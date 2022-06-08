@@ -6,7 +6,7 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="description" content="vim out of the box">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Nvim documentation: intro</title>
+	<title>Nvim 文档: intro</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 	<link href="../css/normalize.min.css" rel="stylesheet">
 	<link href="../css/bootstrap.css" rel="stylesheet">
@@ -65,9 +65,9 @@
 	</header>
 
 	<div class="container">
-		<h1>Nvim documentation: intro</h1>
+		<h1>Nvim 文档: intro</h1>
 		<A NAME="top"></A>
-		<A HREF="index.html">main help file</A>
+		<A HREF="index\.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -75,78 +75,64 @@
 *<A NAME="intro.txt"></A><B>intro.txt</B>*     Nvim
 
 
-			    NVIM REFERENCE MANUAL
+			    NVIM 参考手册
 
 
 
 Nvim							*<A NAME="ref"></A><B>ref</B>* *<A NAME="reference"></A><B>reference</B>*
 
-                                      Type |<A HREF="various.html#gO">gO</A>| to see the table of contents.
+                                      键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
 ==============================================================================
 
-Introduction						*<A NAME="intro"></A><B>intro</B>*
+介绍						*<A NAME="intro"></A><B>intro</B>*
 
-Vim is a text editor which includes most commands from the Unix program &quot;<A HREF="#Vi">Vi</A>&quot;
-and many new ones.
-
-An overview of this manual can be found in the file &quot;help.txt&quot;, |<A HREF="index.html">help.txt</A>|.
-It can be accessed from within Vim with the <A HREF="helphelp.html#&lt;Help&gt;">&lt;Help&gt;</A> or <A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A> key and with the
-|<A HREF="helphelp.html#:help">:help</A>| command (just type &quot;:help&quot;, without the <A HREF="index.html#bars">bars</A> or quotes).
-   The <A HREF="options.html#'helpfile'">'helpfile'</A> option can be set to the name of the help file, in <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A>
-is not located in the default place.  You can jump to subjects like with <A HREF="tagsrch.html#tags">tags</A>:
-Use <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> to jump to a subject under the cursor, use <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> to jump back.
+Vim是一个包含Unix项目&quot;<A HREF="#Vi">Vi</A>&quot;所有命令和许多新命令的文本编辑器.可以从&quot;help.txt&quot;文件（|<A HREF="index.html">help.txt</A>|）中找到本手册概述.
+在Vim中使用<A HREF="helphelp.html#&lt;Help&gt;">&lt;Help&gt;</A>或者<A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A>键和使用|<A HREF="helphelp.html#:help">:help</A>|命令(只键入&quot;:help&quot;, 不需要<A HREF="index.html#bars">竖线</A>或引号)进入该手册.如果帮助文件不在默认位置，使用<A HREF="options.html#'helpfile'">'helpfile'</A>选项进行指定.你可以使用<A HREF="tagsrch.html#tags">tag</A>进行跳转:
+使用<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>跳转到光标下的链接,使用<A HREF="tagsrch.html#CTRL-T">CTRL-T</A>跳转回来.
 
 
 							*<A NAME="pronounce"></A><B>pronounce</B>*
-Vim is pronounced <A HREF="motion.html#as">as</A> one <A HREF="motion.html#word">word</A>, like Jim.  So Nvim is N-Jim, which sounds like
-&quot;Ninja&quot;.  Starting Nvim is like performing a roundhouse kick.
+Vim的发信<A HREF="motion.html#as">是</A>一个<A HREF="motion.html#word">单词</A>,像Jim.所以Nvim发信是N-Jim,这听起来像&quot;Ninja&quot;.
 
-This manual is a reference for all Nvim editor and <A HREF="api.html#API">API</A> features.  It is not an
-introduction; instead for beginners, there is a hands-on |<A HREF="usr_01.html#tutor">tutor</A>| and a user
-manual |<A HREF="usr_toc.html">usr_toc.txt</A>|.
+本手册是所有的Nvim编辑器和<A HREF="api.html#API">API</A>特性的参考.  这不是一个介绍; 相反对于初学这是一个可以动手的|<A HREF="usr_01.html#tutor">tutor</A>|和一个用户手册|<A HREF="usr_toc.html">usr_toc.txt</A>|.
 
 
 							*<A NAME="book"></A><B>book</B>*
-There are many books on <A HREF="#Vi">Vi</A> and Vim.  We recommend:
+对于<A HREF="#Vi">Vi</A>和Vim有许多书.  如:
 
 	&quot;Practical Vim&quot; by Drew Neil
 	&quot;Modern Vim&quot; by Drew Neil
 	https://vimcasts.org/publications/
 
-&quot;Practical Vim&quot; is acclaimed for its focus on quickly learning common editing
-tasks with Vim.  &quot;Modern Vim&quot; explores new features in Nvim and Vim 8.
+&quot;Practical Vim&quot;关注快速学习Vim而备受赞誉.&quot;Modern Vim&quot; 说明 Nvim和Vim 8的新特性.
 
 	&quot;Vim - <A HREF="#Vi">Vi</A> Improved&quot; by Steve Oualline
 
-This was the first <A HREF="#book">book</A> dedicated to Vim.  Parts of <A HREF="motion.html#it">it</A> were included in the
-user manual. |<A HREF="usr_01.html#frombook">frombook</A>|  ISBN: 0735710015
-For more information try one of these:
+这是第一本介绍Vim的<A HREF="#book">书</A>. <A HREF="motion.html#it">它</A>包含用户手册. |<A HREF="usr_01.html#frombook">frombook</A>|  ISBN: 0735710015
+更多信息请看:
 	https://iccf-holland.org/click5.html
 	https://www.vim.org/iccf/click5.html
 
 ==============================================================================
 
-Nvim on the interwebs					*<A NAME="internet"></A><B>internet</B>*
+互联网上的Nvim					*<A NAME="internet"></A><B>internet</B>*
 
 
-			*<A NAME="www"></A><B>www</B>* *<A NAME="faq"></A><B>faq</B>* *<A NAME="distribution"></A><B>distribution</B>* *<A NAME="download"></A><B>download</B>*
+		*<A NAME="www"></A><B>www</B>* *<A NAME="faq"></A><B>faq</B>* *<A NAME="distribution"></A><B>distribution</B>* *<A NAME="download"></A><B>download</B>*
 
-	Nvim home page:	  https://neovim.io/
-	Nvim FAQ:	  https://github.com/neovim/neovim/wiki/FAQ
-	Downloads:	  https://github.com/neovim/neovim/releases
-	Vim FAQ:	  https://vimhelp.org/vim_faq.txt.html
+Nvim 主页:	  https://neovim.io/
+Nvim 问答:	  https://github.com/neovim/neovim/wiki/FAQ
+下载地址:	  https://github.com/neovim/neovim/releases
+Vim 问答:	  https://vimhelp.org/vim_faq.txt.html
 
 
 
 			*<A NAME="bugs"></A><B>bugs</B>* *<A NAME="bug-report"></A><B>bug-report</B>*
-Report bugs and request features here:
-https://github.com/neovim/neovim/issues
+发送bugs报告，请求新特性看这里： https://github.com/neovim/neovim/issues
+要求：简短且完整。提供一个可再现的例子，并尝试找到触发错误的设置或其他事项.
 
-Be brief, yet complete.  Always give a reproducible example and try to find
-out which settings or other things trigger the bug.
-
-If Nvim crashes, try to get a backtrace.  See |<A HREF="debug.html">debug.txt</A>|.
+如果Nvim崩溃,尝试去获得崩溃日志.见|<A HREF="debug.html">debug.txt</A>|.
 
 ==============================================================================
 
@@ -567,92 +553,40 @@ To get a literal &quot;<A HREF="#&lt;lt&gt;">&lt;lt&gt;</A>&quot; in a <A HREF="
 
 ==============================================================================
 
-Modes, introduction				*<A NAME="vim-modes-intro"></A><B>vim-modes-intro</B>* *<A NAME="vim-modes"></A><B>vim-modes</B>*
+模式介绍				*<A NAME="vim-modes-intro"></A><B>vim-modes-intro</B>* *<A NAME="vim-modes"></A><B>vim-modes</B>*
 
-Vim has seven BASIC modes:
+Vim 有七种基本模式:
 
 
 					*<A NAME="Normal"></A><B>Normal</B>* *<A NAME="Normal-mode"></A><B>Normal-mode</B>* *<A NAME="command-mode"></A><B>command-mode</B>*
-<A HREF="#Normal">Normal</A> mode		In <A HREF="#Normal">Normal</A> mode you can enter all the normal editor
-			commands.  If you start the editor you are in this
-			mode.  This is also known <A HREF="motion.html#as">as</A> command mode.
+<A HREF="#Normal">正常</A>模式		在<A HREF="#Normal">正常</A>模式中你可以输入所有的正常编辑命令。你启动编辑器就在此模式。也能<A HREF="motion.html#as">称作</A>命令模式.
 
-<A HREF="visual.html#Visual">Visual</A> mode		This is like <A HREF="#Normal">Normal</A> mode, but the <A HREF="#movement">movement</A> commands
-			extend a highlighted area.  When a non-movement
-			command is used, <A HREF="motion.html#it">it</A> is executed for the highlighted
-			area.  See |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> VISUAL --&quot; is shown
-			at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="visual.html#Visual">可视</A>模式		这很像<A HREF="#Normal">正常</A>模式, 但是<A HREF="#movement">光标移动</A>命令标记出高亮区域. 当一个非可移动命令被使用，<A HREF="motion.html#it">此命令</A> 作用到高亮区域上.  请见|<A HREF="visual.html#Visual-mode">Visual-mode</A>|.如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的。 在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A>VISUAL --&quot;.
 
-<A HREF="visual.html#Select">Select</A> mode		This looks most like the MS-Windows selection mode.
-			Typing a printable character deletes the selection
-			and starts <A HREF="insert.html#Insert">Insert</A> mode.  See |<A HREF="visual.html#Select-mode">Select-mode</A>|.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> SELECT --&quot; is shown
-			at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="visual.html#Select">选择</A>模式		此模式看起来像MS-Windows的选择模式.键入一个可打印字符来删除被选择字符并进入<A HREF="insert.html#Insert">插入</A>模式.  见|<A HREF="visual.html#Select-mode">Select-mode</A>|.如果 <A HREF="options.html#'showmode'">'showmode'</A> 选项打开, 在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> SELECT --&quot;.
 
-<A HREF="insert.html#Insert">Insert</A> mode		In <A HREF="insert.html#Insert">Insert</A> mode the text you type is inserted into the
-			buffer.  See |<A HREF="insert.html#Insert-mode">Insert-mode</A>|.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> INSERT --&quot; is shown
-			at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="insert.html#Insert">插入</A>模式		在<A HREF="insert.html#Insert">插入</A>模式，你键入的文本将会插入到缓冲区。见|<A HREF="insert.html#Insert-mode">Insert-mode</A>|.如果<A HREF="options.html#'showmode'">'showmode'</A>选项打开, 在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> INSERT --&quot;.
 
-<A HREF="cmdline.html#Command-line">Command-line</A> mode	In <A HREF="cmdline.html#Command-line">Command-line</A> mode (also called <A HREF="cmdline.html#Cmdline">Cmdline</A> mode) you
-<A HREF="cmdline.html#Cmdline">Cmdline</A> mode		can enter one line of text at the bottom of the
-			<A HREF="windows.html#window">window</A>.  This is for the <A HREF="#Ex">Ex</A> commands, &quot;<A HREF="cmdline.html#:">:</A>&quot;, the <A HREF="pattern.html#pattern">pattern</A>
-			search commands, &quot;<A HREF="pattern.html#?">?</A>&quot; and &quot;<A HREF="pattern.html#/">/</A>&quot;, and the <A HREF="change.html#filter">filter</A> command,
-			&quot;<A HREF="change.html#!">!</A>&quot;.  |<A HREF="cmdline.html#Cmdline-mode">Cmdline-mode</A>|
+<A HREF="cmdline.html#Command-line">命令行</A>模式	在<A HREF="cmdline.html#Command-line">命令行</A>模式中，你可以在<A HREF="windows.html#window">窗口</A>底部输入一行命令.<A HREF="#Ex">Ex</A>命令通过&quot;<A HREF="cmdline.html#:">:</A>&quot;调用, <A HREF="pattern.html#pattern">模式</A>查询命令通过,&quot;<A HREF="pattern.html#?">?</A>&quot;和&quot;<A HREF="pattern.html#/">/</A>&quot;调用。<A HREF="change.html#filter">过滤/A>命令通过&quot;<A HREF="change.html#!">!</A>&quot;调用. 见|<A HREF="cmdline.html#Cmdline-mode">Cmdline-mode</A>|
 
-<A HREF="#Ex">Ex</A> mode			Like <A HREF="cmdline.html#Command-line">Command-line</A> mode, but after entering a command
-			you remain in <A HREF="#Ex">Ex</A> mode.  Very limited editing of the
-			command line.  |<A HREF="#Ex-mode">Ex-mode</A>|
+<A HREF="#Ex">Ex</A>模式			此模式像<A HREF="cmdline.html#Command-line">命令行</A>模式,但是输入命令后依然保持<A HREF="#Ex">Ex</A>模式.非常受限的命令行编辑.见|<A HREF="#Ex-mode">Ex-mode</A>|
 
+					*<A NAME="Terminal-mode"></A><B>Terminal-mode</B>*
+终端模式		在终端模式所有的输入(除了CTRL-\)会发送到当前运行的|<A HREF="nvim_terminal_emulator.html#terminal">终端</A>|缓冲区线程中.如果输入的时CTRL-\,那么会发送下一个输入，除非<A HREF="motion.html#it">输入</A>是CTRL-N(|<A HREF="#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|).如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的，在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> TERMINAL --&quot;.
 
-							*<A NAME="Terminal-mode"></A><B>Terminal-mode</B>*
-Terminal mode		In Terminal mode all input (except CTRL-\) is sent to
-			the process running in the current |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>| buffer.
-			If CTRL-\ is pressed, the next key is sent unless <A HREF="motion.html#it">it</A>
-			is CTRL-N (|<A HREF="#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|).
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> TERMINAL --&quot; is shown
-			at the bottom of the <A HREF="windows.html#window">window</A>.
-
-There are six ADDITIONAL modes.  These are variants of the BASIC modes:
-
-
+何有额外的六种模式是基本模式的变种:
 				*<A NAME="Operator-pending"></A><B>Operator-pending</B>* *<A NAME="Operator-pending-mode"></A><B>Operator-pending-mode</B>*
-<A HREF="#Operator-pending">Operator-pending</A> mode	This is like <A HREF="#Normal">Normal</A> mode, but after an <A HREF="motion.html#operator">operator</A>
-			command has started, and Vim is waiting for a <A HREF="#{motion}">{motion}</A>
-			to specify the text that the <A HREF="motion.html#operator">operator</A> will work on.
+<A HREF="#Operator-pending">操作符等待</A>模式	此模式像<A HREF="#Normal">正常</A>模式, 但是在一个<A HREF="motion.html#operator">操作符</A>命令开始后, Vim会等待<A HREF="#{motion}">{动作}</A>去要求<A HREF="motion.html#operator">操作符</A>的工作范围.
 
-<A HREF="insert.html#Replace">Replace</A> mode		<A HREF="insert.html#Replace">Replace</A> mode is a special <A HREF="change.html#case">case</A> of <A HREF="insert.html#Insert">Insert</A> mode.  You
-			can <A HREF="diff.html#do">do</A> the same things <A HREF="motion.html#as">as</A> in <A HREF="insert.html#Insert">Insert</A> mode, but for
-			each character you enter, one character of the existing
-			text is deleted.  See |<A HREF="insert.html#Replace-mode">Replace-mode</A>|.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> REPLACE --&quot; is
-			shown at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="insert.html#Replace">替换</A>模式		<A HREF="insert.html#Replace">替换</A>模式是<A HREF="insert.html#Insert">插入</A>模式的一个特殊<A HREF="change.html#case">情况</A>.你能<A HREF="diff.html#do">做</A><A HREF="motion.html#as">和</A><A HREF="insert.html#Insert">插入</A>模式相同的事, 但是对于你输入的每个字符都会覆盖存在的字符.见|<A HREF="insert.html#Replace-mode">Replace-mode</A>|.如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的.在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> REPLACE --&quot;.
 
-Virtual <A HREF="insert.html#Replace">Replace</A> mode	Virtual <A HREF="insert.html#Replace">Replace</A> mode is similar to <A HREF="insert.html#Replace">Replace</A> mode, but
-			instead of file characters you are <A HREF="change.html#replacing">replacing</A> screen
-			real estate.  See |<A HREF="insert.html#Virtual-Replace-mode">Virtual-Replace-mode</A>|.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> VREPLACE --&quot; is
-			shown at the bottom of the <A HREF="windows.html#window">window</A>.
+虚拟<A HREF="insert.html#Replace">替换</A>模式	虚拟<A HREF="insert.html#Replace">替换</A>模式和<A HREF="insert.html#Replace">替换</A>模式相同,但是<A HREF="change.html#replacing">替换</A>的是屏幕位置而不是文件字符.见|<A HREF="insert.html#Virtual-Replace-mode">Virtual-Replace-mode</A>|.如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的.在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> VREPLACE --&quot;.
 
-<A HREF="insert.html#Insert">Insert</A> <A HREF="#Normal">Normal</A> mode	Entered when <A HREF="motion.html#CTRL-O">CTRL-O</A> is typed in <A HREF="insert.html#Insert">Insert</A> mode (see
-			|<A HREF="insert.html#i_CTRL-O">i_CTRL-O</A>|).  This is like <A HREF="#Normal">Normal</A> mode, but after
-			executing one command Vim returns to <A HREF="insert.html#Insert">Insert</A> mode.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> (insert) --&quot; is
-			shown at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="insert.html#Insert">插入</A><A HREF="#Normal">正常</A>模式	在<A HREF="insert.html#Insert">插入</A>模式(见|<A HREF="insert.html#i_CTRL-O">i_CTRL-O</A>|)键入<A HREF="motion.html#CTRL-O">CTRL-O</A>进入此模式. 此模式像<A HREF="#Normal">正常</A>模式,但是执行一个命令后，Vim返回<A HREF="insert.html#Insert">插入</A>模式.如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的.在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> (insert) --&quot;.
 
-<A HREF="insert.html#Insert">Insert</A> <A HREF="visual.html#Visual">Visual</A> mode	Entered when starting a <A HREF="visual.html#Visual">Visual</A> selection from <A HREF="insert.html#Insert">Insert</A>
-			mode, e.g., by using <A HREF="motion.html#CTRL-O">CTRL-O</A> and then &quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="visual.html#V">V</A>&quot; or
-			<A HREF="visual.html#CTRL-V">CTRL-V</A>.  When the <A HREF="visual.html#Visual">Visual</A> selection ends, Vim returns
-			to <A HREF="insert.html#Insert">Insert</A> mode.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> (insert) VISUAL --&quot;
-			is shown at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="insert.html#Insert">插入</A><A HREF="visual.html#Visual">可视</A>模式	在<A HREF="insert.html#Insert">插入</A>模式中进行<A HREF="visual.html#Visual">可视</A>选择, 列如，通过使用<A HREF="motion.html#CTRL-O">CTRL-O</A>然后输入&quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="visual.html#V">V</A>&quot;或者<A HREF="visual.html#CTRL-V">CTRL-V</A>进入该模式. 当<A HREF="visual.html#Visual">可视</A>选择结束, Vim返回<A HREF="insert.html#Insert">插入</A>模式.如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的.在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> (insert) VISUAL --&quot;.
 
-<A HREF="insert.html#Insert">Insert</A> <A HREF="visual.html#Select">Select</A> mode	Entered when starting <A HREF="visual.html#Select">Select</A> mode from <A HREF="insert.html#Insert">Insert</A> mode.
-			E.g., by dragging the mouse or <A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>.
-			When the <A HREF="visual.html#Select">Select</A> mode ends, Vim returns to <A HREF="insert.html#Insert">Insert</A> mode.
-			If the <A HREF="options.html#'showmode'">'showmode'</A> option is on &quot;<A HREF="starting.html#--">--</A> (insert) SELECT --&quot;
-			is shown at the bottom of the <A HREF="windows.html#window">window</A>.
+<A HREF="insert.html#Insert">插入</A><A HREF="visual.html#Select">选择</A>模式	从<A HREF="insert.html#Insert">插入</A>模式中进入<A HREF="visual.html#Select">选择</A>模式，列如，通过拖拽鼠标或者<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>进入此模式。当<A HREF="visual.html#Select">选择</A>模式结束,Vim返回<A HREF="insert.html#Insert">插入</A>模式.如果<A HREF="options.html#'showmode'">'showmode'</A>选项是打开的.在底部<A HREF="windows.html#window">窗口</A>会出现&quot;<A HREF="starting.html#--">--</A> (insert) SELECT --&quot;.
 
 ==============================================================================
 
@@ -936,16 +870,9 @@ process and communicates with Nvim via the |<A HREF="api.html#api">api</A>|.
 
 
 ==============================================================================
-<A HREF="#top">top</A> - <A HREF="index.html">main help file</A>
+<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
 	</div>
-
-	<footer>
-		<div class="container">
-			Generated Wed Jun 8 05:36:19 UTC 2022 from <a
-				href="https://github.com/neovim/neovim/commit/3cd22a34852b7453eecb4715806cc09dcc226e0c"><code>3cd22a3</code></a>.
-		</div>
-	</footer>
 </body>
 
 </html>

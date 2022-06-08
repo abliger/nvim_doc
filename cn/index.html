@@ -6,7 +6,7 @@
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="vim out of the box">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>Nvim documentation: help</title>
+  <title>Nvim 文档: help</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
   <link href="../css/normalize.min.css" rel="stylesheet">
   <link href="../css/bootstrap.css" rel="stylesheet">
@@ -70,72 +70,64 @@
     <HR>
     <PRE>
 *<A NAME="help.txt"></A><B>help.txt</B>*	Nvim
-			VIM - 主帮助文件                                          <A HREF="motion.html#k">k</A>
-      移动:          使用鼠标, 或使用 &quot;<A HREF="motion.html#h">h</A>&quot; 向左,&quot;<A HREF="motion.html#j">j</A>&quot; 向下, &quot;<A HREF="motion.html#k">k</A>&quot; 向上, &quot;<A
+			VIM - 主帮助文件                                    <A HREF="motion.html#k">k</A>
+移动:          使用鼠标, 或使用 &quot;<A HREF="motion.html#h">h</A>&quot; 向左,&quot;<A HREF="motion.html#j">j</A>&quot; 向下, &quot;<A HREF="motion.html#k">k</A>&quot; 向上, &quot;<A
         HREF="motion.html#l">l</A>&quot;向右.&nbsp;&nbsp; <A HREF="motion.html#h">h</A>    <A HREF="motion.html#l">l</A>
-		                                                                  <A HREF="motion.html#j">j</A>
-      关闭当前<A HREF="windows.html#window">窗口</A>:  使用 &quot;:q&lt;Enter&gt;&quot;.
-      离开Nvim:      使用 &quot;:qa!&lt;Enter&gt;&quot; (小心，所有的改动都会丢失!)。
+		                                                            <A HREF="motion.html#j">j</A>
+关闭当前<A HREF="windows.html#window">窗口</A>:  使用 &quot;:q&lt;Enter&gt;&quot;.
+离开Nvim:      使用 &quot;:qa!&lt;Enter&gt;&quot; (小心，所有的改动都会丢失!).
 
-      跳转链接:      光标的位置放于 <A HREF="tagsrch.html#tag">标签</A>上 (e.g. |<A HREF="index.html#bars">bars</A>|) 且使用快捷键 <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>.
-      使用鼠标:      在 <A HREF="tagsrch.html#tag">标签</A>上双击鼠标左键, e.g. |<A HREF="index.html#bars">bars</A>|。
-      返回:          使用快捷键 <A HREF="motion.html#CTRL-O">CTRL-O</A>。  重复返回。
+跳转链接:      光标的位置放于 <A HREF="tagsrch.html#tag">标签</A>上 (e.g. |<A HREF="index.html#bars">bars</A>|) 且使用快捷键 <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>.
+使用鼠标:      在 <A HREF="tagsrch.html#tag">标签</A>上双击鼠标左键, e.g. |<A HREF="index.html#bars">bars</A>|.
+返回:          使用快捷键 <A HREF="motion.html#CTRL-O">CTRL-O</A>。  重复返回.
 
-Get specific help:  It is possible to go directly to whatever you want help
-		    on, by giving an argument to the |<A HREF="helphelp.html#:help">:help</A>| command.
+获取特定帮助:  通过给 |<A HREF="helphelp.html#:help">:help</A>| 命令添加参数，可以直接跳转到任何的帮助主题。还可以通过模式关键字前缀加查询内容进一步指定查询<A HREF="repeat.html#context"></A>内容</A>
+		    
+<B><FONT color="#3A6F2B">      模式   模式关键字  例子	</FONT></B>
+  <A HREF="intro.html#Normal">正常</A>模式命令		   <A HREF="helphelp.html#:help">:help</A> <A HREF="change.html#x">x</A>
+  <A HREF="visual.html#Visual">可视</A>模式命令	  v_	   <A HREF="helphelp.html#:help">:help</A> <A HREF="change.html#v_u">v_u</A>
+  <A HREF="insert.html#Insert">插入</A>模式命令	  i_	   <A HREF="helphelp.html#:help">:help</A> <A HREF="insert.html#i_&lt;Esc&gt;">i_&lt;Esc&gt;</A>
+  <A HREF="cmdline.html#Command-line">命令行</A>命令	  :	   <A HREF="helphelp.html#:help">:help</A> <A HREF="editing.html#:quit">:quit</A>
+  <A HREF="cmdline.html#Command-line">命令行</A>编辑	  c_	   <A HREF="helphelp.html#:help">:help</A> <A HREF="cmdline.html#c_&lt;Del&gt;">c_&lt;Del&gt;</A>
+  Vim 命令参数	  -	   <A HREF="helphelp.html#:help">:help</A> <A HREF="starting.html#-r">-r</A>
+  选项    	  ''	   <A HREF="helphelp.html#:help">:help</A> <A HREF="options.html#'textwidth'">'textwidth'</A>
+  正则<A HREF="eval.html#expression">表达式</A>	  /	   <A HREF="helphelp.html#:help">:help</A> /[
+                          更多内容和解释，请见 |<A HREF="usr_02.html#help-summary">help-summary</A>|.
 
-		    Prepend something to specify the <A HREF="repeat.html#context">context</A>:  *<A NAME="help-context"></A><B>help-context</B>*
+  查找帮助:  键入 &quot;<A HREF="helphelp.html#:help">:help</A> word&quot;, 然后键入 <A HREF="scroll.html#CTRL-D">CTRL-D</A> 可以看到匹配 &quot;<A HREF="motion.html#word">word</A>&quot; 的帮助主题.或者使用 &quot;:helpgrep word&quot;. |<A HREF="helphelp.html#:helpgrep">:helpgrep</A>|
 
-<B><FONT color="#3A6F2B">			  WHAT			PREPEND    EXAMPLE	</FONT></B>
-		      <A HREF="intro.html#Normal">Normal</A> mode command		   <A HREF="helphelp.html#:help">:help</A> <A HREF="change.html#x">x</A>
-		      <A HREF="visual.html#Visual">Visual</A> mode command	  v_	   <A HREF="helphelp.html#:help">:help</A> <A HREF="change.html#v_u">v_u</A>
-		      <A HREF="insert.html#Insert">Insert</A> mode command	  i_	   <A HREF="helphelp.html#:help">:help</A> <A HREF="insert.html#i_&lt;Esc&gt;">i_&lt;Esc&gt;</A>
-		      <A HREF="cmdline.html#Command-line">Command-line</A> command	  :	   <A HREF="helphelp.html#:help">:help</A> <A HREF="editing.html#:quit">:quit</A>
-		      <A HREF="cmdline.html#Command-line">Command-line</A> editing	  c_	   <A HREF="helphelp.html#:help">:help</A> <A HREF="cmdline.html#c_&lt;Del&gt;">c_&lt;Del&gt;</A>
-		      Vim command argument	  -	   <A HREF="helphelp.html#:help">:help</A> <A HREF="starting.html#-r">-r</A>
-		      Option			  ''	   <A HREF="helphelp.html#:help">:help</A> <A HREF="options.html#'textwidth'">'textwidth'</A>
-		      Regular <A HREF="eval.html#expression">expression</A>	  /	   <A HREF="helphelp.html#:help">:help</A> /[
-		    See |<A HREF="usr_02.html#help-summary">help-summary</A>| for more contexts and an explanation.
+  入门:  完成 Vim <A HREF="usr_01.html#tutor">指导手册</A>, 使用三十分钟的交互式课程（|<A HREF="usr_01.html#vimtutor">vimtutor</A>|）熟悉基本命令.从头到底读完用户手册: |<A HREF="usr_01.html">usr_01.txt</A>|
 
-  Search for help:  Type &quot;<A HREF="helphelp.html#:help">:help</A> word&quot;, then hit <A HREF="scroll.html#CTRL-D">CTRL-D</A> to see matching
-		    help entries for &quot;<A HREF="motion.html#word">word</A>&quot;.
-		    Or use &quot;:helpgrep word&quot;. |<A HREF="helphelp.html#:helpgrep">:helpgrep</A>|
-
-  Getting started:  Do the Vim <A HREF="usr_01.html#tutor">tutor</A>, a 30-minute interactive course for the
-		    basic commands, see |<A HREF="usr_01.html#vimtutor">vimtutor</A>|.
-		    Read the user manual from start to end: |<A HREF="usr_01.html">usr_01.txt</A>|
-
-Vim stands for <A HREF="intro.html#Vi">Vi</A> IMproved.  Most of Vim was made by Bram Moolenaar, but only
-through the help of many others.  See |<A HREF="intro.html#credits">credits</A>|.
+Vim 代表 <A HREF="intro.html#Vi">Vi</A> IMproved.  Vim 主要由 Bram Moolenaar 编写，但也有许多其他人的帮助。请见 |<A HREF="intro.html#credits">credits</A>|.
 ------------------------------------------------------------------------------
 
 						*<A NAME="doc-file-list"></A><B>doc-file-list</B>* *<A NAME="Q_ct"></A><B>Q_ct</B>*
-BASIC:
-|<A HREF="quickref.html#quickref">quickref</A>|	Overview of the most common commands you will use
-|<A HREF="usr_01.html#tutor">tutor</A>|		30-minute interactive course for beginners
-|<A HREF="uganda.html#copying">copying</A>|	About copyrights
-|<A HREF="uganda.html#iccf">iccf</A>|		Helping poor children in <A HREF="uganda.html#Uganda">Uganda</A>
-|<A HREF="intro.html#sponsor">sponsor</A>|	Sponsor Vim <A HREF="develop.html#development">development</A>, become a registered Vim user
-|<A HREF="intro.html#www">www</A>|		Vim on the World Wide Web
-|<A HREF="intro.html#bugs">bugs</A>|		Where to send bug reports
+基础:
+|<A HREF="quickref.html#quickref">quickref</A>|     总览你做常用的命令	
+|<A HREF="usr_01.html#tutor">tutor</A>|        初学者三十分钟的交互课程
+|<A HREF="uganda.html#copying">copying</A>|      版权	
+|<A HREF="uganda.html#iccf">iccf</A>|         资助<A HREF="uganda.html#Uganda">乌干达</A>贫困儿童
+|<A HREF="intro.html#sponsor">sponsor</A>|      赞助 Vim <A HREF="develop.html#development">开发</A>, 成为一个注册使用者
+|<A HREF="intro.html#www">www</A>|          互联网上的VIM
+|<A HREF="intro.html#bugs">bugs</A>|         发送bugs报告	
 
-USER MANUAL: These files explain how to accomplish an editing task.
+用户手册: 这些文件解释如何完成一项编辑任务。
 
-|<A HREF="usr_toc.html">usr_toc.txt</A>|	Table Of <A HREF="quickref.html#Contents">Contents</A>
+|<A HREF="usr_toc.html">usr_toc.txt</A>|	<A HREF="quickref.html#Contents">目录</A>
 
-<B><FONT color="#3A6F2B">Getting Started </FONT></B>
-|<A HREF="usr_01.html">usr_01.txt</A>|  About the manuals
-|<A HREF="usr_02.html">usr_02.txt</A>|  The first steps in Vim
-|<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
-|<A HREF="usr_04.html">usr_04.txt</A>|  Making small changes
-|<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
-|<A HREF="usr_06.html">usr_06.txt</A>|  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
-|<A HREF="usr_07.html">usr_07.txt</A>|  Editing more than one file
-|<A HREF="usr_08.html">usr_08.txt</A>|  Splitting <A HREF="windows.html#windows">windows</A>
-|<A HREF="usr_09.html">usr_09.txt</A>|  Using the <A HREF="gui.html#GUI">GUI</A>
-|<A HREF="usr_10.html">usr_10.txt</A>|  Making big changes
-|<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
-|<A HREF="usr_12.html">usr_12.txt</A>|  Clever tricks
+<B><FONT color="#3A6F2B">入门</FONT></B>
+|<A HREF="usr_01.html">usr_01.txt</A>|  关于本手册 
+|<A HREF="usr_02.html">usr_02.txt</A>|  vim 使用的第一步 
+|<A HREF="usr_03.html">usr_03.txt</A>|  移动 
+|<A HREF="usr_04.html">usr_04.txt</A>|  做小改动 
+|<A HREF="usr_05.html">usr_05.txt</A>|  自定义设置 
+|<A HREF="usr_06.html">usr_06.txt</A>|  使用<A HREF="syntax.html#syntax">语法</A>高亮
+|<A HREF="usr_07.html">usr_07.txt</A>|  编辑多个文件 
+|<A HREF="usr_08.html">usr_08.txt</A>|  分割<A HREF="windows.html#windows">窗口</A>
+|<A HREF="usr_09.html">usr_09.txt</A>|  使用<A HREF="gui.html#GUI">GUI</A>
+|<A HREF="usr_10.html">usr_10.txt</A>|  做大改动
+|<A HREF="usr_11.html">usr_11.txt</A>|  从崩溃中恢复
+|<A HREF="usr_12.html">usr_12.txt</A>|  小窍门
 
 <B><FONT color="#3A6F2B">Editing Effectively </FONT></B>
 |<A HREF="usr_20.html">usr_20.txt</A>|  Typing command-line commands quickly
@@ -293,13 +285,6 @@ will try to find help for <A HREF="motion.html#it">it</A>.  Especially for <A HR
 <A HREF="#top">top</A>
 </PRE>
   </div>
-
-  <footer>
-    <div class="container">
-      Generated Wed Jun 8 05:36:19 UTC 2022 from <a
-        href="https://github.com/neovim/neovim/commit/3cd22a34852b7453eecb4715806cc09dcc226e0c"><code>3cd22a3</code></a>.
-    </div>
-  </footer>
 </body>
 
 </html>
