@@ -76,88 +76,75 @@
 
 		     VIM用户手册 - by Bram Moolenaar
 
-			      About the manuals
+			      关于本手册
 
+本章介绍 vim 的手册本身.阅读本文了解解释命令的条件.
 
-This chapter introduces the manuals available with Vim.  Read this to know the
-conditions under which the commands are explained.
+|<A HREF="#01.1">01.1</A>|	两本手册
+|<A HREF="#01.2">01.2</A>|	Vim安装
+|<A HREF="#01.3">01.3</A>|	使用Vim<A HREF="#tutor">指导</A>
+|<A HREF="#01.4">01.4</A>|	版权
 
-|<A HREF="#01.1">01.1</A>|	Two manuals
-|<A HREF="#01.2">01.2</A>|	Vim installed
-|<A HREF="#01.3">01.3</A>|	Using the Vim <A HREF="#tutor">tutor</A>
-|<A HREF="#01.4">01.4</A>|	Copyright
-
-     Next chapter: |<A HREF="usr_02.html">usr_02.txt</A>|  The first steps in Vim
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_02.html">usr_02.txt</A>|  Vim初步
+目录: |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="01.1"></A><B>01.1</B>*	Two manuals
+*<A NAME="01.1"></A><B>01.1</B>*	两本手册
 
-The Vim documentation consists of two parts:
+Vim文档由两部分构成:
 
-1. The <A HREF="autocmd.html#User">User</A> manual
-   Task oriented explanations, from simple to complex.  Reads from start to
-   end like a <A HREF="intro.html#book">book</A>.
+1. <A HREF="autocmd.html#User">用户</A>手册
+   从简单到负载的面向任务的使用说明.可以像<A HREF="intro.html#book">书</A>一样从头读到尾.
 
-2. The Reference manual
-   Precise description of how everything in Vim works.
+2. 参考手册
+   精确描述了使用Vim工作的每一件事.
 
-The notation used in these manuals is explained here: |<A HREF="intro.html#notation">notation</A>|
+本手册使用的符号请参见:|<A HREF="intro.html#notation">notation</A>|
 
+跳转
 
-JUMPING AROUND
+文本包含两部分间的超级链接,允许你快速的从编辑任务描述和命令及选项精确说明间跳.使用这两个命令:
+	使用<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>跳转光标下的地址.
+	使用<A HREF="motion.html#CTRL-O">CTRL-O</A>跳转回来(重复则回到更远处).
 
-The text contains hyperlinks between the two parts, allowing you to quickly
-jump between the description of an editing task and a precise explanation of
-the commands and <A HREF="options.html#options">options</A> used for <A HREF="motion.html#it">it</A>.  Use these two commands:
+许多链接在竖线中间,如: |<A HREF="index.html#bars">bars</A>|.竖线可能是隐藏或不可见的;见下面.  选项名,像<A HREF="options.html#'number'">'number'</A>,使用双引号包裹的命令，像&quot;<A HREF="editing.html#:write">:write</A>&quot;和其他任何<A HREF="motion.html#word">单词</A>都可以<A HREF="motion.html#as">作为</A>一个链接.
+试试看: 移动贯标到<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>上，键入<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>打开链接.
 
-	Press  <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>  to jump to a subject under the cursor.
-	Press  <A HREF="motion.html#CTRL-O">CTRL-O</A>  to jump back (repeat to go further back).
+其他主题可以使用&quot;<A HREF="helphelp.html#:help">:help</A>&quot;命令找到;见|<A HREF="index.html">help.txt</A>|.
 
-Many links are in vertical bars, like this: |<A HREF="index.html#bars">bars</A>|.  The bars themselves may
-be hidden or invisible; see below.  An option name, like <A HREF="options.html#'number'">'number'</A>, a command
-in double quotes like &quot;<A HREF="editing.html#:write">:write</A>&quot; and any other <A HREF="motion.html#word">word</A> can also be used <A HREF="motion.html#as">as</A> a link.
-Try <A HREF="motion.html#it">it</A> out: Move the cursor to  <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>  and press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">it</A>.
-
-Other subjects can be found with the &quot;<A HREF="helphelp.html#:help">:help</A>&quot; command; see |<A HREF="index.html">help.txt</A>|.
-
-The <A HREF="index.html#bars">bars</A> and stars are usually hidden with the |<A HREF="syntax.html#conceal">conceal</A>| feature.  They also
-use |<A HREF="syntax.html#hl-Ignore">hl-Ignore</A>|, using the same color for the text <A HREF="motion.html#as">as</A> the background.  You can
-make them visible with:
+<A HREF="index.html#bars">竖线</A>和星星在使用|<A HREF="syntax.html#conceal">conceal</A>|特性时常常时是隐藏的.它们也能使用|<A HREF="syntax.html#hl-Ignore">hl-Ignore</A>|与背景保持一致颜色.你可以使他们可见:
 <B>	:set conceallevel=0</B>
 <B>	:hi link HelpBar Normal</B>
 <B>	:hi link HelpStar Normal</B>
 
 ==============================================================================
 
-*<A NAME="01.2"></A><B>01.2</B>*	Vim installed					   *<A NAME="setup-vimrc_example"></A><B>setup-vimrc_example</B>*
+*<A NAME="01.2"></A><B>01.2</B>*	Vim安装				*<A NAME="setup-vimrc_example"></A><B>setup-vimrc_example</B>*
 
-To create an empty <A HREF="starting.html#vimrc">vimrc</A>:
+新建一个新的<A HREF="starting.html#vimrc">vimrc</A>:
 
 <B>	:call mkdir(stdpath('config'),'p')</B>
 <B>	:exe 'edit' stdpath('config').'/init.vim'</B>
 <B>	:write</B>
 
-For more info see |<A HREF="starting.html#vimrc">vimrc</A>|.
+更多信息请见|<A HREF="starting.html#vimrc">vimrc</A>|.
 
 ==============================================================================
 
-*<A NAME="01.3"></A><B>01.3</B>*	Using the Vim <A HREF="#tutor">tutor</A>			         *<A NAME="tutor"></A><B>tutor</B>* *<A NAME="vimtutor"></A><B>vimtutor</B>*
+*<A NAME="01.3"></A><B>01.3</B>*	使用Vim<A HREF="#tutor">指导</A>			    *<A NAME="tutor"></A><B>tutor</B>* *<A NAME="vimtutor"></A><B>vimtutor</B>*
 
-Instead of reading the text (boring!) you can use <A HREF="pi_tutor.html#:Tutor">:Tutor</A> to learn your first
-Vim commands.  This is a 30-minute tutorial that teaches the most basic Vim
-functionality hands-on.
+除了读文字(无聊!)，你可以使用<A HREF="pi_tutor.html#:Tutor">:Tutor</A>去学习Vim.它用大约三十分钟叫你Vim基本使用.
 
-To start the tutorial, execute
+使用指导手册，使用如下命令
 
 <B>        :Tutor</B>
  
-from within <A HREF="nvim.html#nvim">nvim</A>. The tutorial will lead you from that point. Have fun!
+The tutorial will lead you from that point. 祝你玩当愉快
 
 ==============================================================================
 
-*<A NAME="01.4"></A><B>01.4</B>*	Copyright					*<A NAME="manual-copyright"></A><B>manual-copyright</B>*
+*<A NAME="01.4"></A><B>01.4</B>*	版权					*<A NAME="manual-copyright"></A><B>manual-copyright</B>*
 
 The Vim user manual and reference manual are Copyright (c) 1988-2003 by Bram
 Moolenaar.  This material may be distributed only subject to the terms and
@@ -186,9 +173,9 @@ If you make money through selling the manuals, you are strongly encouraged to
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_02.html">usr_02.txt</A>|  The first steps in Vim
+下一章: |<A HREF="usr_02.html">usr_02.txt</A>|  Vim初步
 
-Copyright: see |<A HREF="#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+版权: 请见|<A HREF="#manual-copyright">manual-copyright</A>|
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>
