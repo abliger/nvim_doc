@@ -2326,7 +2326,7 @@ quoted text and URLs / email addresses).  In keeping with standard conventions,
 signatures begin in a line containing only &quot;<A HREF="starting.html#--">--</A>&quot; followed optionally by
 whitespaces and end with a newline.
 
-Vim treats lines beginning with '<A HREF="vimindex.html#]">]</A>', '<A HREF="motion.html#}">}</A>', '&#124;', '<A HREF="change.html#&gt;">&gt;</A>' or a <A HREF="motion.html#word">word</A> followed by '<A HREF="change.html#&gt;">&gt;</A>'
+Vim treats lines beginning with '<A HREF="vimindex.html#]">]</A>', '<A HREF="motion.html#}">}</A>', '&#124;', '<A HREF="change.html#&gt;">&gt;</A>' or a <A HREF="motion.html#word">单词</A> followed by '<A HREF="change.html#&gt;">&gt;</A>'
 <A HREF="motion.html#as">as</A> quoted text.  However Vim highlights headers and signatures in quoted text
 only if the text is quoted with '<A HREF="change.html#&gt;">&gt;</A>' (optionally followed by one space).
 
@@ -3912,7 +3912,7 @@ Vim understands three types of <A HREF="#syntax">syntax</A> items:
 1. Keyword
    It can only contain keyword characters, according to the <A HREF="options.html#'iskeyword'">'iskeyword'</A>
    option.  It cannot contain other <A HREF="#syntax">syntax</A> items.  It will only match with a
-   complete <A HREF="motion.html#word">word</A> (there are no keyword characters before or after the match).
+   complete <A HREF="motion.html#word">单词</A> (there are no keyword characters before or after the match).
    The keyword &quot;if&quot; would match in &quot;if(a=b)&quot;, but not in &quot;ifdef x&quot;, because
    &quot;<A HREF="motion.html#(">(</A>&quot; is not a keyword character and &quot;<A HREF="change.html#d">d</A>&quot; is.
 
@@ -4544,7 +4544,7 @@ The {group-name}... can be used just like for &quot;contains&quot;, <A HREF="mot
 
 This is useful when adding a <A HREF="#syntax">syntax</A> item afterwards.  An item can be told to
 be included inside an already existing item, without <A HREF="change.html#changing">changing</A> the definition
-of that item.  For example, to highlight a <A HREF="motion.html#word">word</A> in a C comment after loading
+of that item.  For example, to highlight a <A HREF="motion.html#word">单词</A> in a C comment after loading
 the C <A HREF="#syntax">syntax</A>:
 <B>	:syn keyword myword HELP containedin=cComment contained</B>
 Note that &quot;contained&quot; is also used, to avoid that the item matches at the top

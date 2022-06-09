@@ -1008,9 +1008,9 @@ Command line:					*<A NAME="command-line-functions"></A><B>command-line-function
 
 
 Spelling:					*<A NAME="spell-functions"></A><B>spell-functions</B>*
-	<A HREF="builtin.html#spellbadword()">spellbadword()</A>		locate badly spelled <A HREF="motion.html#word">word</A> at or after cursor
+	<A HREF="builtin.html#spellbadword()">spellbadword()</A>		locate badly spelled <A HREF="motion.html#word">单词</A> at or after cursor
 	<A HREF="builtin.html#spellsuggest()">spellsuggest()</A>		return suggested spelling corrections
-	<A HREF="builtin.html#soundfold()">soundfold()</A>		return the sound-a-like equivalent of a <A HREF="motion.html#word">word</A>
+	<A HREF="builtin.html#soundfold()">soundfold()</A>		return the sound-a-like equivalent of a <A HREF="motion.html#word">单词</A>
 
 
 History:					*<A NAME="history-functions"></A><B>history-functions</B>*
@@ -1626,7 +1626,7 @@ to <A HREF="diff.html#do">do</A> the same for other languages.  Let's first make
 <B>	:endfunction</B>
 
 It's slightly different from the function above, using 'self.words' to lookup
-<A HREF="motion.html#word">word</A> translations.  But we don't have a self.words.  Thus you could call this
+<A HREF="motion.html#word">单词</A> translations.  But we don't have a self.words.  Thus you could call this
 an abstract class.
 
 Now we can instantiate a Dutch translation object:
@@ -2036,7 +2036,7 @@ than using if-endif around the whole file.
 MAPPING
 
 Now let's make the <A HREF="usr_05.html#plugin">plugin</A> more interesting: We will add a <A HREF="map.html#mapping">mapping</A> that adds a
-correction for the <A HREF="motion.html#word">word</A> under the cursor.  We could just pick a key sequence
+correction for the <A HREF="motion.html#word">单词</A> under the cursor.  We could just pick a key sequence
 for this <A HREF="map.html#mapping">mapping</A>, but the user might already use <A HREF="motion.html#it">it</A> for something else.  To
 allow the user to define which keys a <A HREF="map.html#mapping">mapping</A> in a <A HREF="usr_05.html#plugin">plugin</A> uses, the <A HREF="map.html#&lt;Leader&gt;">&lt;Leader&gt;</A>
 item can be used:
@@ -2248,7 +2248,7 @@ Here is the resulting complete example:
 <B> 42	let &amp;cpo = s:save_cpo</B>
 <B> 43	unlet s:save_cpo</B>
 
-Line 33 wasn't explained yet.  It applies the new correction to the <A HREF="motion.html#word">word</A> under
+Line 33 wasn't explained yet.  It applies the new correction to the <A HREF="motion.html#word">单词</A> under
 the cursor.  The |<A HREF="various.html#:normal">:normal</A>| command is used to use the new abbreviation.  Note
 that mappings and <A HREF="map.html#abbreviations">abbreviations</A> are expanded here, even though the function
 was called from a <A HREF="map.html#mapping">mapping</A> defined with &quot;<A HREF="map.html#:noremap">:noremap</A>&quot;.

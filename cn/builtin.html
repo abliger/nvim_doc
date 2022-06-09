@@ -520,7 +520,7 @@ sockconnect({mode}, <A HREF="cmdline.html#{address}">{address}</A> [, {opts}])
 sort({list} [, {func} [, {dict}]])
 				<A HREF="eval.html#List">List</A>	sort {list}, using {func} to compare
 soundfold({word})		<A HREF="eval.html#String">String</A>	sound-fold {word}
-<A HREF="#spellbadword()">spellbadword()</A>			<A HREF="eval.html#String">String</A>	badly spelled <A HREF="motion.html#word">word</A> at cursor
+<A HREF="#spellbadword()">spellbadword()</A>			<A HREF="eval.html#String">String</A>	badly spelled <A HREF="motion.html#word">单词</A> at cursor
 spellsuggest({word} [, {max} [, {capital}]])
 				<A HREF="eval.html#List">List</A>	spelling suggestions
 split({expr} [, {pat} [, {keepempty}]])
@@ -1365,7 +1365,7 @@ complete_info([{what}])				*<A NAME="complete_info()"></A><B>complete_info()</B>
 		   pum_visible	|<A HREF="eval.html#TRUE">TRUE</A>| if popup menu is visible.
 				See |<A HREF="#pumvisible()">pumvisible()</A>|.
 		   items	<A HREF="eval.html#List">List</A> of completion matches.  Each item is a
-				dictionary containing the entries &quot;<A HREF="motion.html#word">word</A>&quot;,
+				dictionary containing the entries &quot;<A HREF="motion.html#word">单词</A>&quot;,
 				&quot;abbr&quot;, &quot;menu&quot;, &quot;kind&quot;, &quot;info&quot; and &quot;user_data&quot;.
 				See |<A HREF="insert.html#complete-items">complete-items</A>|.
 		   selected	Selected item index.  First index is zero.
@@ -2151,8 +2151,8 @@ expand({string} [, {nosuf} [, {list}]])				*<A NAME="expand()"></A><B>expand()</
 					a function
 			<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>		&quot;&lt;SNR&gt;123_&quot;  where &quot;123&quot; is the
 					current <A HREF="usr_41.html#script">script</A> ID  |<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>|
-			<A HREF="cmdline.html#&lt;cword&gt;">&lt;cword&gt;</A>		<A HREF="motion.html#word">word</A> under the cursor
-			<A HREF="cmdline.html#&lt;cWORD&gt;">&lt;cWORD&gt;</A>		<A HREF="motion.html#WORD">WORD</A> under the cursor
+			<A HREF="cmdline.html#&lt;cword&gt;">&lt;cword&gt;</A>		<A HREF="motion.html#word">单词</A> under the cursor
+			<A HREF="cmdline.html#&lt;cWORD&gt;">&lt;cWORD&gt;</A>		<A HREF="motion.html#word">单词</A> under the cursor
 			&lt;client&gt;	the {clientid} of the last received
 					message
 		Modifiers:
@@ -6704,7 +6704,7 @@ search({pattern} [, {flags} [, {stopline} [, {timeout} [, {skip}]]]])
  		This will search for the keywords &quot;if&quot;, &quot;else&quot;, and &quot;endif&quot;
 		under or after the cursor.  Because of the '<A HREF="change.html#p">p</A>' flag, <A HREF="motion.html#it">it</A>
 		returns 1, 2, or 3 depending on which keyword is found, or 0
-		if the search fails.  With the cursor on the first <A HREF="motion.html#word">word</A> of the
+		if the search fails.  With the cursor on the first <A HREF="motion.html#word">单词</A> of the
 		line:
 <B><FONT color="#3A6F2B">		    if (foo == 0) | let foo = foo + 1 | endif </FONT></B>
 		the function returns 1.  Without the '<A HREF="change.html#c">c</A>' flag, the function
@@ -6934,7 +6934,7 @@ searchpair({start}, {middle}, {end} [, {flags} [, {skip}
 		to be found.  Note that single-quote strings are used to avoid
 		having to double the backslashes.  The skip <A HREF="eval.html#expression">expression</A> only
 		catches comments at the start of a line, not after a command.
-		Also, a <A HREF="motion.html#word">word</A> &quot;en&quot; or &quot;if&quot; halfway through a line is considered
+		Also, a <A HREF="motion.html#word">单词</A> &quot;en&quot; or &quot;if&quot; halfway through a line is considered
 		a match.
 		Another example, to search for the matching &quot;<A HREF="motion.html#{">{</A>&quot; of a &quot;<A HREF="motion.html#}">}</A>&quot;:
 
@@ -7792,22 +7792,22 @@ soundfold({word})
 
 							*<A NAME="spellbadword()"></A><B>spellbadword()</B>*
 spellbadword([{sentence}])
-		Without argument: The result is the badly spelled <A HREF="motion.html#word">word</A> under
+		Without argument: The result is the badly spelled <A HREF="motion.html#word">单词</A> under
 		or after the cursor.  The cursor is moved to the start of the
-		bad <A HREF="motion.html#word">word</A>.  When no bad <A HREF="motion.html#word">word</A> is found in the cursor line the
+		bad <A HREF="motion.html#word">单词</A>.  When no bad <A HREF="motion.html#word">单词</A> is found in the cursor line the
 		result is an empty <A HREF="eval.html#string">string</A> and the cursor doesn't move.
 
-		With argument: The result is the first <A HREF="motion.html#word">word</A> in {sentence} that
+		With argument: The result is the first <A HREF="motion.html#word">单词</A> in {sentence} that
 		is badly spelled.  If there are no spelling mistakes the
 		result is an empty <A HREF="eval.html#string">string</A>.
 
 		The return value is a <A HREF="eval.html#list">list</A> with two items:
-		- The badly spelled <A HREF="motion.html#word">word</A> or an empty <A HREF="eval.html#string">string</A>.
+		- The badly spelled <A HREF="motion.html#word">单词</A> or an empty <A HREF="eval.html#string">string</A>.
 		- The type of the spelling error:
 			&quot;bad&quot;		spelling mistake
-			&quot;rare&quot;		rare <A HREF="motion.html#word">word</A>
-			&quot;local&quot;		<A HREF="motion.html#word">word</A> only valid in another region
-			&quot;caps&quot;		<A HREF="motion.html#word">word</A> should start with Capital
+			&quot;rare&quot;		rare <A HREF="motion.html#word">单词</A>
+			&quot;local&quot;		<A HREF="motion.html#word">单词</A> only valid in another region
+			&quot;caps&quot;		<A HREF="motion.html#word">单词</A> should start with Capital
 		Example:
 <B>			echo spellbadword("the quik brown fox")</B>
 <B><FONT color="#3A6F2B"> 			['quik', 'bad'] </FONT></B>
@@ -7829,12 +7829,12 @@ spellsuggest({word} [, {max} [, {capital}]])
 		suggestions with a leading capital will be given.  Use this
 		after a match with <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A>.
 
-		{word} can be a badly spelled <A HREF="motion.html#word">word</A> followed by other text.
+		{word} can be a badly spelled <A HREF="motion.html#word">单词</A> followed by other text.
 		This allows for joining two words that were split.  The
 		suggestions also include the following text, thus you can
 		replace a line.
 
-		{word} may also be a good <A HREF="motion.html#word">word</A>.  Similar words will then be
+		{word} may also be a good <A HREF="motion.html#word">单词</A>.  Similar words will then be
 		returned.  {word} itself is not included in the suggestions,
 		although <A HREF="motion.html#it">it</A> may appear capitalized.
 

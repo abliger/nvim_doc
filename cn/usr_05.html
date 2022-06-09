@@ -280,7 +280,7 @@ compatible).  See <A HREF="options.html#'langremap'">'langremap'</A>.
 
 A <A HREF="map.html#mapping">mapping</A> enables you to bind a set of Vim commands to a single key.  Suppose,
 for example, that you need to surround certain words with curly braces.  In
-other words, you need to change a <A HREF="motion.html#word">word</A> such <A HREF="motion.html#as">as</A> &quot;amount&quot; into &quot;{amount}&quot;.  With
+other words, you need to change a <A HREF="motion.html#word">单词</A> such <A HREF="motion.html#as">as</A> &quot;amount&quot; into &quot;{amount}&quot;.  With
 the <A HREF="map.html#:map">:map</A> command, you can tell Vim that the F5 key does this <A HREF="job_control.html#job">job</A>.  The command
 is <A HREF="motion.html#as">as</A> follows:
 
@@ -298,19 +298,19 @@ Let's break this down:
 
     i{&lt;Esc&gt;	<A HREF="insert.html#Insert">Insert</A> the { character.  The <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key ends <A HREF="intro.html#Insert">插入</A>模式.
 
-    <A HREF="motion.html#e">e</A>		Move to the end of the <A HREF="motion.html#word">word</A>.
+    <A HREF="motion.html#e">e</A>		Move to the end of the <A HREF="motion.html#word">单词</A>.
 
-    a}&lt;Esc&gt;	Append the } to the <A HREF="motion.html#word">word</A>.
+    a}&lt;Esc&gt;	Append the } to the <A HREF="motion.html#word">单词</A>.
 
 After you execute the &quot;<A HREF="map.html#:map">:map</A>&quot; command, all you have to <A HREF="diff.html#do">do</A> to put <A HREF="intro.html#{}">{}</A> around a
-<A HREF="motion.html#word">word</A> is to put the cursor on the first character and press F5.
+<A HREF="motion.html#word">单词</A> is to put the cursor on the first character and press F5.
 
 In this example, the trigger is a single key; <A HREF="motion.html#it">it</A> can be any <A HREF="eval.html#string">string</A>.  But when
 you use an existing Vim command, that command will no longer be available.
 You better avoid that.
    One key that can be used with mappings is the <A HREF="intro.html#backslash">backslash</A>.  Since you
 probably want to define more than one <A HREF="map.html#mapping">mapping</A>, add another character.  You
-could map &quot;\p&quot; to add parentheses around a <A HREF="motion.html#word">word</A>, and &quot;\c&quot; to add curly braces,
+could map &quot;\p&quot; to add parentheses around a <A HREF="motion.html#word">单词</A>, and &quot;\c&quot; to add curly braces,
 for example:
 
 <B>	:map \p i(&lt;Esc&gt;ea)&lt;Esc&gt;</B>
@@ -657,7 +657,7 @@ white space <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#-">-</A>&
 
 KEYWORDS
 
-The <A HREF="options.html#'iskeyword'">'iskeyword'</A> option specifies which characters can appear in a <A HREF="motion.html#word">word</A>:
+The <A HREF="options.html#'iskeyword'">'iskeyword'</A> option specifies which characters can appear in a <A HREF="motion.html#word">单词</A>:
 
 <B>	:set iskeyword</B>
 <B><FONT color="#3A6F2B"> 	  iskeyword=@,48-57,_,192-255 </FONT></B>
@@ -666,7 +666,7 @@ The &quot;<A HREF="repeat.html#@">@</A>&quot; stands for all alphabetic letters.
 characters 48 to 57, which are the numbers 0 to 9.  &quot;192-255&quot; are the
 printable latin characters.
    Sometimes you will want to include a dash in keywords, so that commands
-like &quot;<A HREF="motion.html#w">w</A>&quot; consider &quot;upper-case&quot; to be one <A HREF="motion.html#word">word</A>.  You can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> like this:
+like &quot;<A HREF="motion.html#w">w</A>&quot; consider &quot;upper-case&quot; to be one <A HREF="motion.html#word">单词</A>.  You can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> like this:
 
 <B>	:set iskeyword+=-</B>
 <B>	:set iskeyword</B>

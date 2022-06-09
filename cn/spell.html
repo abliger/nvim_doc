@@ -94,32 +94,32 @@ This command switches on <A HREF="#spell">spell</A> checking:
 This switches on the <A HREF="options.html#'spell'">'spell'</A> option and specifies to check for US English.
 
 The words that are not recognized are highlighted with one of these:
-	SpellBad	<A HREF="motion.html#word">word</A> not recognized			|<A HREF="syntax.html#hl-SpellBad">hl-SpellBad</A>|
-	SpellCap	<A HREF="motion.html#word">word</A> not capitalised			|<A HREF="syntax.html#hl-SpellCap">hl-SpellCap</A>|
-	SpellRare	rare <A HREF="motion.html#word">word</A>				|<A HREF="syntax.html#hl-SpellRare">hl-SpellRare</A>|
+	SpellBad	<A HREF="motion.html#word">单词</A> not recognized			|<A HREF="syntax.html#hl-SpellBad">hl-SpellBad</A>|
+	SpellCap	<A HREF="motion.html#word">单词</A> not capitalised			|<A HREF="syntax.html#hl-SpellCap">hl-SpellCap</A>|
+	SpellRare	rare <A HREF="motion.html#word">单词</A>				|<A HREF="syntax.html#hl-SpellRare">hl-SpellRare</A>|
 	SpellLocal	wrong spelling for selected region	|<A HREF="syntax.html#hl-SpellLocal">hl-SpellLocal</A>|
 
 Vim only checks words for spelling, there is no grammar check.
 
 If the <A HREF="options.html#'mousemodel'">'mousemodel'</A> option is set to &quot;popup&quot; and the cursor is on a badly
-spelled <A HREF="motion.html#word">word</A> or <A HREF="motion.html#it">it</A> is &quot;popup_setpos&quot; and the mouse pointer is on a badly
-spelled <A HREF="motion.html#word">word</A>, then the popup menu will contain a submenu to replace the bad
-<A HREF="motion.html#word">word</A>.  Note: this slows down the appearance of the popup menu.
+spelled <A HREF="motion.html#word">单词</A> or <A HREF="motion.html#it">it</A> is &quot;popup_setpos&quot; and the mouse pointer is on a badly
+spelled <A HREF="motion.html#word">单词</A>, then the popup menu will contain a submenu to replace the bad
+<A HREF="motion.html#word">单词</A>.  Note: this slows down the appearance of the popup menu.
 
-To search for the next misspelled <A HREF="motion.html#word">word</A>:
+To search for the next misspelled <A HREF="motion.html#word">单词</A>:
 
 
 							*<A NAME="]s"></A><B>]s</B>*
-<A HREF="#]s">]s</A>			Move to next misspelled <A HREF="motion.html#word">word</A> after the cursor.
+<A HREF="#]s">]s</A>			Move to next misspelled <A HREF="motion.html#word">单词</A> after the cursor.
 			A <A HREF="intro.html#count">count</A> before the command can be used to repeat.
 			<A HREF="options.html#'wrapscan'">'wrapscan'</A> applies.
 
 
 							*<A NAME="[s"></A><B>[s</B>*
 <A HREF="#[s">[s</A>			Like &quot;<A HREF="#]s">]s</A>&quot; but search backwards, find the misspelled
-			<A HREF="motion.html#word">word</A> before the cursor.  Doesn't recognize words
+			<A HREF="motion.html#word">单词</A> before the cursor.  Doesn't recognize words
 			split over two lines, thus may stop at words that are
-			not highlighted <A HREF="motion.html#as">as</A> bad.  Does not stop at <A HREF="motion.html#word">word</A> with
+			not highlighted <A HREF="motion.html#as">as</A> bad.  Does not stop at <A HREF="motion.html#word">单词</A> with
 			missing capital at the start of a line.
 
 
@@ -132,76 +132,76 @@ To search for the next misspelled <A HREF="motion.html#word">word</A>:
 <A HREF="#[S">[S</A>			Like &quot;<A HREF="#]S">]S</A>&quot; but search backwards.
 
 
-To add words to your own <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>:
+To add words to your own <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>:
 
 
 							*<A NAME="zg"></A><B>zg</B>*
-<A HREF="#zg">zg</A>			Add <A HREF="motion.html#word">word</A> under the cursor <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">word</A> to the first
+<A HREF="#zg">zg</A>			Add <A HREF="motion.html#word">单词</A> under the cursor <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">单词</A> to the first
 			name in <A HREF="options.html#'spellfile'">'spellfile'</A>.  A <A HREF="intro.html#count">count</A> may precede the command
 			to indicate the entry in <A HREF="options.html#'spellfile'">'spellfile'</A> to be used.  A
 			<A HREF="intro.html#count">count</A> of two uses the second entry.
 
 			In <A HREF="visual.html#Visual">Visual</A> mode the selected characters are added <A HREF="motion.html#as">as</A> a
-			<A HREF="motion.html#word">word</A> (including white space!).
+			<A HREF="motion.html#word">单词</A> (including white space!).
 			When the cursor is on text that is marked <A HREF="motion.html#as">as</A> badly
 			spelled then the marked text is used.
-			Otherwise the <A HREF="motion.html#word">word</A> under the cursor, separated by
+			Otherwise the <A HREF="motion.html#word">单词</A> under the cursor, separated by
 			non-word characters, is used.
 
-			If the <A HREF="motion.html#word">word</A> is explicitly marked <A HREF="motion.html#as">as</A> bad <A HREF="motion.html#word">word</A> in
+			If the <A HREF="motion.html#word">单词</A> is explicitly marked <A HREF="motion.html#as">as</A> bad <A HREF="motion.html#word">单词</A> in
 			another <A HREF="#spell">spell</A> file the result is unpredictable.
 
 
 							*<A NAME="zG"></A><B>zG</B>*
-<A HREF="#zG">zG</A>			Like &quot;<A HREF="#zg">zg</A>&quot; but add the <A HREF="motion.html#word">word</A> to the internal <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>
+<A HREF="#zG">zG</A>			Like &quot;<A HREF="#zg">zg</A>&quot; but add the <A HREF="motion.html#word">单词</A> to the internal <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>
 			|<A HREF="#internal-wordlist">internal-wordlist</A>|.
 
 
 							*<A NAME="zw"></A><B>zw</B>*
-<A HREF="#zw">zw</A>			Like &quot;<A HREF="#zg">zg</A>&quot; but <A HREF="motion.html#mark">mark</A> the <A HREF="motion.html#word">word</A> <A HREF="motion.html#as">as</A> a wrong (bad) <A HREF="motion.html#word">word</A>.
-			If the <A HREF="motion.html#word">word</A> already appears in <A HREF="options.html#'spellfile'">'spellfile'</A> <A HREF="motion.html#it">it</A> is
+<A HREF="#zw">zw</A>			Like &quot;<A HREF="#zg">zg</A>&quot; but <A HREF="motion.html#mark">mark</A> the <A HREF="motion.html#word">单词</A> <A HREF="motion.html#as">as</A> a wrong (bad) <A HREF="motion.html#word">单词</A>.
+			If the <A HREF="motion.html#word">单词</A> already appears in <A HREF="options.html#'spellfile'">'spellfile'</A> <A HREF="motion.html#it">it</A> is
 			turned into a comment line.  See |<A HREF="#spellfile-cleanup">spellfile-cleanup</A>|
 			for getting rid of those.
 
 
 							*<A NAME="zW"></A><B>zW</B>*
-<A HREF="#zW">zW</A>			Like &quot;<A HREF="#zw">zw</A>&quot; but add the <A HREF="motion.html#word">word</A> to the internal <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>
+<A HREF="#zW">zW</A>			Like &quot;<A HREF="#zw">zw</A>&quot; but add the <A HREF="motion.html#word">单词</A> to the internal <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>
 			|<A HREF="#internal-wordlist">internal-wordlist</A>|.
 
 
 <A HREF="#zuw">zuw</A>							*<A NAME="zug"></A><B>zug</B>* *<A NAME="zuw"></A><B>zuw</B>*
-<A HREF="#zug">zug</A>			Undo |<A HREF="#zw">zw</A>| and |<A HREF="#zg">zg</A>|, remove the <A HREF="motion.html#word">word</A> from the entry in
+<A HREF="#zug">zug</A>			Undo |<A HREF="#zw">zw</A>| and |<A HREF="#zg">zg</A>|, remove the <A HREF="motion.html#word">单词</A> from the entry in
 			<A HREF="options.html#'spellfile'">'spellfile'</A>.  Count used <A HREF="motion.html#as">as</A> with |<A HREF="#zg">zg</A>|.
 
 
 <A HREF="#zuW">zuW</A>							*<A NAME="zuG"></A><B>zuG</B>* *<A NAME="zuW"></A><B>zuW</B>*
-<A HREF="#zuG">zuG</A>			Undo |<A HREF="#zW">zW</A>| and |<A HREF="#zG">zG</A>|, remove the <A HREF="motion.html#word">word</A> from the internal
-			<A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.  Count used <A HREF="motion.html#as">as</A> with |<A HREF="#zg">zg</A>|.
+<A HREF="#zuG">zuG</A>			Undo |<A HREF="#zW">zW</A>| and |<A HREF="#zG">zG</A>|, remove the <A HREF="motion.html#word">单词</A> from the internal
+			<A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.  Count used <A HREF="motion.html#as">as</A> with |<A HREF="#zg">zg</A>|.
 
 
 							*<A NAME=":spe"></A><B>:spe</B>* *<A NAME=":spellgood"></A><B>:spellgood</B>*
 :[count]spe[llgood] {word}
-			Add {word} <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">word</A> to <A HREF="options.html#'spellfile'">'spellfile'</A>, like with
+			Add {word} <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">单词</A> to <A HREF="options.html#'spellfile'">'spellfile'</A>, like with
 			|<A HREF="#zg">zg</A>|.  Without <A HREF="intro.html#count">count</A> the first name is used, with a
 			<A HREF="intro.html#count">count</A> of two the second entry, etc.
 
-:spe[llgood]! {word}	Add {word} <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">word</A> to the internal <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>,
+:spe[llgood]! {word}	Add {word} <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">单词</A> to the internal <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>,
 			like with |<A HREF="#zG">zG</A>|.
 
 
 							*<A NAME=":spellw"></A><B>:spellw</B>* *<A NAME=":spellwrong"></A><B>:spellwrong</B>*
 :[count]spellw[rong] {word}
-			Add {word} <A HREF="motion.html#as">as</A> a wrong (bad) <A HREF="motion.html#word">word</A> to <A HREF="options.html#'spellfile'">'spellfile'</A>, <A HREF="motion.html#as">as</A>
+			Add {word} <A HREF="motion.html#as">as</A> a wrong (bad) <A HREF="motion.html#word">单词</A> to <A HREF="options.html#'spellfile'">'spellfile'</A>, <A HREF="motion.html#as">as</A>
 			with |<A HREF="#zw">zw</A>|.  Without <A HREF="intro.html#count">count</A> the first name is used, with
 			a <A HREF="intro.html#count">count</A> of two the second entry, etc.
 
-:spellw[rong]! {word}	Add {word} <A HREF="motion.html#as">as</A> a wrong (bad) <A HREF="motion.html#word">word</A> to the internal <A HREF="motion.html#word">word</A>
+:spellw[rong]! {word}	Add {word} <A HREF="motion.html#as">as</A> a wrong (bad) <A HREF="motion.html#word">单词</A> to the internal <A HREF="motion.html#word">单词</A>
 			<A HREF="eval.html#list">list</A>, like with |<A HREF="#zW">zW</A>|.
 
 
 							*<A NAME=":spellra"></A><B>:spellra</B>* *<A NAME=":spellrare"></A><B>:spellrare</B>*
 :[count]spellr[are] {word}
-			Add {word} <A HREF="motion.html#as">as</A> a rare <A HREF="motion.html#word">word</A> to <A HREF="options.html#'spellfile'">'spellfile'</A>, similar to
+			Add {word} <A HREF="motion.html#as">as</A> a rare <A HREF="motion.html#word">单词</A> to <A HREF="options.html#'spellfile'">'spellfile'</A>, similar to
 			|<A HREF="#zw">zw</A>|.  Without <A HREF="intro.html#count">count</A> the first name is used, with
 			a <A HREF="intro.html#count">count</A> of two the second entry, etc.
 
@@ -213,7 +213,7 @@ To add words to your own <A HREF="motion.html#word">word</A> <A HREF="eval.html#
 <B>		nnoremap z/  :exe ':spellrare! ' .. expand('&lt;cWORD&gt;')&lt;CR&gt;</B>
  			|<A HREF="#:spellundo">:spellundo</A>|, |<A HREF="#zuw">zuw</A>|, or |<A HREF="#zuW">zuW</A>| can be used to undo this.
 
-:spellr[rare]! {word}	Add {word} <A HREF="motion.html#as">as</A> a rare <A HREF="motion.html#word">word</A> to the internal <A HREF="motion.html#word">word</A>
+:spellr[rare]! {word}	Add {word} <A HREF="motion.html#as">as</A> a rare <A HREF="motion.html#word">单词</A> to the internal <A HREF="motion.html#word">单词</A>
 			<A HREF="eval.html#list">list</A>, similar to |<A HREF="#zW">zW</A>|.
 
 
@@ -223,7 +223,7 @@ To add words to your own <A HREF="motion.html#word">word</A> <A HREF="eval.html#
 :spellu[ndo]! {word}	Like |<A HREF="#zuW">zuW</A>|.  <A HREF="intro.html#[count]">[count]</A> used <A HREF="motion.html#as">as</A> with |<A HREF="#:spellgood">:spellgood</A>|.
 
 
-After adding a <A HREF="motion.html#word">word</A> to <A HREF="options.html#'spellfile'">'spellfile'</A> with the above commands its associated
+After adding a <A HREF="motion.html#word">单词</A> to <A HREF="options.html#'spellfile'">'spellfile'</A> with the above commands its associated
 &quot;.spl&quot; file will automatically be updated and reloaded.  If you change
 <A HREF="options.html#'spellfile'">'spellfile'</A> manually you need to use the |<A HREF="#:mkspell">:mkspell</A>| command.  This sequence of
 commands mostly works well:
@@ -235,7 +235,7 @@ More details about the <A HREF="options.html#'spellfile'">'spellfile'</A> format
 
 
 							*<A NAME="internal-wordlist"></A><B>internal-wordlist</B>*
-The internal <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> is used for all <A HREF="windows.html#buffers">buffers</A> where <A HREF="options.html#'spell'">'spell'</A> is set.  It is
+The internal <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> is used for all <A HREF="windows.html#buffers">buffers</A> where <A HREF="options.html#'spell'">'spell'</A> is set.  It is
 not stored, <A HREF="motion.html#it">it</A> is lost when you exit Vim.  It is also cleared when <A HREF="options.html#'encoding'">'encoding'</A>
 is set.
 
@@ -243,13 +243,13 @@ is set.
 Finding suggestions for bad words:
 
 							*<A NAME="z="></A><B>z=</B>*
-<A HREF="#z=">z=</A>			For the <A HREF="motion.html#word">word</A> under/after the cursor suggest correctly
+<A HREF="#z=">z=</A>			For the <A HREF="motion.html#word">单词</A> under/after the cursor suggest correctly
 			spelled words.  This also works to find alternatives
-			for a <A HREF="motion.html#word">word</A> that is not highlighted <A HREF="motion.html#as">as</A> a bad <A HREF="motion.html#word">word</A>,
-			e.g., when the <A HREF="motion.html#word">word</A> after <A HREF="motion.html#it">it</A> is bad.
+			for a <A HREF="motion.html#word">单词</A> that is not highlighted <A HREF="motion.html#as">as</A> a bad <A HREF="motion.html#word">单词</A>,
+			e.g., when the <A HREF="motion.html#word">单词</A> after <A HREF="motion.html#it">it</A> is bad.
 			In <A HREF="visual.html#Visual">Visual</A> mode the highlighted text is taken <A HREF="motion.html#as">as</A> the
-			<A HREF="motion.html#word">word</A> to be replaced.
-			The results are sorted on similarity to the <A HREF="motion.html#word">word</A> being
+			<A HREF="motion.html#word">单词</A> to be replaced.
+			The results are sorted on similarity to the <A HREF="motion.html#word">单词</A> being
 			replaced.
 			This may take a long time.  Hit <A HREF="pattern.html#CTRL-C">CTRL-C</A> when you get
 			bored.
@@ -263,7 +263,7 @@ Finding suggestions for bad words:
 			first line (the header) to cancel.
 
 			The suggestions listed normally replace a highlighted
-			bad <A HREF="motion.html#word">word</A>.  Sometimes they include other text, in that
+			bad <A HREF="motion.html#word">单词</A>.  Sometimes they include other text, in that
 			<A HREF="change.html#case">case</A> the replaced text is also listed after a &quot;<A HREF="change.html#&lt;">&lt;</A>&quot;.
 
 			If a <A HREF="intro.html#count">count</A> is used that suggestion is used, without
@@ -272,27 +272,27 @@ Finding suggestions for bad words:
 
 			If <A HREF="options.html#'verbose'">'verbose'</A> is non-zero a score will be displayed
 			with the suggestions to indicate the likeliness to the
-			badly spelled <A HREF="motion.html#word">word</A> (the higher the score the more
+			badly spelled <A HREF="motion.html#word">单词</A> (the higher the score the more
 			different).
-			When a <A HREF="motion.html#word">word</A> was replaced the <A HREF="undo.html#redo">redo</A> command &quot;<A HREF="repeat.html#.">.</A>&quot; will
-			repeat the <A HREF="motion.html#word">word</A> replacement.  This works like &quot;ciw&quot;,
-			the good <A HREF="motion.html#word">word</A> and <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.  This does NOT work for Thai
+			When a <A HREF="motion.html#word">单词</A> was replaced the <A HREF="undo.html#redo">redo</A> command &quot;<A HREF="repeat.html#.">.</A>&quot; will
+			repeat the <A HREF="motion.html#word">单词</A> replacement.  This works like &quot;ciw&quot;,
+			the good <A HREF="motion.html#word">单词</A> and <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.  This does NOT work for Thai
 			and other languages without spaces between words.
 
 
 					*<A NAME=":spellr"></A><B>:spellr</B>* *<A NAME=":spellrepall"></A><B>:spellrepall</B>* *<A NAME="E752"></A><B>E752</B>* *<A NAME="E753"></A><B>E753</B>*
 :spellr[epall]		Repeat the replacement done by |<A HREF="#z=">z=</A>| for all matches
-			with the replaced <A HREF="motion.html#word">word</A> in the current<A HREF="windows.html#window">窗口</A>.
+			with the replaced <A HREF="motion.html#word">单词</A> in the current<A HREF="windows.html#window">窗口</A>.
 
-In <A HREF="intro.html#Insert">插入</A>模式, when the cursor is after a badly spelled <A HREF="motion.html#word">word</A>, you can use
+In <A HREF="intro.html#Insert">插入</A>模式, when the cursor is after a badly spelled <A HREF="motion.html#word">单词</A>, you can use
 <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="change.html#s">s</A> to find suggestions.  This works like <A HREF="intro.html#Insert">插入</A>模式 completion.  Use
 <A HREF="motion.html#CTRL-N">CTRL-N</A> to use the next suggestion, <A HREF="motion.html#CTRL-P">CTRL-P</A> to go back. |<A HREF="insert.html#i_CTRL-X_s">i_CTRL-X_s</A>|
 
 The <A HREF="options.html#'spellsuggest'">'spellsuggest'</A> option influences how the <A HREF="eval.html#list">list</A> of suggestions is generated
 and sorted.  See |<A HREF="options.html#'spellsuggest'">'spellsuggest'</A>|.
 
-The <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> option is used to check the first <A HREF="motion.html#word">word</A> of a <A HREF="motion.html#sentence">sentence</A>
-starts with a capital.  This doesn't work for the first <A HREF="motion.html#word">word</A> in the file.
+The <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> option is used to check the first <A HREF="motion.html#word">单词</A> of a <A HREF="motion.html#sentence">sentence</A>
+starts with a capital.  This doesn't work for the first <A HREF="motion.html#word">单词</A> in the file.
 When there is a line break right after a <A HREF="motion.html#sentence">sentence</A> the highlighting of the next
 line may be postponed.  Use |<A HREF="various.html#CTRL-L">CTRL-L</A>| when needed.  Also see |<A HREF="#set-spc-auto">set-spc-auto</A>| for
 how <A HREF="motion.html#it">it</A> can be set automatically when <A HREF="options.html#'spelllang'">'spelllang'</A> is set.
@@ -300,7 +300,7 @@ how <A HREF="motion.html#it">it</A> can be set automatically when <A HREF="optio
 The <A HREF="options.html#'spelloptions'">'spelloptions'</A> option has a few more flags that influence the way <A HREF="#spell">spell</A>
 checking works.
 
-Vim counts the number of times a good <A HREF="motion.html#word">word</A> is encountered.  This is used to
+Vim counts the number of times a good <A HREF="motion.html#word">单词</A> is encountered.  This is used to
 sort the suggestions: words that have been seen before get a small bonus,
 words that have been seen often get a bigger bonus.  The COMMON item in the
 affix file can be used to define common words, so that this mechanism also
@@ -312,18 +312,18 @@ works in a new or short file |<A HREF="#spell-COMMON">spell-COMMON</A>|.
 
 PERFORMANCE
 
-Vim does on-the-fly <A HREF="#spell">spell</A> checking.  To make this work fast the <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> is
+Vim does on-the-fly <A HREF="#spell">spell</A> checking.  To make this work fast the <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> is
 loaded in memory.  Thus this uses a lot of memory (1 Mbyte or more).  There
-might also be a noticeable delay when the <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> is loaded, which happens
+might also be a noticeable delay when the <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> is loaded, which happens
 when <A HREF="options.html#'spell'">'spell'</A> is set and when <A HREF="options.html#'spelllang'">'spelllang'</A> is set while <A HREF="options.html#'spell'">'spell'</A> was already set.
-To minimize the delay each <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> is only loaded once, <A HREF="motion.html#it">it</A> is not deleted
+To minimize the delay each <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> is only loaded once, <A HREF="motion.html#it">it</A> is not deleted
 when <A HREF="options.html#'spelllang'">'spelllang'</A> is made empty or <A HREF="options.html#'spell'">'spell'</A> is reset.  When <A HREF="options.html#'encoding'">'encoding'</A> is set
-all the <A HREF="motion.html#word">word</A> lists are reloaded, thus you may notice a delay then too.
+all the <A HREF="motion.html#word">单词</A> lists are reloaded, thus you may notice a delay then too.
 
 
 REGIONS
 
-A <A HREF="motion.html#word">word</A> may be spelled differently in various regions.  For example, English
+A <A HREF="motion.html#word">单词</A> may be spelled differently in various regions.  For example, English
 comes in (at least) these variants:
 
 	en		all regions
@@ -338,7 +338,7 @@ highlighted with SpellLocal |<A HREF="syntax.html#hl-SpellLocal">hl-SpellLocal</
 
 Always use <A HREF="change.html#lowercase">lowercase</A> letters for the language and region names.
 
-When adding a <A HREF="motion.html#word">word</A> with |<A HREF="#zg">zg</A>| or another command it's always added for all
+When adding a <A HREF="motion.html#word">单词</A> with |<A HREF="#zg">zg</A>| or another command it's always added for all
 regions.  You can change that by manually editing the <A HREF="options.html#'spellfile'">'spellfile'</A>.  See
 |<A HREF="#spell-wordlist-format">spell-wordlist-format</A>|.  Note that the regions <A HREF="motion.html#as">as</A> specified in the files in
 <A HREF="options.html#'spellfile'">'spellfile'</A> are only used when all entries in <A HREF="options.html#'spelllang'">'spelllang'</A> specify the same
@@ -480,22 +480,22 @@ The default is one second.
 
 WORDS
 
-Vim uses a fixed <A HREF="eval.html#method">method</A> to recognize a <A HREF="motion.html#word">word</A>.  This is independent of
+Vim uses a fixed <A HREF="eval.html#method">method</A> to recognize a <A HREF="motion.html#word">单词</A>.  This is independent of
 <A HREF="options.html#'iskeyword'">'iskeyword'</A>, so that <A HREF="motion.html#it">it</A> also works in help files and for languages that
-include characters like '<A HREF="motion.html#-">-</A>' in <A HREF="options.html#'iskeyword'">'iskeyword'</A>.  The <A HREF="motion.html#word">word</A> characters <A HREF="diff.html#do">do</A> depend on
+include characters like '<A HREF="motion.html#-">-</A>' in <A HREF="options.html#'iskeyword'">'iskeyword'</A>.  The <A HREF="motion.html#word">单词</A> characters <A HREF="diff.html#do">do</A> depend on
 <A HREF="options.html#'encoding'">'encoding'</A>.
 
-The table with <A HREF="motion.html#word">word</A> characters is stored in the main .spl file.  Therefore <A HREF="motion.html#it">it</A>
+The table with <A HREF="motion.html#word">单词</A> characters is stored in the main .spl file.  Therefore <A HREF="motion.html#it">it</A>
 matters what the current <A HREF="mbyte.html#locale">locale</A> is when generating <A HREF="motion.html#it">it</A>!  A .add.spl file does
-not contain a <A HREF="motion.html#word">word</A> table though.
+not contain a <A HREF="motion.html#word">单词</A> table though.
 
-For a <A HREF="motion.html#word">word</A> that starts with a digit the digit is ignored, unless the <A HREF="motion.html#word">word</A> <A HREF="motion.html#as">as</A> a
-whole is recognized.  Thus if &quot;3D&quot; is a <A HREF="motion.html#word">word</A> and &quot;<A HREF="change.html#D">D</A>&quot; is not then &quot;3D&quot; is
-recognized <A HREF="motion.html#as">as</A> a <A HREF="motion.html#word">word</A>, but if &quot;3D&quot; is not a <A HREF="motion.html#word">word</A> then only the &quot;<A HREF="change.html#D">D</A>&quot; is marked <A HREF="motion.html#as">as</A>
+For a <A HREF="motion.html#word">单词</A> that starts with a digit the digit is ignored, unless the <A HREF="motion.html#word">单词</A> <A HREF="motion.html#as">as</A> a
+whole is recognized.  Thus if &quot;3D&quot; is a <A HREF="motion.html#word">单词</A> and &quot;<A HREF="change.html#D">D</A>&quot; is not then &quot;3D&quot; is
+recognized <A HREF="motion.html#as">as</A> a <A HREF="motion.html#word">单词</A>, but if &quot;3D&quot; is not a <A HREF="motion.html#word">单词</A> then only the &quot;<A HREF="change.html#D">D</A>&quot; is marked <A HREF="motion.html#as">as</A>
 bad.  Hex numbers in the form 0x12ab and 0X12AB are recognized.
 
 
-<A HREF="motion.html#WORD">WORD</A> COMBINATIONS
+<A HREF="motion.html#word">单词</A> COMBINATIONS
 
 It is possible to spell-check words that include a space.  This is used to
 recognize words that are invalid when used by themselves, e.g. for &quot;et al.&quot;.
@@ -507,7 +507,7 @@ for spelling mistakes.  When you make a change to one line and only that line
 is redrawn Vim won't look in the previous line, thus when &quot;et&quot; is at the end
 of the previous line &quot;al.&quot; will be flagged <A HREF="motion.html#as">as</A> an error.  And when you type
 &quot;the&lt;CR&gt;the&quot; the highlighting doesn't appear until the first line is redrawn.
-Use |<A HREF="various.html#CTRL-L">CTRL-L</A>| to redraw right away.  &quot;<A HREF="#[s">[s</A>&quot; will also stop at a <A HREF="motion.html#word">word</A> combination
+Use |<A HREF="various.html#CTRL-L">CTRL-L</A>| to redraw right away.  &quot;<A HREF="#[s">[s</A>&quot; will also stop at a <A HREF="motion.html#word">单词</A> combination
 with a line break.
 
 When encountering a line break Vim skips characters such <A HREF="motion.html#as">as</A> '*', '<A HREF="change.html#&gt;">&gt;</A>' and &#39;&#34;'',
@@ -535,9 +535,9 @@ VIM SCRIPTS
 If you want to write a Vim <A HREF="usr_41.html#script">script</A> that does something with spelling, you may
 find these <A HREF="eval.html#functions">functions</A> useful:
 
-    <A HREF="builtin.html#spellbadword()">spellbadword()</A>	find badly spelled <A HREF="motion.html#word">word</A> at the cursor
+    <A HREF="builtin.html#spellbadword()">spellbadword()</A>	find badly spelled <A HREF="motion.html#word">单词</A> at the cursor
     <A HREF="builtin.html#spellsuggest()">spellsuggest()</A>	get <A HREF="eval.html#list">list</A> of spelling suggestions
-    <A HREF="builtin.html#soundfold()">soundfold()</A>		get the sound-a-like version of a <A HREF="motion.html#word">word</A>
+    <A HREF="builtin.html#soundfold()">soundfold()</A>		get the sound-a-like version of a <A HREF="motion.html#word">单词</A>
 
 
 
@@ -563,12 +563,12 @@ The <A HREF="options.html#'spellsuggest'">'spellsuggest'</A> option can be used 
 mechanism is based on the principle that there are two kinds of spelling
 mistakes:
 
-1. You know how to <A HREF="#spell">spell</A> the <A HREF="motion.html#word">word</A>, but mistype something.  This results in a
+1. You know how to <A HREF="#spell">spell</A> the <A HREF="motion.html#word">单词</A>, but mistype something.  This results in a
    small editing distance (character swapped/omitted/inserted) and possibly a
-   <A HREF="motion.html#word">word</A> that sounds completely different.
+   <A HREF="motion.html#word">单词</A> that sounds completely different.
 
-2. You don't know how to <A HREF="#spell">spell</A> the <A HREF="motion.html#word">word</A> and type something that sounds right.
-   The edit distance can be big but the <A HREF="motion.html#word">word</A> is similar after sound-folding.
+2. You don't know how to <A HREF="#spell">spell</A> the <A HREF="motion.html#word">单词</A> and type something that sounds right.
+   The edit distance can be big but the <A HREF="motion.html#word">单词</A> is similar after sound-folding.
 
 Since scores for these two mistakes will be very different we use a <A HREF="eval.html#list">list</A>
 for each and mix them.
@@ -582,7 +582,7 @@ preferred <A HREF="eval.html#method">method</A> for scoring the suggestions.
 3. Generating a <A HREF="#spell">spell</A> file				*<A NAME="spell-mkspell"></A><B>spell-mkspell</B>*
 
 Vim uses a binary file format for spelling.  This greatly speeds up loading
-the <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> and keeps <A HREF="motion.html#it">it</A> small.
+the <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> and keeps <A HREF="motion.html#it">it</A> small.
 
 						    *<A NAME=".aff"></A><B>.aff</B>* *<A NAME=".dic"></A><B>.dic</B>* *<A NAME="Myspell"></A><B>Myspell</B>*
 You can create a Vim <A HREF="#spell">spell</A> file from the <A HREF="#.aff">.aff</A> and <A HREF="#.dic">.dic</A> files that <A HREF="#Myspell">Myspell</A>
@@ -592,8 +592,8 @@ to find them here:
 	<A HREF="http://extensions.services.openoffice.org/dictionary">http://extensions.services.openoffice.org/dictionary</A>
 The older, OpenOffice 2 files may be used if this doesn't work:
 	<A HREF="http://wiki.services.openoffice.org/wiki/Dictionaries">http://wiki.services.openoffice.org/wiki/Dictionaries</A>
-You can also use a plain <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.  The results are the same, the choice
-depends on what <A HREF="motion.html#word">word</A> lists you can find.
+You can also use a plain <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.  The results are the same, the choice
+depends on what <A HREF="motion.html#word">单词</A> lists you can find.
 
 If you install Aap (from www.a-a-p.org) you can use the recipes in the
 runtime/spell/??/ directories.  Aap will take care of downloading the files,
@@ -602,14 +602,14 @@ apply patches needed for Vim and build the .spl file.
 Make sure your current <A HREF="mbyte.html#locale">locale</A> is set properly, otherwise Vim doesn't know what
 characters are upper/lower <A HREF="change.html#case">case</A> letters.  If the <A HREF="mbyte.html#locale">locale</A> isn't available (e.g.,
 when using an MS-Windows codepage on Unix) add tables to the <A HREF="#.aff">.aff</A> file
-|<A HREF="#spell-affix-chars">spell-affix-chars</A>|.  If the <A HREF="#.aff">.aff</A> file doesn't define a table then the <A HREF="motion.html#word">word</A>
+|<A HREF="#spell-affix-chars">spell-affix-chars</A>|.  If the <A HREF="#.aff">.aff</A> file doesn't define a table then the <A HREF="motion.html#word">单词</A>
 table of the currently active spelling is used.  If spelling is not active
 then Vim will try to guess.
 
 
 							*<A NAME=":mksp"></A><B>:mksp</B>* *<A NAME=":mkspell"></A><B>:mkspell</B>*
 :mksp[ell][!] [-ascii] {outname} {inname} <A HREF="eval.html#...">...</A>
-			Generate a Vim <A HREF="#spell">spell</A> file from <A HREF="motion.html#word">word</A> lists.  Example:
+			Generate a Vim <A HREF="#spell">spell</A> file from <A HREF="motion.html#word">单词</A> lists.  Example:
 <B>		:mkspell /tmp/nl nl_NL.words</B>
 
  								*<A NAME="E751"></A><B>E751</B>*
@@ -628,13 +628,13 @@ then Vim will try to guess.
 
 			The input can be the <A HREF="#Myspell">Myspell</A> format files {inname}.aff
 			and {inname}.dic.  If {inname}.aff does not exist then
-			{inname} is used <A HREF="motion.html#as">as</A> the file name of a plain <A HREF="motion.html#word">word</A>
+			{inname} is used <A HREF="motion.html#as">as</A> the file name of a plain <A HREF="motion.html#word">单词</A>
 			<A HREF="eval.html#list">list</A>.
 
 			Multiple {inname} arguments can be given to combine
 			regions into one Vim <A HREF="#spell">spell</A> file.  Example:
 <B>		:mkspell ~/.config/nvim/spell/en /tmp/en_US /tmp/en_CA /tmp/en_AU</B>
- 			This combines the English <A HREF="motion.html#word">word</A> lists for US, CA and AU
+ 			This combines the English <A HREF="motion.html#word">单词</A> lists for US, CA and AU
 			into one en.spl file.
 
 			Up to eight regions can be combined. *<A NAME="E754"></A><B>E754</B>* *<A NAME="E755"></A><B>E755</B>*
@@ -643,7 +643,7 @@ then Vim will try to guess.
 
 								*<A NAME="E845"></A><B>E845</B>*
 			This command uses a lot of memory, required to find
-			the optimal <A HREF="motion.html#word">word</A> tree (Polish, Italian and Hungarian
+			the optimal <A HREF="motion.html#word">单词</A> tree (Polish, Italian and Hungarian
 			require several hundred Mbyte).  The final result will
 			be much smaller, because compression is used.  To
 			avoid running out of memory compression will be done
@@ -665,17 +665,17 @@ then Vim will try to guess.
 
 Vim will report the number of duplicate words.  This might be a mistake in the
 <A HREF="eval.html#list">list</A> of words.  But sometimes <A HREF="motion.html#it">it</A> is used to have different prefixes and
-<A HREF="cmdline.html#suffixes">suffixes</A> for the same basic <A HREF="motion.html#word">word</A> to avoid them combining (e.g. Czech uses
+<A HREF="cmdline.html#suffixes">suffixes</A> for the same basic <A HREF="motion.html#word">单词</A> to avoid them combining (e.g. Czech uses
 this).  If you want Vim to report all duplicate words set the <A HREF="options.html#'verbose'">'verbose'</A>
 option.
 
-Since you might want to change a <A HREF="#Myspell">Myspell</A> <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> for use with Vim the
+Since you might want to change a <A HREF="#Myspell">Myspell</A> <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> for use with Vim the
 following procedure is recommended:
 
 1. Obtain the xx_YY.aff and xx_YY.dic files from <A HREF="#Myspell">Myspell</A>.
 2. Make a copy of these files to xx_YY.orig.aff and xx_YY.orig.dic.
 3. Change the xx_YY.aff and xx_YY.dic files to remove bad words, add missing
-   words, define <A HREF="motion.html#word">word</A> characters with FOL/LOW/UPP, etc.  The distributed
+   words, define <A HREF="motion.html#word">单词</A> characters with FOL/LOW/UPP, etc.  The distributed
    &quot;*.diff&quot; files can be used.
 4. Start Vim with the right <A HREF="mbyte.html#locale">locale</A> and use |<A HREF="#:mkspell">:mkspell</A>| to generate the Vim
    <A HREF="#spell">spell</A> file.
@@ -724,8 +724,8 @@ used spelling files, use this command:
 			Note: For some languages the result may be enormous,
 			causing Vim to run out of memory.
 
-:spelld[ump]!		Like &quot;<A HREF="#:spelldump">:spelldump</A>&quot; and include the <A HREF="motion.html#word">word</A> <A HREF="intro.html#count">count</A>.  This is
-			the number of times the <A HREF="motion.html#word">word</A> was found while
+:spelld[ump]!		Like &quot;<A HREF="#:spelldump">:spelldump</A>&quot; and include the <A HREF="motion.html#word">单词</A> <A HREF="intro.html#count">count</A>.  This is
+			the number of times the <A HREF="motion.html#word">单词</A> was found while
 			updating the screen.  Words that are in COMMON items
 			get a starting <A HREF="intro.html#count">count</A> of 10.
 
@@ -794,14 +794,14 @@ buffer the user was editing.
 4. Spell file format					*<A NAME="spell-file-format"></A><B>spell-file-format</B>*
 
 This is the format of the files that are used by the person who creates and
-maintains a <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.
+maintains a <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.
 
-Note that we avoid the <A HREF="motion.html#word">word</A> &quot;dictionary&quot; here.  That is because the goal of
+Note that we avoid the <A HREF="motion.html#word">单词</A> &quot;dictionary&quot; here.  That is because the goal of
 <A HREF="#spell">spell</A> checking differs from <A HREF="editing.html#writing">writing</A> a dictionary (as in the <A HREF="intro.html#book">book</A>).  For
 spelling we need a <A HREF="eval.html#list">list</A> of words that are OK, thus should not be highlighted.
 Person and company names will not appear in a dictionary, but <A HREF="diff.html#do">do</A> appear in a
-<A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.  And some old words are rarely used while they are common
-misspellings.  These <A HREF="diff.html#do">do</A> appear in a dictionary but not in a <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.
+<A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.  And some old words are rarely used while they are common
+misspellings.  These <A HREF="diff.html#do">do</A> appear in a dictionary but not in a <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.
 
 There are two formats: A straight <A HREF="eval.html#list">list</A> of words and a <A HREF="eval.html#list">list</A> using affix
 compression.  The files with affix compression are used by <A HREF="#Myspell">Myspell</A> (Mozilla
@@ -810,7 +810,7 @@ extension.
 
 
 
-FORMAT OF STRAIGHT <A HREF="motion.html#WORD">WORD</A> LIST				*<A NAME="spell-wordlist-format"></A><B>spell-wordlist-format</B>*
+FORMAT OF STRAIGHT <A HREF="motion.html#word">单词</A> LIST				*<A NAME="spell-wordlist-format"></A><B>spell-wordlist-format</B>*
 
 The words must appear one per line.  That is all that is required.
 
@@ -822,64 +822,64 @@ Additionally the following items are recognized:
 - Lines starting with a # are ignored (comment lines).
 
 <B><FONT color="#3A6F2B">	/encoding=utf-8 </FONT></B>
-- A line starting with &quot;/encoding=&quot;, before any <A HREF="motion.html#word">word</A>, specifies the encoding
+- A line starting with &quot;/encoding=&quot;, before any <A HREF="motion.html#word">单词</A>, specifies the encoding
   of the file.  After the second '<A HREF="change.html#=">=</A>' comes an encoding name.  This tells Vim
   to setup conversion from the specified encoding to <A HREF="options.html#'encoding'">'encoding'</A>.  Thus you can
-  use one <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> for several target encodings.
+  use one <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> for several target encodings.
 
 <B><FONT color="#3A6F2B">	/regions=usca </FONT></B>
 - A line starting with &quot;/regions=&quot; specifies the region names that are
   supported.  Each region name must be two ASCII letters.  The first one is
   region 1.  Thus &quot;/regions=usca&quot; has region 1 &quot;us&quot; and region 2 &quot;ca&quot;.
-  In an addition <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> the region names should be equal to the main <A HREF="motion.html#word">word</A>
+  In an addition <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> the region names should be equal to the main <A HREF="motion.html#word">单词</A>
   <A HREF="eval.html#list">list</A>!
 
 - Other lines starting with '<A HREF="pattern.html#/">/</A>' are reserved for future use.  The ones that
   are not recognized are ignored.  You <A HREF="diff.html#do">do</A> get a warning message, so that you
   know something won't work.
 
-- A &quot;<A HREF="pattern.html#/">/</A>&quot; may follow the <A HREF="motion.html#word">word</A> with the following items:
+- A &quot;<A HREF="pattern.html#/">/</A>&quot; may follow the <A HREF="motion.html#word">单词</A> with the following items:
     =		Case must match exactly.
-    ?		Rare <A HREF="motion.html#word">word</A>.
-    !		Bad (wrong) <A HREF="motion.html#word">word</A>.
-    1 to 9	A region in which the <A HREF="motion.html#word">word</A> is valid.  If no regions are
-		specified the <A HREF="motion.html#word">word</A> is valid in all regions.
+    ?		Rare <A HREF="motion.html#word">单词</A>.
+    !		Bad (wrong) <A HREF="motion.html#word">单词</A>.
+    1 to 9	A region in which the <A HREF="motion.html#word">单词</A> is valid.  If no regions are
+		specified the <A HREF="motion.html#word">单词</A> is valid in all regions.
 
 Example:
 
-	# This is an example <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>		comment
+	# This is an example <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>		comment
 	/encoding=latin1			encoding of the file
 	/regions=uscagb				regions &quot;us&quot;, &quot;ca&quot; and &quot;gb&quot;
-	example					<A HREF="motion.html#word">word</A> for all regions
-	blah/12					<A HREF="motion.html#word">word</A> for regions &quot;us&quot; and &quot;ca&quot;
-	vim/!					bad <A HREF="motion.html#word">word</A>
-	Campbell/?3				rare <A HREF="motion.html#word">word</A> in region 3 &quot;gb&quot;
-	's mornings/=				keep-case <A HREF="motion.html#word">word</A>
+	example					<A HREF="motion.html#word">单词</A> for all regions
+	blah/12					<A HREF="motion.html#word">单词</A> for regions &quot;us&quot; and &quot;ca&quot;
+	vim/!					bad <A HREF="motion.html#word">单词</A>
+	Campbell/?3				rare <A HREF="motion.html#word">单词</A> in region 3 &quot;gb&quot;
+	's mornings/=				keep-case <A HREF="motion.html#word">单词</A>
 
-Note that when &quot;/=&quot; is used the same <A HREF="motion.html#word">word</A> with all upper-case letters is not
-accepted.  This is different from a <A HREF="motion.html#word">word</A> with mixed <A HREF="change.html#case">case</A> that is automatically
+Note that when &quot;/=&quot; is used the same <A HREF="motion.html#word">单词</A> with all upper-case letters is not
+accepted.  This is different from a <A HREF="motion.html#word">单词</A> with mixed <A HREF="change.html#case">case</A> that is automatically
 marked <A HREF="motion.html#as">as</A> keep-case, those words may appear in all upper-case letters.
 
 
 
 FORMAT WITH .AFF AND .DIC FILES				*<A NAME="aff-dic-format"></A><B>aff-dic-format</B>*
 
-There are two files: the basic <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> and an affix file.  The affix file
+There are two files: the basic <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> and an affix file.  The affix file
 specifies settings for the language and can contain affixes.  The affixes are
-used to modify the basic words to get the full <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.  This significantly
+used to modify the basic words to get the full <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.  This significantly
 reduces the number of words, especially for a language like Polish.  This is
 called affix compression.
 
-The basic <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> and the affix file are combined with the &quot;<A HREF="#:mkspell">:mkspell</A>&quot;
+The basic <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> and the affix file are combined with the &quot;<A HREF="#:mkspell">:mkspell</A>&quot;
 command and results in a binary <A HREF="#spell">spell</A> file.  All the preprocessing has been
 done, thus this file loads fast.  The binary <A HREF="#spell">spell</A> file format is described in
 the source code (src/spell.c).  But only developers need to know about <A HREF="motion.html#it">it</A>.
 
 The preprocessing also allows us to take the <A HREF="#Myspell">Myspell</A> language files and modify
-them before the Vim <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> is made.  The tools for this can be found in the
+them before the Vim <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> is made.  The tools for this can be found in the
 &quot;src/spell&quot; directory.
 
-The format for the affix and <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> files is based on what <A HREF="#Myspell">Myspell</A> uses
+The format for the affix and <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> files is based on what <A HREF="#Myspell">Myspell</A> uses
 (the <A HREF="#spell">spell</A> checker of Mozilla and OpenOffice.org).  A description can be found
 here:
 <B><FONT color="#3A6F2B">	http://lingucomponent.openoffice.org/affix.readme </FONT></B>
@@ -892,7 +892,7 @@ that the same files can often be used.  One other project that offers more
 
 
 
-<A HREF="motion.html#WORD">WORD</A> LIST FORMAT				*<A NAME="spell-dic-format"></A><B>spell-dic-format</B>*
+<A HREF="motion.html#word">单词</A> LIST FORMAT				*<A NAME="spell-dic-format"></A><B>spell-dic-format</B>*
 
 A short example, with line numbers:
 
@@ -914,30 +914,30 @@ The first line contains the number of words.  Vim ignores <A HREF="motion.html#i
 
 an error message if it's not there.  *<A NAME="E760"></A><B>E760</B>*
 
-What follows is one <A HREF="motion.html#word">word</A> per line.  White space at the end of the line is
+What follows is one <A HREF="motion.html#word">单词</A> per line.  White space at the end of the line is
 ignored, all other white space matters.  The encoding is specified in the
 affix file |<A HREF="#spell-SET">spell-SET</A>|.
 
 Comment lines start with '<A HREF="pattern.html##">#</A>' or '<A HREF="pattern.html#/">/</A>'.  See the example lines 8 and 12.  Note
-that putting a comment after a <A HREF="motion.html#word">word</A> is NOT allowed:
+that putting a comment after a <A HREF="motion.html#word">单词</A> is NOT allowed:
 
 <B><FONT color="#3A6F2B">		someword   # comment that causes an error! </FONT></B>
 
-After the <A HREF="motion.html#word">word</A> there is an optional slash and flags.  Most of these flags are
-letters that indicate the affixes that can be used with this <A HREF="motion.html#word">word</A>.  These are
+After the <A HREF="motion.html#word">单词</A> there is an optional slash and flags.  Most of these flags are
+letters that indicate the affixes that can be used with this <A HREF="motion.html#word">单词</A>.  These are
 specified with SFX and PFX lines in the <A HREF="#.aff">.aff</A> file, see |<A HREF="#spell-SFX">spell-SFX</A>| and
 |<A HREF="#spell-PFX">spell-PFX</A>|.  Vim allows using other flag types with the FLAG item in the
 affix file |<A HREF="#spell-FLAG">spell-FLAG</A>|.
 
-When the <A HREF="motion.html#word">word</A> only has lower-case letters <A HREF="motion.html#it">it</A> will also match with the <A HREF="motion.html#word">word</A>
+When the <A HREF="motion.html#word">单词</A> only has lower-case letters <A HREF="motion.html#it">it</A> will also match with the <A HREF="motion.html#word">单词</A>
 starting with an upper-case <A HREF="print.html#letter">letter</A>.
 
-When the <A HREF="motion.html#word">word</A> includes an upper-case <A HREF="print.html#letter">letter</A>, this means the upper-case <A HREF="print.html#letter">letter</A>
-is required at this position.  The same <A HREF="motion.html#word">word</A> with a lower-case <A HREF="print.html#letter">letter</A> at this
+When the <A HREF="motion.html#word">单词</A> includes an upper-case <A HREF="print.html#letter">letter</A>, this means the upper-case <A HREF="print.html#letter">letter</A>
+is required at this position.  The same <A HREF="motion.html#word">单词</A> with a lower-case <A HREF="print.html#letter">letter</A> at this
 position will not match. When some of the other letters are upper-case <A HREF="motion.html#it">it</A> will
 not match either.
 
-The <A HREF="motion.html#word">word</A> with all upper-case characters will always be OK,
+The <A HREF="motion.html#word">单词</A> with all upper-case characters will always be OK,
 
 <B><FONT color="#3A6F2B">	word list	matches			does not match </FONT></B>
 	als		als Als ALS		ALs AlS aLs aLS
@@ -945,17 +945,17 @@ The <A HREF="motion.html#word">word</A> with all upper-case characters will alwa
 	ALS		ALS			als Als ALs AlS aLs aLS
 	AlS		AlS ALS			als Als ALs aLs aLS
 
-The KEEPCASE affix ID can be used to specifically match a <A HREF="motion.html#word">word</A> with identical
+The KEEPCASE affix ID can be used to specifically match a <A HREF="motion.html#word">单词</A> with identical
 <A HREF="change.html#case">case</A> only, see below |<A HREF="#spell-KEEPCASE">spell-KEEPCASE</A>|.
 
 Note: in line 5 to 7 non-word characters are used.  You can include any
-character in a <A HREF="motion.html#word">word</A>.  When checking the text a <A HREF="motion.html#word">word</A> still only matches when <A HREF="motion.html#it">it</A>
-appears with a non-word character before and after <A HREF="motion.html#it">it</A>.  For <A HREF="#Myspell">Myspell</A> a <A HREF="motion.html#word">word</A>
+character in a <A HREF="motion.html#word">单词</A>.  When checking the text a <A HREF="motion.html#word">单词</A> still only matches when <A HREF="motion.html#it">it</A>
+appears with a non-word character before and after <A HREF="motion.html#it">it</A>.  For <A HREF="#Myspell">Myspell</A> a <A HREF="motion.html#word">单词</A>
 starting with a non-word character probably won't work.
 
-In line 12 the <A HREF="motion.html#word">word</A> &quot;TCP/IP&quot; is defined.  Since the slash has a special
+In line 12 the <A HREF="motion.html#word">单词</A> &quot;TCP/IP&quot; is defined.  Since the slash has a special
 meaning the comma is used instead.  This is defined with the SLASH item in the
-affix file, see |<A HREF="#spell-SLASH">spell-SLASH</A>|.  Note that without this SLASH item the <A HREF="motion.html#word">word</A>
+affix file, see |<A HREF="#spell-SLASH">spell-SLASH</A>|.  Note that without this SLASH item the <A HREF="motion.html#word">单词</A>
 will be &quot;TCP,IP&quot;.
 
 
@@ -1030,7 +1030,7 @@ CHARACTER TABLES
 
 							*<A NAME="spell-affix-chars"></A><B>spell-affix-chars</B>*
 When using an 8-bit encoding the affix file should define what characters are
-<A HREF="motion.html#word">word</A> characters.  This is because the system where &quot;<A HREF="#:mkspell">:mkspell</A>&quot; is used may not
+<A HREF="motion.html#word">单词</A> characters.  This is because the system where &quot;<A HREF="#:mkspell">:mkspell</A>&quot; is used may not
 support a <A HREF="mbyte.html#locale">locale</A> with this encoding and isalpha() won't work.  For example
 when using &quot;cp1250&quot; on Unix.
 
@@ -1058,19 +1058,19 @@ is upper-case where it's different from the character at the same position in
 
 An exception is made for the German sharp <A HREF="change.html#s">s</A> ß.  The upper-case version is
 &quot;SS&quot;.  In the FOL/LOW/UPP lines <A HREF="motion.html#it">it</A> should be included, so that it's recognized
-<A HREF="motion.html#as">as</A> a <A HREF="motion.html#word">word</A> character, but use the ß character in all three.
+<A HREF="motion.html#as">as</A> a <A HREF="motion.html#word">单词</A> character, but use the ß character in all three.
 
 ASCII characters should be omitted, Vim always handles these in the same way.
-When the encoding is <A HREF="mbyte.html#UTF-8">UTF-8</A> no <A HREF="motion.html#word">word</A> characters need to be specified.
+When the encoding is <A HREF="mbyte.html#UTF-8">UTF-8</A> no <A HREF="motion.html#word">单词</A> characters need to be specified.
 
 
 							*<A NAME="E763"></A><B>E763</B>*
 Vim allows you to use <A HREF="#spell">spell</A> checking for several languages in the same file.
 You can <A HREF="eval.html#list">list</A> them in the <A HREF="options.html#'spelllang'">'spelllang'</A> option.  As a consequence all <A HREF="#spell">spell</A> files
-for the same encoding must use the same <A HREF="motion.html#word">word</A> characters, otherwise they can't
+for the same encoding must use the same <A HREF="motion.html#word">单词</A> characters, otherwise they can't
 be combined without <A HREF="message.html#errors">errors</A>.
 
-If you get an <A HREF="#E763">E763</A> warning that the <A HREF="motion.html#word">word</A> tables differ you need to update your
+If you get an <A HREF="#E763">E763</A> warning that the <A HREF="motion.html#word">单词</A> tables differ you need to update your
 &quot;.spl&quot; <A HREF="#spell">spell</A> files.  If you downloaded the files, get the latest version of
 all <A HREF="#spell">spell</A> files you use.  If you are only using one, e.g., German, then also
 <A HREF="intro.html#download">download</A> the recent English <A HREF="#spell">spell</A> files.  Otherwise generate the .spl file
@@ -1085,11 +1085,11 @@ for any encoding.  The .add.spl files also <A HREF="diff.html#do">do</A> not con
 MID-WORD CHARACTERS
 
 							*<A NAME="spell-midword"></A><B>spell-midword</B>*
-Some characters are only to be considered <A HREF="motion.html#word">word</A> characters if they are used in
-between two ordinary <A HREF="motion.html#word">word</A> characters.  An example is the single <A HREF="change.html#quote:">quote:</A> It is
-often used to put text in quotes, thus <A HREF="motion.html#it">it</A> can't be recognized <A HREF="motion.html#as">as</A> a <A HREF="motion.html#word">word</A>
-character, but when <A HREF="motion.html#it">it</A> appears in between <A HREF="motion.html#word">word</A> characters <A HREF="motion.html#it">it</A> must be part of
-the <A HREF="motion.html#word">word</A>.  This is needed to detect a spelling error such <A HREF="motion.html#as">as</A> they'are.  That
+Some characters are only to be considered <A HREF="motion.html#word">单词</A> characters if they are used in
+between two ordinary <A HREF="motion.html#word">单词</A> characters.  An example is the single <A HREF="change.html#quote:">quote:</A> It is
+often used to put text in quotes, thus <A HREF="motion.html#it">it</A> can't be recognized <A HREF="motion.html#as">as</A> a <A HREF="motion.html#word">单词</A>
+character, but when <A HREF="motion.html#it">it</A> appears in between <A HREF="motion.html#word">单词</A> characters <A HREF="motion.html#it">it</A> must be part of
+the <A HREF="motion.html#word">单词</A>.  This is needed to detect a spelling error such <A HREF="motion.html#as">as</A> they'are.  That
 should be they're, but since &quot;they&quot; and &quot;are&quot; are words themselves that would
 go unnoticed.
 
@@ -1101,8 +1101,8 @@ These characters are defined with MIDWORD in the <A HREF="#.aff">.aff</A> file. 
 
 FLAG TYPES						*<A NAME="spell-FLAG"></A><B>spell-FLAG</B>*
 
-Flags are used to specify the affixes that can be used with a <A HREF="motion.html#word">word</A> and for
-other properties of the <A HREF="motion.html#word">word</A>.  Normally single-character flags are used.  This
+Flags are used to specify the affixes that can be used with a <A HREF="motion.html#word">单词</A> and for
+other properties of the <A HREF="motion.html#word">单词</A>.  Normally single-character flags are used.  This
 <A HREF="vi_diff.html#limits">limits</A> the number of possible flags, especially for 8-bit encodings.  The FLAG
 item can be used if more affixes are to be used.  Possible values:
 
@@ -1143,7 +1143,7 @@ The first line is a header and has four fields:
 {flag}		The name used for the suffix.  Mostly it's a single <A HREF="print.html#letter">letter</A>,
 		but other characters can be used, see |<A HREF="#spell-FLAG">spell-FLAG</A>|.
 
-{combine}	Can be '<A HREF="change.html#Y">Y</A>' or '<A HREF="pattern.html#N">N</A>'.  When '<A HREF="change.html#Y">Y</A>' then the <A HREF="motion.html#word">word</A> plus suffix can
+{combine}	Can be '<A HREF="change.html#Y">Y</A>' or '<A HREF="pattern.html#N">N</A>'.  When '<A HREF="change.html#Y">Y</A>' then the <A HREF="motion.html#word">单词</A> plus suffix can
 		also have a prefix.  When '<A HREF="pattern.html#N">N</A>' then a prefix is not allowed.
 
 {count}		The number of lines following.  If this is wrong you will get
@@ -1156,19 +1156,19 @@ The basic format for the following lines is:
 
 {flag}		Must be the same <A HREF="motion.html#as">as</A> the {flag} used in the first line.
 
-{strip}		Characters removed from the basic <A HREF="motion.html#word">word</A>.  There is no check if
+{strip}		Characters removed from the basic <A HREF="motion.html#word">单词</A>.  There is no check if
 		the characters are actually there, only the length is used (in
 		bytes).  This better match the {condition}, otherwise strange
 		things may happen.  If the {strip} length is equal to or
-		longer than the basic <A HREF="motion.html#word">word</A> the suffix won't be used.
+		longer than the basic <A HREF="motion.html#word">单词</A> the suffix won't be used.
 		When {strip} is 0 (zero) then nothing is stripped.
 
-{add}		Characters added to the basic <A HREF="motion.html#word">word</A>, after removing {strip}.
+{add}		Characters added to the basic <A HREF="motion.html#word">单词</A>, after removing {strip}.
 		Optionally there is a '<A HREF="pattern.html#/">/</A>' followed by flags.  The flags apply
-		to the <A HREF="motion.html#word">word</A> plus affix.  See |<A HREF="#spell-affix-flags">spell-affix-flags</A>|
+		to the <A HREF="motion.html#word">单词</A> plus affix.  See |<A HREF="#spell-affix-flags">spell-affix-flags</A>|
 
 {condition}	A simplistic <A HREF="pattern.html#pattern">pattern</A>.  Only when this matches with a basic
-		<A HREF="motion.html#word">word</A> will the suffix be used for that <A HREF="motion.html#word">word</A>.  This is normally
+		<A HREF="motion.html#word">单词</A> will the suffix be used for that <A HREF="motion.html#word">单词</A>.  This is normally
 		for using one suffix <A HREF="print.html#letter">letter</A> with different {add} and {strip}
 		fields for words with different endings.
 		When {condition} is a . (dot) there is no condition.
@@ -1186,7 +1186,7 @@ The basic format for the following lines is:
 		    -			Hunspell uses this, ignored
 
 For PFX the fields are the same, but the {strip}, {add} and {condition} apply
-to the start of the <A HREF="motion.html#word">word</A>.
+to the start of the <A HREF="motion.html#word">单词</A>.
 
 Note: <A HREF="#Myspell">Myspell</A> ignores any extra text after the relevant info.  Vim requires
 this text to start with a &quot;<A HREF="pattern.html##">#</A>&quot; so that mistakes don't go unnoticed.  Example:
@@ -1213,8 +1213,8 @@ might also be a mistake, Vim checks for an extra &quot;<A HREF="change.html#S">S
 AFFIX FLAGS						*<A NAME="spell-affix-flags"></A><B>spell-affix-flags</B>*
 
 This is a feature that comes from Hunspell: The affix may specify flags.  This
-works similar to flags specified on a basic <A HREF="motion.html#word">word</A>.  The flags apply to the
-basic <A HREF="motion.html#word">word</A> plus the affix (but there are restrictions).  Example:
+works similar to flags specified on a basic <A HREF="motion.html#word">单词</A>.  The flags apply to the
+basic <A HREF="motion.html#word">单词</A> plus the affix (but there are restrictions).  Example:
 
 <B><FONT color="#3A6F2B">	SFX S Y 1 </FONT></B>
 <B><FONT color="#3A6F2B">	SFX S 0 s . </FONT></B>
@@ -1229,25 +1229,25 @@ When the dictionary file contains &quot;drink/AS&quot; then these words are poss
 	drinkable	uses A suffix
 	drinkables	uses A suffix and then <A HREF="change.html#S">S</A> suffix
 
-Generally the flags of the suffix are added to the flags of the basic <A HREF="motion.html#word">word</A>,
-both are used for the <A HREF="motion.html#word">word</A> plus suffix.  But the flags of the basic <A HREF="motion.html#word">word</A> are
+Generally the flags of the suffix are added to the flags of the basic <A HREF="motion.html#word">单词</A>,
+both are used for the <A HREF="motion.html#word">单词</A> plus suffix.  But the flags of the basic <A HREF="motion.html#word">单词</A> are
 only used once for affixes, except that both one prefix and one suffix can be
 used when both support combining.
 
 Specifically, the affix flags can be used for:
 - Suffixes on <A HREF="cmdline.html#suffixes">suffixes</A>, <A HREF="motion.html#as">as</A> in the example above.  This works once, thus you
-  can have two <A HREF="cmdline.html#suffixes">suffixes</A> on a <A HREF="motion.html#word">word</A> (plus one prefix).
-- Making the <A HREF="motion.html#word">word</A> with the affix rare, by using the |<A HREF="#spell-RARE">spell-RARE</A>| flag.
-- Exclude the <A HREF="motion.html#word">word</A> with the affix from compounding, by using the
+  can have two <A HREF="cmdline.html#suffixes">suffixes</A> on a <A HREF="motion.html#word">单词</A> (plus one prefix).
+- Making the <A HREF="motion.html#word">单词</A> with the affix rare, by using the |<A HREF="#spell-RARE">spell-RARE</A>| flag.
+- Exclude the <A HREF="motion.html#word">单词</A> with the affix from compounding, by using the
   |<A HREF="#spell-COMPOUNDFORBIDFLAG">spell-COMPOUNDFORBIDFLAG</A>| flag.
-- Allow the <A HREF="motion.html#word">word</A> with the affix to be part of a compound <A HREF="motion.html#word">word</A> on the side of
+- Allow the <A HREF="motion.html#word">单词</A> with the affix to be part of a compound <A HREF="motion.html#word">单词</A> on the side of
   the affix with the |<A HREF="#spell-COMPOUNDPERMITFLAG">spell-COMPOUNDPERMITFLAG</A>|.
-- Use the NEEDCOMPOUND flag: <A HREF="motion.html#word">word</A> plus affix can only be used <A HREF="motion.html#as">as</A> part of a
-  compound <A HREF="motion.html#word">word</A>. |<A HREF="#spell-NEEDCOMPOUND">spell-NEEDCOMPOUND</A>|
-- Compound flags: <A HREF="motion.html#word">word</A> plus affix can be part of a compound <A HREF="motion.html#word">word</A> at the end,
+- Use the NEEDCOMPOUND flag: <A HREF="motion.html#word">单词</A> plus affix can only be used <A HREF="motion.html#as">as</A> part of a
+  compound <A HREF="motion.html#word">单词</A>. |<A HREF="#spell-NEEDCOMPOUND">spell-NEEDCOMPOUND</A>|
+- Compound flags: <A HREF="motion.html#word">单词</A> plus affix can be part of a compound <A HREF="motion.html#word">单词</A> at the end,
   middle, start, etc.  The flags are combined with the flags of the basic
-  <A HREF="motion.html#word">word</A>.  |<A HREF="#spell-compound">spell-compound</A>|
-- NEEDAFFIX: another affix is needed to make a valid <A HREF="motion.html#word">word</A>.
+  <A HREF="motion.html#word">单词</A>.  |<A HREF="#spell-compound">spell-compound</A>|
+- NEEDAFFIX: another affix is needed to make a valid <A HREF="motion.html#word">单词</A>.
 - CIRCUMFIX, <A HREF="motion.html#as">as</A> explained just below.
 
 
@@ -1274,7 +1274,7 @@ the required prefix and the NEEDAFFIX flag.  |<A HREF="#spell-NEEDAFFIX">spell-N
 PFXPOSTPONE						*<A NAME="spell-PFXPOSTPONE"></A><B>spell-PFXPOSTPONE</B>*
 
 When an affix file has very many prefixes that apply to many words it's not
-possible to build the whole <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> in memory.  This applies to Hebrew (a
+possible to build the whole <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> in memory.  This applies to Hebrew (a
 <A HREF="eval.html#list">list</A> with all words is over a Gbyte).  In that <A HREF="change.html#case">case</A> applying prefixes must be
 postponed.  This makes <A HREF="#spell">spell</A> checking slower.  It is indicated by this keyword
 in the <A HREF="#.aff">.aff</A> file:
@@ -1282,20 +1282,20 @@ in the <A HREF="#.aff">.aff</A> file:
 <B><FONT color="#3A6F2B">	PFXPOSTPONE </FONT></B>
 
 Only prefixes without a chop <A HREF="eval.html#string">string</A> and without flags can be postponed.
-Prefixes with a chop <A HREF="eval.html#string">string</A> or with flags will still be included in the <A HREF="motion.html#word">word</A>
+Prefixes with a chop <A HREF="eval.html#string">string</A> or with flags will still be included in the <A HREF="motion.html#word">单词</A>
 <A HREF="eval.html#list">list</A>.  An exception if the chop <A HREF="eval.html#string">string</A> is one character and equal to the last
 character of the added <A HREF="eval.html#string">string</A>, but in lower <A HREF="change.html#case">case</A>.  Thus when the chop <A HREF="eval.html#string">string</A>
-is used to allow the following <A HREF="motion.html#word">word</A> to start with an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A>.
+is used to allow the following <A HREF="motion.html#word">单词</A> to start with an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A>.
 
 
 
 WORDS WITH A SLASH					*<A NAME="spell-SLASH"></A><B>spell-SLASH</B>*
 
-The slash is used in the <A HREF="#.dic">.dic</A> file to separate the basic <A HREF="motion.html#word">word</A> from the affix
+The slash is used in the <A HREF="#.dic">.dic</A> file to separate the basic <A HREF="motion.html#word">单词</A> from the affix
 letters and other flags.  Unfortunately, this means you cannot use a slash in
-a <A HREF="motion.html#word">word</A>.  Thus &quot;TCP/IP&quot; is not a <A HREF="motion.html#word">word</A> but &quot;TCP&quot; with the flags &quot;IP&quot;.  To include
-a slash in the <A HREF="motion.html#word">word</A> put a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">it</A>: &quot;TCP\/IP&quot;.  In the rare <A HREF="change.html#case">case</A>
-you want to use a <A HREF="intro.html#backslash">backslash</A> inside a <A HREF="motion.html#word">word</A> you need to use two backslashes.
+a <A HREF="motion.html#word">单词</A>.  Thus &quot;TCP/IP&quot; is not a <A HREF="motion.html#word">单词</A> but &quot;TCP&quot; with the flags &quot;IP&quot;.  To include
+a slash in the <A HREF="motion.html#word">单词</A> put a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">it</A>: &quot;TCP\/IP&quot;.  In the rare <A HREF="change.html#case">case</A>
+you want to use a <A HREF="intro.html#backslash">backslash</A> inside a <A HREF="motion.html#word">单词</A> you need to use two backslashes.
 Any other use of the <A HREF="intro.html#backslash">backslash</A> is reserved for future expansion.
 
 
@@ -1308,14 +1308,14 @@ for keep-case words.  Example:
 <B><FONT color="#3A6F2B">	KEEPCASE = </FONT></B>
 
 This flag is not supported by <A HREF="#Myspell">Myspell</A>.  It has the meaning that <A HREF="change.html#case">case</A> matters.
-This can be used if the <A HREF="motion.html#word">word</A> does not have the first <A HREF="print.html#letter">letter</A> in upper <A HREF="change.html#case">case</A> at
+This can be used if the <A HREF="motion.html#word">单词</A> does not have the first <A HREF="print.html#letter">letter</A> in upper <A HREF="change.html#case">case</A> at
 the start of a <A HREF="motion.html#sentence">sentence</A>.  Example:
 
 <B><FONT color="#3A6F2B">    word list	    matches		    does not match </FONT></B>
     's morgens/=    's morgens		    'S morgens 's Morgens 'S MORGENS
     's Morgens	    's Morgens 'S MORGENS   'S morgens 's morgens
 
-The flag can also be used to avoid that the <A HREF="motion.html#word">word</A> matches when <A HREF="motion.html#it">it</A> is in all
+The flag can also be used to avoid that the <A HREF="motion.html#word">单词</A> matches when <A HREF="motion.html#it">it</A> is in all
 upper-case letters.
 
 
@@ -1331,9 +1331,9 @@ Rare words are highlighted differently from bad words.  This is to be used for
 words that are correct for the language, but are hardly ever used and could be
 a typing mistake anyway.
 
-This flag can also be used on an affix, so that a basic <A HREF="motion.html#word">word</A> is not rare but
-the basic <A HREF="motion.html#word">word</A> plus affix is rare |<A HREF="#spell-affix-flags">spell-affix-flags</A>|.  However, if the <A HREF="motion.html#word">word</A>
-also appears <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">word</A> in another way (e.g., in another region) <A HREF="motion.html#it">it</A> won't
+This flag can also be used on an affix, so that a basic <A HREF="motion.html#word">单词</A> is not rare but
+the basic <A HREF="motion.html#word">单词</A> plus affix is rare |<A HREF="#spell-affix-flags">spell-affix-flags</A>|.  However, if the <A HREF="motion.html#word">单词</A>
+also appears <A HREF="motion.html#as">as</A> a good <A HREF="motion.html#word">单词</A> in another way (e.g., in another region) <A HREF="motion.html#it">it</A> won't
 be marked <A HREF="motion.html#as">as</A> rare.
 
 
@@ -1350,10 +1350,10 @@ This can be used to exclude words that would otherwise be good.  For example
 
 <B><FONT color="#3A6F2B">	the the/! </FONT></B>
 
-Once a <A HREF="motion.html#word">word</A> has been marked <A HREF="motion.html#as">as</A> bad <A HREF="motion.html#it">it</A> won't be undone by encountering the same
-<A HREF="motion.html#word">word</A> <A HREF="motion.html#as">as</A> good.
+Once a <A HREF="motion.html#word">单词</A> has been marked <A HREF="motion.html#as">as</A> bad <A HREF="motion.html#it">it</A> won't be undone by encountering the same
+<A HREF="motion.html#word">单词</A> <A HREF="motion.html#as">as</A> good.
 
-The flag also applies to the <A HREF="motion.html#word">word</A> with affixes, thus this can be used to <A HREF="motion.html#mark">mark</A>
+The flag also applies to the <A HREF="motion.html#word">单词</A> with affixes, thus this can be used to <A HREF="motion.html#mark">mark</A>
 a whole bunch of related words <A HREF="motion.html#as">as</A> bad.
 
 
@@ -1362,8 +1362,8 @@ FORBIDDENWORD can be used just like BAD.  For compatibility with Hunspell.
 
 
 							*<A NAME="spell-NEEDAFFIX"></A><B>spell-NEEDAFFIX</B>*
-The NEEDAFFIX flag is used to require that a <A HREF="motion.html#word">word</A> is used with an affix.  The
-<A HREF="motion.html#word">word</A> itself is not a good <A HREF="motion.html#word">word</A> (unless there is an empty affix).  Example:
+The NEEDAFFIX flag is used to require that a <A HREF="motion.html#word">单词</A> is used with an affix.  The
+<A HREF="motion.html#word">单词</A> itself is not a good <A HREF="motion.html#word">单词</A> (unless there is an empty affix).  Example:
 
 <B><FONT color="#3A6F2B">	NEEDAFFIX + </FONT></B>
 
@@ -1371,9 +1371,9 @@ The NEEDAFFIX flag is used to require that a <A HREF="motion.html#word">word</A>
 
 COMPOUND WORDS						*<A NAME="spell-compound"></A><B>spell-compound</B>*
 
-A compound <A HREF="motion.html#word">word</A> is a longer <A HREF="motion.html#word">word</A> made by concatenating words that appear in
+A compound <A HREF="motion.html#word">单词</A> is a longer <A HREF="motion.html#word">单词</A> made by concatenating words that appear in
 the <A HREF="#.dic">.dic</A> file.  To specify which words may be concatenated a character is
-used.  This character is put in the <A HREF="eval.html#list">list</A> of affixes after the <A HREF="motion.html#word">word</A>.  We will
+used.  This character is put in the <A HREF="eval.html#list">list</A> of affixes after the <A HREF="motion.html#word">单词</A>.  We will
 call this character a flag here.  Obviously these flags must be different from
 any affix IDs used.
 
@@ -1381,7 +1381,7 @@ any affix IDs used.
 							*<A NAME="spell-COMPOUNDFLAG"></A><B>spell-COMPOUNDFLAG</B>*
 The <A HREF="#Myspell">Myspell</A> compatible <A HREF="eval.html#method">method</A> uses one flag, specified with COMPOUNDFLAG.  All
 words with this flag combine in any order.  This means there is no <A HREF="intro.html#control">control</A>
-over which <A HREF="motion.html#word">word</A> comes first.  Example:
+over which <A HREF="motion.html#word">单词</A> comes first.  Example:
 <B><FONT color="#3A6F2B">	COMPOUNDFLAG c </FONT></B>
 
 
@@ -1393,8 +1393,8 @@ Let's start with an example:
 <B><FONT color="#3A6F2B">	COMPOUNDRULE se </FONT></B>
 
 The first line defines that words with the &quot;<A HREF="change.html#c">c</A>&quot; flag can be concatenated in any
-order.  The second line defines compound words that are made of one <A HREF="motion.html#word">word</A> with
-the &quot;<A HREF="change.html#s">s</A>&quot; flag and one <A HREF="motion.html#word">word</A> with the &quot;<A HREF="motion.html#e">e</A>&quot; flag.  With this dictionary:
+order.  The second line defines compound words that are made of one <A HREF="motion.html#word">单词</A> with
+the &quot;<A HREF="change.html#s">s</A>&quot; flag and one <A HREF="motion.html#word">单词</A> with the &quot;<A HREF="motion.html#e">e</A>&quot; flag.  With this dictionary:
 <B><FONT color="#3A6F2B">	bork/c </FONT></B>
 <B><FONT color="#3A6F2B">	onion/s </FONT></B>
 <B><FONT color="#3A6F2B">	soup/e </FONT></B>
@@ -1418,7 +1418,7 @@ Optionally this may be followed by:
 	?	the group appears zero times or once, e.g., <A HREF="change.html#x">x</A>?
 
 This is similar to the <A HREF="pattern.html#regexp">regexp</A> <A HREF="pattern.html#pattern">pattern</A> <A HREF="syntax.html#syntax">syntax</A> (but not the same!).  A few
-examples with the sequence of <A HREF="motion.html#word">word</A> flags they require:
+examples with the sequence of <A HREF="motion.html#word">单词</A> flags they require:
     COMPOUNDRULE x+	    <A HREF="change.html#x">x</A> xx xxx etc.
     COMPOUNDRULE yz	    yz
     COMPOUNDRULE x+z	    xz xxz xxxz etc.
@@ -1442,18 +1442,18 @@ A specific example: Allow a compound to be made of two words and a dash:
 <B><FONT color="#3A6F2B">	    end/e </FONT></B>
 <B><FONT color="#3A6F2B">	    -/xd </FONT></B>
 
-This allows for the <A HREF="motion.html#word">word</A> &quot;start-end&quot;, but not &quot;startend&quot;.
+This allows for the <A HREF="motion.html#word">单词</A> &quot;start-end&quot;, but not &quot;startend&quot;.
 
-An additional implied rule is that, without further flags, a <A HREF="motion.html#word">word</A> with a
-prefix cannot be compounded after another <A HREF="motion.html#word">word</A>, and a <A HREF="motion.html#word">word</A> with a suffix
-cannot be compounded with a following <A HREF="motion.html#word">word</A>.  Thus the affix cannot appear
-on the inside of a compound <A HREF="motion.html#word">word</A>.  This can be changed with the
+An additional implied rule is that, without further flags, a <A HREF="motion.html#word">单词</A> with a
+prefix cannot be compounded after another <A HREF="motion.html#word">单词</A>, and a <A HREF="motion.html#word">单词</A> with a suffix
+cannot be compounded with a following <A HREF="motion.html#word">单词</A>.  Thus the affix cannot appear
+on the inside of a compound <A HREF="motion.html#word">单词</A>.  This can be changed with the
 |<A HREF="#spell-COMPOUNDPERMITFLAG">spell-COMPOUNDPERMITFLAG</A>|.
 
 
 							*<A NAME="spell-NEEDCOMPOUND"></A><B>spell-NEEDCOMPOUND</B>*
-The NEEDCOMPOUND flag is used to require that a <A HREF="motion.html#word">word</A> is used <A HREF="motion.html#as">as</A> part of a
-compound <A HREF="motion.html#word">word</A>.  The <A HREF="motion.html#word">word</A> itself is not a good <A HREF="motion.html#word">word</A>.  Example:
+The NEEDCOMPOUND flag is used to require that a <A HREF="motion.html#word">单词</A> is used <A HREF="motion.html#as">as</A> part of a
+compound <A HREF="motion.html#word">单词</A>.  The <A HREF="motion.html#word">单词</A> itself is not a good <A HREF="motion.html#word">单词</A>.  Example:
 
 <B><FONT color="#3A6F2B">	NEEDCOMPOUND &amp; </FONT></B>
 
@@ -1464,7 +1464,7 @@ compatibility with Hunspell.
 
 
 							*<A NAME="spell-COMPOUNDMIN"></A><B>spell-COMPOUNDMIN</B>*
-The minimal character length of a <A HREF="motion.html#word">word</A> used for compounding is specified with
+The minimal character length of a <A HREF="motion.html#word">单词</A> used for compounding is specified with
 COMPOUNDMIN.  Example:
 <B><FONT color="#3A6F2B">	COMPOUNDMIN 5 </FONT></B>
 
@@ -1474,7 +1474,7 @@ compatibility with <A HREF="#Myspell">Myspell</A>.
 
 
 							*<A NAME="spell-COMPOUNDWORDMAX"></A><B>spell-COMPOUNDWORDMAX</B>*
-The maximum number of words that can be concatenated into a compound <A HREF="motion.html#word">word</A> is
+The maximum number of words that can be concatenated into a compound <A HREF="motion.html#word">单词</A> is
 specified with COMPOUNDWORDMAX.  Example:
 <B><FONT color="#3A6F2B">	COMPOUNDWORDMAX 3 </FONT></B>
 
@@ -1485,21 +1485,21 @@ COMPOUNDRULE where they appear don't allow too many words.
 
 
 							*<A NAME="spell-COMPOUNDSYLMAX"></A><B>spell-COMPOUNDSYLMAX</B>*
-The maximum number of syllables that a compound <A HREF="motion.html#word">word</A> may contain is specified
+The maximum number of syllables that a compound <A HREF="motion.html#word">单词</A> may contain is specified
 with COMPOUNDSYLMAX.  Example:
 <B><FONT color="#3A6F2B">	COMPOUNDSYLMAX 6 </FONT></B>
 
 This has no effect if there is no SYLLABLE item.  Without COMPOUNDSYLMAX there
 is no limit on the number of syllables.
 
-If both COMPOUNDWORDMAX and COMPOUNDSYLMAX are defined, a compound <A HREF="motion.html#word">word</A> is
+If both COMPOUNDWORDMAX and COMPOUNDSYLMAX are defined, a compound <A HREF="motion.html#word">单词</A> is
 accepted if <A HREF="motion.html#it">it</A> fits one of the criteria, thus is either made from up to
 COMPOUNDWORDMAX words or contains up to COMPOUNDSYLMAX syllables.
 
 
 						    *<A NAME="spell-COMPOUNDFORBIDFLAG"></A><B>spell-COMPOUNDFORBIDFLAG</B>*
 The COMPOUNDFORBIDFLAG specifies a flag that can be used on an affix.  It
-means that the <A HREF="motion.html#word">word</A> plus affix cannot be used in a compound <A HREF="motion.html#word">word</A>.  Example:
+means that the <A HREF="motion.html#word">单词</A> plus affix cannot be used in a compound <A HREF="motion.html#word">单词</A>.  Example:
 	affix file:
 <B><FONT color="#3A6F2B">		COMPOUNDFLAG c </FONT></B>
 <B><FONT color="#3A6F2B">		COMPOUNDFORBIDFLAG x </FONT></B>
@@ -1516,8 +1516,8 @@ Note: this doesn't work for postponed prefixes yet.
 
 						    *<A NAME="spell-COMPOUNDPERMITFLAG"></A><B>spell-COMPOUNDPERMITFLAG</B>*
 The COMPOUNDPERMITFLAG specifies a flag that can be used on an affix.  It
-means that the <A HREF="motion.html#word">word</A> plus affix can also be used in a compound <A HREF="motion.html#word">word</A> in a way
-where the affix ends up halfway through the <A HREF="motion.html#word">word</A>.  Without this flag that is
+means that the <A HREF="motion.html#word">单词</A> plus affix can also be used in a compound <A HREF="motion.html#word">单词</A> in a way
+where the affix ends up halfway through the <A HREF="motion.html#word">单词</A>.  Without this flag that is
 not allowed.
 Note: this doesn't work for postponed prefixes yet.
 
@@ -1526,7 +1526,7 @@ Note: this doesn't work for postponed prefixes yet.
 The COMPOUNDROOT flag is used for words in the dictionary that are already a
 compound.  This means <A HREF="motion.html#it">it</A> counts for two words when checking the compounding
 rules.  Can also be used for an affix to <A HREF="intro.html#count">count</A> the affix <A HREF="motion.html#as">as</A> a compounding
-<A HREF="motion.html#word">word</A>.
+<A HREF="motion.html#word">单词</A>.
 
 
 						*<A NAME="spell-CHECKCOMPOUNDPATTERN"></A><B>spell-CHECKCOMPOUNDPATTERN</B>*
@@ -1535,7 +1535,7 @@ position where two words are compounded together forbids the compound.
 For example:
 <B><FONT color="#3A6F2B">	CHECKCOMPOUNDPATTERN o e </FONT></B>
 
-This forbids compounding if the first <A HREF="motion.html#word">word</A> ends in &quot;<A HREF="insert.html#o">o</A>&quot; and the second <A HREF="motion.html#word">word</A>
+This forbids compounding if the first <A HREF="motion.html#word">单词</A> ends in &quot;<A HREF="insert.html#o">o</A>&quot; and the second <A HREF="motion.html#word">单词</A>
 starts with &quot;<A HREF="motion.html#e">e</A>&quot;.
 
 The arguments must be plain text, no patterns are actually supported, despite
@@ -1555,7 +1555,7 @@ suggestions would spend most time trying all kind of weird compound words.
 
 							*<A NAME="spell-SYLLABLE"></A><B>spell-SYLLABLE</B>*
 The SYLLABLE item defines characters or character sequences that are used to
-<A HREF="intro.html#count">count</A> the number of syllables in a <A HREF="motion.html#word">word</A>.  Example:
+<A HREF="intro.html#count">count</A> the number of syllables in a <A HREF="motion.html#word">单词</A>.  Example:
 <B><FONT color="#3A6F2B">	SYLLABLE aáeéiíoóöõuúüûy/aa/au/ea/ee/ei/ie/oa/oe/oo/ou/uu/ui </FONT></B>
 
 Before the first slash is the set of characters that are counted for one
@@ -1579,7 +1579,7 @@ looks like all words are compounded.  To specify this use the NOBREAK item in
 the affix file, without arguments:
 <B><FONT color="#3A6F2B">	NOBREAK </FONT></B>
 
-Vim will try to figure out where one <A HREF="motion.html#word">word</A> ends and a next starts.  When there
+Vim will try to figure out where one <A HREF="motion.html#word">单词</A> ends and a next starts.  When there
 are spelling mistakes this may not be quite right.
 
 
@@ -1596,7 +1596,7 @@ for all regions are combined and used for all regions.
 
 
 							*<A NAME="spell-NOSPLITSUGS"></A><B>spell-NOSPLITSUGS</B>*
-This item indicates that splitting a <A HREF="motion.html#word">word</A> to make suggestions is not a good
+This item indicates that splitting a <A HREF="motion.html#word">单词</A> to make suggestions is not a good
 idea.  Split-word suggestions will appear only when there are few similar
 words.
 
@@ -1739,12 +1739,12 @@ BREAK		(Hunspell)				*<A NAME="spell-BREAK"></A><B>spell-BREAK</B>*
 
 
 CHECKCOMPOUNDCASE  (Hunspell)			*<A NAME="spell-CHECKCOMPOUNDCASE"></A><B>spell-CHECKCOMPOUNDCASE</B>*
-		Disallow <A HREF="change.html#uppercase">uppercase</A> letters at compound <A HREF="motion.html#word">word</A> boundaries.
+		Disallow <A HREF="change.html#uppercase">uppercase</A> letters at compound <A HREF="motion.html#word">单词</A> boundaries.
 		Not supported.
 
 
 CHECKCOMPOUNDDUP  (Hunspell)			*<A NAME="spell-CHECKCOMPOUNDDUP"></A><B>spell-CHECKCOMPOUNDDUP</B>*
-		Disallow using the same <A HREF="motion.html#word">word</A> <A HREF="if_cscop.html#twice">twice</A> in a compound.  Not
+		Disallow using the same <A HREF="motion.html#word">单词</A> <A HREF="if_cscop.html#twice">twice</A> in a compound.  Not
 		supported.
 
 
@@ -1882,9 +1882,9 @@ checking engine in Vim, for various reasons:
 - Missing support for regions or dialects.  Makes <A HREF="motion.html#it">it</A> difficult to accept
   all English words and highlight non-Canadian words differently.
 - Missing support for rare words.  Many words are correct but hardly ever used
-  and could be a misspelled often-used <A HREF="motion.html#word">word</A>.
+  and could be a misspelled often-used <A HREF="motion.html#word">单词</A>.
 - For making suggestions the speed is <A HREF="various.html#less">less</A> important and requiring to install
-  another program or library would be acceptable.  But the <A HREF="motion.html#word">word</A> lists probably
+  another program or library would be acceptable.  But the <A HREF="motion.html#word">单词</A> lists probably
   differ, the suggestions may be wrong words.
 
 
@@ -1892,11 +1892,11 @@ checking engine in Vim, for various reasons:
 Spelling suggestions				*<A NAME="develop-spell-suggestions"></A><B>develop-spell-suggestions</B>*
 
 For making suggestions there are two basic mechanisms:
-1. Try <A HREF="change.html#changing">changing</A> the bad <A HREF="motion.html#word">word</A> a little bit and check for a match with a good
-   <A HREF="motion.html#word">word</A>.  Or go through the <A HREF="eval.html#list">list</A> of good words, change them a little bit and
-   check for a match with the bad <A HREF="motion.html#word">word</A>.  The changes are <A HREF="change.html#deleting">deleting</A> a character,
+1. Try <A HREF="change.html#changing">changing</A> the bad <A HREF="motion.html#word">单词</A> a little bit and check for a match with a good
+   <A HREF="motion.html#word">单词</A>.  Or go through the <A HREF="eval.html#list">list</A> of good words, change them a little bit and
+   check for a match with the bad <A HREF="motion.html#word">单词</A>.  The changes are <A HREF="change.html#deleting">deleting</A> a character,
    <A HREF="insert.html#inserting">inserting</A> a character, swapping two characters, etc.
-2. Perform soundfolding on both the bad <A HREF="motion.html#word">word</A> and the good words and then find
+2. Perform soundfolding on both the bad <A HREF="motion.html#word">单词</A> and the good words and then find
    matches, possibly with a few changes like with the first mechanism.
 
 The first is good for finding typing mistakes.  After experimenting with
@@ -1905,22 +1905,22 @@ was that a trie (a kind of tree structure) is ideal for this.  Both for
 reducing memory use and being able to try sensible changes.  For example, when
 <A HREF="insert.html#inserting">inserting</A> a character only characters that lead to good words need to be
 tried.  Other mechanisms (with hashtables) need to try all possible letters at
-every position in the <A HREF="motion.html#word">word</A>.  Also, a hashtable has the requirement that <A HREF="motion.html#word">word</A>
+every position in the <A HREF="motion.html#word">单词</A>.  Also, a hashtable has the requirement that <A HREF="motion.html#word">单词</A>
 boundaries are identified separately, while a trie does not require this.
 That makes the mechanism a lot simpler.
 
 Soundfolding is useful when someone knows how the words sounds but doesn't
-know how <A HREF="motion.html#it">it</A> is spelled.  For example, the <A HREF="motion.html#word">word</A> &quot;dictionary&quot; might be written
+know how <A HREF="motion.html#it">it</A> is spelled.  For example, the <A HREF="motion.html#word">单词</A> &quot;dictionary&quot; might be written
 <A HREF="motion.html#as">as</A> &quot;daktonerie&quot;.  The number of changes that the first <A HREF="eval.html#method">method</A> would need to
-try is very big, it's hard to find the good <A HREF="motion.html#word">word</A> that way.  After soundfolding
+try is very big, it's hard to find the good <A HREF="motion.html#word">单词</A> that way.  After soundfolding
 the words become &quot;tktnr&quot; and &quot;tkxnry&quot;, these differ by only two letters.
 
-To find words by their soundfolded equivalent (soundalike <A HREF="motion.html#word">word</A>) we need a <A HREF="eval.html#list">list</A>
+To find words by their soundfolded equivalent (soundalike <A HREF="motion.html#word">单词</A>) we need a <A HREF="eval.html#list">list</A>
 of all soundfolded words.  A few experiments have been done to find out what
 the best <A HREF="eval.html#method">method</A> is.  Alternatives:
 1. Do the sound <A HREF="fold.html#folding">folding</A> on the fly when looking for suggestions.  This means
-   walking through the trie of good words, soundfolding each <A HREF="motion.html#word">word</A> and
-   checking how different <A HREF="motion.html#it">it</A> is from the bad <A HREF="motion.html#word">word</A>.  This is very efficient for
+   walking through the trie of good words, soundfolding each <A HREF="motion.html#word">单词</A> and
+   checking how different <A HREF="motion.html#it">it</A> is from the bad <A HREF="motion.html#word">单词</A>.  This is very efficient for
    memory use, but takes a long time.  On a fast PC <A HREF="motion.html#it">it</A> takes a couple of
    seconds for English, which can be acceptable for interactive use.  But for
    some languages <A HREF="motion.html#it">it</A> takes more than ten seconds (e.g., German, Catalan),
@@ -1928,15 +1928,15 @@ the best <A HREF="eval.html#method">method</A> is.  Alternatives:
    it's too slow for all languages.
 2. Use a trie for the soundfolded words, so that searching can be done just
    like how <A HREF="motion.html#it">it</A> works without soundfolding.  This requires remembering a <A HREF="eval.html#list">list</A>
-   of good words for each soundfolded <A HREF="motion.html#word">word</A>.  This makes finding matches very
+   of good words for each soundfolded <A HREF="motion.html#word">单词</A>.  This makes finding matches very
    fast but requires quite a lot of memory, in the order of 1 to 10 Mbyte.
-   For some languages more than the original <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A>.
+   For some languages more than the original <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A>.
 3. Like the second alternative, but reduce the amount of memory by using affix
-   compression and store only the soundfolded basic <A HREF="motion.html#word">word</A>.  This is what Aspell
-   does.  Disadvantage is that affixes need to be stripped from the bad <A HREF="motion.html#word">word</A>
+   compression and store only the soundfolded basic <A HREF="motion.html#word">单词</A>.  This is what Aspell
+   does.  Disadvantage is that affixes need to be stripped from the bad <A HREF="motion.html#word">单词</A>
    before soundfolding <A HREF="motion.html#it">it</A>, which means that mistakes at the start and/or end
-   of the <A HREF="motion.html#word">word</A> will cause the mechanism to fail.  Also, this becomes slow when
-   the bad <A HREF="motion.html#word">word</A> is quite different from the good <A HREF="motion.html#word">word</A>.
+   of the <A HREF="motion.html#word">单词</A> will cause the mechanism to fail.  Also, this becomes slow when
+   the bad <A HREF="motion.html#word">单词</A> is quite different from the good <A HREF="motion.html#word">单词</A>.
 
 The choice made is to use the second mechanism and use a separate file.  This
 way a user with sufficient memory can get very good suggestions while a user
@@ -1947,19 +1947,19 @@ doesn't use so much memory.
 Word frequency
 
 For <A HREF="change.html#sorting">sorting</A> suggestions <A HREF="motion.html#it">it</A> helps to know which words are common.  In theory we
-could store a <A HREF="motion.html#word">word</A> frequency with the <A HREF="motion.html#word">word</A> in the dictionary.  However, this
-requires storing a <A HREF="intro.html#count">count</A> per <A HREF="motion.html#word">word</A>.  That degrades <A HREF="motion.html#word">word</A> tree compression a lot.
-And maintaining the <A HREF="motion.html#word">word</A> frequency for all languages will be a heavy task.
+could store a <A HREF="motion.html#word">单词</A> frequency with the <A HREF="motion.html#word">单词</A> in the dictionary.  However, this
+requires storing a <A HREF="intro.html#count">count</A> per <A HREF="motion.html#word">单词</A>.  That degrades <A HREF="motion.html#word">单词</A> tree compression a lot.
+And maintaining the <A HREF="motion.html#word">单词</A> frequency for all languages will be a heavy task.
 Also, <A HREF="motion.html#it">it</A> would be nice to prefer words that are already in the text.  This way
 the words that appear in the specific text are preferred for suggestions.
 
 What has been implemented is to <A HREF="intro.html#count">count</A> words that have been seen during
-displaying.  A hashtable is used to quickly find the <A HREF="motion.html#word">word</A> <A HREF="intro.html#count">count</A>.  The <A HREF="intro.html#count">count</A> is
+displaying.  A hashtable is used to quickly find the <A HREF="motion.html#word">单词</A> <A HREF="intro.html#count">count</A>.  The <A HREF="intro.html#count">count</A> is
 initialized from words listed in COMMON items in the affix file, so that <A HREF="motion.html#it">it</A>
 also works when starting a new file.
 
 This isn't ideal, because the longer Vim is running the higher the counts
-become.  But in practice <A HREF="motion.html#it">it</A> is a noticeable improvement over not using the <A HREF="motion.html#word">word</A>
+become.  But in practice <A HREF="motion.html#it">it</A> is a noticeable improvement over not using the <A HREF="motion.html#word">单词</A>
 <A HREF="intro.html#count">count</A>.
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

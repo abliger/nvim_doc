@@ -155,13 +155,13 @@ N is used to indicate an optional <A HREF="intro.html#count">count</A> that can 
 *<A NAME="Q_tm"></A><B>Q_tm</B>*		Text object motions
 
 |<A HREF="motion.html#w">w</A>|	N  w		N words forward
-|<A HREF="motion.html#W">W</A>|	N  W		N blank-separated |<A HREF="motion.html#WORD">WORD</A>|<A HREF="change.html#s">s</A> forward
-|<A HREF="motion.html#e">e</A>|	N  e		forward to the end of the Nth <A HREF="motion.html#word">word</A>
-|<A HREF="motion.html#E">E</A>|	N  E		forward to the end of the Nth blank-separated |<A HREF="motion.html#WORD">WORD</A>|
+|<A HREF="motion.html#W">W</A>|	N  W		N blank-separated |<A HREF="motion.html#word">单词</A>|<A HREF="change.html#s">s</A> forward
+|<A HREF="motion.html#e">e</A>|	N  e		forward to the end of the Nth <A HREF="motion.html#word">单词</A>
+|<A HREF="motion.html#E">E</A>|	N  E		forward to the end of the Nth blank-separated |<A HREF="motion.html#word">单词</A>|
 |<A HREF="motion.html#b">b</A>|	N  b		N words backward
-|<A HREF="motion.html#B">B</A>|	N  B		N blank-separated |<A HREF="motion.html#WORD">WORD</A>|<A HREF="change.html#s">s</A> backward
-|<A HREF="motion.html#ge">ge</A>|	N  ge		backward to the end of the Nth <A HREF="motion.html#word">word</A>
-|<A HREF="motion.html#gE">gE</A>|	N  gE		backward to the end of the Nth blank-separated |<A HREF="motion.html#WORD">WORD</A>|
+|<A HREF="motion.html#B">B</A>|	N  B		N blank-separated |<A HREF="motion.html#word">单词</A>|<A HREF="change.html#s">s</A> backward
+|<A HREF="motion.html#ge">ge</A>|	N  ge		backward to the end of the Nth <A HREF="motion.html#word">单词</A>
+|<A HREF="motion.html#gE">gE</A>|	N  gE		backward to the end of the Nth blank-separated |<A HREF="motion.html#word">单词</A>|
 
 |<A HREF="motion.html#)">)</A>|	N  )		N sentences forward
 |<A HREF="motion.html#(">(</A>|	N  (		N sentences backward
@@ -208,8 +208,8 @@ N is used to indicate an optional <A HREF="intro.html#count">count</A> that can 
 		matches any single character	.	\.
 		       matches start of line	^	^
 			       matches <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>	$	$
-		       matches start of <A HREF="motion.html#word">word</A>	\&lt;	\&lt;
-			 matches end of <A HREF="motion.html#word">word</A>	\&gt;	\&gt;
+		       matches start of <A HREF="motion.html#word">单词</A>	\&lt;	\&lt;
+			 matches end of <A HREF="motion.html#word">单词</A>	\&gt;	\&gt;
 	matches a single char from the range	[a-z]	\[a-z]
       matches a single char not in the range	[^a-z]	\[^a-z]
 		  matches an identifier char	\i	\i
@@ -360,7 +360,7 @@ leaving <A HREF="intro.html#Insert">插入</A>模式:
 
 moving around:
 |<A HREF="insert.html#i_&lt;Up&gt;">i_&lt;Up&gt;</A>|	cursor keys	  move cursor left/right/up/down
-|<A HREF="insert.html#i_&lt;S-Left&gt;">i_&lt;S-Left&gt;</A>|	shift-left/right  one <A HREF="motion.html#word">word</A> left/right
+|<A HREF="insert.html#i_&lt;S-Left&gt;">i_&lt;S-Left&gt;</A>|	shift-left/right  one <A HREF="motion.html#word">单词</A> left/right
 |<A HREF="insert.html#i_&lt;S-Up&gt;">i_&lt;S-Up&gt;</A>|	shift-up/down	  one screenful backward/forward
 |<A HREF="insert.html#i_&lt;End&gt;">i_&lt;End&gt;</A>|	&lt;End&gt;		  cursor after last character in the line
 |<A HREF="insert.html#i_&lt;Home&gt;">i_&lt;Home&gt;</A>|	&lt;Home&gt;		  cursor to first character in the line
@@ -384,12 +384,12 @@ moving around:
 				     cursor
 |<A HREF="insert.html#i_CTRL-P">i_CTRL-P</A>|	CTRL-P		  insert previous match of identifier before
 				     the cursor
-|<A HREF="insert.html#i_CTRL-X">i_CTRL-X</A>|	CTRL-X <A HREF="eval.html#...">...</A>	  complete the <A HREF="motion.html#word">word</A> before the cursor in
+|<A HREF="insert.html#i_CTRL-X">i_CTRL-X</A>|	CTRL-X <A HREF="eval.html#...">...</A>	  complete the <A HREF="motion.html#word">单词</A> before the cursor in
 				     various ways
 
 |<A HREF="insert.html#i_&lt;BS&gt;">i_&lt;BS&gt;</A>|	&lt;BS&gt; or <A HREF="motion.html#CTRL-H">CTRL-H</A>	  delete the character before the cursor
 |<A HREF="insert.html#i_&lt;Del&gt;">i_&lt;Del&gt;</A>|	&lt;Del&gt;		  delete the character under the cursor
-|<A HREF="insert.html#i_CTRL-W">i_CTRL-W</A>|	CTRL-W		  delete <A HREF="motion.html#word">word</A> before the cursor
+|<A HREF="insert.html#i_CTRL-W">i_CTRL-W</A>|	CTRL-W		  delete <A HREF="motion.html#word">单词</A> before the cursor
 |<A HREF="insert.html#i_CTRL-U">i_CTRL-U</A>|	CTRL-U		  delete all entered characters in the current
 				     line
 |<A HREF="insert.html#i_CTRL-T">i_CTRL-T</A>|	CTRL-T		  insert one shiftwidth of indent in front of
@@ -556,8 +556,8 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 
 |<A HREF="motion.html#v_aw">v_aw</A>|	   N  aw	<A HREF="visual.html#Select">Select</A> &quot;a word&quot;
 |<A HREF="motion.html#v_iw">v_iw</A>|	   N  iw	<A HREF="visual.html#Select">Select</A> &quot;inner word&quot;
-|<A HREF="motion.html#v_aW">v_aW</A>|	   N  aW	<A HREF="visual.html#Select">Select</A> &quot;a |<A HREF="motion.html#WORD">WORD</A>|&quot;
-|<A HREF="motion.html#v_iW">v_iW</A>|	   N  iW	<A HREF="visual.html#Select">Select</A> &quot;inner |<A HREF="motion.html#WORD">WORD</A>|&quot;
+|<A HREF="motion.html#v_aW">v_aW</A>|	   N  aW	<A HREF="visual.html#Select">Select</A> &quot;a |<A HREF="motion.html#word">单词</A>|&quot;
+|<A HREF="motion.html#v_iW">v_iW</A>|	   N  iW	<A HREF="visual.html#Select">Select</A> &quot;inner |<A HREF="motion.html#word">单词</A>|&quot;
 |<A HREF="motion.html#v_as">v_as</A>|	   N  as	<A HREF="visual.html#Select">Select</A> &quot;a sentence&quot;
 |<A HREF="motion.html#v_is">v_is</A>|	   N  is	<A HREF="visual.html#Select">Select</A> &quot;inner sentence&quot;
 |<A HREF="motion.html#v_ap">v_ap</A>|	   N  ap	<A HREF="visual.html#Select">Select</A> &quot;a paragraph&quot;
@@ -1124,12 +1124,12 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 |<A HREF="cmdline.html#c_CTRL-R">c_CTRL-R</A>|	CTRL-R <A HREF="change.html#{register}">{register}</A>  insert the contents of a <A HREF="intro.html#register">register</A>
 
 |<A HREF="cmdline.html#c_&lt;Left&gt;">c_&lt;Left&gt;</A>|	&lt;Left&gt;/&lt;Right&gt;	   cursor left/right
-|<A HREF="cmdline.html#c_&lt;S-Left&gt;">c_&lt;S-Left&gt;</A>|	&lt;S-Left&gt;/&lt;S-Right&gt; cursor one <A HREF="motion.html#word">word</A> left/right
+|<A HREF="cmdline.html#c_&lt;S-Left&gt;">c_&lt;S-Left&gt;</A>|	&lt;S-Left&gt;/&lt;S-Right&gt; cursor one <A HREF="motion.html#word">单词</A> left/right
 |<A HREF="cmdline.html#c_CTRL-B">c_CTRL-B</A>|	CTRL-B/CTRL-E	   cursor to beginning/end of command-line
 
 |<A HREF="cmdline.html#c_&lt;BS&gt;">c_&lt;BS&gt;</A>|	&lt;BS&gt;		   delete the character in front of the cursor
 |<A HREF="cmdline.html#c_&lt;Del&gt;">c_&lt;Del&gt;</A>|	&lt;Del&gt;		   delete the character under the cursor
-|<A HREF="cmdline.html#c_CTRL-W">c_CTRL-W</A>|	CTRL-W		   delete the <A HREF="motion.html#word">word</A> in front of the cursor
+|<A HREF="cmdline.html#c_CTRL-W">c_CTRL-W</A>|	CTRL-W		   delete the <A HREF="motion.html#word">单词</A> in front of the cursor
 |<A HREF="cmdline.html#c_CTRL-U">c_CTRL-U</A>|	CTRL-U		   remove all characters
 
 |<A HREF="cmdline.html#c_&lt;Up&gt;">c_&lt;Up&gt;</A>|	&lt;Up&gt;/&lt;Down&gt;	   recall older/newer command-line that starts
@@ -1197,7 +1197,7 @@ Context-sensitive completion on the command-line:
 |<A HREF="cmdline.html#:&lt;cword&gt;">:&lt;cword&gt;</A>|  &lt;cword&gt;	word under the cursor (only where a file name is
 			   expected)
 |<A HREF="cmdline.html#:&lt;cWORD&gt;">:&lt;cWORD&gt;</A>|  &lt;cWORD&gt;	WORD under the cursor (only where a file name is
-			   expected) (see |<A HREF="motion.html#WORD">WORD</A>|)
+			   expected) (see |<A HREF="motion.html#word">单词</A>|)
 |<A HREF="cmdline.html#:&lt;cfile&gt;">:&lt;cfile&gt;</A>|  &lt;cfile&gt;	file name under the cursor (only where a file name is
 			   expected)
 |<A HREF="cmdline.html#:&lt;sfile&gt;">:&lt;sfile&gt;</A>|  &lt;sfile&gt;	file name of a &quot;<A HREF="repeat.html#:source">:source</A>&quot;d file, within that file (only

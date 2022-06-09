@@ -629,7 +629,7 @@ series of commands (typically ftp) which <A HREF="motion.html#it">it</A> issues 
 from/written to a temporary file (under Unix/Linux, /tmp/...) which the
 &lt;netrw.vim&gt; <A HREF="usr_41.html#script">script</A> will clean up.
 
-Now, a <A HREF="motion.html#word">word</A> about Jan Minář's &quot;FTP <A HREF="autocmd.html#User">User</A> Name and Password Disclosure&quot;; first,
+Now, a <A HREF="motion.html#word">单词</A> about Jan Minář's &quot;FTP <A HREF="autocmd.html#User">User</A> Name and Password Disclosure&quot;; first,
 ftp is not a secure protocol.  <A HREF="autocmd.html#User">User</A> names and passwords are transmitted &quot;in
 the clear&quot; over the <A HREF="intro.html#internet">internet</A>; any snooper tool can pick these up; this is not
 a <A HREF="#netrw">netrw</A> thing, this is a ftp thing.  If you're concerned about this, please
@@ -1296,11 +1296,11 @@ QUICK REFERENCE: MAPS				*<A NAME="netrw-browse-maps"></A><B>netrw-browse-maps</
 
 
 	*<A NAME="netrw-mouse"></A><B>netrw-mouse</B>* *<A NAME="netrw-leftmouse"></A><B>netrw-leftmouse</B>* *<A NAME="netrw-middlemouse"></A><B>netrw-middlemouse</B>* *<A NAME="netrw-rightmouse"></A><B>netrw-rightmouse</B>*
-	&lt;leftmouse&gt;	(gvim only) selects <A HREF="motion.html#word">word</A> under mouse <A HREF="motion.html#as">as</A> if a &lt;cr&gt;
+	&lt;leftmouse&gt;	(gvim only) selects <A HREF="motion.html#word">单词</A> under mouse <A HREF="motion.html#as">as</A> if a &lt;cr&gt;
 			had been pressed (ie. edit file, change directory)
-	&lt;middlemouse&gt;	(gvim only) same <A HREF="motion.html#as">as</A> <A HREF="change.html#P">P</A> selecting <A HREF="motion.html#word">word</A> under mouse;
+	&lt;middlemouse&gt;	(gvim only) same <A HREF="motion.html#as">as</A> <A HREF="change.html#P">P</A> selecting <A HREF="motion.html#word">单词</A> under mouse;
 			see |<A HREF="#netrw-P">netrw-P</A>|
-	&lt;rightmouse&gt;	(gvim only) delete file/directory using <A HREF="motion.html#word">word</A> under
+	&lt;rightmouse&gt;	(gvim only) delete file/directory using <A HREF="motion.html#word">单词</A> under
 			mouse
 	&lt;2-leftmouse&gt;	(gvim only) when:
 			 &#42; in a netrw-selected file, AND
@@ -1645,7 +1645,7 @@ Without a &quot;dirname&quot;, the current line is used (and any leading depth
 information is elided).
 With a &quot;dirname&quot;, the specified directory name is used.
 
-The &quot;<A HREF="visual.html#gn">gn</A>&quot; map will take the <A HREF="motion.html#word">word</A> below the cursor and use that for
+The &quot;<A HREF="visual.html#gn">gn</A>&quot; map will take the <A HREF="motion.html#word">单词</A> below the cursor and use that for
 <A HREF="change.html#changing">changing</A> the top of the tree listing.
 
 
@@ -1702,7 +1702,7 @@ appropriate application to use to &quot;handle&quot; these files.  Such things <
 OpenOffice (*.sfx), visualization (*.jpg, *.gif, etc), and PostScript (*.ps,
 *.eps) can be handled.
 
-The gx <A HREF="map.html#mapping">mapping</A> extends to all <A HREF="windows.html#buffers">buffers</A>; apply &quot;gx&quot; while atop a <A HREF="motion.html#word">word</A> and <A HREF="#netrw">netrw</A>
+The gx <A HREF="map.html#mapping">mapping</A> extends to all <A HREF="windows.html#buffers">buffers</A>; apply &quot;gx&quot; while atop a <A HREF="motion.html#word">单词</A> and <A HREF="#netrw">netrw</A>
 will apply a special handler to <A HREF="motion.html#it">it</A> (like &quot;<A HREF="change.html#x">x</A>&quot; works when in a <A HREF="#netrw">netrw</A> buffer).
 One may also use visual mode (see |<A HREF="visual.html#visual-start">visual-start</A>|) to select the text that the
 special handler will use.  Normally gx uses expand(&quot;&lt;cfile&gt;&quot;) to pick up the
@@ -4420,7 +4420,7 @@ Step 3: If the problem still is present, then get a debugging trace from
 				  return without doing anything if invoked
 				  when inside a non-netrw<A HREF="windows.html#window">窗口</A>
 		Jun 15, 2016	&#42; gx now calls netrw#GX() which returns
-				  the <A HREF="motion.html#word">word</A> under the cursor.  The new
+				  the <A HREF="motion.html#word">单词</A> under the cursor.  The new
 				  wrinkle: if one is in a <A HREF="#netrw">netrw</A> buffer,
 				  then netrw's s:NetrwGetWord().
 		Jun 22, 2016	&#42; Netrw was executing all its associated

@@ -122,8 +122,8 @@ The most often used keys to move around in the command line:
 
 	<A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>			one character left
 	<A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>			one character right
-	<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> or <A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	one <A HREF="motion.html#word">word</A> left
-	<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A> or <A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	one <A HREF="motion.html#word">word</A> right
+	<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> or <A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	one <A HREF="motion.html#word">单词</A> left
+	<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A> or <A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	one <A HREF="motion.html#word">单词</A> right
 	<A HREF="scroll.html#CTRL-B">CTRL-B</A> or <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>	to begin of command line
 	<A HREF="scroll.html#CTRL-E">CTRL-E</A> or <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>		to end of command line
 
@@ -138,7 +138,7 @@ You can also use the mouse to move the cursor.
 DELETING
 
 As mentioned, <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> deletes the character before the cursor.  To delete a whole
-<A HREF="motion.html#word">word</A> use <A HREF="vimindex.html#CTRL-W">CTRL-W</A>.
+<A HREF="motion.html#word">单词</A> use <A HREF="vimindex.html#CTRL-W">CTRL-W</A>.
 
 <B><FONT color="#3A6F2B">	/the fine pig </FONT></B>
 
@@ -253,7 +253,7 @@ It's easy to type this wrong.  A much quicker way is:
 <B>	:edit b&lt;Tab&gt;</B>
 
 Which will result in the same command.  What happened?  The <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> key does
-completion of the <A HREF="motion.html#word">word</A> before the cursor.  In this <A HREF="change.html#case">case</A> &quot;<A HREF="motion.html#b">b</A>&quot;.  Vim looks in the
+completion of the <A HREF="motion.html#word">单词</A> before the cursor.  In this <A HREF="change.html#case">case</A> &quot;<A HREF="motion.html#b">b</A>&quot;.  Vim looks in the
 directory and finds only one file that starts with a &quot;<A HREF="motion.html#b">b</A>&quot;.  That must be the
 one you are looking for, thus Vim completes the file name for you.
 
@@ -336,7 +336,7 @@ results in:
 
 Vim lists the matches and then comes back with the text you typed.  You can
 now check the <A HREF="eval.html#list">list</A> for the item you wanted.  If <A HREF="motion.html#it">it</A> isn't there, you can use
-<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> to correct the <A HREF="motion.html#word">word</A>.  If there are many matches, type a few more
+<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> to correct the <A HREF="motion.html#word">单词</A>.  If there are many matches, type a few more
 characters before pressing <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> to complete the rest.
    If you have watched carefully, you will have noticed that &quot;incsearch&quot;
 doesn't start with &quot;is&quot;.  In this <A HREF="change.html#case">case</A> &quot;is&quot; stands for the short name of
@@ -347,7 +347,7 @@ option into the long name.
 
 THERE IS MORE
 
-The <A HREF="various.html#CTRL-L">CTRL-L</A> command completes the <A HREF="motion.html#word">word</A> to the longest unambiguous <A HREF="eval.html#string">string</A>.  If
+The <A HREF="various.html#CTRL-L">CTRL-L</A> command completes the <A HREF="motion.html#word">单词</A> to the longest unambiguous <A HREF="eval.html#string">string</A>.  If
 you type &quot;<A HREF="editing.html#:edit">:edit</A> i&quot; and there are files &quot;info.txt&quot; and &quot;info_backup.txt&quot; you
 will get &quot;<A HREF="editing.html#:edit">:edit</A> info&quot;.
 

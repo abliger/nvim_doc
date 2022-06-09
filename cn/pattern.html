@@ -143,13 +143,13 @@ N			Repeat the latest &quot;<A HREF="#/">/</A>&quot; or &quot;<A HREF="#?">?</A>
 
 							*<A NAME="star"></A><B>star</B>* *<A NAME="E348"></A><B>E348</B>* *<A NAME="E349"></A><B>E349</B>*
 *			Search forward for the [count]'th occurrence of the
-			<A HREF="motion.html#word">word</A> nearest to the cursor.  The <A HREF="motion.html#word">word</A> used for the
+			<A HREF="motion.html#word">单词</A> nearest to the cursor.  The <A HREF="motion.html#word">单词</A> used for the
 			search is the first of:
 				1. the keyword under the cursor |<A HREF="options.html#'iskeyword'">'iskeyword'</A>|
 				2. the first keyword after the cursor, in the
 				   current line
-				3. the non-blank <A HREF="motion.html#word">word</A> under the cursor
-				4. the first non-blank <A HREF="motion.html#word">word</A> after the cursor,
+				3. the non-blank <A HREF="motion.html#word">单词</A> under the cursor
+				4. the first non-blank <A HREF="motion.html#word">单词</A> after the cursor,
 				   in the current line
 			Only whole keywords are searched for, like with the
 			command &quot;/\&lt;keyword\&gt;&quot;.  |<A HREF="motion.html#exclusive">exclusive</A>|
@@ -172,15 +172,15 @@ N			Repeat the latest &quot;<A HREF="#/">/</A>&quot; or &quot;<A HREF="#?">?</A>
 
 
 							*<A NAME="gstar"></A><B>gstar</B>*
-g*			Like &quot;*&quot;, but don't put &quot;\&lt;&quot; and &quot;\&gt;&quot; around the <A HREF="motion.html#word">word</A>.
+g*			Like &quot;*&quot;, but don't put &quot;\&lt;&quot; and &quot;\&gt;&quot; around the <A HREF="motion.html#word">单词</A>.
 			This makes the search also find matches that are not a
-			whole <A HREF="motion.html#word">word</A>.
+			whole <A HREF="motion.html#word">单词</A>.
 
 
 							*<A NAME="g#"></A><B>g#</B>*
-<A HREF="#g#">g#</A>			Like &quot;<A HREF="##">#</A>&quot;, but don't put &quot;\&lt;&quot; and &quot;\&gt;&quot; around the <A HREF="motion.html#word">word</A>.
+<A HREF="#g#">g#</A>			Like &quot;<A HREF="##">#</A>&quot;, but don't put &quot;\&lt;&quot; and &quot;\&gt;&quot; around the <A HREF="motion.html#word">单词</A>.
 			This makes the search also find matches that are not a
-			whole <A HREF="motion.html#word">word</A>.
+			whole <A HREF="motion.html#word">单词</A>.
 
 
 							*<A NAME="gd"></A><B>gd</B>*
@@ -295,7 +295,7 @@ line offset is given, the whole lines between the two cursor positions are
 affected.
 
 An example of how to search for matches with a <A HREF="#pattern">pattern</A> and change the match
-with another <A HREF="motion.html#word">word</A>:
+with another <A HREF="motion.html#word">单词</A>:
 <B>	/foo&lt;CR&gt;	find "foo"</B>
 <B>	c//e&lt;CR&gt;	change until end of match</B>
 <B>	bar&lt;Esc&gt;	type replacement</B>
@@ -375,7 +375,7 @@ switched off by setting the '<A HREF="change.html#s">s</A>' flag in the <A HREF=
 
 							*<A NAME="search-range"></A><B>search-range</B>*
 You can limit the search command &quot;<A HREF="#/">/</A>&quot; to a certain range of lines by including
-\&#37;&gt;l items.  For example, to match the <A HREF="motion.html#word">word</A> &quot;limit&quot; below line 199 and above
+\&#37;&gt;l items.  For example, to match the <A HREF="motion.html#word">单词</A> &quot;limit&quot; below line 199 and above
 line 300:
 <B>	/\%&gt;199l\%&lt;300llimit</B>
 Also see |<A HREF="#/\&#37;&gt;l">/\&#37;&gt;l</A>|.
@@ -386,14 +386,14 @@ This command will search from the cursor position until line 300 for
 &quot;<A HREF="#Pattern">Pattern</A>&quot;.  At the match, you will be asked to type a character.  Type '<A HREF="repeat.html#q">q</A>' to
 stop at this match, type '<A HREF="#n">n</A>' to find the next match.
 
-The &quot;*&quot;, &quot;<A HREF="##">#</A>&quot;, &quot;g*&quot; and &quot;<A HREF="#g#">g#</A>&quot; commands look for a <A HREF="motion.html#word">word</A> near the cursor in this
+The &quot;*&quot;, &quot;<A HREF="##">#</A>&quot;, &quot;g*&quot; and &quot;<A HREF="#g#">g#</A>&quot; commands look for a <A HREF="motion.html#word">单词</A> near the cursor in this
 order, the first one that is found is used:
 - The keyword currently under the cursor.
 - The first keyword to the right of the cursor, in the same line.
-- The <A HREF="motion.html#WORD">WORD</A> currently under the cursor.
-- The first <A HREF="motion.html#WORD">WORD</A> to the right of the cursor, in the same line.
+- The <A HREF="motion.html#word">单词</A> currently under the cursor.
+- The first <A HREF="motion.html#word">单词</A> to the right of the cursor, in the same line.
 The keyword may only contain letters and characters in <A HREF="options.html#'iskeyword'">'iskeyword'</A>.
-The <A HREF="motion.html#WORD">WORD</A> may contain any non-blanks (&lt;Tab&gt;s and/or &lt;Space&gt;s).
+The <A HREF="motion.html#word">单词</A> may contain any non-blanks (&lt;Tab&gt;s and/or &lt;Space&gt;s).
 Note that if you type with ten fingers, the characters are easy to remember:
 the &quot;<A HREF="##">#</A>&quot; is under your left hand middle finger (search to the left and up) and
 the &quot;*&quot; is under your right hand middle finger (search to the right and down).
@@ -601,8 +601,8 @@ More explanation and examples below, follow the links.
 |<A HREF="#/\_$">/\_$</A>|	\_$	\_$	end-of-line (used anywhere) |<A HREF="#/zero-width">/zero-width</A>|
 |<A HREF="#/.">/.</A>|	.	\.	any single character (not an end-of-line)
 |<A HREF="#/\_.">/\_.</A>|	\_.	\_.	any single character or end-of-line
-|<A HREF="#/\&lt;">/\&lt;</A>|	\&lt;	\&lt;	beginning of a <A HREF="motion.html#word">word</A> |<A HREF="#/zero-width">/zero-width</A>|
-|<A HREF="#/\&gt;">/\&gt;</A>|	\&gt;	\&gt;	end of a <A HREF="motion.html#word">word</A> |<A HREF="#/zero-width">/zero-width</A>|
+|<A HREF="#/\&lt;">/\&lt;</A>|	\&lt;	\&lt;	beginning of a <A HREF="motion.html#word">单词</A> |<A HREF="#/zero-width">/zero-width</A>|
+|<A HREF="#/\&gt;">/\&gt;</A>|	\&gt;	\&gt;	end of a <A HREF="motion.html#word">单词</A> |<A HREF="#/zero-width">/zero-width</A>|
 |<A HREF="#/\zs">/\zs</A>|	\zs	\zs	anything, sets start of match
 |<A HREF="#/\ze">/\ze</A>|	\ze	\ze	anything, sets end of match
 
@@ -634,10 +634,10 @@ Character classes:					*<A NAME="/character-classes"></A><B>/character-classes</
 |<A HREF="#/\X">/\X</A>|	\X	\X	non-hex digit:			[^0-9A-Fa-f]
 |<A HREF="#/\o">/\o</A>|	\o	\o	<A HREF="eval.html#octal">octal</A> digit:			[0-7]
 |<A HREF="#/\O">/\O</A>|	\O	\O	non-octal digit:		[^0-7]
-|<A HREF="#/\w">/\w</A>|	\w	\w	<A HREF="motion.html#word">word</A> character:			[0-9A-Za-z_]
+|<A HREF="#/\w">/\w</A>|	\w	\w	<A HREF="motion.html#word">单词</A> character:			[0-9A-Za-z_]
 |<A HREF="#/\W">/\W</A>|	\W	\W	non-word character:		[^0-9A-Za-z_]
-|<A HREF="#/\h">/\h</A>|	\h	\h	head of <A HREF="motion.html#word">word</A> character:		[A-Za-z_]
-|<A HREF="#/\H">/\H</A>|	\H	\H	non-head of <A HREF="motion.html#word">word</A> character:	[^A-Za-z_]
+|<A HREF="#/\h">/\h</A>|	\h	\h	head of <A HREF="motion.html#word">单词</A> character:		[A-Za-z_]
+|<A HREF="#/\H">/\H</A>|	\H	\H	non-head of <A HREF="motion.html#word">单词</A> character:	[^A-Za-z_]
 |<A HREF="#/\a">/\a</A>|	\a	\a	alphabetic character:		[A-Za-z]
 |<A HREF="#/\A">/\A</A>|	\A	\A	non-alphabetic character:	[^A-Za-z]
 |<A HREF="#/\l">/\l</A>|	\l	\l	<A HREF="change.html#lowercase">lowercase</A> character:		[a-z]
@@ -977,14 +977,14 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 
 
 							*<A NAME="/\&lt;"></A><B>/\&lt;</B>*
-\&lt;	Matches the beginning of a <A HREF="motion.html#word">word</A>: The next char is the first char of a
-	<A HREF="motion.html#word">word</A>.  The <A HREF="options.html#'iskeyword'">'iskeyword'</A> option specifies what is a <A HREF="motion.html#word">word</A> character.
+\&lt;	Matches the beginning of a <A HREF="motion.html#word">单词</A>: The next char is the first char of a
+	<A HREF="motion.html#word">单词</A>.  The <A HREF="options.html#'iskeyword'">'iskeyword'</A> option specifies what is a <A HREF="motion.html#word">单词</A> character.
 	|<A HREF="#/zero-width">/zero-width</A>|
 
 
 							*<A NAME="/\&gt;"></A><B>/\&gt;</B>*
-\&gt;	Matches the end of a <A HREF="motion.html#word">word</A>: The previous char is the last char of a
-	<A HREF="motion.html#word">word</A>.  The <A HREF="options.html#'iskeyword'">'iskeyword'</A> option specifies what is a <A HREF="motion.html#word">word</A> character.
+\&gt;	Matches the end of a <A HREF="motion.html#word">单词</A>: The previous char is the last char of a
+	<A HREF="motion.html#word">单词</A>.  The <A HREF="options.html#'iskeyword'">'iskeyword'</A> option specifies what is a <A HREF="motion.html#word">单词</A> character.
 	|<A HREF="#/zero-width">/zero-width</A>|
 
 
@@ -1056,7 +1056,7 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 	In other words: When the cursor moves the display isn't updated for
 	this change.  An update is done for lines which are changed (the whole
 	line is updated) or when using the |<A HREF="various.html#CTRL-L">CTRL-L</A>| command (the whole screen
-	is updated).  Example, to highlight the <A HREF="motion.html#word">word</A> under the cursor:
+	is updated).  Example, to highlight the <A HREF="motion.html#word">单词</A> under the cursor:
 <B>		/\k*\%#\k*</B>
  	When <A HREF="options.html#'hlsearch'">'hlsearch'</A> is set and you move the cursor around and make changes
 	this will clearly show when the match is updated or not.
@@ -1206,13 +1206,13 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 
 \O	non-octal digit:		[^0-7]		*<A NAME="/\O"></A><B>/\O</B>*
 
-\w	<A HREF="motion.html#word">word</A> character:			[0-9A-Za-z_]	*<A NAME="/\w"></A><B>/\w</B>*
+\w	<A HREF="motion.html#word">单词</A> character:			[0-9A-Za-z_]	*<A NAME="/\w"></A><B>/\w</B>*
 
 \W	non-word character:		[^0-9A-Za-z_]	*<A NAME="/\W"></A><B>/\W</B>*
 
-\h	head of <A HREF="motion.html#word">word</A> character:		[A-Za-z_]	*<A NAME="/\h"></A><B>/\h</B>*
+\h	head of <A HREF="motion.html#word">单词</A> character:		[A-Za-z_]	*<A NAME="/\h"></A><B>/\h</B>*
 
-\H	non-head of <A HREF="motion.html#word">word</A> character:	[^A-Za-z_]	*<A NAME="/\H"></A><B>/\H</B>*
+\H	non-head of <A HREF="motion.html#word">单词</A> character:	[^A-Za-z_]	*<A NAME="/\H"></A><B>/\H</B>*
 
 \a	alphabetic character:		[A-Za-z]	*<A NAME="/\a"></A><B>/\a</B>*
 
@@ -1702,7 +1702,7 @@ Fuzzy matching will match a <A HREF="eval.html#string">string</A>, if all the ch
 are present anywhere in the <A HREF="eval.html#string">string</A> in the same order. Case is ignored.  In a
 matched <A HREF="eval.html#string">string</A>, other characters can be present between two consecutive
 characters in the search <A HREF="eval.html#string">string</A>. If the search <A HREF="eval.html#string">string</A> has multiple words, then
-each <A HREF="motion.html#word">word</A> is matched separately. So the words in the search <A HREF="eval.html#string">string</A> can be
+each <A HREF="motion.html#word">单词</A> is matched separately. So the words in the search <A HREF="eval.html#string">string</A> can be
 present in any order in a <A HREF="eval.html#string">string</A>.
 
 Fuzzy matching assigns a score for each matched <A HREF="eval.html#string">string</A> based on the following
@@ -1710,7 +1710,7 @@ criteria:
     - The number of sequentially matching characters.
     - The number of characters (distance) between two consecutive matching
       characters.
-    - Matches at the beginning of a <A HREF="motion.html#word">word</A>
+    - Matches at the beginning of a <A HREF="motion.html#word">单词</A>
     - Matches at a camel <A HREF="change.html#case">case</A> character (e.g. Case in CamelCase)
     - Matches after a path separator or a hyphen.
     - The number of unmatched characters in a <A HREF="eval.html#string">string</A>.

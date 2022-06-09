@@ -146,8 +146,8 @@ CTRL-@		<A HREF="#Insert">Insert</A> previously inserted text and stop insert.
 		appended after the current one.
 
 						*<A NAME="i_CTRL-W"></A><B>i_CTRL-W</B>*
-<A HREF="vimindex.html#CTRL-W">CTRL-W</A>		Delete the <A HREF="motion.html#word">word</A> before the cursor (see |<A HREF="#i_backspacing">i_backspacing</A>| about
-		joining lines).  See the section &quot;<A HREF="motion.html#word">word</A> motions&quot;,
+<A HREF="vimindex.html#CTRL-W">CTRL-W</A>		Delete the <A HREF="motion.html#word">单词</A> before the cursor (see |<A HREF="#i_backspacing">i_backspacing</A>| about
+		joining lines).  See the section &quot;<A HREF="motion.html#word">单词</A> motions&quot;,
 		|<A HREF="motion.html#word-motions">word-motions</A>|, for the definition of a word.
 
 						*<A NAME="i_CTRL-W-default"></A><B>i_CTRL-W-default</B>*
@@ -475,13 +475,13 @@ like an &quot;<A HREF="#i">i</A>&quot; command.
 
 <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>		cursor one character right		     *<A NAME="i_&lt;Right&gt;"></A><B>i_&lt;Right&gt;</B>*
 
-<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A>	cursor one <A HREF="motion.html#word">word</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot; command)	     *<A NAME="i_&lt;S-Left&gt;"></A><B>i_&lt;S-Left&gt;</B>*
+<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot; command)	     *<A NAME="i_&lt;S-Left&gt;"></A><B>i_&lt;S-Left&gt;</B>*
 
-<A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	cursor one <A HREF="motion.html#word">word</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot; command)	     *<A NAME="i_&lt;C-Left&gt;"></A><B>i_&lt;C-Left&gt;</B>*
+<A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot; command)	     *<A NAME="i_&lt;C-Left&gt;"></A><B>i_&lt;C-Left&gt;</B>*
 
-<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>	cursor one <A HREF="motion.html#word">word</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot; command)   *<A NAME="i_&lt;S-Right&gt;"></A><B>i_&lt;S-Right&gt;</B>*
+<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot; command)   *<A NAME="i_&lt;S-Right&gt;"></A><B>i_&lt;S-Right&gt;</B>*
 
-<A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	cursor one <A HREF="motion.html#word">word</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot; command)   *<A NAME="i_&lt;C-Right&gt;"></A><B>i_&lt;C-Right&gt;</B>*
+<A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot; command)   *<A NAME="i_&lt;C-Right&gt;"></A><B>i_&lt;C-Right&gt;</B>*
 
 <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>		cursor to first char in the line	     *<A NAME="i_&lt;Home&gt;"></A><B>i_&lt;Home&gt;</B>*
 
@@ -611,7 +611,7 @@ When <A HREF="#inserting">inserting</A> the same text in front of the column in 
 The <A HREF="options.html#'textwidth'">'textwidth'</A> option can be used to automatically break a line before <A HREF="motion.html#it">it</A>
 gets too long.  Set the <A HREF="options.html#'textwidth'">'textwidth'</A> option to the desired maximum line
 length.  If you then type more characters (not spaces or tabs), the
-last <A HREF="motion.html#word">word</A> will be put on a new line (unless <A HREF="motion.html#it">it</A> is the only <A HREF="motion.html#word">word</A> on the
+last <A HREF="motion.html#word">单词</A> will be put on a new line (unless <A HREF="motion.html#it">it</A> is the only <A HREF="motion.html#word">单词</A> on the
 line).  If you set <A HREF="options.html#'textwidth'">'textwidth'</A> to 0, this feature is disabled.
 
 The <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> option does almost the same.  The difference is that
@@ -894,7 +894,7 @@ Completing keywords in current file			*<A NAME="compl-current"></A><B>compl-curr
 
 If there is a keyword in front of the cursor (a name made out of alphabetic
 characters and characters in 'iskeyword'), <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the search <A HREF="pattern.html#pattern">pattern</A>,
-with &quot;\&lt;&quot; prepended (meaning: start of a <A HREF="motion.html#word">word</A>).  Otherwise &quot;\&lt;\k\k&quot; is used
+with &quot;\&lt;&quot; prepended (meaning: start of a <A HREF="motion.html#word">单词</A>).  Otherwise &quot;\&lt;\k\k&quot; is used
 <A HREF="motion.html#as">as</A> search <A HREF="pattern.html#pattern">pattern</A> (start of any keyword of at least two characters).
 
 In <A HREF="#Replace">Replace</A> mode, the number of characters that are replaced depends on the
@@ -925,9 +925,9 @@ the way of what you were really after.
 		printf(&quot;name = &#37;s\n&quot;, ^P);
 The '<A HREF="pattern.html#n">n</A>' in '\n' is skipped.
 
-After expanding a <A HREF="motion.html#word">word</A>, you can use <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> or <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-N">CTRL-N</A> to get the
-<A HREF="motion.html#word">word</A> following the expansion in other contexts.  These sequences search for
-the text just expanded and further expand by getting an extra <A HREF="motion.html#word">word</A>.  This is
+After expanding a <A HREF="motion.html#word">单词</A>, you can use <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> or <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-N">CTRL-N</A> to get the
+<A HREF="motion.html#word">单词</A> following the expansion in other contexts.  These sequences search for
+the text just expanded and further expand by getting an extra <A HREF="motion.html#word">单词</A>.  This is
 useful if you need to repeat a sequence of complicated words.  Although <A HREF="motion.html#CTRL-P">CTRL-P</A>
 and <A HREF="motion.html#CTRL-N">CTRL-N</A> look just for strings of at least two characters, <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> and
 <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-N">CTRL-N</A> can be used to expand words of just one character.
@@ -941,10 +941,10 @@ and <A HREF="motion.html#CTRL-N">CTRL-N</A> look just for strings of at least tw
 If the previous expansion was split, because <A HREF="motion.html#it">it</A> got longer than <A HREF="options.html#'textwidth'">'textwidth'</A>,
 then just the text in the current line will be used.
 
-If the match found is at the end of a line, then the first <A HREF="motion.html#word">word</A> in the next
+If the match found is at the end of a line, then the first <A HREF="motion.html#word">单词</A> in the next
 line will be inserted and the message &quot;Word from other line&quot; displayed, if
-this <A HREF="motion.html#word">word</A> is accepted the next <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> or <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-N">CTRL-N</A> will search
-for those lines starting with this <A HREF="motion.html#word">word</A>.
+this <A HREF="motion.html#word">单词</A> is accepted the next <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> or <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-N">CTRL-N</A> will search
+for those lines starting with this <A HREF="motion.html#word">单词</A>.
 
 
 
@@ -981,8 +981,8 @@ Completing words in <A HREF="options.html#'thesaurus'">'thesaurus'</A>				*<A NA
 			the <A HREF="options.html#'thesaurus'">'thesaurus'</A> option instead of <A HREF="options.html#'dictionary'">'dictionary'</A>.  If a
 			match is found in the thesaurus file, all the
 			remaining words on the same line are included <A HREF="motion.html#as">as</A>
-			matches, even though they don't complete the <A HREF="motion.html#word">word</A>.
-			Thus a <A HREF="motion.html#word">word</A> can be completely replaced.
+			matches, even though they don't complete the <A HREF="motion.html#word">单词</A>.
+			Thus a <A HREF="motion.html#word">单词</A> can be completely replaced.
 
 	<A HREF="tagsrch.html#CTRL-T">CTRL-T</A>	or
 	<A HREF="motion.html#CTRL-N">CTRL-N</A>		Search forward for next matching keyword.  This
@@ -998,13 +998,13 @@ space is preferred).  Maximum line length is 510 bytes.
 For an example, imagine the <A HREF="options.html#'thesaurus'">'thesaurus'</A> file has a line like this:
 <B>	angry furious mad enraged</B>
 Placing the cursor after the letters &quot;ang&quot; and typing <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> would
-complete the <A HREF="motion.html#word">word</A> &quot;angry&quot;; subsequent presses would change the <A HREF="motion.html#word">word</A> to
+complete the <A HREF="motion.html#word">单词</A> &quot;angry&quot;; subsequent presses would change the <A HREF="motion.html#word">单词</A> to
 &quot;furious&quot;, &quot;mad&quot; etc.
 
 Other uses include translation between two languages, or grouping <A HREF="api.html#API">API</A>
 <A HREF="eval.html#functions">functions</A> by keyword.
 
-An English <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> was added to this github issue:
+An English <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> was added to this github issue:
 https://github.com/vim/vim/issues/629#issuecomment-443293282
 Unpack thesaurus_pkg.zip, put the thesaurus.txt file somewhere, e.g.
 ~/.vim/thesaurus/english.txt, and the <A HREF="options.html#'thesaurus'">'thesaurus'</A> option to this file name.
@@ -1209,9 +1209,9 @@ first version for C++.
 
 Spelling suggestions					*<A NAME="compl-spelling"></A><B>compl-spelling</B>*
 
-A <A HREF="motion.html#word">word</A> before or at the cursor is located and correctly spelled words are
-suggested to replace <A HREF="motion.html#it">it</A>.  If there is a badly spelled <A HREF="motion.html#word">word</A> in the line, before
-or under the cursor, the cursor is moved to after <A HREF="motion.html#it">it</A>.  Otherwise the <A HREF="motion.html#word">word</A> just
+A <A HREF="motion.html#word">单词</A> before or at the cursor is located and correctly spelled words are
+suggested to replace <A HREF="motion.html#it">it</A>.  If there is a badly spelled <A HREF="motion.html#word">单词</A> in the line, before
+or under the cursor, the cursor is moved to after <A HREF="motion.html#it">it</A>.  Otherwise the <A HREF="motion.html#word">单词</A> just
 before the cursor is used for suggestions, even though <A HREF="motion.html#it">it</A> isn't badly spelled.
 
 NOTE: CTRL-S suspends display in many Unix terminals.  Use '<A HREF="change.html#s">s</A>' instead.  Type
@@ -1220,7 +1220,7 @@ CTRL-Q to resume displaying.
 
 						*<A NAME="i_CTRL-X_CTRL-S"></A><B>i_CTRL-X_CTRL-S</B>* *<A NAME="i_CTRL-X_s"></A><B>i_CTRL-X_s</B>*
 <A HREF="change.html#CTRL-X">CTRL-X</A> CTRL-S   or
-<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="change.html#s">s</A>		Locate the <A HREF="motion.html#word">word</A> in front of the cursor and find the
+<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="change.html#s">s</A>		Locate the <A HREF="motion.html#word">单词</A> in front of the cursor and find the
 			first <A HREF="spell.html#spell">spell</A> suggestion for <A HREF="motion.html#it">it</A>.
 	CTRL-S	or
 	<A HREF="motion.html#CTRL-N">CTRL-N</A>		Use the next suggestion.  This replaces the previous
@@ -1323,10 +1323,10 @@ For example, the function can contain this:
 Each <A HREF="eval.html#list">list</A> item can either be a <A HREF="eval.html#string">string</A> or a <A HREF="eval.html#Dictionary">Dictionary</A>.  When <A HREF="motion.html#it">it</A> is a <A HREF="eval.html#string">string</A> <A HREF="motion.html#it">it</A>
 is used <A HREF="motion.html#as">as</A> the completion.  When <A HREF="motion.html#it">it</A> is a <A HREF="eval.html#Dictionary">Dictionary</A> <A HREF="motion.html#it">it</A> can contain these
 items:
-	<A HREF="motion.html#word">word</A>		the text that will be inserted, mandatory
-	abbr		abbreviation of &quot;<A HREF="motion.html#word">word</A>&quot;; when not empty <A HREF="motion.html#it">it</A> is used in
-			the menu instead of &quot;<A HREF="motion.html#word">word</A>&quot;
-	menu		extra text for the popup menu, displayed after &quot;<A HREF="motion.html#word">word</A>&quot;
+	<A HREF="motion.html#word">单词</A>		the text that will be inserted, mandatory
+	abbr		abbreviation of &quot;<A HREF="motion.html#word">单词</A>&quot;; when not empty <A HREF="motion.html#it">it</A> is used in
+			the menu instead of &quot;<A HREF="motion.html#word">单词</A>&quot;
+	menu		extra text for the popup menu, displayed after &quot;<A HREF="motion.html#word">单词</A>&quot;
 			or &quot;abbr&quot;
 	info		more information about the item, can be displayed in a
 			preview<A HREF="windows.html#window">窗口</A>
@@ -1338,7 +1338,7 @@ items:
 			comparing. Which means, &quot;equal=1&quot; disables filtering
 			of this item.
 	dup		when non-zero this match will be added even when an
-			item with the same <A HREF="motion.html#word">word</A> is already present.
+			item with the same <A HREF="motion.html#word">单词</A> is already present.
 	empty		when non-zero this match will be added even when <A HREF="motion.html#it">it</A> is
 			an empty <A HREF="eval.html#string">string</A>
 	user_data 	custom data which is associated with the item and
@@ -1466,7 +1466,7 @@ starting the completion:
 
 						*<A NAME="popupmenu-keys"></A><B>popupmenu-keys</B>*
 In the first state these keys have a special meaning:
-<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> and <A HREF="motion.html#CTRL-H">CTRL-H</A>   Delete one character, find the matches for the <A HREF="motion.html#word">word</A> before
+<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> and <A HREF="motion.html#CTRL-H">CTRL-H</A>   Delete one character, find the matches for the <A HREF="motion.html#word">单词</A> before
 		  the cursor.  This reduces the <A HREF="eval.html#list">list</A> of matches, often to one
 		  entry, and switches to the second state.
 Any non-special character:
@@ -1474,7 +1474,7 @@ Any non-special character:
 		  typed character.
 
 In the second and third state these keys have a special meaning:
-<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> and <A HREF="motion.html#CTRL-H">CTRL-H</A>   Delete one character, find the matches for the shorter <A HREF="motion.html#word">word</A>
+<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> and <A HREF="motion.html#CTRL-H">CTRL-H</A>   Delete one character, find the matches for the shorter <A HREF="motion.html#word">单词</A>
 		  before the cursor.  This may find more matches.
 <A HREF="various.html#CTRL-L">CTRL-L</A>		  Add one character from the current match, may reduce the
 		  number of matches.
@@ -1829,12 +1829,12 @@ form of this variable is:
 You can create <A HREF="motion.html#as">as</A> many of these <A HREF="eval.html#variables">variables</A> <A HREF="motion.html#as">as</A> you need, varying only the
 <A HREF="filetype.html#filetype">filetype</A> at the end of the variable name.
 
-The <A HREF="usr_05.html#plugin">plugin</A> uses the isKeyword option to determine where <A HREF="motion.html#word">word</A> boundaries are
+The <A HREF="usr_05.html#plugin">plugin</A> uses the isKeyword option to determine where <A HREF="motion.html#word">单词</A> boundaries are
 for the <A HREF="syntax.html#syntax">syntax</A> items.  For example, in the Scheme language completion should
 include the &quot;<A HREF="motion.html#-">-</A>&quot;, call-with-output-file.  Depending on your <A HREF="filetype.html#filetype">filetype</A>, this may
 not provide the words you are expecting.  Setting the
 g:omni_syntax_use_iskeyword option to 0 will force the <A HREF="syntax.html#syntax">syntax</A> <A HREF="usr_05.html#plugin">plugin</A> to break
-on <A HREF="motion.html#word">word</A> characters.   This can be controlled adding the following to your
+on <A HREF="motion.html#word">单词</A> characters.   This can be controlled adding the following to your
 <A HREF="starting.html#vimrc">vimrc</A>:
 <B>    let g:omni_syntax_use_iskeyword = 0</B>
 

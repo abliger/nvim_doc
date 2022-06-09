@@ -193,7 +193,7 @@ This tells Vim to highlight &quot;xType&quot; like &quot;Type&quot; and &quot;xS
 UNUSUAL KEYWORDS
 
 The characters used in a keyword must be in the <A HREF="options.html#'iskeyword'">'iskeyword'</A> option.  If you
-use another character, the <A HREF="motion.html#word">word</A> will never match.  Vim doesn't give a warning
+use another character, the <A HREF="motion.html#word">单词</A> will never match.  Vim doesn't give a warning
 message for this.
    The <A HREF="change.html#x">x</A> language uses the '<A HREF="motion.html#-">-</A>' character in keywords.  This is how it's done:
 
@@ -218,7 +218,7 @@ This doesn't match &quot;nextone&quot;, keywords always match whole words only.
 
 Consider defining something a bit more complex.  You want to match ordinary
 identifiers.  To <A HREF="diff.html#do">do</A> this, you define a match <A HREF="syntax.html#syntax">syntax</A> item.  This one matches
-any <A HREF="motion.html#word">word</A> consisting of only <A HREF="change.html#lowercase">lowercase</A> letters:
+any <A HREF="motion.html#word">单词</A> consisting of only <A HREF="change.html#lowercase">lowercase</A> letters:
 
 <B>	:syntax match xIdentifier /\&lt;\l\+\&gt;/</B>
  
@@ -290,7 +290,7 @@ In the first line, the &quot;contained&quot; argument tells Vim that this keywor
 exist only inside another <A HREF="syntax.html#syntax">syntax</A> item.  The next line has &quot;contains=xTodo&quot;.
 This indicates that the xTodo <A HREF="syntax.html#syntax">syntax</A> element is inside <A HREF="motion.html#it">it</A>.  The result is that
 the comment line <A HREF="motion.html#as">as</A> a whole is matched with &quot;xComment&quot; and made blue.  The
-<A HREF="motion.html#word">word</A> TODO inside <A HREF="motion.html#it">it</A> is matched by xTodo and highlighted yellow (highlighting
+<A HREF="motion.html#word">单词</A> TODO inside <A HREF="motion.html#it">it</A> is matched by xTodo and highlighted yellow (highlighting
 for xTodo was setup for this).
 
 

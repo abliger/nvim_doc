@@ -535,7 +535,7 @@ Examples:
 <B><FONT color="#3A6F2B">   /* Vim: set ai tw=75: */ </FONT></B>
 
 The white space before {vi:|vim:|Vim:|ex:} is required.  This minimizes the
-chance that a normal <A HREF="motion.html#word">word</A> like &quot;lex:&quot; is caught.  There is one exception:
+chance that a normal <A HREF="motion.html#word">单词</A> like &quot;lex:&quot; is caught.  There is one exception:
 &quot;<A HREF="#vi:">vi:</A>&quot; and &quot;<A HREF="#vim:">vim:</A>&quot; can also be at the start of the line (for compatibility with
 version 3.0).  Using &quot;<A HREF="#ex:">ex:</A>&quot; at the start of the line will be ignored (this
 could be short for &quot;example:&quot;).
@@ -759,7 +759,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	take effect.  Shaping, in essence, gets enabled; the term is a broad
 	one which encompasses:
 	  <A HREF="motion.html#a)">a)</A> the changing/morphing of characters based on their location
-	     within a <A HREF="motion.html#word">word</A> (initial, medial, final and stand-alone).
+	     within a <A HREF="motion.html#word">单词</A> (initial, medial, final and stand-alone).
 	  <A HREF="motion.html#b">b</A>) the enabling of the ability to compose characters
 	  <A HREF="change.html#c">c</A>) the enabling of the required combining of some characters
 	When disabled the display shows each character's true stand-alone
@@ -1976,8 +1976,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			following occurrence.
 
 								*<A NAME="cpo-_"></A><B>cpo-_</B>*
-		_	When using |<A HREF="change.html#cw">cw</A>| on a <A HREF="motion.html#word">word</A>, <A HREF="diff.html#do">do</A> not include the
-			<A HREF="pattern.html#whitespace">whitespace</A> following the <A HREF="motion.html#word">word</A> in the motion.
+		_	When using |<A HREF="change.html#cw">cw</A>| on a <A HREF="motion.html#word">单词</A>, <A HREF="diff.html#do">do</A> not include the
+			<A HREF="pattern.html#whitespace">whitespace</A> following the <A HREF="motion.html#word">单词</A> in the motion.
 
 
 						*<A NAME="'cscopepathcomp'"></A><B>'cscopepathcomp'</B>* *<A NAME="'cspc'"></A><B>'cspc'</B>*
@@ -2137,12 +2137,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	<A HREF="eval.html#List">List</A> of file names, separated by commas, that are used to lookup words
 	for keyword completion commands |<A HREF="insert.html#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</A>|.  Each file should
-	contain a <A HREF="eval.html#list">list</A> of words.  This can be one <A HREF="motion.html#word">word</A> per line, or several
+	contain a <A HREF="eval.html#list">list</A> of words.  This can be one <A HREF="motion.html#word">单词</A> per line, or several
 	words per line, separated by non-keyword characters (white space is
 	preferred).  Maximum line length is 510 bytes.
 
 	When this option is empty or an entry &quot;<A HREF="spell.html#spell">spell</A>&quot; is present, and <A HREF="spell.html#spell">spell</A>
-	checking is enabled, words in the <A HREF="motion.html#word">word</A> lists for the currently active
+	checking is enabled, words in the <A HREF="motion.html#word">单词</A> lists for the currently active
 	<A HREF="#'spelllang'">'spelllang'</A> are used. See |<A HREF="spell.html#spell">spell</A>|.
 
 	To include a comma in a file name precede <A HREF="motion.html#it">it</A> with a <A HREF="intro.html#backslash">backslash</A>.  Spaces
@@ -3669,7 +3669,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	to the command line.  If <A HREF="#'ignorecase'">'ignorecase'</A> and <A HREF="#'smartcase'">'smartcase'</A> are set and the
 	command line has no <A HREF="change.html#uppercase">uppercase</A> characters, the added character is
 	converted to <A HREF="change.html#lowercase">lowercase</A>.
-	<A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> can be used to add the <A HREF="motion.html#word">word</A> at the end of the current
+	<A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> can be used to add the <A HREF="motion.html#word">单词</A> at the end of the current
 	match, excluding the characters that were already typed.
 
 
@@ -3805,7 +3805,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Keywords are used in searching and recognizing with many commands:
 	&quot;<A HREF="motion.html#w">w</A>&quot;, &quot;*&quot;, &quot;<A HREF="tagsrch.html#[i">[i</A>&quot;, etc.  It is also used for &quot;\k&quot; in a |<A HREF="pattern.html#pattern">pattern</A>|.  See
 	<A HREF="#'isfname'">'isfname'</A> for a description of the format of this option.  For '<A HREF="repeat.html#@">@</A>'
-	characters above 255 check the &quot;<A HREF="motion.html#word">word</A>&quot; character class (any character
+	characters above 255 check the &quot;<A HREF="motion.html#word">单词</A>&quot; character class (any character
 	that is not white space or punctuation).
 	For C programs you could use &quot;a-z,A-Z,48-57,_,.,-,&gt;&quot;.
 	For a help file <A HREF="motion.html#it">it</A> is set to all non-blank printable characters except
@@ -4339,15 +4339,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'mkspellmem'">'mkspellmem'</A> <A HREF="#'msm'">'msm'</A>	<A HREF="eval.html#string">string</A>	(default &quot;460000,2000,500&quot;)
 			global
 	Parameters for |<A HREF="spell.html#:mkspell">:mkspell</A>|.  This tunes when to start compressing the
-	<A HREF="motion.html#word">word</A> tree.  Compression can be slow when there are many words, but
+	<A HREF="motion.html#word">单词</A> tree.  Compression can be slow when there are many words, but
 	it's needed to avoid running out of memory.  The amount of memory used
-	per <A HREF="motion.html#word">word</A> depends very much on how similar the words are, that's why
+	per <A HREF="motion.html#word">单词</A> depends very much on how similar the words are, that's why
 	this tuning is complicated.
 
 	There are three numbers, separated by commas:
 		{start},{inc},{added}
 
-	For most languages the uncompressed <A HREF="motion.html#word">word</A> tree fits in memory.  {start}
+	For most languages the uncompressed <A HREF="motion.html#word">单词</A> tree fits in memory.  {start}
 	gives the amount of memory in Kbyte that can be used before any
 	compression is done.  It should be a bit smaller than the amount of
 	memory that is available to Vim.
@@ -4539,7 +4539,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B><FONT color="#3A6F2B">	mouse		    extend		popup(_setpos) </FONT></B>
 	left click	    place cursor	place cursor
 	left drag	    start selection	start selection
-	shift-left	    search <A HREF="motion.html#word">word</A>		extend selection
+	shift-left	    search <A HREF="motion.html#word">单词</A>		extend selection
 	right click	    extend selection	popup menu (place cursor)
 	right drag	    extend selection	-
 	middle click	    <A HREF="provider.html#paste">paste</A>		<A HREF="provider.html#paste">paste</A>
@@ -5214,7 +5214,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			*<A NAME="'rightleftcmd'"></A><B>'rightleftcmd'</B>* *<A NAME="'rlc'"></A><B>'rlc'</B>*
 <A HREF="#'rightleftcmd'">'rightleftcmd'</A> <A HREF="#'rlc'">'rlc'</A>	<A HREF="eval.html#string">string</A>	(default &quot;search&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
-	Each <A HREF="motion.html#word">word</A> in this option enables the command line editing to work in
+	Each <A HREF="motion.html#word">单词</A> in this option enables the command line editing to work in
 	right-to-left mode for a group of commands:
 
 		search		&quot;<A HREF="pattern.html#/">/</A>&quot; and &quot;<A HREF="pattern.html#?">?</A>&quot; commands
@@ -5514,7 +5514,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					       help,tabpages,winsize&quot;)
 			global
 	Changes the effect of the |<A HREF="starting.html#:mksession">:mksession</A>| command.  It is a comma-
-	separated <A HREF="eval.html#list">list</A> of words.  Each <A HREF="motion.html#word">word</A> enables saving and restoring
+	separated <A HREF="eval.html#list">list</A> of words.  Each <A HREF="motion.html#word">单词</A> enables saving and restoring
 	something:
 <B><FONT color="#3A6F2B">	   word		save and restore </FONT></B>
 	   blank	empty <A HREF="windows.html#windows">windows</A>
@@ -6002,7 +6002,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			*<A NAME="'showfulltag'"></A><B>'showfulltag'</B>* *<A NAME="'sft'"></A><B>'sft'</B>* *<A NAME="'noshowfulltag'"></A><B>'noshowfulltag'</B>* *<A NAME="'nosft'"></A><B>'nosft'</B>*
 <A HREF="#'showfulltag'">'showfulltag'</A> <A HREF="#'sft'">'sft'</A>	<A HREF="#boolean">boolean</A> (default off)
 			global
-	When completing a <A HREF="motion.html#word">word</A> in insert mode (see |<A HREF="insert.html#ins-completion">ins-completion</A>|) from the
+	When completing a <A HREF="motion.html#word">单词</A> in insert mode (see |<A HREF="insert.html#ins-completion">ins-completion</A>|) from the
 	<A HREF="tagsrch.html#tags">tags</A> file, show both the <A HREF="tagsrch.html#tag">tag</A> name and a tidied-up form of the search
 	<A HREF="pattern.html#pattern">pattern</A> (if there is one) <A HREF="motion.html#as">as</A> possible matches.  Thus, if you have
 	matched a C function, you can see a <A HREF="autocmd.html#template">template</A> for what arguments are
@@ -6202,9 +6202,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'spellcapcheck'"></A><B>'spellcapcheck'</B>* *<A NAME="'spc'"></A><B>'spc'</B>*
 <A HREF="#'spellcapcheck'">'spellcapcheck'</A> <A HREF="#'spc'">'spc'</A>	<A HREF="eval.html#string">string</A>	(default &quot;[.?!]\_[\])&#39;&#34;' \t]\+&quot;)
 			local to buffer
-	<A HREF="pattern.html#Pattern">Pattern</A> to locate the end of a <A HREF="motion.html#sentence">sentence</A>.  The following <A HREF="motion.html#word">word</A> will be
+	<A HREF="pattern.html#Pattern">Pattern</A> to locate the end of a <A HREF="motion.html#sentence">sentence</A>.  The following <A HREF="motion.html#word">单词</A> will be
 	checked to start with a capital <A HREF="print.html#letter">letter</A>.  If not then <A HREF="motion.html#it">it</A> is highlighted
-	with SpellCap |<A HREF="syntax.html#hl-SpellCap">hl-SpellCap</A>| (unless the <A HREF="motion.html#word">word</A> is also badly spelled).
+	with SpellCap |<A HREF="syntax.html#hl-SpellCap">hl-SpellCap</A>| (unless the <A HREF="motion.html#word">单词</A> is also badly spelled).
 	When this check is not wanted make this option empty.
 	Only used when <A HREF="#'spell'">'spell'</A> is set.
 	Be careful with special characters, see |<A HREF="#option-backslash">option-backslash</A>| about
@@ -6216,15 +6216,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'spellfile'"></A><B>'spellfile'</B>* *<A NAME="'spf'"></A><B>'spf'</B>*
 <A HREF="#'spellfile'">'spellfile'</A> <A HREF="#'spf'">'spf'</A>	<A HREF="eval.html#string">string</A>	(default empty)
 			local to buffer
-	Name of the <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> file where words are added for the |<A HREF="spell.html#zg">zg</A>| and |<A HREF="spell.html#zw">zw</A>|
+	Name of the <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> file where words are added for the |<A HREF="spell.html#zg">zg</A>| and |<A HREF="spell.html#zw">zw</A>|
 	commands.  It must end in &quot;.{encoding}.add&quot;.  You need to include the
 	path, otherwise the file is placed in the current directory.
 
 								*<A NAME="E765"></A><B>E765</B>*
 	It may also be a comma-separated <A HREF="eval.html#list">list</A> of names.  A <A HREF="intro.html#count">count</A> before the
 	|<A HREF="spell.html#zg">zg</A>| and |<A HREF="spell.html#zw">zw</A>| commands can be used to access each.  This allows using
-	a personal <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> file and a project <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> file.
-	When a <A HREF="motion.html#word">word</A> is added while this option is empty Vim will set <A HREF="motion.html#it">it</A> for
+	a personal <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> file and a project <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> file.
+	When a <A HREF="motion.html#word">单词</A> is added while this option is empty Vim will set <A HREF="motion.html#it">it</A> for
 	you: Using the first directory in <A HREF="#'runtimepath'">'runtimepath'</A> that is writable.  If
 	there is no &quot;<A HREF="spell.html#spell">spell</A>&quot; directory yet <A HREF="motion.html#it">it</A> will be created.  For the file
 	name the first language name that appears in <A HREF="#'spelllang'">'spelllang'</A> is used,
@@ -6242,12 +6242,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'spelllang'"></A><B>'spelllang'</B>* *<A NAME="'spl'"></A><B>'spl'</B>*
 <A HREF="#'spelllang'">'spelllang'</A> <A HREF="#'spl'">'spl'</A>	<A HREF="eval.html#string">string</A>	(default &quot;en&quot;)
 			local to buffer
-	A comma-separated <A HREF="eval.html#list">list</A> of <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> names.  When the <A HREF="#'spell'">'spell'</A> option is
+	A comma-separated <A HREF="eval.html#list">list</A> of <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> names.  When the <A HREF="#'spell'">'spell'</A> option is
 	on spellchecking will be done for these languages.  Example:
 <B>		set spelllang=en_us,nl,medical</B>
  	This means US English, Dutch and medical words are recognized.  Words
 	that are not recognized will be highlighted.
-	The <A HREF="motion.html#word">word</A> <A HREF="eval.html#list">list</A> name must consist of alphanumeric characters, a dash or
+	The <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> name must consist of alphanumeric characters, a dash or
 	an underscore.  It should not include a comma or dot.  Using a dash is
 	recommended to separate the two <A HREF="print.html#letter">letter</A> language name from a
 	specification.  Thus &quot;en-rare&quot; is used for rare English words.
@@ -6285,10 +6285,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'spelloptions'">'spelloptions'</A> <A HREF="#'spo'">'spo'</A>	<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			local to buffer
 	A comma-separated <A HREF="eval.html#list">list</A> of <A HREF="#options">options</A> for <A HREF="spell.html#spell">spell</A> checking:
-	   camel	When a <A HREF="motion.html#word">word</A> is CamelCased, assume &quot;Cased&quot; is a
-			separate <A HREF="motion.html#word">word</A>: every upper-case character in a <A HREF="motion.html#word">word</A>
+	   camel	When a <A HREF="motion.html#word">单词</A> is CamelCased, assume &quot;Cased&quot; is a
+			separate <A HREF="motion.html#word">单词</A>: every upper-case character in a <A HREF="motion.html#word">单词</A>
 			that comes after a lower <A HREF="change.html#case">case</A> character indicates the
-			start of a new <A HREF="motion.html#word">word</A>.
+			start of a new <A HREF="motion.html#word">单词</A>.
 
 
 						*<A NAME="'spellsuggest'"></A><B>'spellsuggest'</B>* *<A NAME="'sps'"></A><B>'sps'</B>*
@@ -6305,7 +6305,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	double		Internal <A HREF="eval.html#method">method</A> that uses two methods and mixes the
 			results.  The first <A HREF="eval.html#method">method</A> is &quot;fast&quot;, the other <A HREF="eval.html#method">method</A>
 			computes how much the suggestion sounds like the bad
-			<A HREF="motion.html#word">word</A>.  That only works when the language specifies
+			<A HREF="motion.html#word">单词</A>.  That only works when the language specifies
 			sound <A HREF="fold.html#folding">folding</A>.  Can be slow and doesn't always give
 			better results.
 
@@ -6320,22 +6320,22 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	file:{filename} Read file {filename}, which must have two columns,
 			separated by a slash.  The first column contains the
-			bad <A HREF="motion.html#word">word</A>, the second column the suggested good <A HREF="motion.html#word">word</A>.
+			bad <A HREF="motion.html#word">单词</A>, the second column the suggested good <A HREF="motion.html#word">单词</A>.
 			Example:
 <B><FONT color="#3A6F2B">				theribal/terrible </FONT></B>
 			Use this for common mistakes that <A HREF="diff.html#do">do</A> not appear at the
 			top of the suggestion <A HREF="eval.html#list">list</A> with the internal methods.
 			Lines without a slash are ignored, use this for
 			comments.
-			The <A HREF="motion.html#word">word</A> in the second column must be correct,
-			otherwise <A HREF="motion.html#it">it</A> will not be used.  Add the <A HREF="motion.html#word">word</A> to an
+			The <A HREF="motion.html#word">单词</A> in the second column must be correct,
+			otherwise <A HREF="motion.html#it">it</A> will not be used.  Add the <A HREF="motion.html#word">单词</A> to an
 			&quot;.add&quot; file if <A HREF="motion.html#it">it</A> is currently flagged <A HREF="motion.html#as">as</A> a spelling
 			mistake.
 			The file is used for all languages.
 
 	expr:{expr}	Evaluate <A HREF="eval.html#expression">expression</A> {expr}.  Use a function to avoid
 			trouble with spaces.  |<A HREF="eval.html#v:val">v:val</A>| holds the badly spelled
-			<A HREF="motion.html#word">word</A>.  The <A HREF="eval.html#expression">expression</A> must evaluate to a <A HREF="eval.html#List">List</A> of
+			<A HREF="motion.html#word">单词</A>.  The <A HREF="eval.html#expression">expression</A> must evaluate to a <A HREF="eval.html#List">List</A> of
 			<A HREF="eval.html#Lists">Lists</A>, each with a suggestion and a score.
 			Example:
 <B><FONT color="#3A6F2B">				[['the', 33], ['that', 44]] </FONT></B>
@@ -7273,7 +7273,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'viewoptions'">'viewoptions'</A> <A HREF="#'vop'">'vop'</A>	<A HREF="eval.html#string">string</A>	(default: &quot;folds,cursor,curdir&quot;)
 			global
 	Changes the effect of the |<A HREF="starting.html#:mkview">:mkview</A>| command.  It is a comma-separated
-	<A HREF="eval.html#list">list</A> of words.  Each <A HREF="motion.html#word">word</A> enables saving and restoring something:
+	<A HREF="eval.html#list">list</A> of words.  Each <A HREF="motion.html#word">单词</A> enables saving and restoring something:
 <B><FONT color="#3A6F2B">	   word		save and restore </FONT></B>
 	   cursor	cursor position in file and in<A HREF="windows.html#window">窗口</A>
 	   curdir	local current directory, if set with |<A HREF="editing.html#:lcd">:lcd</A>|
@@ -7684,8 +7684,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	and only part of long lines will be displayed.  When the cursor is
 	moved to a part that is not shown, the screen will scroll
 	horizontally.
-	The line will be broken in the middle of a <A HREF="motion.html#word">word</A> if necessary.  See
-	<A HREF="#'linebreak'">'linebreak'</A> to get the break at a <A HREF="motion.html#word">word</A> boundary.
+	The line will be broken in the middle of a <A HREF="motion.html#word">单词</A> if necessary.  See
+	<A HREF="#'linebreak'">'linebreak'</A> to get the break at a <A HREF="motion.html#word">单词</A> boundary.
 	To make <A HREF="scroll.html#scrolling">scrolling</A> horizontally a bit more useful, try this:
 <B>		:set sidescroll=5</B>
 <B>		:set listchars+=precedes:&lt;,extends:&gt;</B>

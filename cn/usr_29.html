@@ -120,7 +120,7 @@ jump to <A HREF="motion.html#it">it</A> by using the following command:
 <B>	:tag startlist</B>
 
 This command will find the function &quot;startlist&quot; even if <A HREF="motion.html#it">it</A> is in another file.
-   The <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> command jumps to the <A HREF="tagsrch.html#tag">tag</A> of the <A HREF="motion.html#word">word</A> that is under the cursor.
+   The <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> command jumps to the <A HREF="tagsrch.html#tag">tag</A> of the <A HREF="motion.html#word">单词</A> that is under the cursor.
 This makes <A HREF="motion.html#it">it</A> easy to explore a tangle of C code.  Suppose, for example, that
 you are in the function &quot;write_block&quot;.  You can see that <A HREF="motion.html#it">it</A> calls
 &quot;write_line&quot;.  But what does &quot;write_line&quot; <A HREF="diff.html#do">do</A>?  By placing the cursor on the
@@ -367,7 +367,7 @@ in the preview<A HREF="windows.html#window">窗口</A>with:
 
 <B>	CTRL-W }</B>
 
-There is a <A HREF="usr_41.html#script">script</A> that automatically displays the text where the <A HREF="motion.html#word">word</A> under
+There is a <A HREF="usr_41.html#script">script</A> that automatically displays the text where the <A HREF="motion.html#word">单词</A> under
 the cursor was defined.  See |<A HREF="windows.html#CursorHold-example">CursorHold-example</A>|.
 
 To close the preview<A HREF="windows.html#window">窗口</A>use this command:
@@ -379,7 +379,7 @@ useful to edit a header file, for example:
 
 <B>	:pedit defs.h</B>
 
-Finally, &quot;<A HREF="windows.html#:psearch">:psearch</A>&quot; can be used to find a <A HREF="motion.html#word">word</A> in the current file and any
+Finally, &quot;<A HREF="windows.html#:psearch">:psearch</A>&quot; can be used to find a <A HREF="motion.html#word">单词</A> in the current file and any
 included files and display the match in the preview<A HREF="windows.html#window">窗口</A>.  This is
 especially useful when using library <A HREF="eval.html#functions">functions</A>, for which you <A HREF="diff.html#do">do</A> not have a
 <A HREF="tagsrch.html#tags">tags</A> file.  Example:
@@ -522,7 +522,7 @@ comment with &quot;<A HREF="motion.html#]/">]/</A>&quot;.  This only works for /
 
 You are editing a C program and wonder if a variable is declared <A HREF="motion.html#as">as</A> &quot;int&quot; or
 &quot;unsigned&quot;.  A quick way to find this is with the &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; command.
-   Suppose the cursor is on the <A HREF="motion.html#word">word</A> &quot;column&quot;.  Type:
+   Suppose the cursor is on the <A HREF="motion.html#word">单词</A> &quot;column&quot;.  Type:
 
 <B>	[I</B>
 
@@ -651,7 +651,7 @@ line looks like that defines the items for &quot;<A HREF="tagsrch.html#[D">[D</A
 *<A NAME="29.5"></A><B>29.5</B>*	Finding local identifiers
 
 The &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; command searches included files.  To search in the current file only,
-and jump to the first place where the <A HREF="motion.html#word">word</A> under the cursor is used:
+and jump to the first place where the <A HREF="motion.html#word">单词</A> under the cursor is used:
 
 <B>	gD</B>
 
@@ -673,7 +673,7 @@ use this command:
 <B>	gd</B>
 
 This will go back to the start of the current function and find the first
-occurrence of the <A HREF="motion.html#word">word</A> under the cursor.  Actually, <A HREF="motion.html#it">it</A> searches backwards to
+occurrence of the <A HREF="motion.html#word">单词</A> under the cursor.  Actually, <A HREF="motion.html#it">it</A> searches backwards to
 an empty line above a &quot;<A HREF="motion.html#{">{</A>&quot; in the first column.  From there <A HREF="motion.html#it">it</A> searches forward
 for the identifier.  Example (cursor on &quot;idx&quot;):
 

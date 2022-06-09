@@ -83,14 +83,14 @@ By combining several commands you can make Vim <A HREF="diff.html#do">do</A> nea
 chapter a number of useful combinations will be presented.  This uses the
 commands introduced in the previous chapters and a few more.
 
-|<A HREF="#12.1">12.1</A>|	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">word</A>
+|<A HREF="#12.1">12.1</A>|	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">单词</A>
 |<A HREF="#12.2">12.2</A>|	Change &quot;Last, First&quot; to &quot;First Last&quot;
 |<A HREF="#12.3">12.3</A>|	Sort a <A HREF="eval.html#list">list</A>
 |<A HREF="#12.4">12.4</A>|	Reverse line order
 |<A HREF="#12.5">12.5</A>|	Count words
 |<A HREF="#12.6">12.6</A>|	Find a man page
 |<A HREF="#12.7">12.7</A>|	Trim blanks
-|<A HREF="#12.8">12.8</A>|	Find where a <A HREF="motion.html#word">word</A> is used
+|<A HREF="#12.8">12.8</A>|	Find where a <A HREF="motion.html#word">单词</A> is used
 
 下一章: |<A HREF="usr_20.html">usr_20.txt</A>|  Typing command-line commands quickly
 上一章: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
@@ -98,10 +98,10 @@ commands introduced in the previous chapters and a few more.
 
 ==============================================================================
 
-*<A NAME="12.1"></A><B>12.1</B>*	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">word</A>
+*<A NAME="12.1"></A><B>12.1</B>*	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">单词</A>
 
-The substitute command can be used to replace all occurrences of a <A HREF="motion.html#word">word</A> with
-another <A HREF="motion.html#word">word</A>:
+The substitute command can be used to replace all occurrences of a <A HREF="motion.html#word">单词</A> with
+another <A HREF="motion.html#word">单词</A>:
 
 <B>	:%s/four/4/g</B>
 
@@ -109,12 +109,12 @@ The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; range means to replace in 
 all words in a line to be replaced.
    This will not <A HREF="diff.html#do">do</A> the right thing if your file also contains &quot;thirtyfour&quot;.
 It would be replaced with &quot;thirty4&quot;.  To avoid this, use the &quot;\&lt;&quot; item to
-match the start of a <A HREF="motion.html#word">word</A>:
+match the start of a <A HREF="motion.html#word">单词</A>:
 
 <B>	:%s/\&lt;four/4/g</B>
 
 Obviously, this still goes wrong on &quot;fourteen&quot;.  Use &quot;\&gt;&quot; to match the end of
-a <A HREF="motion.html#word">word</A>:
+a <A HREF="motion.html#word">单词</A>:
 
 <B>	:%s/\&lt;four\&gt;/4/g</B>
 
@@ -128,7 +128,7 @@ substitute command prompt you for each replacement:
 
 REPLACING IN SEVERAL FILES
 
-Suppose you want to replace a <A HREF="motion.html#word">word</A> in more than one file.  You could edit each
+Suppose you want to replace a <A HREF="motion.html#word">单词</A> in more than one file.  You could edit each
 file and type the command manually.  It's a lot faster to use record and
 playback.
    Let's assume you have a directory with C++ files, all ending in &quot;.cpp&quot;.
@@ -154,7 +154,7 @@ to the next file.  This stops the execution, and everything is done.
 	When playing back a recorded sequence, an error stops the execution.
 	Therefore, make sure you don't get an error message when <A HREF="repeat.html#recording">recording</A>.
 
-There is one catch: If one of the .cpp files does not contain the <A HREF="motion.html#word">word</A>
+There is one catch: If one of the .cpp files does not contain the <A HREF="motion.html#word">单词</A>
 &quot;GetResp&quot;, you will get an error and <A HREF="change.html#replacing">replacing</A> will stop.  To avoid this, add
 the &quot;<A HREF="motion.html#e">e</A>&quot; flag to the substitute command:
 
@@ -294,12 +294,12 @@ easy to read.
 
 <B><FONT color="#3A6F2B">	Col 1 of 0; Line 141 of 157; Word 748 of 774; Byte 4489 of 4976 </FONT></B>
 
-You can see on which <A HREF="motion.html#word">word</A> you are (748), and the total number of words in the
+You can see on which <A HREF="motion.html#word">单词</A> you are (748), and the total number of words in the
 file (774).
 
 When the text is only part of a file, you could move to the start of the text,
 type &quot;g CTRL-G&quot;, move to the end of the text, type &quot;g CTRL-G&quot; again, and then
-use your brain to compute the difference in the <A HREF="motion.html#word">word</A> position.  That's a good
+use your brain to compute the difference in the <A HREF="motion.html#word">单词</A> position.  That's a good
 exercise, but there is an easier way.  With <A HREF="visual.html#Visual">Visual</A> mode, select the text you
 want to <A HREF="intro.html#count">count</A> words in.  Then type <A HREF="vimindex.html#g">g</A> <A HREF="editing.html#CTRL-G">CTRL-G</A>.  The result:
 
@@ -313,11 +313,11 @@ For other ways to count words, lines and other items, see |<A HREF="tips.html#co
 
 While editing a shell <A HREF="usr_41.html#script">script</A> or C program, you are using a command or function
 that you want to find the man page for (this is on Unix).  Let's first use a
-simple way: Move the cursor to the <A HREF="motion.html#word">word</A> you want to find help on and press
+simple way: Move the cursor to the <A HREF="motion.html#word">单词</A> you want to find help on and press
 
 <B>	K</B>
 
-Nvim will run |<A HREF="filetype.html#:Man">:Man</A>| on the <A HREF="motion.html#word">word</A>.  If the man page is found, <A HREF="motion.html#it">it</A> is displayed.
+Nvim will run |<A HREF="filetype.html#:Man">:Man</A>| on the <A HREF="motion.html#word">单词</A>.  If the man page is found, <A HREF="motion.html#it">it</A> is displayed.
 You can also use the |<A HREF="filetype.html#:Man">:Man</A>| command to open a<A HREF="windows.html#window">窗口</A>on a man page:
 
 <B>	:Man csh</B>
@@ -334,7 +334,7 @@ To jump to another man page, which is in the text with the typical form
 &quot;word(1)&quot;, press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">it</A>.  Further &quot;<A HREF="filetype.html#:Man">:Man</A>&quot; commands will use the same
 <A HREF="windows.html#window">窗口</A>.
 
-To display a man page for the <A HREF="motion.html#word">word</A> under the cursor, use this:
+To display a man page for the <A HREF="motion.html#word">单词</A> under the cursor, use this:
 
 <B>	K</B>
 
@@ -377,21 +377,21 @@ matches can be found.
 
 ==============================================================================
 
-*<A NAME="12.8"></A><B>12.8</B>*	Find where a <A HREF="motion.html#word">word</A> is used
+*<A NAME="12.8"></A><B>12.8</B>*	Find where a <A HREF="motion.html#word">单词</A> is used
 
 If you are a Unix user, you can use a combination of Vim and the <A HREF="quickfix.html#grep">grep</A> command
-to edit all the files that contain a given <A HREF="motion.html#word">word</A>.  This is extremely useful if
+to edit all the files that contain a given <A HREF="motion.html#word">单词</A>.  This is extremely useful if
 you are working on a program and want to view or edit all the files that
 contain a specific variable.
    For example, suppose you want to edit all the C program files that contain
-the <A HREF="motion.html#word">word</A> &quot;frame_counter&quot;.  To <A HREF="diff.html#do">do</A> this you use the command:
+the <A HREF="motion.html#word">单词</A> &quot;frame_counter&quot;.  To <A HREF="diff.html#do">do</A> this you use the command:
 
 <B>	vim `grep -l frame_counter *.c`</B>
 
 Let's look at this command in detail.  The <A HREF="quickfix.html#grep">grep</A> command searches through a set
-of files for a given <A HREF="motion.html#word">word</A>.  Because the <A HREF="starting.html#-l">-l</A> argument is specified, the command
-will only <A HREF="eval.html#list">list</A> the files containing the <A HREF="motion.html#word">word</A> and not print the matching lines.
-The <A HREF="motion.html#word">word</A> <A HREF="motion.html#it">it</A> is searching for is &quot;frame_counter&quot;.  Actually, this can be any
+of files for a given <A HREF="motion.html#word">单词</A>.  Because the <A HREF="starting.html#-l">-l</A> argument is specified, the command
+will only <A HREF="eval.html#list">list</A> the files containing the <A HREF="motion.html#word">单词</A> and not print the matching lines.
+The <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">it</A> is searching for is &quot;frame_counter&quot;.  Actually, this can be any
 regular <A HREF="eval.html#expression">expression</A>.  (Note: What <A HREF="quickfix.html#grep">grep</A> uses for regular expressions is not
 exactly the same <A HREF="motion.html#as">as</A> what Vim uses.)
    The entire command is enclosed in backticks (`).  This tells the Unix shell
@@ -404,8 +404,8 @@ like &quot;<A HREF="editing.html#:next">:next</A>&quot; and &quot;<A HREF="editi
 
 FINDING EACH LINE
 
-The above command only finds the files in which the <A HREF="motion.html#word">word</A> is found.  You still
-have to find the <A HREF="motion.html#word">word</A> within the files.
+The above command only finds the files in which the <A HREF="motion.html#word">单词</A> is found.  You still
+have to find the <A HREF="motion.html#word">单词</A> within the files.
    Vim has a built-in command that you can use to search a set of files for a
 given <A HREF="eval.html#string">string</A>.  If you want to find all occurrences of &quot;error_string&quot; in all C
 program files, for example, enter the following command:

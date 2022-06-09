@@ -605,7 +605,7 @@ the omap start <A HREF="visual.html#Visual">Visual</A> mode to select the text t
 that operates on a function name in the current line:
 <B>	onoremap &lt;silent&gt; F :&lt;C-U&gt;normal! 0f(hviw&lt;CR&gt;</B>
 The <A HREF="scroll.html#CTRL-U">CTRL-U</A> (&lt;C-U&gt;) is used to remove the range that Vim may insert.  The
-<A HREF="intro.html#Normal">正常</A>模式 commands find the first '<A HREF="motion.html#(">(</A>' character and select the first <A HREF="motion.html#word">word</A>
+<A HREF="intro.html#Normal">正常</A>模式 commands find the first '<A HREF="motion.html#(">(</A>' character and select the first <A HREF="motion.html#word">单词</A>
 before <A HREF="motion.html#it">it</A>.  That usually is the function name.
 
 To enter a <A HREF="#mapping">mapping</A> for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode, but not <A HREF="intro.html#Operator-pending">Operator-pending</A> mode,
@@ -1092,7 +1092,7 @@ The `mode()` function will return the state <A HREF="motion.html#as">as</A> <A H
 2. <A HREF="#Abbreviations">Abbreviations</A>			*<A NAME="abbreviations"></A><B>abbreviations</B>* *<A NAME="Abbreviations"></A><B>Abbreviations</B>*
 
 <A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="insert.html#Replace">Replace</A> mode and <A HREF="cmdline.html#Command-line">Command-line</A> mode.
-If you enter a <A HREF="motion.html#word">word</A> that is an abbreviation, <A HREF="motion.html#it">it</A> is replaced with the <A HREF="motion.html#word">word</A> <A HREF="motion.html#it">it</A>
+If you enter a <A HREF="motion.html#word">单词</A> that is an abbreviation, <A HREF="motion.html#it">it</A> is replaced with the <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">it</A>
 stands for.  This can be used to save typing for often used long words.  And
 you can use <A HREF="motion.html#it">it</A> to automatically correct obvious spelling <A HREF="message.html#errors">errors</A>.
 Examples:
@@ -1321,7 +1321,7 @@ Stored <A HREF="motion.html#as">as</A>:  esc     ^V^[
 	abbreviation will be displayed.
 
 	Later, when the abbreviation is expanded because the user typed in
-	the <A HREF="motion.html#word">word</A> &quot;esc&quot;, the long form is subjected to the same type of
+	the <A HREF="motion.html#word">单词</A> &quot;esc&quot;, the long form is subjected to the same type of
 	^V interpretation <A HREF="motion.html#as">as</A> keyboard input.  So the ^V protects the ^[
 	character from being interpreted <A HREF="motion.html#as">as</A> the &quot;exit <A HREF="intro.html#Insert">插入</A>模式&quot; character.
 	Instead, the ^[ is inserted into the text.

@@ -106,7 +106,7 @@ aren't on your keyboard.
 The <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> key was already mentioned.  It deletes the character just before the
 cursor.  The <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A> key does the same for the character under (after) the
 cursor.
-   When you typed a whole <A HREF="motion.html#word">word</A> wrong, use <A HREF="vimindex.html#CTRL-W">CTRL-W</A>:
+   When you typed a whole <A HREF="motion.html#word">单词</A> wrong, use <A HREF="vimindex.html#CTRL-W">CTRL-W</A>:
 
 <B><FONT color="#3A6F2B">	The horse had fallen to the sky </FONT></B>
 				       <A HREF="vimindex.html#CTRL-W">CTRL-W</A>
@@ -158,10 +158,10 @@ leave <A HREF="intro.html#Insert">插入</A>模式.  The extra typing doesn't ma
 	<A HREF="motion.html#&lt;C-Home&gt;">&lt;C-Home&gt;</A>	to start of the file
 	<A HREF="scroll.html#&lt;PageUp&gt;">&lt;PageUp&gt;</A>	a whole screenful up
 	<A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>		to start of line
-	<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A>	one <A HREF="motion.html#word">word</A> left
-	<A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	one <A HREF="motion.html#word">word</A> left
-	<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>	one <A HREF="motion.html#word">word</A> right
-	<A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	one <A HREF="motion.html#word">word</A> right
+	<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A>	one <A HREF="motion.html#word">单词</A> left
+	<A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	one <A HREF="motion.html#word">单词</A> left
+	<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>	one <A HREF="motion.html#word">单词</A> right
+	<A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	one <A HREF="motion.html#word">单词</A> right
 	<A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>		to end of the line
 	<A HREF="scroll.html#&lt;PageDown&gt;">&lt;PageDown&gt;</A>	a whole screenful down
 	<A HREF="motion.html#&lt;C-End&gt;">&lt;C-End&gt;</A>		to end of the file
@@ -197,7 +197,7 @@ The time is specified in tenths of a second.
 *<A NAME="24.3"></A><B>24.3</B>*	Completion
 
 Vim can automatically complete words on insertion.  You type the first part of
-a <A HREF="motion.html#word">word</A>, press <A HREF="motion.html#CTRL-P">CTRL-P</A>, and Vim guesses the rest.
+a <A HREF="motion.html#word">单词</A>, press <A HREF="motion.html#CTRL-P">CTRL-P</A>, and Vim guesses the rest.
    Suppose, for example, that you are creating a C program and want to type in
 the following:
 
@@ -207,9 +207,9 @@ You start by entering the following:
 
 <B><FONT color="#3A6F2B">	total = ch_array[0] + ch_ </FONT></B>
 
-At this point, you tell Vim to complete the <A HREF="motion.html#word">word</A> using the command <A HREF="motion.html#CTRL-P">CTRL-P</A>.
-Vim searches for a <A HREF="motion.html#word">word</A> that starts with what's in front of the cursor.  In
-this <A HREF="change.html#case">case</A>, <A HREF="motion.html#it">it</A> is &quot;ch_&quot;, which matches with the <A HREF="motion.html#word">word</A> ch_array.  So typing
+At this point, you tell Vim to complete the <A HREF="motion.html#word">单词</A> using the command <A HREF="motion.html#CTRL-P">CTRL-P</A>.
+Vim searches for a <A HREF="motion.html#word">单词</A> that starts with what's in front of the cursor.  In
+this <A HREF="change.html#case">case</A>, <A HREF="motion.html#it">it</A> is &quot;ch_&quot;, which matches with the <A HREF="motion.html#word">单词</A> ch_array.  So typing
 <A HREF="motion.html#CTRL-P">CTRL-P</A> gives you the following:
 
 <B><FONT color="#3A6F2B">	total = ch_array[0] + ch_array </FONT></B>
@@ -218,10 +218,10 @@ After a little more typing, you get this (ending in a space):
 
 <B><FONT color="#3A6F2B">	total = ch_array[0] + ch_array[1] +  </FONT></B>
 
-If you now type <A HREF="motion.html#CTRL-P">CTRL-P</A> Vim will search again for a <A HREF="motion.html#word">word</A> that completes the
-<A HREF="motion.html#word">word</A> before the cursor.  Since there is nothing in front of the cursor, <A HREF="motion.html#it">it</A>
-finds the first <A HREF="motion.html#word">word</A> backwards, which is &quot;ch_array&quot;.  Typing <A HREF="motion.html#CTRL-P">CTRL-P</A> again
-gives you the next <A HREF="motion.html#word">word</A> that matches, in this <A HREF="change.html#case">case</A> &quot;total&quot;.  A third <A HREF="motion.html#CTRL-P">CTRL-P</A>
+If you now type <A HREF="motion.html#CTRL-P">CTRL-P</A> Vim will search again for a <A HREF="motion.html#word">单词</A> that completes the
+<A HREF="motion.html#word">单词</A> before the cursor.  Since there is nothing in front of the cursor, <A HREF="motion.html#it">it</A>
+finds the first <A HREF="motion.html#word">单词</A> backwards, which is &quot;ch_array&quot;.  Typing <A HREF="motion.html#CTRL-P">CTRL-P</A> again
+gives you the next <A HREF="motion.html#word">单词</A> that matches, in this <A HREF="change.html#case">case</A> &quot;total&quot;.  A third <A HREF="motion.html#CTRL-P">CTRL-P</A>
 searches further back.  If there is nothing else, <A HREF="motion.html#it">it</A> causes the editor to run
 out of words, so <A HREF="motion.html#it">it</A> returns to the original text, which is nothing.  A fourth
 <A HREF="motion.html#CTRL-P">CTRL-P</A> causes the editor to start over again with &quot;ch_array&quot;.
@@ -250,7 +250,7 @@ when searching for matches.
 
 A special option for completion is <A HREF="options.html#'infercase'">'infercase'</A>.  This is useful to find
 matches while ignoring <A HREF="change.html#case">case</A> ('ignorecase' must be set) but still using the
-<A HREF="change.html#case">case</A> of the <A HREF="motion.html#word">word</A> typed so far.  Thus if you type &quot;For&quot; and Vim finds a match
+<A HREF="change.html#case">case</A> of the <A HREF="motion.html#word">单词</A> typed so far.  Thus if you type &quot;For&quot; and Vim finds a match
 &quot;fortunately&quot;, <A HREF="motion.html#it">it</A> will result in &quot;Fortunately&quot;.
 
 
@@ -276,7 +276,7 @@ the previous match.
 COMPLETING FILE NAMES
 
 Let's take <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-F">CTRL-F</A> <A HREF="motion.html#as">as</A> an example.  This will find file names.  It scans
-the current directory for files and displays each one that matches the <A HREF="motion.html#word">word</A> in
+the current directory for files and displays each one that matches the <A HREF="motion.html#word">单词</A> in
 front of the cursor.
    Suppose, for example, that you have the following files in the current
 directory:
@@ -288,7 +288,7 @@ Now enter <A HREF="intro.html#Insert">插入</A>模式 and start typing:
 <B><FONT color="#3A6F2B">	The exit code is in the file sub </FONT></B>
 
 At this point, you enter the command <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-F">CTRL-F</A>.  Vim now completes the
-current <A HREF="motion.html#word">word</A> &quot;sub&quot; by looking at the files in the current directory.  The
+current <A HREF="motion.html#word">单词</A> &quot;sub&quot; by looking at the files in the current directory.  The
 first match is sub_count.c.  This is not the one you want, so you match the
 next file by typing <A HREF="motion.html#CTRL-N">CTRL-N</A>.  This match is sub_done.c.  Typing <A HREF="motion.html#CTRL-N">CTRL-N</A> again
 takes you to sub_exit.c.  The results:
@@ -326,7 +326,7 @@ source:
 
 The cursor is after &quot;p-&gt;&quot;.  Now type <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-O">CTRL-O</A>.  Vim will offer you a <A HREF="eval.html#list">list</A>
 of alternatives, which are the items that &quot;struct foo&quot; contains.  That is
-quite different from using <A HREF="motion.html#CTRL-P">CTRL-P</A>, which would complete any <A HREF="motion.html#word">word</A>, while only
+quite different from using <A HREF="motion.html#CTRL-P">CTRL-P</A>, which would complete any <A HREF="motion.html#word">单词</A>, while only
 members of &quot;struct foo&quot; are valid here.
 
 For Omni completion to work you may need to <A HREF="diff.html#do">do</A> some setup.  At least make sure
@@ -417,7 +417,7 @@ cursor.
 *<A NAME="24.6"></A><B>24.6</B>*	Inserting a <A HREF="intro.html#register">register</A>
 
 The command <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A> inserts the contents of the <A HREF="intro.html#register">register</A>.  This is
-useful to avoid having to type a long <A HREF="motion.html#word">word</A>.  For example, you need to type
+useful to avoid having to type a long <A HREF="motion.html#word">单词</A>.  For example, you need to type
 this:
 
 <B><FONT color="#3A6F2B">	r = VeryLongFunction(a) + VeryLongFunction(b) + VeryLongFunction(c) </FONT></B>
@@ -450,7 +450,7 @@ use the command <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R"
 
 *<A NAME="24.7"></A><B>24.7</B>*	<A HREF="map.html#Abbreviations">Abbreviations</A>
 
-An abbreviation is a short <A HREF="motion.html#word">word</A> that takes the place of a long one.  For
+An abbreviation is a short <A HREF="motion.html#word">单词</A> that takes the place of a long one.  For
 example, &quot;ad&quot; stands for &quot;advertisement&quot;.  Vim enables you to type an
 abbreviation and then will automatically expand <A HREF="motion.html#it">it</A> for you.
    To tell Vim to expand &quot;ad&quot; into &quot;advertisement&quot; every time you insert <A HREF="motion.html#it">it</A>,
@@ -458,9 +458,9 @@ use the following command:
 
 <B>	:iabbrev ad advertisement</B>
 
-Now, when you type &quot;ad&quot;, the whole <A HREF="motion.html#word">word</A> &quot;advertisement&quot; will be inserted into
+Now, when you type &quot;ad&quot;, the whole <A HREF="motion.html#word">单词</A> &quot;advertisement&quot; will be inserted into
 the text.  This is triggered by typing a character that can't be part of a
-<A HREF="motion.html#word">word</A>, for example a space:
+<A HREF="motion.html#word">单词</A>, for example a space:
 
 	What Is Entered		What You See
 <B><FONT color="#3A6F2B">	I saw the a		I saw the a </FONT></B>
@@ -468,7 +468,7 @@ the text.  This is triggered by typing a character that can't be part of a
 <B><FONT color="#3A6F2B">	I saw the ad&lt;Space&gt;	I saw the advertisement&lt;Space&gt; </FONT></B>
 
 The expansion doesn't happen when typing just &quot;ad&quot;.  That allows you to type a
-<A HREF="motion.html#word">word</A> like &quot;add&quot;, which will not get expanded.  Only whole words are checked
+<A HREF="motion.html#word">单词</A> like &quot;add&quot;, which will not get expanded.  Only whole words are checked
 for <A HREF="map.html#abbreviations">abbreviations</A>.
 
 
@@ -493,7 +493,7 @@ abbreviation and the expansion.  To avoid that problem, I <A HREF="spell.html#sp
 characters: <A HREF="change.html#&lt;">&lt;</A>, <A HREF="change.html#S">S</A>, <A HREF="change.html#p">p</A>, a, <A HREF="change.html#c">c</A>, <A HREF="motion.html#e">e</A>, <A HREF="change.html#&gt;">&gt;</A>.
 
 	Note:
-	&quot;<A HREF="map.html#:iabbrev">:iabbrev</A>&quot; is a long <A HREF="motion.html#word">word</A> to type.  &quot;:iab&quot; works just <A HREF="motion.html#as">as</A> well.
+	&quot;<A HREF="map.html#:iabbrev">:iabbrev</A>&quot; is a long <A HREF="motion.html#word">单词</A> to type.  &quot;:iab&quot; works just <A HREF="motion.html#as">as</A> well.
 	That's abbreviating the abbreviate command!
 
 
@@ -681,7 +681,7 @@ You can execute only one <A HREF="intro.html#Normal">正常</A>模式 command th
 
 <B>	CTRL-O "g3dw</B>
 
-This deletes up to the third <A HREF="motion.html#word">word</A> into <A HREF="intro.html#register">register</A> <A HREF="vimindex.html#g">g</A>.
+This deletes up to the third <A HREF="motion.html#word">单词</A> into <A HREF="intro.html#register">register</A> <A HREF="vimindex.html#g">g</A>.
 
 ==============================================================================
 

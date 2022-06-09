@@ -173,12 +173,12 @@ CTRL-SHIFT-Q	Works just like <A HREF="visual.html#CTRL-V">CTRL-V</A>, but <A HRE
 							*<A NAME="c_&lt;S-Left&gt;"></A><B>c_&lt;S-Left&gt;</B>*
 
 <A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> or <A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>					*<A NAME="c_&lt;C-Left&gt;"></A><B>c_&lt;C-Left&gt;</B>*
-		cursor one <A HREF="motion.html#WORD">WORD</A> left
+		cursor one <A HREF="motion.html#word">单词</A> left
 
 							*<A NAME="c_&lt;S-Right&gt;"></A><B>c_&lt;S-Right&gt;</B>*
 
 <A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A> or <A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>					*<A NAME="c_&lt;C-Right&gt;"></A><B>c_&lt;C-Right&gt;</B>*
-		cursor one <A HREF="motion.html#WORD">WORD</A> right
+		cursor one <A HREF="motion.html#word">单词</A> right
 
 <A HREF="scroll.html#CTRL-B">CTRL-B</A> or <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>				*<A NAME="c_CTRL-B"></A><B>c_CTRL-B</B>* *<A NAME="c_&lt;Home&gt;"></A><B>c_&lt;Home&gt;</B>* *<A NAME="c_Home"></A><B>c_Home</B>*
 		cursor to beginning of command-line
@@ -205,7 +205,7 @@ CTRL-SHIFT-Q	Works just like <A HREF="visual.html#CTRL-V">CTRL-V</A>, but <A HRE
 		character before the cursor).
 
 							*<A NAME="c_CTRL-W"></A><B>c_CTRL-W</B>*
-<A HREF="vimindex.html#CTRL-W">CTRL-W</A>		Delete the |<A HREF="motion.html#word">word</A>| before the cursor.  This depends on the
+<A HREF="vimindex.html#CTRL-W">CTRL-W</A>		Delete the |<A HREF="motion.html#word">单词</A>| before the cursor.  This depends on the
 		<A HREF="options.html#'iskeyword'">'iskeyword'</A> option.
 
 							*<A NAME="c_CTRL-U"></A><B>c_CTRL-U</B>*
@@ -288,12 +288,12 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 			<A HREF="motion.html#CTRL-P">CTRL-P</A>	the Filename under the cursor, expanded with
 				<A HREF="options.html#'path'">'path'</A> <A HREF="motion.html#as">as</A> in |<A HREF="editing.html#gf">gf</A>|
 			<A HREF="vimindex.html#CTRL-W">CTRL-W</A>	the Word under the cursor
-			<A HREF="change.html#CTRL-A">CTRL-A</A>	the WORD under the cursor; see |<A HREF="motion.html#WORD">WORD</A>|
+			<A HREF="change.html#CTRL-A">CTRL-A</A>	the WORD under the cursor; see |<A HREF="motion.html#word">单词</A>|
 			<A HREF="various.html#CTRL-L">CTRL-L</A>	the line under the cursor
 
 		When <A HREF="options.html#'incsearch'">'incsearch'</A> is set the cursor position at the end of the
 		currently displayed match is used.  With <A HREF="vimindex.html#CTRL-W">CTRL-W</A> the part of
-		the <A HREF="motion.html#word">word</A> that was already typed is not inserted again.
+		the <A HREF="motion.html#word">单词</A> that was already typed is not inserted again.
 
 
 					*<A NAME="c_CTRL-R_CTRL-R"></A><B>c_CTRL-R_CTRL-R</B>* *<A NAME="c_&lt;C-R&gt;_&lt;C-R&gt;"></A><B>c_&lt;C-R&gt;_&lt;C-R&gt;</B>*
@@ -482,7 +482,7 @@ terminals)
 2. <A HREF="#Command-line">Command-line</A> completion				*<A NAME="cmdline-completion"></A><B>cmdline-completion</B>*
 
 When editing the command-line, a few commands can be used to complete the
-<A HREF="motion.html#word">word</A> before the cursor.  This is available for:
+<A HREF="motion.html#word">单词</A> before the cursor.  This is available for:
 
 - Command names: At the start of the command-line.
 - Tags: Only after the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command.
@@ -1014,13 +1014,13 @@ Also see |<A HREF="editing.html#`=">`=</A>|.
 Note: these are typed literally, they are not special keys!
 
 							*<A NAME=":&lt;cword&gt;"></A><B>:&lt;cword&gt;</B>* *<A NAME="&lt;cword&gt;"></A><B>&lt;cword&gt;</B>*
-	<A HREF="#&lt;cword&gt;">&lt;cword&gt;</A>    is replaced with the <A HREF="motion.html#word">word</A> under the cursor (like |<A HREF="pattern.html#star">star</A>|)
+	<A HREF="#&lt;cword&gt;">&lt;cword&gt;</A>    is replaced with the <A HREF="motion.html#word">单词</A> under the cursor (like |<A HREF="pattern.html#star">star</A>|)
 
 							*<A NAME=":&lt;cWORD&gt;"></A><B>:&lt;cWORD&gt;</B>* *<A NAME="&lt;cWORD&gt;"></A><B>&lt;cWORD&gt;</B>*
-	<A HREF="#&lt;cWORD&gt;">&lt;cWORD&gt;</A>    is replaced with the WORD under the cursor (see |<A HREF="motion.html#WORD">WORD</A>|)
+	<A HREF="#&lt;cWORD&gt;">&lt;cWORD&gt;</A>    is replaced with the WORD under the cursor (see |<A HREF="motion.html#word">单词</A>|)
 
 							*<A NAME=":&lt;cexpr&gt;"></A><B>:&lt;cexpr&gt;</B>* *<A NAME="&lt;cexpr&gt;"></A><B>&lt;cexpr&gt;</B>*
-	<A HREF="#&lt;cexpr&gt;">&lt;cexpr&gt;</A>    is replaced with the <A HREF="motion.html#word">word</A> under the cursor, including more
+	<A HREF="#&lt;cexpr&gt;">&lt;cexpr&gt;</A>    is replaced with the <A HREF="motion.html#word">单词</A> under the cursor, including more
 		   to form a C <A HREF="eval.html#expression">expression</A>.  E.g., when the cursor is on &quot;arg&quot;
 		   of &quot;ptr-&gt;arg&quot; then the result is &quot;ptr-&gt;arg&quot;; when the
 		   cursor is on &quot;<A HREF="vimindex.html#]">]</A>&quot; of &quot;list[idx]&quot; then the result is

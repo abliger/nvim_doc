@@ -193,8 +193,8 @@ APPENDING TO A REGISTER
 
 So far we have used a <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A> for the <A HREF="intro.html#register">register</A> name.  To append to a
 <A HREF="intro.html#register">register</A>, use an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>.
-   Suppose you have recorded a command to change a <A HREF="motion.html#word">word</A> to <A HREF="intro.html#register">register</A> <A HREF="change.html#c">c</A>.  It
-works properly, but you would like to add a search for the next <A HREF="motion.html#word">word</A> to
+   Suppose you have recorded a command to change a <A HREF="motion.html#word">单词</A> to <A HREF="intro.html#register">register</A> <A HREF="change.html#c">c</A>.  It
+works properly, but you would like to add a search for the next <A HREF="motion.html#word">单词</A> to
 change.  This can be done with:
 
 <B>	qC/word&lt;Enter&gt;q</B>
@@ -332,7 +332,7 @@ USING A PATTERN IN A RANGE
 
 Suppose you are editing a chapter in a <A HREF="intro.html#book">book</A>, and want to replace all
 occurrences of &quot;grey&quot; with &quot;gray&quot;.  But only in this chapter, not in the next
-one.  You know that only chapter boundaries have the <A HREF="motion.html#word">word</A> &quot;Chapter&quot; in the
+one.  You know that only chapter boundaries have the <A HREF="motion.html#word">单词</A> &quot;Chapter&quot; in the
 first column.  This command will work then:
 
 <B>	:?^Chapter?,/^Chapter/s=grey=gray=g</B>
@@ -497,7 +497,7 @@ The result:
 
 If the block spans short lines that <A HREF="diff.html#do">do</A> not extend into the block, the text is
 not inserted in that line.  For example, make a <A HREF="visual.html#Visual">Visual</A> block selection that
-includes the <A HREF="motion.html#word">word</A> &quot;long&quot; in the first and last line of this text, and thus has
+includes the <A HREF="motion.html#word">单词</A> &quot;long&quot; in the first and last line of this text, and thus has
 no text selected in the second line:
 
 <B><FONT color="#3A6F2B">	This is a long line </FONT></B>
@@ -559,7 +559,7 @@ which is added to the end of each line.
 <B><FONT color="#3A6F2B">	short </FONT></B>
 <B><FONT color="#3A6F2B">	Any other new text </FONT></B>
 
-Notice that, even though only the &quot;long&quot; <A HREF="motion.html#word">word</A> was selected, the text after <A HREF="motion.html#it">it</A>
+Notice that, even though only the &quot;long&quot; <A HREF="motion.html#word">单词</A> was selected, the text after <A HREF="motion.html#it">it</A>
 is deleted <A HREF="motion.html#as">as</A> well.  Thus only the location of the left edge of the visual
 block really matters.
    Again, short lines that <A HREF="diff.html#do">do</A> not reach into the block are excluded.
@@ -750,7 +750,7 @@ until you are at the end of the text you want to format.
 
 *<A NAME="10.8"></A><B>10.8</B>*	Changing <A HREF="change.html#case">case</A>
 
-You have text with section headers in <A HREF="change.html#lowercase">lowercase</A>.  You want to make the <A HREF="motion.html#word">word</A>
+You have text with section headers in <A HREF="change.html#lowercase">lowercase</A>.  You want to make the <A HREF="motion.html#word">单词</A>
 &quot;section&quot; all <A HREF="change.html#uppercase">uppercase</A>.  Do this with the &quot;<A HREF="change.html#gU">gU</A>&quot; <A HREF="motion.html#operator">operator</A>.  Start with the
 cursor in the first column:
 

@@ -127,9 +127,9 @@ match.  That's smart!
     With these two <A HREF="options.html#options">options</A> set you find the following matches:
 
 <B><FONT color="#3A6F2B">	pattern			matches	</FONT></B>
-	<A HREF="motion.html#word">word</A>			<A HREF="motion.html#word">word</A>, Word, <A HREF="motion.html#WORD">WORD</A>, WoRd, etc.
+	<A HREF="motion.html#word">单词</A>			<A HREF="motion.html#word">单词</A>, Word, <A HREF="motion.html#word">单词</A>, WoRd, etc.
 	Word			Word
-	<A HREF="motion.html#WORD">WORD</A>			<A HREF="motion.html#WORD">WORD</A>
+	<A HREF="motion.html#word">单词</A>			<A HREF="motion.html#word">单词</A>
 	WoRd			WoRd
 
 
@@ -141,10 +141,10 @@ This overrules the <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A H
 used their value doesn't matter.
 
 <B><FONT color="#3A6F2B">	pattern			matches	</FONT></B>
-	\Cword			<A HREF="motion.html#word">word</A>
+	\Cword			<A HREF="motion.html#word">单词</A>
 	\CWord			Word
-	\cword			<A HREF="motion.html#word">word</A>, Word, <A HREF="motion.html#WORD">WORD</A>, WoRd, etc.
-	\cWord			<A HREF="motion.html#word">word</A>, Word, <A HREF="motion.html#WORD">WORD</A>, WoRd, etc.
+	\cword			<A HREF="motion.html#word">单词</A>, Word, <A HREF="motion.html#word">单词</A>, WoRd, etc.
+	\cWord			<A HREF="motion.html#word">单词</A>, Word, <A HREF="motion.html#word">单词</A>, WoRd, etc.
 
 A big advantage of using &quot;\c&quot; and &quot;\C&quot; is that <A HREF="motion.html#it">it</A> sticks with the <A HREF="pattern.html#pattern">pattern</A>.
 Thus if you repeat a <A HREF="pattern.html#pattern">pattern</A> from the search <A HREF="cmdline.html#history">history</A>, the same will happen, no
@@ -222,7 +222,7 @@ appending a slash (/) and the offset:
 
 This command searches for the <A HREF="pattern.html#pattern">pattern</A> &quot;default&quot; and then moves to the
 beginning of the second line past the <A HREF="pattern.html#pattern">pattern</A>.  Using this command on the
-<A HREF="motion.html#paragraph">paragraph</A> above, Vim finds the <A HREF="motion.html#word">word</A> &quot;default&quot; in the first line.  Then the
+<A HREF="motion.html#paragraph">paragraph</A> above, Vim finds the <A HREF="motion.html#word">单词</A> &quot;default&quot; in the first line.  Then the
 cursor is moved two lines down and lands on &quot;an offset&quot;.
 
 If the offset is a simple number, the cursor will be placed at the beginning
@@ -301,7 +301,7 @@ specify a line offset, this can cause trouble.  For example:
 
 <B>	/const/-2</B>
 
-This finds the next <A HREF="motion.html#word">word</A> &quot;const&quot; and then moves two lines up.  If you
+This finds the next <A HREF="motion.html#word">单词</A> &quot;const&quot; and then moves two lines up.  If you
 use &quot;<A HREF="pattern.html#n">n</A>&quot; to search again, Vim could start at the current position and find the
 same &quot;const&quot; match.  Then using the offset again, you would be back where you
 started.  You would be stuck!

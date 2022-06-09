@@ -103,7 +103,7 @@ these commands below |<A HREF="quickref.html#Q_lr">Q_lr</A>|.
 
 *<A NAME="03.1"></A><B>03.1</B>*	Word <A HREF="intro.html#movement">movement</A>
 
-To move the cursor forward one <A HREF="motion.html#word">word</A>, use the &quot;<A HREF="motion.html#w">w</A>&quot; command.  Like most Vim
+To move the cursor forward one <A HREF="motion.html#word">单词</A>, use the &quot;<A HREF="motion.html#w">w</A>&quot; command.  Like most Vim
 commands, you can use a numeric prefix to move past multiple words.  For
 example, &quot;3w&quot; moves three words.  This figure shows how <A HREF="motion.html#it">it</A> works (starting at
 the position marked with &quot;x&quot;):
@@ -112,33 +112,33 @@ the position marked with &quot;x&quot;):
 	  x--&gt;--&gt;-&gt;-----------------&gt;
 	   <A HREF="motion.html#w">w</A>  <A HREF="motion.html#w">w</A>  <A HREF="motion.html#w">w</A>    3w
 
-Notice that &quot;<A HREF="motion.html#w">w</A>&quot; moves to the start of the next <A HREF="motion.html#word">word</A> if <A HREF="motion.html#it">it</A> already is at the
-start of a <A HREF="motion.html#word">word</A>.
-   The &quot;<A HREF="motion.html#b">b</A>&quot; command moves backward to the start of the previous <A HREF="motion.html#word">word</A>:
+Notice that &quot;<A HREF="motion.html#w">w</A>&quot; moves to the start of the next <A HREF="motion.html#word">单词</A> if <A HREF="motion.html#it">it</A> already is at the
+start of a <A HREF="motion.html#word">单词</A>.
+   The &quot;<A HREF="motion.html#b">b</A>&quot; command moves backward to the start of the previous <A HREF="motion.html#word">单词</A>:
 
 <B><FONT color="#3A6F2B">	This is a line with example text </FONT></B>
 	&lt;----&lt;--&lt;-&lt;---------&lt;--x
 	   <A HREF="motion.html#b">b</A>   <A HREF="motion.html#b">b</A> <A HREF="motion.html#b">b</A>    2b      <A HREF="motion.html#b">b</A>
 
-There is also the &quot;<A HREF="motion.html#e">e</A>&quot; command that moves to the next end of a <A HREF="motion.html#word">word</A> and &quot;<A HREF="motion.html#ge">ge</A>&quot;,
-which moves to the previous end of a <A HREF="motion.html#word">word</A>:
+There is also the &quot;<A HREF="motion.html#e">e</A>&quot; command that moves to the next end of a <A HREF="motion.html#word">单词</A> and &quot;<A HREF="motion.html#ge">ge</A>&quot;,
+which moves to the previous end of a <A HREF="motion.html#word">单词</A>:
 
 <B><FONT color="#3A6F2B">	This is a line with example text </FONT></B>
 	   &lt;----&lt;----x----&gt;------------&gt;
 	   2ge   <A HREF="motion.html#ge">ge</A>     <A HREF="motion.html#e">e</A>       2e
 
-If you are at the last <A HREF="motion.html#word">word</A> of a line, the &quot;<A HREF="motion.html#w">w</A>&quot; command will take you to the
-first <A HREF="motion.html#word">word</A> in the next line.  Thus you can use this to move through a
+If you are at the last <A HREF="motion.html#word">单词</A> of a line, the &quot;<A HREF="motion.html#w">w</A>&quot; command will take you to the
+first <A HREF="motion.html#word">单词</A> in the next line.  Thus you can use this to move through a
 <A HREF="motion.html#paragraph">paragraph</A>, much faster than using &quot;<A HREF="motion.html#l">l</A>&quot;.  &quot;<A HREF="motion.html#b">b</A>&quot; does the same in the other
 direction.
 
-A <A HREF="motion.html#word">word</A> ends at a non-word character, such <A HREF="motion.html#as">as</A> a &quot;<A HREF="repeat.html#.">.</A>&quot;, &quot;<A HREF="motion.html#-">-</A>&quot; or &quot;<A HREF="motion.html#)">)</A>&quot;.  To change
-what Vim considers to be a <A HREF="motion.html#word">word</A>, see the <A HREF="options.html#'iskeyword'">'iskeyword'</A> option.  If you try this
+A <A HREF="motion.html#word">单词</A> ends at a non-word character, such <A HREF="motion.html#as">as</A> a &quot;<A HREF="repeat.html#.">.</A>&quot;, &quot;<A HREF="motion.html#-">-</A>&quot; or &quot;<A HREF="motion.html#)">)</A>&quot;.  To change
+what Vim considers to be a <A HREF="motion.html#word">单词</A>, see the <A HREF="options.html#'iskeyword'">'iskeyword'</A> option.  If you try this
 out in the help directly, <A HREF="options.html#'iskeyword'">'iskeyword'</A> needs to be reset for the examples to
 work:
 <B>	:set iskeyword&amp;</B>
 It is also possible to move by <A HREF="pattern.html#white-space">white-space</A> separated WORDs.  This is not a
-<A HREF="motion.html#word">word</A> in the normal sense, that's why the <A HREF="change.html#uppercase">uppercase</A> is used.  The commands for
+<A HREF="motion.html#word">单词</A> in the normal sense, that's why the <A HREF="change.html#uppercase">uppercase</A> is used.  The commands for
 moving by WORDs are also <A HREF="change.html#uppercase">uppercase</A>, <A HREF="motion.html#as">as</A> this figure shows:
 
 	       <A HREF="motion.html#ge">ge</A>      <A HREF="motion.html#b">b</A>	  <A HREF="motion.html#w">w</A>				<A HREF="motion.html#e">e</A>
@@ -193,7 +193,7 @@ will be positioned over the <A HREF="motion.html#h">h</A>:
 	----------&gt;---------------&gt;
 	    fh		 fy
 
-This also shows that the command &quot;fy&quot; moves to the end of the <A HREF="motion.html#word">word</A> really.
+This also shows that the command &quot;fy&quot; moves to the end of the <A HREF="motion.html#word">单词</A> really.
    You can specify a <A HREF="intro.html#count">count</A>; therefore, you can go to the &quot;<A HREF="motion.html#l">l</A>&quot; of &quot;foul&quot; with
 &quot;3fl&quot;:
 
@@ -408,13 +408,13 @@ are a few more <A HREF="scroll.html#scrolling">scrolling</A> commands, see |<A H
 
 *<A NAME="03.8"></A><B>03.8</B>*	Simple searches
 
-To search for a <A HREF="eval.html#string">string</A>, use the &quot;/string&quot; command.  To find the <A HREF="motion.html#word">word</A> include,
+To search for a <A HREF="eval.html#string">string</A>, use the &quot;/string&quot; command.  To find the <A HREF="motion.html#word">单词</A> include,
 for example, use the command:
 
 <B>	/include</B>
 
 You will notice that when you type the &quot;<A HREF="pattern.html#/">/</A>&quot; the cursor jumps to the last line
-of the Vim<A HREF="windows.html#window">窗口</A>, like with colon commands.  That is where you type the <A HREF="motion.html#word">word</A>.
+of the Vim<A HREF="windows.html#window">窗口</A>, like with colon commands.  That is where you type the <A HREF="motion.html#word">单词</A>.
 You can press the backspace key (backarrow or <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>) to make corrections.  Use
 the <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> and <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> cursor keys when necessary.
    Pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> executes the command.
@@ -445,11 +445,11 @@ forwards.
 IGNORING CASE
 
 Normally you have to type exactly what you want to find.  If you don't care
-about upper or <A HREF="change.html#lowercase">lowercase</A> in a <A HREF="motion.html#word">word</A>, set the <A HREF="options.html#'ignorecase'">'ignorecase'</A> option:
+about upper or <A HREF="change.html#lowercase">lowercase</A> in a <A HREF="motion.html#word">单词</A>, set the <A HREF="options.html#'ignorecase'">'ignorecase'</A> option:
 
 <B>	:set ignorecase</B>
 
-If you now search for &quot;<A HREF="motion.html#word">word</A>&quot;, <A HREF="motion.html#it">it</A> will also match &quot;Word&quot; and &quot;<A HREF="motion.html#WORD">WORD</A>&quot;.  To match
+If you now search for &quot;<A HREF="motion.html#word">单词</A>&quot;, <A HREF="motion.html#it">it</A> will also match &quot;Word&quot; and &quot;<A HREF="motion.html#word">单词</A>&quot;.  To match
 <A HREF="change.html#case">case</A> again:
 
 <B>	:set noignorecase</B>
@@ -479,16 +479,16 @@ The commands starting with &quot;<A HREF="cmdline.html#:">:</A>&quot; also have 
 a previous command and execute <A HREF="motion.html#it">it</A> again.  These two histories are separate.
 
 
-SEARCHING FOR A <A HREF="motion.html#WORD">WORD</A> IN THE TEXT
+SEARCHING FOR A <A HREF="motion.html#word">单词</A> IN THE TEXT
 
-Suppose you see the <A HREF="motion.html#word">word</A> &quot;TheLongFunctionName&quot; in the text and you want to
+Suppose you see the <A HREF="motion.html#word">单词</A> &quot;TheLongFunctionName&quot; in the text and you want to
 find the next occurrence of <A HREF="motion.html#it">it</A>.  You could type &quot;/TheLongFunctionName&quot;, but
 that's a lot of typing.  And when you make a mistake Vim won't find <A HREF="motion.html#it">it</A>.
-   There is an easier way: Position the cursor on the <A HREF="motion.html#word">word</A> and use the &quot;*&quot;
-command.  Vim will grab the <A HREF="motion.html#word">word</A> under the cursor and use <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> the search
+   There is an easier way: Position the cursor on the <A HREF="motion.html#word">单词</A> and use the &quot;*&quot;
+command.  Vim will grab the <A HREF="motion.html#word">单词</A> under the cursor and use <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> the search
 <A HREF="eval.html#string">string</A>.
    The &quot;<A HREF="pattern.html##">#</A>&quot; command does the same in the other direction.  You can prepend a
-<A HREF="intro.html#count">count</A>: &quot;3*&quot; searches for the third occurrence of the <A HREF="motion.html#word">word</A> under the cursor.
+<A HREF="intro.html#count">count</A>: &quot;3*&quot; searches for the third occurrence of the <A HREF="motion.html#word">单词</A> under the cursor.
 
 
 SEARCHING FOR WHOLE WORDS
@@ -498,9 +498,9 @@ in &quot;the&quot; use:
 
 <B>	/the\&gt;</B>
 
-The &quot;\&gt;&quot; item is a special marker that only matches at the end of a <A HREF="motion.html#word">word</A>.
-Similarly &quot;\&lt;&quot; only matches at the beginning of a <A HREF="motion.html#word">word</A>.  Thus to search for
-the <A HREF="motion.html#word">word</A> &quot;the&quot; only:
+The &quot;\&gt;&quot; item is a special marker that only matches at the end of a <A HREF="motion.html#word">单词</A>.
+Similarly &quot;\&lt;&quot; only matches at the beginning of a <A HREF="motion.html#word">单词</A>.  Thus to search for
+the <A HREF="motion.html#word">单词</A> &quot;the&quot; only:
 
 <B>	/\&lt;the\&gt;</B>
 
@@ -589,11 +589,11 @@ the full explanation here: |<A HREF="pattern.html#pattern">pattern</A>|.
 BEGINNING AND END OF A LINE
 
 The ^ character matches the beginning of a line.  On an English-US keyboard
-you find <A HREF="motion.html#it">it</A> above the 6.  The <A HREF="pattern.html#pattern">pattern</A> &quot;include&quot; matches the <A HREF="motion.html#word">word</A> include
-anywhere on the line.  But the <A HREF="pattern.html#pattern">pattern</A> &quot;^include&quot; matches the <A HREF="motion.html#word">word</A> include
+you find <A HREF="motion.html#it">it</A> above the 6.  The <A HREF="pattern.html#pattern">pattern</A> &quot;include&quot; matches the <A HREF="motion.html#word">单词</A> include
+anywhere on the line.  But the <A HREF="pattern.html#pattern">pattern</A> &quot;^include&quot; matches the <A HREF="motion.html#word">单词</A> include
 only if <A HREF="motion.html#it">it</A> is at the beginning of a line.
    The $ character matches the end of a line.  Therefore, &quot;was$&quot; matches the
-<A HREF="motion.html#word">word</A> was only if <A HREF="motion.html#it">it</A> is at the end of a line.
+<A HREF="motion.html#word">单词</A> was only if <A HREF="motion.html#it">it</A> is at the end of a line.
 
 Let's <A HREF="motion.html#mark">mark</A> the places where &quot;/the&quot; matches in this example line with &quot;x&quot;s:
 
@@ -611,7 +611,7 @@ And with &quot;/^the&quot; we find this one:
 
 You can try searching with &quot;/^the$&quot;; <A HREF="motion.html#it">it</A> will only match a single line
 consisting entirely of &quot;the&quot;.  White space does matter here, thus if a line
-contains a space after the <A HREF="motion.html#word">word</A>, like &quot;the &quot;<A HREF="motion.html#,">,</A> the <A HREF="pattern.html#pattern">pattern</A> will not match.
+contains a space after the <A HREF="motion.html#word">单词</A>, like &quot;the &quot;<A HREF="motion.html#,">,</A> the <A HREF="pattern.html#pattern">pattern</A> will not match.
 
 
 MATCHING ANY SINGLE CHARACTER
@@ -653,7 +653,7 @@ jump is remembered.
 Generally, every time you <A HREF="diff.html#do">do</A> a command that can move the cursor further than
 within the same line, this is called a jump.  This includes the search
 commands &quot;<A HREF="pattern.html#/">/</A>&quot; and &quot;<A HREF="pattern.html#n">n</A>&quot; (it doesn't matter how far away the match is).  But not
-the character searches with &quot;fx&quot; and &quot;tx&quot; or the <A HREF="motion.html#word">word</A> movements &quot;<A HREF="motion.html#w">w</A>&quot; and &quot;<A HREF="motion.html#e">e</A>&quot;.
+the character searches with &quot;fx&quot; and &quot;tx&quot; or the <A HREF="motion.html#word">单词</A> movements &quot;<A HREF="motion.html#w">w</A>&quot; and &quot;<A HREF="motion.html#e">e</A>&quot;.
    Also, &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot; are not considered to be a jump, even when you use a
 <A HREF="intro.html#count">count</A> to make them move the cursor quite a long way away.
 

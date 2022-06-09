@@ -330,12 +330,12 @@ key restores the original text (if there was any).  (See section &quot;<A HREF="
 
 
 						*<A NAME="cw"></A><B>cw</B>* *<A NAME="cW"></A><B>cW</B>*
-Special <A HREF="#case">case</A>: When the cursor is in a <A HREF="motion.html#word">word</A>, &quot;<A HREF="#cw">cw</A>&quot; and &quot;<A HREF="#cW">cW</A>&quot; <A HREF="diff.html#do">do</A> not include the
-white space after a <A HREF="motion.html#word">word</A>, they only change up to the end of the <A HREF="motion.html#word">word</A>.  This is
-because Vim interprets &quot;<A HREF="#cw">cw</A>&quot; <A HREF="motion.html#as">as</A> change-word, and a <A HREF="motion.html#word">word</A> does not include the
+Special <A HREF="#case">case</A>: When the cursor is in a <A HREF="motion.html#word">单词</A>, &quot;<A HREF="#cw">cw</A>&quot; and &quot;<A HREF="#cW">cW</A>&quot; <A HREF="diff.html#do">do</A> not include the
+white space after a <A HREF="motion.html#word">单词</A>, they only change up to the end of the <A HREF="motion.html#word">单词</A>.  This is
+because Vim interprets &quot;<A HREF="#cw">cw</A>&quot; <A HREF="motion.html#as">as</A> change-word, and a <A HREF="motion.html#word">单词</A> does not include the
 following white space.
 
-If you prefer &quot;<A HREF="#cw">cw</A>&quot; to include the space after a <A HREF="motion.html#word">word</A>, use this <A HREF="map.html#mapping">mapping</A>:
+If you prefer &quot;<A HREF="#cw">cw</A>&quot; to include the space after a <A HREF="motion.html#word">单词</A>, use this <A HREF="map.html#mapping">mapping</A>:
 <B>	:map cw dwi</B>
 Or use &quot;caw&quot; (see |<A HREF="motion.html#aw">aw</A>|).
 
@@ -429,7 +429,7 @@ gU{motion}		Make <A HREF="intro.html#{motion}">{motion}</A> text <A HREF="#upper
 			Example:
 <B>				:map! &lt;C-F&gt; &lt;Esc&gt;gUiw`]a</B>
  			This works in <A HREF="intro.html#Insert">插入</A>模式: press <A HREF="scroll.html#CTRL-F">CTRL-F</A> to make the
-			<A HREF="motion.html#word">word</A> before the cursor <A HREF="#uppercase">uppercase</A>.  Handy to type
+			<A HREF="motion.html#word">单词</A> before the cursor <A HREF="#uppercase">uppercase</A>.  Handy to type
 			words in <A HREF="#lowercase">lowercase</A> and then make them <A HREF="#uppercase">uppercase</A>.
 
 
@@ -463,7 +463,7 @@ g?{motion}		Rot13 encode <A HREF="intro.html#{motion}">{motion}</A> text.
 <A HREF="#g?g?">g?g?</A>							*<A NAME="g?g?"></A><B>g?g?</B>* *<A NAME="g??"></A><B>g??</B>*
 <A HREF="#g??">g??</A>			Rot13 encode current line.
 
-To turn one line into title caps, make every first <A HREF="print.html#letter">letter</A> of a <A HREF="motion.html#word">word</A>
+To turn one line into title caps, make every first <A HREF="print.html#letter">letter</A> of a <A HREF="motion.html#word">单词</A>
 <A HREF="#uppercase">uppercase</A>:
 <B>	:s/\v&lt;(.)(\w*)/\u\1\L\2/g</B>
 
@@ -1004,7 +1004,7 @@ Examples:
 <B>  :s/\w\+/\u\0/g		 modifies "bla bla"  to "Bla Bla"</B>
 <B>  :s/\w\+/\L\u\0/g		 modifies "BLA bla"  to "Bla Bla"</B>
 
-Note: &quot;\L\u&quot; can be used to capitalize the first <A HREF="print.html#letter">letter</A> of a <A HREF="motion.html#word">word</A>.  This is
+Note: &quot;\L\u&quot; can be used to capitalize the first <A HREF="print.html#letter">letter</A> of a <A HREF="motion.html#word">单词</A>.  This is
 not compatible with <A HREF="intro.html#Vi">Vi</A> and older versions of Vim, where the &quot;\u&quot; would cancel
 out the &quot;\L&quot;. Same for &quot;\U\l&quot;.
 
@@ -1330,7 +1330,7 @@ the &quot;<A HREF="#:put">:put</A>&quot; command, Vim always inserts the text in
 exchange two characters with the command sequence &quot;xp&quot;.  You can exchange two
 lines with the command sequence &quot;ddp&quot;.  You can exchange two words with the
 command sequence &quot;deep&quot; (start with the cursor in the blank space before the
-first <A HREF="motion.html#word">word</A>).  You can use the &quot;<A HREF="motion.html#']">']</A>&quot; or &quot;<A HREF="motion.html#`]">`]</A>&quot; command after the put command to
+first <A HREF="motion.html#word">单词</A>).  You can use the &quot;<A HREF="motion.html#']">']</A>&quot; or &quot;<A HREF="motion.html#`]">`]</A>&quot; command after the put command to
 move the cursor to the end of the inserted text, or use &quot;<A HREF="motion.html#'[">'[</A>&quot; or &quot;<A HREF="motion.html#`[">`[</A>&quot; to move
 the cursor to the start.
 
@@ -1925,7 +1925,7 @@ a	Automatic <A HREF="#formatting">formatting</A> of paragraphs.  Every time text
 
 							*<A NAME="fo-m"></A><B>fo-m</B>*
 <A HREF="motion.html#m">m</A>	Also break at a <A HREF="mbyte.html#multibyte">multibyte</A> character above 255.  This is useful for
-	Asian text where every character is a <A HREF="motion.html#word">word</A> on its own.
+	Asian text where every character is a <A HREF="motion.html#word">单词</A> on its own.
 
 							*<A NAME="fo-M"></A><B>fo-M</B>*
 <A HREF="motion.html#M">M</A>	When joining lines, don't insert a space before or after a <A HREF="mbyte.html#multibyte">multibyte</A>
@@ -1936,7 +1936,7 @@ a	Automatic <A HREF="#formatting">formatting</A> of paragraphs.  Every time text
 	characters.  Overruled by the '<A HREF="motion.html#M">M</A>' flag.
 
 							*<A NAME="fo-1"></A><B>fo-1</B>*
-1	Don't break a line after a one-letter <A HREF="motion.html#word">word</A>.  It's broken before <A HREF="motion.html#it">it</A>
+1	Don't break a line after a one-letter <A HREF="motion.html#word">单词</A>.  It's broken before <A HREF="motion.html#it">it</A>
 	instead (if possible).
 
 							*<A NAME="fo-]"></A><B>fo-]</B>*

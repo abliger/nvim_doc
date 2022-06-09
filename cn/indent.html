@@ -162,7 +162,7 @@ Characters that can precede each key:				*<A NAME="i_CTRL-F"></A><B>i_CTRL-F</B>
 0	When a zero precedes the key (but appears after '<A HREF="change.html#!">!</A>' or '*') Vim will
 	reindent the line only if the key is the first character you type in
 	the line.  When used before &quot;<A HREF="change.html#=">=</A>&quot; Vim will only reindent the line if
-	there is only white space before the <A HREF="motion.html#word">word</A>.
+	there is only white space before the <A HREF="motion.html#word">单词</A>.
 
 When neither '<A HREF="change.html#!">!</A>' nor '*' precedes the key, Vim reindents the line after you
 type the key.  So '<A HREF="motion.html#;">;</A>' sets the indentation of a line which includes the '<A HREF="motion.html#;">;</A>'.
@@ -180,12 +180,12 @@ Special key names:
 :	Reindent a line when a '<A HREF="cmdline.html#:">:</A>' is typed which is after a label or <A HREF="change.html#case">case</A>
 	statement.  Don't reindent for a &quot;<A HREF="cmdline.html#:">:</A>&quot; in &quot;class::method&quot; for C++.  To
 	Reindent for any &quot;<A HREF="cmdline.html#:">:</A>&quot;, use &quot;&lt;:&gt;&quot;.
-=word	Reindent when typing the last character of &quot;<A HREF="motion.html#word">word</A>&quot;.  &quot;<A HREF="motion.html#word">word</A>&quot; may
-	actually be part of another <A HREF="motion.html#word">word</A>.  Thus &quot;=end&quot; would cause reindenting
+=word	Reindent when typing the last character of &quot;<A HREF="motion.html#word">单词</A>&quot;.  &quot;<A HREF="motion.html#word">单词</A>&quot; may
+	actually be part of another <A HREF="motion.html#word">单词</A>.  Thus &quot;=end&quot; would cause reindenting
 	when typing the &quot;<A HREF="change.html#d">d</A>&quot; in &quot;endif&quot; or &quot;endwhile&quot;.  But not when typing
-	&quot;bend&quot;.  Also reindent when completion produces a <A HREF="motion.html#word">word</A> that starts
-	with &quot;<A HREF="motion.html#word">word</A>&quot;.  &quot;0=word&quot; reindents when there is only white space before
-	the <A HREF="motion.html#word">word</A>.
+	&quot;bend&quot;.  Also reindent when completion produces a <A HREF="motion.html#word">单词</A> that starts
+	with &quot;<A HREF="motion.html#word">单词</A>&quot;.  &quot;0=word&quot; reindents when there is only white space before
+	the <A HREF="motion.html#word">单词</A>.
 =~word	Like =word, but ignore <A HREF="change.html#case">case</A>.
 
 If you really want to reindent when you type '<A HREF="insert.html#o">o</A>', '<A HREF="insert.html#O">O</A>', '<A HREF="motion.html#e">e</A>', '<A HREF="motion.html#0">0</A>', '<A HREF="change.html#&lt;">&lt;</A>', '<A HREF="change.html#&gt;">&gt;</A>',
@@ -766,12 +766,12 @@ lists of patterns that will be matched against the unqualified symbol at the
 head of a <A HREF="eval.html#list">list</A>.  This means that a <A HREF="pattern.html#pattern">pattern</A> like `&quot;^foo&quot;` will match all these
 candidates: `foobar`, `my.ns/foobar`, and `#'foobar`.
 
-Each candidate <A HREF="motion.html#word">word</A> is tested for special treatment in this order:
+Each candidate <A HREF="motion.html#word">单词</A> is tested for special treatment in this order:
 
-	1. Return true if <A HREF="motion.html#word">word</A> is literally in <A HREF="options.html#'lispwords'">'lispwords'</A>
-	2. Return false if <A HREF="motion.html#word">word</A> matches a <A HREF="pattern.html#pattern">pattern</A> in
+	1. Return true if <A HREF="motion.html#word">单词</A> is literally in <A HREF="options.html#'lispwords'">'lispwords'</A>
+	2. Return false if <A HREF="motion.html#word">单词</A> matches a <A HREF="pattern.html#pattern">pattern</A> in
 	   |<A HREF="#g:clojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</A>|
-	3. Return true if <A HREF="motion.html#word">word</A> matches a <A HREF="pattern.html#pattern">pattern</A> in
+	3. Return true if <A HREF="motion.html#word">单词</A> matches a <A HREF="pattern.html#pattern">pattern</A> in
 	   |<A HREF="#g:clojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</A>|
 	4. Return false and indent normally otherwise
 
