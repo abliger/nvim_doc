@@ -107,10 +107,10 @@ By default an internal <A HREF="#diff">diff</A> library will be used.  When <A H
 works when such a <A HREF="#diff">diff</A> program is available.
 
 Diffs are local to the current tab page |<A HREF="tabpage.html#tab-page">tab-page</A>|.  You can't see diffs with
-a <A HREF="windows.html#window">window</A> in another <A HREF="intro.html#tab">tab</A> page.  This does make <A HREF="motion.html#it">it</A> possible to have several
+a<A HREF="windows.html#window">窗口</A>in another <A HREF="intro.html#tab">tab</A> page.  This does make <A HREF="motion.html#it">it</A> possible to have several
 diffs at the same time, each in their own <A HREF="intro.html#tab">tab</A> page.
 
-What happens is that Nvim opens a <A HREF="windows.html#window">window</A> for each of the files.  This is like
+What happens is that Nvim opens a<A HREF="windows.html#window">窗口</A>for each of the files.  This is like
 using the |<A HREF="starting.html#-O">-O</A>| argument.  This uses vertical splits, but if you prefer
 horizontal splits use the |<A HREF="starting.html#-o">-o</A>| argument instead:
 
@@ -128,7 +128,7 @@ In each of the edited files these <A HREF="options.html#options">options</A> are
 	<A HREF="options.html#'foldmethod'">'foldmethod'</A>	&quot;<A HREF="#diff">diff</A>&quot;
 	<A HREF="options.html#'foldcolumn'">'foldcolumn'</A>	value from <A HREF="options.html#'diffopt'">'diffopt'</A>, default is 2
 
-These <A HREF="options.html#options">options</A> are set local to the <A HREF="windows.html#window">window</A>.  When editing another file they are
+These <A HREF="options.html#options">options</A> are set local to the<A HREF="windows.html#window">窗口</A>.  When editing another file they are
 reset to the global value.
 The <A HREF="options.html#options">options</A> can still be overruled from a <A HREF="options.html#modeline">modeline</A> when re-editing the file.
 However, <A HREF="options.html#'foldmethod'">'foldmethod'</A> and <A HREF="options.html#'wrap'">'wrap'</A> won't be set from a <A HREF="options.html#modeline">modeline</A> when <A HREF="options.html#'diff'">'diff'</A> is
@@ -155,13 +155,13 @@ While already in Vim you can start <A HREF="#diff">diff</A> mode in three ways.
 							*<A NAME="E98"></A><B>E98</B>*
 
 :diffs[plit] {filename}					*<A NAME=":diffs"></A><B>:diffs</B>* *<A NAME=":diffsplit"></A><B>:diffsplit</B>*
-		Open a new <A HREF="windows.html#window">window</A> on the file {filename}.  The <A HREF="options.html#options">options</A> are set
-		<A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot; for the current and the newly opened <A HREF="windows.html#window">window</A>.
+		Open a new<A HREF="windows.html#window">窗口</A>on the file {filename}.  The <A HREF="options.html#options">options</A> are set
+		<A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot; for the current and the newly opened<A HREF="windows.html#window">窗口</A>.
 		Also see <A HREF="options.html#'diffexpr'">'diffexpr'</A>.
 
 
 							*<A NAME=":difft"></A><B>:difft</B>* *<A NAME=":diffthis"></A><B>:diffthis</B>*
-:difft[his]	Make the current <A HREF="windows.html#window">window</A> part of the <A HREF="#diff">diff</A> <A HREF="windows.html#windows">windows</A>.  This sets
+:difft[his]	Make the current<A HREF="windows.html#window">窗口</A>part of the <A HREF="#diff">diff</A> <A HREF="windows.html#windows">windows</A>.  This sets
 		the <A HREF="options.html#options">options</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
 
 
@@ -195,13 +195,13 @@ file for a moment and come back to the same file and be in <A HREF="#diff">diff<
 
 
 							*<A NAME=":diffo"></A><B>:diffo</B>* *<A NAME=":diffoff"></A><B>:diffoff</B>*
-:diffo[ff]	Switch off <A HREF="#diff">diff</A> mode for the current <A HREF="windows.html#window">window</A>.  Resets related
+:diffo[ff]	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>.  Resets related
 		<A HREF="options.html#options">options</A> also when <A HREF="options.html#'diff'">'diff'</A> was not set.
 
-:diffo[ff]!	Switch off <A HREF="#diff">diff</A> mode for the current <A HREF="windows.html#window">window</A> and in all <A HREF="windows.html#windows">windows</A>
+:diffo[ff]!	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>and in all <A HREF="windows.html#windows">windows</A>
 		in the current <A HREF="intro.html#tab">tab</A> page where <A HREF="options.html#'diff'">'diff'</A> is set.  Resetting
-		related <A HREF="options.html#options">options</A> only happens in a <A HREF="windows.html#window">window</A> that has <A HREF="options.html#'diff'">'diff'</A> set,
-		if the current <A HREF="windows.html#window">window</A> does not have <A HREF="options.html#'diff'">'diff'</A> set then no <A HREF="options.html#options">options</A>
+		related <A HREF="options.html#options">options</A> only happens in a<A HREF="windows.html#window">窗口</A>that has <A HREF="options.html#'diff'">'diff'</A> set,
+		if the current<A HREF="windows.html#window">窗口</A>does not have <A HREF="options.html#'diff'">'diff'</A> set then no <A HREF="options.html#options">options</A>
 		in <A HREF="motion.html#it">it</A> are changed.
 		Hidden <A HREF="windows.html#buffers">buffers</A> are also removed from the <A HREF="eval.html#list">list</A> of diff'ed
 		<A HREF="windows.html#buffers">buffers</A>.
@@ -231,21 +231,21 @@ should be aligned properly.
 The alignment of text will go wrong when:
 - <A HREF="options.html#'wrap'">'wrap'</A> is on, some lines will be wrapped and occupy two or more screen
   lines
-- <A HREF="fold.html#folds">folds</A> are open in one <A HREF="windows.html#window">window</A> but not another
+- <A HREF="fold.html#folds">folds</A> are open in one<A HREF="windows.html#window">窗口</A>but not another
 - <A HREF="options.html#'scrollbind'">'scrollbind'</A> is off
 - changes have been made to the text
 - &quot;filler&quot; is not present in <A HREF="options.html#'diffopt'">'diffopt'</A>, deleted/inserted lines makes the
   alignment go wrong
 
-All the <A HREF="windows.html#buffers">buffers</A> edited in a <A HREF="windows.html#window">window</A> where the <A HREF="options.html#'diff'">'diff'</A> option is set will join in
+All the <A HREF="windows.html#buffers">buffers</A> edited in a<A HREF="windows.html#window">窗口</A>where the <A HREF="options.html#'diff'">'diff'</A> option is set will join in
 the <A HREF="#diff">diff</A>.  This is also possible for hidden <A HREF="windows.html#buffers">buffers</A>.  They must have been
-edited in a <A HREF="windows.html#window">window</A> first for this to be possible.  To get rid of the hidden
+edited in a<A HREF="windows.html#window">窗口</A>first for this to be possible.  To get rid of the hidden
 <A HREF="windows.html#buffers">buffers</A> use `:diffoff!`.
 
 
 					*<A NAME=":DiffOrig"></A><B>:DiffOrig</B>* *<A NAME="diff-original-file"></A><B>diff-original-file</B>*
 Since <A HREF="options.html#'diff'">'diff'</A> is a window-local option, it's possible to view the same buffer
-in <A HREF="#diff">diff</A> mode in one <A HREF="windows.html#window">window</A> and &quot;normal&quot; in another <A HREF="windows.html#window">window</A>.  It is also
+in <A HREF="#diff">diff</A> mode in one<A HREF="windows.html#window">窗口</A>and &quot;normal&quot; in another<A HREF="windows.html#window">窗口</A>.  It is also
 possible to view the changes you have made to a buffer since the file was
 loaded.  Since Vim doesn't allow having two <A HREF="windows.html#buffers">buffers</A> for the same file, you
 need another buffer.  This command is useful:
@@ -255,7 +255,7 @@ Use &quot;<A HREF="#:DiffOrig">:DiffOrig</A>&quot; to see the differences
 between the current buffer and the file <A HREF="motion.html#it">it</A> was loaded from.
 
 A buffer that is unloaded cannot be used for the <A HREF="#diff">diff</A>.  But <A HREF="motion.html#it">it</A> does work for
-hidden <A HREF="windows.html#buffers">buffers</A>.  You can use &quot;<A HREF="windows.html#:hide">:hide</A>&quot; to close a <A HREF="windows.html#window">window</A> without unloading the
+hidden <A HREF="windows.html#buffers">buffers</A>.  You can use &quot;<A HREF="windows.html#:hide">:hide</A>&quot; to close a<A HREF="windows.html#window">窗口</A>without unloading the
 buffer.  If you don't want a buffer to remain used for the <A HREF="#diff">diff</A> <A HREF="#do">do</A> &quot;<A HREF="options.html#:set">:set</A>
 nodiff&quot; before hiding <A HREF="motion.html#it">it</A>.
 
@@ -274,7 +274,7 @@ If the ! is included Vim will check if the file was changed externally and
 needs to be reloaded.  It will prompt for each changed file, like `:checktime`
 was used.
 
-Vim will show filler lines for lines that are missing in one <A HREF="windows.html#window">window</A> but are
+Vim will show filler lines for lines that are missing in one<A HREF="windows.html#window">窗口</A>but are
 present in another.  These lines were inserted in another file or deleted in
 this file.  Removing &quot;filler&quot; from the <A HREF="options.html#'diffopt'">'diffopt'</A> option will make Vim not
 display these filler lines.

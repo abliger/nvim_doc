@@ -232,7 +232,7 @@ deleting/inserting lines, unless this was done by another program (e.g.
 another instance of Vim).
 
 For the current file, the &quot;file/text&quot; column shows the text at the position.
-An indent is removed and a long line is truncated to fit in the <A HREF="windows.html#window">window</A>.
+An indent is removed and a long line is truncated to fit in the<A HREF="windows.html#window">窗口</A>.
 
 You can jump to previously used <A HREF="#tags">tags</A> with several commands.  Some examples:
 
@@ -264,8 +264,8 @@ commands explained above the <A HREF="#tag">tag</A> stack will look like this:
    1  1 main		1  harddisk2:text/vim/test
    2  1 FuncB	       59  harddisk2:text/vim/src/main.c
 
-The |<A HREF="builtin.html#gettagstack()">gettagstack()</A>| function returns the tag stack of a specified <A HREF="windows.html#window">window</A>. The
-|<A HREF="builtin.html#settagstack()">settagstack()</A>| function modifies the tag stack of a <A HREF="windows.html#window">window</A>.
+The |<A HREF="builtin.html#gettagstack()">gettagstack()</A>| function returns the tag stack of a specified<A HREF="windows.html#window">窗口</A>. The
+|<A HREF="builtin.html#settagstack()">settagstack()</A>| function modifies the tag stack of a<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME="tagstack-examples"></A><B>tagstack-examples</B>*
@@ -342,7 +342,7 @@ the same entry.
 
 
 							*<A NAME=":sts"></A><B>:sts</B>* *<A NAME=":stselect"></A><B>:stselect</B>*
-:sts[elect][!] [name]	Does &quot;:tselect[!] [name]&quot; and splits the <A HREF="windows.html#window">window</A> for
+:sts[elect][!] [name]	Does &quot;:tselect[!] [name]&quot; and splits the<A HREF="windows.html#window">窗口</A>for
 			the selected <A HREF="#tag">tag</A>.
 
 
@@ -361,7 +361,7 @@ the same entry.
 
 
 							*<A NAME=":stj"></A><B>:stj</B>* *<A NAME=":stjump"></A><B>:stjump</B>*
-:stj[ump][!] [name]	Does &quot;:tjump[!] [name]&quot; and splits the <A HREF="windows.html#window">window</A> for the
+:stj[ump][!] [name]	Does &quot;:tjump[!] [name]&quot; and splits the<A HREF="windows.html#window">窗口</A>for the
 			selected <A HREF="#tag">tag</A>.
 
 
@@ -403,7 +403,7 @@ the same entry.
 
 							*<A NAME=":lt"></A><B>:lt</B>* *<A NAME=":ltag"></A><B>:ltag</B>*
 :lt[ag][!] [name]	Jump to <A HREF="#tag">tag</A> [name] and add the matching <A HREF="#tags">tags</A> to a new
-			location <A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A>.  [name] can be
+			location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>.  [name] can be
 			a regexp <A HREF="pattern.html#pattern">pattern</A>, see |<A HREF="#tag-regexp">tag-regexp</A>|.  When [name] is
 			not given, the last <A HREF="#tag">tag</A> name from the <A HREF="#tag">tag</A> stack is
 			used.  The search <A HREF="pattern.html#pattern">pattern</A> to locate the <A HREF="#tag">tag</A> line is
@@ -432,26 +432,26 @@ message is given.
 
 
 							*<A NAME="tag-preview"></A><B>tag-preview</B>*
-The <A HREF="#tag">tag</A> match <A HREF="eval.html#list">list</A> can also be used in the preview <A HREF="windows.html#window">window</A>.  The commands are
+The <A HREF="#tag">tag</A> match <A HREF="eval.html#list">list</A> can also be used in the preview<A HREF="windows.html#window">窗口</A>.  The commands are
 the same <A HREF="motion.html#as">as</A> above, with a &quot;<A HREF="change.html#p">p</A>&quot; prepended.
 
 
 							*<A NAME=":pts"></A><B>:pts</B>* *<A NAME=":ptselect"></A><B>:ptselect</B>*
 :pts[elect][!] [name]	Does &quot;:tselect[!] [name]&quot; and shows the new <A HREF="#tag">tag</A> in a
-			&quot;Preview&quot; <A HREF="windows.html#window">window</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
+			&quot;Preview&quot;<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
 
 
 							*<A NAME=":ptj"></A><B>:ptj</B>* *<A NAME=":ptjump"></A><B>:ptjump</B>*
 :ptj[ump][!] [name]	Does &quot;:tjump[!] [name]&quot; and shows the new <A HREF="#tag">tag</A> in a
-			&quot;Preview&quot; <A HREF="windows.html#window">window</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
+			&quot;Preview&quot;<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
 
 
 							*<A NAME=":ptn"></A><B>:ptn</B>* *<A NAME=":ptnext"></A><B>:ptnext</B>*
-:[count]ptn[ext][!]	&quot;<A HREF="#:tnext">:tnext</A>&quot; in the preview <A HREF="windows.html#window">window</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:[count]ptn[ext][!]	&quot;<A HREF="#:tnext">:tnext</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 
 							*<A NAME=":ptp"></A><B>:ptp</B>* *<A NAME=":ptprevious"></A><B>:ptprevious</B>*
-:[count]ptp[revious][!]	&quot;<A HREF="#:tprevious">:tprevious</A>&quot; in the preview <A HREF="windows.html#window">window</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:[count]ptp[revious][!]	&quot;<A HREF="#:tprevious">:tprevious</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 
 							*<A NAME=":ptN"></A><B>:ptN</B>* *<A NAME=":ptNext"></A><B>:ptNext</B>*
@@ -459,7 +459,7 @@ the same <A HREF="motion.html#as">as</A> above, with a &quot;<A HREF="change.htm
 
 
 							*<A NAME=":ptr"></A><B>:ptr</B>* *<A NAME=":ptrewind"></A><B>:ptrewind</B>*
-:[count]ptr[ewind][!]	&quot;<A HREF="#:trewind">:trewind</A>&quot; in the preview <A HREF="windows.html#window">window</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:[count]ptr[ewind][!]	&quot;<A HREF="#:trewind">:trewind</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 
 							*<A NAME=":ptf"></A><B>:ptf</B>* *<A NAME=":ptfirst"></A><B>:ptfirst</B>*
@@ -467,7 +467,7 @@ the same <A HREF="motion.html#as">as</A> above, with a &quot;<A HREF="change.htm
 
 
 							*<A NAME=":ptl"></A><B>:ptl</B>* *<A NAME=":ptlast"></A><B>:ptlast</B>*
-:ptl[ast][!]		&quot;<A HREF="#:tlast">:tlast</A>&quot; in the preview <A HREF="windows.html#window">window</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:ptl[ast][!]		&quot;<A HREF="#:tlast">:tlast</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 ==============================================================================
 
@@ -900,7 +900,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#CTRL-I">CTRL-I</A>					*<A NAME="CTRL-W_CTRL-I"></A><B>CTRL-W_CTRL-I</B>* *<A NAME="CTRL-W_i"></A><B>CTRL-W_i</B>*
-<A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="insert.html#i">i</A>		Open a new <A HREF="windows.html#window">window</A>, with the cursor on the first line
+<A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="insert.html#i">i</A>		Open a new<A HREF="windows.html#window">窗口</A>, with the cursor on the first line
 			that contains the keyword under the cursor.  The
 			search starts at the beginning of the file.  Lines
 			that look like a comment line are ignored (see
@@ -974,7 +974,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>					*<A NAME="CTRL-W_CTRL-D"></A><B>CTRL-W_CTRL-D</B>* *<A NAME="CTRL-W_d"></A><B>CTRL-W_d</B>*
-<A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#d">d</A>		Open a new <A HREF="windows.html#window">window</A>, with the cursor on the first
+<A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#d">d</A>		Open a new<A HREF="windows.html#window">窗口</A>, with the cursor on the first
 			<A HREF="map.html#macro">macro</A> definition line that contains the keyword
 			under the cursor.  The search starts from the
 			beginning of the file.  If a <A HREF="intro.html#count">count</A> is given, the
@@ -1021,7 +1021,7 @@ Common arguments for the commands above:
 7. Using <A HREF="options.html#'tagfunc'">'tagfunc'</A>						*<A NAME="tag-function"></A><B>tag-function</B>*
 
 It is possible to provide Vim with a function which will generate a <A HREF="eval.html#list">list</A> of
-<A HREF="#tags">tags</A> used for commands like |<A HREF="#:tag">:tag</A>|, |<A HREF="#:tselect">:tselect</A>| and <A HREF="intro.html#Normal">Normal</A> mode tag commands
+<A HREF="#tags">tags</A> used for commands like |<A HREF="#:tag">:tag</A>|, |<A HREF="#:tselect">:tselect</A>| and <A HREF="intro.html#Normal">正常</A>模式 tag commands
 like |<A HREF="#CTRL-]">CTRL-]</A>|.
 
 The function used for generating the taglist is specified by setting the
@@ -1037,7 +1037,7 @@ Currently up to three flags may be passed to the <A HREF="#tag">tag</A> function
   '<A HREF="change.html#c">c</A>'		The function was invoked by a normal command being processed
 	        (mnemonic: the <A HREF="#tag">tag</A> function may use the <A HREF="repeat.html#context">context</A> around the
 		cursor to perform a better <A HREF="job_control.html#job">job</A> of generating the <A HREF="#tag">tag</A> <A HREF="eval.html#list">list</A>.)
-  '<A HREF="insert.html#i">i</A>'		In <A HREF="insert.html#Insert">Insert</A> mode, the user was completing a <A HREF="#tag">tag</A> (with
+  '<A HREF="insert.html#i">i</A>'		In <A HREF="intro.html#Insert">插入</A>模式, the user was completing a <A HREF="#tag">tag</A> (with
 		|<A HREF="insert.html#i_CTRL-X_CTRL-]">i_CTRL-X_CTRL-]</A>| or <A HREF="options.html#'completeopt'">'completeopt'</A> contains `t`).
   '<A HREF="change.html#r">r</A>'		The first argument to tagfunc should be interpreted <A HREF="motion.html#as">as</A> a
 		|<A HREF="pattern.html#pattern">pattern</A>| (see |<A HREF="#tag-regexp">tag-regexp</A>|), such <A HREF="motion.html#as">as</A> when using:

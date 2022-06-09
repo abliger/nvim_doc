@@ -179,11 +179,11 @@ your <A HREF="starting.html#init.vim">init.vim</A>.  Example:
 
 					*<A NAME="scroll-region"></A><B>scroll-region</B>* *<A NAME="xterm-scroll-region"></A><B>xterm-scroll-region</B>*
 Where possible, Nvim will use the terminal's ability to set a scroll region in
-order to redraw faster when a <A HREF="windows.html#window">window</A> is scrolled.  If the terminal's <A HREF="#terminfo">terminfo</A>
+order to redraw faster when a<A HREF="windows.html#window">窗口</A>is scrolled.  If the terminal's <A HREF="#terminfo">terminfo</A>
 description describes an ability to set top and bottom scroll margins, that is
 used.
 
-This will not speed up <A HREF="scroll.html#scrolling">scrolling</A> in a <A HREF="windows.html#window">window</A> that is not the full width of the
+This will not speed up <A HREF="scroll.html#scrolling">scrolling</A> in a<A HREF="windows.html#window">窗口</A>that is not the full width of the
 <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  Xterm has an extra ability, not described by <A HREF="#terminfo">terminfo</A>, to set left
 and right scroll margins <A HREF="motion.html#as">as</A> well.  If Nvim detects that the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is Xterm,
 <A HREF="motion.html#it">it</A> will make use of this ability to speed up <A HREF="scroll.html#scrolling">scrolling</A> that is not the full
@@ -194,8 +194,8 @@ width of the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
 Nvim uses libtermkey to convert <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="intro.html#escape">escape</A> sequences to key codes.
 |<A HREF="#terminfo">terminfo</A>| is used first, and CSI sequences not in |<A HREF="#terminfo">terminfo</A>| (including
 extended keys a.k.a. modifyOtherKeys or `CSI u`) can also be parsed.
-For example, when running Nvim in tmux, this makes Nvim leave <A HREF="insert.html#Insert">Insert</A> mode and
-go to the <A HREF="windows.html#window">window</A> below:
+For example, when running Nvim in tmux, this makes Nvim leave <A HREF="intro.html#Insert">插入</A>模式 and
+go to the<A HREF="windows.html#window">窗口</A>below:
 <B>  tmux send-keys 'Escape' [ 2 7 u 'C-W' j</B>
 Where `'Escape' [ 2 7 u` is an unambiguous `CSI u` sequence for the <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key.
 
@@ -313,17 +313,17 @@ configuration file.  It will look something like:
 
 Window size						*<A NAME="window-size"></A><B>window-size</B>*
 
-[This is about the size of the whole <A HREF="windows.html#window">window</A> Vim is using, not a <A HREF="windows.html#window">window</A> that is
+[This is about the size of the whole<A HREF="windows.html#window">窗口</A>Vim is using, not a<A HREF="windows.html#window">窗口</A>that is
 created with the &quot;<A HREF="windows.html#:split">:split</A>&quot; command.]
 
-On Unix systems, three methods are tried to get the <A HREF="windows.html#window">window</A> size:
+On Unix systems, three methods are tried to get the<A HREF="windows.html#window">窗口</A>size:
 
 - an ioctl call (TIOCGSIZE or TIOCGWINSZ, depends on your system)
 - the environment <A HREF="eval.html#variables">variables</A> &quot;LINES&quot; and &quot;COLUMNS&quot;
 - from the |<A HREF="#terminfo">terminfo</A>| entries &quot;lines&quot; and &quot;columns&quot;
 
 If everything fails a default size of 24 lines and 80 columns is assumed.  If
-a <A HREF="windows.html#window-resize">window-resize</A> signal is received the size will be set again.  If the <A HREF="windows.html#window">window</A>
+a <A HREF="windows.html#window-resize">window-resize</A> signal is received the size will be set again.  If the<A HREF="windows.html#window">窗口</A>
 size is wrong you can use the <A HREF="options.html#'lines'">'lines'</A> and <A HREF="options.html#'columns'">'columns'</A> <A HREF="options.html#options">options</A> to set the
 correct values. See |<A HREF="various.html#:mode">:mode</A>|.
 
@@ -363,7 +363,7 @@ Using the mouse						*<A NAME="mouse-using"></A><B>mouse-using</B>*
 					*<A NAME="mouse-mode-table"></A><B>mouse-mode-table</B>* *<A NAME="mouse-overview"></A><B>mouse-overview</B>*
 Overview of what the mouse buttons <A HREF="diff.html#do">do</A>, when <A HREF="options.html#'mousemodel'">'mousemodel'</A> is &quot;extend&quot;:
 
-<A HREF="intro.html#Normal">Normal</A> Mode:
+<A HREF="intro.html#Normal">正常</A>模式:
 <B><FONT color="#3A6F2B">event	      position	   selection	  change  action	</FONT></B>
 <B><FONT color="#3A6F2B">	       cursor			  window		</FONT></B>
 <A HREF="visual.html#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>     yes	     end	    yes
@@ -400,14 +400,14 @@ Overview of what the mouse buttons <A HREF="diff.html#do">do</A>, when <A HREF="
 <A HREF="#&lt;S-RightMouse&gt;">&lt;S-RightMouse&gt;</A>  yes     (cannot be active)  yes	   &quot;CTRL-O#&quot; (2)
 <A HREF="tagsrch.html#&lt;C-RightMouse&gt;">&lt;C-RightMouse&gt;</A>  no	(cannot be active)  no	   &quot;<A HREF="motion.html#CTRL-O">CTRL-O</A> CTRL-T&quot;
 
-In a help <A HREF="windows.html#window">window</A>:
+In a help<A HREF="windows.html#window">窗口</A>:
 <B><FONT color="#3A6F2B">event	      position	   selection	  change  action	</FONT></B>
 <B><FONT color="#3A6F2B">	       cursor			  window		</FONT></B>
 <A HREF="#&lt;2-LeftMouse&gt;">&lt;2-LeftMouse&gt;</A>   yes     (cannot be active)  no	   &quot;^]&quot; (jump to help <A HREF="tagsrch.html#tag">tag</A>)
 
 When <A HREF="options.html#'mousemodel'">'mousemodel'</A> is &quot;popup&quot;, these are different:
 
-<A HREF="intro.html#Normal">Normal</A> Mode:
+<A HREF="intro.html#Normal">正常</A>模式:
 <B><FONT color="#3A6F2B">event	      position	   selection	  change  action	</FONT></B>
 <B><FONT color="#3A6F2B">	       cursor			  window		</FONT></B>
 <A HREF="#&lt;S-LeftMouse&gt;">&lt;S-LeftMouse&gt;</A>	yes	start or extend (1) no
@@ -426,10 +426,10 @@ When <A HREF="options.html#'mousemodel'">'mousemodel'</A> is &quot;popup&quot;, 
 (2) only if click is in same buffer
 
 Clicking the left mouse button causes the cursor to be positioned.  If the
-click is in another <A HREF="windows.html#window">window</A> that <A HREF="windows.html#window">window</A> is made the active <A HREF="windows.html#window">window</A>.  When
+click is in another<A HREF="windows.html#window">窗口</A>that<A HREF="windows.html#window">窗口</A>is made the active<A HREF="windows.html#window">窗口</A>.  When
 editing the command-line the cursor can only be positioned on the
-command-line.  When in <A HREF="insert.html#Insert">Insert</A> mode Vim remains in <A HREF="insert.html#Insert">Insert</A> mode.  If <A HREF="options.html#'scrolloff'">'scrolloff'</A>
-is set, and the cursor is positioned within <A HREF="options.html#'scrolloff'">'scrolloff'</A> lines from the <A HREF="windows.html#window">window</A>
+command-line.  When in <A HREF="intro.html#Insert">插入</A>模式 Vim remains in <A HREF="intro.html#Insert">插入</A>模式.  If <A HREF="options.html#'scrolloff'">'scrolloff'</A>
+is set, and the cursor is positioned within <A HREF="options.html#'scrolloff'">'scrolloff'</A> lines from the<A HREF="windows.html#window">窗口</A>
 border, the text is scrolled.
 
 A selection can be started by pressing the left mouse button on the first
@@ -437,18 +437,18 @@ character, moving the mouse to the last character, then releasing the mouse
 button.  You will not always see the selection until you release the button,
 only in some versions (GUI, Win32) will the dragging be shown immediately.
 Note that you can make the text scroll by moving the mouse at least one
-character in the first/last line in the <A HREF="windows.html#window">window</A> when <A HREF="options.html#'scrolloff'">'scrolloff'</A> is non-zero.
+character in the first/last line in the<A HREF="windows.html#window">窗口</A>when <A HREF="options.html#'scrolloff'">'scrolloff'</A> is non-zero.
 
 In <A HREF="intro.html#Normal">Normal</A>, <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">Select</A> mode clicking the right mouse button causes the
 <A HREF="visual.html#Visual">Visual</A> area to be extended.  When <A HREF="options.html#'mousemodel'">'mousemodel'</A> is &quot;popup&quot;, the left button has
-to be used while keeping the <A HREF="intro.html#shift">shift</A> key pressed.  When clicking in a <A HREF="windows.html#window">window</A>
+to be used while keeping the <A HREF="intro.html#shift">shift</A> key pressed.  When clicking in a<A HREF="windows.html#window">窗口</A>
 which is editing another buffer, the <A HREF="visual.html#Visual">Visual</A> or <A HREF="visual.html#Select">Select</A> mode is stopped.
 
 In <A HREF="intro.html#Normal">Normal</A>, <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">Select</A> mode clicking the right mouse button with the alt
 key pressed causes the <A HREF="visual.html#Visual">Visual</A> area to become blockwise.  When <A HREF="options.html#'mousemodel'">'mousemodel'</A> is
 &quot;popup&quot; the left button has to be used with the alt key.  Note that this won't
-work on systems where the <A HREF="windows.html#window">window</A> manager consumes the mouse <A HREF="autocmd.html#events">events</A> when the
-alt key is pressed (it may move the <A HREF="windows.html#window">window</A>).
+work on systems where the<A HREF="windows.html#window">窗口</A>manager consumes the mouse <A HREF="autocmd.html#events">events</A> when the
+alt key is pressed (it may move the<A HREF="windows.html#window">窗口</A>).
 
 
 							*<A NAME="double-click"></A><B>double-click</B>*
@@ -462,7 +462,7 @@ selection:
 	triple		line			*<A NAME="&lt;3-LeftMouse&gt;"></A><B>&lt;3-LeftMouse&gt;</B>*
 
 	quadruple	rectangular block	*<A NAME="&lt;4-LeftMouse&gt;"></A><B>&lt;4-LeftMouse&gt;</B>*
-Exception: In a Help <A HREF="windows.html#window">window</A> a double click jumps to help for the <A HREF="motion.html#word">word</A> that is
+Exception: In a Help<A HREF="windows.html#window">窗口</A>a double click jumps to help for the <A HREF="motion.html#word">word</A> that is
 clicked on.
 A double click on a <A HREF="motion.html#word">word</A> selects that <A HREF="motion.html#word">word</A>.  <A HREF="options.html#'iskeyword'">'iskeyword'</A> is used to specify
 which characters are included in a <A HREF="motion.html#word">word</A>.  A double click on a character
@@ -478,9 +478,9 @@ and then drag) will result in whole words to be selected.  This continues
 until the button is released, at which point the selection is per character
 again.
 
-In <A HREF="insert.html#Insert">Insert</A> mode, when a selection is started, Vim goes into <A HREF="intro.html#Normal">Normal</A> mode
-temporarily.  When <A HREF="visual.html#Visual">Visual</A> or <A HREF="visual.html#Select">Select</A> mode ends, <A HREF="motion.html#it">it</A> returns to <A HREF="insert.html#Insert">Insert</A> mode.
-This is like using <A HREF="motion.html#CTRL-O">CTRL-O</A> in <A HREF="insert.html#Insert">Insert</A> mode.  <A HREF="visual.html#Select">Select</A> mode is used when the
+In <A HREF="intro.html#Insert">插入</A>模式, when a selection is started, Vim goes into <A HREF="intro.html#Normal">正常</A>模式
+temporarily.  When <A HREF="visual.html#Visual">Visual</A> or <A HREF="visual.html#Select">Select</A> mode ends, <A HREF="motion.html#it">it</A> returns to <A HREF="intro.html#Insert">插入</A>模式.
+This is like using <A HREF="motion.html#CTRL-O">CTRL-O</A> in <A HREF="intro.html#Insert">插入</A>模式.  <A HREF="visual.html#Select">Select</A> mode is used when the
 <A HREF="options.html#'selectmode'">'selectmode'</A> option contains &quot;mouse&quot;.
 
 

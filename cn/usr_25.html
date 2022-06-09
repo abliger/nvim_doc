@@ -89,16 +89,16 @@ Vim also has useful features for editing single-line paragraphs and tables.
 |<A HREF="#25.4">25.4</A>|	Dealing with long lines
 |<A HREF="#25.5">25.5</A>|	Editing tables
 
-     Next chapter: |<A HREF="usr_26.html">usr_26.txt</A>|  Repeating
- Previous chapter: |<A HREF="usr_24.html">usr_24.txt</A>|  Inserting quickly
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_26.html">usr_26.txt</A>|  Repeating
+上一章: |<A HREF="usr_24.html">usr_24.txt</A>|  Inserting quickly
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
 *<A NAME="25.1"></A><B>25.1</B>*	Breaking lines
 
 Vim has a number of <A HREF="eval.html#functions">functions</A> that make dealing with text easier.  By default,
-the editor does not perform automatic line breaks.  In other words, you have
+the editor does not perform automatic line breaks.换句话说, you have
 to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> yourself.  This is useful when you are <A HREF="editing.html#writing">writing</A> programs where
 you want to decide where the line ends.  It is not so good when you are
 creating documentation and want the text to be at most 70 character wide.
@@ -370,7 +370,7 @@ real <A HREF="intro.html#tab">tab</A>.
 *<A NAME="25.4"></A><B>25.4</B>*	Dealing with long lines
 
 Sometimes you will be editing a file that is wider than the number of columns
-in the <A HREF="windows.html#window">window</A>.  When that occurs, Vim wraps the lines so that everything fits
+in the<A HREF="windows.html#window">窗口</A>.  When that occurs, Vim wraps the lines so that everything fits
 on the screen.
    If you switch the <A HREF="options.html#'wrap'">'wrap'</A> option off, each line in the file shows up <A HREF="motion.html#as">as</A> one
 line on the screen.  Then the ends of the long lines disappear off the screen
@@ -383,7 +383,7 @@ want to enable one, use the following command:
 
 <B>	:set guioptions+=b</B>
 
-One horizontal scrollbar will appear at the bottom of the Vim <A HREF="windows.html#window">window</A>.
+One horizontal scrollbar will appear at the bottom of the Vim<A HREF="windows.html#window">窗口</A>.
 
 If you don't have a scrollbar or don't want to use <A HREF="motion.html#it">it</A>, use these commands to
 scroll the text.  The cursor will stay in the same place, but it's moved back
@@ -391,35 +391,35 @@ into the visible text if necessary.
 
 	<A HREF="scroll.html#zh">zh</A>		scroll right
 	4zh		scroll four characters right
-	<A HREF="scroll.html#zH">zH</A>		scroll half a <A HREF="windows.html#window">window</A> width right
+	<A HREF="scroll.html#zH">zH</A>		scroll half a<A HREF="windows.html#window">窗口</A>width right
 	<A HREF="scroll.html#ze">ze</A>		scroll right to put the cursor at the end
 	<A HREF="scroll.html#zl">zl</A>		scroll left
 	4zl		scroll four characters left
-	<A HREF="scroll.html#zL">zL</A>		scroll half a <A HREF="windows.html#window">window</A> width left
+	<A HREF="scroll.html#zL">zL</A>		scroll half a<A HREF="windows.html#window">窗口</A>width left
 	<A HREF="scroll.html#zs">zs</A>		scroll left to put the cursor at the start
 
 Let's attempt to show this with one line of text.  The cursor is on the &quot;<A HREF="motion.html#w">w</A>&quot; of
 &quot;which&quot;.  The &quot;current window&quot; above the line indicates the text that is
-currently visible.  The &quot;<A HREF="windows.html#window">window</A>&quot;s below the text indicate the text that is
+currently visible.  The &quot;<A HREF="windows.html#window">窗口</A>&quot;s below the text indicate the text that is
 visible after the command left of <A HREF="motion.html#it">it</A>.
 
-			      |&lt;-- current <A HREF="windows.html#window">window</A> --&gt;|
+			      |&lt;-- current<A HREF="windows.html#window">窗口</A>--&gt;|
 <B><FONT color="#3A6F2B">		some long text, part of which is visible in the window </FONT></B>
-	<A HREF="scroll.html#ze">ze</A>	  |&lt;--	   <A HREF="windows.html#window">window</A>     --&gt;|
-	<A HREF="scroll.html#zH">zH</A>	   |&lt;--     <A HREF="windows.html#window">window</A>     --&gt;|
-	4zh		  |&lt;--	   <A HREF="windows.html#window">window</A>     --&gt;|
-	<A HREF="scroll.html#zh">zh</A>		     |&lt;--     <A HREF="windows.html#window">window</A>	 --&gt;|
-	<A HREF="scroll.html#zl">zl</A>		       |&lt;--	<A HREF="windows.html#window">window</A>	   --&gt;|
-	4zl			  |&lt;--	   <A HREF="windows.html#window">window</A>     --&gt;|
-	<A HREF="scroll.html#zL">zL</A>				|&lt;--	 <A HREF="windows.html#window">window</A>     --&gt;|
-	<A HREF="scroll.html#zs">zs</A>			       |&lt;--	<A HREF="windows.html#window">window</A>	   --&gt;|
+	<A HREF="scroll.html#ze">ze</A>	  |&lt;--	  <A HREF="windows.html#window">窗口</A>    --&gt;|
+	<A HREF="scroll.html#zH">zH</A>	   |&lt;--    <A HREF="windows.html#window">窗口</A>    --&gt;|
+	4zh		  |&lt;--	  <A HREF="windows.html#window">窗口</A>    --&gt;|
+	<A HREF="scroll.html#zh">zh</A>		     |&lt;--    <A HREF="windows.html#window">窗口</A>	 --&gt;|
+	<A HREF="scroll.html#zl">zl</A>		       |&lt;--	<A HREF="windows.html#window">窗口</A>	   --&gt;|
+	4zl			  |&lt;--	  <A HREF="windows.html#window">窗口</A>    --&gt;|
+	<A HREF="scroll.html#zL">zL</A>				|&lt;--	<A HREF="windows.html#window">窗口</A>    --&gt;|
+	<A HREF="scroll.html#zs">zs</A>			       |&lt;--	<A HREF="windows.html#window">窗口</A>	   --&gt;|
 
 
 MOVING WITH WRAP OFF
 
 When <A HREF="options.html#'wrap'">'wrap'</A> is off and the text has scrolled horizontally, you can use the
 following commands to move the cursor to a character you can see.  Thus text
-left and right of the <A HREF="windows.html#window">window</A> is ignored.  These never cause the text to
+left and right of the<A HREF="windows.html#window">窗口</A>is ignored.  These never cause the text to
 scroll:
 
 	<A HREF="motion.html#g0">g0</A>		to first visible character in this line
@@ -428,7 +428,7 @@ scroll:
 	<A HREF="motion.html#gM">gM</A>		to middle of the text in this line
 	<A HREF="motion.html#g$">g$</A>		to last visible character in this line
 
-		|&lt;--	  <A HREF="windows.html#window">window</A>     --&gt;|
+		|&lt;--	 <A HREF="windows.html#window">窗口</A>    --&gt;|
 <B><FONT color="#3A6F2B">	some long    text, part of which is visible in one line </FONT></B>
 		 <A HREF="motion.html#g0">g0</A>  <A HREF="motion.html#g^">g^</A>    <A HREF="motion.html#gm">gm</A>	   <A HREF="motion.html#gM">gM</A> <A HREF="motion.html#g$">g$</A>
 
@@ -659,9 +659,7 @@ The &quot;<A HREF="change.html#gR">gR</A>&quot; command uses Virtual <A HREF="in
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_26.html">usr_26.txt</A>|  Repeating
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_26.html">usr_26.txt</A>|  Repeating
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
 	</div>

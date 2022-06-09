@@ -76,38 +76,33 @@
 
 		     VIM用户手册 - by Bram Moolenaar
 
-			    The first steps in Vim
+			   Vim 初步 
 
 
-This chapter provides just enough information to edit a file with Vim.  Not
-well or fast, but you can edit.  Take some time to practice with these
-commands, they form the base for what follows.
+本章提供使用Vim编辑文件的命令.不好也不开，但是足够你编辑文件.花时间联系这些命令，他们是接下来的基础.
 
-|<A HREF="#02.1">02.1</A>|	Running Vim for the First Time
-|<A HREF="#02.2">02.2</A>|	Inserting text
-|<A HREF="#02.3">02.3</A>|	Moving around
-|<A HREF="#02.4">02.4</A>|	Deleting characters
-|<A HREF="#02.5">02.5</A>|	Undo and Redo
-|<A HREF="#02.6">02.6</A>|	Other editing commands
-|<A HREF="#02.7">02.7</A>|	Getting out
-|<A HREF="#02.8">02.8</A>|	Finding help
+|<A HREF="#02.1">02.1</A>|	第一次运行Vim
+|<A HREF="#02.2">02.2</A>|	插入文本
+|<A HREF="#02.3">02.3</A>|	移动
+|<A HREF="#02.4">02.4</A>|	删除字符
+|<A HREF="#02.5">02.5</A>|	重做和恢复
+|<A HREF="#02.6">02.6</A>|	其他编辑命令
+|<A HREF="#02.7">02.7</A>|	退出
+|<A HREF="#02.8">02.8</A>|	寻求帮助
 
-     Next chapter: |<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
- Previous chapter: |<A HREF="usr_01.html">usr_01.txt</A>|  About the manuals
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_03.html">usr_03.txt</A>|    移动
+上一章: |<A HREF="usr_01.html">usr_01.txt</A>|  关于本手册
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="02.1"></A><B>02.1</B>*	Running Vim for the First Time
+*<A NAME="02.1"></A><B>02.1</B>*	第一次运行Vim
 
-To start Vim, enter this command:
+输入此命令启动Vim:
 
 <B>	gvim file.txt</B>
 
-On Unix you can type this at any command prompt.  If you are running Microsoft
-Windows, open a Command Prompt and enter the command.  In either <A HREF="change.html#case">case</A>, Vim
-starts editing a file called file.txt.  Because this is a new file, you get a
-blank <A HREF="windows.html#window">window</A>. This is what your screen will look like:
+在Unix中你可以在任何命令提示符中键入此命令.如果你是Windows电脑,打开命令提示符输入此命令. 无论任何一种<A HREF="change.html#case">情况</A>,Vim都可以直接编辑file.txt文件. 因为他是一个新文件，你将会获得一个空白<A HREF="windows.html#window">窗口</A>. 看起来像这样:
 
 	+---------------------------------------+
 	|#					|
@@ -117,48 +112,30 @@ blank <A HREF="windows.html#window">window</A>. This is what your screen will lo
 	|~					|
 	|&quot;file.txt&quot; [New file]			|
 	+---------------------------------------+
-		('#' is the cursor position.)
+		('#'是光标位置.)
 
-The tilde (~) lines indicate lines not in the file.  In other words, when Vim
-runs out of file to display, <A HREF="motion.html#it">it</A> displays tilde lines.  At the bottom of the
-screen, a message line indicates the file is named file.txt and shows that you
-are creating a new file.  The message information is temporary and other
-information overwrites <A HREF="motion.html#it">it</A>.
+在此文件中颚化符(~)表示此行不存在.换句话说，当Vim没有显示的文件,<A HREF="motion.html#it">它</A>会显示颚化符.在屏幕底部,显示文件的名称和说明此为新建文件.  这个信息是暂时的，其他的信息可以覆盖<A HREF="motion.html#it">它</A>.
 
 
-THE VIM COMMAND
+Vim 命令
 
-The gvim command causes the editor to create a new <A HREF="windows.html#window">window</A> for editing.  If you
-use this command:
+gvim命令会让编辑器创建一个新<A HREF="windows.html#window">窗口</A>题编辑.如果你使用这个命令:
 
 <B>	vim file.txt</B>
 
-the editing occurs inside your command <A HREF="windows.html#window">window</A>.  In other words, if you are
-running inside an xterm, the editor uses your xterm <A HREF="windows.html#window">window</A>.  If you are using
-the command prompt under Microsoft Windows, the editing occurs inside this
-<A HREF="windows.html#window">window</A>.  The text in the <A HREF="windows.html#window">window</A> will look the same for both versions, but with
-gvim you have extra features, like a menu <A HREF="motion.html#bar">bar</A>.  More about that later.
+编辑信息会出现在你的命令<A HREF="windows.html#window">窗口</A>中.换句话说,如果你使用xterm运行命令,编辑器会只用你的xterm<A HREF="windows.html#window">窗口</A>.如果你使用Windos的命令提示符编辑信息会出现在当前<A HREF="windows.html#window">窗口</A>中.  在两个版本的<A HREF="windows.html#window">窗口</A>的文字看起来一样,但是使用gvim会有其他特性,如菜单<A HREF="motion.html#bar">栏</A>.后面有更多描述.
 
 ==============================================================================
 
-*<A NAME="02.2"></A><B>02.2</B>*	Inserting text
+*<A NAME="02.2"></A><B>02.2</B>*	插入文本
 
-The Vim editor is a modal editor.  That means that the editor behaves
-differently, depending on which mode you are in.  The two basic modes are
-called <A HREF="intro.html#Normal">Normal</A> mode and <A HREF="insert.html#Insert">Insert</A> mode.  In <A HREF="intro.html#Normal">Normal</A> mode the characters you type
-are commands.  In <A HREF="insert.html#Insert">Insert</A> mode the characters are inserted <A HREF="motion.html#as">as</A> text.
-   Since you have just started Vim <A HREF="motion.html#it">it</A> will be in <A HREF="intro.html#Normal">Normal</A> mode.  To start <A HREF="insert.html#Insert">Insert</A>
-mode you type the &quot;<A HREF="insert.html#i">i</A>&quot; command (i for <A HREF="insert.html#Insert">Insert</A>).  Then you can enter
-the text.  It will be inserted into the file.  Do not worry if you make
-mistakes; you can correct them later.  To enter the following programmer's
-limerick, this is what you type:
+Vim是一个现代编辑器，它意味编辑器的行为与你所在的模式有关.有两个基本模式<A HREF="intro.html#Normal">正常</A>模式和<A HREF="insert.html#Insert">插入</A>模式.在<A HREF="intro.html#Normal">正常</A>模式，你键入的所有字符都是命令.在<A HREF="intro.html#Insert">插入</A>模式，所有的字符都会<A HREF="motion.html#as">作为</A>文本插入.当你进入Vim时，<A HREF="motion.html#it">它</A>会处于<A HREF="intro.html#Normal">正常</A>模式.进入<A HREF="insert.html#Insert">插入</A>模式你需要键入&quot;<A HREF="insert.html#i">i</A>&quot;命令(i是<A HREF="insert.html#Insert">Insert</A>)。然后你就可以输入文本了。这些文本会插入到文件中。如果你犯了一个错误也不用担心，你可以在之后改正它.
+输入下文的程序员打油诗，你可以这样敲:
 
 <B>	iA very intelligent turtle</B>
 <B>	Found programming Unix a hurdle</B>
 
-After typing &quot;turtle&quot; you press the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> key to start a new line.  Finally
-you press the <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key to stop <A HREF="insert.html#Insert">Insert</A> mode and go back to <A HREF="intro.html#Normal">Normal</A> mode.  You
-now have two lines of text in your Vim <A HREF="windows.html#window">window</A>:
+随后键入颚化符;使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>键到新行.最后使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>键停止<A HREF="intro.html#Insert">插入</A>模式并返回<A HREF="intro.html#Normal">正常</A>模式.现在你有了两行文本在你的Vim<A HREF="windows.html#window">窗口</A>中:
 
 	+---------------------------------------+
 	|A very intelligent turtle		|
@@ -169,18 +146,13 @@ now have two lines of text in your Vim <A HREF="windows.html#window">window</A>:
 	+---------------------------------------+
 
 
-WHAT IS THE MODE?
+现在是什么模式?
 
-To be able to see what mode you are in, type this command:
+要你所在模式可见,键入以下命令:
 
 <B>	:set showmode</B>
 
-You will notice that when typing the colon Vim moves the cursor to the last
-line of the <A HREF="windows.html#window">window</A>.  That's where you type colon commands (commands that start
-with a colon).  Finish this command by pressing the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> key (all commands
-that start with a colon are finished this way).
-   Now, if you type the &quot;<A HREF="insert.html#i">i</A>&quot; command Vim will display --INSERT-- at the bottom
-of the <A HREF="windows.html#window">window</A>.  This indicates you are in <A HREF="insert.html#Insert">Insert</A> mode.
+你可能注意到当你键入冒号时光标会转移到<A HREF="windows.html#window">窗口</A>的最后一行.那是你输入冒号命令(以冒号开始的命令)的地方.完成命令需要使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>键(冒号命令都需要以这种方法结束).现在,如果你键入&quot;<A HREF="insert.html#i">i</A>&quot;命令，在<A HREF="windows.html#window">窗口</A>底部，Vim将会显示--INSERT--.表示你在<A HREF="intro.html#Insert">插入</A>模式.
 
 	+---------------------------------------+
 	|A very intelligent turtle		|
@@ -190,22 +162,18 @@ of the <A HREF="windows.html#window">window</A>.  This indicates you are in <A H
 	|-- INSERT <A HREF="starting.html#--">--</A>				|
 	+---------------------------------------+
 
-If you press <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to go back to <A HREF="intro.html#Normal">Normal</A> mode the last line will be made blank.
+如果你使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>返回<A HREF="intro.html#Normal">正常</A>模式最后一行将会变成空白.
 
 
-GETTING OUT OF TROUBLE
+摆脱麻烦
 
-One of the problems for Vim novices is mode confusion, which is caused by
-forgetting which mode you are in or by accidentally typing a command that
-switches modes.  To get back to <A HREF="intro.html#Normal">Normal</A> mode, no matter what mode you are in,
-press the <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key.  Sometimes you have to press <A HREF="motion.html#it">it</A> <A HREF="if_cscop.html#twice">twice</A>.  If Vim beeps back
-at you, you already are in <A HREF="intro.html#Normal">Normal</A> mode.
+Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模式或者不小心敲击转换模式的命令. 无论你在任何模式，返回<A HREF="intro.html#Normal">正常</A>模式使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>就可以了.有时你需要使用<A HREF="motion.html#it">它</A><A HREF="if_cscop.html#twice">两次</A>.如果Vim发出 "嘀" 一声，你已经处于<A HREF="intro.html#Normal">正常</A>模式.
 
 ==============================================================================
 
 *<A NAME="02.3"></A><B>02.3</B>*	Moving around
 
-After you return to <A HREF="intro.html#Normal">Normal</A> mode, you can move around by using these keys:
+After you return to <A HREF="intro.html#Normal">正常</A>模式, you can move around by using these keys:
 
 
 	<A HREF="motion.html#h">h</A>   left						*<A NAME="hjkl"></A><B>hjkl</B>*
@@ -348,7 +316,7 @@ The next &quot;<A HREF="undo.html#u">u</A>&quot; command gives you the <A HREF="
 REDO
 
 If you <A HREF="undo.html#undo">undo</A> too many times, you can press <A HREF="undo.html#CTRL-R">CTRL-R</A> (redo) to reverse the
-preceding command.  In other words, <A HREF="motion.html#it">it</A> undoes the <A HREF="undo.html#undo">undo</A>.  To see this in
+preceding command.换句话说, <A HREF="motion.html#it">it</A> undoes the <A HREF="undo.html#undo">undo</A>.  To see this in
 action, press <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="if_cscop.html#twice">twice</A>.  The character A and the space after <A HREF="motion.html#it">it</A> disappear:
 
 <B><FONT color="#3A6F2B">	young intelligent turtle </FONT></B>
@@ -407,7 +375,7 @@ to append three exclamation points after the <A HREF="motion.html#e">e</A> in tu
 OPENING UP A NEW LINE
 
 The &quot;<A HREF="insert.html#o">o</A>&quot; command creates a new, empty line below the cursor and puts Vim in
-<A HREF="insert.html#Insert">Insert</A> mode.  Then you can type the text for the new line.
+<A HREF="intro.html#Insert">插入</A>模式.  Then you can type the text for the new line.
    Suppose the cursor is somewhere in the first of these two lines:
 
 <B><FONT color="#3A6F2B">	A very intelligent turtle </FONT></B>
@@ -438,7 +406,7 @@ its effect.  Similarly, to delete three characters, use the command &quot;3x&quo
 
 ==============================================================================
 
-*<A NAME="02.7"></A><B>02.7</B>*	Getting out
+*<A NAME="02.7"></A><B>02.7</B>*	退出
 
 To exit, use the &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot; command.  This command writes the file and exits.
 
@@ -476,7 +444,7 @@ original version of the file.
 
 ==============================================================================
 
-*<A NAME="02.8"></A><B>02.8</B>*	Finding help
+*<A NAME="02.8"></A><B>02.8</B>*	寻求帮助
 
 Everything you always wanted to know can be found in the Vim help files.
 Don't be afraid to ask!
@@ -494,13 +462,13 @@ To get generic help use this command:
 
 You could also use the first function key <A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A>.  If your keyboard has a <A HREF="helphelp.html#&lt;Help&gt;">&lt;Help&gt;</A>
 key <A HREF="motion.html#it">it</A> might work <A HREF="motion.html#as">as</A> well.
-   If you don't supply a subject, &quot;<A HREF="helphelp.html#:help">:help</A>&quot; displays the general help <A HREF="windows.html#window">window</A>.
+   If you don't supply a subject, &quot;<A HREF="helphelp.html#:help">:help</A>&quot; displays the general help<A HREF="windows.html#window">窗口</A>.
 The creators of Vim did something very clever (or very lazy) with the help
-system: They made the help <A HREF="windows.html#window">window</A> a normal editing <A HREF="windows.html#window">window</A>.  You can use all
+system: They made the help<A HREF="windows.html#window">窗口</A>a normal editing<A HREF="windows.html#window">窗口</A>.  You can use all
 the normal Vim commands to move through the help information.  Therefore <A HREF="motion.html#h">h</A>, <A HREF="motion.html#j">j</A>,
 <A HREF="motion.html#k">k</A>, and <A HREF="motion.html#l">l</A> move left, down, up and right.
-   To get out of the help <A HREF="windows.html#window">window</A>, use the same command you use to get out of
-the editor: &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;.  This will only close the help <A HREF="windows.html#window">window</A>, not exit Vim.
+   To get out of the help<A HREF="windows.html#window">窗口</A>, use the same command you use to get out of
+the editor: &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;.  This will only close the help<A HREF="windows.html#window">窗口</A>, not exit Vim.
 
 As you read the help text, you will notice some text enclosed in vertical <A HREF="index.html#bars">bars</A>
 (for example, |<A HREF="helphelp.html#help">help</A>|).  This indicates a hyperlink.  If you position the
@@ -565,7 +533,7 @@ example, use the following command:
 The table with all mode prefixes can be found below: |<A HREF="#help-summary">help-summary</A>|.
 
 Special keys are enclosed in angle brackets.  To find help on the up-arrow key
-in <A HREF="insert.html#Insert">Insert</A> mode, for instance, use this command:
+in <A HREF="intro.html#Insert">插入</A>模式, for instance, use this command:
 
 <B>	:help i_&lt;Up&gt;</B>
 
@@ -609,11 +577,11 @@ Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>*
     And for the <A HREF="options.html#'guioptions'">'guioptions'</A> flags:
 <B>	:help go-&lt;letter&gt;</B>
 
-4) <A HREF="intro.html#Normal">Normal</A> mode commands <A HREF="diff.html#do">do</A> not have a prefix. To go to the help page for the
+4) <A HREF="intro.html#Normal">正常</A>模式 commands <A HREF="diff.html#do">do</A> not have a prefix. To go to the help page for the
    &quot;<A HREF="tabpage.html#gt">gt</A>&quot; command:
 <B>	:help gt</B>
 
-5) <A HREF="insert.html#Insert">Insert</A> mode commands start with i_.  Help for <A HREF="change.html#deleting">deleting</A> a <A HREF="motion.html#word">word</A>:
+5) <A HREF="intro.html#Insert">插入</A>模式 commands start with i_.  Help for <A HREF="change.html#deleting">deleting</A> a <A HREF="motion.html#word">word</A>:
 <B>	:help i_CTRL-W</B>
 
 6) <A HREF="visual.html#Visual">Visual</A> mode commands start with v_.  Help for jumping to the other side of
@@ -694,9 +662,9 @@ Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>*
 16) Window management commands always start with <A HREF="vimindex.html#CTRL-W">CTRL-W</A>, so you find the
     corresponding help at <A HREF="helphelp.html#:h">:h</A> CTRL-W_letter.  E.g.
 <B>	:help CTRL-W_p</B>
-     for moving the previous accessed <A HREF="windows.html#window">window</A>.  You can also access
+     for moving the previous accessed<A HREF="windows.html#window">窗口</A>.  You can also access
 <B>	:help windows.txt</B>
-     and read your way through if you are looking for <A HREF="windows.html#window">window</A> handling
+     and read your way through if you are looking for<A HREF="windows.html#window">窗口</A>handling
     commands.
 
 17) Use |<A HREF="helphelp.html#:helpgrep">:helpgrep</A>| to search in all help pages (and also of any installed
@@ -705,7 +673,7 @@ Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>*
 <B>	:helpgrep topic</B>
      This takes you to the first match.  To go to the next one:
 <B>	:cnext</B>
-     All matches are available in the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> which can be opened
+     All matches are available in the <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>which can be opened
     with:
 <B>	:copen</B>
      Move around to the match you like and press Enter to jump to that help.
@@ -771,9 +739,7 @@ Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>*
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

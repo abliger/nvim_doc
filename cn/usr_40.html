@@ -87,9 +87,9 @@ Autocommands make <A HREF="motion.html#it">it</A> possible to execute commands a
 |<A HREF="#40.2">40.2</A>|	Defining command-line commands
 |<A HREF="#40.3">40.3</A>|	Autocommands
 
-     Next chapter: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
- Previous chapter: |<A HREF="usr_32.html">usr_32.txt</A>|  The <A HREF="undo.html#undo">undo</A> tree
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
+上一章: |<A HREF="usr_32.html">usr_32.txt</A>|  The <A HREF="undo.html#undo">undo</A> tree
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -105,7 +105,7 @@ good choices to map.  Example:
 <B>	:map &lt;F2&gt; GoDate: &lt;Esc&gt;:read !date&lt;CR&gt;kJ</B>
 
 This shows how three modes are used.  After going to the last line with &quot;<A HREF="motion.html#G">G</A>&quot;,
-the &quot;<A HREF="insert.html#o">o</A>&quot; command opens a new line and starts <A HREF="insert.html#Insert">Insert</A> mode.  The text &quot;Date: &quot; is
+the &quot;<A HREF="insert.html#o">o</A>&quot; command opens a new line and starts <A HREF="intro.html#Insert">插入</A>模式.  The text &quot;Date: &quot; is
 inserted and <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> takes you out of insert mode.
    Notice the use of special keys inside <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>.  This is called angle bracket
 <A HREF="intro.html#notation">notation</A>.  You type these <A HREF="motion.html#as">as</A> separate characters, not by pressing the key
@@ -125,17 +125,17 @@ Now &quot;kJ&quot; moves the cursor up and joins the lines together.
 
 MAPPING AND MODES
 
-The &quot;<A HREF="map.html#:map">:map</A>&quot; command defines remapping for keys in <A HREF="intro.html#Normal">Normal</A> mode.  You can also
-define mappings for other modes.  For example, &quot;<A HREF="map.html#:imap">:imap</A>&quot; applies to <A HREF="insert.html#Insert">Insert</A> mode.
+The &quot;<A HREF="map.html#:map">:map</A>&quot; command defines remapping for keys in <A HREF="intro.html#Normal">正常</A>模式.  You can also
+define mappings for other modes.  For example, &quot;<A HREF="map.html#:imap">:imap</A>&quot; applies to <A HREF="intro.html#Insert">插入</A>模式.
 You can use <A HREF="motion.html#it">it</A> to insert a date below the cursor:
 
 <B>	:imap &lt;F2&gt; &lt;CR&gt;Date: &lt;Esc&gt;:read !date&lt;CR&gt;kJ</B>
 
-It looks a lot like the <A HREF="map.html#mapping">mapping</A> for &lt;F2&gt; in <A HREF="intro.html#Normal">Normal</A> mode, only the start is
-different.  The &lt;F2&gt; <A HREF="map.html#mapping">mapping</A> for <A HREF="intro.html#Normal">Normal</A> mode is still there.  Thus you can map
+It looks a lot like the <A HREF="map.html#mapping">mapping</A> for &lt;F2&gt; in <A HREF="intro.html#Normal">正常</A>模式, only the start is
+different.  The &lt;F2&gt; <A HREF="map.html#mapping">mapping</A> for <A HREF="intro.html#Normal">正常</A>模式 is still there.  Thus you can map
 the same key differently for each mode.
-   Notice that, although this <A HREF="map.html#mapping">mapping</A> starts in <A HREF="insert.html#Insert">Insert</A> mode, <A HREF="motion.html#it">it</A> ends in <A HREF="intro.html#Normal">Normal</A>
-mode.  If you want <A HREF="motion.html#it">it</A> to continue in <A HREF="insert.html#Insert">Insert</A> mode, append an &quot;<A HREF="insert.html#a">a</A>&quot; to the
+   Notice that, although this <A HREF="map.html#mapping">mapping</A> starts in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="motion.html#it">it</A> ends in <A HREF="intro.html#Normal">Normal</A>
+mode.  If you want <A HREF="motion.html#it">it</A> to continue in <A HREF="intro.html#Insert">插入</A>模式, append an &quot;<A HREF="insert.html#a">a</A>&quot; to the
 <A HREF="map.html#mapping">mapping</A>.
 
 Here is an overview of map commands and in which mode they work:
@@ -179,7 +179,7 @@ look like this:
 
 
 The first column of the <A HREF="eval.html#list">list</A> shows in which mode the <A HREF="map.html#mapping">mapping</A> is effective.
-This is &quot;<A HREF="pattern.html#n">n</A>&quot; for <A HREF="intro.html#Normal">Normal</A> mode, &quot;<A HREF="insert.html#i">i</A>&quot; for <A HREF="insert.html#Insert">Insert</A> mode, etc.  A blank is used for a
+This is &quot;<A HREF="pattern.html#n">n</A>&quot; for <A HREF="intro.html#Normal">正常</A>模式, &quot;<A HREF="insert.html#i">i</A>&quot; for <A HREF="intro.html#Insert">插入</A>模式, etc.  A blank is used for a
 <A HREF="map.html#mapping">mapping</A> defined with &quot;<A HREF="map.html#:map">:map</A>&quot;, thus effective in both <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode.
    One useful purpose of listing the <A HREF="map.html#mapping">mapping</A> is to check if special keys in <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>
 form have been recognized (this only works when color is supported).  For
@@ -196,8 +196,8 @@ the mappings for &lt;F2&gt; above could be shortened to:
 <B>	:imap &lt;F2&gt; &lt;Esc&gt;&lt;F3&gt;</B>
 <B>	:map &lt;F3&gt;  oDate: &lt;Esc&gt;:read !date&lt;CR&gt;kJ</B>
 
-For <A HREF="intro.html#Normal">Normal</A> mode &lt;F2&gt; is mapped to go to the last line, and then behave like
-&lt;F3&gt; was pressed.  In <A HREF="insert.html#Insert">Insert</A> mode &lt;F2&gt; stops <A HREF="insert.html#Insert">Insert</A> mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> and then
+For <A HREF="intro.html#Normal">正常</A>模式 &lt;F2&gt; is mapped to go to the last line, and then behave like
+&lt;F3&gt; was pressed.  In <A HREF="intro.html#Insert">插入</A>模式 &lt;F2&gt; stops <A HREF="intro.html#Insert">插入</A>模式 with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> and then
 also uses &lt;F3&gt;.  Then &lt;F3&gt; is mapped to <A HREF="diff.html#do">do</A> the actual work.
 
 Suppose you hardly ever use <A HREF="intro.html#Ex">Ex</A> mode, and want to use the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command to format
@@ -309,7 +309,7 @@ starts a new, empty command with a comment.  Example:
 
 MAPPINGS AND ABBREVIATIONS
 
-<A HREF="map.html#Abbreviations">Abbreviations</A> are a lot like <A HREF="insert.html#Insert">Insert</A> mode mappings.  The arguments are handled
+<A HREF="map.html#Abbreviations">Abbreviations</A> are a lot like <A HREF="intro.html#Insert">插入</A>模式 mappings.  The arguments are handled
 in the same way.  The main difference is the way they are triggered.  An
 abbreviation is triggered by typing a non-word character after the <A HREF="motion.html#word">word</A>.  A
 <A HREF="map.html#mapping">mapping</A> is triggered when typing the last character.
@@ -318,7 +318,7 @@ inserted in the text while you type them.  When the abbreviation is triggered
 these characters are deleted and replaced by what the abbreviation produces.
 When typing the characters for a <A HREF="map.html#mapping">mapping</A>, nothing is inserted until you type
 the last character that triggers <A HREF="motion.html#it">it</A>.  If the <A HREF="options.html#'showcmd'">'showcmd'</A> option is set, the
-typed characters are displayed in the last line of the Vim <A HREF="windows.html#window">window</A>.
+typed characters are displayed in the last line of the Vim<A HREF="windows.html#window">窗口</A>.
    An exception is when a <A HREF="map.html#mapping">mapping</A> is ambiguous.  Suppose you have done two
 mappings:
 
@@ -683,7 +683,7 @@ like &quot;doautocmd&quot; except <A HREF="motion.html#it">it</A> executes on al
 USING NORMAL MODE COMMANDS
 
 The commands executed by an <A HREF="autocmd.html#autocommand">autocommand</A> are <A HREF="cmdline.html#Command-line">Command-line</A> commands.  If you
-want to use a <A HREF="intro.html#Normal">Normal</A> mode command, the &quot;<A HREF="various.html#:normal">:normal</A>&quot; command can be used.
+want to use a <A HREF="intro.html#Normal">正常</A>模式 command, the &quot;<A HREF="various.html#:normal">:normal</A>&quot; command can be used.
 Example:
 
 <B>	:autocmd BufReadPost *.log normal G</B>
@@ -692,7 +692,7 @@ This will make the cursor jump to the last line of *.log files when you start
 to edit <A HREF="motion.html#it">it</A>.
    Using the &quot;<A HREF="various.html#:normal">:normal</A>&quot; command is a bit tricky.  First of all, make sure its
 argument is a complete command, including all the arguments.  When you use &quot;<A HREF="insert.html#i">i</A>&quot;
-to go to <A HREF="insert.html#Insert">Insert</A> mode, there must also be a <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to leave <A HREF="insert.html#Insert">Insert</A> mode again.
+to go to <A HREF="intro.html#Insert">插入</A>模式, there must also be a <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to leave <A HREF="intro.html#Insert">插入</A>模式 again.
 If you use a &quot;<A HREF="pattern.html#/">/</A>&quot; to start a search <A HREF="pattern.html#pattern">pattern</A>, there must be a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> to execute
 <A HREF="motion.html#it">it</A>.
    The &quot;<A HREF="various.html#:normal">:normal</A>&quot; command uses all the text after <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> commands.  Thus there
@@ -715,7 +715,7 @@ IGNORING EVENTS
 
 At times, you will not want to trigger an <A HREF="autocmd.html#autocommand">autocommand</A>.  The <A HREF="options.html#'eventignore'">'eventignore'</A>
 option contains a <A HREF="eval.html#list">list</A> of <A HREF="autocmd.html#events">events</A> that will be totally ignored.  For example,
-the following causes <A HREF="autocmd.html#events">events</A> for entering and leaving a <A HREF="windows.html#window">window</A> to be ignored:
+the following causes <A HREF="autocmd.html#events">events</A> for entering and leaving a<A HREF="windows.html#window">窗口</A>to be ignored:
 
 <B>	:set eventignore=WinEnter,WinLeave</B>
 
@@ -729,9 +729,7 @@ To set <A HREF="motion.html#it">it</A> back to the normal behavior, make <A HREF
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
    </div>

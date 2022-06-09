@@ -90,7 +90,7 @@ For a basic explanation, see section |<A HREF="usr_40.html#40.3">40.3</A>| in th
 1. Introduction						*<A NAME="autocmd-intro"></A><B>autocmd-intro</B>*
 
 You can specify commands to be executed automatically when reading or <A HREF="editing.html#writing">writing</A>
-a file, when entering or leaving a buffer or <A HREF="windows.html#window">window</A>, and when <A HREF="starting.html#exiting">exiting</A> Vim.
+a file, when entering or leaving a buffer or<A HREF="windows.html#window">窗口</A>, and when <A HREF="starting.html#exiting">exiting</A> Vim.
 For example, you can create an <A HREF="#autocommand">autocommand</A> to set the <A HREF="options.html#'cindent'">'cindent'</A> option for
 files matching *.c.  You can also use autocommands to implement advanced
 features, such <A HREF="motion.html#as">as</A> editing compressed files (see |<A HREF="#gzip-example">gzip-example</A>|).  The usual
@@ -345,8 +345,8 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="BufLeave"></A><B>BufLeave</B>*
 <A HREF="#BufLeave">BufLeave</A>			Before leaving to another buffer.  Also when
-				leaving or closing the current <A HREF="windows.html#window">window</A> and the
-				new current <A HREF="windows.html#window">window</A> is not for the same buffer.
+				leaving or closing the current<A HREF="windows.html#window">窗口</A>and the
+				new current<A HREF="windows.html#window">窗口</A>is not for the same buffer.
 
 				Not used for &quot;<A HREF="editing.html#:qa">:qa</A>&quot; or &quot;<A HREF="editing.html#:q">:q</A>&quot; when <A HREF="starting.html#exiting">exiting</A> Vim.
 
@@ -405,20 +405,20 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				more.
 
 							*<A NAME="BufWinEnter"></A><B>BufWinEnter</B>*
-<A HREF="#BufWinEnter">BufWinEnter</A>			After a buffer is displayed in a <A HREF="windows.html#window">window</A>.  This
+<A HREF="#BufWinEnter">BufWinEnter</A>			After a buffer is displayed in a<A HREF="windows.html#window">窗口</A>.  This
 				may be when the buffer is loaded (after
 				processing modelines) or when a hidden buffer
 				is displayed (and is no longer hidden).
 
 				Not triggered for |<A HREF="windows.html#:split">:split</A>| without arguments,
 				since the buffer does not change, or <A HREF="windows.html#:split">:split</A>
-				with a file already open in a <A HREF="windows.html#window">window</A>.
+				with a file already open in a<A HREF="windows.html#window">窗口</A>.
 				Triggered for &quot;<A HREF="windows.html#:split">:split</A>&quot; with the name of the
 				current buffer, since <A HREF="motion.html#it">it</A> reloads that buffer.
 
 							*<A NAME="BufWinLeave"></A><B>BufWinLeave</B>*
-<A HREF="#BufWinLeave">BufWinLeave</A>			Before a buffer is removed from a <A HREF="windows.html#window">window</A>.
-				Not when it's still visible in another <A HREF="windows.html#window">window</A>.
+<A HREF="#BufWinLeave">BufWinLeave</A>			Before a buffer is removed from a<A HREF="windows.html#window">窗口</A>.
+				Not when it's still visible in another<A HREF="windows.html#window">窗口</A>.
 				Also triggered when <A HREF="starting.html#exiting">exiting</A>.
 				Before <A HREF="#BufUnload">BufUnload</A>, <A HREF="#BufHidden">BufHidden</A>.
 				NOTE: Current buffer &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; may be different from
@@ -510,15 +510,15 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				<A HREF="cmdline.html#cmdline">cmdline</A> by <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">it</A> to false.
 
 							*<A NAME="CmdwinEnter"></A><B>CmdwinEnter</B>*
-<A HREF="#CmdwinEnter">CmdwinEnter</A>			After entering the command-line <A HREF="windows.html#window">window</A>.
+<A HREF="#CmdwinEnter">CmdwinEnter</A>			After entering the command-line<A HREF="windows.html#window">窗口</A>.
 				Useful for setting <A HREF="options.html#options">options</A> specifically for
-				this special type of <A HREF="windows.html#window">window</A>.
+				this special type of<A HREF="windows.html#window">窗口</A>.
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expands to a single character,
 				indicating the type of command-line.
 				|<A HREF="cmdline.html#cmdwin-char">cmdwin-char</A>|
 
 							*<A NAME="CmdwinLeave"></A><B>CmdwinLeave</B>*
-<A HREF="#CmdwinLeave">CmdwinLeave</A>			Before leaving the command-line <A HREF="windows.html#window">window</A>.
+<A HREF="#CmdwinLeave">CmdwinLeave</A>			Before leaving the command-line<A HREF="windows.html#window">窗口</A>.
 				Useful to clean up any global setting done
 				with <A HREF="#CmdwinEnter">CmdwinEnter</A>.
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expands to a single character,
@@ -541,7 +541,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 
 <A HREF="#CompleteChanged">CompleteChanged</A> 					*<A NAME="CompleteChanged"></A><B>CompleteChanged</B>*
-				After each time the <A HREF="insert.html#Insert">Insert</A> mode completion
+				After each time the <A HREF="intro.html#Insert">插入</A>模式 completion
 				menu changed.  Not fired on popup menu hide,
 				use |<A HREF="#CompleteDonePre">CompleteDonePre</A>| or |<A HREF="#CompleteDone">CompleteDone</A>| for
 				that.
@@ -563,7 +563,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 
 							*<A NAME="CompleteDonePre"></A><B>CompleteDonePre</B>*
-<A HREF="#CompleteDonePre">CompleteDonePre</A>			After <A HREF="insert.html#Insert">Insert</A> mode completion is done.  Either
+<A HREF="#CompleteDonePre">CompleteDonePre</A>			After <A HREF="intro.html#Insert">插入</A>模式 completion is done.  Either
 				when something was completed or abandoning
 				completion. |<A HREF="insert.html#ins-completion">ins-completion</A>|
 				|<A HREF="builtin.html#complete_info()">complete_info()</A>| can be used, the info is
@@ -573,7 +573,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 
 							*<A NAME="CompleteDone"></A><B>CompleteDone</B>*
-<A HREF="#CompleteDone">CompleteDone</A>			After <A HREF="insert.html#Insert">Insert</A> mode completion is done.  Either
+<A HREF="#CompleteDone">CompleteDone</A>			After <A HREF="intro.html#Insert">插入</A>模式 completion is done.  Either
 				when something was completed or abandoning
 				completion. |<A HREF="insert.html#ins-completion">ins-completion</A>|
 				|<A HREF="builtin.html#complete_info()">complete_info()</A>| cannot be used, the info is
@@ -589,7 +589,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				fire every <A HREF="options.html#'updatetime'">'updatetime'</A> ms if you leave Vim to
 				make some coffee. :)  See |<A HREF="windows.html#CursorHold-example">CursorHold-example</A>|
 				for previewing <A HREF="tagsrch.html#tags">tags</A>.
-				This event is only triggered in <A HREF="intro.html#Normal">Normal</A> mode.
+				This event is only triggered in <A HREF="intro.html#Normal">正常</A>模式.
 				It is not triggered when waiting for a command
 				argument to be typed, or a <A HREF="intro.html#movement">movement</A> after an
 				<A HREF="motion.html#operator">operator</A>.
@@ -612,7 +612,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
  
 
 							*<A NAME="CursorHoldI"></A><B>CursorHoldI</B>*
-<A HREF="#CursorHoldI">CursorHoldI</A>			Like <A HREF="#CursorHold">CursorHold</A>, but in <A HREF="insert.html#Insert">Insert</A> mode. Not
+<A HREF="#CursorHoldI">CursorHoldI</A>			Like <A HREF="#CursorHold">CursorHold</A>, but in <A HREF="intro.html#Insert">插入</A>模式. Not
 				triggered when waiting for another key, e.g.
 				after <A HREF="visual.html#CTRL-V">CTRL-V</A>, and not in <A HREF="change.html#CTRL-X">CTRL-X</A> mode
 				|<A HREF="insert.html#insert_expand">insert_expand</A>|.
@@ -620,13 +620,13 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="CursorMoved"></A><B>CursorMoved</B>*
 <A HREF="#CursorMoved">CursorMoved</A>			After the cursor was moved in <A HREF="intro.html#Normal">Normal</A> or <A HREF="visual.html#Visual">Visual</A>
-				mode or to another <A HREF="windows.html#window">window</A>.  Also when the text
+				mode or to another<A HREF="windows.html#window">窗口</A>.  Also when the text
 				of the cursor line has been changed, e.g. with
 				&quot;<A HREF="change.html#x">x</A>&quot;, &quot;rx&quot; or &quot;<A HREF="change.html#p">p</A>&quot;.
 				Not always triggered when there is typeahead,
 				while executing commands in a <A HREF="usr_41.html#script">script</A> file, or
 				when an <A HREF="motion.html#operator">operator</A> is pending. Always triggered
-				when moving to another <A HREF="windows.html#window">window</A>.
+				when moving to another<A HREF="windows.html#window">窗口</A>.
 				For an example see |<A HREF="tips.html#match-parens">match-parens</A>|.
 				Note: Cannot be skipped with |<A HREF="#:noautocmd">:noautocmd</A>|.
 				Careful: This is triggered very often, don't
@@ -634,7 +634,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				that is slow.
 
 							*<A NAME="CursorMovedI"></A><B>CursorMovedI</B>*
-<A HREF="#CursorMovedI">CursorMovedI</A>			After the cursor was moved in <A HREF="insert.html#Insert">Insert</A> mode.
+<A HREF="#CursorMovedI">CursorMovedI</A>			After the cursor was moved in <A HREF="intro.html#Insert">插入</A>模式.
 				Not triggered when the popup menu is visible.
 				Otherwise the same <A HREF="motion.html#as">as</A> <A HREF="#CursorMoved">CursorMoved</A>.
 
@@ -647,15 +647,15 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 							*<A NAME="DirChanged"></A><B>DirChanged</B>*
 <A HREF="#DirChanged">DirChanged</A>			After the |<A HREF="editing.html#current-directory">current-directory</A>| was changed.
 				The <A HREF="pattern.html#pattern">pattern</A> can be:
-					&quot;<A HREF="windows.html#window">window</A>&quot;  to trigger on `:lcd`
+					&quot;<A HREF="windows.html#window">窗口</A>&quot;  to trigger on `:lcd`
 					&quot;<A HREF="tabpage.html#tabpage">tabpage</A>&quot; to trigger on `:tcd`
 					&quot;global&quot;  to trigger on `:cd`
 					&quot;auto&quot;    to trigger on <A HREF="options.html#'autochdir'">'autochdir'</A>.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
 				    cwd:            current working directory
-				    scope:          &quot;global&quot;, &quot;<A HREF="tabpage.html#tabpage">tabpage</A>&quot;, &quot;<A HREF="windows.html#window">window</A>&quot;
+				    scope:          &quot;global&quot;, &quot;<A HREF="tabpage.html#tabpage">tabpage</A>&quot;, &quot;<A HREF="windows.html#window">窗口</A>&quot;
 				    changed_window: <A HREF="eval.html#v:true">v:true</A> if we fired the event
-				                    switching <A HREF="windows.html#window">window</A> (or <A HREF="intro.html#tab">tab</A>)
+				                    switching<A HREF="windows.html#window">窗口</A>(or <A HREF="intro.html#tab">tab</A>)
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> is set to the new directory name.
 				Non-recursive (event cannot trigger itself).
 
@@ -665,9 +665,9 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				The <A HREF="pattern.html#pattern">pattern</A> is like with |<A HREF="#DirChanged">DirChanged</A>|.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
 				    directory:      new working directory
-				    scope:          &quot;global&quot;, &quot;<A HREF="tabpage.html#tabpage">tabpage</A>&quot;, &quot;<A HREF="windows.html#window">window</A>&quot;
+				    scope:          &quot;global&quot;, &quot;<A HREF="tabpage.html#tabpage">tabpage</A>&quot;, &quot;<A HREF="windows.html#window">窗口</A>&quot;
 				    changed_window: <A HREF="eval.html#v:true">v:true</A> if we fired the event
-				                    switching <A HREF="windows.html#window">window</A> (or <A HREF="intro.html#tab">tab</A>)
+				                    switching<A HREF="windows.html#window">窗口</A>(or <A HREF="intro.html#tab">tab</A>)
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> is set to the new directory name.
 				Non-recursive (event cannot trigger itself).
 
@@ -675,7 +675,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 <A HREF="#ExitPre">ExitPre</A>				When using `:quit`, `:wq` in a way <A HREF="motion.html#it">it</A> makes
 				Vim exit, or using `:qall`, just after
 				|<A HREF="#QuitPre">QuitPre</A>|.  Can be used to close any
-				non-essential <A HREF="windows.html#window">window</A>.  Exiting may still be
+				non-essential<A HREF="windows.html#window">窗口</A>.  Exiting may still be
 				cancelled if there is a modified buffer that
 				isn't automatically saved, use |<A HREF="#VimLeavePre">VimLeavePre</A>|
 				for really <A HREF="starting.html#exiting">exiting</A>.
@@ -850,7 +850,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				anything else that the user does not expect.
 
 							*<A NAME="InsertCharPre"></A><B>InsertCharPre</B>*
-<A HREF="#InsertCharPre">InsertCharPre</A>			When a character is typed in <A HREF="insert.html#Insert">Insert</A> mode,
+<A HREF="#InsertCharPre">InsertCharPre</A>			When a character is typed in <A HREF="intro.html#Insert">插入</A>模式,
 				before <A HREF="insert.html#inserting">inserting</A> the char.
 				The |<A HREF="eval.html#v:char">v:char</A>| variable indicates the char typed
 				and can be changed during the event to insert
@@ -862,7 +862,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				Not triggered when <A HREF="options.html#'paste'">'paste'</A> is set.
 
 							*<A NAME="InsertEnter"></A><B>InsertEnter</B>*
-<A HREF="#InsertEnter">InsertEnter</A>			Just before starting <A HREF="insert.html#Insert">Insert</A> mode.  Also for
+<A HREF="#InsertEnter">InsertEnter</A>			Just before starting <A HREF="intro.html#Insert">插入</A>模式.  Also for
 				<A HREF="insert.html#Replace">Replace</A> mode and Virtual <A HREF="insert.html#Replace">Replace</A> mode.  The
 				|<A HREF="eval.html#v:insertmode">v:insertmode</A>| variable indicates the mode.
 				Be careful not to <A HREF="diff.html#do">do</A> anything else that the
@@ -872,13 +872,13 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				<A HREF="eval.html#string">string</A>.
 
 							*<A NAME="InsertLeavePre"></A><B>InsertLeavePre</B>*
-<A HREF="#InsertLeavePre">InsertLeavePre</A>			Just before leaving <A HREF="insert.html#Insert">Insert</A> mode.  Also when
+<A HREF="#InsertLeavePre">InsertLeavePre</A>			Just before leaving <A HREF="intro.html#Insert">插入</A>模式.  Also when
 				using CTRL-O |<A HREF="insert.html#i_CTRL-O">i_CTRL-O</A>|.  Be careful not to
 				change mode or use `:normal`, <A HREF="motion.html#it">it</A> will likely
 				cause trouble.
 
 							*<A NAME="InsertLeave"></A><B>InsertLeave</B>*
-<A HREF="#InsertLeave">InsertLeave</A>			Just after leaving <A HREF="insert.html#Insert">Insert</A> mode.  Also when
+<A HREF="#InsertLeave">InsertLeave</A>			Just after leaving <A HREF="intro.html#Insert">插入</A>模式.  Also when
 				using CTRL-O |<A HREF="insert.html#i_CTRL-O">i_CTRL-O</A>|.  But not for |<A HREF="insert.html#i_CTRL-C">i_CTRL-C</A>|.
 
 							*<A NAME="MenuPopup"></A><B>MenuPopup</B>*
@@ -988,11 +988,11 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="QuitPre"></A><B>QuitPre</B>*
 <A HREF="#QuitPre">QuitPre</A>				When using `:quit`, `:wq` or `:qall`, before
-				deciding whether <A HREF="motion.html#it">it</A> closes the current <A HREF="windows.html#window">window</A>
+				deciding whether <A HREF="motion.html#it">it</A> closes the current<A HREF="windows.html#window">窗口</A>
 				or quits Vim.  For `:wq` the buffer is written
 				before <A HREF="#QuitPre">QuitPre</A> is triggered.  Can be used to
-				close any non-essential <A HREF="windows.html#window">window</A> if the current
-				<A HREF="windows.html#window">window</A> is the last ordinary <A HREF="windows.html#window">window</A>.
+				close any non-essential<A HREF="windows.html#window">窗口</A>if the current
+				<A HREF="windows.html#window">窗口</A>is the last ordinary<A HREF="windows.html#window">窗口</A>.
 				See also |<A HREF="#ExitPre">ExitPre</A>|, |<A HREF="#WinClosed">WinClosed</A>|.
 
 							*<A NAME="RemoteReply"></A><B>RemoteReply</B>*
@@ -1164,7 +1164,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="TextChanged"></A><B>TextChanged</B>*
 <A HREF="#TextChanged">TextChanged</A>			After a change was made to the text in the
-				current buffer in <A HREF="intro.html#Normal">Normal</A> mode.  That is after
+				current buffer in <A HREF="intro.html#Normal">正常</A>模式.  That is after
 				|<A HREF="eval.html#b:changedtick">b:changedtick</A>| has changed (also when that
 				happened before the <A HREF="#TextChanged">TextChanged</A> <A HREF="#autocommand">autocommand</A>
 				was defined).
@@ -1177,13 +1177,13 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="TextChangedI"></A><B>TextChangedI</B>*
 <A HREF="#TextChangedI">TextChangedI</A>			After a change was made to the text in the
-				current buffer in <A HREF="insert.html#Insert">Insert</A> mode.
+				current buffer in <A HREF="intro.html#Insert">插入</A>模式.
 				Not triggered when the popup menu is visible.
 				Otherwise the same <A HREF="motion.html#as">as</A> <A HREF="#TextChanged">TextChanged</A>.
 
 							*<A NAME="TextChangedP"></A><B>TextChangedP</B>*
 <A HREF="#TextChangedP">TextChangedP</A>			After a change was made to the text in the
-				current buffer in <A HREF="insert.html#Insert">Insert</A> mode, only when the
+				current buffer in <A HREF="intro.html#Insert">插入</A>模式, only when the
 				popup menu is visible.  Otherwise the same <A HREF="motion.html#as">as</A>
 				<A HREF="#TextChanged">TextChanged</A>.
 
@@ -1250,7 +1250,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				Not triggered if |<A HREF="eval.html#v:dying">v:dying</A>| is 2 or more.
 
 							*<A NAME="VimResized"></A><B>VimResized</B>*
-<A HREF="#VimResized">VimResized</A>			After the Vim <A HREF="windows.html#window">window</A> was resized, thus <A HREF="options.html#'lines'">'lines'</A>
+<A HREF="#VimResized">VimResized</A>			After the Vim<A HREF="windows.html#window">窗口</A>was resized, thus <A HREF="options.html#'lines'">'lines'</A>
 				and/or <A HREF="options.html#'columns'">'columns'</A> changed.  Not when starting
 				up though.
 
@@ -1261,7 +1261,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 <A HREF="#VimSuspend">VimSuspend</A>			Before Nvim enters |<A HREF="starting.html#suspend">suspend</A>| state.
 
 							*<A NAME="WinClosed"></A><B>WinClosed</B>*
-<A HREF="#WinClosed">WinClosed</A>			After closing a <A HREF="windows.html#window">window</A>.  The <A HREF="pattern.html#pattern">pattern</A> is
+<A HREF="#WinClosed">WinClosed</A>			After closing a<A HREF="windows.html#window">窗口</A>.  The <A HREF="pattern.html#pattern">pattern</A> is
 				matched against the |<A HREF="windows.html#window-ID">window-ID</A>|.  Both
 				<A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> and <A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> are set to the |<A HREF="windows.html#window-ID">window-ID</A>|.
 				After <A HREF="#WinLeave">WinLeave</A>.
@@ -1269,10 +1269,10 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				See also |<A HREF="#ExitPre">ExitPre</A>|, |<A HREF="#QuitPre">QuitPre</A>|.
 
 							*<A NAME="WinEnter"></A><B>WinEnter</B>*
-<A HREF="#WinEnter">WinEnter</A>			After entering another <A HREF="windows.html#window">window</A>.  Not done for
-				the first <A HREF="windows.html#window">window</A>, when Vim has just started.
-				Useful for setting the <A HREF="windows.html#window">window</A> height.
-				If the <A HREF="windows.html#window">window</A> is for another buffer, Vim
+<A HREF="#WinEnter">WinEnter</A>			After entering another<A HREF="windows.html#window">窗口</A>.  Not done for
+				the first<A HREF="windows.html#window">窗口</A>, when Vim has just started.
+				Useful for setting the<A HREF="windows.html#window">窗口</A>height.
+				If the<A HREF="windows.html#window">窗口</A>is for another buffer, Vim
 				executes the <A HREF="#BufEnter">BufEnter</A> autocommands after the
 				<A HREF="#WinEnter">WinEnter</A> autocommands.
 				Note: For split and <A HREF="tabpage.html#tabpage">tabpage</A> commands the
@@ -1281,7 +1281,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 
 							*<A NAME="WinLeave"></A><B>WinLeave</B>*
-<A HREF="#WinLeave">WinLeave</A>			Before leaving a <A HREF="windows.html#window">window</A>.  If the <A HREF="windows.html#window">window</A> to be
+<A HREF="#WinLeave">WinLeave</A>			Before leaving a<A HREF="windows.html#window">窗口</A>.  If the<A HREF="windows.html#window">窗口</A>to be
 				entered next is for a different buffer, Vim
 				executes the <A HREF="#BufLeave">BufLeave</A> autocommands before the
 				<A HREF="#WinLeave">WinLeave</A> autocommands (but not for &quot;:new&quot;).
@@ -1289,20 +1289,20 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				Before <A HREF="#WinClosed">WinClosed</A>.
 
 							*<A NAME="WinNew"></A><B>WinNew</B>*
-<A HREF="#WinNew">WinNew</A>				When a new <A HREF="windows.html#window">window</A> was created.  Not done for
-				the first <A HREF="windows.html#window">window</A>, when Vim has just started.
+<A HREF="#WinNew">WinNew</A>				When a new<A HREF="windows.html#window">窗口</A>was created.  Not done for
+				the first<A HREF="windows.html#window">窗口</A>, when Vim has just started.
 				Before <A HREF="#WinEnter">WinEnter</A>.
 
 
 							*<A NAME="WinScrolled"></A><B>WinScrolled</B>*
-<A HREF="#WinScrolled">WinScrolled</A>			After <A HREF="scroll.html#scrolling">scrolling</A> the content of a <A HREF="windows.html#window">window</A> or
-				resizing a <A HREF="windows.html#window">window</A>.
+<A HREF="#WinScrolled">WinScrolled</A>			After <A HREF="scroll.html#scrolling">scrolling</A> the content of a<A HREF="windows.html#window">窗口</A>or
+				resizing a<A HREF="windows.html#window">窗口</A>.
 				The <A HREF="pattern.html#pattern">pattern</A> is matched against the
 				|<A HREF="windows.html#window-ID">window-ID</A>|.  Both <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> and <A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> are
 				set to the |<A HREF="windows.html#window-ID">window-ID</A>|.
 				Non-recursive (the event cannot trigger
 				itself).  However, if the command causes the
-				<A HREF="windows.html#window">window</A> to scroll or change size another
+				<A HREF="windows.html#window">窗口</A>to scroll or change size another
 				<A HREF="#WinScrolled">WinScrolled</A> event will be triggered later.
 				Does not trigger when the command is added,
 				only after the first scroll or resize.
@@ -1666,8 +1666,8 @@ changes made by <A HREF="#BufWritePre">BufWritePre</A> commands, you can still <
 &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot; work).  If you <A HREF="diff.html#do">do</A> want the buffer to be marked <A HREF="motion.html#as">as</A> modified, set the
 <A HREF="options.html#'modified'">'modified'</A> option.
 
-To execute <A HREF="intro.html#Normal">Normal</A> mode commands from an <A HREF="#autocommand">autocommand</A>, use the &quot;<A HREF="various.html#:normal">:normal</A>&quot;
-command.  Use with care!  If the <A HREF="intro.html#Normal">Normal</A> mode command is not finished, the user
+To execute <A HREF="intro.html#Normal">正常</A>模式 commands from an <A HREF="#autocommand">autocommand</A>, use the &quot;<A HREF="various.html#:normal">:normal</A>&quot;
+command.  Use with care!  If the <A HREF="intro.html#Normal">正常</A>模式 command is not finished, the user
 needs to type characters (e.g., after &quot;<A HREF="various.html#:normal">:normal</A> m&quot; you need to type a <A HREF="motion.html#mark">mark</A>
 name).
 

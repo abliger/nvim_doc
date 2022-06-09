@@ -498,7 +498,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                  • float: Options for floating <A HREF="windows.html#windows">windows</A>. See
                                    |<A HREF="vim.html">vim.diagnostic.open_float()</A>|.
                                  • update_in_insert: (default false) Update
-                                   diagnostics in <A HREF="insert.html#Insert">Insert</A> mode (if false,
+                                   diagnostics in <A HREF="intro.html#Insert">插入</A>模式 (if false,
                                    diagnostics are updated on <A HREF="autocmd.html#InsertLeave">InsertLeave</A>)
                                  • severity_sort: (default false) Sort
                                    diagnostics by severity. This affects the
@@ -714,7 +714,7 @@ match({str}, {pat}, {groups}, {severity_map}, {defaults})
 
 
 open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_float()"></A><B>vim.diagnostic.open_float()</B>*
-                Show diagnostics in a floating <A HREF="windows.html#window">window</A>.
+                Show diagnostics in a floating<A HREF="windows.html#window">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  (table|nil) Configuration table with the same keys
@@ -741,7 +741,7 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                             • severity: See |<A HREF="#diagnostic-severity">diagnostic-severity</A>|. Overrides
                               the setting from |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • header: (string or table) <A HREF="eval.html#String">String</A> to use <A HREF="motion.html#as">as</A> the
-                              header for the floating <A HREF="windows.html#window">window</A>. If a table, <A HREF="motion.html#it">it</A>
+                              header for the floating<A HREF="windows.html#window">窗口</A>. If a table, <A HREF="motion.html#it">it</A>
                               is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group] tuple.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
@@ -758,20 +758,20 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               diagnostic. Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • prefix: (function, <A HREF="eval.html#string">string</A>, or table) Prefix each
-                              diagnostic in the floating <A HREF="windows.html#window">window</A>. If a
+                              diagnostic in the floating<A HREF="windows.html#window">窗口</A>. If a
                               function, <A HREF="motion.html#it">it</A> must have the signature
                               (diagnostic, <A HREF="insert.html#i">i</A>, total) <A HREF="eval.html#-&gt;">-&gt;</A> (string, string),
                               where {i} is the index of the diagnostic being
                               evaluated and {total} is the total number of
-                              diagnostics displayed in the <A HREF="windows.html#window">window</A>. The
+                              diagnostics displayed in the<A HREF="windows.html#window">窗口</A>. The
                               function should return a <A HREF="eval.html#string">string</A> which is
-                              prepended to each diagnostic in the <A HREF="windows.html#window">window</A> <A HREF="motion.html#as">as</A>
+                              prepended to each diagnostic in the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A>
                               well <A HREF="motion.html#as">as</A> an (optional) highlight group which will
                               be used to highlight the prefix. If {prefix} is
                               a table, <A HREF="motion.html#it">it</A> is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group]
                               tuple <A HREF="motion.html#as">as</A> in |<A HREF="api.html#nvim_echo()">nvim_echo()</A>|; otherwise, if
                               {prefix} is a <A HREF="eval.html#string">string</A>, <A HREF="motion.html#it">it</A> is prepended to each
-                              diagnostic in the <A HREF="windows.html#window">window</A> with no highlight.
+                              diagnostic in the<A HREF="windows.html#window">窗口</A>with no highlight.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
 

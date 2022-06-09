@@ -1224,7 +1224,7 @@ code_action({options})                             *<A NAME="vim.lsp.buf.code_ac
 
 completion({context})                               *<A NAME="vim.lsp.buf.completion()"></A><B>vim.lsp.buf.completion()</B>*
                 Retrieves the completion items at the current cursor position.
-                Can only be called in <A HREF="insert.html#Insert">Insert</A> mode.
+                Can only be called in <A HREF="intro.html#Insert">插入</A>模式.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {context}  (context support not yet implemented)
@@ -1245,7 +1245,7 @@ declaration({options})                             *<A NAME="vim.lsp.buf.declara
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {options}  (table|nil) additional <A HREF="options.html#options">options</A>
-                               • reuse_win: (boolean) Jump to existing <A HREF="windows.html#window">window</A>
+                               • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
 
@@ -1254,7 +1254,7 @@ definition({options})                               *<A NAME="vim.lsp.buf.defini
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {options}  (table|nil) additional <A HREF="options.html#options">options</A>
-                               • reuse_win: (boolean) Jump to existing <A HREF="windows.html#window">window</A>
+                               • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
 
@@ -1277,7 +1277,7 @@ document_highlight()                        *<A NAME="vim.lsp.buf.document_highl
 
 document_symbol()                              *<A NAME="vim.lsp.buf.document_symbol()"></A><B>vim.lsp.buf.document_symbol()</B>*
                 <A HREF="eval.html#Lists">Lists</A> all symbols in the current buffer in the <A HREF="quickfix.html#quickfix">quickfix</A>
-                <A HREF="windows.html#window">window</A>.
+               <A HREF="windows.html#window">窗口</A>.
 
 
 execute_command({command_params})              *<A NAME="vim.lsp.buf.execute_command()"></A><B>vim.lsp.buf.execute_command()</B>*
@@ -1390,18 +1390,18 @@ formatting_sync({options}, {timeout_ms})
 
 hover()                                                  *<A NAME="vim.lsp.buf.hover()"></A><B>vim.lsp.buf.hover()</B>*
                 Displays hover information about the symbol under the cursor
-                in a floating <A HREF="windows.html#window">window</A>. Calling the function <A HREF="if_cscop.html#twice">twice</A> will jump
-                into the floating <A HREF="windows.html#window">window</A>.
+                in a floating<A HREF="windows.html#window">窗口</A>. Calling the function <A HREF="if_cscop.html#twice">twice</A> will jump
+                into the floating<A HREF="windows.html#window">窗口</A>.
 
 
 implementation()                                *<A NAME="vim.lsp.buf.implementation()"></A><B>vim.lsp.buf.implementation()</B>*
                 <A HREF="eval.html#Lists">Lists</A> all the implementations for the symbol under the cursor
-                in the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.
+                in the <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.
 
 
 incoming_calls()                                *<A NAME="vim.lsp.buf.incoming_calls()"></A><B>vim.lsp.buf.incoming_calls()</B>*
                 <A HREF="eval.html#Lists">Lists</A> all the call sites of the symbol under the cursor in the
-                |<A HREF="quickfix.html#quickfix">quickfix</A>| <A HREF="windows.html#window">window</A>. If the symbol can resolve to multiple
+                |<A HREF="quickfix.html#quickfix">quickfix</A>|<A HREF="windows.html#window">窗口</A>. If the symbol can resolve to multiple
                 items, the user can pick one in the |<A HREF="intro.html#inputlist">inputlist</A>|.
 
 
@@ -1411,7 +1411,7 @@ list_workspace_folders()                *<A NAME="vim.lsp.buf.list_workspace_fol
 
 outgoing_calls()                                *<A NAME="vim.lsp.buf.outgoing_calls()"></A><B>vim.lsp.buf.outgoing_calls()</B>*
                 <A HREF="eval.html#Lists">Lists</A> all the items that are called by the symbol under the
-                cursor in the |<A HREF="quickfix.html#quickfix">quickfix</A>| <A HREF="windows.html#window">window</A>. If the symbol can resolve to
+                cursor in the |<A HREF="quickfix.html#quickfix">quickfix</A>|<A HREF="windows.html#window">窗口</A>. If the symbol can resolve to
                 multiple items, the user can pick one in the |<A HREF="intro.html#inputlist">inputlist</A>|.
 
 
@@ -1451,7 +1451,7 @@ range_formatting({options}, {start_pos}, {end_pos})
 
 references({context})                               *<A NAME="vim.lsp.buf.references()"></A><B>vim.lsp.buf.references()</B>*
                 <A HREF="eval.html#Lists">Lists</A> all the references to the symbol under the cursor in the
-                <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.
+                <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {context}  (table) <A HREF="repeat.html#Context">Context</A> for the request
@@ -1494,7 +1494,7 @@ server_ready()                                    *<A NAME="vim.lsp.buf.server_r
 
 signature_help()                                *<A NAME="vim.lsp.buf.signature_help()"></A><B>vim.lsp.buf.signature_help()</B>*
                 Displays signature information about the symbol under the
-                cursor in a floating <A HREF="windows.html#window">window</A>.
+                cursor in a floating<A HREF="windows.html#window">窗口</A>.
 
 
 type_definition({options})                     *<A NAME="vim.lsp.buf.type_definition()"></A><B>vim.lsp.buf.type_definition()</B>*
@@ -1503,13 +1503,13 @@ type_definition({options})                     *<A NAME="vim.lsp.buf.type_defini
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {options}  (table|nil) additional <A HREF="options.html#options">options</A>
-                               • reuse_win: (boolean) Jump to existing <A HREF="windows.html#window">window</A>
+                               • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
 
 workspace_symbol({query})                     *<A NAME="vim.lsp.buf.workspace_symbol()"></A><B>vim.lsp.buf.workspace_symbol()</B>*
                 <A HREF="eval.html#Lists">Lists</A> all symbols in the current workspace in the <A HREF="quickfix.html#quickfix">quickfix</A>
-                <A HREF="windows.html#window">window</A>.
+               <A HREF="windows.html#window">窗口</A>.
 
                 The <A HREF="eval.html#list">list</A> is filtered against {query}; if the argument is
                 omitted from the call, the user is prompted to enter a <A HREF="eval.html#string">string</A>
@@ -1639,7 +1639,7 @@ hover({_}, {result}, {ctx}, {config})               *<A NAME="vim.lsp.handlers.h
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {config}  (table) Configuration table.
                               • border: (default=nil)
-                                • Add borders to the floating <A HREF="windows.html#window">window</A>
+                                • Add borders to the floating<A HREF="windows.html#window">窗口</A>
                                 • See |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|
 
 
@@ -1660,7 +1660,7 @@ signature_help({_}, {result}, {ctx}, {config})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {config}  (table) Configuration table.
                               • border: (default=nil)
-                                • Add borders to the floating <A HREF="windows.html#window">window</A>
+                                • Add borders to the floating<A HREF="windows.html#window">窗口</A>
                                 • See |<A HREF="vim.html">vim.api.nvim_open_win()</A>|
 
 
@@ -1750,7 +1750,7 @@ character_offset({buf}, {row}, {col}, {offset_encoding})
 convert_input_to_markdown_lines({input}, {contents})
                 Converts any of `MarkedString` &#124; `MarkedString[]` |
                 `MarkupContent` into a <A HREF="eval.html#list">list</A> of lines containing valid
-                markdown. Useful to populate the hover <A HREF="windows.html#window">window</A> for
+                markdown. Useful to populate the hover<A HREF="windows.html#window">窗口</A>for
                 `textDocument/hover`, for parsing the result of
                 `textDocument/signatureHelp`, and potentially others.
 
@@ -1823,7 +1823,7 @@ jump_to_location({location}, {offset_encoding}, {reuse_win})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {location}         (table) (`Location`|`LocationLink`)
                     {offset_encoding}  (string) utf-8|utf-16|utf-32 (required)
-                    {reuse_win}        (boolean) Jump to existing <A HREF="windows.html#window">window</A> if
+                    {reuse_win}        (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>if
                                        buffer is already opened.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -1866,11 +1866,11 @@ lookup_section({settings}, {section})          *<A NAME="vim.lsp.util.lookup_sec
                                   *<A NAME="vim.lsp.util.make_floating_popup_options()"></A><B>vim.lsp.util.make_floating_popup_options()</B>*
 make_floating_popup_options({width}, {height}, {opts})
                 Creates a table with sensible default <A HREF="options.html#options">options</A> for a floating
-                <A HREF="windows.html#window">window</A>. The table can be passed to |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
+               <A HREF="windows.html#window">窗口</A>. The table can be passed to |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {width}   (number) <A HREF="windows.html#window">window</A> width (in character cells)
-                    {height}  (number) <A HREF="windows.html#window">window</A> height (in character cells)
+                    {width}   (number)<A HREF="windows.html#window">窗口</A>width (in character cells)
+                    {height}  (number)<A HREF="windows.html#window">窗口</A>height (in character cells)
                     {opts}    (table, optional)
                               • offset_x (number) offset to add to `col`
                               • offset_y (number) offset to add to `row`
@@ -1929,7 +1929,7 @@ make_position_params({window}, {offset_encoding})
                 buffer and cursor position.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}           (optional, number): <A HREF="windows.html#window">window</A> handle or 0
+                    {window}           (optional, number):<A HREF="windows.html#window">窗口</A>handle or 0
                                        for current, defaults to current
                     {offset_encoding}  (string) utf-8|utf-16|utf-32|nil
                                        defaults to `offset_encoding` of first
@@ -1951,7 +1951,7 @@ make_range_params({window}, {offset_encoding})
                 `textDocument/rangeFormatting`.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}           (optional, number): <A HREF="windows.html#window">window</A> handle or 0
+                    {window}           (optional, number):<A HREF="windows.html#window">窗口</A>handle or 0
                                        for current, defaults to current
                     {offset_encoding}  (string) utf-8|utf-16|utf-32|nil
                                        defaults to `offset_encoding` of first
@@ -1989,23 +1989,23 @@ make_workspace_params({added}, {removed})
 
                                         *<A NAME="vim.lsp.util.open_floating_preview()"></A><B>vim.lsp.util.open_floating_preview()</B>*
 open_floating_preview({contents}, {syntax}, {opts})
-                Shows contents in a floating <A HREF="windows.html#window">window</A>.
+                Shows contents in a floating<A HREF="windows.html#window">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {contents}  (table) of lines to show in <A HREF="windows.html#window">window</A>
+                    {contents}  (table) of lines to show in<A HREF="windows.html#window">窗口</A>
                     {syntax}    (string) of <A HREF="syntax.html#syntax">syntax</A> to set for opened buffer
                     {opts}      (table) with optional fields (additional keys
                                 are passed on to |<A HREF="vim.html">vim.api.nvim_open_win()</A>|)
-                                • height: (number) height of floating <A HREF="windows.html#window">window</A>
-                                • width: (number) width of floating <A HREF="windows.html#window">window</A>
+                                • height: (number) height of floating<A HREF="windows.html#window">窗口</A>
+                                • width: (number) width of floating<A HREF="windows.html#window">窗口</A>
                                 • wrap: (boolean, default true) wrap long
                                   lines
                                 • wrap_at: (number) character to wrap at for
                                   computing height when wrap is enabled
                                 • max_width: (number) maximal width of
-                                  floating <A HREF="windows.html#window">window</A>
+                                  floating<A HREF="windows.html#window">窗口</A>
                                 • max_height: (number) maximal height of
-                                  floating <A HREF="windows.html#window">window</A>
+                                  floating<A HREF="windows.html#window">窗口</A>
                                 • pad_top: (number) number of lines to pad
                                   contents at top
                                 • pad_bottom: (number) number of lines to pad
@@ -2013,17 +2013,17 @@ open_floating_preview({contents}, {syntax}, {opts})
                                 • focus_id: (string) if a popup with this id
                                   is opened, then focus <A HREF="motion.html#it">it</A>
                                 • close_events: (table) <A HREF="eval.html#list">list</A> of <A HREF="autocmd.html#events">events</A> that
-                                  closes the floating <A HREF="windows.html#window">window</A>
+                                  closes the floating<A HREF="windows.html#window">窗口</A>
                                 • focusable: (boolean, default true) Make
                                   float focusable
                                 • focus: (boolean, default true) If `true`,
                                   and if {focusable} is also `true`, focus an
-                                  existing floating <A HREF="windows.html#window">window</A> with the same
+                                  existing floating<A HREF="windows.html#window">窗口</A>with the same
                                   {focus_id}
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    bufnr,winnr buffer and <A HREF="windows.html#window">window</A> number of the newly created
-                    floating preview <A HREF="windows.html#window">window</A>
+                    bufnr,winnr buffer and<A HREF="windows.html#window">窗口</A>number of the newly created
+                    floating preview<A HREF="windows.html#window">窗口</A>
 
 
 parse_snippet({input})                          *<A NAME="vim.lsp.util.parse_snippet()"></A><B>vim.lsp.util.parse_snippet()</B>*
@@ -2037,7 +2037,7 @@ parse_snippet({input})                          *<A NAME="vim.lsp.util.parse_sni
 
 
 preview_location({location}, {opts})         *<A NAME="vim.lsp.util.preview_location()"></A><B>vim.lsp.util.preview_location()</B>*
-                Previews a location in a floating <A HREF="windows.html#window">window</A>
+                Previews a location in a floating<A HREF="windows.html#window">窗口</A>
 
                 behavior depends on type of location:
                 • for Location, range is shown (e.g., function definition)
@@ -2048,7 +2048,7 @@ preview_location({location}, {opts})         *<A NAME="vim.lsp.util.preview_loca
                     {location}  a single `Location` or `LocationLink`
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (bufnr,winnr) buffer and <A HREF="windows.html#window">window</A> number of floating <A HREF="windows.html#window">window</A>
+                    (bufnr,winnr) buffer and<A HREF="windows.html#window">窗口</A>number of floating<A HREF="windows.html#window">窗口</A>
                     or nil
 
 
@@ -2090,14 +2090,14 @@ stylize_markdown({bufnr}, {contents}, {opts})
                 `open_floating_preview` instead
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {contents}  (table) of lines to show in <A HREF="windows.html#window">window</A>
+                    {contents}  (table) of lines to show in<A HREF="windows.html#window">窗口</A>
                     {opts}      dictionary with optional fields
-                                • height of floating <A HREF="windows.html#window">window</A>
-                                • width of floating <A HREF="windows.html#window">window</A>
+                                • height of floating<A HREF="windows.html#window">窗口</A>
+                                • width of floating<A HREF="windows.html#window">窗口</A>
                                 • wrap_at character to wrap at for computing
                                   height
-                                • max_width maximal width of floating <A HREF="windows.html#window">window</A>
-                                • max_height maximal height of floating <A HREF="windows.html#window">window</A>
+                                • max_width maximal width of floating<A HREF="windows.html#window">窗口</A>
+                                • max_height maximal height of floating<A HREF="windows.html#window">窗口</A>
                                 • pad_top number of lines to pad contents at
                                   top
                                 • pad_bottom number of lines to pad contents

@@ -91,9 +91,9 @@ Furthermore, this is about the ways to remember the state of Vim and restore
 |<A HREF="#21.5">21.5</A>|	Views
 |<A HREF="#21.6">21.6</A>|	Modelines
 
-     Next chapter: |<A HREF="usr_22.html">usr_22.txt</A>|  Finding the file to edit
- Previous chapter: |<A HREF="usr_20.html">usr_20.txt</A>|  Typing command-line commands quickly
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_22.html">usr_22.txt</A>|  Finding the file to edit
+上一章: |<A HREF="usr_20.html">usr_20.txt</A>|  Typing command-line commands quickly
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -117,7 +117,7 @@ Only Unix has support for this.  On other systems Vim will start a shell for
 you.  This also has the functionality of being able to execute shell commands.
 But it's a new shell, not the one that you started Vim from.
    When you are running the <A HREF="gui.html#GUI">GUI</A> you can't go back to the shell where Vim was
-started.  <A HREF="starting.html#CTRL-Z">CTRL-Z</A> will minimize the Vim <A HREF="windows.html#window">window</A> instead.
+started.  <A HREF="starting.html#CTRL-Z">CTRL-Z</A> will minimize the Vim<A HREF="windows.html#window">窗口</A>instead.
 
 ==============================================================================
 
@@ -255,7 +255,7 @@ Now you would like to edit the second file, which is in the <A HREF="eval.html#l
 
 Instead of &quot;<A HREF="editing.html#:e">:e</A>&quot; you can use any command that has a file name argument, the
 &quot;#&lt;2&quot; item works in the same place <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; (current file name) and &quot;<A HREF="pattern.html##">#</A>&quot;
-(alternate file name).  So you can also split the <A HREF="windows.html#window">window</A> to edit the third
+(alternate file name).  So you can also split the<A HREF="windows.html#window">窗口</A>to edit the third
 file:
 
 <B>	:split #&lt;3</B>
@@ -310,7 +310,7 @@ Suppose you are editing along, and <A HREF="motion.html#it">it</A> is the end of
 work and pick up where you left off the next day.  You can <A HREF="diff.html#do">do</A> this by saving
 your editing session and restoring <A HREF="motion.html#it">it</A> the next day.
    A Vim session contains all the information about what you are editing.
-This includes things such <A HREF="motion.html#as">as</A> the file <A HREF="eval.html#list">list</A>, <A HREF="windows.html#window">window</A> layout, global <A HREF="eval.html#variables">variables</A>,
+This includes things such <A HREF="motion.html#as">as</A> the file <A HREF="eval.html#list">list</A>,<A HREF="windows.html#window">窗口</A>layout, global <A HREF="eval.html#variables">variables</A>,
 <A HREF="options.html#options">options</A> and other information.  (Exactly what is remembered is controlled by
 the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option, described below.)
    The following command creates a session file:
@@ -336,14 +336,14 @@ before.  Mappings and option values are like before.
 default value is &quot;blank,buffers,curdir,folds,help,options,winsize&quot;.
 
 	blank		keep empty <A HREF="windows.html#windows">windows</A>
-	<A HREF="windows.html#buffers">buffers</A>		all <A HREF="windows.html#buffers">buffers</A>, not only the ones in a <A HREF="windows.html#window">window</A>
+	<A HREF="windows.html#buffers">buffers</A>		all <A HREF="windows.html#buffers">buffers</A>, not only the ones in a<A HREF="windows.html#window">窗口</A>
 	curdir		the current directory
 	<A HREF="fold.html#folds">folds</A>		<A HREF="fold.html#folds">folds</A>, also manually created ones
-	help		the help <A HREF="windows.html#window">window</A>
+	help		the help<A HREF="windows.html#window">窗口</A>
 	<A HREF="options.html#options">options</A>		all <A HREF="options.html#options">options</A> and mappings
-	winsize		<A HREF="windows.html#window">window</A> sizes
+	winsize		<A HREF="windows.html#window">窗口</A>sizes
 
-Change this to your liking.  To also restore the size of the Vim <A HREF="windows.html#window">window</A>, for
+Change this to your liking.  To also restore the size of the Vim<A HREF="windows.html#window">窗口</A>, for
 example, use:
 
 <B>	:set sessionoptions+=resize</B>
@@ -366,14 +366,14 @@ next time you load the secret session you can continue where you were at this
 point.  And finally you load the new &quot;boring&quot; session.
 
 If you open help <A HREF="windows.html#windows">windows</A>, split and close various <A HREF="windows.html#windows">windows</A>, and generally mess
-up the <A HREF="windows.html#window">window</A> layout, you can go back to the last saved session:
+up the<A HREF="windows.html#window">窗口</A>layout, you can go back to the last saved session:
 
 <B>	:source ~/.config/nvim/boring.vim</B>
 
 Thus you have complete <A HREF="intro.html#control">control</A> over whether you want to continue next time
 where you are now, by saving the current setup in a session, or keep the
 session file <A HREF="motion.html#as">as</A> a starting point.
-   Another way of using sessions is to create a <A HREF="windows.html#window">window</A> layout that you like to
+   Another way of using sessions is to create a<A HREF="windows.html#window">窗口</A>layout that you like to
 use, and save this in a session.  Then you can go back to this layout whenever
 you want.
    For example, this is a nice layout to use:
@@ -394,8 +394,8 @@ you want.
 	&#124;					 |
 	+----------------------------------------+
 
-This has a help <A HREF="windows.html#window">window</A> at the top, so that you can read this text.  The narrow
-vertical <A HREF="windows.html#window">window</A> on the left contains a file explorer.  This is a Vim <A HREF="usr_05.html#plugin">plugin</A>
+This has a help<A HREF="windows.html#window">窗口</A>at the top, so that you can read this text.  The narrow
+vertical<A HREF="windows.html#window">窗口</A>on the left contains a file explorer.  This is a Vim <A HREF="usr_05.html#plugin">plugin</A>
 that lists the contents of a directory.  You can select files to edit there.
 More about this in the next chapter.
    Create this from a just started Vim with:
@@ -412,8 +412,8 @@ Now you can start Vim with this layout:
 
 <B>	vim -S ~/.config/nvim/mine.vim</B>
 
-Hint: To open a file you see listed in the explorer <A HREF="windows.html#window">window</A> in the empty
-<A HREF="windows.html#window">window</A>, move the cursor to the filename and press &quot;<A HREF="insert.html#O">O</A>&quot;.  Double clicking with
+Hint: To open a file you see listed in the explorer<A HREF="windows.html#window">窗口</A>in the empty
+<A HREF="windows.html#window">窗口</A>, move the cursor to the filename and press &quot;<A HREF="insert.html#O">O</A>&quot;.  Double clicking with
 the mouse will also <A HREF="diff.html#do">do</A> this.
 
 
@@ -442,15 +442,15 @@ And to restore this again:
 *<A NAME="21.5"></A><B>21.5</B>*	Views
 
 A session stores the looks of the whole of Vim.  When you want to store the
-properties for one <A HREF="windows.html#window">window</A> only, use a view.
+properties for one<A HREF="windows.html#window">窗口</A>only, use a view.
    The use of a view is for when you want to edit a file in a specific way.
 For example, you have line numbers enabled with the <A HREF="options.html#'number'">'number'</A> option and
 defined a few <A HREF="fold.html#folds">folds</A>.  Just like with sessions, you can remember this view on
 the file and restore <A HREF="motion.html#it">it</A> later.  Actually, when you store a session, <A HREF="motion.html#it">it</A> stores
-the view of each <A HREF="windows.html#window">window</A>.
+the view of each<A HREF="windows.html#window">窗口</A>.
    There are two basic ways to use views.  The first is to let Vim pick a name
 for the view file.  You can restore the view when you later edit the same
-file.  To store the view for the current <A HREF="windows.html#window">window</A>:
+file.  To store the view for the current<A HREF="windows.html#window">窗口</A>:
 
 <B>	:mkview</B>
 
@@ -461,7 +461,7 @@ you get the view back with this command:
 
 That's easy, isn't <A HREF="motion.html#it">it</A>?
    Now you want to view the file without the <A HREF="options.html#'number'">'number'</A> option on, or with all
-<A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options.html#options">options</A> to make the <A HREF="windows.html#window">window</A> look that way.  Then
+<A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options.html#options">options</A> to make the<A HREF="windows.html#window">窗口</A>look that way.  Then
 store this view with:
 
 <B>	:mkview 1</B>
@@ -551,9 +551,7 @@ For more details see |<A HREF="options.html#modeline">modeline</A>|.
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_22.html">usr_22.txt</A>|  Finding the file to edit
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_22.html">usr_22.txt</A>|  Finding the file to edit
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
    </div>

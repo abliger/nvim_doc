@@ -100,9 +100,9 @@ many other things.  This chapter explains the items that can be used in a Vim
 |<A HREF="#41.15">41.15</A>|	Writing library scripts
 |<A HREF="#41.16">41.16</A>|	Distributing Vim scripts
 
-     Next chapter: |<A HREF="usr_42.html">usr_42.txt</A>|  Add new <A HREF="gui.html#menus">menus</A>
- Previous chapter: |<A HREF="usr_40.html">usr_40.txt</A>|  Make new commands
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_42.html">usr_42.txt</A>|  Add new <A HREF="gui.html#menus">menus</A>
+上一章: |<A HREF="usr_40.html">usr_40.txt</A>|  Make new commands
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -134,7 +134,7 @@ Let's start with a simple example:
 	The &quot;<A HREF="cmdline.html#:">:</A>&quot; characters are not really needed here.  You only need to use
 	them when you type a command.  In a Vim <A HREF="#script">script</A> file they can be left
 	out.  We will use them here anyway to make clear these are colon
-	commands and make them stand out from <A HREF="intro.html#Normal">Normal</A> mode commands.
+	commands and make them stand out from <A HREF="intro.html#Normal">正常</A>模式 commands.
 	Note:
 	You can try out the examples by yanking the lines from the text here
 	and executing them with :@&quot;
@@ -260,7 +260,7 @@ There are more kinds of variables, see |<A HREF="eval.html#internal-variables">i
 used ones are:
 
 	b:name		variable local to a buffer
-	w:name		variable local to a <A HREF="windows.html#window">window</A>
+	w:name		variable local to a<A HREF="windows.html#window">窗口</A>
 	g:name		global variable (also in a function)
 	v:name		variable predefined by Vim
 
@@ -590,7 +590,7 @@ will be executed is:
 <B>	:tag get_cmd</B>
 
 The &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command can only execute colon commands.  The &quot;<A HREF="various.html#:normal">:normal</A>&quot; command
-executes <A HREF="intro.html#Normal">Normal</A> mode commands.  However, its argument is not an <A HREF="eval.html#expression">expression</A> but
+executes <A HREF="intro.html#Normal">正常</A>模式 commands.  However, its argument is not an <A HREF="eval.html#expression">expression</A> but
 the literal command characters.  Example:
 
 <B>	:normal gg=G</B>
@@ -601,10 +601,10 @@ Example:
 
 <B>	:execute "normal " .. normal_commands</B>
 
-The variable &quot;normal_commands&quot; must contain the <A HREF="intro.html#Normal">Normal</A> mode commands.
+The variable &quot;normal_commands&quot; must contain the <A HREF="intro.html#Normal">正常</A>模式 commands.
    Make sure that the argument for &quot;<A HREF="various.html#:normal">:normal</A>&quot; is a complete command.  Otherwise
 Vim will run into the end of the argument and abort the command.  For example,
-if you start <A HREF="insert.html#Insert">Insert</A> mode, you must leave <A HREF="insert.html#Insert">Insert</A> mode <A HREF="motion.html#as">as</A> well.  This works:
+if you start <A HREF="intro.html#Insert">插入</A>模式, you must leave <A HREF="intro.html#Insert">插入</A>模式 <A HREF="motion.html#as">as</A> well.  This works:
 
 <B>	:execute "normal Inew text \&lt;Esc&gt;"</B>
 
@@ -715,7 +715,7 @@ Use <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on the function name to jump to det
 	<A HREF="builtin.html#repeat()">repeat()</A>		repeat a <A HREF="eval.html#string">string</A> multiple times
 	<A HREF="builtin.html#eval()">eval()</A>			evaluate a <A HREF="eval.html#string">string</A> <A HREF="eval.html#expression">expression</A>
 	<A HREF="builtin.html#execute()">execute()</A>		execute an <A HREF="intro.html#Ex">Ex</A> command and get the output
-	<A HREF="builtin.html#win_execute()">win_execute()</A>		like <A HREF="builtin.html#execute()">execute()</A> but in a specified <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#win_execute()">win_execute()</A>		like <A HREF="builtin.html#execute()">execute()</A> but in a specified<A HREF="windows.html#window">窗口</A>
 	<A HREF="builtin.html#trim()">trim()</A>			trim characters from a <A HREF="eval.html#string">string</A>
 
 
@@ -807,12 +807,12 @@ Variables:						*<A NAME="var-functions"></A><B>var-functions</B>*
 	<A HREF="builtin.html#function()">function()</A>		get a <A HREF="eval.html#Funcref">Funcref</A> for a function name
 	<A HREF="builtin.html#getbufvar()">getbufvar()</A>		get a variable value from a specific buffer
 	<A HREF="builtin.html#setbufvar()">setbufvar()</A>		set a variable in a specific buffer
-	<A HREF="builtin.html#getwinvar()">getwinvar()</A>		get a variable from specific <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#getwinvar()">getwinvar()</A>		get a variable from specific<A HREF="windows.html#window">窗口</A>
 	<A HREF="builtin.html#gettabvar()">gettabvar()</A>		get a variable from specific <A HREF="intro.html#tab">tab</A> page
-	<A HREF="builtin.html#gettabwinvar()">gettabwinvar()</A>		get a variable from specific <A HREF="windows.html#window">window</A> <A HREF="change.html#&amp;">&amp;</A> <A HREF="intro.html#tab">tab</A> page
-	<A HREF="builtin.html#setwinvar()">setwinvar()</A>		set a variable in a specific <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#gettabwinvar()">gettabwinvar()</A>		get a variable from specific<A HREF="windows.html#window">窗口</A><A HREF="change.html#&amp;">&amp;</A> <A HREF="intro.html#tab">tab</A> page
+	<A HREF="builtin.html#setwinvar()">setwinvar()</A>		set a variable in a specific<A HREF="windows.html#window">窗口</A>
 	<A HREF="builtin.html#settabvar()">settabvar()</A>		set a variable in a specific <A HREF="intro.html#tab">tab</A> page
-	<A HREF="builtin.html#settabwinvar()">settabwinvar()</A>		set a variable in a specific <A HREF="windows.html#window">window</A> <A HREF="change.html#&amp;">&amp;</A> <A HREF="intro.html#tab">tab</A> page
+	<A HREF="builtin.html#settabwinvar()">settabwinvar()</A>		set a variable in a specific<A HREF="windows.html#window">窗口</A><A HREF="change.html#&amp;">&amp;</A> <A HREF="intro.html#tab">tab</A> page
 	<A HREF="builtin.html#garbagecollect()">garbagecollect()</A>	possibly free memory
 
 
@@ -820,8 +820,8 @@ Cursor and <A HREF="motion.html#mark">mark</A> position:		*<A NAME="cursor-funct
 	<A HREF="builtin.html#col()">col()</A>			column number of the cursor or a <A HREF="motion.html#mark">mark</A>
 	<A HREF="builtin.html#virtcol()">virtcol()</A>		screen column of the cursor or a <A HREF="motion.html#mark">mark</A>
 	<A HREF="builtin.html#line()">line()</A>			line number of the cursor or <A HREF="motion.html#mark">mark</A>
-	<A HREF="builtin.html#wincol()">wincol()</A>		<A HREF="windows.html#window">window</A> column number of the cursor
-	<A HREF="builtin.html#winline()">winline()</A>		<A HREF="windows.html#window">window</A> line number of the cursor
+	<A HREF="builtin.html#wincol()">wincol()</A>		<A HREF="windows.html#window">窗口</A>column number of the cursor
+	<A HREF="builtin.html#winline()">winline()</A>		<A HREF="windows.html#window">窗口</A>line number of the cursor
 	<A HREF="builtin.html#cursor()">cursor()</A>		position the cursor at a line/column
 	<A HREF="builtin.html#screencol()">screencol()</A>		get screen column of the cursor
 	<A HREF="builtin.html#screenrow()">screenrow()</A>		get screen row of the cursor
@@ -882,7 +882,7 @@ System <A HREF="eval.html#functions">functions</A> and manipulation of files:
 	<A HREF="builtin.html#isdirectory()">isdirectory()</A>		check if a directory exists
 	<A HREF="builtin.html#getfsize()">getfsize()</A>		get the size of a file
 	<A HREF="builtin.html#getcwd()">getcwd()</A>		get the current working directory
-	<A HREF="builtin.html#haslocaldir()">haslocaldir()</A>		check if current <A HREF="windows.html#window">window</A> used |<A HREF="editing.html#:lcd">:lcd</A>| or |<A HREF="editing.html#:tcd">:tcd</A>|
+	<A HREF="builtin.html#haslocaldir()">haslocaldir()</A>		check if current<A HREF="windows.html#window">窗口</A>used |<A HREF="editing.html#:lcd">:lcd</A>| or |<A HREF="editing.html#:tcd">:tcd</A>|
 	<A HREF="builtin.html#tempname()">tempname()</A>		get the name of a temporary file
 	<A HREF="builtin.html#mkdir()">mkdir()</A>			create a new directory
 	<A HREF="builtin.html#chdir()">chdir()</A>			change current working directory
@@ -923,24 +923,24 @@ Buffers, <A HREF="windows.html#windows">windows</A> and the argument <A HREF="ev
 	<A HREF="builtin.html#tabpagebuflist()">tabpagebuflist()</A>	return <A HREF="eval.html#List">List</A> of <A HREF="windows.html#buffers">buffers</A> in a <A HREF="intro.html#tab">tab</A> page
 	<A HREF="builtin.html#tabpagenr()">tabpagenr()</A>		get the number of a <A HREF="intro.html#tab">tab</A> page
 	<A HREF="builtin.html#tabpagewinnr()">tabpagewinnr()</A>		like <A HREF="builtin.html#winnr()">winnr()</A> for a specified <A HREF="intro.html#tab">tab</A> page
-	<A HREF="builtin.html#winnr()">winnr()</A>			get the <A HREF="windows.html#window">window</A> number for the current <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#bufwinid()">bufwinid()</A>		get the <A HREF="windows.html#window">window</A> ID of a specific buffer
-	<A HREF="builtin.html#bufwinnr()">bufwinnr()</A>		get the <A HREF="windows.html#window">window</A> number of a specific buffer
-	<A HREF="builtin.html#winbufnr()">winbufnr()</A>		get the buffer number of a specific <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#winnr()">winnr()</A>			get the<A HREF="windows.html#window">窗口</A>number for the current<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#bufwinid()">bufwinid()</A>		get the<A HREF="windows.html#window">窗口</A>ID of a specific buffer
+	<A HREF="builtin.html#bufwinnr()">bufwinnr()</A>		get the<A HREF="windows.html#window">窗口</A>number of a specific buffer
+	<A HREF="builtin.html#winbufnr()">winbufnr()</A>		get the buffer number of a specific<A HREF="windows.html#window">窗口</A>
 	<A HREF="builtin.html#getbufline()">getbufline()</A>		get a <A HREF="eval.html#list">list</A> of lines from the specified buffer
 	<A HREF="builtin.html#setbufline()">setbufline()</A>		replace a line in the specified buffer
 	<A HREF="builtin.html#appendbufline()">appendbufline()</A>		append a <A HREF="eval.html#list">list</A> of lines in the specified buffer
 	<A HREF="builtin.html#deletebufline()">deletebufline()</A>		delete lines from a specified buffer
 	<A HREF="builtin.html#win_findbuf()">win_findbuf()</A>		find <A HREF="windows.html#windows">windows</A> containing a buffer
-	<A HREF="builtin.html#win_getid()">win_getid()</A>		get <A HREF="windows.html#window">window</A> ID of a <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#win_gotoid()">win_gotoid()</A>		go to <A HREF="windows.html#window">window</A> with ID
-	<A HREF="builtin.html#win_id2tabwin()">win_id2tabwin()</A>		get <A HREF="intro.html#tab">tab</A> and <A HREF="windows.html#window">window</A> nr from <A HREF="windows.html#window">window</A> ID
-	<A HREF="builtin.html#win_id2win()">win_id2win()</A>		get <A HREF="windows.html#window">window</A> nr from <A HREF="windows.html#window">window</A> ID
-	<A HREF="builtin.html#win_move_separator()">win_move_separator()</A>	move <A HREF="windows.html#window">window</A> vertical separator
-	<A HREF="builtin.html#win_move_statusline()">win_move_statusline()</A>	move <A HREF="windows.html#window">window</A> status line
+	<A HREF="builtin.html#win_getid()">win_getid()</A>		get<A HREF="windows.html#window">窗口</A>ID of a<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#win_gotoid()">win_gotoid()</A>		go to<A HREF="windows.html#window">窗口</A>with ID
+	<A HREF="builtin.html#win_id2tabwin()">win_id2tabwin()</A>		get <A HREF="intro.html#tab">tab</A> and<A HREF="windows.html#window">窗口</A>nr from<A HREF="windows.html#window">窗口</A>ID
+	<A HREF="builtin.html#win_id2win()">win_id2win()</A>		get<A HREF="windows.html#window">窗口</A>nr from<A HREF="windows.html#window">窗口</A>ID
+	<A HREF="builtin.html#win_move_separator()">win_move_separator()</A>	move<A HREF="windows.html#window">窗口</A>vertical separator
+	<A HREF="builtin.html#win_move_statusline()">win_move_statusline()</A>	move<A HREF="windows.html#window">窗口</A>status line
 	<A HREF="builtin.html#getbufinfo()">getbufinfo()</A>		get a <A HREF="eval.html#list">list</A> with buffer information
 	<A HREF="builtin.html#gettabinfo()">gettabinfo()</A>		get a <A HREF="eval.html#list">list</A> with <A HREF="intro.html#tab">tab</A> page information
-	<A HREF="builtin.html#getwininfo()">getwininfo()</A>		get a <A HREF="eval.html#list">list</A> with <A HREF="windows.html#window">window</A> information
+	<A HREF="builtin.html#getwininfo()">getwininfo()</A>		get a <A HREF="eval.html#list">list</A> with<A HREF="windows.html#window">窗口</A>information
 	<A HREF="builtin.html#getchangelist()">getchangelist()</A>		get a <A HREF="eval.html#list">list</A> of change <A HREF="eval.html#list">list</A> entries
 	<A HREF="builtin.html#getjumplist()">getjumplist()</A>		get a <A HREF="eval.html#list">list</A> of jump <A HREF="eval.html#list">list</A> entries
 	<A HREF="builtin.html#swapinfo()">swapinfo()</A>		information about a swap file
@@ -956,7 +956,7 @@ Command line:					*<A NAME="command-line-functions"></A><B>command-line-function
 				command line
 	<A HREF="builtin.html#setcmdpos()">setcmdpos()</A>		set position of the cursor in the command line
 	<A HREF="builtin.html#getcmdtype()">getcmdtype()</A>		return the current command-line type
-	<A HREF="builtin.html#getcmdwintype()">getcmdwintype()</A>		return the current command-line <A HREF="windows.html#window">window</A> type
+	<A HREF="builtin.html#getcmdwintype()">getcmdwintype()</A>		return the current command-line<A HREF="windows.html#window">窗口</A>type
 	<A HREF="builtin.html#getcompletion()">getcompletion()</A>		<A HREF="eval.html#list">list</A> of command-line completion matches
 	<A HREF="builtin.html#fullcommand()">fullcommand()</A>		get full command name
 
@@ -968,7 +968,7 @@ Command line:					*<A NAME="command-line-functions"></A><B>command-line-function
 	<A HREF="builtin.html#setloclist()">setloclist()</A>		modify a location <A HREF="eval.html#list">list</A>
 
 
-<A HREF="insert.html#Insert">Insert</A> mode completion:				*<A NAME="completion-functions"></A><B>completion-functions</B>*
+<A HREF="intro.html#Insert">插入</A>模式 completion:				*<A NAME="completion-functions"></A><B>completion-functions</B>*
 	<A HREF="builtin.html#complete()">complete()</A>		set found matches
 	<A HREF="builtin.html#complete_add()">complete_add()</A>		add to found matches
 	<A HREF="builtin.html#complete_check()">complete_check()</A>	check if completion should be aborted
@@ -1037,9 +1037,9 @@ Interactive:					*<A NAME="interactive-functions"></A><B>interactive-functions</
 
 <A HREF="gui.html#GUI">GUI</A>:						*<A NAME="gui-functions"></A><B>gui-functions</B>*
 	<A HREF="builtin.html#getfontname()">getfontname()</A>		get name of current font being used
-	<A HREF="builtin.html#getwinpos()">getwinpos()</A>		position of the Vim <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#getwinposx()">getwinposx()</A>		X position of the Vim <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#getwinposy()">getwinposy()</A>		<A HREF="change.html#Y">Y</A> position of the Vim <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#getwinpos()">getwinpos()</A>		position of the Vim<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#getwinposx()">getwinposx()</A>		X position of the Vim<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#getwinposy()">getwinposy()</A>		<A HREF="change.html#Y">Y</A> position of the Vim<A HREF="windows.html#window">窗口</A>
 	balloon_show()		set the balloon content
 	balloon_split()		split a message for a balloon
 	balloon_gettext()	get the text in the balloon
@@ -1053,18 +1053,18 @@ Vim server:					*<A NAME="server-functions"></A><B>server-functions</B>*
 	server2client()		send a reply to a client of a Vim server
 	remote_peek()		check if there is a reply from a Vim server
 	remote_read()		read a reply from a Vim server
-	foreground()		move the Vim <A HREF="windows.html#window">window</A> to the foreground
-	remote_foreground()	move the Vim server <A HREF="windows.html#window">window</A> to the foreground
+	foreground()		move the Vim<A HREF="windows.html#window">窗口</A>to the foreground
+	remote_foreground()	move the Vim server<A HREF="windows.html#window">窗口</A>to the foreground
 
 
 Window size and position:			*<A NAME="window-size-functions"></A><B>window-size-functions</B>*
-	<A HREF="builtin.html#winheight()">winheight()</A>		get height of a specific <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#winwidth()">winwidth()</A>		get width of a specific <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#win_screenpos()">win_screenpos()</A>		get screen position of a <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#winheight()">winheight()</A>		get height of a specific<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#winwidth()">winwidth()</A>		get width of a specific<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#win_screenpos()">win_screenpos()</A>		get screen position of a<A HREF="windows.html#window">窗口</A>
 	<A HREF="builtin.html#winlayout()">winlayout()</A>		get layout of <A HREF="windows.html#windows">windows</A> in a <A HREF="intro.html#tab">tab</A> page
-	<A HREF="builtin.html#winrestcmd()">winrestcmd()</A>		return command to restore <A HREF="windows.html#window">window</A> sizes
-	<A HREF="builtin.html#winsaveview()">winsaveview()</A>		get view of current <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#winrestview()">winrestview()</A>		restore saved view of current <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#winrestcmd()">winrestcmd()</A>		return command to restore<A HREF="windows.html#window">窗口</A>sizes
+	<A HREF="builtin.html#winsaveview()">winsaveview()</A>		get view of current<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#winrestview()">winrestview()</A>		restore saved view of current<A HREF="windows.html#window">窗口</A>
 
 
 Mappings:				    *<A NAME="mapping-functions"></A><B>mapping-functions</B>*
@@ -1118,8 +1118,8 @@ Timers:						*<A NAME="timer-functions"></A><B>timer-functions</B>*
 Tags:						*<A NAME="tag-functions"></A><B>tag-functions</B>*
 	<A HREF="builtin.html#taglist()">taglist()</A>		get <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">tags</A>
 	<A HREF="builtin.html#tagfiles()">tagfiles()</A>		get a <A HREF="eval.html#list">list</A> of <A HREF="tagsrch.html#tags">tags</A> files
-	<A HREF="builtin.html#gettagstack()">gettagstack()</A>		get the <A HREF="tagsrch.html#tag">tag</A> stack of a <A HREF="windows.html#window">window</A>
-	<A HREF="builtin.html#settagstack()">settagstack()</A>		modify the <A HREF="tagsrch.html#tag">tag</A> stack of a <A HREF="windows.html#window">window</A>
+	<A HREF="builtin.html#gettagstack()">gettagstack()</A>		get the <A HREF="tagsrch.html#tag">tag</A> stack of a<A HREF="windows.html#window">窗口</A>
+	<A HREF="builtin.html#settagstack()">settagstack()</A>		modify the <A HREF="tagsrch.html#tag">tag</A> stack of a<A HREF="windows.html#window">窗口</A>
 
 
 Prompt Buffer:					*<A NAME="promptbuffer-functions"></A><B>promptbuffer-functions</B>*
@@ -1869,7 +1869,7 @@ RESTORING THE VIEW
 
 Sometimes you want to make a change and go back to where the cursor was.
 Restoring the relative position would also be nice, so that the same line
-appears at the top of the <A HREF="windows.html#window">window</A>.
+appears at the top of the<A HREF="windows.html#window">窗口</A>.
    This example yanks the current line, puts <A HREF="motion.html#it">it</A> above the first line in the
 file and then restores the view:
 
@@ -1879,11 +1879,11 @@ What this does:
 <B>	ma"aYHmbgg"aP`bzt`a</B>
  	ma			set <A HREF="motion.html#mark">mark</A> a at cursor position
 	  &quot;aY			<A HREF="change.html#yank">yank</A> current line into <A HREF="intro.html#register">register</A> a
-	     Hmb		go to top line in <A HREF="windows.html#window">window</A> and set <A HREF="motion.html#mark">mark</A> <A HREF="motion.html#b">b</A> there
+	     Hmb		go to top line in<A HREF="windows.html#window">窗口</A>and set <A HREF="motion.html#mark">mark</A> <A HREF="motion.html#b">b</A> there
 		<A HREF="motion.html#gg">gg</A>		go to first line in file
 		  &quot;aP		put the yanked line above <A HREF="motion.html#it">it</A>
 		     `b		go back to top line in display
-		       <A HREF="scroll.html#zt">zt</A>	position the text in the <A HREF="windows.html#window">window</A> <A HREF="motion.html#as">as</A> before
+		       <A HREF="scroll.html#zt">zt</A>	position the text in the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> before
 			 `a	go back to saved cursor position
 
 
@@ -1892,7 +1892,7 @@ PACKAGING
 To avoid your function names to interfere with <A HREF="eval.html#functions">functions</A> that you get from
 others, use this scheme:
 - Prepend a unique <A HREF="eval.html#string">string</A> before each function name.  I often use an
-  abbreviation.  For example, &quot;OW_&quot; is used for the option <A HREF="windows.html#window">window</A> <A HREF="eval.html#functions">functions</A>.
+  abbreviation.  For example, &quot;OW_&quot; is used for the option<A HREF="windows.html#window">窗口</A><A HREF="eval.html#functions">functions</A>.
 - Put the definition of your <A HREF="eval.html#functions">functions</A> together in a file.  Set a global
   variable to indicate that the <A HREF="eval.html#functions">functions</A> have been loaded.  When sourcing the
   file again, first unload the <A HREF="eval.html#functions">functions</A>.
@@ -2400,7 +2400,7 @@ To make sure the <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.h
 
 command to set <A HREF="options.html#options">options</A>.  And only set <A HREF="options.html#options">options</A> which are local to a buffer (see
 the help for the option to check that).  When using |<A HREF="options.html#:setlocal">:setlocal</A>| for global
-<A HREF="options.html#options">options</A> or <A HREF="options.html#options">options</A> local to a <A HREF="windows.html#window">window</A>, the value will change for many <A HREF="windows.html#buffers">buffers</A>,
+<A HREF="options.html#options">options</A> or <A HREF="options.html#options">options</A> local to a<A HREF="windows.html#window">窗口</A>, the value will change for many <A HREF="windows.html#buffers">buffers</A>,
 and that is not what a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> should <A HREF="diff.html#do">do</A>.
 
 When an option has a value that is a <A HREF="eval.html#list">list</A> of flags or items, consider using
@@ -2740,9 +2740,7 @@ utility is recommended.
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_42.html">usr_42.txt</A>|  Add new <A HREF="gui.html#menus">menus</A>
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_42.html">usr_42.txt</A>|  Add new <A HREF="gui.html#menus">menus</A>
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
 	</div>

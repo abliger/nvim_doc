@@ -94,9 +94,9 @@ an external program to <A HREF="diff.html#do">do</A> really complicated things.
 |<A HREF="#10.8">10.8</A>|	Changing <A HREF="change.html#case">case</A>
 |<A HREF="#10.9">10.9</A>|	Using an external program
 
-     Next chapter: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
- Previous chapter: |<A HREF="usr_09.html">usr_09.txt</A>|  Using the <A HREF="gui.html#GUI">GUI</A>
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
+上一章: |<A HREF="usr_09.html">usr_09.txt</A>|  Using the <A HREF="gui.html#GUI">GUI</A>
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -431,7 +431,7 @@ matched text with other text, the command {command} is executed.
 
 	Note:
 	The command executed for &quot;<A HREF="repeat.html#:global">:global</A>&quot; must be one that starts with a
-	colon.  <A HREF="intro.html#Normal">Normal</A> mode commands can not be used directly.  The |<A HREF="various.html#:normal">:normal</A>|
+	colon.  <A HREF="intro.html#Normal">正常</A>模式 commands can not be used directly.  The |<A HREF="various.html#:normal">:normal</A>|
 	command can <A HREF="diff.html#do">do</A> this for you.
 
 Suppose you want to change &quot;foobar&quot; to &quot;barfoo&quot;, but only in C++ style
@@ -473,7 +473,7 @@ INSERTING TEXT
 The command  &quot;I{string}&lt;Esc&gt;&quot; inserts the text {string} in each line, just
 left of the visual block.  You start by pressing <A HREF="visual.html#CTRL-V">CTRL-V</A> to enter visual block
 mode.  Now you move the cursor to define your block.  Next you type I to enter
-<A HREF="insert.html#Insert">Insert</A> mode, followed by the text to insert.  As you type, the text appears on
+<A HREF="intro.html#Insert">插入</A>模式, followed by the text to insert.  As you type, the text appears on
 the first line only.
    After you press <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to end the insert, the text will magically be
 inserted in the rest of the lines contained in the visual selection.  Example:
@@ -551,7 +551,7 @@ Just like with &quot;<A HREF="insert.html#I">I</A>&quot; the short line is not c
 newline in the new text.
 
 The &quot;<A HREF="change.html#C">C</A>&quot; command deletes text from the left edge of the block to the end of
-line.  It then puts you in <A HREF="insert.html#Insert">Insert</A> mode so that you can type in a <A HREF="eval.html#string">string</A>,
+line.  It then puts you in <A HREF="intro.html#Insert">插入</A>模式 so that you can type in a <A HREF="eval.html#string">string</A>,
 which is added to the end of each line.
    Starting with the same text again, and typing &quot;Cnew text&lt;Esc&gt;&quot; you get:
 
@@ -704,7 +704,7 @@ but the line must be appended at the end.   You can repeat this <A HREF="motion.
 *<A NAME="10.7"></A><B>10.7</B>*	Formatting text
 
 When you are typing plain text, it's nice if the length of each line is
-automatically trimmed to fit in the <A HREF="windows.html#window">window</A>.  To make this happen while
+automatically trimmed to fit in the<A HREF="windows.html#window">窗口</A>.  To make this happen while
 <A HREF="insert.html#inserting">inserting</A> text, set the <A HREF="options.html#'textwidth'">'textwidth'</A> option:
 
 <B>	:set textwidth=78</B>
@@ -779,7 +779,7 @@ with any motion command, with text <A HREF="vimindex.html#objects">objects</A> a
 Vim has a very powerful set of commands, <A HREF="motion.html#it">it</A> can <A HREF="diff.html#do">do</A> anything.  But there may
 still be something that an external command can <A HREF="diff.html#do">do</A> better or faster.
    The command &quot;!{motion}{program}&quot; takes a block of text and filters <A HREF="motion.html#it">it</A>
-through an external program.  In other words, <A HREF="motion.html#it">it</A> runs the system command
+through an external program.换句话说, <A HREF="motion.html#it">it</A> runs the system command
 represented by {program}, giving <A HREF="motion.html#it">it</A> the block of text represented by <A HREF="intro.html#{motion}">{motion}</A>
 <A HREF="motion.html#as">as</A> input.  The output of this command then replaces the selected block.
    Because this summarizes badly if you are unfamiliar with Unix filters, take
@@ -902,9 +902,7 @@ has written.  To tell Vim to redraw the screen:
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
    </div>

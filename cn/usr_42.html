@@ -88,9 +88,9 @@ accessible.  This is for mouse-happy users only.
 |<A HREF="#42.3">42.3</A>|	Various
 |<A HREF="#42.4">42.4</A>|	Toolbar and popup <A HREF="gui.html#menus">menus</A>
 
-     Next chapter: |<A HREF="usr_43.html">usr_43.txt</A>|  Using <A HREF="filetype.html#filetypes">filetypes</A>
- Previous chapter: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_43.html">usr_43.txt</A>|  Using <A HREF="filetype.html#filetypes">filetypes</A>
+上一章: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -118,7 +118,7 @@ a bit to use such an item.
    The &quot;<A HREF="gui.html#:menu">:menu</A>&quot; command is very similar to the &quot;<A HREF="map.html#:map">:map</A>&quot; command: the left side
 specifies how the item is triggered and the right hand side defines the
 characters that are executed.  {keys} are characters, they are used just like
-you would have typed them.  Thus in <A HREF="insert.html#Insert">Insert</A> mode, when {keys} is plain text,
+you would have typed them.  Thus in <A HREF="intro.html#Insert">插入</A>模式, when {keys} is plain text,
 that text is inserted.
 
 
@@ -220,11 +220,11 @@ You can define menu items that exist for only certain modes.  This works just
 like the variations on the &quot;<A HREF="map.html#:map">:map</A>&quot; command:
 
 	<A HREF="gui.html#:menu">:menu</A>		<A HREF="intro.html#Normal">Normal</A>, <A HREF="visual.html#Visual">Visual</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A> mode
-	<A HREF="gui.html#:nmenu">:nmenu</A>		<A HREF="intro.html#Normal">Normal</A> mode
+	<A HREF="gui.html#:nmenu">:nmenu</A>		<A HREF="intro.html#Normal">正常</A>模式
 	<A HREF="gui.html#:vmenu">:vmenu</A>		<A HREF="visual.html#Visual">Visual</A> mode
 	<A HREF="gui.html#:omenu">:omenu</A>		<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
 	<A HREF="gui.html#:menu">:menu</A>!		<A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode
-	<A HREF="gui.html#:imenu">:imenu</A>		<A HREF="insert.html#Insert">Insert</A> mode
+	<A HREF="gui.html#:imenu">:imenu</A>		<A HREF="intro.html#Insert">插入</A>模式
 	<A HREF="gui.html#:cmenu">:cmenu</A>		<A HREF="cmdline.html#Command-line">Command-line</A> mode
 	<A HREF="gui.html#:amenu">:amenu</A>		All modes
 
@@ -235,23 +235,23 @@ To avoid that the commands of a menu item are being mapped, use the command
 USING :AMENU
 
 The &quot;<A HREF="gui.html#:amenu">:amenu</A>&quot; command is a bit different.  It assumes that the {keys} you
-give are to be executed in <A HREF="intro.html#Normal">Normal</A> mode.  When Vim is in <A HREF="visual.html#Visual">Visual</A> or <A HREF="insert.html#Insert">Insert</A> mode
-when the menu is used, Vim first has to go back to <A HREF="intro.html#Normal">Normal</A> mode.  &quot;<A HREF="gui.html#:amenu">:amenu</A>&quot;
+give are to be executed in <A HREF="intro.html#Normal">正常</A>模式.  When Vim is in <A HREF="visual.html#Visual">Visual</A> or <A HREF="intro.html#Insert">插入</A>模式
+when the menu is used, Vim first has to go back to <A HREF="intro.html#Normal">正常</A>模式.  &quot;<A HREF="gui.html#:amenu">:amenu</A>&quot;
 inserts a <A HREF="pattern.html#CTRL-C">CTRL-C</A> or <A HREF="motion.html#CTRL-O">CTRL-O</A> for you.  For example, if you use this command:
 
 <B>	:amenu  90.100 Mine.Find\ Word  *</B>
 
 Then the resulting menu commands will be:
 
-	<A HREF="intro.html#Normal">Normal</A> mode:		*
+	<A HREF="intro.html#Normal">正常</A>模式:		*
 	<A HREF="visual.html#Visual">Visual</A> mode:		<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
 	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode:	<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
-	<A HREF="insert.html#Insert">Insert</A> mode:		<A HREF="motion.html#CTRL-O">CTRL-O</A> *
+	<A HREF="intro.html#Insert">插入</A>模式:		<A HREF="motion.html#CTRL-O">CTRL-O</A> *
 	<A HREF="cmdline.html#Command-line">Command-line</A> mode:	<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
 
 When in <A HREF="cmdline.html#Command-line">Command-line</A> mode the <A HREF="pattern.html#CTRL-C">CTRL-C</A> will <A HREF="editing.html#abandon">abandon</A> the command typed so far.
 In <A HREF="visual.html#Visual">Visual</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A> mode <A HREF="pattern.html#CTRL-C">CTRL-C</A> will stop the mode.  The <A HREF="motion.html#CTRL-O">CTRL-O</A> in
-<A HREF="insert.html#Insert">Insert</A> mode will execute the command and then return to <A HREF="insert.html#Insert">Insert</A> mode.
+<A HREF="intro.html#Insert">插入</A>模式 will execute the command and then return to <A HREF="intro.html#Insert">插入</A>模式.
    <A HREF="motion.html#CTRL-O">CTRL-O</A> only works for one command.  If you need to use two or more
 commands, put them in a function and call that function.  Example:
 
@@ -303,7 +303,7 @@ to get a shorter <A HREF="eval.html#list">list</A>:
 <B>	:amenu Edit</B>
 
 This lists only the &quot;Edit&quot; menu items for all modes.  To <A HREF="eval.html#list">list</A> only one
-specific menu item for <A HREF="insert.html#Insert">Insert</A> mode:
+specific menu item for <A HREF="intro.html#Insert">插入</A>模式:
 
 <B>	:imenu Edit.Undo</B>
 
@@ -316,7 +316,7 @@ DELETING MENUS
 
 To delete a menu, the same command is used <A HREF="motion.html#as">as</A> for listing, but with &quot;menu&quot;
 changed to &quot;unmenu&quot;.  Thus &quot;<A HREF="gui.html#:menu">:menu</A>&quot; becomes, &quot;<A HREF="gui.html#:unmenu">:unmenu</A>&quot;, &quot;<A HREF="gui.html#:nmenu">:nmenu</A>&quot; becomes
-&quot;<A HREF="gui.html#:nunmenu">:nunmenu</A>&quot;, etc.  To delete the &quot;Tools.Make&quot; item for <A HREF="insert.html#Insert">Insert</A> mode:
+&quot;<A HREF="gui.html#:nunmenu">:nunmenu</A>&quot;, etc.  To delete the &quot;Tools.Make&quot; item for <A HREF="intro.html#Insert">插入</A>模式:
 
 <B>	:iunmenu Tools.Make</B>
 
@@ -432,9 +432,7 @@ is...
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_43.html">usr_43.txt</A>|  Using <A HREF="filetype.html#filetypes">filetypes</A>
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_43.html">usr_43.txt</A>|  Using <A HREF="filetype.html#filetypes">filetypes</A>
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

@@ -436,7 +436,7 @@ Calling |<A HREF="#nvim_buf_attach()">nvim_buf_attach()</A>| with send_buffer=tr
                                                         *<A NAME="api-buffer-updates-lua"></A><B>api-buffer-updates-lua</B>*
 In-process <A HREF="lua.html#Lua">Lua</A> plugins can receive buffer updates in the form of <A HREF="lua.html#Lua">Lua</A>
 callbacks. These callbacks are called frequently in various contexts;
-|<A HREF="eval.html#textlock">textlock</A>| prevents <A HREF="change.html#changing">changing</A> buffer contents and <A HREF="windows.html#window">window</A> layout (use
+|<A HREF="eval.html#textlock">textlock</A>| prevents <A HREF="change.html#changing">changing</A> buffer contents and<A HREF="windows.html#window">窗口</A>layout (use
 |<A HREF="vim.html">vim.schedule</A>| to defer such operations to the main loop instead).
 
 |<A HREF="#nvim_buf_attach()">nvim_buf_attach()</A>| will take keyword args for the callbacks. &quot;on_lines&quot; will
@@ -516,13 +516,13 @@ useful to implement simple widgets, such <A HREF="motion.html#as">as</A> tooltip
 cursor. Floats are fully functional <A HREF="windows.html#windows">windows</A> supporting user editing, common
 |<A HREF="#api-window">api-window</A>| calls, and most window <A HREF="options.html#options">options</A> (except <A HREF="options.html#'statusline'">'statusline'</A>).
 
-Two ways to create a floating <A HREF="windows.html#window">window</A>:
-- |<A HREF="#nvim_open_win()">nvim_open_win()</A>| creates a new <A HREF="windows.html#window">window</A> (needs a buffer, see |<A HREF="#nvim_create_buf()">nvim_create_buf()</A>|)
-- |<A HREF="#nvim_win_set_config()">nvim_win_set_config()</A>| reconfigures a normal <A HREF="windows.html#window">window</A> into a float
+Two ways to create a floating<A HREF="windows.html#window">窗口</A>:
+- |<A HREF="#nvim_open_win()">nvim_open_win()</A>| creates a new<A HREF="windows.html#window">窗口</A>(needs a buffer, see |<A HREF="#nvim_create_buf()">nvim_create_buf()</A>|)
+- |<A HREF="#nvim_win_set_config()">nvim_win_set_config()</A>| reconfigures a normal<A HREF="windows.html#window">窗口</A>into a float
 
 To close <A HREF="motion.html#it">it</A> use |<A HREF="#nvim_win_close()">nvim_win_close()</A>| or a command such <A HREF="motion.html#as">as</A> |<A HREF="windows.html#:close">:close</A>|.
 
-To check whether a <A HREF="windows.html#window">window</A> is floating, check whether the `relative` option in
+To check whether a<A HREF="windows.html#window">窗口</A>is floating, check whether the `relative` option in
 its <A HREF="starting.html#config">config</A> is non-empty:
 
 <B>    if vim.api.nvim_win_get_config(window_id).relative ~= '' then</B>
@@ -533,7 +533,7 @@ its <A HREF="starting.html#config">config</A> is non-empty:
 Buffer text can be highlighted by typical mechanisms (syntax highlighting,
 |<A HREF="#api-highlights">api-highlights</A>|). The |<A HREF="syntax.html#hl-NormalFloat">hl-NormalFloat</A>| group highlights normal text;
 <A HREF="options.html#'winhighlight'">'winhighlight'</A> can be used <A HREF="motion.html#as">as</A> usual to override groups locally. Floats inherit
-<A HREF="options.html#options">options</A> from the current <A HREF="windows.html#window">window</A>; specify `style=minimal` in |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
+<A HREF="options.html#options">options</A> from the current<A HREF="windows.html#window">窗口</A>; specify `style=minimal` in |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
 to disable various visual features such <A HREF="motion.html#as">as</A> the <A HREF="options.html#'number'">'number'</A> column.
 
 Currently, floating <A HREF="windows.html#windows">windows</A> don't support some widgets like scrollbar.
@@ -1177,7 +1177,7 @@ nvim_get_context({*opts})                                 *<A NAME="nvim_get_con
 
 
 <A HREF="#nvim_get_current_win()">nvim_get_current_win()</A>                                *<A NAME="nvim_get_current_win()"></A><B>nvim_get_current_win()</B>*
-                Gets the current <A HREF="windows.html#window">window</A>.
+                Gets the current<A HREF="windows.html#window">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Window handle
@@ -1302,8 +1302,8 @@ nvim_get_option_value({name}, {*opts})               *<A NAME="nvim_get_option_v
                 matches that of |:set|: the local value of an option is
                 returned if <A HREF="motion.html#it">it</A> exists; otherwise, the global value is
                 returned. Local values always correspond to the current buffer
-                or <A HREF="windows.html#window">window</A>. To get a buffer-local or window-local option for a
-                specific buffer or <A HREF="windows.html#window">window</A>, use |<A HREF="#nvim_buf_get_option()">nvim_buf_get_option()</A>| or
+                or<A HREF="windows.html#window">窗口</A>. To get a buffer-local or window-local option for a
+                specific buffer or<A HREF="windows.html#window">窗口</A>, use |<A HREF="#nvim_buf_get_option()">nvim_buf_get_option()</A>| or
                 |<A HREF="#nvim_win_get_option()">nvim_win_get_option()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -1482,10 +1482,10 @@ nvim_input_mouse({button}, {action}, {modifier}, {grid}, {row}, {col})
 
 
 <A HREF="#nvim_list_wins()">nvim_list_wins()</A>                                            *<A NAME="nvim_list_wins()"></A><B>nvim_list_wins()</B>*
-                Gets the current <A HREF="eval.html#list">list</A> of <A HREF="windows.html#window">window</A> handles.
+                Gets the current <A HREF="eval.html#list">list</A> of<A HREF="windows.html#window">窗口</A>handles.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#List">List</A> of <A HREF="windows.html#window">window</A> handles
+                    <A HREF="eval.html#List">List</A> of<A HREF="windows.html#window">窗口</A>handles
 
 
 nvim_load_context({dict})                                *<A NAME="nvim_load_context()"></A><B>nvim_load_context()</B>*
@@ -1518,7 +1518,7 @@ nvim_open_term({buffer}, {opts})                            *<A NAME="nvim_open_
                 of a <A HREF="#rpc">rpc</A> message, or similar.
 
                 Note: to directly initiate the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> using the right size,
-                display the buffer in a configured <A HREF="windows.html#window">window</A> before calling this.
+                display the buffer in a configured<A HREF="windows.html#window">窗口</A>before calling this.
                 For instance, for a floating display, first create an empty
                 buffer using |<A HREF="#nvim_create_buf()">nvim_create_buf()</A>|, then display <A HREF="motion.html#it">it</A> using
                 |<A HREF="#nvim_open_win()">nvim_open_win()</A>|, and then call this function. Then
@@ -1749,7 +1749,7 @@ nvim_set_current_tabpage({tabpage})               *<A NAME="nvim_set_current_tab
 
 
 nvim_set_current_win({window})                        *<A NAME="nvim_set_current_win()"></A><B>nvim_set_current_win()</B>*
-                Sets the current <A HREF="windows.html#window">window</A>.
+                Sets the current<A HREF="windows.html#window">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Attributes: </FONT></B>
                     not allowed when |<A HREF="eval.html#textlock">textlock</A>| is active
@@ -2223,7 +2223,7 @@ Buffers may be unloaded by the |<A HREF="windows.html#:bunload">:bunload</A>| co
 buffer's |<A HREF="options.html#'bufhidden'">'bufhidden'</A>| option. When a buffer is unloaded its
 file contents are freed from memory and vim cannot operate on
 the buffer lines until <A HREF="motion.html#it">it</A> is reloaded (usually by opening the
-buffer again in a new <A HREF="windows.html#window">window</A>). <A HREF="#API">API</A> methods such <A HREF="motion.html#as">as</A>
+buffer again in a new<A HREF="windows.html#window">窗口</A>). <A HREF="#API">API</A> methods such <A HREF="motion.html#as">as</A>
 |<A HREF="#nvim_buf_get_lines()">nvim_buf_get_lines()</A>| and |<A HREF="#nvim_buf_line_count()">nvim_buf_line_count()</A>| will be
 affected.
 
@@ -2331,11 +2331,11 @@ nvim_buf_call({buffer}, {fun})                               *<A NAME="nvim_buf_
                 call a function with buffer <A HREF="motion.html#as">as</A> temporary current buffer
 
                 This temporarily switches current buffer to &quot;buffer&quot;. If the
-                current <A HREF="windows.html#window">window</A> already shows &quot;buffer&quot;, the <A HREF="windows.html#window">window</A> is not
-                switched If a <A HREF="windows.html#window">window</A> inside the current <A HREF="tabpage.html#tabpage">tabpage</A> (including a
+                current<A HREF="windows.html#window">窗口</A>already shows &quot;buffer&quot;, the<A HREF="windows.html#window">窗口</A>is not
+                switched If a<A HREF="windows.html#window">窗口</A>inside the current <A HREF="tabpage.html#tabpage">tabpage</A> (including a
                 float) already shows the buffer One of these <A HREF="windows.html#windows">windows</A> will be
-                set <A HREF="motion.html#as">as</A> current <A HREF="windows.html#window">window</A> temporarily. Otherwise a temporary
-                scratch <A HREF="windows.html#window">window</A> (called the &quot;<A HREF="autocmd.html#autocmd">autocmd</A> window&quot; for historical
+                set <A HREF="motion.html#as">as</A> current<A HREF="windows.html#window">窗口</A>temporarily. Otherwise a temporary
+                scratch<A HREF="windows.html#window">窗口</A>(called the &quot;<A HREF="autocmd.html#autocmd">autocmd</A> window&quot; for historical
                 reasons) will be used.
 
                 This is useful e.g. to call vimL <A HREF="eval.html#functions">functions</A> that only work with
@@ -2952,10 +2952,10 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                                   column, without shifting the underlying
                                   text.
                                 • &quot;right_align&quot;: display right aligned in the
-                                  <A HREF="windows.html#window">window</A>.
+                                 <A HREF="windows.html#window">窗口</A>.
 
                               • virt_text_win_col : position the virtual text
-                                at a fixed <A HREF="windows.html#window">window</A> column (starting from the
+                                at a fixed<A HREF="windows.html#window">窗口</A>column (starting from the
                                 first text column)
                               • virt_text_hide : hide the virtual text when
                                 the background text is selected or hidden due
@@ -2974,7 +2974,7 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                                 <A HREF="motion.html#mark">mark</A> This should be an array over lines, where
                                 each line in turn is an array over [text,
                                 highlight] tuples. In general, buffer and
-                                <A HREF="windows.html#window">window</A> <A HREF="options.html#options">options</A> <A HREF="diff.html#do">do</A> not affect the display of
+                               <A HREF="windows.html#window">窗口</A><A HREF="options.html#options">options</A> <A HREF="diff.html#do">do</A> not affect the display of
                                 the text. In particular <A HREF="options.html#'wrap'">'wrap'</A> and <A HREF="options.html#'linebreak'">'linebreak'</A>
                                 <A HREF="options.html#options">options</A> <A HREF="diff.html#do">do</A> not take effect, so the number of
                                 extra screen lines will always match the size
@@ -2985,7 +2985,7 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                               • virt_lines_above: place virtual lines above
                                 instead.
                               • virt_lines_leftcol: Place <A HREF="#extmarks">extmarks</A> in the
-                                leftmost column of the <A HREF="windows.html#window">window</A>, bypassing sign
+                                leftmost column of the<A HREF="windows.html#window">窗口</A>, bypassing sign
                                 and number columns.
                               • ephemeral : for use with
                                 |<A HREF="intro.html#nvim_set_decoration_provider">nvim_set_decoration_provider</A>| callbacks. The
@@ -3090,7 +3090,7 @@ nvim_set_decoration_provider({ns_id}, {opts})
                 callbacks. the `on_start` callback can return `false` to
                 disable the <A HREF="provider.html#provider">provider</A> until the next redraw. Similarly, return
                 `false` in `on_win` will skip the `on_lines` calls for that
-                <A HREF="windows.html#window">window</A> (but any <A HREF="#extmarks">extmarks</A> set in `on_win` will still be used).
+               <A HREF="windows.html#window">窗口</A>(but any <A HREF="#extmarks">extmarks</A> set in `on_win` will still be used).
                 A <A HREF="usr_05.html#plugin">plugin</A> managing multiple sources of decoration should
                 ideally only set one <A HREF="provider.html#provider">provider</A>, and <A HREF="diff.html#merge">merge</A> the sources
                 internally. You can use multiple `ns_id` for the <A HREF="#extmarks">extmarks</A>
@@ -3112,9 +3112,9 @@ nvim_set_decoration_provider({ns_id}, {opts})
                              • on_start: called first on each screen redraw
                                [&quot;start&quot;, tick]
                              • on_buf: called for each buffer being redrawn
-                               (before <A HREF="windows.html#window">window</A> callbacks) [&quot;buf&quot;, bufnr, tick]
+                               (before<A HREF="windows.html#window">窗口</A>callbacks) [&quot;buf&quot;, bufnr, tick]
                              • on_win: called when starting to redraw a
-                               specific <A HREF="windows.html#window">window</A>. [&quot;win&quot;, <A HREF="windows.html#winid">winid</A>, bufnr, topline,
+                               specific<A HREF="windows.html#window">窗口</A>. [&quot;win&quot;, <A HREF="windows.html#winid">winid</A>, bufnr, topline,
                                botline_guess]
                              • on_line: called for each buffer line being
                                redrawn. (The interaction with fold lines is
@@ -3129,14 +3129,14 @@ Window Functions                                                  *<A NAME="api-
 
 
 nvim_win_call({window}, {fun})                               *<A NAME="nvim_win_call()"></A><B>nvim_win_call()</B>*
-                Calls a function with <A HREF="windows.html#window">window</A> <A HREF="motion.html#as">as</A> temporary current <A HREF="windows.html#window">window</A>.
+                Calls a function with<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> temporary current<A HREF="windows.html#window">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Attributes: </FONT></B>
                     |<A HREF="vim.html">vim.api</A>| only
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
-                    {fun}     Function to call inside the <A HREF="windows.html#window">window</A> (currently
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
+                    {fun}     Function to call inside the<A HREF="windows.html#window">窗口</A>(currently
                               <A HREF="lua.html#lua">lua</A> callable only)
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -3155,8 +3155,8 @@ nvim_win_close({window}, {force})                           *<A NAME="nvim_win_c
                     not allowed when |<A HREF="eval.html#textlock">textlock</A>| is active
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
-                    {force}   Behave like `:close!` The last <A HREF="windows.html#window">window</A> of a
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
+                    {force}   Behave like `:close!` The last<A HREF="windows.html#window">窗口</A>of a
                               buffer with unwritten changes can be closed. The
                               buffer will become hidden, even if <A HREF="options.html#'hidden'">'hidden'</A> is
                               not set.
@@ -3166,56 +3166,56 @@ nvim_win_del_var({window}, {name})                        *<A NAME="nvim_win_del
                 Removes a window-scoped (w:) variable
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {name}    Variable name
 
 
 nvim_win_get_buf({window})                                *<A NAME="nvim_win_get_buf()"></A><B>nvim_win_get_buf()</B>*
-                Gets the current buffer in a <A HREF="windows.html#window">window</A>
+                Gets the current buffer in a<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Buffer handle
 
 
 nvim_win_get_cursor({window})                          *<A NAME="nvim_win_get_cursor()"></A><B>nvim_win_get_cursor()</B>*
-                Gets the (1,0)-indexed cursor position in the <A HREF="windows.html#window">window</A>.
+                Gets the (1,0)-indexed cursor position in the<A HREF="windows.html#window">窗口</A>.
                 |<A HREF="#api-indexing">api-indexing</A>|
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (row, col) tuple
 
 
 nvim_win_get_height({window})                          *<A NAME="nvim_win_get_height()"></A><B>nvim_win_get_height()</B>*
-                Gets the <A HREF="windows.html#window">window</A> height
+                Gets the<A HREF="windows.html#window">窗口</A>height
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Height <A HREF="motion.html#as">as</A> a <A HREF="intro.html#count">count</A> of rows
 
 
 nvim_win_get_number({window})                          *<A NAME="nvim_win_get_number()"></A><B>nvim_win_get_number()</B>*
-                Gets the <A HREF="windows.html#window">window</A> number
+                Gets the<A HREF="windows.html#window">窗口</A>number
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Window number
 
 
 nvim_win_get_option({window}, {name})                  *<A NAME="nvim_win_get_option()"></A><B>nvim_win_get_option()</B>*
-                Gets a <A HREF="windows.html#window">window</A> option value
+                Gets a<A HREF="windows.html#window">窗口</A>option value
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {name}    Option name
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -3223,31 +3223,31 @@ nvim_win_get_option({window}, {name})                  *<A NAME="nvim_win_get_op
 
 
 nvim_win_get_position({window})                      *<A NAME="nvim_win_get_position()"></A><B>nvim_win_get_position()</B>*
-                Gets the <A HREF="windows.html#window">window</A> position in display cells. First position is
+                Gets the<A HREF="windows.html#window">窗口</A>position in display cells. First position is
                 zero.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (row, col) tuple with the <A HREF="windows.html#window">window</A> position
+                    (row, col) tuple with the<A HREF="windows.html#window">窗口</A>position
 
 
 nvim_win_get_tabpage({window})                        *<A NAME="nvim_win_get_tabpage()"></A><B>nvim_win_get_tabpage()</B>*
-                Gets the <A HREF="windows.html#window">window</A> <A HREF="tabpage.html#tabpage">tabpage</A>
+                Gets the<A HREF="windows.html#window">窗口</A><A HREF="tabpage.html#tabpage">tabpage</A>
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    Tabpage that contains the <A HREF="windows.html#window">window</A>
+                    Tabpage that contains the<A HREF="windows.html#window">窗口</A>
 
 
 nvim_win_get_var({window}, {name})                        *<A NAME="nvim_win_get_var()"></A><B>nvim_win_get_var()</B>*
                 Gets a window-scoped (w:) variable
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {name}    Variable name
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -3255,20 +3255,20 @@ nvim_win_get_var({window}, {name})                        *<A NAME="nvim_win_get
 
 
 nvim_win_get_width({window})                            *<A NAME="nvim_win_get_width()"></A><B>nvim_win_get_width()</B>*
-                Gets the <A HREF="windows.html#window">window</A> width
+                Gets the<A HREF="windows.html#window">窗口</A>width
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Width <A HREF="motion.html#as">as</A> a <A HREF="intro.html#count">count</A> of columns
 
 
 nvim_win_hide({window})                                      *<A NAME="nvim_win_hide()"></A><B>nvim_win_hide()</B>*
-                Closes the <A HREF="windows.html#window">window</A> and hide the buffer <A HREF="motion.html#it">it</A> contains (like
+                Closes the<A HREF="windows.html#window">窗口</A>and hide the buffer <A HREF="motion.html#it">it</A> contains (like
                 |<A HREF="windows.html#:hide">:hide</A>| with a |<A HREF="windows.html#window-ID">window-ID</A>|).
 
-                Like |<A HREF="windows.html#:hide">:hide</A>| the buffer becomes hidden unless another <A HREF="windows.html#window">window</A>
+                Like |<A HREF="windows.html#:hide">:hide</A>| the buffer becomes hidden unless another<A HREF="windows.html#window">窗口</A>
                 is editing <A HREF="motion.html#it">it</A>, or <A HREF="options.html#'bufhidden'">'bufhidden'</A> is `unload`, `delete` or `wipe`
                 <A HREF="motion.html#as">as</A> opposed to |<A HREF="windows.html#:close">:close</A>| or |<A HREF="intro.html#nvim_win_close">nvim_win_close</A>|, which will close
                 the buffer.
@@ -3277,54 +3277,54 @@ nvim_win_hide({window})                                      *<A NAME="nvim_win_
                     not allowed when |<A HREF="eval.html#textlock">textlock</A>| is active
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 
 nvim_win_is_valid({window})                              *<A NAME="nvim_win_is_valid()"></A><B>nvim_win_is_valid()</B>*
-                Checks if a <A HREF="windows.html#window">window</A> is valid
+                Checks if a<A HREF="windows.html#window">窗口</A>is valid
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    true if the <A HREF="windows.html#window">window</A> is valid, false otherwise
+                    true if the<A HREF="windows.html#window">窗口</A>is valid, false otherwise
 
 
 nvim_win_set_buf({window}, {buffer})                      *<A NAME="nvim_win_set_buf()"></A><B>nvim_win_set_buf()</B>*
-                Sets the current buffer in a <A HREF="windows.html#window">window</A>, without side effects
+                Sets the current buffer in a<A HREF="windows.html#window">窗口</A>, without side effects
 
 <B><FONT color="#3A6F2B">                Attributes: </FONT></B>
                     not allowed when |<A HREF="eval.html#textlock">textlock</A>| is active
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {buffer}  Buffer handle
 
 
 nvim_win_set_cursor({window}, {pos})                   *<A NAME="nvim_win_set_cursor()"></A><B>nvim_win_set_cursor()</B>*
-                Sets the (1,0)-indexed cursor position in the <A HREF="windows.html#window">window</A>.
-                |<A HREF="#api-indexing">api-indexing</A>| This scrolls the <A HREF="windows.html#window">window</A> even if <A HREF="motion.html#it">it</A> is not the
+                Sets the (1,0)-indexed cursor position in the<A HREF="windows.html#window">窗口</A>.
+                |<A HREF="#api-indexing">api-indexing</A>| This scrolls the<A HREF="windows.html#window">窗口</A>even if <A HREF="motion.html#it">it</A> is not the
                 current one.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {pos}     (row, col) tuple representing the new position
 
 
 nvim_win_set_height({window}, {height})                *<A NAME="nvim_win_set_height()"></A><B>nvim_win_set_height()</B>*
-                Sets the <A HREF="windows.html#window">window</A> height.
+                Sets the<A HREF="windows.html#window">窗口</A>height.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {height}  Height <A HREF="motion.html#as">as</A> a <A HREF="intro.html#count">count</A> of rows
 
 
 nvim_win_set_option({window}, {name}, {value})         *<A NAME="nvim_win_set_option()"></A><B>nvim_win_set_option()</B>*
-                Sets a <A HREF="windows.html#window">window</A> option value. Passing 'nil' <A HREF="motion.html#as">as</A> value deletes the
+                Sets a<A HREF="windows.html#window">窗口</A>option value. Passing 'nil' <A HREF="motion.html#as">as</A> value deletes the
                 option(only works if there's a global fallback)
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {name}    Option name
                     {value}   Option value
 
@@ -3333,17 +3333,17 @@ nvim_win_set_var({window}, {name}, {value})               *<A NAME="nvim_win_set
                 Sets a window-scoped (w:) variable
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {name}    Variable name
                     {value}   Variable value
 
 
 nvim_win_set_width({window}, {width})                   *<A NAME="nvim_win_set_width()"></A><B>nvim_win_set_width()</B>*
-                Sets the <A HREF="windows.html#window">window</A> width. This will only succeed if the screen is
+                Sets the<A HREF="windows.html#window">窗口</A>width. This will only succeed if the screen is
                 split vertically.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
                     {width}   Width <A HREF="motion.html#as">as</A> a <A HREF="intro.html#count">count</A> of columns
 
 
@@ -3353,11 +3353,11 @@ Win_Config Functions                                          *<A NAME="api-win_
 
 
 nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open_win()"></A><B>nvim_open_win()</B>*
-                Open a new <A HREF="windows.html#window">window</A>.
+                Open a new<A HREF="windows.html#window">窗口</A>.
 
                 Currently this is used to open floating and external <A HREF="windows.html#windows">windows</A>.
                 Floats are <A HREF="windows.html#windows">windows</A> that are drawn above the split layout, at
-                some anchor position in some other <A HREF="windows.html#window">window</A>. Floats can be drawn
+                some anchor position in some other<A HREF="windows.html#window">窗口</A>. Floats can be drawn
                 internally or by external <A HREF="gui.html#GUI">GUI</A> with the |<A HREF="ui.html#ui-multigrid">ui-multigrid</A>|
                 extension. External <A HREF="windows.html#windows">windows</A> are only supported with multigrid
                 GUIs, and are displayed <A HREF="motion.html#as">as</A> separate top-level <A HREF="windows.html#windows">windows</A>.
@@ -3365,7 +3365,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                 For a general overview of floats, see |<A HREF="#api-floatwin">api-floatwin</A>|.
 
                 Exactly one of `external` and `relative` must be specified.
-                The `width` and `height` of the new <A HREF="windows.html#window">window</A> must be specified.
+                The `width` and `height` of the new<A HREF="windows.html#window">窗口</A>must be specified.
 
                 With relative=editor (row=0,col=0) refers to the top-left
                 corner of the screen-grid and (row=Lines-1,col=Columns-1)
@@ -3377,7 +3377,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                 not fit inside the main editor, are allowed. The builtin
                 implementation truncates values so floats are fully within the
                 main screen grid. External GUIs could let floats hover outside
-                of the main <A HREF="windows.html#window">window</A> like a tooltip, but this should not be used
+                of the main<A HREF="windows.html#window">窗口</A>like a tooltip, but this should not be used
                 to specify arbitrary WM screen positions.
 
                 Example (Lua): window-relative float
@@ -3396,15 +3396,15 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {buffer}  Buffer to display, or 0 for current buffer
-                    {enter}   Enter the <A HREF="windows.html#window">window</A> (make <A HREF="motion.html#it">it</A> the current <A HREF="windows.html#window">window</A>)
-                    {config}  Map defining the <A HREF="windows.html#window">window</A> configuration. Keys:
-                              • relative: Sets the <A HREF="windows.html#window">window</A> layout to
+                    {enter}   Enter the<A HREF="windows.html#window">窗口</A>(make <A HREF="motion.html#it">it</A> the current<A HREF="windows.html#window">窗口</A>)
+                    {config}  Map defining the<A HREF="windows.html#window">窗口</A>configuration. Keys:
+                              • relative: Sets the<A HREF="windows.html#window">窗口</A>layout to
                                 &quot;floating&quot;, placed at (row,col) coordinates
                                 relative to:
                                 • &quot;editor&quot; The global editor grid
                                 • &quot;win&quot; Window given by the `win` field, or
-                                  current <A HREF="windows.html#window">window</A>.
-                                • &quot;cursor&quot; Cursor position in current <A HREF="windows.html#window">window</A>.
+                                  current<A HREF="windows.html#window">窗口</A>.
+                                • &quot;cursor&quot; Cursor position in current<A HREF="windows.html#window">窗口</A>.
 
                               • win: |<A HREF="windows.html#window-ID">window-ID</A>| for relative=&quot;win&quot;.
                               • anchor: Decides which corner of the float to
@@ -3436,8 +3436,8 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                 (wincmds, mouse <A HREF="autocmd.html#events">events</A>). Defaults to true.
                                 Non-focusable <A HREF="windows.html#windows">windows</A> can be entered by
                                 |<A HREF="#nvim_set_current_win()">nvim_set_current_win()</A>|.
-                              • external: <A HREF="gui.html#GUI">GUI</A> should display the <A HREF="windows.html#window">window</A> <A HREF="motion.html#as">as</A> an
-                                external top-level <A HREF="windows.html#window">window</A>. Currently accepts
+                              • external: <A HREF="gui.html#GUI">GUI</A> should display the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> an
+                                external top-level<A HREF="windows.html#window">窗口</A>. Currently accepts
                                 no other positioning configuration together
                                 with this.
                               • zindex: Stacking order. floats with higher `zindex` go on top on floats with lower indices. Must
@@ -3451,9 +3451,9 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                   are recommended, unless there is a good
                                   reason to overshadow builtin elements.
 
-                              • style: Configure the appearance of the <A HREF="windows.html#window">window</A>.
+                              • style: Configure the appearance of the<A HREF="windows.html#window">窗口</A>.
                                 Currently only takes one non-empty value:
-                                • &quot;minimal&quot; Nvim will display the <A HREF="windows.html#window">window</A> with
+                                • &quot;minimal&quot; Nvim will display the<A HREF="windows.html#window">窗口</A>with
                                   many <A HREF="ui.html#UI">UI</A> <A HREF="options.html#options">options</A> disabled. This is useful
                                   when displaying a temporary float where the
                                   text should not be edited. Disables
@@ -3466,7 +3466,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                   and clearing the |<A HREF="intro.html#EndOfBuffer">EndOfBuffer</A>| region in
                                   <A HREF="options.html#'winhighlight'">'winhighlight'</A>.
 
-                              • border: Style of (optional) <A HREF="windows.html#window">window</A> border.
+                              • border: Style of (optional)<A HREF="windows.html#window">窗口</A>border.
                                 This can either be a <A HREF="eval.html#string">string</A> or an array. The
                                 <A HREF="eval.html#string">string</A> values are
                                 • &quot;none&quot;: No border (default).
@@ -3509,32 +3509,32 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
 
 
 nvim_win_get_config({window})                          *<A NAME="nvim_win_get_config()"></A><B>nvim_win_get_config()</B>*
-                Gets <A HREF="windows.html#window">window</A> configuration.
+                Gets<A HREF="windows.html#window">窗口</A>configuration.
 
                 The returned value may be given to |<A HREF="#nvim_open_win()">nvim_open_win()</A>|.
 
                 `relative` is empty for normal <A HREF="windows.html#windows">windows</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    Map defining the <A HREF="windows.html#window">window</A> configuration, see
+                    Map defining the<A HREF="windows.html#window">窗口</A>configuration, see
                     |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
 
 
 nvim_win_set_config({window}, {*config})               *<A NAME="nvim_win_set_config()"></A><B>nvim_win_set_config()</B>*
-                Configures <A HREF="windows.html#window">window</A> layout. Currently only for floating and
-                external <A HREF="windows.html#windows">windows</A> (including <A HREF="change.html#changing">changing</A> a split <A HREF="windows.html#window">window</A> to those
+                Configures<A HREF="windows.html#window">窗口</A>layout. Currently only for floating and
+                external <A HREF="windows.html#windows">windows</A> (including <A HREF="change.html#changing">changing</A> a split<A HREF="windows.html#window">窗口</A>to those
                 layouts).
 
-                When reconfiguring a floating <A HREF="windows.html#window">window</A>, absent option keys will
+                When reconfiguring a floating<A HREF="windows.html#window">窗口</A>, absent option keys will
                 not be changed. `row`/`col` and `relative` must be
                 reconfigured together.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {window}  Window handle, or 0 for current <A HREF="windows.html#window">window</A>
-                    {config}  Map defining the <A HREF="windows.html#window">window</A> configuration, see
+                    {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
+                    {config}  Map defining the<A HREF="windows.html#window">窗口</A>configuration, see
                               |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
@@ -3576,7 +3576,7 @@ nvim_tabpage_get_var({tabpage}, {name})               *<A NAME="nvim_tabpage_get
 
 
 nvim_tabpage_get_win({tabpage})                       *<A NAME="nvim_tabpage_get_win()"></A><B>nvim_tabpage_get_win()</B>*
-                Gets the current <A HREF="windows.html#window">window</A> in a <A HREF="tabpage.html#tabpage">tabpage</A>
+                Gets the current<A HREF="windows.html#window">窗口</A>in a <A HREF="tabpage.html#tabpage">tabpage</A>
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {tabpage}  Tabpage handle, or 0 for current <A HREF="tabpage.html#tabpage">tabpage</A>

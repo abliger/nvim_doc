@@ -182,7 +182,7 @@ archive file on your closest gnu-ftp-mirror).
 
 ==============================================================================
 
-Scrolling in <A HREF="insert.html#Insert">Insert</A> mode				*<A NAME="scroll-insert"></A><B>scroll-insert</B>*
+Scrolling in <A HREF="intro.html#Insert">插入</A>模式				*<A NAME="scroll-insert"></A><B>scroll-insert</B>*
 
 If you are in insert mode and you want to see something that is just off the
 screen, you can use <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-E">CTRL-E</A> and <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-Y">CTRL-Y</A> to scroll the screen.
@@ -195,7 +195,7 @@ You then lose the ability to copy text from the line above/below the cursor
 |<A HREF="insert.html#i_CTRL-E">i_CTRL-E</A>|.
 
 Also consider setting <A HREF="options.html#'scrolloff'">'scrolloff'</A> to a larger value, so that you can always see
-some <A HREF="repeat.html#context">context</A> around the cursor.  If <A HREF="options.html#'scrolloff'">'scrolloff'</A> is bigger than half the <A HREF="windows.html#window">window</A>
+some <A HREF="repeat.html#context">context</A> around the cursor.  If <A HREF="options.html#'scrolloff'">'scrolloff'</A> is bigger than half the<A HREF="windows.html#window">窗口</A>
 height, the cursor will always be in the middle and the text is scrolled when
 the cursor is moved up/down.
 
@@ -258,12 +258,12 @@ example, to change the date <A HREF="motion.html#mark">mark</A> in a file:
 
 Breaking up saving the position:
 	ms	store cursor position in the '<A HREF="change.html#s">s</A>' <A HREF="motion.html#mark">mark</A>
-	<A HREF="motion.html#H">H</A>	go to the first line in the <A HREF="windows.html#window">window</A>
+	<A HREF="motion.html#H">H</A>	go to the first line in the<A HREF="windows.html#window">窗口</A>
 	mt	store this position in the '<A HREF="motion.html#t">t</A>' <A HREF="motion.html#mark">mark</A>
 
 Breaking up restoring the position:
-	't	go to the line previously at the top of the <A HREF="windows.html#window">window</A>
-	<A HREF="scroll.html#zt">zt</A>	scroll to move this line to the top of the <A HREF="windows.html#window">window</A>
+	't	go to the line previously at the top of the<A HREF="windows.html#window">窗口</A>
+	<A HREF="scroll.html#zt">zt</A>	scroll to move this line to the top of the<A HREF="windows.html#window">窗口</A>
 	`s	jump to the original position of the cursor
 
 For something more advanced see |<A HREF="builtin.html#winsaveview()">winsaveview()</A>| and |<A HREF="builtin.html#winrestview()">winrestview()</A>|.
@@ -544,10 +544,10 @@ A slightly more advanced version is used in the |<A HREF="pi_paren.html#matchpar
 
 ==============================================================================
 
-Opening help in the current <A HREF="windows.html#window">window</A>				*<A NAME="help-curwin"></A><B>help-curwin</B>*
+Opening help in the current<A HREF="windows.html#window">窗口</A>				*<A NAME="help-curwin"></A><B>help-curwin</B>*
 
-By default, help is displayed in a split <A HREF="windows.html#window">window</A>.  If you prefer <A HREF="motion.html#it">it</A> opens in
-the current <A HREF="windows.html#window">window</A>, try this custom `:HelpCurwin` command:
+By default, help is displayed in a split<A HREF="windows.html#window">窗口</A>.  If you prefer <A HREF="motion.html#it">it</A> opens in
+the current<A HREF="windows.html#window">窗口</A>, try this custom `:HelpCurwin` command:
 
 <B>	command -bar -nargs=? -complete=help HelpCurwin execute s:HelpCurwin(&lt;q-args&gt;)</B>
 <B>	let s:did_open_help = v:false</B>

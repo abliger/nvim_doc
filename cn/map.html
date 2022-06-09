@@ -136,7 +136,7 @@ modes.
 			<A HREF="#{rhs}">{rhs}</A>, is then further scanned for mappings.  This
 			allows for nested and recursive use of mappings.
 			Note: Trailing spaces are included in the <A HREF="#{rhs}">{rhs}</A>,
-			because space is a valid <A HREF="intro.html#Normal">Normal</A> mode command.
+			because space is a valid <A HREF="intro.html#Normal">正常</A>模式 command.
 			See |<A HREF="#map-trailing-white">map-trailing-white</A>|.
 
 
@@ -504,16 +504,16 @@ Note:
 		*<A NAME="mapmode-nvo"></A><B>mapmode-nvo</B>* *<A NAME="mapmode-n"></A><B>mapmode-n</B>* *<A NAME="mapmode-v"></A><B>mapmode-v</B>* *<A NAME="mapmode-o"></A><B>mapmode-o</B>* *<A NAME="mapmode-t"></A><B>mapmode-t</B>*
 
 There are seven sets of mappings
-- For <A HREF="intro.html#Normal">Normal</A> mode: When typing commands.
+- For <A HREF="intro.html#Normal">正常</A>模式: When typing commands.
 - For <A HREF="visual.html#Visual">Visual</A> mode: When typing commands while the <A HREF="visual.html#Visual">Visual</A> area is highlighted.
 - For <A HREF="visual.html#Select">Select</A> mode: like <A HREF="visual.html#Visual">Visual</A> mode but typing text replaces the selection.
 - For <A HREF="intro.html#Operator-pending">Operator-pending</A> mode: When an <A HREF="motion.html#operator">operator</A> is pending (after &quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#y">y</A>&quot;, &quot;<A HREF="change.html#c">c</A>&quot;,
   etc.).  See below: |<A HREF="#omap-info">omap-info</A>|.
-- For <A HREF="insert.html#Insert">Insert</A> mode.  These are also used in <A HREF="insert.html#Replace">Replace</A> mode.
+- For <A HREF="intro.html#Insert">插入</A>模式.  These are also used in <A HREF="insert.html#Replace">Replace</A> mode.
 - For <A HREF="cmdline.html#Command-line">Command-line</A> mode: When entering a &quot;<A HREF="cmdline.html#:">:</A>&quot; or &quot;<A HREF="pattern.html#/">/</A>&quot; command.
 - For Terminal mode: When typing in a |<A HREF="various.html#:terminal">:terminal</A>| buffer.
 
-Special <A HREF="change.html#case">case</A>: While typing a <A HREF="intro.html#count">count</A> for a command in <A HREF="intro.html#Normal">Normal</A> mode, <A HREF="#mapping">mapping</A> zero
+Special <A HREF="change.html#case">case</A>: While typing a <A HREF="intro.html#count">count</A> for a command in <A HREF="intro.html#Normal">正常</A>模式, <A HREF="#mapping">mapping</A> zero
 is disabled.  This makes <A HREF="motion.html#it">it</A> possible to map zero without making <A HREF="motion.html#it">it</A> impossible
 to type a <A HREF="intro.html#count">count</A> with a zero.
 
@@ -576,7 +576,7 @@ better to explicitly use <A HREF="#:xmap">:xmap</A> and <A HREF="#:smap">:smap</
 
 
 			*<A NAME="mapmode-ic"></A><B>mapmode-ic</B>* *<A NAME="mapmode-i"></A><B>mapmode-i</B>* *<A NAME="mapmode-c"></A><B>mapmode-c</B>* *<A NAME="mapmode-l"></A><B>mapmode-l</B>*
-Some commands work both in <A HREF="insert.html#Insert">Insert</A> mode and <A HREF="cmdline.html#Command-line">Command-line</A> mode, some not:
+Some commands work both in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="cmdline.html#Command-line">Command-line</A> mode, some not:
 
 <B><FONT color="#3A6F2B">    COMMANDS				      MODES </FONT></B>
 <B><FONT color="#3A6F2B">					  Insert  Command-line	Lang-Arg </FONT></B>
@@ -605,7 +605,7 @@ the omap start <A HREF="visual.html#Visual">Visual</A> mode to select the text t
 that operates on a function name in the current line:
 <B>	onoremap &lt;silent&gt; F :&lt;C-U&gt;normal! 0f(hviw&lt;CR&gt;</B>
 The <A HREF="scroll.html#CTRL-U">CTRL-U</A> (&lt;C-U&gt;) is used to remove the range that Vim may insert.  The
-<A HREF="intro.html#Normal">Normal</A> mode commands find the first '<A HREF="motion.html#(">(</A>' character and select the first <A HREF="motion.html#word">word</A>
+<A HREF="intro.html#Normal">正常</A>模式 commands find the first '<A HREF="motion.html#(">(</A>' character and select the first <A HREF="motion.html#word">word</A>
 before <A HREF="motion.html#it">it</A>.  That usually is the function name.
 
 To enter a <A HREF="#mapping">mapping</A> for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode, but not <A HREF="intro.html#Operator-pending">Operator-pending</A> mode,
@@ -620,7 +620,7 @@ Likewise for a <A HREF="#mapping">mapping</A> for <A HREF="visual.html#Visual">V
 
 						*<A NAME="language-mapping"></A><B>language-mapping</B>*
 &quot;<A HREF="#:lmap">:lmap</A>&quot; defines a <A HREF="#mapping">mapping</A> that applies to:
-- <A HREF="insert.html#Insert">Insert</A> mode
+- <A HREF="intro.html#Insert">插入</A>模式
 - <A HREF="cmdline.html#Command-line">Command-line</A> mode
 - when entering a search <A HREF="pattern.html#pattern">pattern</A>
 - the argument of the commands that accept a text character, such <A HREF="motion.html#as">as</A> &quot;<A HREF="change.html#r">r</A>&quot; and
@@ -631,12 +631,12 @@ buffer, not a Vim command character.  &quot;Lang-Arg&quot; isn't really another 
 it's just used here for this situation.
    The simplest way to load a set of related language mappings is by using the
 <A HREF="options.html#'keymap'">'keymap'</A> option.  See |<A HREF="usr_45.html#45.5">45.5</A>|.
-   In <A HREF="insert.html#Insert">Insert</A> mode and in <A HREF="cmdline.html#Command-line">Command-line</A> mode the mappings can be disabled with
+   In <A HREF="intro.html#Insert">插入</A>模式 and in <A HREF="cmdline.html#Command-line">Command-line</A> mode the mappings can be disabled with
 the CTRL-^ command |<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>| |<A HREF="cmdline.html#c_CTRL-^">c_CTRL-^</A>|. These commands change the value of
 the <A HREF="options.html#'iminsert'">'iminsert'</A> option.  When starting to enter a normal command line (not a
 search <A HREF="pattern.html#pattern">pattern</A>) the mappings are disabled until a <A HREF="editing.html#CTRL-^">CTRL-^</A> is typed.  The state
-last used is remembered for <A HREF="insert.html#Insert">Insert</A> mode and Search patterns separately.  The
-state for <A HREF="insert.html#Insert">Insert</A> mode is also used when typing a character <A HREF="motion.html#as">as</A> an argument to
+last used is remembered for <A HREF="intro.html#Insert">插入</A>模式 and Search patterns separately.  The
+state for <A HREF="intro.html#Insert">插入</A>模式 is also used when typing a character <A HREF="motion.html#as">as</A> an argument to
 command like &quot;<A HREF="motion.html#f">f</A>&quot; or &quot;<A HREF="motion.html#t">t</A>&quot;.
    Language mappings will never be applied to already mapped characters.  They
 are only used for typed characters.  This assumes that the language <A HREF="#mapping">mapping</A>
@@ -859,7 +859,7 @@ this (see |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|).  Example:
 <B>   :map  _ls  :!ls -l %:S&lt;CR&gt;:echo "the end"&lt;CR&gt;</B>
 
 To avoid <A HREF="#mapping">mapping</A> of the characters you type in insert or <A HREF="cmdline.html#Command-line">Command-line</A> mode,
-type a <A HREF="visual.html#CTRL-V">CTRL-V</A> first.  The <A HREF="#mapping">mapping</A> in <A HREF="insert.html#Insert">Insert</A> mode is disabled if the <A HREF="options.html#'paste'">'paste'</A>
+type a <A HREF="visual.html#CTRL-V">CTRL-V</A> first.  The <A HREF="#mapping">mapping</A> in <A HREF="intro.html#Insert">插入</A>模式 is disabled if the <A HREF="options.html#'paste'">'paste'</A>
 option is on.
 
 							*<A NAME="map-error"></A><B>map-error</B>*
@@ -1091,7 +1091,7 @@ The `mode()` function will return the state <A HREF="motion.html#as">as</A> <A H
 
 2. <A HREF="#Abbreviations">Abbreviations</A>			*<A NAME="abbreviations"></A><B>abbreviations</B>* *<A NAME="Abbreviations"></A><B>Abbreviations</B>*
 
-<A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="insert.html#Insert">Insert</A> mode, <A HREF="insert.html#Replace">Replace</A> mode and <A HREF="cmdline.html#Command-line">Command-line</A> mode.
+<A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="insert.html#Replace">Replace</A> mode and <A HREF="cmdline.html#Command-line">Command-line</A> mode.
 If you enter a <A HREF="motion.html#word">word</A> that is an abbreviation, <A HREF="motion.html#it">it</A> is replaced with the <A HREF="motion.html#word">word</A> <A HREF="motion.html#it">it</A>
 stands for.  This can be used to save typing for often used long words.  And
 you can use <A HREF="motion.html#it">it</A> to automatically correct obvious spelling <A HREF="message.html#errors">errors</A>.
@@ -1162,7 +1162,7 @@ Examples: ({CURSOR} is where you type a non-keyword character)
  		&quot;test;;&quot;	  is not expanded
 		&quot;test ;;&quot;	  is expanded to &quot;test &lt;endofline&gt;&quot;
 
-To avoid the abbreviation in <A HREF="insert.html#Insert">Insert</A> mode: Type <A HREF="visual.html#CTRL-V">CTRL-V</A> before the character
+To avoid the abbreviation in <A HREF="intro.html#Insert">插入</A>模式: Type <A HREF="visual.html#CTRL-V">CTRL-V</A> before the character
 that would trigger the abbreviation.  E.g. <A HREF="visual.html#CTRL-V">CTRL-V</A> <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A>.  Or type part of
 the abbreviation, exit insert mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, re-enter insert mode with &quot;<A HREF="insert.html#a">a</A>&quot;
 and type the rest.
@@ -1260,7 +1260,7 @@ See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 						*<A NAME=":ia"></A><B>:ia</B>* *<A NAME=":iabbrev"></A><B>:iabbrev</B>*
 :ia[bbrev] [&lt;expr&gt;] [&lt;buffer&gt;] [lhs] [rhs]
-			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="insert.html#Insert">Insert</A> mode only.
+			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="intro.html#Insert">插入</A>模式 only.
 
 
 						*<A NAME=":iuna"></A><B>:iuna</B>* *<A NAME=":iunabbrev"></A><B>:iunabbrev</B>*
@@ -1270,7 +1270,7 @@ See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 						*<A NAME=":inorea"></A><B>:inorea</B>* *<A NAME=":inoreabbrev"></A><B>:inoreabbrev</B>*
 :inorea[bbrev] [&lt;expr&gt;] [&lt;buffer&gt;] [lhs] [rhs]
-			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="insert.html#Insert">Insert</A> mode only and no
+			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="intro.html#Insert">插入</A>模式 only and no
 			remapping for this <A HREF="#{rhs}">{rhs}</A>
 
 
@@ -1279,7 +1279,7 @@ See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 
 							*<A NAME=":iabc"></A><B>:iabc</B>* *<A NAME=":iabclear"></A><B>:iabclear</B>*
-:iabc[lear] [&lt;buffer&gt;]	Remove all <A HREF="#abbreviations">abbreviations</A> for <A HREF="insert.html#Insert">Insert</A> mode.
+:iabc[lear] [&lt;buffer&gt;]	Remove all <A HREF="#abbreviations">abbreviations</A> for <A HREF="intro.html#Insert">插入</A>模式.
 
 
 							*<A NAME=":cabc"></A><B>:cabc</B>* *<A NAME=":cabclear"></A><B>:cabclear</B>*
@@ -1323,7 +1323,7 @@ Stored <A HREF="motion.html#as">as</A>:  esc     ^V^[
 	Later, when the abbreviation is expanded because the user typed in
 	the <A HREF="motion.html#word">word</A> &quot;esc&quot;, the long form is subjected to the same type of
 	^V interpretation <A HREF="motion.html#as">as</A> keyboard input.  So the ^V protects the ^[
-	character from being interpreted <A HREF="motion.html#as">as</A> the &quot;exit <A HREF="insert.html#Insert">Insert</A> mode&quot; character.
+	character from being interpreted <A HREF="motion.html#as">as</A> the &quot;exit <A HREF="intro.html#Insert">插入</A>模式&quot; character.
 	Instead, the ^[ is inserted into the text.
 
 Expands to: ^[
@@ -1691,8 +1691,8 @@ Your command preview routine must implement this protocol:
    |<A HREF="api.html#nvim_buf_set_extmark()">nvim_buf_set_extmark()</A>| for help on how to add highlights to a <A HREF="api.html#namespace">namespace</A>).
 4. Return an integer (0, 1, 2) which controls how Nvim behaves <A HREF="motion.html#as">as</A> follows:
    0: No preview is shown.
-   1: Preview is shown without preview <A HREF="windows.html#window">window</A> (even with &quot;inccommand=split&quot;).
-   2: Preview is shown and preview <A HREF="windows.html#window">window</A> is opened (if &quot;inccommand=split&quot;).
+   1: Preview is shown without preview<A HREF="windows.html#window">窗口</A>(even with &quot;inccommand=split&quot;).
+   2: Preview is shown and preview<A HREF="windows.html#window">窗口</A>is opened (if &quot;inccommand=split&quot;).
       For &quot;inccommand=nosplit&quot; this is the same <A HREF="motion.html#as">as</A> 1.
 
 After preview ends, Nvim discards all changes to the buffer and all highlights

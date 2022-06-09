@@ -98,7 +98,7 @@ right to left.
 Bidirectionality (or bidi for short) is what <A HREF="mbyte.html#Unicode">Unicode</A> offers <A HREF="motion.html#as">as</A> a full
 solution to these languages.  Bidi offers the user the ability to view
 both right-to-left <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> left-to-right text properly at the same time
-within the same <A HREF="windows.html#window">window</A>.  Vim currently, due to simplicity, does not offer
+within the same<A HREF="windows.html#window">窗口</A>.  Vim currently, due to simplicity, does not offer
 bidi and is merely opting to present a functional means to display/enter/use
 right-to-left languages.  An older hybrid solution in which direction is
 encoded for every character (or group of characters) are not supported either
@@ -110,7 +110,7 @@ Highlights
 <A HREF="insert.html#o">o</A>  Editing left-to-right files <A HREF="motion.html#as">as</A> in the original Vim, no change.
 
 <A HREF="insert.html#o">o</A>  Viewing and editing files in right-to-left <A HREF="windows.html#windows">windows</A>.  File orientation
-   is per <A HREF="windows.html#window">window</A>, so <A HREF="motion.html#it">it</A> is possible to view the same file in right-to-left
+   is per<A HREF="windows.html#window">窗口</A>, so <A HREF="motion.html#it">it</A> is possible to view the same file in right-to-left
    and left-to-right modes, simultaneously.  (Useful for editing mixed files
    in which both right-to-left and left-to-right text exist).
 
@@ -133,7 +133,7 @@ Of Interest...
 
 <A HREF="insert.html#o">o</A>  Invocations
    -----------
-   + <A HREF="options.html#'rightleft'">'rightleft'</A> ('rl') sets <A HREF="windows.html#window">window</A> orientation to right-to-left.
+   + <A HREF="options.html#'rightleft'">'rightleft'</A> ('rl') sets<A HREF="windows.html#window">窗口</A>orientation to right-to-left.
    + <A HREF="options.html#'delcombine'">'delcombine'</A> ('deco'), <A HREF="options.html#boolean">boolean</A>, if editing <A HREF="mbyte.html#UTF-8">UTF-8</A> encoded languages,
      allows one to remove a composing character which gets superimposed
      on those that preceded them (some languages require this).
@@ -155,11 +155,11 @@ Of Interest...
    There is no reverse replace mode (yet).
 
    If the <A HREF="options.html#'showmode'">'showmode'</A> option is set, &quot;<A HREF="starting.html#--">--</A> REVERSE INSERT --&quot; will be shown
-   in the status line when reverse <A HREF="insert.html#Insert">Insert</A> mode is active.
+   in the status line when reverse <A HREF="intro.html#Insert">插入</A>模式 is active.
 
-<A HREF="insert.html#o">o</A>  Pasting when in a rightleft <A HREF="windows.html#window">window</A>
+<A HREF="insert.html#o">o</A>  Pasting when in a rightleft<A HREF="windows.html#window">窗口</A>
    ----------------------------------
-   When cutting text with the mouse and pasting <A HREF="motion.html#it">it</A> in a rightleft <A HREF="windows.html#window">window</A>
+   When cutting text with the mouse and pasting <A HREF="motion.html#it">it</A> in a rightleft<A HREF="windows.html#window">窗口</A>
    the text will be reversed, because the characters come from the cut buffer
    from the left to the right, while inserted in the file from the right to
    the left.   In order to avoid <A HREF="motion.html#it">it</A>, toggle <A HREF="options.html#'revins'">'revins'</A> before pasting.
@@ -167,7 +167,7 @@ Of Interest...
 
 Bugs
 <A HREF="insert.html#o">o</A>  Does not handle <A HREF="change.html#CTRL-A">CTRL-A</A> and <A HREF="change.html#CTRL-X">CTRL-X</A> commands (add and subtract) correctly
-   when in rightleft <A HREF="windows.html#window">window</A>.
+   when in rightleft<A HREF="windows.html#window">窗口</A>.
 
 <A HREF="insert.html#o">o</A>  Does not support reverse insert and rightleft modes on the command-line.
    However, functionality of the editor is not reduced, because <A HREF="motion.html#it">it</A> is

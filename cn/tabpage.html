@@ -95,7 +95,7 @@ A <A HREF="intro.html#tab">tab</A> page holds one or more <A HREF="windows.html#
 pages, so that you have several collections of <A HREF="windows.html#windows">windows</A> to work on different
 things.
 
-Usually you will see a <A HREF="eval.html#list">list</A> of labels at the top of the Vim <A HREF="windows.html#window">window</A>, one for
+Usually you will see a <A HREF="eval.html#list">list</A> of labels at the top of the Vim<A HREF="windows.html#window">窗口</A>, one for
 each <A HREF="intro.html#tab">tab</A> page.  With the mouse you can click on the label to jump to that <A HREF="intro.html#tab">tab</A>
 page.  There are other ways to move between <A HREF="intro.html#tab">tab</A> pages, see below.
 
@@ -105,7 +105,7 @@ The commands that are aware of other <A HREF="intro.html#tab">tab</A> pages than
 mentioned below.
 
 Tabs are also a nice way to edit a buffer temporarily without <A HREF="change.html#changing">changing</A> the
-current <A HREF="windows.html#window">window</A> layout.  Open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="diff.html#do">do</A> whatever you want to <A HREF="diff.html#do">do</A> and
+current<A HREF="windows.html#window">窗口</A>layout.  Open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="diff.html#do">do</A> whatever you want to <A HREF="diff.html#do">do</A> and
 close the <A HREF="intro.html#tab">tab</A> page.
 
 ==============================================================================
@@ -132,7 +132,7 @@ For the related autocommands see |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
 
 :[count]tabe[dit]				*<A NAME=":tabe"></A><B>:tabe</B>* *<A NAME=":tabedit"></A><B>:tabedit</B>* *<A NAME=":tabnew"></A><B>:tabnew</B>*
 :[count]tabnew
-		Open a new <A HREF="intro.html#tab">tab</A> page with an empty <A HREF="windows.html#window">window</A>, after the current
+		Open a new <A HREF="intro.html#tab">tab</A> page with an empty<A HREF="windows.html#window">窗口</A>, after the current
 		<A HREF="intro.html#tab">tab</A> page. If <A HREF="intro.html#[count]">[count]</A> is given the new <A HREF="intro.html#tab">tab</A> page appears after
 		the <A HREF="#tabpage">tabpage</A> <A HREF="intro.html#[count]">[count]</A> otherwise the new <A HREF="intro.html#tab">tab</A> page will appear
 		after the current one.
@@ -156,7 +156,7 @@ For the related autocommands see |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
 
 
 :[count]tab {cmd}					*<A NAME=":tab"></A><B>:tab</B>*
-		Execute {cmd} and when <A HREF="motion.html#it">it</A> opens a new <A HREF="windows.html#window">window</A> open a new <A HREF="intro.html#tab">tab</A>
+		Execute {cmd} and when <A HREF="motion.html#it">it</A> opens a new<A HREF="windows.html#window">窗口</A>open a new <A HREF="intro.html#tab">tab</A>
 		page instead.  Doesn't work for |<A HREF="diff.html#:diffsplit">:diffsplit</A>|, |<A HREF="diff.html#:diffpatch">:diffpatch</A>|,
 		|<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
 		If <A HREF="intro.html#[count]">[count]</A> is given the new <A HREF="intro.html#tab">tab</A> page appears after the <A HREF="intro.html#tab">tab</A>
@@ -184,7 +184,7 @@ For the related autocommands see |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
 
 CLOSING A TAB PAGE:
 
-Closing the last <A HREF="windows.html#window">window</A> of a <A HREF="intro.html#tab">tab</A> page closes the <A HREF="intro.html#tab">tab</A> page too, unless there is
+Closing the last<A HREF="windows.html#window">窗口</A>of a <A HREF="intro.html#tab">tab</A> page closes the <A HREF="intro.html#tab">tab</A> page too, unless there is
 only one <A HREF="intro.html#tab">tab</A> page.
 
 Using the mouse: If the <A HREF="intro.html#tab">tab</A> page line is displayed you can click in the &quot;<A HREF="change.html#X">X</A>&quot; at
@@ -198,7 +198,7 @@ something else.
 
 		- There is only one <A HREF="intro.html#tab">tab</A> page on the screen.		*<A NAME="E784"></A><B>E784</B>*
 		- When <A HREF="options.html#'hidden'">'hidden'</A> is not set, [!] is not used, a buffer has
-		  changes, and there is no other <A HREF="windows.html#window">window</A> on this buffer.
+		  changes, and there is no other<A HREF="windows.html#window">窗口</A>on this buffer.
 		Changes to the buffer are not written and won't get lost, so
 		this is a &quot;safe&quot; command.
 <B>                    :tabclose   " close the current tab page</B>
@@ -316,7 +316,7 @@ Other commands:
 
 							*<A NAME=":tabs"></A><B>:tabs</B>*
 <A HREF="#:tabs">:tabs</A>		<A HREF="eval.html#List">List</A> the <A HREF="intro.html#tab">tab</A> pages and the <A HREF="windows.html#windows">windows</A> they contain.
-		Shows a &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; for the current <A HREF="windows.html#window">window</A>.
+		Shows a &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; for the current<A HREF="windows.html#window">窗口</A>.
 		Shows a &quot;<A HREF="motion.html#+">+</A>&quot; for modified <A HREF="windows.html#buffers">buffers</A>.
 		For example:
 <B><FONT color="#3A6F2B">			Tab page 1 </FONT></B>
@@ -376,7 +376,7 @@ LOOPING OVER TAB PAGES:
 <B>			:tabnext</B>
 <B>			:{cmd}</B>
 <B>			etc.</B>
- 		This only operates in the current <A HREF="windows.html#window">window</A> of each <A HREF="intro.html#tab">tab</A> page.
+ 		This only operates in the current<A HREF="windows.html#window">窗口</A>of each <A HREF="intro.html#tab">tab</A> page.
 		When an error is detected on one <A HREF="intro.html#tab">tab</A> page, further <A HREF="intro.html#tab">tab</A> pages
 		will not be visited.
 		The last <A HREF="intro.html#tab">tab</A> page (or where an error occurred) becomes the
@@ -415,11 +415,11 @@ Currently there is only one option local to a <A HREF="intro.html#tab">tab</A> p
 The <A HREF="autocmd.html#TabLeave">TabLeave</A> and <A HREF="autocmd.html#TabEnter">TabEnter</A> <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> can be used to <A HREF="diff.html#do">do</A> something when
 switching from one <A HREF="intro.html#tab">tab</A> page to another.  The exact order depends on what you
 are doing.  When creating a new <A HREF="intro.html#tab">tab</A> page this works <A HREF="motion.html#as">as</A> if you create a new
-<A HREF="windows.html#window">window</A> on the same buffer and then edit another buffer.  Thus &quot;<A HREF="#:tabnew">:tabnew</A>&quot;
+<A HREF="windows.html#window">窗口</A>on the same buffer and then edit another buffer.  Thus &quot;<A HREF="#:tabnew">:tabnew</A>&quot;
 triggers:
-	<A HREF="autocmd.html#WinLeave">WinLeave</A>		leave current <A HREF="windows.html#window">window</A>
+	<A HREF="autocmd.html#WinLeave">WinLeave</A>		leave current<A HREF="windows.html#window">窗口</A>
 	<A HREF="autocmd.html#TabLeave">TabLeave</A>		leave current <A HREF="intro.html#tab">tab</A> page
-	<A HREF="autocmd.html#WinEnter">WinEnter</A>		enter <A HREF="windows.html#window">window</A> in new <A HREF="intro.html#tab">tab</A> page
+	<A HREF="autocmd.html#WinEnter">WinEnter</A>		enter<A HREF="windows.html#window">窗口</A>in new <A HREF="intro.html#tab">tab</A> page
 	<A HREF="autocmd.html#TabEnter">TabEnter</A>		enter new <A HREF="intro.html#tab">tab</A> page
 	<A HREF="autocmd.html#BufLeave">BufLeave</A>		leave current buffer
 	<A HREF="autocmd.html#BufEnter">BufEnter</A>		enter new empty buffer
@@ -449,7 +449,7 @@ always.
 The highlighting of the <A HREF="intro.html#tab">tab</A> pages line is set with the groups TabLine
 TabLineSel and TabLineFill.  |<A HREF="syntax.html#hl-TabLine">hl-TabLine</A>| |<A HREF="syntax.html#hl-TabLineSel">hl-TabLineSel</A>| |<A HREF="syntax.html#hl-TabLineFill">hl-TabLineFill</A>|
 
-A &quot;<A HREF="motion.html#+">+</A>&quot; will be shown for a <A HREF="intro.html#tab">tab</A> page that has a modified <A HREF="windows.html#window">window</A>.  The number of
+A &quot;<A HREF="motion.html#+">+</A>&quot; will be shown for a <A HREF="intro.html#tab">tab</A> page that has a modified<A HREF="windows.html#window">窗口</A>.  The number of
 <A HREF="windows.html#windows">windows</A> in a <A HREF="#tabpage">tabpage</A> is also shown.  Thus &quot;3+&quot; means three <A HREF="windows.html#windows">windows</A> and one of
 them has a modified buffer.
 
@@ -527,7 +527,7 @@ See the <A HREF="options.html#'statusline'">'statusline'</A> option for the form
 
 The &quot;&#37;N&quot; item can be used for the current <A HREF="intro.html#tab">tab</A> page number.  The |<A HREF="eval.html#v:lnum">v:lnum</A>|
 variable is also set to this number when the option is evaluated.
-The items that use a file name refer to the current <A HREF="windows.html#window">window</A> of the <A HREF="intro.html#tab">tab</A> page.
+The items that use a file name refer to the current<A HREF="windows.html#window">窗口</A>of the <A HREF="intro.html#tab">tab</A> page.
 
 Note that <A HREF="syntax.html#syntax">syntax</A> highlighting is not used for the option.  The &#37;T and &#37;X
 items are also ignored.

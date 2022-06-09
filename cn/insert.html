@@ -112,7 +112,7 @@ all the time.
 <B><FONT color="#3A6F2B">char		action	</FONT></B>
 
 						*<A NAME="i_CTRL-["></A><B>i_CTRL-[</B>* *<A NAME="i_&lt;Esc&gt;"></A><B>i_&lt;Esc&gt;</B>*
-<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> or CTRL-[	End insert or <A HREF="#Replace">Replace</A> mode, go back to <A HREF="intro.html#Normal">Normal</A> mode.  Finish
+<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> or CTRL-[	End insert or <A HREF="#Replace">Replace</A> mode, go back to <A HREF="intro.html#Normal">正常</A>模式.  Finish
 		abbreviation.
 		Note: If your <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key is hard to hit, try CTRL-[ instead.
 
@@ -122,7 +122,7 @@ all the time.
 		insert-mode <A HREF="map.html#mapping">mapping</A>.
 
 						*<A NAME="i_CTRL-C"></A><B>i_CTRL-C</B>*
-<A HREF="pattern.html#CTRL-C">CTRL-C</A>		Quit insert mode, go back to <A HREF="intro.html#Normal">Normal</A> mode.  Do not check for
+<A HREF="pattern.html#CTRL-C">CTRL-C</A>		Quit insert mode, go back to <A HREF="intro.html#Normal">正常</A>模式.  Do not check for
 		<A HREF="map.html#abbreviations">abbreviations</A>.  Does not trigger the |<A HREF="autocmd.html#InsertLeave">InsertLeave</A>| <A HREF="autocmd.html#autocommand">autocommand</A>
 		event.
 
@@ -313,7 +313,7 @@ CTRL-SHIFT-Q	Works just like <A HREF="visual.html#CTRL-V">CTRL-V</A>, but <A HRE
 		modifier into the key.
 
 <A HREF="change.html#CTRL-X">CTRL-X</A>		Enter <A HREF="change.html#CTRL-X">CTRL-X</A> mode.  This is a sub-mode where commands can
-		be given to complete words or scroll the <A HREF="windows.html#window">window</A>.  See
+		be given to complete words or scroll the<A HREF="windows.html#window">窗口</A>.  See
 		|<A HREF="#i_CTRL-X">i_CTRL-X</A>| and |<A HREF="#ins-completion">ins-completion</A>|.
 
 
@@ -328,9 +328,9 @@ CTRL-SHIFT-Q	Works just like <A HREF="visual.html#CTRL-V">CTRL-V</A>, but <A HRE
 
 						*<A NAME="i_CTRL-_"></A><B>i_CTRL-_</B>*
 CTRL-_		Switch between languages, <A HREF="motion.html#as">as</A> follows:
-		-  When in a rightleft <A HREF="windows.html#window">window</A>, revins and nohkmap are toggled,
+		-  When in a rightleft<A HREF="windows.html#window">窗口</A>, revins and nohkmap are toggled,
 		   since English will likely be inserted in this <A HREF="change.html#case">case</A>.
-		-  When in a norightleft <A HREF="windows.html#window">window</A>, revins and hkmap are toggled,
+		-  When in a norightleft<A HREF="windows.html#window">窗口</A>, revins and hkmap are toggled,
 		   since Hebrew will likely be inserted in this <A HREF="change.html#case">case</A>.
 
 		CTRL-_ moves the cursor to the end of the typed text.
@@ -420,20 +420,20 @@ Also see <A HREF="options.html#'fileformat'">'fileformat'</A>.
 <A HREF="change.html#CTRL-X">CTRL-X</A> enters a sub-mode where several commands can be used.  Most of these
 commands <A HREF="diff.html#do">do</A> keyword completion; see |<A HREF="#ins-completion">ins-completion</A>|.
 
-Two commands can be used to scroll the <A HREF="windows.html#window">window</A> up or down, without <A HREF="starting.html#exiting">exiting</A>
+Two commands can be used to scroll the<A HREF="windows.html#window">窗口</A>up or down, without <A HREF="starting.html#exiting">exiting</A>
 insert mode:
 
 
 						*<A NAME="i_CTRL-X_CTRL-E"></A><B>i_CTRL-X_CTRL-E</B>*
-<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-E">CTRL-E</A>		scroll <A HREF="windows.html#window">window</A> one line up.
+<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-E">CTRL-E</A>		scroll<A HREF="windows.html#window">窗口</A>one line up.
 			When doing completion look here: |<A HREF="#complete_CTRL-E">complete_CTRL-E</A>|
 
 
 						*<A NAME="i_CTRL-X_CTRL-Y"></A><B>i_CTRL-X_CTRL-Y</B>*
-<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-Y">CTRL-Y</A>		scroll <A HREF="windows.html#window">window</A> one line down.
+<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-Y">CTRL-Y</A>		scroll<A HREF="windows.html#window">窗口</A>one line down.
 			When doing completion look here: |<A HREF="#complete_CTRL-Y">complete_CTRL-Y</A>|
 
-After <A HREF="change.html#CTRL-X">CTRL-X</A> is pressed, each <A HREF="scroll.html#CTRL-E">CTRL-E</A> (CTRL-Y) scrolls the <A HREF="windows.html#window">window</A> up (down) by
+After <A HREF="change.html#CTRL-X">CTRL-X</A> is pressed, each <A HREF="scroll.html#CTRL-E">CTRL-E</A> (CTRL-Y) scrolls the<A HREF="windows.html#window">窗口</A>up (down) by
 one line unless that would cause the cursor to move from its current position
 in the file.  As soon <A HREF="motion.html#as">as</A> another key is pressed, <A HREF="change.html#CTRL-X">CTRL-X</A> mode is exited and
 that key is interpreted <A HREF="motion.html#as">as</A> in <A HREF="#Insert">Insert</A> mode.
@@ -446,7 +446,7 @@ that key is interpreted <A HREF="motion.html#as">as</A> in <A HREF="#Insert">Ins
 The following keys are special.  They stop the current insert, <A HREF="diff.html#do">do</A> something,
 and then restart insertion.  This means you can <A HREF="diff.html#do">do</A> something without getting
 out of <A HREF="#Insert">Insert</A> mode.  This is very handy if you prefer to use the <A HREF="#Insert">Insert</A> mode
-all the time, just like editors that don't have a separate <A HREF="intro.html#Normal">Normal</A> mode. You
+all the time, just like editors that don't have a separate <A HREF="intro.html#Normal">正常</A>模式. You
 can use <A HREF="motion.html#CTRL-O">CTRL-O</A> if you want to map a function key to a command.
 
 The changes (inserted or deleted characters) before and after these keys can
@@ -493,29 +493,29 @@ like an &quot;<A HREF="#i">i</A>&quot; command.
 
 <A HREF="visual.html#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>	cursor to position of mouse click	     *<A NAME="i_&lt;LeftMouse&gt;"></A><B>i_&lt;LeftMouse&gt;</B>*
 
-<A HREF="scroll.html#&lt;S-Up&gt;">&lt;S-Up&gt;</A>		move <A HREF="windows.html#window">window</A> one page up			     *<A NAME="i_&lt;S-Up&gt;"></A><B>i_&lt;S-Up&gt;</B>*
+<A HREF="scroll.html#&lt;S-Up&gt;">&lt;S-Up&gt;</A>		move<A HREF="windows.html#window">窗口</A>one page up			     *<A NAME="i_&lt;S-Up&gt;"></A><B>i_&lt;S-Up&gt;</B>*
 
-<A HREF="scroll.html#&lt;PageUp&gt;">&lt;PageUp&gt;</A>	move <A HREF="windows.html#window">window</A> one page up			     *<A NAME="i_&lt;PageUp&gt;"></A><B>i_&lt;PageUp&gt;</B>*
+<A HREF="scroll.html#&lt;PageUp&gt;">&lt;PageUp&gt;</A>	move<A HREF="windows.html#window">窗口</A>one page up			     *<A NAME="i_&lt;PageUp&gt;"></A><B>i_&lt;PageUp&gt;</B>*
 
-<A HREF="scroll.html#&lt;S-Down&gt;">&lt;S-Down&gt;</A>	move <A HREF="windows.html#window">window</A> one page down		     *<A NAME="i_&lt;S-Down&gt;"></A><B>i_&lt;S-Down&gt;</B>*
+<A HREF="scroll.html#&lt;S-Down&gt;">&lt;S-Down&gt;</A>	move<A HREF="windows.html#window">窗口</A>one page down		     *<A NAME="i_&lt;S-Down&gt;"></A><B>i_&lt;S-Down&gt;</B>*
 
-<A HREF="scroll.html#&lt;PageDown&gt;">&lt;PageDown&gt;</A>	move <A HREF="windows.html#window">window</A> one page down		     *<A NAME="i_&lt;PageDown&gt;"></A><B>i_&lt;PageDown&gt;</B>*
+<A HREF="scroll.html#&lt;PageDown&gt;">&lt;PageDown&gt;</A>	move<A HREF="windows.html#window">窗口</A>one page down		     *<A NAME="i_&lt;PageDown&gt;"></A><B>i_&lt;PageDown&gt;</B>*
 
-&lt;ScrollWheelDown&gt;    move <A HREF="windows.html#window">window</A> three lines down	*<A NAME="i_&lt;ScrollWheelDown&gt;"></A><B>i_&lt;ScrollWheelDown&gt;</B>*
+&lt;ScrollWheelDown&gt;    move<A HREF="windows.html#window">窗口</A>three lines down	*<A NAME="i_&lt;ScrollWheelDown&gt;"></A><B>i_&lt;ScrollWheelDown&gt;</B>*
 
-&lt;S-ScrollWheelDown&gt;  move <A HREF="windows.html#window">window</A> one page down		*<A NAME="i_&lt;S-ScrollWheelDown&gt;"></A><B>i_&lt;S-ScrollWheelDown&gt;</B>*
+&lt;S-ScrollWheelDown&gt;  move<A HREF="windows.html#window">窗口</A>one page down		*<A NAME="i_&lt;S-ScrollWheelDown&gt;"></A><B>i_&lt;S-ScrollWheelDown&gt;</B>*
 
-&lt;ScrollWheelUp&gt;      move <A HREF="windows.html#window">window</A> three lines up		*<A NAME="i_&lt;ScrollWheelUp&gt;"></A><B>i_&lt;ScrollWheelUp&gt;</B>*
+&lt;ScrollWheelUp&gt;      move<A HREF="windows.html#window">窗口</A>three lines up		*<A NAME="i_&lt;ScrollWheelUp&gt;"></A><B>i_&lt;ScrollWheelUp&gt;</B>*
 
-&lt;S-ScrollWheelUp&gt;    move <A HREF="windows.html#window">window</A> one page up		*<A NAME="i_&lt;S-ScrollWheelUp&gt;"></A><B>i_&lt;S-ScrollWheelUp&gt;</B>*
+&lt;S-ScrollWheelUp&gt;    move<A HREF="windows.html#window">窗口</A>one page up		*<A NAME="i_&lt;S-ScrollWheelUp&gt;"></A><B>i_&lt;S-ScrollWheelUp&gt;</B>*
 
-&lt;ScrollWheelLeft&gt;    move <A HREF="windows.html#window">window</A> six columns left	*<A NAME="i_&lt;ScrollWheelLeft&gt;"></A><B>i_&lt;ScrollWheelLeft&gt;</B>*
+&lt;ScrollWheelLeft&gt;    move<A HREF="windows.html#window">窗口</A>six columns left	*<A NAME="i_&lt;ScrollWheelLeft&gt;"></A><B>i_&lt;ScrollWheelLeft&gt;</B>*
 
-&lt;S-ScrollWheelLeft&gt;  move <A HREF="windows.html#window">window</A> one page left		*<A NAME="i_&lt;S-ScrollWheelLeft&gt;"></A><B>i_&lt;S-ScrollWheelLeft&gt;</B>*
+&lt;S-ScrollWheelLeft&gt;  move<A HREF="windows.html#window">窗口</A>one page left		*<A NAME="i_&lt;S-ScrollWheelLeft&gt;"></A><B>i_&lt;S-ScrollWheelLeft&gt;</B>*
 
-&lt;ScrollWheelRight&gt;   move <A HREF="windows.html#window">window</A> six columns right	*<A NAME="i_&lt;ScrollWheelRight&gt;"></A><B>i_&lt;ScrollWheelRight&gt;</B>*
+&lt;ScrollWheelRight&gt;   move<A HREF="windows.html#window">窗口</A>six columns right	*<A NAME="i_&lt;ScrollWheelRight&gt;"></A><B>i_&lt;ScrollWheelRight&gt;</B>*
 
-&lt;S-ScrollWheelRight&gt; move <A HREF="windows.html#window">window</A> one page right		*<A NAME="i_&lt;S-ScrollWheelRight&gt;"></A><B>i_&lt;S-ScrollWheelRight&gt;</B>*
+&lt;S-ScrollWheelRight&gt; move<A HREF="windows.html#window">窗口</A>one page right		*<A NAME="i_&lt;S-ScrollWheelRight&gt;"></A><B>i_&lt;S-ScrollWheelRight&gt;</B>*
 
 <A HREF="motion.html#CTRL-O">CTRL-O</A>		execute one command, return to <A HREF="#Insert">Insert</A> mode   *<A NAME="i_CTRL-O"></A><B>i_CTRL-O</B>*
 
@@ -535,9 +535,9 @@ beware of the cursor possibly being beyond the end of the line.  Note that the
 command following CTRL-\ <A HREF="motion.html#CTRL-O">CTRL-O</A> can still move the cursor, <A HREF="motion.html#it">it</A> is not restored
 to its original position.
 
-The <A HREF="motion.html#CTRL-O">CTRL-O</A> command takes you to <A HREF="intro.html#Normal">Normal</A> mode.  If you then use a command enter
+The <A HREF="motion.html#CTRL-O">CTRL-O</A> command takes you to <A HREF="intro.html#Normal">正常</A>模式.  If you then use a command enter
 <A HREF="#Insert">Insert</A> mode again <A HREF="motion.html#it">it</A> normally doesn't nest.  Thus when typing &quot;a&lt;C-O&gt;a&quot; and
-then <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> takes you back to <A HREF="intro.html#Normal">Normal</A> mode, you <A HREF="diff.html#do">do</A> not need to type <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> <A HREF="if_cscop.html#twice">twice</A>.
+then <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> takes you back to <A HREF="intro.html#Normal">正常</A>模式, you <A HREF="diff.html#do">do</A> not need to type <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> <A HREF="if_cscop.html#twice">twice</A>.
 An exception is when not typing the command, e.g. when executing a <A HREF="map.html#mapping">mapping</A> or
 sourcing a <A HREF="usr_41.html#script">script</A>.  This makes mappings work that briefly switch to <A HREF="#Insert">Insert</A>
 mode.
@@ -1329,7 +1329,7 @@ items:
 	menu		extra text for the popup menu, displayed after &quot;<A HREF="motion.html#word">word</A>&quot;
 			or &quot;abbr&quot;
 	info		more information about the item, can be displayed in a
-			preview <A HREF="windows.html#window">window</A>
+			preview<A HREF="windows.html#window">窗口</A>
 	kind		single <A HREF="print.html#letter">letter</A> indicating the type of completion
 	icase		when non-zero <A HREF="change.html#case">case</A> is to be ignored when comparing
 			items to be equal; when omitted zero is used, thus
@@ -1352,10 +1352,10 @@ items in the returned <A HREF="eval.html#list">list</A>.
 
 The &quot;menu&quot; item is used in the popup menu and may be truncated, thus <A HREF="motion.html#it">it</A> should
 be relatively short.  The &quot;info&quot; item can be longer, <A HREF="motion.html#it">it</A> will  be displayed in
-the preview <A HREF="windows.html#window">window</A> when &quot;preview&quot; appears in <A HREF="options.html#'completeopt'">'completeopt'</A>.  The &quot;info&quot; item
+the preview<A HREF="windows.html#window">窗口</A>when &quot;preview&quot; appears in <A HREF="options.html#'completeopt'">'completeopt'</A>.  The &quot;info&quot; item
 will also remain displayed after the popup menu has been removed.  This is
 useful for function arguments.  Use a single space for &quot;info&quot; to remove
-existing text in the preview <A HREF="windows.html#window">window</A>.  The size of the preview <A HREF="windows.html#window">window</A> is three
+existing text in the preview<A HREF="windows.html#window">窗口</A>.  The size of the preview<A HREF="windows.html#window">窗口</A>is three
 lines, but <A HREF="options.html#'previewheight'">'previewheight'</A> is used when <A HREF="motion.html#it">it</A> has a value of 1 or 2.
 
 The &quot;kind&quot; item uses a single <A HREF="print.html#letter">letter</A> to indicate the kind of completion.  This
@@ -1375,7 +1375,7 @@ while still searching for matches.  Stop searching when <A HREF="motion.html#it"
 
 							*<A NAME="E840"></A><B>E840</B>*
 The function is allowed to move the cursor, <A HREF="motion.html#it">it</A> is restored afterwards.
-The function is not allowed to move to another <A HREF="windows.html#window">window</A> or delete text.
+The function is not allowed to move to another<A HREF="windows.html#window">窗口</A>or delete text.
 
 An example that completes the names of the months:
 <B>	fun! CompleteMonths(findstart, base)</B>
@@ -2148,7 +2148,7 @@ NOTE: These commands cannot be used with |<A HREF="repeat.html#:global">:global<
 							*<A NAME=":start"></A><B>:start</B>* *<A NAME=":startinsert"></A><B>:startinsert</B>*
 :star[tinsert][!]	Start <A HREF="#Insert">Insert</A> mode (or |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>| in a |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|
 			buffer) just after executing this command.
-			Works like typing &quot;<A HREF="#i">i</A>&quot; in <A HREF="intro.html#Normal">Normal</A> mode.  When the ! is
+			Works like typing &quot;<A HREF="#i">i</A>&quot; in <A HREF="intro.html#Normal">正常</A>模式.  When the ! is
 			included <A HREF="motion.html#it">it</A> works like &quot;<A HREF="#A">A</A>&quot;, append to the line.
 			Otherwise insertion starts at the cursor position.
 			Note that when using this command in a function or
@@ -2166,7 +2166,7 @@ NOTE: These commands cannot be used with |<A HREF="repeat.html#:global">:global<
 
 					*<A NAME="replacing-ex"></A><B>replacing-ex</B>* *<A NAME=":startreplace"></A><B>:startreplace</B>*
 :startr[eplace][!]	Start <A HREF="#Replace">Replace</A> mode just after executing this command.
-			Works just like typing &quot;<A HREF="change.html#R">R</A>&quot; in <A HREF="intro.html#Normal">Normal</A> mode.  When the
+			Works just like typing &quot;<A HREF="change.html#R">R</A>&quot; in <A HREF="intro.html#Normal">正常</A>模式.  When the
 			! is included <A HREF="motion.html#it">it</A> acts just like &quot;$R&quot; had been typed
 			(ie. begin replace mode at the end-of-line).  Other-
 			wise replacement begins at the cursor position.

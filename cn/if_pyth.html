@@ -253,7 +253,7 @@ vim.command(str)					*<A NAME="python-command"></A><B>python-command</B>*
 	Examples:
 <B>	    :py vim.command("set tw=72")</B>
 <B>	    :py vim.command("%s/aaa/bbb/g")</B>
- 	The following definition executes <A HREF="intro.html#Normal">Normal</A> mode commands:
+ 	The following definition executes <A HREF="intro.html#Normal">正常</A>模式 commands:
 <B>		def normal(str):</B>
 <B>			vim.command("normal "+str)</B>
 <B>		# Note the use of single quotes to delimit a string containing</B>
@@ -355,7 +355,7 @@ vim.current						*<A NAME="python-current"></A><B>python-current</B>*
 	&quot;current&quot; <A HREF="vimindex.html#objects">objects</A> available in <A HREF="options.html#vim:">vim:</A>
 		vim.current.line	The current line (RW)		<A HREF="eval.html#String">String</A>
 		vim.current.buffer	The current buffer (RW)		Buffer
-		vim.current.window	The current <A HREF="windows.html#window">window</A> (RW)		Window
+		vim.current.window	The current<A HREF="windows.html#window">窗口</A>(RW)		Window
 		vim.current.tabpage	The current <A HREF="intro.html#tab">tab</A> page (RW)	TabPage
 		vim.current.range	The current line range (RO)	Range
 
@@ -367,7 +367,7 @@ vim.current						*<A NAME="python-current"></A><B>python-current</B>*
 	Note: When assigning to vim.current.{buffer,window,tabpage} <A HREF="motion.html#it">it</A> expects
 	valid |<A HREF="#python-buffer">python-buffer</A>|, |<A HREF="#python-window">python-window</A>| or |<A HREF="#python-tabpage">python-tabpage</A>| <A HREF="vimindex.html#objects">objects</A>
 	respectively. Assigning triggers normal (with |<A HREF="autocmd.html#autocommand">autocommand</A>|<A HREF="change.html#s">s</A>)
-	switching to given buffer, <A HREF="windows.html#window">window</A> or <A HREF="intro.html#tab">tab</A> page. It is the only way to
+	switching to given buffer,<A HREF="windows.html#window">窗口</A>or <A HREF="intro.html#tab">tab</A> page. It is the only way to
 	switch <A HREF="ui.html#UI">UI</A> <A HREF="vimindex.html#objects">objects</A> in <A HREF="#python">python</A>: you can't assign to
 	|<A HREF="#python-tabpage">python-tabpage</A>|.window attribute. To switch without triggering
 	autocommands use
@@ -627,37 +627,37 @@ Window <A HREF="vimindex.html#objects">objects</A> represent vim <A HREF="window
 	- via vim.current.window (|<A HREF="#python-current">python-current</A>|)
 	- from indexing vim.windows (|<A HREF="#python-windows">python-windows</A>|)
 	- from indexing &quot;<A HREF="windows.html#windows">windows</A>&quot; attribute of a tab page (|<A HREF="#python-tabpage">python-tabpage</A>|)
-	- from the &quot;<A HREF="windows.html#window">window</A>&quot; attribute of a tab page (|<A HREF="#python-tabpage">python-tabpage</A>|)
+	- from the &quot;<A HREF="windows.html#window">窗口</A>&quot; attribute of a tab page (|<A HREF="#python-tabpage">python-tabpage</A>|)
 
-You can manipulate <A HREF="windows.html#window">window</A> <A HREF="vimindex.html#objects">objects</A> only through their attributes.  They have no
+You can manipulate<A HREF="windows.html#window">窗口</A><A HREF="vimindex.html#objects">objects</A> only through their attributes.  They have no
 methods, and no sequence or other interface.
 
 Window attributes are:
-	buffer (read-only)	The buffer displayed in this <A HREF="windows.html#window">window</A>
-	cursor (read-write)	The current cursor position in the <A HREF="windows.html#window">window</A>
+	buffer (read-only)	The buffer displayed in this<A HREF="windows.html#window">窗口</A>
+	cursor (read-write)	The current cursor position in the<A HREF="windows.html#window">窗口</A>
 				This is a tuple, (row,col).
-	height (read-write)	The <A HREF="windows.html#window">window</A> height, in rows
-	width (read-write)	The <A HREF="windows.html#window">window</A> width, in columns
-	vars (read-only)	The <A HREF="windows.html#window">window</A> |<A HREF="eval.html#w:">w:</A>| <A HREF="eval.html#variables">variables</A>. Attribute is
-				unassignable, but you can change <A HREF="windows.html#window">window</A>
+	height (read-write)	The<A HREF="windows.html#window">窗口</A>height, in rows
+	width (read-write)	The<A HREF="windows.html#window">窗口</A>width, in columns
+	vars (read-only)	The<A HREF="windows.html#window">窗口</A>|<A HREF="eval.html#w:">w:</A>| <A HREF="eval.html#variables">variables</A>. Attribute is
+				unassignable, but you can change<A HREF="windows.html#window">窗口</A>
 				<A HREF="eval.html#variables">variables</A> this way
 	<A HREF="options.html#options">options</A> (read-only)	The window-local <A HREF="options.html#options">options</A>. Attribute is
-				unassignable, but you can change <A HREF="windows.html#window">window</A>
+				unassignable, but you can change<A HREF="windows.html#window">窗口</A>
 				<A HREF="options.html#options">options</A> this way. Provides access only to
 				window-local <A HREF="options.html#options">options</A>, for buffer-local use
 				|<A HREF="#python-buffer">python-buffer</A>| and for global ones use
 				|<A HREF="#python-options">python-options</A>|. If option is |<A HREF="options.html#global-local">global-local</A>|
 				and local value is missing getting <A HREF="motion.html#it">it</A> will
 				return None.
-	number (read-only)	Window number.  The first <A HREF="windows.html#window">window</A> has number 1.
+	number (read-only)	Window number.  The first<A HREF="windows.html#window">窗口</A>has number 1.
 				This is zero in <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> cannot be determined
-				(e.g. when the <A HREF="windows.html#window">window</A> object belongs to other
+				(e.g. when the<A HREF="windows.html#window">窗口</A>object belongs to other
 				<A HREF="intro.html#tab">tab</A> page).
-	row, col (read-only)	On-screen <A HREF="windows.html#window">window</A> position in display cells.
+	row, col (read-only)	On-screen<A HREF="windows.html#window">窗口</A>position in display cells.
 				First position is zero.
 	<A HREF="tabpage.html#tabpage">tabpage</A> (read-only)	Window <A HREF="intro.html#tab">tab</A> page.
 	valid (read-write)	True or False. Window object becomes invalid
-				when corresponding <A HREF="windows.html#window">window</A> is closed.
+				when corresponding<A HREF="windows.html#window">窗口</A>is closed.
 
 The height attribute is writable only if the screen is split horizontally.
 The width attribute is writable only if the screen is split vertically.
@@ -681,7 +681,7 @@ no sequence or other interfaces.
 			|<A HREF="builtin.html#tabpagenr()">tabpagenr()</A>|.
 	windows		Like |<A HREF="#python-windows">python-windows</A>|, but for current <A HREF="intro.html#tab">tab</A> page.
 	vars		The <A HREF="intro.html#tab">tab</A> page |<A HREF="eval.html#t:">t:</A>| <A HREF="eval.html#variables">variables</A>.
-	<A HREF="windows.html#window">window</A>		Current <A HREF="tabpage.html#tabpage">tabpage</A> <A HREF="windows.html#window">window</A>.
+	<A HREF="windows.html#window">窗口</A>		Current <A HREF="tabpage.html#tabpage">tabpage</A><A HREF="windows.html#window">窗口</A>.
 	valid		True or False. <A HREF="intro.html#Tab">Tab</A> page object becomes invalid when
 			corresponding <A HREF="intro.html#tab">tab</A> page is closed.
 

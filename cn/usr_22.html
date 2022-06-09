@@ -89,9 +89,9 @@ before.
 |<A HREF="#22.3">22.3</A>|	Finding a file
 |<A HREF="#22.4">22.4</A>|	The buffer <A HREF="eval.html#list">list</A>
 
-     Next chapter: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
- Previous chapter: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
+上一章: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -101,7 +101,7 @@ Vim has a <A HREF="usr_05.html#plugin">plugin</A> that makes <A HREF="motion.htm
 
 <B>	:edit .</B>
 
-Through the magic of autocommands and Vim scripts, the <A HREF="windows.html#window">window</A> will be filled
+Through the magic of autocommands and Vim scripts, the<A HREF="windows.html#window">窗口</A>will be filled
 with the contents of the directory.  It looks like this:
 
 <B><FONT color="#3A6F2B">" ============================================================================ </FONT></B>
@@ -135,7 +135,7 @@ You can see these items:
 If you have <A HREF="syntax.html#syntax">syntax</A> highlighting enabled, the different parts are highlighted
 so <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">it</A> easier to spot them.
 
-You can use <A HREF="intro.html#Normal">Normal</A> mode Vim commands to move around in the text.  For example,
+You can use <A HREF="intro.html#Normal">正常</A>模式 Vim commands to move around in the text.  For example,
 move the cursor atop a file and press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>; you will then be editing that
 file.  To go back to the browser use &quot;<A HREF="editing.html#:edit">:edit</A> .&quot; again, or use &quot;<A HREF="pi_netrw.html#:Explore">:Explore</A>&quot;.
 <A HREF="motion.html#CTRL-O">CTRL-O</A> also works.
@@ -178,11 +178,11 @@ and |<A HREF="motion.html#CTRL-O">CTRL-O</A>| to jump back.
 
 To select files for display and editing: (with the cursor is atop a filename)
 
-	&lt;enter&gt;		Open the file in the current <A HREF="windows.html#window">window</A>.	   |<A HREF="pi_netrw.html#netrw-cr">netrw-cr</A>|
-	o		Horizontally split <A HREF="windows.html#window">window</A> and display file |<A HREF="pi_netrw.html#netrw-o">netrw-o</A>|
-	v		Vertically split <A HREF="windows.html#window">window</A> and display file   |<A HREF="pi_netrw.html#netrw-v">netrw-v</A>|
+	&lt;enter&gt;		Open the file in the current<A HREF="windows.html#window">窗口</A>.	   |<A HREF="pi_netrw.html#netrw-cr">netrw-cr</A>|
+	o		Horizontally split<A HREF="windows.html#window">窗口</A>and display file |<A HREF="pi_netrw.html#netrw-o">netrw-o</A>|
+	v		Vertically split<A HREF="windows.html#window">窗口</A>and display file   |<A HREF="pi_netrw.html#netrw-v">netrw-v</A>|
 	p		Use the |<A HREF="windows.html#preview-window">preview-window</A>| 		   |<A HREF="pi_netrw.html#netrw-p">netrw-p</A>|
-	P		Edit in the previous <A HREF="windows.html#window">window</A>		   |<A HREF="pi_netrw.html#netrw-P">netrw-P</A>|
+	P		Edit in the previous<A HREF="windows.html#window">窗口</A>		   |<A HREF="pi_netrw.html#netrw-P">netrw-P</A>|
 	t		Open file in a new <A HREF="intro.html#tab">tab</A>			   |<A HREF="pi_netrw.html#netrw-t">netrw-t</A>|
 
 The following normal-mode commands may be used to <A HREF="intro.html#control">control</A> the browser display:
@@ -263,10 +263,10 @@ Example:
 
 WINDOW LOCAL DIRECTORY
 
-When you split a <A HREF="windows.html#window">window</A>, both <A HREF="windows.html#windows">windows</A> use the same current directory.  When
-you want to edit a number of files somewhere else in the new <A HREF="windows.html#window">window</A>, you can
+When you split a<A HREF="windows.html#window">窗口</A>, both <A HREF="windows.html#windows">windows</A> use the same current directory.  When
+you want to edit a number of files somewhere else in the new<A HREF="windows.html#window">窗口</A>, you can
 make <A HREF="motion.html#it">it</A> use a different directory, without <A HREF="change.html#changing">changing</A> the current directory in
-the other <A HREF="windows.html#window">window</A>.  This is called a local directory.
+the other<A HREF="windows.html#window">窗口</A>.  This is called a local directory.
 
 <B>	:pwd</B>
 <B>	/home/Bram/VeryLongFileName</B>
@@ -279,17 +279,17 @@ the other <A HREF="windows.html#window">window</A>.  This is called a local dire
 <B>	/home/Bram/VeryLongFileName</B>
 
 So long <A HREF="motion.html#as">as</A> no `:lcd` command has been used, all <A HREF="windows.html#windows">windows</A> share the same current
-directory.  Doing a `:cd` command in one <A HREF="windows.html#window">window</A> will also change the current
-directory of the other <A HREF="windows.html#window">window</A>.
-   For a <A HREF="windows.html#window">window</A> where `:lcd` has been used a different current directory is
+directory.  Doing a `:cd` command in one<A HREF="windows.html#window">窗口</A>will also change the current
+directory of the other<A HREF="windows.html#window">窗口</A>.
+   For a<A HREF="windows.html#window">窗口</A>where `:lcd` has been used a different current directory is
 remembered.  Using `:cd` or `:lcd` in other <A HREF="windows.html#windows">windows</A> will not change <A HREF="motion.html#it">it</A>.
-   When using a `:cd` command in a <A HREF="windows.html#window">window</A> that uses a different current
+   When using a `:cd` command in a<A HREF="windows.html#window">窗口</A>that uses a different current
 directory, <A HREF="motion.html#it">it</A> will go back to using the shared directory.
 
 
 TAB LOCAL DIRECTORY
 
-When you open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="motion.html#it">it</A> uses the directory of the <A HREF="windows.html#window">window</A> in the
+When you open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="motion.html#it">it</A> uses the directory of the<A HREF="windows.html#window">窗口</A>in the
 previous <A HREF="intro.html#tab">tab</A> page from which the new <A HREF="intro.html#tab">tab</A> page was opened. You can change the
 directory of the current <A HREF="intro.html#tab">tab</A> page using the `:tcd` command. All the <A HREF="windows.html#windows">windows</A> in
 a <A HREF="intro.html#tab">tab</A> page share this directory except for <A HREF="windows.html#windows">windows</A> with a window-local
@@ -349,7 +349,7 @@ type <A HREF="motion.html#it">it</A>:
 Vim will then use the <A HREF="options.html#'path'">'path'</A> option to try and locate the file.  This is the
 same <A HREF="motion.html#as">as</A> the &quot;<A HREF="editing.html#:edit">:edit</A>&quot; command, except for the use of <A HREF="options.html#'path'">'path'</A>.
 
-To open the found file in a new <A HREF="windows.html#window">window</A> use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#f">f</A> instead of &quot;<A HREF="editing.html#gf">gf</A>&quot;, or use
+To open the found file in a new<A HREF="windows.html#window">窗口</A>use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#f">f</A> instead of &quot;<A HREF="editing.html#gf">gf</A>&quot;, or use
 &quot;<A HREF="windows.html#:sfind">:sfind</A>&quot; instead of &quot;<A HREF="editing.html#:find">:find</A>&quot;.
 
 
@@ -393,12 +393,12 @@ without making sure you have saved all the <A HREF="windows.html#buffers">buffer
 INACTIVE BUFFERS
 
    When a buffer has been used once, Vim remembers some information about <A HREF="motion.html#it">it</A>.
-When <A HREF="motion.html#it">it</A> is not displayed in a <A HREF="windows.html#window">window</A> and <A HREF="motion.html#it">it</A> is not hidden, <A HREF="motion.html#it">it</A> is still in the
+When <A HREF="motion.html#it">it</A> is not displayed in a<A HREF="windows.html#window">窗口</A>and <A HREF="motion.html#it">it</A> is not hidden, <A HREF="motion.html#it">it</A> is still in the
 buffer <A HREF="eval.html#list">list</A>.  This is called an inactive buffer.  Overview:
 
-   Active		Appears in a <A HREF="windows.html#window">window</A>, text loaded.
-   Hidden		Not in a <A HREF="windows.html#window">window</A>, text loaded.
-   Inactive		Not in a <A HREF="windows.html#window">window</A>, no text loaded.
+   Active		Appears in a<A HREF="windows.html#window">窗口</A>, text loaded.
+   Hidden		Not in a<A HREF="windows.html#window">窗口</A>, text loaded.
+   Inactive		Not in a<A HREF="windows.html#window">窗口</A>, no text loaded.
 
 The inactive <A HREF="windows.html#buffers">buffers</A> are remembered, because Vim keeps information about them,
 like marks.  And remembering the file name is useful too, so that you can see
@@ -452,7 +452,7 @@ use the name, or part of <A HREF="motion.html#it">it</A>, instead:
 
 Vim will find the best match for the name you type.  If there is only one
 buffer that matches the name, <A HREF="motion.html#it">it</A> will be used.  In this <A HREF="change.html#case">case</A> &quot;<A HREF="index.html#help.txt">help.txt</A>&quot;.
-   To open a buffer in a new <A HREF="windows.html#window">window</A>:
+   To open a buffer in a new<A HREF="windows.html#window">窗口</A>:
 
 <B>	:sbuffer 3</B>
 
@@ -473,9 +473,9 @@ To remove a buffer from the <A HREF="eval.html#list">list</A>, use this command:
 <B>	:bdelete 3</B>
 
 Again, this also works with a name.
-   If you delete a buffer that was active (visible in a window), that <A HREF="windows.html#window">window</A>
-will be closed.  If you delete the current buffer, the current <A HREF="windows.html#window">window</A> will be
-closed.  If <A HREF="motion.html#it">it</A> was the last <A HREF="windows.html#window">window</A>, Vim will find another buffer to edit.  You
+   If you delete a buffer that was active (visible in a window), that<A HREF="windows.html#window">窗口</A>
+will be closed.  If you delete the current buffer, the current<A HREF="windows.html#window">窗口</A>will be
+closed.  If <A HREF="motion.html#it">it</A> was the last<A HREF="windows.html#window">窗口</A>, Vim will find another buffer to edit.  You
 can't be editing nothing!
 
 	Note:
@@ -487,9 +487,7 @@ can't be editing nothing!
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

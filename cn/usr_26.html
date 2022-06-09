@@ -88,9 +88,9 @@ will be explained.
 |<A HREF="#26.3">26.3</A>|	Making a change in many files
 |<A HREF="#26.4">26.4</A>|	Using Vim from a shell <A HREF="usr_41.html#script">script</A>
 
-     Next chapter: |<A HREF="usr_27.html">usr_27.txt</A>|  Search commands and patterns
- Previous chapter: |<A HREF="usr_25.html">usr_25.txt</A>|  Editing formatted text
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_27.html">usr_27.txt</A>|  Search commands and patterns
+上一章: |<A HREF="usr_25.html">usr_25.txt</A>|  Editing formatted text
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -207,7 +207,7 @@ Suppose you have a lot of files in which you need to change the <A HREF="eval.ht
 &quot;-person-&quot; to &quot;Jones&quot; and then print <A HREF="motion.html#it">it</A>.  How <A HREF="diff.html#do">do</A> you <A HREF="diff.html#do">do</A> that?  One way is to
 <A HREF="diff.html#do">do</A> a lot of typing.  The other is to write a shell <A HREF="usr_41.html#script">script</A> to <A HREF="diff.html#do">do</A> the work.
    The Vim editor does a superb <A HREF="job_control.html#job">job</A> <A HREF="motion.html#as">as</A> a screen-oriented editor when using
-<A HREF="intro.html#Normal">Normal</A> mode commands.  For batch processing, however, <A HREF="intro.html#Normal">Normal</A> mode commands <A HREF="diff.html#do">do</A>
+<A HREF="intro.html#Normal">正常</A>模式 commands.  For batch processing, however, <A HREF="intro.html#Normal">正常</A>模式 commands <A HREF="diff.html#do">do</A>
 not result in clear, commented command files; so here you will use <A HREF="intro.html#Ex">Ex</A> mode
 instead.  This mode gives you a nice command-line interface that makes <A HREF="motion.html#it">it</A> easy
 to put into a batch file.  (&quot;Ex command&quot; is just another name for a
@@ -230,7 +230,7 @@ The for-done loop is a shell construct to repeat the two lines in between,
 while the $file variable is set to a different file name each time.
    The second line runs the Vim editor in <A HREF="intro.html#Ex">Ex</A> mode (-e argument) on the file
 $file and reads commands from the file &quot;change.vim&quot;.  The <A HREF="starting.html#-s">-s</A> argument tells
-Vim to operate in silent mode.  In other words, <A HREF="diff.html#do">do</A> not keep outputting the
+Vim to operate in silent mode.换句话说, <A HREF="diff.html#do">do</A> not keep outputting the
 :prompt, or any other prompt for that matter.
    The &quot;lpr <A HREF="starting.html#-r">-r</A> tempfile&quot; command prints the resulting &quot;<A HREF="change.html#tempfile">tempfile</A>&quot; and deletes
 <A HREF="motion.html#it">it</A> (that's what the <A HREF="starting.html#-r">-r</A> argument does).
@@ -254,19 +254,19 @@ argument to read a <A HREF="usr_41.html#script">script</A>:
 
 NORMAL MODE SCRIPTS
 
-If you really want to use <A HREF="intro.html#Normal">Normal</A> mode commands in a <A HREF="usr_41.html#script">script</A>, you can use <A HREF="motion.html#it">it</A>
+If you really want to use <A HREF="intro.html#Normal">正常</A>模式 commands in a <A HREF="usr_41.html#script">script</A>, you can use <A HREF="motion.html#it">it</A>
 like this:
 
 <B>	vim -s script file.txt ...</B>
  
 	Note:
 	&quot;<A HREF="starting.html#-s">-s</A>&quot; has a different meaning when <A HREF="motion.html#it">it</A> is used without &quot;<A HREF="starting.html#-e">-e</A>&quot;.  Here <A HREF="motion.html#it">it</A>
-	means to source the &quot;<A HREF="usr_41.html#script">script</A>&quot; <A HREF="motion.html#as">as</A> <A HREF="intro.html#Normal">Normal</A> mode commands.  When used with
+	means to source the &quot;<A HREF="usr_41.html#script">script</A>&quot; <A HREF="motion.html#as">as</A> <A HREF="intro.html#Normal">正常</A>模式 commands.  When used with
 	&quot;<A HREF="starting.html#-e">-e</A>&quot; <A HREF="motion.html#it">it</A> means to be silent, and doesn't use the next argument <A HREF="motion.html#as">as</A> a
 	file name.
 
 The commands in &quot;<A HREF="usr_41.html#script">script</A>&quot; are executed like you typed them.  Don't forget that
-a line break is interpreted <A HREF="motion.html#as">as</A> pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.  In <A HREF="intro.html#Normal">Normal</A> mode that moves
+a line break is interpreted <A HREF="motion.html#as">as</A> pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.  In <A HREF="intro.html#Normal">正常</A>模式 that moves
 the cursor to the next line.
    To create the <A HREF="usr_41.html#script">script</A> you can edit the <A HREF="usr_41.html#script">script</A> file and type the commands.
 You need to imagine what the result would be, which can be a bit difficult.
@@ -283,9 +283,7 @@ start all over, use the &quot;<A HREF="starting.html#-W">-W</A>&quot; argument. 
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_27.html">usr_27.txt</A>|  Search commands and patterns
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_27.html">usr_27.txt</A>|  Search commands and patterns
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

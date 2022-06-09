@@ -111,8 +111,8 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 
 						*<A NAME=":redraws"></A><B>:redraws</B>* *<A NAME=":redrawstatus"></A><B>:redrawstatus</B>*
-:redraws[tatus][!]	Redraws the status line and <A HREF="windows.html#window">window</A> <A HREF="motion.html#bar">bar</A> of the current
-			<A HREF="windows.html#window">window</A>, or all status lines and <A HREF="windows.html#window">window</A> <A HREF="index.html#bars">bars</A> if &quot;<A HREF="change.html#!">!</A>&quot; is
+:redraws[tatus][!]	Redraws the status line and<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A> of the current
+			<A HREF="windows.html#window">窗口</A>, or all status lines and<A HREF="windows.html#window">窗口</A><A HREF="index.html#bars">bars</A> if &quot;<A HREF="change.html#!">!</A>&quot; is
 			included. Useful if <A HREF="options.html#'statusline'">'statusline'</A> or <A HREF="options.html#'winbar'">'winbar'</A> includes
 			an item that doesn't cause automatic updating.
 
@@ -235,9 +235,9 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			if there is no <A HREF="cmdline.html#[range]">[range]</A>.
 
 			If there is a <A HREF="intro.html#[count]">[count]</A>, that's how many lines you'll
-			see; if there is no <A HREF="intro.html#[count]">[count]</A> and only one <A HREF="windows.html#window">window</A> then
+			see; if there is no <A HREF="intro.html#[count]">[count]</A> and only one<A HREF="windows.html#window">窗口</A>then
 			<A HREF="if_cscop.html#twice">twice</A> the value of the <A HREF="options.html#'scroll'">'scroll'</A> option is used,
-			otherwise the current <A HREF="windows.html#window">window</A> height minus 3 is used.
+			otherwise the current<A HREF="windows.html#window">窗口</A>height minus 3 is used.
 			This is the value of &quot;scr&quot; in the table below.
 
 			If there is a <A HREF="intro.html#[count]">[count]</A> the <A HREF="options.html#'window'">'window'</A> option is set to
@@ -262,7 +262,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 							*<A NAME=":z!"></A><B>:z!</B>*
 :[range]z![+-^.=][count]
 			Like &quot;<A HREF="#:z">:z</A>&quot;, but when <A HREF="intro.html#[count]">[count]</A> is not specified, <A HREF="motion.html#it">it</A>
-			defaults to the Vim <A HREF="windows.html#window">window</A> height minus one.
+			defaults to the Vim<A HREF="windows.html#window">窗口</A>height minus one.
 
 
 :[range]z[!]#[+-^.=][count]				*<A NAME=":z#"></A><B>:z#</B>*
@@ -280,8 +280,8 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 
 :norm[al][!] {commands}					*<A NAME=":norm"></A><B>:norm</B>* *<A NAME=":normal"></A><B>:normal</B>*
-			Execute <A HREF="intro.html#Normal">Normal</A> mode commands {commands}.  This makes
-			<A HREF="motion.html#it">it</A> possible to execute <A HREF="intro.html#Normal">Normal</A> mode commands typed on
+			Execute <A HREF="intro.html#Normal">正常</A>模式 commands {commands}.  This makes
+			<A HREF="motion.html#it">it</A> possible to execute <A HREF="intro.html#Normal">正常</A>模式 commands typed on
 			the command-line.  {commands} are executed like they
 			are typed.  For <A HREF="undo.html#undo">undo</A> all commands are undone together.
 			Execution stops when an error is encountered.
@@ -295,7 +295,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			{commands} does not finish a command, the last one
 			will be aborted <A HREF="motion.html#as">as</A> if <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> or &lt;C-C&gt; was typed.
 			This implies that an insert command must be completed
-			(to start <A HREF="insert.html#Insert">Insert</A> mode, see |<A HREF="insert.html#:startinsert">:startinsert</A>|).  A &quot;:&quot;
+			(to start <A HREF="intro.html#Insert">插入</A>模式, see |<A HREF="insert.html#:startinsert">:startinsert</A>|).  A &quot;:&quot;
 			command must be completed <A HREF="motion.html#as">as</A> well.  And you can't use
 			&quot;<A HREF="repeat.html#Q">Q</A>&quot; or &quot;<A HREF="intro.html#gQ">gQ</A>&quot; to start <A HREF="intro.html#Ex">Ex</A> mode.
 
@@ -320,7 +320,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 
 :{range}norm[al][!] {commands}				*<A NAME=":normal-range"></A><B>:normal-range</B>*
-			Execute <A HREF="intro.html#Normal">Normal</A> mode commands {commands} for each line
+			Execute <A HREF="intro.html#Normal">正常</A>模式 commands {commands} for each line
 			in the {range}.  Before executing the {commands}, the
 			cursor is positioned in the first column of the range,
 			for each line.  Otherwise it's the same <A HREF="motion.html#as">as</A> the
@@ -514,7 +514,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 <B>			    :redir &gt;/tmp/foobar</B>
 <B>			    :silent g/Aap/p</B>
 <B>			    :redir END</B>
- 			To execute a <A HREF="intro.html#Normal">Normal</A> mode command silently, use the
+ 			To execute a <A HREF="intro.html#Normal">正常</A>模式 command silently, use the
 			|<A HREF="#:normal">:normal</A>| command.  For example, to search for a
 			<A HREF="eval.html#string">string</A> without <A HREF="message.html#messages">messages</A>:
 <B>			    :silent exe "normal /path\&lt;CR&gt;"</B>

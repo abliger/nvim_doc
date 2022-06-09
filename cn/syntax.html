@@ -137,7 +137,7 @@ file for your system.  Although on MS-Windows the right format is
 automatically selected if the <A HREF="options.html#'fileformats'">'fileformats'</A> option is not empty.
 
 NOTE: When using reverse video (&quot;gvim -fg white -bg black&quot;), the default value
-of <A HREF="options.html#'background'">'background'</A> will not be set until the <A HREF="gui.html#GUI">GUI</A> <A HREF="windows.html#window">window</A> is opened, which is after
+of <A HREF="options.html#'background'">'background'</A> will not be set until the <A HREF="gui.html#GUI">GUI</A><A HREF="windows.html#window">窗口</A>is opened, which is after
 reading the |<A HREF="gui.html#gvimrc">gvimrc</A>|.  This will cause the wrong default highlighting to be
 used.  To set the default value of <A HREF="options.html#'background'">'background'</A> before switching on
 highlighting, include the &quot;:gui&quot; command in the YXXYgvimrc|:
@@ -437,7 +437,7 @@ Upon loading a file, Vim finds the relevant <A HREF="#syntax">syntax</A> file <A
 4. Conversion to HTML				*<A NAME="2html.vim"></A><B>2html.vim</B>* *<A NAME="convert-to-HTML"></A><B>convert-to-HTML</B>*
 
 2html is not a <A HREF="#syntax">syntax</A> file itself, but a <A HREF="usr_41.html#script">script</A> that converts the current
-<A HREF="windows.html#window">window</A> into HTML. Vim opens a new <A HREF="windows.html#window">window</A> in which <A HREF="motion.html#it">it</A> builds the HTML file.
+<A HREF="windows.html#window">窗口</A>into HTML. Vim opens a new<A HREF="windows.html#window">窗口</A>in which <A HREF="motion.html#it">it</A> builds the HTML file.
 
 After you save the resulting file, you can view <A HREF="motion.html#it">it</A> with any browser. The
 colors should be exactly the same <A HREF="motion.html#as">as</A> you see them in Vim.  With
@@ -483,13 +483,13 @@ and last line to be converted.  Example, using the last set <A HREF="visual.html
 			range, respectively. Default range is the entire
 			buffer.
 
-			If the current <A HREF="windows.html#window">window</A> is part of a |<A HREF="diff.html#diff">diff</A>|, unless
+			If the current<A HREF="windows.html#window">窗口</A>is part of a |<A HREF="diff.html#diff">diff</A>|, unless
 			|<A HREF="#g:html_diff_one_file">g:html_diff_one_file</A>| is set, <A HREF="#:TOhtml">:TOhtml</A> will convert
 			all <A HREF="windows.html#windows">windows</A> which are part of the <A HREF="diff.html#diff">diff</A> in the current
 			<A HREF="intro.html#tab">tab</A> and place them side-by-side in a &lt;table&gt; element
 			in the generated HTML. With |<A HREF="#g:html_line_ids">g:html_line_ids</A>| you can
 			jump to lines in specific <A HREF="windows.html#windows">windows</A> with (for example)
-			#W1L42 for line <A HREF="usr_42.html#42">42</A> in the first diffed <A HREF="windows.html#window">window</A>, or
+			#W1L42 for line <A HREF="usr_42.html#42">42</A> in the first diffed<A HREF="windows.html#window">窗口</A>, or
 			#W3L87 for line 87 in the third.
 
 			Examples:
@@ -573,10 +573,10 @@ Default: 1 if |<A HREF="#g:html_number_lines">g:html_number_lines</A>| is set, 0
 When 1, adds an HTML id attribute to each line number, or to an empty &lt;span&gt;
 inserted for that purpose if no line numbers are shown. This ID attribute
 takes the form of L123 for single-buffer HTML pages, or W2L123 for diff-view
-pages, and is used to jump to a specific line (in a specific <A HREF="windows.html#window">window</A> of a <A HREF="diff.html#diff">diff</A>
+pages, and is used to jump to a specific line (in a specific<A HREF="windows.html#window">窗口</A>of a <A HREF="diff.html#diff">diff</A>
 view). Javascript is inserted to open any closed dynamic <A HREF="fold.html#folds">folds</A>
 (|<A HREF="#g:html_dynamic_folds">g:html_dynamic_folds</A>|) containing the specified line before jumping. The
-javascript also allows omitting the <A HREF="windows.html#window">window</A> ID in the url, and the leading <A HREF="motion.html#L">L</A>.
+javascript also allows omitting the<A HREF="windows.html#window">窗口</A>ID in the url, and the leading <A HREF="motion.html#L">L</A>.
 For example:
 
 <B>	page.html#L123	jumps to line 123 in a single-buffer file</B>
@@ -739,17 +739,17 @@ To append a <A HREF="eval.html#string">string</A> &quot;_mystring&quot; to the e
 <B>	:let g:html_id_expr = '"_mystring"'</B>
  
 Note: When converting a <A HREF="diff.html#diff">diff</A> view to HTML, the <A HREF="eval.html#expression">expression</A> will only be
-evaluated for the first <A HREF="windows.html#window">window</A> in the <A HREF="diff.html#diff">diff</A>, and the result used for all the
+evaluated for the first<A HREF="windows.html#window">窗口</A>in the <A HREF="diff.html#diff">diff</A>, and the result used for all the
 <A HREF="windows.html#windows">windows</A>.
 
 
 					  *<A NAME="TOhtml-wrap-text"></A><B>TOhtml-wrap-text</B>* *<A NAME="g:html_pre_wrap"></A><B>g:html_pre_wrap</B>*
 Default: Current <A HREF="options.html#'wrap'">'wrap'</A> setting.
 When 0, if |<A HREF="#g:html_no_pre">g:html_no_pre</A>| is 0 or unset, the text in the generated HTML does
-not wrap at the edge of the browser <A HREF="windows.html#window">window</A>.
+not wrap at the edge of the browser<A HREF="windows.html#window">窗口</A>.
 When 1, if |<A HREF="#g:html_use_css">g:html_use_css</A>| is 1, the CSS 2.0 &quot;white-space:pre-wrap&quot; value is
 used, causing the text to wrap at <A HREF="pattern.html#whitespace">whitespace</A> at the edge of the browser
-<A HREF="windows.html#window">window</A>.
+<A HREF="windows.html#window">窗口</A>.
 Explicitly enable text wrapping:
 <B>   :let g:html_pre_wrap = 1</B>
 Explicitly disable wrapping:
@@ -1139,7 +1139,7 @@ displayed line.  The default value is 50 (15 when <A HREF="#c_no_if0">c_no_if0</
 disadvantage of using a larger number is that redrawing can become slow.
 
 When using the &quot;#if 0&quot; / &quot;#endif&quot; comment highlighting, notice that this only
-works when the &quot;#if 0&quot; is within &quot;c_minlines&quot; from the top of the <A HREF="windows.html#window">window</A>.  If
+works when the &quot;#if 0&quot; is within &quot;c_minlines&quot; from the top of the<A HREF="windows.html#window">窗口</A>.  If
 you have a long &quot;#if 0&quot; construct <A HREF="motion.html#it">it</A> will not be highlighted correctly.
 
 To match extra items in comments, use the cCommentGroup cluster.
@@ -3116,7 +3116,7 @@ spaces respectively.
 <B>	:let ruby_fold = 1</B>
  
 This will set the value of <A HREF="options.html#'foldmethod'">'foldmethod'</A> to &quot;<A HREF="#syntax">syntax</A>&quot; locally to the current
-buffer or <A HREF="windows.html#window">window</A>, which will enable syntax-based <A HREF="fold.html#folding">folding</A> when editing <A HREF="if_ruby.html#Ruby">Ruby</A>
+buffer or<A HREF="windows.html#window">窗口</A>, which will enable syntax-based <A HREF="fold.html#folding">folding</A> when editing <A HREF="if_ruby.html#Ruby">Ruby</A>
 <A HREF="filetype.html#filetypes">filetypes</A>.
 
 Default <A HREF="fold.html#folding">folding</A> is rather detailed, i.e., small <A HREF="#syntax">syntax</A> units like &quot;if&quot;, &quot;<A HREF="diff.html#do">do</A>&quot;,
@@ -5150,7 +5150,7 @@ There are two types of highlight groups:
 							*<A NAME="hitest.vim"></A><B>hitest.vim</B>*
 You can see all the groups currently active with this command:
 <B>    :so $VIMRUNTIME/syntax/hitest.vim</B>
-This will open a new <A HREF="windows.html#window">window</A> containing all highlight group names, displayed
+This will open a new<A HREF="windows.html#window">窗口</A>containing all highlight group names, displayed
 in their own color.
 
 
@@ -5461,7 +5461,7 @@ guisp={color-name}					*<A NAME="highlight-guisp"></A><B>highlight-guisp</B>*
 blend={integer}					*<A NAME="highlight-blend"></A><B>highlight-blend</B>*
 	Override the blend level for a highlight group within the popupmenu
 	or floating <A HREF="windows.html#windows">windows</A>. Only takes effect if <A HREF="options.html#'pumblend'">'pumblend'</A> or <A HREF="options.html#'winblend'">'winblend'</A>
-	is set for the menu or <A HREF="windows.html#window">window</A>. See the help at the respective option.
+	is set for the menu or<A HREF="windows.html#window">窗口</A>. See the help at the respective option.
 
 
 					*<A NAME="highlight-groups"></A><B>highlight-groups</B>* *<A NAME="highlight-default"></A><B>highlight-default</B>*
@@ -5524,7 +5524,7 @@ TermCursorNC	Cursor in an unfocused <A HREF="nvim_terminal_emulator.html#termina
 ErrorMsg	Error <A HREF="message.html#messages">messages</A> on the command line.
 
 							*<A NAME="hl-WinSeparator"></A><B>hl-WinSeparator</B>*
-WinSeparator	Separators between <A HREF="windows.html#window">window</A> splits.
+WinSeparator	Separators between<A HREF="windows.html#window">窗口</A>splits.
 
 							*<A NAME="hl-Folded"></A><B>hl-Folded</B>*
 Folded		Line used for closed <A HREF="fold.html#folds">folds</A>.
@@ -5583,7 +5583,7 @@ MsgSeparator	Separator for scrolled <A HREF="message.html#messages">messages</A>
 MoreMsg		|<A HREF="message.html#more-prompt">more-prompt</A>|
 
 							*<A NAME="hl-NonText"></A><B>hl-NonText</B>*
-NonText		'<A HREF="repeat.html#@">@</A>' at the end of the <A HREF="windows.html#window">window</A>, characters from <A HREF="options.html#'showbreak'">'showbreak'</A>
+NonText		'<A HREF="repeat.html#@">@</A>' at the end of the<A HREF="windows.html#window">窗口</A>, characters from <A HREF="options.html#'showbreak'">'showbreak'</A>
 		and other characters that <A HREF="diff.html#do">do</A> not really exist in the text
 		(e.g., &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; displayed when a double-wide character doesn't
 		fit at the end of the line). See also |<A HREF="#hl-EndOfBuffer">hl-EndOfBuffer</A>|.
@@ -5613,7 +5613,7 @@ PmenuThumb	Popup menu: Thumb of the scrollbar.
 Question	|<A HREF="message.html#hit-enter">hit-enter</A>| prompt and yes/no questions.
 
 							*<A NAME="hl-QuickFixLine"></A><B>hl-QuickFixLine</B>*
-QuickFixLine	Current |<A HREF="quickfix.html#quickfix">quickfix</A>| item in the quickfix <A HREF="windows.html#window">window</A>. Combined with
+QuickFixLine	Current |<A HREF="quickfix.html#quickfix">quickfix</A>| item in the quickfix<A HREF="windows.html#window">窗口</A>. Combined with
                 |<A HREF="#hl-CursorLine">hl-CursorLine</A>| when the cursor is there.
 
 							*<A NAME="hl-Search"></A><B>hl-Search</B>*
@@ -5643,12 +5643,12 @@ SpellRare	Word that is recognized by the spellchecker <A HREF="motion.html#as">a
 		Combined with the highlighting used otherwise.
 
 							*<A NAME="hl-StatusLine"></A><B>hl-StatusLine</B>*
-StatusLine	Status line of current <A HREF="windows.html#window">window</A>.
+StatusLine	Status line of current<A HREF="windows.html#window">窗口</A>.
 
 							*<A NAME="hl-StatusLineNC"></A><B>hl-StatusLineNC</B>*
 StatusLineNC	Status lines of not-current <A HREF="windows.html#windows">windows</A>.
 		Note: If this is equal to &quot;StatusLine&quot;, Vim will use &quot;^^^&quot; in
-		the status line of the current <A HREF="windows.html#window">window</A>.
+		the status line of the current<A HREF="windows.html#window">窗口</A>.
 
 							*<A NAME="hl-TabLine"></A><B>hl-TabLine</B>*
 TabLine		<A HREF="intro.html#Tab">Tab</A> pages line, not active <A HREF="intro.html#tab">tab</A> page label.
@@ -5679,7 +5679,7 @@ Whitespace	&quot;nbsp&quot;, &quot;space&quot;, &quot;<A HREF="intro.html#tab">t
 WildMenu	Current match in <A HREF="options.html#'wildmenu'">'wildmenu'</A> completion.
 
 							*<A NAME="hl-WinBar"></A><B>hl-WinBar</B>*
-WinBar		Window <A HREF="motion.html#bar">bar</A> of current <A HREF="windows.html#window">window</A>.
+WinBar		Window <A HREF="motion.html#bar">bar</A> of current<A HREF="windows.html#window">窗口</A>.
 
 							*<A NAME="hl-WinBarNC"></A><B>hl-WinBarNC</B>*
 WinBarNC	Window <A HREF="motion.html#bar">bar</A> of not-current <A HREF="windows.html#windows">windows</A>.
@@ -5853,13 +5853,13 @@ And put these lines in your <A HREF="starting.html#vimrc">vimrc</A>:
 17. Window-local <A HREF="#syntax">syntax</A>				*<A NAME=":ownsyntax"></A><B>:ownsyntax</B>*
 
 Normally all <A HREF="windows.html#windows">windows</A> on a buffer share the same <A HREF="#syntax">syntax</A> settings. It is
-possible, however, to set a particular <A HREF="windows.html#window">window</A> on a file to have its own
+possible, however, to set a particular<A HREF="windows.html#window">窗口</A>on a file to have its own
 private <A HREF="#syntax">syntax</A> setting. A possible example would be to edit LaTeX source
-with conventional highlighting in one <A HREF="windows.html#window">window</A>, while seeing the same source
+with conventional highlighting in one<A HREF="windows.html#window">窗口</A>, while seeing the same source
 highlighted differently (so <A HREF="motion.html#as">as</A> to hide <A HREF="intro.html#control">control</A> sequences and indicate <A HREF="#bold">bold</A>,
 <A HREF="#italic">italic</A> etc regions) in another. The <A HREF="options.html#'scrollbind'">'scrollbind'</A> option is useful here.
 
-To set the current <A HREF="windows.html#window">window</A> to have the <A HREF="#syntax">syntax</A> &quot;foo&quot;, separately from all other
+To set the current<A HREF="windows.html#window">窗口</A>to have the <A HREF="#syntax">syntax</A> &quot;foo&quot;, separately from all other
 <A HREF="windows.html#windows">windows</A> on the buffer:
 <B>   :ownsyntax foo</B>
 
@@ -5871,14 +5871,14 @@ restoring &quot;b:current_syntax&quot;, since the <A HREF="#syntax">syntax</A> f
 &quot;<A HREF="#w:current_syntax">w:current_syntax</A>&quot;.
 Note: This resets the <A HREF="options.html#'spell'">'spell'</A>, <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> and <A HREF="options.html#'spellfile'">'spellfile'</A> <A HREF="options.html#options">options</A>.
 
-Once a <A HREF="windows.html#window">window</A> has its own <A HREF="#syntax">syntax</A>, <A HREF="#syntax">syntax</A> commands executed from other <A HREF="windows.html#windows">windows</A>
+Once a<A HREF="windows.html#window">窗口</A>has its own <A HREF="#syntax">syntax</A>, <A HREF="#syntax">syntax</A> commands executed from other <A HREF="windows.html#windows">windows</A>
 on the same buffer (including <A HREF="#:syntax">:syntax</A> clear) have no effect. Conversely,
-<A HREF="#syntax">syntax</A> commands executed from that <A HREF="windows.html#window">window</A> <A HREF="diff.html#do">do</A> not affect other <A HREF="windows.html#windows">windows</A> on the
+<A HREF="#syntax">syntax</A> commands executed from that<A HREF="windows.html#window">窗口</A><A HREF="diff.html#do">do</A> not affect other <A HREF="windows.html#windows">windows</A> on the
 same buffer.
 
-A <A HREF="windows.html#window">window</A> with its own <A HREF="#syntax">syntax</A> reverts to normal behavior when another buffer
-is loaded into that <A HREF="windows.html#window">window</A> or the file is reloaded.
-When splitting the <A HREF="windows.html#window">window</A>, the new <A HREF="windows.html#window">window</A> will use the original <A HREF="#syntax">syntax</A>.
+A<A HREF="windows.html#window">窗口</A>with its own <A HREF="#syntax">syntax</A> reverts to normal behavior when another buffer
+is loaded into that<A HREF="windows.html#window">窗口</A>or the file is reloaded.
+When splitting the<A HREF="windows.html#window">窗口</A>, the new<A HREF="windows.html#window">窗口</A>will use the original <A HREF="#syntax">syntax</A>.
 
 ==============================================================================
 
@@ -5920,7 +5920,7 @@ This will display a <A HREF="eval.html#list">list</A> of <A HREF="#syntax">synta
 <A HREF="#:syntime">:syntime</A> clear		Set all the counters to zero, restart measuring.
 
 <A HREF="#:syntime">:syntime</A> report		Show the <A HREF="#syntax">syntax</A> items used since &quot;<A HREF="#:syntime">:syntime</A> on&quot; in the
-			current <A HREF="windows.html#window">window</A>.  Use a wider display to see more of
+			current<A HREF="windows.html#window">窗口</A>.  Use a wider display to see more of
 			the output.
 
 			The <A HREF="eval.html#list">list</A> is sorted by total time. The columns are:

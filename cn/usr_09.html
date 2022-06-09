@@ -89,9 +89,9 @@ that the <A HREF="gui.html#GUI">GUI</A> offers.
 |<A HREF="#09.3">09.3</A>|	The <A HREF="provider.html#clipboard">clipboard</A>
 |<A HREF="#09.4">09.4</A>|	<A HREF="visual.html#Select">Select</A> mode
 
-     Next chapter: |<A HREF="usr_10.html">usr_10.txt</A>|  Making big changes
- Previous chapter: |<A HREF="usr_08.html">usr_08.txt</A>|  Splitting <A HREF="windows.html#windows">windows</A>
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_10.html">usr_10.txt</A>|  Making big changes
+上一章: |<A HREF="usr_08.html">usr_08.txt</A>|  Splitting <A HREF="windows.html#windows">windows</A>
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -105,12 +105,12 @@ these commands should <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it<
 
 If this doesn't work you don't have a version of Vim with <A HREF="gui.html#GUI">GUI</A> support.  You
 will have to install one first.
-   Vim will open a <A HREF="windows.html#window">window</A> and display &quot;file.txt&quot; in <A HREF="motion.html#it">it</A>.  What the <A HREF="windows.html#window">window</A> looks
+   Vim will open a<A HREF="windows.html#window">窗口</A>and display &quot;file.txt&quot; in <A HREF="motion.html#it">it</A>.  What the<A HREF="windows.html#window">窗口</A>looks
 like depends on the version of Vim.  It should resemble the following picture
 (for <A HREF="motion.html#as">as</A> far <A HREF="motion.html#as">as</A> this can be shown in ASCII!).
 
 	+----------------------------------------------------+
-	&#124; file.txt + (~/dir) - VIM			   X &#124;	&lt;- <A HREF="windows.html#window">window</A> title
+	&#124; file.txt + (~/dir) - VIM			   X &#124;	&lt;-<A HREF="windows.html#window">窗口</A>title
 	+----------------------------------------------------+
 	&#124; File	Edit  Tools  <A HREF="autocmd.html#Syntax">Syntax</A>  Buffers  Window  Help   &#124;	&lt;- menubar
 	+----------------------------------------------------+
@@ -133,7 +133,7 @@ perhaps.
 
 THE WINDOW TITLE
 
-At the very top is the <A HREF="windows.html#window">window</A> title.  This is drawn by your <A HREF="windows.html#window">window</A> system.
+At the very top is the<A HREF="windows.html#window">窗口</A>title.  This is drawn by your<A HREF="windows.html#window">窗口</A>system.
 Vim will set the title to show the name of the current file.  First comes the
 name of the file.  Then some special characters and the directory of the file
 in parens.  These special characters can be present:
@@ -177,13 +177,13 @@ This removes the '<A HREF="motion.html#T">T</A>' flag from the <A HREF="options.
 THE SCROLLBARS
 
 By default there is one scrollbar on the right.  It does the obvious thing.
-When you split the <A HREF="windows.html#window">window</A>, each <A HREF="windows.html#window">window</A> will get its own scrollbar.
+When you split the<A HREF="windows.html#window">窗口</A>, each<A HREF="windows.html#window">窗口</A>will get its own scrollbar.
    You can make a horizontal scrollbar appear with the menu item
 Edit/Global Settings/Toggle Bottom Scrollbar.  This is useful in <A HREF="diff.html#diff">diff</A> mode, or
 when the <A HREF="options.html#'wrap'">'wrap'</A> option has been reset (more about that later).
 
 When there are vertically split <A HREF="windows.html#windows">windows</A>, only the <A HREF="windows.html#windows">windows</A> on the right side
-will have a scrollbar.  However, when you move the cursor to a <A HREF="windows.html#window">window</A> on the
+will have a scrollbar.  However, when you move the cursor to a<A HREF="windows.html#window">窗口</A>on the
 left, <A HREF="motion.html#it">it</A> will be this one that the scrollbar controls.  This takes a bit of
 time to get used to.
    When you work with vertically split <A HREF="windows.html#windows">windows</A>, consider adding a scrollbar on
@@ -259,13 +259,13 @@ using the default option settings).  You can <A HREF="provider.html#paste">paste
 application without any further action.
    For example, in this text select a few words with the mouse.  Vim will
 switch to <A HREF="visual.html#Visual">Visual</A> mode and highlight the text.  Now start another gvim, without
-a file name argument, so that <A HREF="motion.html#it">it</A> displays an empty <A HREF="windows.html#window">window</A>.  Click the middle
+a file name argument, so that <A HREF="motion.html#it">it</A> displays an empty<A HREF="windows.html#window">窗口</A>.  Click the middle
 mouse button.  The selected text will be inserted.
 
 The &quot;current selection&quot; will only remain valid until some other text is
 selected.  After doing the <A HREF="provider.html#paste">paste</A> in the other gvim, now select some characters
-in that <A HREF="windows.html#window">window</A>.  You will notice that the words that were previously selected
-in the other gvim <A HREF="windows.html#window">window</A> are displayed differently.  This means that <A HREF="motion.html#it">it</A> no
+in that<A HREF="windows.html#window">窗口</A>.  You will notice that the words that were previously selected
+in the other gvim<A HREF="windows.html#window">窗口</A>are displayed differently.  This means that <A HREF="motion.html#it">it</A> no
 longer is the current selection.
 
 You don't need to select text with the mouse, using the keyboard commands for
@@ -347,7 +347,7 @@ To start working with <A HREF="visual.html#Select">Select</A> mode, you must fir
 
 Now use the mouse to select some text.  It is highlighted like in <A HREF="visual.html#Visual">Visual</A> mode.
 Now press a <A HREF="print.html#letter">letter</A>.  The selected text is deleted, and the single <A HREF="print.html#letter">letter</A>
-replaces <A HREF="motion.html#it">it</A>.  You are in <A HREF="insert.html#Insert">Insert</A> mode now, thus you can continue typing.
+replaces <A HREF="motion.html#it">it</A>.  You are in <A HREF="intro.html#Insert">插入</A>模式 now, thus you can continue typing.
 
 Since typing normal text causes the selected text to be deleted, you can not
 use the normal <A HREF="intro.html#movement">movement</A> commands &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot;, &quot;<A HREF="motion.html#w">w</A>&quot;, etc.  Instead, use the shifted
@@ -359,9 +359,7 @@ You can tune the way <A HREF="visual.html#Select">Select</A> mode works with the
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_10.html">usr_10.txt</A>|  Making big changes
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_10.html">usr_10.txt</A>|  Making big changes
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

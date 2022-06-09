@@ -291,14 +291,14 @@ Functions:
 Highlight groups:
   |<A HREF="syntax.html#highlight-blend">highlight-blend</A>| controls blend level for a highlight group
   |<A HREF="eval.html#expr-highlight">expr-highlight</A>| highlight groups (prefixed with &quot;Nvim&quot;)
-  |<A HREF="syntax.html#hl-NormalFloat">hl-NormalFloat</A>| highlights floating <A HREF="windows.html#window">window</A>
+  |<A HREF="syntax.html#hl-NormalFloat">hl-NormalFloat</A>| highlights floating<A HREF="windows.html#window">窗口</A>
   |<A HREF="syntax.html#hl-NormalNC">hl-NormalNC</A>| highlights non-current <A HREF="windows.html#windows">windows</A>
   |<A HREF="syntax.html#hl-MsgArea">hl-MsgArea</A>| highlights messages/cmdline area
   |<A HREF="syntax.html#hl-MsgSeparator">hl-MsgSeparator</A>| highlights separator for scrolled <A HREF="message.html#messages">messages</A>
   |<A HREF="syntax.html#hl-Substitute">hl-Substitute</A>|
   |<A HREF="syntax.html#hl-TermCursor">hl-TermCursor</A>|
   |<A HREF="syntax.html#hl-TermCursorNC">hl-TermCursorNC</A>|
-  |<A HREF="syntax.html#hl-WinSeparator">hl-WinSeparator</A>| highlights <A HREF="windows.html#window">window</A> separators
+  |<A HREF="syntax.html#hl-WinSeparator">hl-WinSeparator</A>| highlights<A HREF="windows.html#window">窗口</A>separators
   |<A HREF="syntax.html#hl-Whitespace">hl-Whitespace</A>| highlights <A HREF="options.html#'listchars'">'listchars'</A> <A HREF="pattern.html#whitespace">whitespace</A>
 
 Input/Mappings:
@@ -536,12 +536,12 @@ Vimscript compatibility:
 
 Working directory (Vim implemented some of these later than Nvim):
 - |<A HREF="autocmd.html#DirChanged">DirChanged</A>| and |<A HREF="autocmd.html#DirChangedPre">DirChangedPre</A>| can be triggered when switching to another
-  <A HREF="windows.html#window">window</A> or <A HREF="intro.html#tab">tab</A>.
-- |<A HREF="builtin.html#getcwd()">getcwd()</A>| and |<A HREF="builtin.html#haslocaldir()">haslocaldir()</A>| may throw <A HREF="message.html#errors">errors</A> if the <A HREF="intro.html#tab">tab</A> page or <A HREF="windows.html#window">window</A>
+ <A HREF="windows.html#window">窗口</A>or <A HREF="intro.html#tab">tab</A>.
+- |<A HREF="builtin.html#getcwd()">getcwd()</A>| and |<A HREF="builtin.html#haslocaldir()">haslocaldir()</A>| may throw <A HREF="message.html#errors">errors</A> if the <A HREF="intro.html#tab">tab</A> page or<A HREF="windows.html#window">窗口</A>
 
   cannot be found.  *<A NAME="E5000"></A><B>E5000</B>* *<A NAME="E5001"></A><B>E5001</B>* *<A NAME="E5002"></A><B>E5002</B>*
 - |<A HREF="builtin.html#haslocaldir()">haslocaldir()</A>| checks for tab-local directory if and only if -1 is passed as
-  <A HREF="windows.html#window">window</A> number, and its only possible returns values are 0 and 1.
+ <A HREF="windows.html#window">窗口</A>number, and its only possible returns values are 0 and 1.
 - `getcwd(-1)` is equivalent to `getcwd(-1, 0)` instead of returning the global
   working directory. Use `getcwd(-1, -1)` to get the global working directory.
 

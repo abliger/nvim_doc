@@ -361,7 +361,7 @@ f{char}			To [count]'th occurrence of {char} to the right.  The
 			When <A HREF="options.html#'encoding'">'encoding'</A> is set to <A HREF="mbyte.html#Unicode">Unicode</A>, composing
 			characters may be used, see |<A HREF="mbyte.html#utf-8-char-arg">utf-8-char-arg</A>|.
 			|<A HREF="map.html#:lmap">:lmap</A>| mappings apply to {char}.  The <A HREF="editing.html#CTRL-^">CTRL-^</A> command
-			in <A HREF="insert.html#Insert">Insert</A> mode can be used to switch this on/off
+			in <A HREF="intro.html#Insert">插入</A>模式 can be used to switch this on/off
 			|<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>|.
 
 
@@ -1098,14 +1098,14 @@ was made yet in the current file.
 			line.  See |<A HREF="usr_05.html#last-position-jump">last-position-jump</A>| for how to use this
 			for each opened file.
 			Only one position is remembered per buffer, not one
-			for each <A HREF="windows.html#window">window</A>.  As long <A HREF="#as">as</A> the buffer is visible in
-			a <A HREF="windows.html#window">window</A> the position won't be changed.  <A HREF="#Mark">Mark</A> is also 
+			for each<A HREF="windows.html#window">窗口</A>.  As long <A HREF="#as">as</A> the buffer is visible in
+			a<A HREF="windows.html#window">窗口</A>the position won't be changed.  <A HREF="#Mark">Mark</A> is also 
 			reset when |<A HREF="starting.html#:wshada">:wshada</A>| is run.
 
 
 							*<A NAME="'^"></A><B>'^</B>* *<A NAME="`^"></A><B>`^</B>*
 <A HREF="#'^">'^</A>  <A HREF="#`^">`^</A>			To the position where the cursor was the last time
-			when <A HREF="insert.html#Insert">Insert</A> mode was stopped.  This is used by the
+			when <A HREF="intro.html#Insert">插入</A>模式 was stopped.  This is used by the
 			|<A HREF="insert.html#gi">gi</A>| command.  Not set when the |<A HREF="#:keepjumps">:keepjumps</A>| command
 			modifier was used.
 
@@ -1186,7 +1186,7 @@ These commands are not marks themselves, but jump to a <A HREF="#mark">mark</A>:
 			These items will still be adjusted:
 			- previous <A HREF="repeat.html#context">context</A> <A HREF="#mark">mark</A> <A HREF="#''">''</A>
 			- the cursor position
-			- the view of a <A HREF="windows.html#window">window</A> on a buffer
+			- the view of a<A HREF="windows.html#window">窗口</A>on a buffer
 			- <A HREF="fold.html#folds">folds</A>
 			- diffs
 
@@ -1255,13 +1255,13 @@ commands that start editing a new file.
 
 
 							*<A NAME=":cle"></A><B>:cle</B>* *<A NAME=":clearjumps"></A><B>:clearjumps</B>*
-:cle[arjumps]		Clear the jump <A HREF="eval.html#list">list</A> of the current <A HREF="windows.html#window">window</A>.
+:cle[arjumps]		Clear the jump <A HREF="eval.html#list">list</A> of the current<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME="jumplist"></A><B>jumplist</B>*
 Jumps are remembered in a jump <A HREF="eval.html#list">list</A>.  With the <A HREF="#CTRL-O">CTRL-O</A> and <A HREF="#CTRL-I">CTRL-I</A> command you
 can go to cursor positions before older jumps, and back again.  Thus you can
-move up and down the <A HREF="eval.html#list">list</A>.  There is a separate jump <A HREF="eval.html#list">list</A> for each <A HREF="windows.html#window">window</A>.
+move up and down the <A HREF="eval.html#list">list</A>.  There is a separate jump <A HREF="eval.html#list">list</A> for each<A HREF="windows.html#window">窗口</A>.
 The maximum number of entries is fixed at 100.
 
 For example, after three jump commands you have this jump <A HREF="eval.html#list">list</A>:
@@ -1274,7 +1274,7 @@ For example, after three jump commands you have this jump <A HREF="eval.html#lis
 
 The &quot;file/text&quot; column shows the file name, or the text at the jump if <A HREF="#it">it</A> is
 in the current file (an indent is removed and a long line is truncated to fit
-in the <A HREF="windows.html#window">window</A>).
+in the<A HREF="windows.html#window">窗口</A>).
 
 The marker &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; indicates the current position in the <A HREF="#jumplist">jumplist</A>.  It may not be
 shown when filtering the |<A HREF="#:jumps">:jumps</A>| command using |<A HREF="various.html#:filter">:filter</A>|
@@ -1323,7 +1323,7 @@ jump command (e.g., &quot;G&quot;).  The jump <A HREF="eval.html#list">list</A> 
 The line numbers will be adjusted for deleted and inserted lines.  This fails
 if you stop editing a file without <A HREF="editing.html#writing">writing</A>, like with &quot;:n!&quot;.
 
-When you split a <A HREF="windows.html#window">window</A>, the <A HREF="#jumplist">jumplist</A> will be copied to the new <A HREF="windows.html#window">window</A>.
+When you split a<A HREF="windows.html#window">窗口</A>, the <A HREF="#jumplist">jumplist</A> will be copied to the new<A HREF="windows.html#window">窗口</A>.
 
 If you have included the '' item in the <A HREF="options.html#'shada'">'shada'</A> option the <A HREF="#jumplist">jumplist</A> will be
 stored in the ShaDa file and restored when starting Vim.
@@ -1600,8 +1600,8 @@ the current line is included.  You can then use &quot;<A HREF="#&#37;">&#37;</A>
 
 
 						*<A NAME="H"></A><B>H</B>*
-<A HREF="#H">H</A>			To line <A HREF="intro.html#[count]">[count]</A> from top (Home) of <A HREF="windows.html#window">window</A> (default:
-			first line on the <A HREF="windows.html#window">window</A>) on the first non-blank
+<A HREF="#H">H</A>			To line <A HREF="intro.html#[count]">[count]</A> from top (Home) of<A HREF="windows.html#window">窗口</A>(default:
+			first line on the<A HREF="windows.html#window">窗口</A>) on the first non-blank
 			character |<A HREF="#linewise">linewise</A>|.  See also <A HREF="options.html#'startofline'">'startofline'</A> option.
 			Cursor is adjusted for <A HREF="options.html#'scrolloff'">'scrolloff'</A> option, unless an
 			<A HREF="#operator">operator</A> is pending, in which <A HREF="change.html#case">case</A> the text may
@@ -1610,13 +1610,13 @@ the current line is included.  You can then use &quot;<A HREF="#&#37;">&#37;</A>
 
 
 						*<A NAME="M"></A><B>M</B>*
-<A HREF="#M">M</A>			To Middle line of <A HREF="windows.html#window">window</A>, on the first non-blank
+<A HREF="#M">M</A>			To Middle line of<A HREF="windows.html#window">窗口</A>, on the first non-blank
 			character |<A HREF="#linewise">linewise</A>|.  See also <A HREF="options.html#'startofline'">'startofline'</A> option.
 
 
 						*<A NAME="L"></A><B>L</B>*
-<A HREF="#L">L</A>			To line <A HREF="intro.html#[count]">[count]</A> from bottom of <A HREF="windows.html#window">window</A> (default: Last
-			line on the <A HREF="windows.html#window">window</A>) on the first non-blank character
+<A HREF="#L">L</A>			To line <A HREF="intro.html#[count]">[count]</A> from bottom of<A HREF="windows.html#window">窗口</A>(default: Last
+			line on the<A HREF="windows.html#window">窗口</A>) on the first non-blank character
 			|<A HREF="#linewise">linewise</A>|.  See also <A HREF="options.html#'startofline'">'startofline'</A> option.
 			Cursor is adjusted for <A HREF="options.html#'scrolloff'">'scrolloff'</A> option, unless an
 			<A HREF="#operator">operator</A> is pending, in which <A HREF="change.html#case">case</A> the text may
@@ -1625,8 +1625,8 @@ the current line is included.  You can then use &quot;<A HREF="#&#37;">&#37;</A>
 
 <A HREF="visual.html#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>		Moves to the position on the screen where the mouse
 			click is |<A HREF="#exclusive">exclusive</A>|.  See also |<A HREF="visual.html#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>|.  If the
-			position is in a status line, that <A HREF="windows.html#window">window</A> is made the
-			active <A HREF="windows.html#window">window</A> and the cursor is not moved.
+			position is in a status line, that<A HREF="windows.html#window">窗口</A>is made the
+			active<A HREF="windows.html#window">窗口</A>and the cursor is not moved.
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>

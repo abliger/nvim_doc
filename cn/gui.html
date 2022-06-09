@@ -100,22 +100,22 @@ Example: this sets &quot;g:gui&quot; to the value of the UI's &quot;rgb&quot; fi
 						*<A NAME=":winp"></A><B>:winp</B>* *<A NAME=":winpos"></A><B>:winpos</B>* *<A NAME="E188"></A><B>E188</B>*
 :winp[os]
 		Display current position of the top left corner of the <A HREF="#GUI">GUI</A> vim
-		<A HREF="windows.html#window">window</A> in pixels.  Does not work in all versions.
+		<A HREF="windows.html#window">窗口</A>in pixels.  Does not work in all versions.
 		Also see |<A HREF="builtin.html#getwinpos()">getwinpos()</A>|, |<A HREF="builtin.html#getwinposx()">getwinposx()</A>| and |<A HREF="builtin.html#getwinposy()">getwinposy()</A>|.
 
 
 :winp[os] {X} {Y}							*<A NAME="E466"></A><B>E466</B>*
-		Put the <A HREF="#GUI">GUI</A> vim <A HREF="windows.html#window">window</A> at the given {X} and {Y} coordinates.
+		Put the <A HREF="#GUI">GUI</A> vim<A HREF="windows.html#window">窗口</A>at the given {X} and {Y} coordinates.
 		The coordinates should specify the position in pixels of the
-		top left corner of the <A HREF="windows.html#window">window</A>.
-		When the <A HREF="#GUI">GUI</A> <A HREF="windows.html#window">window</A> has not been opened yet, the values are
-		remembered until the <A HREF="windows.html#window">window</A> is opened.  The position is
-		adjusted to make the <A HREF="windows.html#window">window</A> fit on the screen (if possible).
+		top left corner of the<A HREF="windows.html#window">窗口</A>.
+		When the <A HREF="#GUI">GUI</A><A HREF="windows.html#window">窗口</A>has not been opened yet, the values are
+		remembered until the<A HREF="windows.html#window">窗口</A>is opened.  The position is
+		adjusted to make the<A HREF="windows.html#window">窗口</A>fit on the screen (if possible).
 
 
 						    *<A NAME=":win"></A><B>:win</B>* *<A NAME=":winsize"></A><B>:winsize</B>* *<A NAME="E465"></A><B>E465</B>*
 :win[size] {width} {height}
-		Set the <A HREF="windows.html#window">window</A> height to {width} by {height} characters.
+		Set the<A HREF="windows.html#window">窗口</A>height to {width} by {height} characters.
 		Obsolete, use &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'lines'">lines</A>=11 columns=22&quot;.
 
 ==============================================================================
@@ -156,19 +156,19 @@ only useful when <A HREF="options.html#'nowrap'">'nowrap'</A> is set.
 
 VERTICAL SCROLLBARS					*<A NAME="gui-vert-scroll"></A><B>gui-vert-scroll</B>*
 
-Each Vim <A HREF="windows.html#window">window</A> has a scrollbar next to <A HREF="motion.html#it">it</A> which may be scrolled up and down
+Each Vim<A HREF="windows.html#window">窗口</A>has a scrollbar next to <A HREF="motion.html#it">it</A> which may be scrolled up and down
 to move through the text in that buffer.  The size of the scrollbar-thumb
-indicates the fraction of the buffer which can be seen in the <A HREF="windows.html#window">window</A>.
+indicates the fraction of the buffer which can be seen in the<A HREF="windows.html#window">窗口</A>.
 When the scrollbar is dragged all the way down, the last line of the file
-will appear in the top of the <A HREF="windows.html#window">window</A>.
+will appear in the top of the<A HREF="windows.html#window">窗口</A>.
 
-If a <A HREF="windows.html#window">window</A> is shrunk to zero height (by the growth of another <A HREF="windows.html#window">window</A>) its
-scrollbar disappears.  It reappears when the <A HREF="windows.html#window">window</A> is restored.
+If a<A HREF="windows.html#window">窗口</A>is shrunk to zero height (by the growth of another<A HREF="windows.html#window">窗口</A>) its
+scrollbar disappears.  It reappears when the<A HREF="windows.html#window">窗口</A>is restored.
 
-If a <A HREF="windows.html#window">window</A> is vertically split, <A HREF="motion.html#it">it</A> will get a scrollbar when <A HREF="motion.html#it">it</A> is the
-current <A HREF="windows.html#window">window</A> and when, taking the middle of the current <A HREF="windows.html#window">window</A> and drawing a
-vertical line, this line goes through the <A HREF="windows.html#window">window</A>.
-When there are scrollbars on both sides, and the middle of the current <A HREF="windows.html#window">window</A>
+If a<A HREF="windows.html#window">窗口</A>is vertically split, <A HREF="motion.html#it">it</A> will get a scrollbar when <A HREF="motion.html#it">it</A> is the
+current<A HREF="windows.html#window">窗口</A>and when, taking the middle of the current<A HREF="windows.html#window">窗口</A>and drawing a
+vertical line, this line goes through the<A HREF="windows.html#window">窗口</A>.
+When there are scrollbars on both sides, and the middle of the current<A HREF="windows.html#window">窗口</A>
 is on the left half, the right scrollbar column will contain scrollbars for
 the rightmost <A HREF="windows.html#windows">windows</A>.  The same happens on the other side.
 
@@ -193,11 +193,11 @@ text of the current cursor line.
 
 Drag and drop						*<A NAME="drag-n-drop"></A><B>drag-n-drop</B>*
 
-You can drag and drop one or more files into the Vim <A HREF="windows.html#window">window</A>, where they will
+You can drag and drop one or more files into the Vim<A HREF="windows.html#window">窗口</A>, where they will
 be opened <A HREF="motion.html#as">as</A> if a |<A HREF="windows.html#:drop">:drop</A>| command was used.
 
 If you hold down Shift while doing this, Vim changes to the first dropped
-file's directory.  If you hold Ctrl Vim will always split a new <A HREF="windows.html#window">window</A> for the
+file's directory.  If you hold Ctrl Vim will always split a new<A HREF="windows.html#window">窗口</A>for the
 file.  Otherwise it's only done if the current buffer has been changed.
 
 You can also drop a directory on Vim.  This starts the explorer <A HREF="usr_05.html#plugin">plugin</A> for
@@ -329,7 +329,7 @@ is equal to:
 <B>   :cmenu File.Next	^C:next^M^\^G</B>
 <B>   :omenu File.Next	^C:next^M^\^G</B>
 
-Careful: In <A HREF="insert.html#Insert">Insert</A> mode this only works for a SINGLE <A HREF="intro.html#Normal">Normal</A> mode command,
+Careful: In <A HREF="intro.html#Insert">插入</A>模式 this only works for a SINGLE <A HREF="intro.html#Normal">正常</A>模式 command,
 because of the <A HREF="motion.html#CTRL-O">CTRL-O</A>.  If you have two or more commands, you will need to use
 the &quot;<A HREF="#:imenu">:imenu</A>&quot; command.  For <A HREF="insert.html#inserting">inserting</A> text in any mode, you can use the
 <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A>:
@@ -346,7 +346,7 @@ is <A HREF="intro.html#Vi">Vi</A> compatible.  Use <A HREF="pattern.html#CTRL-C"
 
 
 		*<A NAME=":nme"></A><B>:nme</B>* *<A NAME=":nmenu"></A><B>:nmenu</B>*  *<A NAME=":nnoreme"></A><B>:nnoreme</B>* *<A NAME=":nnoremenu"></A><B>:nnoremenu</B>* *<A NAME=":nunme"></A><B>:nunme</B>* *<A NAME=":nunmenu"></A><B>:nunmenu</B>*
-Menu commands starting with &quot;n&quot; work in <A HREF="intro.html#Normal">Normal</A> mode. |<A HREF="map.html#mapmode-n">mapmode-n</A>|
+Menu commands starting with &quot;n&quot; work in <A HREF="intro.html#Normal">正常</A>模式. |<A HREF="map.html#mapmode-n">mapmode-n</A>|
 
 
 		*<A NAME=":ome"></A><B>:ome</B>* *<A NAME=":omenu"></A><B>:omenu</B>*  *<A NAME=":onoreme"></A><B>:onoreme</B>* *<A NAME=":onoremenu"></A><B>:onoremenu</B>* *<A NAME=":ounme"></A><B>:ounme</B>* *<A NAME=":ounmenu"></A><B>:ounmenu</B>*
@@ -366,7 +366,7 @@ Menu commands starting with &quot;s&quot; work in <A HREF="visual.html#Select">S
 
 
 		*<A NAME=":ime"></A><B>:ime</B>* *<A NAME=":imenu"></A><B>:imenu</B>*  *<A NAME=":inoreme"></A><B>:inoreme</B>* *<A NAME=":inoremenu"></A><B>:inoremenu</B>* *<A NAME=":iunme"></A><B>:iunme</B>* *<A NAME=":iunmenu"></A><B>:iunmenu</B>*
-Menu commands starting with &quot;i&quot; work in <A HREF="insert.html#Insert">Insert</A> mode. |<A HREF="map.html#mapmode-i">mapmode-i</A>|
+Menu commands starting with &quot;i&quot; work in <A HREF="intro.html#Insert">插入</A>模式. |<A HREF="map.html#mapmode-i">mapmode-i</A>|
 
 
 		*<A NAME=":cme"></A><B>:cme</B>* *<A NAME=":cmenu"></A><B>:cmenu</B>*  *<A NAME=":cnoreme"></A><B>:cnoreme</B>* *<A NAME=":cnoremenu"></A><B>:cnoremenu</B>* *<A NAME=":cunme"></A><B>:cunme</B>* *<A NAME=":cunmenu"></A><B>:cunmenu</B>*
@@ -490,7 +490,7 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
     MS-Windows a size of 18 by 18 pixels works best.
     For MS-Windows the bitmap should have 16 colors with the standard palette.
     The light grey pixels will be changed to the Window frame color and the
-    dark grey pixels to the <A HREF="windows.html#window">window</A> shadow color.  More colors might also work,
+    dark grey pixels to the<A HREF="windows.html#window">窗口</A>shadow color.  More colors might also work,
     depending on your system.
 4)  If the bitmap is still not found, Vim checks for a match against its <A HREF="eval.html#list">list</A>
     of built-in names.  Each built-in button image has a name.
@@ -503,8 +503,8 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
 
 							*<A NAME="builtin-tools"></A><B>builtin-tools</B>*
 <B><FONT color="#3A6F2B">nr  Name		Normal action  </FONT></B>
-00  New			open new <A HREF="windows.html#window">window</A>
-01  Open		browse for file to open in current <A HREF="windows.html#window">window</A>
+00  New			open new<A HREF="windows.html#window">窗口</A>
+01  Open		browse for file to open in current<A HREF="windows.html#window">窗口</A>
 02  Save		write buffer to file
 03  Undo		<A HREF="undo.html#undo">undo</A> last change
 04  Redo		<A HREF="undo.html#redo">redo</A> last undone change
@@ -520,10 +520,10 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
 14  LoadSesn		load session file
 15  RunScript		browse for file to run <A HREF="motion.html#as">as</A> a Vim <A HREF="usr_41.html#script">script</A>
 16  <A HREF="insert.html#Replace">Replace</A>		prompt for substitute command
-17  WinClose		close current <A HREF="windows.html#window">window</A>
-18  WinMax		make current <A HREF="windows.html#window">window</A> use many lines
-19  WinMin		make current <A HREF="windows.html#window">window</A> use few lines
-20  WinSplit		split current <A HREF="windows.html#window">window</A>
+17  WinClose		close current<A HREF="windows.html#window">窗口</A>
+18  WinMax		make current<A HREF="windows.html#window">窗口</A>use many lines
+19  WinMin		make current<A HREF="windows.html#window">窗口</A>use few lines
+20  WinSplit		split current<A HREF="windows.html#window">窗口</A>
 21  Shell		start a shell
 22  FindPrev		search again, backward
 23  FindNext		search again, forward
@@ -531,16 +531,16 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
 25  Make		run make and jump to first error
 26  TagJump		jump to <A HREF="tagsrch.html#tag">tag</A> under the cursor
 27  RunCtags		build <A HREF="tagsrch.html#tags">tags</A> for files in current directory
-28  WinVSplit		split current <A HREF="windows.html#window">window</A> vertically
-29  WinMaxWidth		make current <A HREF="windows.html#window">window</A> use many columns
-30  WinMinWidth		make current <A HREF="windows.html#window">window</A> use few columns
+28  WinVSplit		split current<A HREF="windows.html#window">窗口</A>vertically
+29  WinMaxWidth		make current<A HREF="windows.html#window">窗口</A>use many columns
+30  WinMinWidth		make current<A HREF="windows.html#window">窗口</A>use few columns
 
 
 					*<A NAME="hidden-menus"></A><B>hidden-menus</B>* *<A NAME="win32-hidden-menus"></A><B>win32-hidden-menus</B>*
 In the Win32 <A HREF="#GUI">GUI</A>, starting a menu name with '<A HREF="vimindex.html#]">]</A>' excludes that menu from the
 main menu <A HREF="motion.html#bar">bar</A>.  You must then use the |<A HREF="#:popup">:popup</A>| command to display <A HREF="motion.html#it">it</A>.
 
-When splitting the <A HREF="windows.html#window">window</A> the <A HREF="windows.html#window">window</A> toolbar is not copied to the new <A HREF="windows.html#window">window</A>.
+When splitting the<A HREF="windows.html#window">窗口</A>the<A HREF="windows.html#window">窗口</A>toolbar is not copied to the new<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME="popup-menu"></A><B>popup-menu</B>*
@@ -576,7 +576,7 @@ Executing Menus						*<A NAME="execute-menus"></A><B>execute-menus</B>*
 
 						*<A NAME=":em"></A><B>:em</B>*  *<A NAME=":emenu"></A><B>:emenu</B>* *<A NAME="E334"></A><B>E334</B>* *<A NAME="E335"></A><B>E335</B>*
 :[range]em[enu] {menu}		Execute {menu} from the command line.
-				The default is to execute the <A HREF="intro.html#Normal">Normal</A> mode
+				The default is to execute the <A HREF="intro.html#Normal">正常</A>模式
 				menu.  If a range is specified, <A HREF="motion.html#it">it</A> executes
 				the <A HREF="visual.html#Visual">Visual</A> mode menu.
 				If used from &lt;c-o&gt;, <A HREF="motion.html#it">it</A> executes the

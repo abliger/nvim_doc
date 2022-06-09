@@ -266,13 +266,13 @@ Put this in `uppercase.vim` and run:
 
 5. Using a prompt buffer				*<A NAME="prompt-buffer"></A><B>prompt-buffer</B>*
 
-If you want to type input for the <A HREF="job_control.html#job">job</A> in a Vim <A HREF="windows.html#window">window</A> you have a few <A HREF="options.html#options">options</A>:
+If you want to type input for the <A HREF="job_control.html#job">job</A> in a Vim<A HREF="windows.html#window">窗口</A>you have a few <A HREF="options.html#options">options</A>:
 - Use a normal buffer and handle all possible commands yourself.
   This will be complicated, since there are so many possible commands.
-- Use a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#window">window</A>.  This works well if what you type goes directly to
-  the <A HREF="job_control.html#job">job</A> and the <A HREF="job_control.html#job">job</A> output is directly displayed in the <A HREF="windows.html#window">window</A>.
+- Use a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>.  This works well if what you type goes directly to
+  the <A HREF="job_control.html#job">job</A> and the <A HREF="job_control.html#job">job</A> output is directly displayed in the<A HREF="windows.html#window">窗口</A>.
   See |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|.
-- Use a <A HREF="windows.html#window">window</A> with a prompt buffer. This works well when entering a line for
+- Use a<A HREF="windows.html#window">窗口</A>with a prompt buffer. This works well when entering a line for
   the <A HREF="job_control.html#job">job</A> in Vim while displaying (possibly filtered) output from the <A HREF="job_control.html#job">job</A>.
 
 A prompt buffer is created by setting <A HREF="options.html#'buftype'">'buftype'</A> to &quot;prompt&quot;. You would
@@ -285,27 +285,27 @@ Another callback would receive the output from the <A HREF="job_control.html#job
 buffer, below the prompt (and above the next prompt).
 
 Only the text in the last line, after the prompt, is editable. The rest of the
-buffer is not modifiable with <A HREF="intro.html#Normal">Normal</A> mode commands.  It can be modified by
+buffer is not modifiable with <A HREF="intro.html#Normal">正常</A>模式 commands.  It can be modified by
 calling <A HREF="eval.html#functions">functions</A>, such <A HREF="motion.html#as">as</A> |<A HREF="builtin.html#append()">append()</A>|.  Using other commands may mess up the
 buffer.
 
 After setting <A HREF="options.html#'buftype'">'buftype'</A> to &quot;prompt&quot; Vim does not automatically start <A HREF="insert.html#Insert">Insert</A>
-mode, use `:startinsert` if you want to enter <A HREF="insert.html#Insert">Insert</A> mode, so that the user
+mode, use `:startinsert` if you want to enter <A HREF="intro.html#Insert">插入</A>模式, so that the user
 can start typing a line.
 
 The text of the prompt can be set with the |<A HREF="builtin.html#prompt_setprompt()">prompt_setprompt()</A>| function. If
 no prompt is set with |<A HREF="builtin.html#prompt_setprompt()">prompt_setprompt()</A>|, &quot;<A HREF="motion.html#&#37;">&#37;</A> &quot; is used. You can get the
 effective prompt text for a buffer, with |<A HREF="builtin.html#prompt_getprompt()">prompt_getprompt()</A>|.
 
-The user can go to <A HREF="intro.html#Normal">Normal</A> mode and navigate through the buffer.  This can be
+The user can go to <A HREF="intro.html#Normal">正常</A>模式 and navigate through the buffer.  This can be
 useful to see older output or copy text.
 
-The <A HREF="vimindex.html#CTRL-W">CTRL-W</A> key can be used to start a <A HREF="windows.html#window">window</A> command, such <A HREF="motion.html#as">as</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#w">w</A> to
-switch to the next <A HREF="windows.html#window">window</A>.  This also works in <A HREF="insert.html#Insert">Insert</A> mode (use Shift-CTRL-W
-to delete a <A HREF="motion.html#word">word</A>). When leaving the <A HREF="windows.html#window">window</A> <A HREF="insert.html#Insert">Insert</A> mode will be stopped.  When
-coming back to the prompt <A HREF="windows.html#window">window</A> <A HREF="insert.html#Insert">Insert</A> mode will be restored.
+The <A HREF="vimindex.html#CTRL-W">CTRL-W</A> key can be used to start a<A HREF="windows.html#window">窗口</A>command, such <A HREF="motion.html#as">as</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#w">w</A> to
+switch to the next<A HREF="windows.html#window">窗口</A>.  This also works in <A HREF="intro.html#Insert">插入</A>模式 (use Shift-CTRL-W
+to delete a <A HREF="motion.html#word">word</A>). When leaving the<A HREF="windows.html#window">窗口</A><A HREF="intro.html#Insert">插入</A>模式 will be stopped.  When
+coming back to the prompt<A HREF="windows.html#window">窗口</A><A HREF="intro.html#Insert">插入</A>模式 will be restored.
 
-Any command that starts <A HREF="insert.html#Insert">Insert</A> mode, such <A HREF="motion.html#as">as</A> &quot;<A HREF="insert.html#a">a</A>&quot;, &quot;<A HREF="insert.html#i">i</A>&quot;, &quot;<A HREF="insert.html#A">A</A>&quot; and &quot;<A HREF="insert.html#I">I</A>&quot;, will move
+Any command that starts <A HREF="intro.html#Insert">插入</A>模式, such <A HREF="motion.html#as">as</A> &quot;<A HREF="insert.html#a">a</A>&quot;, &quot;<A HREF="insert.html#i">i</A>&quot;, &quot;<A HREF="insert.html#A">A</A>&quot; and &quot;<A HREF="insert.html#I">I</A>&quot;, will move
 the cursor to the last line.  &quot;<A HREF="insert.html#A">A</A>&quot; will move to the end of the line, &quot;<A HREF="insert.html#I">I</A>&quot; to the
 start of the line.
 

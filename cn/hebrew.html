@@ -98,9 +98,9 @@ See |<A HREF="rileft.html">rileft.txt</A>| for further details.
 
 Details
 +  Options:
-   +  <A HREF="options.html#'rightleft'">'rightleft'</A> ('rl') sets <A HREF="windows.html#window">window</A> orientation to right-to-left.  This means
+   +  <A HREF="options.html#'rightleft'">'rightleft'</A> ('rl') sets<A HREF="windows.html#window">窗口</A>orientation to right-to-left.  This means
       that the logical text 'ABC' will be displayed <A HREF="motion.html#as">as</A> 'CBA', and will start
-      drawing at the right edge of the <A HREF="windows.html#window">window</A>, not the left edge.
+      drawing at the right edge of the<A HREF="windows.html#window">窗口</A>, not the left edge.
    +  <A HREF="options.html#'hkmap'">'hkmap'</A> ('hk') sets keyboard <A HREF="map.html#mapping">mapping</A> to Hebrew, in insert/replace modes.
    +  <A HREF="options.html#'aleph'">'aleph'</A> ('al'), numeric, holds the decimal code of <A HREF="options.html#Aleph">Aleph</A>, for keyboard
       <A HREF="map.html#mapping">mapping</A>.
@@ -114,7 +114,7 @@ Details
       associated niqud).
 
    +  <A HREF="options.html#'rightleftcmd'">'rightleftcmd'</A> ('rlc') makes the command-prompt for searches show up on
-      the right side.  It only takes effect if the <A HREF="windows.html#window">window</A> is <A HREF="options.html#'rightleft'">'rightleft'</A>.
+      the right side.  It only takes effect if the<A HREF="windows.html#window">窗口</A>is <A HREF="options.html#'rightleft'">'rightleft'</A>.
 
 +  Encoding:
    +  Under Unix, ISO 8859-8 encoding (Hebrew letters codes: 224-250).
@@ -128,15 +128,15 @@ Details
       are set.
 
 +  Keyboard:
-   +  The <A HREF="options.html#'allowrevins'">'allowrevins'</A> option enables the CTRL-_ command in <A HREF="insert.html#Insert">Insert</A> mode and
+   +  The <A HREF="options.html#'allowrevins'">'allowrevins'</A> option enables the CTRL-_ command in <A HREF="intro.html#Insert">插入</A>模式 and
       in <A HREF="cmdline.html#Command-line">Command-line</A> mode.
 
    +  CTRL-_ in insert/replace modes toggles <A HREF="options.html#'revins'">'revins'</A> and <A HREF="options.html#'hkmap'">'hkmap'</A> <A HREF="motion.html#as">as</A> follows:
 
-      When in rightleft <A HREF="windows.html#window">window</A>, <A HREF="options.html#'revins'">'revins'</A> and <A HREF="options.html#'nohkmap'">'nohkmap'</A> are toggled, since
+      When in rightleft<A HREF="windows.html#window">窗口</A>, <A HREF="options.html#'revins'">'revins'</A> and <A HREF="options.html#'nohkmap'">'nohkmap'</A> are toggled, since
       English will likely be inserted in this <A HREF="change.html#case">case</A>.
 
-      When in norightleft <A HREF="windows.html#window">window</A>, <A HREF="options.html#'revins'">'revins'</A> <A HREF="options.html#'hkmap'">'hkmap'</A> are toggled, since Hebrew
+      When in norightleft<A HREF="windows.html#window">窗口</A>, <A HREF="options.html#'revins'">'revins'</A> <A HREF="options.html#'hkmap'">'hkmap'</A> are toggled, since Hebrew
       will likely be inserted in this <A HREF="change.html#case">case</A>.
 
       CTRL-_ moves the cursor to the end of the typed text.
@@ -177,20 +177,20 @@ the <A HREF="options.html#'backspace'">'backspace'</A> option is set.
 There is no reverse replace mode (yet).
 
 If the <A HREF="options.html#'showmode'">'showmode'</A> option is set, &quot;<A HREF="starting.html#--">--</A> REVERSE INSERT --&quot; will be shown in the
-status line when reverse <A HREF="insert.html#Insert">Insert</A> mode is active.
+status line when reverse <A HREF="intro.html#Insert">插入</A>模式 is active.
 
-When the <A HREF="options.html#'allowrevins'">'allowrevins'</A> option is set, reverse <A HREF="insert.html#Insert">Insert</A> mode can be also entered
+When the <A HREF="options.html#'allowrevins'">'allowrevins'</A> option is set, reverse <A HREF="intro.html#Insert">插入</A>模式 can be also entered
 via CTRL-_, which has some extra functionality: First, keyboard <A HREF="map.html#mapping">mapping</A> is
-changed according to the <A HREF="windows.html#window">window</A> orientation <A HREF="starting.html#--">--</A> if in a left-to-right <A HREF="windows.html#window">window</A>,
+changed according to the<A HREF="windows.html#window">窗口</A>orientation <A HREF="starting.html#--">--</A> if in a left-to-right<A HREF="windows.html#window">窗口</A>,
 <A HREF="options.html#'revins'">'revins'</A> is used to enter Hebrew text, so the keyboard changes to Hebrew
-('hkmap' is set); if in a right-to-left <A HREF="windows.html#window">window</A>, <A HREF="options.html#'revins'">'revins'</A> is used to enter
+('hkmap' is set); if in a right-to-left<A HREF="windows.html#window">窗口</A>, <A HREF="options.html#'revins'">'revins'</A> is used to enter
 English text, so the keyboard changes to English ('hkmap' is reset).  Second,
 when <A HREF="starting.html#exiting">exiting</A> <A HREF="options.html#'revins'">'revins'</A> via CTRL-_, the cursor moves to the end of the typed
 text (if possible).
 
 
-Pasting when in a rightleft <A HREF="windows.html#window">window</A>
-When cutting text with the mouse and pasting <A HREF="motion.html#it">it</A> in a rightleft <A HREF="windows.html#window">window</A>
+Pasting when in a rightleft<A HREF="windows.html#window">窗口</A>
+When cutting text with the mouse and pasting <A HREF="motion.html#it">it</A> in a rightleft<A HREF="windows.html#window">窗口</A>
 the text will be reversed, because the characters come from the cut buffer
 from the left to the right, while inserted in the file from the right to
 the left.   In order to avoid <A HREF="motion.html#it">it</A>, toggle <A HREF="options.html#'revins'">'revins'</A> (by typing CTRL-? or CTRL-_)

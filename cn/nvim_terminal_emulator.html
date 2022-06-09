@@ -163,10 +163,10 @@ Mouse input has the following behavior:
   forwarded to the program.
 - If mouse <A HREF="autocmd.html#events">events</A> are disabled (the default), <A HREF="#terminal">terminal</A> focus will be lost and
   the event will be processed <A HREF="motion.html#as">as</A> in a normal buffer.
-- If another <A HREF="windows.html#window">window</A> is clicked, <A HREF="#terminal">terminal</A> focus will be lost and <A HREF="nvim.html#nvim">nvim</A> will jump
-  to the clicked <A HREF="windows.html#window">window</A>
-- If the mouse wheel is used while the mouse is positioned in another <A HREF="windows.html#window">window</A>,
-  the <A HREF="#terminal">terminal</A> won't lose focus and the hovered <A HREF="windows.html#window">window</A> will be scrolled.
+- If another<A HREF="windows.html#window">窗口</A>is clicked, <A HREF="#terminal">terminal</A> focus will be lost and <A HREF="nvim.html#nvim">nvim</A> will jump
+  to the clicked<A HREF="windows.html#window">窗口</A>
+- If the mouse wheel is used while the mouse is positioned in another<A HREF="windows.html#window">窗口</A>,
+  the <A HREF="#terminal">terminal</A> won't lose focus and the hovered<A HREF="windows.html#window">窗口</A>will be scrolled.
 
 ==============================================================================
 
@@ -210,7 +210,7 @@ Example:
 
 
 - *<A NAME="b:term_title"></A><B>b:term_title</B>*  Terminal title (user-writable), typically displayed in the
-  <A HREF="windows.html#window">window</A> title or <A HREF="intro.html#tab">tab</A> title of a graphical <A HREF="#terminal">terminal</A> emulator. Terminal
+ <A HREF="windows.html#window">窗口</A>title or <A HREF="intro.html#tab">tab</A> title of a graphical <A HREF="#terminal">terminal</A> emulator. Terminal
   programs can set this by emitting an <A HREF="intro.html#escape">escape</A> sequence.
 - |<A HREF="options.html#'channel'">'channel'</A>|  Terminal PTY |<A HREF="job_control.html#job-id">job-id</A>|.  Can be used with |<A HREF="builtin.html#chansend()">chansend()</A>| to send
   input to the <A HREF="#terminal">terminal</A>.
@@ -227,7 +227,7 @@ Use |<A HREF="builtin.html#jobwait()">jobwait()</A>| to check if the <A HREF="#t
 <A HREF="#:Termdebug">:Termdebug</A> <A HREF="usr_05.html#plugin">plugin</A>				*<A NAME="terminal-debug"></A><B>terminal-debug</B>*
 
 The Terminal debugging <A HREF="usr_05.html#plugin">plugin</A> can be used to debug a program with <A HREF="debug.html#gdb">gdb</A> and view
-the source code in a Vim <A HREF="windows.html#window">window</A>.  Since this is completely contained inside
+the source code in a Vim<A HREF="windows.html#window">窗口</A>.  Since this is completely contained inside
 Vim this also works remotely over an ssh connection.
 
 <B><FONT color="#3A6F2B">Starting </FONT></B>
@@ -243,24 +243,24 @@ command name, for example:
 
 This opens two <A HREF="windows.html#windows">windows</A>:
 
-<A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>	A <A HREF="#terminal">terminal</A> <A HREF="windows.html#window">window</A> in which &quot;<A HREF="debug.html#gdb">gdb</A> vim&quot; is executed.  Here you
+<A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>in which &quot;<A HREF="debug.html#gdb">gdb</A> vim&quot; is executed.  Here you
 		can directly interact with <A HREF="debug.html#gdb">gdb</A>.
 
-program <A HREF="windows.html#window">window</A>	A <A HREF="#terminal">terminal</A> <A HREF="windows.html#window">window</A> for the executed program.  When &quot;run&quot; is
-		used in <A HREF="debug.html#gdb">gdb</A> the program I/O will happen in this <A HREF="windows.html#window">window</A>, so
+program<A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>for the executed program.  When &quot;run&quot; is
+		used in <A HREF="debug.html#gdb">gdb</A> the program I/O will happen in this<A HREF="windows.html#window">窗口</A>, so
 		that <A HREF="motion.html#it">it</A> does not interfere with controlling <A HREF="debug.html#gdb">gdb</A>.
 
-The current <A HREF="windows.html#window">window</A> is used to show the source code.  When <A HREF="debug.html#gdb">gdb</A> pauses the
+The current<A HREF="windows.html#window">窗口</A>is used to show the source code.  When <A HREF="debug.html#gdb">gdb</A> pauses the
 source file location will be displayed, if possible.  A sign is used to
 highlight the current position, using highlight group debugPC.
 
-If the buffer in the current <A HREF="windows.html#window">window</A> is modified, another <A HREF="windows.html#window">window</A> will be opened
+If the buffer in the current<A HREF="windows.html#window">窗口</A>is modified, another<A HREF="windows.html#window">窗口</A>will be opened
 to display the current <A HREF="debug.html#gdb">gdb</A> position.
 
 Focus the <A HREF="#terminal">terminal</A> of the executed program to interact with <A HREF="motion.html#it">it</A>.  This works
-the same <A HREF="motion.html#as">as</A> any command running in a <A HREF="#terminal">terminal</A> <A HREF="windows.html#window">window</A>.
+the same <A HREF="motion.html#as">as</A> any command running in a <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>.
 
-When the debugger ends, typically by typing &quot;quit&quot; in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>, the two
+When the debugger ends, typically by typing &quot;quit&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>, the two
 opened <A HREF="windows.html#windows">windows</A> are closed.
 
 Only one debugger can be active at a time.
@@ -272,8 +272,8 @@ additional parameters.
 <B>	:TermdebugCommand vim --clean -c ':set nu'</B>
 
 Both the `:Termdebug` and `:TermdebugCommand` support an optional &quot;<A HREF="change.html#!">!</A>&quot; bang
-argument to start the command right away, without pausing at the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>
-(and cursor will be in the debugged <A HREF="windows.html#window">window</A>).  For example:
+argument to start the command right away, without pausing at the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>
+(and cursor will be in the debugged<A HREF="windows.html#window">窗口</A>).  For example:
 <B>	:TermdebugCommand! vim --clean</B>
 
 To attach <A HREF="debug.html#gdb">gdb</A> to an already running executable or use a core file, pass extra
@@ -281,7 +281,7 @@ arguments.  E.g.:
 <B>	:Termdebug vim core</B>
 <B>	:Termdebug vim 98343</B>
 
-If no argument is given, you'll end up in a <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>, in which you need to
+If no argument is given, you'll end up in a <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>, in which you need to
 specify which command to run using e.g. the <A HREF="debug.html#gdb">gdb</A> `file` command.
 
 
@@ -298,14 +298,14 @@ Load the termdebug <A HREF="usr_05.html#plugin">plugin</A> and start debugging V
 You should now have three <A HREF="windows.html#windows">windows</A>:
     source  - where you started
     <A HREF="debug.html#gdb">gdb</A>	    - you can type <A HREF="debug.html#gdb">gdb</A> commands here
-    program - the executed program will use this <A HREF="windows.html#window">window</A>
+    program - the executed program will use this<A HREF="windows.html#window">窗口</A>
 
-Put focus on the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A> and type:
+Put focus on the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>and type:
 <B>	break ex_help</B>
 <B>	run</B>
-Vim will start running in the program <A HREF="windows.html#window">window</A>. Put focus there and type:
+Vim will start running in the program<A HREF="windows.html#window">窗口</A>. Put focus there and type:
 <B>	:help gui</B>
-Gdb will run into the ex_help breakpoint.  The source <A HREF="windows.html#window">window</A> now shows the
+Gdb will run into the ex_help breakpoint.  The source<A HREF="windows.html#window">窗口</A>now shows the
 ex_cmds.c file.  A red &quot;1 &quot; marker will appear in the signcolumn where the
 breakpoint was set.  The line where the debugger stopped is highlighted.  You
 can now step through the program.  You will see the highlighting move <A HREF="motion.html#as">as</A> the
@@ -315,38 +315,38 @@ Run &quot;<A HREF="editing.html#:Next">:Next</A>&quot; a few times until the for
 the end of &quot;eap-&gt;arg&quot;, then call &quot;:Eval&quot;.  You will see this displayed:
 <B><FONT color="#3A6F2B">	"eap-&gt;arg": 0x555555e68855 "gui" </FONT></B>
 This way you can inspect the value of local <A HREF="eval.html#variables">variables</A>.  You can also focus the
-<A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A> and use a &quot;print&quot; command, e.g.:
+<A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>and use a &quot;print&quot; command, e.g.:
 <B>	print *eap</B>
 If mouse pointer movements are working, Vim will also show a balloon when the
 mouse rests on text that can be evaluated by <A HREF="debug.html#gdb">gdb</A>.
 You can also use the &quot;<A HREF="various.html#K">K</A>&quot; <A HREF="map.html#mapping">mapping</A> that will either use neovim floating <A HREF="windows.html#windows">windows</A>
 if available to show the results or print below the status <A HREF="motion.html#bar">bar</A>.
 
-Now go back to the source <A HREF="windows.html#window">window</A> and put the cursor on the first line after
+Now go back to the source<A HREF="windows.html#window">窗口</A>and put the cursor on the first line after
 the for loop, then type:
 <B>	:Break</B>
 You will see a &quot;1&quot; marker appear, this indicates the new breakpoint.  Now
 run &quot;:Cont&quot; command and the code until the breakpoint will be executed.
 
-You can type more advanced commands in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>.  For example, type:
+You can type more advanced commands in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>.  For example, type:
 <B>	watch curbuf</B>
-Now run &quot;:Cont&quot; (or type &quot;cont&quot; in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>). Execution
+Now run &quot;:Cont&quot; (or type &quot;cont&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>). Execution
 will now continue until the value of &quot;curbuf&quot; changes, which is in do_ecmd().
-To remove this watchpoint again type in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>:
+To remove this watchpoint again type in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>:
 <B>	delete 3</B>
 
-You can see the stack by typing in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>:
+You can see the stack by typing in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>:
 <B>	where</B>
 Move through the stack frames, e.g. with:
 <B>	frame 3</B>
-The source <A HREF="windows.html#window">window</A> will show the code, at the point where the call was made to
+The source<A HREF="windows.html#window">窗口</A>will show the code, at the point where the call was made to
 a deeper level.
 
 
 <B><FONT color="#3A6F2B">Stepping through code </FONT></B>
 
 							*<A NAME="termdebug-stepping"></A><B>termdebug-stepping</B>*
-Put focus on the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A> to type commands there.  Some common ones are:
+Put focus on the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>to type commands there.  Some common ones are:
 - <A HREF="pattern.html#CTRL-C">CTRL-C</A>	interrupt the program
 - next		execute the current line and stop at the next line
 - step		execute the current line and stop at the next statement,
@@ -360,7 +360,7 @@ Put focus on the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">
 
 
 						*<A NAME=":Run"></A><B>:Run</B>* *<A NAME=":Arguments"></A><B>:Arguments</B>*
-In the <A HREF="windows.html#window">window</A> showing the source code these commands can be used to <A HREF="intro.html#control">control</A>
+In the<A HREF="windows.html#window">窗口</A>showing the source code these commands can be used to <A HREF="intro.html#control">control</A>
 <A HREF="debug.html#gdb">gdb</A>:
  `:Run` [args]	    run the program with [args] or the previous arguments
  `:Arguments` {args}  set arguments for the next `:Run`
@@ -383,9 +383,9 @@ In the <A HREF="windows.html#window">window</A> showing the source code these co
 
  *<A NAME=":Stop"></A><B>:Stop</B>*	interrupt the program
 
-If <A HREF="debug.html#gdb">gdb</A> stops at a source line and there is no <A HREF="windows.html#window">window</A> currently showing the
-source code, a new <A HREF="windows.html#window">window</A> will be created for the source code.  This also
-happens if the buffer in the source code <A HREF="windows.html#window">window</A> has been modified and can't be
+If <A HREF="debug.html#gdb">gdb</A> stops at a source line and there is no<A HREF="windows.html#window">窗口</A>currently showing the
+source code, a new<A HREF="windows.html#window">窗口</A>will be created for the source code.  This also
+happens if the buffer in the source code<A HREF="windows.html#window">窗口</A>has been modified and can't be
 abandoned.
 
 Gdb gives each breakpoint a number.  In Vim the number shows up in the sign
@@ -404,7 +404,7 @@ breakpoint, or use the &quot;Clear breakpoint&quot; right-click menu entry.
  `:Evaluate` {expr}   evaluate {expr}
  `:'&lt;,'&gt;Evaluate`     evaluate the Visually selected text
 
-This is similar to using &quot;print&quot; in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>.
+This is similar to using &quot;print&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>.
 You can usually shorten `:Evaluate` to `:Ev`.
 
 
@@ -412,14 +412,14 @@ You can usually shorten `:Evaluate` to `:Ev`.
 
 							*<A NAME="termdebug-commands"></A><B>termdebug-commands</B>*
 
- *<A NAME=":Gdb"></A><B>:Gdb</B>*	     jump to the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>
+ *<A NAME=":Gdb"></A><B>:Gdb</B>*	     jump to the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>
 
- *<A NAME=":Program"></A><B>:Program</B>*    jump to the <A HREF="windows.html#window">window</A> with the running program
+ *<A NAME=":Program"></A><B>:Program</B>*    jump to the<A HREF="windows.html#window">窗口</A>with the running program
 
- *<A NAME=":Source"></A><B>:Source</B>*     jump to the <A HREF="windows.html#window">window</A> with the source code, create <A HREF="motion.html#it">it</A> if there
+ *<A NAME=":Source"></A><B>:Source</B>*     jump to the<A HREF="windows.html#window">窗口</A>with the source code, create <A HREF="motion.html#it">it</A> if there
 	     isn't one
 
- *<A NAME=":Asm"></A><B>:Asm</B>*	     jump to the <A HREF="windows.html#window">window</A> with the disassembly, create <A HREF="motion.html#it">it</A> if there
+ *<A NAME=":Asm"></A><B>:Asm</B>*	     jump to the<A HREF="windows.html#window">窗口</A>with the disassembly, create <A HREF="motion.html#it">it</A> if there
 	     isn't one
 
 
@@ -448,7 +448,7 @@ Four autocommands can be used:
 						*<A NAME="TermdebugStopPre"></A><B>TermdebugStopPre</B>*
 <A HREF="#TermdebugStopPre">TermdebugStopPre</A>		Before debugging ends, when <A HREF="debug.html#gdb">gdb</A> is terminated,
 				most likely after issuing a &quot;quit&quot; command in
-				the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A>.
+				the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>.
 
 						*<A NAME="TermdebugStopPost"></A><B>TermdebugStopPost</B>*
 <A HREF="#TermdebugStopPost">TermdebugStopPost</A>		After debugging has ended, gdb-related <A HREF="windows.html#windows">windows</A>
@@ -461,11 +461,11 @@ Four autocommands can be used:
 						*<A NAME="termdebug-prompt"></A><B>termdebug-prompt</B>*
 When on MS-Windows, <A HREF="debug.html#gdb">gdb</A> will run in a buffer with <A HREF="options.html#'buftype'">'buftype'</A> set to &quot;prompt&quot;.
 This works slightly differently:
-- The <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A> will be in <A HREF="insert.html#Insert">Insert</A> mode while typing commands.  Go to <A HREF="intro.html#Normal">Normal</A>
+- The <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>will be in <A HREF="intro.html#Insert">插入</A>模式 while typing commands.  Go to <A HREF="intro.html#Normal">Normal</A>
   mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, then you can move around in the buffer, copy/paste, etc.
-  Go back to editing the <A HREF="debug.html#gdb">gdb</A> command with any command that starts <A HREF="insert.html#Insert">Insert</A> mode,
+  Go back to editing the <A HREF="debug.html#gdb">gdb</A> command with any command that starts <A HREF="intro.html#Insert">插入</A>模式,
   such <A HREF="motion.html#as">as</A> `a` or `i`.
-- A separate <A HREF="various.html#:terminal">:terminal</A> <A HREF="windows.html#window">window</A> will be opened to run the debugged program in.
+- A separate <A HREF="various.html#:terminal">:terminal</A><A HREF="windows.html#window">窗口</A>will be opened to run the debugged program in.
 
 
 						*<A NAME="termdebug_use_prompt"></A><B>termdebug_use_prompt</B>*
@@ -483,13 +483,13 @@ Or if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:
  
 
 						*<A NAME="termdebug_disasm_window"></A><B>termdebug_disasm_window</B>*
-If you want the Asm <A HREF="windows.html#window">window</A> shown by default, set the flag to 1.
-the &quot;disasm_window_height&quot; entry can be used to set the <A HREF="windows.html#window">window</A> height:
+If you want the Asm<A HREF="windows.html#window">窗口</A>shown by default, set the flag to 1.
+the &quot;disasm_window_height&quot; entry can be used to set the<A HREF="windows.html#window">窗口</A>height:
 <B>	let g:termdebug_config['disasm_window'] = 1</B>
 <B>	let g:termdebug_config['disasm_window_height'] = 15</B>
 or, if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:
 <B>	let g:termdebug_disasm_window = 15</B>
-Any value greater than 1 will set the Asm <A HREF="windows.html#window">window</A> height to that value:
+Any value greater than 1 will set the Asm<A HREF="windows.html#window">窗口</A>height to that value:
 
 <B><FONT color="#3A6F2B">Communication </FONT></B>
 
@@ -499,7 +499,7 @@ There is another, hidden, buffer, which is used for Vim to communicate with
 will break the debugger.
 
 Gdb has some weird behavior, the <A HREF="usr_05.html#plugin">plugin</A> does its best to work around that.
-For example, after typing &quot;continue&quot; in the <A HREF="debug.html#gdb">gdb</A> <A HREF="windows.html#window">window</A> a <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be used to
+For example, after typing &quot;continue&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>a <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be used to
 interrupt the running program.  But after using the MI command
 &quot;-exec-continue&quot;  pressing <A HREF="pattern.html#CTRL-C">CTRL-C</A> does not interrupt.  Therefore you will see
 &quot;continue&quot; being used for the `:Continue` command, instead of using the
@@ -579,15 +579,15 @@ When <A HREF="options.html#'background'">'background'</A> is &quot;dark&quot;:
 Shortcuts						*<A NAME="termdebug_shortcuts"></A><B>termdebug_shortcuts</B>*
 
 You can define your own shortcuts (mappings) to <A HREF="intro.html#control">control</A> <A HREF="debug.html#gdb">gdb</A>, that can work in
-any <A HREF="windows.html#window">window</A>, using the TermDebugSendCommand() function.  Example:
+any<A HREF="windows.html#window">窗口</A>, using the TermDebugSendCommand() function.  Example:
 <B>	map ,w :call TermDebugSendCommand('where')&lt;CR&gt;</B>
 The argument is the <A HREF="debug.html#gdb">gdb</A> command.
 
 
 
-Vim <A HREF="windows.html#window">window</A> width						*<A NAME="termdebug_wide"></A><B>termdebug_wide</B>*
+Vim<A HREF="windows.html#window">窗口</A>width						*<A NAME="termdebug_wide"></A><B>termdebug_wide</B>*
 
-To change the width of the Vim <A HREF="windows.html#window">window</A> when debugging starts and use a vertical
+To change the width of the Vim<A HREF="windows.html#window">窗口</A>when debugging starts and use a vertical
 split:
 <B>	let g:termdebug_config['wide'] = 163</B>
 Or if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:

@@ -280,9 +280,9 @@ opt+=val&quot; the expansion is done before the adding or removing.
 
 Handling of local <A HREF="#options">options</A>			*<A NAME="local-options"></A><B>local-options</B>*
 
-Some of the <A HREF="#options">options</A> only apply to a <A HREF="windows.html#window">window</A> or buffer.  Each <A HREF="windows.html#window">window</A> or buffer
+Some of the <A HREF="#options">options</A> only apply to a<A HREF="windows.html#window">窗口</A>or buffer.  Each<A HREF="windows.html#window">窗口</A>or buffer
 has its own copy of this option, thus each can have its own value.  This
-allows you to set <A HREF="#'list'">'list'</A> in one <A HREF="windows.html#window">window</A> but not in another.  And set
+allows you to set <A HREF="#'list'">'list'</A> in one<A HREF="windows.html#window">窗口</A>but not in another.  And set
 <A HREF="#'shiftwidth'">'shiftwidth'</A> to 3 in one buffer and 4 in another.
 
 The following explains what happens to these local <A HREF="#options">options</A> in specific
@@ -290,7 +290,7 @@ situations.  You don't really need to know all of this, since Vim mostly uses
 the option values you would expect.  Unfortunately, doing what the user
 expects is a bit complicated...
 
-When splitting a <A HREF="windows.html#window">window</A>, the local <A HREF="#options">options</A> are copied to the new <A HREF="windows.html#window">window</A>.  Thus
+When splitting a<A HREF="windows.html#window">窗口</A>, the local <A HREF="#options">options</A> are copied to the new<A HREF="windows.html#window">窗口</A>.  Thus
 right after the split the contents of the two <A HREF="windows.html#windows">windows</A> look the same.
 
 When editing a new buffer, its local option values must be initialized.  Since
@@ -300,17 +300,17 @@ global value, which is used for new <A HREF="windows.html#buffers">buffers</A>. 
 global value is changed.  With &quot;setlocal&quot; only the local value is changed,
 thus this value is not used when editing a new buffer.
 
-When editing a buffer that has been edited before, the <A HREF="#options">options</A> from the <A HREF="windows.html#window">window</A>
+When editing a buffer that has been edited before, the <A HREF="#options">options</A> from the<A HREF="windows.html#window">窗口</A>
 that was last closed are used again.  If this buffer has been edited in this
-<A HREF="windows.html#window">window</A>, the values from back then are used.  Otherwise the values from the
-last closed <A HREF="windows.html#window">window</A> where the buffer was edited last are used.
+<A HREF="windows.html#window">窗口</A>, the values from back then are used.  Otherwise the values from the
+last closed<A HREF="windows.html#window">窗口</A>where the buffer was edited last are used.
 
-It's possible to set a local <A HREF="windows.html#window">window</A> option specifically for a type of buffer.
-When you edit another buffer in the same <A HREF="windows.html#window">window</A>, you don't want to keep
-using these local <A HREF="windows.html#window">window</A> <A HREF="#options">options</A>.  Therefore Vim keeps a global value of the
-local <A HREF="windows.html#window">window</A> <A HREF="#options">options</A>, which is used when editing another buffer.  Each <A HREF="windows.html#window">window</A>
-has its own copy of these values.  Thus these are local to the <A HREF="windows.html#window">window</A>, but
-global to all <A HREF="windows.html#buffers">buffers</A> in the <A HREF="windows.html#window">window</A>.  With this you can <A HREF="diff.html#do">do</A>:
+It's possible to set a local<A HREF="windows.html#window">窗口</A>option specifically for a type of buffer.
+When you edit another buffer in the same<A HREF="windows.html#window">窗口</A>, you don't want to keep
+using these local<A HREF="windows.html#window">窗口</A><A HREF="#options">options</A>.  Therefore Vim keeps a global value of the
+local<A HREF="windows.html#window">窗口</A><A HREF="#options">options</A>, which is used when editing another buffer.  Each<A HREF="windows.html#window">窗口</A>
+has its own copy of these values.  Thus these are local to the<A HREF="windows.html#window">窗口</A>, but
+global to all <A HREF="windows.html#buffers">buffers</A> in the<A HREF="windows.html#window">窗口</A>.  With this you can <A HREF="diff.html#do">do</A>:
 <B>	:e one</B>
 <B>	:set list</B>
 <B>	:e two</B>
@@ -325,14 +325,14 @@ value, &quot;<A HREF="#:setlocal">:setlocal</A> list&quot; only changes the loca
 global value.  Note that if you <A HREF="diff.html#do">do</A> this next:
 <B>	:e one</B>
 You will get back the <A HREF="#'list'">'list'</A> value <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> was the last time you edited &quot;one&quot;.
-The <A HREF="#options">options</A> local to a <A HREF="windows.html#window">window</A> are remembered for each buffer.  This also
+The <A HREF="#options">options</A> local to a<A HREF="windows.html#window">窗口</A>are remembered for each buffer.  This also
 happens when the buffer is not loaded, but they are lost when the buffer is
 wiped out |<A HREF="windows.html#:bwipe">:bwipe</A>|.
 
 
 							*<A NAME=":setl"></A><B>:setl</B>* *<A NAME=":setlocal"></A><B>:setlocal</B>*
 :setl[ocal][!] <A HREF="eval.html#...">...</A>	Like &quot;<A HREF="#:set">:set</A>&quot; but set only the value local to the
-			current buffer or <A HREF="windows.html#window">window</A>.  Not all <A HREF="#options">options</A> have a
+			current buffer or<A HREF="windows.html#window">窗口</A>.  Not all <A HREF="#options">options</A> have a
 			local value.  If the option does not have a local
 			value the global value is set.
 			With the &quot;all&quot; argument: display local values for all
@@ -377,16 +377,16 @@ Global <A HREF="#options">options</A> with a local value			*<A NAME="global-loca
 
 Options are global when you mostly use one value for all <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows.html#windows">windows</A>.
 For some global <A HREF="#options">options</A> it's useful to sometimes have a different local value.
-You can set the local value with &quot;<A HREF="#:setlocal">:setlocal</A>&quot;.  That buffer or <A HREF="windows.html#window">window</A> will then
+You can set the local value with &quot;<A HREF="#:setlocal">:setlocal</A>&quot;.  That buffer or<A HREF="windows.html#window">窗口</A>will then
 use the local value, while other <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows.html#windows">windows</A> continue using the global
 value.
 
 For example, you have two <A HREF="windows.html#windows">windows</A>, both on C source code.  They use the global
 <A HREF="#'makeprg'">'makeprg'</A> option.  If you <A HREF="diff.html#do">do</A> this in one of the two <A HREF="windows.html#windows">windows</A>:
 <B>	:set makeprg=gmake</B>
-then the other <A HREF="windows.html#window">window</A> will switch to the same value.  There is no need to set
-the <A HREF="#'makeprg'">'makeprg'</A> option in the other C source <A HREF="windows.html#window">window</A> too.
-However, if you start editing a Perl file in a new <A HREF="windows.html#window">window</A>, you want to use
+then the other<A HREF="windows.html#window">窗口</A>will switch to the same value.  There is no need to set
+the <A HREF="#'makeprg'">'makeprg'</A> option in the other C source<A HREF="windows.html#window">窗口</A>too.
+However, if you start editing a Perl file in a new<A HREF="windows.html#window">窗口</A>, you want to use
 another <A HREF="#'makeprg'">'makeprg'</A> for <A HREF="motion.html#it">it</A>, without <A HREF="change.html#changing">changing</A> the value used for the C source
 files.  You use this command:
 <B>	:setlocal makeprg=perlmake</B>
@@ -430,16 +430,16 @@ Setting the <A HREF="filetype.html#filetype">filetype</A>
 				*<A NAME="option-window"></A><B>option-window</B>* *<A NAME="optwin"></A><B>optwin</B>*
 
 :bro[wse] se[t]			*<A NAME=":set-browse"></A><B>:set-browse</B>* *<A NAME=":browse-set"></A><B>:browse-set</B>* *<A NAME=":opt"></A><B>:opt</B>* *<A NAME=":options"></A><B>:options</B>*
-:opt[ions]		Open a <A HREF="windows.html#window">window</A> for viewing and setting all <A HREF="#options">options</A>.
+:opt[ions]		Open a<A HREF="windows.html#window">窗口</A>for viewing and setting all <A HREF="#options">options</A>.
 			Options are grouped by function.
 			Offers short help for each option.  Hit <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> on the
-			short help to open a help <A HREF="windows.html#window">window</A> with more help for
+			short help to open a help<A HREF="windows.html#window">窗口</A>with more help for
 			the option.
 			Modify the value of the option and hit <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> on the
-			&quot;set&quot; line to set the new value.  For <A HREF="windows.html#window">window</A> and
-			buffer specific <A HREF="#options">options</A>, the last accessed <A HREF="windows.html#window">window</A> is
+			&quot;set&quot; line to set the new value.  For<A HREF="windows.html#window">窗口</A>and
+			buffer specific <A HREF="#options">options</A>, the last accessed<A HREF="windows.html#window">窗口</A>is
 			used to set the option value in, unless this is a help
-			<A HREF="windows.html#window">window</A>, in which <A HREF="change.html#case">case</A> the <A HREF="windows.html#window">window</A> below help <A HREF="windows.html#window">window</A> is
+			<A HREF="windows.html#window">窗口</A>, in which <A HREF="change.html#case">case</A> the<A HREF="windows.html#window">窗口</A>below help<A HREF="windows.html#window">窗口</A>is
 			used (skipping the <A HREF="#option-window">option-window</A>).
 
 
@@ -552,7 +552,7 @@ normally not have any).
 
 							*<A NAME="modeline-local"></A><B>modeline-local</B>*
 The <A HREF="#options">options</A> are set like with &quot;<A HREF="#:setlocal">:setlocal</A>&quot;: The new value only applies to the
-buffer and <A HREF="windows.html#window">window</A> that contain the file.  Although it's possible to set global
+buffer and<A HREF="windows.html#window">窗口</A>that contain the file.  Although it's possible to set global
 <A HREF="#options">options</A> from a <A HREF="#modeline">modeline</A>, this is unusual.  If you have two <A HREF="windows.html#windows">windows</A> open and
 the files in <A HREF="motion.html#it">it</A> set the same global option to a different value, the result
 depends on which one was opened last.
@@ -560,7 +560,7 @@ depends on which one was opened last.
 When editing a file that was already loaded, only the window-local <A HREF="#options">options</A>
 from the <A HREF="#modeline">modeline</A> are used.  Thus if you manually changed a buffer-local
 option after opening the file, <A HREF="motion.html#it">it</A> won't be changed if you edit the same buffer
-in another <A HREF="windows.html#window">window</A>.  But window-local <A HREF="#options">options</A> will be set.
+in another<A HREF="windows.html#window">窗口</A>.  But window-local <A HREF="#options">options</A> will be set.
 
 
 							*<A NAME="modeline-version"></A><B>modeline-version</B>*
@@ -626,19 +626,19 @@ In this document when a <A HREF="#boolean">boolean</A> option is &quot;set&quot;
 is entered.  When an option is &quot;reset&quot;, &quot;<A HREF="#:set">:set</A> nooption&quot; is used.
 
 Most <A HREF="#options">options</A> are the same in all <A HREF="windows.html#windows">windows</A> and <A HREF="windows.html#buffers">buffers</A>.  There are a few that
-are specific to how the text is presented in a <A HREF="windows.html#window">window</A>.  These can be set to a
-different value in each <A HREF="windows.html#window">window</A>.  For example the <A HREF="#'list'">'list'</A> option can be set in
-one <A HREF="windows.html#window">window</A> and reset in another for the same text, giving both types of view
+are specific to how the text is presented in a<A HREF="windows.html#window">窗口</A>.  These can be set to a
+different value in each<A HREF="windows.html#window">窗口</A>.  For example the <A HREF="#'list'">'list'</A> option can be set in
+one<A HREF="windows.html#window">窗口</A>and reset in another for the same text, giving both types of view
 at the same time.  There are a few <A HREF="#options">options</A> that are specific to a certain
 file.  These can have a different value for each file or buffer.  For example
 the <A HREF="#'textwidth'">'textwidth'</A> option can be 78 for a normal text file and 0 for a C
 program.
 
 	global			one option for all <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows.html#windows">windows</A>
-	local to <A HREF="windows.html#window">window</A>		each <A HREF="windows.html#window">window</A> has its own copy of this option
+	local to<A HREF="windows.html#window">窗口</A>		each<A HREF="windows.html#window">窗口</A>has its own copy of this option
 	local to buffer		each buffer has its own copy of this option
 
-When creating a new <A HREF="windows.html#window">window</A> the option values from the currently active <A HREF="windows.html#window">window</A>
+When creating a new<A HREF="windows.html#window">窗口</A>the option values from the currently active<A HREF="windows.html#window">窗口</A>
 are used <A HREF="motion.html#as">as</A> a default value for the window-specific <A HREF="#options">options</A>.  For the
 buffer-specific <A HREF="#options">options</A> this depends on the '<A HREF="change.html#s">s</A>' and '<A HREF="change.html#S">S</A>' flags in the
 <A HREF="#'cpoptions'">'cpoptions'</A> option.  If '<A HREF="change.html#s">s</A>' is included (which is the default) the values for
@@ -672,7 +672,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'aleph'">'aleph'</A> <A HREF="#'al'">'al'</A>		number	(default 224)
 			global
 	The ASCII code for the first <A HREF="print.html#letter">letter</A> of the Hebrew alphabet.  The
-	routine that maps the keyboard in Hebrew mode, both in <A HREF="insert.html#Insert">Insert</A> mode
+	routine that maps the keyboard in Hebrew mode, both in <A HREF="intro.html#Insert">插入</A>模式
 	(when hkmap is set) and on the command-line (when hitting CTRL-_)
 	outputs the Hebrew characters in the range [aleph..aleph+26].
 	aleph=128 applies to PC code, and aleph=224 applies to ISO 8859-8.
@@ -684,7 +684,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	Allow CTRL-_ in <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode.  This is default off, to
 	avoid that users that accidentally type CTRL-_ instead of SHIFT-_ get
-	into reverse <A HREF="insert.html#Insert">Insert</A> mode, and don't know how to get out.  See
+	into reverse <A HREF="intro.html#Insert">插入</A>模式, and don't know how to get out.  See
 	<A HREF="#'revins'">'revins'</A>.
 
 
@@ -724,7 +724,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'autochdir'">'autochdir'</A> <A HREF="#'acd'">'acd'</A>	<A HREF="#boolean">boolean</A> (default off)
 			global
 	When on, Vim will change the current working directory whenever you
-	open a file, switch <A HREF="windows.html#buffers">buffers</A>, delete a buffer or open/close a <A HREF="windows.html#window">window</A>.
+	open a file, switch <A HREF="windows.html#buffers">buffers</A>, delete a buffer or open/close a<A HREF="windows.html#window">窗口</A>.
 	It will change to the directory containing the file which was opened
 	or selected.
 	Note: When this option is on some plugins may not work.
@@ -732,12 +732,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 				*<A NAME="'arabic'"></A><B>'arabic'</B>* *<A NAME="'arab'"></A><B>'arab'</B>* *<A NAME="'noarabic'"></A><B>'noarabic'</B>* *<A NAME="'noarab'"></A><B>'noarab'</B>*
 <A HREF="#'arabic'">'arabic'</A> <A HREF="#'arab'">'arab'</A>		<A HREF="#boolean">boolean</A> (default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	This option can be set to start editing <A HREF="arabic.html#Arabic">Arabic</A> text.
 	Setting this option will:
 	- Set the <A HREF="#'rightleft'">'rightleft'</A> option, unless <A HREF="#'termbidi'">'termbidi'</A> is set.
 	- Set the <A HREF="#'arabicshape'">'arabicshape'</A> option, unless <A HREF="#'termbidi'">'termbidi'</A> is set.
-	- Set the <A HREF="#'keymap'">'keymap'</A> option to &quot;arabic&quot;; in <A HREF="insert.html#Insert">Insert</A> mode <A HREF="editing.html#CTRL-^">CTRL-^</A> toggles
+	- Set the <A HREF="#'keymap'">'keymap'</A> option to &quot;arabic&quot;; in <A HREF="intro.html#Insert">插入</A>模式 <A HREF="editing.html#CTRL-^">CTRL-^</A> toggles
 	  between typing English and <A HREF="arabic.html#Arabic">Arabic</A> key <A HREF="map.html#mapping">mapping</A>.
 	- Set the <A HREF="#'delcombine'">'delcombine'</A> option
 
@@ -772,13 +772,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'autoindent'">'autoindent'</A> <A HREF="#'ai'">'ai'</A>	<A HREF="#boolean">boolean</A>	(default on)
 			local to buffer
 	Copy indent from current line when starting a new line (typing <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>
-	in <A HREF="insert.html#Insert">Insert</A> mode or when using the &quot;<A HREF="insert.html#o">o</A>&quot; or &quot;<A HREF="insert.html#O">O</A>&quot; command).  If you <A HREF="diff.html#do">do</A> not
+	in <A HREF="intro.html#Insert">插入</A>模式 or when using the &quot;<A HREF="insert.html#o">o</A>&quot; or &quot;<A HREF="insert.html#O">O</A>&quot; command).  If you <A HREF="diff.html#do">do</A> not
 	type anything on the new line except <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> or <A HREF="scroll.html#CTRL-D">CTRL-D</A> and then type
 	<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, <A HREF="motion.html#CTRL-O">CTRL-O</A> or <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>, the indent is deleted again.  Moving the cursor
 	to another line has the same effect, unless the '<A HREF="insert.html#I">I</A>' flag is included
 	in <A HREF="#'cpoptions'">'cpoptions'</A>.
 	When autoindent is on, <A HREF="change.html#formatting">formatting</A> (with the &quot;<A HREF="change.html#gq">gq</A>&quot; command or when you
-	reach <A HREF="#'textwidth'">'textwidth'</A> in <A HREF="insert.html#Insert">Insert</A> mode) uses the indentation of the first
+	reach <A HREF="#'textwidth'">'textwidth'</A> in <A HREF="intro.html#Insert">插入</A>模式) uses the indentation of the first
 	line.
 	When <A HREF="#'smartindent'">'smartindent'</A> or <A HREF="#'cindent'">'cindent'</A> is on the indent is changed in
 	a different way.
@@ -822,7 +822,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'autowriteall'">'autowriteall'</A> <A HREF="#'awa'">'awa'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			global
 	Like <A HREF="#'autowrite'">'autowrite'</A>, but also used for commands &quot;<A HREF="editing.html#:edit">:edit</A>&quot;, &quot;<A HREF="editing.html#:enew">:enew</A>&quot;, &quot;<A HREF="editing.html#:quit">:quit</A>&quot;,
-	&quot;<A HREF="editing.html#:qall">:qall</A>&quot;, &quot;<A HREF="editing.html#:exit">:exit</A>&quot;, &quot;<A HREF="editing.html#:xit">:xit</A>&quot;, &quot;<A HREF="recover.html#:recover">:recover</A>&quot; and closing the Vim <A HREF="windows.html#window">window</A>.
+	&quot;<A HREF="editing.html#:qall">:qall</A>&quot;, &quot;<A HREF="editing.html#:exit">:exit</A>&quot;, &quot;<A HREF="editing.html#:xit">:xit</A>&quot;, &quot;<A HREF="recover.html#:recover">:recover</A>&quot; and closing the Vim<A HREF="windows.html#window">窗口</A>.
 	Setting this option also implies that Vim behaves like <A HREF="#'autowrite'">'autowrite'</A> has
 	been set.
 
@@ -1074,7 +1074,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		    |<A HREF="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</A>|.
 	copy	    Cannot copy char from insert mode using |<A HREF="insert.html#i_CTRL-Y">i_CTRL-Y</A>| or
 		    |<A HREF="insert.html#i_CTRL-E">i_CTRL-E</A>|.
-	ctrlg	    Unknown Char after &lt;C-G&gt; in <A HREF="insert.html#Insert">Insert</A> mode.
+	ctrlg	    Unknown Char after &lt;C-G&gt; in <A HREF="intro.html#Insert">插入</A>模式.
 	error	    Other Error occurred (e.g. try to join last line)
 		    (mostly used in |<A HREF="intro.html#Normal-mode">Normal-mode</A>| or |<A HREF="cmdline.html#Cmdline-mode">Cmdline-mode</A>|).
 	esc	    hitting <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> in |<A HREF="intro.html#Normal-mode">Normal-mode</A>|.
@@ -1089,8 +1089,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	wildmode    More matches in |<A HREF="cmdline.html#cmdline-completion">cmdline-completion</A>| available
 		    (depends on the <A HREF="#'wildmode'">'wildmode'</A> setting).
 
-	This is most useful to fine tune when in <A HREF="insert.html#Insert">Insert</A> mode the bell should
-	be rung. For <A HREF="intro.html#Normal">Normal</A> mode and <A HREF="intro.html#Ex">Ex</A> commands, the bell is often rung to
+	This is most useful to fine tune when in <A HREF="intro.html#Insert">插入</A>模式 the bell should
+	be rung. For <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="intro.html#Ex">Ex</A> commands, the bell is often rung to
 	indicate that an error occurred. It can be silenced by adding the
 	&quot;error&quot; keyword.
 
@@ -1155,7 +1155,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'breakindent'"></A><B>'breakindent'</B>* *<A NAME="'bri'"></A><B>'bri'</B>* *<A NAME="'nobreakindent'"></A><B>'nobreakindent'</B>* *<A NAME="'nobri'"></A><B>'nobri'</B>*
 <A HREF="#'breakindent'">'breakindent'</A> <A HREF="#'bri'">'bri'</A>	<A HREF="#boolean">boolean</A> (default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Every wrapped line will continue visually indented (same amount of
 	space <A HREF="motion.html#as">as</A> the beginning of that line), thus preserving horizontal blocks
 	of text.
@@ -1163,13 +1163,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'breakindentopt'"></A><B>'breakindentopt'</B>* *<A NAME="'briopt'"></A><B>'briopt'</B>*
 <A HREF="#'breakindentopt'">'breakindentopt'</A> <A HREF="#'briopt'">'briopt'</A> <A HREF="eval.html#string">string</A> (default empty)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Settings for <A HREF="#'breakindent'">'breakindent'</A>. It can consist of the following optional
 	items and must be separated by a comma:
 		min:{n}	    Minimum text width that will be kept after
 			    applying <A HREF="#'breakindent'">'breakindent'</A>, even if the resulting
 			    text should normally be narrower. This prevents
-			    text indented almost to the right <A HREF="windows.html#window">window</A> border
+			    text indented almost to the right<A HREF="windows.html#window">窗口</A>border
 			    occupying lot of vertical space when broken.
 		shift:{n}   After applying <A HREF="#'breakindent'">'breakindent'</A>, the wrapped line's
 			    beginning will be shifted by the given number of
@@ -1201,7 +1201,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'bufhidden'">'bufhidden'</A> <A HREF="#'bh'">'bh'</A>	<A HREF="eval.html#string">string</A> (default: &quot;&quot;)
 			local to buffer
 	This option specifies what happens when a buffer is no longer
-	displayed in a <A HREF="windows.html#window">window</A>:
+	displayed in a<A HREF="windows.html#window">窗口</A>:
 	  &lt;empty&gt;	follow the global <A HREF="#'hidden'">'hidden'</A> option
 	  hide		hide the buffer (don't unload it), even if <A HREF="#'hidden'">'hidden'</A> is
 			not set
@@ -1247,7 +1247,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	This option is used together with <A HREF="#'bufhidden'">'bufhidden'</A> and <A HREF="#'swapfile'">'swapfile'</A> to
 	specify special kinds of buffers.   See |<A HREF="windows.html#special-buffers">special-buffers</A>|.
-	Also see |<A HREF="builtin.html#win_gettype()">win_gettype()</A>|, which returns the type of the <A HREF="windows.html#window">window</A>.
+	Also see |<A HREF="builtin.html#win_gettype()">win_gettype()</A>|, which returns the type of the<A HREF="windows.html#window">窗口</A>.
 
 	Be careful with <A HREF="change.html#changing">changing</A> this option, <A HREF="motion.html#it">it</A> can have many side effects!
 	One such effect is that Vim will not check the <A HREF="editing.html#timestamp">timestamp</A> of the file,
@@ -1327,7 +1327,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'cedit'"></A><B>'cedit'</B>*
 <A HREF="#'cedit'">'cedit'</A>			<A HREF="eval.html#string">string</A>	(default: <A HREF="scroll.html#CTRL-F">CTRL-F</A>)
 			global
-	The key used in <A HREF="cmdline.html#Command-line">Command-line</A> Mode to open the command-line <A HREF="windows.html#window">window</A>.
+	The key used in <A HREF="cmdline.html#Command-line">Command-line</A> Mode to open the command-line<A HREF="windows.html#window">窗口</A>.
 	Only non-printable keys are allowed.
 	The key can be specified <A HREF="motion.html#as">as</A> a single character, but <A HREF="motion.html#it">it</A> is difficult to
 	type.  The preferred way is to use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A>.  Examples:
@@ -1401,7 +1401,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 							*<A NAME="'cinkeys'"></A><B>'cinkeys'</B>* *<A NAME="'cink'"></A><B>'cink'</B>*
 <A HREF="#'cinkeys'">'cinkeys'</A> <A HREF="#'cink'">'cink'</A>	<A HREF="eval.html#string">string</A>	(default &quot;0{,0},0),0],:,0#,!^F,o,O,e&quot;)
 			local to buffer
-	A <A HREF="eval.html#list">list</A> of keys that, when typed in <A HREF="insert.html#Insert">Insert</A> mode, cause reindenting of
+	A <A HREF="eval.html#list">list</A> of keys that, when typed in <A HREF="intro.html#Insert">插入</A>模式, cause reindenting of
 	the current line.  Only used if <A HREF="#'cindent'">'cindent'</A> is on and <A HREF="#'indentexpr'">'indentexpr'</A> is
 	empty.
 	For the format of this option see |<A HREF="indent.html#cinkeys-format">cinkeys-format</A>|.
@@ -1478,12 +1478,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'cmdwinheight'"></A><B>'cmdwinheight'</B>* *<A NAME="'cwh'"></A><B>'cwh'</B>*
 <A HREF="#'cmdwinheight'">'cmdwinheight'</A> <A HREF="#'cwh'">'cwh'</A>	number	(default 7)
 			global
-	<A HREF="eval.html#Number">Number</A> of screen lines to use for the command-line <A HREF="windows.html#window">window</A>. |<A HREF="cmdline.html#cmdwin">cmdwin</A>|
+	<A HREF="eval.html#Number">Number</A> of screen lines to use for the command-line<A HREF="windows.html#window">窗口</A>. |<A HREF="cmdline.html#cmdwin">cmdwin</A>|
 
 
 						*<A NAME="'colorcolumn'"></A><B>'colorcolumn'</B>* *<A NAME="'cc'"></A><B>'cc'</B>*
 <A HREF="#'colorcolumn'">'colorcolumn'</A> <A HREF="#'cc'">'cc'</A>	<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	<A HREF="#'colorcolumn'">'colorcolumn'</A> is a comma-separated <A HREF="eval.html#list">list</A> of screen columns that are
 	highlighted with ColorColumn |<A HREF="syntax.html#hl-ColorColumn">hl-ColorColumn</A>|.  Useful to align
 	text.  Will make screen redrawing slower.
@@ -1503,14 +1503,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	<A HREF="eval.html#Number">Number</A> of columns of the screen.  Normally this is set by the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
 	<A HREF="starting.html#initialization">initialization</A> and does not have to be set by hand.
-	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable <A HREF="windows.html#window">window</A>, setting this
-	option will cause the <A HREF="windows.html#window">window</A> size to be changed.  When you only want
+	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable<A HREF="windows.html#window">窗口</A>, setting this
+	option will cause the<A HREF="windows.html#window">窗口</A>size to be changed.  When you only want
 	to use the size for the <A HREF="gui.html#GUI">GUI</A>, put the command in your |<A HREF="ginit.html">ginit.vim</A>| file.
 	When you set this option and Vim is unable to change the physical
 	number of columns of the display, the display may be messed up.  For
 	the <A HREF="gui.html#GUI">GUI</A> <A HREF="motion.html#it">it</A> is always possible and Vim <A HREF="vi_diff.html#limits">limits</A> the number of columns to
 	what fits on the screen.  You can use this command to get the widest
-	<A HREF="windows.html#window">window</A> possible:
+	<A HREF="windows.html#window">窗口</A>possible:
 <B>		:set columns=9999</B>
  	Minimum value is 12, maximum value is 10000.
 
@@ -1571,7 +1571,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'completefunc'"></A><B>'completefunc'</B>* *<A NAME="'cfu'"></A><B>'cfu'</B>*
 <A HREF="#'completefunc'">'completefunc'</A> <A HREF="#'cfu'">'cfu'</A>	<A HREF="eval.html#string">string</A>	(default: empty)
 			local to buffer
-	This option specifies a function to be used for <A HREF="insert.html#Insert">Insert</A> mode completion
+	This option specifies a function to be used for <A HREF="intro.html#Insert">插入</A>模式 completion
 	with CTRL-X CTRL-U. |<A HREF="insert.html#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</A>|
 	See |<A HREF="insert.html#complete-functions">complete-functions</A>| for an explanation of how the function is
 	invoked and what <A HREF="motion.html#it">it</A> should return.
@@ -1591,14 +1591,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	  useful when editing a batch file with <A HREF="#'shellslash'">'shellslash'</A> set on MS-Windows.
 	- When this option is empty, same character is used <A HREF="motion.html#as">as</A> for
 	  <A HREF="#'shellslash'">'shellslash'</A>.
-	For <A HREF="insert.html#Insert">Insert</A> mode completion the buffer-local value is used.  For
+	For <A HREF="intro.html#Insert">插入</A>模式 completion the buffer-local value is used.  For
 	command line completion the global value is used.
 
 
 						*<A NAME="'completeopt'"></A><B>'completeopt'</B>* *<A NAME="'cot'"></A><B>'cot'</B>*
 <A HREF="#'completeopt'">'completeopt'</A> <A HREF="#'cot'">'cot'</A>	<A HREF="eval.html#string">string</A>	(default: &quot;menu,preview&quot;)
 			global
-	A comma-separated <A HREF="eval.html#list">list</A> of <A HREF="#options">options</A> for <A HREF="insert.html#Insert">Insert</A> mode completion
+	A comma-separated <A HREF="eval.html#list">list</A> of <A HREF="#options">options</A> for <A HREF="intro.html#Insert">插入</A>模式 completion
 	|<A HREF="insert.html#ins-completion">ins-completion</A>|.  The supported values are:
 
 	   menu	    Use a popup menu to show the possible completions.  The
@@ -1616,7 +1616,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		    used.
 
 	   preview  Show extra information about the currently selected
-		    completion in the preview <A HREF="windows.html#window">window</A>.  Only works in
+		    completion in the preview<A HREF="windows.html#window">窗口</A>.  Only works in
 		    combination with &quot;menu&quot; or &quot;menuone&quot;.
 
 	  noinsert  Do not insert any text for a match until the user selects
@@ -1631,13 +1631,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'concealcursor'"></A><B>'concealcursor'</B>* *<A NAME="'cocu'"></A><B>'cocu'</B>*
 <A HREF="#'concealcursor'">'concealcursor'</A> <A HREF="#'cocu'">'cocu'</A>	<A HREF="eval.html#string">string</A> (default: &quot;&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Sets the modes in which text in the cursor line can also be concealed.
 	When the current mode is listed then concealing happens just like in
 	other lines.
-	  <A HREF="pattern.html#n">n</A>		<A HREF="intro.html#Normal">Normal</A> mode
+	  <A HREF="pattern.html#n">n</A>		<A HREF="intro.html#Normal">正常</A>模式
 	  <A HREF="visual.html#v">v</A>		<A HREF="visual.html#Visual">Visual</A> mode
-	  <A HREF="insert.html#i">i</A>		<A HREF="insert.html#Insert">Insert</A> mode
+	  <A HREF="insert.html#i">i</A>		<A HREF="intro.html#Insert">插入</A>模式
 	  <A HREF="change.html#c">c</A>		Command line editing, for <A HREF="#'incsearch'">'incsearch'</A>
 
 	'<A HREF="visual.html#v">v</A>' applies to all lines in the <A HREF="visual.html#Visual">Visual</A> area, not only the cursor.
@@ -1652,7 +1652,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'conceallevel'"></A><B>'conceallevel'</B>* *<A NAME="'cole'"></A><B>'cole'</B>*
 <A HREF="#'conceallevel'">'conceallevel'</A> <A HREF="#'cole'">'cole'</A>	number (default 0)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Determine how text with the &quot;conceal&quot; <A HREF="syntax.html#syntax">syntax</A> attribute |<A HREF="syntax.html#:syn-conceal">:syn-conceal</A>|
 	is shown:
 
@@ -1716,12 +1716,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 								*<A NAME="cpo-a"></A><B>cpo-a</B>*
 		a	When included, a &quot;<A HREF="insert.html#:read">:read</A>&quot; command with a file name
 			argument will set the alternate file name for the
-			current <A HREF="windows.html#window">window</A>.
+			current<A HREF="windows.html#window">窗口</A>.
 
 								*<A NAME="cpo-A"></A><B>cpo-A</B>*
 		A	When included, a &quot;<A HREF="editing.html#:write">:write</A>&quot; command with a file name
 			argument will set the alternate file name for the
-			current <A HREF="windows.html#window">window</A>.
+			current<A HREF="windows.html#window">窗口</A>.
 
 								*<A NAME="cpo-b"></A><B>cpo-b</B>*
 		<A HREF="motion.html#b">b</A>	&quot;\|&quot; in a &quot;<A HREF="map.html#:map">:map</A>&quot; command is recognized <A HREF="motion.html#as">as</A> the end of
@@ -1759,7 +1759,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			<A HREF="tagsrch.html#tags">tags</A> file in the current directory.
 
 								*<A NAME="cpo-D"></A><B>cpo-D</B>*
-		<A HREF="change.html#D">D</A>	Can't use CTRL-K to enter a <A HREF="digraph.html#digraph">digraph</A> after <A HREF="intro.html#Normal">Normal</A> mode
+		<A HREF="change.html#D">D</A>	Can't use CTRL-K to enter a <A HREF="digraph.html#digraph">digraph</A> after <A HREF="intro.html#Normal">正常</A>模式
 			commands with a character argument, like |<A HREF="change.html#r">r</A>|, |<A HREF="motion.html#f">f</A>| and
 			|<A HREF="motion.html#t">t</A>|.
 
@@ -1900,7 +1900,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="cpo-v"></A><B>cpo-v</B>*
 		<A HREF="visual.html#v">v</A>	Backspaced characters remain visible on the screen in
-			<A HREF="insert.html#Insert">Insert</A> mode.  Without this flag the characters are
+			<A HREF="intro.html#Insert">插入</A>模式.  Without this flag the characters are
 			erased from the screen right away.  With this flag the
 			screen newly typed text overwrites backspaced
 			characters.
@@ -1998,7 +1998,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'cscopequickfix'"></A><B>'cscopequickfix'</B>* *<A NAME="'csqf'"></A><B>'csqf'</B>*
 <A HREF="#'cscopequickfix'">'cscopequickfix'</A> <A HREF="#'csqf'">'csqf'</A> <A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			global
-	Specifies whether to use <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> to show <A HREF="if_cscop.html#cscope">cscope</A> results.
+	Specifies whether to use <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>to show <A HREF="if_cscop.html#cscope">cscope</A> results.
 	See |<A HREF="if_cscop.html#cscopequickfix">cscopequickfix</A>|.
 
 
@@ -2025,9 +2025,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'cursorbind'"></A><B>'cursorbind'</B>* *<A NAME="'crb'"></A><B>'crb'</B>* *<A NAME="'nocursorbind'"></A><B>'nocursorbind'</B>* *<A NAME="'nocrb'"></A><B>'nocrb'</B>*
 <A HREF="#'cursorbind'">'cursorbind'</A> <A HREF="#'crb'">'crb'</A>	<A HREF="#boolean">boolean</A>  (default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	When this option is set, <A HREF="motion.html#as">as</A> the cursor in the current
-	<A HREF="windows.html#window">window</A> moves other cursorbound <A HREF="windows.html#windows">windows</A> (windows that also have
+	<A HREF="windows.html#window">窗口</A>moves other cursorbound <A HREF="windows.html#windows">windows</A> (windows that also have
 	this option set) move their cursors to the corresponding line and
 	column.  This option is useful for viewing the
 	differences between two versions of a file (see 'diff'); in <A HREF="diff.html#diff">diff</A> mode,
@@ -2038,11 +2038,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'cursorcolumn'"></A><B>'cursorcolumn'</B>* *<A NAME="'cuc'"></A><B>'cuc'</B>* *<A NAME="'nocursorcolumn'"></A><B>'nocursorcolumn'</B>* *<A NAME="'nocuc'"></A><B>'nocuc'</B>*
 <A HREF="#'cursorcolumn'">'cursorcolumn'</A> <A HREF="#'cuc'">'cuc'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Highlight the screen column of the cursor with CursorColumn
 	|<A HREF="syntax.html#hl-CursorColumn">hl-CursorColumn</A>|.  Useful to align text.  Will make screen redrawing
 	slower.
-	If you only want the highlighting in the current <A HREF="windows.html#window">window</A> you can use
+	If you only want the highlighting in the current<A HREF="windows.html#window">窗口</A>you can use
 	these autocommands:
 <B>		au WinLeave * set nocursorline nocursorcolumn</B>
 <B>		au WinEnter * set cursorline cursorcolumn</B>
@@ -2051,7 +2051,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'cursorline'"></A><B>'cursorline'</B>* *<A NAME="'cul'"></A><B>'cul'</B>* *<A NAME="'nocursorline'"></A><B>'nocursorline'</B>* *<A NAME="'nocul'"></A><B>'nocul'</B>*
 <A HREF="#'cursorline'">'cursorline'</A> <A HREF="#'cul'">'cul'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Highlight the text line of the cursor with CursorLine |<A HREF="syntax.html#hl-CursorLine">hl-CursorLine</A>|.
 	Useful to easily spot the cursor.  Will make screen redrawing slower.
 	When <A HREF="visual.html#Visual">Visual</A> mode is active the highlighting isn't used to make <A HREF="motion.html#it">it</A>
@@ -2061,7 +2061,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'cursorlineopt'"></A><B>'cursorlineopt'</B>* *<A NAME="'culopt'"></A><B>'culopt'</B>*
 <A HREF="#'cursorlineopt'">'cursorlineopt'</A> <A HREF="#'culopt'">'culopt'</A> <A HREF="eval.html#string">string</A> (default: &quot;number,line&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Comma-separated <A HREF="eval.html#list">list</A> of settings for how <A HREF="#'cursorline'">'cursorline'</A> is displayed.
 	Valid values:
 	&quot;line&quot;		Highlight the text line of the cursor with
@@ -2121,7 +2121,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			*<A NAME="'delcombine'"></A><B>'delcombine'</B>* *<A NAME="'deco'"></A><B>'deco'</B>* *<A NAME="'nodelcombine'"></A><B>'nodelcombine'</B>* *<A NAME="'nodeco'"></A><B>'nodeco'</B>*
 <A HREF="#'delcombine'">'delcombine'</A> <A HREF="#'deco'">'deco'</A>	<A HREF="#boolean">boolean</A> (default off)
 			global
-	If editing <A HREF="mbyte.html#Unicode">Unicode</A> and this option is set, backspace and <A HREF="intro.html#Normal">Normal</A> mode
+	If editing <A HREF="mbyte.html#Unicode">Unicode</A> and this option is set, backspace and <A HREF="intro.html#Normal">正常</A>模式
 	&quot;<A HREF="change.html#x">x</A>&quot; delete each combining character on its own.  When <A HREF="motion.html#it">it</A> is off (the
 	default) the character along with its combining characters are
 	deleted.
@@ -2161,8 +2161,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 							*<A NAME="'diff'"></A><B>'diff'</B>* *<A NAME="'nodiff'"></A><B>'nodiff'</B>*
 <A HREF="#'diff'">'diff'</A>			<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
-	Join the current <A HREF="windows.html#window">window</A> in the group of <A HREF="windows.html#windows">windows</A> that shows differences
+			local to<A HREF="windows.html#window">窗口</A>
+	Join the current<A HREF="windows.html#window">窗口</A>in the group of <A HREF="windows.html#windows">windows</A> that shows differences
 	between files.  See |<A HREF="diff.html#diff-mode">diff-mode</A>|.
 
 
@@ -2182,7 +2182,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	All are optional.  Items must be separated by a comma.
 
 		filler		Show filler lines, to keep the text
-				synchronized with a <A HREF="windows.html#window">window</A> that has inserted
+				synchronized with a<A HREF="windows.html#window">窗口</A>that has inserted
 				lines at the same position.  Mostly useful
 				when <A HREF="windows.html#windows">windows</A> are side-by-side and <A HREF="#'scrollbind'">'scrollbind'</A>
 				is set.
@@ -2233,10 +2233,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		vertical	Start <A HREF="diff.html#diff">diff</A> mode with vertical splits (unless
 				explicitly specified otherwise).
 
-		closeoff	When a <A HREF="windows.html#window">window</A> is closed where <A HREF="#'diff'">'diff'</A> is set
-				and there is only one <A HREF="windows.html#window">window</A> remaining in the
+		closeoff	When a<A HREF="windows.html#window">窗口</A>is closed where <A HREF="#'diff'">'diff'</A> is set
+				and there is only one<A HREF="windows.html#window">窗口</A>remaining in the
 				same <A HREF="intro.html#tab">tab</A> page with <A HREF="#'diff'">'diff'</A> set, execute
-				`:diffoff` in that <A HREF="windows.html#window">window</A>.  This undoes a
+				`:diffoff` in that<A HREF="windows.html#window">窗口</A>.  This undoes a
 				`:diffsplit` command.
 
 		hiddenoff	Do not use <A HREF="diff.html#diff">diff</A> mode for a buffer when <A HREF="motion.html#it">it</A>
@@ -2278,7 +2278,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 				     *<A NAME="'digraph'"></A><B>'digraph'</B>* *<A NAME="'dg'"></A><B>'dg'</B>* *<A NAME="'nodigraph'"></A><B>'nodigraph'</B>* *<A NAME="'nodg'"></A><B>'nodg'</B>*
 <A HREF="#'digraph'">'digraph'</A> <A HREF="#'dg'">'dg'</A>		<A HREF="#boolean">boolean</A>	(default off)
 			global
-	Enable the entering of <A HREF="digraph.html#digraphs">digraphs</A> in <A HREF="insert.html#Insert">Insert</A> mode with {char1} <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>
+	Enable the entering of <A HREF="digraph.html#digraphs">digraphs</A> in <A HREF="intro.html#Insert">插入</A>模式 with {char1} <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>
 	{char2}.  See |<A HREF="digraph.html#digraphs">digraphs</A>|.
 
 
@@ -2341,7 +2341,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Change the way text is displayed.  This is comma-separated <A HREF="eval.html#list">list</A> of
 	flags:
 	lastline	When included, <A HREF="motion.html#as">as</A> much <A HREF="motion.html#as">as</A> possible of the last line
-			in a <A HREF="windows.html#window">window</A> will be displayed.  &quot;@@@&quot; is put in the
+			in a<A HREF="windows.html#window">窗口</A>will be displayed.  &quot;@@@&quot; is put in the
 			last columns of the last screen line to indicate the
 			rest of the line is not displayed.
 	truncate	Like &quot;lastline&quot;, but &quot;@@@&quot; is displayed in the first
@@ -2403,17 +2403,17 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'equalalways'">'equalalways'</A> <A HREF="#'ea'">'ea'</A>	<A HREF="#boolean">boolean</A>	(default on)
 			global
 	When on, all the <A HREF="windows.html#windows">windows</A> are automatically made the same size after
-	splitting or closing a <A HREF="windows.html#window">window</A>.  This also happens the moment the
-	option is switched on.  When off, splitting a <A HREF="windows.html#window">window</A> will reduce the
-	size of the current <A HREF="windows.html#window">window</A> and leave the other <A HREF="windows.html#windows">windows</A> the same.  When
-	closing a <A HREF="windows.html#window">window</A> the extra lines are given to the <A HREF="windows.html#window">window</A> next to <A HREF="motion.html#it">it</A>
+	splitting or closing a<A HREF="windows.html#window">窗口</A>.  This also happens the moment the
+	option is switched on.  When off, splitting a<A HREF="windows.html#window">窗口</A>will reduce the
+	size of the current<A HREF="windows.html#window">窗口</A>and leave the other <A HREF="windows.html#windows">windows</A> the same.  When
+	closing a<A HREF="windows.html#window">窗口</A>the extra lines are given to the<A HREF="windows.html#window">窗口</A>next to <A HREF="motion.html#it">it</A>
 	(depending on <A HREF="#'splitbelow'">'splitbelow'</A> and <A HREF="#'splitright'">'splitright'</A>).
 	When mixing vertically and horizontally split <A HREF="windows.html#windows">windows</A>, a minimal size
 	is computed and some <A HREF="windows.html#windows">windows</A> may be larger if there is room.  The
 	<A HREF="#'eadirection'">'eadirection'</A> option tells in which direction the size is affected.
-	Changing the height and width of a <A HREF="windows.html#window">window</A> can be avoided by setting
+	Changing the height and width of a<A HREF="windows.html#window">窗口</A>can be avoided by setting
 	<A HREF="#'winfixheight'">'winfixheight'</A> and <A HREF="#'winfixwidth'">'winfixwidth'</A>, respectively.
-	If a <A HREF="windows.html#window">window</A> size is specified when creating a new <A HREF="windows.html#window">window</A> sizes are
+	If a<A HREF="windows.html#window">窗口</A>size is specified when creating a new<A HREF="windows.html#window">窗口</A>sizes are
 	currently not equalized (it's complicated, but may be implemented in
 	the future).
 
@@ -2473,7 +2473,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 				 *<A NAME="'expandtab'"></A><B>'expandtab'</B>* *<A NAME="'et'"></A><B>'et'</B>* *<A NAME="'noexpandtab'"></A><B>'noexpandtab'</B>* *<A NAME="'noet'"></A><B>'noet'</B>*
 <A HREF="#'expandtab'">'expandtab'</A> <A HREF="#'et'">'et'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			local to buffer
-	In <A HREF="insert.html#Insert">Insert</A> mode: Use the appropriate number of spaces to insert a
+	In <A HREF="intro.html#Insert">插入</A>模式: Use the appropriate number of spaces to insert a
 	<A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.  Spaces are used in indents with the '<A HREF="change.html#&gt;">&gt;</A>' and '<A HREF="change.html#&lt;">&lt;</A>' commands and
 	when <A HREF="#'autoindent'">'autoindent'</A> is on.  To insert a real <A HREF="intro.html#tab">tab</A> when <A HREF="#'expandtab'">'expandtab'</A> is
 	on, use CTRL-V&lt;Tab&gt;.  See also |<A HREF="change.html#:retab">:retab</A>| and |<A HREF="insert.html#ins-expandtab">ins-expandtab</A>|.
@@ -2683,14 +2683,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'fillchars'"></A><B>'fillchars'</B>* *<A NAME="'fcs'"></A><B>'fcs'</B>*
 <A HREF="#'fillchars'">'fillchars'</A> <A HREF="#'fcs'">'fcs'</A>	<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	Characters to fill the statuslines and vertical separators.
 	It is a comma-separated <A HREF="eval.html#list">list</A> of items:
 
 <B><FONT color="#3A6F2B">	  item		default		Used for </FONT></B>
-	  stl:c		'' '' or '<A HREF="motion.html#^">^</A>'	statusline of the current <A HREF="windows.html#window">window</A>
+	  stl:c		'' '' or '<A HREF="motion.html#^">^</A>'	statusline of the current<A HREF="windows.html#window">窗口</A>
 	  stlnc:c	'' '' or '<A HREF="change.html#=">=</A>'	statusline of the non-current <A HREF="windows.html#windows">windows</A>
-	  wbr:c		'' ''		<A HREF="windows.html#window">window</A> <A HREF="motion.html#bar">bar</A>
+	  wbr:c		'' ''		<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A>
 	  horiz:c	'─' or '<A HREF="motion.html#-">-</A>'	horizontal separators |<A HREF="windows.html#:split">:split</A>|
 	  horizup:c	'┴' or '<A HREF="motion.html#-">-</A>'	upwards facing horizontal separator
 	  horizdown:c	'┬' or '<A HREF="motion.html#-">-</A>'	downwards facing horizontal separator
@@ -2713,7 +2713,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	Note that &quot;horiz&quot;, &quot;horizup&quot;, &quot;horizdown&quot;, &quot;vertleft&quot;, &quot;vertright&quot; and
 	&quot;verthoriz&quot; are only used when <A HREF="#'laststatus'">'laststatus'</A> is 3, since only vertical
-	<A HREF="windows.html#window">window</A> separators are used otherwise.
+	<A HREF="windows.html#window">窗口</A>separators are used otherwise.
 
 	If <A HREF="#'ambiwidth'">'ambiwidth'</A> is &quot;double&quot; then &quot;horiz&quot;, &quot;horizup&quot;, &quot;horizdown&quot;,
 	&quot;vert&quot;, &quot;vertleft&quot;, &quot;vertright&quot;, &quot;verthoriz&quot;, &quot;foldsep&quot; and &quot;fold&quot;
@@ -2765,7 +2765,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldcolumn'"></A><B>'foldcolumn'</B>* *<A NAME="'fdc'"></A><B>'fdc'</B>*
 <A HREF="#'foldcolumn'">'foldcolumn'</A> <A HREF="#'fdc'">'fdc'</A>	<A HREF="eval.html#string">string</A> (default &quot;<A HREF="motion.html#0">0</A>&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	When and how to draw the foldcolumn. Valid values are:
 	    &quot;auto&quot;:       resize to the minimum amount of <A HREF="fold.html#folds">folds</A> to display.
 	    &quot;auto:[1-9]&quot;: resize to accommodate multiple <A HREF="fold.html#folds">folds</A> up to the
@@ -2777,7 +2777,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'foldenable'"></A><B>'foldenable'</B>* *<A NAME="'fen'"></A><B>'fen'</B>* *<A NAME="'nofoldenable'"></A><B>'nofoldenable'</B>* *<A NAME="'nofen'"></A><B>'nofen'</B>*
 <A HREF="#'foldenable'">'foldenable'</A> <A HREF="#'fen'">'fen'</A>	<A HREF="#boolean">boolean</A> (default on)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	When off, all <A HREF="fold.html#folds">folds</A> are open.  This option can be used to quickly
 	switch between showing all text unfolded and viewing the text with
 	<A HREF="fold.html#folds">folds</A> (including manually opened or closed <A HREF="fold.html#folds">folds</A>).  It can be toggled
@@ -2789,7 +2789,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldexpr'"></A><B>'foldexpr'</B>* *<A NAME="'fde'"></A><B>'fde'</B>*
 <A HREF="#'foldexpr'">'foldexpr'</A> <A HREF="#'fde'">'fde'</A>	<A HREF="eval.html#string">string</A> (default: &quot;<A HREF="motion.html#0">0</A>&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	The <A HREF="eval.html#expression">expression</A> used for when <A HREF="#'foldmethod'">'foldmethod'</A> is &quot;<A HREF="eval.html#expr">expr</A>&quot;.  It is evaluated
 	for each line to obtain its fold level.  See |<A HREF="fold.html#fold-expr">fold-expr</A>|.
 
@@ -2798,13 +2798,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	This option can't be set from a |<A HREF="#modeline">modeline</A>| when the <A HREF="#'diff'">'diff'</A> option is
 	on or the <A HREF="#'modelineexpr'">'modelineexpr'</A> option is off.
 
-	It is not allowed to change text or jump to another <A HREF="windows.html#window">window</A> while
+	It is not allowed to change text or jump to another<A HREF="windows.html#window">窗口</A>while
 	evaluating <A HREF="#'foldexpr'">'foldexpr'</A> |<A HREF="eval.html#textlock">textlock</A>|.
 
 
 						*<A NAME="'foldignore'"></A><B>'foldignore'</B>* *<A NAME="'fdi'"></A><B>'fdi'</B>*
 <A HREF="#'foldignore'">'foldignore'</A> <A HREF="#'fdi'">'fdi'</A>	<A HREF="eval.html#string">string</A> (default: &quot;<A HREF="pattern.html##">#</A>&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Used only when <A HREF="#'foldmethod'">'foldmethod'</A> is &quot;indent&quot;.  Lines starting with
 	characters in <A HREF="#'foldignore'">'foldignore'</A> will get their fold level from surrounding
 	lines.  White space is skipped before checking for this character.
@@ -2813,7 +2813,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldlevel'"></A><B>'foldlevel'</B>* *<A NAME="'fdl'"></A><B>'fdl'</B>*
 <A HREF="#'foldlevel'">'foldlevel'</A> <A HREF="#'fdl'">'fdl'</A>	number (default: 0)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Sets the fold level: Folds with a higher level will be closed.
 	Setting this option to zero will close all <A HREF="fold.html#folds">folds</A>.  Higher numbers will
 	close fewer <A HREF="fold.html#folds">folds</A>.
@@ -2824,7 +2824,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'foldlevelstart'"></A><B>'foldlevelstart'</B>* *<A NAME="'fdls'"></A><B>'fdls'</B>*
 <A HREF="#'foldlevelstart'">'foldlevelstart'</A> <A HREF="#'fdls'">'fdls'</A>	number (default: -1)
 			global
-	Sets <A HREF="#'foldlevel'">'foldlevel'</A> when starting to edit another buffer in a <A HREF="windows.html#window">window</A>.
+	Sets <A HREF="#'foldlevel'">'foldlevel'</A> when starting to edit another buffer in a<A HREF="windows.html#window">窗口</A>.
 	Useful to always start editing with all <A HREF="fold.html#folds">folds</A> closed (value zero),
 	some <A HREF="fold.html#folds">folds</A> closed (one) or no <A HREF="fold.html#folds">folds</A> closed (99).
 	This is done before reading any <A HREF="#modeline">modeline</A>, thus a setting in a <A HREF="#modeline">modeline</A>
@@ -2837,7 +2837,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldmarker'"></A><B>'foldmarker'</B>* *<A NAME="'fmr'"></A><B>'fmr'</B>* *<A NAME="E536"></A><B>E536</B>*
 <A HREF="#'foldmarker'">'foldmarker'</A> <A HREF="#'fmr'">'fmr'</A>	<A HREF="eval.html#string">string</A> (default: &quot;{{{,}}}&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	The start and end marker used when <A HREF="#'foldmethod'">'foldmethod'</A> is &quot;marker&quot;.  There
 	must be one comma, which separates the start and end marker.  The
 	marker is a literal <A HREF="eval.html#string">string</A> (a regular <A HREF="eval.html#expression">expression</A> would be too slow).
@@ -2846,8 +2846,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldmethod'"></A><B>'foldmethod'</B>* *<A NAME="'fdm'"></A><B>'fdm'</B>*
 <A HREF="#'foldmethod'">'foldmethod'</A> <A HREF="#'fdm'">'fdm'</A>	<A HREF="eval.html#string">string</A> (default: &quot;manual&quot;)
-			local to <A HREF="windows.html#window">window</A>
-	The kind of <A HREF="fold.html#folding">folding</A> used for the current <A HREF="windows.html#window">window</A>.  Possible values:
+			local to<A HREF="windows.html#window">窗口</A>
+	The kind of <A HREF="fold.html#folding">folding</A> used for the current<A HREF="windows.html#window">窗口</A>.  Possible values:
 	|<A HREF="fold.html#fold-manual">fold-manual</A>|	manual	    Folds are created manually.
 	|<A HREF="fold.html#fold-indent">fold-indent</A>|	indent	    Lines with equal indent form a fold.
 	|<A HREF="fold.html#fold-expr">fold-expr</A>|	expr	    <A HREF="#'foldexpr'">'foldexpr'</A> gives the fold level of a line.
@@ -2858,7 +2858,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldminlines'"></A><B>'foldminlines'</B>* *<A NAME="'fml'"></A><B>'fml'</B>*
 <A HREF="#'foldminlines'">'foldminlines'</A> <A HREF="#'fml'">'fml'</A>	number (default: 1)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Sets the number of screen lines above which a fold can be displayed
 	closed.  Also for manually closed <A HREF="fold.html#folds">folds</A>.  With the default value of
 	one a fold can only be closed if <A HREF="motion.html#it">it</A> takes up two or more screen lines.
@@ -2870,7 +2870,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldnestmax'"></A><B>'foldnestmax'</B>* *<A NAME="'fdn'"></A><B>'fdn'</B>*
 <A HREF="#'foldnestmax'">'foldnestmax'</A> <A HREF="#'fdn'">'fdn'</A>	number (default: 20)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Sets the maximum nesting of <A HREF="fold.html#folds">folds</A> for the &quot;indent&quot; and &quot;<A HREF="syntax.html#syntax">syntax</A>&quot;
 	methods.  This avoids that too many <A HREF="fold.html#folds">folds</A> will be created.  Using more
 	than 20 doesn't work, because the internal limit is 20.
@@ -2891,7 +2891,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		all		any
 		block		&quot;<A HREF="motion.html#(">(</A>&quot;, &quot;<A HREF="motion.html#{">{</A>&quot;, &quot;<A HREF="motion.html#[[">[[</A>&quot;, &quot;<A HREF="motion.html#[{">[{</A>&quot;, etc.
 		hor		horizontal movements: &quot;<A HREF="motion.html#l">l</A>&quot;, &quot;<A HREF="motion.html#w">w</A>&quot;, &quot;fx&quot;, etc.
-		insert		any command in <A HREF="insert.html#Insert">Insert</A> mode
+		insert		any command in <A HREF="intro.html#Insert">插入</A>模式
 		jump		far jumps: &quot;<A HREF="motion.html#G">G</A>&quot;, &quot;<A HREF="motion.html#gg">gg</A>&quot;, etc.
 		<A HREF="motion.html#mark">mark</A>		jumping to a <A HREF="motion.html#mark">mark</A>: &quot;'m&quot;, <A HREF="motion.html#CTRL-O">CTRL-O</A>, etc.
 		percent		&quot;<A HREF="motion.html#&#37;">&#37;</A>&quot;
@@ -2914,7 +2914,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'foldtext'"></A><B>'foldtext'</B>* *<A NAME="'fdt'"></A><B>'fdt'</B>*
 <A HREF="#'foldtext'">'foldtext'</A> <A HREF="#'fdt'">'fdt'</A>	<A HREF="eval.html#string">string</A> (default: &quot;<A HREF="builtin.html#foldtext()">foldtext()</A>&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	An <A HREF="eval.html#expression">expression</A> which is used to specify the text displayed for a closed
 	fold.  See |<A HREF="fold.html#fold-foldtext">fold-foldtext</A>|.
 
@@ -2922,7 +2922,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#modeline">modeline</A>, see |<A HREF="eval.html#sandbox-option">sandbox-option</A>|.
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
-	It is not allowed to change text or jump to another <A HREF="windows.html#window">window</A> while
+	It is not allowed to change text or jump to another<A HREF="windows.html#window">窗口</A>while
 	evaluating <A HREF="#'foldtext'">'foldtext'</A> |<A HREF="eval.html#textlock">textlock</A>|.
 
 
@@ -3086,17 +3086,17 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	mode-list and an <A HREF="editing.html#argument-list">argument-list</A>:
 		mode-list:argument-list,mode-list:argument-list,..
 	The mode-list is a dash separated <A HREF="eval.html#list">list</A> of these modes:
-		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">Normal</A> mode
+		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
 		<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> mode
 		ve	<A HREF="visual.html#Visual">Visual</A> mode with <A HREF="#'selection'">'selection'</A> &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; (same <A HREF="motion.html#as">as</A> '<A HREF="visual.html#v">v</A>',
 			if not specified)
 		<A HREF="insert.html#o">o</A>	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
-		<A HREF="insert.html#i">i</A>	<A HREF="insert.html#Insert">Insert</A> mode
+		<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 		<A HREF="change.html#r">r</A>	<A HREF="insert.html#Replace">Replace</A> mode
 		<A HREF="change.html#c">c</A>	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="intro.html#Normal">Normal</A> (append) mode
-		ci	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="insert.html#Insert">Insert</A> mode
+		ci	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="intro.html#Insert">插入</A>模式
 		cr	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="insert.html#Replace">Replace</A> mode
-		sm	showmatch in <A HREF="insert.html#Insert">Insert</A> mode
+		sm	showmatch in <A HREF="intro.html#Insert">插入</A>模式
 		a	all modes
 	The <A HREF="editing.html#argument-list">argument-list</A> is a dash separated <A HREF="eval.html#list">list</A> of these arguments:
 		hor{N}	horizontal <A HREF="motion.html#bar">bar</A>, {N} percent of the character height
@@ -3141,7 +3141,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 				modes, use a <A HREF="syntax.html#underline">underline</A> cursor with
 				default colors.
 	   i-ci:ver30-iCursor-blinkwait300-blinkon200-blinkoff150
-				In <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="insert.html#Insert">Insert</A> mode, use a
+				In <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="intro.html#Insert">插入</A>模式, use a
 				30&#37; vertical <A HREF="motion.html#bar">bar</A> cursor with colors from the
 				&quot;iCursor&quot; highlight group.  Blink a bit
 				faster.
@@ -3314,14 +3314,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="'go-R'"></A><B>'go-R'</B>*
 	  '<A HREF="change.html#R">R</A>'	Right-hand scrollbar is present when there is a vertically
-		split <A HREF="windows.html#window">window</A>.
+		split<A HREF="windows.html#window">窗口</A>.
 
 								*<A NAME="'go-l'"></A><B>'go-l'</B>*
 	  '<A HREF="motion.html#l">l</A>'	Left-hand scrollbar is always present.
 
 								*<A NAME="'go-L'"></A><B>'go-L'</B>*
 	  '<A HREF="motion.html#L">L</A>'	Left-hand scrollbar is present when there is a vertically
-		split <A HREF="windows.html#window">window</A>.
+		split<A HREF="windows.html#window">窗口</A>.
 
 								*<A NAME="'go-b'"></A><B>'go-b'</B>*
 	  '<A HREF="motion.html#b">b</A>'	Bottom (horizontal) scrollbar is present.  Its size depends on
@@ -3343,16 +3343,16 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="'go-p'"></A><B>'go-p'</B>*
 	  '<A HREF="change.html#p">p</A>'	Use Pointer callbacks for X11 <A HREF="gui.html#GUI">GUI</A>.  This is required for some
-		<A HREF="windows.html#window">window</A> managers.  If the cursor is not blinking or hollow at
+		<A HREF="windows.html#window">窗口</A>managers.  If the cursor is not blinking or hollow at
 		the right moment, try adding this flag.  This must be done
 		before starting the <A HREF="gui.html#GUI">GUI</A>.  Set <A HREF="motion.html#it">it</A> in your |<A HREF="gui.html#gvimrc">gvimrc</A>|.  Adding or
 		removing <A HREF="motion.html#it">it</A> after the <A HREF="gui.html#GUI">GUI</A> has started has no effect.
 
 								*<A NAME="'go-k'"></A><B>'go-k'</B>*
-	  '<A HREF="motion.html#k">k</A>'	Keep the <A HREF="gui.html#GUI">GUI</A> <A HREF="windows.html#window">window</A> size when adding/removing a scrollbar, or
+	  '<A HREF="motion.html#k">k</A>'	Keep the <A HREF="gui.html#GUI">GUI</A><A HREF="windows.html#window">窗口</A>size when adding/removing a scrollbar, or
 		toolbar, tabline, etc.  Instead, the behavior is similar to
-		when the <A HREF="windows.html#window">window</A> is maximized and will adjust <A HREF="#'lines'">'lines'</A> and
-		<A HREF="#'columns'">'columns'</A> to fit to the <A HREF="windows.html#window">window</A>.  Without the '<A HREF="motion.html#k">k</A>' flag Vim will
+		when the<A HREF="windows.html#window">窗口</A>is maximized and will adjust <A HREF="#'lines'">'lines'</A> and
+		<A HREF="#'columns'">'columns'</A> to fit to the<A HREF="windows.html#window">窗口</A>.  Without the '<A HREF="motion.html#k">k</A>' flag Vim will
 		try to keep <A HREF="#'lines'">'lines'</A> and <A HREF="#'columns'">'columns'</A> the same when adding and
 		removing <A HREF="gui.html#GUI">GUI</A> components.
 
@@ -3404,9 +3404,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'helpheight'"></A><B>'helpheight'</B>* *<A NAME="'hh'"></A><B>'hh'</B>*
 <A HREF="#'helpheight'">'helpheight'</A> <A HREF="#'hh'">'hh'</A>	number	(default 20)
 			global
-	Minimal initial height of the help <A HREF="windows.html#window">window</A> when <A HREF="motion.html#it">it</A> is opened with the
-	&quot;<A HREF="helphelp.html#:help">:help</A>&quot; command.  The initial height of the help <A HREF="windows.html#window">window</A> is half of the
-	current <A HREF="windows.html#window">window</A>, or (when the <A HREF="#'ea'">'ea'</A> option is on) the same <A HREF="motion.html#as">as</A> other
+	Minimal initial height of the help<A HREF="windows.html#window">窗口</A>when <A HREF="motion.html#it">it</A> is opened with the
+	&quot;<A HREF="helphelp.html#:help">:help</A>&quot; command.  The initial height of the help<A HREF="windows.html#window">窗口</A>is half of the
+	current<A HREF="windows.html#window">窗口</A>, or (when the <A HREF="#'ea'">'ea'</A> option is on) the same <A HREF="motion.html#as">as</A> other
 	<A HREF="windows.html#windows">windows</A>.  When the height is <A HREF="various.html#less">less</A> than <A HREF="#'helpheight'">'helpheight'</A>, the height is
 	set to <A HREF="#'helpheight'">'helpheight'</A>.  Set to zero to disable.
 
@@ -3433,7 +3433,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	When off a buffer is unloaded (including loss of <A HREF="undo.html#undo">undo</A> information)
 	when <A HREF="motion.html#it">it</A> is |abandon|ed.  When on a buffer becomes hidden when <A HREF="motion.html#it">it</A> is
-	|abandon|ed.  A buffer displayed in another <A HREF="windows.html#window">window</A> does not become
+	|abandon|ed.  A buffer displayed in another<A HREF="windows.html#window">窗口</A>does not become
 	hidden, of course.
 
 	Commands that move through the buffer <A HREF="eval.html#list">list</A> sometimes hide a buffer
@@ -3489,7 +3489,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#'redrawtime'">'redrawtime'</A> specifies the maximum time spent on finding matches.
 	When the search <A HREF="pattern.html#pattern">pattern</A> can match an end-of-line, Vim will try to
 	highlight all of the matched text.  However, this depends on where the
-	search starts.  This will be the first line in the <A HREF="windows.html#window">window</A> or the first
+	search starts.  This will be the first line in the<A HREF="windows.html#window">窗口</A>or the first
 	line below a closed fold.  A match in a previous line which is not
 	drawn may not continue in a newly drawn line.
 	You can specify whether the highlight status is restored on <A HREF="starting.html#startup">startup</A>
@@ -3499,19 +3499,19 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'icon'"></A><B>'icon'</B>* *<A NAME="'noicon'"></A><B>'noicon'</B>*
 <A HREF="#'icon'">'icon'</A>			<A HREF="#boolean">boolean</A>	(default off, on when title can be restored)
 			global
-	When on, the icon text of the <A HREF="windows.html#window">window</A> will be set to the value of
+	When on, the icon text of the<A HREF="windows.html#window">窗口</A>will be set to the value of
 	<A HREF="#'iconstring'">'iconstring'</A> (if <A HREF="motion.html#it">it</A> is not empty), or to the name of the file
 	currently being edited.  Only the last part of the name is used.
 	Overridden by the <A HREF="#'iconstring'">'iconstring'</A> option.
-	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports setting <A HREF="windows.html#window">window</A> icons.
+	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports setting<A HREF="windows.html#window">窗口</A>icons.
 
 
 						*<A NAME="'iconstring'"></A><B>'iconstring'</B>*
 <A HREF="#'iconstring'">'iconstring'</A>		<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			global
 	When this option is not empty, <A HREF="motion.html#it">it</A> will be used for the icon text of
-	the <A HREF="windows.html#window">window</A>.  This happens only when the <A HREF="#'icon'">'icon'</A> option is on.
-	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports setting <A HREF="windows.html#window">window</A> icon text
+	the<A HREF="windows.html#window">窗口</A>.  This happens only when the <A HREF="#'icon'">'icon'</A> option is on.
+	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports setting<A HREF="windows.html#window">窗口</A>icon text
 	When this option contains printf-style '<A HREF="motion.html#&#37;">&#37;</A>' items, they will be
 	expanded according to the rules used for <A HREF="#'statusline'">'statusline'</A>.  See
 	<A HREF="#'titlestring'">'titlestring'</A> for example settings.
@@ -3551,16 +3551,16 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'iminsert'">'iminsert'</A> <A HREF="#'imi'">'imi'</A>	number (default 0)
 			local to buffer
 	Specifies whether <A HREF="map.html#:lmap">:lmap</A> or an Input Method (IM) is to be used in
-	<A HREF="insert.html#Insert">Insert</A> mode.  Valid values:
+	<A HREF="intro.html#Insert">插入</A>模式.  Valid values:
 		0	<A HREF="map.html#:lmap">:lmap</A> is off and IM is off
 		1	<A HREF="map.html#:lmap">:lmap</A> is ON and IM is off
 		2	<A HREF="map.html#:lmap">:lmap</A> is off and IM is ON
-	To always reset the option to zero when leaving <A HREF="insert.html#Insert">Insert</A> mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>
+	To always reset the option to zero when leaving <A HREF="intro.html#Insert">插入</A>模式 with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>
 	this can be used:
 <B>		:inoremap &lt;ESC&gt; &lt;ESC&gt;:set iminsert=0&lt;CR&gt;</B>
  	This makes <A HREF="map.html#:lmap">:lmap</A> and IM turn off automatically when leaving <A HREF="insert.html#Insert">Insert</A>
 	mode.
-	Note that this option changes when using <A HREF="editing.html#CTRL-^">CTRL-^</A> in <A HREF="insert.html#Insert">Insert</A> mode
+	Note that this option changes when using <A HREF="editing.html#CTRL-^">CTRL-^</A> in <A HREF="intro.html#Insert">插入</A>模式
 	|<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>|.
 	The value is set to 1 when setting <A HREF="#'keymap'">'keymap'</A> to a valid keymap name.
 	It is also used for the argument of commands like &quot;<A HREF="change.html#r">r</A>&quot; and &quot;<A HREF="motion.html#f">f</A>&quot;.
@@ -3594,7 +3594,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		nosplit	Shows the effects of a command incrementally in the
 			buffer.
 		split	Like &quot;nosplit&quot;, but also shows partial off-screen
-			results in a preview <A HREF="windows.html#window">window</A>.
+			results in a preview<A HREF="windows.html#window">窗口</A>.
 
 	If the preview for built-in commands is too slow (exceeds
 	<A HREF="#'redrawtime'">'redrawtime'</A>) then <A HREF="#'inccommand'">'inccommand'</A> is automatically disabled until
@@ -3633,7 +3633,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#modeline">modeline</A>, see |<A HREF="eval.html#sandbox-option">sandbox-option</A>|.
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
-	It is not allowed to change text or jump to another <A HREF="windows.html#window">window</A> while
+	It is not allowed to change text or jump to another<A HREF="windows.html#window">窗口</A>while
 	evaluating <A HREF="#'includeexpr'">'includeexpr'</A> |<A HREF="eval.html#textlock">textlock</A>|.
 
 
@@ -3678,7 +3678,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			local to buffer
 	Expression which is evaluated to obtain the proper indent for a line.
 	It is used when a new line is created, for the |<A HREF="change.html#=">=</A>| <A HREF="motion.html#operator">operator</A> and
-	in <A HREF="insert.html#Insert">Insert</A> mode <A HREF="motion.html#as">as</A> specified with the <A HREF="#'indentkeys'">'indentkeys'</A> option.
+	in <A HREF="intro.html#Insert">插入</A>模式 <A HREF="motion.html#as">as</A> specified with the <A HREF="#'indentkeys'">'indentkeys'</A> option.
 	When this option is not empty, <A HREF="motion.html#it">it</A> overrules the <A HREF="#'cindent'">'cindent'</A> and
 	<A HREF="#'smartindent'">'smartindent'</A> indenting.  When <A HREF="#'lisp'">'lisp'</A> is set, this option is
 	overridden by the Lisp indentation algorithm.
@@ -3692,7 +3692,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Functions useful for computing the indent are |<A HREF="builtin.html#indent()">indent()</A>|, |<A HREF="builtin.html#cindent()">cindent()</A>|
 	and |<A HREF="builtin.html#lispindent()">lispindent()</A>|.
 	The evaluation of the <A HREF="eval.html#expression">expression</A> must not have side effects!  It must
-	not change the text, jump to another <A HREF="windows.html#window">window</A>, etc.  Afterwards the
+	not change the text, jump to another<A HREF="windows.html#window">窗口</A>, etc.  Afterwards the
 	cursor position is always restored, thus the cursor may be moved.
 	Normally this option would be set to call a function:
 <B>		:set indentexpr=GetMyIndent()</B>
@@ -3704,7 +3704,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#modeline">modeline</A>, see |<A HREF="eval.html#sandbox-option">sandbox-option</A>|.
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
-	It is not allowed to change text or jump to another <A HREF="windows.html#window">window</A> while
+	It is not allowed to change text or jump to another<A HREF="windows.html#window">窗口</A>while
 	evaluating <A HREF="#'indentexpr'">'indentexpr'</A> |<A HREF="eval.html#textlock">textlock</A>|.
 
 
@@ -3712,7 +3712,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'indentkeys'"></A><B>'indentkeys'</B>* *<A NAME="'indk'"></A><B>'indk'</B>*
 <A HREF="#'indentkeys'">'indentkeys'</A> <A HREF="#'indk'">'indk'</A>	<A HREF="eval.html#string">string</A>	(default &quot;0{,0},0),0],:,0#,!^F,o,O,e&quot;)
 			local to buffer
-	A <A HREF="eval.html#list">list</A> of keys that, when typed in <A HREF="insert.html#Insert">Insert</A> mode, cause reindenting of
+	A <A HREF="eval.html#list">list</A> of keys that, when typed in <A HREF="intro.html#Insert">插入</A>模式, cause reindenting of
 	the current line.  Only happens if <A HREF="#'indentexpr'">'indentexpr'</A> isn't empty.
 	The format is identical to <A HREF="#'cinkeys'">'cinkeys'</A>, see |<A HREF="indent.html#indentkeys-format">indentkeys-format</A>|.
 	See |<A HREF="indent.html#C-indenting">C-indenting</A>| and |<A HREF="indent.html#indent-expression">indent-expression</A>|.
@@ -3913,13 +3913,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'langmap'">'langmap'</A> <A HREF="#'lmap'">'lmap'</A>	<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			global
 	This option allows switching your keyboard into a special language
-	mode.  When you are typing text in <A HREF="insert.html#Insert">Insert</A> mode the characters are
-	inserted directly.  When in <A HREF="intro.html#Normal">Normal</A> mode the <A HREF="#'langmap'">'langmap'</A> option takes
+	mode.  When you are typing text in <A HREF="intro.html#Insert">插入</A>模式 the characters are
+	inserted directly.  When in <A HREF="intro.html#Normal">正常</A>模式 the <A HREF="#'langmap'">'langmap'</A> option takes
 	care of translating these special characters to the original meaning
 	of the key.  This means you don't have to change the keyboard mode to
-	be able to execute <A HREF="intro.html#Normal">Normal</A> mode commands.
+	be able to execute <A HREF="intro.html#Normal">正常</A>模式 commands.
 	This is the opposite of the <A HREF="#'keymap'">'keymap'</A> option, where characters are
-	mapped in <A HREF="insert.html#Insert">Insert</A> mode.
+	mapped in <A HREF="intro.html#Insert">插入</A>模式.
 	Also consider setting <A HREF="#'langremap'">'langremap'</A> to off, to prevent <A HREF="#'langmap'">'langmap'</A> from
 	applying to characters resulting from a <A HREF="map.html#mapping">mapping</A>.
 	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
@@ -3988,12 +3988,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					*<A NAME="'laststatus'"></A><B>'laststatus'</B>* *<A NAME="'ls'"></A><B>'ls'</B>*
 <A HREF="#'laststatus'">'laststatus'</A> <A HREF="#'ls'">'ls'</A>	number	(default 2)
 			global
-	The value of this option influences when the last <A HREF="windows.html#window">window</A> will have a
+	The value of this option influences when the last<A HREF="windows.html#window">窗口</A>will have a
 	status line:
 		0: never
 		1: only if there are at least two <A HREF="windows.html#windows">windows</A>
 		2: always
-		3: always and ONLY the last <A HREF="windows.html#window">window</A>
+		3: always and ONLY the last<A HREF="windows.html#window">窗口</A>
 	The screen looks nicer with a status line if you have several
 	<A HREF="windows.html#windows">windows</A>, but <A HREF="motion.html#it">it</A> takes another screen line. |<A HREF="windows.html#status-line">status-line</A>|
 
@@ -4003,13 +4003,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	When this option is set, the screen will not be redrawn while
 	executing macros, <A HREF="change.html#registers">registers</A> and other commands that have not been
-	typed.  Also, updating the <A HREF="windows.html#window">window</A> title is postponed.  To force an
+	typed.  Also, updating the<A HREF="windows.html#window">窗口</A>title is postponed.  To force an
 	update use |<A HREF="various.html#:redraw">:redraw</A>|.
 
 
 			*<A NAME="'linebreak'"></A><B>'linebreak'</B>* *<A NAME="'lbr'"></A><B>'lbr'</B>* *<A NAME="'nolinebreak'"></A><B>'nolinebreak'</B>* *<A NAME="'nolbr'"></A><B>'nolbr'</B>*
 <A HREF="#'linebreak'">'linebreak'</A> <A HREF="#'lbr'">'lbr'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	If on, Vim will wrap long lines at a character in <A HREF="#'breakat'">'breakat'</A> rather
 	than at the last character that fits on the screen.  Unlike
 	<A HREF="#'wrapmargin'">'wrapmargin'</A> and <A HREF="#'textwidth'">'textwidth'</A>, this does not insert &lt;EOL&gt;s in the file,
@@ -4024,14 +4024,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'lines'"></A><B>'lines'</B>* *<A NAME="E593"></A><B>E593</B>*
 <A HREF="#'lines'">'lines'</A>			number	(default 24 or <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> height)
 			global
-	<A HREF="eval.html#Number">Number</A> of lines of the Vim <A HREF="windows.html#window">window</A>.
+	<A HREF="eval.html#Number">Number</A> of lines of the Vim<A HREF="windows.html#window">窗口</A>.
 	Normally you don't need to set this.  It is done automatically by the
 	<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="starting.html#initialization">initialization</A> code.
-	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable <A HREF="windows.html#window">window</A>, setting this
-	option will cause the <A HREF="windows.html#window">window</A> size to be changed.  When you only want
+	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable<A HREF="windows.html#window">窗口</A>, setting this
+	option will cause the<A HREF="windows.html#window">窗口</A>size to be changed.  When you only want
 	to use the size for the <A HREF="gui.html#GUI">GUI</A>, put the command in your |<A HREF="gui.html#gvimrc">gvimrc</A>| file.
 	Vim <A HREF="vi_diff.html#limits">limits</A> the number of lines to what fits on the screen.  You can
-	use this command to get the tallest <A HREF="windows.html#window">window</A> possible:
+	use this command to get the tallest<A HREF="windows.html#window">窗口</A>possible:
 <B>		:set lines=999</B>
  	Minimum value is 2, maximum value is 1000.
 
@@ -4072,14 +4072,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'list'"></A><B>'list'</B>* *<A NAME="'nolist'"></A><B>'nolist'</B>*
 <A HREF="#'list'">'list'</A>			<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	<A HREF="eval.html#List">List</A> mode: By default, show tabs <A HREF="motion.html#as">as</A> &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, trailing spaces <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#-">-</A>&quot;, and
 	non-breakable space characters <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#+">+</A>&quot;. Useful to see the difference
 	between tabs and spaces and for trailing blanks. Further changed by
 	the <A HREF="#'listchars'">'listchars'</A> option.
 
 	The cursor is displayed at the start of the space a <A HREF="intro.html#Tab">Tab</A> character
-	occupies, not at the end <A HREF="motion.html#as">as</A> usual in <A HREF="intro.html#Normal">Normal</A> mode.  To get this cursor
+	occupies, not at the end <A HREF="motion.html#as">as</A> usual in <A HREF="intro.html#Normal">正常</A>模式.  To get this cursor
 	position while displaying Tabs with spaces, use:
 <B>		:set list lcs=tab:\ \ </B>
  
@@ -4090,7 +4090,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'listchars'"></A><B>'listchars'</B>* *<A NAME="'lcs'"></A><B>'lcs'</B>*
 <A HREF="#'listchars'">'listchars'</A> <A HREF="#'lcs'">'lcs'</A>	<A HREF="eval.html#string">string</A>	(default: &quot;tab:&gt; ,trail:-,nbsp:+&quot;)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	Strings to use in <A HREF="#'list'">'list'</A> mode and for the |<A HREF="various.html#:list">:list</A>| command.  It is a
 	comma-separated <A HREF="eval.html#list">list</A> of <A HREF="eval.html#string">string</A> settings.
 
@@ -4446,7 +4446,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'mouse'">'mouse'</A>			<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			global
 
-	Enables mouse support. For example, to enable the mouse in <A HREF="intro.html#Normal">Normal</A> mode
+	Enables mouse support. For example, to enable the mouse in <A HREF="intro.html#Normal">正常</A>模式
 	and <A HREF="visual.html#Visual">Visual</A> mode:
 <B>		:set mouse=nv</B>
  
@@ -4454,9 +4454,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	the mouse.
 
 	Mouse support can be enabled for different modes:
-		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">Normal</A> mode
+		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
 		<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> mode
-		<A HREF="insert.html#i">i</A>	<A HREF="insert.html#Insert">Insert</A> mode
+		<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 		<A HREF="change.html#c">c</A>	<A HREF="cmdline.html#Command-line">Command-line</A> mode
 		<A HREF="motion.html#h">h</A>	all previous modes when editing a help file
 		a	all previous modes
@@ -4466,7 +4466,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	works with operators too, e.g. type |<A HREF="change.html#d">d</A>| then left-click to delete text
 	from the current cursor position to the position where you clicked.
 
-	Drag the |<A HREF="windows.html#status-line">status-line</A>| or vertical separator of a <A HREF="windows.html#window">window</A> to resize <A HREF="motion.html#it">it</A>.
+	Drag the |<A HREF="windows.html#status-line">status-line</A>| or vertical separator of a<A HREF="windows.html#window">窗口</A>to resize <A HREF="motion.html#it">it</A>.
 
 	If enabled for &quot;<A HREF="visual.html#v">v</A>&quot; (Visual mode) then <A HREF="term.html#double-click">double-click</A> selects word-wise,
 	triple-click makes <A HREF="motion.html#it">it</A> line-wise, and quadruple-click makes <A HREF="motion.html#it">it</A>
@@ -4478,7 +4478,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	&quot;* <A HREF="intro.html#register">register</A> if possible. See also <A HREF="#'clipboard'">'clipboard'</A>.
 
 	Related <A HREF="#options">options</A>:
-	<A HREF="#'mousefocus'">'mousefocus'</A>	<A HREF="windows.html#window">window</A> focus follows mouse pointer
+	<A HREF="#'mousefocus'">'mousefocus'</A>	<A HREF="windows.html#window">窗口</A>focus follows mouse pointer
 	<A HREF="#'mousemodel'">'mousemodel'</A>	what mouse button does which action
 	<A HREF="#'mousehide'">'mousehide'</A>	hide mouse pointer while typing text
 	<A HREF="#'selectmode'">'selectmode'</A>	whether to start <A HREF="visual.html#Select">Select</A> mode or <A HREF="visual.html#Visual">Visual</A> mode
@@ -4503,11 +4503,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			*<A NAME="'mousefocus'"></A><B>'mousefocus'</B>* *<A NAME="'mousef'"></A><B>'mousef'</B>* *<A NAME="'nomousefocus'"></A><B>'nomousefocus'</B>* *<A NAME="'nomousef'"></A><B>'nomousef'</B>*
 <A HREF="#'mousefocus'">'mousefocus'</A> <A HREF="#'mousef'">'mousef'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			global
-	The <A HREF="windows.html#window">window</A> that the mouse pointer is on is automatically activated.
-	When <A HREF="change.html#changing">changing</A> the <A HREF="windows.html#window">window</A> layout or <A HREF="windows.html#window">window</A> focus in another way, the
-	mouse pointer is moved to the <A HREF="windows.html#window">window</A> with keyboard focus.  Off is the
+	The<A HREF="windows.html#window">窗口</A>that the mouse pointer is on is automatically activated.
+	When <A HREF="change.html#changing">changing</A> the<A HREF="windows.html#window">窗口</A>layout or<A HREF="windows.html#window">窗口</A>focus in another way, the
+	mouse pointer is moved to the<A HREF="windows.html#window">窗口</A>with keyboard focus.  Off is the
 	default because <A HREF="motion.html#it">it</A> makes using the pull down <A HREF="gui.html#menus">menus</A> a little goofy, <A HREF="motion.html#as">as</A>
-	a pointer transit may activate a <A HREF="windows.html#window">window</A> unintentionally.
+	a pointer transit may activate a<A HREF="windows.html#window">窗口</A>unintentionally.
 
 
 			*<A NAME="'mousehide'"></A><B>'mousehide'</B>* *<A NAME="'mh'"></A><B>'mh'</B>* *<A NAME="'nomousehide'"></A><B>'nomousehide'</B>* *<A NAME="'nomh'"></A><B>'nomh'</B>*
@@ -4583,12 +4583,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		mode-list:shape,mode-list:shape,..
 	The mode-list is a dash separated <A HREF="eval.html#list">list</A> of these modes/locations:
 <B><FONT color="#3A6F2B">			In a normal window: </FONT></B>
-		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">Normal</A> mode
+		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
 		<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> mode
 		ve	<A HREF="visual.html#Visual">Visual</A> mode with <A HREF="#'selection'">'selection'</A> &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; (same <A HREF="motion.html#as">as</A> '<A HREF="visual.html#v">v</A>',
 			if not specified)
 		<A HREF="insert.html#o">o</A>	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
-		<A HREF="insert.html#i">i</A>	<A HREF="insert.html#Insert">Insert</A> mode
+		<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 		<A HREF="change.html#r">r</A>	<A HREF="insert.html#Replace">Replace</A> mode
 
 <B><FONT color="#3A6F2B">			Others: </FONT></B>
@@ -4597,7 +4597,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		cr	<A HREF="change.html#replacing">replacing</A> in the command-line
 		<A HREF="motion.html#m">m</A>	at the 'Hit ENTER' or 'More' prompts
 		ml	idem, but cursor in the last line
-		<A HREF="motion.html#e">e</A>	any mode, pointer below last <A HREF="windows.html#window">window</A>
+		<A HREF="motion.html#e">e</A>	any mode, pointer below last<A HREF="windows.html#window">窗口</A>
 		<A HREF="change.html#s">s</A>	any mode, pointer on a status line
 		sd	any mode, while dragging a status line
 		vs	any mode, pointer on a vertical separator line
@@ -4677,7 +4677,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 				*<A NAME="'number'"></A><B>'number'</B>* *<A NAME="'nu'"></A><B>'nu'</B>* *<A NAME="'nonumber'"></A><B>'nonumber'</B>* *<A NAME="'nonu'"></A><B>'nonu'</B>*
 <A HREF="#'number'">'number'</A> <A HREF="#'nu'">'nu'</A>		<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Print the line number in front of each line.  When the '<A HREF="pattern.html#n">n</A>' option is
 	excluded from <A HREF="#'cpoptions'">'cpoptions'</A> a wrapped line will not use the column of
 	line numbers.
@@ -4703,14 +4703,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'numberwidth'"></A><B>'numberwidth'</B>* *<A NAME="'nuw'"></A><B>'nuw'</B>*
 <A HREF="#'numberwidth'">'numberwidth'</A> <A HREF="#'nuw'">'nuw'</A>	number	(default: 4)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Minimal number of columns to use for the line number.  Only relevant
 	when the <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A> option is set or <A HREF="print.html#printing">printing</A> lines
 	with a line number. Since one space is always between the number and
 	the text, there is one <A HREF="various.html#less">less</A> character for the number itself.
 	The value is the minimum width.  A bigger width is used when needed to
 	fit the highest line number in the buffer respectively the number of
-	rows in the <A HREF="windows.html#window">window</A>, depending on whether <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A>
+	rows in the<A HREF="windows.html#window">窗口</A>, depending on whether <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A>
 	is set. Thus with the Vim default of 4 there is room for a line number
 	up to 999. When the buffer has 1000 lines five columns will be used.
 	The minimum value is 1, the maximum value is 20.
@@ -4719,7 +4719,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'omnifunc'"></A><B>'omnifunc'</B>* *<A NAME="'ofu'"></A><B>'ofu'</B>*
 <A HREF="#'omnifunc'">'omnifunc'</A> <A HREF="#'ofu'">'ofu'</A>	<A HREF="eval.html#string">string</A>	(default: empty)
 			local to buffer
-	This option specifies a function to be used for <A HREF="insert.html#Insert">Insert</A> mode omni
+	This option specifies a function to be used for <A HREF="intro.html#Insert">插入</A>模式 omni
 	completion with CTRL-X CTRL-O. |<A HREF="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</A>|
 	See |<A HREF="insert.html#complete-functions">complete-functions</A>| for an explanation of how the function is
 	invoked and what <A HREF="motion.html#it">it</A> should return.
@@ -4771,7 +4771,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	This option is obsolete; |<A HREF="provider.html#bracketed-paste-mode">bracketed-paste-mode</A>| is built-in.
 
 	Put Vim in Paste mode.  This is useful if you want to cut or copy
-	some text from one <A HREF="windows.html#window">window</A> and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">it</A> in Vim.  This will avoid
+	some text from one<A HREF="windows.html#window">窗口</A>and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">it</A> in Vim.  This will avoid
 	unexpected effects.
 	Setting this option is useful when using Vim in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, where Vim
 	cannot distinguish between typed text and pasted text.  In the <A HREF="gui.html#GUI">GUI</A>, Vim
@@ -4781,9 +4781,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	This option is reset when starting the <A HREF="gui.html#GUI">GUI</A>.  Thus if you set <A HREF="motion.html#it">it</A> in
 	your <A HREF="starting.html#vimrc">vimrc</A> <A HREF="motion.html#it">it</A> will work in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, but not in the <A HREF="gui.html#GUI">GUI</A>.  Setting
 	<A HREF="#'paste'">'paste'</A> in the <A HREF="gui.html#GUI">GUI</A> has side effects: e.g., the Paste toolbar button
-	will no longer work in <A HREF="insert.html#Insert">Insert</A> mode, because <A HREF="motion.html#it">it</A> uses a <A HREF="map.html#mapping">mapping</A>.
+	will no longer work in <A HREF="intro.html#Insert">插入</A>模式, because <A HREF="motion.html#it">it</A> uses a <A HREF="map.html#mapping">mapping</A>.
 	When the <A HREF="#'paste'">'paste'</A> option is switched on (also when <A HREF="motion.html#it">it</A> was already on):
-		- <A HREF="map.html#mapping">mapping</A> in <A HREF="insert.html#Insert">Insert</A> mode and <A HREF="cmdline.html#Command-line">Command-line</A> mode is disabled
+		- <A HREF="map.html#mapping">mapping</A> in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="cmdline.html#Command-line">Command-line</A> mode is disabled
 		- <A HREF="map.html#abbreviations">abbreviations</A> are disabled
 		- <A HREF="#'autoindent'">'autoindent'</A> is reset
 		- <A HREF="#'expandtab'">'expandtab'</A> is reset
@@ -4821,10 +4821,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B>	    :map {keys} :set invpaste&lt;CR&gt;</B>
  	Where {keys} is the value of <A HREF="#'pastetoggle'">'pastetoggle'</A>.
 	The difference is that <A HREF="motion.html#it">it</A> will work even when <A HREF="#'paste'">'paste'</A> is set.
-	<A HREF="#'pastetoggle'">'pastetoggle'</A> works in <A HREF="insert.html#Insert">Insert</A> mode and <A HREF="intro.html#Normal">Normal</A> mode, but not in
+	<A HREF="#'pastetoggle'">'pastetoggle'</A> works in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="intro.html#Normal">正常</A>模式, but not in
 	<A HREF="cmdline.html#Command-line">Command-line</A> mode.
 	Mappings are checked first, thus overrule <A HREF="#'pastetoggle'">'pastetoggle'</A>.  However,
-	when <A HREF="#'paste'">'paste'</A> is on mappings are ignored in <A HREF="insert.html#Insert">Insert</A> mode, thus you can <A HREF="diff.html#do">do</A>
+	when <A HREF="#'paste'">'paste'</A> is on mappings are ignored in <A HREF="intro.html#Insert">插入</A>模式, thus you can <A HREF="diff.html#do">do</A>
 	this:
 <B>	    :map &lt;F10&gt; :set paste&lt;CR&gt;</B>
 <B>	    :map &lt;F11&gt; :set nopaste&lt;CR&gt;</B>
@@ -4939,7 +4939,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					*<A NAME="'previewheight'"></A><B>'previewheight'</B>* *<A NAME="'pvh'"></A><B>'pvh'</B>*
 <A HREF="#'previewheight'">'previewheight'</A> <A HREF="#'pvh'">'pvh'</A>	number (default 12)
 			global
-	Default height for a preview <A HREF="windows.html#window">window</A>.  Used for |<A HREF="windows.html#:ptag">:ptag</A>| and associated
+	Default height for a preview<A HREF="windows.html#window">窗口</A>.  Used for |<A HREF="windows.html#:ptag">:ptag</A>| and associated
 	commands.  Used for |<A HREF="windows.html#CTRL-W_}">CTRL-W_}</A>| when no <A HREF="intro.html#count">count</A> is given.
 
 
@@ -4947,8 +4947,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 					*<A NAME="'pvw'"></A><B>'pvw'</B>* *<A NAME="'nopvw'"></A><B>'nopvw'</B>* *<A NAME="E590"></A><B>E590</B>*
 <A HREF="#'previewwindow'">'previewwindow'</A> <A HREF="#'pvw'">'pvw'</A>	<A HREF="#boolean">boolean</A> (default off)
-			local to <A HREF="windows.html#window">window</A>
-	Identifies the preview <A HREF="windows.html#window">window</A>.  Only one <A HREF="windows.html#window">window</A> can have this option
+			local to<A HREF="windows.html#window">窗口</A>
+	Identifies the preview<A HREF="windows.html#window">窗口</A>.  Only one<A HREF="windows.html#window">窗口</A>can have this option
 	set.  It's normally not set directly, but by using one of the commands
 	|<A HREF="windows.html#:ptag">:ptag</A>|, |<A HREF="windows.html#:pedit">:pedit</A>|, etc.
 
@@ -5061,7 +5061,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	This option specifies a function to be used to get the text to display
 	in the <A HREF="quickfix.html#quickfix">quickfix</A> and location <A HREF="eval.html#list">list</A> <A HREF="windows.html#windows">windows</A>.  This can be used to
-	customize the information displayed in the <A HREF="quickfix.html#quickfix">quickfix</A> or location <A HREF="windows.html#window">window</A>
+	customize the information displayed in the <A HREF="quickfix.html#quickfix">quickfix</A> or location<A HREF="windows.html#window">窗口</A>
 	for each entry in the corresponding <A HREF="quickfix.html#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A>.  See
 	|<A HREF="quickfix.html#quickfix-window-function">quickfix-window-function</A>| for an explanation of how to write the
 	function and an example. The value can be the name of a function or a
@@ -5132,7 +5132,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	highlighting.
 	When redrawing takes more than this many milliseconds no further
 	matches will be highlighted.
-	For <A HREF="syntax.html#syntax">syntax</A> highlighting the time applies per <A HREF="windows.html#window">window</A>.  When over the
+	For <A HREF="syntax.html#syntax">syntax</A> highlighting the time applies per<A HREF="windows.html#window">窗口</A>.  When over the
 	limit <A HREF="syntax.html#syntax">syntax</A> highlighting is disabled until |<A HREF="various.html#CTRL-L">CTRL-L</A>| is used.
 	This is used to avoid that Vim hangs when using a very complicated
 	<A HREF="pattern.html#pattern">pattern</A>.
@@ -5157,7 +5157,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 		*<A NAME="'relativenumber'"></A><B>'relativenumber'</B>* *<A NAME="'rnu'"></A><B>'rnu'</B>* *<A NAME="'norelativenumber'"></A><B>'norelativenumber'</B>* *<A NAME="'nornu'"></A><B>'nornu'</B>*
 <A HREF="#'relativenumber'">'relativenumber'</A> <A HREF="#'rnu'">'rnu'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Show the line number relative to the line with the cursor in front of
 	each line. Relative line numbers help you use the |<A HREF="intro.html#count">count</A>| you can
 	precede some vertical motion commands (e.g. <A HREF="motion.html#j">j</A> <A HREF="motion.html#k">k</A> + -) with, without
@@ -5190,21 +5190,21 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 				*<A NAME="'revins'"></A><B>'revins'</B>* *<A NAME="'ri'"></A><B>'ri'</B>* *<A NAME="'norevins'"></A><B>'norevins'</B>* *<A NAME="'nori'"></A><B>'nori'</B>*
 <A HREF="#'revins'">'revins'</A> <A HREF="#'ri'">'ri'</A>		<A HREF="#boolean">boolean</A>	(default off)
 			global
-	Inserting characters in <A HREF="insert.html#Insert">Insert</A> mode will work backwards.  See &quot;typing
+	Inserting characters in <A HREF="intro.html#Insert">插入</A>模式 will work backwards.  See &quot;typing
 	backwards&quot; |<A HREF="rileft.html#ins-reverse">ins-reverse</A>|.  This option can be toggled with the CTRL-_
-	command in <A HREF="insert.html#Insert">Insert</A> mode, when <A HREF="#'allowrevins'">'allowrevins'</A> is set.
+	command in <A HREF="intro.html#Insert">插入</A>模式, when <A HREF="#'allowrevins'">'allowrevins'</A> is set.
 	This option is reset when <A HREF="#'paste'">'paste'</A> is set and restored when <A HREF="#'paste'">'paste'</A> is
 	reset.
 
 
 				 *<A NAME="'rightleft'"></A><B>'rightleft'</B>* *<A NAME="'rl'"></A><B>'rl'</B>* *<A NAME="'norightleft'"></A><B>'norightleft'</B>* *<A NAME="'norl'"></A><B>'norl'</B>*
 <A HREF="#'rightleft'">'rightleft'</A> <A HREF="#'rl'">'rl'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	When on, display orientation becomes right-to-left, i.e., characters
 	that are stored in the file appear from the right to the left.
 	Using this option, <A HREF="motion.html#it">it</A> is possible to edit files for languages that
 	are written from the right to the left such <A HREF="motion.html#as">as</A> Hebrew and <A HREF="arabic.html#Arabic">Arabic</A>.
-	This option is per <A HREF="windows.html#window">window</A>, so <A HREF="motion.html#it">it</A> is possible to edit mixed files
+	This option is per<A HREF="windows.html#window">窗口</A>, so <A HREF="motion.html#it">it</A> is possible to edit mixed files
 	simultaneously, or to view the same file in both ways (this is
 	useful whenever you have a mixed text file with both right-to-left
 	and left-to-right strings so that both sets are displayed properly
@@ -5213,7 +5213,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'rightleftcmd'"></A><B>'rightleftcmd'</B>* *<A NAME="'rlc'"></A><B>'rlc'</B>*
 <A HREF="#'rightleftcmd'">'rightleftcmd'</A> <A HREF="#'rlc'">'rlc'</A>	<A HREF="eval.html#string">string</A>	(default &quot;search&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Each <A HREF="motion.html#word">word</A> in this option enables the command line editing to work in
 	right-to-left mode for a group of commands:
 
@@ -5234,7 +5234,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		All	first and last line are visible
 		45&#37;	relative position in the file
 	If <A HREF="#'rulerformat'">'rulerformat'</A> is set, <A HREF="motion.html#it">it</A> will determine the contents of the ruler.
-	Each <A HREF="windows.html#window">window</A> has its own ruler.  If a <A HREF="windows.html#window">window</A> has a status line, the
+	Each<A HREF="windows.html#window">窗口</A>has its own ruler.  If a<A HREF="windows.html#window">窗口</A>has a status line, the
 	ruler is shown there.  Otherwise <A HREF="motion.html#it">it</A> is shown in the last line of the
 	screen.  If the statusline is given by <A HREF="#'statusline'">'statusline'</A> (i.e. not empty),
 	this option takes precedence over <A HREF="#'ruler'">'ruler'</A> and <A HREF="#'rulerformat'">'rulerformat'</A>
@@ -5358,14 +5358,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'scroll'"></A><B>'scroll'</B>* *<A NAME="'scr'"></A><B>'scr'</B>*
-<A HREF="#'scroll'">'scroll'</A> <A HREF="#'scr'">'scr'</A>		number	(default: half the <A HREF="windows.html#window">window</A> height)
-			local to <A HREF="windows.html#window">window</A>
+<A HREF="#'scroll'">'scroll'</A> <A HREF="#'scr'">'scr'</A>		number	(default: half the<A HREF="windows.html#window">窗口</A>height)
+			local to<A HREF="windows.html#window">窗口</A>
 	<A HREF="eval.html#Number">Number</A> of lines to scroll with <A HREF="scroll.html#CTRL-U">CTRL-U</A> and <A HREF="scroll.html#CTRL-D">CTRL-D</A> commands.  Will be
-	set to half the number of lines in the <A HREF="windows.html#window">window</A> when the <A HREF="windows.html#window">window</A> size
+	set to half the number of lines in the<A HREF="windows.html#window">窗口</A>when the<A HREF="windows.html#window">窗口</A>size
 	changes.  This may happen when enabling the |<A HREF="windows.html#status-line">status-line</A>| or
 	<A HREF="#'tabline'">'tabline'</A> option after setting the <A HREF="#'scroll'">'scroll'</A> option.
 	If you give a <A HREF="intro.html#count">count</A> to the <A HREF="scroll.html#CTRL-U">CTRL-U</A> or <A HREF="scroll.html#CTRL-D">CTRL-D</A> command <A HREF="motion.html#it">it</A> will
-	be used <A HREF="motion.html#as">as</A> the new value for <A HREF="#'scroll'">'scroll'</A>.  Reset to half the <A HREF="windows.html#window">window</A>
+	be used <A HREF="motion.html#as">as</A> the new value for <A HREF="#'scroll'">'scroll'</A>.  Reset to half the<A HREF="windows.html#window">窗口</A>
 	height with &quot;<A HREF="#:set">:set</A> <A HREF="#'scroll'">scroll</A>=0&quot;.
 
 
@@ -5380,14 +5380,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'scrollbind'"></A><B>'scrollbind'</B>* *<A NAME="'scb'"></A><B>'scb'</B>* *<A NAME="'noscrollbind'"></A><B>'noscrollbind'</B>* *<A NAME="'noscb'"></A><B>'noscb'</B>*
 <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="#'scb'">'scb'</A>	<A HREF="#boolean">boolean</A>  (default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	See also |<A HREF="scroll.html#scroll-binding">scroll-binding</A>|.  When this option is set, the current
-	<A HREF="windows.html#window">window</A> scrolls <A HREF="motion.html#as">as</A> other scrollbind <A HREF="windows.html#windows">windows</A> (windows that also have
+	<A HREF="windows.html#window">窗口</A>scrolls <A HREF="motion.html#as">as</A> other scrollbind <A HREF="windows.html#windows">windows</A> (windows that also have
 	this option set) scroll.  This option is useful for viewing the
 	differences between two versions of a file, see <A HREF="#'diff'">'diff'</A>.
 	See |<A HREF="#'scrollopt'">'scrollopt'</A>| for <A HREF="#options">options</A> that determine how this option should be
 	interpreted.
-	This option is mostly reset when splitting a <A HREF="windows.html#window">window</A> to edit another
+	This option is mostly reset when splitting a<A HREF="windows.html#window">窗口</A>to edit another
 	file.  This means that &quot;<A HREF="windows.html#:split">:split</A> &#124; edit file&quot; results in two <A HREF="windows.html#windows">windows</A>
 	with <A HREF="scroll.html#scroll-binding">scroll-binding</A>, but &quot;<A HREF="windows.html#:split">:split</A> file&quot; does not.
 
@@ -5399,17 +5399,17 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	screen (e.g., with &quot;j&quot;).  Not used for scroll commands (e.g., <A HREF="scroll.html#CTRL-E">CTRL-E</A>,
 	<A HREF="scroll.html#CTRL-D">CTRL-D</A>).  Useful if your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> scrolls very slowly.
 	When set to a negative number from -1 to -100 this is used <A HREF="motion.html#as">as</A> the
-	percentage of the <A HREF="windows.html#window">window</A> height.  Thus -50 scrolls half the <A HREF="windows.html#window">window</A>
+	percentage of the<A HREF="windows.html#window">窗口</A>height.  Thus -50 scrolls half the<A HREF="windows.html#window">窗口</A>
 	height.
 
 
 						*<A NAME="'scrolloff'"></A><B>'scrolloff'</B>* *<A NAME="'so'"></A><B>'so'</B>*
 <A HREF="#'scrolloff'">'scrolloff'</A> <A HREF="#'so'">'so'</A>	number	(default 0)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	Minimal number of screen lines to keep above and below the cursor.
 	This will make some <A HREF="repeat.html#context">context</A> visible around where you are working.  If
 	you set <A HREF="motion.html#it">it</A> to a very large value (999) the cursor line will always be
-	in the middle of the <A HREF="windows.html#window">window</A> (except at the start or end of the file or
+	in the middle of the<A HREF="windows.html#window">窗口</A>(except at the start or end of the file or
 	when long lines wrap).
 	After using the local value, go back the global value with one of
 	these two:
@@ -5430,20 +5430,20 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	    jump	Applies to the offset between two <A HREF="windows.html#windows">windows</A> for vertical
 			<A HREF="scroll.html#scrolling">scrolling</A>.  This offset is the difference in the first
 			displayed line of the bound <A HREF="windows.html#windows">windows</A>.  When moving
-			around in a <A HREF="windows.html#window">window</A>, another <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#window">window</A> may
+			around in a<A HREF="windows.html#window">窗口</A>, another <A HREF="#'scrollbind'">'scrollbind'</A><A HREF="windows.html#window">窗口</A>may
 			reach a position before the start or after the end of
 			the buffer.  The offset is not changed though, when
-			moving back the <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#window">window</A> will try to scroll
+			moving back the <A HREF="#'scrollbind'">'scrollbind'</A><A HREF="windows.html#window">窗口</A>will try to scroll
 			to the desired position when possible.
-			When now making that <A HREF="windows.html#window">window</A> the current one, two
+			When now making that<A HREF="windows.html#window">窗口</A>the current one, two
 			things can be done with the relative offset:
 			1. When &quot;jump&quot; is not included, the relative offset is
 			   adjusted for the scroll position in the new current
-			   <A HREF="windows.html#window">window</A>.  When going back to the other <A HREF="windows.html#window">window</A>, the
+			  <A HREF="windows.html#window">窗口</A>.  When going back to the other<A HREF="windows.html#window">窗口</A>, the
 			   new relative offset will be used.
 			2. When &quot;jump&quot; is included, the other <A HREF="windows.html#windows">windows</A> are
 			   scrolled to keep the same relative offset.  When
-			   going back to the other <A HREF="windows.html#window">window</A>, <A HREF="motion.html#it">it</A> still uses the
+			   going back to the other<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> still uses the
 			   same relative offset.
 	Also see |<A HREF="scroll.html#scroll-binding">scroll-binding</A>|.
 	When <A HREF="#'diff'">'diff'</A> mode is active there always is vertical scroll binding,
@@ -5491,7 +5491,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	the end of line the line break still isn't included.
 	Note that when &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; is used and selecting from the end
 	backwards, you cannot include the last character of a line, when
-	starting in <A HREF="intro.html#Normal">Normal</A> mode and <A HREF="#'virtualedit'">'virtualedit'</A> empty.
+	starting in <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="#'virtualedit'">'virtualedit'</A> empty.
 
 	The <A HREF="#'selection'">'selection'</A> option is set by the |<A HREF="#:behave">:behave</A>| command.
 
@@ -5525,13 +5525,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   globals	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>
 			and contain at least one <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A>.  Only
 			<A HREF="eval.html#String">String</A> and <A HREF="eval.html#Number">Number</A> types are stored.
-	   help		the help <A HREF="windows.html#window">window</A>
-	   localoptions	<A HREF="#options">options</A> and mappings local to a <A HREF="windows.html#window">window</A> or buffer (not
+	   help		the help<A HREF="windows.html#window">窗口</A>
+	   localoptions	<A HREF="#options">options</A> and mappings local to a<A HREF="windows.html#window">窗口</A>or buffer (not
 			global values for local <A HREF="#options">options</A>)
 	   <A HREF="#options">options</A>	all <A HREF="#options">options</A> and mappings (also global values for local
 			<A HREF="#options">options</A>)
 	   skiprtp	exclude <A HREF="#'runtimepath'">'runtimepath'</A> and <A HREF="#'packpath'">'packpath'</A> from the <A HREF="#options">options</A>
-	   resize	size of the Vim <A HREF="windows.html#window">window</A>: <A HREF="#'lines'">'lines'</A> and <A HREF="#'columns'">'columns'</A>
+	   resize	size of the Vim<A HREF="windows.html#window">窗口</A>: <A HREF="#'lines'">'lines'</A> and <A HREF="#'columns'">'columns'</A>
 	   sesdir	the directory in which the session file is located
 			will become the current directory (useful with
 			projects accessed over a <A HREF="pi_netrw.html#network">network</A> from different
@@ -5541,8 +5541,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			<A HREF="intro.html#tab">tab</A> page separately
 	   <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>	include <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#windows">windows</A> where the command can be
 			restored
-	   winpos	position of the whole Vim <A HREF="windows.html#window">window</A>
-	   winsize	<A HREF="windows.html#window">window</A> sizes
+	   winpos	position of the whole Vim<A HREF="windows.html#window">窗口</A>
+	   winsize	<A HREF="windows.html#window">窗口</A>sizes
 	   slash	|<A HREF="deprecated.html#deprecated">deprecated</A>| Always enabled. Uses &quot;<A HREF="pattern.html#/">/</A>&quot; in filenames.
 	   unix		|<A HREF="deprecated.html#deprecated">deprecated</A>| Always enabled. Uses &quot;\n&quot; line endings.
 
@@ -5896,7 +5896,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'shiftround'">'shiftround'</A> <A HREF="#'sr'">'sr'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			global
 	Round indent to multiple of <A HREF="#'shiftwidth'">'shiftwidth'</A>.  Applies to <A HREF="change.html#&gt;">&gt;</A> and <A HREF="change.html#&lt;">&lt;</A>
-	commands.  <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> and <A HREF="scroll.html#CTRL-D">CTRL-D</A> in <A HREF="insert.html#Insert">Insert</A> mode always round the indent to
+	commands.  <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> and <A HREF="scroll.html#CTRL-D">CTRL-D</A> in <A HREF="intro.html#Insert">插入</A>模式 always round the indent to
 	a multiple of <A HREF="#'shiftwidth'">'shiftwidth'</A> (this is <A HREF="intro.html#Vi">Vi</A> compatible).
 
 
@@ -5966,7 +5966,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'showbreak'"></A><B>'showbreak'</B>* *<A NAME="'sbr'"></A><B>'sbr'</B>* *<A NAME="E595"></A><B>E595</B>*
 <A HREF="#'showbreak'">'showbreak'</A> <A HREF="#'sbr'">'sbr'</A>	<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	<A HREF="eval.html#String">String</A> to put at the start of lines that have been wrapped.  Useful
 	values are &quot;<A HREF="change.html#&gt;">&gt;</A> &quot; or &quot;+++ &quot;:
 <B>		:set showbreak=&gt;\ </B>
@@ -5981,7 +5981,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	If you want the <A HREF="#'showbreak'">'showbreak'</A> to appear in between line numbers, add the
 	&quot;<A HREF="pattern.html#n">n</A>&quot; flag to <A HREF="#'cpoptions'">'cpoptions'</A>.
 	A window-local value overrules a global value.  If the global value is
-	set and you want no value in the current <A HREF="windows.html#window">window</A> use NONE:
+	set and you want no value in the current<A HREF="windows.html#window">窗口</A>use NONE:
 <B>		:setlocal showbreak=NONE</B>
  
 
@@ -6066,14 +6066,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'sidescrolloff'"></A><B>'sidescrolloff'</B>* *<A NAME="'siso'"></A><B>'siso'</B>*
 <A HREF="#'sidescrolloff'">'sidescrolloff'</A> <A HREF="#'siso'">'siso'</A>	number (default 0)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	The minimal number of screen columns to keep to the left and to the
 	right of the cursor if <A HREF="#'nowrap'">'nowrap'</A> is set.  Setting this option to a
 	value greater than 0 while having |<A HREF="#'sidescroll'">'sidescroll'</A>| also at a non-zero
 	value makes some <A HREF="repeat.html#context">context</A> visible in the line you are <A HREF="scroll.html#scrolling">scrolling</A> in
 	horizontally (except at beginning of the line).  Setting this option
 	to a large value (like 999) has the effect of keeping the cursor
-	horizontally centered in the <A HREF="windows.html#window">window</A>, <A HREF="motion.html#as">as</A> long <A HREF="motion.html#as">as</A> one does not come too
+	horizontally centered in the<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#as">as</A> long <A HREF="motion.html#as">as</A> one does not come too
 	close to the beginning of the line.
 	After using the local value, go back the global value with one of
 	these two:
@@ -6090,7 +6090,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'signcolumn'"></A><B>'signcolumn'</B>* *<A NAME="'scl'"></A><B>'scl'</B>*
 <A HREF="#'signcolumn'">'signcolumn'</A> <A HREF="#'scl'">'scl'</A>	<A HREF="eval.html#string">string</A>	(default &quot;auto&quot;)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	When and how to draw the signcolumn. Valid values are:
 	   &quot;auto&quot;   	only when there is a sign to display
 	   &quot;auto:[1-9]&quot; resize to accommodate multiple <A HREF="sign.html#signs">signs</A> up to the
@@ -6194,7 +6194,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'spell'"></A><B>'spell'</B>* *<A NAME="'nospell'"></A><B>'nospell'</B>*
 <A HREF="#'spell'">'spell'</A>			<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	When on spell checking will be done.  See |<A HREF="spell.html#spell">spell</A>|.
 	The languages are specified with <A HREF="#'spelllang'">'spelllang'</A>.
 
@@ -6358,14 +6358,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			*<A NAME="'splitbelow'"></A><B>'splitbelow'</B>* *<A NAME="'sb'"></A><B>'sb'</B>* *<A NAME="'nosplitbelow'"></A><B>'nosplitbelow'</B>* *<A NAME="'nosb'"></A><B>'nosb'</B>*
 <A HREF="#'splitbelow'">'splitbelow'</A> <A HREF="#'sb'">'sb'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			global
-	When on, splitting a <A HREF="windows.html#window">window</A> will put the new <A HREF="windows.html#window">window</A> below the current
+	When on, splitting a<A HREF="windows.html#window">窗口</A>will put the new<A HREF="windows.html#window">窗口</A>below the current
 	one. |<A HREF="windows.html#:split">:split</A>|
 
 
 			*<A NAME="'splitright'"></A><B>'splitright'</B>* *<A NAME="'spr'"></A><B>'spr'</B>* *<A NAME="'nosplitright'"></A><B>'nosplitright'</B>* *<A NAME="'nospr'"></A><B>'nospr'</B>*
 <A HREF="#'splitright'">'splitright'</A> <A HREF="#'spr'">'spr'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			global
-	When on, splitting a <A HREF="windows.html#window">window</A> will put the new <A HREF="windows.html#window">window</A> right of the
+	When on, splitting a<A HREF="windows.html#window">窗口</A>will put the new<A HREF="windows.html#window">窗口</A>right of the
 	current one. |<A HREF="windows.html#:vsplit">:vsplit</A>|
 
 
@@ -6385,7 +6385,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			   *<A NAME="'statusline'"></A><B>'statusline'</B>* *<A NAME="'stl'"></A><B>'stl'</B>* *<A NAME="E540"></A><B>E540</B>* *<A NAME="E542"></A><B>E542</B>*
 <A HREF="#'statusline'">'statusline'</A> <A HREF="#'stl'">'stl'</A>	<A HREF="eval.html#string">string</A>	(default empty)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	When non-empty, this option determines the content of the status line.
 	Also see |<A HREF="windows.html#status-line">status-line</A>|.
 
@@ -6400,11 +6400,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B>		:set statusline=%!MyStatusLine()</B>
 
  	The *<A NAME="g:statusline_winid"></A><B>g:statusline_winid</B>* variable will be set to the |<A HREF="windows.html#window-ID">window-ID</A>| of the
-	<A HREF="windows.html#window">window</A> that the status line belongs to.
+	<A HREF="windows.html#window">窗口</A>that the status line belongs to.
 	The result can contain &#37;{} items that will be evaluated too.
 	Note that the &quot;&#37;!&quot; <A HREF="eval.html#expression">expression</A> is evaluated in the <A HREF="repeat.html#context">context</A> of the
-	current <A HREF="windows.html#window">window</A> and buffer, while &#37;{} items are evaluated in the
-	<A HREF="repeat.html#context">context</A> of the <A HREF="windows.html#window">window</A> that the statusline belongs to.
+	current<A HREF="windows.html#window">窗口</A>and buffer, while &#37;{} items are evaluated in the
+	<A HREF="repeat.html#context">context</A> of the<A HREF="windows.html#window">窗口</A>that the statusline belongs to.
 
 	When there is error while evaluating the option then <A HREF="motion.html#it">it</A> will be made
 	empty to avoid further <A HREF="message.html#errors">errors</A>.  Otherwise screen updating would loop.
@@ -6443,8 +6443,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="change.html#R">R</A> <A HREF="motion.html#F">F</A>   Readonly flag, text is &quot;,RO&quot;.
 	<A HREF="motion.html#h">h</A> <A HREF="motion.html#F">F</A>   Help buffer flag, text is &quot;[help]&quot;.
 	<A HREF="motion.html#H">H</A> <A HREF="motion.html#F">F</A>   Help buffer flag, text is &quot;,HLP&quot;.
-	<A HREF="motion.html#w">w</A> <A HREF="motion.html#F">F</A>   Preview <A HREF="windows.html#window">window</A> flag, text is &quot;[Preview]&quot;.
-	<A HREF="motion.html#W">W</A> <A HREF="motion.html#F">F</A>   Preview <A HREF="windows.html#window">window</A> flag, text is &quot;,PRV&quot;.
+	<A HREF="motion.html#w">w</A> <A HREF="motion.html#F">F</A>   Preview<A HREF="windows.html#window">窗口</A>flag, text is &quot;[Preview]&quot;.
+	<A HREF="motion.html#W">W</A> <A HREF="motion.html#F">F</A>   Preview<A HREF="windows.html#window">窗口</A>flag, text is &quot;,PRV&quot;.
 	<A HREF="change.html#y">y</A> <A HREF="motion.html#F">F</A>   Type of file in the buffer, e.g., &quot;[vim]&quot;.  See <A HREF="#'filetype'">'filetype'</A>.
 	<A HREF="change.html#Y">Y</A> <A HREF="motion.html#F">F</A>   Type of file in the buffer, e.g., &quot;,VIM&quot;.  See <A HREF="#'filetype'">'filetype'</A>.
 	<A HREF="repeat.html#q">q</A> <A HREF="change.html#S">S</A>   &quot;[Quickfix List]&quot;, &quot;[Location List]&quot; or empty.
@@ -6463,7 +6463,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="visual.html#v">v</A> N   Virtual column number (screen column).
 	<A HREF="visual.html#V">V</A> N   Virtual column number <A HREF="motion.html#as">as</A> -{num}.  Not displayed if equal to '<A HREF="change.html#c">c</A>'.
 	<A HREF="change.html#p">p</A> N   Percentage through file in lines <A HREF="motion.html#as">as</A> in |<A HREF="editing.html#CTRL-G">CTRL-G</A>|.
-	<A HREF="change.html#P">P</A> <A HREF="change.html#S">S</A>   Percentage through file of displayed <A HREF="windows.html#window">window</A>.  This is like the
+	<A HREF="change.html#P">P</A> <A HREF="change.html#S">S</A>   Percentage through file of displayed<A HREF="windows.html#window">窗口</A>.  This is like the
 	      percentage described for <A HREF="#'ruler'">'ruler'</A>.  Always 3 in length, unless
 	      translated.
 	a <A HREF="change.html#S">S</A>   Argument <A HREF="eval.html#list">list</A> status <A HREF="motion.html#as">as</A> in default title.  ({current} of {max})
@@ -6546,18 +6546,18 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	line is displayed.
 
 				*<A NAME="stl-&#37;{"></A><B>stl-&#37;{</B>* *<A NAME="g:actual_curbuf"></A><B>g:actual_curbuf</B>* *<A NAME="g:actual_curwin"></A><B>g:actual_curwin</B>*
-	While evaluating &#37;{} the current buffer and current <A HREF="windows.html#window">window</A> will be set
-	temporarily to that of the <A HREF="windows.html#window">window</A> (and buffer) whose statusline is
+	While evaluating &#37;{} the current buffer and current<A HREF="windows.html#window">窗口</A>will be set
+	temporarily to that of the<A HREF="windows.html#window">窗口</A>(and buffer) whose statusline is
 	currently being drawn.  The <A HREF="eval.html#expression">expression</A> will evaluate in this <A HREF="repeat.html#context">context</A>.
 	The variable &quot;<A HREF="#g:actual_curbuf">g:actual_curbuf</A>&quot; is set to the `bufnr()` number of the
 	real current buffer and &quot;<A HREF="#g:actual_curwin">g:actual_curwin</A>&quot; to the |<A HREF="windows.html#window-ID">window-ID</A>| of the
-	real current <A HREF="windows.html#window">window</A>.  These values are strings.
+	real current<A HREF="windows.html#window">窗口</A>.  These values are strings.
 
 	The <A HREF="#'statusline'">'statusline'</A> option will be evaluated in the |<A HREF="eval.html#sandbox">sandbox</A>| if set from
 	a <A HREF="#modeline">modeline</A>, see |<A HREF="eval.html#sandbox-option">sandbox-option</A>|.
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
-	It is not allowed to change text or jump to another <A HREF="windows.html#window">window</A> while
+	It is not allowed to change text or jump to another<A HREF="windows.html#window">窗口</A>while
 	evaluating <A HREF="#'statusline'">'statusline'</A> |<A HREF="eval.html#textlock">textlock</A>|.
 
 	If the statusline is not updated when you want <A HREF="motion.html#it">it</A> (e.g., after setting
@@ -6645,7 +6645,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Mostly for |<A HREF="quickfix.html#quickfix">quickfix</A>| commands some values are also used for other
  	commands, <A HREF="motion.html#as">as</A> mentioned below.
 	Possible values (comma-separated list):
-	   useopen	If included, jump to the first open <A HREF="windows.html#window">window</A> that
+	   useopen	If included, jump to the first open<A HREF="windows.html#window">窗口</A>that
 			contains the specified buffer (if there is one).
 			Otherwise: Do not examine other <A HREF="windows.html#windows">windows</A>.
 			This setting is checked with |<A HREF="quickfix.html#quickfix">quickfix</A>| commands, when
@@ -6654,15 +6654,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			example &quot;<A HREF="windows.html#:sbuffer">:sbuffer</A>&quot;, &quot;<A HREF="windows.html#:sbnext">:sbnext</A>&quot;, or &quot;<A HREF="windows.html#:sbrewind">:sbrewind</A>&quot;.
 	   usetab	Like &quot;useopen&quot;, but also consider <A HREF="windows.html#windows">windows</A> in other <A HREF="intro.html#tab">tab</A>
 			pages.
-	   split	If included, split the current <A HREF="windows.html#window">window</A> before loading
+	   split	If included, split the current<A HREF="windows.html#window">窗口</A>before loading
 			a buffer for a |<A HREF="quickfix.html#quickfix">quickfix</A>| command that display <A HREF="message.html#errors">errors</A>.
-			Otherwise: <A HREF="diff.html#do">do</A> not split, use current <A HREF="windows.html#window">window</A> (when used
-			in the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>: the previously used <A HREF="windows.html#window">window</A> or
-			split if there is no other <A HREF="windows.html#window">window</A>).
+			Otherwise: <A HREF="diff.html#do">do</A> not split, use current<A HREF="windows.html#window">窗口</A>(when used
+			in the <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>: the previously used<A HREF="windows.html#window">窗口</A>or
+			split if there is no other<A HREF="windows.html#window">窗口</A>).
 	   vsplit	Just like &quot;split&quot; but split vertically.
 	   newtab	Like &quot;split&quot;, but open a new <A HREF="intro.html#tab">tab</A> page.  Overrules
 			&quot;split&quot; when both are present.
-	   uselast	If included, jump to the previously used <A HREF="windows.html#window">window</A> when
+	   uselast	If included, jump to the previously used<A HREF="windows.html#window">窗口</A>when
 			jumping to <A HREF="message.html#errors">errors</A> with |<A HREF="quickfix.html#quickfix">quickfix</A>| commands.
 
 
@@ -6709,7 +6709,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'tabline'">'tabline'</A> <A HREF="#'tal'">'tal'</A>		<A HREF="eval.html#string">string</A>	(default empty)
 			global
 	When non-empty, this option determines the content of the <A HREF="intro.html#tab">tab</A> pages
-	line at the top of the Vim <A HREF="windows.html#window">window</A>.  When empty Vim will use a default
+	line at the top of the Vim<A HREF="windows.html#window">窗口</A>.  When empty Vim will use a default
 	tab pages line.  See |<A HREF="tabpage.html#setting-tabline">setting-tabline</A>| for more info.
 
 	The <A HREF="intro.html#tab">tab</A> pages line only appears <A HREF="motion.html#as">as</A> specified with the <A HREF="#'showtabline'">'showtabline'</A>
@@ -6919,7 +6919,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'termpastefilter'">'termpastefilter'</A> <A HREF="#'tpf'">'tpf'</A>	<A HREF="eval.html#string">string</A>	(default: &quot;BS,HT,ESC,DEL&quot;)
 			global
 	A comma-separated <A HREF="eval.html#list">list</A> of <A HREF="#options">options</A> for specifying <A HREF="intro.html#control">control</A> characters
-	to be removed from the text pasted into the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#window">window</A>. The
+	to be removed from the text pasted into the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>. The
 	supported values are:
 
 	   BS	    Backspace
@@ -7029,7 +7029,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'title'"></A><B>'title'</B>* *<A NAME="'notitle'"></A><B>'notitle'</B>*
 <A HREF="#'title'">'title'</A>			<A HREF="#boolean">boolean</A>	(default off)
 			global
-	When on, the title of the <A HREF="windows.html#window">window</A> will be set to the value of
+	When on, the title of the<A HREF="windows.html#window">窗口</A>will be set to the value of
 	<A HREF="#'titlestring'">'titlestring'</A> (if <A HREF="motion.html#it">it</A> is not empty), or to:
 		filename [+=-] (path) - NVIM
 	Where:
@@ -7045,10 +7045,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 								*<A NAME="'titlelen'"></A><B>'titlelen'</B>*
 <A HREF="#'titlelen'">'titlelen'</A>		number	(default 85)
 			global
-	Gives the percentage of <A HREF="#'columns'">'columns'</A> to use for the length of the <A HREF="windows.html#window">window</A>
+	Gives the percentage of <A HREF="#'columns'">'columns'</A> to use for the length of the<A HREF="windows.html#window">窗口</A>
 	title.  When the title is longer, only the end of the path name is
 	shown.  A '<A HREF="change.html#&lt;">&lt;</A>' character before the path name is used to indicate this.
-	Using a percentage makes this adapt to the width of the <A HREF="windows.html#window">window</A>.  But
+	Using a percentage makes this adapt to the width of the<A HREF="windows.html#window">窗口</A>.  But
 	<A HREF="motion.html#it">it</A> won't work perfectly, because the actual number of characters
 	available also depends on the font used and other things in the title
 	<A HREF="motion.html#bar">bar</A>.  When <A HREF="#'titlelen'">'titlelen'</A> is zero the full path is used.  Otherwise,
@@ -7059,7 +7059,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'titleold'"></A><B>'titleold'</B>*
 <A HREF="#'titleold'">'titleold'</A>		<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			global
-	If not empty, this option will be used to set the <A HREF="windows.html#window">window</A> title when
+	If not empty, this option will be used to set the<A HREF="windows.html#window">窗口</A>title when
 	<A HREF="starting.html#exiting">exiting</A>.  Only if <A HREF="#'title'">'title'</A> is enabled.
 	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
 	security reasons.
@@ -7068,7 +7068,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'titlestring'">'titlestring'</A>		<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
 			global
 	When this option is not empty, <A HREF="motion.html#it">it</A> will be used for the title of the
-	<A HREF="windows.html#window">window</A>.  This happens only when the <A HREF="#'title'">'title'</A> option is on.
+	<A HREF="windows.html#window">窗口</A>.  This happens only when the <A HREF="#'title'">'title'</A> option is on.
 
 	When this option contains printf-style '<A HREF="motion.html#&#37;">&#37;</A>' items, they will be
 	expanded according to the rules used for <A HREF="#'statusline'">'statusline'</A>.
@@ -7275,11 +7275,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Changes the effect of the |<A HREF="starting.html#:mkview">:mkview</A>| command.  It is a comma-separated
 	<A HREF="eval.html#list">list</A> of words.  Each <A HREF="motion.html#word">word</A> enables saving and restoring something:
 <B><FONT color="#3A6F2B">	   word		save and restore </FONT></B>
-	   cursor	cursor position in file and in <A HREF="windows.html#window">window</A>
+	   cursor	cursor position in file and in<A HREF="windows.html#window">窗口</A>
 	   curdir	local current directory, if set with |<A HREF="editing.html#:lcd">:lcd</A>|
 	   <A HREF="fold.html#folds">folds</A>	manually created <A HREF="fold.html#folds">folds</A>, opened/closed <A HREF="fold.html#folds">folds</A> and local
 			fold <A HREF="#options">options</A>
-	   <A HREF="#options">options</A>	<A HREF="#options">options</A> and mappings local to a <A HREF="windows.html#window">window</A> or buffer (not
+	   <A HREF="#options">options</A>	<A HREF="#options">options</A> and mappings local to a<A HREF="windows.html#window">窗口</A>or buffer (not
 			global values for local <A HREF="#options">options</A>)
 	   localoptions same <A HREF="motion.html#as">as</A> &quot;<A HREF="#options">options</A>&quot;
 	   slash	|<A HREF="deprecated.html#deprecated">deprecated</A>| Always enabled. Uses &quot;<A HREF="pattern.html#/">/</A>&quot; in filenames.
@@ -7288,10 +7288,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 					    *<A NAME="'virtualedit'"></A><B>'virtualedit'</B>* *<A NAME="'ve'"></A><B>'ve'</B>*
 <A HREF="#'virtualedit'">'virtualedit'</A> <A HREF="#'ve'">'ve'</A>	<A HREF="eval.html#string">string</A>	(default &quot;&quot;)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	A comma-separated <A HREF="eval.html#list">list</A> of these words:
 	    block	Allow virtual editing in <A HREF="visual.html#Visual">Visual</A> block mode.
-	    insert	Allow virtual editing in <A HREF="insert.html#Insert">Insert</A> mode.
+	    insert	Allow virtual editing in <A HREF="intro.html#Insert">插入</A>模式.
 	    all		Allow virtual editing in all modes.
 	    onemore	Allow the cursor to move just past the end of the line
 	    none	When used <A HREF="motion.html#as">as</A> the local value, <A HREF="diff.html#do">do</A> not allow virtual
@@ -7534,27 +7534,27 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 						*<A NAME="'winbar'"></A><B>'winbar'</B>* *<A NAME="'wbr'"></A><B>'wbr'</B>*
 <A HREF="#'winbar'">'winbar'</A> <A HREF="#'wbr'">'wbr'</A>		<A HREF="eval.html#string">string</A> (default empty)
-			global or local to <A HREF="windows.html#window">window</A> |<A HREF="#global-local">global-local</A>|
-	When non-empty, this option enables the <A HREF="windows.html#window">window</A> <A HREF="motion.html#bar">bar</A> and determines its
-	contents. The <A HREF="windows.html#window">window</A> <A HREF="motion.html#bar">bar</A> is a <A HREF="motion.html#bar">bar</A> that's shown at the top of every
-	<A HREF="windows.html#window">window</A> with <A HREF="motion.html#it">it</A> enabled. The value of <A HREF="#'winbar'">'winbar'</A> is evaluated like with
+			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
+	When non-empty, this option enables the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A> and determines its
+	contents. The<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A> is a <A HREF="motion.html#bar">bar</A> that's shown at the top of every
+	<A HREF="windows.html#window">窗口</A>with <A HREF="motion.html#it">it</A> enabled. The value of <A HREF="#'winbar'">'winbar'</A> is evaluated like with
 	<A HREF="#'statusline'">'statusline'</A>.
 
 	When <A HREF="change.html#changing">changing</A> something that is used in <A HREF="#'winbar'">'winbar'</A> that does not trigger
 	<A HREF="motion.html#it">it</A> to be updated, use |<A HREF="various.html#:redrawstatus">:redrawstatus</A>|.
 
 	Floating <A HREF="windows.html#windows">windows</A> <A HREF="diff.html#do">do</A> not use the global value of <A HREF="#'winbar'">'winbar'</A>. The
-	window-local value of <A HREF="#'winbar'">'winbar'</A> must be set for a floating <A HREF="windows.html#window">window</A> to
-	have a <A HREF="windows.html#window">window</A> <A HREF="motion.html#bar">bar</A>.
+	window-local value of <A HREF="#'winbar'">'winbar'</A> must be set for a floating<A HREF="windows.html#window">窗口</A>to
+	have a<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A>.
 
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
 
 						*<A NAME="'winblend'"></A><B>'winblend'</B>* *<A NAME="'winbl'"></A><B>'winbl'</B>*
 <A HREF="#'winblend'">'winblend'</A> <A HREF="#'winbl'">'winbl'</A>		number	(default 0)
-			local to <A HREF="windows.html#window">window</A>
-	Enables pseudo-transparency for a floating <A HREF="windows.html#window">window</A>. Valid values are in
-	the range of 0 for fully opaque <A HREF="windows.html#window">window</A> (disabled) to 100 for fully
+			local to<A HREF="windows.html#window">窗口</A>
+	Enables pseudo-transparency for a floating<A HREF="windows.html#window">窗口</A>. Valid values are in
+	the range of 0 for fully opaque<A HREF="windows.html#window">窗口</A>(disabled) to 100 for fully
 	transparent background. Values between 0-30 are typically most useful.
 
 	UI-dependent. Works best with RGB colors. <A HREF="#'termguicolors'">'termguicolors'</A>
@@ -7564,25 +7564,25 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'window'">'window'</A> <A HREF="#'wi'">'wi'</A>		number  (default screen height - 1)
 			global
 	Window height used for |<A HREF="scroll.html#CTRL-F">CTRL-F</A>| and |<A HREF="scroll.html#CTRL-B">CTRL-B</A>| when there is only one
-	<A HREF="windows.html#window">window</A> and the value is smaller than <A HREF="#'lines'">'lines'</A> minus one.  The screen
+	<A HREF="windows.html#window">窗口</A>and the value is smaller than <A HREF="#'lines'">'lines'</A> minus one.  The screen
 	will scroll <A HREF="#'window'">'window'</A> minus two lines, with a minimum of one.
 	When <A HREF="#'window'">'window'</A> is equal to <A HREF="#'lines'">'lines'</A> minus one <A HREF="scroll.html#CTRL-F">CTRL-F</A> and <A HREF="scroll.html#CTRL-B">CTRL-B</A> scroll
 	in a much smarter way, taking care of wrapping lines.
-	When resizing the Vim <A HREF="windows.html#window">window</A>, the value is smaller than 1 or more than
+	When resizing the Vim<A HREF="windows.html#window">窗口</A>, the value is smaller than 1 or more than
 	or equal to <A HREF="#'lines'">'lines'</A> <A HREF="motion.html#it">it</A> will be set to <A HREF="#'lines'">'lines'</A> minus 1.
-	Note: Do not confuse this with the height of the Vim <A HREF="windows.html#window">window</A>, use
+	Note: Do not confuse this with the height of the Vim<A HREF="windows.html#window">窗口</A>, use
 	<A HREF="#'lines'">'lines'</A> for that.
 
 
 						*<A NAME="'winheight'"></A><B>'winheight'</B>* *<A NAME="'wh'"></A><B>'wh'</B>* *<A NAME="E591"></A><B>E591</B>*
 <A HREF="#'winheight'">'winheight'</A> <A HREF="#'wh'">'wh'</A>	number	(default 1)
 			global
-	Minimal number of lines for the current <A HREF="windows.html#window">window</A>.  This is not a hard
+	Minimal number of lines for the current<A HREF="windows.html#window">窗口</A>.  This is not a hard
 	minimum, Vim will use fewer lines if there is not enough room.  If the
-	focus goes to a <A HREF="windows.html#window">window</A> that is smaller, its size is increased, at the
+	focus goes to a<A HREF="windows.html#window">窗口</A>that is smaller, its size is increased, at the
 	cost of the height of other <A HREF="windows.html#windows">windows</A>.
 	Set <A HREF="#'winheight'">'winheight'</A> to a small number for normal editing.
-	Set <A HREF="motion.html#it">it</A> to 999 to make the current <A HREF="windows.html#window">window</A> fill most of the screen.
+	Set <A HREF="motion.html#it">it</A> to 999 to make the current<A HREF="windows.html#window">窗口</A>fill most of the screen.
 	Other <A HREF="windows.html#windows">windows</A> will be only <A HREF="#'winminheight'">'winminheight'</A> high.  This has the drawback
 	that &quot;<A HREF="windows.html#:all">:all</A>&quot; will create only two <A HREF="windows.html#windows">windows</A>.  To avoid &quot;vim <A HREF="starting.html#-o">-o</A> 1 2 3 4&quot;
 	to create only two <A HREF="windows.html#windows">windows</A>, set the option after <A HREF="starting.html#startup">startup</A> is done,
@@ -7590,24 +7590,24 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B>		au VimEnter * set winheight=999</B>
  	Minimum value is 1.
 	The height is not adjusted after one of the commands that change the
-	height of the current <A HREF="windows.html#window">window</A>.
-	<A HREF="#'winheight'">'winheight'</A> applies to the current <A HREF="windows.html#window">window</A>.  Use <A HREF="#'winminheight'">'winminheight'</A> to set
+	height of the current<A HREF="windows.html#window">窗口</A>.
+	<A HREF="#'winheight'">'winheight'</A> applies to the current<A HREF="windows.html#window">窗口</A>.  Use <A HREF="#'winminheight'">'winminheight'</A> to set
 	the minimal height for other <A HREF="windows.html#windows">windows</A>.
 
 
 						*<A NAME="'winhighlight'"></A><B>'winhighlight'</B>* *<A NAME="'winhl'"></A><B>'winhl'</B>*
 <A HREF="#'winhighlight'">'winhighlight'</A> <A HREF="#'winhl'">'winhl'</A>	<A HREF="eval.html#string">string</A> (default empty)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	Window-local highlights.  Comma-delimited <A HREF="eval.html#list">list</A> of highlight
 	|<A HREF="syntax.html#group-name">group-name</A>| pairs &quot;{hl-builtin}:{hl},...&quot; where each {hl-builtin} is
 	a built-in |<A HREF="syntax.html#highlight-groups">highlight-groups</A>| item to be overridden by {hl} group in
-	the <A HREF="windows.html#window">window</A>.  Only built-in |<A HREF="syntax.html#highlight-groups">highlight-groups</A>| are supported, not
+	the<A HREF="windows.html#window">窗口</A>.  Only built-in |<A HREF="syntax.html#highlight-groups">highlight-groups</A>| are supported, not
 	syntax highlighting (use |<A HREF="syntax.html#:ownsyntax">:ownsyntax</A>| for that).
 
-	Highlights of vertical separators are determined by the <A HREF="windows.html#window">window</A> to the
+	Highlights of vertical separators are determined by the<A HREF="windows.html#window">窗口</A>to the
 	left of the separator.  The <A HREF="#'tabline'">'tabline'</A> highlight of a <A HREF="tabpage.html#tabpage">tabpage</A> is
-	decided by the last-focused <A HREF="windows.html#window">window</A> of the <A HREF="tabpage.html#tabpage">tabpage</A>.  Highlights of
-	the popupmenu are determined by the current <A HREF="windows.html#window">window</A>.  Highlights in the
+	decided by the last-focused<A HREF="windows.html#window">窗口</A>of the <A HREF="tabpage.html#tabpage">tabpage</A>.  Highlights of
+	the popupmenu are determined by the current<A HREF="windows.html#window">窗口</A>.  Highlights in the
 	message area cannot be overridden.
 
 	Example: show a different color for non-current <A HREF="windows.html#windows">windows</A>:
@@ -7616,8 +7616,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'winfixheight'"></A><B>'winfixheight'</B>* *<A NAME="'wfh'"></A><B>'wfh'</B>* *<A NAME="'nowinfixheight'"></A><B>'nowinfixheight'</B>* *<A NAME="'nowfh'"></A><B>'nowfh'</B>*
 <A HREF="#'winfixheight'">'winfixheight'</A> <A HREF="#'wfh'">'wfh'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
-	Keep the <A HREF="windows.html#window">window</A> height when <A HREF="windows.html#windows">windows</A> are opened or closed and
+			local to<A HREF="windows.html#window">窗口</A>
+	Keep the<A HREF="windows.html#window">窗口</A>height when <A HREF="windows.html#windows">windows</A> are opened or closed and
 	<A HREF="#'equalalways'">'equalalways'</A> is set.  Also for |<A HREF="windows.html#CTRL-W_=">CTRL-W_=</A>|.  Set by default for the
 	|<A HREF="windows.html#preview-window">preview-window</A>| and |<A HREF="quickfix.html#quickfix-window">quickfix-window</A>|.
 	The height may be changed anyway when running out of room.
@@ -7625,8 +7625,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 			*<A NAME="'winfixwidth'"></A><B>'winfixwidth'</B>* *<A NAME="'wfw'"></A><B>'wfw'</B>* *<A NAME="'nowinfixwidth'"></A><B>'nowinfixwidth'</B>* *<A NAME="'nowfw'"></A><B>'nowfw'</B>*
 <A HREF="#'winfixwidth'">'winfixwidth'</A> <A HREF="#'wfw'">'wfw'</A>	<A HREF="#boolean">boolean</A>	(default off)
-			local to <A HREF="windows.html#window">window</A>
-	Keep the <A HREF="windows.html#window">window</A> width when <A HREF="windows.html#windows">windows</A> are opened or closed and
+			local to<A HREF="windows.html#window">窗口</A>
+	Keep the<A HREF="windows.html#window">窗口</A>width when <A HREF="windows.html#windows">windows</A> are opened or closed and
 	<A HREF="#'equalalways'">'equalalways'</A> is set.  Also for |<A HREF="windows.html#CTRL-W_=">CTRL-W_=</A>|.
 	The width may be changed anyway when running out of room.
 
@@ -7634,13 +7634,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'winminheight'"></A><B>'winminheight'</B>* *<A NAME="'wmh'"></A><B>'wmh'</B>*
 <A HREF="#'winminheight'">'winminheight'</A> <A HREF="#'wmh'">'wmh'</A>	number	(default 1)
 			global
-	The minimal height of a <A HREF="windows.html#window">window</A>, when it's not the current <A HREF="windows.html#window">window</A>.
+	The minimal height of a<A HREF="windows.html#window">窗口</A>, when it's not the current<A HREF="windows.html#window">窗口</A>.
 	This is a hard minimum, <A HREF="windows.html#windows">windows</A> will never become smaller.
 	When set to zero, <A HREF="windows.html#windows">windows</A> may be &quot;squashed&quot; to zero lines (i.e. just a
 	status <A HREF="motion.html#bar">bar</A>) if necessary.  They will return to at least one line when
 	they become active (since the cursor has to have somewhere to go.)
-	Use <A HREF="#'winheight'">'winheight'</A> to set the minimal height of the current <A HREF="windows.html#window">window</A>.
-	This option is only checked when making a <A HREF="windows.html#window">window</A> smaller.  Don't use a
+	Use <A HREF="#'winheight'">'winheight'</A> to set the minimal height of the current<A HREF="windows.html#window">窗口</A>.
+	This option is only checked when making a<A HREF="windows.html#window">窗口</A>smaller.  Don't use a
 	large number, <A HREF="motion.html#it">it</A> will cause <A HREF="message.html#errors">errors</A> when opening more than a few
 	<A HREF="windows.html#windows">windows</A>.  A value of 0 to 3 is reasonable.
 
@@ -7648,14 +7648,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'winminwidth'"></A><B>'winminwidth'</B>* *<A NAME="'wmw'"></A><B>'wmw'</B>*
 <A HREF="#'winminwidth'">'winminwidth'</A> <A HREF="#'wmw'">'wmw'</A>	number	(default 1)
 			global
-	The minimal width of a <A HREF="windows.html#window">window</A>, when it's not the current <A HREF="windows.html#window">window</A>.
+	The minimal width of a<A HREF="windows.html#window">窗口</A>, when it's not the current<A HREF="windows.html#window">窗口</A>.
 	This is a hard minimum, <A HREF="windows.html#windows">windows</A> will never become smaller.
 	When set to zero, <A HREF="windows.html#windows">windows</A> may be &quot;squashed&quot; to zero columns (i.e. just
 	a vertical separator) if necessary.  They will return to at least one
 	line when they become active (since the cursor has to have somewhere
 	to go.)
-	Use <A HREF="#'winwidth'">'winwidth'</A> to set the minimal width of the current <A HREF="windows.html#window">window</A>.
-	This option is only checked when making a <A HREF="windows.html#window">window</A> smaller.  Don't use a
+	Use <A HREF="#'winwidth'">'winwidth'</A> to set the minimal width of the current<A HREF="windows.html#window">窗口</A>.
+	This option is only checked when making a<A HREF="windows.html#window">窗口</A>smaller.  Don't use a
 	large number, <A HREF="motion.html#it">it</A> will cause <A HREF="message.html#errors">errors</A> when opening more than a few
 	<A HREF="windows.html#windows">windows</A>.  A value of 0 to 12 is reasonable.
 
@@ -7663,23 +7663,23 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'winwidth'"></A><B>'winwidth'</B>* *<A NAME="'wiw'"></A><B>'wiw'</B>* *<A NAME="E592"></A><B>E592</B>*
 <A HREF="#'winwidth'">'winwidth'</A> <A HREF="#'wiw'">'wiw'</A>	number	(default 20)
 			global
-	Minimal number of columns for the current <A HREF="windows.html#window">window</A>.  This is not a hard
+	Minimal number of columns for the current<A HREF="windows.html#window">窗口</A>.  This is not a hard
 	minimum, Vim will use fewer columns if there is not enough room.  If
-	the current <A HREF="windows.html#window">window</A> is smaller, its size is increased, at the cost of
-	the width of other <A HREF="windows.html#windows">windows</A>.  Set <A HREF="motion.html#it">it</A> to 999 to make the current <A HREF="windows.html#window">window</A>
+	the current<A HREF="windows.html#window">窗口</A>is smaller, its size is increased, at the cost of
+	the width of other <A HREF="windows.html#windows">windows</A>.  Set <A HREF="motion.html#it">it</A> to 999 to make the current<A HREF="windows.html#window">窗口</A>
 	always fill the screen.  Set <A HREF="motion.html#it">it</A> to a small number for normal editing.
 	The width is not adjusted after one of the commands to change the
-	width of the current <A HREF="windows.html#window">window</A>.
-	<A HREF="#'winwidth'">'winwidth'</A> applies to the current <A HREF="windows.html#window">window</A>.  Use <A HREF="#'winminwidth'">'winminwidth'</A> to set
+	width of the current<A HREF="windows.html#window">窗口</A>.
+	<A HREF="#'winwidth'">'winwidth'</A> applies to the current<A HREF="windows.html#window">窗口</A>.  Use <A HREF="#'winminwidth'">'winminwidth'</A> to set
 	the minimal width for other <A HREF="windows.html#windows">windows</A>.
 
 
 						*<A NAME="'wrap'"></A><B>'wrap'</B>* *<A NAME="'nowrap'"></A><B>'nowrap'</B>*
 <A HREF="#'wrap'">'wrap'</A>			<A HREF="#boolean">boolean</A>	(default on)
-			local to <A HREF="windows.html#window">window</A>
+			local to<A HREF="windows.html#window">窗口</A>
 	This option changes how text is displayed.  It doesn't change the text
 	in the buffer, see <A HREF="#'textwidth'">'textwidth'</A> for that.
-	When on, lines longer than the width of the <A HREF="windows.html#window">window</A> will wrap and
+	When on, lines longer than the width of the<A HREF="windows.html#window">窗口</A>will wrap and
 	displaying continues on the next line.  When off lines will not wrap
 	and only part of long lines will be displayed.  When the cursor is
 	moved to a part that is not shown, the screen will scroll
@@ -7697,7 +7697,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'wrapmargin'"></A><B>'wrapmargin'</B>* *<A NAME="'wm'"></A><B>'wm'</B>*
 <A HREF="#'wrapmargin'">'wrapmargin'</A> <A HREF="#'wm'">'wm'</A>	number	(default 0)
 			local to buffer
-	<A HREF="eval.html#Number">Number</A> of characters from the right <A HREF="windows.html#window">window</A> border where wrapping
+	<A HREF="eval.html#Number">Number</A> of characters from the right<A HREF="windows.html#window">窗口</A>border where wrapping
 	starts.  When typing text beyond this limit, an <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> will be inserted
 	and <A HREF="insert.html#inserting">inserting</A> continues on the next line.
 	Options that add a margin, such <A HREF="motion.html#as">as</A> <A HREF="#'number'">'number'</A> and <A HREF="#'foldcolumn'">'foldcolumn'</A>, cause

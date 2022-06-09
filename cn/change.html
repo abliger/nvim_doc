@@ -322,9 +322,9 @@ Notes:
 
 See |<A HREF="#registers">registers</A>| for an explanation of registers.
 
-<A HREF="insert.html#Replace">Replace</A> mode is just like <A HREF="insert.html#Insert">Insert</A> mode, except that every character you enter
+<A HREF="insert.html#Replace">Replace</A> mode is just like <A HREF="intro.html#Insert">插入</A>模式, except that every character you enter
 deletes one character.  If you reach the end of a line, Vim appends any
-further characters (just like <A HREF="insert.html#Insert">Insert</A> mode).  In <A HREF="insert.html#Replace">Replace</A> mode, the backspace
+further characters (just like <A HREF="intro.html#Insert">插入</A>模式).  In <A HREF="insert.html#Replace">Replace</A> mode, the backspace
 key restores the original text (if there was any).  (See section &quot;<A HREF="insert.html#Insert">Insert</A> and
 <A HREF="insert.html#Replace">Replace</A> mode&quot; |<A HREF="insert.html#mode-ins-repl">mode-ins-repl</A>|).
 
@@ -374,7 +374,7 @@ r{char}			<A HREF="insert.html#Replace">Replace</A> the character under the curs
 			&quot;i&lt;CR&gt;&lt;Esc&gt;&quot;.
 			{char} can be entered <A HREF="motion.html#as">as</A> a digraph |<A HREF="#digraph-arg">digraph-arg</A>|.
 			|<A HREF="map.html#:lmap">:lmap</A>| mappings apply to {char}.  The <A HREF="editing.html#CTRL-^">CTRL-^</A> command
-			in <A HREF="insert.html#Insert">Insert</A> mode can be used to switch this on/off
+			in <A HREF="intro.html#Insert">插入</A>模式 can be used to switch this on/off
 			|<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>|.  See |<A HREF="mbyte.html#utf-8-char-arg">utf-8-char-arg</A>| about using
 			composing characters when <A HREF="options.html#'encoding'">'encoding'</A> is <A HREF="mbyte.html#Unicode">Unicode</A>.
 
@@ -388,7 +388,7 @@ gr{char}		<A HREF="insert.html#Replace">Replace</A> the virtual characters under
 
 
 						*<A NAME="digraph-arg"></A><B>digraph-arg</B>*
-The argument for <A HREF="intro.html#Normal">Normal</A> mode commands like |<A HREF="#r">r</A>| and |<A HREF="motion.html#t">t</A>| is a single character.
+The argument for <A HREF="intro.html#Normal">正常</A>模式 commands like |<A HREF="#r">r</A>| and |<A HREF="motion.html#t">t</A>| is a single character.
 When <A HREF="options.html#'cpo'">'cpo'</A> doesn't contain the '<A HREF="#D">D</A>' flag, this character can also be entered
 like |<A HREF="digraph.html#digraphs">digraphs</A>|.  First type CTRL-K and then the two digraph characters.
 
@@ -428,7 +428,7 @@ g~{motion}		Switch <A HREF="#case">case</A> of <A HREF="intro.html#{motion}">{mo
 gU{motion}		Make <A HREF="intro.html#{motion}">{motion}</A> text <A HREF="#uppercase">uppercase</A>.
 			Example:
 <B>				:map! &lt;C-F&gt; &lt;Esc&gt;gUiw`]a</B>
- 			This works in <A HREF="insert.html#Insert">Insert</A> mode: press <A HREF="scroll.html#CTRL-F">CTRL-F</A> to make the
+ 			This works in <A HREF="intro.html#Insert">插入</A>模式: press <A HREF="scroll.html#CTRL-F">CTRL-F</A> to make the
 			<A HREF="motion.html#word">word</A> before the cursor <A HREF="#uppercase">uppercase</A>.  Handy to type
 			words in <A HREF="#lowercase">lowercase</A> and then make them <A HREF="#uppercase">uppercase</A>.
 
@@ -1464,7 +1464,7 @@ and &quot;<A HREF="#:put">:put</A>&quot; commands and with <A HREF="undo.html#CT
 
 							*<A NAME="quote_#"></A><B>quote_#</B>* *<A NAME="quote#"></A><B>quote#</B>*
 6. Alternate file <A HREF="intro.html#register">register</A> &quot;<A HREF="pattern.html##">#</A>
-Contains the name of the alternate file for the current <A HREF="windows.html#window">window</A>.  It will
+Contains the name of the alternate file for the current<A HREF="windows.html#window">窗口</A>.  It will
 change how the |<A HREF="editing.html#CTRL-^">CTRL-^</A>| command works.
 This <A HREF="intro.html#register">register</A> is writable, mainly to allow for restoring <A HREF="motion.html#it">it</A> after a <A HREF="usr_05.html#plugin">plugin</A> has
 changed <A HREF="motion.html#it">it</A>.  It accepts buffer number:
@@ -1855,11 +1855,11 @@ t	Auto-wrap text using <A HREF="options.html#'textwidth'">'textwidth'</A>
 
 							*<A NAME="fo-r"></A><B>fo-r</B>*
 <A HREF="#r">r</A>	Automatically insert the current comment leader after hitting
-	<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in <A HREF="insert.html#Insert">Insert</A> mode.
+	<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in <A HREF="intro.html#Insert">插入</A>模式.
 
 							*<A NAME="fo-o"></A><B>fo-o</B>*
 <A HREF="insert.html#o">o</A>	Automatically insert the current comment leader after hitting '<A HREF="insert.html#o">o</A>' or
-	'<A HREF="insert.html#O">O</A>' in <A HREF="intro.html#Normal">Normal</A> mode.  In <A HREF="#case">case</A> comment is unwanted in a specific place
+	'<A HREF="insert.html#O">O</A>' in <A HREF="intro.html#Normal">正常</A>模式.  In <A HREF="#case">case</A> comment is unwanted in a specific place
 	use CTRL-U to quickly delete <A HREF="motion.html#it">it</A>. |<A HREF="insert.html#i_CTRL-U">i_CTRL-U</A>|
 
 							*<A NAME="fo-/"></A><B>fo-/</B>*

@@ -159,7 +159,7 @@ Note that backslashes must be used to <A HREF="intro.html#escape">escape</A> cha
 differently (space, backslash, double <A HREF="change.html#quote">quote</A>, etc., see |<A HREF="options.html#option-backslash">option-backslash</A>|).
 
 These are the conditions with which the <A HREF="eval.html#expression">expression</A> is evaluated:
-- The current buffer and <A HREF="windows.html#window">window</A> are set for the line.
+- The current buffer and<A HREF="windows.html#window">窗口</A>are set for the line.
 - The variable &quot;<A HREF="eval.html#v:lnum">v:lnum</A>&quot; is set to the line number.
 - The result is used for the fold level in this way:
 <B><FONT color="#3A6F2B">  value			meaning </FONT></B>
@@ -238,7 +238,7 @@ The <A HREF="#folds">folds</A> are automatically defined for text that is not pa
 close to a change.
 
 This <A HREF="eval.html#method">method</A> only works properly when the <A HREF="options.html#'diff'">'diff'</A> option is set for the current
-<A HREF="windows.html#window">window</A> and changes are being displayed.  Otherwise the whole buffer will be
+<A HREF="windows.html#window">窗口</A>and changes are being displayed.  Otherwise the whole buffer will be
 one big fold.
 
 The <A HREF="options.html#'diffopt'">'diffopt'</A> option can be used to specify the <A HREF="repeat.html#context">context</A>.  That is, the number
@@ -397,7 +397,7 @@ zf{motion}  or
 
 
 							*<A NAME="zE"></A><B>zE</B>* *<A NAME="E352"></A><B>E352</B>*
-<A HREF="#zE">zE</A>		Eliminate all <A HREF="#folds">folds</A> in the <A HREF="windows.html#window">window</A>.
+<A HREF="#zE">zE</A>		Eliminate all <A HREF="#folds">folds</A> in the<A HREF="windows.html#window">窗口</A>.
 		This only works when <A HREF="options.html#'foldmethod'">'foldmethod'</A> is &quot;manual&quot; or &quot;marker&quot;.
 		Also see |<A HREF="#fold-delete-marker">fold-delete-marker</A>|.
 
@@ -619,8 +619,8 @@ Note the use of backslashes to avoid some characters to be interpreted by the
 <B>    :  return v:folddashes .. sub</B>
 <B>    :endfunction</B>
 
-Evaluating <A HREF="options.html#'foldtext'">'foldtext'</A> is done in the |<A HREF="eval.html#sandbox">sandbox</A>|.  The current <A HREF="windows.html#window">window</A> is set to
-the <A HREF="windows.html#window">window</A> that displays the line.
+Evaluating <A HREF="options.html#'foldtext'">'foldtext'</A> is done in the |<A HREF="eval.html#sandbox">sandbox</A>|.  The current<A HREF="windows.html#window">窗口</A>is set to
+the<A HREF="windows.html#window">窗口</A>that displays the line.
 
 Errors are ignored.  For debugging set the <A HREF="options.html#'debug'">'debug'</A> option to &quot;throw&quot;.
 
@@ -636,7 +636,7 @@ types of <A HREF="#folding">folding</A>.  If you don't like <A HREF="motion.html
 In the result a TAB is replaced with a space and unprintable characters are
 made into printable characters.
 
-The resulting line is truncated to fit in the <A HREF="windows.html#window">window</A>, <A HREF="motion.html#it">it</A> never wraps.
+The resulting line is truncated to fit in the<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> never wraps.
 When there is room after the text, <A HREF="motion.html#it">it</A> is filled with the character specified
 by <A HREF="options.html#'fillchars'">'fillchars'</A>.
 
@@ -648,7 +648,7 @@ handles differently: Space, backslash and double-quote. |<A HREF="options.html#o
 FOLDCOLUMN						*<A NAME="fold-foldcolumn"></A><B>fold-foldcolumn</B>*
 
 <A HREF="options.html#'foldcolumn'">'foldcolumn'</A> is a number, which sets the width for a column on the side of the
-<A HREF="windows.html#window">window</A> to indicate <A HREF="#folds">folds</A>.  When <A HREF="motion.html#it">it</A> is zero, there is no foldcolumn.  A normal
+<A HREF="windows.html#window">窗口</A>to indicate <A HREF="#folds">folds</A>.  When <A HREF="motion.html#it">it</A> is zero, there is no foldcolumn.  A normal
 value is auto:9. The maximum is 9.
 
 An open fold is indicated with a column that has a '<A HREF="motion.html#-">-</A>' at the top and '&#124;'
@@ -697,7 +697,7 @@ line is folded, <A HREF="motion.html#it">it</A> cannot be displayed there.
 Many <A HREF="intro.html#movement">movement</A> commands handle a sequence of folded lines like an empty line.
 For example, the &quot;<A HREF="motion.html#w">w</A>&quot; command stops once in the first column.
 
-When in <A HREF="insert.html#Insert">Insert</A> mode, the cursor line is never folded.  That allows you to see
+When in <A HREF="intro.html#Insert">插入</A>模式, the cursor line is never folded.  That allows you to see
 what you type!
 
 When using an <A HREF="motion.html#operator">operator</A>, a closed fold is included <A HREF="motion.html#as">as</A> a whole.  Thus &quot;<A HREF="change.html#dl">dl</A>&quot;
@@ -714,8 +714,8 @@ This does not happen for |<A HREF="#:folddoopen">:folddoopen</A>| and |<A HREF="
 When editing a buffer that has been edited before, the last used <A HREF="#folding">folding</A>
 settings are used again.  For manual <A HREF="#folding">folding</A> the defined <A HREF="#folds">folds</A> are restored.
 For all <A HREF="#folding">folding</A> methods the manually opened and closed <A HREF="#folds">folds</A> are restored.
-If this buffer has been edited in this <A HREF="windows.html#window">window</A>, the values from back then are
-used.  Otherwise the values from the <A HREF="windows.html#window">window</A> where the buffer was edited last
+If this buffer has been edited in this<A HREF="windows.html#window">窗口</A>, the values from back then are
+used.  Otherwise the values from the<A HREF="windows.html#window">窗口</A>where the buffer was edited last
 are used.
 
 ==============================================================================

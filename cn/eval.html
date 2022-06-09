@@ -1711,8 +1711,8 @@ One local buffer variable is predefined:
 
 
 						*<A NAME="window-variable"></A><B>window-variable</B>* *<A NAME="w:var"></A><B>w:var</B>* *<A NAME="w:"></A><B>w:</B>*
-A variable name that is preceded with &quot;<A HREF="#w:">w:</A>&quot; is local to the current <A HREF="windows.html#window">window</A>.  It
-is deleted when the <A HREF="windows.html#window">window</A> is closed.
+A variable name that is preceded with &quot;<A HREF="#w:">w:</A>&quot; is local to the current<A HREF="windows.html#window">窗口</A>.  It
+is deleted when the<A HREF="windows.html#window">窗口</A>is closed.
 
 
 						*<A NAME="tabpage-variable"></A><B>tabpage-variable</B>* *<A NAME="t:var"></A><B>t:var</B>* *<A NAME="t:"></A><B>t:</B>*
@@ -1850,10 +1850,10 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:beval_winnr"></A><B>v:beval_winnr</B>* *<A NAME="beval_winnr-variable"></A><B>beval_winnr-variable</B>*
-<A HREF="#v:beval_winnr">v:beval_winnr</A>	The number of the <A HREF="windows.html#window">window</A>, over which the mouse pointer is. Only
+<A HREF="#v:beval_winnr">v:beval_winnr</A>	The number of the<A HREF="windows.html#window">窗口</A>, over which the mouse pointer is. Only
 		valid while evaluating the <A HREF="vim_diff.html#'balloonexpr'">'balloonexpr'</A> option.  The first
-		<A HREF="windows.html#window">window</A> has number zero (unlike most other places where a
-		<A HREF="windows.html#window">window</A> gets a number).
+		<A HREF="windows.html#window">窗口</A>has number zero (unlike most other places where a
+		<A HREF="windows.html#window">窗口</A>gets a number).
 
 
 					*<A NAME="v:beval_winid"></A><B>v:beval_winid</B>* *<A NAME="beval_winid-variable"></A><B>beval_winid-variable</B>*
@@ -1918,7 +1918,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:count"></A><B>v:count</B>* *<A NAME="count-variable"></A><B>count-variable</B>*
-<A HREF="#v:count">v:count</A>		The <A HREF="intro.html#count">count</A> given for the last <A HREF="intro.html#Normal">Normal</A> mode command.  Can be used
+<A HREF="#v:count">v:count</A>		The <A HREF="intro.html#count">count</A> given for the last <A HREF="intro.html#Normal">正常</A>模式 command.  Can be used
 		to get the <A HREF="intro.html#count">count</A> before a <A HREF="map.html#mapping">mapping</A>.  Read-only.  Example:
 <B>	:map _x :&lt;C-U&gt;echo "the count is " .. v:count&lt;CR&gt;</B>
  		Note: The &lt;C-U&gt; is required to remove the line range that you
@@ -2035,7 +2035,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 			scrollbar 	Is |<A HREF="#v:true">v:true</A>| if popup menu have scrollbar, or
 					|<A HREF="#v:false">v:false</A>| if not.
 			changed_window 	Is |<A HREF="#v:true">v:true</A>| if the the event fired
-					while <A HREF="change.html#changing">changing</A> <A HREF="windows.html#window">window</A> (or <A HREF="intro.html#tab">tab</A>) on |<A HREF="autocmd.html#DirChanged">DirChanged</A>|.
+					while <A HREF="change.html#changing">changing</A><A HREF="windows.html#window">窗口</A>(or <A HREF="intro.html#tab">tab</A>) on |<A HREF="autocmd.html#DirChanged">DirChanged</A>|.
 			status		Job status or exit code, -1 means &quot;unknown&quot;. |<A HREF="autocmd.html#TermClose">TermClose</A>|
 
 
@@ -2164,7 +2164,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 					*<A NAME="v:insertmode"></A><B>v:insertmode</B>* *<A NAME="insertmode-variable"></A><B>insertmode-variable</B>*
 <A HREF="#v:insertmode">v:insertmode</A>	Used for the |<A HREF="autocmd.html#InsertEnter">InsertEnter</A>| and |<A HREF="autocmd.html#InsertChange">InsertChange</A>| <A HREF="autocmd.html#autocommand">autocommand</A>
 		<A HREF="autocmd.html#events">events</A>.  Values:
-			<A HREF="insert.html#i">i</A>	<A HREF="insert.html#Insert">Insert</A> mode
+			<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 			<A HREF="change.html#r">r</A>	<A HREF="insert.html#Replace">Replace</A> mode
 			<A HREF="visual.html#v">v</A>	Virtual <A HREF="insert.html#Replace">Replace</A> mode
 
@@ -2210,7 +2210,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 					*<A NAME="v:mouse_win"></A><B>v:mouse_win</B>* *<A NAME="mouse_win-variable"></A><B>mouse_win-variable</B>*
 <A HREF="#v:mouse_win">v:mouse_win</A>	Window number for a mouse click obtained with |<A HREF="builtin.html#getchar()">getchar()</A>|.
-		First <A HREF="windows.html#window">window</A> has number 1, like with |<A HREF="builtin.html#winnr()">winnr()</A>|.  The value is
+		First<A HREF="windows.html#window">窗口</A>has number 1, like with |<A HREF="builtin.html#winnr()">winnr()</A>|.  The value is
 		zero when there was no mouse button click.
 
 
@@ -2309,7 +2309,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 			&quot;modeline&quot;	|<A HREF="options.html#modeline">modeline</A>|
 
 					*<A NAME="v:operator"></A><B>v:operator</B>* *<A NAME="operator-variable"></A><B>operator-variable</B>*
-<A HREF="#v:operator">v:operator</A>	The last <A HREF="motion.html#operator">operator</A> given in <A HREF="intro.html#Normal">Normal</A> mode.  This is a single
+<A HREF="#v:operator">v:operator</A>	The last <A HREF="motion.html#operator">operator</A> given in <A HREF="intro.html#Normal">正常</A>模式.  This is a single
 		character except for commands starting with &lt;g&gt; or &lt;z&gt;,
 		in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> is two characters.  Best used alongside
 		|<A HREF="#v:prevcount">v:prevcount</A>| and |<A HREF="#v:register">v:register</A>|.  Useful if you want to cancel
@@ -2323,7 +2323,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:prevcount"></A><B>v:prevcount</B>* *<A NAME="prevcount-variable"></A><B>prevcount-variable</B>*
-<A HREF="#v:prevcount">v:prevcount</A>	The <A HREF="intro.html#count">count</A> given for the last but one <A HREF="intro.html#Normal">Normal</A> mode command.
+<A HREF="#v:prevcount">v:prevcount</A>	The <A HREF="intro.html#count">count</A> given for the last but one <A HREF="intro.html#Normal">正常</A>模式 command.
 		This is the <A HREF="#v:count">v:count</A> value of the previous command.  Useful if
 		you want to cancel <A HREF="visual.html#Visual">Visual</A> or <A HREF="intro.html#Operator-pending">Operator-pending</A> mode and then
 		use the <A HREF="intro.html#count">count</A>, e.g.:
@@ -2440,7 +2440,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:swapcommand"></A><B>v:swapcommand</B>* *<A NAME="swapcommand-variable"></A><B>swapcommand-variable</B>*
-<A HREF="#v:swapcommand">v:swapcommand</A>	<A HREF="intro.html#Normal">Normal</A> mode command to be executed after a file has been
+<A HREF="#v:swapcommand">v:swapcommand</A>	<A HREF="intro.html#Normal">正常</A>模式 command to be executed after a file has been
 		opened.  Can be used for a |<A HREF="autocmd.html#SwapExists">SwapExists</A>| <A HREF="autocmd.html#autocommand">autocommand</A> to have
 		another Vim open the file and jump to the right place.  For
 		example, when jumping to a <A HREF="tagsrch.html#tag">tag</A> the value is &quot;<A HREF="tagsrch.html#:tag">:tag</A> tagname\r&quot;.
@@ -2544,7 +2544,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:windowid"></A><B>v:windowid</B>* *<A NAME="windowid-variable"></A><B>windowid-variable</B>*
-<A HREF="#v:windowid">v:windowid</A>	Application-specific <A HREF="windows.html#window">window</A> &quot;handle&quot; which may be set by any
+<A HREF="#v:windowid">v:windowid</A>	Application-specific<A HREF="windows.html#window">窗口</A>&quot;handle&quot; which may be set by any
 		attached <A HREF="ui.html#UI">UI</A>. Defaults to zero.
 		Note: For Nvim |<A HREF="windows.html#windows">windows</A>| use |<A HREF="builtin.html#winnr()">winnr()</A>| or |<A HREF="builtin.html#win_getid()">win_getid()</A>|, see
 		|<A HREF="windows.html#window-ID">window-ID</A>|.
@@ -2566,7 +2566,7 @@ help file: |<A HREF="builtin.html#builtin-functions">builtin-functions</A>|.
 5. Defining <A HREF="#functions">functions</A>					*<A NAME="user-function"></A><B>user-function</B>*
 
 New <A HREF="#functions">functions</A> can be defined.  These can be called just like builtin
-<A HREF="#functions">functions</A>.  The function executes a sequence of <A HREF="intro.html#Ex">Ex</A> commands.  <A HREF="intro.html#Normal">Normal</A> mode
+<A HREF="#functions">functions</A>.  The function executes a sequence of <A HREF="intro.html#Ex">Ex</A> commands.  <A HREF="intro.html#Normal">正常</A>模式
 commands can be executed with the |<A HREF="various.html#:normal">:normal</A>| command.
 
 The function name must start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>, to avoid confusion with
@@ -3115,7 +3115,7 @@ This does NOT work:
 			Set option {option-name} to the result of the
 			<A HREF="#expression">expression</A> {expr1}.  A <A HREF="#String">String</A> or <A HREF="#Number">Number</A> value is
 			always converted to the type of the option.
-			For an option local to a <A HREF="windows.html#window">window</A> or buffer the effect
+			For an option local to a<A HREF="windows.html#window">窗口</A>or buffer the effect
 			is just like using the |<A HREF="options.html#:set">:set</A>| command: both the local
 			value and the global value are changed.
 			Example:
@@ -3255,7 +3255,7 @@ text...
 			here:				*<A NAME="E738"></A><B>E738</B>*
 			  <A HREF="#g:">g:</A>	global <A HREF="#variables">variables</A>
 			  <A HREF="#b:">b:</A>	local buffer <A HREF="#variables">variables</A>
-			  <A HREF="#w:">w:</A>	local <A HREF="windows.html#window">window</A> <A HREF="#variables">variables</A>
+			  <A HREF="#w:">w:</A>	local<A HREF="windows.html#window">窗口</A><A HREF="#variables">variables</A>
 			  <A HREF="#t:">t:</A>	local <A HREF="intro.html#tab">tab</A> page <A HREF="#variables">variables</A>
 			  <A HREF="change.html#s">s</A>:	<A HREF="map.html#script-local">script-local</A> <A HREF="#variables">variables</A>
 			  <A HREF="#l:">l:</A>	local function <A HREF="#variables">variables</A>
@@ -4964,16 +4964,16 @@ option will still be marked <A HREF="motion.html#as">as</A> <A HREF="motion.html
 Textlock							*<A NAME="textlock"></A><B>textlock</B>*
 
 In a few situations <A HREF="motion.html#it">it</A> is not allowed to change the text in the buffer, jump
-to another <A HREF="windows.html#window">window</A> and some other things that might confuse or break what Vim
+to another<A HREF="windows.html#window">窗口</A>and some other things that might confuse or break what Vim
 is currently doing.  This mostly applies to things that happen when Vim is
 actually doing something else.  For example, evaluating the <A HREF="vim_diff.html#'balloonexpr'">'balloonexpr'</A> may
 happen any moment the mouse cursor is resting at some position.
 
 This is not allowed when the <A HREF="#textlock">textlock</A> is active:
 	- <A HREF="change.html#changing">changing</A> the buffer text
-	- jumping to another buffer or <A HREF="windows.html#window">window</A>
+	- jumping to another buffer or<A HREF="windows.html#window">窗口</A>
 	- editing another file
-	- closing a <A HREF="windows.html#window">window</A> or quitting Vim
+	- closing a<A HREF="windows.html#window">窗口</A>or quitting Vim
 	- etc.
 
 ==============================================================================

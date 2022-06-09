@@ -87,11 +87,11 @@ nearly everything.
 |<A HREF="#20.2">20.2</A>|	Command line <A HREF="map.html#abbreviations">abbreviations</A>
 |<A HREF="#20.3">20.3</A>|	Command line completion
 |<A HREF="#20.4">20.4</A>|	Command line <A HREF="cmdline.html#history">history</A>
-|<A HREF="#20.5">20.5</A>|	Command line <A HREF="windows.html#window">window</A>
+|<A HREF="#20.5">20.5</A>|	Command line<A HREF="windows.html#window">窗口</A>
 
-     Next chapter: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
- Previous chapter: |<A HREF="usr_12.html">usr_12.txt</A>|  Clever tricks
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
+上一章: |<A HREF="usr_12.html">usr_12.txt</A>|  Clever tricks
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -404,22 +404,22 @@ for next.
 
 ==============================================================================
 
-*<A NAME="20.5"></A><B>20.5</B>*	Command line <A HREF="windows.html#window">window</A>
+*<A NAME="20.5"></A><B>20.5</B>*	Command line<A HREF="windows.html#window">窗口</A>
 
 Typing the text in the command line works differently from typing text in
-<A HREF="insert.html#Insert">Insert</A> mode.  It doesn't allow many commands to change the text.  For most
+<A HREF="intro.html#Insert">插入</A>模式.  It doesn't allow many commands to change the text.  For most
 commands that's OK, but sometimes you have to type a complicated command.
-That's where the command line <A HREF="windows.html#window">window</A> is useful.
+That's where the command line<A HREF="windows.html#window">窗口</A>is useful.
 
-Open the command line <A HREF="windows.html#window">window</A> with this command:
+Open the command line<A HREF="windows.html#window">窗口</A>with this command:
 
 <B>	q:</B>
 
-Vim now opens a (small) <A HREF="windows.html#window">window</A> at the bottom.  It contains the command line
+Vim now opens a (small)<A HREF="windows.html#window">窗口</A>at the bottom.  It contains the command line
 <A HREF="cmdline.html#history">history</A>, and an empty line at the end:
 
 	+-------------------------------------+
-	|other <A HREF="windows.html#window">window</A>			      |
+	|other<A HREF="windows.html#window">窗口</A>			      |
 	|~				      |
 	|file.txt=============================|
 	|:e <A HREF="change.html#c">c</A>				      |
@@ -433,34 +433,32 @@ Vim now opens a (small) <A HREF="windows.html#window">window</A> at the bottom. 
 	&#124;				      |
 	+-------------------------------------+
 
-You are now in <A HREF="intro.html#Normal">Normal</A> mode.  You can use the &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot; keys to move around.  For
+You are now in <A HREF="intro.html#Normal">正常</A>模式.  You can use the &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot; keys to move around.  For
 example, move up with &quot;5k&quot; to the &quot;<A HREF="editing.html#:e">:e</A> config.h.in&quot; line.  Type &quot;$h&quot; to go to
 the &quot;<A HREF="insert.html#i">i</A>&quot; of &quot;in&quot; and type &quot;cwout&quot;.  Now you have changed the line to:
 
 <B><FONT color="#3A6F2B">	:e config.h.out </FONT></B>
 
-Now press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> and this command will be executed.  The command line <A HREF="windows.html#window">window</A>
+Now press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> and this command will be executed.  The command line<A HREF="windows.html#window">窗口</A>
 will close.
    The <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> command will execute the line under the cursor.  It doesn't
-matter whether Vim is in <A HREF="insert.html#Insert">Insert</A> mode or in <A HREF="intro.html#Normal">Normal</A> mode.
-   Changes in the command line <A HREF="windows.html#window">window</A> are lost.  They <A HREF="diff.html#do">do</A> not result in the
+matter whether Vim is in <A HREF="intro.html#Insert">插入</A>模式 or in <A HREF="intro.html#Normal">正常</A>模式.
+   Changes in the command line<A HREF="windows.html#window">窗口</A>are lost.  They <A HREF="diff.html#do">do</A> not result in the
 <A HREF="cmdline.html#history">history</A> to be changed.  Except that the command you execute will be added to
 the end of the <A HREF="cmdline.html#history">history</A>, like with all executed commands.
 
-The command line <A HREF="windows.html#window">window</A> is very useful when you want to have overview of the
+The command line<A HREF="windows.html#window">窗口</A>is very useful when you want to have overview of the
 <A HREF="cmdline.html#history">history</A>, lookup a similar command, change <A HREF="motion.html#it">it</A> a bit and execute <A HREF="motion.html#it">it</A>.  A search
 command can be used to find something.
    In the previous example the &quot;?config&quot; search command could have been used
 to find the previous command that contains &quot;<A HREF="starting.html#config">config</A>&quot;.  It's a bit strange,
-because you are using a command line to search in the command line <A HREF="windows.html#window">window</A>.
-While typing that search command you can't open another command line <A HREF="windows.html#window">window</A>,
+because you are using a command line to search in the command line<A HREF="windows.html#window">窗口</A>.
+While typing that search command you can't open another command line<A HREF="windows.html#window">窗口</A>,
 there can be only one.
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

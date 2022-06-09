@@ -94,9 +94,9 @@ around.  It teaches you the three basic ways to change text: operator-motion,
 |<A HREF="#04.9">04.9</A>|	<A HREF="insert.html#Replace">Replace</A> mode
 |<A HREF="#04.10">04.10</A>|	Conclusion
 
-     Next chapter: |<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
- Previous chapter: |<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
+上一章: |<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -151,8 +151,8 @@ For example, &quot;<A HREF="change.html#d">d</A>&quot; is the delete <A HREF="mo
 *<A NAME="04.2"></A><B>04.2</B>*	Changing text
 
 Another <A HREF="motion.html#operator">operator</A> is &quot;<A HREF="change.html#c">c</A>&quot;, change.  It acts just like the &quot;<A HREF="change.html#d">d</A>&quot; <A HREF="motion.html#operator">operator</A>, except
-<A HREF="motion.html#it">it</A> leaves you in <A HREF="insert.html#Insert">Insert</A> mode.  For example, &quot;<A HREF="change.html#cw">cw</A>&quot; changes a <A HREF="motion.html#word">word</A>.  Or more
-specifically, <A HREF="motion.html#it">it</A> deletes a <A HREF="motion.html#word">word</A> and then puts you in <A HREF="insert.html#Insert">Insert</A> mode.
+<A HREF="motion.html#it">it</A> leaves you in <A HREF="intro.html#Insert">插入</A>模式.  For example, &quot;<A HREF="change.html#cw">cw</A>&quot; changes a <A HREF="motion.html#word">word</A>.  Or more
+specifically, <A HREF="motion.html#it">it</A> deletes a <A HREF="motion.html#word">word</A> and then puts you in <A HREF="intro.html#Insert">插入</A>模式.
 
 <B><FONT color="#3A6F2B">	To err is human </FONT></B>
 	   -------&gt;
@@ -163,9 +163,9 @@ specifically, <A HREF="motion.html#it">it</A> deletes a <A HREF="motion.html#wor
 This &quot;c2wbe&lt;Esc&gt;&quot; contains these bits:
 
 	<A HREF="change.html#c">c</A>	the change <A HREF="motion.html#operator">operator</A>
-	2w	move two words (they are deleted and <A HREF="insert.html#Insert">Insert</A> mode started)
+	2w	move two words (they are deleted and <A HREF="intro.html#Insert">插入</A>模式 started)
 	be	insert this text
-	<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>	back to <A HREF="intro.html#Normal">Normal</A> mode
+	<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>	back to <A HREF="intro.html#Normal">正常</A>模式
 
 You will have noticed something strange: The space before &quot;human&quot; isn't
 deleted.  There is a saying that for every problem there is an answer that is
@@ -184,7 +184,7 @@ existing indent (leading white space) though.
 
 Just like &quot;d$&quot; deletes until the end of the line, &quot;c$&quot; changes until the end
 of the line.  It's like doing &quot;d$&quot; to delete the text and then &quot;<A HREF="insert.html#a">a</A>&quot; to start
-<A HREF="insert.html#Insert">Insert</A> mode and append new text.
+<A HREF="intro.html#Insert">插入</A>模式 and append new text.
 
 
 SHORTCUTS
@@ -342,7 +342,7 @@ When using blockwise selection, you have four corners.  &quot;<A HREF="insert.ht
 one of the other corners, diagonally.  Use &quot;<A HREF="insert.html#O">O</A>&quot; to move to the other corner in
 the same line.
 
-Note that &quot;<A HREF="insert.html#o">o</A>&quot; and &quot;<A HREF="insert.html#O">O</A>&quot; in <A HREF="visual.html#Visual">Visual</A> mode work very differently from <A HREF="intro.html#Normal">Normal</A> mode,
+Note that &quot;<A HREF="insert.html#o">o</A>&quot; and &quot;<A HREF="insert.html#O">O</A>&quot; in <A HREF="visual.html#Visual">Visual</A> mode work very differently from <A HREF="intro.html#Normal">正常</A>模式,
 where they open a new line below or above the cursor.
 
 ==============================================================================
@@ -450,7 +450,7 @@ Edit/Copy menu item.  The selected text is now copied to the <A HREF="provider.h
 can <A HREF="provider.html#paste">paste</A> the text in other programs.  In Vim itself too.
 
 If you have copied text to the <A HREF="provider.html#clipboard">clipboard</A> in another application, you can <A HREF="provider.html#paste">paste</A>
-<A HREF="motion.html#it">it</A> in Vim with the Edit/Paste menu item.  This works in <A HREF="intro.html#Normal">Normal</A> mode and <A HREF="insert.html#Insert">Insert</A>
+<A HREF="motion.html#it">it</A> in Vim with the Edit/Paste menu item.  This works in <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="insert.html#Insert">Insert</A>
 mode.  In <A HREF="visual.html#Visual">Visual</A> mode the selected text is replaced with the pasted text.
 
 The &quot;Cut&quot; menu item deletes the text before it's put on the <A HREF="provider.html#clipboard">clipboard</A>.  The
@@ -546,7 +546,7 @@ You may have noticed that this command replaced 5 characters in the line with
 twelve others.  The &quot;<A HREF="change.html#R">R</A>&quot; command automatically extends the line if <A HREF="motion.html#it">it</A> runs out
 of characters to replace.  It will not continue on the next line.
 
-You can switch between <A HREF="insert.html#Insert">Insert</A> mode and <A HREF="insert.html#Replace">Replace</A> mode with the <A HREF="insert.html#&lt;Insert&gt;">&lt;Insert&gt;</A> key.
+You can switch between <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="insert.html#Replace">Replace</A> mode with the <A HREF="insert.html#&lt;Insert&gt;">&lt;Insert&gt;</A> key.
 
 When you use <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> (backspace) to make a correction, you will notice that the
 old text is put back.  Thus <A HREF="motion.html#it">it</A> works like an <A HREF="undo.html#undo">undo</A> command for the previously
@@ -588,17 +588,15 @@ else:
 		command.  It does work in <A HREF="visual.html#Visual">Visual</A> mode, where <A HREF="motion.html#it">it</A> changes <A HREF="change.html#case">case</A>
 		for all the selected text.
 
-	I	Start <A HREF="insert.html#Insert">Insert</A> mode after moving the cursor to the first
+	I	Start <A HREF="intro.html#Insert">插入</A>模式 after moving the cursor to the first
 		non-blank in the line.
 
-	A	Start <A HREF="insert.html#Insert">Insert</A> mode after moving the cursor to the end of the
+	A	Start <A HREF="intro.html#Insert">插入</A>模式 after moving the cursor to the end of the
 		line.
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
 	</div>

@@ -89,12 +89,12 @@ Vim's capabilities.  Or define your own macros.
 |<A HREF="#05.4">05.4</A>|	Adding a package
 |<A HREF="#05.5">05.5</A>|	Adding a <A HREF="#plugin">plugin</A>
 |<A HREF="#05.6">05.6</A>|	Adding a help file
-|<A HREF="#05.7">05.7</A>|	The option <A HREF="windows.html#window">window</A>
+|<A HREF="#05.7">05.7</A>|	The option<A HREF="windows.html#window">窗口</A>
 |<A HREF="#05.8">05.8</A>|	Often used <A HREF="options.html#options">options</A>
 
-     Next chapter: |<A HREF="usr_06.html">usr_06.txt</A>|  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
- Previous chapter: |<A HREF="usr_04.html">usr_04.txt</A>|  Making small changes
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
+上一章: |<A HREF="usr_04.html">usr_04.txt</A>|  Making small changes
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -145,17 +145,17 @@ will be explained though.  Use the &quot;<A HREF="helphelp.html#:help">:help</A>
 
 <B>	set backspace=indent,eol,start</B>
 
-This specifies where in <A HREF="insert.html#Insert">Insert</A> mode the <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> is allowed to delete the
+This specifies where in <A HREF="intro.html#Insert">插入</A>模式 the <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> is allowed to delete the
 character in front of the cursor.  The three items, separated by commas, tell
 Vim to delete the white space at the start of the line, a line break and the
-character before where <A HREF="insert.html#Insert">Insert</A> mode started.
+character before where <A HREF="intro.html#Insert">插入</A>模式 started.
 
 
 <B>	set autoindent</B>
 
 This makes Vim use the indent of the previous line for a newly created line.
 Thus there is the same amount of white space before the new line.  For example
-when pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in <A HREF="insert.html#Insert">Insert</A> mode, and when using the &quot;<A HREF="insert.html#o">o</A>&quot; command to open a
+when pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in <A HREF="intro.html#Insert">插入</A>模式, and when using the &quot;<A HREF="insert.html#o">o</A>&quot; command to open a
 new line.
 
 
@@ -174,18 +174,18 @@ you want to remember fewer or more lines.
 <B>	set ruler</B>
 
 Always display the current cursor position in the lower right corner of the
-Vim <A HREF="windows.html#window">window</A>.
+Vim<A HREF="windows.html#window">窗口</A>.
 
 
 <B>	set showcmd</B>
 
-Display an incomplete command in the lower right corner of the Vim <A HREF="windows.html#window">window</A>,
+Display an incomplete command in the lower right corner of the Vim<A HREF="windows.html#window">窗口</A>,
 left of the ruler.  For example, when you type &quot;2f&quot;, Vim is waiting for you to
 type the character to find and &quot;2f&quot; is displayed.  When you press &quot;<A HREF="motion.html#w">w</A>&quot; next,
 the &quot;2fw&quot; command is executed and the displayed &quot;2f&quot; is removed.
 
 	+-------------------------------------------------+
-	|text in the Vim <A HREF="windows.html#window">window</A>				  |
+	|text in the Vim<A HREF="windows.html#window">窗口</A>				  |
 	|~						  |
 	|~						  |
 	|-- VISUAL <A HREF="starting.html#--">--</A>			2f     43,8   17&#37; |
@@ -296,7 +296,7 @@ Let's break this down:
     &lt;F5&gt;	The F5 function key.  This is the trigger key that causes the
 		command to be executed <A HREF="motion.html#as">as</A> the key is pressed.
 
-    i{&lt;Esc&gt;	<A HREF="insert.html#Insert">Insert</A> the { character.  The <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key ends <A HREF="insert.html#Insert">Insert</A> mode.
+    i{&lt;Esc&gt;	<A HREF="insert.html#Insert">Insert</A> the { character.  The <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key ends <A HREF="intro.html#Insert">插入</A>模式.
 
     <A HREF="motion.html#e">e</A>		Move to the end of the <A HREF="motion.html#word">word</A>.
 
@@ -320,7 +320,7 @@ You need to type the \ and the <A HREF="change.html#p">p</A> quickly after anoth
 belong together.
 
 The &quot;<A HREF="map.html#:map">:map</A>&quot; command (with no arguments) lists your current mappings.  At
-least the ones for <A HREF="intro.html#Normal">Normal</A> mode.  More about mappings in section |<A HREF="usr_40.html#40.1">40.1</A>|.
+least the ones for <A HREF="intro.html#Normal">正常</A>模式.  More about mappings in section |<A HREF="usr_40.html#40.1">40.1</A>|.
 
 ==============================================================================
 
@@ -540,14 +540,14 @@ For <A HREF="editing.html#writing">writing</A> a local help file, see |<A HREF="
 
 ==============================================================================
 
-*<A NAME="05.7"></A><B>05.7</B>*	The option <A HREF="windows.html#window">window</A>
+*<A NAME="05.7"></A><B>05.7</B>*	The option<A HREF="windows.html#window">窗口</A>
 
 If you are looking for an option that does what you want, you can search in
 the help files here: |<A HREF="options.html#options">options</A>|.  Another way is by using this command:
 
 <B>	:options</B>
 
-This opens a new <A HREF="windows.html#window">window</A>, with a <A HREF="eval.html#list">list</A> of <A HREF="options.html#options">options</A> with a one-line explanation.
+This opens a new<A HREF="windows.html#window">窗口</A>, with a <A HREF="eval.html#list">list</A> of <A HREF="options.html#options">options</A> with a one-line explanation.
 The <A HREF="options.html#options">options</A> are grouped by subject.  Move the cursor to a subject and press
 <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to jump there.  Press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> again to jump back.  Or use <A HREF="motion.html#CTRL-O">CTRL-O</A>.
 
@@ -576,7 +576,7 @@ Position the cursor on the zero with &quot;<A HREF="motion.html#$">$</A>&quot;. 
 Then press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to apply the new value.  When you now move the cursor
 around you will notice that the text starts <A HREF="scroll.html#scrolling">scrolling</A> before you reach the
 border.  This is what the <A HREF="options.html#'scrolloff'">'scrolloff'</A> option does, <A HREF="motion.html#it">it</A> specifies an offset
-from the <A HREF="windows.html#window">window</A> border where <A HREF="scroll.html#scrolling">scrolling</A> starts.
+from the<A HREF="windows.html#window">窗口</A>border where <A HREF="scroll.html#scrolling">scrolling</A> starts.
 
 ==============================================================================
 
@@ -598,7 +598,7 @@ default by putting an ampersand (&amp;) after the option name.  Example:
 NOT WRAPPING LINES
 
 Vim normally wraps long lines, so that you can see all of the text.  Sometimes
-it's better to let the text continue right of the <A HREF="windows.html#window">window</A>.  Then you need to
+it's better to let the text continue right of the<A HREF="windows.html#window">窗口</A>.  Then you need to
 scroll the text left-right to see all of a long line.  Switch wrapping off
 with this command:
 
@@ -628,8 +628,8 @@ To allow the cursor keys <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> and
 
 <B>	:set whichwrap=b,s,&lt;,&gt;</B>
 
-This is still only for <A HREF="intro.html#Normal">Normal</A> mode.  To let <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> and <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> <A HREF="diff.html#do">do</A> this in
-<A HREF="insert.html#Insert">Insert</A> mode <A HREF="motion.html#as">as</A> well:
+This is still only for <A HREF="intro.html#Normal">正常</A>模式.  To let <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> and <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> <A HREF="diff.html#do">do</A> this in
+<A HREF="intro.html#Insert">插入</A>模式 <A HREF="motion.html#as">as</A> well:
 
 <B>	:set whichwrap=b,s,&lt;,&gt;,[,]</B>
 
@@ -696,9 +696,7 @@ This does mean there is <A HREF="various.html#less">less</A> room to edit text, 
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_06.html">usr_06.txt</A>|  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

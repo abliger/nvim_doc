@@ -142,7 +142,7 @@ bufloaded({expr})		<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRU
 bufname([{expr}])		<A HREF="eval.html#String">String</A>	Name of the buffer {expr}
 bufnr([{expr} [, {create}]])	<A HREF="eval.html#Number">Number</A>	<A HREF="eval.html#Number">Number</A> of the buffer {expr}
 bufwinid({expr})		<A HREF="eval.html#Number">Number</A>	|<A HREF="windows.html#window-ID">window-ID</A>| of buffer {expr}
-bufwinnr({expr})		<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">window</A> number of buffer {expr}
+bufwinnr({expr})		<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">窗口</A>number of buffer {expr}
 byte2line({byte})		<A HREF="eval.html#Number">Number</A>	line number at byte <A HREF="intro.html#count">count</A> {byte}
 byteidx({expr}, {nr})		<A HREF="eval.html#Number">Number</A>	byte index of {nr}'th char in {expr}
 byteidxcomp({expr}, {nr})	<A HREF="eval.html#Number">Number</A>	byte index of {nr}'th char in {expr}
@@ -160,7 +160,7 @@ chdir({dir})			<A HREF="eval.html#String">String</A>	change current working dire
 cindent({lnum})			<A HREF="eval.html#Number">Number</A>	C indent for line {lnum}
 clearmatches([{win}])		none	clear all matches
 col({expr})			<A HREF="eval.html#Number">Number</A>	column byte index of cursor or <A HREF="motion.html#mark">mark</A>
-complete({startcol}, {matches}) none	set <A HREF="insert.html#Insert">Insert</A> mode completion
+complete({startcol}, {matches}) none	set <A HREF="intro.html#Insert">插入</A>模式 completion
 complete_add({expr})		<A HREF="eval.html#Number">Number</A>	add completion match
 <A HREF="#complete_check()">complete_check()</A>		<A HREF="eval.html#Number">Number</A>	check for key typed during completion
 complete_info([{what}])		<A HREF="eval.html#Dict">Dict</A>	get current completion information
@@ -262,7 +262,7 @@ getcharstr([expr])		<A HREF="eval.html#String">String</A>	get one character from
 <A HREF="#getcmdscreenpos()">getcmdscreenpos()</A>		<A HREF="eval.html#Number">Number</A>	return cursor screen position in
 					command-line
 <A HREF="#getcmdtype()">getcmdtype()</A>			<A HREF="eval.html#String">String</A>	return current command-line type
-<A HREF="#getcmdwintype()">getcmdwintype()</A>			<A HREF="eval.html#String">String</A>	return current command-line <A HREF="windows.html#window">window</A> type
+<A HREF="#getcmdwintype()">getcmdwintype()</A>			<A HREF="eval.html#String">String</A>	return current command-line<A HREF="windows.html#window">窗口</A>type
 getcompletion({pat}, {type} [, {filtered}])
 				<A HREF="eval.html#List">List</A>	<A HREF="eval.html#list">list</A> of <A HREF="cmdline.html#cmdline">cmdline</A> completion matches
 getcurpos([{winnr}])		<A HREF="eval.html#List">List</A>	position of the cursor
@@ -296,13 +296,13 @@ gettabvar({nr}, {varname} [, {def}])
 				any	variable {varname} in <A HREF="intro.html#tab">tab</A> {nr} or {def}
 gettabwinvar({tabnr}, {winnr}, {name} [, {def}])
 				any	{name} in {winnr} in <A HREF="intro.html#tab">tab</A> page {tabnr}
-gettagstack([{nr}])		<A HREF="eval.html#Dict">Dict</A>	get the <A HREF="tagsrch.html#tag">tag</A> stack of <A HREF="windows.html#window">window</A> {nr}
-getwininfo([{winid}])		<A HREF="eval.html#List">List</A>	<A HREF="eval.html#list">list</A> of info about each <A HREF="windows.html#window">window</A>
-getwinpos([{timeout}])		<A HREF="eval.html#List">List</A>	X and <A HREF="change.html#Y">Y</A> coord in pixels of the Vim <A HREF="windows.html#window">window</A>
-<A HREF="#getwinposx()">getwinposx()</A>			<A HREF="eval.html#Number">Number</A>	X coord in pixels of Vim <A HREF="windows.html#window">window</A>
-<A HREF="#getwinposy()">getwinposy()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="change.html#Y">Y</A> coord in pixels of Vim <A HREF="windows.html#window">window</A>
+gettagstack([{nr}])		<A HREF="eval.html#Dict">Dict</A>	get the <A HREF="tagsrch.html#tag">tag</A> stack of<A HREF="windows.html#window">窗口</A>{nr}
+getwininfo([{winid}])		<A HREF="eval.html#List">List</A>	<A HREF="eval.html#list">list</A> of info about each<A HREF="windows.html#window">窗口</A>
+getwinpos([{timeout}])		<A HREF="eval.html#List">List</A>	X and <A HREF="change.html#Y">Y</A> coord in pixels of the Vim<A HREF="windows.html#window">窗口</A>
+<A HREF="#getwinposx()">getwinposx()</A>			<A HREF="eval.html#Number">Number</A>	X coord in pixels of Vim<A HREF="windows.html#window">窗口</A>
+<A HREF="#getwinposy()">getwinposy()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="change.html#Y">Y</A> coord in pixels of Vim<A HREF="windows.html#window">窗口</A>
 getwinvar({nr}, {varname} [, {def}])
-				any	variable {varname} in <A HREF="windows.html#window">window</A> {nr}
+				any	variable {varname} in<A HREF="windows.html#window">窗口</A>{nr}
 glob({expr} [, {nosuf} [, {list} [, {alllinks}]]])
 				any	expand file <A HREF="editing.html#wildcards">wildcards</A> in {expr}
 glob2regpat({expr})		<A HREF="eval.html#String">String</A>	convert a glob pat into a search pat
@@ -311,7 +311,7 @@ globpath({path}, {expr} [, {nosuf} [, {list} [, {alllinks}]]])
 has({feature})			<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if feature {feature} supported
 has_key({dict}, {key})		<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if {dict} has entry {key}
 haslocaldir([{winnr} [, {tabnr}]])
-				<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if the <A HREF="windows.html#window">window</A> executed |<A HREF="editing.html#:lcd">:lcd</A>| or
+				<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if the<A HREF="windows.html#window">窗口</A>executed |<A HREF="editing.html#:lcd">:lcd</A>| or
 					the <A HREF="intro.html#tab">tab</A> executed |<A HREF="editing.html#:tcd">:tcd</A>|
 hasmapto({what} [, {mode} [, {abbr}]])
 				<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if <A HREF="map.html#mapping">mapping</A> to {what} exists
@@ -346,7 +346,7 @@ id({expr})			<A HREF="eval.html#String">String</A>	identifier of the container
 items({dict})			<A HREF="eval.html#List">List</A>	key-value pairs in {dict}
 jobpid({id})			<A HREF="eval.html#Number">Number</A>	Returns pid of a <A HREF="job_control.html#job">job</A>.
 jobresize({id}, {width}, {height})
-				<A HREF="eval.html#Number">Number</A>	Resize pseudo <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#window">window</A> of a <A HREF="job_control.html#job">job</A>
+				<A HREF="eval.html#Number">Number</A>	Resize pseudo <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>of a <A HREF="job_control.html#job">job</A>
 jobstart({cmd} [, {opts}])	<A HREF="eval.html#Number">Number</A>	Spawns {cmd} <A HREF="motion.html#as">as</A> a <A HREF="job_control.html#job">job</A>
 jobstop({id})			<A HREF="eval.html#Number">Number</A>	Stops a <A HREF="job_control.html#job">job</A>
 jobwait({ids} [, {timeout}])	<A HREF="eval.html#Number">Number</A>	Wait for a set of jobs
@@ -487,11 +487,11 @@ setqflist({list}, {action}, {what})
 				<A HREF="eval.html#Number">Number</A>	modify specific <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> props
 setreg({n}, {v} [, {opt}])	<A HREF="eval.html#Number">Number</A>	set <A HREF="intro.html#register">register</A> to value and type
 settabvar({nr}, {varname}, {val})	set {varname} in <A HREF="intro.html#tab">tab</A> page {nr} to {val}
-settabwinvar({tabnr}, {winnr}, {varname}, {val})    set {varname} in <A HREF="windows.html#window">window</A>
+settabwinvar({tabnr}, {winnr}, {varname}, {val})    set {varname} in<A HREF="windows.html#window">窗口</A>
 					{winnr} in <A HREF="intro.html#tab">tab</A> page {tabnr} to {val}
 settagstack({nr}, {dict} [, {action}])
 				<A HREF="eval.html#Number">Number</A>	modify <A HREF="tagsrch.html#tag">tag</A> stack using {dict}
-setwinvar({nr}, {varname}, {val})	set {varname} in <A HREF="windows.html#window">window</A> {nr} to {val}
+setwinvar({nr}, {varname}, {val})	set {varname} in<A HREF="windows.html#window">窗口</A>{nr} to {val}
 sha256({string})		<A HREF="eval.html#String">String</A>	SHA256 checksum of {string}
 shellescape({string} [, {special}])
 				<A HREF="eval.html#String">String</A>	<A HREF="intro.html#escape">escape</A> {string} for use <A HREF="motion.html#as">as</A> shell
@@ -571,7 +571,7 @@ systemlist({cmd} [, {input}])	<A HREF="eval.html#List">List</A>	output of shell 
 tabpagebuflist([{arg}])		<A HREF="eval.html#List">List</A>	<A HREF="eval.html#list">list</A> of buffer numbers in <A HREF="intro.html#tab">tab</A> page
 tabpagenr([{arg}])		<A HREF="eval.html#Number">Number</A>	number of current or last <A HREF="intro.html#tab">tab</A> page
 tabpagewinnr({tabarg} [, {arg}])
-				<A HREF="eval.html#Number">Number</A>	number of current <A HREF="windows.html#window">window</A> in <A HREF="intro.html#tab">tab</A> page
+				<A HREF="eval.html#Number">Number</A>	number of current<A HREF="windows.html#window">窗口</A>in <A HREF="intro.html#tab">tab</A> page
 taglist({expr} [, {filename}])	<A HREF="eval.html#List">List</A>	<A HREF="eval.html#list">list</A> of <A HREF="tagsrch.html#tags">tags</A> matching {expr}
 <A HREF="#tagfiles()">tagfiles()</A>			<A HREF="eval.html#List">List</A>	<A HREF="tagsrch.html#tags">tags</A> files used
 tan({expr})			<A HREF="eval.html#Float">Float</A>	tangent of {expr}
@@ -603,29 +603,29 @@ wait({timeout}, {condition} [, {interval}])
 				<A HREF="eval.html#Number">Number</A>	Wait until {condition} is satisfied
 <A HREF="#wildmenumode()">wildmenumode()</A>			<A HREF="eval.html#Number">Number</A>	whether <A HREF="options.html#'wildmenu'">'wildmenu'</A> mode is active
 win_execute({id}, {command} [, {silent}])
-				<A HREF="eval.html#String">String</A>	execute {command} in <A HREF="windows.html#window">window</A> {id}
+				<A HREF="eval.html#String">String</A>	execute {command} in<A HREF="windows.html#window">窗口</A>{id}
 win_findbuf({bufnr})		<A HREF="eval.html#List">List</A>	find <A HREF="windows.html#windows">windows</A> containing {bufnr}
 win_getid([{win} [, {tab}]])	<A HREF="eval.html#Number">Number</A>	get |<A HREF="windows.html#window-ID">window-ID</A>| for {win} in {tab}
-win_gettype([{nr}])		<A HREF="eval.html#String">String</A>	type of <A HREF="windows.html#window">window</A> {nr}
+win_gettype([{nr}])		<A HREF="eval.html#String">String</A>	type of<A HREF="windows.html#window">窗口</A>{nr}
 win_gotoid({expr})		<A HREF="eval.html#Number">Number</A>	go to |<A HREF="windows.html#window-ID">window-ID</A>| {expr}
 win_id2tabwin({expr})		<A HREF="eval.html#List">List</A>	get <A HREF="intro.html#tab">tab</A> and window nr from |<A HREF="windows.html#window-ID">window-ID</A>|
 win_id2win({expr})		<A HREF="eval.html#Number">Number</A>	get window nr from |<A HREF="windows.html#window-ID">window-ID</A>|
-win_move_separator({nr})	<A HREF="eval.html#Number">Number</A>	move <A HREF="windows.html#window">window</A> vertical separator
-win_move_statusline({nr})	<A HREF="eval.html#Number">Number</A>	move <A HREF="windows.html#window">window</A> status line
-win_screenpos({nr})		<A HREF="eval.html#List">List</A>	get screen position of <A HREF="windows.html#window">window</A> {nr}
+win_move_separator({nr})	<A HREF="eval.html#Number">Number</A>	move<A HREF="windows.html#window">窗口</A>vertical separator
+win_move_statusline({nr})	<A HREF="eval.html#Number">Number</A>	move<A HREF="windows.html#window">窗口</A>status line
+win_screenpos({nr})		<A HREF="eval.html#List">List</A>	get screen position of<A HREF="windows.html#window">窗口</A>{nr}
 win_splitmove({nr}, {target} [, {options}])
-				<A HREF="eval.html#Number">Number</A>	move <A HREF="windows.html#window">window</A> {nr} to split of {target}
-winbufnr({nr})			<A HREF="eval.html#Number">Number</A>	buffer number of <A HREF="windows.html#window">window</A> {nr}
-<A HREF="#wincol()">wincol()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">window</A> column of the cursor
+				<A HREF="eval.html#Number">Number</A>	move<A HREF="windows.html#window">窗口</A>{nr} to split of {target}
+winbufnr({nr})			<A HREF="eval.html#Number">Number</A>	buffer number of<A HREF="windows.html#window">窗口</A>{nr}
+<A HREF="#wincol()">wincol()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">窗口</A>column of the cursor
 <A HREF="#windowsversion()">windowsversion()</A>		<A HREF="eval.html#String">String</A>	MS-Windows OS version
-winheight({nr})			<A HREF="eval.html#Number">Number</A>	height of <A HREF="windows.html#window">window</A> {nr}
+winheight({nr})			<A HREF="eval.html#Number">Number</A>	height of<A HREF="windows.html#window">窗口</A>{nr}
 winlayout([{tabnr}])		<A HREF="eval.html#List">List</A>	layout of <A HREF="windows.html#windows">windows</A> in <A HREF="intro.html#tab">tab</A> {tabnr}
-<A HREF="#winline()">winline()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">window</A> line of the cursor
-winnr([{expr}])			<A HREF="eval.html#Number">Number</A>	number of current <A HREF="windows.html#window">window</A>
-<A HREF="#winrestcmd()">winrestcmd()</A>			<A HREF="eval.html#String">String</A>	returns command to restore <A HREF="windows.html#window">window</A> sizes
-winrestview({dict})		none	restore view of current <A HREF="windows.html#window">window</A>
-<A HREF="#winsaveview()">winsaveview()</A>			<A HREF="eval.html#Dict">Dict</A>	save view of current <A HREF="windows.html#window">window</A>
-winwidth({nr})			<A HREF="eval.html#Number">Number</A>	width of <A HREF="windows.html#window">window</A> {nr}
+<A HREF="#winline()">winline()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">窗口</A>line of the cursor
+winnr([{expr}])			<A HREF="eval.html#Number">Number</A>	number of current<A HREF="windows.html#window">窗口</A>
+<A HREF="#winrestcmd()">winrestcmd()</A>			<A HREF="eval.html#String">String</A>	returns command to restore<A HREF="windows.html#window">窗口</A>sizes
+winrestview({dict})		none	restore view of current<A HREF="windows.html#window">窗口</A>
+<A HREF="#winsaveview()">winsaveview()</A>			<A HREF="eval.html#Dict">Dict</A>	save view of current<A HREF="windows.html#window">窗口</A>
+winwidth({nr})			<A HREF="eval.html#Number">Number</A>	width of<A HREF="windows.html#window">窗口</A>{nr}
 <A HREF="#wordcount()">wordcount()</A>			<A HREF="eval.html#Dict">Dict</A>	get byte/char/word statistics
 writefile({object}, {fname} [, {flags}])
 				<A HREF="eval.html#Number">Number</A>	write |<A HREF="eval.html#Blob">Blob</A>| or |<A HREF="eval.html#List">List</A>| of lines to file
@@ -746,10 +746,10 @@ argc([{winid}])					*<A NAME="argc()"></A><B>argc()</B>*
 		The result is the number of files in the argument <A HREF="eval.html#list">list</A>.  See
 		|<A HREF="editing.html#arglist">arglist</A>|.
 		If {winid} is not supplied, the argument <A HREF="eval.html#list">list</A> of the current
-		<A HREF="windows.html#window">window</A> is used.
+		<A HREF="windows.html#window">窗口</A>is used.
 		If {winid} is -1, the global argument <A HREF="eval.html#list">list</A> is used.
-		Otherwise {winid} specifies the <A HREF="windows.html#window">window</A> of which the argument
-		<A HREF="eval.html#list">list</A> is used: either the <A HREF="windows.html#window">window</A> number or the <A HREF="windows.html#window">window</A> ID.
+		Otherwise {winid} specifies the<A HREF="windows.html#window">窗口</A>of which the argument
+		<A HREF="eval.html#list">list</A> is used: either the<A HREF="windows.html#window">窗口</A>number or the<A HREF="windows.html#window">窗口</A>ID.
 		Returns -1 if the {winid} argument is invalid.
 
 
@@ -765,9 +765,9 @@ arglistid([{winnr} [, {tabnr}]])
 		global argument list.  See |<A HREF="editing.html#arglist">arglist</A>|.
 		Returns -1 if the arguments are invalid.
 
-		Without arguments use the current <A HREF="windows.html#window">window</A>.
-		With {winnr} only use this <A HREF="windows.html#window">window</A> in the current <A HREF="intro.html#tab">tab</A> page.
-		With {winnr} and {tabnr} use the <A HREF="windows.html#window">window</A> in the specified <A HREF="intro.html#tab">tab</A>
+		Without arguments use the current<A HREF="windows.html#window">窗口</A>.
+		With {winnr} only use this<A HREF="windows.html#window">窗口</A>in the current <A HREF="intro.html#tab">tab</A> page.
+		With {winnr} and {tabnr} use the<A HREF="windows.html#window">窗口</A>in the specified <A HREF="intro.html#tab">tab</A>
 		page.
 		{winnr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
 
@@ -785,7 +785,7 @@ argv([{nr} [, {winid}]])
  		Without the {nr} argument, or when {nr} is -1, a |<A HREF="eval.html#List">List</A>| with
 		the whole |<A HREF="editing.html#arglist">arglist</A>| is returned.
 
-		The {winid} argument specifies the <A HREF="windows.html#window">window</A> ID, see |<A HREF="#argc()">argc()</A>|.
+		The {winid} argument specifies the<A HREF="windows.html#window">窗口</A>ID, see |<A HREF="#argc()">argc()</A>|.
 		For the Vim command line arguments see |<A HREF="eval.html#v:argv">v:argv</A>|.
 
 		Returns an empty <A HREF="eval.html#string">string</A> if {nr}th argument is not present in
@@ -891,7 +891,7 @@ bufexists({buf})					*<A NAME="bufexists()"></A><B>bufexists()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is |<A HREF="eval.html#TRUE">TRUE</A>| if a buffer called
 		{buf} exists.
 		If the {buf} argument is a number, buffer numbers are used.
-		<A HREF="eval.html#Number">Number</A> zero is the alternate buffer for the current <A HREF="windows.html#window">window</A>.
+		<A HREF="eval.html#Number">Number</A> zero is the alternate buffer for the current<A HREF="windows.html#window">窗口</A>.
 
 		If the {buf} argument is a <A HREF="eval.html#string">string</A> <A HREF="motion.html#it">it</A> must match a buffer name
 		exactly.  The name can be:
@@ -937,7 +937,7 @@ bufload({buf})						*<A NAME="bufload()"></A><B>bufload()</B>*
 
 bufloaded({buf})					*<A NAME="bufloaded()"></A><B>bufloaded()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is |<A HREF="eval.html#TRUE">TRUE</A>| if a buffer called
-		{buf} exists and is loaded (shown in a <A HREF="windows.html#window">window</A> or hidden).
+		{buf} exists and is loaded (shown in a<A HREF="windows.html#window">窗口</A>or hidden).
 		The {buf} argument is used like with |<A HREF="#bufexists()">bufexists()</A>|.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -950,7 +950,7 @@ bufname([{buf}])						*<A NAME="bufname()"></A><B>bufname()</B>*
 		&quot;[No Name]&quot;.
 		If {buf} is omitted the current buffer is used.
 		If {buf} is a <A HREF="eval.html#Number">Number</A>, that buffer number's name is given.
-		<A HREF="eval.html#Number">Number</A> zero is the alternate buffer for the current <A HREF="windows.html#window">window</A>.
+		<A HREF="eval.html#Number">Number</A> zero is the alternate buffer for the current<A HREF="windows.html#window">窗口</A>.
 		If {buf} is a <A HREF="eval.html#String">String</A>, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> a |<A HREF="autocmd.html#file-pattern">file-pattern</A>| to match
 		with the buffer names.  This is always done like <A HREF="options.html#'magic'">'magic'</A> is
 		set and <A HREF="options.html#'cpoptions'">'cpoptions'</A> is empty.  When there is more than one
@@ -999,9 +999,9 @@ bufnr([{buf} [, {create}]])
 
 bufwinid({buf})						*<A NAME="bufwinid()"></A><B>bufwinid()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is the |<A HREF="windows.html#window-ID">window-ID</A>| of the first
-		<A HREF="windows.html#window">window</A> associated with buffer {buf}.  For the use of {buf},
+		<A HREF="windows.html#window">窗口</A>associated with buffer {buf}.  For the use of {buf},
 		see |<A HREF="#bufname()">bufname()</A>| above.  If buffer {buf} doesn't exist or
-		there is no such <A HREF="windows.html#window">window</A>, -1 is returned.  Example:
+		there is no such<A HREF="windows.html#window">窗口</A>, -1 is returned.  Example:
 
 <B>	echo "A window containing buffer 1 is " .. (bufwinid(1))</B>
  
@@ -1012,9 +1012,9 @@ bufwinid({buf})						*<A NAME="bufwinid()"></A><B>bufwinid()</B>*
 
 
 bufwinnr({buf})						*<A NAME="bufwinnr()"></A><B>bufwinnr()</B>*
-		Like |<A HREF="#bufwinid()">bufwinid()</A>| but return the <A HREF="windows.html#window">window</A> number instead of the
+		Like |<A HREF="#bufwinid()">bufwinid()</A>| but return the<A HREF="windows.html#window">窗口</A>number instead of the
 		|<A HREF="windows.html#window-ID">window-ID</A>|.
-		If buffer {buf} doesn't exist or there is no such <A HREF="windows.html#window">window</A>, -1
+		If buffer {buf} doesn't exist or there is no such<A HREF="windows.html#window">窗口</A>, -1
 		is returned.  Example:
 
 <B>	echo "A window containing buffer 1 is " .. (bufwinnr(1))</B>
@@ -1215,9 +1215,9 @@ charidx({string}, {idx} [, {countcc}])
 chdir({dir})						*<A NAME="chdir()"></A><B>chdir()</B>*
 		Change the current working directory to {dir}.  The scope of
 		the directory change depends on the directory of the current
-		<A HREF="windows.html#window">window</A>:
-			- If the current <A HREF="windows.html#window">window</A> has a window-local directory
-			  (|<A HREF="editing.html#:lcd">:lcd</A>|), then changes the <A HREF="windows.html#window">window</A> local directory.
+		<A HREF="windows.html#window">窗口</A>:
+			- If the current<A HREF="windows.html#window">窗口</A>has a window-local directory
+			  (|<A HREF="editing.html#:lcd">:lcd</A>|), then changes the<A HREF="windows.html#window">窗口</A>local directory.
 			- Otherwise, if the current <A HREF="tabpage.html#tabpage">tabpage</A> has a local
 			  directory (|<A HREF="editing.html#:tcd">:tcd</A>|) then changes the <A HREF="tabpage.html#tabpage">tabpage</A> local
 			  directory.
@@ -1247,10 +1247,10 @@ cindent({lnum})						*<A NAME="cindent()"></A><B>cindent()</B>*
 
 
 clearmatches([{win}])					*<A NAME="clearmatches()"></A><B>clearmatches()</B>*
- 		Clears all matches previously defined for the current <A HREF="windows.html#window">window</A>
+ 		Clears all matches previously defined for the current<A HREF="windows.html#window">窗口</A>
  		by |<A HREF="#matchadd()">matchadd()</A>| and the |<A HREF="pattern.html#:match">:match</A>| commands.
-		If {win} is specified, use the <A HREF="windows.html#window">window</A> with this number or
-		<A HREF="windows.html#window">window</A> ID instead of the current <A HREF="windows.html#window">window</A>.
+		If {win} is specified, use the<A HREF="windows.html#window">窗口</A>with this number or
+		<A HREF="windows.html#window">窗口</A>ID instead of the current<A HREF="windows.html#window">窗口</A>.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetWin()-&gt;clearmatches()</B>
@@ -1287,7 +1287,7 @@ col({expr})	The result is a <A HREF="eval.html#Number">Number</A>, which is the 
 		buffer.
 		For the cursor position, when <A HREF="options.html#'virtualedit'">'virtualedit'</A> is active, the
 		column is one higher if the cursor is after the end of the
-		line.  This can be used to obtain the column in <A HREF="insert.html#Insert">Insert</A> mode:
+		line.  This can be used to obtain the column in <A HREF="intro.html#Insert">插入</A>模式:
 <B>			:imap &lt;F2&gt; &lt;C-O&gt;:let save_ve = &amp;ve&lt;CR&gt;</B>
 <B>				\&lt;C-O&gt;:set ve=all&lt;CR&gt;</B>
 <B>				\&lt;C-O&gt;:echo col(".") .. "\n" &lt;Bar&gt;</B>
@@ -1299,8 +1299,8 @@ col({expr})	The result is a <A HREF="eval.html#Number">Number</A>, which is the 
 
 
 complete({startcol}, {matches})			*<A NAME="complete()"></A><B>complete()</B>* *<A NAME="E785"></A><B>E785</B>*
-		Set the matches for <A HREF="insert.html#Insert">Insert</A> mode completion.
-		Can only be used in <A HREF="insert.html#Insert">Insert</A> mode.  You need to use a <A HREF="map.html#mapping">mapping</A>
+		Set the matches for <A HREF="intro.html#Insert">插入</A>模式 completion.
+		Can only be used in <A HREF="intro.html#Insert">插入</A>模式.  You need to use a <A HREF="map.html#mapping">mapping</A>
 		with CTRL-R = (see |<A HREF="insert.html#i_CTRL-R">i_CTRL-R</A>|).  It does not work after <A HREF="motion.html#CTRL-O">CTRL-O</A>
 		or with an <A HREF="eval.html#expression">expression</A> <A HREF="map.html#mapping">mapping</A>.
 		{startcol} is the byte offset in the line where the completed
@@ -1314,7 +1314,7 @@ complete({startcol}, {matches})			*<A NAME="complete()"></A><B>complete()</B>* *
 		Note that the after calling this function you need to avoid
 		<A HREF="insert.html#inserting">inserting</A> anything that would cause completion to stop.
 		The match can be selected with <A HREF="motion.html#CTRL-N">CTRL-N</A> and <A HREF="motion.html#CTRL-P">CTRL-P</A> <A HREF="motion.html#as">as</A> usual with
-		<A HREF="insert.html#Insert">Insert</A> mode completion.  The popup menu will appear if
+		<A HREF="intro.html#Insert">插入</A>模式 completion.  The popup menu will appear if
 		specified, see |<A HREF="insert.html#ins-completion-menu">ins-completion-menu</A>|.
 		Example:
 <B>	inoremap &lt;F5&gt; &lt;C-R&gt;=ListMonths()&lt;CR&gt;</B>
@@ -1357,7 +1357,7 @@ complete_add({expr})				*<A NAME="complete_add()"></A><B>complete_add()</B>*
 
 
 complete_info([{what}])				*<A NAME="complete_info()"></A><B>complete_info()</B>*
-		Returns a |<A HREF="eval.html#Dictionary">Dictionary</A>| with information about <A HREF="insert.html#Insert">Insert</A> mode
+		Returns a |<A HREF="eval.html#Dictionary">Dictionary</A>| with information about <A HREF="intro.html#Insert">插入</A>模式
 		completion.  See |<A HREF="insert.html#ins-completion">ins-completion</A>|.
 		The items are:
 		   mode		Current completion mode name <A HREF="eval.html#string">string</A>.
@@ -1772,11 +1772,11 @@ dictwatcherdel({dict}, {pattern}, {callback})		      *<A NAME="dictwatcherdel()"
 diff_filler({lnum})					*<A NAME="diff_filler()"></A><B>diff_filler()</B>*
 		Returns the number of filler lines above line {lnum}.
 		These are the lines that were inserted at this point in
-		another diff'ed <A HREF="windows.html#window">window</A>.  These filler lines are shown in the
+		another diff'ed<A HREF="windows.html#window">窗口</A>.  These filler lines are shown in the
 		display but don't exist in the buffer.
 		{lnum} is used like with |<A HREF="#getline()">getline()</A>|.  Thus &quot;<A HREF="repeat.html#.">.</A>&quot; is the current
 		line, &quot;'m&quot; <A HREF="motion.html#mark">mark</A> <A HREF="motion.html#m">m</A>, etc.
-		Returns 0 if the current <A HREF="windows.html#window">window</A> is not in <A HREF="diff.html#diff">diff</A> mode.
+		Returns 0 if the current<A HREF="windows.html#window">窗口</A>is not in <A HREF="diff.html#diff">diff</A> mode.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetLnum()-&gt;diff_filler()</B>
@@ -1986,7 +1986,7 @@ execute({command} [, {silent}])				*<A NAME="execute()"></A><B>execute()</B>*
 		Note: If nested, an outer <A HREF="#execute()">execute()</A> will not observe output of
 		the inner calls.
 		Note: Text attributes (highlights) are not captured.
-		To execute a command in another <A HREF="windows.html#window">window</A> than the current one
+		To execute a command in another<A HREF="windows.html#window">窗口</A>than the current one
 		use `win_execute()`.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -2295,15 +2295,15 @@ feedkeys({string} [, {mode}])				*<A NAME="feedkeys()"></A><B>feedkeys()</B>*
 			similar to using &quot;:normal!&quot;.  You can call <A HREF="#feedkeys()">feedkeys()</A>
 			several times without '<A HREF="change.html#x">x</A>' and then one time with '<A HREF="change.html#x">x</A>'
 			(possibly with an empty {string}) to execute all the
-			typeahead.  Note that when Vim ends in <A HREF="insert.html#Insert">Insert</A> mode <A HREF="motion.html#it">it</A>
+			typeahead.  Note that when Vim ends in <A HREF="intro.html#Insert">插入</A>模式 <A HREF="motion.html#it">it</A>
 			will behave <A HREF="motion.html#as">as</A> if <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is typed, to avoid getting
 			stuck, waiting for a character to be typed before the
 			<A HREF="usr_41.html#script">script</A> continues.
 			Note that if you manage to call <A HREF="#feedkeys()">feedkeys()</A> while
 			executing commands, thus calling <A HREF="motion.html#it">it</A> recursively, then
 			all typehead will be consumed by the last call.
-		'<A HREF="change.html#!">!</A>'	When used with '<A HREF="change.html#x">x</A>' will not end <A HREF="insert.html#Insert">Insert</A> mode. Can be
-			used in a test when a <A HREF="#timer">timer</A> is set to exit <A HREF="insert.html#Insert">Insert</A> mode
+		'<A HREF="change.html#!">!</A>'	When used with '<A HREF="change.html#x">x</A>' will not end <A HREF="intro.html#Insert">插入</A>模式. Can be
+			used in a test when a <A HREF="#timer">timer</A> is set to exit <A HREF="intro.html#Insert">插入</A>模式
 			a little later.  Useful for <A HREF="testing.html#testing">testing</A> <A HREF="autocmd.html#CursorHoldI">CursorHoldI</A>.
 
 		Return value is always 0.
@@ -2788,12 +2788,12 @@ getbufinfo([{dict}])
 					last used.
 			listed		<A HREF="eval.html#TRUE">TRUE</A> if the buffer is listed.
 			lnum		Line number used for the buffer when
-					opened in the current <A HREF="windows.html#window">window</A>.
+					opened in the current<A HREF="windows.html#window">窗口</A>.
 					Only valid if the buffer has been
-					displayed in the <A HREF="windows.html#window">window</A> in the past.
+					displayed in the<A HREF="windows.html#window">窗口</A>in the past.
 					If you want the line number of the
 					last known cursor position in a given
-					<A HREF="windows.html#window">window</A>, use YXXYline()|:
+					<A HREF="windows.html#window">窗口</A>, use YXXYline()|:
 <B>						:echo line('.', {winid})</B>
  
 			linecount	<A HREF="eval.html#Number">Number</A> of lines in the buffer (only
@@ -2946,7 +2946,7 @@ getchar([expr])						*<A NAME="getchar()"></A><B>getchar()</B>*
  
 		There is no prompt, you will somehow have to make clear to the
 		user that a character has to be typed.  The screen is not
-		redrawn, e.g. when resizing the <A HREF="windows.html#window">window</A>.
+		redrawn, e.g. when resizing the<A HREF="windows.html#window">窗口</A>.
 
 		There is no <A HREF="map.html#mapping">mapping</A> for the character.
 		Key codes are replaced, thus when the user presses the <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A>
@@ -3092,7 +3092,7 @@ getcharstr([expr])					*<A NAME="getcharstr()"></A><B>getcharstr()</B>*
 <A HREF="#getcmdwintype()">getcmdwintype()</A>						*<A NAME="getcmdwintype()"></A><B>getcmdwintype()</B>*
 		Return the current |<A HREF="cmdline.html#command-line-window">command-line-window</A>| type. Possible return
 		values are the same <A HREF="motion.html#as">as</A> |<A HREF="#getcmdtype()">getcmdtype()</A>|. Returns an empty <A HREF="eval.html#string">string</A>
-		when not in the command-line <A HREF="windows.html#window">window</A>.
+		when not in the command-line<A HREF="windows.html#window">窗口</A>.
 
 
 getcompletion({pat}, {type} [, {filtered}])		*<A NAME="getcompletion()"></A><B>getcompletion()</B>*
@@ -3169,17 +3169,17 @@ getcurpos([{winid}])
 		the cursor is returned in 'col'. To get the character
 		position, use |<A HREF="#getcursorcharpos()">getcursorcharpos()</A>|.
 
-		The optional {winid} argument can specify the <A HREF="windows.html#window">window</A>.  It can
+		The optional {winid} argument can specify the<A HREF="windows.html#window">窗口</A>.  It can
 		be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.  The last known
 		cursor position is returned, this may be invalid for the
-		current value of the buffer if <A HREF="motion.html#it">it</A> is not the current <A HREF="windows.html#window">window</A>.
+		current value of the buffer if <A HREF="motion.html#it">it</A> is not the current<A HREF="windows.html#window">窗口</A>.
 		If {winid} is invalid a <A HREF="eval.html#list">list</A> with zeroes is returned.
 
  		This can be used to save and restore the cursor position:
 <B> 			let save_cursor = getcurpos()</B>
 <B> 			MoveTheCursorAround</B>
 <B> 			call setpos('.', save_cursor)</B>
- 		Note that this only works within the <A HREF="windows.html#window">window</A>.  See
+ 		Note that this only works within the<A HREF="windows.html#window">窗口</A>.  See
 		|<A HREF="#winrestview()">winrestview()</A>| for restoring more state.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -3206,7 +3206,7 @@ getcwd([{winnr} [, {tabnr}]])				*<A NAME="getcwd()"></A><B>getcwd()</B>*
 		directory of that scope is returned, and <A HREF="options.html#'autochdir'">'autochdir'</A> is
 		ignored.
 		Tabs and <A HREF="windows.html#windows">windows</A> are identified by their respective numbers,
-		0 means current <A HREF="intro.html#tab">tab</A> or <A HREF="windows.html#window">window</A>. Missing <A HREF="intro.html#tab">tab</A> number implies 0.
+		0 means current <A HREF="intro.html#tab">tab</A> or<A HREF="windows.html#window">窗口</A>. Missing <A HREF="intro.html#tab">tab</A> number implies 0.
 		Thus the following are equivalent:
 <B>			getcwd(0)</B>
 <B>			getcwd(0, 0)</B>
@@ -3315,12 +3315,12 @@ getftype({fname})					*<A NAME="getftype()"></A><B>getftype()</B>*
 
 
 getjumplist([{winnr} [, {tabnr}]])			*<A NAME="getjumplist()"></A><B>getjumplist()</B>*
-		Returns the |<A HREF="motion.html#jumplist">jumplist</A>| for the specified <A HREF="windows.html#window">window</A>.
+		Returns the |<A HREF="motion.html#jumplist">jumplist</A>| for the specified<A HREF="windows.html#window">窗口</A>.
 
-		Without arguments use the current <A HREF="windows.html#window">window</A>.
-		With {winnr} only use this <A HREF="windows.html#window">window</A> in the current <A HREF="intro.html#tab">tab</A> page.
+		Without arguments use the current<A HREF="windows.html#window">窗口</A>.
+		With {winnr} only use this<A HREF="windows.html#window">窗口</A>in the current <A HREF="intro.html#tab">tab</A> page.
 		{winnr} can also be a |<A HREF="windows.html#window-ID">window-ID</A>|.
-		With {winnr} and {tabnr} use the <A HREF="windows.html#window">window</A> in the specified <A HREF="intro.html#tab">tab</A>
+		With {winnr} and {tabnr} use the<A HREF="windows.html#window">窗口</A>in the specified <A HREF="intro.html#tab">tab</A>
 		page.  If {winnr} or {tabnr} is invalid, an empty <A HREF="eval.html#list">list</A> is
  		returned.
 
@@ -3370,10 +3370,10 @@ getline({lnum} [, {end}])
 getloclist({nr} [, {what}])				*<A NAME="getloclist()"></A><B>getloclist()</B>*
 		Returns a |<A HREF="eval.html#List">List</A>| with all the entries in the location <A HREF="eval.html#list">list</A> for
 		window {nr}.  {nr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {nr} is zero the current <A HREF="windows.html#window">window</A> is used.
+		When {nr} is zero the current<A HREF="windows.html#window">窗口</A>is used.
 
-		For a location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>, the displayed location <A HREF="eval.html#list">list</A> is
-		returned.  For an invalid <A HREF="windows.html#window">window</A> number {nr}, an empty <A HREF="eval.html#list">list</A> is
+		For a location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>, the displayed location <A HREF="eval.html#list">list</A> is
+		returned.  For an invalid<A HREF="windows.html#window">窗口</A>number {nr}, an empty <A HREF="eval.html#list">list</A> is
 		returned. Otherwise, same <A HREF="motion.html#as">as</A> |<A HREF="#getqflist()">getqflist()</A>|.
 
 		If the optional {what} dictionary argument is supplied, then
@@ -3383,16 +3383,16 @@ getloclist({nr} [, {what}])				*<A NAME="getloclist()"></A><B>getloclist()</B>*
 		In addition to the items supported by |<A HREF="#getqflist()">getqflist()</A>| in {what},
 		the following item is supported by YXXYgetloclist()|:
 
-			filewinid 	id of the <A HREF="windows.html#window">window</A> used to display files
+			filewinid 	id of the<A HREF="windows.html#window">窗口</A>used to display files
 					from the location <A HREF="eval.html#list">list</A>. This field is
 					applicable only when called from a
-					location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>. See
+					location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>. See
 					|<A HREF="quickfix.html#location-list-file-window">location-list-file-window</A>| for more
 					details.
 
 		Returns a |<A HREF="eval.html#Dictionary">Dictionary</A>| with default values if there is no
-		location <A HREF="eval.html#list">list</A> for the <A HREF="windows.html#window">window</A> {nr}.
-		Returns an empty <A HREF="eval.html#Dictionary">Dictionary</A> if <A HREF="windows.html#window">window</A> {nr} does not exist.
+		location <A HREF="eval.html#list">list</A> for the<A HREF="windows.html#window">窗口</A>{nr}.
+		Returns an empty <A HREF="eval.html#Dictionary">Dictionary</A> if<A HREF="windows.html#window">窗口</A>{nr} does not exist.
 
 		Examples (See also |<A HREF="quickfix.html#getqflist-examples">getqflist-examples</A>|):
 <B>			:echo getloclist(3, {'all': 0})</B>
@@ -3425,12 +3425,12 @@ getmarklist([{buf}])					*<A NAME="getmarklist()"></A><B>getmarklist()</B>*
 
 getmatches([{win}])					*<A NAME="getmatches()"></A><B>getmatches()</B>*
 		Returns a |<A HREF="eval.html#List">List</A>| with all matches previously defined for the
-		current <A HREF="windows.html#window">window</A> by |<A HREF="#matchadd()">matchadd()</A>| and the |<A HREF="pattern.html#:match">:match</A>| commands.
+		current<A HREF="windows.html#window">窗口</A>by |<A HREF="#matchadd()">matchadd()</A>| and the |<A HREF="pattern.html#:match">:match</A>| commands.
 		|<A HREF="#getmatches()">getmatches()</A>| is useful in combination with |<A HREF="#setmatches()">setmatches()</A>|,
 		<A HREF="motion.html#as">as</A> |<A HREF="#setmatches()">setmatches()</A>| can restore a <A HREF="eval.html#list">list</A> of matches saved by
 		|<A HREF="#getmatches()">getmatches()</A>|.
-		If {win} is specified, use the <A HREF="windows.html#window">window</A> with this number or
-		<A HREF="windows.html#window">window</A> ID instead of the current <A HREF="windows.html#window">window</A>.  If {win} is invalid,
+		If {win} is specified, use the<A HREF="windows.html#window">窗口</A>with this number or
+		<A HREF="windows.html#window">窗口</A>ID instead of the current<A HREF="windows.html#window">窗口</A>.  If {win} is invalid,
 		an empty <A HREF="eval.html#list">list</A> is returned.
 		Example:
 <B>			:echo getmatches()</B>
@@ -3462,18 +3462,18 @@ getmatches([{win}])					*<A NAME="getmatches()"></A><B>getmatches()</B>*
 			column		text column inside &quot;<A HREF="windows.html#winid">winid</A>&quot;
 		All numbers are 1-based.
 
-		If not over a <A HREF="windows.html#window">window</A>, e.g. when in the command line, then only
+		If not over a<A HREF="windows.html#window">窗口</A>, e.g. when in the command line, then only
 		&quot;screenrow&quot; and &quot;screencol&quot; are valid, the others are zero.
 
-		When on the status line below a <A HREF="windows.html#window">window</A> or the vertical
-		separater right of a <A HREF="windows.html#window">window</A>, the &quot;line&quot; and &quot;column&quot; values
+		When on the status line below a<A HREF="windows.html#window">窗口</A>or the vertical
+		separater right of a<A HREF="windows.html#window">窗口</A>, the &quot;line&quot; and &quot;column&quot; values
 		are zero.
 
 		When the position is after the text then &quot;column&quot; is the
 		length of the text in bytes plus one.
 
-		If the mouse is over a focusable floating <A HREF="windows.html#window">window</A> then that
-		<A HREF="windows.html#window">window</A> is used.
+		If the mouse is over a focusable floating<A HREF="windows.html#window">窗口</A>then that
+		<A HREF="windows.html#window">窗口</A>is used.
 
 		When using |<A HREF="#getchar()">getchar()</A>| the Vim <A HREF="eval.html#variables">variables</A> |<A HREF="eval.html#v:mouse_lnum">v:mouse_lnum</A>|,
 		|<A HREF="eval.html#v:mouse_col">v:mouse_col</A>| and |<A HREF="eval.html#v:mouse_winid">v:mouse_winid</A>| also provide these values.
@@ -3574,7 +3574,7 @@ getqflist([{what}])					*<A NAME="getqflist()"></A><B>getqflist()</B>*
 				means the current <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> and &quot;<A HREF="motion.html#$">$</A>&quot; means
 				the last <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>
 			qfbufnr number of the buffer displayed in the <A HREF="quickfix.html#quickfix">quickfix</A>
-				<A HREF="windows.html#window">window</A>. Returns 0 if the <A HREF="quickfix.html#quickfix">quickfix</A> buffer is
+				<A HREF="windows.html#window">窗口</A>. Returns 0 if the <A HREF="quickfix.html#quickfix">quickfix</A> buffer is
 				not present. See |<A HREF="quickfix.html#quickfix-buffer">quickfix-buffer</A>|.
 			size	number of entries in the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>
 			title	get the <A HREF="eval.html#list">list</A> title |<A HREF="quickfix.html#quickfix-title">quickfix-title</A>|
@@ -3605,7 +3605,7 @@ getqflist([{what}])					*<A NAME="getqflist()"></A><B>getqflist()</B>*
 				an empty <A HREF="eval.html#list">list</A>.
 			nr	<A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> number. If not present, set to 0
 			qfbufnr	number of the buffer displayed in the <A HREF="quickfix.html#quickfix">quickfix</A>
-				<A HREF="windows.html#window">window</A>. If not present, set to 0.
+				<A HREF="windows.html#window">窗口</A>. If not present, set to 0.
 			size	number of entries in the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>. If not
 				present, set to 0.
 			title	<A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> title text. If not present, set
@@ -3720,7 +3720,7 @@ gettabvar({tabnr}, {varname} [, {def}])				*<A NAME="gettabvar()"></A><B>gettabv
 
 
 gettabwinvar({tabnr}, {winnr}, {varname} [, {def}])		*<A NAME="gettabwinvar()"></A><B>gettabwinvar()</B>*
-		Get the value of window-local variable {varname} in <A HREF="windows.html#window">window</A>
+		Get the value of window-local variable {varname} in<A HREF="windows.html#window">窗口</A>
 		{winnr} in <A HREF="intro.html#tab">tab</A> page {tabnr}.
 		The {varname} argument is a <A HREF="eval.html#string">string</A>.  When {varname} is empty a
  		dictionary with all window-local <A HREF="eval.html#variables">variables</A> is returned.
@@ -3732,11 +3732,11 @@ gettabwinvar({tabnr}, {winnr}, {varname} [, {def}])		*<A NAME="gettabwinvar()"><
 		Tabs are numbered starting with one.  For the current <A HREF="tabpage.html#tabpage">tabpage</A>
 		use |<A HREF="#getwinvar()">getwinvar()</A>|.
 		{winnr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {winnr} is zero the current <A HREF="windows.html#window">window</A> is used.
+		When {winnr} is zero the current<A HREF="windows.html#window">窗口</A>is used.
 		This also works for a global option, buffer-local option and
 		window-local option, but <A HREF="motion.html#it">it</A> doesn't work for a global variable
 		or buffer-local variable.
-		When the <A HREF="intro.html#tab">tab</A>, <A HREF="windows.html#window">window</A> or variable doesn't exist {def} or an
+		When the <A HREF="intro.html#tab">tab</A>,<A HREF="windows.html#window">窗口</A>or variable doesn't exist {def} or an
 		empty <A HREF="eval.html#string">string</A> is returned, there is no error message.
 		Examples:
 <B>			:let list_is_on = gettabwinvar(1, 2, '&amp;list')</B>
@@ -3750,10 +3750,10 @@ gettabwinvar({tabnr}, {winnr}, {varname} [, {def}])		*<A NAME="gettabwinvar()"><
 
 
 gettagstack([{winnr}])					*<A NAME="gettagstack()"></A><B>gettagstack()</B>*
-		The result is a <A HREF="eval.html#Dict">Dict</A>, which is the <A HREF="tagsrch.html#tag">tag</A> stack of <A HREF="windows.html#window">window</A> {winnr}.
+		The result is a <A HREF="eval.html#Dict">Dict</A>, which is the <A HREF="tagsrch.html#tag">tag</A> stack of<A HREF="windows.html#window">窗口</A>{winnr}.
 		{winnr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {winnr} is not specified, the current <A HREF="windows.html#window">window</A> is used.
-		When <A HREF="windows.html#window">window</A> {winnr} doesn't exist, an empty <A HREF="eval.html#Dict">Dict</A> is returned.
+		When {winnr} is not specified, the current<A HREF="windows.html#window">窗口</A>is used.
+		When<A HREF="windows.html#window">窗口</A>{winnr} doesn't exist, an empty <A HREF="eval.html#Dict">Dict</A> is returned.
 
 		The returned dictionary contains the following entries:
 			curidx		Current index in the stack. When at
@@ -3784,8 +3784,8 @@ gettagstack([{winnr}])					*<A NAME="gettagstack()"></A><B>gettagstack()</B>*
 getwininfo([{winid}])					*<A NAME="getwininfo()"></A><B>getwininfo()</B>*
 		Returns information about <A HREF="windows.html#windows">windows</A> <A HREF="motion.html#as">as</A> a |<A HREF="eval.html#List">List</A>| with <A HREF="eval.html#Dictionaries">Dictionaries</A>.
 
-		If {winid} is given Information about the <A HREF="windows.html#window">window</A> with that ID
-		is returned, <A HREF="motion.html#as">as</A> a |<A HREF="eval.html#List">List</A>| with one item.  If the <A HREF="windows.html#window">window</A> does not
+		If {winid} is given Information about the<A HREF="windows.html#window">窗口</A>with that ID
+		is returned, <A HREF="motion.html#as">as</A> a |<A HREF="eval.html#List">List</A>| with one item.  If the<A HREF="windows.html#window">窗口</A>does not
 		exist the result is an empty <A HREF="eval.html#list">list</A>.
 
 		Without {winid} information about all the <A HREF="windows.html#windows">windows</A> in all the
@@ -3793,26 +3793,26 @@ getwininfo([{winid}])					*<A NAME="getwininfo()"></A><B>getwininfo()</B>*
 
 		Each <A HREF="eval.html#List">List</A> item is a |<A HREF="eval.html#Dictionary">Dictionary</A>| with the following entries:
 			botline		last complete displayed buffer line
-			bufnr		number of buffer in the <A HREF="windows.html#window">window</A>
-			height		<A HREF="windows.html#window">window</A> height (excluding winbar)
+			bufnr		number of buffer in the<A HREF="windows.html#window">窗口</A>
+			height		<A HREF="windows.html#window">窗口</A>height (excluding winbar)
 			loclist		1 if showing a location <A HREF="eval.html#list">list</A>
-			<A HREF="quickfix.html#quickfix">quickfix</A>	1 if <A HREF="quickfix.html#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>
-			<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>	1 if a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#window">window</A>
+			<A HREF="quickfix.html#quickfix">quickfix</A>	1 if <A HREF="quickfix.html#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>
+			<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>	1 if a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>
 			tabnr		<A HREF="intro.html#tab">tab</A> page number
 			topline		first displayed buffer line
 			<A HREF="eval.html#variables">variables</A>	a reference to the dictionary with
 					window-local <A HREF="eval.html#variables">variables</A>
-			width		<A HREF="windows.html#window">window</A> width
-			winbar		1 if the <A HREF="windows.html#window">window</A> has a toolbar, 0
+			width		<A HREF="windows.html#window">窗口</A>width
+			winbar		1 if the<A HREF="windows.html#window">窗口</A>has a toolbar, 0
 					otherwise
-			wincol		leftmost screen column of the <A HREF="windows.html#window">window</A>;
+			wincol		leftmost screen column of the<A HREF="windows.html#window">窗口</A>;
 					&quot;col&quot; from |<A HREF="#win_screenpos()">win_screenpos()</A>|
 			textoff		number of columns occupied by any
 					<A HREF="options.html#'foldcolumn'">'foldcolumn'</A>, <A HREF="options.html#'signcolumn'">'signcolumn'</A> and line
 					number in front of the text
 			<A HREF="windows.html#winid">winid</A>		|<A HREF="windows.html#window-ID">window-ID</A>|
-			winnr		<A HREF="windows.html#window">window</A> number
-			winrow		topmost screen line of the <A HREF="windows.html#window">window</A>;
+			winnr		<A HREF="windows.html#window">窗口</A>number
+			winrow		topmost screen line of the<A HREF="windows.html#window">窗口</A>;
 					&quot;row&quot; from |<A HREF="#win_screenpos()">win_screenpos()</A>|
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -3845,14 +3845,14 @@ getwinpos([{timeout}])					*<A NAME="getwinpos()"></A><B>getwinpos()</B>*
 
 							*<A NAME="getwinposx()"></A><B>getwinposx()</B>*
 <A HREF="#getwinposx()">getwinposx()</A>	The result is a <A HREF="eval.html#Number">Number</A>, which is the X coordinate in pixels of
-		the left hand side of the <A HREF="gui.html#GUI">GUI</A> Vim <A HREF="windows.html#window">window</A>.  The result will be
+		the left hand side of the <A HREF="gui.html#GUI">GUI</A> Vim<A HREF="windows.html#window">窗口</A>.  The result will be
 		-1 if the information is not available.
 		The value can be used with `:winpos`.
 
 
 							*<A NAME="getwinposy()"></A><B>getwinposy()</B>*
 <A HREF="#getwinposy()">getwinposy()</A>	The result is a <A HREF="eval.html#Number">Number</A>, which is the <A HREF="change.html#Y">Y</A> coordinate in pixels of
-		the top of the <A HREF="gui.html#GUI">GUI</A> Vim <A HREF="windows.html#window">window</A>.  The result will be -1 if the
+		the top of the <A HREF="gui.html#GUI">GUI</A> Vim<A HREF="windows.html#window">窗口</A>.  The result will be -1 if the
 		information is not available.
 		The value can be used with `:winpos`.
 
@@ -4036,18 +4036,18 @@ has_key({dict}, {key})					*<A NAME="has_key()"></A><B>has_key()</B>*
 
 
 haslocaldir([{winnr} [, {tabnr}]])			*<A NAME="haslocaldir()"></A><B>haslocaldir()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is 1 when the <A HREF="windows.html#window">window</A> has set a
+		The result is a <A HREF="eval.html#Number">Number</A>, which is 1 when the<A HREF="windows.html#window">窗口</A>has set a
 		local path via |<A HREF="editing.html#:lcd">:lcd</A>| or when {winnr} is -1 and the <A HREF="tabpage.html#tabpage">tabpage</A>
 		has set a local path via |<A HREF="editing.html#:tcd">:tcd</A>|, otherwise 0.
 
 		Tabs and <A HREF="windows.html#windows">windows</A> are identified by their respective numbers,
-		0 means current <A HREF="intro.html#tab">tab</A> or <A HREF="windows.html#window">window</A>. Missing argument implies 0.
+		0 means current <A HREF="intro.html#tab">tab</A> or<A HREF="windows.html#window">窗口</A>. Missing argument implies 0.
 		Thus the following are equivalent:
 <B>			haslocaldir()</B>
 <B>			haslocaldir(0)</B>
 <B>			haslocaldir(0, 0)</B>
- 		With {winnr} use that <A HREF="windows.html#window">window</A> in the current <A HREF="tabpage.html#tabpage">tabpage</A>.
-		With {winnr} and {tabnr} use the <A HREF="windows.html#window">window</A> in that <A HREF="tabpage.html#tabpage">tabpage</A>.
+ 		With {winnr} use that<A HREF="windows.html#window">窗口</A>in the current <A HREF="tabpage.html#tabpage">tabpage</A>.
+		With {winnr} and {tabnr} use the<A HREF="windows.html#window">窗口</A>in that <A HREF="tabpage.html#tabpage">tabpage</A>.
 		{winnr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
 		If {winnr} is -1 <A HREF="motion.html#it">it</A> is ignored, only the <A HREF="intro.html#tab">tab</A> is resolved.
 		Throw error if the arguments are invalid. |<A HREF="vim_diff.html#E5000">E5000</A>| |<A HREF="vim_diff.html#E5001">E5001</A>| |<A HREF="vim_diff.html#E5002">E5002</A>|
@@ -4069,12 +4069,12 @@ hasmapto({what} [, {mode} [, {abbr}]])			*<A NAME="hasmapto()"></A><B>hasmapto()
 		buffer are checked for a match.
 		If no matching <A HREF="map.html#mapping">mapping</A> is found <A HREF="eval.html#FALSE">FALSE</A> is returned.
 		The following characters are recognized in {mode}:
-			<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">Normal</A> mode
+			<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
 			<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">Select</A> mode
 			<A HREF="change.html#x">x</A>	<A HREF="visual.html#Visual">Visual</A> mode
 			<A HREF="change.html#s">s</A>	<A HREF="visual.html#Select">Select</A> mode
 			<A HREF="insert.html#o">o</A>	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
-			<A HREF="insert.html#i">i</A>	<A HREF="insert.html#Insert">Insert</A> mode
+			<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 			<A HREF="motion.html#l">l</A>	Language-Argument (&quot;r&quot;, &quot;<A HREF="motion.html#f">f</A>&quot;, &quot;<A HREF="motion.html#t">t</A>&quot;, etc.)
 			<A HREF="change.html#c">c</A>	<A HREF="cmdline.html#Command-line">Command-line</A> mode
 		When {mode} is omitted, &quot;nvo&quot; is used.
@@ -4563,7 +4563,7 @@ jobpid({job})						*<A NAME="jobpid()"></A><B>jobpid()</B>*
 
 
 jobresize({job}, {width}, {height})			*<A NAME="jobresize()"></A><B>jobresize()</B>*
-		Resize the pseudo <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#window">window</A> of |<A HREF="job_control.html#job-id">job-id</A>| {job} to {width}
+		Resize the pseudo <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>of |<A HREF="job_control.html#job-id">job-id</A>| {job} to {width}
 		columns and {height} rows.
 		Fails if the <A HREF="job_control.html#job">job</A> was not started with `&quot;pty&quot;:v:true`.
 
@@ -4834,9 +4834,9 @@ line({expr} [, {winid}])				*<A NAME="line()"></A><B>line()</B>*
 		    $	    the last line in the current buffer
 		    'x	    position of <A HREF="motion.html#mark">mark</A> <A HREF="change.html#x">x</A> (if the <A HREF="motion.html#mark">mark</A> is not set, 0 is
 			    returned)
-		    w0	    first line visible in current <A HREF="windows.html#window">window</A> (one if the
+		    w0	    first line visible in current<A HREF="windows.html#window">窗口</A>(one if the
 			    display isn't updated, e.g. in silent <A HREF="intro.html#Ex">Ex</A> mode)
-		    w$	    last line visible in current <A HREF="windows.html#window">window</A> (this is one
+		    w$	    last line visible in current<A HREF="windows.html#window">窗口</A>(this is one
 			    <A HREF="various.html#less">less</A> than &quot;w0&quot; if no lines are visible)
 		    <A HREF="visual.html#v">v</A>	    In <A HREF="visual.html#Visual">Visual</A> mode: the start of the <A HREF="visual.html#Visual">Visual</A> area (the
 			    cursor is the end).  When not in <A HREF="visual.html#Visual">Visual</A> mode
@@ -4847,7 +4847,7 @@ line({expr} [, {winid}])				*<A NAME="line()"></A><B>line()</B>*
 		To get the column number use |<A HREF="#col()">col()</A>|.  To get both use
 		|<A HREF="#getpos()">getpos()</A>|.
 		With the optional {winid} argument the values are obtained for
-		that <A HREF="windows.html#window">window</A> instead of the current <A HREF="windows.html#window">window</A>.
+		that<A HREF="windows.html#window">窗口</A>instead of the current<A HREF="windows.html#window">窗口</A>.
 		Examples:
 <B>			line(".")		line number of the cursor</B>
 <B>			line(".", winid)	idem, in window "winid"</B>
@@ -5167,10 +5167,10 @@ match({expr}, {pat} [, {start} [, {count}]])			*<A NAME="match()"></A><B>match()
 
 			*<A NAME="matchadd()"></A><B>matchadd()</B>* *<A NAME="E798"></A><B>E798</B>* *<A NAME="E799"></A><B>E799</B>* *<A NAME="E801"></A><B>E801</B>* *<A NAME="E957"></A><B>E957</B>*
 matchadd({group}, {pattern} [, {priority} [, {id} [, {dict}]]])
-		Defines a <A HREF="pattern.html#pattern">pattern</A> to be highlighted in the current <A HREF="windows.html#window">window</A> (a
+		Defines a <A HREF="pattern.html#pattern">pattern</A> to be highlighted in the current<A HREF="windows.html#window">窗口</A>(a
 		&quot;match&quot;).  It will be highlighted with {group}.  Returns an
 		identification number (ID), which can be used to delete the
-		match using |<A HREF="#matchdelete()">matchdelete()</A>|.  The ID is bound to the <A HREF="windows.html#window">window</A>.
+		match using |<A HREF="#matchdelete()">matchdelete()</A>|.  The ID is bound to the<A HREF="windows.html#window">窗口</A>.
 		Matching is <A HREF="change.html#case">case</A> sensitive and magic, unless <A HREF="change.html#case">case</A> sensitivity
 		or magicness are explicitly overridden in {pattern}.  The
 		<A HREF="options.html#'magic'">'magic'</A>, <A HREF="options.html#'smartcase'">'smartcase'</A> and <A HREF="options.html#'ignorecase'">'ignorecase'</A> <A HREF="options.html#options">options</A> are not used.
@@ -5204,8 +5204,8 @@ matchadd({group}, {pattern} [, {priority} [, {id} [, {dict}]]])
 			<A HREF="syntax.html#conceal">conceal</A>	    Special character to show instead of the
 				    match (only for |<A HREF="syntax.html#hl-Conceal">hl-Conceal</A>| highlighed
 				    matches, see |<A HREF="syntax.html#:syn-cchar">:syn-cchar</A>|)
-			<A HREF="windows.html#window">window</A>	    Instead of the current <A HREF="windows.html#window">window</A> use the
-				    <A HREF="windows.html#window">window</A> with this number or <A HREF="windows.html#window">window</A> ID.
+			<A HREF="windows.html#window">窗口</A>	    Instead of the current<A HREF="windows.html#window">窗口</A>use the
+				   <A HREF="windows.html#window">窗口</A>with this number or<A HREF="windows.html#window">窗口</A>ID.
 
 		The number of matches is not limited, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> is the <A HREF="change.html#case">case</A> with
 		the |<A HREF="pattern.html#:match">:match</A>| commands.
@@ -5288,8 +5288,8 @@ matchdelete({id} [, {win}])		       *<A NAME="matchdelete()"></A><B>matchdelete(
 		or one of the |<A HREF="pattern.html#:match">:match</A>| commands.  Returns 0 if successful,
 		otherwise -1.  See example for |<A HREF="#matchadd()">matchadd()</A>|.  All matches can
 		be deleted in one operation by |<A HREF="#clearmatches()">clearmatches()</A>|.
-		If {win} is specified, use the <A HREF="windows.html#window">window</A> with this number or
-		<A HREF="windows.html#window">window</A> ID instead of the current <A HREF="windows.html#window">window</A>.
+		If {win} is specified, use the<A HREF="windows.html#window">窗口</A>with this number or
+		<A HREF="windows.html#window">窗口</A>ID instead of the current<A HREF="windows.html#window">窗口</A>.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetMatch()-&gt;matchdelete()</B>
@@ -5592,8 +5592,8 @@ mode([expr])	Return a <A HREF="eval.html#string">string</A> that indicates the c
 		   <A HREF="change.html#S">S</A>	    <A HREF="visual.html#Select">Select</A> by line
 		   CTRL-S   <A HREF="visual.html#Select">Select</A> blockwise
 		   <A HREF="insert.html#i">i</A>	    <A HREF="insert.html#Insert">Insert</A>
-		   ic	    <A HREF="insert.html#Insert">Insert</A> mode completion |<A HREF="insert.html#compl-generic">compl-generic</A>|
-		   ix	    <A HREF="insert.html#Insert">Insert</A> mode |<A HREF="insert.html#i_CTRL-X">i_CTRL-X</A>| completion
+		   ic	    <A HREF="intro.html#Insert">插入</A>模式 completion |<A HREF="insert.html#compl-generic">compl-generic</A>|
+		   ix	    <A HREF="intro.html#Insert">插入</A>模式 |<A HREF="insert.html#i_CTRL-X">i_CTRL-X</A>| completion
 		   R	    <A HREF="insert.html#Replace">Replace</A> |<A HREF="change.html#R">R</A>|
 		   Rc	    <A HREF="insert.html#Replace">Replace</A> mode completion |<A HREF="insert.html#compl-generic">compl-generic</A>|
 		   Rx	    <A HREF="insert.html#Replace">Replace</A> mode |<A HREF="insert.html#i_CTRL-X">i_CTRL-X</A>| completion
@@ -5755,7 +5755,7 @@ nvim_...({...})					*<A NAME="E5555"></A><B>E5555</B>* *<A NAME="nvim_...()"></A
 		|<A HREF="eval.html#String">String</A>| will not be autoconverted.
 		Buffer numbers, <A HREF="motion.html#as">as</A> returned by |<A HREF="#bufnr()">bufnr()</A>| could be used <A HREF="motion.html#as">as</A>
 		first argument to nvim_buf_... <A HREF="eval.html#functions">functions</A>.  All <A HREF="eval.html#functions">functions</A>
-		expecting an object (buffer, <A HREF="windows.html#window">window</A> or <A HREF="tabpage.html#tabpage">tabpage</A>) can
+		expecting an object (buffer,<A HREF="windows.html#window">窗口</A>or <A HREF="tabpage.html#tabpage">tabpage</A>) can
 		also take the numerical value 0 to indicate the current
 		(focused) object.
 
@@ -6093,7 +6093,7 @@ prompt_setinterrupt({buf}, {expr})			*<A NAME="prompt_setinterrupt()"></A><B>pro
 		{buf} has <A HREF="options.html#'buftype'">'buftype'</A> set to &quot;prompt&quot;.
 
 		This callback will be invoked when pressing <A HREF="pattern.html#CTRL-C">CTRL-C</A> in <A HREF="insert.html#Insert">Insert</A>
-		mode.  Without setting a callback Vim will exit <A HREF="insert.html#Insert">Insert</A> mode,
+		mode.  Without setting a callback Vim will exit <A HREF="intro.html#Insert">插入</A>模式,
 		<A HREF="motion.html#as">as</A> in any buffer.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -6528,7 +6528,7 @@ screenattr({row}, {col})					*<A NAME="screenattr()"></A><B>screenattr()</B>*
 screenchar({row}, {col})					*<A NAME="screenchar()"></A><B>screenchar()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is the character at position
 		[row, col] on the screen.  This works for every possible
-		screen position, also status lines, <A HREF="windows.html#window">window</A> separators and the
+		screen position, also status lines,<A HREF="windows.html#window">窗口</A>separators and the
 		command line.  The top left position is row one, column one
 		The character excludes composing characters.  For double-byte
 		encodings <A HREF="motion.html#it">it</A> may only be the first byte.
@@ -6567,7 +6567,7 @@ screenchars({row}, {col})					*<A NAME="screenchars()"></A><B>screenchars()</B>*
 
 screenpos({winid}, {lnum}, {col})				*<A NAME="screenpos()"></A><B>screenpos()</B>*
 		The result is a <A HREF="eval.html#Dict">Dict</A> with the screen position of the text
-		character in <A HREF="windows.html#window">window</A> {winid} at buffer line {lnum} and column
+		character in<A HREF="windows.html#window">窗口</A>{winid} at buffer line {lnum} and column
 		{col}.  {col} is a one-based byte index.
 		The <A HREF="eval.html#Dict">Dict</A> has these members:
 			row	screen row
@@ -7057,9 +7057,9 @@ setbufline({buf}, {lnum}, {text})			*<A NAME="setbufline()"></A><B>setbufline()<
 setbufvar({buf}, {varname}, {val})			*<A NAME="setbufvar()"></A><B>setbufvar()</B>*
 		Set option or local variable {varname} in buffer {buf} to
 		{val}.
-		This also works for a global or local <A HREF="windows.html#window">window</A> option, but <A HREF="motion.html#it">it</A>
-		doesn't work for a global or local <A HREF="windows.html#window">window</A> variable.
-		For a local <A HREF="windows.html#window">window</A> option the global value is unchanged.
+		This also works for a global or local<A HREF="windows.html#window">窗口</A>option, but <A HREF="motion.html#it">it</A>
+		doesn't work for a global or local<A HREF="windows.html#window">窗口</A>variable.
+		For a local<A HREF="windows.html#window">窗口</A>option the global value is unchanged.
 		For the use of {buf}, see |<A HREF="#bufname()">bufname()</A>| above.
 		The {varname} argument is a <A HREF="eval.html#string">string</A>.
 		Note that the variable name without &quot;<A HREF="eval.html#b:">b:</A>&quot; must be used.
@@ -7211,12 +7211,12 @@ setline({lnum}, {text})					*<A NAME="setline()"></A><B>setline()</B>*
 
 
 setloclist({nr}, {list} [, {action} [, {what}]])		*<A NAME="setloclist()"></A><B>setloclist()</B>*
-		Create or replace or add to the location <A HREF="eval.html#list">list</A> for <A HREF="windows.html#window">window</A> {nr}.
+		Create or replace or add to the location <A HREF="eval.html#list">list</A> for<A HREF="windows.html#window">窗口</A>{nr}.
 		{nr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {nr} is zero the current <A HREF="windows.html#window">window</A> is used.
+		When {nr} is zero the current<A HREF="windows.html#window">窗口</A>is used.
 
-		For a location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>, the displayed location <A HREF="eval.html#list">list</A> is
-		modified.  For an invalid <A HREF="windows.html#window">window</A> number {nr}, -1 is returned.
+		For a location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>, the displayed location <A HREF="eval.html#list">list</A> is
+		modified.  For an invalid<A HREF="windows.html#window">窗口</A>number {nr}, -1 is returned.
 		Otherwise, same <A HREF="motion.html#as">as</A> |<A HREF="#setqflist()">setqflist()</A>|.
 		Also see |<A HREF="quickfix.html#location-list">location-list</A>|.
 
@@ -7236,8 +7236,8 @@ setmatches({list} [, {win}])				*<A NAME="setmatches()"></A><B>setmatches()</B>*
 		current window|.  Returns 0 if successful, otherwise -1.  All
 		current matches are cleared before the <A HREF="eval.html#list">list</A> is restored.  See
 		example for |<A HREF="#getmatches()">getmatches()</A>|.
-		If {win} is specified, use the <A HREF="windows.html#window">window</A> with this number or
-		<A HREF="windows.html#window">window</A> ID instead of the current <A HREF="windows.html#window">window</A>.
+		If {win} is specified, use the<A HREF="windows.html#window">窗口</A>with this number or
+		<A HREF="windows.html#window">窗口</A>ID instead of the current<A HREF="windows.html#window">窗口</A>.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetMatches()-&gt;setmatches()</B>
@@ -7259,7 +7259,7 @@ setpos({expr}, {list})
 		buffer to set the <A HREF="motion.html#mark">mark</A> in.  You can use the |<A HREF="#bufnr()">bufnr()</A>| function
 		to turn a file name into a buffer number.
 		For setting the cursor and the '' <A HREF="motion.html#mark">mark</A> &quot;bufnum&quot; is ignored,
-		since these are associated with a <A HREF="windows.html#window">window</A>, not a buffer.
+		since these are associated with a<A HREF="windows.html#window">窗口</A>, not a buffer.
 		Does not change the <A HREF="motion.html#jumplist">jumplist</A>.
 
 		&quot;lnum&quot; and &quot;col&quot; are the position in the buffer.  The first
@@ -7316,7 +7316,7 @@ setqflist({list} [, {action} [, {what}]])		*<A NAME="setqflist()"></A><B>setqfli
 		    filename	name of a file; only used when &quot;bufnr&quot; is not
 				present or <A HREF="motion.html#it">it</A> is invalid.
 		    module	name of a module; if given <A HREF="motion.html#it">it</A> will be used in
-				<A HREF="quickfix.html#quickfix">quickfix</A> error <A HREF="windows.html#window">window</A> instead of the filename.
+				<A HREF="quickfix.html#quickfix">quickfix</A> error<A HREF="windows.html#window">窗口</A>instead of the filename.
 		    lnum	line number in the file
 		    end_lnum	end of lines, if the item spans multiple lines
 		    <A HREF="pattern.html#pattern">pattern</A>	search <A HREF="pattern.html#pattern">pattern</A> used to locate the error
@@ -7386,7 +7386,7 @@ setqflist({list} [, {action} [, {what}]])		*<A NAME="setqflist()"></A><B>setqfli
 				the last <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 		    quickfixtextfunc
 				function to get the text to display in the
-				<A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.  The value can be the name of
+				<A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.  The value can be the name of
 				a function or a funcref or a <A HREF="eval.html#lambda">lambda</A>.  Refer to
 				|<A HREF="quickfix.html#quickfix-window-function">quickfix-window-function</A>| for an explanation
 				of how to write the function and an example.
@@ -7491,12 +7491,12 @@ settabvar({tabnr}, {varname}, {val})			*<A NAME="settabvar()"></A><B>settabvar()
 
 
 settabwinvar({tabnr}, {winnr}, {varname}, {val})	*<A NAME="settabwinvar()"></A><B>settabwinvar()</B>*
-		Set option or local variable {varname} in <A HREF="windows.html#window">window</A> {winnr} to
+		Set option or local variable {varname} in<A HREF="windows.html#window">窗口</A>{winnr} to
 		{val}.
 		Tabs are numbered starting with one.  For the current <A HREF="tabpage.html#tabpage">tabpage</A>
 		use |<A HREF="#setwinvar()">setwinvar()</A>|.
 		{winnr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {winnr} is zero the current <A HREF="windows.html#window">window</A> is used.
+		When {winnr} is zero the current<A HREF="windows.html#window">窗口</A>is used.
 		This also works for a global or local buffer option, but <A HREF="motion.html#it">it</A>
 		doesn't work for a global or local buffer variable.
 		For a local buffer option the global value is unchanged.
@@ -7512,7 +7512,7 @@ settabwinvar({tabnr}, {winnr}, {varname}, {val})	*<A NAME="settabwinvar()"></A><
 
 
 settagstack({nr}, {dict} [, {action}])			*<A NAME="settagstack()"></A><B>settagstack()</B>*
-		Modify the <A HREF="tagsrch.html#tag">tag</A> stack of the <A HREF="windows.html#window">window</A> {nr} using {dict}.
+		Modify the <A HREF="tagsrch.html#tag">tag</A> stack of the<A HREF="windows.html#window">窗口</A>{nr} using {dict}.
 		{nr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
 
 		For a <A HREF="eval.html#list">list</A> of supported items in {dict}, refer to
@@ -7536,7 +7536,7 @@ settagstack({nr}, {dict} [, {action}])			*<A NAME="settagstack()"></A><B>settags
 		Returns zero for success, -1 for failure.
 
 		Examples (for more examples see |<A HREF="tagsrch.html#tagstack-examples">tagstack-examples</A>|):
-		    Empty the <A HREF="tagsrch.html#tag">tag</A> stack of <A HREF="windows.html#window">window</A> 3:
+		    Empty the <A HREF="tagsrch.html#tag">tag</A> stack of<A HREF="windows.html#window">窗口</A>3:
 <B>			call settagstack(3, {'items' : []})</B>
 
  		    Save and restore the <A HREF="tagsrch.html#tag">tag</A> stack:
@@ -7780,7 +7780,7 @@ sort({list} [, {func} [, {dict}]])			*<A NAME="sort()"></A><B>sort()</B>* *<A NA
 							*<A NAME="soundfold()"></A><B>soundfold()</B>*
 soundfold({word})
 		Return the sound-folded equivalent of {word}.  Uses the first
-		language in <A HREF="options.html#'spelllang'">'spelllang'</A> for the current <A HREF="windows.html#window">window</A> that supports
+		language in <A HREF="options.html#'spelllang'">'spelllang'</A> for the current<A HREF="windows.html#window">窗口</A>that supports
 		soundfolding.  <A HREF="options.html#'spell'">'spell'</A> must be set.  When no sound <A HREF="fold.html#folding">folding</A> is
 		possible the {word} is returned unmodified.
 		This can be used for making spelling suggestions.  Note that
@@ -7812,7 +7812,7 @@ spellbadword([{sentence}])
 <B>			echo spellbadword("the quik brown fox")</B>
 <B><FONT color="#3A6F2B"> 			['quik', 'bad'] </FONT></B>
 
-		The spelling information for the current <A HREF="windows.html#window">window</A> and the value
+		The spelling information for the current<A HREF="windows.html#window">窗口</A>and the value
 		of <A HREF="options.html#'spelllang'">'spelllang'</A> are used.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -7838,7 +7838,7 @@ spellsuggest({word} [, {max} [, {capital}]])
 		returned.  {word} itself is not included in the suggestions,
 		although <A HREF="motion.html#it">it</A> may appear capitalized.
 
-		The spelling information for the current <A HREF="windows.html#window">window</A> is used.  The
+		The spelling information for the current<A HREF="windows.html#window">窗口</A>is used.  The
 		values of <A HREF="options.html#'spelllang'">'spelllang'</A> and <A HREF="options.html#'spellsuggest'">'spellsuggest'</A> are used.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -8056,7 +8056,7 @@ strdisplaywidth({string} [, {col}])			*<A NAME="strdisplaywidth()"></A><B>strdis
 		(first column is zero).  When {col} is omitted zero is used.
 		Otherwise <A HREF="motion.html#it">it</A> is the screen column where to start.  This
 		matters for <A HREF="intro.html#Tab">Tab</A> characters.
-		The option settings of the current <A HREF="windows.html#window">window</A> are used.  This
+		The option settings of the current<A HREF="windows.html#window">窗口</A>are used.  This
 		matters for anything that's displayed differently, such <A HREF="motion.html#as">as</A>
 		<A HREF="options.html#'tabstop'">'tabstop'</A> and <A HREF="options.html#'display'">'display'</A>.
 		When {string} contains characters with East Asian Width Class
@@ -8245,7 +8245,7 @@ strridx({haystack}, {needle} [, {start}])			*<A NAME="strridx()"></A><B>strridx(
 strtrans({string})					*<A NAME="strtrans()"></A><B>strtrans()</B>*
 		The result is a <A HREF="eval.html#String">String</A>, which is {string} with all unprintable
 		characters translated into printable characters |<A HREF="options.html#'isprint'">'isprint'</A>|.
-		Like they are shown in a <A HREF="windows.html#window">window</A>.  Example:
+		Like they are shown in a<A HREF="windows.html#window">窗口</A>.  Example:
 <B>			echo strtrans(@a)</B>
  		This displays a newline in <A HREF="intro.html#register">register</A> a <A HREF="motion.html#as">as</A> &quot;^@&quot; instead of
 		starting a new line.
@@ -8376,14 +8376,14 @@ swapname({buf})						*<A NAME="swapname()"></A><B>swapname()</B>*
 
 synID({lnum}, {col}, {trans})				*<A NAME="synID()"></A><B>synID()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is the <A HREF="syntax.html#syntax">syntax</A> ID at the position
-		{lnum} and {col} in the current <A HREF="windows.html#window">window</A>.
+		{lnum} and {col} in the current<A HREF="windows.html#window">窗口</A>.
 		The <A HREF="syntax.html#syntax">syntax</A> ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| and
 		|<A HREF="#synIDtrans()">synIDtrans()</A>| to obtain <A HREF="syntax.html#syntax">syntax</A> information about text.
 
 		{col} is 1 for the leftmost column, {lnum} is 1 for the first
 		line.  <A HREF="options.html#'synmaxcol'">'synmaxcol'</A> applies, in a longer line zero is returned.
 		Note that when the position is after the last character,
-		that's where the cursor can be in <A HREF="insert.html#Insert">Insert</A> mode, <A HREF="#synID()">synID()</A> returns
+		that's where the cursor can be in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="#synID()">synID()</A> returns
 		zero.  {lnum} is used like with |<A HREF="#getline()">getline()</A>|.
 
 		When {trans} is |<A HREF="eval.html#TRUE">TRUE</A>|, transparent items are reduced to the
@@ -8480,7 +8480,7 @@ synconcealed({lnum}, {col})				*<A NAME="synconcealed()"></A><B>synconcealed()</
 
 synstack({lnum}, {col})					*<A NAME="synstack()"></A><B>synstack()</B>*
 		Return a |<A HREF="eval.html#List">List</A>|, which is the stack of <A HREF="syntax.html#syntax">syntax</A> items at the
-		position {lnum} and {col} in the current <A HREF="windows.html#window">window</A>.  {lnum} is
+		position {lnum} and {col} in the current<A HREF="windows.html#window">窗口</A>.  {lnum} is
 		used like with |<A HREF="#getline()">getline()</A>|.  Each item in the <A HREF="eval.html#List">List</A> is an ID
 		like what |<A HREF="#synID()">synID()</A>| returns.
 		The first item in the <A HREF="eval.html#List">List</A> is the outer region, following are
@@ -8570,7 +8570,7 @@ systemlist({cmd} [, {input} [, {keepempty}]])		*<A NAME="systemlist()"></A><B>sy
 
 tabpagebuflist([{arg}])					*<A NAME="tabpagebuflist()"></A><B>tabpagebuflist()</B>*
 		The result is a |<A HREF="eval.html#List">List</A>|, where each item is the number of the
-		buffer associated with each <A HREF="windows.html#window">window</A> in the current <A HREF="intro.html#tab">tab</A> page.
+		buffer associated with each<A HREF="windows.html#window">窗口</A>in the current <A HREF="intro.html#tab">tab</A> page.
 		{arg} specifies the number of the <A HREF="intro.html#tab">tab</A> page to be used. When
 		omitted the current <A HREF="intro.html#tab">tab</A> page is used.
 		When {arg} is invalid the number zero is returned.
@@ -8579,7 +8579,7 @@ tabpagebuflist([{arg}])					*<A NAME="tabpagebuflist()"></A><B>tabpagebuflist()<
 <B>			for i in range(tabpagenr('$'))</B>
 <B>			   call extend(buflist, tabpagebuflist(i + 1))</B>
 <B>			endfor</B>
- 		Note that a buffer may appear in more than one <A HREF="windows.html#window">window</A>.
+ 		Note that a buffer may appear in more than one<A HREF="windows.html#window">窗口</A>.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetTabpage()-&gt;tabpagebuflist()</B>
@@ -8602,10 +8602,10 @@ tabpagewinnr({tabarg} [, {arg}])			*<A NAME="tabpagewinnr()"></A><B>tabpagewinnr
 		Like |<A HREF="#winnr()">winnr()</A>| but for <A HREF="intro.html#tab">tab</A> page {tabarg}.
 		{tabarg} specifies the number of <A HREF="intro.html#tab">tab</A> page to be used.
 		{arg} is used like with YXXYwinnr()|:
-		- When omitted the current <A HREF="windows.html#window">window</A> number is returned.  This is
-		  the <A HREF="windows.html#window">window</A> which will be used when going to this <A HREF="intro.html#tab">tab</A> page.
+		- When omitted the current<A HREF="windows.html#window">窗口</A>number is returned.  This is
+		  the<A HREF="windows.html#window">窗口</A>which will be used when going to this <A HREF="intro.html#tab">tab</A> page.
 		- When &quot;<A HREF="motion.html#$">$</A>&quot; the number of <A HREF="windows.html#windows">windows</A> is returned.
-		- When &quot;<A HREF="pattern.html##">#</A>&quot; the previous <A HREF="windows.html#window">window</A> nr is returned.
+		- When &quot;<A HREF="pattern.html##">#</A>&quot; the previous<A HREF="windows.html#window">窗口</A>nr is returned.
 		Useful examples:
 <B>		    tabpagewinnr(1)	    " current window of tab page 1</B>
 <B>		    tabpagewinnr(4, '$')    " number of windows in tab page 4</B>
@@ -8683,7 +8683,7 @@ termopen({cmd} [, {opts}])			*<A NAME="termopen()"></A><B>termopen()</B>*
 		to the current (unmodified) buffer. Parameters and behavior
 		are the same <A HREF="motion.html#as">as</A> |<A HREF="#jobstart()">jobstart()</A>| except &quot;pty&quot;, &quot;width&quot;, &quot;height&quot;,
 		and &quot;TERM&quot; are ignored: &quot;height&quot; and &quot;width&quot; are taken from
-		the current <A HREF="windows.html#window">window</A>.
+		the current<A HREF="windows.html#window">窗口</A>.
 		Returns the same values <A HREF="motion.html#as">as</A> |<A HREF="#jobstart()">jobstart()</A>|.
 
 		Terminal environment is initialized <A HREF="motion.html#as">as</A> in &#124;&#124;jobstart-envYXXY,
@@ -9083,8 +9083,8 @@ wait({timeout}, {condition} [, {interval}])			*<A NAME="wait()"></A><B>wait()</B
 
 
 win_execute({id}, {command} [, {silent}])		*<A NAME="win_execute()"></A><B>win_execute()</B>*
-		Like `execute()` but in the <A HREF="repeat.html#context">context</A> of <A HREF="windows.html#window">window</A> {id}.
-		The <A HREF="windows.html#window">window</A> will temporarily be made the current <A HREF="windows.html#window">window</A>,
+		Like `execute()` but in the <A HREF="repeat.html#context">context</A> of<A HREF="windows.html#window">窗口</A>{id}.
+		The<A HREF="windows.html#window">窗口</A>will temporarily be made the current<A HREF="windows.html#window">窗口</A>,
 		without triggering autocommands or <A HREF="change.html#changing">changing</A> directory.  When
 		executing {command} autocommands will be triggered, this may
 		have unexpected side effects.  Use |<A HREF="autocmd.html#:noautocmd">:noautocmd</A>| if needed.
@@ -9106,35 +9106,35 @@ win_findbuf({bufnr})					*<A NAME="win_findbuf()"></A><B>win_findbuf()</B>*
 
 win_getid([{win} [, {tab}]])				*<A NAME="win_getid()"></A><B>win_getid()</B>*
 		Get the |<A HREF="windows.html#window-ID">window-ID</A>| for the specified window.
-		When {win} is missing use the current <A HREF="windows.html#window">window</A>.
-		With {win} this is the <A HREF="windows.html#window">window</A> number.  The top <A HREF="windows.html#window">window</A> has
+		When {win} is missing use the current<A HREF="windows.html#window">窗口</A>.
+		With {win} this is the<A HREF="windows.html#window">窗口</A>number.  The top<A HREF="windows.html#window">窗口</A>has
 		number 1.
 		Without {tab} use the current <A HREF="intro.html#tab">tab</A>, otherwise the <A HREF="intro.html#tab">tab</A> with
 		number {tab}.  The first <A HREF="intro.html#tab">tab</A> has number one.
-		Return zero if the <A HREF="windows.html#window">window</A> cannot be found.
+		Return zero if the<A HREF="windows.html#window">窗口</A>cannot be found.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetWinnr()-&gt;win_getid()</B>
 
 
 win_gettype([{nr}])					*<A NAME="win_gettype()"></A><B>win_gettype()</B>*
-		Return the type of the <A HREF="windows.html#window">window</A>:
-			&quot;<A HREF="autocmd.html#autocmd">autocmd</A>&quot;	<A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="windows.html#window">window</A>. Temporary <A HREF="windows.html#window">window</A>
+		Return the type of the<A HREF="windows.html#window">窗口</A>:
+			&quot;<A HREF="autocmd.html#autocmd">autocmd</A>&quot;	<A HREF="autocmd.html#autocommand">autocommand</A><A HREF="windows.html#window">窗口</A>. Temporary<A HREF="windows.html#window">窗口</A>
 					used to execute autocommands.
-			&quot;command&quot;	command-line <A HREF="windows.html#window">window</A> |<A HREF="cmdline.html#cmdwin">cmdwin</A>|
-			(empty)		normal <A HREF="windows.html#window">window</A>
+			&quot;command&quot;	command-line<A HREF="windows.html#window">窗口</A>|<A HREF="cmdline.html#cmdwin">cmdwin</A>|
+			(empty)		normal<A HREF="windows.html#window">窗口</A>
 			&quot;loclist&quot;	|<A HREF="quickfix.html#location-list-window">location-list-window</A>|
-			&quot;popup&quot;		popup <A HREF="windows.html#window">window</A> |<A HREF="intro.html#popup">popup</A>|
+			&quot;popup&quot;		popup<A HREF="windows.html#window">窗口</A>|<A HREF="intro.html#popup">popup</A>|
 			&quot;preview&quot;	preview window |<A HREF="windows.html#preview-window">preview-window</A>|
 			&quot;quickfix&quot;	|<A HREF="quickfix.html#quickfix-window">quickfix-window</A>|
-			&quot;unknown&quot;	<A HREF="windows.html#window">window</A> {nr} not found
+			&quot;unknown&quot;	<A HREF="windows.html#window">窗口</A>{nr} not found
 
-		When {nr} is omitted return the type of the current <A HREF="windows.html#window">window</A>.
-		When {nr} is given return the type of this <A HREF="windows.html#window">window</A> by number or
+		When {nr} is omitted return the type of the current<A HREF="windows.html#window">窗口</A>.
+		When {nr} is given return the type of this<A HREF="windows.html#window">窗口</A>by number or
 		|<A HREF="windows.html#window-ID">window-ID</A>|.
 
 		Also see the <A HREF="options.html#'buftype'">'buftype'</A> option.  When running a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> in a
-		popup <A HREF="windows.html#window">window</A> then <A HREF="options.html#'buftype'">'buftype'</A> is &quot;<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>&quot; and <A HREF="#win_gettype()">win_gettype()</A>
+		popup<A HREF="windows.html#window">窗口</A>then <A HREF="options.html#'buftype'">'buftype'</A> is &quot;<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>&quot; and <A HREF="#win_gettype()">win_gettype()</A>
 		returns &quot;popup&quot;.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -9142,41 +9142,41 @@ win_gettype([{nr}])					*<A NAME="win_gettype()"></A><B>win_gettype()</B>*
  
 
 win_gotoid({expr})					*<A NAME="win_gotoid()"></A><B>win_gotoid()</B>*
-		Go to <A HREF="windows.html#window">window</A> with ID {expr}.  This may also change the current
+		Go to<A HREF="windows.html#window">窗口</A>with ID {expr}.  This may also change the current
 		<A HREF="tabpage.html#tabpage">tabpage</A>.
-		Return <A HREF="eval.html#TRUE">TRUE</A> if successful, <A HREF="eval.html#FALSE">FALSE</A> if the <A HREF="windows.html#window">window</A> cannot be found.
+		Return <A HREF="eval.html#TRUE">TRUE</A> if successful, <A HREF="eval.html#FALSE">FALSE</A> if the<A HREF="windows.html#window">窗口</A>cannot be found.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetWinid()-&gt;win_gotoid()</B>
 
 
 win_id2tabwin({expr})					*<A NAME="win_id2tabwin()"></A><B>win_id2tabwin()</B>*
-		Return a <A HREF="eval.html#list">list</A> with the <A HREF="intro.html#tab">tab</A> number and <A HREF="windows.html#window">window</A> number of <A HREF="windows.html#window">window</A>
+		Return a <A HREF="eval.html#list">list</A> with the <A HREF="intro.html#tab">tab</A> number and<A HREF="windows.html#window">窗口</A>number of<A HREF="windows.html#window">窗口</A>
 		with ID {expr}: [tabnr, winnr].
-		Return [0, 0] if the <A HREF="windows.html#window">window</A> cannot be found.
+		Return [0, 0] if the<A HREF="windows.html#window">窗口</A>cannot be found.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetWinid()-&gt;win_id2tabwin()</B>
 
 
 win_id2win({expr})					*<A NAME="win_id2win()"></A><B>win_id2win()</B>*
-		Return the <A HREF="windows.html#window">window</A> number of <A HREF="windows.html#window">window</A> with ID {expr}.
-		Return 0 if the <A HREF="windows.html#window">window</A> cannot be found in the current <A HREF="tabpage.html#tabpage">tabpage</A>.
+		Return the<A HREF="windows.html#window">窗口</A>number of<A HREF="windows.html#window">窗口</A>with ID {expr}.
+		Return 0 if the<A HREF="windows.html#window">窗口</A>cannot be found in the current <A HREF="tabpage.html#tabpage">tabpage</A>.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetWinid()-&gt;win_id2win()</B>
 
 
 win_move_separator({nr}, <A HREF="pattern.html#{offset}">{offset}</A>)			*<A NAME="win_move_separator()"></A><B>win_move_separator()</B>*
-		Move <A HREF="windows.html#window">window</A> {nr}'s vertical separator (i.e., the right border)
+		Move<A HREF="windows.html#window">窗口</A>{nr}'s vertical separator (i.e., the right border)
 		by <A HREF="pattern.html#{offset}">{offset}</A> columns, <A HREF="motion.html#as">as</A> if being dragged by the mouse. {nr}
 		can be a window number or |<A HREF="windows.html#window-ID">window-ID</A>|. A positive <A HREF="pattern.html#{offset}">{offset}</A>
 		moves right and a negative <A HREF="pattern.html#{offset}">{offset}</A> moves left. Moving a
 		window's vertical separator will change the width of the
-		<A HREF="windows.html#window">window</A> and the width of other <A HREF="windows.html#windows">windows</A> adjacent to the vertical
+		<A HREF="windows.html#window">窗口</A>and the width of other <A HREF="windows.html#windows">windows</A> adjacent to the vertical
 		separator. The magnitude of <A HREF="intro.html#movement">movement</A> may be smaller than
 		specified (e.g., <A HREF="motion.html#as">as</A> a consequence of maintaining
-		<A HREF="options.html#'winminwidth'">'winminwidth'</A>). Returns <A HREF="eval.html#TRUE">TRUE</A> if the <A HREF="windows.html#window">window</A> can be found and
+		<A HREF="options.html#'winminwidth'">'winminwidth'</A>). Returns <A HREF="eval.html#TRUE">TRUE</A> if the<A HREF="windows.html#window">窗口</A>can be found and
 		<A HREF="eval.html#FALSE">FALSE</A> otherwise.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -9184,14 +9184,14 @@ win_move_separator({nr}, <A HREF="pattern.html#{offset}">{offset}</A>)			*<A NAM
 
 
 win_move_statusline({nr}, <A HREF="pattern.html#{offset}">{offset}</A>)			*<A NAME="win_move_statusline()"></A><B>win_move_statusline()</B>*
-		Move <A HREF="windows.html#window">window</A> {nr}'s status line (i.e., the bottom border) by
+		Move<A HREF="windows.html#window">窗口</A>{nr}'s status line (i.e., the bottom border) by
 		<A HREF="pattern.html#{offset}">{offset}</A> rows, <A HREF="motion.html#as">as</A> if being dragged by the mouse. {nr} can be a
 		window number or |<A HREF="windows.html#window-ID">window-ID</A>|. A positive <A HREF="pattern.html#{offset}">{offset}</A> moves down
 		and a negative <A HREF="pattern.html#{offset}">{offset}</A> moves up. Moving a window's status
-		line will change the height of the <A HREF="windows.html#window">window</A> and the height of
+		line will change the height of the<A HREF="windows.html#window">窗口</A>and the height of
 		other <A HREF="windows.html#windows">windows</A> adjacent to the status line. The magnitude of
 		<A HREF="intro.html#movement">movement</A> may be smaller than specified (e.g., <A HREF="motion.html#as">as</A> a consequence
-		of maintaining <A HREF="options.html#'winminheight'">'winminheight'</A>). Returns <A HREF="eval.html#TRUE">TRUE</A> if the <A HREF="windows.html#window">window</A> can
+		of maintaining <A HREF="options.html#'winminheight'">'winminheight'</A>). Returns <A HREF="eval.html#TRUE">TRUE</A> if the<A HREF="windows.html#window">窗口</A>can
 		be found and <A HREF="eval.html#FALSE">FALSE</A> otherwise.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -9199,12 +9199,12 @@ win_move_statusline({nr}, <A HREF="pattern.html#{offset}">{offset}</A>)			*<A NA
 
 
 win_screenpos({nr})					*<A NAME="win_screenpos()"></A><B>win_screenpos()</B>*
-		Return the screen position of <A HREF="windows.html#window">window</A> {nr} <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">list</A> with two
-		numbers: [row, col].  The first <A HREF="windows.html#window">window</A> always has position
+		Return the screen position of<A HREF="windows.html#window">窗口</A>{nr} <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">list</A> with two
+		numbers: [row, col].  The first<A HREF="windows.html#window">窗口</A>always has position
 		[1, 1], unless there is a tabline, then <A HREF="motion.html#it">it</A> is [2, 1].
 		{nr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.  Use zero
-		for the current <A HREF="windows.html#window">window</A>.
-		Returns [0, 0] if the <A HREF="windows.html#window">window</A> cannot be found in the current
+		for the current<A HREF="windows.html#window">窗口</A>.
+		Returns [0, 0] if the<A HREF="windows.html#window">窗口</A>cannot be found in the current
 		<A HREF="tabpage.html#tabpage">tabpage</A>.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -9212,9 +9212,9 @@ win_screenpos({nr})					*<A NAME="win_screenpos()"></A><B>win_screenpos()</B>*
  
 
 win_splitmove({nr}, {target} [, {options}])		*<A NAME="win_splitmove()"></A><B>win_splitmove()</B>*
-		Move the <A HREF="windows.html#window">window</A> {nr} to a new split of the <A HREF="windows.html#window">window</A> {target}.
-		This is similar to moving to {target}, creating a new <A HREF="windows.html#window">window</A>
-		using |<A HREF="windows.html#:split">:split</A>| but having the same contents <A HREF="motion.html#as">as</A> <A HREF="windows.html#window">window</A> {nr}, and
+		Move the<A HREF="windows.html#window">窗口</A>{nr} to a new split of the<A HREF="windows.html#window">窗口</A>{target}.
+		This is similar to moving to {target}, creating a new<A HREF="windows.html#window">窗口</A>
+		using |<A HREF="windows.html#:split">:split</A>| but having the same contents <A HREF="motion.html#as">as</A><A HREF="windows.html#window">窗口</A>{nr}, and
 		then closing {nr}.
 
 		Both {nr} and {target} can be window numbers or |<A HREF="windows.html#window-ID">window-ID</A>|<A HREF="change.html#s">s</A>.
@@ -9237,11 +9237,11 @@ win_splitmove({nr}, {target} [, {options}])		*<A NAME="win_splitmove()"></A><B>w
 
 							*<A NAME="winbufnr()"></A><B>winbufnr()</B>*
 winbufnr({nr})	The result is a <A HREF="eval.html#Number">Number</A>, which is the number of the buffer
-		associated with <A HREF="windows.html#window">window</A> {nr}.  {nr} can be the <A HREF="windows.html#window">window</A> number or
+		associated with<A HREF="windows.html#window">窗口</A>{nr}.  {nr} can be the<A HREF="windows.html#window">窗口</A>number or
 		the |<A HREF="windows.html#window-ID">window-ID</A>|.
 		When {nr} is zero, the number of the buffer in the current
-		<A HREF="windows.html#window">window</A> is returned.
-		When <A HREF="windows.html#window">window</A> {nr} doesn't exist, -1 is returned.
+		<A HREF="windows.html#window">窗口</A>is returned.
+		When<A HREF="windows.html#window">窗口</A>{nr} doesn't exist, -1 is returned.
 		Example:
 <B>  :echo "The file in the current window is " .. bufname(winbufnr(0))</B>
  
@@ -9251,8 +9251,8 @@ winbufnr({nr})	The result is a <A HREF="eval.html#Number">Number</A>, which is t
 
 							*<A NAME="wincol()"></A><B>wincol()</B>*
 <A HREF="#wincol()">wincol()</A>	The result is a <A HREF="eval.html#Number">Number</A>, which is the virtual column of the
-		cursor in the <A HREF="windows.html#window">window</A>.  This is counting screen cells from the
-		left side of the <A HREF="windows.html#window">window</A>.  The leftmost column is one.
+		cursor in the<A HREF="windows.html#window">窗口</A>.  This is counting screen cells from the
+		left side of the<A HREF="windows.html#window">窗口</A>.  The leftmost column is one.
 
 
 							*<A NAME="windowsversion()"></A><B>windowsversion()</B>*
@@ -9264,12 +9264,12 @@ winbufnr({nr})	The result is a <A HREF="eval.html#Number">Number</A>, which is t
 
 
 winheight({nr})						*<A NAME="winheight()"></A><B>winheight()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is the height of <A HREF="windows.html#window">window</A> {nr}.
+		The result is a <A HREF="eval.html#Number">Number</A>, which is the height of<A HREF="windows.html#window">窗口</A>{nr}.
 		{nr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {nr} is zero, the height of the current <A HREF="windows.html#window">window</A> is
-		returned.  When <A HREF="windows.html#window">window</A> {nr} doesn't exist, -1 is returned.
-		An existing <A HREF="windows.html#window">window</A> always has a height of zero or more.
-		This excludes any <A HREF="windows.html#window">window</A> toolbar line.
+		When {nr} is zero, the height of the current<A HREF="windows.html#window">窗口</A>is
+		returned.  When<A HREF="windows.html#window">窗口</A>{nr} doesn't exist, -1 is returned.
+		An existing<A HREF="windows.html#window">窗口</A>always has a height of zero or more.
+		This excludes any<A HREF="windows.html#window">窗口</A>toolbar line.
 		Examples:
 <B>  :echo "The current window has " .. winheight(0) .. " lines."</B>
 
@@ -9285,7 +9285,7 @@ winlayout([{tabnr}])					*<A NAME="winlayout()"></A><B>winlayout()</B>*
 		with number {tabnr}. If the <A HREF="tabpage.html#tabpage">tabpage</A> {tabnr} is not found,
 		returns an empty <A HREF="eval.html#list">list</A>.
 
-		For a leaf <A HREF="windows.html#window">window</A>, <A HREF="motion.html#it">it</A> returns:
+		For a leaf<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> returns:
 			['leaf', {winid}]
 		For horizontally split <A HREF="windows.html#windows">windows</A>, which form a column, <A HREF="motion.html#it">it</A>
 		returns:
@@ -9313,32 +9313,32 @@ winlayout([{tabnr}])					*<A NAME="winlayout()"></A><B>winlayout()</B>*
 
 							*<A NAME="winline()"></A><B>winline()</B>*
 <A HREF="#winline()">winline()</A>	The result is a <A HREF="eval.html#Number">Number</A>, which is the screen line of the cursor
-		in the <A HREF="windows.html#window">window</A>.  This is counting screen lines from the top of
-		the <A HREF="windows.html#window">window</A>.  The first line is one.
+		in the<A HREF="windows.html#window">窗口</A>.  This is counting screen lines from the top of
+		the<A HREF="windows.html#window">窗口</A>.  The first line is one.
 		If the cursor was moved the view on the file will be updated
 		first, this may cause a scroll.
 
 
 							*<A NAME="winnr()"></A><B>winnr()</B>*
 winnr([{arg}])	The result is a <A HREF="eval.html#Number">Number</A>, which is the number of the current
-		<A HREF="windows.html#window">window</A>.  The top <A HREF="windows.html#window">window</A> has number 1.
-		Returns zero for a popup <A HREF="windows.html#window">window</A>.
+		<A HREF="windows.html#window">窗口</A>.  The top<A HREF="windows.html#window">窗口</A>has number 1.
+		Returns zero for a popup<A HREF="windows.html#window">窗口</A>.
 
 		The optional argument {arg} supports the following values:
-			$	the number of the last <A HREF="windows.html#window">window</A> (the <A HREF="windows.html#window">window</A>
+			$	the number of the last<A HREF="windows.html#window">窗口</A>(the<A HREF="windows.html#window">窗口</A>
 				<A HREF="intro.html#count">count</A>).
-			#	the number of the last accessed <A HREF="windows.html#window">window</A> (where
+			#	the number of the last accessed<A HREF="windows.html#window">窗口</A>(where
 				|<A HREF="windows.html#CTRL-W_p">CTRL-W_p</A>| goes to).  If there is no previous
-				<A HREF="windows.html#window">window</A> or <A HREF="motion.html#it">it</A> is in another <A HREF="intro.html#tab">tab</A> page 0 is
+				<A HREF="windows.html#window">窗口</A>or <A HREF="motion.html#it">it</A> is in another <A HREF="intro.html#tab">tab</A> page 0 is
 				returned.
-			{N}j	the number of the Nth <A HREF="windows.html#window">window</A> below the
-				current <A HREF="windows.html#window">window</A> (where |<A HREF="windows.html#CTRL-W_j">CTRL-W_j</A>| goes to).
-			{N}k	the number of the Nth <A HREF="windows.html#window">window</A> above the current
-				<A HREF="windows.html#window">window</A> (where |<A HREF="windows.html#CTRL-W_k">CTRL-W_k</A>| goes to).
-			{N}h	the number of the Nth <A HREF="windows.html#window">window</A> left of the
-				current <A HREF="windows.html#window">window</A> (where |<A HREF="windows.html#CTRL-W_h">CTRL-W_h</A>| goes to).
-			{N}l	the number of the Nth <A HREF="windows.html#window">window</A> right of the
-				current <A HREF="windows.html#window">window</A> (where |<A HREF="windows.html#CTRL-W_l">CTRL-W_l</A>| goes to).
+			{N}j	the number of the Nth<A HREF="windows.html#window">窗口</A>below the
+				current<A HREF="windows.html#window">窗口</A>(where |<A HREF="windows.html#CTRL-W_j">CTRL-W_j</A>| goes to).
+			{N}k	the number of the Nth<A HREF="windows.html#window">窗口</A>above the current
+				<A HREF="windows.html#window">窗口</A>(where |<A HREF="windows.html#CTRL-W_k">CTRL-W_k</A>| goes to).
+			{N}h	the number of the Nth<A HREF="windows.html#window">窗口</A>left of the
+				current<A HREF="windows.html#window">窗口</A>(where |<A HREF="windows.html#CTRL-W_h">CTRL-W_h</A>| goes to).
+			{N}l	the number of the Nth<A HREF="windows.html#window">窗口</A>right of the
+				current<A HREF="windows.html#window">窗口</A>(where |<A HREF="windows.html#CTRL-W_l">CTRL-W_l</A>| goes to).
 		The number can be used with |<A HREF="windows.html#CTRL-W_w">CTRL-W_w</A>| and &quot;<A HREF="windows.html#:wincmd">:wincmd</A> w&quot;
 		|<A HREF="windows.html#:wincmd">:wincmd</A>|.
 		When {arg} is invalid an error is given and zero is returned.
@@ -9354,8 +9354,8 @@ winnr([{arg}])	The result is a <A HREF="eval.html#Number">Number</A>, which is t
 
 							*<A NAME="winrestcmd()"></A><B>winrestcmd()</B>*
 <A HREF="#winrestcmd()">winrestcmd()</A>	Returns a sequence of |<A HREF="windows.html#:resize">:resize</A>| commands that should restore
-		the current <A HREF="windows.html#window">window</A> sizes.  Only works properly when no <A HREF="windows.html#windows">windows</A>
-		are opened or closed and the current <A HREF="windows.html#window">window</A> and <A HREF="intro.html#tab">tab</A> page is
+		the current<A HREF="windows.html#window">窗口</A>sizes.  Only works properly when no <A HREF="windows.html#windows">windows</A>
+		are opened or closed and the current<A HREF="windows.html#window">窗口</A>and <A HREF="intro.html#tab">tab</A> page is
 		unchanged.
 		Example:
 <B>			:let cmd = winrestcmd()</B>
@@ -9366,7 +9366,7 @@ winnr([{arg}])	The result is a <A HREF="eval.html#Number">Number</A>, which is t
 							*<A NAME="winrestview()"></A><B>winrestview()</B>*
 winrestview({dict})
 		Uses the |<A HREF="eval.html#Dictionary">Dictionary</A>| returned by |<A HREF="#winsaveview()">winsaveview()</A>| to restore
-		the view of the current <A HREF="windows.html#window">window</A>.
+		the view of the current<A HREF="windows.html#window">窗口</A>.
 		Note: The {dict} does not have to contain all values, that are
 		returned by |<A HREF="#winsaveview()">winsaveview()</A>|. If values are missing, those
 		settings won't be restored. So you can use:
@@ -9378,7 +9378,7 @@ winrestview({dict})
 		same. This is useful, if you set the cursor position manually.
 
 		If you have changed the values the result is unpredictable.
-		If the <A HREF="windows.html#window">window</A> size changed the result won't be the same.
+		If the<A HREF="windows.html#window">窗口</A>size changed the result won't be the same.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetView()-&gt;winrestview()</B>
@@ -9386,7 +9386,7 @@ winrestview({dict})
 
 							*<A NAME="winsaveview()"></A><B>winsaveview()</B>*
 <A HREF="#winsaveview()">winsaveview()</A>	Returns a |<A HREF="eval.html#Dictionary">Dictionary</A>| that contains information to restore
-		the view of the current <A HREF="windows.html#window">window</A>.  Use |<A HREF="#winrestview()">winrestview()</A>| to
+		the view of the current<A HREF="windows.html#window">窗口</A>.  Use |<A HREF="#winrestview()">winrestview()</A>| to
 		restore the view.
 		This is useful if you have a <A HREF="map.html#mapping">mapping</A> that jumps around in the
 		buffer and you want to go back to the original view.
@@ -9400,7 +9400,7 @@ winrestview({dict})
 					returns)
 			coladd		cursor column offset for <A HREF="options.html#'virtualedit'">'virtualedit'</A>
 			curswant	column for vertical <A HREF="intro.html#movement">movement</A>
-			topline		first line in the <A HREF="windows.html#window">window</A>
+			topline		first line in the<A HREF="windows.html#window">窗口</A>
 			topfill		filler lines, only in <A HREF="diff.html#diff">diff</A> mode
 			leftcol		first column displayed; only used when
 					<A HREF="options.html#'wrap'">'wrap'</A> is off
@@ -9410,11 +9410,11 @@ winrestview({dict})
 
 
 winwidth({nr})						*<A NAME="winwidth()"></A><B>winwidth()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is the width of <A HREF="windows.html#window">window</A> {nr}.
+		The result is a <A HREF="eval.html#Number">Number</A>, which is the width of<A HREF="windows.html#window">窗口</A>{nr}.
 		{nr} can be the window number or the |<A HREF="windows.html#window-ID">window-ID</A>|.
-		When {nr} is zero, the width of the current <A HREF="windows.html#window">window</A> is
-		returned.  When <A HREF="windows.html#window">window</A> {nr} doesn't exist, -1 is returned.
-		An existing <A HREF="windows.html#window">window</A> always has a width of zero or more.
+		When {nr} is zero, the width of the current<A HREF="windows.html#window">窗口</A>is
+		returned.  When<A HREF="windows.html#window">窗口</A>{nr} doesn't exist, -1 is returned.
+		An existing<A HREF="windows.html#window">窗口</A>always has a width of zero or more.
 		Examples:
 <B>  :echo "The current window has " .. winwidth(0) .. " columns."</B>
 <B>  :if winwidth(0) &lt;= 50</B>

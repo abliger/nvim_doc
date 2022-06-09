@@ -138,11 +138,11 @@
 			for <A HREF="visual.html#CTRL-V">CTRL-V</A> you can type:
 <B>				:help ^V</B>
  			This also works together with other characters, for
-			example to find help for <A HREF="visual.html#CTRL-V">CTRL-V</A> in <A HREF="insert.html#Insert">Insert</A> mode:
+			example to find help for <A HREF="visual.html#CTRL-V">CTRL-V</A> in <A HREF="intro.html#Insert">插入</A>模式:
 <B>				:help i^V</B>
  
 			It is also possible to first <A HREF="diff.html#do">do</A> &quot;<A HREF="#:help">:help</A>&quot; and then
-			use &quot;<A HREF="tagsrch.html#:tag">:tag</A> {pattern}&quot; in the help <A HREF="windows.html#window">window</A>.  The
+			use &quot;<A HREF="tagsrch.html#:tag">:tag</A> {pattern}&quot; in the help<A HREF="windows.html#window">窗口</A>.  The
 			&quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot; command can then be used to jump to other
 			matches, &quot;tselect&quot; to <A HREF="eval.html#list">list</A> matches and choose one.
 <B>				:help index</B>
@@ -172,10 +172,10 @@
 
 
 							*<A NAME=":helpc"></A><B>:helpc</B>* *<A NAME=":helpclose"></A><B>:helpclose</B>*
-:helpc[lose]		Close one help <A HREF="windows.html#window">window</A>, if there is one.
-			Vim will try to restore the <A HREF="windows.html#window">window</A> layout (including
+:helpc[lose]		Close one help<A HREF="windows.html#window">窗口</A>, if there is one.
+			Vim will try to restore the<A HREF="windows.html#window">窗口</A>layout (including
 			cursor position) to the same layout <A HREF="motion.html#it">it</A> was before
-			opening the help <A HREF="windows.html#window">window</A> initially.  This might cause
+			opening the help<A HREF="windows.html#window">窗口</A>initially.  This might cause
 			triggering several autocommands.
 
 
@@ -188,7 +188,7 @@
 			You can navigate through the matches with the
 			|<A HREF="quickfix.html#quickfix">quickfix</A>| commands, e.g., |<A HREF="quickfix.html#:cnext">:cnext</A>| to jump to the
 			next one.  Or use |<A HREF="quickfix.html#:cwindow">:cwindow</A>| to get the <A HREF="eval.html#list">list</A> of
-			matches in the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.
+			matches in the <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.
 			{pattern} is used <A HREF="motion.html#as">as</A> a Vim <A HREF="pattern.html#regexp">regexp</A> |<A HREF="pattern.html#pattern">pattern</A>|.
 			<A HREF="options.html#'ignorecase'">'ignorecase'</A> is not used, add &quot;\c&quot; to ignore <A HREF="change.html#case">case</A>.
 			Example for <A HREF="change.html#case">case</A> sensitive search:
@@ -211,11 +211,11 @@
 							*<A NAME=":lh"></A><B>:lh</B>* *<A NAME=":lhelpgrep"></A><B>:lhelpgrep</B>*
 :lh[elpgrep] {pattern}[@xx]
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:helpgrep">:helpgrep</A>&quot;, except the location <A HREF="eval.html#list">list</A> is used
-			instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.  If the help <A HREF="windows.html#window">window</A> is
-			already opened, then the location <A HREF="eval.html#list">list</A> for that <A HREF="windows.html#window">window</A>
-			is used.  Otherwise, a new help <A HREF="windows.html#window">window</A> is opened and
-			the location <A HREF="eval.html#list">list</A> for that <A HREF="windows.html#window">window</A> is set.  The
-			location <A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A> is not changed
+			instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.  If the help<A HREF="windows.html#window">窗口</A>is
+			already opened, then the location <A HREF="eval.html#list">list</A> for that<A HREF="windows.html#window">窗口</A>
+			is used.  Otherwise, a new help<A HREF="windows.html#window">窗口</A>is opened and
+			the location <A HREF="eval.html#list">list</A> for that<A HREF="windows.html#window">窗口</A>is set.  The
+			location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>is not changed
 			then.
 
 
@@ -225,17 +225,17 @@
 
 
 							*<A NAME=":viu"></A><B>:viu</B>* *<A NAME=":viusage"></A><B>:viusage</B>*
-:viu[sage]		Show help on <A HREF="intro.html#Normal">Normal</A> mode commands.  Added to simulate
+:viu[sage]		Show help on <A HREF="intro.html#Normal">正常</A>模式 commands.  Added to simulate
 			the <A HREF="intro.html#Nvi">Nvi</A> command.
 
 When no argument is given to |<A HREF="#:help">:help</A>| the file given with the <A HREF="options.html#'helpfile'">'helpfile'</A> option
 will be opened.  Otherwise the specified <A HREF="tagsrch.html#tag">tag</A> is searched for in all &quot;doc/tags&quot;
 files in the directories specified in the <A HREF="options.html#'runtimepath'">'runtimepath'</A> option.
 
-If you would like to open the help in the current <A HREF="windows.html#window">window</A>, see this tip:
+If you would like to open the help in the current<A HREF="windows.html#window">窗口</A>, see this tip:
 |<A HREF="tips.html#help-curwin">help-curwin</A>|.
 
-The initial height of the help <A HREF="windows.html#window">window</A> can be set with the <A HREF="options.html#'helpheight'">'helpheight'</A> option
+The initial height of the help<A HREF="windows.html#window">窗口</A>can be set with the <A HREF="options.html#'helpheight'">'helpheight'</A> option
 (default 20).
 
 						*<A NAME="help-buffer-options"></A><B>help-buffer-options</B>*
@@ -266,11 +266,11 @@ Jump to specific subjects by using <A HREF="tagsrch.html#tags">tags</A>.  This c
   characters.
 
 Use <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> or <A HREF="motion.html#CTRL-O">CTRL-O</A> to jump back.
-Use &quot;<A HREF="editing.html#:q">:q</A>&quot; to close the help <A HREF="windows.html#window">window</A>.
+Use &quot;<A HREF="editing.html#:q">:q</A>&quot; to close the help<A HREF="windows.html#window">窗口</A>.
 
 If there are several matches for an item you are looking for, this is how you
 can jump to each one of them:
-1. Open a help <A HREF="windows.html#window">window</A>
+1. Open a help<A HREF="windows.html#window">窗口</A>
 2. Use the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command with a slash prepended to the <A HREF="tagsrch.html#tag">tag</A>.  E.g.:
 <B>	:tag /min</B>
 3. Use &quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot; to jump to the next matching <A HREF="tagsrch.html#tag">tag</A>.
@@ -288,7 +288,7 @@ file.  The files in $VIMRUNTIME/doc are skipped.
 
 
 							*<A NAME="help-xterm-window"></A><B>help-xterm-window</B>*
-If you want to have the help in another xterm <A HREF="windows.html#window">window</A>, you could use this
+If you want to have the help in another xterm<A HREF="windows.html#window">窗口</A>, you could use this
 command:
 <B>	:!xterm -e vim +help &amp;</B>
  

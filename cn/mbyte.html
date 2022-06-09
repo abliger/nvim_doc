@@ -567,7 +567,7 @@ Use the RPM or port for your system.
     Status Area is created in a fixed position within the area of application,
     in <A HREF="change.html#case">case</A> of Vim, the position is the additional status line.  Preedit Area
     is made at present input position of application.  The input <A HREF="eval.html#method">method</A>
-    displays pre-edit data in a <A HREF="windows.html#window">window</A> which <A HREF="motion.html#it">it</A> brings up directly over the
+    displays pre-edit data in a<A HREF="windows.html#window">窗口</A>which <A HREF="motion.html#it">it</A> brings up directly over the
     text insertion position.
 *.  off-the-spot					*OffTheSpot*
     Preedit Area and Status Area are performed in the area of application, in
@@ -577,7 +577,7 @@ Use the RPM or port for your system.
 *.  root-window						*Root*
     Preedit Area and Status Area are outside of the application.  The input
     <A HREF="eval.html#method">method</A> displays all pre-edit data in a separate area of the screen in a
-    <A HREF="windows.html#window">window</A> specific to the input <A HREF="eval.html#method">method</A>.
+   <A HREF="windows.html#window">窗口</A>specific to the input <A HREF="eval.html#method">method</A>.
 
 
 
@@ -615,12 +615,12 @@ For example, when you are using kinput2 <A HREF="motion.html#as">as</A> |<A HREF
 <B>	*.preeditType: OverTheSpot</B>
  
 When using |<A HREF="#OverTheSpot">OverTheSpot</A>|, <A HREF="gui.html#GUI">GUI</A> Vim always connects to the IM Server even in
-<A HREF="intro.html#Normal">Normal</A> mode, so you can input your language with commands like &quot;<A HREF="motion.html#f">f</A>&quot; and &quot;<A HREF="change.html#r">r</A>&quot;.
+<A HREF="intro.html#Normal">正常</A>模式, so you can input your language with commands like &quot;<A HREF="motion.html#f">f</A>&quot; and &quot;<A HREF="change.html#r">r</A>&quot;.
 But when using one of the other two methods, <A HREF="gui.html#GUI">GUI</A> Vim connects to the IM Server
-only if <A HREF="motion.html#it">it</A> is not in <A HREF="intro.html#Normal">Normal</A> mode.
+only if <A HREF="motion.html#it">it</A> is not in <A HREF="intro.html#Normal">正常</A>模式.
 
 If your IM Server does not support |<A HREF="#OverTheSpot">OverTheSpot</A>|, and if you want to use your
-language with some <A HREF="intro.html#Normal">Normal</A> mode command like &quot;<A HREF="motion.html#f">f</A>&quot; or &quot;<A HREF="change.html#r">r</A>&quot;, then you should use a
+language with some <A HREF="intro.html#Normal">正常</A>模式 command like &quot;<A HREF="motion.html#f">f</A>&quot; or &quot;<A HREF="change.html#r">r</A>&quot;, then you should use a
 localized xterm  or an xterm which supports |<A HREF="#XIM">XIM</A>|
 
 If needed, you can set the XMODIFIERS environment variable:
@@ -658,8 +658,8 @@ available keymap files, use this:
 
 In <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode you can use <A HREF="editing.html#CTRL-^">CTRL-^</A> to toggle between using the
 keyboard map or not. |<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>| |<A HREF="cmdline.html#c_CTRL-^">c_CTRL-^</A>|
-This flag is remembered for <A HREF="insert.html#Insert">Insert</A> mode with the <A HREF="options.html#'iminsert'">'iminsert'</A> option.  When
-leaving and entering <A HREF="insert.html#Insert">Insert</A> mode the previous value is used.  The same value
+This flag is remembered for <A HREF="intro.html#Insert">插入</A>模式 with the <A HREF="options.html#'iminsert'">'iminsert'</A> option.  When
+leaving and entering <A HREF="intro.html#Insert">插入</A>模式 the previous value is used.  The same value
 is also used for commands that take a single character argument, like |<A HREF="motion.html#f">f</A>| and
 |<A HREF="change.html#r">r</A>|.
 For <A HREF="cmdline.html#Command-line">Command-line</A> mode the flag is NOT remembered.  You are expected to type an

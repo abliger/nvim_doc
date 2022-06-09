@@ -80,7 +80,7 @@
 
 
 When entering text, Vim offers various ways to reduce the number of keystrokes
-and avoid typing mistakes.  Use <A HREF="insert.html#Insert">Insert</A> mode completion to repeat previously
+and avoid typing mistakes.  Use <A HREF="intro.html#Insert">插入</A>模式 completion to repeat previously
 typed words.  Abbreviate long words to short ones.  Type characters that
 aren't on your keyboard.
 
@@ -93,11 +93,11 @@ aren't on your keyboard.
 |<A HREF="#24.7">24.7</A>|	<A HREF="map.html#Abbreviations">Abbreviations</A>
 |<A HREF="#24.8">24.8</A>|	Entering special characters
 |<A HREF="#24.9">24.9</A>|	<A HREF="digraph.html#Digraphs">Digraphs</A>
-|<A HREF="#24.10">24.10</A>|	<A HREF="intro.html#Normal">Normal</A> mode commands
+|<A HREF="#24.10">24.10</A>|	<A HREF="intro.html#Normal">正常</A>模式 commands
 
-     Next chapter: |<A HREF="usr_25.html">usr_25.txt</A>|  Editing formatted text
- Previous chapter: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_25.html">usr_25.txt</A>|  Editing formatted text
+上一章: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -131,11 +131,11 @@ would type this to correct <A HREF="motion.html#it">it</A>:
 
 <B>					&lt;Esc&gt;4blraA</B>
 
- 	get out of <A HREF="insert.html#Insert">Insert</A> mode		<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>
+ 	get out of <A HREF="intro.html#Insert">插入</A>模式		<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>
 	four words back			     4b
 	move on top of the &quot;<A HREF="insert.html#o">o</A>&quot;		       <A HREF="motion.html#l">l</A>
 	replace with &quot;<A HREF="insert.html#a">a</A>&quot;			ra
-	restart <A HREF="insert.html#Insert">Insert</A> mode			  A
+	restart <A HREF="intro.html#Insert">插入</A>模式			  A
 
 Another way to <A HREF="diff.html#do">do</A> this:
 
@@ -147,13 +147,13 @@ Another way to <A HREF="diff.html#do">do</A> this:
 	insert an &quot;<A HREF="insert.html#a">a</A>&quot;					    a
 	go to end of the line				     <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>
 
-This uses special keys to move around, while remaining in <A HREF="insert.html#Insert">Insert</A> mode.  This
+This uses special keys to move around, while remaining in <A HREF="intro.html#Insert">插入</A>模式.  This
 resembles what you would <A HREF="diff.html#do">do</A> in a modeless editor.  It's easier to remember,
 but takes more time (you have to move your hand from the letters to the cursor
 keys, and the <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A> key is hard to press without looking at the keyboard).
    These special keys are most useful when <A HREF="editing.html#writing">writing</A> a <A HREF="map.html#mapping">mapping</A> that doesn't
-leave <A HREF="insert.html#Insert">Insert</A> mode.  The extra typing doesn't matter then.
-   An overview of the keys you can use in <A HREF="insert.html#Insert">Insert</A> mode:
+leave <A HREF="intro.html#Insert">插入</A>模式.  The extra typing doesn't matter then.
+   An overview of the keys you can use in <A HREF="intro.html#Insert">插入</A>模式:
 
 	<A HREF="motion.html#&lt;C-Home&gt;">&lt;C-Home&gt;</A>	to start of the file
 	<A HREF="scroll.html#&lt;PageUp&gt;">&lt;PageUp&gt;</A>	a whole screenful up
@@ -283,7 +283,7 @@ directory:
 
 	main.c  sub_count.c  sub_done.c  sub_exit.c
 
-Now enter <A HREF="insert.html#Insert">Insert</A> mode and start typing:
+Now enter <A HREF="intro.html#Insert">插入</A>模式 and start typing:
 
 <B><FONT color="#3A6F2B">	The exit code is in the file sub </FONT></B>
 
@@ -347,7 +347,7 @@ work.
 *<A NAME="24.4"></A><B>24.4</B>*	Repeating an insert
 
 If you press <A HREF="change.html#CTRL-A">CTRL-A</A>, the editor inserts the text you typed the last time you
-were in <A HREF="insert.html#Insert">Insert</A> mode.
+were in <A HREF="intro.html#Insert">插入</A>模式.
    Assume, for example, that you have a file that begins with the following:
 
 <B><FONT color="#3A6F2B">	"file.h" </FONT></B>
@@ -377,7 +377,7 @@ insert.  Now you type  &quot;main.h&quot;&lt;Enter&gt;  to finish the line:
 <B><FONT color="#3A6F2B">	#include "main.h" </FONT></B>
 <B><FONT color="#3A6F2B">	/* Main program begins */ </FONT></B>
 
-The CTRL-@ command does a <A HREF="change.html#CTRL-A">CTRL-A</A> and then exits <A HREF="insert.html#Insert">Insert</A> mode.  That's a quick
+The CTRL-@ command does a <A HREF="change.html#CTRL-A">CTRL-A</A> and then exits <A HREF="intro.html#Insert">插入</A>模式.  That's a quick
 way of doing exactly the same insertion again.
 
 ==============================================================================
@@ -487,7 +487,7 @@ As a programmer, I use two rather unusual <A HREF="map.html#abbreviations">abbre
 These are used for creating boxed comments.  The comment starts with #b, which
 draws the top line.  I then type the comment text and use #e to draw the
 bottom line.
-   Notice that the #e abbreviation begins with a space.  In other words, the
+   Notice that the #e abbreviation begins with a space.换句话说, the
 first two characters are space-star.  Usually Vim ignores spaces between the
 abbreviation and the expansion.  To avoid that problem, I <A HREF="spell.html#spell">spell</A> space <A HREF="motion.html#as">as</A> seven
 characters: <A HREF="change.html#&lt;">&lt;</A>, <A HREF="change.html#S">S</A>, <A HREF="change.html#p">p</A>, a, <A HREF="change.html#c">c</A>, <A HREF="motion.html#e">e</A>, <A HREF="change.html#&gt;">&gt;</A>.
@@ -519,8 +519,8 @@ The &quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot; command lists the
 	<A HREF="insert.html#i">i</A>  ad		 advertisement
 	!  teh		 the
 
-The &quot;<A HREF="insert.html#i">i</A>&quot; in the first column indicates <A HREF="insert.html#Insert">Insert</A> mode.  These <A HREF="map.html#abbreviations">abbreviations</A> are
-only active in <A HREF="insert.html#Insert">Insert</A> mode.  Other possible characters are:
+The &quot;<A HREF="insert.html#i">i</A>&quot; in the first column indicates <A HREF="intro.html#Insert">插入</A>模式.  These <A HREF="map.html#abbreviations">abbreviations</A> are
+only active in <A HREF="intro.html#Insert">插入</A>模式.  Other possible characters are:
 
 	<A HREF="change.html#c">c</A>	<A HREF="cmdline.html#Command-line">Command-line</A> mode			<A HREF="map.html#:cabbrev">:cabbrev</A>
 	!	both <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode	<A HREF="map.html#:abbreviate">:abbreviate</A>
@@ -550,7 +550,7 @@ abbreviation for &quot;fresh&quot;, but that's very unlikely).
 
 <B>	:abclear</B>
 
-&quot;<A HREF="map.html#:unabbreviate">:unabbreviate</A>&quot; and &quot;<A HREF="map.html#:abclear">:abclear</A>&quot; also come in the variants for <A HREF="insert.html#Insert">Insert</A> mode
+&quot;<A HREF="map.html#:unabbreviate">:unabbreviate</A>&quot; and &quot;<A HREF="map.html#:abclear">:abclear</A>&quot; also come in the variants for <A HREF="intro.html#Insert">插入</A>模式
 (&quot;:iunabbreviate and &quot;<A HREF="map.html#:iabclear">:iabclear</A>&quot;) and <A HREF="cmdline.html#Command-line">Command-line</A> mode (&quot;:cunabbreviate&quot; and
 &quot;:cabclear&quot;).
 
@@ -581,7 +581,7 @@ example:
 
 <B>	CTRL-V &lt;Esc&gt;</B>
 
-Inserts an <A HREF="intro.html#escape">escape</A> character.  Thus you don't leave <A HREF="insert.html#Insert">Insert</A> mode.  (Don't type
+Inserts an <A HREF="intro.html#escape">escape</A> character.  Thus you don't leave <A HREF="intro.html#Insert">插入</A>模式.  (Don't type
 the space after <A HREF="visual.html#CTRL-V">CTRL-V</A>, it's only to make this easier to read).
 
 	Note:
@@ -665,18 +665,18 @@ here: |<A HREF="usr_45.html#45.5">45.5</A>|
 
 ==============================================================================
 
-*<A NAME="24.10"></A><B>24.10</B>*	<A HREF="intro.html#Normal">Normal</A> mode commands
+*<A NAME="24.10"></A><B>24.10</B>*	<A HREF="intro.html#Normal">正常</A>模式 commands
 
-<A HREF="insert.html#Insert">Insert</A> mode offers a limited number of commands.  In <A HREF="intro.html#Normal">Normal</A> mode you have many
-more.  When you want to use one, you usually leave <A HREF="insert.html#Insert">Insert</A> mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>,
-execute the <A HREF="intro.html#Normal">Normal</A> mode command, and re-enter <A HREF="insert.html#Insert">Insert</A> mode with &quot;<A HREF="insert.html#i">i</A>&quot; or &quot;<A HREF="insert.html#a">a</A>&quot;.
+<A HREF="intro.html#Insert">插入</A>模式 offers a limited number of commands.  In <A HREF="intro.html#Normal">正常</A>模式 you have many
+more.  When you want to use one, you usually leave <A HREF="intro.html#Insert">插入</A>模式 with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>,
+execute the <A HREF="intro.html#Normal">正常</A>模式 command, and re-enter <A HREF="intro.html#Insert">插入</A>模式 with &quot;<A HREF="insert.html#i">i</A>&quot; or &quot;<A HREF="insert.html#a">a</A>&quot;.
    There is a quicker way.  With <A HREF="motion.html#CTRL-O">CTRL-O</A> {command} you can execute any <A HREF="intro.html#Normal">Normal</A>
-mode command from <A HREF="insert.html#Insert">Insert</A> mode.  For example, to delete from the cursor to the
+mode command from <A HREF="intro.html#Insert">插入</A>模式.  For example, to delete from the cursor to the
 end of the line:
 
 <B>	CTRL-O D</B>
 
-You can execute only one <A HREF="intro.html#Normal">Normal</A> mode command this way.  But you can specify a
+You can execute only one <A HREF="intro.html#Normal">正常</A>模式 command this way.  But you can specify a
 <A HREF="intro.html#register">register</A> or a <A HREF="intro.html#count">count</A>.  A more complicated example:
 
 <B>	CTRL-O "g3dw</B>
@@ -685,9 +685,7 @@ This deletes up to the third <A HREF="motion.html#word">word</A> into <A HREF="i
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_25.html">usr_25.txt</A>|  Editing formatted text
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_25.html">usr_25.txt</A>|  Editing formatted text
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

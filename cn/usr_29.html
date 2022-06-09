@@ -81,18 +81,18 @@
 
 The creator of Vim is a computer programmer.  It's no surprise that Vim
 contains many features to aid in <A HREF="editing.html#writing">writing</A> programs.  Jump around to find where
-identifiers are defined and used.  Preview declarations in a separate <A HREF="windows.html#window">window</A>.
+identifiers are defined and used.  Preview declarations in a separate<A HREF="windows.html#window">窗口</A>.
 There is more in the next chapter.
 
 |<A HREF="#29.1">29.1</A>|	Using <A HREF="tagsrch.html#tags">tags</A>
-|<A HREF="#29.2">29.2</A>|	The preview <A HREF="windows.html#window">window</A>
+|<A HREF="#29.2">29.2</A>|	The preview<A HREF="windows.html#window">窗口</A>
 |<A HREF="#29.3">29.3</A>|	Moving through a program
 |<A HREF="#29.4">29.4</A>|	Finding global identifiers
 |<A HREF="#29.5">29.5</A>|	Finding local identifiers
 
-     Next chapter: |<A HREF="usr_30.html">usr_30.txt</A>|  Editing programs
- Previous chapter: |<A HREF="usr_28.html">usr_28.txt</A>|  <A HREF="fold.html#Folding">Folding</A>
-Table of contents: |<A HREF="usr_toc.html">usr_toc.txt</A>|
+下一章: |<A HREF="usr_30.html">usr_30.txt</A>|  Editing programs
+上一章: |<A HREF="usr_28.html">usr_28.txt</A>|  <A HREF="fold.html#Folding">Folding</A>
+目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
@@ -180,19 +180,19 @@ up again with <A HREF="tagsrch.html#CTRL-T">CTRL-T</A>.  Use &quot;<A HREF="tags
 
 SPLIT WINDOWS
 
-The &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command replaces the file in the current <A HREF="windows.html#window">window</A> with the one
+The &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command replaces the file in the current<A HREF="windows.html#window">窗口</A>with the one
 containing the new function.  But suppose you want to see not only the old
-function but also the new one?  You can split the <A HREF="windows.html#window">window</A> using the &quot;<A HREF="windows.html#:split">:split</A>&quot;
+function but also the new one?  You can split the<A HREF="windows.html#window">窗口</A>using the &quot;<A HREF="windows.html#:split">:split</A>&quot;
 command followed by the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command.  Vim has a shorthand command that does
 both:
 <B>	:stag tagname</B>
 
-To split the current <A HREF="windows.html#window">window</A> and jump to the <A HREF="tagsrch.html#tag">tag</A> under the cursor use this
+To split the current<A HREF="windows.html#window">窗口</A>and jump to the <A HREF="tagsrch.html#tag">tag</A> under the cursor use this
 command:
 
 <B>	CTRL-W ]</B>
 
-If a <A HREF="intro.html#count">count</A> is specified, the new <A HREF="windows.html#window">window</A> will be that many lines high.
+If a <A HREF="intro.html#count">count</A> is specified, the new<A HREF="windows.html#window">窗口</A>will be that many lines high.
 
 
 MORE TAGS FILES
@@ -315,19 +315,19 @@ ctags):
 <B>	ctags --c-types=f -f functions *.c</B>
 
 Now start Vim without a file, and edit this file in Vim, in a vertically split
-<A HREF="windows.html#window">window</A>:
+<A HREF="windows.html#window">窗口</A>:
 
 <B>	vim</B>
 <B>	:vsplit functions</B>
 
-The <A HREF="windows.html#window">window</A> contains a <A HREF="eval.html#list">list</A> of all the <A HREF="eval.html#functions">functions</A>.  There is some more stuff,
+The<A HREF="windows.html#window">窗口</A>contains a <A HREF="eval.html#list">list</A> of all the <A HREF="eval.html#functions">functions</A>.  There is some more stuff,
 but you can ignore that.  Do &quot;<A HREF="options.html#:setlocal">:setlocal</A> ts=99&quot; to clean <A HREF="motion.html#it">it</A> up a bit.
-   In this <A HREF="windows.html#window">window</A>, define a <A HREF="map.html#mapping">mapping</A>:
+   In this<A HREF="windows.html#window">窗口</A>, define a <A HREF="map.html#mapping">mapping</A>:
 
 <B>	:nnoremap &lt;buffer&gt; &lt;CR&gt; 0ye&lt;C-W&gt;w:tag &lt;C-R&gt;"&lt;CR&gt;</B>
 
 Move the cursor to the line that contains the function you want to go to.
-Now press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.  Vim will go to the other <A HREF="windows.html#window">window</A> and jump to the selected
+Now press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.  Vim will go to the other<A HREF="windows.html#window">窗口</A>and jump to the selected
 function.
 
 
@@ -348,50 +348,50 @@ declared, but also where <A HREF="motion.html#it">it</A> is used.  See |<A HREF=
 
 ==============================================================================
 
-*<A NAME="29.2"></A><B>29.2</B>*	The preview <A HREF="windows.html#window">window</A>
+*<A NAME="29.2"></A><B>29.2</B>*	The preview<A HREF="windows.html#window">窗口</A>
 
 When you edit code that contains a function call, you need to use the correct
 arguments.  To know what values to pass you can look at how the function is
 defined.  The <A HREF="tagsrch.html#tags">tags</A> mechanism works very well for this.  Preferably the
-definition is displayed in another <A HREF="windows.html#window">window</A>.  For this the preview <A HREF="windows.html#window">window</A> can be
+definition is displayed in another<A HREF="windows.html#window">窗口</A>.  For this the preview<A HREF="windows.html#window">窗口</A>can be
 used.
-   To open a preview <A HREF="windows.html#window">window</A> to display the function &quot;write_char&quot;:
+   To open a preview<A HREF="windows.html#window">窗口</A>to display the function &quot;write_char&quot;:
 
 <B>	:ptag write_char</B>
 
-Vim will open a <A HREF="windows.html#window">window</A>, and jumps to the <A HREF="tagsrch.html#tag">tag</A> &quot;write_char&quot;.  Then <A HREF="motion.html#it">it</A> takes you
+Vim will open a<A HREF="windows.html#window">窗口</A>, and jumps to the <A HREF="tagsrch.html#tag">tag</A> &quot;write_char&quot;.  Then <A HREF="motion.html#it">it</A> takes you
 back to the original position.  Thus you can continue typing without the need
 to use a <A HREF="vimindex.html#CTRL-W">CTRL-W</A> command.
    If the name of a function appears in the text, you can get its definition
-in the preview <A HREF="windows.html#window">window</A> with:
+in the preview<A HREF="windows.html#window">窗口</A>with:
 
 <B>	CTRL-W }</B>
 
 There is a <A HREF="usr_41.html#script">script</A> that automatically displays the text where the <A HREF="motion.html#word">word</A> under
 the cursor was defined.  See |<A HREF="windows.html#CursorHold-example">CursorHold-example</A>|.
 
-To close the preview <A HREF="windows.html#window">window</A> use this command:
+To close the preview<A HREF="windows.html#window">窗口</A>use this command:
 
 <B>	:pclose</B>
 
-To edit a specific file in the preview <A HREF="windows.html#window">window</A>, use &quot;<A HREF="windows.html#:pedit">:pedit</A>&quot;.  This can be
+To edit a specific file in the preview<A HREF="windows.html#window">窗口</A>, use &quot;<A HREF="windows.html#:pedit">:pedit</A>&quot;.  This can be
 useful to edit a header file, for example:
 
 <B>	:pedit defs.h</B>
 
 Finally, &quot;<A HREF="windows.html#:psearch">:psearch</A>&quot; can be used to find a <A HREF="motion.html#word">word</A> in the current file and any
-included files and display the match in the preview <A HREF="windows.html#window">window</A>.  This is
+included files and display the match in the preview<A HREF="windows.html#window">窗口</A>.  This is
 especially useful when using library <A HREF="eval.html#functions">functions</A>, for which you <A HREF="diff.html#do">do</A> not have a
 <A HREF="tagsrch.html#tags">tags</A> file.  Example:
 
 <B>	:psearch popen</B>
 
-This will show the &quot;stdio.h&quot; file in the preview <A HREF="windows.html#window">window</A>, with the function
+This will show the &quot;stdio.h&quot; file in the preview<A HREF="windows.html#window">窗口</A>, with the function
 prototype for popen():
 
 <B><FONT color="#3A6F2B">	FILE	*popen __P((const char *, const char *)); </FONT></B>
 
-You can specify the height of the preview <A HREF="windows.html#window">window</A>, when <A HREF="motion.html#it">it</A> is opened, with the
+You can specify the height of the preview<A HREF="windows.html#window">窗口</A>, when <A HREF="motion.html#it">it</A> is opened, with the
 <A HREF="options.html#'previewheight'">'previewheight'</A> option.
 
 ==============================================================================
@@ -533,7 +533,7 @@ looks like this:
 <B><FONT color="#3A6F2B">	structs.h </FONT></B>
 <B><FONT color="#3A6F2B">	 1:   29     unsigned     column;    /* column number */ </FONT></B>
 
-The advantage over using <A HREF="tagsrch.html#tags">tags</A> or the preview <A HREF="windows.html#window">window</A> is that included files are
+The advantage over using <A HREF="tagsrch.html#tags">tags</A> or the preview<A HREF="windows.html#window">窗口</A>is that included files are
 searched.  In most cases this results in the right declaration to be found.
 Also when the <A HREF="tagsrch.html#tags">tags</A> file is out of date.  Also when you don't have <A HREF="tagsrch.html#tags">tags</A> for the
 included files.
@@ -688,9 +688,7 @@ for the identifier.  Example (cursor on &quot;idx&quot;):
 
 ==============================================================================
 
-Next chapter: |<A HREF="usr_30.html">usr_30.txt</A>|  Editing programs
-
-Copyright: see |<A HREF="usr_01.html#manual-copyright">manual-copyright</A>|  vim:tw=78:ts=8:noet:ft=help:norl:
+下一章: |<A HREF="usr_30.html">usr_30.txt</A>|  Editing programs
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
 	</div>

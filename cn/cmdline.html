@@ -147,7 +147,7 @@ There is an automatic completion of names on the command-line; see
 <A HREF="visual.html#CTRL-V">CTRL-V</A>		<A HREF="insert.html#Insert">Insert</A> next non-digit literally.  Up to three digits form the
 		decimal value of a single byte.  The non-digit and the three
 		digits are not considered for <A HREF="map.html#mapping">mapping</A>.  This works the same
-		way <A HREF="motion.html#as">as</A> in <A HREF="insert.html#Insert">Insert</A> mode (see above, |<A HREF="insert.html#i_CTRL-V">i_CTRL-V</A>|).
+		way <A HREF="motion.html#as">as</A> in <A HREF="intro.html#Insert">插入</A>模式 (see above, |<A HREF="insert.html#i_CTRL-V">i_CTRL-V</A>|).
 		For special keys, the CTRL modifier may be included into the
 		key to produce a <A HREF="intro.html#control">control</A> character.  If there is no <A HREF="intro.html#control">control</A>
 		character for the key then its |<A HREF="intro.html#key-notation">key-notation</A>| is inserted.
@@ -256,7 +256,7 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 				enter an expression (see |<A HREF="eval.html#expression">expression</A>|)
 				(doesn't work at the <A HREF="eval.html#expression">expression</A> prompt; some
 				things such <A HREF="motion.html#as">as</A> <A HREF="change.html#changing">changing</A> the buffer or current
-				<A HREF="windows.html#window">window</A> are not allowed to avoid side effects)
+				<A HREF="windows.html#window">窗口</A>are not allowed to avoid side effects)
 				When the result is a |<A HREF="eval.html#List">List</A>| the items are used
 				<A HREF="motion.html#as">as</A> lines.  They can have line breaks inside
 				too.
@@ -971,7 +971,7 @@ function |<A HREF="builtin.html#expand()">expand()</A>|.
 	<A HREF="motion.html#&#37;">&#37;</A>	Is replaced with the current file name.		  *<A NAME=":_&#37;"></A><B>:_&#37;</B>* *<A NAME="c_&#37;"></A><B>c_&#37;</B>*
 
 	#	Is replaced with the alternate file name.	  *<A NAME=":_#"></A><B>:_#</B>* *<A NAME="c_#"></A><B>c_#</B>*
-		This is remembered for every <A HREF="windows.html#window">window</A>.
+		This is remembered for every<A HREF="windows.html#window">窗口</A>.
 
 	#n	(where <A HREF="pattern.html#n">n</A> is a number) is replaced with		  *<A NAME=":_#0"></A><B>:_#0</B>* *<A NAME=":_#n"></A><B>:_#n</B>*
 
@@ -1232,89 +1232,89 @@ Also see |<A HREF="editing.html#`=">`=</A>|.
 
 ==============================================================================
 
-7. <A HREF="#Command-line">Command-line</A> <A HREF="windows.html#window">window</A>				*<A NAME="cmdline-window"></A><B>cmdline-window</B>* *<A NAME="cmdwin"></A><B>cmdwin</B>*
+7. <A HREF="#Command-line">Command-line</A><A HREF="windows.html#window">窗口</A>				*<A NAME="cmdline-window"></A><B>cmdline-window</B>* *<A NAME="cmdwin"></A><B>cmdwin</B>*
 
 							*<A NAME="command-line-window"></A><B>command-line-window</B>*
-In the command-line <A HREF="windows.html#window">window</A> the command line can be edited just like editing
-text in any <A HREF="windows.html#window">window</A>.  It is a special kind of <A HREF="windows.html#window">window</A>, because you cannot leave
+In the command-line<A HREF="windows.html#window">窗口</A>the command line can be edited just like editing
+text in any<A HREF="windows.html#window">窗口</A>.  It is a special kind of<A HREF="windows.html#window">窗口</A>, because you cannot leave
 <A HREF="motion.html#it">it</A> in a normal way.
 
 
 
 OPEN						*<A NAME="c_CTRL-F"></A><B>c_CTRL-F</B>* *<A NAME="q:"></A><B>q:</B>* *<A NAME="q/"></A><B>q/</B>* *<A NAME="q?"></A><B>q?</B>*
 
-There are two ways to open the command-line <A HREF="windows.html#window">window</A>:
+There are two ways to open the command-line<A HREF="windows.html#window">窗口</A>:
 1. From <A HREF="#Command-line">Command-line</A> mode, use the key specified with the <A HREF="options.html#'cedit'">'cedit'</A> option.
-2. From <A HREF="intro.html#Normal">Normal</A> mode, use the &quot;<A HREF="#q:">q:</A>&quot;, &quot;<A HREF="#q/">q/</A>&quot; or &quot;<A HREF="#q?">q?</A>&quot; command.
+2. From <A HREF="intro.html#Normal">正常</A>模式, use the &quot;<A HREF="#q:">q:</A>&quot;, &quot;<A HREF="#q/">q/</A>&quot; or &quot;<A HREF="#q?">q?</A>&quot; command.
    This starts editing an <A HREF="intro.html#Ex">Ex</A> command-line (&quot;q:&quot;) or search <A HREF="eval.html#string">string</A> (&quot;q/&quot; or
    &quot;q?&quot;).  Note that this is not possible while <A HREF="repeat.html#recording">recording</A> is in progress (the
    &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">recording</A> then).
 
-When the <A HREF="windows.html#window">window</A> opens <A HREF="motion.html#it">it</A> is filled with the command-line <A HREF="#history">history</A>.  The last
+When the<A HREF="windows.html#window">窗口</A>opens <A HREF="motion.html#it">it</A> is filled with the command-line <A HREF="#history">history</A>.  The last
 line contains the command <A HREF="motion.html#as">as</A> typed so far.  The left column will show a
 character that indicates the type of command-line being edited, see
 |<A HREF="#cmdwin-char">cmdwin-char</A>|.
 
-Vim will be in <A HREF="intro.html#Normal">Normal</A> mode when the editor is opened.
+Vim will be in <A HREF="intro.html#Normal">正常</A>模式 when the editor is opened.
 
-The height of the <A HREF="windows.html#window">window</A> is specified with <A HREF="options.html#'cmdwinheight'">'cmdwinheight'</A> (or smaller if there
-is no room).  The <A HREF="windows.html#window">window</A> is always full width and is positioned just above the
+The height of the<A HREF="windows.html#window">窗口</A>is specified with <A HREF="options.html#'cmdwinheight'">'cmdwinheight'</A> (or smaller if there
+is no room).  The<A HREF="windows.html#window">窗口</A>is always full width and is positioned just above the
 command-line.
 
 
 EDIT
 
-You can now use commands to move around and edit the text in the <A HREF="windows.html#window">window</A>.  Both
-in <A HREF="intro.html#Normal">Normal</A> mode and <A HREF="insert.html#Insert">Insert</A> mode.
+You can now use commands to move around and edit the text in the<A HREF="windows.html#window">窗口</A>.  Both
+in <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="intro.html#Insert">插入</A>模式.
 
 It is possible to use &quot;<A HREF="#:">:</A>&quot;, &quot;<A HREF="pattern.html#/">/</A>&quot; and other commands that use the command-line,
-but it's not possible to open another command-line <A HREF="windows.html#window">window</A> then.  There is no
+but it's not possible to open another command-line<A HREF="windows.html#window">窗口</A>then.  There is no
 nesting.
 
 							*<A NAME="E11"></A><B>E11</B>* *<A NAME="E1188"></A><B>E1188</B>*
-The command-line <A HREF="windows.html#window">window</A> is not a normal <A HREF="windows.html#window">window</A>.  It is not possible to move to
-another <A HREF="windows.html#window">window</A> or edit another buffer.  All commands that would <A HREF="diff.html#do">do</A> this are
-disabled in the command-line <A HREF="windows.html#window">window</A>.  Of course <A HREF="motion.html#it">it</A> _is_ possible to execute
-any command that you entered in the command-line <A HREF="windows.html#window">window</A>.  Other text edits are
-discarded when closing the <A HREF="windows.html#window">window</A>.
+The command-line<A HREF="windows.html#window">窗口</A>is not a normal<A HREF="windows.html#window">窗口</A>.  It is not possible to move to
+another<A HREF="windows.html#window">窗口</A>or edit another buffer.  All commands that would <A HREF="diff.html#do">do</A> this are
+disabled in the command-line<A HREF="windows.html#window">窗口</A>.  Of course <A HREF="motion.html#it">it</A> _is_ possible to execute
+any command that you entered in the command-line<A HREF="windows.html#window">窗口</A>.  Other text edits are
+discarded when closing the<A HREF="windows.html#window">窗口</A>.
 
 
 
 CLOSE							*<A NAME="E199"></A><B>E199</B>*
 
-There are several ways to leave the command-line <A HREF="windows.html#window">window</A>:
+There are several ways to leave the command-line<A HREF="windows.html#window">窗口</A>:
 
 <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>		Execute the command-line under the cursor.  Works both in
-		<A HREF="insert.html#Insert">Insert</A> and in <A HREF="intro.html#Normal">Normal</A> mode.
+		<A HREF="insert.html#Insert">Insert</A> and in <A HREF="intro.html#Normal">正常</A>模式.
 <A HREF="pattern.html#CTRL-C">CTRL-C</A>		Continue in <A HREF="#Command-line">Command-line</A> mode.  The command-line under the
 		cursor is used <A HREF="motion.html#as">as</A> the command-line.  Works both in <A HREF="insert.html#Insert">Insert</A> and
-		in <A HREF="intro.html#Normal">Normal</A> mode.  There is no redraw, thus the <A HREF="windows.html#window">window</A> will
+		in <A HREF="intro.html#Normal">正常</A>模式.  There is no redraw, thus the<A HREF="windows.html#window">窗口</A>will
 		remain visible.
-<A HREF="editing.html#:quit">:quit</A>		Discard the command line and go back to <A HREF="intro.html#Normal">Normal</A> mode.
+<A HREF="editing.html#:quit">:quit</A>		Discard the command line and go back to <A HREF="intro.html#Normal">正常</A>模式.
 		&quot;<A HREF="windows.html#:close">:close</A>&quot;, <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#c">c</A>, &quot;<A HREF="editing.html#:exit">:exit</A>&quot;, &quot;<A HREF="editing.html#:xit">:xit</A>&quot; and CTRL-\ <A HREF="motion.html#CTRL-N">CTRL-N</A> also
 		work.
 <A HREF="editing.html#:qall">:qall</A>		Quit Vim, unless there are changes in some buffer.
 <A HREF="editing.html#:qall">:qall</A>!		Quit Vim, discarding changes to any buffer.
 
-Once the command-line <A HREF="windows.html#window">window</A> is closed the old <A HREF="windows.html#window">window</A> sizes are restored.  The
-executed command applies to the <A HREF="windows.html#window">window</A> and buffer where the command-line was
-started from.  This works <A HREF="motion.html#as">as</A> if the command-line <A HREF="windows.html#window">window</A> was not there, except
+Once the command-line<A HREF="windows.html#window">窗口</A>is closed the old<A HREF="windows.html#window">窗口</A>sizes are restored.  The
+executed command applies to the<A HREF="windows.html#window">窗口</A>and buffer where the command-line was
+started from.  This works <A HREF="motion.html#as">as</A> if the command-line<A HREF="windows.html#window">窗口</A>was not there, except
 that there will be an extra screen redraw.
-The buffer used for the command-line <A HREF="windows.html#window">window</A> is deleted.  Any changes to lines
+The buffer used for the command-line<A HREF="windows.html#window">窗口</A>is deleted.  Any changes to lines
 other than the one that is executed with <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> are lost.
 
 If you would like to execute the command under the cursor and then have the
-command-line <A HREF="windows.html#window">window</A> open again, you may find this <A HREF="map.html#mapping">mapping</A> useful:
+command-line<A HREF="windows.html#window">窗口</A>open again, you may find this <A HREF="map.html#mapping">mapping</A> useful:
 
 <B>	:autocmd CmdwinEnter * map &lt;buffer&gt; &lt;F5&gt; &lt;CR&gt;q:</B>
 
 
 VARIOUS
 
-The command-line <A HREF="windows.html#window">window</A> cannot be used when there already is a command-line
-<A HREF="windows.html#window">window</A> (no nesting).
+The command-line<A HREF="windows.html#window">窗口</A>cannot be used when there already is a command-line
+<A HREF="windows.html#window">窗口</A>(no nesting).
 
-Some <A HREF="options.html#options">options</A> are set when the command-line <A HREF="windows.html#window">window</A> is opened:
+Some <A HREF="options.html#options">options</A> are set when the command-line<A HREF="windows.html#window">窗口</A>is opened:
 <A HREF="options.html#'filetype'">'filetype'</A>	&quot;vim&quot;, when editing an <A HREF="intro.html#Ex">Ex</A> command-line; this starts Vim <A HREF="syntax.html#syntax">syntax</A>
 		highlighting if <A HREF="motion.html#it">it</A> was enabled
 <A HREF="options.html#'rightleft'">'rightleft'</A>	off
@@ -1325,22 +1325,22 @@ Some <A HREF="options.html#options">options</A> are set when the command-line <A
 It is allowed to write the buffer contents to a file.  This is an easy way to
 save the command-line <A HREF="#history">history</A> and read <A HREF="motion.html#it">it</A> back later.
 
-If the <A HREF="options.html#'wildchar'">'wildchar'</A> option is set to <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, and the command-line <A HREF="windows.html#window">window</A> is used
+If the <A HREF="options.html#'wildchar'">'wildchar'</A> option is set to <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, and the command-line<A HREF="windows.html#window">窗口</A>is used
 for an <A HREF="intro.html#Ex">Ex</A> command, then two mappings will be added to use <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> for completion
-in the command-line <A HREF="windows.html#window">window</A>, like this:
+in the command-line<A HREF="windows.html#window">窗口</A>, like this:
 <B>	:imap &lt;buffer&gt; &lt;Tab&gt; &lt;C-X&gt;&lt;C-V&gt;</B>
 <B>	:nmap &lt;buffer&gt; &lt;Tab&gt; a&lt;C-X&gt;&lt;C-V&gt;</B>
-Note that hitting <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> in <A HREF="intro.html#Normal">Normal</A> mode will <A HREF="diff.html#do">do</A> completion on the next
+Note that hitting <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> in <A HREF="intro.html#Normal">正常</A>模式 will <A HREF="diff.html#do">do</A> completion on the next
 character.  That way <A HREF="motion.html#it">it</A> works at the end of the line.
 If you don't want these mappings, disable them with:
 <B>	au CmdwinEnter [:&gt;] iunmap &lt;buffer&gt; &lt;Tab&gt;</B>
 <B>	au CmdwinEnter [:&gt;] nunmap &lt;buffer&gt; &lt;Tab&gt;</B>
 You could put these lines in your <A HREF="starting.html#vimrc">vimrc</A> file.
 
-While in the command-line <A HREF="windows.html#window">window</A> you cannot use the mouse to put the cursor in
-another <A HREF="windows.html#window">window</A>, or drag statuslines of other <A HREF="windows.html#windows">windows</A>.  You can drag the
-statusline of the command-line <A HREF="windows.html#window">window</A> itself and the statusline above <A HREF="motion.html#it">it</A>.
-Thus you can resize the command-line <A HREF="windows.html#window">window</A>, but not others.
+While in the command-line<A HREF="windows.html#window">窗口</A>you cannot use the mouse to put the cursor in
+another<A HREF="windows.html#window">窗口</A>, or drag statuslines of other <A HREF="windows.html#windows">windows</A>.  You can drag the
+statusline of the command-line<A HREF="windows.html#window">窗口</A>itself and the statusline above <A HREF="motion.html#it">it</A>.
+Thus you can resize the command-line<A HREF="windows.html#window">窗口</A>, but not others.
 
 The |<A HREF="builtin.html#getcmdwintype()">getcmdwintype()</A>| function returns the type of the command-line being
 edited <A HREF="motion.html#as">as</A> described in |<A HREF="#cmdwin-char">cmdwin-char</A>|.
@@ -1354,15 +1354,15 @@ You can disable this in your <A HREF="starting.html#config">config</A> with &quo
 AUTOCOMMANDS
 
 Two <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> are used: |<A HREF="autocmd.html#CmdwinEnter">CmdwinEnter</A>| and |<A HREF="autocmd.html#CmdwinLeave">CmdwinLeave</A>|.  You can use
-the Cmdwin <A HREF="autocmd.html#events">events</A> to <A HREF="diff.html#do">do</A> settings specifically for the command-line <A HREF="windows.html#window">window</A>.
+the Cmdwin <A HREF="autocmd.html#events">events</A> to <A HREF="diff.html#do">do</A> settings specifically for the command-line<A HREF="windows.html#window">窗口</A>.
 Be careful not to cause side effects!
 Example:
 <B>	:au CmdwinEnter :  let b:cpt_save = &amp;cpt | set cpt=.</B>
 <B>	:au CmdwinLeave :  let &amp;cpt = b:cpt_save</B>
-This sets <A HREF="options.html#'complete'">'complete'</A> to use completion in the current <A HREF="windows.html#window">window</A> for |<A HREF="insert.html#i_CTRL-N">i_CTRL-N</A>|.
+This sets <A HREF="options.html#'complete'">'complete'</A> to use completion in the current<A HREF="windows.html#window">窗口</A>for |<A HREF="insert.html#i_CTRL-N">i_CTRL-N</A>|.
 Another example:
 <B>	:au CmdwinEnter [/?]  startinsert</B>
-This will make Vim start in <A HREF="insert.html#Insert">Insert</A> mode in the command-line <A HREF="windows.html#window">window</A>.
+This will make Vim start in <A HREF="intro.html#Insert">插入</A>模式 in the command-line<A HREF="windows.html#window">窗口</A>.
 
 
 					*<A NAME="cmdline-char"></A><B>cmdline-char</B>* *<A NAME="cmdwin-char"></A><B>cmdwin-char</B>*

@@ -512,11 +512,11 @@ the space bar):
      <A HREF="starting.html#View">View</A> <A HREF="eval.html#List">List</A>		   - &lt;C-C&gt;v
      Column <A HREF="eval.html#List">List</A>	   - &lt;C-C&gt;c
 
-     Drilling In / Out     - When viewing a popup <A HREF="windows.html#window">window</A> displaying the <A HREF="eval.html#list">list</A>
+     Drilling In / Out     - When viewing a popup<A HREF="windows.html#window">窗口</A>displaying the <A HREF="eval.html#list">list</A>
 			     of tables, you can press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>, this will
 			     replace the table currently highlighted with
 			     the column <A HREF="eval.html#list">list</A> for that table.
-			   - When viewing a popup <A HREF="windows.html#window">window</A> displaying the <A HREF="eval.html#list">list</A>
+			   - When viewing a popup<A HREF="windows.html#window">窗口</A>displaying the <A HREF="eval.html#list">list</A>
 			     of columns, you can press <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>, this will
 			     replace the column <A HREF="eval.html#list">list</A> with the <A HREF="eval.html#list">list</A> of tables.
 			   - This allows you to quickly drill down into a
@@ -527,7 +527,7 @@ the space bar):
 <B>                                let g:ftplugin_sql_omni_key_left  = '&lt;Left&gt;'</B>
 
 The SQL completion <A HREF="usr_05.html#plugin">plugin</A> caches various lists that are displayed in
-the popup <A HREF="windows.html#window">window</A>.  This makes the re-displaying of these lists very
+the popup<A HREF="windows.html#window">窗口</A>.  This makes the re-displaying of these lists very
 fast.  If new tables or columns are added to the database <A HREF="motion.html#it">it</A> may become
 necessary to clear the plugins cache.  The default map for this is:
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;R &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('ResetCache')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
@@ -585,14 +585,14 @@ documentation.
 Assuming you have followed the dbext-tutorial you can press &lt;C-C&gt;t to
 display a <A HREF="eval.html#list">list</A> of tables.  There is a delay while dbext is creating the table
 <A HREF="eval.html#list">list</A>.  After the <A HREF="eval.html#list">list</A> is displayed press &lt;C-W&gt;.  This will remove both the
-popup <A HREF="windows.html#window">window</A> and the table name already chosen when the <A HREF="eval.html#list">list</A> became active.
+popup<A HREF="windows.html#window">窗口</A>and the table name already chosen when the <A HREF="eval.html#list">list</A> became active.
 
 <B> 4.3.1 Table Completion:			*sql-completion-tables*</B>
 
 Press &lt;C-C&gt;t to display a <A HREF="eval.html#list">list</A> of tables from within the database you
 have connected via the dbext <A HREF="usr_05.html#plugin">plugin</A>.
 NOTE: All of the SQL completion popups support typing a prefix before pressing
-the key map.  This will limit the contents of the popup <A HREF="windows.html#window">window</A> to just items
+the key map.  This will limit the contents of the popup<A HREF="windows.html#window">窗口</A>to just items
 beginning with those characters. 
 
 <B> 4.3.2 Column Completion:			*sql-completion-columns*</B>
@@ -601,11 +601,11 @@ The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can also display a <A
 tables.  The column completion is triggered via &lt;C-C&gt;c.
 
 NOTE: The following example uses <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> to trigger a column <A HREF="eval.html#list">list</A> while
-      the popup <A HREF="windows.html#window">window</A> is active.
+      the popup<A HREF="windows.html#window">窗口</A>is active.
 
 Example of using column completion:
      - Press &lt;C-C&gt;t again to display the <A HREF="eval.html#list">list</A> of tables.
-     - When the <A HREF="eval.html#list">list</A> is displayed in the completion <A HREF="windows.html#window">window</A>, press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>,
+     - When the <A HREF="eval.html#list">list</A> is displayed in the completion<A HREF="windows.html#window">窗口</A>, press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>,
        this will replace the <A HREF="eval.html#list">list</A> of tables, with a <A HREF="eval.html#list">list</A> of columns for the
        table highlighted (after the same short delay).
      - If you press <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>, this will again replace the column <A HREF="eval.html#list">list</A> with the
@@ -616,7 +616,7 @@ Example of using column completion:
        change the schema of a cached table you can press &lt;C-C&gt;R, which
        clears the SQL completion cache.
      - NOTE: <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> and <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> have been designed to work while the
-       completion <A HREF="windows.html#window">window</A> is active.  If the completion popup <A HREF="windows.html#window">window</A> is
+       completion<A HREF="windows.html#window">窗口</A>is active.  If the completion popup<A HREF="windows.html#window">窗口</A>is
        not active, a normal <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> or <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> will be executed.
 
 Let's look at how we can build a SQL statement dynamically.  A select statement
@@ -777,10 +777,10 @@ These are maps which use populate the completion <A HREF="eval.html#list">list</
         - Displays a comma-separated <A HREF="eval.html#list">list</A> of columns for a specific table.
 <B>    &lt;C-C&gt;L</B>
         - Displays a comma-separated <A HREF="eval.html#list">list</A> of columns for a specific table.
-	  This should only be used when the completion <A HREF="windows.html#window">window</A> is active.
+	  This should only be used when the completion<A HREF="windows.html#window">窗口</A>is active.
 <B>    &lt;Right&gt;</B>
  	- Displays a <A HREF="eval.html#list">list</A> of columns for the table currently highlighted in
-	  the completion <A HREF="windows.html#window">window</A>.  <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> is not recognized on most Unix
+	  the completion<A HREF="windows.html#window">窗口</A>.  <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> is not recognized on most Unix
 	  systems, so this maps is only created on the Windows platform.
 	  If you would like the same feature on Unix, choose a different key
 	  and make the same map in your <A HREF="starting.html#vimrc">vimrc</A>.

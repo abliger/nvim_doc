@@ -122,11 +122,11 @@ location <A HREF="eval.html#list">list</A> instead of a <A HREF="#quickfix">quic
 `:grep`, `:helpgrep`, `:make` <A HREF="diff.html#do">do</A>.
 
 						*<A NAME="location-list-file-window"></A><B>location-list-file-window</B>*
-A location <A HREF="eval.html#list">list</A> is associated with a <A HREF="windows.html#window">window</A> and each <A HREF="windows.html#window">window</A> can have a
+A location <A HREF="eval.html#list">list</A> is associated with a<A HREF="windows.html#window">窗口</A>and each<A HREF="windows.html#window">窗口</A>can have a
 separate location <A HREF="eval.html#list">list</A>.  A location <A HREF="eval.html#list">list</A> can be associated with only one
-<A HREF="windows.html#window">window</A>.  The location <A HREF="eval.html#list">list</A> is independent of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+<A HREF="windows.html#window">窗口</A>.  The location <A HREF="eval.html#list">list</A> is independent of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
-When a <A HREF="windows.html#window">window</A> with a location <A HREF="eval.html#list">list</A> is split, the new <A HREF="windows.html#window">window</A> gets a copy of the
+When a<A HREF="windows.html#window">窗口</A>with a location <A HREF="eval.html#list">list</A> is split, the new<A HREF="windows.html#window">窗口</A>gets a copy of the
 location <A HREF="eval.html#list">list</A>.  When there are no longer any references to a location <A HREF="eval.html#list">list</A>,
 the location <A HREF="eval.html#list">list</A> is destroyed.
 
@@ -145,7 +145,7 @@ command with '<A HREF="motion.html#l">l</A>'.
 
 
 							*<A NAME="E924"></A><B>E924</B>*
-If the current <A HREF="windows.html#window">window</A> was closed by an |<A HREF="autocmd.html#autocommand">autocommand</A>| while processing a
+If the current<A HREF="windows.html#window">窗口</A>was closed by an |<A HREF="autocmd.html#autocommand">autocommand</A>| while processing a
 location <A HREF="eval.html#list">list</A> command, <A HREF="motion.html#it">it</A> will be aborted.
 
 
@@ -158,21 +158,21 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 :cc[!] [nr]		Display error [nr].  If [nr] is omitted, the same
 :[nr]cc[!]		error is displayed again.  Without [!] this doesn't
 			work when jumping to another buffer, the current buffer
-			has been changed, there is the only <A HREF="windows.html#window">window</A> for the
+			has been changed, there is the only<A HREF="windows.html#window">窗口</A>for the
 			buffer and both <A HREF="options.html#'hidden'">'hidden'</A> and <A HREF="options.html#'autowrite'">'autowrite'</A> are off.
 			When jumping to another buffer with [!] any changes to
 			the current buffer are lost, unless <A HREF="options.html#'hidden'">'hidden'</A> is set or
-			there is another <A HREF="windows.html#window">window</A> for this buffer.
+			there is another<A HREF="windows.html#window">窗口</A>for this buffer.
 			The <A HREF="options.html#'switchbuf'">'switchbuf'</A> settings are respected when jumping
 			to a buffer.
-			When used in the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> the line number can
+			When used in the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>the line number can
 			be used, including &quot;<A HREF="repeat.html#.">.</A>&quot; for the current line and &quot;<A HREF="motion.html#$">$</A>&quot;
 			for the last line.
 
 
 							*<A NAME=":ll"></A><B>:ll</B>*
 :ll[!] [nr]		Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cc">:cc</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-:[nr]ll[!]		current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+:[nr]ll[!]		current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME=":cn"></A><B>:cn</B>* *<A NAME=":cne"></A><B>:cne</B>* *<A NAME=":cnext"></A><B>:cnext</B>* *<A NAME="E553"></A><B>E553</B>*
@@ -184,7 +184,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lne"></A><B>:lne</B>* *<A NAME=":lnext"></A><B>:lnext</B>*
 :[count]lne[xt][!]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cnext">:cnext</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 :[count]cN[ext][!]		*<A NAME=":cp"></A><B>:cp</B>* *<A NAME=":cprevious"></A><B>:cprevious</B>*  *<A NAME=":cprev"></A><B>:cprev</B>* *<A NAME=":cN"></A><B>:cN</B>* *<A NAME=":cNext"></A><B>:cNext</B>*
@@ -197,7 +197,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 :[count]lN[ext][!]		*<A NAME=":lp"></A><B>:lp</B>* *<A NAME=":lprevious"></A><B>:lprevious</B>* *<A NAME=":lprev"></A><B>:lprev</B>* *<A NAME=":lN"></A><B>:lN</B>* *<A NAME=":lNext"></A><B>:lNext</B>*
 :[count]lp[revious][!]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cNext">:cNext</A>&quot; and &quot;<A HREF="#:cprevious">:cprevious</A>&quot;, except the location
-			<A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A> is used instead of the
+			<A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>is used instead of the
 			<A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
@@ -215,7 +215,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lab"></A><B>:lab</B>* *<A NAME=":labove"></A><B>:labove</B>*
 :[count]lab[ove]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cabove">:cabove</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cbel"></A><B>:cbel</B>* *<A NAME=":cbelow"></A><B>:cbelow</B>*
@@ -232,7 +232,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lbel"></A><B>:lbel</B>* *<A NAME=":lbelow"></A><B>:lbelow</B>*
 :[count]lbel[ow]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cbelow">:cbelow</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cbe"></A><B>:cbe</B>* *<A NAME=":cbefore"></A><B>:cbefore</B>*
@@ -248,7 +248,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lbe"></A><B>:lbe</B>* *<A NAME=":lbefore"></A><B>:lbefore</B>*
 :[count]lbe[fore]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cbefore">:cbefore</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":caf"></A><B>:caf</B>* *<A NAME=":cafter"></A><B>:cafter</B>*
@@ -264,7 +264,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":laf"></A><B>:laf</B>* *<A NAME=":lafter"></A><B>:lafter</B>*
 :[count]laf[ter]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cafter">:cafter</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cnf"></A><B>:cnf</B>* *<A NAME=":cnfile"></A><B>:cnfile</B>*
@@ -277,7 +277,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lnf"></A><B>:lnf</B>* *<A NAME=":lnfile"></A><B>:lnfile</B>*
 :[count]lnf[ile][!]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cnfile">:cnfile</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 :[count]cNf[ile][!]			*<A NAME=":cpf"></A><B>:cpf</B>* *<A NAME=":cpfile"></A><B>:cpfile</B>* *<A NAME=":cNf"></A><B>:cNf</B>* *<A NAME=":cNfile"></A><B>:cNfile</B>*
@@ -291,7 +291,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 :[count]lNf[ile][!]			*<A NAME=":lpf"></A><B>:lpf</B>* *<A NAME=":lpfile"></A><B>:lpfile</B>* *<A NAME=":lNf"></A><B>:lNf</B>* *<A NAME=":lNfile"></A><B>:lNfile</B>*
 :[count]lpf[ile][!]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cNfile">:cNfile</A>&quot; and &quot;<A HREF="#:cpfile">:cpfile</A>&quot;, except the location
-			<A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A> is used instead of the
+			<A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>is used instead of the
 			<A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
@@ -302,7 +302,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lrewind"></A><B>:lrewind</B>* *<A NAME=":lr"></A><B>:lr</B>*
 :lr[ewind][!] [nr]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:crewind">:crewind</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cfirst"></A><B>:cfirst</B>* *<A NAME=":cfir"></A><B>:cfir</B>*
@@ -320,7 +320,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":llast"></A><B>:llast</B>* *<A NAME=":lla"></A><B>:lla</B>*
 :lla[st][!] [nr]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:clast">:clast</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cq"></A><B>:cq</B>* *<A NAME=":cquit"></A><B>:cquit</B>*
@@ -353,7 +353,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lf"></A><B>:lf</B>* *<A NAME=":lfi"></A><B>:lfi</B>* *<A NAME=":lfile"></A><B>:lfile</B>*
 :lf[ile][!] [errorfile]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cfile">:cfile</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 			You can not use the <A HREF="starting.html#-q">-q</A> command-line option to set
 			the location <A HREF="eval.html#list">list</A>.
 
@@ -370,7 +370,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 :lg[etfile] [errorfile]					*<A NAME=":lg"></A><B>:lg</B>* *<A NAME=":lge"></A><B>:lge</B>* *<A NAME=":lgetfile"></A><B>:lgetfile</B>*
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cgetfile">:cgetfile</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":caddf"></A><B>:caddf</B>* *<A NAME=":caddfile"></A><B>:caddfile</B>*
@@ -384,7 +384,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":laddf"></A><B>:laddf</B>* *<A NAME=":laddfile"></A><B>:laddfile</B>*
 :laddf[ile] [errorfile]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:caddfile">:caddfile</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME=":cb"></A><B>:cb</B>* *<A NAME=":cbuffer"></A><B>:cbuffer</B>* *<A NAME="E681"></A><B>E681</B>*
@@ -399,7 +399,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 						*<A NAME=":lb"></A><B>:lb</B>* *<A NAME=":lbuffer"></A><B>:lbuffer</B>*
 :lb[uffer][!] [bufnr]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cbuffer">:cbuffer</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME=":cgetb"></A><B>:cgetb</B>* *<A NAME=":cgetbuffer"></A><B>:cgetbuffer</B>*
@@ -409,7 +409,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 						*<A NAME=":lgetb"></A><B>:lgetb</B>* *<A NAME=":lgetbuffer"></A><B>:lgetbuffer</B>*
 :lgetb[uffer] [bufnr]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cgetbuffer">:cgetbuffer</A>&quot;, except the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A>
+			the current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A>
 			<A HREF="eval.html#list">list</A>.
 
 
@@ -422,7 +422,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":laddb"></A><B>:laddb</B>* *<A NAME=":laddbuffer"></A><B>:laddbuffer</B>*
 :laddb[uffer] [bufnr]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:caddbuffer">:caddbuffer</A>&quot;, except the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A>
+			the current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A>
 			<A HREF="eval.html#list">list</A>.
 
 
@@ -444,7 +444,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lex"></A><B>:lex</B>* *<A NAME=":lexpr"></A><B>:lexpr</B>*
 :lex[pr][!] {expr}	Same <A HREF="motion.html#as">as</A> |<A HREF="#:cexpr">:cexpr</A>|, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cgete"></A><B>:cgete</B>* *<A NAME=":cgetexpr"></A><B>:cgetexpr</B>*
@@ -454,7 +454,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":lgete"></A><B>:lgete</B>* *<A NAME=":lgetexpr"></A><B>:lgetexpr</B>*
 :lgete[xpr] {expr}	Same <A HREF="motion.html#as">as</A> |<A HREF="#:cgetexpr">:cgetexpr</A>|, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cadde"></A><B>:cadde</B>* *<A NAME=":caddexpr"></A><B>:caddexpr</B>*
@@ -469,7 +469,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 						*<A NAME=":lad"></A><B>:lad</B>* *<A NAME=":addd"></A><B>:addd</B>* *<A NAME=":laddexpr"></A><B>:laddexpr</B>*
 :lad[dexpr] {expr}	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:caddexpr">:caddexpr</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":cl"></A><B>:cl</B>* *<A NAME=":clist"></A><B>:clist</B>*
@@ -505,11 +505,11 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 :lli[st] [from] [, [to]]				*<A NAME=":lli"></A><B>:lli</B>* *<A NAME=":llist"></A><B>:llist</B>*
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:clist">:clist</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 :lli[st]! [from] [, [to]]
 			<A HREF="eval.html#List">List</A> all the entries in the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A>.
+			current<A HREF="windows.html#window">窗口</A>.
 
 If you insert or delete lines, mostly the correct error location is still
 found because hidden marks are used.  Sometimes, when the <A HREF="motion.html#mark">mark</A> has been
@@ -647,7 +647,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 
 							*<A NAME=":ldo"></A><B>:ldo</B>*
 :ld[o][!] {cmd}		Execute {cmd} in each valid entry in the location <A HREF="eval.html#list">list</A>
-			for the current <A HREF="windows.html#window">window</A>.
+			for the current<A HREF="windows.html#window">窗口</A>.
 			It works like doing this:
 <B>				:lfirst</B>
 <B>				:{cmd}</B>
@@ -660,7 +660,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 
 							*<A NAME=":lfdo"></A><B>:lfdo</B>*
 :lfdo[!] {cmd}		Execute {cmd} in each file in the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A>.
+			the current<A HREF="windows.html#window">窗口</A>.
 			It works like doing this:
 <B>				:lfirst</B>
 <B>				:{cmd}</B>
@@ -695,26 +695,26 @@ location <A HREF="eval.html#list">list</A>.
 
 =============================================================================
 
-2. The error <A HREF="windows.html#window">window</A>					*<A NAME="quickfix-window"></A><B>quickfix-window</B>*
+2. The error<A HREF="windows.html#window">窗口</A>					*<A NAME="quickfix-window"></A><B>quickfix-window</B>*
 
 
 					    *<A NAME=":cope"></A><B>:cope</B>* *<A NAME=":copen"></A><B>:copen</B>* *<A NAME="w:quickfix_title"></A><B>w:quickfix_title</B>*
-:cope[n] [height]	Open a <A HREF="windows.html#window">window</A> to show the current <A HREF="eval.html#list">list</A> of <A HREF="message.html#errors">errors</A>.
+:cope[n] [height]	Open a<A HREF="windows.html#window">窗口</A>to show the current <A HREF="eval.html#list">list</A> of <A HREF="message.html#errors">errors</A>.
 
-			When [height] is given, the <A HREF="windows.html#window">window</A> becomes that high
+			When [height] is given, the<A HREF="windows.html#window">窗口</A>becomes that high
 			(if there is room).  When [height] is omitted the
-			<A HREF="windows.html#window">window</A> is made ten lines high.
+			<A HREF="windows.html#window">窗口</A>is made ten lines high.
 
-			If there already is a <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>, <A HREF="motion.html#it">it</A> will be made
-			the current <A HREF="windows.html#window">window</A>.  It is not possible to open a
-			second <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.  If [height] is given the
-			existing <A HREF="windows.html#window">window</A> will be resized to <A HREF="motion.html#it">it</A>.
+			If there already is a <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> will be made
+			the current<A HREF="windows.html#window">窗口</A>.  It is not possible to open a
+			second <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.  If [height] is given the
+			existing<A HREF="windows.html#window">窗口</A>will be resized to <A HREF="motion.html#it">it</A>.
 
 
 							*<A NAME="quickfix-buffer"></A><B>quickfix-buffer</B>*
-			The <A HREF="windows.html#window">window</A> will contain a special buffer, with
+			The<A HREF="windows.html#window">窗口</A>will contain a special buffer, with
 			<A HREF="options.html#'buftype'">'buftype'</A> equal to &quot;<A HREF="#quickfix">quickfix</A>&quot;.  Don't change this!
-			The <A HREF="windows.html#window">window</A> will have the <A HREF="#w:quickfix_title">w:quickfix_title</A> variable set
+			The<A HREF="windows.html#window">窗口</A>will have the <A HREF="#w:quickfix_title">w:quickfix_title</A> variable set
 			which will indicate the command that produced the
 			<A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>. This can be used to compose a custom
 			status line if the value of <A HREF="options.html#'statusline'">'statusline'</A> is adjusted
@@ -728,35 +728,35 @@ location <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":lop"></A><B>:lop</B>* *<A NAME=":lopen"></A><B>:lopen</B>*
-:lop[en] [height]	Open a <A HREF="windows.html#window">window</A> to show the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A>. Works only when the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A> is present.  You can have more than
-			one location <A HREF="windows.html#window">window</A> opened at a time.  Otherwise, <A HREF="motion.html#it">it</A>
+:lop[en] [height]	Open a<A HREF="windows.html#window">窗口</A>to show the location <A HREF="eval.html#list">list</A> for the
+			current<A HREF="windows.html#window">窗口</A>. Works only when the location <A HREF="eval.html#list">list</A> for
+			the current<A HREF="windows.html#window">窗口</A>is present.  You can have more than
+			one location<A HREF="windows.html#window">窗口</A>opened at a time.  Otherwise, <A HREF="motion.html#it">it</A>
 			acts the same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:copen">:copen</A>&quot;.
 
 
 							*<A NAME=":ccl"></A><B>:ccl</B>* *<A NAME=":cclose"></A><B>:cclose</B>*
-:ccl[ose]		Close the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.
+:ccl[ose]		Close the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME=":lcl"></A><B>:lcl</B>* *<A NAME=":lclose"></A><B>:lclose</B>*
-:lcl[ose]		Close the <A HREF="windows.html#window">window</A> showing the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A>.
+:lcl[ose]		Close the<A HREF="windows.html#window">窗口</A>showing the location <A HREF="eval.html#list">list</A> for the
+			current<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME=":cw"></A><B>:cw</B>* *<A NAME=":cwindow"></A><B>:cwindow</B>*
-:cw[indow] [height]	Open the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> when there are recognized
-			<A HREF="message.html#errors">errors</A>.  If the <A HREF="windows.html#window">window</A> is already open and there are
-			no recognized <A HREF="message.html#errors">errors</A>, close the <A HREF="windows.html#window">window</A>.
+:cw[indow] [height]	Open the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>when there are recognized
+			<A HREF="message.html#errors">errors</A>.  If the<A HREF="windows.html#window">窗口</A>is already open and there are
+			no recognized <A HREF="message.html#errors">errors</A>, close the<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME=":lw"></A><B>:lw</B>* *<A NAME=":lwindow"></A><B>:lwindow</B>*
-:lw[indow] [height]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cwindow">:cwindow</A>&quot;, except use the <A HREF="windows.html#window">window</A> showing the
-			location <A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A>.
+:lw[indow] [height]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cwindow">:cwindow</A>&quot;, except use the<A HREF="windows.html#window">窗口</A>showing the
+			location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME=":cbo"></A><B>:cbo</B>* *<A NAME=":cbottom"></A><B>:cbottom</B>*
-:cbo[ttom]		Put the cursor in the last line of the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>
+:cbo[ttom]		Put the cursor in the last line of the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>
 			and scroll to make <A HREF="motion.html#it">it</A> visible.  This is useful for
 			when <A HREF="message.html#errors">errors</A> are added by an asynchronous callback.
 			Only call <A HREF="motion.html#it">it</A> once in a while if there are many
@@ -764,57 +764,57 @@ location <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":lbo"></A><B>:lbo</B>* *<A NAME=":lbottom"></A><B>:lbottom</B>*
-:lbo[ttom]		Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cbottom">:cbottom</A>&quot;, except use the <A HREF="windows.html#window">window</A> showing the
-			location <A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A>.
+:lbo[ttom]		Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:cbottom">:cbottom</A>&quot;, except use the<A HREF="windows.html#window">窗口</A>showing the
+			location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>.
 
-Normally the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> is at the bottom of the screen.  If there are
+Normally the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>is at the bottom of the screen.  If there are
 vertical splits, it's at the bottom of the rightmost column of <A HREF="windows.html#windows">windows</A>.  To
 make <A HREF="motion.html#it">it</A> always occupy the full width:
 <B>	:botright cwindow</B>
 You can move the window around with |<A HREF="windows.html#window-moving">window-moving</A>| commands.
 For example, to move <A HREF="motion.html#it">it</A> to the top: <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="various.html#K">K</A>
-The <A HREF="options.html#'winfixheight'">'winfixheight'</A> option will be set, which means that the <A HREF="windows.html#window">window</A> will mostly
+The <A HREF="options.html#'winfixheight'">'winfixheight'</A> option will be set, which means that the<A HREF="windows.html#window">窗口</A>will mostly
 keep its height, ignoring <A HREF="options.html#'winheight'">'winheight'</A> and <A HREF="options.html#'equalalways'">'equalalways'</A>.  You can change the
 height manually (e.g., by dragging the status line above <A HREF="motion.html#it">it</A> with the mouse).
 
-In the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>, each line is one error.  The line number is equal to
+In the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, each line is one error.  The line number is equal to
 the error number.  The current entry is highlighted with the QuickFixLine
 highlighting.  You can change <A HREF="motion.html#it">it</A> to your liking, e.g.:
 <B>	:hi QuickFixLine ctermbg=Yellow guibg=Yellow</B>
 
 You can use &quot;:.cc&quot; to jump to the error under the cursor.
 Hitting the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> key or double-clicking the mouse on a line has the same
-effect.  The file containing the error is opened in the <A HREF="windows.html#window">window</A> above the
-<A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>.  If there already is a <A HREF="windows.html#window">window</A> for that file, <A HREF="motion.html#it">it</A> is used
-instead.  If the buffer in the used <A HREF="windows.html#window">window</A> has changed, and the error is in
+effect.  The file containing the error is opened in the<A HREF="windows.html#window">窗口</A>above the
+<A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.  If there already is a<A HREF="windows.html#window">窗口</A>for that file, <A HREF="motion.html#it">it</A> is used
+instead.  If the buffer in the used<A HREF="windows.html#window">窗口</A>has changed, and the error is in
 another file, jumping to the error will fail.  You will first have to make
-sure the <A HREF="windows.html#window">window</A> contains a buffer which can be abandoned.
+sure the<A HREF="windows.html#window">窗口</A>contains a buffer which can be abandoned.
 
-When you select a file from the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>, the following steps are used
-to find a <A HREF="windows.html#window">window</A> to edit the file:
+When you select a file from the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, the following steps are used
+to find a<A HREF="windows.html#window">窗口</A>to edit the file:
 
-1. If a <A HREF="windows.html#window">window</A> displaying the selected file is present in the current <A HREF="tabpage.html#tabpage">tabpage</A>
-   (starting with the <A HREF="windows.html#window">window</A> before the <A HREF="#quickfix">quickfix</A> window), then that <A HREF="windows.html#window">window</A> is
+1. If a<A HREF="windows.html#window">窗口</A>displaying the selected file is present in the current <A HREF="tabpage.html#tabpage">tabpage</A>
+   (starting with the<A HREF="windows.html#window">窗口</A>before the <A HREF="#quickfix">quickfix</A> window), then that<A HREF="windows.html#window">窗口</A>is
    used.
-2. If the above step fails and if <A HREF="options.html#'switchbuf'">'switchbuf'</A> contains &quot;usetab&quot; and a <A HREF="windows.html#window">window</A>
+2. If the above step fails and if <A HREF="options.html#'switchbuf'">'switchbuf'</A> contains &quot;usetab&quot; and a<A HREF="windows.html#window">窗口</A>
    displaying the selected file is present in any one of the tabpages
-   (starting with the first <A HREF="tabpage.html#tabpage">tabpage</A>) then that <A HREF="windows.html#window">window</A> is used.
-3. If the above step fails then a <A HREF="windows.html#window">window</A> in the current <A HREF="tabpage.html#tabpage">tabpage</A> displaying a
-   buffer with <A HREF="options.html#'buftype'">'buftype'</A> not set (starting with the <A HREF="windows.html#window">window</A> before the <A HREF="#quickfix">quickfix</A>
-   <A HREF="windows.html#window">window</A>) is used.
+   (starting with the first <A HREF="tabpage.html#tabpage">tabpage</A>) then that<A HREF="windows.html#window">窗口</A>is used.
+3. If the above step fails then a<A HREF="windows.html#window">窗口</A>in the current <A HREF="tabpage.html#tabpage">tabpage</A> displaying a
+   buffer with <A HREF="options.html#'buftype'">'buftype'</A> not set (starting with the<A HREF="windows.html#window">窗口</A>before the <A HREF="#quickfix">quickfix</A>
+  <A HREF="windows.html#window">窗口</A>) is used.
 4. If the above step fails and if <A HREF="options.html#'switchbuf'">'switchbuf'</A> contains &quot;uselast&quot;, then the
-   previously accessed <A HREF="windows.html#window">window</A> is used.
-5. If the above step fails then the <A HREF="windows.html#window">window</A> before the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> is used.
-   If there is no previous <A HREF="windows.html#window">window</A>, then the <A HREF="windows.html#window">window</A> after the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>
+   previously accessed<A HREF="windows.html#window">窗口</A>is used.
+5. If the above step fails then the<A HREF="windows.html#window">窗口</A>before the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>is used.
+   If there is no previous<A HREF="windows.html#window">窗口</A>, then the<A HREF="windows.html#window">窗口</A>after the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>
    is used.
-6. If the above step fails, then a new horizontally split <A HREF="windows.html#window">window</A> above the
-   <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> is used.
+6. If the above step fails, then a new horizontally split<A HREF="windows.html#window">窗口</A>above the
+   <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>is used.
 
 
 					*<A NAME="CTRL-W_&lt;Enter&gt;"></A><B>CTRL-W_&lt;Enter&gt;</B>* *<A NAME="CTRL-W_&lt;CR&gt;"></A><B>CTRL-W_&lt;CR&gt;</B>*
-You can use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to open a new <A HREF="windows.html#window">window</A> and jump to the error there.
+You can use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to open a new<A HREF="windows.html#window">窗口</A>and jump to the error there.
 
-When the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> has been filled, two <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> are
+When the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has been filled, two <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> are
 triggered.  First the <A HREF="options.html#'filetype'">'filetype'</A> option is set to &quot;qf&quot;, which triggers the
 <A HREF="autocmd.html#FileType">FileType</A> event (also see |<A HREF="qf.html">qf.vim</A>|).  Then the <A HREF="autocmd.html#BufReadPost">BufReadPost</A> event is triggered,
 using &quot;<A HREF="#quickfix">quickfix</A>&quot; for the buffer name.  This can be used to perform some action
@@ -831,43 +831,43 @@ name.
 Note: When adding to an existing <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> the <A HREF="autocmd.html#autocommand">autocommand</A> are not
 triggered.
 
-Note: Making changes in the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> has no effect on the <A HREF="eval.html#list">list</A> of
+Note: Making changes in the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has no effect on the <A HREF="eval.html#list">list</A> of
 <A HREF="message.html#errors">errors</A>.  <A HREF="options.html#'modifiable'">'modifiable'</A> is off to avoid making changes.  If you delete or insert
 lines anyway, the relation between the text and the error number is messed up.
 If you really want to <A HREF="diff.html#do">do</A> this, you could write the contents of the <A HREF="#quickfix">quickfix</A>
-<A HREF="windows.html#window">window</A> to a file and use &quot;<A HREF="#:cfile">:cfile</A>&quot; to have <A HREF="motion.html#it">it</A> parsed and used <A HREF="motion.html#as">as</A> the new error
+<A HREF="windows.html#window">窗口</A>to a file and use &quot;<A HREF="#:cfile">:cfile</A>&quot; to have <A HREF="motion.html#it">it</A> parsed and used <A HREF="motion.html#as">as</A> the new error
 <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME="location-list-window"></A><B>location-list-window</B>*
-The location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A> displays the entries in a location <A HREF="eval.html#list">list</A>.  When you
-open a location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>, <A HREF="motion.html#it">it</A> is created below the current <A HREF="windows.html#window">window</A> and
-displays the location <A HREF="eval.html#list">list</A> for the current <A HREF="windows.html#window">window</A>.  The location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>
-is similar to the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>, except that you can have more than one
-location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A> open at a time. When you use a location <A HREF="eval.html#list">list</A> command in
-this <A HREF="windows.html#window">window</A>, the displayed location <A HREF="eval.html#list">list</A> is used.
+The location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>displays the entries in a location <A HREF="eval.html#list">list</A>.  When you
+open a location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> is created below the current<A HREF="windows.html#window">窗口</A>and
+displays the location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>.  The location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>
+is similar to the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, except that you can have more than one
+location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>open at a time. When you use a location <A HREF="eval.html#list">list</A> command in
+this<A HREF="windows.html#window">窗口</A>, the displayed location <A HREF="eval.html#list">list</A> is used.
 
-When you select a file from the location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>, the following steps are
-used to find a <A HREF="windows.html#window">window</A> to edit the file:
+When you select a file from the location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>, the following steps are
+used to find a<A HREF="windows.html#window">窗口</A>to edit the file:
 
-1. If a non-quickfix <A HREF="windows.html#window">window</A> associated with the location <A HREF="eval.html#list">list</A> is present in
-   the current <A HREF="tabpage.html#tabpage">tabpage</A>, then that <A HREF="windows.html#window">window</A> is used.
-2. If the above step fails and if the file is already opened in another <A HREF="windows.html#window">window</A>
-   in the current <A HREF="tabpage.html#tabpage">tabpage</A>, then that <A HREF="windows.html#window">window</A> is used.
+1. If a non-quickfix<A HREF="windows.html#window">窗口</A>associated with the location <A HREF="eval.html#list">list</A> is present in
+   the current <A HREF="tabpage.html#tabpage">tabpage</A>, then that<A HREF="windows.html#window">窗口</A>is used.
+2. If the above step fails and if the file is already opened in another<A HREF="windows.html#window">窗口</A>
+   in the current <A HREF="tabpage.html#tabpage">tabpage</A>, then that<A HREF="windows.html#window">窗口</A>is used.
 3. If the above step fails and <A HREF="options.html#'switchbuf'">'switchbuf'</A> contains &quot;usetab&quot; and if the file
-   is opened in a <A HREF="windows.html#window">window</A> in any one of the tabpages, then that <A HREF="windows.html#window">window</A> is used.
-4. If the above step fails then a <A HREF="windows.html#window">window</A> in the current <A HREF="tabpage.html#tabpage">tabpage</A> showing a
+   is opened in a<A HREF="windows.html#window">窗口</A>in any one of the tabpages, then that<A HREF="windows.html#window">窗口</A>is used.
+4. If the above step fails then a<A HREF="windows.html#window">窗口</A>in the current <A HREF="tabpage.html#tabpage">tabpage</A> showing a
    buffer with <A HREF="options.html#'buftype'">'buftype'</A> not set is used.
-5. If the above step fails, then the file is edited in a new <A HREF="windows.html#window">window</A>.
+5. If the above step fails, then the file is edited in a new<A HREF="windows.html#window">窗口</A>.
 
-In all of the above cases, if the location <A HREF="eval.html#list">list</A> for the selected <A HREF="windows.html#window">window</A> is not
+In all of the above cases, if the location <A HREF="eval.html#list">list</A> for the selected<A HREF="windows.html#window">窗口</A>is not
 yet set, then <A HREF="motion.html#it">it</A> is set to the location <A HREF="eval.html#list">list</A> displayed in the location <A HREF="eval.html#list">list</A>
-<A HREF="windows.html#window">window</A>.
+<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME="quickfix-window-ID"></A><B>quickfix-window-ID</B>*
 You can use the |<A HREF="builtin.html#getqflist()">getqflist()</A>| and |<A HREF="builtin.html#getloclist()">getloclist()</A>| <A HREF="eval.html#functions">functions</A> to obtain the
-<A HREF="windows.html#window">window</A> ID of the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> and location <A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A> respectively (if
+<A HREF="windows.html#window">窗口</A>ID of the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>and location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>respectively (if
 present).  Examples:
 <B>	echo getqflist({'winid' : 1}).winid</B>
 <B>	echo getloclist(2, {'winid' : 1}).winid</B>
@@ -1008,7 +1008,7 @@ lists.  They set one of the existing error lists <A HREF="motion.html#as">as</A>
 
 						*<A NAME=":lolder"></A><B>:lolder</B>* *<A NAME=":lol"></A><B>:lol</B>*
 :lol[der] <A HREF="intro.html#[count]">[count]</A>	Same <A HREF="motion.html#as">as</A> `:colder`, except use the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A> instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			the current<A HREF="windows.html#window">窗口</A>instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME=":cnewer"></A><B>:cnewer</B>* *<A NAME=":cnew"></A><B>:cnew</B>* *<A NAME="E381"></A><B>E381</B>*
@@ -1019,7 +1019,7 @@ lists.  They set one of the existing error lists <A HREF="motion.html#as">as</A>
 
 						*<A NAME=":lnewer"></A><B>:lnewer</B>* *<A NAME=":lnew"></A><B>:lnew</B>*
 :lnew[er] <A HREF="intro.html#[count]">[count]</A>	Same <A HREF="motion.html#as">as</A> `:cnewer`, except use the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A> instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			the current<A HREF="windows.html#window">窗口</A>instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME=":chistory"></A><B>:chistory</B>* *<A NAME=":chi"></A><B>:chi</B>*
@@ -1089,7 +1089,7 @@ To get the number of the current <A HREF="eval.html#list">list</A> in the stack:
 							*<A NAME=":lmak"></A><B>:lmak</B>* *<A NAME=":lmake"></A><B>:lmake</B>*
 :lmak[e][!] [arguments]
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:make">:make</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 The &quot;<A HREF="#:make">:make</A>&quot; command executes the command given with the <A HREF="options.html#'makeprg'">'makeprg'</A> option.
 This is done by passing the command to the shell given with the <A HREF="options.html#'shell'">'shell'</A>
@@ -1247,7 +1247,7 @@ commands can be combined to create a NewGrep command:
 :lv[imgrep][!] /{pattern}/[g][j][f] <A HREF="editing.html#{file}">{file}</A> <A HREF="eval.html#...">...</A>
 :lv[imgrep][!] {pattern} <A HREF="editing.html#{file}">{file}</A> <A HREF="eval.html#...">...</A>
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:vimgrep">:vimgrep</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME=":vimgrepa"></A><B>:vimgrepa</B>* *<A NAME=":vimgrepadd"></A><B>:vimgrepadd</B>*
@@ -1262,7 +1262,7 @@ commands can be combined to create a NewGrep command:
 :lvimgrepa[dd][!] /{pattern}/[g][j][f] <A HREF="editing.html#{file}">{file}</A> <A HREF="eval.html#...">...</A>
 :lvimgrepa[dd][!] {pattern} <A HREF="editing.html#{file}">{file}</A> <A HREF="eval.html#...">...</A>
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:vimgrepadd">:vimgrepadd</A>&quot;, except the location <A HREF="eval.html#list">list</A> for
-			the current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A>
+			the current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A>
 			<A HREF="eval.html#list">list</A>.
 
 5.2 External <A HREF="#grep">grep</A>
@@ -1287,7 +1287,7 @@ id-utils) in a similar way to its compiler integration (see |<A HREF="#:make">:m
 
 							    *<A NAME=":lgr"></A><B>:lgr</B>* *<A NAME=":lgrep"></A><B>:lgrep</B>*
 :lgr[ep][!] [arguments]	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:grep">:grep</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 
 							*<A NAME=":grepa"></A><B>:grepa</B>* *<A NAME=":grepadd"></A><B>:grepadd</B>*
@@ -1317,7 +1317,7 @@ id-utils) in a similar way to its compiler integration (see |<A HREF="#:make">:m
 							*<A NAME=":lgrepa"></A><B>:lgrepa</B>* *<A NAME=":lgrepadd"></A><B>:lgrepadd</B>*
 :lgrepa[dd][!] [arguments]
 			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:grepadd">:grepadd</A>&quot;, except the location <A HREF="eval.html#list">list</A> for the
-			current <A HREF="windows.html#window">window</A> is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+			current<A HREF="windows.html#window">窗口</A>is used instead of the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
 
 5.3 Setting up external <A HREF="#grep">grep</A>
 
@@ -1604,7 +1604,7 @@ output.  Like the output of the &quot;<A HREF="#grep">grep</A>&quot; shell comma
 When the <A HREF="pattern.html#pattern">pattern</A> is present the line number will not be used.
 
 The &quot;&#37;o&quot; conversion specifies the module name in <A HREF="#quickfix">quickfix</A> entry.  If present
-<A HREF="motion.html#it">it</A> will be used in <A HREF="#quickfix">quickfix</A> error <A HREF="windows.html#window">window</A> instead of the filename.  The module
+<A HREF="motion.html#it">it</A> will be used in <A HREF="#quickfix">quickfix</A> error<A HREF="windows.html#window">窗口</A>instead of the filename.  The module
 name is used only for displaying purposes, the file name is used when jumping
 to the file.
 
@@ -2122,10 +2122,10 @@ by Vim.
 
 =============================================================================
 
-10. Customizing the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A>		*<A NAME="quickfix-window-function"></A><B>quickfix-window-function</B>*
+10. Customizing the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>		*<A NAME="quickfix-window-function"></A><B>quickfix-window-function</B>*
 
-The default format for the lines displayed in the <A HREF="#quickfix">quickfix</A> <A HREF="windows.html#window">window</A> and location
-<A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A> is:
+The default format for the lines displayed in the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>and location
+<A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>is:
 
     &lt;filename&gt;|&lt;lnum&gt; col &lt;col&gt;|&lt;text&gt;
 
@@ -2143,11 +2143,11 @@ common parent directory.
 The displayed text can be customized by setting the <A HREF="options.html#'quickfixtextfunc'">'quickfixtextfunc'</A> option
 to a Vim function.  This function will be called with a <A HREF="eval.html#dict">dict</A> argument and
 should return a <A HREF="eval.html#List">List</A> of strings to be displayed in the <A HREF="#quickfix">quickfix</A> or location
-<A HREF="eval.html#list">list</A> <A HREF="windows.html#window">window</A>. The <A HREF="eval.html#dict">dict</A> argument will have the following fields:
+<A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>. The <A HREF="eval.html#dict">dict</A> argument will have the following fields:
 
     <A HREF="#quickfix">quickfix</A>	set to 1 when called for a <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> and 0 when called for
 		a location <A HREF="eval.html#list">list</A>.
-    <A HREF="windows.html#winid">winid</A>	for a location <A HREF="eval.html#list">list</A>, set to the id of the <A HREF="windows.html#window">window</A> with the
+    <A HREF="windows.html#winid">winid</A>	for a location <A HREF="eval.html#list">list</A>, set to the id of the<A HREF="windows.html#window">窗口</A>with the
 		location <A HREF="eval.html#list">list</A>. For a <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>, set to 0. Can be used in
 		<A HREF="builtin.html#getloclist()">getloclist()</A> to get the location <A HREF="eval.html#list">list</A> entry.
     id		<A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A> identifier
@@ -2155,7 +2155,7 @@ should return a <A HREF="eval.html#List">List</A> of strings to be displayed in 
     end_idx	index of the last entry for which text should be returned
 
 The function should return a single line of text to display in the <A HREF="#quickfix">quickfix</A>
-<A HREF="windows.html#window">window</A> for each entry from start_idx to end_idx. The function can obtain
+<A HREF="windows.html#window">窗口</A>for each entry from start_idx to end_idx. The function can obtain
 information about the entries using the |<A HREF="builtin.html#getqflist()">getqflist()</A>| function and specifying
 the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> identifier &quot;id&quot;. For a location <A HREF="eval.html#list">list</A>, <A HREF="builtin.html#getloclist()">getloclist()</A> function
 can be used with the '<A HREF="windows.html#winid">winid</A>' argument. If an empty <A HREF="eval.html#list">list</A> is returned, then the
@@ -2168,7 +2168,7 @@ If a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">list<
 |<A HREF="builtin.html#setloclist()">setloclist()</A>| function. This overrides the global <A HREF="options.html#'quickfixtextfunc'">'quickfixtextfunc'</A> option.
 
 The example below displays the <A HREF="eval.html#list">list</A> of old files (|<A HREF="eval.html#v:oldfiles">v:oldfiles</A>|) in a <A HREF="#quickfix">quickfix</A>
-<A HREF="windows.html#window">window</A>. As there is no line, column number and error text information
+<A HREF="windows.html#window">窗口</A>. As there is no line, column number and error text information
 associated with each entry, the <A HREF="options.html#'quickfixtextfunc'">'quickfixtextfunc'</A> function returns only the
 filename.
 Example:

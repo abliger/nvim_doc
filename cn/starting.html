@@ -376,9 +376,9 @@ argument.
 
 							*<A NAME="-o"></A><B>-o</B>*
 -o[N]		Open N <A HREF="windows.html#windows">windows</A>, split horizontally.  If [N] is not given,
-		one <A HREF="windows.html#window">window</A> is opened for every file given <A HREF="motion.html#as">as</A> argument.  If
+		one<A HREF="windows.html#window">窗口</A>is opened for every file given <A HREF="motion.html#as">as</A> argument.  If
 		there is not enough room, only the first few files get a
-		<A HREF="windows.html#window">window</A>.  If there are more <A HREF="windows.html#windows">windows</A> than arguments, the last
+		<A HREF="windows.html#window">窗口</A>.  If there are more <A HREF="windows.html#windows">windows</A> than arguments, the last
 		few <A HREF="windows.html#windows">windows</A> will be editing an empty file.
 
 
@@ -801,8 +801,8 @@ In the <A HREF="gui.html#GUI">GUI</A>, suspending is implementation-defined.
 Exiting							*<A NAME="exiting"></A><B>exiting</B>*
 
 There are several ways to exit Vim:
-- Close the last <A HREF="windows.html#window">window</A> with `:quit`.  Only when there are no changes.
-- Close the last <A HREF="windows.html#window">window</A> with `:quit!`.  Also when there are changes.
+- Close the last<A HREF="windows.html#window">窗口</A>with `:quit`.  Only when there are no changes.
+- Close the last<A HREF="windows.html#window">窗口</A>with `:quit!`.  Also when there are changes.
 - Close all <A HREF="windows.html#windows">windows</A> with `:qall`.  Only when there are no changes.
 - Close all <A HREF="windows.html#windows">windows</A> with `:qall!`.  Also when there are changes.
 - Use `:cquit`.  Also when there are changes.
@@ -879,15 +879,15 @@ This is introduced in sections |<A HREF="usr_21.html#21.4">21.4</A>| and |<A HRE
 
 
 						*<A NAME="View"></A><B>View</B>* *<A NAME="view-file"></A><B>view-file</B>*
-A <A HREF="#View">View</A> is a collection of settings that apply to one <A HREF="windows.html#window">window</A>.  You can save a
+A <A HREF="#View">View</A> is a collection of settings that apply to one<A HREF="windows.html#window">窗口</A>.  You can save a
 <A HREF="#View">View</A> and when you restore <A HREF="motion.html#it">it</A> later, the text is displayed in the same way.
-The <A HREF="options.html#options">options</A> and mappings in this <A HREF="windows.html#window">window</A> will also be restored, so that you can
+The <A HREF="options.html#options">options</A> and mappings in this<A HREF="windows.html#window">窗口</A>will also be restored, so that you can
 continue editing like when the <A HREF="#View">View</A> was saved.
 
 
 						*<A NAME="Session"></A><B>Session</B>* *<A NAME="session-file"></A><B>session-file</B>*
 A <A HREF="#Session">Session</A> keeps the Views for all <A HREF="windows.html#windows">windows</A>, plus the global settings.  You can
-save a <A HREF="#Session">Session</A> and when you restore <A HREF="motion.html#it">it</A> later the <A HREF="windows.html#window">window</A> layout looks the same.
+save a <A HREF="#Session">Session</A> and when you restore <A HREF="motion.html#it">it</A> later the<A HREF="windows.html#window">窗口</A>layout looks the same.
 You can use a <A HREF="#Session">Session</A> to quickly switch between different projects,
 automatically loading the files you were last working on in that project.
 
@@ -920,7 +920,7 @@ resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source
 4. Restores the current directory if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;curdir&quot;, or
    sets the current directory to where the <A HREF="#Session">Session</A> file is if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>
    contains &quot;sesdir&quot;.
-5. Restores <A HREF="gui.html#GUI">GUI</A> Vim <A HREF="windows.html#window">window</A> position, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;winpos&quot;.
+5. Restores <A HREF="gui.html#GUI">GUI</A> Vim<A HREF="windows.html#window">窗口</A>position, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;winpos&quot;.
 6. Restores screen size, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;resize&quot;.
 7. Reloads the buffer <A HREF="eval.html#list">list</A>, with the last cursor positions.  If
    <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;<A HREF="windows.html#buffers">buffers</A>&quot; then all <A HREF="windows.html#buffers">buffers</A> are restored,
@@ -930,7 +930,7 @@ resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source
    &quot;help&quot;, help <A HREF="windows.html#windows">windows</A> are restored.  If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;blank&quot;,
    <A HREF="windows.html#windows">windows</A> editing a buffer without a name will be restored.
    If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;winsize&quot; and no (help/blank) <A HREF="windows.html#windows">windows</A> were
-   left out, the <A HREF="windows.html#window">window</A> sizes are restored (relative to the screen size).
+   left out, the<A HREF="windows.html#window">窗口</A>sizes are restored (relative to the screen size).
    Otherwise, the <A HREF="windows.html#windows">windows</A> are just given sensible sizes.
 9. Restores the Views for all the <A HREF="windows.html#windows">windows</A>, <A HREF="motion.html#as">as</A> with |<A HREF="#:mkview">:mkview</A>|.  But
    <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> is used instead of <A HREF="options.html#'viewoptions'">'viewoptions'</A>.
@@ -959,7 +959,7 @@ triggered.
 
 							*<A NAME=":mkvie"></A><B>:mkvie</B>* *<A NAME=":mkview"></A><B>:mkview</B>*
 :mkvie[w][!] [file]	Write a Vim <A HREF="usr_41.html#script">script</A> that restores the contents of the
-			current <A HREF="windows.html#window">window</A>.
+			current<A HREF="windows.html#window">窗口</A>.
 			When [!] is included an existing file is overwritten.
 			When [file] is omitted or is a number from 1 to 9, a
 			name is generated and <A HREF="options.html#'viewdir'">'viewdir'</A> prepended.  When the
@@ -974,15 +974,15 @@ triggered.
 			generated file.
 
 The output of &quot;<A HREF="#:mkview">:mkview</A>&quot; contains these items:
-1. The argument <A HREF="eval.html#list">list</A> used in the <A HREF="windows.html#window">window</A>.  When the global argument <A HREF="eval.html#list">list</A> is
+1. The argument <A HREF="eval.html#list">list</A> used in the<A HREF="windows.html#window">窗口</A>.  When the global argument <A HREF="eval.html#list">list</A> is
    used <A HREF="motion.html#it">it</A> is reset to the global <A HREF="eval.html#list">list</A>.
    The index in the argument <A HREF="eval.html#list">list</A> is also restored.
-2. The file being edited in the <A HREF="windows.html#window">window</A>.  If there is no file, the <A HREF="windows.html#window">window</A> is
+2. The file being edited in the<A HREF="windows.html#window">窗口</A>.  If there is no file, the<A HREF="windows.html#window">窗口</A>is
    made empty.
-3. Restore mappings, <A HREF="map.html#abbreviations">abbreviations</A> and <A HREF="options.html#options">options</A> local to the <A HREF="windows.html#window">window</A> if
+3. Restore mappings, <A HREF="map.html#abbreviations">abbreviations</A> and <A HREF="options.html#options">options</A> local to the<A HREF="windows.html#window">窗口</A>if
    <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains &quot;<A HREF="options.html#options">options</A>&quot; or &quot;localoptions&quot;.  For the <A HREF="options.html#options">options</A> <A HREF="motion.html#it">it</A>
    restores only values that are local to the current buffer and values local
-   to the <A HREF="windows.html#window">window</A>.
+   to the<A HREF="windows.html#window">窗口</A>.
    When storing the view <A HREF="motion.html#as">as</A> part of a session and &quot;<A HREF="options.html#options">options</A>&quot; is in
    <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>, global values for local <A HREF="options.html#options">options</A> will be stored too.
 4. Restore <A HREF="fold.html#folds">folds</A> when using manual <A HREF="fold.html#folding">folding</A> and <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains

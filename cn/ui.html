@@ -249,7 +249,7 @@ the editor.
 
 [&quot;set_title&quot;, title]
 [&quot;set_icon&quot;, icon]
-	Set the <A HREF="windows.html#window">window</A> title, and icon (minimized) <A HREF="windows.html#window">window</A> title, respectively.
+	Set the<A HREF="windows.html#window">窗口</A>title, and icon (minimized)<A HREF="windows.html#window">窗口</A>title, respectively.
 	In windowing systems not distinguishing between the two, &quot;set_icon&quot;
 	can be ignored.
 
@@ -660,45 +660,45 @@ See |<A HREF="api.html#nvim_ui_try_resize_grid()">nvim_ui_try_resize_grid()</A>|
 See |<A HREF="api.html#nvim_input_mouse()">nvim_input_mouse()</A>| for sending mouse <A HREF="autocmd.html#events">events</A> to Nvim.
 
 The multigrid extension gives UIs more <A HREF="intro.html#control">control</A> over how <A HREF="windows.html#windows">windows</A> are displayed:
-- UIs receive updates on a separate grid for each <A HREF="windows.html#window">window</A>.
-- UIs can set the grid size independently of how much space the <A HREF="windows.html#window">window</A>
+- UIs receive updates on a separate grid for each<A HREF="windows.html#window">窗口</A>.
+- UIs can set the grid size independently of how much space the<A HREF="windows.html#window">窗口</A>
   occupies on the global layout. So the <A HREF="#UI">UI</A> could use a different font size
-  per-window. Or reserve space around the border of the <A HREF="windows.html#window">window</A> for its own
+  per-window. Or reserve space around the border of the<A HREF="windows.html#window">窗口</A>for its own
   elements, such <A HREF="motion.html#as">as</A> scrollbars from the <A HREF="#UI">UI</A> toolkit.
-- A dedicated grid is used for <A HREF="message.html#messages">messages</A>, which may scroll over the <A HREF="windows.html#window">window</A>
+- A dedicated grid is used for <A HREF="message.html#messages">messages</A>, which may scroll over the<A HREF="windows.html#window">窗口</A>
   area. (Alternatively |<A HREF="intro.html#ext_messages">ext_messages</A>| can be used).
 
 By default, the grid size is handled by Nvim and set to the outer grid size
-(i.e. the size of the <A HREF="windows.html#window">window</A> frame in Nvim) whenever the split is created.
+(i.e. the size of the<A HREF="windows.html#window">窗口</A>frame in Nvim) whenever the split is created.
 Once a <A HREF="#UI">UI</A> sets a grid size, Nvim does not handle the size for that grid and
 the <A HREF="#UI">UI</A> must change the grid size whenever the outer size is changed. To
 delegate grid-size handling back to Nvim, request the size (0, 0).
 
-A <A HREF="windows.html#window">window</A> can be hidden and redisplayed without its grid being deallocated.
-This can happen multiple times for the same <A HREF="windows.html#window">window</A>, for instance when switching
+A<A HREF="windows.html#window">窗口</A>can be hidden and redisplayed without its grid being deallocated.
+This can happen multiple times for the same<A HREF="windows.html#window">窗口</A>, for instance when switching
 tabs.
 
 [&quot;win_pos&quot;, grid, win, start_row, start_col, width, height]
 	Set the position and size of the grid in Nvim (i.e. the outer grid
-	size). If the <A HREF="windows.html#window">window</A> was previously hidden, <A HREF="motion.html#it">it</A> should now be shown
+	size). If the<A HREF="windows.html#window">窗口</A>was previously hidden, <A HREF="motion.html#it">it</A> should now be shown
 	again.
 
 [&quot;win_float_pos&quot;, grid, win, anchor, anchor_grid, anchor_row, anchor_col, focusable]
-	Display or reconfigure floating <A HREF="windows.html#window">window</A> `win`. The <A HREF="windows.html#window">window</A> should be
+	Display or reconfigure floating<A HREF="windows.html#window">窗口</A>`win`. The<A HREF="windows.html#window">窗口</A>should be
 	displayed above another grid `anchor_grid` at the specified position
 	`anchor_row` and `anchor_col`. For the meaning of `anchor` and more
 	details of positioning, see |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
 
 [&quot;win_external_pos&quot;, grid, win]
-	Display or reconfigure external <A HREF="windows.html#window">window</A> `win`. The <A HREF="windows.html#window">window</A> should be
-	displayed <A HREF="motion.html#as">as</A> a separate top-level <A HREF="windows.html#window">window</A> in the desktop environment,
+	Display or reconfigure external<A HREF="windows.html#window">窗口</A>`win`. The<A HREF="windows.html#window">窗口</A>should be
+	displayed <A HREF="motion.html#as">as</A> a separate top-level<A HREF="windows.html#window">窗口</A>in the desktop environment,
 	or something similar.
 
 [&quot;win_hide&quot;, grid]
-	Stop displaying the <A HREF="windows.html#window">window</A>. The <A HREF="windows.html#window">window</A> can be shown again later.
+	Stop displaying the<A HREF="windows.html#window">窗口</A>. The<A HREF="windows.html#window">窗口</A>can be shown again later.
 
 [&quot;win_close&quot;, grid]
-	Close the <A HREF="windows.html#window">window</A>.
+	Close the<A HREF="windows.html#window">窗口</A>.
 
 [&quot;msg_set_pos&quot;, grid, row, scrolled, sep_char]
 	Display <A HREF="message.html#messages">messages</A> on `grid`.  The grid will be displayed at `row` on the
@@ -712,14 +712,14 @@ tabs.
 	will not be sent.
 
 [&quot;win_viewport&quot;, grid, win, topline, botline, curline, curcol]
-	Indicates the range of buffer text displayed in the <A HREF="windows.html#window">window</A>, <A HREF="motion.html#as">as</A> well
+	Indicates the range of buffer text displayed in the<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#as">as</A> well
 	<A HREF="motion.html#as">as</A> the cursor position in the buffer. All positions are zero-based.
 	`botline` is set to one more than the line <A HREF="intro.html#count">count</A> of the buffer, if
 	there are filler lines past the end.
 
 [&quot;win_extmark&quot;, grid, win, ns_id, mark_id, row, col]
 	Updates the position of an extmark which is currently visible in a
-	<A HREF="windows.html#window">window</A>. Only emitted if the <A HREF="motion.html#mark">mark</A> has the `ui_watched` attribute. 
+	<A HREF="windows.html#window">窗口</A>. Only emitted if the <A HREF="motion.html#mark">mark</A> has the `ui_watched` attribute. 
 
 ==============================================================================
 

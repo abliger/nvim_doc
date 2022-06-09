@@ -221,7 +221,7 @@ g*			Like &quot;*&quot;, but don't put &quot;\&lt;&quot; and &quot;\&gt;&quot; a
 
 							*<A NAME="CTRL-C"></A><B>CTRL-C</B>*
 <A HREF="#CTRL-C">CTRL-C</A>			Interrupt current (search) command.
-			In <A HREF="intro.html#Normal">Normal</A> mode, any pending command is aborted.
+			In <A HREF="intro.html#Normal">正常</A>模式, any pending command is aborted.
 
 
 							*<A NAME=":noh"></A><B>:noh</B>* *<A NAME=":nohlsearch"></A><B>:nohlsearch</B>*
@@ -1049,7 +1049,7 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 
 						*<A NAME="/\&#37;#"></A><B>/\&#37;#</B>* *<A NAME="cursor-position"></A><B>cursor-position</B>*
 \&#37;#	Matches with the cursor position.  Only works when matching in a
-	buffer displayed in a <A HREF="windows.html#window">window</A>.
+	buffer displayed in a<A HREF="windows.html#window">窗口</A>.
 	WARNING: When the cursor is moved after the <A HREF="#pattern">pattern</A> was used, the
 	result becomes invalid.  Vim doesn't automatically update the matches.
 	This is especially relevant for <A HREF="syntax.html#syntax">syntax</A> highlighting and <A HREF="options.html#'hlsearch'">'hlsearch'</A>.
@@ -1133,8 +1133,8 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 \&#37;&lt;.v	Matches before the current virtual column.
 \&#37;&gt;.v	Matches after the current virtual column.
 	These six can be used to match specific virtual columns in a buffer or
-	<A HREF="eval.html#string">string</A>.  When not matching with a buffer in a <A HREF="windows.html#window">window</A>, the option
-	values of the current <A HREF="windows.html#window">window</A> are used (e.g., <A HREF="options.html#'tabstop'">'tabstop'</A>).
+	<A HREF="eval.html#string">string</A>.  When not matching with a buffer in a<A HREF="windows.html#window">窗口</A>, the option
+	values of the current<A HREF="windows.html#window">窗口</A>are used (e.g., <A HREF="options.html#'tabstop'">'tabstop'</A>).
 	The &quot;23&quot; can be any column number.  The first column is 1.
 	Note that some virtual column positions will never match, because they
 	are halfway through a <A HREF="intro.html#tab">tab</A> or other character that occupies more than
@@ -1621,7 +1621,7 @@ Finally, these constructs are unique to Perl:
 
 							*<A NAME=":mat"></A><B>:mat</B>* *<A NAME=":match"></A><B>:match</B>*
 :mat[ch] {group} /{pattern}/
-		Define a <A HREF="#pattern">pattern</A> to highlight in the current <A HREF="windows.html#window">window</A>.  It will
+		Define a <A HREF="#pattern">pattern</A> to highlight in the current<A HREF="windows.html#window">窗口</A>.  It will
 		be highlighted with {group}.  Example:
 <B>			:highlight MyGroup ctermbg=green guibg=green</B>
 <B>			:match MyGroup /TODO/</B>
@@ -1639,7 +1639,7 @@ Finally, these constructs are unique to Perl:
 
 		Note that highlighting the last used search <A HREF="#pattern">pattern</A> with
 		<A HREF="options.html#'hlsearch'">'hlsearch'</A> is used in all <A HREF="windows.html#windows">windows</A>, while the <A HREF="#pattern">pattern</A> defined
-		with &quot;<A HREF="#:match">:match</A>&quot; only exists in the current <A HREF="windows.html#window">window</A>.  It is kept
+		with &quot;<A HREF="#:match">:match</A>&quot; only exists in the current<A HREF="windows.html#window">窗口</A>.  It is kept
 		when switching to another buffer.
 
 		<A HREF="options.html#'ignorecase'">'ignorecase'</A> does not apply, use |<A HREF="#/\c">/\c</A>| in the <A HREF="#pattern">pattern</A> to

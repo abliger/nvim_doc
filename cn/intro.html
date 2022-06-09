@@ -289,7 +289,7 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 		but only in the explanation.  This was done to make the
 		commands easier to look up.  If the <A HREF="options.html#'showcmd'">'showcmd'</A> option is on,
 		the (partially) entered <A HREF="#count">count</A> is shown at the bottom of the
-		<A HREF="windows.html#window">window</A>.  You can use &lt;Del&gt; to erase the last digit (|<A HREF="various.html#N&lt;Del&gt;">N&lt;Del&gt;</A>|).
+		<A HREF="windows.html#window">窗口</A>.  You can use &lt;Del&gt; to erase the last digit (|<A HREF="various.html#N&lt;Del&gt;">N&lt;Del&gt;</A>|).
 
 
 							*<A NAME="[quotex]"></A><B>[quotex]</B>*
@@ -597,7 +597,7 @@ back to <A HREF="#Normal">Normal</A> mode by typing <A HREF="#&lt;Esc&gt;">&lt;E
 though, use &quot;<A HREF="editing.html#:visual">:visual</A>&quot;.
 You will know you are back in <A HREF="#Normal">Normal</A> mode when you see the screen flash or
 hear the bell after you type <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A>.  However, when pressing <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A> after using
-<A HREF="motion.html#CTRL-O">CTRL-O</A> in <A HREF="insert.html#Insert">Insert</A> mode you get a beep but you are still in <A HREF="insert.html#Insert">Insert</A> mode, type
+<A HREF="motion.html#CTRL-O">CTRL-O</A> in <A HREF="intro.html#Insert">插入</A>模式 you get a beep but you are still in <A HREF="intro.html#Insert">插入</A>模式, type
 <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A> again.
 
 
@@ -615,7 +615,7 @@ hear the bell after you type <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A>.  However, w
 
 <A HREF="starting.html#--">--</A> not possible
 
-*1 Go from <A HREF="#Normal">Normal</A> mode to <A HREF="insert.html#Insert">Insert</A> mode by giving the command &quot;<A HREF="insert.html#i">i</A>&quot;, &quot;<A HREF="insert.html#I">I</A>&quot;, &quot;<A HREF="insert.html#a">a</A>&quot;,
+*1 Go from <A HREF="#Normal">Normal</A> mode to <A HREF="intro.html#Insert">插入</A>模式 by giving the command &quot;<A HREF="insert.html#i">i</A>&quot;, &quot;<A HREF="insert.html#I">I</A>&quot;, &quot;<A HREF="insert.html#a">a</A>&quot;,
    &quot;<A HREF="insert.html#A">A</A>&quot;, &quot;<A HREF="insert.html#o">o</A>&quot;, &quot;<A HREF="insert.html#O">O</A>&quot;, &quot;<A HREF="change.html#c">c</A>&quot;, &quot;<A HREF="change.html#C">C</A>&quot;, &quot;<A HREF="change.html#s">s</A>&quot; or S&quot;.
 *2 Go from <A HREF="visual.html#Visual">Visual</A> mode to <A HREF="#Normal">Normal</A> mode by giving a non-movement command, which
    causes the command to be executed, or by hitting <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A> &quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="visual.html#V">V</A>&quot; or &quot;<A HREF="visual.html#CTRL-V">CTRL-V</A>&quot;
@@ -636,7 +636,7 @@ hear the bell after you type <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A>.  However, w
    - use &quot;<A HREF="visual.html#gh">gh</A>&quot;, &quot;<A HREF="visual.html#gH">gH</A>&quot; or &quot;g CTRL-H&quot;  |<A HREF="visual.html#g_CTRL-H">g_CTRL-H</A>|
 *5 Go from <A HREF="visual.html#Select">Select</A> mode to <A HREF="#Normal">Normal</A> mode by using a non-printable command to move
    the cursor, without keeping the Shift key pressed.
-*6 Go from <A HREF="visual.html#Select">Select</A> mode to <A HREF="insert.html#Insert">Insert</A> mode by typing a printable character.  The
+*6 Go from <A HREF="visual.html#Select">Select</A> mode to <A HREF="intro.html#Insert">插入</A>模式 by typing a printable character.  The
    selection is deleted and the character is inserted.
 
 
@@ -663,20 +663,20 @@ CTRL-\ <A HREF="editing.html#CTRL-G">CTRL-G</A> works the same <A HREF="motion.h
 
 Window contents						*<A NAME="window-contents"></A><B>window-contents</B>*
 
-In <A HREF="#Normal">Normal</A> mode and Insert/Replace mode the screen <A HREF="windows.html#window">window</A> will show the current
+In <A HREF="#Normal">Normal</A> mode and Insert/Replace mode the screen<A HREF="windows.html#window">窗口</A>will show the current
 contents of the buffer: What You See Is What You Get.  There are two
 exceptions:
 - When the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option contains '<A HREF="motion.html#$">$</A>', and the change is within one line,
   the text is not directly deleted, but a '<A HREF="motion.html#$">$</A>' is put at the last deleted
   character.
-- When <A HREF="insert.html#inserting">inserting</A> text in one <A HREF="windows.html#window">window</A>, other <A HREF="windows.html#windows">windows</A> on the same text are not
+- When <A HREF="insert.html#inserting">inserting</A> text in one<A HREF="windows.html#window">窗口</A>, other <A HREF="windows.html#windows">windows</A> on the same text are not
   updated until the insert is finished.
 
-Lines longer than the <A HREF="windows.html#window">window</A> width will wrap, unless the <A HREF="options.html#'wrap'">'wrap'</A> option is off
+Lines longer than the<A HREF="windows.html#window">窗口</A>width will wrap, unless the <A HREF="options.html#'wrap'">'wrap'</A> option is off
 (see below).  The <A HREF="options.html#'linebreak'">'linebreak'</A> option can be set to wrap at a blank character.
 
-If the <A HREF="windows.html#window">window</A> has room after the last line of the buffer, Vim will show '<A HREF="change.html#~">~</A>' in
-the first column of the last lines in the <A HREF="windows.html#window">window</A>, like this:
+If the<A HREF="windows.html#window">窗口</A>has room after the last line of the buffer, Vim will show '<A HREF="change.html#~">~</A>' in
+the first column of the last lines in the<A HREF="windows.html#window">窗口</A>, like this:
 
 	+-----------------------+
 	|some line		|
@@ -687,8 +687,8 @@ the first column of the last lines in the <A HREF="windows.html#window">window</
 
 Thus the '<A HREF="change.html#~">~</A>' lines indicate that the end of the buffer was reached.
 
-If the last line in a <A HREF="windows.html#window">window</A> doesn't fit, Vim will indicate this with a '<A HREF="repeat.html#@">@</A>' in
-the first column of the last lines in the <A HREF="windows.html#window">window</A>, like this:
+If the last line in a<A HREF="windows.html#window">窗口</A>doesn't fit, Vim will indicate this with a '<A HREF="repeat.html#@">@</A>' in
+the first column of the last lines in the<A HREF="windows.html#window">窗口</A>, like this:
 
 	+-----------------------+
 	|first line		|
@@ -698,10 +698,10 @@ the first column of the last lines in the <A HREF="windows.html#window">window</
 	+-----------------------+
 
 Thus the '<A HREF="repeat.html#@">@</A>' lines indicate that there is a line that doesn't fit in the
-<A HREF="windows.html#window">window</A>.
+<A HREF="windows.html#window">窗口</A>.
 
 When the &quot;lastline&quot; flag is present in the <A HREF="options.html#'display'">'display'</A> option, you will not see
-'<A HREF="repeat.html#@">@</A>' characters at the left side of <A HREF="windows.html#window">window</A>.  If the last line doesn't fit
+'<A HREF="repeat.html#@">@</A>' characters at the left side of<A HREF="windows.html#window">窗口</A>.  If the last line doesn't fit
 completely, only the part that fits is shown, and the last three characters of
 the last line are replaced with &quot;@@@&quot;, like this:
 
@@ -712,7 +712,7 @@ the last line are replaced with &quot;@@@&quot;, like this:
 	|oesn't fit in the wi@@@|
 	+-----------------------+
 
-If there is a single line that is too long to fit in the <A HREF="windows.html#window">window</A>, this is a
+If there is a single line that is too long to fit in the<A HREF="windows.html#window">窗口</A>, this is a
 special situation.  Vim will show only part of the line, around where the
 cursor is.  There are no special characters shown, so that you can edit all
 parts of this line.
@@ -754,7 +754,7 @@ In <A HREF="cmdline.html#Command-line">Command-line</A> mode only the command-li
 display of the buffer contents is updated <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> you go back to Command
 mode.
 
-The last line of the <A HREF="windows.html#window">window</A> is used for status and other <A HREF="message.html#messages">messages</A>.  The
+The last line of the<A HREF="windows.html#window">窗口</A>is used for status and other <A HREF="message.html#messages">messages</A>.  The
 status <A HREF="message.html#messages">messages</A> will only be used if an option is on:
 
 <B><FONT color="#3A6F2B">status message			option	     default	Unix default	</FONT></B>
@@ -776,8 +776,8 @@ Some commands show how many lines were affected.  Above which threshold this
 happens can be controlled with the <A HREF="options.html#'report'">'report'</A> option (default 2).
 
 The name Vim and the full name of the current file name will be shown in the
-title <A HREF="motion.html#bar">bar</A>.  When the <A HREF="windows.html#window">window</A> is resized, Vim will automatically redraw the
-<A HREF="windows.html#window">window</A>.  You may make the <A HREF="windows.html#window">window</A> <A HREF="motion.html#as">as</A> small <A HREF="motion.html#as">as</A> you like, but if <A HREF="motion.html#it">it</A> gets too
+title <A HREF="motion.html#bar">bar</A>.  When the<A HREF="windows.html#window">窗口</A>is resized, Vim will automatically redraw the
+<A HREF="windows.html#window">窗口</A>.  You may make the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> small <A HREF="motion.html#as">as</A> you like, but if <A HREF="motion.html#it">it</A> gets too
 small not a single line will fit in <A HREF="motion.html#it">it</A>.  Make <A HREF="motion.html#it">it</A> at least 40 characters wide
 to be able to read most <A HREF="message.html#messages">messages</A> on the last line.
 
@@ -787,20 +787,20 @@ Definitions						*<A NAME="definitions"></A><B>definitions</B>* *<A NAME="jargon
 
   buffer		Contains lines of text, usually from a file.
   screen		The whole area that Nvim uses to display things.
-  <A HREF="windows.html#window">window</A>		A view on a buffer.  There can be multiple <A HREF="windows.html#windows">windows</A> for
+ <A HREF="windows.html#window">窗口</A>		A view on a buffer.  There can be multiple <A HREF="windows.html#windows">windows</A> for
 			one buffer.
   frame			Windows are kept in a tree of frames.  Each frame
-			contains a column, row, or <A HREF="windows.html#window">window</A> (&quot;leaf&quot; frame).
+			contains a column, row, or<A HREF="windows.html#window">窗口</A>(&quot;leaf&quot; frame).
 
 A screen contains one or more <A HREF="windows.html#windows">windows</A>, separated by status lines and with the
 command line at the bottom.
 
 	+-------------------------------+
-screen	&#124; <A HREF="windows.html#window">window</A> 1	&#124; <A HREF="windows.html#window">window</A> 2	|
+screen	&#124;<A HREF="windows.html#window">窗口</A>1	&#124;<A HREF="windows.html#window">窗口</A>2	|
 	&#124;		&#124;		|
 	&#124;		&#124;		|
 	|= status line =|= status line =|
-	&#124; <A HREF="windows.html#window">window</A> 3			|
+	&#124;<A HREF="windows.html#window">窗口</A>3			|
 	&#124;				|
 	&#124;				|
 	|==== status line ==============|
@@ -819,12 +819,12 @@ A difference is made between four types of lines:
 			in a closed fold are changed to a single logical line:
 			&quot;+-- 99 lines folded&quot;.  They can be thousands of
 			characters long.
-  <A HREF="windows.html#window">window</A> lines		The lines displayed in a <A HREF="windows.html#window">window</A>: A range of logical
+ <A HREF="windows.html#window">窗口</A>lines		The lines displayed in a<A HREF="windows.html#window">窗口</A>: A range of logical
 			lines with wrapping, line breaks, etc.  applied.  They
-			can only be <A HREF="motion.html#as">as</A> long <A HREF="motion.html#as">as</A> the width of the <A HREF="windows.html#window">window</A> allows,
+			can only be <A HREF="motion.html#as">as</A> long <A HREF="motion.html#as">as</A> the width of the<A HREF="windows.html#window">窗口</A>allows,
 			longer lines are wrapped or truncated.
   screen lines		The lines of the screen that Nvim uses.  Consists of
-			the <A HREF="windows.html#window">window</A> lines of all <A HREF="windows.html#windows">windows</A>, with status lines
+			the<A HREF="windows.html#window">窗口</A>lines of all <A HREF="windows.html#windows">windows</A>, with status lines
 			and the command line added.  They can only be <A HREF="motion.html#as">as</A> long
 			<A HREF="motion.html#as">as</A> the width of the screen allows.  When the command
 			line gets longer <A HREF="motion.html#it">it</A> wraps and lines are scrolled to

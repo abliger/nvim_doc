@@ -292,9 +292,9 @@ use <A HREF="intro.html#Ex">Ex</A> commands, commands that make changes or <A HR
 (starting with) &quot;<A HREF="repeat.html#.">.</A>&quot;, &quot;<A HREF="change.html#&amp;">&amp;</A>&quot;, <A HREF="editing.html#CTRL-^">CTRL-^</A>, &quot;Z&quot;, <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>, <A HREF="tagsrch.html#CTRL-T">CTRL-T</A>, <A HREF="undo.html#CTRL-R">CTRL-R</A>, <A HREF="motion.html#CTRL-I">CTRL-I</A>
 and <A HREF="motion.html#CTRL-O">CTRL-O</A> cause a beep and <A HREF="#Visual">Visual</A> mode continues.
 
-When switching to another <A HREF="windows.html#window">window</A> on the same buffer, the cursor position in
-that <A HREF="windows.html#window">window</A> is adjusted, so that the same <A HREF="#Visual">Visual</A> area is still selected.  This
-is especially useful to view the start of the <A HREF="#Visual">Visual</A> area in one <A HREF="windows.html#window">window</A>, and
+When switching to another<A HREF="windows.html#window">窗口</A>on the same buffer, the cursor position in
+that<A HREF="windows.html#window">窗口</A>is adjusted, so that the same <A HREF="#Visual">Visual</A> area is still selected.  This
+is especially useful to view the start of the <A HREF="#Visual">Visual</A> area in one<A HREF="windows.html#window">窗口</A>, and
 the end in another.  You can then use <A HREF="#&lt;RightMouse&gt;">&lt;RightMouse&gt;</A> (or <A HREF="term.html#&lt;S-LeftMouse&gt;">&lt;S-LeftMouse&gt;</A> when
 <A HREF="options.html#'mousemodel'">'mousemodel'</A> is &quot;popup&quot;) to drag either end of the <A HREF="#Visual">Visual</A> area.
 
@@ -426,7 +426,7 @@ Works only for adding text to a line, not for deletions.
 
 Visual-block change						*<A NAME="v_b_c"></A><B>v_b_c</B>*
 All selected text in the block will be replaced by the same text <A HREF="eval.html#string">string</A>.  When
-using &quot;<A HREF="change.html#c">c</A>&quot; the selected text is deleted and <A HREF="insert.html#Insert">Insert</A> mode started.  You can then
+using &quot;<A HREF="change.html#c">c</A>&quot; the selected text is deleted and <A HREF="intro.html#Insert">插入</A>模式 started.  You can then
 enter text (without a line break).  When you hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, the same <A HREF="eval.html#string">string</A> is
 inserted in all previously selected lines.
 
@@ -582,13 +582,13 @@ Entering <A HREF="#Select">Select</A> mode:
   <A HREF="options.html#'selectmode'">'selectmode'</A> contains &quot;key&quot;.  For example: <A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> and &lt;S-End&gt;.  <A HREF="options.html#'keymodel'">'keymodel'</A>
   must also contain &quot;startsel&quot;.
 - Using &quot;<A HREF="#v">v</A>&quot;, &quot;<A HREF="#V">V</A>&quot; or <A HREF="#CTRL-V">CTRL-V</A> command, and <A HREF="options.html#'selectmode'">'selectmode'</A> contains &quot;cmd&quot;.
-- Using &quot;<A HREF="#gh">gh</A>&quot;, &quot;<A HREF="#gH">gH</A>&quot; or &quot;<A HREF="#g_CTRL-H">g_CTRL-H</A>&quot; command in <A HREF="intro.html#Normal">Normal</A> mode.
+- Using &quot;<A HREF="#gh">gh</A>&quot;, &quot;<A HREF="#gH">gH</A>&quot; or &quot;<A HREF="#g_CTRL-H">g_CTRL-H</A>&quot; command in <A HREF="intro.html#Normal">正常</A>模式.
 
 - From <A HREF="#Visual">Visual</A> mode, press <A HREF="editing.html#CTRL-G">CTRL-G</A>.			*<A NAME="v_CTRL-G"></A><B>v_CTRL-G</B>*
 
 Commands in <A HREF="#Select">Select</A> mode:
 - Printable characters, <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> and <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> cause the selection to be deleted, and
-  Vim enters <A HREF="insert.html#Insert">Insert</A> mode.  The typed character is inserted.
+  Vim enters <A HREF="intro.html#Insert">插入</A>模式.  The typed character is inserted.
 - Non-printable <A HREF="intro.html#movement">movement</A> commands, with the Shift key pressed, extend the
   selection.  <A HREF="options.html#'keymodel'">'keymodel'</A> must include &quot;startsel&quot;.
 - Non-printable <A HREF="intro.html#movement">movement</A> commands, with the Shift key NOT pressed, stop <A HREF="#Select">Select</A>
@@ -625,11 +625,11 @@ Therefore avoid <A HREF="map.html#mapping">mapping</A> printable characters in <
 
 After the <A HREF="map.html#mapping">mapping</A> or menu finishes, the selection is enabled again and <A HREF="#Select">Select</A>
 mode entered, unless the selected area was deleted, another buffer became
-the current one or the <A HREF="windows.html#window">window</A> layout was changed.
+the current one or the<A HREF="windows.html#window">窗口</A>layout was changed.
 
 When a character was typed that causes the selection to be deleted and <A HREF="insert.html#Insert">Insert</A>
-mode started, <A HREF="insert.html#Insert">Insert</A> mode mappings are applied to this character.  This may
-cause some confusion, because <A HREF="motion.html#it">it</A> means <A HREF="insert.html#Insert">Insert</A> mode mappings apply to a
+mode started, <A HREF="intro.html#Insert">插入</A>模式 mappings are applied to this character.  This may
+cause some confusion, because <A HREF="motion.html#it">it</A> means <A HREF="intro.html#Insert">插入</A>模式 mappings apply to a
 character typed in <A HREF="#Select">Select</A> mode.  Language mappings apply <A HREF="motion.html#as">as</A> well.
 
 
