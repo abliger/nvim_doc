@@ -124,7 +124,7 @@ The color of the column is set with the SignColumn highlight group
 
 <B>	:highlight SignColumn guibg=darkgrey</B>
  
-If <A HREF="options.html#'cursorline'">'cursorline'</A> is enabled, then the CursorLineSign highlight group is used
+If <A HREF="options.html#'cursorline'">'cursorline'</A> is enabled然后the CursorLineSign highlight group is used
 |<A HREF="syntax.html#hl-CursorLineSign">hl-CursorLineSign</A>|.
 
 							*<A NAME="sign-identifier"></A><B>sign-identifier</B>*
@@ -132,7 +132,7 @@ Each placed sign is identified by a number called the sign identifier. This
 identifier is used to jump to the sign or to remove the sign. The identifier
 is assigned when placing the sign using the |<A HREF="#:sign-place">:sign-place</A>| command or the
 |<A HREF="#sign_place()">sign_place()</A>| function. Each sign identifier should be a unique number. If
-multiple placed <A HREF="#signs">signs</A> use the same identifier, then jumping to or removing a
+multiple placed <A HREF="#signs">signs</A> use the same identifier然后jumping to or removing a
 sign becomes unpredictable. To avoid overlapping identifiers, sign groups can
 be used. The |<A HREF="#sign_place()">sign_place()</A>| function can be called with a zero sign identifier
 to allocate the next available identifier.
@@ -140,8 +140,8 @@ to allocate the next available identifier.
 
 							*<A NAME="sign-group"></A><B>sign-group</B>*
 Each placed sign can be assigned to either the global group or a named group.
-When placing a sign, if a group name is not supplied, or an empty <A HREF="eval.html#string">string</A> is
-used, then the sign is placed in the global group. Otherwise the sign is
+When placing a sign, if a group name is not supplied, or an empty <A HREF="options\.html#options">字符串</A> is
+used然后the sign is placed in the global group. Otherwise the sign is
 placed in the named group. The sign identifier is unique within a group. The
 sign group allows Vim plugins to use unique <A HREF="#signs">signs</A> without interfering with
 other plugins using <A HREF="#signs">signs</A>.
@@ -154,7 +154,7 @@ independently of the sign group. The default priority for a sign is 10. The
 priority is assigned at the time of placing a sign.
 
 When two <A HREF="#signs">signs</A> with the same priority are present, and one has an icon or text
-in the signcolumn while the other has line highlighting, then both are
+in the signcolumn while the other has line highlighting然后both are
 displayed.
 
 When the line on which the sign is placed is deleted, the sign is moved to the
@@ -173,7 +173,7 @@ line 23 of the current file:
 And here is the command to delete <A HREF="motion.html#it">它</A> again:
 <B>	:sign unplace 2</B>
 
-Note that the &quot;<A HREF="#:sign">:sign</A>&quot; command cannot be followed by another command or a
+Note that the &quot;<A HREF="#:sign">:sign</A>&quot;命令 cannot be followed by another command or a
 comment.  If you <A HREF="diff.html#do">do</A> need that, use the |<A HREF="eval.html#:execute">:execute</A>| command.
 
 
@@ -243,9 +243,9 @@ LISTING SIGNS						*<A NAME=":sign-list"></A><B>:sign-list</B>* *<A NAME="E156">
 
 见 |<A HREF="#sign_getdefined()">sign_getdefined()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
-<A HREF="#:sign">:sign</A> <A HREF="eval.html#list">list</A>	<A HREF="eval.html#Lists">Lists</A> all defined <A HREF="#signs">signs</A> and their attributes.
+<A HREF="#:sign">:sign</A> <A HREF="eval.html#list">列表</A>	<A HREF="eval.html#Lists">Lists</A> all defined <A HREF="#signs">signs</A> and their attributes.
 
-<A HREF="#:sign">:sign</A> <A HREF="eval.html#list">list</A> {name}
+<A HREF="#:sign">:sign</A> <A HREF="eval.html#list">列表</A> {name}
 		<A HREF="eval.html#Lists">Lists</A> one defined sign and its attributes.
 
 
@@ -389,7 +389,7 @@ REMOVING SIGNS						*<A NAME=":sign-unplace"></A><B>:sign-unplace</B>* *<A NAME=
 
 <A HREF="#:sign">:sign</A> unplace
 		Remove a placed sign at the cursor position. If multiple <A HREF="#signs">signs</A>
-		are placed in the line, then only one is removed.
+		are placed in the line然后only one is removed.
 
 <A HREF="#:sign">:sign</A> unplace group={group}
 		Remove a placed sign in group {group} at the cursor
@@ -405,30 +405,30 @@ LISTING PLACED SIGNS					*<A NAME=":sign-place-list"></A><B>:sign-place-list</B>
 见 |<A HREF="#sign_getplaced()">sign_getplaced()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> place file={fname}
-		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> placed in file {fname}.
+		<A HREF="eval.html#list">列表</A> <A HREF="#signs">signs</A> placed in file {fname}.
 		See remark above about {fname} |<A HREF="#:sign-fname">:sign-fname</A>|.
 
 <A HREF="#:sign">:sign</A> place group={group} file={fname}
-		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> in group {group} placed in file {fname}.
+		<A HREF="eval.html#list">列表</A> <A HREF="#signs">signs</A> in group {group} placed in file {fname}.
 
 <A HREF="#:sign">:sign</A> place group=* file={fname}
-		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> in all the groups placed in file {fname}.
+		<A HREF="eval.html#list">列表</A> <A HREF="#signs">signs</A> in all the groups placed in file {fname}.
 
 
 <A HREF="#:sign">:sign</A> place buffer={nr}
-		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> placed in buffer {nr}.
+		<A HREF="eval.html#list">列表</A> <A HREF="#signs">signs</A> placed in buffer {nr}.
 
 <A HREF="#:sign">:sign</A> place group={group} buffer={nr}
-		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> in group {group} placed in buffer {nr}.
+		<A HREF="eval.html#list">列表</A> <A HREF="#signs">signs</A> in group {group} placed in buffer {nr}.
 
 <A HREF="#:sign">:sign</A> place group=* buffer={nr}
-		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> in all the groups placed in buffer {nr}.
+		<A HREF="eval.html#list">列表</A> <A HREF="#signs">signs</A> in all the groups placed in buffer {nr}.
 
 <A HREF="#:sign">:sign</A> place group={group}
-		<A HREF="eval.html#List">List</A> placed <A HREF="#signs">signs</A> in all sign groups in all the files.
+		<A HREF="eval.html#list">列表</A> placed <A HREF="#signs">signs</A> in all sign groups in all the files.
 
 <A HREF="#:sign">:sign</A> place group=*
-		<A HREF="eval.html#List">List</A> placed <A HREF="#signs">signs</A> in all sign groups in all files.
+		<A HREF="eval.html#list">列表</A> placed <A HREF="#signs">signs</A> in all sign groups in all files.
 
 
 
@@ -469,7 +469,7 @@ sign_define({list})
 		Prefix {name} with a unique text to avoid name collisions.
 		There is no {group} like with placing <A HREF="#signs">signs</A>.
 
-		The {name} can be a <A HREF="eval.html#String">String</A> or a <A HREF="eval.html#Number">Number</A>.  The optional {dict}
+		The {name} can be a <A HREF="options\.html#options">字符串</A> or a <A HREF="eval.html#Number">Number</A>.  The optional {dict}
 		argument specifies the sign attributes.  The following values
 		are supported:
 		   icon		full path to the bitmap file for the sign.
@@ -485,15 +485,15 @@ sign_define({list})
 				associated line. Overrides |<A HREF="syntax.html#hl-LineNr">hl-LineNr</A>|,
 				|<A HREF="syntax.html#hl-CursorLineNr">hl-CursorLineNr</A>|.
 
-		If the sign named {name} already exists, then the attributes
+		If the sign named {name} already exists然后the attributes
 		of the sign are updated.
 
-		The one argument {list} can be used to define a <A HREF="eval.html#list">list</A> of <A HREF="#signs">signs</A>.
-		Each <A HREF="eval.html#list">list</A> item is a dictionary with the above items in {dict}
+		The one argument {list} can be used to define a <A HREF="eval.html#list">列表</A> of <A HREF="#signs">signs</A>.
+		Each <A HREF="eval.html#list">列表</A> item is a dictionary with the above items in {dict}
 		and a &quot;name&quot; item for the sign name.
 
 		Returns 0 on success and -1 on failure.  When the one argument
-		{list} is used, then returns a <A HREF="eval.html#List">List</A> of values one for each
+		{list} is used然后returns a <A HREF="eval.html#list">列表</A> of values one for each
 		defined sign.
 
 		Examples:
@@ -513,14 +513,14 @@ sign_define({list})
 
 
 sign_getdefined([{name}])				*<A NAME="sign_getdefined()"></A><B>sign_getdefined()</B>*
-		Get a <A HREF="eval.html#list">list</A> of defined <A HREF="#signs">signs</A> and their attributes.
+		Get a <A HREF="eval.html#list">列表</A> of defined <A HREF="#signs">signs</A> and their attributes.
 		This is similar to the |<A HREF="#:sign-list">:sign-list</A>| command.
 
-		If the {name} is not supplied, then a <A HREF="eval.html#list">list</A> of all the defined
+		If the {name} is not supplied然后a <A HREF="eval.html#list">列表</A> of all the defined
 		<A HREF="#signs">signs</A> is returned. Otherwise the attribute of the specified
 		sign is returned.
 
-		Each <A HREF="eval.html#list">list</A> item in the returned value is a dictionary with the
+		Each <A HREF="eval.html#list">列表</A> item in the returned value is a dictionary with the
 		following entries:
 		   icon		full path to the bitmap file of the sign
 		   linehl	highlight group used for the whole line the
@@ -538,7 +538,7 @@ sign_getdefined([{name}])				*<A NAME="sign_getdefined()"></A><B>sign_getdefined
 				associated line. Overrides |<A HREF="syntax.html#hl-LineNr">hl-LineNr</A>|,
 				|<A HREF="syntax.html#hl-CursorLineNr">hl-CursorLineNr</A>|; not present if not set.
 
-		Returns an empty <A HREF="eval.html#List">List</A> if there are no <A HREF="#signs">signs</A> and when {name} is
+		Returns an empty <A HREF="eval.html#list">列表</A> if there are no <A HREF="#signs">signs</A> and when {name} is
 		not found.
 
 		Examples:
@@ -553,28 +553,28 @@ sign_getdefined([{name}])				*<A NAME="sign_getdefined()"></A><B>sign_getdefined
 
 
 sign_getplaced([{buf} [, {dict}]])			*<A NAME="sign_getplaced()"></A><B>sign_getplaced()</B>*
-		Return a <A HREF="eval.html#list">list</A> of <A HREF="#signs">signs</A> placed in a buffer or all the <A HREF="windows.html#buffers">buffers</A>.
+		Return a <A HREF="eval.html#list">列表</A> of <A HREF="#signs">signs</A> placed in a buffer or all the <A HREF="windows.html#buffers">buffers</A>.
 		This is similar to the |<A HREF="#:sign-place-list">:sign-place-list</A>| command.
 
-		If the optional buffer name {buf} is specified, then only the
-		<A HREF="eval.html#list">list</A> of <A HREF="#signs">signs</A> placed in that buffer is returned.  For the use
+		If the optional buffer name {buf} is specified然后only the
+		<A HREF="eval.html#list">列表</A> of <A HREF="#signs">signs</A> placed in that buffer is returned.  For the use
 		of {buf}, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|. The optional {dict} can contain
 		the following entries:
 		   group	select only <A HREF="#signs">signs</A> in this group
 		   id		select sign with this identifier
 		   lnum		select <A HREF="#signs">signs</A> placed in this line. For the use
 				of {lnum}, 见 |<A HREF="builtin.html#line()">line()</A>|.
-		If {group} is '*', then <A HREF="#signs">signs</A> in all the groups including the
+		If {group} is '*'然后<A HREF="#signs">signs</A> in all the groups including the
 		global group are returned. If {group} is not supplied or is an
-		empty <A HREF="eval.html#string">string</A>, then only <A HREF="#signs">signs</A> in the global group are
-		returned.  If no arguments are supplied, then <A HREF="#signs">signs</A> in the
+		empty <A HREF="options\.html#options">字符串</A>然后only <A HREF="#signs">signs</A> in the global group are
+		returned.  If no arguments are supplied然后<A HREF="#signs">signs</A> in the
 		global group placed in all the <A HREF="windows.html#buffers">buffers</A> are returned.
 		见 |<A HREF="#sign-group">sign-group</A>|.
 
-		Each <A HREF="eval.html#list">list</A> item in the returned value is a dictionary with the
+		Each <A HREF="eval.html#list">列表</A> item in the returned value is a dictionary with the
 		following entries:
 			bufnr	number of the buffer with the sign
-			<A HREF="#signs">signs</A>	<A HREF="eval.html#list">list</A> of <A HREF="#signs">signs</A> placed in {bufnr}. Each <A HREF="eval.html#list">list</A>
+			<A HREF="#signs">signs</A>	<A HREF="eval.html#list">列表</A> of <A HREF="#signs">signs</A> placed in {bufnr}. Each <A HREF="eval.html#list">列表</A>
 				item is a dictionary with the below listed
 				entries
 
@@ -588,7 +588,7 @@ sign_getplaced([{buf} [, {dict}]])			*<A NAME="sign_getplaced()"></A><B>sign_get
 		The returned <A HREF="#signs">signs</A> in a buffer are ordered by their line
 		number and priority.
 
-		Returns an empty <A HREF="eval.html#list">list</A> on failure or if there are no placed
+		Returns an empty <A HREF="eval.html#list">列表</A> on failure or if there are no placed
 		<A HREF="#signs">signs</A>.
 
 		Examples:
@@ -641,10 +641,10 @@ sign_place({id}, {group}, {name}, {buf} [, {dict}])
 		buffer {buf} and assign {id} and {group} to sign.  This is
 		similar to the |<A HREF="#:sign-place">:sign-place</A>| command.
 
-		If the sign identifier {id} is zero, then a new identifier is
+		If the sign identifier {id} is zero然后a new identifier is
 		allocated.  Otherwise the specified number is used. {group} is
 		the sign group name. To use the global sign group, use an
-		empty <A HREF="eval.html#string">string</A>.  {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A> for {id}, thus
+		empty <A HREF="options\.html#options">字符串</A>.  {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A> for {id}, thus
 		two groups can use the same IDs. Refer to |<A HREF="#sign-identifier">sign-identifier</A>|
 		and |<A HREF="#sign-group">sign-group</A>| for more information.
 
@@ -659,7 +659,7 @@ sign_place({id}, {group}, {name}, {buf} [, {dict}])
 			priority	priority of the sign. See
 					|<A HREF="#sign-priority">sign-priority</A>| for more information.
 
-		If the optional {dict} is not specified, then <A HREF="motion.html#it">它</A> modifies the
+		If the optional {dict} is not specified然后<A HREF="motion.html#it">它</A> modifies the
 		placed sign {id} in group {group} to use the defined sign
 		{name}.
 
@@ -692,14 +692,14 @@ sign_place({id}, {group}, {name}, {buf} [, {dict}])
 sign_placelist({list})
 		Place one or more <A HREF="#signs">signs</A>.  This is similar to the
 		|<A HREF="#sign_place()">sign_place()</A>| function.  The {list} argument specifies the
-		<A HREF="eval.html#List">List</A> of <A HREF="#signs">signs</A> to place. Each <A HREF="eval.html#list">list</A> item is a <A HREF="eval.html#dict">dict</A> with the
+		<A HREF="eval.html#list">列表</A> of <A HREF="#signs">signs</A> to place. Each <A HREF="eval.html#list">列表</A> item is a <A HREF="eval.html#dict">dict</A> with the
 		following sign attributes:
 		    buffer	buffer name or number. For the accepted
 				values, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|.
 		    group	sign group. {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A>
 				for {id}, thus two groups can use the same
 				IDs. If not specified or set to an empty
-				<A HREF="eval.html#string">string</A>, then the global group is used.   See
+				<A HREF="options\.html#options">字符串</A>然后the global group is used.   See
 				|<A HREF="#sign-group">sign-group</A>| for more information.
 		    id		sign identifier. If not specified or zero,
 				then a new unique identifier is allocated.
@@ -716,11 +716,11 @@ sign_placelist({list})
 				default value of 10 is used. See
 				|<A HREF="#sign-priority">sign-priority</A>| for more information.
 
-		If {id} refers to an existing sign, then the existing sign is
+		If {id} refers to an existing sign然后the existing sign is
 		modified to use the specified {name} and/or {priority}.
 
-		Returns a <A HREF="eval.html#List">List</A> of sign identifiers. If failed to place a
-		sign, the corresponding <A HREF="eval.html#list">list</A> item is set to -1.
+		Returns a <A HREF="eval.html#list">列表</A> of sign identifiers. If failed to place a
+		sign, the corresponding <A HREF="eval.html#list">列表</A> item is set to -1.
 
 		Examples:
 <B>			" Place sign s1 with id 5 at line 20 and id 10 at line</B>
@@ -757,11 +757,11 @@ sign_undefine({list})
 		the |<A HREF="#:sign-undefine">:sign-undefine</A>| command. If {name} is not supplied, then
 		deletes all the defined <A HREF="#signs">signs</A>.
 
-		The one argument {list} can be used to undefine a <A HREF="eval.html#list">list</A> of
-		<A HREF="#signs">signs</A>. Each <A HREF="eval.html#list">list</A> item is the name of a sign.
+		The one argument {list} can be used to undefine a <A HREF="eval.html#list">列表</A> of
+		<A HREF="#signs">signs</A>. Each <A HREF="eval.html#list">列表</A> item is the name of a sign.
 
 		Returns 0 on success and -1 on failure.  For the one argument
-		{list} call, returns a <A HREF="eval.html#list">list</A> of values one for each undefined
+		{list} call, returns a <A HREF="eval.html#list">列表</A> of values one for each undefined
 		sign.
 
 		Examples:
@@ -783,14 +783,14 @@ sign_unplace({group} [, {dict}])			*<A NAME="sign_unplace()"></A><B>sign_unplace
 		is similar to the |<A HREF="#:sign-unplace">:sign-unplace</A>| command.
 
 		{group} is the sign group name. To use the global sign group,
-		use an empty <A HREF="eval.html#string">string</A>.  If {group} is set to '*', then all the
+		use an empty <A HREF="options\.html#options">字符串</A>.  If {group} is set to '*'然后all the
 		groups including the global group are used.
 		The <A HREF="#signs">signs</A> in {group} are selected based on the entries in
 		{dict}.  The following optional entries in {dict} are
 		supported:
 			buffer	buffer name or number. 见 |<A HREF="builtin.html#bufname()">bufname()</A>|.
 			id	sign identifier
-		If {dict} is not supplied, then all the <A HREF="#signs">signs</A> in {group} are
+		If {dict} is not supplied然后all the <A HREF="#signs">signs</A> in {group} are
 		removed.
 
 		Returns 0 on success and -1 on failure.
@@ -828,20 +828,20 @@ sign_unplacelist({list})				*<A NAME="sign_unplacelist()"></A><B>sign_unplacelis
 		Remove previously placed <A HREF="#signs">signs</A> from one or more <A HREF="windows.html#buffers">buffers</A>.  This
 		is similar to the |<A HREF="#sign_unplace()">sign_unplace()</A>| function.
 
-		The {list} argument specifies the <A HREF="eval.html#List">List</A> of <A HREF="#signs">signs</A> to remove.
-		Each <A HREF="eval.html#list">list</A> item is a <A HREF="eval.html#dict">dict</A> with the following sign attributes:
+		The {list} argument specifies the <A HREF="eval.html#list">列表</A> of <A HREF="#signs">signs</A> to remove.
+		Each <A HREF="eval.html#list">列表</A> item is a <A HREF="eval.html#dict">dict</A> with the following sign attributes:
 		    buffer	buffer name or number. For the accepted
 				values, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|. If not specified,
 				then the specified sign is removed from all
 				the <A HREF="windows.html#buffers">buffers</A>.
 		    group	sign group name. If not specified or set to an
-				empty <A HREF="eval.html#string">string</A>, then the global sign group is
-				used. If set to '*', then all the groups
+				empty <A HREF="options\.html#options">字符串</A>然后the global sign group is
+				used. If set to '*'然后all the groups
 				including the global group are used.
-		    id		sign identifier. If not specified, then all
+		    id		sign identifier. If not specified然后all
 				the <A HREF="#signs">signs</A> in the specified group are removed.
 
-		Returns a <A HREF="eval.html#List">List</A> where an entry is set to 0 if the corresponding
+		Returns a <A HREF="eval.html#list">列表</A> where an entry is set to 0 if the corresponding
 		sign was successfully removed or -1 on failure.
 
 		Example:

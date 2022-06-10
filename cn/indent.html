@@ -89,10 +89,10 @@ This file is about indenting C programs and other files.
 The basics for C style indenting are explained in section |<A HREF="usr_30.html#30.2">30.2</A>| of the user
 manual.
 
-Vim has <A HREF="options.html#options">options</A> for automatically indenting C style program files. Many
+Vim has <A HREF="options\.html#options">选项</A> for automatically indenting C style program files. Many
 programming languages including Java and C++ follow very closely the
-<A HREF="change.html#formatting">formatting</A> conventions established with C.  These <A HREF="options.html#options">options</A> affect only the
-indent and <A HREF="diff.html#do">do</A> not perform other <A HREF="change.html#formatting">formatting</A>.  There are additional <A HREF="options.html#options">options</A> that
+<A HREF="change.html#formatting">formatting</A> conventions established with C.  These <A HREF="options\.html#options">选项</A> affect only the
+indent and <A HREF="diff.html#do">do</A> not perform other <A HREF="change.html#formatting">formatting</A>.  There are additional <A HREF="options\.html#options">选项</A> that
 affect other kinds of <A HREF="change.html#formatting">formatting</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> indenting, 见 |<A HREF="change.html#format-comments">format-comments</A>|,
 |<A HREF="change.html#fo-table">fo-table</A>|, |<A HREF="change.html#gq">gq</A>| and |<A HREF="change.html#formatting">formatting</A>| for the main ones.
 
@@ -113,7 +113,7 @@ is not a C compiler: <A HREF="motion.html#it">它</A> does not recognize all <A 
 that toplevel <A HREF="eval.html#functions">functions</A> have a '<A HREF="motion.html#{">{</A>' in the first column.  Otherwise they are
 easily confused with declarations.
 
-These five <A HREF="options.html#options">options</A> <A HREF="intro.html#control">control</A> C program indenting:
+These five <A HREF="options\.html#options">选项</A> <A HREF="intro.html#control">control</A> C program indenting:
 <A HREF="options.html#'cindent'">'cindent'</A>	Enables Vim to perform C program indenting automatically.
 <A HREF="options.html#'cinkeys'">'cinkeys'</A>	Specifies which keys trigger reindenting in insert mode.
 <A HREF="options.html#'cinoptions'">'cinoptions'</A>	Sets your preferred indent style.
@@ -128,7 +128,7 @@ files and reset <A HREF="motion.html#it">它</A> for others.
 
 
 					*<A NAME="cinkeys-format"></A><B>cinkeys-format</B>* *<A NAME="indentkeys-format"></A><B>indentkeys-format</B>*
-The <A HREF="options.html#'cinkeys'">'cinkeys'</A> option is a <A HREF="eval.html#string">string</A> that controls Vim's indenting in response to
+The <A HREF="options.html#'cinkeys'">'cinkeys'</A> option is a <A HREF="options\.html#options">字符串</A> that controls Vim's indenting in response to
 typing certain characters or commands in certain contexts.  Note that this not
 only triggers <A HREF="#C-indenting">C-indenting</A>.  When <A HREF="options.html#'indentexpr'">'indentexpr'</A> is not empty <A HREF="options.html#'indentkeys'">'indentkeys'</A> is
 used instead.  The format of <A HREF="options.html#'cinkeys'">'cinkeys'</A> and <A HREF="options.html#'indentkeys'">'indentkeys'</A> is equal.
@@ -143,9 +143,9 @@ occurs <A HREF="motion.html#as">as</A> follows:
 	&quot;<A HREF="cmdline.html#:">:</A>&quot;	if you type '<A HREF="cmdline.html#:">:</A>' after a label or <A HREF="change.html#case">case</A> statement
 	&quot;0#&quot;	if you type '<A HREF="pattern.html##">#</A>' <A HREF="motion.html#as">as</A> the first character in a line
 	&quot;!^F&quot;	if you type <A HREF="scroll.html#CTRL-F">CTRL-F</A> (which is not inserted)
-	&quot;<A HREF="insert.html#o">o</A>&quot;	if you type a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> anywhere or use the &quot;<A HREF="insert.html#o">o</A>&quot; command (not in
+	&quot;<A HREF="insert.html#o">o</A>&quot;	if you type a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> anywhere or use the &quot;<A HREF="insert.html#o">o</A>&quot;命令 (not in
 		insert mode!)
-	&quot;<A HREF="insert.html#O">O</A>&quot;	if you use the &quot;<A HREF="insert.html#O">O</A>&quot; command (not in insert mode!)
+	&quot;<A HREF="insert.html#O">O</A>&quot;	if you use the &quot;<A HREF="insert.html#O">O</A>&quot;命令 (not in insert mode!)
 	&quot;<A HREF="motion.html#e">e</A>&quot;	if you type the second '<A HREF="motion.html#e">e</A>' for an &quot;else&quot; at the start of a
 		line
 
@@ -168,14 +168,14 @@ When neither '<A HREF="change.html#!">!</A>' nor '*' precedes the key, Vim reind
 type the key.  So '<A HREF="motion.html#;">;</A>' sets the indentation of a line which includes the '<A HREF="motion.html#;">;</A>'.
 
 Special key names:
-<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>	Angle brackets mean spelled-out names of keys.  For example: &quot;<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>&quot;,
+<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>	Angle brackets mean spelled-out names of keys.例如: &quot;<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>&quot;,
 	&quot;&lt;Ins&gt;&quot; (见 |<A HREF="intro.html#key-notation">key-notation</A>|).
-^	Letters preceded by a caret (^) are <A HREF="intro.html#control">control</A> characters.  For example:
+^	Letters preceded by a caret (^) are <A HREF="intro.html#control">control</A> characters.例如:
 	&quot;^F&quot; is <A HREF="scroll.html#CTRL-F">CTRL-F</A>.
-<A HREF="insert.html#o">o</A>	Reindent a line when you use the &quot;<A HREF="insert.html#o">o</A>&quot; command or when Vim opens a new
+<A HREF="insert.html#o">o</A>	Reindent a line when you use the &quot;<A HREF="insert.html#o">o</A>&quot;命令 or when Vim opens a new
 	line below the current one (e.g., when you type <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in insert
 	mode).
-<A HREF="insert.html#O">O</A>	Reindent a line when you use the &quot;<A HREF="insert.html#O">O</A>&quot; command.
+<A HREF="insert.html#O">O</A>	Reindent a line when you use the &quot;<A HREF="insert.html#O">O</A>&quot;命令.
 <A HREF="motion.html#e">e</A>	Reindent a line that starts with &quot;else&quot; when you type the second '<A HREF="motion.html#e">e</A>'.
 :	Reindent a line when a '<A HREF="cmdline.html#:">:</A>' is typed which is after a label or <A HREF="change.html#case">case</A>
 	statement.  Don't reindent for a &quot;<A HREF="cmdline.html#:">:</A>&quot; in &quot;class::method&quot; for C++.  To
@@ -211,7 +211,7 @@ the option character can be one of these (N is any number):
 	Ns	N times <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> spaces
 	-Ns	N times <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> spaces to the left
 
-In the <A HREF="eval.html#list">list</A> below,
+In the <A HREF="eval.html#list">列表</A> below,
 &quot;<A HREF="pattern.html#N">N</A>&quot; represents a number of your choice (the number can be negative).  When
 there is an '<A HREF="change.html#s">s</A>' after the number, Vim multiplies the number by <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>:
 &quot;1s&quot; is <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>, &quot;2s&quot; is two times <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>, etc.  You can use a
@@ -723,7 +723,7 @@ CLOJURE					*<A NAME="ft-clojure-indent"></A><B>ft-clojure-indent</B>* *<A NAME=
 Clojure indentation differs somewhat from traditional Lisps, due in part to
 the use of square and curly brackets, and otherwise by community convention.
 These conventions are not universally followed, so the Clojure indent <A HREF="usr_41.html#script">script</A>
-offers a few configuration <A HREF="options.html#options">options</A>.
+offers a few configuration <A HREF="options\.html#options">选项</A>.
 
 
 
@@ -741,7 +741,7 @@ performance for correctness when dealing with very long forms.  A value of
 
 					*<A NAME="g:clojure_fuzzy_indent_blacklist"></A><B>g:clojure_fuzzy_indent_blacklist</B>*
 
-The <A HREF="options.html#'lispwords'">'lispwords'</A> option is a <A HREF="eval.html#list">list</A> of comma-separated words that <A HREF="motion.html#mark">mark</A> special
+The <A HREF="options.html#'lispwords'">'lispwords'</A> option is a <A HREF="eval.html#list">列表</A> of comma-separated words that <A HREF="motion.html#mark">mark</A> special
 forms whose subforms should be indented with two spaces.
 
 For example:
@@ -763,7 +763,7 @@ the fuzzy indent feature:
  
 |<A HREF="#g:clojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</A>| and |<A HREF="#g:clojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</A>| are
 lists of patterns that will be matched against the unqualified symbol at the
-head of a <A HREF="eval.html#list">list</A>.  This means that a <A HREF="pattern.html#pattern">pattern</A> like `&quot;^foo&quot;` will match all these
+head of a <A HREF="eval.html#list">列表</A>.  This means that a <A HREF="pattern.html#pattern">pattern</A> like `&quot;^foo&quot;` will match all these
 candidates: `foobar`, `my.ns/foobar`, and `#'foobar`.
 
 Each candidate <A HREF="motion.html#word">单词</A> is tested for special treatment in this order:
@@ -782,7 +782,7 @@ Each candidate <A HREF="motion.html#word">单词</A> is tested for special treat
 Some forms in Clojure are indented such that every subform is indented by only
 two spaces, regardless of <A HREF="options.html#'lispwords'">'lispwords'</A>.  If you have a custom construct that
 should be indented in this idiosyncratic fashion, you can add your symbols to
-the default <A HREF="eval.html#list">list</A> below.
+the default <A HREF="eval.html#list">列表</A> below.
 
 <B>	" Default</B>
 <B>	let g:clojure_special_indent_words =</B>
@@ -860,7 +860,7 @@ follows
 <B>   let fortran_do_enddo=1</B>
 
 in which <A HREF="change.html#case">case</A> <A HREF="diff.html#do">do</A> loops will be indented.  If all your loops are of do/enddo
-type only in, say, .f90 files, then you should set a buffer flag with an
+type only in, say, .f90 files然后you should set a buffer flag with an
 <A HREF="autocmd.html#autocommand">autocommand</A> such <A HREF="motion.html#as">as</A>
 
 <B>  au! BufRead,BufNewFile *.f90 let b:fortran_do_enddo=1</B>
@@ -973,7 +973,7 @@ To not enable auto-formatting of comments by default (if you want to use your
 own 'formatoptions'):
 <B>    :let g:PHP_autoformatcomment = 0</B>
 
-Else, '<A HREF="motion.html#t">t</A>' will be removed from the <A HREF="options.html#'formatoptions'">'formatoptions'</A> <A HREF="eval.html#string">string</A> and &quot;qrowcb&quot; will be
+Else, '<A HREF="motion.html#t">t</A>' will be removed from the <A HREF="options.html#'formatoptions'">'formatoptions'</A> <A HREF="options\.html#options">字符串</A> and &quot;qrowcb&quot; will be
 added, 见 |<A HREF="change.html#fo-table">fo-table</A>| for more information.
 
 
@@ -1295,7 +1295,7 @@ For example:
 While in <A HREF="intro.html#Insert">插入</A>模式, after typing &quot;<A HREF="starting.html#--">--</A> &quot; (note the space &quot; &quot;), hitting <A HREF="scroll.html#CTRL-F">CTRL-F</A>
 will align the current &quot;<A HREF="starting.html#--">--</A> &quot; with the previous line's &quot;<A HREF="starting.html#--">--</A>&quot;.
 
-If the very previous line does not contain &quot;<A HREF="starting.html#--">--</A>&quot;, THEN the full-line comment
+If the very previous line does not contain &quot;<A HREF="starting.html#--">--</A>&quot;然后the full-line comment
 will be aligned with the start of the next non-blank line that is NOT a
 full-line comment.
 

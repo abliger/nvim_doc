@@ -269,7 +269,7 @@ To ALWAYS use the <A HREF="#clipboard">clipboard</A> for ALL operations (instead
 the '<A HREF="motion.html#+">+</A>' and/or '*' <A HREF="change.html#registers">registers</A> explicitly):
 <B>    set clipboard+=unnamedplus</B>
 
-See <A HREF="options.html#'clipboard'">'clipboard'</A> for details and <A HREF="options.html#options">options</A>.
+See <A HREF="options.html#'clipboard'">'clipboard'</A> for details and <A HREF="options\.html#options">选项</A>.
 
 
 							      *<A NAME="clipboard-tool"></A><B>clipboard-tool</B>*
@@ -324,9 +324,9 @@ For example this configuration uses the g:foo variable <A HREF="motion.html#as">
 <B>          \   },</B>
 <B>          \ }</B>
 
-The &quot;copy&quot; function stores a <A HREF="eval.html#list">list</A> of lines and the <A HREF="intro.html#register">register</A> type. The &quot;<A HREF="#paste">paste</A>&quot;
-function returns the <A HREF="#clipboard">clipboard</A> <A HREF="motion.html#as">as</A> a `[lines, regtype]` <A HREF="eval.html#list">list</A>, where `lines` is
-a <A HREF="eval.html#list">list</A> of lines and `regtype` is a <A HREF="intro.html#register">register</A> type conforming to |<A HREF="builtin.html#setreg()">setreg()</A>|.
+The &quot;copy&quot; function stores a <A HREF="eval.html#list">列表</A> of lines and the <A HREF="intro.html#register">register</A> type. The &quot;<A HREF="#paste">paste</A>&quot;
+function returns the <A HREF="#clipboard">clipboard</A> <A HREF="motion.html#as">as</A> a `[lines, regtype]` <A HREF="eval.html#list">列表</A>, where `lines` is
+a <A HREF="eval.html#list">列表</A> of lines and `regtype` is a <A HREF="intro.html#register">register</A> type conforming to |<A HREF="builtin.html#setreg()">setreg()</A>|.
 
 ==============================================================================
 
@@ -334,7 +334,7 @@ Paste 							*<A NAME="provider-paste"></A><B>provider-paste</B>* *<A NAME="past
 
 &quot;Paste&quot; is a separate concept from |clipboard|: <A HREF="#paste">paste</A> means &quot;dump a bunch of
 text to the editor&quot;, whereas <A HREF="#clipboard">clipboard</A> provides features like |<A HREF="intro.html#quote-+">quote-+</A>| to get
-and set the OS <A HREF="#clipboard">clipboard</A> directly.  For example, middle-click or CTRL-SHIFT-v
+and set the OS <A HREF="#clipboard">clipboard</A> directly.例如, middle-click or CTRL-SHIFT-v
 (macOS: CMD-v) in your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is &quot;<A HREF="#paste">paste</A>&quot;, not &quot;<A HREF="#clipboard">clipboard</A>&quot;: the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
 application (Nvim) just gets a stream of text, <A HREF="motion.html#it">它</A> does not interact with the
 <A HREF="#clipboard">clipboard</A> directly.

@@ -130,13 +130,13 @@ that indicates that there is a section.
 
 *<A NAME="28.2"></A><B>28.2</B>*	Manual <A HREF="fold.html#folding">folding</A>
 
-Try <A HREF="motion.html#it">它</A> out: Position the cursor in a <A HREF="motion.html#paragraph">paragraph</A> and type:
+Try <A HREF="motion.html#it">它</A> out: Position the cursor in a <A HREF="motion.html#paragraph">段落</A> and type:
 
 <B>	zfap</B>
 
-You will see that the <A HREF="motion.html#paragraph">paragraph</A> is replaced by a highlighted line.  You have
+You will see that the <A HREF="motion.html#paragraph">段落</A> is replaced by a highlighted line.  You have
 created a fold.  |<A HREF="fold.html#zf">zf</A>| is an <A HREF="motion.html#operator">operator</A> and |<A HREF="motion.html#ap">ap</A>| a text object selection.  You
-can use the |<A HREF="fold.html#zf">zf</A>| <A HREF="motion.html#operator">operator</A> with any <A HREF="intro.html#movement">movement</A> command to create a fold for the
+can use the |<A HREF="fold.html#zf">zf</A>| <A HREF="motion.html#operator">operator</A> with any <A HREF="intro.html#movement">移动</A>命令 to create a fold for the
 text that <A HREF="motion.html#it">它</A> moved over.  |<A HREF="fold.html#zf">zf</A>| also works in <A HREF="visual.html#Visual">Visual</A> mode.
 
 To view the text again, open the fold by typing:
@@ -156,7 +156,7 @@ mnemonic meaning to make <A HREF="motion.html#it">它</A> easier to remember the
 	<A HREF="fold.html#zc">zc</A>	C-lose a fold
 
 Folds can be nested: A region of text that contains <A HREF="fold.html#folds">folds</A> can be folded
-again.  For example, you can fold each <A HREF="motion.html#paragraph">paragraph</A> in this section, and then
+again.例如, you can fold each <A HREF="motion.html#paragraph">段落</A> in this section, and then
 fold all the sections in this chapter.  Try <A HREF="motion.html#it">它</A> out.  You will notice that
 opening the fold for the whole chapter will restore the nested <A HREF="fold.html#folds">folds</A> <A HREF="motion.html#as">as</A> they
 were, some may be open and some may be closed.
@@ -198,7 +198,7 @@ More about manual <A HREF="fold.html#folding">folding</A> in the reference manua
 
 *<A NAME="28.3"></A><B>28.3</B>*	Working with <A HREF="fold.html#folds">folds</A>
 
-When some <A HREF="fold.html#folds">folds</A> are closed, <A HREF="intro.html#movement">movement</A> commands like &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot; move over a
+When some <A HREF="fold.html#folds">folds</A> are closed, <A HREF="intro.html#movement">移动</A>命令 like &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot; move over a
 fold like <A HREF="motion.html#it">它</A> was a single, empty line.  This allows you to quickly move around
 over folded text.
 
@@ -235,7 +235,7 @@ When in <A HREF="intro.html#Insert">插入</A>模式, the fold at the cursor lin
 you to see what you type!
 
 Folds are opened automatically when jumping around or moving the cursor left
-or right.  For example, the &quot;<A HREF="motion.html#0">0</A>&quot; command opens the fold under the cursor
+or right.例如, the &quot;<A HREF="motion.html#0">0</A>&quot;命令 opens the fold under the cursor
 (if <A HREF="options.html#'foldopen'">'foldopen'</A> contains &quot;hor&quot;, which is the default).  The <A HREF="options.html#'foldopen'">'foldopen'</A> option
 can be changed to open <A HREF="fold.html#folds">folds</A> for specific commands.  If you want the line
 under the cursor always to be open, <A HREF="diff.html#do">do</A> this:
@@ -276,7 +276,7 @@ When you come back to the same file later, you can load the view again:
 
 <B>	:loadview</B>
 
-You can store up to ten views on one file.  For example, to save the current
+You can store up to ten views on one file.例如, to save the current
 setup <A HREF="motion.html#as">as</A> the third view and load the second view:
 
 <B>	:mkview 3</B>
@@ -400,7 +400,7 @@ For each language Vim uses a different <A HREF="syntax.html#syntax">syntax</A> f
 for various items in the file.  If you are reading this in Vim, in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
 that supports colors, the colors you see are made with the &quot;help&quot; <A HREF="syntax.html#syntax">syntax</A> file.
    In the <A HREF="syntax.html#syntax">syntax</A> files <A HREF="motion.html#it">它</A> is possible to add <A HREF="syntax.html#syntax">syntax</A> items that have the &quot;fold&quot;
-argument.  These define a fold region.  This requires <A HREF="editing.html#writing">writing</A> a <A HREF="syntax.html#syntax">syntax</A> file
+argument.  These define a fold region.  This requires <A HREF="editing.html#writing">写</A> a <A HREF="syntax.html#syntax">syntax</A> file
 and adding these items in <A HREF="motion.html#it">它</A>.  That's not so easy to <A HREF="diff.html#do">do</A>.  But once it's done,
 all <A HREF="fold.html#folding">folding</A> happens automatically.
    Here we'll assume you are using an existing <A HREF="syntax.html#syntax">syntax</A> file.  Then there is
@@ -433,11 +433,11 @@ Explanation for the <A HREF="options.html#'foldexpr'">'foldexpr'</A> used in the
    getline(v:lnum)			gets the current line
    substitute(...,'\\s','','g')		removes all white space from the line
    substitute(...,'[^&gt;].*','','')	removes everything after leading '&gt;'s
-   strlen(...)				counts the length of the <A HREF="eval.html#string">string</A>, which
+   strlen(...)				counts the length of the <A HREF="options\.html#options">字符串</A>, which
 					is the number of '&gt;'s found
 
 Note that a <A HREF="intro.html#backslash">backslash</A> must be inserted before every space, double <A HREF="change.html#quote">quote</A> and
-<A HREF="intro.html#backslash">backslash</A> for the &quot;<A HREF="options.html#:set">:set</A>&quot; command.  If this confuses you, <A HREF="diff.html#do">do</A>
+<A HREF="intro.html#backslash">backslash</A> for the &quot;<A HREF="options.html#:set">:set</A>&quot;命令.  If this confuses you, <A HREF="diff.html#do">do</A>
 
 <B>	:set foldexpr</B>
 

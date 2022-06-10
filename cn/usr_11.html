@@ -105,7 +105,7 @@ with the &quot;<A HREF="starting.html#-r">-r</A>&quot; argument added:
 
 Vim will read the swap file (used to store text you were editing) and may read
 bits and pieces of the original file.  If Vim recovered your changes you will
-see these <A HREF="message.html#messages">messages</A> (with different file names, of course):
+see these <A HREF="message.html#messages">信息</A> (with different file names, of course):
 
 <B><FONT color="#3A6F2B">	Using swap file ".help.txt.swp" </FONT></B>
 <B><FONT color="#3A6F2B">	Original file "~/vim/runtime/doc/help.txt" </FONT></B>
@@ -119,7 +119,7 @@ To be on the safe side, write this file under another name:
 <B>	:write help.txt.recovered</B>
 
 Compare the file with the original file to check if you ended up with what you
-expected.  Diff mode is very useful for this |<A HREF="usr_08.html#08.7">08.7</A>|.  For example:
+expected.  Diff mode is very useful for this |<A HREF="usr_08.html#08.7">08.7</A>|.例如:
 
 <B>	:write help.txt.recovered</B>
 <B>	:edit #</B>
@@ -128,7 +128,7 @@ expected.  Diff mode is very useful for this |<A HREF="usr_08.html#08.7">08.7</A
 Watch out for the original file to contain a more recent version (you saved
 the file just before the computer crashed).  And check that no lines are
 missing (something went wrong that Vim could not recover).
-   If Vim produces warning <A HREF="message.html#messages">messages</A> when recovering, read them carefully.
+   If Vim produces warning <A HREF="message.html#messages">信息</A> when recovering, read them carefully.
 This is rare though.
 
 If the <A HREF="recover.html#recovery">recovery</A> resulted in text that is exactly the same <A HREF="motion.html#as">as</A> the file
@@ -145,10 +145,10 @@ file after making changes.  It is safe to delete the swap file now.
 It is normal that the last few changes can not be recovered.  Vim flushes the
 changes to disk when you don't type for about four seconds, or after typing
 about two hundred characters.  This is set with the <A HREF="options.html#'updatetime'">'updatetime'</A> and
-<A HREF="options.html#'updatecount'">'updatecount'</A> <A HREF="options.html#options">options</A>.  Thus when Vim didn't get a chance to save itself when
+<A HREF="options.html#'updatecount'">'updatecount'</A> <A HREF="options\.html#options">选项</A>.  Thus when Vim didn't get a chance to save itself when
 the system went down, the changes after the last flush will be lost.
 
-If you were editing without a file name, give an empty <A HREF="eval.html#string">string</A> <A HREF="motion.html#as">as</A> argument:
+If you were editing without a file name, give an empty <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#as">as</A> argument:
 
 <B>	vim -r ""</B>
 
@@ -164,7 +164,7 @@ file, and use:
 
 <B>	vim -r</B>
 
-Vim will <A HREF="eval.html#list">list</A> the swap files that <A HREF="motion.html#it">它</A> can find.  It will also look in other
+Vim will <A HREF="eval.html#list">列表</A> the swap files that <A HREF="motion.html#it">它</A> can find.  It will also look in other
 directories where the swap file for files in the current directory may be
 located.  It will not find swap files in any other directories though, <A HREF="motion.html#it">它</A>
 doesn't search the directory tree.
@@ -186,7 +186,7 @@ doesn't search the directory tree.
 <B><FONT color="#3A6F2B">	      -- none -- </FONT></B>
 
 If there are several swap files that look like they may be the one you want to
-use, a <A HREF="eval.html#list">list</A> is given of these swap files and you are requested to enter the
+use, a <A HREF="eval.html#list">列表</A> is given of these swap files and you are requested to enter the
 number of the one you want to use.  Carefully look at the dates to decide
 which one you want to use.
    In <A HREF="change.html#case">case</A> you don't know which one to use, just try them one by one and check
@@ -351,7 +351,7 @@ A  Abort.  Like Quit, but also abort further commands.  This is useful when
    <A HREF="windows.html#windows">windows</A>.
 
 <A HREF="change.html#D">D</A>  Delete the swap file.  Use this when you are sure you no longer need <A HREF="motion.html#it">它</A>.
-   For example, when <A HREF="motion.html#it">它</A> doesn't contain changes, or when the file itself is
+ 例如, when <A HREF="motion.html#it">它</A> doesn't contain changes, or when the file itself is
    newer than the swap file.
       On Unix this choice is only offered when the process that created the
    swap file does not appear to be running.
@@ -384,7 +384,7 @@ For programmatic access to the swap file, 见 |<A HREF="builtin.html#swapinfo()"
 <A HREF="options.html#'updatecount'">'updatecount'</A>	<A HREF="eval.html#Number">Number</A> of key strokes after which the swap file is flushed to
 		disk.
 <A HREF="options.html#'updatetime'">'updatetime'</A>	Timeout after which the swap file is flushed to disk.
-<A HREF="options.html#'directory'">'directory'</A>	<A HREF="eval.html#List">List</A> of directory names where to store the swap file.
+<A HREF="options.html#'directory'">'directory'</A>	<A HREF="eval.html#list">列表</A> of directory names where to store the swap file.
 
 ==============================================================================
 

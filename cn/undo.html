@@ -128,12 +128,12 @@ The last changes are remembered.  You can use the <A HREF="#undo">undo</A> and <
 to revert the text to how <A HREF="motion.html#it">它</A> was before each change.  You can also apply the
 changes again, getting back the text before the <A HREF="#undo">undo</A>.
 
-The &quot;<A HREF="#U">U</A>&quot; command is treated by undo/redo just like any other command.  Thus a
-&quot;<A HREF="#u">u</A>&quot; command undoes a &quot;<A HREF="#U">U</A>&quot; command and a '<A HREF="#CTRL-R">CTRL-R</A>' command redoes <A HREF="motion.html#it">它</A> again.  When
-mixing &quot;<A HREF="#U">U</A>&quot;, &quot;<A HREF="#u">u</A>&quot; and '<A HREF="#CTRL-R">CTRL-R</A>' you will notice that the &quot;<A HREF="#U">U</A>&quot; command will
-restore the situation of a line to before the previous &quot;<A HREF="#U">U</A>&quot; command.  This may
+The &quot;<A HREF="#U">U</A>&quot;命令 is treated by undo/redo just like any other command.  Thus a
+&quot;<A HREF="#u">u</A>&quot;命令 undoes a &quot;<A HREF="#U">U</A>&quot;命令 and a '<A HREF="#CTRL-R">CTRL-R</A>' command redoes <A HREF="motion.html#it">它</A> again.  When
+mixing &quot;<A HREF="#U">U</A>&quot;, &quot;<A HREF="#u">u</A>&quot; and '<A HREF="#CTRL-R">CTRL-R</A>' you will notice that the &quot;<A HREF="#U">U</A>&quot;命令 will
+restore the situation of a line to before the previous &quot;<A HREF="#U">U</A>&quot;命令.  This may
 be confusing.  Try <A HREF="motion.html#it">它</A> out to get used to <A HREF="motion.html#it">它</A>.
-The &quot;<A HREF="#U">U</A>&quot; command will always <A HREF="motion.html#mark">mark</A> the buffer <A HREF="motion.html#as">as</A> changed.  When &quot;<A HREF="#U">U</A>&quot; changes the
+The &quot;<A HREF="#U">U</A>&quot;命令 will always <A HREF="motion.html#mark">mark</A> the buffer <A HREF="motion.html#as">as</A> changed.  When &quot;<A HREF="#U">U</A>&quot; changes the
 buffer back to how <A HREF="motion.html#it">它</A> was without changes, <A HREF="motion.html#it">它</A> is still considered changed.
 Use &quot;<A HREF="#u">u</A>&quot; to <A HREF="#undo">undo</A> changes until the buffer becomes unchanged.
 
@@ -160,8 +160,8 @@ repeat a change command, use &quot;<A HREF="repeat.html#.">.</A>&quot; for that.
 &quot;uu&quot;		two times <A HREF="#undo">undo</A>		no-op
 &quot;<A HREF="#u">u</A> CTRL-R&quot;	no-op			two times <A HREF="#undo">undo</A>
 
-Rationale:  <A HREF="intro.html#Nvi">Nvi</A> uses the &quot;<A HREF="repeat.html#.">.</A>&quot; command instead of <A HREF="#CTRL-R">CTRL-R</A>.  Unfortunately, this
-	    is not <A HREF="intro.html#Vi">Vi</A> compatible.  For example &quot;dwdwu.&quot; in <A HREF="intro.html#Vi">Vi</A> deletes two
+Rationale:  <A HREF="intro.html#Nvi">Nvi</A> uses the &quot;<A HREF="repeat.html#.">.</A>&quot;命令 instead of <A HREF="#CTRL-R">CTRL-R</A>.  Unfortunately, this
+	    is not <A HREF="intro.html#Vi">Vi</A> compatible.例如 &quot;dwdwu.&quot; in <A HREF="intro.html#Vi">Vi</A> deletes two
 	    words, in <A HREF="intro.html#Nvi">Nvi</A> <A HREF="motion.html#it">它</A> does nothing.
 
 ==============================================================================
@@ -192,7 +192,7 @@ change again.  But you can <A HREF="diff.html#do">do</A> something like this:
 
 <B>	:undojoin | delete</B>
 
-After this a &quot;<A HREF="#u">u</A>&quot; command will <A HREF="#undo">undo</A> the delete command and the previous
+After this a &quot;<A HREF="#u">u</A>&quot;命令 will <A HREF="#undo">undo</A> the delete command and the previous
 change.
 
 							*<A NAME="undo-break"></A><B>undo-break</B>*
@@ -217,7 +217,7 @@ This is explained in the user manual: |<A HREF="usr_32.html">usr_32.txt</A>|.
 
 
 							*<A NAME=":undol"></A><B>:undol</B>* *<A NAME=":undolist"></A><B>:undolist</B>*
-:undol[ist]		<A HREF="eval.html#List">List</A> the leafs in the tree of changes.  Example:
+:undol[ist]		<A HREF="eval.html#list">列表</A> the leafs in the tree of changes.  Example:
 <B><FONT color="#3A6F2B">			   number changes  when               saved </FONT></B>
 			       88      88  2010/01/04 14:25:53
 			      108     107  08/07 12:47:51
@@ -335,7 +335,7 @@ that buffer.  By setting the <A HREF="options.html#'undofile'">'undofile'</A> op
 your <A HREF="#undo">undo</A> <A HREF="cmdline.html#history">history</A> when you write a file and restore <A HREF="#undo">undo</A> <A HREF="cmdline.html#history">history</A> when you edit
 the file again.
 
-The <A HREF="options.html#'undofile'">'undofile'</A> option is checked after <A HREF="editing.html#writing">writing</A> a file, before the <A HREF="autocmd.html#BufWritePost">BufWritePost</A>
+The <A HREF="options.html#'undofile'">'undofile'</A> option is checked after <A HREF="editing.html#writing">写</A> a file, before the <A HREF="autocmd.html#BufWritePost">BufWritePost</A>
 autocommands.  If you want to <A HREF="intro.html#control">control</A> what files to write <A HREF="#undo">undo</A> information
 for, you can use a <A HREF="autocmd.html#BufWritePre">BufWritePre</A> <A HREF="autocmd.html#autocommand">autocommand</A>:
 <B>	au BufWritePre /tmp/* setlocal noundofile</B>
@@ -397,7 +397,7 @@ use.
 
 Note that while reading/writing files and <A HREF="options.html#'undofile'">'undofile'</A> is set most <A HREF="message.html#errors">errors</A> will
 be silent, unless <A HREF="options.html#'verbose'">'verbose'</A> is set.  With <A HREF="#:wundo">:wundo</A> and <A HREF="#:rundo">:rundo</A> you will get more
-error <A HREF="message.html#messages">messages</A>, e.g., when the file cannot be read or written.
+error <A HREF="message.html#messages">信息</A>, e.g., when the file cannot be read or written.
 
 NOTE: <A HREF="#undo">undo</A> files are never deleted by Vim.  You need to delete them yourself.
 
@@ -438,7 +438,7 @@ Writing an <A HREF="#undo">undo</A> file may fail for these reasons:
 	There is no <A HREF="#undo">undo</A> information to be written, nothing has been changed
 	or <A HREF="options.html#'undolevels'">'undolevels'</A> is negative.
 
-*<A NAME="E829"></A><B>E829</B>*	An error occurred while <A HREF="editing.html#writing">writing</A> the <A HREF="#undo">undo</A> file.  You may want to try
+*<A NAME="E829"></A><B>E829</B>*	An error occurred while <A HREF="editing.html#writing">写</A> the <A HREF="#undo">undo</A> file.  You may want to try
 	again.
 
 ==============================================================================

@@ -99,7 +99,7 @@ Vim also has useful features for editing single-line paragraphs and tables.
 
 Vim has a number of <A HREF="eval.html#functions">functions</A> that make dealing with text easier.  By default,
 the editor does not perform automatic line breaks.换句话说, you have
-to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> yourself.  This is useful when you are <A HREF="editing.html#writing">writing</A> programs where
+to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> yourself.  This is useful when you are <A HREF="editing.html#writing">写</A> programs where
 you want to decide where the line ends.  It is not so good when you are
 creating documentation and want the text to be at most 70 character wide.
    If you set the <A HREF="options.html#'textwidth'">'textwidth'</A> option, Vim automatically inserts line breaks.
@@ -122,7 +122,7 @@ When Vim sees this, <A HREF="motion.html#it">它</A> inserts a line break and yo
 <B><FONT color="#3A6F2B">	I taught programming for a </FONT></B>
 <B><FONT color="#3A6F2B">	whil </FONT></B>
 
-Continuing on, you can type in the rest of the <A HREF="motion.html#paragraph">paragraph</A>:
+Continuing on, you can type in the rest of the <A HREF="motion.html#paragraph">段落</A>:
 
 		 1	   2	     3
 	12345678901234567890123456789012345
@@ -142,7 +142,7 @@ You <A HREF="diff.html#do">do</A> not have to type newlines; Vim puts them in au
 REFORMATTING
 
 The Vim editor is not a <A HREF="motion.html#word">单词</A> processor.  In a <A HREF="motion.html#word">单词</A> processor, if you delete
-something at the beginning of the <A HREF="motion.html#paragraph">paragraph</A>, the line breaks are reworked.  In
+something at the beginning of the <A HREF="motion.html#paragraph">段落</A>, the line breaks are reworked.  In
 Vim they are not; so if you delete the <A HREF="motion.html#word">单词</A> &quot;programming&quot; from the first line,
 all you get is a short line:
 
@@ -154,14 +154,14 @@ all you get is a short line:
 <B><FONT color="#3A6F2B">	because my homework was too </FONT></B>
 <B><FONT color="#3A6F2B">	hard. True story. </FONT></B>
 
-This does not look good.  To get the <A HREF="motion.html#paragraph">paragraph</A> into shape you use the &quot;<A HREF="change.html#gq">gq</A>&quot;
+This does not look good.  To get the <A HREF="motion.html#paragraph">段落</A> into shape you use the &quot;<A HREF="change.html#gq">gq</A>&quot;
 <A HREF="motion.html#operator">operator</A>.
    Let's first use this with a <A HREF="visual.html#Visual">Visual</A> selection.  Starting from the first
 line, type:
 
 <B>	v4jgq</B>
 
-&quot;<A HREF="visual.html#v">v</A>&quot; to start <A HREF="visual.html#Visual">Visual</A> mode, &quot;4j&quot; to move to the end of the <A HREF="motion.html#paragraph">paragraph</A> and then
+&quot;<A HREF="visual.html#v">v</A>&quot; to start <A HREF="visual.html#Visual">Visual</A> mode, &quot;4j&quot; to move to the end of the <A HREF="motion.html#paragraph">段落</A> and then
 the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">operator</A>.  The result is:
 
 		 1	   2	     3
@@ -176,16 +176,16 @@ Note: there is a way to <A HREF="diff.html#do">do</A> automatic <A HREF="change.
 layouts, 见 |<A HREF="change.html#auto-format">auto-format</A>|.
 
 Since &quot;<A HREF="change.html#gq">gq</A>&quot; is an <A HREF="motion.html#operator">operator</A>, you can use one of the three ways to select the
-text <A HREF="motion.html#it">它</A> works on: With <A HREF="visual.html#Visual">Visual</A> mode, with a <A HREF="intro.html#movement">movement</A> and with a text object.
+text <A HREF="motion.html#it">它</A> works on: With <A HREF="visual.html#Visual">Visual</A> mode, with a <A HREF="intro.html#movement">移动</A> and with a text object.
    The example above could also be done with &quot;gq4j&quot;.  That's <A HREF="various.html#less">less</A> typing, but
 you have to know the line <A HREF="intro.html#count">count</A>.  A more useful motion command is &quot;<A HREF="motion.html#}">}</A>&quot;.  This
-moves to the end of a <A HREF="motion.html#paragraph">paragraph</A>.  Thus &quot;gq}&quot; formats from the cursor to the
-end of the current <A HREF="motion.html#paragraph">paragraph</A>.
-   A very useful text object to use with &quot;<A HREF="change.html#gq">gq</A>&quot; is the <A HREF="motion.html#paragraph">paragraph</A>.  Try this:
+moves to the end of a <A HREF="motion.html#paragraph">段落</A>.  Thus &quot;gq}&quot; formats from the cursor to the
+end of the current <A HREF="motion.html#paragraph">段落</A>.
+   A very useful text object to use with &quot;<A HREF="change.html#gq">gq</A>&quot; is the <A HREF="motion.html#paragraph">段落</A>.  Try this:
 
 <B>	gqap</B>
 
-&quot;<A HREF="motion.html#ap">ap</A>&quot; stands for &quot;a-paragraph&quot;.  This formats the text of one <A HREF="motion.html#paragraph">paragraph</A>
+&quot;<A HREF="motion.html#ap">ap</A>&quot; stands for &quot;a-paragraph&quot;.  This formats the text of one <A HREF="motion.html#paragraph">段落</A>
 (separated by empty lines).  Also the part before the cursor.
    If you have your paragraphs separated by empty lines, you can format the
 whole file by typing this:
@@ -215,7 +215,7 @@ To center a range of lines, use the following command:
 {range} is the usual command-line range.  [width] is an optional line width to
 use for centering.  If [width] is not specified, <A HREF="motion.html#it">它</A> defaults to the value of
 <A HREF="options.html#'textwidth'">'textwidth'</A>.  (If <A HREF="options.html#'textwidth'">'textwidth'</A> is 0, the default is 80.)
-   For example:
+ 例如:
 
 <B>	:1,5center 40</B>
 
@@ -230,7 +230,7 @@ results in the following:
 
 RIGHT ALIGNMENT
 
-Similarly, the &quot;<A HREF="change.html#:right">:right</A>&quot; command right-justifies the text:
+Similarly, the &quot;<A HREF="change.html#:right">:right</A>&quot;命令 right-justifies the text:
 
 <B>	:1,5right 37</B>
 
@@ -352,17 +352,17 @@ You edit a file which was written with a tabstop of 3.  In Vim <A HREF="motion.h
 because <A HREF="motion.html#it">它</A> uses the normal tabstop value of 8.  You can fix this by setting
 <A HREF="options.html#'tabstop'">'tabstop'</A> to 3.  But you have to <A HREF="diff.html#do">do</A> this every time you edit this file.
    Vim can change the use of tabstops in your file.  First, set <A HREF="options.html#'tabstop'">'tabstop'</A> to
-make the indents look good, then use the &quot;<A HREF="change.html#:retab">:retab</A>&quot; command:
+make the indents look good然后use the &quot;<A HREF="change.html#:retab">:retab</A>&quot;命令:
 
 <B>	:set tabstop=3</B>
 <B>	:retab 8</B>
 
-The &quot;<A HREF="change.html#:retab">:retab</A>&quot; command will change <A HREF="options.html#'tabstop'">'tabstop'</A> to 8, while <A HREF="change.html#changing">changing</A> the text such
+The &quot;<A HREF="change.html#:retab">:retab</A>&quot;命令 will change <A HREF="options.html#'tabstop'">'tabstop'</A> to 8, while <A HREF="change.html#changing">changing</A> the text such
 that <A HREF="motion.html#it">它</A> looks the same.  It changes spans of white space into tabs and spaces
 for this.  You can now write the file.  Next time you edit <A HREF="motion.html#it">它</A> the indents will
 be right without setting an option.
    Warning: When using &quot;<A HREF="change.html#:retab">:retab</A>&quot; on a program, <A HREF="motion.html#it">它</A> may change white space inside
-a <A HREF="eval.html#string">string</A> constant.  Therefore it's a good habit to use &quot;\t&quot; instead of a
+a <A HREF="options\.html#options">字符串</A> constant.  Therefore it's a good habit to use &quot;\t&quot; instead of a
 real <A HREF="intro.html#tab">tab</A>.
 
 ==============================================================================
@@ -440,7 +440,7 @@ When preparing text for use by another program, you might have to make
 paragraphs without a line break.  A disadvantage of using <A HREF="options.html#'nowrap'">'nowrap'</A> is that you
 can't see the whole <A HREF="motion.html#sentence">sentence</A> you are working on.  When <A HREF="options.html#'wrap'">'wrap'</A> is on, words are
 broken halfway, which makes them hard to read.
-   A good solution for editing this kind of <A HREF="motion.html#paragraph">paragraph</A> is setting the
+   A good solution for editing this kind of <A HREF="motion.html#paragraph">段落</A> is setting the
 <A HREF="options.html#'linebreak'">'linebreak'</A> option.  Vim then breaks lines at an appropriate place when
 displaying the line.  The text in the file remains unchanged.
    Without <A HREF="options.html#'linebreak'">'linebreak'</A> text might look like this:
@@ -466,20 +466,20 @@ After:
 	|Unfortunately for the programmer,|
 	+---------------------------------+
 
-Related <A HREF="options.html#options">options</A>:
+Related <A HREF="options\.html#options">选项</A>:
 <A HREF="options.html#'breakat'">'breakat'</A> specifies the characters where a break can be inserted.
-<A HREF="options.html#'showbreak'">'showbreak'</A> specifies a <A HREF="eval.html#string">string</A> to show at the start of broken line.
-Set <A HREF="options.html#'textwidth'">'textwidth'</A> to zero to avoid a <A HREF="motion.html#paragraph">paragraph</A> to be split.
+<A HREF="options.html#'showbreak'">'showbreak'</A> specifies a <A HREF="options\.html#options">字符串</A> to show at the start of broken line.
+Set <A HREF="options.html#'textwidth'">'textwidth'</A> to zero to avoid a <A HREF="motion.html#paragraph">段落</A> to be split.
 
 
 MOVING BY VISIBLE LINES
 
-The &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot; commands move to the next and previous lines.  When used on
+The &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot;命令 move to the next and previous lines.  When used on
 a long line, this means moving a lot of screen lines at once.
-   To move only one screen line, use the &quot;<A HREF="motion.html#gj">gj</A>&quot; and &quot;<A HREF="motion.html#gk">gk</A>&quot; commands.  When a line
+   To move only one screen line, use the &quot;<A HREF="motion.html#gj">gj</A>&quot; and &quot;<A HREF="motion.html#gk">gk</A>&quot;命令.  When a line
 doesn't wrap they <A HREF="diff.html#do">do</A> the same <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot;.  When the line does wrap, they
 move to a character displayed one line below or above.
-   You might like to use these mappings, which bind these <A HREF="intro.html#movement">movement</A> commands to
+   You might like to use these mappings, which bind these <A HREF="intro.html#movement">移动</A>命令 to
 the cursor keys:
 
 <B>	:map &lt;Up&gt; gk</B>
@@ -489,19 +489,19 @@ the cursor keys:
 
 TURNING A PARAGRAPH INTO ONE LINE			*<A NAME="edit-paragraph-join"></A><B>edit-paragraph-join</B>*
 
-If you want to import text into a program like MS-Word, each <A HREF="motion.html#paragraph">paragraph</A> should
+If you want to import text into a program like MS-Word, each <A HREF="motion.html#paragraph">段落</A> should
 be a single line.  If your paragraphs are currently separated with empty
-lines, this is how you turn each <A HREF="motion.html#paragraph">paragraph</A> into a single line:
+lines, this is how you turn each <A HREF="motion.html#paragraph">段落</A> into a single line:
 
 <B>	:g/./,/^$/join</B>
 
 That looks complicated.  Let's break <A HREF="motion.html#it">它</A> up in pieces:
 
-	:g/./		A &quot;<A HREF="repeat.html#:global">:global</A>&quot; command that finds all lines that contain
+	:g/./		A &quot;<A HREF="repeat.html#:global">:global</A>&quot;命令 that finds all lines that contain
 			at least one character.
 	     ,/^$/	A range, starting from the current line (the non-empty
 			line) until an empty line.
-		  join	The &quot;<A HREF="change.html#:join">:join</A>&quot; command joins the range of lines together
+		  join	The &quot;<A HREF="change.html#:join">:join</A>&quot;命令 joins the range of lines together
 			into one line.
 
 Starting with this text, containing eight lines broken at column 30:
@@ -533,7 +533,7 @@ when <A HREF="motion.html#it">它</A> contains spaces and/or tabs.  This command
 <B>	:g/\S/,/^\s*$/join</B>
 
 This still requires a blank or empty line at the end of the file for the last
-<A HREF="motion.html#paragraph">paragraph</A> to be joined.
+<A HREF="motion.html#paragraph">段落</A> to be joined.
 
 ==============================================================================
 
@@ -620,7 +620,7 @@ characters.  Use &quot;rx&quot; on the first <A HREF="intro.html#tab">tab</A>:
 
 <B><FONT color="#3A6F2B">	inpx0.693   0.534	0.693 </FONT></B>
 
-The layout is messed up.  To avoid that, use the &quot;<A HREF="change.html#gr">gr</A>&quot; command:
+The layout is messed up.  To avoid that, use the &quot;<A HREF="change.html#gr">gr</A>&quot;命令:
 
 <B><FONT color="#3A6F2B">	inp	0.693   0.534	0.693 </FONT></B>
 
@@ -630,12 +630,12 @@ The layout is messed up.  To avoid that, use the &quot;<A HREF="change.html#gr">
 
 <B><FONT color="#3A6F2B">	inpx	0.693   0.534	0.693 </FONT></B>
 
-What happens is that the &quot;<A HREF="change.html#gr">gr</A>&quot; command makes sure the new character takes the
+What happens is that the &quot;<A HREF="change.html#gr">gr</A>&quot;命令 makes sure the new character takes the
 right amount of screen space.  Extra spaces or tabs are inserted to fill the
 gap.  Thus what actually happens is that a <A HREF="intro.html#tab">tab</A> is replaced by &quot;<A HREF="change.html#x">x</A>&quot; and then
 blanks added to make the text after <A HREF="motion.html#it">它</A> keep its place.  In this <A HREF="change.html#case">case</A> a
 <A HREF="intro.html#tab">tab</A> is inserted.
-   When you need to replace more than one character, you use the &quot;<A HREF="change.html#R">R</A>&quot; command
+   When you need to replace more than one character, you use the &quot;<A HREF="change.html#R">R</A>&quot;命令
 to go to <A HREF="insert.html#Replace">Replace</A> mode (见 |<A HREF="usr_04.html#04.9">04.9</A>|).  This messes up the layout and replaces
 the wrong characters:
 
@@ -647,7 +647,7 @@ the wrong characters:
 
 <B><FONT color="#3A6F2B">	inp	0.78634	0.693 </FONT></B>
 
-The &quot;<A HREF="change.html#gR">gR</A>&quot; command uses Virtual <A HREF="insert.html#Replace">Replace</A> mode.  This preserves the layout:
+The &quot;<A HREF="change.html#gR">gR</A>&quot;命令 uses Virtual <A HREF="insert.html#Replace">Replace</A> mode.  This preserves the layout:
 
 <B><FONT color="#3A6F2B">	inp	0	0.534	0.693 </FONT></B>
 

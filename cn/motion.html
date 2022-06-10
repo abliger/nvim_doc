@@ -83,11 +83,11 @@ Cursor motions					*<A NAME="cursor-motions"></A><B>cursor-motions</B>* *<A NAME
 
 These commands move the cursor position.  If the new position is off of the
 screen, the screen is scrolled to show the cursor (see also <A HREF="options.html#'scrolljump'">'scrolljump'</A> and
-<A HREF="options.html#'scrolloff'">'scrolloff'</A> <A HREF="options.html#options">options</A>).
+<A HREF="options.html#'scrolloff'">'scrolloff'</A> <A HREF="options\.html#options">选项</A>).
 
 General remarks:
 
-If you want to know where you are in the file use the &quot;<A HREF="editing.html#CTRL-G">CTRL-G</A>&quot; command
+If you want to know where you are in the file use the &quot;<A HREF="editing.html#CTRL-G">CTRL-G</A>&quot;命令
 |<A HREF="editing.html#CTRL-G">CTRL-G</A>| or the &quot;g CTRL-G&quot; command |<A HREF="editing.html#g_CTRL-G">g_CTRL-G</A>|.  If you set the <A HREF="options.html#'ruler'">'ruler'</A> option,
 the cursor position is continuously shown in the status line (which slows down
 Vim a little).
@@ -117,12 +117,12 @@ or change text.  The following operators are available:
 	|<A HREF="change.html#y">y</A>|	y	<A HREF="change.html#yank">yank</A> into <A HREF="intro.html#register">register</A> (does not change the text)
 	|<A HREF="change.html#~">~</A>|	~	swap <A HREF="change.html#case">case</A> (only if <A HREF="options.html#'tildeop'">'tildeop'</A> is set)
 	|<A HREF="change.html#g~">g~</A>|	g~	swap <A HREF="change.html#case">case</A>
-	|<A HREF="change.html#gu">gu</A>|	gu	make <A HREF="change.html#lowercase">lowercase</A>
-	|<A HREF="change.html#gU">gU</A>|	gU	make <A HREF="change.html#uppercase">uppercase</A>
+	|<A HREF="change.html#gu">gu</A>|	gu	make <A HREF="change.html#lowercase">小写</A>
+	|<A HREF="change.html#gU">gU</A>|	gU	make <A HREF="change.html#uppercase">大写</A>
 	|<A HREF="change.html#!">!</A>|	!	<A HREF="change.html#filter">filter</A> through an external program
 	|<A HREF="change.html#=">=</A>|	=	<A HREF="change.html#filter">filter</A> through <A HREF="options.html#'equalprg'">'equalprg'</A> or <A HREF="indent.html#C-indenting">C-indenting</A> if empty
 	|<A HREF="change.html#gq">gq</A>|	gq	text <A HREF="change.html#formatting">formatting</A>
-	|<A HREF="change.html#gw">gw</A>|	gw	text <A HREF="change.html#formatting">formatting</A> with no cursor <A HREF="intro.html#movement">movement</A>
+	|<A HREF="change.html#gw">gw</A>|	gw	text <A HREF="change.html#formatting">formatting</A> with no cursor <A HREF="intro.html#movement">移动</A>
 	|<A HREF="change.html#g?">g?</A>|	g?	ROT13 encoding
 	|<A HREF="change.html#&gt;">&gt;</A>|	&gt;	<A HREF="intro.html#shift">shift</A> right
 	|<A HREF="change.html#&lt;">&lt;</A>|	&lt;	<A HREF="intro.html#shift">shift</A> left
@@ -131,7 +131,7 @@ or change text.  The following operators are available:
 
 						*<A NAME="motion-count-multiplied"></A><B>motion-count-multiplied</B>*
 If the motion includes a <A HREF="intro.html#count">count</A> and the <A HREF="#operator">operator</A> also had a <A HREF="intro.html#count">count</A> before <A HREF="#it">it</A>,
-the two counts are multiplied.  For example: &quot;2d3w&quot; deletes six words.
+the two counts are multiplied.例如: &quot;2d3w&quot; deletes six words.
 
 						*<A NAME="operator-doubled"></A><B>operator-doubled</B>*
 When doubling the <A HREF="#operator">operator</A> <A HREF="#it">it</A> operates on a line.  When using a <A HREF="intro.html#count">count</A>, before
@@ -140,7 +140,7 @@ deletes three lines. A <A HREF="intro.html#count">count</A> before and after the
 multiplied, thus `2y3y` yanks six lines.
 
 After applying the <A HREF="#operator">operator</A> the cursor is mostly left at the start of the text
-that was operated upon.  For example, &quot;yfe&quot; doesn't move the cursor, but &quot;yFe&quot;
+that was operated upon.例如, &quot;yfe&quot; doesn't move the cursor, but &quot;yFe&quot;
 moves the cursor leftwards to the &quot;<A HREF="#e">e</A>&quot; where the <A HREF="change.html#yank">yank</A> started.
 
 
@@ -184,7 +184,7 @@ be operated upon.  This allows much more freedom, but requires more key
 strokes and has limited <A HREF="undo.html#redo">redo</A> functionality.  See the chapter on <A HREF="visual.html#Visual">Visual</A> mode
 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.
 
-You can use a &quot;<A HREF="cmdline.html#:">:</A>&quot; command for a motion.  For example &quot;d:call FindEnd()&quot;.
+You can use a &quot;<A HREF="cmdline.html#:">:</A>&quot;命令 for a motion.例如 &quot;d:call FindEnd()&quot;.
 But this can't be repeated with &quot;<A HREF="repeat.html#.">.</A>&quot; if the command is more than one line.
 This can be repeated:
 <B>	d:call search("f")&lt;CR&gt;</B>
@@ -208,7 +208,7 @@ deletes from the cursor position until the character below the cursor
 <B>	d&lt;C-V&gt;j</B>
 deletes the character under the cursor and the character below the cursor.
 
-Be careful with forcing a <A HREF="#linewise">linewise</A> <A HREF="intro.html#movement">movement</A> to be used <A HREF="#charwise">charwise</A> or blockwise,
+Be careful with forcing a <A HREF="#linewise">linewise</A> <A HREF="intro.html#movement">移动</A> to be used <A HREF="#charwise">charwise</A> or blockwise,
 the column may not always be defined.
 
 
@@ -488,7 +488,7 @@ _  &lt;underscore&gt;		<A HREF="intro.html#[count]">[count]</A> - 1 lines downwa
 These commands move to the specified line.  They stop when reaching the first
 or the last line.  The first two commands put the cursor in the same column
 (if possible) <A HREF="#as">as</A> <A HREF="#it">it</A> was after the last command that changed the column,
-except after the &quot;<A HREF="#$">$</A>&quot; command, then the cursor will be put on the last
+except after the &quot;<A HREF="#$">$</A>&quot;命令然后the cursor will be put on the last
 character of the line.
 
 ==============================================================================
@@ -554,7 +554,7 @@ Another special <A HREF="change.html#case">case</A>: When using the &quot;<A HRE
 that <A HREF="#word">word</A> becomes the end of the operated text, not the first <A HREF="#word">word</A> in the
 next line.
 
-The original <A HREF="intro.html#Vi">Vi</A> implementation of &quot;<A HREF="#e">e</A>&quot; is buggy.  For example, the &quot;<A HREF="#e">e</A>&quot; command
+The original <A HREF="intro.html#Vi">Vi</A> implementation of &quot;<A HREF="#e">e</A>&quot; is buggy.例如, the &quot;<A HREF="#e">e</A>&quot;命令
 will stop on the first character of a line if the previous line was empty.
 But when you use &quot;2e&quot; this does not happen.  In Vim &quot;ee&quot; and &quot;2e&quot; are the
 same, which is more logical.  However, this causes a small incompatibility
@@ -583,7 +583,7 @@ between <A HREF="intro.html#Vi">Vi</A> and Vim.
 
 							*<A NAME="]]"></A><B>]]</B>*
 <A HREF="#]]">]]</A>			<A HREF="intro.html#[count]">[count]</A> |<A HREF="#section">section</A>|s forward or to the next '<A HREF="#{">{</A>' in the
-			first column.  When used after an <A HREF="#operator">operator</A>, then also
+			first column.  When used after an <A HREF="#operator">operator</A>然后also
 			stops below a '<A HREF="#}">}</A>' in the first column.  |<A HREF="#exclusive">exclusive</A>|
 			Note that |<A HREF="#exclusive-linewise">exclusive-linewise</A>| often applies.
 
@@ -636,7 +636,7 @@ a set of section macros, specified by the pairs of characters in the
 <A HREF="options.html#'sections'">'sections'</A> option.  The default is &quot;SHNHH HUnhsh&quot;, which defines a section to
 start at the nroff macros &quot;.SH&quot;, &quot;.NH&quot;, &quot;.H&quot;, &quot;.HU&quot;, &quot;.nh&quot; and &quot;.sh&quot;.
 
-The &quot;<A HREF="#]]">]]</A>&quot; and &quot;<A HREF="#[[">[[</A>&quot; commands stop at the '<A HREF="#{">{</A>' in the first column.  This is
+The &quot;<A HREF="#]]">]]</A>&quot; and &quot;<A HREF="#[[">[[</A>&quot;命令 stop at the '<A HREF="#{">{</A>' in the first column.  This is
 useful to find the start of a function in a C program.  To search for a '<A HREF="#}">}</A>' in
 the first column, the end of a C function, use &quot;<A HREF="#][">][</A>&quot; (forward) or &quot;<A HREF="#[]">[]</A>&quot;
 (backward).  Note that the first character of the command determines the
@@ -660,7 +660,7 @@ This is a series of commands that can only be used while in <A HREF="visual.html
 after an <A HREF="#operator">operator</A>.  The commands that start with &quot;<A HREF="insert.html#a">a</A>&quot; select &quot;<A HREF="insert.html#a">a</A>&quot;n object
 including white space, the commands starting with &quot;<A HREF="insert.html#i">i</A>&quot; select an &quot;inner&quot; object
 without white space, or just the white space.  Thus the &quot;inner&quot; commands
-always select <A HREF="various.html#less">less</A> text than the &quot;<A HREF="insert.html#a">a</A>&quot; commands.
+always select <A HREF="various.html#less">less</A> text than the &quot;<A HREF="insert.html#a">a</A>&quot;命令.
 
 Also see `gn` and `gN`, operating on the last search <A HREF="pattern.html#pattern">pattern</A>.
 
@@ -816,12 +816,12 @@ a&quot;							*<A NAME="v_aquote"></A><B>v_aquote</B>* *<A NAME="aquote"></A><B>
 			is used to skip escaped quotes.
 			Only works within one line.
 			When the cursor starts on a <A HREF="change.html#quote">quote</A>, Vim will figure out
-			which <A HREF="change.html#quote">quote</A> pairs form a <A HREF="eval.html#string">string</A> by searching from the
+			which <A HREF="change.html#quote">quote</A> pairs form a <A HREF="options\.html#options">字符串</A> by searching from the
 			start of the line.
 			Any trailing white space is included, unless there is
-			none, then leading white space is included.
+			none然后leading white space is included.
 			When used in <A HREF="visual.html#Visual">Visual</A> mode <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
-			Repeating this object in <A HREF="visual.html#Visual">Visual</A> mode another <A HREF="eval.html#string">string</A> is
+			Repeating this object in <A HREF="visual.html#Visual">Visual</A> mode another <A HREF="options\.html#options">字符串</A> is
 			included.  A <A HREF="intro.html#count">count</A> is currently not used.
 
 
@@ -837,7 +837,7 @@ i&quot;							*<A NAME="v_iquote"></A><B>v_iquote</B>* *<A NAME="iquote"></A><B>
 
 When used after an <A HREF="#operator">operator</A>:
 For non-block <A HREF="vimindex.html#objects">objects</A>:
-	For the &quot;<A HREF="insert.html#a">a</A>&quot; commands: The <A HREF="#operator">operator</A> applies to the object and the white
+	For the &quot;<A HREF="insert.html#a">a</A>&quot;命令: The <A HREF="#operator">operator</A> applies to the object and the white
 	space after the object.  If there is no white space after the object
 	or when the cursor was in the white space before the object, the white
 	space before the object is included.
@@ -847,7 +847,7 @@ For non-block <A HREF="vimindex.html#objects">objects</A>:
 For a block object:
 	The <A HREF="#operator">operator</A> applies to the block where the cursor is in, or the block
 	on which the cursor is on one of the braces.  For the &quot;inner&quot; commands
-	the surrounding braces are excluded.  For the &quot;<A HREF="insert.html#a">a</A>&quot; commands, the braces
+	the surrounding braces are excluded.  For the &quot;<A HREF="insert.html#a">a</A>&quot;命令, the braces
 	are included.
 
 When used in <A HREF="visual.html#Visual">Visual</A> mode:
@@ -860,9 +860,9 @@ When start and end of the <A HREF="visual.html#Visual">Visual</A> area are not t
 	area the cursor is.  For the block <A HREF="vimindex.html#objects">objects</A> the block is extended one
 	level outwards.
 
-For illustration, here is a <A HREF="eval.html#list">list</A> of delete commands, grouped from small to big
+For illustration, here is a <A HREF="eval.html#list">列表</A> of delete commands, grouped from small to big
 <A HREF="vimindex.html#objects">objects</A>.  Note that for a single character and a whole line the existing <A HREF="intro.html#vi">vi</A>
-<A HREF="intro.html#movement">movement</A> commands are used.
+<A HREF="intro.html#movement">移动</A>命令 are used.
 	&quot;dl&quot;	delete character (alias: &quot;<A HREF="change.html#x">x</A>&quot;)		|<A HREF="change.html#dl">dl</A>|
 
 	&quot;<A HREF="#diw">diw</A>&quot;	delete inner <A HREF="#word">word</A>			*<A NAME="diw"></A><B>diw</B>*
@@ -892,10 +892,10 @@ For illustration, here is a <A HREF="eval.html#list">list</A> of delete commands
 
 	&quot;<A HREF="#daB">daB</A>&quot;	delete a '<A HREF="#{">{</A>' '<A HREF="#}">}</A>' block			*<A NAME="daB"></A><B>daB</B>*
 
-Note the difference between using a <A HREF="intro.html#movement">movement</A> command and an object.  The
-<A HREF="intro.html#movement">movement</A> command operates from here (cursor position) to where the <A HREF="intro.html#movement">movement</A>
+Note the difference between using a <A HREF="intro.html#movement">移动</A>命令 and an object.  The
+<A HREF="intro.html#movement">移动</A>命令 operates from here (cursor position) to where the <A HREF="intro.html#movement">移动</A>
 takes us.  When using an object the whole object is operated upon, no matter
-where on the object the cursor is.  For example, compare &quot;dw&quot; and &quot;<A HREF="#daw">daw</A>&quot;: &quot;dw&quot;
+where on the object the cursor is.例如, compare &quot;dw&quot; and &quot;<A HREF="#daw">daw</A>&quot;: &quot;dw&quot;
 deletes from the cursor position to the start of the next <A HREF="#word">word</A>, &quot;<A HREF="#daw">daw</A>&quot; deletes
 the <A HREF="#word">word</A> under the cursor and the space after or before <A HREF="#it">it</A>.
 
@@ -939,7 +939,7 @@ m{a-zA-Z}		Set <A HREF="#mark">mark</A> {a-zA-Z} at cursor position (does not mo
 
 						*<A NAME="m'"></A><B>m'</B>* *<A NAME="m`"></A><B>m`</B>*
 <A HREF="#m'">m'</A>  or  <A HREF="#m`">m`</A>		Set the previous <A HREF="repeat.html#context">context</A> <A HREF="#mark">mark</A>.  This can be jumped to
-			with the &quot;'&#39;&#34;' or &quot;<A HREF="#``">``</A>&quot; command (does not move the
+			with the &quot;'&#39;&#34;' or &quot;<A HREF="#``">``</A>&quot;命令 (does not move the
 			cursor, this is not a motion command).
 
 
@@ -987,21 +987,21 @@ g'{mark}  g`{mark}
 
 
 						*<A NAME=":marks"></A><B>:marks</B>*
-<A HREF="#:marks">:marks</A>			<A HREF="eval.html#List">List</A> all the current marks (not a motion command).
+<A HREF="#:marks">:marks</A>			<A HREF="eval.html#list">列表</A> all the current marks (not a motion command).
 			The |<A HREF="#'(">'(</A>|, |<A HREF="#')">')</A>|, |<A HREF="#'{">'{</A>| and |<A HREF="#'}">'}</A>| marks are not listed.
 			The first column has number zero.
 
 						*<A NAME="E283"></A><B>E283</B>*
-<A HREF="#:marks">:marks</A> {arg}		<A HREF="eval.html#List">List</A> the marks that are mentioned in {arg} (not a
-			motion command).  For example:
+<A HREF="#:marks">:marks</A> {arg}		<A HREF="eval.html#list">列表</A> the marks that are mentioned in {arg} (not a
+			motion command).例如:
 <B>				:marks aB</B>
- 			to <A HREF="eval.html#list">list</A> marks '<A HREF="insert.html#a">a</A>' and '<A HREF="#B">B</A>'.
+ 			to <A HREF="eval.html#list">列表</A> marks '<A HREF="insert.html#a">a</A>' and '<A HREF="#B">B</A>'.
 
 
 							*<A NAME=":delm"></A><B>:delm</B>* *<A NAME=":delmarks"></A><B>:delmarks</B>*
 :delm[arks] {marks}	Delete the specified marks.  Marks that can be deleted
 			include A-Z and 0-9.  You cannot delete the '' <A HREF="#mark">mark</A>.
-			They can be specified by giving the <A HREF="eval.html#list">list</A> of <A HREF="#mark">mark</A>
+			They can be specified by giving the <A HREF="eval.html#list">列表</A> of <A HREF="#mark">mark</A>
 			names, or with a range, separated with a dash.  Spaces
 			are ignored.  Examples:
 <B>			   :delmarks a	      deletes mark a</B>
@@ -1019,24 +1019,24 @@ A <A HREF="#mark">mark</A> is not visible in any way.  It is just a position in 
 remembered.  Do not confuse marks with named <A HREF="change.html#registers">registers</A>, they are totally
 unrelated.
 
-<A HREF="#'a">'a</A> - 'z		<A HREF="change.html#lowercase">lowercase</A> marks, valid within one file
-<A HREF="#'A">'A</A> - 'Z		<A HREF="change.html#uppercase">uppercase</A> marks, also called file marks, valid between files
+<A HREF="#'a">'a</A> - 'z		<A HREF="change.html#lowercase">小写</A> marks, valid within one file
+<A HREF="#'A">'A</A> - 'Z		<A HREF="change.html#uppercase">大写</A> marks, also called file marks, valid between files
 <A HREF="#'0">'0</A> - '9		numbered marks, set from .shada file
 
 Lowercase marks <A HREF="#'a">'a</A> to 'z are remembered <A HREF="#as">as</A> long <A HREF="#as">as</A> the file remains in the
-buffer <A HREF="eval.html#list">list</A>.  If you remove the file from the buffer <A HREF="eval.html#list">list</A>, all its marks are
+buffer <A HREF="eval.html#list">列表</A>.  If you remove the file from the buffer <A HREF="eval.html#list">列表</A>, all its marks are
 lost.  If you delete a line that contains a <A HREF="#mark">mark</A>, that <A HREF="#mark">mark</A> is erased.
 
-Lowercase marks can be used in combination with operators.  For example: &quot;d't&quot;
+Lowercase marks can be used in combination with operators.例如: &quot;d't&quot;
 deletes the lines from the cursor position to <A HREF="#mark">mark</A> '<A HREF="#t">t</A>'.  Hint: Use <A HREF="#mark">mark</A> '<A HREF="#t">t</A>' for
 Top, '<A HREF="#b">b</A>' for Bottom, etc..  Lowercase marks are restored when using <A HREF="undo.html#undo">undo</A> and
 <A HREF="undo.html#redo">redo</A>.
 
 Uppercase marks <A HREF="#'A">'A</A> to 'Z include the file name.
-You can use them to jump from file to file.  You can only use an <A HREF="change.html#uppercase">uppercase</A>
+You can use them to jump from file to file.  You can only use an <A HREF="change.html#uppercase">大写</A>
 <A HREF="#mark">mark</A> with an <A HREF="#operator">operator</A> if the <A HREF="#mark">mark</A> is in the current file.  The line number of
 the <A HREF="#mark">mark</A> remains correct, even if you insert/delete lines or edit another file
-for a moment.  When the <A HREF="options.html#'shada'">'shada'</A> option is not empty, <A HREF="change.html#uppercase">uppercase</A> marks are
+for a moment.  When the <A HREF="options.html#'shada'">'shada'</A> option is not empty, <A HREF="change.html#uppercase">大写</A> marks are
 kept in the .shada file.  见 |<A HREF="starting.html#shada-file-marks">shada-file-marks</A>|.
 
 Numbered marks <A HREF="#'0">'0</A> to '9 are quite different.  They can not be set directly.
@@ -1061,7 +1061,7 @@ that was operated upon.  After a put command (&quot;p&quot; or &quot;<A HREF="ch
 sometimes placed at the first inserted line and sometimes on the last inserted
 character.  The four commands above put the cursor at either end.  Example:
 After yanking 10 lines you want to go to the last one of them: &quot;10Y']&quot;.  After
-<A HREF="insert.html#inserting">inserting</A> several lines with the &quot;<A HREF="change.html#p">p</A>&quot; command you want to jump to the lowest
+<A HREF="insert.html#inserting">inserting</A> several lines with the &quot;<A HREF="change.html#p">p</A>&quot;命令 you want to jump to the lowest
 inserted line: &quot;p']&quot;.  This also works for text that has been inserted.
 
 Note: After <A HREF="change.html#deleting">deleting</A> text, the start and end positions are the same, except
@@ -1087,7 +1087,7 @@ was made yet in the current file.
 
 							*<A NAME="''"></A><B>''</B>* *<A NAME="``"></A><B>``</B>*
 <A HREF="#''">''</A>  <A HREF="#``">``</A>			To the position before the latest jump, or where the
-			last &quot;m&#39;&#34;' or &quot;<A HREF="#m`">m`</A>&quot; command was given.  Not set when the
+			last &quot;m&#39;&#34;' or &quot;<A HREF="#m`">m`</A>&quot;命令 was given.  Not set when the
 			|<A HREF="#:keepjumps">:keepjumps</A>| command modifier was used.
 			Also 见 |<A HREF="tips.html#restore-position">restore-position</A>|.
 
@@ -1115,7 +1115,7 @@ was made yet in the current file.
 			position is at or near where the change started.
 			Sometimes a command is executed <A HREF="#as">as</A> several changes,
 			then the position can be near the end of what the
-			command changed.  For example when <A HREF="insert.html#inserting">inserting</A> a <A HREF="#word">word</A>,
+			command changed.例如 when <A HREF="insert.html#inserting">inserting</A> a <A HREF="#word">word</A>,
 			the position will be on the last character.
 			To jump to older changes use |<A HREF="#g;">g;</A>|.
 
@@ -1143,23 +1143,23 @@ These commands are not marks themselves, but jump to a <A HREF="#mark">mark</A>:
 
 
 							*<A NAME="]'"></A><B>]'</B>*
-<A HREF="#]'">]'</A>			<A HREF="intro.html#[count]">[count]</A> times to next line with a <A HREF="change.html#lowercase">lowercase</A> <A HREF="#mark">mark</A> below
+<A HREF="#]'">]'</A>			<A HREF="intro.html#[count]">[count]</A> times to next line with a <A HREF="change.html#lowercase">小写</A> <A HREF="#mark">mark</A> below
 			the cursor, on the first non-blank character in the
 			line.
 
 
 							*<A NAME="]`"></A><B>]`</B>*
-<A HREF="#]`">]`</A>			<A HREF="intro.html#[count]">[count]</A> times to <A HREF="change.html#lowercase">lowercase</A> <A HREF="#mark">mark</A> after the cursor.
+<A HREF="#]`">]`</A>			<A HREF="intro.html#[count]">[count]</A> times to <A HREF="change.html#lowercase">小写</A> <A HREF="#mark">mark</A> after the cursor.
 
 
 							*<A NAME="['"></A><B>['</B>*
-<A HREF="#['">['</A>			<A HREF="intro.html#[count]">[count]</A> times to previous line with a <A HREF="change.html#lowercase">lowercase</A> <A HREF="#mark">mark</A>
+<A HREF="#['">['</A>			<A HREF="intro.html#[count]">[count]</A> times to previous line with a <A HREF="change.html#lowercase">小写</A> <A HREF="#mark">mark</A>
 			before the cursor, on the first non-blank character in
 			the line.
 
 
 							*<A NAME="[`"></A><B>[`</B>*
-<A HREF="#[`">[`</A>			<A HREF="intro.html#[count]">[count]</A> times to <A HREF="change.html#lowercase">lowercase</A> <A HREF="#mark">mark</A> before the cursor.
+<A HREF="#[`">[`</A>			<A HREF="intro.html#[count]">[count]</A> times to <A HREF="change.html#lowercase">小写</A> <A HREF="#mark">mark</A> before the cursor.
 
 
 
@@ -1233,7 +1233,7 @@ These commands are not marks themselves, but jump to a <A HREF="#mark">mark</A>:
 
 A &quot;jump&quot; is a command that normally moves the cursor several lines away.  If
 you make the cursor &quot;jump&quot; the position of the cursor before the jump is
-remembered.  You can return to that position with the &quot;'&#39;&#34;' and &quot;<A HREF="#``">``</A>&quot; commands,
+remembered.  You can return to that position with the &quot;'&#39;&#34;' and &quot;<A HREF="#``">``</A>&quot;命令,
 unless the line containing that position was changed or deleted.  The
 following commands are &quot;jump&quot; commands: &quot;&#39;&#34;', &quot;<A HREF="#`">`</A>&quot;, &quot;<A HREF="#G">G</A>&quot;, &quot;<A HREF="pattern.html#/">/</A>&quot;, &quot;<A HREF="pattern.html#?">?</A>&quot;, &quot;<A HREF="pattern.html#n">n</A>&quot;, &quot;<A HREF="pattern.html#N">N</A>&quot;,
 &quot;<A HREF="#&#37;">&#37;</A>&quot;, &quot;<A HREF="#(">(</A>&quot;, &quot;<A HREF="#)">)</A>&quot;, &quot;<A HREF="#[[">[[</A>&quot;, &quot;<A HREF="#]]">]]</A>&quot;, &quot;<A HREF="#{">{</A>&quot;, &quot;<A HREF="#}">}</A>&quot;, &quot;<A HREF="change.html#:s">:s</A>&quot;, &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;, &quot;<A HREF="#L">L</A>&quot;, &quot;<A HREF="#M">M</A>&quot;, &quot;<A HREF="#H">H</A>&quot; and the
@@ -1241,30 +1241,30 @@ commands that start editing a new file.
 
 
 							*<A NAME="CTRL-O"></A><B>CTRL-O</B>*
-<A HREF="#CTRL-O">CTRL-O</A>			Go to <A HREF="intro.html#[count]">[count]</A> Older cursor position in jump <A HREF="eval.html#list">list</A>
+<A HREF="#CTRL-O">CTRL-O</A>			Go to <A HREF="intro.html#[count]">[count]</A> Older cursor position in jump <A HREF="eval.html#list">列表</A>
 			(not a motion command).
 
 
 <A HREF="#&lt;Tab&gt;">&lt;Tab&gt;</A>		or					*<A NAME="CTRL-I"></A><B>CTRL-I</B>* *<A NAME="&lt;Tab&gt;"></A><B>&lt;Tab&gt;</B>*
-<A HREF="#CTRL-I">CTRL-I</A>			Go to <A HREF="intro.html#[count]">[count]</A> newer cursor position in jump <A HREF="eval.html#list">list</A>
+<A HREF="#CTRL-I">CTRL-I</A>			Go to <A HREF="intro.html#[count]">[count]</A> newer cursor position in jump <A HREF="eval.html#list">列表</A>
 			(not a motion command).
 
 
 							*<A NAME=":ju"></A><B>:ju</B>* *<A NAME=":jumps"></A><B>:jumps</B>*
-:ju[mps]		Print the jump <A HREF="eval.html#list">list</A> (not a motion command).
+:ju[mps]		Print the jump <A HREF="eval.html#list">列表</A> (not a motion command).
 
 
 							*<A NAME=":cle"></A><B>:cle</B>* *<A NAME=":clearjumps"></A><B>:clearjumps</B>*
-:cle[arjumps]		Clear the jump <A HREF="eval.html#list">list</A> of the current<A HREF="windows.html#window">窗口</A>.
+:cle[arjumps]		Clear the jump <A HREF="eval.html#list">列表</A> of the current<A HREF="windows.html#window">窗口</A>.
 
 
 							*<A NAME="jumplist"></A><B>jumplist</B>*
-Jumps are remembered in a jump <A HREF="eval.html#list">list</A>.  With the <A HREF="#CTRL-O">CTRL-O</A> and <A HREF="#CTRL-I">CTRL-I</A> command you
+Jumps are remembered in a jump <A HREF="eval.html#list">列表</A>.  With the <A HREF="#CTRL-O">CTRL-O</A> and <A HREF="#CTRL-I">CTRL-I</A> command you
 can go to cursor positions before older jumps, and back again.  Thus you can
-move up and down the <A HREF="eval.html#list">list</A>.  There is a separate jump <A HREF="eval.html#list">list</A> for each<A HREF="windows.html#window">窗口</A>.
+move up and down the <A HREF="eval.html#list">列表</A>.  There is a separate jump <A HREF="eval.html#list">列表</A> for each<A HREF="windows.html#window">窗口</A>.
 The maximum number of entries is fixed at 100.
 
-For example, after three jump commands you have this jump <A HREF="eval.html#list">list</A>:
+For example, after three jump commands you have this jump <A HREF="eval.html#list">列表</A>:
 
 <B><FONT color="#3A6F2B">    jump line  col file/text </FONT></B>
 <B><FONT color="#3A6F2B">      3	  1    0 some text </FONT></B>
@@ -1292,7 +1292,7 @@ The pointer will be set at the last used jump position.  The next <A HREF="#CTRL
 command will use the entry above <A HREF="#it">it</A>, the next <A HREF="#CTRL-I">CTRL-I</A> command will use the
 entry below <A HREF="#it">it</A>.  If the pointer is below the last entry, this indicates that
 you did not use a <A HREF="#CTRL-I">CTRL-I</A> or <A HREF="#CTRL-O">CTRL-O</A> before.  In this <A HREF="change.html#case">case</A> the <A HREF="#CTRL-O">CTRL-O</A> command
-will cause the cursor position to be added to the jump <A HREF="eval.html#list">list</A>, so you can get
+will cause the cursor position to be added to the jump <A HREF="eval.html#list">列表</A>, so you can get
 back to the position before the <A HREF="#CTRL-O">CTRL-O</A>.  In this <A HREF="change.html#case">case</A> this is line 1167.
 
 With more <A HREF="#CTRL-O">CTRL-O</A> commands you will go to lines 70 and 1.  If you use <A HREF="#CTRL-I">CTRL-I</A>
@@ -1301,7 +1301,7 @@ column indicates the <A HREF="intro.html#count">count</A> for the <A HREF="#CTRL
 this position.
 
 If you use a jump command, the current line number is inserted at the end of
-the jump <A HREF="eval.html#list">list</A>.  If the same line was already in the jump <A HREF="eval.html#list">list</A>, <A HREF="#it">it</A> is removed.
+the jump <A HREF="eval.html#list">列表</A>.  If the same line was already in the jump <A HREF="eval.html#list">列表</A>, <A HREF="#it">it</A> is removed.
 The result is that when <A HREF="repeat.html#repeating">repeating</A> <A HREF="#CTRL-O">CTRL-O</A> you will get back to old positions
 only once.
 
@@ -1311,7 +1311,7 @@ command.  You can explicitly add a jump by setting the '' <A HREF="#mark">mark</
 that calling <A HREF="builtin.html#setpos()">setpos()</A> does not <A HREF="diff.html#do">do</A> this.
 
 After the <A HREF="#CTRL-O">CTRL-O</A> command that got you into line 1154 you could give another
-jump command (e.g., &quot;G&quot;).  The jump <A HREF="eval.html#list">list</A> would then become:
+jump command (e.g., &quot;G&quot;).  The jump <A HREF="eval.html#list">列表</A> would then become:
 
 <B><FONT color="#3A6F2B">    jump line  col file/text </FONT></B>
 <B><FONT color="#3A6F2B">      4	  1    0 some text </FONT></B>
@@ -1321,7 +1321,7 @@ jump command (e.g., &quot;G&quot;).  The jump <A HREF="eval.html#list">list</A> 
 <B><FONT color="#3A6F2B">   &gt; </FONT></B>
 
 The line numbers will be adjusted for deleted and inserted lines.  This fails
-if you stop editing a file without <A HREF="editing.html#writing">writing</A>, like with &quot;:n!&quot;.
+if you stop editing a file without <A HREF="editing.html#writing">写</A>, like with &quot;:n!&quot;.
 
 When you split a<A HREF="windows.html#window">窗口</A>, the <A HREF="#jumplist">jumplist</A> will be copied to the new<A HREF="windows.html#window">窗口</A>.
 
@@ -1394,7 +1394,7 @@ also those that have been undone:
 
 
 							*<A NAME="g;"></A><B>g;</B>* *<A NAME="E662"></A><B>E662</B>*
-<A HREF="#g;">g;</A>			Go to <A HREF="intro.html#[count]">[count]</A> older position in change <A HREF="eval.html#list">list</A>.
+<A HREF="#g;">g;</A>			Go to <A HREF="intro.html#[count]">[count]</A> older position in change <A HREF="eval.html#list">列表</A>.
 			If <A HREF="intro.html#[count]">[count]</A> is larger than the number of older change
 			positions go to the oldest change.
 			If there is no older change an error message is given.
@@ -1402,19 +1402,19 @@ also those that have been undone:
 
 
 							*<A NAME="g,"></A><B>g,</B>* *<A NAME="E663"></A><B>E663</B>*
-<A HREF="#g,">g,</A>			Go to <A HREF="intro.html#[count]">[count]</A> newer cursor position in change <A HREF="eval.html#list">list</A>.
+<A HREF="#g,">g,</A>			Go to <A HREF="intro.html#[count]">[count]</A> newer cursor position in change <A HREF="eval.html#list">列表</A>.
 			Just like |<A HREF="#g;">g;</A>| but in the opposite direction.
 			(not a motion command)
 
 When using a <A HREF="intro.html#count">count</A> you jump <A HREF="#as">as</A> far back or forward <A HREF="#as">as</A> possible.  Thus you can
 use &quot;999g;&quot; to go to the first change for which the position is still
-remembered.  The number of entries in the change <A HREF="eval.html#list">list</A> is fixed and is the same
+remembered.  The number of entries in the change <A HREF="eval.html#list">列表</A> is fixed and is the same
 <A HREF="#as">as</A> for the |<A HREF="#jumplist">jumplist</A>|.
 
 When two undo-able changes are in the same line and at a column position <A HREF="various.html#less">less</A>
 than <A HREF="options.html#'textwidth'">'textwidth'</A> apart only the last one is remembered.  This avoids that a
 sequence of small changes in a line, for example &quot;xxxxx&quot;, adds many positions
-to the change <A HREF="eval.html#list">list</A>.  When <A HREF="options.html#'textwidth'">'textwidth'</A> is zero <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> is used.  When that
+to the change <A HREF="eval.html#list">列表</A>.  When <A HREF="options.html#'textwidth'">'textwidth'</A> is zero <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> is used.  When that
 also isn't set a fixed number of 79 is used.  Detail: For the computations
 bytes are used, not characters, to avoid a speed penalty (this only matters
 for <A HREF="mbyte.html#multibyte">multibyte</A> encodings).
@@ -1428,7 +1428,7 @@ remembered.
 
 
 							*<A NAME=":changes"></A><B>:changes</B>*
-<A HREF="#:changes">:changes</A>		Print the change <A HREF="eval.html#list">list</A>.  A &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; character indicates the
+<A HREF="#:changes">:changes</A>		Print the change <A HREF="eval.html#list">列表</A>.  A &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; character indicates the
 			current position.  Just after a change <A HREF="#it">it</A> is below the
 			newest entry, indicating that `g;` takes you to the
 			newest entry position.  The first column indicates the
@@ -1493,7 +1493,7 @@ remembered.
 
 			No <A HREF="intro.html#count">count</A> is allowed, {count}&#37; jumps to a line {count}
 			percentage down the file |<A HREF="#N&#37;">N&#37;</A>|.  Using '&#37;' on
-			#if/#else/#endif makes the <A HREF="intro.html#movement">movement</A> <A HREF="#linewise">linewise</A>.
+			#if/#else/#endif makes the <A HREF="intro.html#movement">移动</A> <A HREF="#linewise">linewise</A>.
 
 
 						*<A NAME="[("></A><B>[(</B>*

@@ -100,7 +100,7 @@ Maximum file size	   2147483647 bytes (2 Gbyte) when a long integer is
 							*<A NAME="E75"></A><B>E75</B>*
 Length of a file path	   Unix and Win32: 1024 characters, otherwise 256
 			   characters (or <A HREF="motion.html#as">as</A> much <A HREF="motion.html#as">as</A> the system supports).
-Length of an expanded <A HREF="eval.html#string">string</A> option
+Length of an expanded <A HREF="options\.html#options">字符串</A> option
 			   Unix and Win32: 1024 characters, otherwise 256
 			   characters
 Maximum display width	   Unix and Win32: 1024 characters, otherwise 255
@@ -114,7 +114,7 @@ Maximum length of a line in a <A HREF="tagsrch.html#tags">标签</A> file: 512 b
 Information for <A HREF="undo.html#undo">undo</A> and text in <A HREF="change.html#registers">registers</A> is kept in memory, thus when making
 (big) changes the amount of (virtual) memory available <A HREF="#limits">limits</A> the number of
 <A HREF="undo.html#undo">undo</A> levels and the text that can be kept in <A HREF="change.html#registers">registers</A>.  Other things are also
-kept in memory:  <A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="cmdline.html#history">history</A>, error <A HREF="message.html#messages">messages</A> for <A HREF="quickfix.html#Quickfix">Quickfix</A> mode, etc.
+kept in memory:  <A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="cmdline.html#history">history</A>, error <A HREF="message.html#messages">信息</A> for <A HREF="quickfix.html#Quickfix">Quickfix</A> mode, etc.
 
 ==============================================================================
 
@@ -151,7 +151,7 @@ Multiple windows and <A HREF="windows.html#buffers">buffers</A>.				|<A HREF="wi
 	Vim can split the screen into several <A HREF="windows.html#windows">windows</A>, each editing a
 	different buffer or the same buffer at a different location.  Buffers
 	can still be loaded (and changed) but not displayed in a<A HREF="windows.html#window">窗口</A>.  This
-	is called a hidden buffer.  Many commands and <A HREF="options.html#options">options</A> have been added
+	is called a hidden buffer.  Many commands and <A HREF="options\.html#options">选项</A> have been added
 	for this facility.
 	Vim can also use multiple <A HREF="intro.html#tab">tab</A> pages, each with one or more <A HREF="windows.html#windows">windows</A>.  A
 	line with <A HREF="intro.html#tab">tab</A> labels can be used to quickly switch between these pages.
@@ -167,7 +167,7 @@ Multiple windows and <A HREF="windows.html#buffers">buffers</A>.				|<A HREF="wi
 	and the <A HREF="gui.html#GUI">GUI</A> with the |<A HREF="syntax.html#:highlight">:highlight</A>| command.  A convenient way to <A HREF="diff.html#do">do</A>
 	this is using a |<A HREF="syntax.html#:colorscheme">:colorscheme</A>| command.
 	The highlighted text can be exported <A HREF="motion.html#as">as</A> HTML. |<A HREF="syntax.html#convert-to-HTML">convert-to-HTML</A>|
-	Other items that can be highlighted are matches with the search <A HREF="eval.html#string">string</A>
+	Other items that can be highlighted are matches with the search <A HREF="options\.html#options">字符串</A>
 	|<A HREF="options.html#'hlsearch'">'hlsearch'</A>|, matching parens |<A HREF="pi_paren.html#matchparen">matchparen</A>| and the cursor line and
 	column |<A HREF="options.html#'cursorline'">'cursorline'</A>| |<A HREF="options.html#'cursorcolumn'">'cursorcolumn'</A>|.
 
@@ -196,7 +196,7 @@ Plugins.						|<A HREF="usr_05.html#add-plugin">add-plugin</A>|
 	Packages make this even easier. |<A HREF="repeat.html#packages">packages</A>|
 
 Asynchronous communication and <A HREF="builtin.html#timers">timers</A>.			|<A HREF="job_control.html#job-control">job-control</A>| |<A HREF="builtin.html#timer">timer</A>|
-	Vim can exchange <A HREF="message.html#messages">messages</A> with other processes in the background.
+	Vim can exchange <A HREF="message.html#messages">信息</A> with other processes in the background.
 	Vim can start a job, communicate with <A HREF="motion.html#it">它</A> and stop <A HREF="motion.html#it">它</A>. |<A HREF="job_control.html#job-control">job-control</A>|
 	Timers can fire once or repeatedly and invoke a function to <A HREF="diff.html#do">do</A> any
 	work. |<A HREF="builtin.html#timer">timer</A>|
@@ -235,18 +235,18 @@ Visual mode.						|<A HREF="visual.html#Visual-mode">Visual-mode</A>|
 		<A HREF="change.html#gq">gq</A>	format text to <A HREF="options.html#'textwidth'">'textwidth'</A> columns
 		<A HREF="change.html#J">J</A>	join lines
 		~	swap <A HREF="change.html#case">case</A>
-		<A HREF="undo.html#u">u</A>	make <A HREF="change.html#lowercase">lowercase</A>
-		<A HREF="undo.html#U">U</A>	make <A HREF="change.html#uppercase">uppercase</A>
+		<A HREF="undo.html#u">u</A>	make <A HREF="change.html#lowercase">小写</A>
+		<A HREF="undo.html#U">U</A>	make <A HREF="change.html#uppercase">大写</A>
 
 Block operators.					|<A HREF="visual.html#visual-block">visual-block</A>|
 	With <A HREF="visual.html#Visual">Visual</A> mode a rectangular block of text can be selected.  Start
 	<A HREF="visual.html#Visual">Visual</A> mode with <A HREF="visual.html#CTRL-V">CTRL-V</A>.  The block can be deleted (&quot;d&quot;), yanked (&quot;y&quot;)
 	or its <A HREF="change.html#case">case</A> can be changed (&quot;~&quot;, &quot;<A HREF="undo.html#u">u</A>&quot; and &quot;U&quot;).  A deleted or yanked
-	block can be put into the text with the &quot;<A HREF="change.html#p">p</A>&quot; and &quot;<A HREF="change.html#P">P</A>&quot; commands.
+	block can be put into the text with the &quot;<A HREF="change.html#p">p</A>&quot; and &quot;<A HREF="change.html#P">P</A>&quot;命令.
 
 Help system.						|<A HREF="helphelp.html#:help">:help</A>|
 	Help is displayed in a<A HREF="windows.html#window">窗口</A>.  The usual commands can be used to
-	move around, search for a <A HREF="eval.html#string">string</A>, etc.  Tags can be used to jump
+	move around, search for a <A HREF="options\.html#options">字符串</A>, etc.  Tags can be used to jump
 	around in the help files, just like hypertext links.  The |<A HREF="helphelp.html#:help">:help</A>|
 	command takes an argument to quickly jump to the info on a subject.
 	<A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A> is the quick access to the help system.  The name of the help
@@ -315,14 +315,14 @@ Long line support.					|<A HREF="options.html#'wrap'">'wrap'</A>| |<A HREF="opti
 	and |<A HREF="scroll.html#zl">zl</A>| commands can be used to scroll sideways.
 	Alternatively, long lines are broken in between words when the
 	<A HREF="options.html#'linebreak'">'linebreak'</A> option is set.  This allows editing a single-line
-	<A HREF="motion.html#paragraph">paragraph</A> conveniently (e.g. when the text is later read into a DTP
+	<A HREF="motion.html#paragraph">段落</A> conveniently (e.g. when the text is later read into a DTP
 	program).  Move the cursor up/down with the |<A HREF="motion.html#gk">gk</A>| and |<A HREF="motion.html#gj">gj</A>| commands.
 
 Text formatting.					|<A HREF="change.html#formatting">formatting</A>|
 	The <A HREF="options.html#'textwidth'">'textwidth'</A> option can be used to automatically limit the line
 	length.  This supplements the <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> option of <A HREF="intro.html#Vi">Vi</A>, which was not
 	very useful.  The |<A HREF="change.html#gq">gq</A>| <A HREF="motion.html#operator">operator</A> can be used to format a piece of text
-	(for example, |<A HREF="change.html#gqap">gqap</A>| formats the current <A HREF="motion.html#paragraph">paragraph</A>).  Commands for
+	(for example, |<A HREF="change.html#gqap">gqap</A>| formats the current <A HREF="motion.html#paragraph">段落</A>).  Commands for
 	text alignment: |<A HREF="change.html#:center">:center</A>|, |<A HREF="change.html#:left">:left</A>| and |<A HREF="change.html#:right">:right</A>|.
 
 Extended search patterns.				|<A HREF="pattern.html#pattern">pattern</A>|
@@ -333,26 +333,26 @@ Extended search patterns.				|<A HREF="pattern.html#pattern">pattern</A>|
 
 Directory, remote and archive browsing.			|<A HREF="pi_netrw.html#netrw">netrw</A>|
 	Vim can browse the file system.  Simply edit a directory.  Move around
-	in the <A HREF="eval.html#list">list</A> with the usual commands and press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to go to the
+	in the <A HREF="eval.html#list">列表</A> with the usual commands and press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to go to the
 	directory or file under the cursor.
 	This also works for remote files over ftp, <A HREF="pi_netrw.html#http">http</A>, ssh, etc.
 	Zip and tar archives can also be browsed. |<A HREF="pi_tar.html#tar">tar</A>| |<A HREF="pi_zip.html#zip">zip</A>|
 
 Edit-compile-edit speedup.				|<A HREF="quickfix.html#quickfix">quickfix</A>|
 	The |<A HREF="quickfix.html#:make">:make</A>| command can be used to run the compilation and jump to the
-	first error.  A file with compiler error <A HREF="message.html#messages">messages</A> is interpreted.  Vim
+	first error.  A file with compiler error <A HREF="message.html#messages">信息</A> is interpreted.  Vim
 	jumps to the first error.
 
 	Each line in the error file is scanned for the name of a file, line
 	number and error message.  The <A HREF="options.html#'errorformat'">'errorformat'</A> option can be set to a
-	<A HREF="eval.html#list">list</A> of scanf-like strings to handle output from many compilers.
+	<A HREF="eval.html#list">列表</A> of scanf-like strings to handle output from many compilers.
 
 	The |<A HREF="quickfix.html#:cn">:cn</A>| command can be used to jump to the next error.
-	|<A HREF="quickfix.html#:cl">:cl</A>| lists all the error <A HREF="message.html#messages">messages</A>.  Other commands are available.
-	The <A HREF="options.html#'makeef'">'makeef'</A> option has the name of the file with error <A HREF="message.html#messages">messages</A>.
+	|<A HREF="quickfix.html#:cl">:cl</A>| lists all the error <A HREF="message.html#messages">信息</A>.  Other commands are available.
+	The <A HREF="options.html#'makeef'">'makeef'</A> option has the name of the file with error <A HREF="message.html#messages">信息</A>.
 	The <A HREF="options.html#'makeprg'">'makeprg'</A> option contains the name of the program to be executed
 	with the |<A HREF="quickfix.html#:make">:make</A>| command.
-	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> option contains the <A HREF="eval.html#string">string</A> to be used to put the
+	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> option contains the <A HREF="options\.html#options">字符串</A> to be used to put the
 	output of the compiler into the errorfile.
 
 Finding matches in files.				|<A HREF="quickfix.html#:vimgrep">:vimgrep</A>|
@@ -386,21 +386,21 @@ Searching for words in included files.			|<A HREF="tagsrch.html#include-search">
 	lines where the <A HREF="pattern.html#pattern">pattern</A> given with the <A HREF="options.html#'define'">'define'</A> option matches.
 
 Automatic commands.					|<A HREF="autocmd.html#autocommand">autocommand</A>|
-	Commands can be automatically executed when reading a file, <A HREF="editing.html#writing">writing</A> a
+	Commands can be automatically executed when reading a file, <A HREF="editing.html#writing">写</A> a
 	file, jumping to another buffer, etc., depending on the file name.
-	This is useful to set <A HREF="options.html#options">options</A> and mappings for C programs,
+	This is useful to set <A HREF="options\.html#options">选项</A> and mappings for C programs,
 	documentation, plain text, e-mail, etc.  This also makes <A HREF="motion.html#it">它</A> possible
 	to edit compressed files.
 
 Scripts and Expressions.				|<A HREF="eval.html#expression">expression</A>|
 	Commands have been added to form up a powerful <A HREF="usr_41.html#script">script</A> language.
 	|<A HREF="eval.html#:if">:if</A>|		Conditional execution, which can be used for example
-			to set <A HREF="options.html#options">options</A> depending on the value of <A HREF="term.html#$TERM">$TERM</A>.
+			to set <A HREF="options\.html#options">选项</A> depending on the value of <A HREF="term.html#$TERM">$TERM</A>.
 	|<A HREF="eval.html#:while">:while</A>|	Repeat a number of commands.
-	|<A HREF="eval.html#:for">:for</A>|		Loop over a <A HREF="eval.html#list">list</A>.
+	|<A HREF="eval.html#:for">:for</A>|		Loop over a <A HREF="eval.html#list">列表</A>.
 	|<A HREF="eval.html#:echo">:echo</A>|		Print the result of an <A HREF="eval.html#expression">expression</A>.
 	|<A HREF="eval.html#:let">:let</A>|		Assign a value to an internal variable, option, etc.
-			Variable types are <A HREF="eval.html#Number">Number</A>, <A HREF="eval.html#String">String</A>, <A HREF="eval.html#List">List</A> and <A HREF="eval.html#Dictionary">Dictionary</A>.
+			Variable types are <A HREF="eval.html#Number">Number</A>, <A HREF="options\.html#options">字符串</A>, <A HREF="eval.html#list">列表</A> and <A HREF="eval.html#Dictionary">Dictionary</A>.
 	|<A HREF="eval.html#:execute">:execute</A>|	Execute a command formed by an <A HREF="eval.html#expression">expression</A>.
 	|<A HREF="eval.html#:try">:try</A>|		Catch exceptions.
 	etc., etc.  见 |<A HREF="eval.html#eval">eval</A>|.

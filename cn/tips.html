@@ -108,7 +108,7 @@ is an overview with <A HREF="tagsrch.html#tags">标签</A> to jump to:
 |<A HREF="tagsrch.html#[i">[i</A>|			Search for identifier under cursor in current and
 			included files.
 |<A HREF="tagsrch.html#[_CTRL-I">[_CTRL-I</A>|		Jump to match for &quot;<A HREF="tagsrch.html#[i">[i</A>&quot;
-|<A HREF="tagsrch.html#[I">[I</A>|			<A HREF="eval.html#List">List</A> all lines in current and included files where
+|<A HREF="tagsrch.html#[I">[I</A>|			<A HREF="eval.html#list">列表</A> all lines in current and included files where
 			identifier under the cursor matches.
 |<A HREF="tagsrch.html#[d">[d</A>|			Search for define under cursor in current and included
 			files.
@@ -116,7 +116,7 @@ is an overview with <A HREF="tagsrch.html#tags">标签</A> to jump to:
 |<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>|		Jump to <A HREF="tagsrch.html#tag">标签</A> under cursor (e.g., definition of a
 			function).
 |<A HREF="tagsrch.html#CTRL-T">CTRL-T</A>|		Jump back to before a <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> command.
-|<A HREF="tagsrch.html#:tselect">:tselect</A>|		<A HREF="visual.html#Select">Select</A> one <A HREF="tagsrch.html#tag">标签</A> out of a <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">标签</A>.
+|<A HREF="tagsrch.html#:tselect">:tselect</A>|		<A HREF="visual.html#Select">Select</A> one <A HREF="tagsrch.html#tag">标签</A> out of a <A HREF="eval.html#list">列表</A> of matching <A HREF="tagsrch.html#tags">标签</A>.
 
 |<A HREF="pattern.html#gd">gd</A>|			Go to Declaration of local variable under cursor.
 |<A HREF="pattern.html#gD">gD</A>|			Go to Declaration of global variable under cursor.
@@ -212,7 +212,7 @@ If you like the <A HREF="scroll.html#scrolling">scrolling</A> to go a bit smooth
 Correcting common typing mistakes			*<A NAME="type-mistakes"></A><B>type-mistakes</B>*
 
 When there are a few words that you keep on typing in the wrong way, make
-<A HREF="map.html#abbreviations">abbreviations</A> that correct them.  For example:
+<A HREF="map.html#abbreviations">abbreviations</A> that correct them.例如:
 <B>	:ab teh the</B>
 <B>	:ab fro for</B>
 
@@ -371,8 +371,8 @@ For Emacs-style editing on the command-line:
  
 
 							*<A NAME="format-bullet-list"></A><B>format-bullet-list</B>*
-This <A HREF="map.html#mapping">mapping</A> will format any bullet <A HREF="eval.html#list">list</A>.  It requires that there is an empty
-line above and below each <A HREF="eval.html#list">list</A> entry.  The <A HREF="eval.html#expression">expression</A> commands are used to
+This <A HREF="map.html#mapping">mapping</A> will format any bullet <A HREF="eval.html#list">列表</A>.  It requires that there is an empty
+line above and below each <A HREF="eval.html#list">列表</A> entry.  The <A HREF="eval.html#expression">expression</A> commands are used to
 be able to give comments to the parts of the <A HREF="map.html#mapping">mapping</A>.
 
 <B>	:let m =     ":map _f  :set ai&lt;CR&gt;"   " need 'autoindent' set</B>
@@ -387,13 +387,13 @@ be able to give comments to the parts of the <A HREF="map.html#mapping">mapping<
 (&lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|.  Note that this is all typed literally.  ^W is &quot;<A HREF="motion.html#^">^</A>&quot; &quot;<A HREF="motion.html#W">W</A>&quot;, not
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A>.)
 
-Note that the last comment starts with |&quot;, because the &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command
+Note that the last comment starts with |&quot;, because the &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令
 doesn't accept a comment directly.
 
 You also need to set <A HREF="options.html#'textwidth'">'textwidth'</A> to a non-zero value, e.g.,
 <B>	:set tw=70</B>
 
-A <A HREF="map.html#mapping">mapping</A> that does about the same, but takes the indent for the <A HREF="eval.html#list">list</A> from the
+A <A HREF="map.html#mapping">mapping</A> that does about the same, but takes the indent for the <A HREF="eval.html#list">列表</A> from the
 first line (Note: this <A HREF="map.html#mapping">mapping</A> is a single long line with a lot of spaces):
 <B>	:map _f :set ai&lt;CR&gt;}{a                                                          &lt;Esc&gt;WWmmkD`mi&lt;CR&gt;&lt;Esc&gt;kkddpJgq}'mJO&lt;Esc&gt;j</B>
  
@@ -435,7 +435,7 @@ See section |<A HREF="usr_23.html#23.3">23.3</A>| of the user manual.
 If one has a particular extension that one uses for binary files (such <A HREF="motion.html#as">as</A> exe,
 bin, etc), you may find <A HREF="motion.html#it">它</A> helpful to automate the process with the following
 bit of autocmds for your |<A HREF="init.html">init.vim</A>|.  Change that &quot;*.bin&quot; to whatever
-comma-separated <A HREF="eval.html#list">list</A> of extension(s) you find yourself wanting to edit:
+comma-separated <A HREF="eval.html#list">列表</A> of extension(s) you find yourself wanting to edit:
 
 <B>	" vim -b : edit binary using xxd-format!</B>
 <B>	augroup Binary</B>
@@ -470,8 +470,8 @@ get the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation"
 <B> autocmd BufNewFile,BufReadPre * nmap i :nunmap i&lt;CR&gt;O&lt;C-R&gt;%&lt;Esc&gt;:.g/\./s/\./\\./g&lt;CR&gt;0"9y$u:menu Buffers.&lt;C-R&gt;9 :buffer &lt;C-R&gt;%&lt;C-V&gt;&lt;CR&gt;&lt;CR&gt;</B>
 <B> autocmd BufNewFile,BufReadPre * normal i</B>
 
-Another <A HREF="eval.html#method">method</A>, perhaps better, is to use the &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command.  In the
-<A HREF="eval.html#string">string</A> you can use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> by preceding <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A>.  Don't
+Another <A HREF="eval.html#method">method</A>, perhaps better, is to use the &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令.  In the
+<A HREF="options\.html#options">字符串</A> you can use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> by preceding <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A>.  Don't
 forget to double the number of existing backslashes and put a <A HREF="intro.html#backslash">backslash</A> before
 &#39;&#34;''.
 
@@ -487,12 +487,12 @@ Highlighting matching parens					*<A NAME="match-parens"></A><B>match-parens</B>
 This example shows the use of a few advanced tricks:
 - using the |<A HREF="autocmd.html#CursorMoved">CursorMoved</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event
 - using |<A HREF="builtin.html#searchpairpos()">searchpairpos()</A>| to find a matching paren
-- using |<A HREF="builtin.html#synID()">synID()</A>| to detect whether the cursor is in a <A HREF="eval.html#string">string</A> or comment
+- using |<A HREF="builtin.html#synID()">synID()</A>| to detect whether the cursor is in a <A HREF="options\.html#options">字符串</A> or comment
 - using |<A HREF="pattern.html#:match">:match</A>| to highlight something
 - using a |<A HREF="pattern.html#pattern">pattern</A>| to match a specific position in the file.
 
 This should be put in a Vim <A HREF="usr_41.html#script">script</A> file, since <A HREF="motion.html#it">它</A> uses <A HREF="map.html#script-local">script-local</A> <A HREF="eval.html#variables">variables</A>.
-It skips matches in strings or comments, unless the cursor started in <A HREF="eval.html#string">string</A>
+It skips matches in strings or comments, unless the cursor started in <A HREF="options\.html#options">字符串</A>
 or comment.  This requires <A HREF="syntax.html#syntax">syntax</A> highlighting.
 
 A slightly more advanced version is used in the |<A HREF="pi_paren.html#matchparen">matchparen</A>| <A HREF="usr_05.html#plugin">plugin</A>.

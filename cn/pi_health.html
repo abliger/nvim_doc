@@ -148,11 +148,11 @@ vim.health.report_ok({msg})                             *<A NAME="vim.health.rep
 
 
 vim.health.report_warn({msg} [, {advice}])              *<A NAME="vim.health.report_warn()"></A><B>vim.health.report_warn()</B>*
-        Reports a warning. {advice} is an optional <A HREF="eval.html#List">List</A> of suggestions.
+        Reports a warning. {advice} is an optional <A HREF="eval.html#list">列表</A> of suggestions.
 
 
 vim.health.report_error({msg} [, {advice}])             *<A NAME="vim.health.report_error()"></A><B>vim.health.report_error()</B>*
-        Reports an error. {advice} is an optional <A HREF="eval.html#List">List</A> of suggestions.
+        Reports an error. {advice} is an optional <A HREF="eval.html#list">列表</A> of suggestions.
 
 ==============================================================================
 
@@ -165,7 +165,7 @@ To add a new healthcheck for your own <A HREF="usr_05.html#plugin">plugin</A>, s
 your <A HREF="usr_05.html#plugin">plugin</A> that returns a table with a &quot;check()&quot; function. |<A HREF="#:checkhealth">:checkhealth</A>|
 will automatically find and invoke this function.
 
-If your <A HREF="usr_05.html#plugin">plugin</A> is named &quot;foo&quot;, then its healthcheck module should be a file in
+If your <A HREF="usr_05.html#plugin">plugin</A> is named &quot;foo&quot;然后its healthcheck module should be a file in
 one of these locations on <A HREF="options.html#'runtimepath'">'runtimepath'</A> or <A HREF="options.html#'packpath'">'packpath'</A>:
         - lua/foo/health/init.lua
         - lua/foo/health.lua
@@ -220,11 +220,11 @@ health#report_ok({msg})                                 *<A NAME="health#report_
 
 
 health#report_warn({msg} [, {advice}])                  *<A NAME="health#report_warn"></A><B>health#report_warn</B>*
-        Reports a warning. {advice} is an optional <A HREF="eval.html#List">List</A> of suggestions.
+        Reports a warning. {advice} is an optional <A HREF="eval.html#list">列表</A> of suggestions.
 
 
 health#report_error({msg} [, {advice}])                 *<A NAME="health#report_error"></A><B>health#report_error</B>*
-        Reports an error. {advice} is an optional <A HREF="eval.html#List">List</A> of suggestions.
+        Reports an error. {advice} is an optional <A HREF="eval.html#list">列表</A> of suggestions.
 
 
 health#{plugin}#check()                                 *<A NAME="health.user_checker"></A><B>health.user_checker</B>*
@@ -247,7 +247,7 @@ To add a new healthcheck for your own <A HREF="usr_05.html#plugin">plugin</A>, s
 health#{plugin}#check() function in autoload/health/{plugin}.vim.
 |<A HREF="#:checkhealth">:checkhealth</A>| automatically finds and invokes such <A HREF="eval.html#functions">functions</A>.
 
-If your <A HREF="usr_05.html#plugin">plugin</A> is named &quot;foo&quot;, then its healthcheck function must be
+If your <A HREF="usr_05.html#plugin">plugin</A> is named &quot;foo&quot;然后its healthcheck function must be
 <B>        health#foo#check()</B>
 
 defined in this file on <A HREF="options.html#'runtimepath'">'runtimepath'</A> or <A HREF="options.html#'packpath'">'packpath'</A>:

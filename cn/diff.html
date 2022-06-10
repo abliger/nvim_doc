@@ -103,7 +103,7 @@ then append the file name of the first argument to the directory name to find
 the file.
 
 By default an internal <A HREF="#diff">diff</A> library will be used.  When <A HREF="options.html#'diffopt'">'diffopt'</A> or
-<A HREF="options.html#'diffexpr'">'diffexpr'</A> has been set an external &quot;<A HREF="#diff">diff</A>&quot; command will be used.  This only
+<A HREF="options.html#'diffexpr'">'diffexpr'</A> has been set an external &quot;<A HREF="#diff">diff</A>&quot;命令 will be used.  This only
 works when such a <A HREF="#diff">diff</A> program is available.
 
 Diffs are local to the current tab page |<A HREF="tabpage.html#tab-page">tab-page</A>|.  You can't see diffs with
@@ -118,7 +118,7 @@ horizontal splits use the |<A HREF="starting.html#-o">-o</A>| argument instead:
 
 If you always prefer horizontal splits include &quot;horizontal&quot; in <A HREF="options.html#'diffopt'">'diffopt'</A>.
 
-In each of the edited files these <A HREF="options.html#options">options</A> are set:
+In each of the edited files these <A HREF="options\.html#options">选项</A> are set:
 
 	<A HREF="options.html#'diff'">'diff'</A>		on
 	<A HREF="options.html#'scrollbind'">'scrollbind'</A>	on
@@ -128,12 +128,12 @@ In each of the edited files these <A HREF="options.html#options">options</A> are
 	<A HREF="options.html#'foldmethod'">'foldmethod'</A>	&quot;<A HREF="#diff">diff</A>&quot;
 	<A HREF="options.html#'foldcolumn'">'foldcolumn'</A>	value from <A HREF="options.html#'diffopt'">'diffopt'</A>, default is 2
 
-These <A HREF="options.html#options">options</A> are set local to the<A HREF="windows.html#window">窗口</A>.  When editing another file they are
+These <A HREF="options\.html#options">选项</A> are set local to the<A HREF="windows.html#window">窗口</A>.  When editing another file they are
 reset to the global value.
-The <A HREF="options.html#options">options</A> can still be overruled from a <A HREF="options.html#modeline">modeline</A> when re-editing the file.
+The <A HREF="options\.html#options">选项</A> can still be overruled from a <A HREF="options.html#modeline">modeline</A> when re-editing the file.
 However, <A HREF="options.html#'foldmethod'">'foldmethod'</A> and <A HREF="options.html#'wrap'">'wrap'</A> won't be set from a <A HREF="options.html#modeline">modeline</A> when <A HREF="options.html#'diff'">'diff'</A> is
 set.
-See `:diffoff` for an easy way to revert the <A HREF="options.html#options">options</A>.
+See `:diffoff` for an easy way to revert the <A HREF="options\.html#options">选项</A>.
 
 The differences shown are actually the differences in the buffer.  Thus if you
 make changes after loading a file, these will be included in the displayed
@@ -155,20 +155,20 @@ While already in Vim you can start <A HREF="#diff">diff</A> mode in three ways.
 							*<A NAME="E98"></A><B>E98</B>*
 
 :diffs[plit] {filename}					*<A NAME=":diffs"></A><B>:diffs</B>* *<A NAME=":diffsplit"></A><B>:diffsplit</B>*
-		Open a new<A HREF="windows.html#window">窗口</A>on the file {filename}.  The <A HREF="options.html#options">options</A> are set
+		Open a new<A HREF="windows.html#window">窗口</A>on the file {filename}.  The <A HREF="options\.html#options">选项</A> are set
 		<A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot; for the current and the newly opened<A HREF="windows.html#window">窗口</A>.
 		Also see <A HREF="options.html#'diffexpr'">'diffexpr'</A>.
 
 
 							*<A NAME=":difft"></A><B>:difft</B>* *<A NAME=":diffthis"></A><B>:diffthis</B>*
 :difft[his]	Make the current<A HREF="windows.html#window">窗口</A>part of the <A HREF="#diff">diff</A> <A HREF="windows.html#windows">windows</A>.  This sets
-		the <A HREF="options.html#options">options</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
+		the <A HREF="options\.html#options">选项</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
 
 
 :diffp[atch] {patchfile}			 *<A NAME="E816"></A><B>E816</B>* *<A NAME=":diffp"></A><B>:diffp</B>* *<A NAME=":diffpatch"></A><B>:diffpatch</B>*
 		Use the current buffer, patch <A HREF="motion.html#it">它</A> with the <A HREF="#diff">diff</A> found in
 		{patchfile} and open a buffer on the result.  This sets the
-		<A HREF="options.html#options">options</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
+		<A HREF="options\.html#options">选项</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
 		{patchfile} can be in any format that the &quot;patch&quot; program
 		understands or <A HREF="options.html#'patchexpr'">'patchexpr'</A> can handle.
 		Note that {patchfile} should only contain a <A HREF="#diff">diff</A> for one file,
@@ -196,17 +196,17 @@ file for a moment and come back to the same file and be in <A HREF="#diff">diff<
 
 							*<A NAME=":diffo"></A><B>:diffo</B>* *<A NAME=":diffoff"></A><B>:diffoff</B>*
 :diffo[ff]	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>.  Resets related
-		<A HREF="options.html#options">options</A> also when <A HREF="options.html#'diff'">'diff'</A> was not set.
+		<A HREF="options\.html#options">选项</A> also when <A HREF="options.html#'diff'">'diff'</A> was not set.
 
 :diffo[ff]!	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>and in all <A HREF="windows.html#windows">windows</A>
 		in the current <A HREF="intro.html#tab">tab</A> page where <A HREF="options.html#'diff'">'diff'</A> is set.  Resetting
-		related <A HREF="options.html#options">options</A> only happens in a<A HREF="windows.html#window">窗口</A>that has <A HREF="options.html#'diff'">'diff'</A> set,
-		if the current<A HREF="windows.html#window">窗口</A>does not have <A HREF="options.html#'diff'">'diff'</A> set then no <A HREF="options.html#options">options</A>
+		related <A HREF="options\.html#options">选项</A> only happens in a<A HREF="windows.html#window">窗口</A>that has <A HREF="options.html#'diff'">'diff'</A> set,
+		if the current<A HREF="windows.html#window">窗口</A>does not have <A HREF="options.html#'diff'">'diff'</A> set then no <A HREF="options\.html#options">选项</A>
 		in <A HREF="motion.html#it">它</A> are changed.
-		Hidden <A HREF="windows.html#buffers">buffers</A> are also removed from the <A HREF="eval.html#list">list</A> of diff'ed
+		Hidden <A HREF="windows.html#buffers">buffers</A> are also removed from the <A HREF="eval.html#list">列表</A> of diff'ed
 		<A HREF="windows.html#buffers">buffers</A>.
 
-The `:diffoff` command resets the relevant <A HREF="options.html#options">options</A> to the values they had when
+The `:diffoff` command resets the relevant <A HREF="options\.html#options">选项</A> to the values they had when
 using `:diffsplit`, `:diffpatch` , `:diffthis`. or starting Vim in <A HREF="#diff">diff</A> mode.
 When using `:diffoff` <A HREF="if_cscop.html#twice">twice</A> the last saved values are restored.
 Otherwise they are set to their default value:
@@ -284,7 +284,7 @@ Folds are used to hide the text that wasn't changed.  见 |<A HREF="fold.html#fo
 the commands that can be used with <A HREF="fold.html#folds">folds</A>.
 
 The <A HREF="repeat.html#context">context</A> of lines above a difference that are not included in the fold can
-be set with the <A HREF="options.html#'diffopt'">'diffopt'</A> option.  For example, to set the <A HREF="repeat.html#context">context</A> to three
+be set with the <A HREF="options.html#'diffopt'">'diffopt'</A> option.例如, to set the <A HREF="repeat.html#context">context</A> to three
 lines:
 
 <B>	:set diffopt=filler,context:3</B>
@@ -373,7 +373,7 @@ lines.  When there are deleted lines, this may not always be possible.
 
 There can be deleted lines below the last line of the buffer.  When the cursor
 is on the last line in the buffer and there is no <A HREF="#diff">diff</A> above this line, the
-&quot;<A HREF="#:diffget">:diffget</A>&quot; and &quot;<A HREF="#do">do</A>&quot; commands will obtain lines from the other buffer.
+&quot;<A HREF="#:diffget">:diffget</A>&quot; and &quot;<A HREF="#do">do</A>&quot;命令 will obtain lines from the other buffer.
 
 To be able to get those lines from another buffer in a <A HREF="cmdline.html#[range]">[range]</A> it's allowed to
 use the last line number plus one.  This command gets all diffs from the other
@@ -400,7 +400,7 @@ name or a part of a buffer name.  Examples:
 
 ==============================================================================
 
-5. Diff <A HREF="options.html#options">options</A>						*<A NAME="diff-options"></A><B>diff-options</B>*
+5. Diff <A HREF="options\.html#options">选项</A>						*<A NAME="diff-options"></A><B>diff-options</B>*
 
 Also 见 |<A HREF="options.html#'diffopt'">'diffopt'</A>| and the &quot;diff&quot; item of |<A HREF="options.html#'fillchars'">'fillchars'</A>|.
 
@@ -492,14 +492,14 @@ Vim will <A HREF="#do">do</A> a test if the <A HREF="#diff">diff</A> output look
 get an error message.  Possible causes:
 -  The &quot;<A HREF="#diff">diff</A>&quot; program cannot be executed.
 -  The &quot;<A HREF="#diff">diff</A>&quot; program doesn't produce normal &quot;ed&quot; style diffs (see above).
--  The <A HREF="options.html#'shell'">'shell'</A> and associated <A HREF="options.html#options">options</A> are not set correctly.  Try if filtering
+-  The <A HREF="options.html#'shell'">'shell'</A> and associated <A HREF="options\.html#options">选项</A> are not set correctly.  Try if filtering
    works with a command like &quot;:!sort&quot;.
 -  You are using <A HREF="options.html#'diffexpr'">'diffexpr'</A> and <A HREF="motion.html#it">它</A> doesn't work.
 If it's not clear what the problem is set the <A HREF="options.html#'verbose'">'verbose'</A> option to one or more
-to see more <A HREF="message.html#messages">messages</A>.
+to see more <A HREF="message.html#messages">信息</A>.
 
 The self-installing Vim for MS-Windows includes a <A HREF="#diff">diff</A> program.  If you don't
-have <A HREF="motion.html#it">它</A> you might want to <A HREF="intro.html#download">download</A> a diff.exe.  For example from
+have <A HREF="motion.html#it">它</A> you might want to <A HREF="intro.html#download">download</A> a diff.exe.例如 from
 	<A HREF="http://gnuwin32.sourceforge.net/packages/diffutils.htm">http://gnuwin32.sourceforge.net/packages/diffutils.htm</A>.
 
 

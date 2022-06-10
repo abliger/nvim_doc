@@ -118,7 +118,7 @@ Let's start with the basic arguments.  Before we start defining any new
 This isn't required in the final <A HREF="syntax.html#syntax">syntax</A> file, but very useful when
 experimenting.
 
-There are more simplifications in this chapter.  If you are <A HREF="editing.html#writing">writing</A> a <A HREF="syntax.html#syntax">syntax</A>
+There are more simplifications in this chapter.  If you are <A HREF="editing.html#writing">写</A> a <A HREF="syntax.html#syntax">syntax</A>
 file to be used by others, read all the way through the end to find out the
 details.
 
@@ -132,11 +132,11 @@ To check which <A HREF="syntax.html#syntax">syntax</A> items are currently defin
 You can use this to check which items have actually been defined.  Quite
 useful when you are experimenting with a new <A HREF="syntax.html#syntax">syntax</A> file.  It also shows the
 colors used for each item, which helps to find out what is what.
-   To <A HREF="eval.html#list">list</A> the items in a specific <A HREF="syntax.html#syntax">syntax</A> group use:
+   To <A HREF="eval.html#list">列表</A> the items in a specific <A HREF="syntax.html#syntax">syntax</A> group use:
 
 <B>	:syntax list {group-name}</B>
 
-This also can be used to <A HREF="eval.html#list">list</A> clusters (explained in |<A HREF="#44.8">44.8</A>|).  Just include
+This also can be used to <A HREF="eval.html#list">列表</A> clusters (explained in |<A HREF="#44.8">44.8</A>|).  Just include
 the @ in the name.
 
 
@@ -166,7 +166,7 @@ following form:
 
 <B>	:syntax keyword {group} {keyword} ...</B>
 
-The {group} is the name of a <A HREF="syntax.html#syntax">syntax</A> group.  With the &quot;<A HREF="syntax.html#:highlight">:highlight</A>&quot; command you
+The {group} is the name of a <A HREF="syntax.html#syntax">syntax</A> group.  With the &quot;<A HREF="syntax.html#:highlight">:highlight</A>&quot;命令 you
 can assign colors to a {group}.  The {keyword} argument is an actual keyword.
 Here are a few examples:
 
@@ -200,12 +200,12 @@ message for this.
 <B>	:setlocal iskeyword+=-</B>
 <B>	:syntax keyword xStatement when-not</B>
 
-The &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot; command is used to change <A HREF="options.html#'iskeyword'">'iskeyword'</A> only for the current
+The &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot;命令 is used to change <A HREF="options.html#'iskeyword'">'iskeyword'</A> only for the current
 buffer.  Still <A HREF="motion.html#it">它</A> does change the behavior of commands like &quot;<A HREF="motion.html#w">w</A>&quot; and &quot;*&quot;.  If
 that is not wanted, don't define a keyword but use a match (explained in the
 next section).
 
-The <A HREF="change.html#x">x</A> language allows for <A HREF="map.html#abbreviations">abbreviations</A>.  For example, &quot;next&quot; can be
+The <A HREF="change.html#x">x</A> language allows for <A HREF="map.html#abbreviations">abbreviations</A>.例如, &quot;next&quot; can be
 abbreviated to &quot;<A HREF="pattern.html#n">n</A>&quot;, &quot;ne&quot; or &quot;nex&quot;.  You can define them by using this command:
 
 <B>	:syntax keyword xStatement n[ext]</B>
@@ -218,7 +218,7 @@ This doesn't match &quot;nextone&quot;, keywords always match whole words only.
 
 Consider defining something a bit more complex.  You want to match ordinary
 identifiers.  To <A HREF="diff.html#do">do</A> this, you define a match <A HREF="syntax.html#syntax">syntax</A> item.  This one matches
-any <A HREF="motion.html#word">单词</A> consisting of only <A HREF="change.html#lowercase">lowercase</A> letters:
+any <A HREF="motion.html#word">单词</A> consisting of only <A HREF="change.html#lowercase">小写</A> letters:
 
 <B>	:syntax match xIdentifier /\&lt;\l\+\&gt;/</B>
  
@@ -229,7 +229,7 @@ any <A HREF="motion.html#word">单词</A> consisting of only <A HREF="change.htm
 	xIdentifier.
 
 The part at the end is a <A HREF="pattern.html#pattern">pattern</A>, like it's used for searching.  The // is
-used to surround the <A HREF="pattern.html#pattern">pattern</A> (like how it's done in a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command).
+used to surround the <A HREF="pattern.html#pattern">pattern</A> (like how it's done in a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令).
 You can use any other character, like a plus or a <A HREF="change.html#quote.">quote.</A>
 
 Now define a match for a comment.  In the <A HREF="change.html#x">x</A> language <A HREF="motion.html#it">它</A> is anything from # to
@@ -255,9 +255,9 @@ and end of the region.  But what about strings that look like this?
 
 <B><FONT color="#3A6F2B">	"A string with a double quote (\") in it" </FONT></B>
 
-This creates a problem: The double quotation marks in the middle of the <A HREF="eval.html#string">string</A>
+This creates a problem: The double quotation marks in the middle of the <A HREF="options\.html#options">字符串</A>
 will end the region.  You need to tell Vim to skip over any escaped double
-quotes in the <A HREF="eval.html#string">string</A>.  Do this with the skip keyword:
+quotes in the <A HREF="options\.html#options">字符串</A>.  Do this with the skip keyword:
 
 <B>	:syntax region xString start=/"/ skip=/\\"/ end=/"/</B>
 
@@ -479,7 +479,7 @@ More about offsets here: |<A HREF="syntax.html#:syn-pattern-offset">:syn-pattern
 ONELINE
 
 The &quot;oneline&quot; argument indicates that the region does not cross a line
-boundary.  For example:
+boundary.例如:
 
 <B>	:syntax region xIfThen start=/if/ end=/then/ oneline</B>
 
@@ -513,7 +513,7 @@ For example, <A HREF="motion.html#it">它</A> would match both of these lines:
 
 In this <A HREF="change.html#case">case</A>, this is what you want.  If <A HREF="motion.html#it">它</A> is not what you want, you can call
 for the region to be on a single line by adding &quot;excludenl&quot; to the contained
-<A HREF="pattern.html#pattern">pattern</A>.  For example, you want to highlight &quot;end&quot; in xPreProc, but only at
+<A HREF="pattern.html#pattern">pattern</A>.例如, you want to highlight &quot;end&quot; in xPreProc, but only at
 the end of the line.  To avoid making the xPreProc continue on the next line,
 like xLineContinue does, use &quot;excludenl&quot; like this:
 
@@ -561,7 +561,7 @@ You can add new group names to this cluster with the &quot;add&quot; argument:
 
 <B>	:syntax cluster xState add=xString</B>
 
-You can remove <A HREF="syntax.html#syntax">syntax</A> groups from this <A HREF="eval.html#list">list</A> <A HREF="motion.html#as">as</A> well:
+You can remove <A HREF="syntax.html#syntax">syntax</A> groups from this <A HREF="eval.html#list">列表</A> <A HREF="motion.html#as">as</A> well:
 
 <B>	:syntax cluster xState remove=xNumber</B>
 
@@ -618,7 +618,7 @@ Compilers have <A HREF="motion.html#it">它</A> easy.  They start at the beginni
 straight through.  Vim does not have <A HREF="motion.html#it">它</A> so easy.  It must start in the middle,
 where the editing is being done.  So how does <A HREF="motion.html#it">它</A> tell where <A HREF="motion.html#it">它</A> is?
    The secret is the &quot;<A HREF="syntax.html#:syntax">:syntax</A> sync&quot; command.  This tells Vim how to figure out
-where <A HREF="motion.html#it">它</A> is.  For example, the following command tells Vim to scan backward
+where <A HREF="motion.html#it">它</A> is.例如, the following command tells Vim to scan backward
 for the beginning or end of a C-style comment and begin <A HREF="syntax.html#syntax">syntax</A> <A HREF="syntax.html#coloring">coloring</A> from
 there:
 
@@ -627,7 +627,7 @@ there:
 You can tune this processing with some arguments.  The &quot;minlines&quot; argument
 tells Vim the minimum number of lines to look backward, and &quot;maxlines&quot; tells
 the editor the maximum number of lines to scan.
-   For example, the following command tells Vim to look at least 10 lines
+ 例如, the following command tells Vim to look at least 10 lines
 before the top of the screen:
 
 <B>	:syntax sync ccomment minlines=10 maxlines=500</B>
@@ -661,7 +661,7 @@ backwards in the file.
 
 This tells Vim that when <A HREF="motion.html#it">它</A> sees {pattern} the <A HREF="syntax.html#syntax">syntax</A> group named <A HREF="syntax.html#{group-name}">{group-name}</A>
 begins just after the <A HREF="pattern.html#pattern">pattern</A> given.  The {sync-group-name} is used to give a
-name to this synchronization specification.  For example, the sh scripting
+name to this synchronization specification.例如, the sh scripting
 language begins an if statement with &quot;if&quot; and ends <A HREF="motion.html#it">它</A> with &quot;fi&quot;:
 
 <B><FONT color="#3A6F2B">	if [ --f file.txt ] ; then </FONT></B>
@@ -683,7 +683,7 @@ region.  In particular, you are not inside an if block.
 
 You also can define matches and regions that are with no &quot;grouphere&quot; or
 &quot;groupthere&quot; arguments.  These groups are for <A HREF="syntax.html#syntax">syntax</A> groups skipped during
-synchronization.  For example, the following skips over anything inside <A HREF="intro.html#{}">{}</A>,
+synchronization.例如, the following skips over anything inside <A HREF="intro.html#{}">{}</A>,
 even if <A HREF="motion.html#it">它</A> would normally match another synchronization <A HREF="eval.html#method">method</A>:
 
 <B>	:syntax sync match xSpecial /{.*}/</B>
@@ -717,7 +717,7 @@ We were assuming you were adding a completely new <A HREF="syntax.html#syntax">s
 file.  That avoids <A HREF="change.html#changing">changing</A> the distributed <A HREF="syntax.html#syntax">syntax</A> file, which will be lost
 when installing a new version of Vim.
    Write <A HREF="syntax.html#syntax">syntax</A> commands in your file, possibly using group names from the
-existing <A HREF="syntax.html#syntax">syntax</A>.  For example, to add new variable types to the C <A HREF="syntax.html#syntax">syntax</A> file:
+existing <A HREF="syntax.html#syntax">syntax</A>.例如, to add new variable types to the C <A HREF="syntax.html#syntax">syntax</A> file:
 
 <B>	:syntax keyword cType off_t uint</B>
 
@@ -747,7 +747,7 @@ changes <A HREF="cmdline.html#history">history</A>, not many people will read <A
 Use the same layout <A HREF="motion.html#as">as</A> the other <A HREF="syntax.html#syntax">syntax</A> files.  Using an existing <A HREF="syntax.html#syntax">syntax</A> file
 <A HREF="motion.html#as">as</A> an example will save you a lot of time.
 
-Choose a good, descriptive name for your <A HREF="syntax.html#syntax">syntax</A> file.  Use <A HREF="change.html#lowercase">lowercase</A> letters
+Choose a good, descriptive name for your <A HREF="syntax.html#syntax">syntax</A> file.  Use <A HREF="change.html#lowercase">小写</A> letters
 and digits.  Don't make <A HREF="motion.html#it">它</A> too long, <A HREF="motion.html#it">它</A> is used in many places: The name of
 the <A HREF="syntax.html#syntax">syntax</A> file &quot;name.vim&quot;, <A HREF="options.html#'filetype'">'filetype'</A>, b:current_syntax and the start of each
 <A HREF="syntax.html#syntax">syntax</A> group (nameType, nameStatement, nameString, etc).

@@ -161,7 +161,7 @@ you need to overrule the format:
 
 <B>	:edit ++ff=unix file.txt</B>
 
-The &quot;++&quot; <A HREF="eval.html#string">string</A> is an item that tells Vim that an option name follows, which
+The &quot;++&quot; <A HREF="options\.html#options">字符串</A> is an item that tells Vim that an option name follows, which
 overrules the default for this single command.  &quot;<A HREF="editing.html#++ff">++ff</A>&quot; is used for
 <A HREF="options.html#'fileformat'">'fileformat'</A>.  You could also use &quot;++ff=mac&quot; or &quot;++ff=dos&quot;.
    This doesn't work for any option, only &quot;<A HREF="editing.html#++ff">++ff</A>&quot; and &quot;<A HREF="editing.html#++enc">++enc</A>&quot; are currently
@@ -241,7 +241,7 @@ the &quot;<A HREF="starting.html#-b">-b</A>&quot; argument when starting Vim:
 <B>	vim -b datafile</B>
 
 This sets the <A HREF="options.html#'binary'">'binary'</A> option.  The effect of this is that unexpected side
-effects are turned off.  For example, <A HREF="options.html#'textwidth'">'textwidth'</A> is set to zero, to avoid
+effects are turned off.例如, <A HREF="options.html#'textwidth'">'textwidth'</A> is set to zero, to avoid
 automatic <A HREF="change.html#formatting">formatting</A> of lines.  And files are always read in Unix file format.
 
 Binary mode can be used to change a message in a program.  Be careful not to
@@ -252,7 +252,7 @@ Many characters in the file will be unprintable.  To see them in Hex format:
 
 <B>	:set display=uhex</B>
 
-Otherwise, the &quot;<A HREF="various.html#ga">ga</A>&quot; command can be used to see the value of the character
+Otherwise, the &quot;<A HREF="various.html#ga">ga</A>&quot;命令 can be used to see the value of the character
 under the cursor.  The output, when the cursor is on an <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, looks like
 this:
 

@@ -98,7 +98,7 @@ will be explained.
 
 <A HREF="visual.html#Visual">Visual</A> mode is very handy for making a change in any sequence of lines.  You
 can see the highlighted text, thus you can check if the correct lines are
-changed.  But making the selection takes some typing.  The &quot;<A HREF="visual.html#gv">gv</A>&quot; command
+changed.  But making the selection takes some typing.  The &quot;<A HREF="visual.html#gv">gv</A>&quot;命令
 selects the same area again.  This allows you to <A HREF="diff.html#do">do</A> another operation on the
 same text.
    Suppose you have some lines where you want to change &quot;2001&quot; to &quot;2002&quot; and
@@ -142,7 +142,7 @@ Use &quot;<A HREF="pattern.html#n">n</A>&quot; to find the next year, and press 
 bit quicker to type).  Repeat &quot;<A HREF="pattern.html#n">n</A>&quot; and &quot;<A HREF="repeat.html#.">.</A>&quot; for all years that appear.
 
 Adding more than one can be done by prepending the number to <A HREF="change.html#CTRL-A">CTRL-A</A>.  Suppose
-you have this <A HREF="eval.html#list">list</A>:
+you have this <A HREF="eval.html#list">列表</A>:
 
 <B><FONT color="#3A6F2B">	1.  item four </FONT></B>
 <B><FONT color="#3A6F2B">	2.  item five </FONT></B>
@@ -172,7 +172,7 @@ identified <A HREF="motion.html#as">as</A> an <A HREF="eval.html#octal">octal</A
 Suppose you have a variable called &quot;x_cnt&quot; and you want to change <A HREF="motion.html#it">它</A> to
 &quot;x_counter&quot;.  This variable is used in several of your C files.  You need to
 change <A HREF="motion.html#it">它</A> in all files.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.
-   Put all the relevant files in the argument <A HREF="eval.html#list">list</A>:
+   Put all the relevant files in the argument <A HREF="eval.html#list">列表</A>:
 
 <B>	:args *.c</B>
  
@@ -181,8 +181,8 @@ substitution command on all these files:
 
 <B>	:argdo %s/\&lt;x_cnt\&gt;/x_counter/ge | update</B>
 
-The &quot;<A HREF="editing.html#:argdo">:argdo</A>&quot; command takes an argument that is another command.  That command
-will be executed on all files in the argument <A HREF="eval.html#list">list</A>.
+The &quot;<A HREF="editing.html#:argdo">:argdo</A>&quot;命令 takes an argument that is another command.  That command
+will be executed on all files in the argument <A HREF="eval.html#list">列表</A>.
    The &quot;&#37;s&quot; substitute command that follows works on all lines.  It finds the
 <A HREF="motion.html#word">单词</A> &quot;x_cnt&quot; with &quot;\&lt;x_cnt\&gt;&quot;.  The &quot;\&lt;&quot; and &quot;\&gt;&quot; are used to match the whole
 <A HREF="motion.html#word">单词</A> only, and not &quot;px_cnt&quot; or &quot;x_cnt2&quot;.
@@ -194,16 +194,16 @@ the first file where &quot;x_cnt&quot; was not found.
 file only if <A HREF="motion.html#it">它</A> was changed.  If no &quot;x_cnt&quot; was changed to &quot;x_counter&quot; nothing
 happens.
 
-There is also the &quot;<A HREF="windows.html#:windo">:windo</A>&quot; command, which executes its argument in all
+There is also the &quot;<A HREF="windows.html#:windo">:windo</A>&quot;命令, which executes its argument in all
 <A HREF="windows.html#windows">windows</A>.  And &quot;<A HREF="windows.html#:bufdo">:bufdo</A>&quot; executes its argument on all <A HREF="windows.html#buffers">buffers</A>.  Be careful with
-this, because you might have more files in the buffer <A HREF="eval.html#list">list</A> than you think.
-Check this with the &quot;<A HREF="windows.html#:buffers">:buffers</A>&quot; command (or &quot;:ls&quot;).
+this, because you might have more files in the buffer <A HREF="eval.html#list">列表</A> than you think.
+Check this with the &quot;<A HREF="windows.html#:buffers">:buffers</A>&quot;命令 (or &quot;:ls&quot;).
 
 ==============================================================================
 
 *<A NAME="26.4"></A><B>26.4</B>*	Using Vim from a shell <A HREF="usr_41.html#script">script</A>
 
-Suppose you have a lot of files in which you need to change the <A HREF="eval.html#string">string</A>
+Suppose you have a lot of files in which you need to change the <A HREF="options\.html#options">字符串</A>
 &quot;-person-&quot; to &quot;Jones&quot; and then print <A HREF="motion.html#it">它</A>.  How <A HREF="diff.html#do">do</A> you <A HREF="diff.html#do">do</A> that?  One way is to
 <A HREF="diff.html#do">do</A> a lot of typing.  The other is to write a shell <A HREF="usr_41.html#script">script</A> to <A HREF="diff.html#do">do</A> the work.
    The Vim editor does a superb <A HREF="job_control.html#job">job</A> <A HREF="motion.html#as">as</A> a screen-oriented editor when using

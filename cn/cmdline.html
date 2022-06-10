@@ -257,20 +257,20 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 				(doesn't work at the <A HREF="eval.html#expression">expression</A> prompt; some
 				things such <A HREF="motion.html#as">as</A> <A HREF="change.html#changing">changing</A> the buffer or current
 				<A HREF="windows.html#window">窗口</A>are not allowed to avoid side effects)
-				When the result is a |<A HREF="eval.html#List">List</A>| the items are used
+				When the result is a |<A HREF="eval.html#list">列表</A>| the items are used
 				<A HREF="motion.html#as">as</A> lines.  They can have line breaks inside
 				too.
 				When the result is a <A HREF="eval.html#Float">Float</A> it's automatically
-				converted to a <A HREF="eval.html#String">String</A>.
+				converted to a <A HREF="options\.html#options">字符串</A>.
 				Note that when you only want to move the
 				cursor and not insert anything, you must make
 				sure the <A HREF="eval.html#expression">expression</A> evaluates to an empty
-				<A HREF="eval.html#string">string</A>.  E.g.:
+				<A HREF="options\.html#options">字符串</A>.  E.g.:
 <B>					&lt;C-R&gt;&lt;C-R&gt;=setcmdpos(2)[-1]&lt;CR&gt;</B>
  		见 |<A HREF="change.html#registers">registers</A>| about registers.
 		Implementation detail: When using the |<A HREF="eval.html#expression">expression</A>| <A HREF="intro.html#register">register</A>
 		and invoking <A HREF="builtin.html#setcmdpos()">setcmdpos()</A>, this sets the position before
-		<A HREF="insert.html#inserting">inserting</A> the resulting <A HREF="eval.html#string">string</A>.  Use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> to set the
+		<A HREF="insert.html#inserting">inserting</A> the resulting <A HREF="options\.html#options">字符串</A>.  Use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> to set the
 		position afterwards.
 
 
@@ -302,7 +302,7 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> {register <A HREF="scroll.html#CTRL-F">CTRL-F</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#CTRL-A">CTRL-A</A> CTRL-L}
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="motion.html#CTRL-O">CTRL-O</A> {register <A HREF="scroll.html#CTRL-F">CTRL-F</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#CTRL-A">CTRL-A</A> CTRL-L}
 		<A HREF="insert.html#Insert">Insert</A> <A HREF="intro.html#register">register</A> or object under the cursor.  Works like
-		|<A HREF="#c_CTRL-R">c_CTRL-R</A>| but inserts the text literally.  For example, if
+		|<A HREF="#c_CTRL-R">c_CTRL-R</A>| but inserts the text literally.例如, if
 		<A HREF="intro.html#register">register</A> a contains &quot;xy^Hz&quot; (where ^H is a backspace),
 		&quot;<A HREF="undo.html#CTRL-R">CTRL-R</A> a&quot; will insert &quot;xz&quot; while &quot;<A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> a&quot; will
 		insert &quot;xy^Hz&quot;.
@@ -317,7 +317,7 @@ CTRL-\ <A HREF="motion.html#e">e</A> {expr}						*<A NAME="c_CTRL-\_e"></A><B>c_
 		Useful <A HREF="eval.html#functions">functions</A> are |<A HREF="builtin.html#getcmdtype()">getcmdtype()</A>|, |<A HREF="builtin.html#getcmdline()">getcmdline()</A>| and
 		|<A HREF="builtin.html#getcmdpos()">getcmdpos()</A>|.
 		The cursor position is unchanged, except when the cursor was
-		at the end of the line, then <A HREF="motion.html#it">它</A> stays at the end.
+		at the end of the line然后<A HREF="motion.html#it">它</A> stays at the end.
 		|<A HREF="builtin.html#setcmdpos()">setcmdpos()</A>| can be used to set the cursor position.
 		The |<A HREF="eval.html#sandbox">sandbox</A>| is used for evaluating the <A HREF="eval.html#expression">expression</A> to avoid
 		nasty side effects.
@@ -428,10 +428,10 @@ CTRL-_		Switch between Hebrew and English keyboard mode, which is
 
 For Emacs-style editing on the command-line 见 |<A HREF="tips.html#emacs-keys">emacs-keys</A>|.
 
-The <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> and <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> keys take the current command-line <A HREF="motion.html#as">as</A> a search <A HREF="eval.html#string">string</A>.
+The <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> and <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> keys take the current command-line <A HREF="motion.html#as">as</A> a search <A HREF="options\.html#options">字符串</A>.
 The beginning of the next/previous command-lines are compared with this
-<A HREF="eval.html#string">string</A>.  The first line that matches is the new command-line.  When typing
-these two keys repeatedly, the same <A HREF="eval.html#string">string</A> is used again.  For example, this
+<A HREF="options\.html#options">字符串</A>.  The first line that matches is the new command-line.  When typing
+these two keys repeatedly, the same <A HREF="options\.html#options">字符串</A> is used again.例如, this
 can be used to find the previous substitute command: Type &quot;<A HREF="change.html#:s">:s</A>&quot; and then <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>.
 The same could be done by typing <A HREF="scroll.html#&lt;S-Up&gt;">&lt;S-Up&gt;</A> a number of times until the desired
 command-line is shown.  (Note: the shifted arrow keys <A HREF="diff.html#do">do</A> not work on all
@@ -442,9 +442,9 @@ terminals)
 :his[tory]	Print the <A HREF="#history">history</A> of last entered commands.
 
 :his[tory] [{name}] [{first}][, [{last}]]
-		<A HREF="eval.html#List">List</A> the contents of <A HREF="#history">history</A> {name} which can be:
+		<A HREF="eval.html#list">列表</A> the contents of <A HREF="#history">history</A> {name} which can be:
 		c[md]	 or :		command-line <A HREF="#history">history</A>
-		s[earch] or / or ?	search <A HREF="eval.html#string">string</A> <A HREF="#history">history</A>
+		s[earch] or / or ?	search <A HREF="options\.html#options">字符串</A> <A HREF="#history">history</A>
 		e[xpr]	 or =		<A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A> <A HREF="#history">history</A>
 		i[nput]	 or @		input line <A HREF="#history">history</A>
 		d[ebug]	 or <A HREF="change.html#&gt;">&gt;</A>		debug command <A HREF="#history">history</A>
@@ -463,13 +463,13 @@ terminals)
 		counted from the newest entry (which has index -1) backwards.
 
 		Examples:
-		<A HREF="eval.html#List">List</A> entries 6 to 12 from the search <A HREF="#history">history</A>:
+		<A HREF="eval.html#list">列表</A> entries 6 to 12 from the search <A HREF="#history">history</A>:
 <B>			:history / 6,12</B>
  
-		<A HREF="eval.html#List">List</A> the penultimate entry from all histories:
+		<A HREF="eval.html#list">列表</A> the penultimate entry from all histories:
 <B>			:history all -2</B>
  
-		<A HREF="eval.html#List">List</A> the most recent two entries from all histories:
+		<A HREF="eval.html#list">列表</A> the most recent two entries from all histories:
 <B>			:history all -2,</B>
 
 
@@ -485,12 +485,12 @@ When editing the command-line, a few commands can be used to complete the
 <A HREF="motion.html#word">单词</A> before the cursor.  This is available for:
 
 - Command names: At the start of the command-line.
-- Tags: Only after the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command.
+- Tags: Only after the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;命令.
 - File names: Only after a command that accepts a file name or a setting for
   an option that can be set to a file name.  This is called file name
   completion.
 - Shell command names: After &quot;<A HREF="various.html#:!cmd">:!cmd</A>&quot;, &quot;<A HREF="insert.html#:r">:r</A> !cmd&quot; and &quot;<A HREF="editing.html#:w">:w</A> !cmd&quot;.  $PATH is used.
-- Options: Only after the &quot;<A HREF="options.html#:set">:set</A>&quot; command.
+- Options: Only after the &quot;<A HREF="options.html#:set">:set</A>&quot;命令.
 - Mappings: Only after a &quot;<A HREF="map.html#:map">:map</A>&quot; or similar command.
 - Variable and function names: Only after a &quot;<A HREF="eval.html#:if">:if</A>&quot;, &quot;<A HREF="eval.html#:call">:call</A>&quot; or similar command.
 
@@ -501,11 +501,11 @@ These are the commands that can be used:
 
 
 							*<A NAME="c_CTRL-D"></A><B>c_CTRL-D</B>*
-<A HREF="scroll.html#CTRL-D">CTRL-D</A>		<A HREF="eval.html#List">List</A> names that match the <A HREF="pattern.html#pattern">pattern</A> in front of the cursor.
+<A HREF="scroll.html#CTRL-D">CTRL-D</A>		<A HREF="eval.html#list">列表</A> names that match the <A HREF="pattern.html#pattern">pattern</A> in front of the cursor.
 		When showing file names, directories are highlighted (see
 		|<A HREF="syntax.html#highlight-groups">highlight-groups</A>|).  Names where <A HREF="options.html#'suffixes'">'suffixes'</A> matches are moved
 		to the end.
-		The <A HREF="options.html#'wildoptions'">'wildoptions'</A> option can be set to &quot;tagfile&quot; to <A HREF="eval.html#list">list</A> the
+		The <A HREF="options.html#'wildoptions'">'wildoptions'</A> option can be set to &quot;tagfile&quot; to <A HREF="eval.html#list">列表</A> the
 		file of matching <A HREF="tagsrch.html#tags">标签</A>.
 
 					*<A NAME="c_CTRL-I"></A><B>c_CTRL-I</B>* *<A NAME="c_wildchar"></A><B>c_wildchar</B>* *<A NAME="c_&lt;Tab&gt;"></A><B>c_&lt;Tab&gt;</B>*
@@ -549,8 +549,8 @@ These are the commands that can be used:
 		&quot;<A HREF="pattern.html#?">?</A>&quot; and the current match is displayed then <A HREF="various.html#CTRL-L">CTRL-L</A> will add
 		one character from the end of the current match.  If
 		<A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A> are set and the command line has
-		no <A HREF="change.html#uppercase">uppercase</A> characters, the added character is converted to
-		<A HREF="change.html#lowercase">lowercase</A>.
+		no <A HREF="change.html#uppercase">大写</A> characters, the added character is converted to
+		<A HREF="change.html#lowercase">小写</A>.
 
 	                                            *<A NAME="c_CTRL-G"></A><B>c_CTRL-G</B>* *<A NAME="/_CTRL-G"></A><B>/_CTRL-G</B>*
 <A HREF="editing.html#CTRL-G">CTRL-G</A>		When <A HREF="options.html#'incsearch'">'incsearch'</A> is set, entering a search <A HREF="pattern.html#pattern">pattern</A> for &quot;<A HREF="pattern.html#/">/</A>&quot; or
@@ -569,7 +569,7 @@ These are the commands that can be used:
 
 The <A HREF="options.html#'wildchar'">'wildchar'</A> option defaults to <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> (CTRL-E when in <A HREF="intro.html#Vi">Vi</A> compatible mode; in
 a previous version <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> was used).  In the <A HREF="pattern.html#pattern">pattern</A> standard <A HREF="editing.html#wildcards">wildcards</A> '*' and
-'<A HREF="pattern.html#?">?</A>' are accepted when matching file names.  '*' matches any <A HREF="eval.html#string">string</A>, '<A HREF="pattern.html#?">?</A>'
+'<A HREF="pattern.html#?">?</A>' are accepted when matching file names.  '*' matches any <A HREF="options\.html#options">字符串</A>, '<A HREF="pattern.html#?">?</A>'
 matches exactly one character.
 
 When <A HREF="repeat.html#repeating">repeating</A> <A HREF="options.html#'wildchar'">'wildchar'</A> or <A HREF="motion.html#CTRL-N">CTRL-N</A> you cycle through the matches, eventually
@@ -584,12 +584,12 @@ line.
 If you like tcsh's autolist completion, you can use this <A HREF="map.html#mapping">mapping</A>:
 	<A HREF="map.html#:cnoremap">:cnoremap</A> X &lt;C-L&gt;&lt;C-D&gt;
 (Where X is the command key to use, &lt;C-L&gt; is <A HREF="various.html#CTRL-L">CTRL-L</A> and &lt;C-D&gt; is <A HREF="scroll.html#CTRL-D">CTRL-D</A>)
-This will find the longest match and then <A HREF="eval.html#list">list</A> all matching files.
+This will find the longest match and then <A HREF="eval.html#list">列表</A> all matching files.
 
 If you like tcsh's autolist completion, you can use the <A HREF="options.html#'wildmode'">'wildmode'</A> option to
-emulate <A HREF="motion.html#it">它</A>.  For example, this mimics autolist=ambiguous:
+emulate <A HREF="motion.html#it">它</A>.例如, this mimics autolist=ambiguous:
 	<A HREF="options.html#:set">:set</A> <A HREF="options.html#'wildmode'">wildmode</A>=longest,list
-This will find the longest match with the first <A HREF="options.html#'wildchar'">'wildchar'</A>, then <A HREF="eval.html#list">list</A> all
+This will find the longest match with the first <A HREF="options.html#'wildchar'">'wildchar'</A>然后<A HREF="eval.html#list">列表</A> all
 matching files with the next.
 
 
@@ -633,8 +633,8 @@ example, to match only files that end in &quot;.c&quot;:
 This will not match a file ending in &quot;.cpp&quot;.  Without the &quot;<A HREF="motion.html#$">$</A>&quot; <A HREF="motion.html#it">它</A> does match.
 
 The old value of an option can be obtained by hitting <A HREF="options.html#'wildchar'">'wildchar'</A> just after
-the '<A HREF="change.html#=">=</A>'.  For example, typing <A HREF="options.html#'wildchar'">'wildchar'</A> after &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'dir'">dir</A>=&quot; will insert the
-current value of <A HREF="options.html#'dir'">'dir'</A>.  This overrules file name completion for the <A HREF="options.html#options">options</A>
+the '<A HREF="change.html#=">=</A>'.例如, typing <A HREF="options.html#'wildchar'">'wildchar'</A> after &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'dir'">dir</A>=&quot; will insert the
+current value of <A HREF="options.html#'dir'">'dir'</A>.  This overrules file name completion for the <A HREF="options\.html#options">选项</A>
 that take a file name.
 
 If you would like using &lt;S-Tab&gt; for <A HREF="motion.html#CTRL-P">CTRL-P</A> in an xterm, put this command in
@@ -656,7 +656,7 @@ after a command causes the rest of the line to be ignored.  This can be used
 to add comments.  Example:
 <B>	:set ai		"set 'autoindent' option</B>
 It is not possible to add a comment to a shell command &quot;<A HREF="various.html#:!cmd">:!cmd</A>&quot; or to the
-&quot;<A HREF="map.html#:map">:map</A>&quot; command and a few others (mainly commands that expect expressions)
+&quot;<A HREF="map.html#:map">:map</A>&quot;命令 and a few others (mainly commands that expect expressions)
 that see the &#39;&#34;'' <A HREF="motion.html#as">as</A> part of their argument:
 
     <A HREF="editing.html#:argdo">:argdo</A>
@@ -740,7 +740,7 @@ followed by another Vim command:
 Note that this is confusing (inherited from Vi): With &quot;<A HREF="repeat.html#:g">:g</A>&quot; the '&#124;' is included
 in the command, with &quot;<A HREF="change.html#:s">:s</A>&quot; <A HREF="motion.html#it">它</A> is not.
 
-To be able to use another command anyway, use the &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command.
+To be able to use another command anyway, use the &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令.
 Example (append the output of &quot;ls&quot; and jump to the first line):
 <B>	:execute 'r !ls' | '[</B>
 
@@ -775,7 +775,7 @@ Because of <A HREF="intro.html#Vi">Vi</A> compatibility the following strange co
 <B>	:3			goto line 3</B>
 
 A colon is allowed between the range and the command name.  It is ignored
-(this is <A HREF="intro.html#Vi">Vi</A> compatible).  For example:
+(this is <A HREF="intro.html#Vi">Vi</A> compatible).例如:
 <B>	:1,$:s/pat/string</B>
 
 When the character '<A HREF="motion.html#&#37;">&#37;</A>' or '<A HREF="pattern.html##">#</A>' is used where a file name is expected, they are
@@ -783,14 +783,14 @@ expanded to the current and alternate file name (see the chapter &quot;editing
 files&quot; |<A HREF="#:_&#37;">:_&#37;</A>| |<A HREF="#:_#">:_#</A>|).
 
 Trailing spaces in filenames will be ignored, unless escaped with a <A HREF="intro.html#backslash">backslash</A>
-or <A HREF="visual.html#CTRL-V">CTRL-V</A>.  Note that the &quot;<A HREF="editing.html#:next">:next</A>&quot; command uses spaces to separate file names.
+or <A HREF="visual.html#CTRL-V">CTRL-V</A>.  Note that the &quot;<A HREF="editing.html#:next">:next</A>&quot;命令 uses spaces to separate file names.
 Escape the spaces to include them in a file name.  Example:
 <B>	:next foo\ bar goes\ to school\</B>
 starts editing the three files &quot;foo bar&quot;, &quot;goes to&quot; and &quot;school &quot;.
 
 When you want to use the special characters &#39;&#34;'' or '&#124;' in a command, or want
 to use '<A HREF="motion.html#&#37;">&#37;</A>' or '<A HREF="pattern.html##">#</A>' in a file name, precede them with a <A HREF="intro.html#backslash">backslash</A>.  The
-<A HREF="intro.html#backslash">backslash</A> is not required in a range and in the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command.
+<A HREF="intro.html#backslash">backslash</A> is not required in a range and in the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令.
 See also |<A HREF="editing.html#`=">`=</A>|.
 
 
@@ -798,7 +798,7 @@ See also |<A HREF="editing.html#`=">`=</A>|.
 The '<A HREF="change.html#!">!</A>' (bang) character after an <A HREF="intro.html#Ex">Ex</A> command makes the command behave in a
 different way.  The '<A HREF="change.html#!">!</A>' should be placed immediately after the command, without
 any blanks in between.  If you insert blanks the '<A HREF="change.html#!">!</A>' will be seen <A HREF="motion.html#as">as</A> an
-argument for the command, which has a different meaning.  For example:
+argument for the command, which has a different meaning.例如:
 	<A HREF="editing.html#:w!">:w!</A> name	write the current buffer to file &quot;name&quot;, overwriting
 			any existing file
 	<A HREF="editing.html#:w">:w</A> !name	send the current buffer <A HREF="motion.html#as">as</A> standard input to command
@@ -977,7 +977,7 @@ function |<A HREF="builtin.html#expand()">expand()</A>|.
 
 		the file name of buffer <A HREF="pattern.html#n">n</A>.  &quot;#0&quot; is the same <A HREF="motion.html#as">as</A> &quot;<A HREF="pattern.html##">#</A>&quot;.     *<A NAME="c_#n"></A><B>c_#n</B>*
 
-	##	Is replaced with all names in the argument <A HREF="eval.html#list">list</A>	  *<A NAME=":_##"></A><B>:_##</B>* *<A NAME="c_##"></A><B>c_##</B>*
+	##	Is replaced with all names in the argument <A HREF="eval.html#list">列表</A>	  *<A NAME=":_##"></A><B>:_##</B>* *<A NAME="c_##"></A><B>c_##</B>*
 		concatenated, separated by spaces.  Each space in a name
 		is preceded with a <A HREF="intro.html#backslash">backslash</A>.
 
@@ -1054,7 +1054,7 @@ Note: these are typed literally, they are not special keys!
  		   full path.
 
 							*<A NAME=":&lt;sfile&gt;"></A><B>:&lt;sfile&gt;</B>* *<A NAME="&lt;sfile&gt;"></A><B>&lt;sfile&gt;</B>*
-	<A HREF="#&lt;sfile&gt;">&lt;sfile&gt;</A>    When executing a &quot;<A HREF="repeat.html#:source">:source</A>&quot; command, is replaced with the
+	<A HREF="#&lt;sfile&gt;">&lt;sfile&gt;</A>    When executing a &quot;<A HREF="repeat.html#:source">:source</A>&quot;命令, is replaced with the
 
 		   file name of the sourced file.  *<A NAME="E498"></A><B>E498</B>*
 		   When executing a function, is replaced with:
@@ -1065,7 +1065,7 @@ Note: these are typed literally, they are not special keys!
 		   used inside a function.
 
 							*<A NAME=":&lt;slnum&gt;"></A><B>:&lt;slnum&gt;</B>* *<A NAME="&lt;slnum&gt;"></A><B>&lt;slnum&gt;</B>*
-	<A HREF="#&lt;slnum&gt;">&lt;slnum&gt;</A>	   When executing a &quot;<A HREF="repeat.html#:source">:source</A>&quot; command, is replaced with the
+	<A HREF="#&lt;slnum&gt;">&lt;slnum&gt;</A>	   When executing a &quot;<A HREF="repeat.html#:source">:source</A>&quot;命令, is replaced with the
 
 		   line number.  *<A NAME="E842"></A><B>E842</B>*
 		   When executing a function it's the line number relative to
@@ -1245,8 +1245,8 @@ OPEN						*<A NAME="c_CTRL-F"></A><B>c_CTRL-F</B>* *<A NAME="q:"></A><B>q:</B>* 
 
 There are two ways to open the command-line<A HREF="windows.html#window">窗口</A>:
 1. From <A HREF="#Command-line">Command-line</A> mode, use the key specified with the <A HREF="options.html#'cedit'">'cedit'</A> option.
-2. From <A HREF="intro.html#Normal">正常</A>模式, use the &quot;<A HREF="#q:">q:</A>&quot;, &quot;<A HREF="#q/">q/</A>&quot; or &quot;<A HREF="#q?">q?</A>&quot; command.
-   This starts editing an <A HREF="intro.html#Ex">Ex</A> command-line (&quot;q:&quot;) or search <A HREF="eval.html#string">string</A> (&quot;q/&quot; or
+2. From <A HREF="intro.html#Normal">正常</A>模式, use the &quot;<A HREF="#q:">q:</A>&quot;, &quot;<A HREF="#q/">q/</A>&quot; or &quot;<A HREF="#q?">q?</A>&quot;命令.
+   This starts editing an <A HREF="intro.html#Ex">Ex</A> command-line (&quot;q:&quot;) or search <A HREF="options\.html#options">字符串</A> (&quot;q/&quot; or
    &quot;q?&quot;).  Note that this is not possible while <A HREF="repeat.html#recording">recording</A> is in progress (the
    &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">recording</A> then).
 
@@ -1314,7 +1314,7 @@ VARIOUS
 The command-line<A HREF="windows.html#window">窗口</A>cannot be used when there already is a command-line
 <A HREF="windows.html#window">窗口</A>(no nesting).
 
-Some <A HREF="options.html#options">options</A> are set when the command-line<A HREF="windows.html#window">窗口</A>is opened:
+Some <A HREF="options\.html#options">选项</A> are set when the command-line<A HREF="windows.html#window">窗口</A>is opened:
 <A HREF="options.html#'filetype'">'filetype'</A>	&quot;vim&quot;, when editing an <A HREF="intro.html#Ex">Ex</A> command-line; this starts Vim <A HREF="syntax.html#syntax">syntax</A>
 		highlighting if <A HREF="motion.html#it">它</A> was enabled
 <A HREF="options.html#'rightleft'">'rightleft'</A>	off
@@ -1326,7 +1326,7 @@ It is allowed to write the buffer contents to a file.  This is an easy way to
 save the command-line <A HREF="#history">history</A> and read <A HREF="motion.html#it">它</A> back later.
 
 If the <A HREF="options.html#'wildchar'">'wildchar'</A> option is set to <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, and the command-line<A HREF="windows.html#window">窗口</A>is used
-for an <A HREF="intro.html#Ex">Ex</A> command, then two mappings will be added to use <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> for completion
+for an <A HREF="intro.html#Ex">Ex</A> command然后two mappings will be added to use <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> for completion
 in the command-line<A HREF="windows.html#window">窗口</A>, like this:
 <B>	:imap &lt;buffer&gt; &lt;Tab&gt; &lt;C-X&gt;&lt;C-V&gt;</B>
 <B>	:nmap &lt;buffer&gt; &lt;Tab&gt; a&lt;C-X&gt;&lt;C-V&gt;</B>
@@ -1369,10 +1369,10 @@ This will make Vim start in <A HREF="intro.html#Insert">插入</A>模式 in the 
 The character used for the <A HREF="pattern.html#pattern">pattern</A> indicates the type of command-line:
 	:	normal <A HREF="intro.html#Ex">Ex</A> command
 	<A HREF="change.html#&gt;">&gt;</A>	debug mode command |<A HREF="repeat.html#debug-mode">debug-mode</A>|
-	/	forward search <A HREF="eval.html#string">string</A>
-	?	backward search <A HREF="eval.html#string">string</A>
+	/	forward search <A HREF="options\.html#options">字符串</A>
+	?	backward search <A HREF="options\.html#options">字符串</A>
 	=	<A HREF="eval.html#expression">expression</A> for &quot;<A HREF="change.html#=">=</A> |<A HREF="eval.html#expr-register">expr-register</A>|
-	@	<A HREF="eval.html#string">string</A> for |<A HREF="builtin.html#input()">input()</A>|
+	@	<A HREF="options\.html#options">字符串</A> for |<A HREF="builtin.html#input()">input()</A>|
 	-	text for |<A HREF="insert.html#:insert">:insert</A>| or |<A HREF="insert.html#:append">:append</A>|
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

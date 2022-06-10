@@ -78,7 +78,7 @@
 		  VIM 参考手册    by Bram Moolenaar
 
 
-This file contains an alphabetical <A HREF="eval.html#list">list</A> of <A HREF="#messages">messages</A> and error <A HREF="#messages">messages</A> that
+This file contains an alphabetical <A HREF="eval.html#list">列表</A> of <A HREF="#messages">messages</A> and error <A HREF="#messages">messages</A> that
 Vim produces.  You can use this if you don't understand what the message
 means.  It is not complete though.
 
@@ -88,7 +88,7 @@ means.  It is not complete though.
 
 1. Old <A HREF="#messages">messages</A>			*<A NAME=":messages"></A><B>:messages</B>* *<A NAME=":mes"></A><B>:mes</B>* *<A NAME="message-history"></A><B>message-history</B>*
 
-The &quot;<A HREF="#:messages">:messages</A>&quot; command can be used to view previously given <A HREF="#messages">messages</A>.  This
+The &quot;<A HREF="#:messages">:messages</A>&quot;命令 can be used to view previously given <A HREF="#messages">messages</A>.  This
 is especially useful when <A HREF="#messages">messages</A> have been overwritten or truncated.  This
 depends on the <A HREF="options.html#'shortmess'">'shortmess'</A> option.
 
@@ -106,7 +106,7 @@ The number of remembered <A HREF="#messages">messages</A> is fixed at 200.
 
 
 								*<A NAME="g&lt;"></A><B>g&lt;</B>*
-The &quot;<A HREF="#g&lt;">g&lt;</A>&quot; command can be used to see the last page of previous command output.
+The &quot;<A HREF="#g&lt;">g&lt;</A>&quot;命令 can be used to see the last page of previous command output.
 This is especially useful if you accidentally typed <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A> at the <A HREF="#hit-enter">hit-enter</A>
 prompt.  You are then back at the <A HREF="#hit-enter">hit-enter</A> prompt and can then scroll further
 back.
@@ -116,7 +116,7 @@ The previous command output is cleared when another command produces output.
 The &quot;<A HREF="#g&lt;">g&lt;</A>&quot; output is not redirected.
 
 If you want to find help on a specific (error) message, use the ID at the
-start of the message.  For example, to get help on the message:
+start of the message.例如, to get help on the message:
 
 <B>	E72: Close error on swap file</B>
 
@@ -139,7 +139,7 @@ If you are lazy, <A HREF="motion.html#it">它</A> also works without the <A HREF
 When an error message is displayed, but <A HREF="motion.html#it">它</A> is removed before you could read
 <A HREF="motion.html#it">它</A>, you can see <A HREF="motion.html#it">它</A> again with:
 <B>  :echo v:errmsg</B>
-Or view a <A HREF="eval.html#list">list</A> of recent <A HREF="#messages">messages</A> with:
+Or view a <A HREF="eval.html#list">列表</A> of recent <A HREF="#messages">messages</A> with:
 <B>  :messages</B>
 See `:messages` above.
 
@@ -216,7 +216,7 @@ larger.  When it's more there probably is an endless loop.  Probably a
 							*<A NAME="E254"></A><B>E254</B>* 
 <B>  Cannot allocate color {name}</B>
 
-The color name {name} is unknown.  见 |<A HREF="syntax.html#gui-colors">gui-colors</A>| for a <A HREF="eval.html#list">list</A> of colors that
+The color name {name} is unknown.  见 |<A HREF="syntax.html#gui-colors">gui-colors</A>| for a <A HREF="eval.html#list">列表</A> of colors that
 are available on most systems.
 
 
@@ -258,7 +258,7 @@ execute permission on the current directory.
 <B>  Cannot open "{filename}" for writing</B>
 <B>  Can't open file for writing</B>
 
-For some reason the file you are <A HREF="editing.html#writing">writing</A> to cannot be created or overwritten.
+For some reason the file you are <A HREF="editing.html#writing">写</A> to cannot be created or overwritten.
 The reason could be that you <A HREF="diff.html#do">do</A> not have permission to write in the directory
 or the file name is not valid.
 
@@ -293,7 +293,7 @@ to display in the<A HREF="windows.html#window">窗口</A>.
 							*<A NAME="E40"></A><B>E40</B>* 
 <B>  Can't open errorfile &lt;filename&gt;</B>
 
-When using the &quot;<A HREF="quickfix.html#:make">:make</A>&quot; or &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot; commands: The file used to save the error
+When using the &quot;<A HREF="quickfix.html#:make">:make</A>&quot; or &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot;命令: The file used to save the error
 <A HREF="#messages">messages</A> or <A HREF="quickfix.html#grep">grep</A> output cannot be opened.  This can have several causes:
 - <A HREF="options.html#'shellredir'">'shellredir'</A> has a wrong value.
 - The shell changes directory, causing the error file to be written in another
@@ -309,7 +309,7 @@ When using the &quot;<A HREF="quickfix.html#:make">:make</A>&quot; or &quot;<A H
 On MS-Windows, this message appears when the output of an external command was
 to be read, but the command didn't run successfully.  This can be caused by
 many things.  Check the <A HREF="options.html#'shell'">'shell'</A>, <A HREF="options.html#'shellquote'">'shellquote'</A>, <A HREF="options.html#'shellxquote'">'shellxquote'</A>, <A HREF="options.html#'shellslash'">'shellslash'</A> and
-related <A HREF="options.html#options">options</A>.  It might also be that the external command was not found,
+related <A HREF="options\.html#options">选项</A>.  It might also be that the external command was not found,
 there is no different error message for that.
 
 
@@ -324,13 +324,13 @@ file.  Also see <A HREF="options.html#'secure'">'secure'</A>.
 							*<A NAME="E74"></A><B>E74</B>* 
 <B>  Command too complex</B>
 
-A <A HREF="map.html#mapping">mapping</A> resulted in a very long command <A HREF="eval.html#string">string</A>.  Could be caused by a
+A <A HREF="map.html#mapping">mapping</A> resulted in a very long command <A HREF="options\.html#options">字符串</A>.  Could be caused by a
 <A HREF="map.html#mapping">mapping</A> that indirectly calls itself.
 
 
 <B>  CONVERSION ERROR</B>
 
-When <A HREF="editing.html#writing">writing</A> a file and the text &quot;CONVERSION ERROR&quot; appears, this means that
+When <A HREF="editing.html#writing">写</A> a file and the text &quot;CONVERSION ERROR&quot; appears, this means that
 some bits were lost when converting text from the internally used <A HREF="mbyte.html#UTF-8">UTF-8</A> to the
 format of the file.  The file will not be marked unmodified.  If you care
 about the loss of information, set the <A HREF="options.html#'fileencoding'">'fileencoding'</A> option to another value
@@ -408,7 +408,7 @@ happens when you use &quot;<A HREF="editing.html#:w!">:w!</A> filename&quot; and
 - If the swapfile was left over from an old crashed edit session you may want
   to delete the swapfile.  Edit {filename} to find out information about the
   swapfile.
-- If you want to write anyway prepend &quot;<A HREF="various.html#:silent!">:silent!</A>&quot; to the command.  For example:
+- If you want to write anyway prepend &quot;<A HREF="various.html#:silent!">:silent!</A>&quot; to the command.例如:
 <B>	:silent! w! /tmp/test</B>
   The special command is needed, since you already added the ! for overwriting
   an existing file.
@@ -439,7 +439,7 @@ Neovim does not have a built in <A HREF="gui.html#GUI">GUI</A>, so `:gvim` and `
 <B>  Invalid scroll size</B>
 
 This is caused by setting an invalid value for the <A HREF="options.html#'scroll'">'scroll'</A>, <A HREF="options.html#'scrolljump'">'scrolljump'</A> or
-<A HREF="options.html#'scrolloff'">'scrolloff'</A> <A HREF="options.html#options">options</A>.
+<A HREF="options.html#'scrolloff'">'scrolloff'</A> <A HREF="options\.html#options">选项</A>.
 
 
 							*<A NAME="E17"></A><B>E17</B>* 
@@ -476,7 +476,7 @@ reproduced, and submit a |<A HREF="intro.html#bug-report">bug-report</A>|.
 							*<A NAME="E173"></A><B>E173</B>* 
 <B>  {number} more files to edit</B>
 
-You are trying to exit, while the last item in the argument <A HREF="eval.html#list">list</A> has not been
+You are trying to exit, while the last item in the argument <A HREF="eval.html#list">列表</A> has not been
 edited.  This protects you from accidentally <A HREF="starting.html#exiting">exiting</A> when you still have more
 files to work on.  见 |<A HREF="editing.html#argument-list">argument-list</A>|.  If you <A HREF="diff.html#do">do</A> want to exit, just <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>
 again and <A HREF="motion.html#it">它</A> will work.
@@ -509,9 +509,9 @@ cannot be written.  You need to give the buffer a file name:
 <B>  No previous substitute regular expression</B>
 
 When using the '<A HREF="change.html#~">~</A>' character in a <A HREF="pattern.html#pattern">pattern</A>, <A HREF="motion.html#it">它</A> is replaced with the previously
-used <A HREF="pattern.html#pattern">pattern</A> in a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command.  This fails when no such command has
+used <A HREF="pattern.html#pattern">pattern</A> in a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令.  This fails when no such command has
 been used yet.  见 |<A HREF="pattern.html#/~">/~</A>|.  This also happens when using &quot;:s/pat/&#37;/&quot;, where the
-&quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; stands for the previous substitute <A HREF="eval.html#string">string</A>.
+&quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; stands for the previous substitute <A HREF="options\.html#options">字符串</A>.
 
 
 							*<A NAME="E35"></A><B>E35</B>* 
@@ -524,7 +524,7 @@ that is not possible if there was no previous search.
 							*<A NAME="E24"></A><B>E24</B>* 
 <B>  No such abbreviation</B>
 
-You have used an &quot;<A HREF="map.html#:unabbreviate">:unabbreviate</A>&quot; command with an argument which is not an
+You have used an &quot;<A HREF="map.html#:unabbreviate">:unabbreviate</A>&quot;命令 with an argument which is not an
 existing abbreviation.  All variations of this command give the same message:
 &quot;<A HREF="map.html#:cunabbrev">:cunabbrev</A>&quot;, &quot;<A HREF="map.html#:iunabbrev">:iunabbrev</A>&quot;, etc.  Check for trailing white space.
 
@@ -532,9 +532,9 @@ existing abbreviation.  All variations of this command give the same message:
 							*<A NAME="E31"></A><B>E31</B>* 
 <B>  No such mapping</B>
 
-You have used an &quot;<A HREF="map.html#:unmap">:unmap</A>&quot; command with an argument which is not an existing
+You have used an &quot;<A HREF="map.html#:unmap">:unmap</A>&quot;命令 with an argument which is not an existing
 <A HREF="map.html#mapping">mapping</A>.  All variations of this command give the same message: &quot;<A HREF="map.html#:cunmap">:cunmap</A>&quot;,
-&quot;<A HREF="map.html#:unmap!">:unmap!</A>&quot;, etc.  A few hints:
+&quot;<A HREF="map.html#:unmap!">:unmap!</A>&quot;, etc.  A few 提示:
 - Check for trailing white space.
 - If the <A HREF="map.html#mapping">mapping</A> is buffer-local you need to use &quot;<A HREF="map.html#:unmap">:unmap</A> &lt;buffer&gt;&quot;.
   |<A HREF="map.html#:map-&lt;buffer&gt;">:map-&lt;buffer&gt;</A>|
@@ -590,7 +590,7 @@ start again.
 
 Buffers are only partly kept in memory, thus editing a very large file is
 unlikely to cause an out-of-memory situation.  Undo information is completely
-in memory, you can reduce that with these <A HREF="options.html#options">options</A>:
+in memory, you can reduce that with these <A HREF="options\.html#options">选项</A>:
 - <A HREF="options.html#'undolevels'">'undolevels'</A>  Set to a low value, or to -1 to disable <A HREF="undo.html#undo">undo</A> completely.  This
   helps for a change that affects all lines.
 - <A HREF="options.html#'undoreload'">'undoreload'</A> Set to zero to disable.
@@ -630,7 +630,7 @@ differences.
 							*<A NAME="E192"></A><B>E192</B>* 
 <B>  Recursive use of :normal too deep</B>
 
-You are using a &quot;<A HREF="various.html#:normal">:normal</A>&quot; command, whose argument again uses a &quot;<A HREF="various.html#:normal">:normal</A>&quot;
+You are using a &quot;<A HREF="various.html#:normal">:normal</A>&quot;命令, whose argument again uses a &quot;<A HREF="various.html#:normal">:normal</A>&quot;
 command in a recursive way.  This is restricted to <A HREF="options.html#'maxmapdepth'">'maxmapdepth'</A> levels.  This
 example illustrates how to get this message:
 <B>	:map gq :normal gq&lt;CR&gt;</B>
@@ -640,7 +640,7 @@ If you type &quot;<A HREF="change.html#gq">gq</A>&quot;, <A HREF="motion.html#it
 							*<A NAME="E22"></A><B>E22</B>* 
 <B>  Scripts nested too deep</B>
 
-Scripts can be read with the &quot;<A HREF="starting.html#-s">-s</A>&quot; command-line argument and with the
+Scripts can be read with the &quot;<A HREF="starting.html#-s">-s</A>&quot;命令-line argument and with the
 `:source!` command.  The <A HREF="usr_41.html#script">script</A> can then again read another <A HREF="usr_41.html#script">script</A>.  This can
 continue for about 14 levels.  When more nesting is done, Vim assumes that
 there is a recursive loop and stops with this error message.

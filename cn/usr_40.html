@@ -105,7 +105,7 @@ good choices to map.  Example:
 <B>	:map &lt;F2&gt; GoDate: &lt;Esc&gt;:read !date&lt;CR&gt;kJ</B>
 
 This shows how three modes are used.  After going to the last line with &quot;<A HREF="motion.html#G">G</A>&quot;,
-the &quot;<A HREF="insert.html#o">o</A>&quot; command opens a new line and starts <A HREF="intro.html#Insert">插入</A>模式.  The text &quot;Date: &quot; is
+the &quot;<A HREF="insert.html#o">o</A>&quot;命令 opens a new line and starts <A HREF="intro.html#Insert">插入</A>模式.  The text &quot;Date: &quot; is
 inserted and <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> takes you out of insert mode.
    Notice the use of special keys inside <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>.  This is called angle bracket
 <A HREF="intro.html#notation">notation</A>.  You type these <A HREF="motion.html#as">as</A> separate characters, not by pressing the key
@@ -113,7 +113,7 @@ itself.  This makes the mappings better readable and you can copy and <A HREF="p
 the text without problems.
    The &quot;<A HREF="cmdline.html#:">:</A>&quot; character takes Vim to the command line.  The &quot;<A HREF="insert.html#:read">:read</A> !date&quot; command
 reads the output from the &quot;date&quot; command and appends <A HREF="motion.html#it">它</A> below the current
-line.  The <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is required to execute the &quot;<A HREF="insert.html#:read">:read</A>&quot; command.
+line.  The <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is required to execute the &quot;<A HREF="insert.html#:read">:read</A>&quot;命令.
    At this point of execution the text looks like this:
 
 <B><FONT color="#3A6F2B">	Date:  </FONT></B>
@@ -125,8 +125,8 @@ Now &quot;kJ&quot; moves the cursor up and joins the lines together.
 
 MAPPING AND MODES
 
-The &quot;<A HREF="map.html#:map">:map</A>&quot; command defines remapping for keys in <A HREF="intro.html#Normal">正常</A>模式.  You can also
-define mappings for other modes.  For example, &quot;<A HREF="map.html#:imap">:imap</A>&quot; applies to <A HREF="intro.html#Insert">插入</A>模式.
+The &quot;<A HREF="map.html#:map">:map</A>&quot;命令 defines remapping for keys in <A HREF="intro.html#Normal">正常</A>模式.  You can also
+define mappings for other modes.例如, &quot;<A HREF="map.html#:imap">:imap</A>&quot; applies to <A HREF="intro.html#Insert">插入</A>模式.
 You can use <A HREF="motion.html#it">它</A> to insert a date below the cursor:
 
 <B>	:imap &lt;F2&gt; &lt;CR&gt;Date: &lt;Esc&gt;:read !date&lt;CR&gt;kJ</B>
@@ -178,7 +178,7 @@ look like this:
 	   &lt;xEnd&gt;	 <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>
 
 
-The first column of the <A HREF="eval.html#list">list</A> shows in which mode the <A HREF="map.html#mapping">mapping</A> is effective.
+The first column of the <A HREF="eval.html#list">列表</A> shows in which mode the <A HREF="map.html#mapping">mapping</A> is effective.
 This is &quot;<A HREF="pattern.html#n">n</A>&quot; for <A HREF="intro.html#Normal">正常</A>模式, &quot;<A HREF="insert.html#i">i</A>&quot; for <A HREF="intro.html#Insert">插入</A>模式, etc.  A blank is used for a
 <A HREF="map.html#mapping">mapping</A> defined with &quot;<A HREF="map.html#:map">:map</A>&quot;, thus effective in both <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode.
    One useful purpose of listing the <A HREF="map.html#mapping">mapping</A> is to check if special keys in <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>
@@ -189,7 +189,7 @@ When <A HREF="motion.html#it">它</A> has the same color <A HREF="motion.html#as
 
 REMAPPING
 
-The result of a <A HREF="map.html#mapping">mapping</A> is inspected for other mappings in <A HREF="motion.html#it">它</A>.  For example,
+The result of a <A HREF="map.html#mapping">mapping</A> is inspected for other mappings in <A HREF="motion.html#it">它</A>.例如,
 the mappings for &lt;F2&gt; above could be shortened to:
 
 <B>	:map &lt;F2&gt; G&lt;F3&gt;</B>
@@ -200,7 +200,7 @@ For <A HREF="intro.html#Normal">正常</A>模式 &lt;F2&gt; is mapped to go to t
 &lt;F3&gt; was pressed.  In <A HREF="intro.html#Insert">插入</A>模式 &lt;F2&gt; stops <A HREF="intro.html#Insert">插入</A>模式 with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> and then
 also uses &lt;F3&gt;.  Then &lt;F3&gt; is mapped to <A HREF="diff.html#do">do</A> the actual work.
 
-Suppose you hardly ever use <A HREF="intro.html#Ex">Ex</A> mode, and want to use the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command to format
+Suppose you hardly ever use <A HREF="intro.html#Ex">Ex</A> mode, and want to use the &quot;<A HREF="repeat.html#Q">Q</A>&quot;命令 to format
 text (this was so in old versions of Vim).  This <A HREF="map.html#mapping">mapping</A> will <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
 
 <B>	:map Q gq</B>
@@ -213,7 +213,7 @@ that you can still go to <A HREF="intro.html#Ex">Ex</A> mode:
 What happens now is that when you type &quot;<A HREF="intro.html#gQ">gQ</A>&quot; <A HREF="motion.html#it">它</A> is mapped to &quot;<A HREF="repeat.html#Q">Q</A>&quot;.  So far so
 good.  But then &quot;<A HREF="repeat.html#Q">Q</A>&quot; is mapped to &quot;<A HREF="change.html#gq">gq</A>&quot;, thus typing &quot;<A HREF="intro.html#gQ">gQ</A>&quot; results in &quot;<A HREF="change.html#gq">gq</A>&quot;, and
 you don't get to <A HREF="intro.html#Ex">Ex</A> mode at all.
-   To avoid keys to be mapped again, use the &quot;<A HREF="map.html#:noremap">:noremap</A>&quot; command:
+   To avoid keys to be mapped again, use the &quot;<A HREF="map.html#:noremap">:noremap</A>&quot;命令:
 
 <B>	:noremap gQ Q</B>
 
@@ -233,7 +233,7 @@ RECURSIVE MAPPING
 
 When a <A HREF="map.html#mapping">mapping</A> triggers itself, <A HREF="motion.html#it">它</A> will run forever.  This can be used to
 repeat an action an unlimited number of times.
-   For example, you have a <A HREF="eval.html#list">list</A> of files that contain a version number in the
+ 例如, you have a <A HREF="eval.html#list">列表</A> of files that contain a version number in the
 first line.  You edit these files with &quot;vim *.txt&quot;.  You are now editing the
 first file.  Define this <A HREF="map.html#mapping">mapping</A>:
 
@@ -246,14 +246,14 @@ thus doing the substitution, etc.
    This continues until there is an error.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> could be a file
 where the substitute command doesn't find a match for &quot;5.1&quot;.  You can then
 make a change to insert &quot;5.1&quot; and continue by typing &quot;,,&quot; again.  Or the
-&quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; fails, because you are in the last file in the <A HREF="eval.html#list">list</A>.
+&quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; fails, because you are in the last file in the <A HREF="eval.html#list">列表</A>.
    When a <A HREF="map.html#mapping">mapping</A> runs into an error halfway, the rest of the <A HREF="map.html#mapping">mapping</A> is
 discarded.  <A HREF="pattern.html#CTRL-C">CTRL-C</A> interrupts the <A HREF="map.html#mapping">mapping</A> (CTRL-Break on MS-Windows).
 
 
 DELETE A MAPPING
 
-To remove a <A HREF="map.html#mapping">mapping</A> use the &quot;<A HREF="map.html#:unmap">:unmap</A>&quot; command.  Again, the mode the unmapping
+To remove a <A HREF="map.html#mapping">mapping</A> use the &quot;<A HREF="map.html#:unmap">:unmap</A>&quot;命令.  Again, the mode the unmapping
 applies to depends on the command used:
 
 	<A HREF="map.html#:unmap">:unmap</A>		<A HREF="intro.html#Normal">Normal</A>, <A HREF="visual.html#Visual">Visual</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A>
@@ -280,13 +280,13 @@ be undone.
 
 SPECIAL CHARACTERS
 
-The &quot;<A HREF="map.html#:map">:map</A>&quot; command can be followed by another command.  A &#124; character
+The &quot;<A HREF="map.html#:map">:map</A>&quot;命令 can be followed by another command.  A &#124; character
 separates the two commands.  This also means that a &#124; character can't be used
 inside a map command.  To include one, use <A HREF="intro.html#&lt;Bar&gt;">&lt;Bar&gt;</A> (five characters).  Example:
 
 <B>	:map &lt;F8&gt; :write &lt;Bar&gt; !checkin %:S&lt;CR&gt;</B>
 
-The same problem applies to the &quot;<A HREF="map.html#:unmap">:unmap</A>&quot; command, with the addition that you
+The same problem applies to the &quot;<A HREF="map.html#:unmap">:unmap</A>&quot;命令, with the addition that you
 have to watch out for trailing white space.  These two commands are different:
 
 <B>	:unmap a | unmap b</B>
@@ -357,7 +357,7 @@ There must be no space after <A HREF="intro.html#&lt;Nop&gt;">&lt;Nop&gt;</A>.
 
 The Vim editor enables you to define your own commands.  You execute these
 commands just like any other <A HREF="cmdline.html#Command-line">命令行</A>模式 command.
-   To define a command, use the &quot;<A HREF="map.html#:command">:command</A>&quot; command, <A HREF="motion.html#as">as</A> follows:
+   To define a command, use the &quot;<A HREF="map.html#:command">:command</A>&quot;命令, <A HREF="motion.html#as">as</A> follows:
 
 <B>	:command DeleteFirst 1delete</B>
 
@@ -369,7 +369,7 @@ deletes the first line.
 	use &quot;<A HREF="editing.html#:Next">:Next</A>&quot;.  The underscore cannot be used!  You can use digits, but
 	this is discouraged.
 
-To <A HREF="eval.html#list">list</A> the user-defined commands, execute the following command:
+To <A HREF="eval.html#list">列表</A> the user-defined commands, execute the following command:
 
 <B>	:command</B>
 
@@ -400,7 +400,7 @@ However, because zero arguments is the default, you <A HREF="diff.html#do">do</A
 USING THE ARGUMENTS
 
 Inside the command definition, the arguments are represented by the
-<A HREF="map.html#&lt;args&gt;">&lt;args&gt;</A> keyword.  For example:
+<A HREF="map.html#&lt;args&gt;">&lt;args&gt;</A> keyword.例如:
 
 <B>	:command -nargs=+ Say :echo "&lt;args&gt;"</B>
 
@@ -413,7 +413,7 @@ For example:
 
 <B>	:Say he said "hello"</B>
 
-To get special characters turned into a <A HREF="eval.html#string">string</A>, properly escaped to use <A HREF="motion.html#as">as</A> an
+To get special characters turned into a <A HREF="options\.html#options">字符串</A>, properly escaped to use <A HREF="motion.html#as">as</A> an
 <A HREF="eval.html#expression">expression</A>, use &quot;<A HREF="map.html#&lt;q-args&gt;">&lt;q-args&gt;</A>&quot;:
 
 <B>	:command -nargs=+ Say :echo &lt;q-args&gt;</B>
@@ -423,7 +423,7 @@ Now the above &quot;:Say&quot; command will result in this to be executed:
 <B>	:echo "he said \"hello\""</B>
 
 The <A HREF="map.html#&lt;f-args&gt;">&lt;f-args&gt;</A> keyword contains the same information <A HREF="motion.html#as">as</A> the <A HREF="map.html#&lt;args&gt;">&lt;args&gt;</A> keyword,
-except in a format suitable for use <A HREF="motion.html#as">as</A> function call arguments.  For example:
+except in a format suitable for use <A HREF="motion.html#as">as</A> function call arguments.例如:
 
 <B>	:command -nargs=* DoIt :call AFunction(&lt;f-args&gt;)</B>
 <B>	:DoIt a b c</B>
@@ -445,7 +445,7 @@ this option are <A HREF="motion.html#as">as</A> follows:
 			single number whose default is {count}.
 
 When a range is specified, the keywords <A HREF="map.html#&lt;line1&gt;">&lt;line1&gt;</A> and <A HREF="map.html#&lt;line2&gt;">&lt;line2&gt;</A> get the values of
-the first and last line in the range.  For example, the following command
+the first and last line in the range.例如, the following command
 defines the SaveIt command, which writes out the specified range to the file
 &quot;save_file&quot;:
 
@@ -454,7 +454,7 @@ defines the SaveIt command, which writes out the specified range to the file
 
 OTHER OPTIONS
 
-Some of the other <A HREF="options.html#options">options</A> and keywords are <A HREF="motion.html#as">as</A> follows:
+Some of the other <A HREF="options\.html#options">选项</A> and keywords are <A HREF="motion.html#as">as</A> follows:
 
 	-count={number}		The command can take a <A HREF="intro.html#count">count</A> whose default is
 				{number}.  The resulting <A HREF="intro.html#count">count</A> can be used
@@ -466,7 +466,7 @@ Some of the other <A HREF="options.html#options">options</A> and keywords are <A
 				The <A HREF="intro.html#register">register</A> specification is available <A HREF="motion.html#as">as</A>
 				<A HREF="map.html#&lt;reg&gt;">&lt;reg&gt;</A> (a.k.a. <A HREF="map.html#&lt;register&gt;">&lt;register&gt;</A>).
 	-complete={type}	Type of command-line completion used.  See
-				|<A HREF="map.html#:command-completion">:command-completion</A>| for the <A HREF="eval.html#list">list</A> of possible
+				|<A HREF="map.html#:command-completion">:command-completion</A>| for the <A HREF="eval.html#list">列表</A> of possible
 				values.
 	-bar			The command can be followed by &#124; and another
 				command, or &quot; and a comment.
@@ -523,7 +523,7 @@ to a file.  This will make that happen:
 <B>	:autocmd BufWritePre *  call DateInsert()</B>
 
 &quot;<A HREF="autocmd.html#BufWritePre">BufWritePre</A>&quot; is the event for which this <A HREF="autocmd.html#autocommand">autocommand</A> is triggered: Just
-before (pre) <A HREF="editing.html#writing">writing</A> a buffer to a file.  The &quot;*&quot; is a <A HREF="pattern.html#pattern">pattern</A> to match with
+before (pre) <A HREF="editing.html#writing">写</A> a buffer to a file.  The &quot;*&quot; is a <A HREF="pattern.html#pattern">pattern</A> to match with
 the file name.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> matches all files.
    With this command enabled, when you <A HREF="diff.html#do">do</A> a &quot;<A HREF="editing.html#:write">:write</A>&quot;, Vim checks for any
 matching <A HREF="autocmd.html#BufWritePre">BufWritePre</A> autocommands and executes them, and then <A HREF="motion.html#it">它</A>
@@ -533,9 +533,9 @@ performs the &quot;<A HREF="editing.html#:write">:write</A>&quot;.
 <B>	:autocmd [group] {events} {file-pattern} [++nested] {command}</B>
 
 The [group] name is optional.  It is used in managing and calling the commands
-(more on this later).  The {events} parameter is a <A HREF="eval.html#list">list</A> of <A HREF="autocmd.html#events">events</A> (comma
+(more on this later).  The {events} parameter is a <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#events">events</A> (comma
 separated) that trigger the command.
-   {file-pattern} is a filename, usually with <A HREF="editing.html#wildcards">wildcards</A>.  For example, using
+   {file-pattern} is a filename, usually with <A HREF="editing.html#wildcards">wildcards</A>.例如, using
 &quot;*.txt&quot; makes the <A HREF="autocmd.html#autocommand">autocommand</A> be used for all files whose name end in &quot;.txt&quot;.
 The optional [++nested] flag allows for nesting of autocommands (see below),
 and finally, {command} is the command to be executed.
@@ -544,7 +544,7 @@ and finally, {command} is the command to be executed.
 EVENTS
 
 One of the most useful <A HREF="autocmd.html#events">events</A> is <A HREF="autocmd.html#BufReadPost">BufReadPost</A>.  It is triggered after a new
-file is being edited.  It is commonly used to set option values.  For example,
+file is being edited.  It is commonly used to set option values.例如,
 you know that &quot;*.gsm&quot; files are GNU assembly language.  To get the <A HREF="syntax.html#syntax">syntax</A> file
 right, define this <A HREF="autocmd.html#autocommand">autocommand</A>:
 
@@ -552,7 +552,7 @@ right, define this <A HREF="autocmd.html#autocommand">autocommand</A>:
 
 If Vim is able to detect the type of file, <A HREF="motion.html#it">它</A> will set the <A HREF="options.html#'filetype'">'filetype'</A> option
 for you.  This triggers the Filetype event.  Use this to <A HREF="diff.html#do">do</A> something when a
-certain type of file is edited.  For example, to load a <A HREF="eval.html#list">list</A> of <A HREF="map.html#abbreviations">abbreviations</A>
+certain type of file is edited.例如, to load a <A HREF="eval.html#list">列表</A> of <A HREF="map.html#abbreviations">abbreviations</A>
 for text files:
 
 <B>	:autocmd Filetype text  source ~/.config/nvim/abbrevs.vim</B>
@@ -561,13 +561,13 @@ When starting to edit a new file, you could make Vim insert a <A HREF="autocmd.h
 
 <B>	:autocmd BufNewFile *.[ch]  0read ~/skeletons/skel.c</B>
 
-见 |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>| for a complete <A HREF="eval.html#list">list</A> of events.
+见 |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>| for a complete <A HREF="eval.html#list">列表</A> of events.
 
 
 PATTERNS
 
-The {file-pattern} argument can actually be a comma-separated <A HREF="eval.html#list">list</A> of file
-patterns.  For example: &quot;*.c,*.h&quot; matches files ending in &quot;.c&quot; and &quot;.h&quot;.
+The {file-pattern} argument can actually be a comma-separated <A HREF="eval.html#list">列表</A> of file
+patterns.例如: &quot;*.c,*.h&quot; matches files ending in &quot;.c&quot; and &quot;.h&quot;.
    The usual file <A HREF="editing.html#wildcards">wildcards</A> can be used.  Here is a summary of the most often
 used ones:
 
@@ -578,7 +578,7 @@ used ones:
 	a{b,c}		Matches &quot;<A HREF="motion.html#ab">ab</A>&quot; and &quot;ac&quot;
 
 When the <A HREF="pattern.html#pattern">pattern</A> includes a slash (/) Vim will compare directory names.
-Without the slash only the last part of a file name is used.  For example,
+Without the slash only the last part of a file name is used.例如,
 &quot;*.txt&quot; matches &quot;/home/biep/readme.txt&quot;.  The <A HREF="pattern.html#pattern">pattern</A> &quot;/home/biep/*&quot; would
 also match <A HREF="motion.html#it">它</A>.  But &quot;home/foo/*.txt&quot; wouldn't.
    When including a slash, Vim matches the <A HREF="pattern.html#pattern">pattern</A> against both the full path
@@ -605,21 +605,21 @@ This will delete all autocommands for the &quot;<A HREF="autocmd.html#FileWriteP
 
 LISTING
 
-To <A HREF="eval.html#list">list</A> all the currently defined autocommands, use this:
+To <A HREF="eval.html#list">列表</A> all the currently defined autocommands, use this:
 
 <B>	:autocmd</B>
 
-The <A HREF="eval.html#list">list</A> can be very long, especially when <A HREF="filetype.html#filetype">filetype</A> detection is used.  To
-<A HREF="eval.html#list">list</A> only part of the commands, specify the group, event and/or <A HREF="pattern.html#pattern">pattern</A>.  For
-example, to <A HREF="eval.html#list">list</A> all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> autocommands:
+The <A HREF="eval.html#list">列表</A> can be very long, especially when <A HREF="filetype.html#filetype">filetype</A> detection is used.  To
+<A HREF="eval.html#list">列表</A> only part of the commands, specify the group, event and/or <A HREF="pattern.html#pattern">pattern</A>.  For
+example, to <A HREF="eval.html#list">列表</A> all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> autocommands:
 
 <B>	:autocmd BufNewFile</B>
 
-To <A HREF="eval.html#list">list</A> all autocommands for the <A HREF="pattern.html#pattern">pattern</A> &quot;*.c&quot;:
+To <A HREF="eval.html#list">列表</A> all autocommands for the <A HREF="pattern.html#pattern">pattern</A> &quot;*.c&quot;:
 
 <B>	:autocmd * *.c</B>
 
-Using &quot;*&quot; for the event will <A HREF="eval.html#list">list</A> all the <A HREF="autocmd.html#events">events</A>.  To <A HREF="eval.html#list">list</A> all autocommands
+Using &quot;*&quot; for the event will <A HREF="eval.html#list">列表</A> all the <A HREF="autocmd.html#events">events</A>.  To <A HREF="eval.html#list">列表</A> all autocommands
 for the cprograms group:
 
 <B>	:autocmd cprograms</B>
@@ -631,7 +631,7 @@ The {group} item, used when defining an <A HREF="autocmd.html#autocommand">autoc
 together.  This can be used to delete all the autocommands in a certain group,
 for example.
    When defining several autocommands for a certain group, use the &quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot;
-command.  For example, let's define autocommands for C programs:
+command.例如, let's define autocommands for C programs:
 
 <B>	:augroup cprograms</B>
 <B>	:  autocmd BufReadPost *.c,*.h :set sw=4 sts=4</B>
@@ -666,7 +666,7 @@ This is useful to have one <A HREF="autocmd.html#autocommand">autocommand</A> tr
 <B>	:autocmd BufReadPost *.new  execute "doautocmd BufReadPost " . expand("&lt;afile&gt;:r")</B>
 
 This defines an <A HREF="autocmd.html#autocommand">autocommand</A> that is triggered when a new file has been edited.
-The file name must end in &quot;.new&quot;.  The &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command uses <A HREF="eval.html#expression">expression</A>
+The file name must end in &quot;.new&quot;.  The &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令 uses <A HREF="eval.html#expression">expression</A>
 evaluation to form a new command and execute <A HREF="motion.html#it">它</A>.  When editing the file
 &quot;tryout.c.new&quot; the executed command will be:
 
@@ -676,28 +676,28 @@ The <A HREF="builtin.html#expand()">expand()</A> function takes the &quot;<A HRE
 name the <A HREF="autocmd.html#autocommand">autocommand</A> was executed for, and takes the root of the file name
 with &quot;<A HREF="insert.html#:r">:r</A>&quot;.
 
-&quot;<A HREF="autocmd.html#:doautocmd">:doautocmd</A>&quot; executes on the current buffer.  The &quot;<A HREF="autocmd.html#:doautoall">:doautoall</A>&quot; command works
+&quot;<A HREF="autocmd.html#:doautocmd">:doautocmd</A>&quot; executes on the current buffer.  The &quot;<A HREF="autocmd.html#:doautoall">:doautoall</A>&quot;命令 works
 like &quot;doautocmd&quot; except <A HREF="motion.html#it">它</A> executes on all the <A HREF="windows.html#buffers">buffers</A>.
 
 
 USING NORMAL MODE COMMANDS
 
 The commands executed by an <A HREF="autocmd.html#autocommand">autocommand</A> are <A HREF="cmdline.html#Command-line">Command-line</A> commands.  If you
-want to use a <A HREF="intro.html#Normal">正常</A>模式 command, the &quot;<A HREF="various.html#:normal">:normal</A>&quot; command can be used.
+want to use a <A HREF="intro.html#Normal">正常</A>模式 command, the &quot;<A HREF="various.html#:normal">:normal</A>&quot;命令 can be used.
 Example:
 
 <B>	:autocmd BufReadPost *.log normal G</B>
 
 This will make the cursor jump to the last line of *.log files when you start
 to edit <A HREF="motion.html#it">它</A>.
-   Using the &quot;<A HREF="various.html#:normal">:normal</A>&quot; command is a bit tricky.  First of all, make sure its
+   Using the &quot;<A HREF="various.html#:normal">:normal</A>&quot;命令 is a bit tricky.  First of all, make sure its
 argument is a complete command, including all the arguments.  When you use &quot;<A HREF="insert.html#i">i</A>&quot;
 to go to <A HREF="intro.html#Insert">插入</A>模式, there must also be a <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to leave <A HREF="intro.html#Insert">插入</A>模式 again.
 If you use a &quot;<A HREF="pattern.html#/">/</A>&quot; to start a search <A HREF="pattern.html#pattern">pattern</A>, there must be a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> to execute
 <A HREF="motion.html#it">它</A>.
-   The &quot;<A HREF="various.html#:normal">:normal</A>&quot; command uses all the text after <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> commands.  Thus there
+   The &quot;<A HREF="various.html#:normal">:normal</A>&quot;命令 uses all the text after <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> commands.  Thus there
 can be no &#124; and another command following.  To work around this, put the
-&quot;<A HREF="various.html#:normal">:normal</A>&quot; command inside an &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command.  This also makes <A HREF="motion.html#it">它</A> possible
+&quot;<A HREF="various.html#:normal">:normal</A>&quot;命令 inside an &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令.  This also makes <A HREF="motion.html#it">它</A> possible
 to pass unprintable characters in a convenient way.  Example:
 
 <B>	:autocmd BufReadPost *.chg execute "normal ONew entry:\&lt;Esc&gt;" |</B>
@@ -714,7 +714,7 @@ to restore the view on the file.  见 |<A HREF="tips.html#restore-position">rest
 IGNORING EVENTS
 
 At times, you will not want to trigger an <A HREF="autocmd.html#autocommand">autocommand</A>.  The <A HREF="options.html#'eventignore'">'eventignore'</A>
-option contains a <A HREF="eval.html#list">list</A> of <A HREF="autocmd.html#events">events</A> that will be totally ignored.  For example,
+option contains a <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#events">events</A> that will be totally ignored.例如,
 the following causes <A HREF="autocmd.html#events">events</A> for entering and leaving a<A HREF="windows.html#window">窗口</A>to be ignored:
 
 <B>	:set eventignore=WinEnter,WinLeave</B>

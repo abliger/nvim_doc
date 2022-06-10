@@ -87,7 +87,7 @@ before.
 |<A HREF="#22.1">22.1</A>|	The file browser
 |<A HREF="#22.2">22.2</A>|	The current directory
 |<A HREF="#22.3">22.3</A>|	Finding a file
-|<A HREF="#22.4">22.4</A>|	The buffer <A HREF="eval.html#list">list</A>
+|<A HREF="#22.4">22.4</A>|	The buffer <A HREF="eval.html#list">列表</A>
 
 下一章: |<A HREF="usr_23.html">usr_23.txt</A>|  Editing other files
 上一章: |<A HREF="usr_21.html">usr_21.txt</A>|  Go away and come back
@@ -125,17 +125,17 @@ You can see these items:
 1.  The name of the browsing tool and its version number
 2.  The name of the browsing directory
 3.  The <A HREF="eval.html#method">method</A> of <A HREF="change.html#sorting">sorting</A> (may be by name, time, or size)
-4.  How names are to be sorted (directories first, then *.h files,
+4.  How names are to be sorted (directories first然后*.h files,
     *.c files, etc)
 5.  How to get help (use the <A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A> key), and an abbreviated listing
     of available commands
-6.  A listing of files, including &quot;../&quot;, which allows one to <A HREF="eval.html#list">list</A>
+6.  A listing of files, including &quot;../&quot;, which allows one to <A HREF="eval.html#list">列表</A>
     the parent directory.
 
 If you have <A HREF="syntax.html#syntax">syntax</A> highlighting enabled, the different parts are highlighted
 so <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">它</A> easier to spot them.
 
-You can use <A HREF="intro.html#Normal">正常</A>模式 Vim commands to move around in the text.  For example,
+You can use <A HREF="intro.html#Normal">正常</A>模式 Vim commands to move around in the text.例如,
 move the cursor atop a file and press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>; you will then be editing that
 file.  To go back to the browser use &quot;<A HREF="editing.html#:edit">:edit</A> .&quot; again, or use &quot;<A HREF="pi_netrw.html#:Explore">:Explore</A>&quot;.
 <A HREF="motion.html#CTRL-O">CTRL-O</A> also works.
@@ -209,7 +209,7 @@ As a sampling of extra normal-mode commands:
 One may also use command mode; again, just a sampling:
 
 	<A HREF="pi_netrw.html#:Explore">:Explore</A> [directory]	Browse specified/current directory
-	:NetrwSettings		A comprehensive <A HREF="eval.html#list">list</A> of your current <A HREF="pi_netrw.html#netrw">netrw</A>
+	:NetrwSettings		A comprehensive <A HREF="eval.html#list">列表</A> of your current <A HREF="pi_netrw.html#netrw">netrw</A>
 				settings with help linkage.
 
 The <A HREF="pi_netrw.html#netrw">netrw</A> browser is not limited to just your local machine; one may use
@@ -239,8 +239,8 @@ To avoid much of the typing, <A HREF="diff.html#do">do</A> this:
 <B>	:edit file2.txt</B>
 <B>	:edit file3.txt</B>
 
-The &quot;<A HREF="editing.html#:cd">:cd</A>&quot; command changes the current directory.  You can see what the current
-directory is with the &quot;<A HREF="editing.html#:pwd">:pwd</A>&quot; command:
+The &quot;<A HREF="editing.html#:cd">:cd</A>&quot;命令 changes the current directory.  You can see what the current
+directory is with the &quot;<A HREF="editing.html#:pwd">:pwd</A>&quot;命令:
 
 <B>	:pwd</B>
 <B>	/home/Bram/VeryLongFileName</B>
@@ -296,7 +296,7 @@ a <A HREF="intro.html#tab">tab</A> page share this directory except for <A HREF=
 directory. Any new <A HREF="windows.html#windows">windows</A> opened in this <A HREF="intro.html#tab">tab</A> page will use this directory <A HREF="motion.html#as">as</A>
 the current working directory. Using a `:cd` command in a <A HREF="intro.html#tab">tab</A> page will not
 change the working directory of <A HREF="intro.html#tab">tab</A> pages which have a <A HREF="intro.html#tab">tab</A> local directory.
-When the global working directory is changed using the &quot;<A HREF="editing.html#:cd">:cd</A>&quot; command in a <A HREF="intro.html#tab">tab</A>
+When the global working directory is changed using the &quot;<A HREF="editing.html#:cd">:cd</A>&quot;命令 in a <A HREF="intro.html#tab">tab</A>
 page, <A HREF="motion.html#it">它</A> will also change the current <A HREF="intro.html#tab">tab</A> page working directory.
 
 
@@ -315,7 +315,7 @@ of the file and type:
 
 Vim will find the file and edit <A HREF="motion.html#it">它</A>.
    What if the file is not in the current directory?  Vim will use the <A HREF="options.html#'path'">'path'</A>
-option to find the file.  This option is a <A HREF="eval.html#list">list</A> of directory names where to
+option to find the file.  This option is a <A HREF="eval.html#list">列表</A> of directory names where to
 look for your file.
    Suppose you have your include files located in &quot;c:/prog/include&quot;.  This
 command will add <A HREF="motion.html#it">它</A> to the <A HREF="options.html#'path'">'path'</A> option:
@@ -347,7 +347,7 @@ type <A HREF="motion.html#it">它</A>:
 <B>	:find inits.h</B>
 
 Vim will then use the <A HREF="options.html#'path'">'path'</A> option to try and locate the file.  This is the
-same <A HREF="motion.html#as">as</A> the &quot;<A HREF="editing.html#:edit">:edit</A>&quot; command, except for the use of <A HREF="options.html#'path'">'path'</A>.
+same <A HREF="motion.html#as">as</A> the &quot;<A HREF="editing.html#:edit">:edit</A>&quot;命令, except for the use of <A HREF="options.html#'path'">'path'</A>.
 
 To open the found file in a new<A HREF="windows.html#window">窗口</A>use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#f">f</A> instead of &quot;<A HREF="editing.html#gf">gf</A>&quot;, or use
 &quot;<A HREF="windows.html#:sfind">:sfind</A>&quot; instead of &quot;<A HREF="editing.html#:find">:find</A>&quot;.
@@ -362,7 +362,7 @@ necessary to have one argument |<A HREF="starting.html#-+c">-+c</A>|.
 
 ==============================================================================
 
-*<A NAME="22.4"></A><B>22.4</B>*	The buffer <A HREF="eval.html#list">list</A>
+*<A NAME="22.4"></A><B>22.4</B>*	The buffer <A HREF="eval.html#list">列表</A>
 
 The Vim editor uses the term buffer to describe a file being edited.
 Actually, a buffer is a copy of the file that you edit.  When you finish
@@ -394,7 +394,7 @@ INACTIVE BUFFERS
 
    When a buffer has been used once, Vim remembers some information about <A HREF="motion.html#it">它</A>.
 When <A HREF="motion.html#it">它</A> is not displayed in a<A HREF="windows.html#window">窗口</A>and <A HREF="motion.html#it">它</A> is not hidden, <A HREF="motion.html#it">它</A> is still in the
-buffer <A HREF="eval.html#list">list</A>.  This is called an inactive buffer.  Overview:
+buffer <A HREF="eval.html#list">列表</A>.  This is called an inactive buffer.  Overview:
 
    Active		Appears in a<A HREF="windows.html#window">窗口</A>, text loaded.
    Hidden		Not in a<A HREF="windows.html#window">窗口</A>, text loaded.
@@ -407,11 +407,11 @@ which files you have edited.  And edit them again.
 
 LISTING BUFFERS
 
-<A HREF="starting.html#View">View</A> the buffer <A HREF="eval.html#list">list</A> with this command:
+<A HREF="starting.html#View">View</A> the buffer <A HREF="eval.html#list">列表</A> with this command:
 
 <B>	:buffers</B>
 
-A command which does the same, is not so obvious to <A HREF="eval.html#list">list</A> <A HREF="windows.html#buffers">buffers</A>, but is much
+A command which does the same, is not so obvious to <A HREF="eval.html#list">列表</A> <A HREF="windows.html#buffers">buffers</A>, but is much
 shorter to type:
 
 <B>	:ls</B>
@@ -445,7 +445,7 @@ name:
 
 <B>	:buffer 2</B>
 
-But the only way to know the number is by looking in the buffer <A HREF="eval.html#list">list</A>.  You can
+But the only way to know the number is by looking in the buffer <A HREF="eval.html#list">列表</A>.  You can
 use the name, or part of <A HREF="motion.html#it">它</A>, instead:
 
 <B>	:buffer help</B>
@@ -461,14 +461,14 @@ This works with a name <A HREF="motion.html#as">as</A> well.
 
 USING THE BUFFER LIST
 
-You can move around in the buffer <A HREF="eval.html#list">list</A> with these commands:
+You can move around in the buffer <A HREF="eval.html#list">列表</A> with these commands:
 
 	<A HREF="windows.html#:bnext">:bnext</A>		go to next buffer
 	<A HREF="windows.html#:bprevious">:bprevious</A>	go to previous buffer
 	<A HREF="windows.html#:bfirst">:bfirst</A>		go to the first buffer
 	<A HREF="windows.html#:blast">:blast</A>		go to the last buffer
 
-To remove a buffer from the <A HREF="eval.html#list">list</A>, use this command:
+To remove a buffer from the <A HREF="eval.html#list">列表</A>, use this command:
 
 <B>	:bdelete 3</B>
 
@@ -480,8 +480,8 @@ can't be editing nothing!
 
 	Note:
 	Even after removing the buffer with &quot;<A HREF="windows.html#:bdelete">:bdelete</A>&quot; Vim still remembers <A HREF="motion.html#it">它</A>.
-	It's actually made &quot;unlisted&quot;, <A HREF="motion.html#it">它</A> no longer appears in the <A HREF="eval.html#list">list</A> from
-	&quot;<A HREF="windows.html#:buffers">:buffers</A>&quot;.  The &quot;:buffers!&quot; command will <A HREF="eval.html#list">list</A> unlisted <A HREF="windows.html#buffers">buffers</A> (yes,
+	It's actually made &quot;unlisted&quot;, <A HREF="motion.html#it">它</A> no longer appears in the <A HREF="eval.html#list">列表</A> from
+	&quot;<A HREF="windows.html#:buffers">:buffers</A>&quot;.  The &quot;:buffers!&quot; command will <A HREF="eval.html#list">列表</A> unlisted <A HREF="windows.html#buffers">buffers</A> (yes,
 	Vim can <A HREF="diff.html#do">do</A> the impossible).  To really make Vim forget about a buffer,
 	use &quot;<A HREF="windows.html#:bwipe">:bwipe</A>&quot;.  Also see the <A HREF="options.html#'buflisted'">'buflisted'</A> option.
 

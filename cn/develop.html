@@ -202,7 +202,7 @@ reflects whether <A HREF="if_pyth.html#Python">Python</A> support is working.
 
 							*<A NAME="provider-reload"></A><B>provider-reload</B>*
 Sometimes a <A HREF="gui.html#GUI">GUI</A> or other application may want to force a <A HREF="provider.html#provider">provider</A> to
-&quot;<A HREF="editing.html#reload">reload</A>&quot;.  To <A HREF="editing.html#reload">reload</A> a <A HREF="provider.html#provider">provider</A>, undefine its &quot;loaded&quot; flag, then use
+&quot;<A HREF="editing.html#reload">reload</A>&quot;.  To <A HREF="editing.html#reload">reload</A> a <A HREF="provider.html#provider">provider</A>, undefine its &quot;loaded&quot; flag然后use
 |<A HREF="repeat.html#:runtime">:runtime</A>| to <A HREF="editing.html#reload">reload</A> <A HREF="motion.html#it">它</A>:
 
 <B>    :unlet g:loaded_clipboard_provider</B>
@@ -336,7 +336,7 @@ Use existing common {action} names if possible:
     del     Delete a thing (or group of things)
     exec    Execute code
     get     Get a thing (or group of things by query)
-    <A HREF="eval.html#list">list</A>    Get all things
+    <A HREF="eval.html#list">列表</A>    Get all things
     set     Set a thing (or group of things)
 
 Use consistent names for {thing} in all <A HREF="api.html#API">API</A> <A HREF="eval.html#functions">functions</A>. E.g. a buffer is called
@@ -352,7 +352,7 @@ Example:
 
 Example:
     `nvim_list_bufs` operates in a global <A HREF="repeat.html#context">context</A> (first parameter is not
-    a Buffer). The common {action} &quot;<A HREF="eval.html#list">list</A>&quot; indicates that <A HREF="motion.html#it">它</A> lists all bufs
+    a Buffer). The common {action} &quot;<A HREF="eval.html#list">列表</A>&quot; indicates that <A HREF="motion.html#it">它</A> lists all bufs
     (plural) in the global <A HREF="repeat.html#context">context</A>.
 
 Use this <A HREF="autocmd.html#template">template</A> to name new <A HREF="api.html#API">API</A> <A HREF="autocmd.html#events">events</A>:
@@ -371,7 +371,7 @@ API clients wrap the Nvim |<A HREF="api.html#API">API</A>| to provide idiomatic 
 respective platforms (见 |<A HREF="intro.html#jargon">jargon</A>|). You can build a new <A HREF="api.html#API">API</A> client for your
 favorite platform or programming language.
 
-<A HREF="eval.html#List">List</A> of <A HREF="api.html#API">API</A> clients:
+<A HREF="eval.html#list">列表</A> of <A HREF="api.html#API">API</A> clients:
     https://github.com/neovim/neovim/wiki/Related-projects#api-clients
 
 
@@ -451,7 +451,7 @@ External UIs are expected to implement these common features:
   chords (&lt;C-,&gt; &lt;C-Enter&gt; &lt;C-S-x&gt; &lt;D-x&gt;) and patterns (&quot;shift shift&quot;) that <A HREF="diff.html#do">do</A>
   not potentially conflict with Nvim defaults, plugins, etc.
 - Consider the &quot;option_set&quot; |<A HREF="ui.html#ui-global">ui-global</A>| event <A HREF="motion.html#as">as</A> a hint for other <A HREF="gui.html#GUI">GUI</A>
-  behaviors. Various UI-related <A HREF="options.html#options">options</A> ('guifont', <A HREF="options.html#'ambiwidth'">'ambiwidth'</A>, …) are
+  behaviors. Various UI-related <A HREF="options\.html#options">选项</A> ('guifont', <A HREF="options.html#'ambiwidth'">'ambiwidth'</A>, …) are
   published in this event. See also &quot;mouse_on&quot;, &quot;mouse_off&quot;.
 
 

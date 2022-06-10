@@ -81,7 +81,7 @@
 
 Multi-language features				*<A NAME="multilang"></A><B>multilang</B>* *<A NAME="multi-lang"></A><B>multi-lang</B>*
 
-This is about using <A HREF="message.html#messages">messages</A> and <A HREF="gui.html#menus">menus</A> in various languages.  For editing
+This is about using <A HREF="message.html#messages">信息</A> and <A HREF="gui.html#menus">menus</A> in various languages.  For editing
 multibyte text 见 |<A HREF="mbyte.html#multibyte">multibyte</A>|.
 
 The basics are explained in the user manual: |<A HREF="usr_45.html">usr_45.txt</A>|.
@@ -95,7 +95,7 @@ The basics are explained in the user manual: |<A HREF="usr_45.html">usr_45.txt</
 Vim picks up the <A HREF="mbyte.html#locale">locale</A> from the environment.  In most cases this means Vim
 will use the language that you prefer, unless it's not available.
 
-To see a <A HREF="eval.html#list">list</A> of supported <A HREF="mbyte.html#locale">locale</A> names on your system, look in one of these
+To see a <A HREF="eval.html#list">列表</A> of supported <A HREF="mbyte.html#locale">locale</A> names on your system, look in one of these
 directories (for Unix):
 <B><FONT color="#3A6F2B">	/usr/lib/locale </FONT></B>
 <B><FONT color="#3A6F2B">	/usr/share/locale </FONT></B>
@@ -110,8 +110,8 @@ use of &quot;<A HREF="motion.html#-">-</A>&quot; and &quot;<A HREF="motion.html#
 :lan[guage] tim[e]
 :lan[guage] col[late]
 			Print the current language (aka <A HREF="mbyte.html#locale">locale</A>).
-			With the &quot;<A HREF="message.html#messages">messages</A>&quot; argument the language used for
-			<A HREF="message.html#messages">messages</A> is printed.  Technical: LC_MESSAGES.
+			With the &quot;<A HREF="message.html#messages">信息</A>&quot; argument the language used for
+			<A HREF="message.html#messages">信息</A> is printed.  Technical: LC_MESSAGES.
 			With the &quot;ctype&quot; argument the language used for
 			character encoding is printed.  Technical: LC_CTYPE.
 			With the &quot;time&quot; argument the language used for
@@ -136,9 +136,9 @@ use of &quot;<A HREF="motion.html#-">-</A>&quot; and &quot;<A HREF="motion.html#
 			like &quot;en_US.ISO_8859-1&quot;.  On Unix systems you can use
 			this command to see what locales are supported:
 <B>				:!locale -a</B>
- 			With the &quot;<A HREF="message.html#messages">messages</A>&quot; argument the language used for
-			<A HREF="message.html#messages">messages</A> is set.  This can be different when you want,
-			for example, English <A HREF="message.html#messages">messages</A> while editing <A HREF="mbyte.html#Japanese">Japanese</A>
+ 			With the &quot;<A HREF="message.html#messages">信息</A>&quot; argument the language used for
+			<A HREF="message.html#messages">信息</A> is set.  This can be different when you want,
+			for example, English <A HREF="message.html#messages">信息</A> while editing <A HREF="mbyte.html#Japanese">Japanese</A>
 			text.  This sets $LC_MESSAGES.
 			With the &quot;ctype&quot; argument the language used for
 			character encoding is set.  This affects the libraries
@@ -146,7 +146,7 @@ use of &quot;<A HREF="motion.html#-">-</A>&quot; and &quot;<A HREF="motion.html#
 			a different value from <A HREF="options.html#'encoding'">'encoding'</A> or &quot;<A HREF="change.html#C">C</A>&quot;.  This sets
 			$LC_CTYPE.
 			With the &quot;time&quot; argument the language used for time
-			and date <A HREF="message.html#messages">messages</A> is set.  This affects <A HREF="builtin.html#strftime()">strftime()</A>.
+			and date <A HREF="message.html#messages">信息</A> is set.  This affects <A HREF="builtin.html#strftime()">strftime()</A>.
 			This sets $LC_TIME.
 			With the &quot;collate&quot; argument the language used for the
 			collation order is set.  This affects <A HREF="change.html#sorting">sorting</A> of
@@ -156,7 +156,7 @@ use of &quot;<A HREF="motion.html#-">-</A>&quot; and &quot;<A HREF="motion.html#
 			The LC_NUMERIC value will always be set to &quot;<A HREF="change.html#C">C</A>&quot; so
 			that floating point numbers use '<A HREF="repeat.html#.">.</A>' <A HREF="motion.html#as">as</A> the decimal
 			point.  This will make a difference for items that
-			depend on the language (some <A HREF="message.html#messages">messages</A>, time and date
+			depend on the language (some <A HREF="message.html#messages">信息</A>, time and date
 			format).
 			Not fully supported on all systems.
 			If this fails there will be an error message.  If <A HREF="motion.html#it">它</A>
@@ -227,7 +227,7 @@ translations you expected, check the output of this command:
 Now check the &quot;$VIMRUNTIME/lang&quot; directory for menu translation files that use
 a similar language.  A difference in a &quot;<A HREF="motion.html#-">-</A>&quot; being a &quot;<A HREF="motion.html#_">_</A>&quot; already causes a file
 not to be found!  Another common difference to watch out for is &quot;iso8859-1&quot;
-versus &quot;iso_8859-1&quot;.  Fortunately Vim makes all names <A HREF="change.html#lowercase">lowercase</A>, thus you
+versus &quot;iso_8859-1&quot;.  Fortunately Vim makes all names <A HREF="change.html#lowercase">小写</A>, thus you
 don't have to worry about <A HREF="change.html#case">case</A> differences.  Spaces are changed to
 underscores, to avoid having to <A HREF="intro.html#escape">escape</A> them.
 

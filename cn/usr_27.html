@@ -79,7 +79,7 @@
 			 Search commands and patterns
 
 
-In chapter 3 a few simple search patterns were mentioned |<A HREF="usr_03.html#03.9">03.9</A>|.  Vim can <A HREF="diff.html#do">do</A>
+In chapter 3 a few 简单搜索模式 were mentioned |<A HREF="usr_03.html#03.9">03.9</A>|.  Vim can <A HREF="diff.html#do">do</A>
 much more complex searches.  This chapter explains the most often used ones.
 A detailed specification can be found here: |<A HREF="pattern.html#pattern">pattern</A>|
 
@@ -120,11 +120,11 @@ same text <A HREF="motion.html#as">as</A> &quot;include&quot; did.  Now set the 
 
 <B>	:set ignorecase smartcase</B>
 
-If you have a <A HREF="pattern.html#pattern">pattern</A> with at least one <A HREF="change.html#uppercase">uppercase</A> character, the search
+If you have a <A HREF="pattern.html#pattern">pattern</A> with at least one <A HREF="change.html#uppercase">大写</A> character, the search
 becomes <A HREF="change.html#case">case</A> sensitive.  The idea is that you didn't have to type that
-<A HREF="change.html#uppercase">uppercase</A> character, so you must have done <A HREF="motion.html#it">它</A> because you wanted <A HREF="change.html#case">case</A> to
+<A HREF="change.html#uppercase">大写</A> character, so you must have done <A HREF="motion.html#it">它</A> because you wanted <A HREF="change.html#case">case</A> to
 match.  That's smart!
-    With these two <A HREF="options.html#options">options</A> set you find the following matches:
+    With these two <A HREF="options\.html#options">选项</A> set you find the following matches:
 
 <B><FONT color="#3A6F2B">	pattern			matches	</FONT></B>
 	<A HREF="motion.html#word">单词</A>			<A HREF="motion.html#word">单词</A>, Word, <A HREF="motion.html#word">单词</A>, WoRd, etc.
@@ -136,8 +136,8 @@ match.  That's smart!
 CASE IN ONE PATTERN
 
 If you want to ignore <A HREF="change.html#case">case</A> for one specific <A HREF="pattern.html#pattern">pattern</A>, you can <A HREF="diff.html#do">do</A> this by
-prepending the &quot;\c&quot; <A HREF="eval.html#string">string</A>.  Using &quot;\C&quot; will make the <A HREF="pattern.html#pattern">pattern</A> to match <A HREF="change.html#case">case</A>.
-This overrules the <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A> <A HREF="options.html#options">options</A>, when &quot;\c&quot; or &quot;\C&quot; is
+prepending the &quot;\c&quot; <A HREF="options\.html#options">字符串</A>.  Using &quot;\C&quot; will make the <A HREF="pattern.html#pattern">pattern</A> to match <A HREF="change.html#case">case</A>.
+This overrules the <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A> <A HREF="options\.html#options">选项</A>, when &quot;\c&quot; or &quot;\C&quot; is
 used their value doesn't matter.
 
 <B><FONT color="#3A6F2B">	pattern			matches	</FONT></B>
@@ -164,17 +164,17 @@ matter if <A HREF="options.html#'ignorecase'">'ignorecase'</A> or <A HREF="optio
 
 *<A NAME="27.2"></A><B>27.2</B>*	Wrapping around the file end
 
-By default, a forward search starts searching for the given <A HREF="eval.html#string">string</A> at the
+By default, a forward search starts searching for the given <A HREF="options\.html#options">字符串</A> at the
 current cursor location.  It then proceeds to the end of the file.  If <A HREF="motion.html#it">它</A> has
-not found the <A HREF="eval.html#string">string</A> by that time, <A HREF="motion.html#it">它</A> starts from the beginning and searches
+not found the <A HREF="options\.html#options">字符串</A> by that time, <A HREF="motion.html#it">它</A> starts from the beginning and searches
 from the start of the file to the cursor location.
-   Keep in mind that when <A HREF="repeat.html#repeating">repeating</A> the &quot;<A HREF="pattern.html#n">n</A>&quot; command to search for the next
+   Keep in mind that when <A HREF="repeat.html#repeating">repeating</A> the &quot;<A HREF="pattern.html#n">n</A>&quot;命令 to search for the next
 match, you eventually get back to the first match.  If you don't notice this
 you keep searching forever!  To give you a hint, Vim displays this message:
 
 <B><FONT color="#3A6F2B">	search hit BOTTOM, continuing at TOP </FONT></B>
 
-If you use the &quot;<A HREF="pattern.html#?">?</A>&quot; command, to search in the other direction, you get this
+If you use the &quot;<A HREF="pattern.html#?">?</A>&quot;命令, to search in the other direction, you get this
 message:
 
 <B><FONT color="#3A6F2B">	search hit TOP, continuing at BOTTOM </FONT></B>
@@ -222,7 +222,7 @@ appending a slash (/) and the offset:
 
 This command searches for the <A HREF="pattern.html#pattern">pattern</A> &quot;default&quot; and then moves to the
 beginning of the second line past the <A HREF="pattern.html#pattern">pattern</A>.  Using this command on the
-<A HREF="motion.html#paragraph">paragraph</A> above, Vim finds the <A HREF="motion.html#word">单词</A> &quot;default&quot; in the first line.  Then the
+<A HREF="motion.html#paragraph">段落</A> above, Vim finds the <A HREF="motion.html#word">单词</A> &quot;default&quot; in the first line.  Then the
 cursor is moved two lines down and lands on &quot;an offset&quot;.
 
 If the offset is a simple number, the cursor will be placed at the beginning
@@ -245,7 +245,7 @@ This command moves to the character just after the match:
 <B>	/const/e+1</B>
 
 A positive number moves the cursor to the right, a negative number moves <A HREF="motion.html#it">它</A> to
-the left.  For example:
+the left.例如:
 
 <B>	/const/e-1</B>
 
@@ -254,7 +254,7 @@ moves the cursor to the &quot;<A HREF="change.html#s">s</A>&quot; of &quot;const
 If the offset begins with &quot;<A HREF="motion.html#b">b</A>&quot;, the cursor moves to the beginning of the
 <A HREF="pattern.html#pattern">pattern</A>.  That's not very useful, since leaving out the &quot;<A HREF="motion.html#b">b</A>&quot; does the same
 thing.  It does get useful when a number is added or subtracted.  The cursor
-then goes forward or backward that many characters.  For example:
+then goes forward or backward that many characters.例如:
 
 <B>	/const/b+2</B>
 
@@ -285,7 +285,7 @@ To repeat with the same offset:
 
 SEARCHING BACKWARDS
 
-The &quot;<A HREF="pattern.html#?">?</A>&quot; command uses offsets in the same way, but you must use &quot;<A HREF="pattern.html#?">?</A>&quot; to separate
+The &quot;<A HREF="pattern.html#?">?</A>&quot;命令 uses offsets in the same way, but you must use &quot;<A HREF="pattern.html#?">?</A>&quot; to separate
 the offset from the <A HREF="pattern.html#pattern">pattern</A>, instead of &quot;<A HREF="pattern.html#/">/</A>&quot;:
 
 <B>	?const?e-2</B>
@@ -297,7 +297,7 @@ of &quot;<A HREF="pattern.html#?">?</A>&quot;.
 START POSITION
 
 When starting a search, <A HREF="motion.html#it">它</A> normally starts at the cursor position.  When you
-specify a line offset, this can cause trouble.  For example:
+specify a line offset, this can cause trouble.例如:
 
 <B>	/const/-2</B>
 
@@ -325,7 +325,7 @@ Thus:
 matches &quot;<A HREF="insert.html#a">a</A>&quot;, &quot;aa&quot;, &quot;aaa&quot;, etc.  But also &quot;&quot; (the empty string), because zero
 times is included.
    The &quot;*&quot; only applies to the item directly before <A HREF="motion.html#it">它</A>.  Thus &quot;ab*&quot; matches
-&quot;<A HREF="insert.html#a">a</A>&quot;, &quot;<A HREF="motion.html#ab">ab</A>&quot;, &quot;abb&quot;, &quot;abbb&quot;, etc.  To match a whole <A HREF="eval.html#string">string</A> multiple times, <A HREF="motion.html#it">它</A>
+&quot;<A HREF="insert.html#a">a</A>&quot;, &quot;<A HREF="motion.html#ab">ab</A>&quot;, &quot;abb&quot;, &quot;abbb&quot;, etc.  To match a whole <A HREF="options\.html#options">字符串</A> multiple times, <A HREF="motion.html#it">它</A>
 must be grouped into one item.  This is done by putting &quot;\(&quot; before <A HREF="motion.html#it">它</A> and
 &quot;\)&quot; after <A HREF="motion.html#it">它</A>.  Thus this command:
 
@@ -333,7 +333,7 @@ must be grouped into one item.  This is done by putting &quot;\(&quot; before <A
 
 Matches: &quot;<A HREF="motion.html#ab">ab</A>&quot;, &quot;abab&quot;, &quot;ababab&quot;, etc.  And also &quot;&quot;.
 
-To avoid matching the empty <A HREF="eval.html#string">string</A>, use &quot;\+&quot;.  This makes the previous item
+To avoid matching the empty <A HREF="options\.html#options">字符串</A>, use &quot;\+&quot;.  This makes the previous item
 match one or more times.
 
 <B>	/ab\+</B>
@@ -374,7 +374,7 @@ MATCHING AS LITTLE AS POSSIBLE
 The items so far match <A HREF="motion.html#as">as</A> many characters <A HREF="motion.html#as">as</A> they can find.  To match <A HREF="motion.html#as">as</A> few
 <A HREF="motion.html#as">as</A> possible, use &quot;\{-n,m}&quot;.  It works the same <A HREF="motion.html#as">as</A> &quot;\{n,m}&quot;, except that the
 minimal amount possible is used.
-   For example, use:
+ 例如, use:
 
 <B>	/ab\{-1,3}</B>
 
@@ -436,7 +436,7 @@ letters from &quot;<A HREF="insert.html#a">a</A>&quot; to &quot;<A HREF="viminde
 <B>	/[a-z]</B>
 
 The <A HREF="motion.html#[]">[]</A> construct matches a single character.  Inside you specify which
-characters to match.  You can include a <A HREF="eval.html#list">list</A> of characters, like this:
+characters to match.  You can include a <A HREF="eval.html#list">列表</A> of characters, like this:
 
 <B>	/[0123456789abcdef]</B>
 
@@ -491,18 +491,18 @@ few more of these:
 	\X	non-hex digit		[^0-9a-fA-F]
 	\s	white space		[ 	]     (&lt;Tab&gt; and <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A>)
 	\S	non-white characters	[^ 	]     (not <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> and <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A>)
-	\l	<A HREF="change.html#lowercase">lowercase</A> alpha		[a-z]
+	\l	<A HREF="change.html#lowercase">小写</A> alpha		[a-z]
 	\L	non-lowercase alpha	[^a-z]
-	\u	<A HREF="change.html#uppercase">uppercase</A> alpha		[A-Z]
+	\u	<A HREF="change.html#uppercase">大写</A> alpha		[A-Z]
 	\U	non-uppercase alpha	[^A-Z]
 
 	Note:
 	Using these predefined ranges works a lot faster than the character
 	range <A HREF="motion.html#it">它</A> stands for.
 	These items can not be used inside <A HREF="motion.html#[]">[]</A>.  Thus &quot;[\d\l]&quot; does NOT work to
-	match a digit or <A HREF="change.html#lowercase">lowercase</A> alpha.  Use &quot;\(\d\|\l\)&quot; instead.
+	match a digit or <A HREF="change.html#lowercase">小写</A> alpha.  Use &quot;\(\d\|\l\)&quot; instead.
 
-见 |<A HREF="pattern.html#/\s">/\s</A>| for the whole <A HREF="eval.html#list">list</A> of these ranges.
+见 |<A HREF="pattern.html#/\s">/\s</A>| for the whole <A HREF="eval.html#list">列表</A> of these ranges.
 
 ==============================================================================
 
@@ -511,7 +511,7 @@ few more of these:
 The character range matches a fixed set of characters.  A character class is
 similar, but with an essential difference: The set of characters can be
 redefined without <A HREF="change.html#changing">changing</A> the search <A HREF="pattern.html#pattern">pattern</A>.
-   For example, search for this <A HREF="pattern.html#pattern">pattern</A>:
+ 例如, search for this <A HREF="pattern.html#pattern">pattern</A>:
 
 <B>	/\f\+</B>
 
@@ -599,7 +599,7 @@ items mentioned above can be combined.
 
 FINDING A CALIFORNIA LICENSE PLATE
 
-A sample <A HREF="uganda.html#license">license</A> plate number is &quot;1MGU103&quot;.  It has one digit, three <A HREF="change.html#uppercase">uppercase</A>
+A sample <A HREF="uganda.html#license">license</A> plate number is &quot;1MGU103&quot;.  It has one digit, three <A HREF="change.html#uppercase">大写</A>
 letters and three digits.  Directly putting this into a search <A HREF="pattern.html#pattern">pattern</A>:
 
 <B>	/\d\u\u\u\d\d\d</B>
@@ -615,7 +615,7 @@ Using <A HREF="motion.html#[]">[]</A> ranges instead:
 
 Which one of these you should use?  Whichever one you can remember.  The
 simple way you can remember is much faster than the fancy way that you can't.
-If you can remember them all, then avoid the last one, because it's both more
+If you can remember them all然后avoid the last one, because it's both more
 typing and slower to execute.
 
 
@@ -632,7 +632,7 @@ and &quot;\w&quot; for &quot;[0-9A-Za-z_]&quot;.
 
 	Note:
 	&quot;\&lt;&quot; and &quot;\&gt;&quot; depend on the <A HREF="options.html#'iskeyword'">'iskeyword'</A> option.  If <A HREF="motion.html#it">它</A> includes &quot;<A HREF="motion.html#-">-</A>&quot;,
-	for example, then &quot;ident-&quot; is not matched.  In this situation use:
+	for example然后&quot;ident-&quot; is not matched.  In this situation use:
 
 <B>		/\w\@&lt;!\h\w*\w\@!</B>
  

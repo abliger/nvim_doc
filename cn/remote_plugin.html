@@ -194,12 +194,12 @@ command, <A HREF="autocmd.html#autocommand">autocommand</A>, or function is used
 The manifest generation step is necessary to keep Nvim's <A HREF="starting.html#startup">startup</A> fast in
 situations where a user has remote plugins with different hosts. For example,
 say a user has three plugins, for <A HREF="if_pyth.html#Python">Python</A>, Java and .NET hosts respectively. If
-we were to load all three plugins at <A HREF="starting.html#startup">startup</A>, then three language runtimes
+we were to load all three plugins at <A HREF="starting.html#startup">startup</A>然后three language runtimes
 would also be spawned, which could take seconds!
 
 With the manifest, each host will only be loaded when required. Continuing with
 the example, say the Java <A HREF="usr_05.html#plugin">plugin</A> is a semantic completion engine for Java code.
-If <A HREF="motion.html#it">它</A> defines the <A HREF="autocmd.html#autocommand">autocommand</A> &quot;<A HREF="autocmd.html#BufEnter">BufEnter</A> *.java&quot;, then the Java host is spawned
+If <A HREF="motion.html#it">它</A> defines the <A HREF="autocmd.html#autocommand">autocommand</A> &quot;<A HREF="autocmd.html#BufEnter">BufEnter</A> *.java&quot;然后the Java host is spawned
 only when Nvim loads a buffer matching &quot;*.java&quot;.
 
 If the explicit call to |<A HREF="#:UpdateRemotePlugins">:UpdateRemotePlugins</A>| seems inconvenient, try to see

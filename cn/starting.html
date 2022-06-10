@@ -96,7 +96,7 @@ More generally, Nvim is started with:
 <B>	nvim [option | filename] ..</B>
 
 Option arguments and file name arguments can be mixed, and any number of them
-can be given.  However, watch out for <A HREF="options.html#options">options</A> that take an argument.
+can be given.  However, watch out for <A HREF="options\.html#options">选项</A> that take an argument.
 
 The following items decide how to start editing:
 
@@ -109,7 +109,7 @@ filename	One or more file names.  The first one will be the current
 		an option, precede the <A HREF="editing.html#arglist">arglist</A> with &quot;<A HREF="#--">--</A>&quot;, e.g.:
 <B>			nvim -- -filename</B>
  		All arguments after the &quot;<A HREF="#--">--</A>&quot; will be interpreted <A HREF="motion.html#as">as</A> file names,
-		no other <A HREF="options.html#options">options</A> or &quot;+command&quot; argument can follow.
+		no other <A HREF="options\.html#options">选项</A> or &quot;+command&quot; argument can follow.
 
 
 							*<A NAME="--"></A><B>--</B>*
@@ -156,7 +156,7 @@ filename	One or more file names.  The first one will be the current
 
 
 							*<A NAME="startup-options"></A><B>startup-options</B>*
-The option arguments may be given in any order.  Single-letter <A HREF="options.html#options">options</A> can be
+The option arguments may be given in any order.  Single-letter <A HREF="options\.html#options">选项</A> can be
 combined after one dash.  There can be no option arguments after the &quot;<A HREF="#--">--</A>&quot;
 argument.
 
@@ -192,10 +192,10 @@ argument.
 
 
 <A HREF="#--startuptime">--startuptime</A> {fname}					*<A NAME="--startuptime"></A><B>--startuptime</B>*
-		During <A HREF="#startup">startup</A> write timing <A HREF="message.html#messages">messages</A> to the file {fname}.
+		During <A HREF="#startup">startup</A> write timing <A HREF="message.html#messages">信息</A> to the file {fname}.
 		This can be used to find out where time is spent while loading
 		your |<A HREF="#config">config</A>|, plugins and opening the first file.
-		When {fname} already exists new <A HREF="message.html#messages">messages</A> are appended.
+		When {fname} already exists new <A HREF="message.html#messages">信息</A> are appended.
 
 
 							*<A NAME="-+"></A><B>-+</B>*
@@ -232,7 +232,7 @@ argument.
 <A HREF="#--cmd">--cmd</A> {command}						*<A NAME="--cmd"></A><B>--cmd</B>*
 		{command} will be executed before processing any <A HREF="#vimrc">vimrc</A> file.
 		Otherwise <A HREF="motion.html#it">它</A> acts like <A HREF="#-c">-c</A> {command}.  You can use up to 10 of
-		these commands, independently from &quot;<A HREF="#-c">-c</A>&quot; commands.
+		these commands, independently from &quot;<A HREF="#-c">-c</A>&quot;命令.
 
 
 							*<A NAME="-S"></A><B>-S</B>*
@@ -248,7 +248,7 @@ argument.
 
 
 <A HREF="#-L">-L</A>							*<A NAME="-L"></A><B>-L</B>* *<A NAME="-r"></A><B>-r</B>*
-<A HREF="#-r">-r</A>		Recovery mode.  Without a file name argument, a <A HREF="eval.html#list">list</A> of
+<A HREF="#-r">-r</A>		Recovery mode.  Without a file name argument, a <A HREF="eval.html#list">列表</A> of
 		existing swap files is given.  With a file name, a swap file
 		is read to recover a crashed editing session.  See
 		|<A HREF="recover.html#crash-recovery">crash-recovery</A>|.
@@ -261,7 +261,7 @@ argument.
 		forgot that you are in <A HREF="#View">View</A> mode and did make some changes,
 		you can overwrite a file by adding an exclamation <A HREF="motion.html#mark">mark</A> to
 		the <A HREF="intro.html#Ex">Ex</A> command, <A HREF="motion.html#as">as</A> in &quot;<A HREF="editing.html#:w!">:w!</A>&quot;.  The <A HREF="options.html#'readonly'">'readonly'</A> option can be
-		reset with &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'noro'">noro</A>&quot; (see the options chapter, |<A HREF="options.html#options">options</A>|).
+		reset with &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'noro'">noro</A>&quot; (see the options chapter, |<A HREF="options\.html#options">选项</A>|).
 		Subsequent edits will not be done in readonly mode.  Calling
 		the executable &quot;view&quot; has the same effect <A HREF="motion.html#as">as</A> the <A HREF="#-R">-R</A> argument.
 		The <A HREF="options.html#'updatecount'">'updatecount'</A> option will be set to 10000, meaning that
@@ -271,16 +271,16 @@ argument.
 
 							*<A NAME="-m"></A><B>-m</B>*
 <A HREF="#-m">-m</A>		Modifications not allowed to be written.  The <A HREF="options.html#'write'">'write'</A> option
-		will be reset, so that <A HREF="editing.html#writing">writing</A> files is disabled.  However,
-		the <A HREF="options.html#'write'">'write'</A> option can be set to enable <A HREF="editing.html#writing">writing</A> again.
+		will be reset, so that <A HREF="editing.html#writing">写</A> files is disabled.  However,
+		the <A HREF="options.html#'write'">'write'</A> option can be set to enable <A HREF="editing.html#writing">写</A> again.
 
 
 							*<A NAME="-M"></A><B>-M</B>*
 <A HREF="#-M">-M</A>		Modifications not allowed.  The <A HREF="options.html#'modifiable'">'modifiable'</A> option will be
 		reset, so that changes are not allowed.  The <A HREF="options.html#'write'">'write'</A> option
-		will be reset, so that <A HREF="editing.html#writing">writing</A> files is disabled.  However,
-		the <A HREF="options.html#'modifiable'">'modifiable'</A> and <A HREF="options.html#'write'">'write'</A> <A HREF="options.html#options">options</A> can be set to enable
-		changes and <A HREF="editing.html#writing">writing</A>.
+		will be reset, so that <A HREF="editing.html#writing">写</A> files is disabled.  However,
+		the <A HREF="options.html#'modifiable'">'modifiable'</A> and <A HREF="options.html#'write'">'write'</A> <A HREF="options\.html#options">选项</A> can be set to enable
+		changes and <A HREF="editing.html#writing">写</A>.
 
 
 <A HREF="#-e">-e</A>							*<A NAME="-e"></A><B>-e</B>* *<A NAME="-E"></A><B>-E</B>*
@@ -293,7 +293,7 @@ argument.
 
 <A HREF="#-es">-es</A>						*<A NAME="-es"></A><B>-es</B>* *<A NAME="-Es"></A><B>-Es</B>* *<A NAME="-s-ex"></A><B>-s-ex</B>* *<A NAME="silent-mode"></A><B>silent-mode</B>*
 <A HREF="#-Es">-Es</A>		Silent mode (no UI), for scripting.  Unrelated to |<A HREF="#-s">-s</A>|.
-		Disables most prompts, <A HREF="message.html#messages">messages</A>, warnings and <A HREF="message.html#errors">errors</A>.
+		Disables most prompts, <A HREF="message.html#messages">信息</A>, warnings and <A HREF="message.html#errors">errors</A>.
 
 		<A HREF="#-es">-es</A> reads/executes stdin <A HREF="motion.html#as">as</A> <A HREF="intro.html#Ex">Ex</A> commands.
 <B>			printf "put ='foo'\n%%print\n" | nvim -es</B>
@@ -307,7 +307,7 @@ argument.
 			<A HREF="various.html#:list">:list</A>
 			<A HREF="various.html#:number">:number</A>
 			<A HREF="options.html#:set">:set</A>      (to display option values)
-		When <A HREF="options.html#'verbose'">'verbose'</A> is set <A HREF="message.html#messages">messages</A> are printed to stderr.
+		When <A HREF="options.html#'verbose'">'verbose'</A> is set <A HREF="message.html#messages">信息</A> are printed to stderr.
 <B>			echo foo | nvim -V1 -es</B>
 
  		<A HREF="autocmd.html#User">User</A> |<A HREF="#config">config</A>| is skipped (unless given with |<A HREF="#-u">-u</A>|).
@@ -324,7 +324,7 @@ argument.
 
 
 							*<A NAME="-l"></A><B>-l</B>*
-<A HREF="#-l">-l</A>		Lisp mode.  Sets the <A HREF="options.html#'lisp'">'lisp'</A> and <A HREF="options.html#'showmatch'">'showmatch'</A> <A HREF="options.html#options">options</A> on.
+<A HREF="#-l">-l</A>		Lisp mode.  Sets the <A HREF="options.html#'lisp'">'lisp'</A> and <A HREF="options.html#'showmatch'">'showmatch'</A> <A HREF="options\.html#options">选项</A> on.
 
 
 							*<A NAME="-A"></A><B>-A</B>*
@@ -332,13 +332,13 @@ argument.
 
 
 							*<A NAME="-H"></A><B>-H</B>*
-<A HREF="#-H">-H</A>		Hebrew mode.  Sets the <A HREF="options.html#'hkmap'">'hkmap'</A> and <A HREF="options.html#'rightleft'">'rightleft'</A> <A HREF="options.html#options">options</A> on.
+<A HREF="#-H">-H</A>		Hebrew mode.  Sets the <A HREF="options.html#'hkmap'">'hkmap'</A> and <A HREF="options.html#'rightleft'">'rightleft'</A> <A HREF="options\.html#options">选项</A> on.
 
 
 							*<A NAME="-V"></A><B>-V</B>* *<A NAME="verbose"></A><B>verbose</B>*
 -V[N]		Verbose.  Sets the <A HREF="options.html#'verbose'">'verbose'</A> option to [N] (default: 10).
 		Messages will be given for each file that is &quot;<A HREF="repeat.html#:source">:source</A>&quot;d and
-		for reading or <A HREF="editing.html#writing">writing</A> a ShaDa file.  Can be used to find
+		for reading or <A HREF="editing.html#writing">写</A> a ShaDa file.  Can be used to find
 		out what is happening upon <A HREF="#startup">startup</A> and exit.
 		Example:
 <B>			nvim -V8</B>
@@ -405,7 +405,7 @@ argument.
 
 		This can be used to start Vim in a special mode, with special
 		mappings and settings.  A shell alias can be used to make
-		this easy to use.  For example:
+		this easy to use.例如:
 <B>			alias vimc vim -u ~/.config/nvim/c_init.vim !*</B>
  		Also consider using autocommands; 见 |<A HREF="autocmd.html#autocommand">autocommand</A>|.
 
@@ -465,7 +465,7 @@ argument.
 
 		Waits for the client (&quot;embedder&quot;) to call |<A HREF="api.html#nvim_ui_attach()">nvim_ui_attach()</A>|
 		before sourcing <A HREF="#startup">startup</A> files and reading <A HREF="windows.html#buffers">buffers</A>, so that UIs
-		can deterministically handle (display) early <A HREF="message.html#messages">messages</A>,
+		can deterministically handle (display) early <A HREF="message.html#messages">信息</A>,
 		dialogs, etc.  The client can <A HREF="diff.html#do">do</A> other requests before
 		`nvim_ui_attach` (e.g. `nvim_get_api_info` for feature-detection).
 		During this pre-startup phase the user <A HREF="#config">config</A> is of course not
@@ -486,7 +486,7 @@ argument.
 		builtin <A HREF="term.html#TUI">TUI</A> is not used, so stdio works <A HREF="motion.html#as">as</A> an arbitrary
 		communication channel. |<A HREF="channel.html#channel-stdio">channel-stdio</A>|
 
-		Also useful for scripting (tests) to see <A HREF="message.html#messages">messages</A> that would
+		Also useful for scripting (tests) to see <A HREF="message.html#messages">信息</A> that would
 		not be printed by |<A HREF="#-es">-es</A>|.
 
 		To detect if a <A HREF="ui.html#UI">UI</A> is available, check if |<A HREF="api.html#nvim_list_uis()">nvim_list_uis()</A>| is
@@ -497,7 +497,7 @@ argument.
 <B>			echo foo | nvim --headless +"%print" +"q!" -</B>
  
 		See also |<A HREF="#--embed">--embed</A>|.
-		See also |<A HREF="#-es">-es</A>|, which also disables most <A HREF="message.html#messages">messages</A>.
+		See also |<A HREF="#-es">-es</A>|, which also disables most <A HREF="message.html#messages">信息</A>.
 
 
 <A HREF="#--listen">--listen</A> {addr}						*<A NAME="--listen"></A><B>--listen</B>*
@@ -518,7 +518,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	if <A HREF="#SHELL">SHELL</A> is not set.
 
 2. Process the arguments
-	The <A HREF="options.html#options">options</A> and file names from the command that start Vim are
+	The <A HREF="options\.html#options">选项</A> and file names from the command that start Vim are
 	inspected.  Buffers are created for all files (but not loaded yet).
 	The |<A HREF="#-V">-V</A>| argument can be used to display or log what happens next,
 	useful for debugging the initializations.
@@ -602,7 +602,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
  	The result is that all directories in <A HREF="options.html#'runtimepath'">'runtimepath'</A> will be searched
 	for the &quot;<A HREF="usr_05.html#plugin">plugin</A>&quot; sub-directory and all files ending in &quot;.vim&quot; or
 	&quot;.lua&quot; will be sourced (in alphabetical order per directory),
-	also in subdirectories. First &quot;*.vim&quot; are sourced, then &quot;*.lua&quot; files.
+	also in subdirectories. First &quot;*.vim&quot; are sourced然后&quot;*.lua&quot; files.
 
 	However, directories in <A HREF="options.html#'runtimepath'">'runtimepath'</A> ending in &quot;after&quot; are skipped
 	here and only loaded after <A HREF="repeat.html#packages">packages</A>, see below.
@@ -626,14 +626,14 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	ending in &quot;after&quot;.
 
 10. Set <A HREF="options.html#'shellpipe'">'shellpipe'</A> and <A HREF="options.html#'shellredir'">'shellredir'</A>
-	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> and <A HREF="options.html#'shellredir'">'shellredir'</A> <A HREF="options.html#options">options</A> are set according to the
+	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> and <A HREF="options.html#'shellredir'">'shellredir'</A> <A HREF="options\.html#options">选项</A> are set according to the
 	value of the <A HREF="options.html#'shell'">'shell'</A> option, unless they have been set before.
 	This means that Nvim will figure out the values of <A HREF="options.html#'shellpipe'">'shellpipe'</A> and
 	<A HREF="options.html#'shellredir'">'shellredir'</A> for you, unless you have set them yourself.
 
-11. Set <A HREF="options.html#'updatecount'">'updatecount'</A> to zero, if &quot;<A HREF="#-n">-n</A>&quot; command argument used
+11. Set <A HREF="options.html#'updatecount'">'updatecount'</A> to zero, if &quot;<A HREF="#-n">-n</A>&quot;命令 argument used
 
-12. Set binary <A HREF="options.html#options">options</A> if the |<A HREF="#-b">-b</A>| flag was given.
+12. Set binary <A HREF="options\.html#options">选项</A> if the |<A HREF="#-b">-b</A>| flag was given.
 
 13. Read the |<A HREF="#shada-file">shada-file</A>|.
 
@@ -659,8 +659,8 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 
 <B><FONT color="#3A6F2B">Saving the current state of Vim to a file </FONT></B>
 
-Whenever you have changed values of <A HREF="options.html#options">options</A> or when you have created a
-<A HREF="map.html#mapping">mapping</A>, then you may want to save them in a <A HREF="#vimrc">vimrc</A> file for later use.  See
+Whenever you have changed values of <A HREF="options\.html#options">选项</A> or when you have created a
+<A HREF="map.html#mapping">mapping</A>然后you may want to save them in a <A HREF="#vimrc">vimrc</A> file for later use.  See
 |<A HREF="#save-settings">save-settings</A>| about saving the current state of settings to a file.
 
 
@@ -722,7 +722,7 @@ To find the cause of a problem in your <A HREF="#config">config</A>, you must &q
 							*<A NAME=":intro"></A><B>:intro</B>*
 When Vim starts without a file name, an introductory message is displayed.  It
 is removed <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> the display is redrawn.  To see the message again, use
-the &quot;<A HREF="#:intro">:intro</A>&quot; command.  To avoid the <A HREF="intro.html#intro">intro</A> message on <A HREF="#startup">startup</A>, add the &quot;<A HREF="insert.html#I">I</A>&quot; flag
+the &quot;<A HREF="#:intro">:intro</A>&quot;命令.  To avoid the <A HREF="intro.html#intro">intro</A> message on <A HREF="#startup">startup</A>, add the &quot;<A HREF="insert.html#I">I</A>&quot; flag
 to <A HREF="options.html#'shortmess'">'shortmess'</A>.
 
 ==============================================================================
@@ -748,14 +748,14 @@ After doing this once, Nvim sets the <A HREF="#$VIM">$VIM</A> environment variab
 
 								*<A NAME="$VIMRUNTIME"></A><B>$VIMRUNTIME</B>*
 The environment variable &quot;<A HREF="#$VIMRUNTIME">$VIMRUNTIME</A>&quot; is used to locate various support
-files, such <A HREF="motion.html#as">as</A> the documentation and <A HREF="syntax.html#syntax-highlighting">syntax-highlighting</A> files.  For example,
+files, such <A HREF="motion.html#as">as</A> the documentation and <A HREF="syntax.html#syntax-highlighting">syntax-highlighting</A> files.例如,
 the main help file is normally &quot;$VIMRUNTIME/doc/help.txt&quot;.
 
 Nvim will try to get the value for <A HREF="#$VIMRUNTIME">$VIMRUNTIME</A> in this order:
 
 1. Environment variable <A HREF="#$VIMRUNTIME">$VIMRUNTIME</A>, if <A HREF="motion.html#it">它</A> is set.
 2. Directory path &quot;$VIM/vim{version}&quot;, if <A HREF="motion.html#it">它</A> exists, where {version} is the
-   Vim version number without '<A HREF="motion.html#-">-</A>' or '<A HREF="repeat.html#.">.</A>'.  For example: &quot;$VIM/vim82&quot;.
+   Vim version number without '<A HREF="motion.html#-">-</A>' or '<A HREF="repeat.html#.">.</A>'.例如: &quot;$VIM/vim82&quot;.
 3. Directory path &quot;$VIM/runtime&quot;, if <A HREF="motion.html#it">它</A> exists.
 4. Value of <A HREF="#$VIM">$VIM</A> environment variable.  This is for backwards compatibility
    with older Vim versions.
@@ -821,26 +821,26 @@ You can use these files <A HREF="motion.html#as">as</A> they are, or copy/paste 
 
 
 							*<A NAME=":mk"></A><B>:mk</B>* *<A NAME=":mkexrc"></A><B>:mkexrc</B>*
-:mk[exrc] [file]	Write current key mappings and changed <A HREF="options.html#options">options</A> to
+:mk[exrc] [file]	Write current key mappings and changed <A HREF="options\.html#options">选项</A> to
 			[file] (default &quot;.exrc&quot; in the current directory),
 			unless <A HREF="motion.html#it">它</A> already exists.
 
 :mk[exrc]! [file]	Always write current key mappings and changed
-			<A HREF="options.html#options">options</A> to [file] (default &quot;.exrc&quot; in the current
+			<A HREF="options\.html#options">选项</A> to [file] (default &quot;.exrc&quot; in the current
 			directory).
 
 
 						*<A NAME=":mkv"></A><B>:mkv</B>* *<A NAME=":mkvi"></A><B>:mkvi</B>* *<A NAME=":mkvimrc"></A><B>:mkvimrc</B>*
 :mkv[imrc][!] [file]	Like &quot;<A HREF="#:mkexrc">:mkexrc</A>&quot;, but the default is &quot;.nvimrc&quot; in the
-			current directory.  The &quot;<A HREF="various.html#:version">:version</A>&quot; command is also
+			current directory.  The &quot;<A HREF="various.html#:version">:version</A>&quot;命令 is also
 			written to the file.
 
-These commands will write &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.html#:set">:set</A>&quot; commands to a file, in such a way
-that when these commands are executed, the current key mappings and <A HREF="options.html#options">options</A>
-will be set to the same values.  The <A HREF="options.html#options">options</A> <A HREF="options.html#'columns'">'columns'</A>, <A HREF="options.html#'endofline'">'endofline'</A>,
+These commands will write &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.html#:set">:set</A>&quot;命令 to a file, in such a way
+that when these commands are executed, the current key mappings and <A HREF="options\.html#options">选项</A>
+will be set to the same values.  The <A HREF="options\.html#options">选项</A> <A HREF="options.html#'columns'">'columns'</A>, <A HREF="options.html#'endofline'">'endofline'</A>,
 <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'lines'">'lines'</A>, <A HREF="options.html#'modified'">'modified'</A>, and <A HREF="options.html#'scroll'">'scroll'</A> are not included, because
 these are <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> or file dependent.
-Note that the <A HREF="options.html#options">options</A> <A HREF="options.html#'binary'">'binary'</A>, <A HREF="options.html#'paste'">'paste'</A> and <A HREF="options.html#'readonly'">'readonly'</A> are included, this
+Note that the <A HREF="options\.html#options">选项</A> <A HREF="options.html#'binary'">'binary'</A>, <A HREF="options.html#'paste'">'paste'</A> and <A HREF="options.html#'readonly'">'readonly'</A> are included, this
 might not always be what you want.
 
 When special keys are used in mappings, The <A HREF="options.html#'cpoptions'">'cpoptions'</A> option will be
@@ -851,7 +851,7 @@ can be used with different terminals.
 Only global mappings are stored, not mappings local to a buffer.
 
 A common <A HREF="eval.html#method">method</A> is to use a default |<A HREF="#config">config</A>| file, make some modifications
-with &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.html#:set">:set</A>&quot; commands and write the modified file.  First read the
+with &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.html#:set">:set</A>&quot;命令 and write the modified file.  First read the
 default <A HREF="#vimrc">vimrc</A> in with a command like &quot;<A HREF="repeat.html#:source">:source</A> ~piet/.vimrc.Cprogs&quot;, change
 the settings and then save them in the current directory with &quot;:mkvimrc!&quot;.  If
 you want to make this file your default |<A HREF="#config">config</A>|, move <A HREF="motion.html#it">它</A> to
@@ -881,7 +881,7 @@ This is introduced in sections |<A HREF="usr_21.html#21.4">21.4</A>| and |<A HRE
 						*<A NAME="View"></A><B>View</B>* *<A NAME="view-file"></A><B>view-file</B>*
 A <A HREF="#View">View</A> is a collection of settings that apply to one<A HREF="windows.html#window">窗口</A>.  You can save a
 <A HREF="#View">View</A> and when you restore <A HREF="motion.html#it">它</A> later, the text is displayed in the same way.
-The <A HREF="options.html#options">options</A> and mappings in this<A HREF="windows.html#window">窗口</A>will also be restored, so that you can
+The <A HREF="options\.html#options">选项</A> and mappings in this<A HREF="windows.html#window">窗口</A>will also be restored, so that you can
 continue editing like when the <A HREF="#View">View</A> was saved.
 
 
@@ -907,11 +907,11 @@ You can quickly start editing with a previously saved <A HREF="#View">View</A> o
 
 The output of &quot;<A HREF="#:mksession">:mksession</A>&quot; is like &quot;<A HREF="#:mkvimrc">:mkvimrc</A>&quot;, but additional commands are
 added to the file.  Which ones depends on the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option.  The
-resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source</A>&quot; command:
-1. Restores global mappings and <A HREF="options.html#options">options</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
-   &quot;<A HREF="options.html#options">options</A>&quot;.  Script-local mappings will not be written.
-2. Restores global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A> and contain
-   at least one <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;globals&quot;.
+resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source</A>&quot;命令:
+1. Restores global mappings and <A HREF="options\.html#options">选项</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
+   &quot;<A HREF="options\.html#options">选项</A>&quot;.  Script-local mappings will not be written.
+2. Restores global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> and contain
+   at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;globals&quot;.
 3. Closes all <A HREF="windows.html#windows">windows</A> in the current <A HREF="intro.html#tab">tab</A> page, except the current one; closes
    all <A HREF="intro.html#tab">tab</A> pages except the current one (this results in currently loaded
    <A HREF="windows.html#buffers">buffers</A> to be unloaded, some may become hidden if <A HREF="options.html#'hidden'">'hidden'</A> is set or
@@ -922,7 +922,7 @@ resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source
    contains &quot;sesdir&quot;.
 5. Restores <A HREF="gui.html#GUI">GUI</A> Vim<A HREF="windows.html#window">窗口</A>position, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;winpos&quot;.
 6. Restores screen size, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;resize&quot;.
-7. Reloads the buffer <A HREF="eval.html#list">list</A>, with the last cursor positions.  If
+7. Reloads the buffer <A HREF="eval.html#list">列表</A>, with the last cursor positions.  If
    <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;<A HREF="windows.html#buffers">buffers</A>&quot; then all <A HREF="windows.html#buffers">buffers</A> are restored,
    including hidden and unloaded <A HREF="windows.html#buffers">buffers</A>.  Otherwise only <A HREF="windows.html#buffers">buffers</A> in <A HREF="windows.html#windows">windows</A>
    are restored.
@@ -974,17 +974,17 @@ triggered.
 			generated file.
 
 The output of &quot;<A HREF="#:mkview">:mkview</A>&quot; contains these items:
-1. The argument <A HREF="eval.html#list">list</A> used in the<A HREF="windows.html#window">窗口</A>.  When the global argument <A HREF="eval.html#list">list</A> is
-   used <A HREF="motion.html#it">它</A> is reset to the global <A HREF="eval.html#list">list</A>.
-   The index in the argument <A HREF="eval.html#list">list</A> is also restored.
+1. The argument <A HREF="eval.html#list">列表</A> used in the<A HREF="windows.html#window">窗口</A>.  When the global argument <A HREF="eval.html#list">列表</A> is
+   used <A HREF="motion.html#it">它</A> is reset to the global <A HREF="eval.html#list">列表</A>.
+   The index in the argument <A HREF="eval.html#list">列表</A> is also restored.
 2. The file being edited in the<A HREF="windows.html#window">窗口</A>.  If there is no file, the<A HREF="windows.html#window">窗口</A>is
    made empty.
-3. Restore mappings, <A HREF="map.html#abbreviations">abbreviations</A> and <A HREF="options.html#options">options</A> local to the<A HREF="windows.html#window">窗口</A>if
-   <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains &quot;<A HREF="options.html#options">options</A>&quot; or &quot;localoptions&quot;.  For the <A HREF="options.html#options">options</A> <A HREF="motion.html#it">它</A>
+3. Restore mappings, <A HREF="map.html#abbreviations">abbreviations</A> and <A HREF="options\.html#options">选项</A> local to the<A HREF="windows.html#window">窗口</A>if
+   <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains &quot;<A HREF="options\.html#options">选项</A>&quot; or &quot;localoptions&quot;.  For the <A HREF="options\.html#options">选项</A> <A HREF="motion.html#it">它</A>
    restores only values that are local to the current buffer and values local
    to the<A HREF="windows.html#window">窗口</A>.
-   When storing the view <A HREF="motion.html#as">as</A> part of a session and &quot;<A HREF="options.html#options">options</A>&quot; is in
-   <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>, global values for local <A HREF="options.html#options">options</A> will be stored too.
+   When storing the view <A HREF="motion.html#as">as</A> part of a session and &quot;<A HREF="options\.html#options">选项</A>&quot; is in
+   <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>, global values for local <A HREF="options\.html#options">选项</A> will be stored too.
 4. Restore <A HREF="fold.html#folds">folds</A> when using manual <A HREF="fold.html#folding">folding</A> and <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains
    &quot;<A HREF="fold.html#folds">folds</A>&quot;.  Restore manually opened and closed <A HREF="fold.html#folds">folds</A>.
 5. The scroll position and the cursor position in the file.  Doesn't work very
@@ -993,12 +993,12 @@ The output of &quot;<A HREF="#:mkview">:mkview</A>&quot; contains these items:
    directory and <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains &quot;curdir&quot;.
 
 Note that Views and Sessions are not perfect:
-- They don't restore everything.  For example, defined <A HREF="eval.html#functions">functions</A>, autocommands
+- They don't restore everything.例如, defined <A HREF="eval.html#functions">functions</A>, autocommands
   and &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot; are not included.  Things like <A HREF="intro.html#register">register</A> contents and
   command line <A HREF="cmdline.html#history">history</A> are in ShaDa, not in Sessions or Views.
 - Global option values are only set when they differ from the default value.
   When the current value is not the default value, loading a <A HREF="#Session">Session</A> will not
-  set <A HREF="motion.html#it">它</A> back to the default value.  Local <A HREF="options.html#options">options</A> will be set back to the
+  set <A HREF="motion.html#it">它</A> back to the default value.  Local <A HREF="options\.html#options">选项</A> will be set back to the
   default value though.
 - Existing mappings will be overwritten without warning.  An existing <A HREF="map.html#mapping">mapping</A>
   may cause an error for ambiguity.
@@ -1039,13 +1039,13 @@ This is introduced in section |<A HREF="usr_21.html#21.3">21.3</A>| of the user 
 
 The ShaDa file is used to store:
 - The command line <A HREF="cmdline.html#history">history</A>.
-- The search <A HREF="eval.html#string">string</A> <A HREF="cmdline.html#history">history</A>.
+- The search <A HREF="options\.html#options">字符串</A> <A HREF="cmdline.html#history">history</A>.
 - The input-line <A HREF="cmdline.html#history">history</A>.
 - <A HREF="quickref.html#Contents">Contents</A> of non-empty <A HREF="change.html#registers">registers</A>.
 - Marks for several files.
 - File marks, pointing to locations in files.
 - Last search/substitute <A HREF="pattern.html#pattern">pattern</A> (for '<A HREF="pattern.html#n">n</A>' and '&amp;').
-- The buffer <A HREF="eval.html#list">list</A>.
+- The buffer <A HREF="eval.html#list">列表</A>.
 - Global <A HREF="eval.html#variables">variables</A>.
 
 You could also use a <A HREF="#Session">Session</A> file.  The difference is that the ShaDa file
@@ -1067,7 +1067,7 @@ option upon <A HREF="#startup">startup</A>.
 							*<A NAME="shada-write"></A><B>shada-write</B>*
 When Vim exits and <A HREF="options.html#'shada'">'shada'</A> is non-empty, the info is stored in the ShaDa file
 (it's actually merged with the existing one, if one exists |<A HREF="#shada-merging">shada-merging</A>|).
-The <A HREF="options.html#'shada'">'shada'</A> option is a <A HREF="eval.html#string">string</A> containing information about what info should
+The <A HREF="options.html#'shada'">'shada'</A> option is a <A HREF="options\.html#options">字符串</A> containing information about what info should
 be stored, and contains <A HREF="vi_diff.html#limits">limits</A> on how much should be stored (see <A HREF="options.html#'shada'">'shada'</A>).
 
 Notes for Unix:
@@ -1076,7 +1076,7 @@ Notes for Unix:
   you have worked with.
 - If you want to share the ShaDa file with other users (e.g. when you &quot;su&quot;
   to another user), you can make the file writable for the group or everybody.
-  Vim will preserve this when <A HREF="editing.html#writing">writing</A> new ShaDa files.  Be careful, don't
+  Vim will preserve this when <A HREF="editing.html#writing">写</A> new ShaDa files.  Be careful, don't
   allow just anybody to read and write your ShaDa file!
 - Vim will not overwrite a ShaDa file that is not writable by the current
   &quot;real&quot; user.  This helps for when you did &quot;su&quot; to become root, but your
@@ -1093,7 +1093,7 @@ unless &quot;<A HREF="windows.html#:bdel">:bdel</A>&quot; is used.  If you want 
 about to <A HREF="editing.html#abandon">abandon</A> with &quot;<A HREF="windows.html#:bdel">:bdel</A>&quot;, use &quot;<A HREF="#:wsh">:wsh</A>&quot;.  The '<A HREF="vimindex.html#[">[</A>' and '<A HREF="vimindex.html#]">]</A>' marks are not
 stored, but the &#39;&#34;'' <A HREF="motion.html#mark">mark</A> is.  The &#39;&#34;'' <A HREF="motion.html#mark">mark</A> is very useful for jumping to the
 cursor position when the file was last exited.  No marks are saved for files
-that start with any <A HREF="eval.html#string">string</A> given with the &quot;<A HREF="change.html#r">r</A>&quot; flag in <A HREF="options.html#'shada'">'shada'</A>.  This can be
+that start with any <A HREF="options\.html#options">字符串</A> given with the &quot;<A HREF="change.html#r">r</A>&quot; flag in <A HREF="options.html#'shada'">'shada'</A>.  This can be
 used to avoid saving marks for files on removable media (for MS-Windows you
 would use &quot;ra:,rb:&quot;).
 The |<A HREF="eval.html#v:oldfiles">v:oldfiles</A>| variable is filled with the file names that the ShaDa file
@@ -1101,7 +1101,7 @@ has marks for.
 
 
 							*<A NAME="shada-file-marks"></A><B>shada-file-marks</B>*
-Uppercase marks ('A to 'Z) are stored when <A HREF="editing.html#writing">writing</A> the ShaDa file.  The
+Uppercase marks ('A to 'Z) are stored when <A HREF="editing.html#writing">写</A> the ShaDa file.  The
 numbered marks ('0 to '9) are a bit special.  When the ShaDa file is written
 (when <A HREF="#exiting">exiting</A> or with the |<A HREF="#:wshada">:wshada</A>| command), <A HREF="motion.html#'0">'0</A> is set to the current cursor
 position and file.  The old <A HREF="motion.html#'0">'0</A> is moved to '1, '1 to '2, etc.  This
@@ -1127,7 +1127,7 @@ remembered.
 
 MERGING							*<A NAME="shada-merging"></A><B>shada-merging</B>*
 
-When <A HREF="editing.html#writing">writing</A> ShaDa files with |<A HREF="#:wshada">:wshada</A>| without bang or at regular exit
+When <A HREF="editing.html#writing">写</A> ShaDa files with |<A HREF="#:wshada">:wshada</A>| without bang or at regular exit
 information in the existing ShaDa file is merged with information from current
 Neovim instance.  For this purpose ShaDa files store <A HREF="editing.html#timestamps">timestamps</A> associated
 with ShaDa entries.  Specifically the following is being done:
@@ -1139,21 +1139,21 @@ with ShaDa entries.  Specifically the following is being done:
 2. Local marks and changes for files that were not opened by Neovim are copied
    to new ShaDa file. Marks for files that were opened by Neovim are merged,
    changes to files opened by Neovim are ignored. |<A HREF="options.html#shada-'">shada-'</A>|
-3. Jump <A HREF="eval.html#list">list</A> is merged: jumps are ordered by <A HREF="editing.html#timestamp">timestamp</A>, identical jumps
+3. Jump <A HREF="eval.html#list">列表</A> is merged: jumps are ordered by <A HREF="editing.html#timestamp">timestamp</A>, identical jumps
    (identical position AND <A HREF="editing.html#timestamp">timestamp</A>) are squashed.
 4. Search patterns and substitute strings are not merged: search <A HREF="pattern.html#pattern">pattern</A> or
-   substitute <A HREF="eval.html#string">string</A> which has greatest <A HREF="editing.html#timestamp">timestamp</A> will be the only one copied
+   substitute <A HREF="options\.html#options">字符串</A> which has greatest <A HREF="editing.html#timestamp">timestamp</A> will be the only one copied
    to ShaDa file.
 5. For each <A HREF="intro.html#register">register</A> entity with greatest <A HREF="editing.html#timestamp">timestamp</A> is the only saved.
    |<A HREF="options.html#shada-&lt;">shada-&lt;</A>|
 6. All saved <A HREF="eval.html#variables">variables</A> are saved from current Neovim instance. Additionally
    existing variable values are copied, meaning that the only way to remove
    variable from a ShaDa file is either removing <A HREF="motion.html#it">它</A> by hand or disabling
-   <A HREF="editing.html#writing">writing</A> <A HREF="eval.html#variables">variables</A> completely. |<A HREF="options.html#shada-!">shada-!</A>|
+   <A HREF="editing.html#writing">写</A> <A HREF="eval.html#variables">variables</A> completely. |<A HREF="options.html#shada-!">shada-!</A>|
 7. For each global <A HREF="motion.html#mark">mark</A> entity with greatest <A HREF="editing.html#timestamp">timestamp</A> is the only saved.
-8. Buffer <A HREF="eval.html#list">list</A> and header are the only entries which are not merged in any
-   fashion: the only header and buffer <A HREF="eval.html#list">list</A> present are the ones from the
-   Neovim instance which was last <A HREF="editing.html#writing">writing</A> the file. |<A HREF="options.html#shada-&#37;">shada-&#37;</A>|
+8. Buffer <A HREF="eval.html#list">列表</A> and header are the only entries which are not merged in any
+   fashion: the only header and buffer <A HREF="eval.html#list">列表</A> present are the ones from the
+   Neovim instance which was last <A HREF="editing.html#writing">写</A> the file. |<A HREF="options.html#shada-&#37;">shada-&#37;</A>|
 
 
 COMPATIBILITY						*<A NAME="shada-compatibility"></A><B>shada-compatibility</B>*
@@ -1161,30 +1161,30 @@ COMPATIBILITY						*<A NAME="shada-compatibility"></A><B>shada-compatibility</B>
 ShaDa files are forward and backward compatible.  This means that
 
 1. Entries which have unknown type (i.e. that hold unidentified data) are
-   ignored when reading and blindly copied when <A HREF="editing.html#writing">writing</A>.
+   ignored when reading and blindly copied when <A HREF="editing.html#writing">写</A>.
 2. Register entries with unknown <A HREF="intro.html#register">register</A> name are ignored when reading and
-   blindly copied when <A HREF="editing.html#writing">writing</A>. Limitation: only <A HREF="change.html#registers">registers</A> that use name with
+   blindly copied when <A HREF="editing.html#writing">写</A>. Limitation: only <A HREF="change.html#registers">registers</A> that use name with
    code in interval [1, 255] are supported. |<A HREF="change.html#registers">registers</A>|
 3. Register entries with unknown <A HREF="intro.html#register">register</A> type are ignored when reading and
-   merged <A HREF="motion.html#as">as</A> usual when <A HREF="editing.html#writing">writing</A>. |<A HREF="builtin.html#getregtype()">getregtype()</A>|
+   merged <A HREF="motion.html#as">as</A> usual when <A HREF="editing.html#writing">写</A>. |<A HREF="builtin.html#getregtype()">getregtype()</A>|
 4. Local and global <A HREF="motion.html#mark">mark</A> entries with unknown <A HREF="motion.html#mark">mark</A> names are ignored when
-   reading. When <A HREF="editing.html#writing">writing</A> global <A HREF="motion.html#mark">mark</A> entries are blindly copied and local <A HREF="motion.html#mark">mark</A>
+   reading. When <A HREF="editing.html#writing">写</A> global <A HREF="motion.html#mark">mark</A> entries are blindly copied and local <A HREF="motion.html#mark">mark</A>
    entries are also blindly copied, but only if file they are attached to fits
    in the |<A HREF="options.html#shada-'">shada-'</A>| limit. Unknown local <A HREF="motion.html#mark">mark</A> entry's <A HREF="editing.html#timestamp">timestamp</A> is also taken
    into account when calculating which files exactly should fit into this
    limit. Limitation: only marks that use name with code in interval [1, 255]
    are supported. |<A HREF="motion.html#mark-motions">mark-motions</A>|
 5. History entries with unknown <A HREF="cmdline.html#history">history</A> type are ignored when reading and
-   blindly copied when <A HREF="editing.html#writing">writing</A>. Limitation: there can be only up to 256
+   blindly copied when <A HREF="editing.html#writing">写</A>. Limitation: there can be only up to 256
    history types. |<A HREF="cmdline.html#history">history</A>|
 6. Unknown keys found in <A HREF="intro.html#register">register</A>, local <A HREF="motion.html#mark">mark</A>, global <A HREF="motion.html#mark">mark</A>, change, jump and
-   search <A HREF="pattern.html#pattern">pattern</A> entries are saved internally and dumped when <A HREF="editing.html#writing">writing</A>.
+   search <A HREF="pattern.html#pattern">pattern</A> entries are saved internally and dumped when <A HREF="editing.html#writing">写</A>.
    Entries created during Neovim session never have such additions.
-7. Additional elements found in replacement <A HREF="eval.html#string">string</A> and <A HREF="cmdline.html#history">history</A> entries are
+7. Additional elements found in replacement <A HREF="options\.html#options">字符串</A> and <A HREF="cmdline.html#history">history</A> entries are
    saved internally and dumped. Entries created during Neovim session never
    have such additions.
 8. Additional elements found in variable entries are simply ignored when
-   reading. When <A HREF="editing.html#writing">writing</A> new <A HREF="eval.html#variables">variables</A> they will be preserved during merging,
+   reading. When <A HREF="editing.html#writing">写</A> new <A HREF="eval.html#variables">variables</A> they will be preserved during merging,
    but that's all. Variable values dumped from current Neovim session never
    have additional elements, even if <A HREF="eval.html#variables">variables</A> themselves were obtained by
    reading ShaDa files.
@@ -1215,7 +1215,7 @@ MANUALLY READING AND WRITING				*<A NAME="shada-read-write"></A><B>shada-read-wr
 Two commands can be used to read and write the ShaDa file manually.  This
 can be used to exchange <A HREF="change.html#registers">registers</A> between two running Vim programs: First
 type &quot;<A HREF="#:wsh">:wsh</A>&quot; in one and then &quot;<A HREF="#:rsh">:rsh</A>&quot; in the other.  Note that if the <A HREF="intro.html#register">register</A>
-already contained something, then &quot;:rsh!&quot; would be required.  Also note
+already contained something然后&quot;:rsh!&quot; would be required.  Also note
 however that this means everything will be overwritten with information from
 the first Vim, including the command line <A HREF="cmdline.html#history">history</A>, etc.
 
@@ -1224,7 +1224,7 @@ start with an existing one to get the format right.  You need to understand
 MessagePack (or, more likely, find software that is able to use <A HREF="motion.html#it">它</A>) format to
 <A HREF="diff.html#do">do</A> this.  This can be useful in order to create a second file, say
 &quot;~/.my.shada&quot; which could contain certain settings that you always want when
-you first start Neovim.  For example, you can preload <A HREF="change.html#registers">registers</A> with
+you first start Neovim.例如, you can preload <A HREF="change.html#registers">registers</A> with
 particular data, or put certain commands in the command line <A HREF="cmdline.html#history">history</A>.  A line
 in your |<A HREF="#config">config</A>| file like
 <B>	:rshada! ~/.my.shada</B>
@@ -1245,7 +1245,7 @@ include:
   destroying an unrelated file.  This could happen e.g. when typing &quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-i">-i</A>
   file&quot; in place of &quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-R">-R</A> file&quot; (yes, somebody did that at least with Vim).
   Such errors are listed at |<A HREF="#shada-critical-contents-errors">shada-critical-contents-errors</A>|.
-- If <A HREF="editing.html#writing">writing</A> to the temporary file failed: e.g. because of the insufficient
+- If <A HREF="editing.html#writing">写</A> to the temporary file failed: e.g. because of the insufficient
   space left.
 - If renaming file failed: e.g. because of insufficient permissions.
 - If target ShaDa file has different from the Neovim instance's owners (user
@@ -1256,7 +1256,7 @@ Do not forget to remove the temporary file or replace the target file with
 temporary one after getting one of the above <A HREF="message.html#errors">errors</A> or all attempts to create
 a ShaDa file may fail with |<A HREF="#E929">E929</A>|.  If you got one of them when using
 |<A HREF="#:wshada">:wshada</A>| (and not when <A HREF="#exiting">exiting</A> Neovim: i.e. when you have Neovim session
-running) you have additional <A HREF="options.html#options">options</A>:
+running) you have additional <A HREF="options\.html#options">选项</A>:
 
 - First thing which you should consider if you got any error, except failure
   to write to the temporary file: remove existing file and replace <A HREF="motion.html#it">它</A> with the
@@ -1265,8 +1265,8 @@ running) you have additional <A HREF="options.html#options">options</A>:
   write again.  Do not remove the existing file.
 - Use |<A HREF="#:wshada">:wshada</A>| with bang.  Does not help in <A HREF="change.html#case">case</A> of permission error.  If
   target file was actually the ShaDa file some information may be lost in this
-  <A HREF="change.html#case">case</A>.  To make the matters slightly better use |<A HREF="#:rshada">:rshada</A>| prior to <A HREF="editing.html#writing">writing</A>,
-  but this still will loose buffer-local marks and change <A HREF="eval.html#list">list</A> entries for any
+  <A HREF="change.html#case">case</A>.  To make the matters slightly better use |<A HREF="#:rshada">:rshada</A>| prior to <A HREF="editing.html#writing">写</A>,
+  but this still will loose buffer-local marks and change <A HREF="eval.html#list">列表</A> entries for any
   file which is not opened in the current Neovim instance.
 - Remove the target file from shell and use |<A HREF="#:wshada">:wshada</A>|.  Consequences are not
   different from using |<A HREF="#:wshada">:wshada</A>| with bang, but &quot;rm -f&quot; works in some cases
@@ -1275,7 +1275,7 @@ running) you have additional <A HREF="options.html#options">options</A>:
 
 						    *<A NAME=":rsh"></A><B>:rsh</B>* *<A NAME=":rshada"></A><B>:rshada</B>* *<A NAME="E886"></A><B>E886</B>*
 :rsh[ada][!] [file]	Read from ShaDa file [file] (default: see above).
-			If [!] is given, then any information that is
+			If [!] is given然后any information that is
 			already set (registers, marks, |<A HREF="eval.html#v:oldfiles">v:oldfiles</A>|, etc.)
 			will be overwritten.
 
@@ -1297,8 +1297,8 @@ running) you have additional <A HREF="options.html#options">options</A>:
 
 
 						*<A NAME=":o"></A><B>:o</B>* *<A NAME=":ol"></A><B>:ol</B>* *<A NAME=":oldfiles"></A><B>:oldfiles</B>*
-:o[ldfiles]		<A HREF="eval.html#List">List</A> the files that have marks stored in the ShaDa
-			file.  This <A HREF="eval.html#list">list</A> is read on <A HREF="#startup">startup</A> and only changes
+:o[ldfiles]		<A HREF="eval.html#list">列表</A> the files that have marks stored in the ShaDa
+			file.  This <A HREF="eval.html#list">列表</A> is read on <A HREF="#startup">startup</A> and only changes
 			afterwards with `:rshada!`.  Also 见 |<A HREF="eval.html#v:oldfiles">v:oldfiles</A>|.
 			The number can be used with |<A HREF="cmdline.html#c_#&lt;">c_#&lt;</A>|.
 			The output can be filtered with |<A HREF="various.html#:filter">:filter</A>|, e.g.:
@@ -1306,9 +1306,9 @@ running) you have additional <A HREF="options.html#options">options</A>:
  			The filtering happens on the file name.
 
 :bro[wse] o[ldfiles][!]
-			<A HREF="eval.html#List">List</A> file names <A HREF="motion.html#as">as</A> with |<A HREF="#:oldfiles">:oldfiles</A>|, and then prompt
+			<A HREF="eval.html#list">列表</A> file names <A HREF="motion.html#as">as</A> with |<A HREF="#:oldfiles">:oldfiles</A>|, and then prompt
 			for a number.  When the number is valid that file from
-			the <A HREF="eval.html#list">list</A> is edited.
+			the <A HREF="eval.html#list">列表</A> is edited.
 			If you get the |<A HREF="message.html#press-enter">press-enter</A>| prompt you can press &quot;<A HREF="repeat.html#q">q</A>&quot;
 			and still get the prompt to enter a file number.
 			Use ! to abandon a modified buffer. |<A HREF="editing.html#abandon">abandon</A>|
@@ -1325,9 +1325,9 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
 3. Third goes the length of the fourth entry.  Unsigned integer <A HREF="motion.html#as">as</A> well, used
    for fast skipping without parsing.
 4. Fourth is actual entry data.  All currently used ShaDa entries use
-   containers to hold data: either map or array.  All <A HREF="eval.html#string">string</A> values in those
+   containers to hold data: either map or array.  All <A HREF="options\.html#options">字符串</A> values in those
    containers are either binary (applies to filenames) or <A HREF="mbyte.html#UTF-8">UTF-8</A>, yet parser
-   needs to expect that invalid bytes may be present in a <A HREF="mbyte.html#UTF-8">UTF-8</A> <A HREF="eval.html#string">string</A>.
+   needs to expect that invalid bytes may be present in a <A HREF="mbyte.html#UTF-8">UTF-8</A> <A HREF="options\.html#options">字符串</A>.
 
    Exact format depends on the entry type:
 
@@ -1377,8 +1377,8 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
                        &#42;    any      none     Other keys are allowed for
                                               compatibility reasons, see
                                               |<A HREF="#shada-compatibility">shada-compatibility</A>|.
-   3 (SubString)       Array containing last |<A HREF="change.html#:substitute">:substitute</A>| replacement <A HREF="eval.html#string">string</A>.
-                       Contains single entry: binary, replacement <A HREF="eval.html#string">string</A> used.
+   3 (SubString)       Array containing last |<A HREF="change.html#:substitute">:substitute</A>| replacement <A HREF="options\.html#options">字符串</A>.
+                       Contains single entry: binary, replacement <A HREF="options\.html#options">字符串</A> used.
                        More entries are allowed for compatibility reasons, see
                        |<A HREF="#shada-compatibility">shada-compatibility</A>|.
    4 (HistoryEntry)    Array containing one entry from <A HREF="cmdline.html#history">history</A>.  Should have
@@ -1422,7 +1422,7 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
    6 (Variable)        Array containing two items: variable name (binary) and
                        variable value (any object).  Values are converted
                        using the same code |<A HREF="builtin.html#msgpackparse()">msgpackparse()</A>| uses when reading,
-                       |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| when <A HREF="editing.html#writing">writing</A>, so there may appear
+                       |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| when <A HREF="editing.html#writing">写</A>, so there may appear
                        |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>|s.  If there are more then two
                        entries then the rest are ignored
                        (|<A HREF="#shada-compatibility">shada-compatibility</A>|).
@@ -1465,7 +1465,7 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
 								*<A NAME="E575"></A><B>E575</B>* *<A NAME="E576"></A><B>E576</B>*
 Errors in ShaDa file may have two types: <A HREF="#E575">E575</A> used for all “logical” <A HREF="message.html#errors">errors</A>
 and <A HREF="#E576">E576</A> used for all “critical” <A HREF="message.html#errors">errors</A>.  Critical <A HREF="message.html#errors">errors</A> trigger behaviour
-described in |<A HREF="#shada-error-handling">shada-error-handling</A>| when <A HREF="editing.html#writing">writing</A> and skipping the rest of the
+described in |<A HREF="#shada-error-handling">shada-error-handling</A>| when <A HREF="editing.html#writing">写</A> and skipping the rest of the
 file when reading and include:
 
 					    *<A NAME="shada-critical-contents-errors"></A><B>shada-critical-contents-errors</B>*

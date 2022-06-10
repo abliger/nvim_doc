@@ -82,8 +82,8 @@ Currently, this Vim <A HREF="usr_05.html#plugin">plugin</A> allows you to easily
 section in RPM spec files.  It will even create a section for you if <A HREF="motion.html#it">它</A>
 doesn't exist yet.  If you've already inserted an entry today, <A HREF="motion.html#it">它</A> will
 give you the opportunity to just add a new item in today's entry.  If you
-don't provide a format <A HREF="eval.html#string">string</A> (|<A HREF="#spec_chglog_format">spec_chglog_format</A>|), it'll ask you an
-email address and build a format <A HREF="eval.html#string">string</A> by itself.
+don't provide a format <A HREF="options\.html#options">字符串</A> (|<A HREF="#spec_chglog_format">spec_chglog_format</A>|), it'll ask you an
+email address and build a format <A HREF="options\.html#options">字符串</A> by itself.
 
 1. How to use it	|<A HREF="#spec-how-to-use-it">spec-how-to-use-it</A>|
 2. Customizing		|<A HREF="#spec-customizing">spec-customizing</A>|
@@ -131,7 +131,7 @@ This command will add a map only in the spec file <A HREF="windows.html#buffers"
 2. Customizing					*<A NAME="spec-customizing"></A><B>spec-customizing</B>*
 
 
-The format <A HREF="eval.html#string">string</A>				*<A NAME="spec_chglog_format"></A><B>spec_chglog_format</B>*
+The format <A HREF="options\.html#options">字符串</A>				*<A NAME="spec_chglog_format"></A><B>spec_chglog_format</B>*
 
 You can easily customize how your spec file entry will look like.  To <A HREF="diff.html#do">do</A>
 this just set the variable &quot;<A HREF="#spec_chglog_format">spec_chglog_format</A>&quot; in your <A HREF="starting.html#vimrc">vimrc</A> file like
@@ -140,12 +140,12 @@ this:
 <B>	let spec_chglog_format = "%a %b %d %Y My Name &lt;my@email.com&gt;"</B>
 
 Note that &quot;&#37;a &#37;b &#37;d &#37;Y&quot; is the most used time format.  If you don't provide
-a format <A HREF="eval.html#string">string</A>, when you run the SpecChangelog command for the first
+a format <A HREF="options\.html#options">字符串</A>, when you run the SpecChangelog command for the first
 time, <A HREF="motion.html#it">它</A> will ask you an email address and build the |<A HREF="#spec_chglog_format">spec_chglog_format</A>|
 variable for you.  This way, you will only need to provide your email
 address once.
 
-To discover which format <A HREF="options.html#options">options</A> you can use, take a look at the <A HREF="builtin.html#strftime()">strftime()</A>
+To discover which format <A HREF="options\.html#options">选项</A> you can use, take a look at the <A HREF="builtin.html#strftime()">strftime()</A>
 function man page.
 
 

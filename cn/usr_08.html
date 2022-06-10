@@ -122,7 +122,7 @@ top one:
 What you see here is two <A HREF="windows.html#windows">windows</A> on the same file.  The line with &quot;====&quot; is
 the status line.  It displays information about the<A HREF="windows.html#window">窗口</A>above <A HREF="motion.html#it">它</A>.  (In
 practice the status line will be in reverse video.)
-   The two <A HREF="windows.html#windows">windows</A> allow you to view two parts of the same file.  For example,
+   The two <A HREF="windows.html#windows">windows</A> allow you to view two parts of the same file.例如,
 you could make the top<A HREF="windows.html#window">窗口</A>show the variable declarations of a program, and
 the bottom one the code that uses these <A HREF="eval.html#variables">variables</A>.
 
@@ -162,7 +162,7 @@ The following command opens a second<A HREF="windows.html#window">窗口</A>and 
 
 <B>	:split two.c</B>
 
-If you were editing one.c, then the result looks like this:
+If you were editing one.c然后the result looks like this:
 
 	+----------------------------------+
 	|/* file two.c */		   |
@@ -179,15 +179,15 @@ To open a<A HREF="windows.html#window">窗口</A>on a new, empty file, use this:
 
 <B>	:new</B>
 
-You can repeat the &quot;<A HREF="windows.html#:split">:split</A>&quot; and &quot;<A HREF="windows.html#:new">:new</A>&quot; commands to create <A HREF="motion.html#as">as</A> many <A HREF="windows.html#windows">windows</A> <A HREF="motion.html#as">as</A>
+You can repeat the &quot;<A HREF="windows.html#:split">:split</A>&quot; and &quot;<A HREF="windows.html#:new">:new</A>&quot;命令 to create <A HREF="motion.html#as">as</A> many <A HREF="windows.html#windows">windows</A> <A HREF="motion.html#as">as</A>
 you like.
 
 ==============================================================================
 
 *<A NAME="08.3"></A><B>08.3</B>*	Window size
 
-The &quot;<A HREF="windows.html#:split">:split</A>&quot; command can take a number argument.  If specified, this will be
-the height of the new<A HREF="windows.html#window">窗口</A>.  For example, the following opens a new<A HREF="windows.html#window">窗口</A>
+The &quot;<A HREF="windows.html#:split">:split</A>&quot;命令 can take a number argument.  If specified, this will be
+the height of the new<A HREF="windows.html#window">窗口</A>.例如, the following opens a new<A HREF="windows.html#window">窗口</A>
 three lines high and starts editing the file alpha.c:
 
 <B>	:3split alpha.c</B>
@@ -239,7 +239,7 @@ when a<A HREF="windows.html#window">窗口</A>is closed or opened.
 
 *<A NAME="08.4"></A><B>08.4</B>*	Vertical splits
 
-The &quot;<A HREF="windows.html#:split">:split</A>&quot; command creates the new<A HREF="windows.html#window">窗口</A>above the current one.  To make
+The &quot;<A HREF="windows.html#:split">:split</A>&quot;命令 creates the new<A HREF="windows.html#window">窗口</A>above the current one.  To make
 the<A HREF="windows.html#window">窗口</A>appear at the left side, use:
 
 <B>	:vsplit</B>
@@ -261,12 +261,12 @@ The result looks something like this:
 Actually, the &#124; lines in the middle will be in reverse video.  This is called
 the vertical separator.  It separates the two <A HREF="windows.html#windows">windows</A> left and right of <A HREF="motion.html#it">它</A>.
 
-There is also the &quot;<A HREF="windows.html#:vnew">:vnew</A>&quot; command, to open a vertically split<A HREF="windows.html#window">窗口</A>on a new,
+There is also the &quot;<A HREF="windows.html#:vnew">:vnew</A>&quot;命令, to open a vertically split<A HREF="windows.html#window">窗口</A>on a new,
 empty file.  Another way to <A HREF="diff.html#do">do</A> this:
 
 <B>	:vertical new</B>
 
-The &quot;<A HREF="windows.html#:vertical">:vertical</A>&quot; command can be inserted before another command that splits a
+The &quot;<A HREF="windows.html#:vertical">:vertical</A>&quot;命令 can be inserted before another command that splits a
 <A HREF="windows.html#window">窗口</A>.  This will cause that command to split the<A HREF="windows.html#window">窗口</A>vertically instead
 of horizontally.  (If the command doesn't split a<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">它</A> works
 unmodified.)
@@ -295,7 +295,7 @@ cursor keys can also be used, if you like.
 *<A NAME="08.5"></A><B>08.5</B>*	Moving <A HREF="windows.html#windows">windows</A>
 
 You have split a few <A HREF="windows.html#windows">windows</A>, but now they are in the wrong place.  Then you
-need a command to move the<A HREF="windows.html#window">窗口</A>somewhere else.  For example, you have three
+need a command to move the<A HREF="windows.html#window">窗口</A>somewhere else.例如, you have three
 <A HREF="windows.html#windows">windows</A> like this:
 
 	+----------------------------------+
@@ -318,7 +318,7 @@ and then type this command:
 
 <B>	CTRL-W K</B>
 
-This uses the <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A> <A HREF="various.html#K">K</A>.  What happens is that the<A HREF="windows.html#window">窗口</A>is moved to
+This uses the <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> <A HREF="various.html#K">K</A>.  What happens is that the<A HREF="windows.html#window">窗口</A>is moved to
 the very top.  You will notice that <A HREF="various.html#K">K</A> is again used for moving upwards.
    When you have vertical splits, <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="various.html#K">K</A> will move the current<A HREF="windows.html#window">窗口</A>to the
 top and make <A HREF="motion.html#it">它</A> occupy the full width of the Vim<A HREF="windows.html#window">窗口</A>.  If this is your
@@ -411,8 +411,8 @@ This results in:
 	+-------------------------------+
 
 The &quot;<A HREF="starting.html#-O">-O</A>&quot; argument is used to get vertically split <A HREF="windows.html#windows">windows</A>.
-   When Vim is already running, the &quot;<A HREF="windows.html#:all">:all</A>&quot; command opens a<A HREF="windows.html#window">窗口</A>for each
-file in the argument <A HREF="eval.html#list">list</A>.  &quot;<A HREF="windows.html#:vertical">:vertical</A> all&quot; does <A HREF="motion.html#it">它</A> with vertical splits.
+   When Vim is already running, the &quot;<A HREF="windows.html#:all">:all</A>&quot;命令 opens a<A HREF="windows.html#window">窗口</A>for each
+file in the argument <A HREF="eval.html#list">列表</A>.  &quot;<A HREF="windows.html#:vertical">:vertical</A> all&quot; does <A HREF="motion.html#it">它</A> with vertical splits.
 
 ==============================================================================
 
@@ -479,12 +479,12 @@ this -, the fold will close.
 DIFFING IN VIM
 
 Another way to start in <A HREF="diff.html#diff">diff</A> mode can be done from inside Vim.  Edit the
-&quot;main.c&quot; file, then make a split and show the differences:
+&quot;main.c&quot; file然后make a split and show the differences:
 
 <B>	:edit main.c</B>
 <B>	:vertical diffsplit main.c~</B>
 
-The &quot;<A HREF="windows.html#:vertical">:vertical</A>&quot; command is used to make the<A HREF="windows.html#window">窗口</A>split vertically.  If you
+The &quot;<A HREF="windows.html#:vertical">:vertical</A>&quot;命令 is used to make the<A HREF="windows.html#window">窗口</A>split vertically.  If you
 omit this, you will get a horizontal split.
 
 If you have a patch or <A HREF="diff.html#diff">diff</A> file, you can use the third way to start <A HREF="diff.html#diff">diff</A>
@@ -495,7 +495,7 @@ of the patch file:
 <B>	:vertical diffpatch main.c.diff</B>
 
 WARNING: The patch file must contain only one patch, for the file you are
-editing.  Otherwise you will get a lot of error <A HREF="message.html#messages">messages</A>, and some files might
+editing.  Otherwise you will get a lot of error <A HREF="message.html#messages">信息</A>, and some files might
 be patched unexpectedly.
    The patching will only be done to the copy of the file in Vim.  The file on
 your harddisk will remain unmodified (until you decide to write the file).
@@ -568,7 +568,7 @@ statusline:
 		<A HREF="windows.html#window">窗口</A>
 
 Many commands that edit another file have a variant that splits the<A HREF="windows.html#window">窗口</A>.
-For <A HREF="cmdline.html#Command-line">Command-line</A> commands this is done by prepending an &quot;<A HREF="change.html#s">s</A>&quot;.  For example:
+For <A HREF="cmdline.html#Command-line">Command-line</A> commands this is done by prepending an &quot;<A HREF="change.html#s">s</A>&quot;.例如:
 &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; jumps to a <A HREF="tagsrch.html#tag">标签</A>, &quot;<A HREF="windows.html#:stag">:stag</A>&quot; splits the<A HREF="windows.html#window">窗口</A>and jumps to a
 <A HREF="tagsrch.html#tag">标签</A>.
    For <A HREF="intro.html#Normal">正常</A>模式 commands a <A HREF="vimindex.html#CTRL-W">CTRL-W</A> is prepended.  <A HREF="editing.html#CTRL-^">CTRL-^</A> jumps to the

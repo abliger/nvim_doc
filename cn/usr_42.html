@@ -99,7 +99,7 @@ accessible.  This is for mouse-happy users only.
 The <A HREF="gui.html#menus">menus</A> that Vim uses are defined in the file &quot;$VIMRUNTIME/menu.vim&quot;.  If
 you want to write your own <A HREF="gui.html#menus">menus</A>, you might first want to look through that
 file.
-   To define a menu item, use the &quot;<A HREF="gui.html#:menu">:menu</A>&quot; command.  The basic form of this
+   To define a menu item, use the &quot;<A HREF="gui.html#:menu">:menu</A>&quot;命令.  The basic form of this
 command is <A HREF="motion.html#as">as</A> follows:
 
 <B>	:menu {menu-item} {keys}</B>
@@ -110,12 +110,12 @@ The {menu-item} describes where on the menu to put the item.  A typical
 
 <B>	:menu File.Save  :update&lt;CR&gt;</B>
 
-The &quot;<A HREF="editing.html#:update">:update</A>&quot; command writes the file when <A HREF="motion.html#it">它</A> was modified.
+The &quot;<A HREF="editing.html#:update">:update</A>&quot;命令 writes the file when <A HREF="motion.html#it">它</A> was modified.
    You can add another level: &quot;Edit.Settings.Shiftwidth&quot; defines a submenu
 &quot;Settings&quot; under the &quot;Edit&quot; menu, with an item &quot;Shiftwidth&quot;.  You could use
 even deeper levels.  Don't use this too much, you need to move the mouse quite
 a bit to use such an item.
-   The &quot;<A HREF="gui.html#:menu">:menu</A>&quot; command is very similar to the &quot;<A HREF="map.html#:map">:map</A>&quot; command: the left side
+   The &quot;<A HREF="gui.html#:menu">:menu</A>&quot;命令 is very similar to the &quot;<A HREF="map.html#:map">:map</A>&quot;命令: the left side
 specifies how the item is triggered and the right hand side defines the
 characters that are executed.  {keys} are characters, they are used just like
 you would have typed them.  Thus in <A HREF="intro.html#Insert">插入</A>模式, when {keys} is plain text,
@@ -204,7 +204,7 @@ is &quot;<A HREF="editing.html#:w">:w</A>&quot;.
 SEPARATORS
 
 The separator lines, used to group related menu items together, can be defined
-by using a name that starts and ends in a '<A HREF="motion.html#-">-</A>'.  For example &quot;-sep-&quot;.  When
+by using a name that starts and ends in a '<A HREF="motion.html#-">-</A>'.例如 &quot;-sep-&quot;.  When
 using several separators the names must be different.  Otherwise the names
 don't matter.
    The command from a separator will never be executed, but you have to define
@@ -217,7 +217,7 @@ one anyway.  A single colon will <A HREF="diff.html#do">do</A>.  Example:
 *<A NAME="42.2"></A><B>42.2</B>*	Menu commands
 
 You can define menu items that exist for only certain modes.  This works just
-like the variations on the &quot;<A HREF="map.html#:map">:map</A>&quot; command:
+like the variations on the &quot;<A HREF="map.html#:map">:map</A>&quot;命令:
 
 	<A HREF="gui.html#:menu">:menu</A>		<A HREF="intro.html#Normal">Normal</A>, <A HREF="visual.html#Visual">Visual</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A> mode
 	<A HREF="gui.html#:nmenu">:nmenu</A>		<A HREF="intro.html#Normal">正常</A>模式
@@ -234,10 +234,10 @@ To avoid that the commands of a menu item are being mapped, use the command
 
 USING :AMENU
 
-The &quot;<A HREF="gui.html#:amenu">:amenu</A>&quot; command is a bit different.  It assumes that the {keys} you
+The &quot;<A HREF="gui.html#:amenu">:amenu</A>&quot;命令 is a bit different.  It assumes that the {keys} you
 give are to be executed in <A HREF="intro.html#Normal">正常</A>模式.  When Vim is in <A HREF="visual.html#Visual">Visual</A> or <A HREF="intro.html#Insert">插入</A>模式
 when the menu is used, Vim first has to go back to <A HREF="intro.html#Normal">正常</A>模式.  &quot;<A HREF="gui.html#:amenu">:amenu</A>&quot;
-inserts a <A HREF="pattern.html#CTRL-C">CTRL-C</A> or <A HREF="motion.html#CTRL-O">CTRL-O</A> for you.  For example, if you use this command:
+inserts a <A HREF="pattern.html#CTRL-C">CTRL-C</A> or <A HREF="motion.html#CTRL-O">CTRL-O</A> for you.例如, if you use this command:
 
 <B>	:amenu  90.100 Mine.Find\ Word  *</B>
 
@@ -261,7 +261,7 @@ commands, put them in a function and call that function.  Example:
 <B>	:  1/^Code</B>
 <B>	:endfunction</B>
 
-This menu entry goes to the next file in the argument <A HREF="eval.html#list">list</A> with &quot;<A HREF="editing.html#:next">:next</A>&quot;.  Then
+This menu entry goes to the next file in the argument <A HREF="eval.html#list">列表</A> with &quot;<A HREF="editing.html#:next">:next</A>&quot;.  Then
 <A HREF="motion.html#it">它</A> searches for the line that starts with &quot;Code&quot;.
    The <A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A> before the function name is the <A HREF="usr_41.html#script">script</A> ID.  This makes the
 function local to the current Vim <A HREF="usr_41.html#script">script</A> file.  This avoids problems when a
@@ -270,11 +270,11 @@ function with the same name is defined in another <A HREF="usr_41.html#script">s
 
 SILENT MENUS
 
-The menu executes the {keys} <A HREF="motion.html#as">as</A> if you typed them.  For a &quot;<A HREF="cmdline.html#:">:</A>&quot; command this
+The menu executes the {keys} <A HREF="motion.html#as">as</A> if you typed them.  For a &quot;<A HREF="cmdline.html#:">:</A>&quot;命令 this
 means you will see the command being echoed on the command line.  If it's a
 long command, the hit-Enter prompt will appear.  That can be very annoying!
    To avoid this, make the menu silent.  This is done with the &lt;silent&gt;
-argument.  For example, take the call to NextFile() in the previous example.
+argument.例如, take the call to NextFile() in the previous example.
 When you use this menu, you will see this on the command line:
 
 <B><FONT color="#3A6F2B">	:call &lt;SNR&gt;34_NextFile() </FONT></B>
@@ -292,17 +292,17 @@ give them a hint about what they could have typed, instead of using the mouse.
 LISTING MENUS
 
 When a menu command is used without a {keys} part, <A HREF="motion.html#it">它</A> lists the already
-defined <A HREF="gui.html#menus">menus</A>.  You can specify a {menu-item}, or part of <A HREF="motion.html#it">它</A>, to <A HREF="eval.html#list">list</A> specific
+defined <A HREF="gui.html#menus">menus</A>.  You can specify a {menu-item}, or part of <A HREF="motion.html#it">它</A>, to <A HREF="eval.html#list">列表</A> specific
 <A HREF="gui.html#menus">menus</A>.  Example:
 
 <B>	:amenu</B>
 
-This lists all <A HREF="gui.html#menus">menus</A>.  That's a long <A HREF="eval.html#list">list</A>!  Better specify the name of a menu
-to get a shorter <A HREF="eval.html#list">list</A>:
+This lists all <A HREF="gui.html#menus">menus</A>.  That's a long <A HREF="eval.html#list">列表</A>!  Better specify the name of a menu
+to get a shorter <A HREF="eval.html#list">列表</A>:
 
 <B>	:amenu Edit</B>
 
-This lists only the &quot;Edit&quot; menu items for all modes.  To <A HREF="eval.html#list">list</A> only one
+This lists only the &quot;Edit&quot; menu items for all modes.  To <A HREF="eval.html#list">列表</A> only one
 specific menu item for <A HREF="intro.html#Insert">插入</A>模式:
 
 <B>	:imenu Edit.Undo</B>
@@ -348,7 +348,7 @@ command like:
 For translating menu items, 见 |<A HREF="mlang.html#:menutrans">:menutrans</A>|.
 
 Since the mouse has to be used to select a menu item, <A HREF="motion.html#it">它</A> is a good idea to use
-the &quot;<A HREF="editing.html#:browse">:browse</A>&quot; command for selecting a file.  And &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot; to get a dialog
+the &quot;<A HREF="editing.html#:browse">:browse</A>&quot;命令 for selecting a file.  And &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot; to get a dialog
 instead of an error message, e.g., when the current buffer contains changes.
 These two can be combined:
 
@@ -379,7 +379,7 @@ on the toolbar.
 |<A HREF="gui.html#builtin-tools">builtin-tools</A>|.  Most of them are used in the default toolbar.  You can
 redefine what these items <A HREF="diff.html#do">do</A> (after the default <A HREF="gui.html#menus">menus</A> are setup).
    You can add another bitmap for a toolbar item.  Or define a new toolbar
-item with a bitmap.  For example, define a new toolbar item with:
+item with a bitmap.例如, define a new toolbar item with:
 
 <B>	:tmenu ToolBar.Compile  Compile the current file</B>
 <B>	:amenu ToolBar.Compile  :!cc %:S -o %:r:S&lt;CR&gt;</B>
@@ -392,7 +392,7 @@ can be used <A HREF="motion.html#as">as</A> well, but <A HREF="motion.html#it">�
 <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  E.g., for Unix &quot;~/.config/nvim/bitmaps/Compile.xpm&quot;.
 
 You can define tooltips for the items in the toolbar.  A tooltip is a short
-text that explains what a toolbar item will <A HREF="diff.html#do">do</A>.  For example &quot;Open file&quot;.  It
+text that explains what a toolbar item will <A HREF="diff.html#do">do</A>.例如 &quot;Open file&quot;.  It
 appears when the mouse pointer is on the item, without moving for a moment.
 This is very useful if the meaning of the picture isn't that obvious.
 Example:

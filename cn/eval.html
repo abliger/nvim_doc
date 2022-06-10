@@ -179,7 +179,7 @@ To test for a non-empty <A HREF="#string">string</A>, use <A HREF="builtin.html#
 							*<A NAME="non-zero-arg"></A><B>non-zero-arg</B>*
 Function arguments often behave slightly different from |TRUE|: If the
 argument is present and <A HREF="motion.html#it">它</A> evaluates to a non-zero <A HREF="#Number">Number</A>, |<A HREF="#v:true">v:true</A>| or a
-non-empty <A HREF="#String">String</A>, then the value is considered to be <A HREF="#TRUE">TRUE</A>.
+non-empty <A HREF="#String">String</A>然后the value is considered to be <A HREF="#TRUE">TRUE</A>.
 Note that &quot; &quot; and &quot;<A HREF="motion.html#0">0</A>&quot; are also non-empty strings, thus considered to be <A HREF="#TRUE">TRUE</A>.
 A <A HREF="#List">List</A>, <A HREF="#Dictionary">Dictionary</A> or <A HREF="#Float">Float</A> is not a <A HREF="#Number">Number</A> or <A HREF="#String">String</A>, thus evaluate to <A HREF="#FALSE">FALSE</A>.
 
@@ -856,11 +856,11 @@ If you need to know the type of a variable or <A HREF="#expression">expression</
 function.
 
 When the '<A HREF="change.html#!">!</A>' flag is included in the <A HREF="options.html#'shada'">'shada'</A> option, global <A HREF="#variables">variables</A> that
-start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>, and don't contain a <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A>, are
+start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>, and don't contain a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>, are
 stored in the shada file |<A HREF="starting.html#shada-file">shada-file</A>|.
 
 When the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option contains &quot;global&quot;, global <A HREF="#variables">variables</A> that
-start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A> and contain at least one <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A> are
+start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> and contain at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> are
 stored in the session file |<A HREF="starting.html#session-file">session-file</A>|.
 
 <B><FONT color="#3A6F2B">variable name		can be stored where </FONT></B>
@@ -1007,7 +1007,7 @@ Note that &quot;&amp;&amp;&quot; takes precedence over &quot;&#124;&#124;&quot;,
 <B>	&amp;nu || (&amp;list &amp;&amp; &amp;shell == "csh")</B>
 
 Once the result is known, the <A HREF="#expression">expression</A> &quot;short-circuits&quot;, that is, further
-arguments are not evaluated.  This is like what happens in C.  For example:
+arguments are not evaluated.  This is like what happens in C.例如:
 
 <B>	let a = 1</B>
 <B>	echo a || b</B>
@@ -1316,7 +1316,7 @@ for a <A HREF="#sublist">sublist</A>:
 
 expr8.name		entry in a |<A HREF="#Dictionary">Dictionary</A>|		*<A NAME="expr-entry"></A><B>expr-entry</B>*
 
-If <A HREF="#expr8">expr8</A> is a |<A HREF="#Dictionary">Dictionary</A>| and <A HREF="motion.html#it">它</A> is followed by a dot, then the following
+If <A HREF="#expr8">expr8</A> is a |<A HREF="#Dictionary">Dictionary</A>| and <A HREF="motion.html#it">它</A> is followed by a dot然后the following
 name will be used <A HREF="motion.html#as">as</A> a key in the |<A HREF="#Dictionary">Dictionary</A>|.  This is just like:
 expr8[name].
 
@@ -1520,7 +1520,7 @@ Examples:
 <B>	echo "tabstop is " .. &amp;tabstop</B>
 <B>	if &amp;expandtab</B>
 
-Any option name can be used here.  见 |<A HREF="options.html#options">options</A>|.  When using the local value
+Any option name can be used here.  见 |<A HREF="options\.html#options">选项</A>|.  When using the local value
 and there is no buffer-local or window-local value, the global value is used
 anyway.
 
@@ -1661,7 +1661,7 @@ cannot start with a digit.  It's also possible to use curly braces, see
 |<A HREF="#curly-braces-names">curly-braces-names</A>|.
 
 An internal variable is created with the &quot;:let&quot; command |<A HREF="#:let">:let</A>|.
-An internal variable is explicitly destroyed with the &quot;<A HREF="#:unlet">:unlet</A>&quot; command
+An internal variable is explicitly destroyed with the &quot;<A HREF="#:unlet">:unlet</A>&quot;命令
 |<A HREF="#:unlet">:unlet</A>|.
 Using a name that is not an internal variable or refers to a variable that has
 been destroyed results in an error.
@@ -1681,7 +1681,7 @@ specified by what is prepended:
 |<A HREF="#function-argument">function-argument</A>|  a:	  Function argument (only inside a function).
 |<A HREF="#vim-variable">vim-variable</A>|       <A HREF="#v:">v:</A>	  Global, predefined by Vim.
 
-The scope name by itself can be used <A HREF="motion.html#as">as</A> a |<A HREF="#Dictionary">Dictionary</A>|.  For example, to
+The scope name by itself can be used <A HREF="motion.html#as">as</A> a |<A HREF="#Dictionary">Dictionary</A>|.例如, to
 delete all <A HREF="map.html#script-local">script-local</A> <A HREF="#variables">variables</A>:
 <B>	:for k in keys(s:)</B>
 <B>	:    unlet s:[k]</B>
@@ -1699,7 +1699,7 @@ One local buffer variable is predefined:
 					*<A NAME="b:changedtick"></A><B>b:changedtick</B>* *<A NAME="changetick"></A><B>changetick</B>*
 <A HREF="#b:changedtick">b:changedtick</A>	The total number of changes to the current buffer.  It is
 		incremented for each change.  An <A HREF="undo.html#undo">undo</A> command is also a change
-		in this <A HREF="change.html#case">case</A>.  Resetting <A HREF="options.html#'modified'">'modified'</A> when <A HREF="editing.html#writing">writing</A> the buffer is
+		in this <A HREF="change.html#case">case</A>.  Resetting <A HREF="options.html#'modified'">'modified'</A> when <A HREF="editing.html#writing">写</A> the buffer is
 		also counted.
 		This can be used to perform an action only when the buffer has
 		changed.  Example:
@@ -1729,7 +1729,7 @@ place if you like.
 						*<A NAME="local-variable"></A><B>local-variable</B>* *<A NAME="l:var"></A><B>l:var</B>* *<A NAME="l:"></A><B>l:</B>*
 Inside <A HREF="#functions">functions</A> local <A HREF="#variables">variables</A> are accessed without prepending anything.
 But you can also prepend &quot;<A HREF="#l:">l:</A>&quot; if you like.  However, without prepending &quot;<A HREF="#l:">l:</A>&quot;
-you may run into reserved variable names.  For example &quot;<A HREF="intro.html#count">count</A>&quot;.  By itself <A HREF="motion.html#it">它</A>
+you may run into reserved variable names.例如 &quot;<A HREF="intro.html#count">count</A>&quot;.  By itself <A HREF="motion.html#it">它</A>
 refers to &quot;<A HREF="#v:count">v:count</A>&quot;.  Using &quot;l:count&quot; you can have a local variable with the
 same name.
 
@@ -1889,7 +1889,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 		   read/write command.  Note: The &quot;<A HREF="editing.html#+cmd">+cmd</A>&quot; argument isn't
 		   included here, because <A HREF="motion.html#it">它</A> will be executed anyway.
 		2. When <A HREF="print.html#printing">printing</A> a PostScript file with &quot;<A HREF="print.html#:hardcopy">:hardcopy</A>&quot; this is
-		   the argument for the &quot;<A HREF="print.html#:hardcopy">:hardcopy</A>&quot; command.  This can be used
+		   the argument for the &quot;<A HREF="print.html#:hardcopy">:hardcopy</A>&quot;命令.  This can be used
 		   in <A HREF="options.html#'printexpr'">'printexpr'</A>.
 
 
@@ -2078,7 +2078,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 			<A HREF="editing.html#reload">reload</A>		Reload the buffer (does not work if
 					the file was deleted).
 			edit		Reload the buffer and detect the
-					values for <A HREF="options.html#options">options</A> such <A HREF="motion.html#as">as</A>
+					values for <A HREF="options\.html#options">选项</A> such <A HREF="motion.html#as">as</A>
 					<A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'binary'">'binary'</A>
 					(does not work if the file was
 					deleted).
@@ -2176,19 +2176,19 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 						*<A NAME="v:lang"></A><B>v:lang</B>* *<A NAME="lang-variable"></A><B>lang-variable</B>*
-<A HREF="#v:lang">v:lang</A>		The current <A HREF="mbyte.html#locale">locale</A> setting for <A HREF="message.html#messages">messages</A> of the runtime
+<A HREF="#v:lang">v:lang</A>		The current <A HREF="mbyte.html#locale">locale</A> setting for <A HREF="message.html#messages">信息</A> of the runtime
 		environment.  This allows Vim scripts to be aware of the
 		current language.  Technical: it's the value of LC_MESSAGES.
 		The value is system dependent.
 		This variable can not be set directly, use the |<A HREF="mlang.html#:language">:language</A>|
 		command.
-		It can be different from |<A HREF="#v:ctype">v:ctype</A>| when <A HREF="message.html#messages">messages</A> are desired
+		It can be different from |<A HREF="#v:ctype">v:ctype</A>| when <A HREF="message.html#messages">信息</A> are desired
 		in a different language than what is used for character
 		encoding.  见 |<A HREF="mlang.html#multi-lang">multi-lang</A>|.
 
 
 						*<A NAME="v:lc_time"></A><B>v:lc_time</B>* *<A NAME="lc_time-variable"></A><B>lc_time-variable</B>*
-<A HREF="#v:lc_time">v:lc_time</A>	The current <A HREF="mbyte.html#locale">locale</A> setting for time <A HREF="message.html#messages">messages</A> of the runtime
+<A HREF="#v:lc_time">v:lc_time</A>	The current <A HREF="mbyte.html#locale">locale</A> setting for time <A HREF="message.html#messages">信息</A> of the runtime
 		environment.  This allows Vim scripts to be aware of the
 		current language.  Technical: it's the value of LC_TIME.
 		This variable can not be set directly, use the |<A HREF="mlang.html#:language">:language</A>|
@@ -2352,7 +2352,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 		<A HREF="intro.html#register">register</A>).  Or for the currently executing normal mode <A HREF="map.html#mapping">mapping</A>
 		(use this in custom commands that take a <A HREF="intro.html#register">register</A>).
 		If none is supplied <A HREF="motion.html#it">它</A> is the default <A HREF="intro.html#register">register</A> &#39;&#34;'', unless
-		<A HREF="options.html#'clipboard'">'clipboard'</A> contains &quot;unnamed&quot; or &quot;unnamedplus&quot;, then <A HREF="motion.html#it">它</A> is
+		<A HREF="options.html#'clipboard'">'clipboard'</A> contains &quot;unnamed&quot; or &quot;unnamedplus&quot;然后<A HREF="motion.html#it">它</A> is
 		'*' or '<A HREF="motion.html#+">+</A>'.
 		Also 见 |<A HREF="builtin.html#getreg()">getreg()</A>| and |<A HREF="builtin.html#setreg()">setreg()</A>|
 
@@ -2416,7 +2416,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 <A HREF="#v:stderr">v:stderr</A>	|<A HREF="channel.html#channel-id">channel-id</A>| corresponding to stderr. The value is always 2;
 		use this variable to make your code more descriptive.
 		Unlike stdin and stdout (见 |<A HREF="builtin.html#stdioopen()">stdioopen()</A>|), stderr is always
-		open for <A HREF="editing.html#writing">writing</A>. Example:
+		open for <A HREF="editing.html#writing">写</A>. Example:
 <B>			:call chansend(v:stderr, "error: toaster empty\n")</B>
  
 
@@ -2569,7 +2569,7 @@ New <A HREF="#functions">functions</A> can be defined.  These can be called just
 <A HREF="#functions">functions</A>.  The function executes a sequence of <A HREF="intro.html#Ex">Ex</A> commands.  <A HREF="intro.html#Normal">正常</A>模式
 commands can be executed with the |<A HREF="various.html#:normal">:normal</A>| command.
 
-The function name must start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>, to avoid confusion with
+The function name must start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>, to avoid confusion with
 builtin <A HREF="#functions">functions</A>.  To prevent from using the same name in different scripts
 avoid obvious, short names.  A good habit is to start the function name with
 the name of the <A HREF="usr_41.html#script">script</A>, e.g., &quot;HTMLcolor()&quot;.
@@ -2941,7 +2941,7 @@ like this:
 
 When such a function is called, and <A HREF="motion.html#it">它</A> is not defined yet, Vim will search the
 &quot;<A HREF="#autoload">autoload</A>&quot; directories in <A HREF="options.html#'runtimepath'">'runtimepath'</A> for a <A HREF="usr_41.html#script">script</A> file called
-&quot;filename.vim&quot;.  For example &quot;~/.config/nvim/autoload/filename.vim&quot;.  That
+&quot;filename.vim&quot;.例如 &quot;~/.config/nvim/autoload/filename.vim&quot;.  That
 file should then define the function like this:
 
 <B>	function filename#funcname()</B>
@@ -2994,11 +2994,11 @@ wrapped in braces <A HREF="intro.html#{}">{}</A> like this:
 When Vim encounters this, <A HREF="motion.html#it">它</A> evaluates the <A HREF="#expression">expression</A> inside the braces, puts
 that in place of the <A HREF="#expression">expression</A>, and re-interprets the whole <A HREF="motion.html#as">as</A> a variable
 name.  So in the above example, if the variable &quot;adjective&quot; was set to
-&quot;noisy&quot;, then the reference would be to &quot;my_noisy_variable&quot;, whereas if
-&quot;adjective&quot; was set to &quot;quiet&quot;, then <A HREF="motion.html#it">它</A> would be to &quot;my_quiet_variable&quot;.
+&quot;noisy&quot;然后the reference would be to &quot;my_noisy_variable&quot;, whereas if
+&quot;adjective&quot; was set to &quot;quiet&quot;然后<A HREF="motion.html#it">它</A> would be to &quot;my_quiet_variable&quot;.
 
 One application for this is to create a set of <A HREF="#variables">variables</A> governed by an option
-value.  For example, the statement
+value.例如, the statement
 <B>	echo my_{&amp;background}_message</B>
 
 would output the contents of &quot;my_dark_message&quot; or &quot;my_light_message&quot; depending
@@ -3155,7 +3155,7 @@ This does NOT work:
 			command <A HREF="motion.html#as">as</A> mentioned above.
 			Example:
 <B>				:let [s, item] = GetItem(s)</B>
- 			Detail: {expr1} is evaluated first, then the
+ 			Detail: {expr1} is evaluated first然后the
 			assignments are done in sequence.  This matters if
 			{name2} depends on {name1}.  Example:
 <B>				:let x = [0, 1]</B>
@@ -3205,7 +3205,7 @@ text...
 
 			Without &quot;trim&quot; any white space characters in the lines
 			of text are preserved.  If &quot;trim&quot; is specified before
-			{endmarker}, then indentation is stripped so you can
+			{endmarker}然后indentation is stripped so you can
 			<A HREF="diff.html#do">do</A>:
 <B>				let text =&lt;&lt; trim END</B>
 <B>				   if ok</B>
@@ -3410,7 +3410,7 @@ text...
 <B>				:endif</B>
  			The commands still need to be parsed to find the
 			`endif`.  Sometimes an older Vim has a problem with a
-			new command.  For example, `:silent` is recognized <A HREF="motion.html#as">as</A>
+			new command.例如, `:silent` is recognized <A HREF="motion.html#as">as</A>
 			a `:substitute` command.  In that <A HREF="change.html#case">case</A> `:execute` can
 			avoid problems:
 <B>				:if version &gt;= 600</B>
@@ -3801,7 +3801,7 @@ explains how <A HREF="motion.html#it">它</A> can be used in a Vim <A HREF="usr_
 
 Exceptions may be raised by Vim on an error or on interrupt, see
 |<A HREF="#catch-errors">catch-errors</A>| and |<A HREF="#catch-interrupt">catch-interrupt</A>|.  You can also explicitly throw an
-exception by using the &quot;<A HREF="#:throw">:throw</A>&quot; command, 见 |<A HREF="#throw-catch">throw-catch</A>|.
+exception by using the &quot;<A HREF="#:throw">:throw</A>&quot;命令, 见 |<A HREF="#throw-catch">throw-catch</A>|.
 
 
 
@@ -3843,14 +3843,14 @@ is transferred to the finally clause, if present.  After its execution, the
 <A HREF="usr_41.html#script">script</A> continues with the line following the &quot;<A HREF="#:endtry">:endtry</A>&quot;.
    When an exception occurs during execution of the try block, the remaining
 lines in the try block are skipped.  The exception is matched against the
-patterns specified <A HREF="motion.html#as">as</A> arguments to the &quot;<A HREF="#:catch">:catch</A>&quot; commands.  The catch clause
+patterns specified <A HREF="motion.html#as">as</A> arguments to the &quot;<A HREF="#:catch">:catch</A>&quot;命令.  The catch clause
 after the first matching &quot;<A HREF="#:catch">:catch</A>&quot; is taken, other catch clauses are not
 executed.  The catch clause ends when the next &quot;<A HREF="#:catch">:catch</A>&quot;, &quot;<A HREF="#:finally">:finally</A>&quot;, or
-&quot;<A HREF="#:endtry">:endtry</A>&quot; command is reached - whatever is first.  Then, the finally clause
+&quot;<A HREF="#:endtry">:endtry</A>&quot;命令 is reached - whatever is first.  Then, the finally clause
 (if present) is executed.  When the &quot;<A HREF="#:endtry">:endtry</A>&quot; is reached, the <A HREF="usr_41.html#script">script</A> execution
 continues in the following line <A HREF="motion.html#as">as</A> usual.
    When an exception that does not match any of the patterns specified by the
-&quot;<A HREF="#:catch">:catch</A>&quot; commands is thrown in the try block, the exception is not caught by
+&quot;<A HREF="#:catch">:catch</A>&quot;命令 is thrown in the try block, the exception is not caught by
 that try conditional and none of the catch clauses is executed.  Only the
 finally clause, if present, is taken.  The exception pends during execution of
 the finally clause.  It is resumed at the &quot;<A HREF="#:endtry">:endtry</A>&quot;, so that commands after
@@ -3858,7 +3858,7 @@ the &quot;<A HREF="#:endtry">:endtry</A>&quot; are not executed and the exceptio
 见 |<A HREF="#try-nesting">try-nesting</A>|.
    When during execution of a catch clause another exception is thrown, the
 remaining lines in that catch clause are not executed.  The new exception is
-not matched against the patterns in any of the &quot;<A HREF="#:catch">:catch</A>&quot; commands of the same
+not matched against the patterns in any of the &quot;<A HREF="#:catch">:catch</A>&quot;命令 of the same
 try conditional and none of its catch clauses is taken.  If there is, however,
 a finally clause, <A HREF="motion.html#it">它</A> is executed, and the exception pends during its
 execution.  The commands following the &quot;<A HREF="#:endtry">:endtry</A>&quot; are not executed.  The new
@@ -3907,7 +3907,7 @@ the inner try conditional.
 When none of the active try conditionals catches an exception, just their
 finally clauses are executed.  Thereafter, the <A HREF="usr_41.html#script">script</A> processing terminates.
 An error message is displayed in <A HREF="change.html#case">case</A> of an uncaught exception explicitly
-thrown by a &quot;<A HREF="#:throw">:throw</A>&quot; command.  For uncaught error and interrupt exceptions
+thrown by a &quot;<A HREF="#:throw">:throw</A>&quot;命令.  For uncaught error and interrupt exceptions
 implicitly raised by Vim, the error message(s) or interrupt message are shown
 <A HREF="motion.html#as">as</A> usual.
 
@@ -3941,7 +3941,7 @@ first, and the result is thrown:
 
 An exception might be thrown during evaluation of the argument of the &quot;<A HREF="#:throw">:throw</A>&quot;
 command.  Unless <A HREF="motion.html#it">它</A> is caught there, the <A HREF="#expression">expression</A> evaluation is abandoned.
-The &quot;<A HREF="#:throw">:throw</A>&quot; command then does not throw a new exception.
+The &quot;<A HREF="#:throw">:throw</A>&quot;命令 then does not throw a new exception.
    Example:
 
 <B>	:function! Foo(arg)</B>
@@ -3999,7 +3999,7 @@ gets executed when a matching exception is caught.
 <B>	:call Foo('string')</B>
 
 The first call to Foo() displays &quot;<A HREF="#Number">Number</A> thrown&quot;, the second &quot;<A HREF="#String">String</A> thrown&quot;.
-An exception is matched against the &quot;<A HREF="#:catch">:catch</A>&quot; commands in the order they are
+An exception is matched against the &quot;<A HREF="#:catch">:catch</A>&quot;命令 in the order they are
 specified.  Only the first match counts.  So you should place the more
 specific &quot;<A HREF="#:catch">:catch</A>&quot; first.  The following order does not make sense:
 
@@ -4258,7 +4258,7 @@ If you want to catch specific <A HREF="message.html#errors">errors</A>, you just
 watched in a try block and add a catch clause for the error message.  The
 presence of the try conditional causes all <A HREF="message.html#errors">errors</A> to be converted to an
 exception.  No message is displayed and |<A HREF="#v:errmsg">v:errmsg</A>| is not set then.  To find
-the right <A HREF="pattern.html#pattern">pattern</A> for the &quot;<A HREF="#:catch">:catch</A>&quot; command, you have to know how the format of
+the right <A HREF="pattern.html#pattern">pattern</A> for the &quot;<A HREF="#:catch">:catch</A>&quot;命令, you have to know how the format of
 the error exception is.
    Error exceptions have the following format:
 
@@ -4293,7 +4293,7 @@ You can catch all &quot;<A HREF="#:unlet">:unlet</A>&quot; <A HREF="message.html
 or all <A HREF="message.html#errors">errors</A> for misspelled command names by a
 <B>	:catch /^Vim:E492:/</B>
 
-Some error <A HREF="message.html#messages">messages</A> may be produced by different commands:
+Some error <A HREF="message.html#messages">信息</A> may be produced by different commands:
 <B>	:function nofunc</B>
 and
 <B>	:delfunction nofunc</B>
@@ -4309,7 +4309,7 @@ command that caused <A HREF="motion.html#it">它</A> if you use the following <A
 
 Some commands like
 <B>	:let x = novar</B>
-produce multiple error <A HREF="message.html#messages">messages</A>, here:
+produce multiple error <A HREF="message.html#messages">信息</A>, here:
 <B>	E121: Undefined variable: novar</B>
 <B>	E15: Invalid expression:  novar</B>
 Only the first is used for the exception value, since <A HREF="motion.html#it">它</A> is the most specific
@@ -4319,7 +4319,7 @@ one (见 |<A HREF="#except-several-errors">except-several-errors</A>|).  So you 
 You can catch all <A HREF="message.html#errors">errors</A> related to the name &quot;nofunc&quot; by
 <B>	:catch /\&lt;nofunc\&gt;/</B>
 
-You can catch all Vim <A HREF="message.html#errors">errors</A> in the &quot;<A HREF="editing.html#:write">:write</A>&quot; and &quot;<A HREF="insert.html#:read">:read</A>&quot; commands by
+You can catch all Vim <A HREF="message.html#errors">errors</A> in the &quot;<A HREF="editing.html#:write">:write</A>&quot; and &quot;<A HREF="insert.html#:read">:read</A>&quot;命令 by
 <B>	:catch /^Vim(\(write\|read\)):E\d\+:/</B>
 
 You can catch all Vim <A HREF="message.html#errors">errors</A> by the <A HREF="pattern.html#pattern">pattern</A>
@@ -4346,8 +4346,8 @@ You can ignore <A HREF="message.html#errors">errors</A> in a specific Vim comman
 <B>	:endtry</B>
 
 But you are strongly recommended NOT to use this simple form, since <A HREF="motion.html#it">它</A> could
-catch more than you want.  With the &quot;<A HREF="editing.html#:write">:write</A>&quot; command, some autocommands could
-be executed and cause <A HREF="message.html#errors">errors</A> not related to <A HREF="editing.html#writing">writing</A>, for instance:
+catch more than you want.  With the &quot;<A HREF="editing.html#:write">:write</A>&quot;命令, some autocommands could
+be executed and cause <A HREF="message.html#errors">errors</A> not related to <A HREF="editing.html#writing">写</A>, for instance:
 
 <B>	:au BufWritePre * unlet novar</B>
 
@@ -4498,7 +4498,7 @@ abandoned and the exception is propagated to the caller of the command.
 <B>	:  echo "Caught:" v:exception "from" v:throwpoint</B>
 <B>	:endtry</B>
 
-Here, the &quot;<A HREF="editing.html#:write">:write</A>&quot; command does not write the file currently being edited (as
+Here, the &quot;<A HREF="editing.html#:write">:write</A>&quot;命令 does not write the file currently being edited (as
 you can see by checking 'modified'), since the exception from the <A HREF="autocmd.html#BufWritePre">BufWritePre</A>
 <A HREF="autocmd.html#autocommand">autocommand</A> abandons the &quot;<A HREF="editing.html#:write">:write</A>&quot;.  The exception is then caught and the
 <A HREF="usr_41.html#script">script</A> displays:
@@ -4570,7 +4570,7 @@ autocommands will be catchable by the caller of the command:
 For some commands, the normal action can be replaced by a sequence of
 autocommands.  Exceptions from that sequence will be catchable by the caller
 of the command.
-   Example:  For the &quot;<A HREF="editing.html#:write">:write</A>&quot; command, the caller cannot know whether the file
+   Example:  For the &quot;<A HREF="editing.html#:write">:write</A>&quot;命令, the caller cannot know whether the file
 had actually been written when the exception occurred.  You need to tell <A HREF="motion.html#it">它</A> in
 some way.
 
@@ -4636,10 +4636,10 @@ class name with the components separated by a colon, for instance throw the
 <A HREF="#string">string</A> &quot;EXCEPT:MATHERR:OVERFLOW&quot; for an overflow in a mathematical library.
    When you want to pass additional information with your exception class, add
 <A HREF="motion.html#it">它</A> in parentheses, for instance throw the <A HREF="#string">string</A> &quot;EXCEPT:IO:WRITEERR(myfile)&quot;
-for an error when <A HREF="editing.html#writing">writing</A> &quot;myfile&quot;.
-   With the appropriate patterns in the &quot;<A HREF="#:catch">:catch</A>&quot; command, you can catch for
+for an error when <A HREF="editing.html#writing">写</A> &quot;myfile&quot;.
+   With the appropriate patterns in the &quot;<A HREF="#:catch">:catch</A>&quot;命令, you can catch for
 base classes or derived classes of your hierarchy.  Additional information in
-parentheses can be cut out from |<A HREF="#v:exception">v:exception</A>| with the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command.
+parentheses can be cut out from |<A HREF="#v:exception">v:exception</A>| with the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令.
    Example:
 
 <B>	:function! CheckRange(a, func)</B>
@@ -4737,17 +4737,17 @@ commands (or when calling one of its <A HREF="#functions">functions</A>) from in
 conditional of a new <A HREF="usr_41.html#script">script</A>, you might change the <A HREF="intro.html#control">control</A> flow of the existing
 <A HREF="usr_41.html#script">script</A> on error.  You get the immediate abortion on error and can catch the
 error in the new <A HREF="usr_41.html#script">script</A>.  If however the sourced <A HREF="usr_41.html#script">script</A> suppresses error
-<A HREF="message.html#messages">messages</A> by using the &quot;<A HREF="various.html#:silent!">:silent!</A>&quot; command (checking for <A HREF="message.html#errors">errors</A> by <A HREF="testing.html#testing">testing</A>
+<A HREF="message.html#messages">信息</A> by using the &quot;<A HREF="various.html#:silent!">:silent!</A>&quot;命令 (checking for <A HREF="message.html#errors">errors</A> by <A HREF="testing.html#testing">testing</A>
 |<A HREF="#v:errmsg">v:errmsg</A>| if appropriate), its execution path is not changed.  The error is
 not converted to an exception.  (见 |<A HREF="various.html#:silent">:silent</A>|.)  So the only remaining cause
 where this happens is for scripts that don't care about <A HREF="message.html#errors">errors</A> and produce
-error <A HREF="message.html#messages">messages</A>.  You probably won't want to use such code from your new
+error <A HREF="message.html#messages">信息</A>.  You probably won't want to use such code from your new
 scripts.
 
 
 							*<A NAME="except-syntax-err"></A><B>except-syntax-err</B>*
 <A HREF="autocmd.html#Syntax">Syntax</A> <A HREF="message.html#errors">errors</A> in the exception handling commands are never caught by any of
-the &quot;<A HREF="#:catch">:catch</A>&quot; commands of the try conditional they belong to.  Its finally
+the &quot;<A HREF="#:catch">:catch</A>&quot;命令 of the try conditional they belong to.  Its finally
 clauses, however, is executed.
    Example:
 
@@ -4775,13 +4775,13 @@ The original exception is discarded and an error exception is raised, instead.
 
 
 							*<A NAME="except-single-line"></A><B>except-single-line</B>*
-The &quot;<A HREF="#:try">:try</A>&quot;, &quot;<A HREF="#:catch">:catch</A>&quot;, &quot;<A HREF="#:finally">:finally</A>&quot;, and &quot;<A HREF="#:endtry">:endtry</A>&quot; commands can be put on
+The &quot;<A HREF="#:try">:try</A>&quot;, &quot;<A HREF="#:catch">:catch</A>&quot;, &quot;<A HREF="#:finally">:finally</A>&quot;, and &quot;<A HREF="#:endtry">:endtry</A>&quot;命令 can be put on
 a single line, but then <A HREF="syntax.html#syntax">syntax</A> <A HREF="message.html#errors">errors</A> may make <A HREF="motion.html#it">它</A> difficult to recognize the
 &quot;catch&quot; line, thus you better avoid this.
    Example:
 <B>	:try | unlet! foo # | catch | endtry</B>
 raises an error exception for the trailing characters after the &quot;:unlet!&quot;
-argument, but does not see the &quot;<A HREF="#:catch">:catch</A>&quot; and &quot;<A HREF="#:endtry">:endtry</A>&quot; commands, so that the
+argument, but does not see the &quot;<A HREF="#:catch">:catch</A>&quot; and &quot;<A HREF="#:endtry">:endtry</A>&quot;命令, so that the
 error exception is discarded and the &quot;E488: Trailing characters&quot; message gets
 displayed.
 
@@ -4919,9 +4919,9 @@ code can be used:
 The <A HREF="#sandbox">sandbox</A>					*<A NAME="eval-sandbox"></A><B>eval-sandbox</B>* *<A NAME="sandbox"></A><B>sandbox</B>*
 
 The <A HREF="options.html#'foldexpr'">'foldexpr'</A>, <A HREF="options.html#'formatexpr'">'formatexpr'</A>, <A HREF="options.html#'includeexpr'">'includeexpr'</A>, <A HREF="options.html#'indentexpr'">'indentexpr'</A>, <A HREF="options.html#'statusline'">'statusline'</A> and
-<A HREF="options.html#'foldtext'">'foldtext'</A> <A HREF="options.html#options">options</A> may be evaluated in a <A HREF="#sandbox">sandbox</A>.  This means that you are
+<A HREF="options.html#'foldtext'">'foldtext'</A> <A HREF="options\.html#options">选项</A> may be evaluated in a <A HREF="#sandbox">sandbox</A>.  This means that you are
 protected from these expressions having nasty side effects.  This gives some
-safety for when these <A HREF="options.html#options">options</A> are set from a <A HREF="options.html#modeline">modeline</A>.  It is also used when
+safety for when these <A HREF="options\.html#options">选项</A> are set from a <A HREF="options.html#modeline">modeline</A>.  It is also used when
 the command from a <A HREF="tagsrch.html#tags">标签</A> file is executed and for <A HREF="undo.html#CTRL-R">CTRL-R</A> = in the command line.
 The sandbox is also used for the |<A HREF="#:sandbox">:sandbox</A>| command.
 
@@ -4930,11 +4930,11 @@ The sandbox is also used for the |<A HREF="#:sandbox">:sandbox</A>| command.
 These items are not allowed in the <A HREF="#sandbox">sandbox</A>:
 	- <A HREF="change.html#changing">changing</A> the buffer text
 	- defining or <A HREF="change.html#changing">changing</A> <A HREF="map.html#mapping">mapping</A>, autocommands, user commands
-	- setting certain <A HREF="options.html#options">options</A> (见 |<A HREF="options.html#option-summary">option-summary</A>|)
+	- setting certain <A HREF="options\.html#options">选项</A> (见 |<A HREF="options.html#option-summary">option-summary</A>|)
 
 	- setting certain v: <A HREF="#variables">variables</A> (见 |<A HREF="#v:var">v:var</A>|)  *<A NAME="E794"></A><B>E794</B>*
 	- executing a shell command
-	- reading or <A HREF="editing.html#writing">writing</A> a file
+	- reading or <A HREF="editing.html#writing">写</A> a file
 	- jumping to another buffer or editing a file
 	- executing <A HREF="if_pyth.html#Python">Python</A>, Perl, etc. commands
 This is not guaranteed 100&#37; secure, but <A HREF="motion.html#it">它</A> should block most attacks.
@@ -4947,7 +4947,7 @@ This is not guaranteed 100&#37; secure, but <A HREF="motion.html#it">它</A> sho
 
 
 							*<A NAME="sandbox-option"></A><B>sandbox-option</B>*
-A few <A HREF="options.html#options">options</A> contain an <A HREF="#expression">expression</A>.  When this <A HREF="#expression">expression</A> is evaluated <A HREF="motion.html#it">它</A> may
+A few <A HREF="options\.html#options">选项</A> contain an <A HREF="#expression">expression</A>.  When this <A HREF="#expression">expression</A> is evaluated <A HREF="motion.html#it">它</A> may
 have to be done in the <A HREF="#sandbox">sandbox</A> to avoid a security risk.  But the <A HREF="#sandbox">sandbox</A> is
 restrictive, thus this only happens when the option was set from an insecure
 location.  Insecure in this <A HREF="repeat.html#context">context</A> are:
@@ -4966,7 +4966,7 @@ Textlock							*<A NAME="textlock"></A><B>textlock</B>*
 In a few situations <A HREF="motion.html#it">它</A> is not allowed to change the text in the buffer, jump
 to another<A HREF="windows.html#window">窗口</A>and some other things that might confuse or break what Vim
 is currently doing.  This mostly applies to things that happen when Vim is
-actually doing something else.  For example, evaluating the <A HREF="vim_diff.html#'balloonexpr'">'balloonexpr'</A> may
+actually doing something else.例如, evaluating the <A HREF="vim_diff.html#'balloonexpr'">'balloonexpr'</A> may
 happen any moment the mouse cursor is resting at some position.
 
 This is not allowed when the <A HREF="#textlock">textlock</A> is active:

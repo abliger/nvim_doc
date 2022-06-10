@@ -101,19 +101,19 @@ And to enable <A HREF="motion.html#it">它</A> again:
 <B>	:DoMatchParen</B>
 
 The highlighting used is MatchParen.  You can specify different colors with
-the &quot;<A HREF="syntax.html#:highlight">:highlight</A>&quot; command.  Example:
+the &quot;<A HREF="syntax.html#:highlight">:highlight</A>&quot;命令.  Example:
 
 <B>	:hi MatchParen ctermbg=blue guibg=lightblue</B>
 
 The characters to be matched come from the <A HREF="options.html#'matchpairs'">'matchpairs'</A> option.  You can
 change the value to highlight different matches.  Note that not everything is
-possible.  For example, you can't highlight single or double quotes, because
+possible.例如, you can't highlight single or double quotes, because
 the start and end are equal.
 
 The <A HREF="syntax.html#syntax">syntax</A> highlighting attributes are used.  When the cursor currently is not
-in a <A HREF="eval.html#string">string</A> or comment <A HREF="syntax.html#syntax">syntax</A> item, then matches inside <A HREF="eval.html#string">string</A> and comment
-<A HREF="syntax.html#syntax">syntax</A> items are ignored.  Any <A HREF="syntax.html#syntax">syntax</A> items with &quot;<A HREF="eval.html#string">string</A>&quot; or &quot;comment&quot;
-somewhere in their name are considered <A HREF="eval.html#string">string</A> or comment items.
+in a <A HREF="options\.html#options">字符串</A> or comment <A HREF="syntax.html#syntax">syntax</A> item然后matches inside <A HREF="options\.html#options">字符串</A> and comment
+<A HREF="syntax.html#syntax">syntax</A> items are ignored.  Any <A HREF="syntax.html#syntax">syntax</A> items with &quot;<A HREF="options\.html#options">字符串</A>&quot; or &quot;comment&quot;
+somewhere in their name are considered <A HREF="options\.html#options">字符串</A> or comment items.
 
 The search is limited to avoid a delay when moving the cursor.  The <A HREF="vi_diff.html#limits">limits</A>
 are:

@@ -123,7 +123,7 @@ started.  <A HREF="starting.html#CTRL-Z">CTRL-Z</A> will minimize the Vim<A HREF
 
 *<A NAME="21.2"></A><B>21.2</B>*	Executing shell commands
 
-To execute a single shell command from Vim use &quot;:!{command}&quot;.  For example, to
+To execute a single shell command from Vim use &quot;:!{command}&quot;.例如, to
 see a directory listing:
 
 <B>	:!ls</B>
@@ -165,7 +165,7 @@ information:
 	<A HREF="cmdline.html#Command-line">Command-line</A> and Search <A HREF="pattern.html#pattern">pattern</A> <A HREF="cmdline.html#history">history</A>
 	Text in <A HREF="change.html#registers">registers</A>
 	Marks for various files
-	The buffer <A HREF="eval.html#list">list</A>
+	The buffer <A HREF="eval.html#list">列表</A>
 	Global <A HREF="eval.html#variables">variables</A>
 
 Each time you exit Vim <A HREF="motion.html#it">它</A> will store this information in a file, the ShaDa
@@ -178,10 +178,10 @@ the following command:
 
 <B>	:set shada=string</B>
 
-The <A HREF="eval.html#string">string</A> specifies what to save.  The <A HREF="syntax.html#syntax">syntax</A> of this <A HREF="eval.html#string">string</A> is an option
+The <A HREF="options\.html#options">字符串</A> specifies what to save.  The <A HREF="syntax.html#syntax">syntax</A> of this <A HREF="options\.html#options">字符串</A> is an option
 character followed by an argument.  The option/argument pairs are separated by
 commas.
-   Take a look at how you can build up your own <A HREF="starting.html#shada">shada</A> <A HREF="eval.html#string">string</A>.  First, the ''
+   Take a look at how you can build up your own <A HREF="starting.html#shada">shada</A> <A HREF="options\.html#options">字符串</A>.  First, the ''
 option is used to specify how many files for which you save marks (a-z).  Pick
 a nice even number for this option (1000, for instance).  Your command now
 looks like this:
@@ -201,16 +201,16 @@ starting Vim slower) you use a maximum of 500 lines:
 
 <B>	:set shada='1000,f1,&lt;500</B>
  
-Other <A HREF="options.html#options">options</A> you might want to use:
+Other <A HREF="options\.html#options">选项</A> you might want to use:
 	:	number of lines to save from the command line <A HREF="cmdline.html#history">history</A>
 	@	number of lines to save from the input line <A HREF="cmdline.html#history">history</A>
 	/	number of lines to save from the search <A HREF="cmdline.html#history">history</A>
 	<A HREF="change.html#r">r</A>	removable media, for which no marks will be stored (can be
 		used several times)
-	!	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A> and
-		don't contain <A HREF="change.html#lowercase">lowercase</A> letters
+	!	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> and
+		don't contain <A HREF="change.html#lowercase">小写</A> letters
 	<A HREF="motion.html#h">h</A>	disable <A HREF="options.html#'hlsearch'">'hlsearch'</A> highlighting when starting
-	<A HREF="motion.html#&#37;">&#37;</A>	the buffer <A HREF="eval.html#list">list</A> (only restored when starting Vim without file
+	<A HREF="motion.html#&#37;">&#37;</A>	the buffer <A HREF="eval.html#list">列表</A> (only restored when starting Vim without file
 		arguments)
 	<A HREF="change.html#c">c</A>	convert the text using <A HREF="options.html#'encoding'">'encoding'</A>
 	<A HREF="pattern.html#n">n</A>	name used for the ShaDa file (must be the last option)
@@ -240,7 +240,7 @@ position that <A HREF="motion.html#'0">'0</A> pointed to is made '1.  And '1 is 
 GETTING BACK TO SOME FILE
 
 If you want to go back to a file that you edited recently, but not when
-<A HREF="starting.html#exiting">exiting</A> Vim, there is a slightly more complicated way.  You can see a <A HREF="eval.html#list">list</A> of
+<A HREF="starting.html#exiting">exiting</A> Vim, there is a slightly more complicated way.  You can see a <A HREF="eval.html#list">列表</A> of
 files by typing the command:
 
 <B>	:oldfiles</B>
@@ -248,7 +248,7 @@ files by typing the command:
 <B><FONT color="#3A6F2B">	2: ~/text/resume.txt </FONT></B>
 <B><FONT color="#3A6F2B">	3: /tmp/draft </FONT></B>
 
-Now you would like to edit the second file, which is in the <A HREF="eval.html#list">list</A> preceded by
+Now you would like to edit the second file, which is in the <A HREF="eval.html#list">列表</A> preceded by
 &quot;2:&quot;.  You type:
 
 <B>	:e #&lt;2</B>
@@ -269,7 +269,7 @@ Fortunately there is a simpler way:
 <B><FONT color="#3A6F2B">	3: /tmp/draft </FONT></B>
 	<A HREF="starting.html#--">--</A> More <A HREF="starting.html#--">--</A>
 
-You get the same <A HREF="eval.html#list">list</A> of files <A HREF="motion.html#as">as</A> with |<A HREF="starting.html#:oldfiles">:oldfiles</A>|.  If you want to edit
+You get the same <A HREF="eval.html#list">列表</A> of files <A HREF="motion.html#as">as</A> with |<A HREF="starting.html#:oldfiles">:oldfiles</A>|.  If you want to edit
 &quot;resume.txt&quot; first press &quot;<A HREF="repeat.html#q">q</A>&quot; to stop the listing.  You will get a prompt:
 
 <B><FONT color="#3A6F2B">	Type number and &lt;Enter&gt; (empty cancels): </FONT></B>
@@ -281,7 +281,7 @@ More info at |<A HREF="starting.html#:oldfiles">:oldfiles</A>|, |<A HREF="eval.h
 
 MOVE INFO FROM ONE VIM TO ANOTHER
 
-You can use the &quot;<A HREF="starting.html#:wshada">:wshada</A>&quot; and &quot;<A HREF="starting.html#:rshada">:rshada</A>&quot; commands to save and restore the
+You can use the &quot;<A HREF="starting.html#:wshada">:wshada</A>&quot; and &quot;<A HREF="starting.html#:rshada">:rshada</A>&quot;命令 to save and restore the
 information while still running Vim.  This is useful for exchanging <A HREF="intro.html#register">register</A>
 contents between two instances of Vim, for example.  In the first Vim <A HREF="diff.html#do">do</A>:
 
@@ -310,8 +310,8 @@ Suppose you are editing along, and <A HREF="motion.html#it">它</A> is the end o
 work and pick up where you left off the next day.  You can <A HREF="diff.html#do">do</A> this by saving
 your editing session and restoring <A HREF="motion.html#it">它</A> the next day.
    A Vim session contains all the information about what you are editing.
-This includes things such <A HREF="motion.html#as">as</A> the file <A HREF="eval.html#list">list</A>,<A HREF="windows.html#window">窗口</A>layout, global <A HREF="eval.html#variables">variables</A>,
-<A HREF="options.html#options">options</A> and other information.  (Exactly what is remembered is controlled by
+This includes things such <A HREF="motion.html#as">as</A> the file <A HREF="eval.html#list">列表</A>,<A HREF="windows.html#window">窗口</A>layout, global <A HREF="eval.html#variables">variables</A>,
+<A HREF="options\.html#options">选项</A> and other information.  (Exactly what is remembered is controlled by
 the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option, described below.)
    The following command creates a session file:
 
@@ -340,7 +340,7 @@ default value is &quot;blank,buffers,curdir,folds,help,options,winsize&quot;.
 	curdir		the current directory
 	<A HREF="fold.html#folds">folds</A>		<A HREF="fold.html#folds">folds</A>, also manually created ones
 	help		the help<A HREF="windows.html#window">窗口</A>
-	<A HREF="options.html#options">options</A>		all <A HREF="options.html#options">options</A> and mappings
+	<A HREF="options\.html#options">选项</A>		all <A HREF="options\.html#options">选项</A> and mappings
 	winsize		<A HREF="windows.html#window">窗口</A>sizes
 
 Change this to your liking.  To also restore the size of the Vim<A HREF="windows.html#window">窗口</A>, for
@@ -376,7 +376,7 @@ session file <A HREF="motion.html#as">as</A> a starting point.
    Another way of using sessions is to create a<A HREF="windows.html#window">窗口</A>layout that you like to
 use, and save this in a session.  Then you can go back to this layout whenever
 you want.
-   For example, this is a nice layout to use:
+ 例如, this is a nice layout to use:
 
 	+----------------------------------------+
 	&#124;		   VIM - main help file  |
@@ -461,7 +461,7 @@ you get the view back with this command:
 
 That's easy, isn't <A HREF="motion.html#it">它</A>?
    Now you want to view the file without the <A HREF="options.html#'number'">'number'</A> option on, or with all
-<A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options.html#options">options</A> to make the<A HREF="windows.html#window">窗口</A>look that way.  Then
+<A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options\.html#options">选项</A> to make the<A HREF="windows.html#window">窗口</A>look that way.  Then
 store this view with:
 
 <B>	:mkview 1</B>
@@ -481,9 +481,9 @@ A VIEW WITH A NAME
 The second basic way to use views is by storing the view in a file with a name
 you choose.  This view can be loaded while editing another file.  Vim will
 then switch to editing the file specified in the view.  Thus you can use this
-to quickly switch to editing another file, with all its <A HREF="options.html#options">options</A> set <A HREF="motion.html#as">as</A> you
+to quickly switch to editing another file, with all its <A HREF="options\.html#options">选项</A> set <A HREF="motion.html#as">as</A> you
 saved them.
-   For example, to save the view of the current file:
+ 例如, to save the view of the current file:
 
 <B>	:mkview ~/.config/nvim/main.vim</B>
 
@@ -495,11 +495,11 @@ You can restore <A HREF="motion.html#it">它</A> with:
 
 *<A NAME="21.6"></A><B>21.6</B>*	Modelines
 
-When editing a specific file, you might set <A HREF="options.html#options">options</A> specifically for that
+When editing a specific file, you might set <A HREF="options\.html#options">选项</A> specifically for that
 file.  Typing these commands each time is boring.  Using a session or view for
 editing a file doesn't work when sharing the file between several people.
    The solution for this situation is adding a <A HREF="options.html#modeline">modeline</A> to the file.  This is
-a line of text that tells Vim the values of <A HREF="options.html#options">options</A>, to be used in this file
+a line of text that tells Vim the values of <A HREF="options\.html#options">选项</A>, to be used in this file
 only.
    A typical example is a C program where you make indents by a multiple of 4
 spaces.  This requires setting the <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> option to 4.  This <A HREF="options.html#modeline">modeline</A>
@@ -535,8 +535,8 @@ done above with /* and *<A HREF="pattern.html#/.">/.</A>
    The &quot; vim:&quot; part is what makes Vim recognize this line.  There must be
 white space before &quot;vim&quot;, or &quot;vim&quot; must be at the start of the line.  Thus
 using something like &quot;gvim:&quot; will not work.
-   The part between the colons is a &quot;<A HREF="options.html#:set">:set</A>&quot; command.  It works the same way <A HREF="motion.html#as">as</A>
-typing the &quot;<A HREF="options.html#:set">:set</A>&quot; command, except that you need to insert a <A HREF="intro.html#backslash">backslash</A> before a
+   The part between the colons is a &quot;<A HREF="options.html#:set">:set</A>&quot;命令.  It works the same way <A HREF="motion.html#as">as</A>
+typing the &quot;<A HREF="options.html#:set">:set</A>&quot;命令, except that you need to insert a <A HREF="intro.html#backslash">backslash</A> before a
 colon (otherwise <A HREF="motion.html#it">它</A> would be seen <A HREF="motion.html#as">as</A> the end of the <A HREF="options.html#modeline">modeline</A>).
 
 Another example:
@@ -544,7 +544,7 @@ Another example:
 <B><FONT color="#3A6F2B">	// vim:set textwidth=72 dir=c\:\tmp:  use c:\tmp here </FONT></B>
 
 There is an extra <A HREF="intro.html#backslash">backslash</A> before the first colon, so that it's included in
-the &quot;<A HREF="options.html#:set">:set</A>&quot; command.  The text after the second colon is ignored, thus a remark
+the &quot;<A HREF="options.html#:set">:set</A>&quot;命令.  The text after the second colon is ignored, thus a remark
 can be placed there.
 
 For more details 见 |<A HREF="options.html#modeline">modeline</A>|.

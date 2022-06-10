@@ -80,7 +80,7 @@
 
 
 Vim can be tuned to work like you want <A HREF="motion.html#it">它</A> to.  This chapter shows you how to
-make Vim start with <A HREF="options.html#options">options</A> set to different values.  Add plugins to extend
+make Vim start with <A HREF="options\.html#options">选项</A> set to different values.  Add plugins to extend
 Vim's capabilities.  Or define your own macros.
 
 |<A HREF="#05.1">05.1</A>|	The <A HREF="starting.html#vimrc">vimrc</A> file
@@ -90,10 +90,10 @@ Vim's capabilities.  Or define your own macros.
 |<A HREF="#05.5">05.5</A>|	Adding a <A HREF="#plugin">plugin</A>
 |<A HREF="#05.6">05.6</A>|	Adding a help file
 |<A HREF="#05.7">05.7</A>|	The option<A HREF="windows.html#window">窗口</A>
-|<A HREF="#05.8">05.8</A>|	Often used <A HREF="options.html#options">options</A>
+|<A HREF="#05.8">05.8</A>|	Often used <A HREF="options\.html#options">选项</A>
 
 下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
-上一章: |<A HREF="usr_04.html">usr_04.txt</A>|  Making small changes
+上一章: |<A HREF="usr_04.html">usr_04.txt</A>|  做小改动
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
@@ -119,7 +119,7 @@ This file is always used and is recommended:
 <B><FONT color="#3A6F2B">	~/AppData/Local/nvim/init.vim   (Windows) </FONT></B>
 
 The <A HREF="starting.html#vimrc">vimrc</A> file can contain all the commands that you type after a colon.  The
-simplest ones are for setting <A HREF="options.html#options">options</A>.  For example, if you want Vim to always
+simplest ones are for setting <A HREF="options\.html#options">选项</A>.例如, if you want Vim to always
 start with the <A HREF="options.html#'ignorecase'">'ignorecase'</A> option on, add this line your <A HREF="starting.html#vimrc">vimrc</A> file:
 
 <B>	set ignorecase</B>
@@ -140,7 +140,7 @@ In the first chapter was explained how to create a <A HREF="starting.html#vimrc"
 
 In this section we will explain the various commands used in this file.  This
 will give you hints about how to set up your own preferences.  Not everything
-will be explained though.  Use the &quot;<A HREF="helphelp.html#:help">:help</A>&quot; command to find out more.
+will be explained though.  Use the &quot;<A HREF="helphelp.html#:help">:help</A>&quot;命令 to find out more.
 
 
 <B>	set backspace=indent,eol,start</B>
@@ -154,8 +154,8 @@ character before where <A HREF="intro.html#Insert">插入</A>模式 started.
 <B>	set autoindent</B>
 
 This makes Vim use the indent of the previous line for a newly created line.
-Thus there is the same amount of white space before the new line.  For example
-when pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in <A HREF="intro.html#Insert">插入</A>模式, and when using the &quot;<A HREF="insert.html#o">o</A>&quot; command to open a
+Thus there is the same amount of white space before the new line.例如
+when pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> in <A HREF="intro.html#Insert">插入</A>模式, and when using the &quot;<A HREF="insert.html#o">o</A>&quot;命令 to open a
 new line.
 
 
@@ -180,7 +180,7 @@ Vim<A HREF="windows.html#window">窗口</A>.
 <B>	set showcmd</B>
 
 Display an incomplete command in the lower right corner of the Vim<A HREF="windows.html#window">窗口</A>,
-left of the ruler.  For example, when you type &quot;2f&quot;, Vim is waiting for you to
+left of the ruler.例如, when you type &quot;2f&quot;, Vim is waiting for you to
 type the character to find and &quot;2f&quot; is displayed.  When you press &quot;<A HREF="motion.html#w">w</A>&quot; next,
 the &quot;2fw&quot; command is executed and the displayed &quot;2f&quot; is removed.
 
@@ -202,8 +202,8 @@ Display matches for a search <A HREF="pattern.html#pattern">pattern</A> while yo
 <B>	map Q gq</B>
 
 This defines a key <A HREF="map.html#mapping">mapping</A>.  More about that in the next section.  This
-defines the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command to <A HREF="diff.html#do">do</A> <A HREF="change.html#formatting">formatting</A> with the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">operator</A>.  This is how
-<A HREF="motion.html#it">它</A> worked before Vim 5.0.  Otherwise the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command starts <A HREF="intro.html#Ex">Ex</A> mode, but you
+defines the &quot;<A HREF="repeat.html#Q">Q</A>&quot;命令 to <A HREF="diff.html#do">do</A> <A HREF="change.html#formatting">formatting</A> with the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">operator</A>.  This is how
+<A HREF="motion.html#it">它</A> worked before Vim 5.0.  Otherwise the &quot;<A HREF="repeat.html#Q">Q</A>&quot;命令 starts <A HREF="intro.html#Ex">Ex</A> mode, but you
 will not need <A HREF="motion.html#it">它</A>.
 
 
@@ -218,7 +218,7 @@ executed like you typed them.
 <B>	set hlsearch</B>
 
 This option tells Vim to highlight matches with the last used search <A HREF="pattern.html#pattern">pattern</A>.
-The &quot;if&quot; command is very useful to set <A HREF="options.html#options">options</A> only when some condition is
+The &quot;if&quot; command is very useful to set <A HREF="options\.html#options">选项</A> only when some condition is
 met.  More about that in |<A HREF="usr_41.html">usr_41.txt</A>|.
 
 
@@ -236,7 +236,7 @@ This switches on three very clever mechanisms:
    见 |<A HREF="filetype.html#filetypes">filetypes</A>|.
 
 2. Using <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A> files
-   Many different <A HREF="filetype.html#filetypes">filetypes</A> are edited with different <A HREF="options.html#options">options</A>.  For example,
+   Many different <A HREF="filetype.html#filetypes">filetypes</A> are edited with different <A HREF="options\.html#options">选项</A>.例如,
    when you edit a &quot;<A HREF="change.html#c">c</A>&quot; file, it's very useful to set the <A HREF="options.html#'cindent'">'cindent'</A> option to
    automatically indent the lines.  These commonly useful option settings are
    included with Vim in <A HREF="filetype.html#filetype">filetype</A> plugins.  You can also add your own, see
@@ -264,7 +264,7 @@ typing commands at the command-line.
 <B>	command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis</B>
 <B>		  \ | wincmd p | diffthis</B>
 
-This adds the &quot;<A HREF="diff.html#:DiffOrig">:DiffOrig</A>&quot; command.  Use this in a modified buffer to see the
+This adds the &quot;<A HREF="diff.html#:DiffOrig">:DiffOrig</A>&quot;命令.  Use this in a modified buffer to see the
 differences with the file <A HREF="motion.html#it">它</A> was loaded from.  见 |<A HREF="diff.html#diff">diff</A>| and |<A HREF="diff.html#:DiffOrig">:DiffOrig</A>|.
 
 
@@ -302,10 +302,10 @@ Let's break this down:
 
     a}&lt;Esc&gt;	Append the } to the <A HREF="motion.html#word">单词</A>.
 
-After you execute the &quot;<A HREF="map.html#:map">:map</A>&quot; command, all you have to <A HREF="diff.html#do">do</A> to put <A HREF="intro.html#{}">{}</A> around a
+After you execute the &quot;<A HREF="map.html#:map">:map</A>&quot;命令, all you have to <A HREF="diff.html#do">do</A> to put <A HREF="intro.html#{}">{}</A> around a
 <A HREF="motion.html#word">单词</A> is to put the cursor on the first character and press F5.
 
-In this example, the trigger is a single key; <A HREF="motion.html#it">它</A> can be any <A HREF="eval.html#string">string</A>.  But when
+In this example, the trigger is a single key; <A HREF="motion.html#it">它</A> can be any <A HREF="options\.html#options">字符串</A>.  But when
 you use an existing Vim command, that command will no longer be available.
 You better avoid that.
    One key that can be used with mappings is the <A HREF="intro.html#backslash">backslash</A>.  Since you
@@ -319,7 +319,7 @@ for example:
 You need to type the \ and the <A HREF="change.html#p">p</A> quickly after another, so that Vim knows they
 belong together.
 
-The &quot;<A HREF="map.html#:map">:map</A>&quot; command (with no arguments) lists your current mappings.  At
+The &quot;<A HREF="map.html#:map">:map</A>&quot;命令 (with no arguments) lists your current mappings.  At
 least the ones for <A HREF="intro.html#Normal">正常</A>模式.  More about mappings in section |<A HREF="usr_40.html#40.1">40.1</A>|.
 
 ==============================================================================
@@ -376,7 +376,7 @@ There are two types of plugins:
     global <A HREF="#plugin">plugin</A>: Used for all kinds of files
   <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A>: Only used for a specific type of file
 
-The global plugins will be discussed first, then the <A HREF="filetype.html#filetype">filetype</A> ones
+The global plugins will be discussed first然后the <A HREF="filetype.html#filetype">filetype</A> ones
 |<A HREF="#add-filetype-plugin">add-filetype-plugin</A>|.
 
 
@@ -448,7 +448,7 @@ better one, you can add <A HREF="motion.html#it">它</A>.  There are two steps f
 GETTING A FILETYPE PLUGIN
 
 You can find them in the same places <A HREF="motion.html#as">as</A> the global plugins.  Watch out if the
-type of file is mentioned, then you know if the <A HREF="#plugin">plugin</A> is a global or a
+type of file is mentioned然后you know if the <A HREF="#plugin">plugin</A> is a global or a
 <A HREF="filetype.html#filetype">filetype</A> one.  The scripts in $VIMRUNTIME/macros are global ones, the <A HREF="filetype.html#filetype">filetype</A>
 plugins are in $VIMRUNTIME/ftplugin.
 
@@ -536,22 +536,22 @@ The title lines from the local help files are automagically added to this
 section.  There you can see which local help files have been added and jump to
 them through the <A HREF="tagsrch.html#tag">标签</A>.
 
-For <A HREF="editing.html#writing">writing</A> a local help file, 见 |<A HREF="usr_41.html#write-local-help">write-local-help</A>|.
+For <A HREF="editing.html#writing">写</A> a local help file, 见 |<A HREF="usr_41.html#write-local-help">write-local-help</A>|.
 
 ==============================================================================
 
 *<A NAME="05.7"></A><B>05.7</B>*	The option<A HREF="windows.html#window">窗口</A>
 
 If you are looking for an option that does what you want, you can search in
-the help files here: |<A HREF="options.html#options">options</A>|.  Another way is by using this command:
+the help files here: |<A HREF="options\.html#options">选项</A>|.  Another way is by using this command:
 
 <B>	:options</B>
 
-This opens a new<A HREF="windows.html#window">窗口</A>, with a <A HREF="eval.html#list">list</A> of <A HREF="options.html#options">options</A> with a one-line explanation.
-The <A HREF="options.html#options">options</A> are grouped by subject.  Move the cursor to a subject and press
+This opens a new<A HREF="windows.html#window">窗口</A>, with a <A HREF="eval.html#list">列表</A> of <A HREF="options\.html#options">选项</A> with a one-line explanation.
+The <A HREF="options\.html#options">选项</A> are grouped by subject.  Move the cursor to a subject and press
 <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to jump there.  Press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> again to jump back.  Or use <A HREF="motion.html#CTRL-O">CTRL-O</A>.
 
-You can change the value of an option.  For example, move to the &quot;displaying
+You can change the value of an option.例如, move to the &quot;displaying
 text&quot; subject.  Then move the cursor down to this line:
 
 <B><FONT color="#3A6F2B">	set wrap	nowrap </FONT></B>
@@ -566,8 +566,8 @@ Just above this line is a short description of the <A HREF="options.html#'wrap'"
 cursor one line up to place <A HREF="motion.html#it">它</A> in this line.  Now hit <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> and you jump to
 the full help on the <A HREF="options.html#'wrap'">'wrap'</A> option.
 
-For <A HREF="options.html#options">options</A> that take a number or <A HREF="eval.html#string">string</A> argument you can edit the value.
-Then press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to apply the new value.  For example, move the cursor a few
+For <A HREF="options\.html#options">选项</A> that take a number or <A HREF="options\.html#options">字符串</A> argument you can edit the value.
+Then press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to apply the new value.例如, move the cursor a few
 lines up to this line:
 
 <B><FONT color="#3A6F2B">	set so=0 </FONT></B>
@@ -580,12 +580,12 @@ from the<A HREF="windows.html#window">窗口</A>border where <A HREF="scroll.htm
 
 ==============================================================================
 
-*<A NAME="05.8"></A><B>05.8</B>*	Often used <A HREF="options.html#options">options</A>
+*<A NAME="05.8"></A><B>05.8</B>*	Often used <A HREF="options\.html#options">选项</A>
 
-There are an awful lot of <A HREF="options.html#options">options</A>.  Most of them you will hardly ever use.
+There are an awful lot of <A HREF="options\.html#options">选项</A>.  Most of them you will hardly ever use.
 Some of the more useful ones will be mentioned here.  Don't forget you can
-find more help on these <A HREF="options.html#options">options</A> with the &quot;<A HREF="helphelp.html#:help">:help</A>&quot; command, with single quotes
-before and after the option name.  For example:
+find more help on these <A HREF="options\.html#options">选项</A> with the &quot;<A HREF="helphelp.html#:help">:help</A>&quot;命令, with single quotes
+before and after the option name.例如:
 
 <B>	:help 'wrap'</B>
 
@@ -673,7 +673,7 @@ like &quot;<A HREF="motion.html#w">w</A>&quot; consider &quot;upper-case&quot; t
 <B><FONT color="#3A6F2B"> 	  iskeyword=@,48-57,_,192-255,- </FONT></B>
 
 If you look at the new value, you will see that Vim has added a comma for you.
-   To remove a character use &quot;-=&quot;.  For example, to remove the underscore:
+   To remove a character use &quot;-=&quot;.例如, to remove the underscore:
 
 <B>	:set iskeyword-=_</B>
 <B>	:set iskeyword</B>
@@ -684,11 +684,11 @@ This time a comma is automatically deleted.
 
 ROOM FOR MESSAGES
 
-When Vim starts there is one line at the bottom that is used for <A HREF="message.html#messages">messages</A>.
+When Vim starts there is one line at the bottom that is used for <A HREF="message.html#messages">信息</A>.
 When a message is long, <A HREF="motion.html#it">它</A> is either truncated, thus you can only see part of
 <A HREF="motion.html#it">它</A>, or the text scrolls and you have to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to continue.
    You can set the <A HREF="options.html#'cmdheight'">'cmdheight'</A> option to the number of lines used for
-<A HREF="message.html#messages">messages</A>.  Example:
+<A HREF="message.html#messages">信息</A>.  Example:
 
 <B>	:set cmdheight=3</B>
 

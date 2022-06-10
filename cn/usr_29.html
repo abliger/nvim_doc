@@ -80,7 +80,7 @@
 
 
 The creator of Vim is a computer programmer.  It's no surprise that Vim
-contains many features to aid in <A HREF="editing.html#writing">writing</A> programs.  Jump around to find where
+contains many features to aid in <A HREF="editing.html#writing">写</A> programs.  Jump around to find where
 identifiers are defined and used.  Preview declarations in a separate<A HREF="windows.html#window">窗口</A>.
 There is more in the next chapter.
 
@@ -99,7 +99,7 @@ There is more in the next chapter.
 *<A NAME="29.1"></A><B>29.1</B>*	Using <A HREF="tagsrch.html#tags">标签</A>
 
 What is a <A HREF="tagsrch.html#tag">标签</A>?  It is a location where an identifier is defined.  An example
-is a function definition in a C or C++ program.  A <A HREF="eval.html#list">list</A> of <A HREF="tagsrch.html#tags">标签</A> is kept in a
+is a function definition in a C or C++ program.  A <A HREF="eval.html#list">列表</A> of <A HREF="tagsrch.html#tags">标签</A> is kept in a
 <A HREF="tagsrch.html#tags">标签</A> file.  This can be used by Vim to directly jump from any place to the
 <A HREF="tagsrch.html#tag">标签</A>, the place where an identifier is defined.
    To generate the <A HREF="tagsrch.html#tags">标签</A> file for all C files in the current directory, use the
@@ -156,7 +156,7 @@ function.
 				       |}				    |
 				       +------------------------------------+
 
-The &quot;<A HREF="tagsrch.html#:tags">:tags</A>&quot; command shows the <A HREF="eval.html#list">list</A> of <A HREF="tagsrch.html#tags">标签</A> that you traversed through:
+The &quot;<A HREF="tagsrch.html#:tags">:tags</A>&quot;命令 shows the <A HREF="eval.html#list">列表</A> of <A HREF="tagsrch.html#tags">标签</A> that you traversed through:
 
 	<A HREF="tagsrch.html#:tags">:tags</A>
 <B><FONT color="#3A6F2B">	  # TO tag	   FROM line  in file/text </FONT></B>
@@ -168,11 +168,11 @@ Now to go back.  The <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> command goes to th
 above you get back to the &quot;write_line&quot; function, in the call to &quot;write_char&quot;.
    This command takes a <A HREF="intro.html#count">count</A> argument that indicates how many <A HREF="tagsrch.html#tags">标签</A> to jump
 back.  You have gone forward, and now back.  Let's go forward again.  The
-following command goes to the <A HREF="tagsrch.html#tag">标签</A> on top of the <A HREF="eval.html#list">list</A>:
+following command goes to the <A HREF="tagsrch.html#tag">标签</A> on top of the <A HREF="eval.html#list">列表</A>:
 
 <B>	:tag</B>
 
-You can prefix <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#count">count</A> and jump forward that many <A HREF="tagsrch.html#tags">标签</A>.  For example:
+You can prefix <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#count">count</A> and jump forward that many <A HREF="tagsrch.html#tags">标签</A>.例如:
 &quot;:3tag&quot;.  <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> also can be preceded with a <A HREF="intro.html#count">count</A>.
    These commands thus allow you to go down a call tree with <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> and back
 up again with <A HREF="tagsrch.html#CTRL-T">CTRL-T</A>.  Use &quot;<A HREF="tagsrch.html#:tags">:tags</A>&quot; to find out where you are.
@@ -180,10 +180,10 @@ up again with <A HREF="tagsrch.html#CTRL-T">CTRL-T</A>.  Use &quot;<A HREF="tags
 
 SPLIT WINDOWS
 
-The &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command replaces the file in the current<A HREF="windows.html#window">窗口</A>with the one
+The &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;命令 replaces the file in the current<A HREF="windows.html#window">窗口</A>with the one
 containing the new function.  But suppose you want to see not only the old
 function but also the new one?  You can split the<A HREF="windows.html#window">窗口</A>using the &quot;<A HREF="windows.html#:split">:split</A>&quot;
-command followed by the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command.  Vim has a shorthand command that does
+command followed by the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;命令.  Vim has a shorthand command that does
 both:
 <B>	:stag tagname</B>
 
@@ -236,7 +236,7 @@ Eiffel and even Vim scripts.  See the <A HREF="tagsrch.html#ctags">ctags</A> doc
 MULTIPLE MATCHES
 
 When a function is defined multiple times (or a <A HREF="eval.html#method">method</A> in several classes),
-the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command will jump to the first one.  If there is a match in the
+the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;命令 will jump to the first one.  If there is a match in the
 current file, that one is used first.
    You can now jump to other matches for the same <A HREF="tagsrch.html#tag">标签</A> with:
 
@@ -247,7 +247,7 @@ one to jump to:
 
 <B>	:tselect tagname</B>
 
-Vim will present you with a <A HREF="eval.html#list">list</A> of choices:
+Vim will present you with a <A HREF="eval.html#list">列表</A> of choices:
 
 <B><FONT color="#3A6F2B">	  # pri kind tag	       file </FONT></B>
 <B><FONT color="#3A6F2B">	  1 F	f    mch_init	       os_amiga.c </FONT></B>
@@ -284,7 +284,7 @@ type the first bit and press <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>:
 You will get the first match.  If it's not the one you want, press <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> until
 you find the right one.
    Sometimes you only know part of the name of a function.  Or you have many
-<A HREF="tagsrch.html#tags">标签</A> that start with the same <A HREF="eval.html#string">string</A>, but end differently.  Then you can tell
+<A HREF="tagsrch.html#tags">标签</A> that start with the same <A HREF="options\.html#options">字符串</A>, but end differently.  Then you can tell
 Vim to use a <A HREF="pattern.html#pattern">pattern</A> to find the <A HREF="tagsrch.html#tag">标签</A>.
    Suppose you want to jump to a <A HREF="tagsrch.html#tag">标签</A> that contains &quot;block&quot;.  First type
 this:
@@ -307,9 +307,9 @@ be found halfway in a <A HREF="tagsrch.html#tag">标签</A> name.  Similarly &qu
 A TAGS BROWSER
 
 Since <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> takes you to the definition of the identifier under the cursor,
-you can use a <A HREF="eval.html#list">list</A> of identifier names <A HREF="motion.html#as">as</A> a table of contents.  Here is an
+you can use a <A HREF="eval.html#list">列表</A> of identifier names <A HREF="motion.html#as">as</A> a table of contents.  Here is an
 example.
-   First create a <A HREF="eval.html#list">list</A> of identifiers (this requires Universal or Exuberant
+   First create a <A HREF="eval.html#list">列表</A> of identifiers (this requires Universal or Exuberant
 ctags):
 
 <B>	ctags --c-types=f -f functions *.c</B>
@@ -320,7 +320,7 @@ Now start Vim without a file, and edit this file in Vim, in a vertically split
 <B>	vim</B>
 <B>	:vsplit functions</B>
 
-The<A HREF="windows.html#window">窗口</A>contains a <A HREF="eval.html#list">list</A> of all the <A HREF="eval.html#functions">functions</A>.  There is some more stuff,
+The<A HREF="windows.html#window">窗口</A>contains a <A HREF="eval.html#list">列表</A> of all the <A HREF="eval.html#functions">functions</A>.  There is some more stuff,
 but you can ignore that.  Do &quot;<A HREF="options.html#:setlocal">:setlocal</A> ts=99&quot; to clean <A HREF="motion.html#it">它</A> up a bit.
    In this<A HREF="windows.html#window">窗口</A>, define a <A HREF="map.html#mapping">mapping</A>:
 
@@ -440,9 +440,9 @@ With the cursor in the last line, &quot;<A HREF="motion.html#[#">[#</A>&quot; mo
 MOVING IN CODE BLOCKS
 
 In C code blocks are enclosed in <A HREF="intro.html#{}">{}</A>.  These can get pretty long.  To move to
-the start of the outer block use the &quot;<A HREF="motion.html#[[">[[</A>&quot; command.  Use &quot;<A HREF="motion.html#][">][</A>&quot; to find the end.
+the start of the outer block use the &quot;<A HREF="motion.html#[[">[[</A>&quot;命令.  Use &quot;<A HREF="motion.html#][">][</A>&quot; to find the end.
 This assumes that the &quot;<A HREF="motion.html#{">{</A>&quot; and &quot;<A HREF="motion.html#}">}</A>&quot; are in the first column.
-   The &quot;<A HREF="motion.html#[{">[{</A>&quot; command moves to the start of the current block.  It skips over
+   The &quot;<A HREF="motion.html#[{">[{</A>&quot;命令 moves to the start of the current block.  It skips over
 pairs of <A HREF="intro.html#{}">{}</A> at the same level.  &quot;<A HREF="motion.html#]}">]}</A>&quot; jumps to the end.
    An overview:
 
@@ -460,7 +460,7 @@ pairs of <A HREF="intro.html#{}">{}</A> at the same level.  &quot;<A HREF="motio
 			    }			       &lt;-+	 |
 			}				       &lt;-+
 
-When <A HREF="editing.html#writing">writing</A> C++ or Java, the outer <A HREF="intro.html#{}">{}</A> block is for the class.  The next level
+When <A HREF="editing.html#writing">写</A> C++ or Java, the outer <A HREF="intro.html#{}">{}</A> block is for the class.  The next level
 of <A HREF="intro.html#{}">{}</A> is for a <A HREF="eval.html#method">method</A>.  When somewhere inside a class use &quot;<A HREF="motion.html#[m">[m</A>&quot; to find the
 previous start of a <A HREF="eval.html#method">method</A>.  &quot;<A HREF="motion.html#]m">]m</A>&quot; finds the next start of a <A HREF="eval.html#method">method</A>.
 
@@ -491,7 +491,7 @@ That also works when they are many lines apart.
 
 MOVING IN BRACES
 
-The &quot;<A HREF="motion.html#[(">[(</A>&quot; and &quot;<A HREF="motion.html#])">])</A>&quot; commands work similar to &quot;<A HREF="motion.html#[{">[{</A>&quot; and &quot;<A HREF="motion.html#]}">]}</A>&quot;, except that they
+The &quot;<A HREF="motion.html#[(">[(</A>&quot; and &quot;<A HREF="motion.html#])">])</A>&quot;命令 work similar to &quot;<A HREF="motion.html#[{">[{</A>&quot; and &quot;<A HREF="motion.html#]}">]}</A>&quot;, except that they
 work on () pairs instead of <A HREF="intro.html#{}">{}</A> pairs.
 
 <B>				  [(</B>
@@ -521,12 +521,12 @@ comment with &quot;<A HREF="motion.html#]/">]/</A>&quot;.  This only works for /
 *<A NAME="29.4"></A><B>29.4</B>*	Finding global identifiers
 
 You are editing a C program and wonder if a variable is declared <A HREF="motion.html#as">as</A> &quot;int&quot; or
-&quot;unsigned&quot;.  A quick way to find this is with the &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; command.
+&quot;unsigned&quot;.  A quick way to find this is with the &quot;<A HREF="tagsrch.html#[I">[I</A>&quot;命令.
    Suppose the cursor is on the <A HREF="motion.html#word">单词</A> &quot;column&quot;.  Type:
 
 <B>	[I</B>
 
-Vim will <A HREF="eval.html#list">list</A> the matching lines <A HREF="motion.html#it">它</A> can find.  Not only in the current file,
+Vim will <A HREF="eval.html#list">列表</A> the matching lines <A HREF="motion.html#it">它</A> can find.  Not only in the current file,
 but also in all included files (and files included in them, etc.).  The result
 looks like this:
 
@@ -550,7 +550,7 @@ can discover this with this command:
 
 <B>	:checkpath</B>
 
-It will <A HREF="eval.html#list">list</A> the include files that could not be found.  Also files included
+It will <A HREF="eval.html#list">列表</A> the include files that could not be found.  Also files included
 by the files that could be found.  An example of the output:
 
 <B><FONT color="#3A6F2B">	--- Included files not found in path --- </FONT></B>
@@ -600,26 +600,26 @@ command:
 
 <B>	:checkpath!</B>
 
-You will get a (very long) <A HREF="eval.html#list">list</A> of included files, the files they include, and
-so on.  To shorten the <A HREF="eval.html#list">list</A> a bit, Vim shows &quot;(Already listed)&quot; for files that
-were found before and doesn't <A HREF="eval.html#list">list</A> the included files in there again.
+You will get a (very long) <A HREF="eval.html#list">列表</A> of included files, the files they include, and
+so on.  To shorten the <A HREF="eval.html#list">列表</A> a bit, Vim shows &quot;(Already listed)&quot; for files that
+were found before and doesn't <A HREF="eval.html#list">列表</A> the included files in there again.
 
 
 JUMPING TO A MATCH
 
-&quot;<A HREF="tagsrch.html#[I">[I</A>&quot; produces a <A HREF="eval.html#list">list</A> with only one line of text.  When you want to have a
+&quot;<A HREF="tagsrch.html#[I">[I</A>&quot; produces a <A HREF="eval.html#list">列表</A> with only one line of text.  When you want to have a
 closer look at the first item, you can jump to that line with the command:
 
 <B>	[&lt;Tab&gt;</B>
 
 You can also use &quot;[ CTRL-I&quot;, since <A HREF="motion.html#CTRL-I">CTRL-I</A> is the same <A HREF="motion.html#as">as</A> pressing <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.
 
-The <A HREF="eval.html#list">list</A> that &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; produces has a number at the start of each line.  When you
+The <A HREF="eval.html#list">列表</A> that &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; produces has a number at the start of each line.  When you
 want to jump to another item than the first one, type the number first:
 
 <B>	3[&lt;Tab&gt;</B>
 
-Will jump to the third item in the <A HREF="eval.html#list">list</A>.  Remember that you can use <A HREF="motion.html#CTRL-O">CTRL-O</A> to
+Will jump to the third item in the <A HREF="eval.html#list">列表</A>.  Remember that you can use <A HREF="motion.html#CTRL-O">CTRL-O</A> to
 jump back to where you started from.
 
 
@@ -632,7 +632,7 @@ RELATED COMMANDS
 
 FINDING DEFINED IDENTIFIERS
 
-The &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; command finds any identifier.  To find only macros, defined with
+The &quot;<A HREF="tagsrch.html#[I">[I</A>&quot;命令 finds any identifier.  To find only macros, defined with
 &quot;#define&quot; use:
 
 <B>	[D</B>
@@ -650,7 +650,7 @@ line looks like that defines the items for &quot;<A HREF="tagsrch.html#[D">[D</A
 
 *<A NAME="29.5"></A><B>29.5</B>*	Finding local identifiers
 
-The &quot;<A HREF="tagsrch.html#[I">[I</A>&quot; command searches included files.  To search in the current file only,
+The &quot;<A HREF="tagsrch.html#[I">[I</A>&quot;命令 searches included files.  To search in the current file only,
 and jump to the first place where the <A HREF="motion.html#word">单词</A> under the cursor is used:
 
 <B>	gD</B>

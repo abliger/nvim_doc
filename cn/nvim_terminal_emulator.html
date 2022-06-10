@@ -127,7 +127,7 @@ To send input, enter |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>| with
 program. If &lt;C-\&gt; is pressed, the next key is sent unless <A HREF="motion.html#it">它</A> is &lt;C-N&gt;. Use
 &lt;C-\&gt;&lt;C-N&gt; to return to normal-mode. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
-<A HREF="intro.html#Terminal-mode">Terminal-mode</A> forces these local <A HREF="options.html#options">options</A>:
+<A HREF="intro.html#Terminal-mode">Terminal-mode</A> forces these local <A HREF="options\.html#options">选项</A>:
 
     <A HREF="options.html#'cursorlineopt'">'cursorlineopt'</A> = number
     <A HREF="options.html#'nocursorcolumn'">'nocursorcolumn'</A>
@@ -176,7 +176,7 @@ Options:		<A HREF="options.html#'modified'">'modified'</A>, <A HREF="options.htm
 Events:			|<A HREF="autocmd.html#TermOpen">TermOpen</A>|, |<A HREF="autocmd.html#TermEnter">TermEnter</A>|, |<A HREF="autocmd.html#TermLeave">TermLeave</A>|, |<A HREF="autocmd.html#TermClose">TermClose</A>|
 Highlight groups:	|<A HREF="syntax.html#hl-TermCursor">hl-TermCursor</A>|, |<A HREF="syntax.html#hl-TermCursorNC">hl-TermCursorNC</A>|
 
-Terminal sets local defaults for some <A HREF="options.html#options">options</A>, which may differ from your
+Terminal sets local defaults for some <A HREF="options\.html#options">选项</A>, which may differ from your
 global configuration.
 
 - <A HREF="options.html#'list'">'list'</A> is disabled
@@ -189,7 +189,7 @@ You can change the defaults with a <A HREF="autocmd.html#TermOpen">TermOpen</A> 
 
 The `{g,b}:terminal_color_x` <A HREF="eval.html#variables">variables</A> <A HREF="intro.html#control">control</A> the <A HREF="#terminal">terminal</A> color palette,
 where `x` is the color index between 0 and 255 <A HREF="motion.html#inclusive">inclusive</A>.  The <A HREF="eval.html#variables">variables</A> are
-read during |<A HREF="autocmd.html#TermOpen">TermOpen</A>|. The value must be a color name or hexadecimal <A HREF="eval.html#string">string</A>.
+read during |<A HREF="autocmd.html#TermOpen">TermOpen</A>|. The value must be a color name or hexadecimal <A HREF="options\.html#options">字符串</A>.
 Example:
 <B>    let g:terminal_color_4 = '#ff0000'</B>
 <B>    let g:terminal_color_5 = 'green'</B>
@@ -203,7 +203,7 @@ higher precedence: <A HREF="motion.html#it">它</A> is applied after <A HREF="#t
 
 Status Variables				*<A NAME="terminal-status"></A><B>terminal-status</B>*
 
-Terminal <A HREF="windows.html#buffers">buffers</A> maintain some buffer-local <A HREF="eval.html#variables">variables</A> and <A HREF="options.html#options">options</A>. The values
+Terminal <A HREF="windows.html#buffers">buffers</A> maintain some buffer-local <A HREF="eval.html#variables">variables</A> and <A HREF="options\.html#options">选项</A>. The values
 are initialized before <A HREF="autocmd.html#TermOpen">TermOpen</A>, so you can use them in a local <A HREF="options.html#'statusline'">'statusline'</A>.
 Example:
 <B>    :autocmd TermOpen * setlocal statusline=%{b:term_title}</B>
@@ -273,7 +273,7 @@ additional parameters.
 
 Both the `:Termdebug` and `:TermdebugCommand` support an optional &quot;<A HREF="change.html#!">!</A>&quot; bang
 argument to start the command right away, without pausing at the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>
-(and cursor will be in the debugged<A HREF="windows.html#window">窗口</A>).  For example:
+(and cursor will be in the debugged<A HREF="windows.html#window">窗口</A>).例如:
 <B>	:TermdebugCommand! vim --clean</B>
 
 To attach <A HREF="debug.html#gdb">gdb</A> to an already running executable or use a core file, pass extra
@@ -312,7 +312,7 @@ can now step through the program.  You will see the highlighting move <A HREF="m
 debugger executes a line of source code.
 
 Run &quot;<A HREF="editing.html#:Next">:Next</A>&quot; a few times until the for loop is highlighted.  Put the cursor on
-the end of &quot;eap-&gt;arg&quot;, then call &quot;:Eval&quot;.  You will see this displayed:
+the end of &quot;eap-&gt;arg&quot;然后call &quot;:Eval&quot;.  You will see this displayed:
 <B><FONT color="#3A6F2B">	"eap-&gt;arg": 0x555555e68855 "gui" </FONT></B>
 This way you can inspect the value of local <A HREF="eval.html#variables">variables</A>.  You can also focus the
 <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>and use a &quot;print&quot; command, e.g.:
@@ -323,12 +323,12 @@ You can also use the &quot;<A HREF="various.html#K">K</A>&quot; <A HREF="map.htm
 if available to show the results or print below the status <A HREF="motion.html#bar">bar</A>.
 
 Now go back to the source<A HREF="windows.html#window">窗口</A>and put the cursor on the first line after
-the for loop, then type:
+the for loop然后type:
 <B>	:Break</B>
 You will see a &quot;1&quot; marker appear, this indicates the new breakpoint.  Now
 run &quot;:Cont&quot; command and the code until the breakpoint will be executed.
 
-You can type more advanced commands in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>.  For example, type:
+You can type more advanced commands in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>.例如, type:
 <B>	watch curbuf</B>
 Now run &quot;:Cont&quot; (or type &quot;cont&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>). Execution
 will now continue until the value of &quot;curbuf&quot; changes, which is in do_ecmd().
@@ -390,7 +390,7 @@ abandoned.
 
 Gdb gives each breakpoint a number.  In Vim the number shows up in the sign
 column, with a red background.  You can use these <A HREF="debug.html#gdb">gdb</A> commands:
-- info break	<A HREF="eval.html#list">list</A> breakpoints
+- info break	<A HREF="eval.html#list">列表</A> breakpoints
 - delete N	delete breakpoint N
 You can also use the `:Clear` command if the cursor is in the line with the
 breakpoint, or use the &quot;Clear breakpoint&quot; right-click menu entry.
@@ -462,7 +462,7 @@ Four autocommands can be used:
 When on MS-Windows, <A HREF="debug.html#gdb">gdb</A> will run in a buffer with <A HREF="options.html#'buftype'">'buftype'</A> set to &quot;prompt&quot;.
 This works slightly differently:
 - The <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>will be in <A HREF="intro.html#Insert">插入</A>模式 while typing commands.  Go to <A HREF="intro.html#Normal">Normal</A>
-  mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, then you can move around in the buffer, copy/paste, etc.
+  mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>然后you can move around in the buffer, copy/paste, etc.
   Go back to editing the <A HREF="debug.html#gdb">gdb</A> command with any command that starts <A HREF="intro.html#Insert">插入</A>模式,
   such <A HREF="motion.html#as">as</A> `a` or `i`.
 - A separate <A HREF="various.html#:terminal">:terminal</A><A HREF="windows.html#window">窗口</A>will be opened to run the debugged program in.
@@ -524,7 +524,7 @@ To change the name of the <A HREF="debug.html#gdb">gdb</A> command, set &quot;de
 Or if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:
 <B>	let g:termdebugger = "mygdb"</B>
 
-If the command needs an argument use a <A HREF="eval.html#List">List</A>:
+If the command needs an argument use a <A HREF="eval.html#list">列表</A>:
 <B>	let g:termdebug_config['command'] = ['rr', 'replay', '--']</B>
 Or if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:
 <B>	let g:termdebugger = ['rr', 'replay', '--']</B>
@@ -542,13 +542,13 @@ or set/unset a breakpoint:
 
 
 Several arguments will be added to make <A HREF="debug.html#gdb">gdb</A> work well for the debugger.
-If you want to modify them, add a function to <A HREF="change.html#filter">filter</A> the argument <A HREF="eval.html#list">list</A>:
+If you want to modify them, add a function to <A HREF="change.html#filter">filter</A> the argument <A HREF="eval.html#list">列表</A>:
 <B>	let g:termdebug_config['command_filter'] = MyDebugFilter</B>
 
 If you <A HREF="diff.html#do">do</A> not want the arguments to be added, but you <A HREF="diff.html#do">do</A> need to set the
 &quot;pty&quot;, use a function to add the necessary arguments:
 <B>	let g:termdebug_config['command_add_args'] = MyAddArguments</B>
-The function will be called with the <A HREF="eval.html#list">list</A> of arguments so far, and a second
+The function will be called with the <A HREF="eval.html#list">列表</A> of arguments so far, and a second
 argument that is the name of the pty.
 
 							*<A NAME="gdb-version"></A><B>gdb-version</B>*
@@ -596,7 +596,7 @@ Or if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:
 This will set <A HREF="options.html#'columns'">'columns'</A> to 163 when `:Termdebug` is used.  The value is
 restored when quitting the debugger.
 
-If the wide value is set and <A HREF="options.html#'columns'">'columns'</A> is already a greater value, then a
+If the wide value is set and <A HREF="options.html#'columns'">'columns'</A> is already a greater value然后a
 vertical split will be used without modifying <A HREF="options.html#'columns'">'columns'</A>.
 
 Set the wide value to 1 to use a vertical split without ever <A HREF="change.html#changing">changing</A>

@@ -181,12 +181,12 @@ will also start (end) when the fold level is higher (lower) than the fold
 level of the previous line.
 
 There must be no side effects from the <A HREF="eval.html#expression">expression</A>.  The text in the buffer,
-cursor position, the search patterns, <A HREF="options.html#options">options</A> etc. must not be changed.
+cursor position, the search patterns, <A HREF="options\.html#options">选项</A> etc. must not be changed.
 You can change and restore them if you are careful.
 
 If there is some error in the <A HREF="eval.html#expression">expression</A>, or the resulting value isn't
 recognized, there is no error message and the fold level will be zero.
-For debugging the <A HREF="options.html#'debug'">'debug'</A> option can be set to &quot;msg&quot;, the error <A HREF="message.html#messages">messages</A> will
+For debugging the <A HREF="options.html#'debug'">'debug'</A> option can be set to &quot;msg&quot;, the error <A HREF="message.html#messages">信息</A> will
 be visible then.
 
 Note: Since the <A HREF="eval.html#expression">expression</A> has to be evaluated for every line, this fold
@@ -308,7 +308,7 @@ level by one.  Be careful to keep the markers matching!  Example:
 
 You can mix using markers with a number and without a number.  A useful way of
 doing this is to use numbered markers for large <A HREF="#folds">folds</A>, and unnumbered markers
-locally in a function.  For example use level one <A HREF="#folds">folds</A> for the sections of
+locally in a function.例如 use level one <A HREF="#folds">folds</A> for the sections of
 your file like &quot;structure definitions&quot;, &quot;local variables&quot; and &quot;<A HREF="eval.html#functions">functions</A>&quot;.
 Use level 2 markers for each definition and function,  Use unnumbered markers
 inside <A HREF="eval.html#functions">functions</A>.  When you make changes in a function to split up <A HREF="#folds">folds</A>, you
@@ -331,7 +331,7 @@ This does not work properly when:
   know what to <A HREF="diff.html#do">do</A>.
 - Folds nearby use a level number in their marker which gets in the way.
 - The line is inside a comment, <A HREF="options.html#'commentstring'">'commentstring'</A> isn't empty and nested
-  comments don't work.  For example with C: adding /* {{{ */ inside a comment
+  comments don't work.例如 with C: adding /* {{{ */ inside a comment
   will truncate the existing comment.  Either put the marker before or after
   the comment, or add the marker manually.
 Generally it's not a good idea to let Vim create markers when you already have
@@ -460,7 +460,7 @@ Therefore the commands below may work differently on small <A HREF="#folds">fold
 
 							*<A NAME="zx"></A><B>zx</B>*
 <A HREF="#zx">zx</A>		Update <A HREF="#folds">folds</A>: Undo manually opened and closed <A HREF="#folds">folds</A>: re-apply
-		<A HREF="options.html#'foldlevel'">'foldlevel'</A>, then <A HREF="diff.html#do">do</A> &quot;<A HREF="#zv">zv</A>&quot;: <A HREF="starting.html#View">View</A> cursor line.
+		<A HREF="options.html#'foldlevel'">'foldlevel'</A>然后<A HREF="diff.html#do">do</A> &quot;<A HREF="#zv">zv</A>&quot;: <A HREF="starting.html#View">View</A> cursor line.
 		Also forces recomputing <A HREF="#folds">folds</A>.  This is useful when using
 		<A HREF="options.html#'foldexpr'">'foldexpr'</A> and the buffer is changed in a way that results in
 		<A HREF="#folds">folds</A> not to be updated properly.
@@ -555,7 +555,7 @@ Therefore the commands below may work differently on small <A HREF="#folds">fold
 		When <A HREF="cmdline.html#[range]">[range]</A> is given, only these lines are used.
 		Each time {cmd} is executed the cursor is positioned on the
 		line <A HREF="motion.html#it">它</A> is executed for.
-		This works like the &quot;<A HREF="repeat.html#:global">:global</A>&quot; command: First all lines that
+		This works like the &quot;<A HREF="repeat.html#:global">:global</A>&quot;命令: First all lines that
 		are not in a closed fold are marked.  Then the {cmd} is
 		executed for all marked lines.  Thus when {cmd} changes the
 		<A HREF="#folds">folds</A>, this has no influence on where <A HREF="motion.html#it">它</A> is executed (except
@@ -572,7 +572,7 @@ Therefore the commands below may work differently on small <A HREF="#folds">fold
 
 ==============================================================================
 
-3. Fold <A HREF="options.html#options">options</A>					*<A NAME="fold-options"></A><B>fold-options</B>*
+3. Fold <A HREF="options\.html#options">选项</A>					*<A NAME="fold-options"></A><B>fold-options</B>*
 
 
 COLORS							*<A NAME="fold-colors"></A><B>fold-colors</B>*
@@ -603,14 +603,14 @@ When decreased, <A HREF="#folds">folds</A> above the new level are closed.  No m
 
 FOLDTEXT						*<A NAME="fold-foldtext"></A><B>fold-foldtext</B>*
 
-<A HREF="options.html#'foldtext'">'foldtext'</A> is a <A HREF="eval.html#string">string</A> option that specifies an <A HREF="eval.html#expression">expression</A>.  This <A HREF="eval.html#expression">expression</A>
+<A HREF="options.html#'foldtext'">'foldtext'</A> is a <A HREF="options\.html#options">字符串</A> option that specifies an <A HREF="eval.html#expression">expression</A>.  This <A HREF="eval.html#expression">expression</A>
 is evaluated to obtain the text displayed for a closed fold.  Example:
 
 <B>    :set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')</B>
 
 This shows the first line of the fold, with &quot;/*&quot;, &quot;*/&quot; and &quot;{{{&quot; removed.
 Note the use of backslashes to avoid some characters to be interpreted by the
-&quot;<A HREF="options.html#:set">:set</A>&quot; command.  It's simpler to define a function and call that:
+&quot;<A HREF="options.html#:set">:set</A>&quot;命令.  It's simpler to define a function and call that:
 
 <B>    :set foldtext=MyFoldText()</B>
 <B>    :function MyFoldText()</B>
@@ -629,7 +629,7 @@ types of <A HREF="#folding">folding</A>.  If you don't like <A HREF="motion.html
 <A HREF="eval.html#expression">expression</A>.  It can use these special Vim <A HREF="eval.html#variables">variables</A>:
 	<A HREF="eval.html#v:foldstart">v:foldstart</A>	line number of first line in the fold
 	<A HREF="eval.html#v:foldend">v:foldend</A>	line number of last line in the fold
-	<A HREF="eval.html#v:folddashes">v:folddashes</A>	a <A HREF="eval.html#string">string</A> that contains dashes to represent the
+	<A HREF="eval.html#v:folddashes">v:folddashes</A>	a <A HREF="options\.html#options">字符串</A> that contains dashes to represent the
 			foldlevel.
 	<A HREF="eval.html#v:foldlevel">v:foldlevel</A>	the foldlevel of the fold
 
@@ -640,7 +640,7 @@ The resulting line is truncated to fit in the<A HREF="windows.html#window">窗�
 When there is room after the text, <A HREF="motion.html#it">它</A> is filled with the character specified
 by <A HREF="options.html#'fillchars'">'fillchars'</A>.
 
-Note that backslashes need to be used for characters that the &quot;<A HREF="options.html#:set">:set</A>&quot; command
+Note that backslashes need to be used for characters that the &quot;<A HREF="options.html#:set">:set</A>&quot;命令
 handles differently: Space, backslash and double-quote. |<A HREF="options.html#option-backslash">option-backslash</A>|
 
 
@@ -694,8 +694,8 @@ While the cursor is on folded lines, the cursor is always displayed in the
 first column.  The ruler does show the actual cursor position, but since the
 line is folded, <A HREF="motion.html#it">它</A> cannot be displayed there.
 
-Many <A HREF="intro.html#movement">movement</A> commands handle a sequence of folded lines like an empty line.
-For example, the &quot;<A HREF="motion.html#w">w</A>&quot; command stops once in the first column.
+Many <A HREF="intro.html#movement">移动</A>命令 handle a sequence of folded lines like an empty line.
+For example, the &quot;<A HREF="motion.html#w">w</A>&quot;命令 stops once in the first column.
 
 When in <A HREF="intro.html#Insert">插入</A>模式, the cursor line is never folded.  That allows you to see
 what you type!

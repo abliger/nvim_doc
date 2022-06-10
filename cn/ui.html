@@ -139,7 +139,7 @@ with these (optional) keys:
 
 
 Specifying an unknown option is an error; UIs can check the |<A HREF="api.html#api-metadata">api-metadata</A>|
-`ui_options` key for supported <A HREF="options.html#options">options</A>.
+`ui_options` key for supported <A HREF="options\.html#options">选项</A>.
 
 By default Nvim requires all connected UIs to support the same capabilities,
 thus the active capabilities are the intersection of those requested. UIs may
@@ -176,7 +176,7 @@ Example of a typical &quot;redraw&quot; batch in a single <A HREF="api.html#RPC"
 
 Events must be handled in-order. Nvim sends a &quot;flush&quot; event when <A HREF="motion.html#it">它</A> has
 completed a redraw of the entire screen (so all <A HREF="windows.html#windows">windows</A> have a consistent view
-of buffer state, <A HREF="options.html#options">options</A>, etc.). Multiple &quot;redraw&quot; batches may be sent before
+of buffer state, <A HREF="options\.html#options">选项</A>, etc.). Multiple &quot;redraw&quot; batches may be sent before
 the entire screen has been redrawn, with &quot;flush&quot; following only the last
 batch. The user should only see the final state (when &quot;flush&quot; is sent), not
 any intermediate state while processing part of the batch array, nor after
@@ -213,7 +213,7 @@ additional configuration of the Nvim process, should use the following <A HREF="
 procedure:
 
 1. Invoke |<A HREF="api.html#nvim_get_api_info()">nvim_get_api_info()</A>|, if needed to setup the client library and/or
-   to get the <A HREF="eval.html#list">list</A> of supported <A HREF="#UI">UI</A> extensions.
+   to get the <A HREF="eval.html#list">列表</A> of supported <A HREF="#UI">UI</A> extensions.
 2. Do any configuration that should be happen before user <A HREF="starting.html#config">config</A> is loaded.
    Buffers and <A HREF="windows.html#windows">windows</A> are not available at this point, but this could be used
    to set |<A HREF="eval.html#g:">g:</A>| <A HREF="eval.html#variables">variables</A> visible to <A HREF="starting.html#init.vim">init.vim</A>
@@ -255,7 +255,7 @@ the editor.
 
 [&quot;mode_info_set&quot;, cursor_style_enabled, mode_info]
 	`cursor_style_enabled` is a <A HREF="options.html#boolean">boolean</A> indicating if the <A HREF="#UI">UI</A> should set
-	the cursor style. `mode_info` is a <A HREF="eval.html#list">list</A> of mode property maps. The
+	the cursor style. `mode_info` is a <A HREF="eval.html#list">列表</A> of mode property maps. The
 	current mode is given by the `mode_idx` field of the `mode_change`
 	event.
 
@@ -301,13 +301,13 @@ the editor.
 	Options are not represented here if their effects are communicated in
 	other <A HREF="#UI">UI</A> <A HREF="autocmd.html#events">events</A>. For example, instead of forwarding the <A HREF="options.html#'mouse'">'mouse'</A> option
 	value, the &quot;mouse_on&quot; and &quot;mouse_off&quot; <A HREF="#UI">UI</A> <A HREF="autocmd.html#events">events</A> directly indicate if
-	mouse support is active. Some <A HREF="options.html#options">options</A> like <A HREF="options.html#'ambiwidth'">'ambiwidth'</A> have already
+	mouse support is active. Some <A HREF="options\.html#options">选项</A> like <A HREF="options.html#'ambiwidth'">'ambiwidth'</A> have already
 	taken effect on the grid, where appropriate empty cells are added,
-	however a <A HREF="#UI">UI</A> might still use such <A HREF="options.html#options">options</A> when rendering raw text
+	however a <A HREF="#UI">UI</A> might still use such <A HREF="options\.html#options">选项</A> when rendering raw text
 	sent from Nvim, like for |<A HREF="#ui-cmdline">ui-cmdline</A>|.
 
 [&quot;mode_change&quot;, mode, mode_idx]
-	Editor mode changed.  The `mode` parameter is a <A HREF="eval.html#string">string</A> representing
+	Editor mode changed.  The `mode` parameter is a <A HREF="options\.html#options">字符串</A> representing
 	the current mode. `mode_idx` is an index into the array emitted in
 	the `mode_info_set` event. UIs should change the cursor style
 	according to the properties specified in the corresponding item. The
@@ -453,7 +453,7 @@ numerical highlight ids to the actual attributes.
 	once.
 
 	The right cell of a double-width char will be represented <A HREF="motion.html#as">as</A> the empty
-	<A HREF="eval.html#string">string</A>. Double-width chars never use `repeat`.
+	<A HREF="options\.html#options">字符串</A>. Double-width chars never use `repeat`.
 
 	If the array of cell changes doesn't reach to the end of the line, the
 	rest should remain unchanged. A <A HREF="pattern.html#whitespace">whitespace</A> char, repeated
@@ -571,7 +571,7 @@ is not active. New UIs should implement |<A HREF="#ui-linegrid">ui-linegrid</A>|
 	`underdash`:	underdashed text. The dashes have `special` color.
 
 [&quot;put&quot;, text]
-	The (utf-8 encoded) <A HREF="eval.html#string">string</A> `text` is put at the cursor position
+	The (utf-8 encoded) <A HREF="options\.html#options">字符串</A> `text` is put at the cursor position
 	(and the cursor is advanced), with the highlights <A HREF="motion.html#as">as</A> set by the
 	last `highlight_set` update.
 
@@ -665,7 +665,7 @@ The multigrid extension gives UIs more <A HREF="intro.html#control">control</A> 
   occupies on the global layout. So the <A HREF="#UI">UI</A> could use a different font size
   per-window. Or reserve space around the border of the<A HREF="windows.html#window">窗口</A>for its own
   elements, such <A HREF="motion.html#as">as</A> scrollbars from the <A HREF="#UI">UI</A> toolkit.
-- A dedicated grid is used for <A HREF="message.html#messages">messages</A>, which may scroll over the<A HREF="windows.html#window">窗口</A>
+- A dedicated grid is used for <A HREF="message.html#messages">信息</A>, which may scroll over the<A HREF="windows.html#window">窗口</A>
   area. (Alternatively |<A HREF="intro.html#ext_messages">ext_messages</A>| can be used).
 
 By default, the grid size is handled by Nvim and set to the outer grid size
@@ -701,7 +701,7 @@ tabs.
 	Close the<A HREF="windows.html#window">窗口</A>.
 
 [&quot;msg_set_pos&quot;, grid, row, scrolled, sep_char]
-	Display <A HREF="message.html#messages">messages</A> on `grid`.  The grid will be displayed at `row` on the
+	Display <A HREF="message.html#messages">信息</A> on `grid`.  The grid will be displayed at `row` on the
 	default grid (grid=1), covering the full column width. `scrolled`
 	indicates whether the message area has been scrolled to cover other
 	grids. It can be useful to draw a separator then ('display' msgsep
@@ -758,11 +758,11 @@ Activated by the `ext_tabline` |<A HREF="#ui-option">ui-option</A>|.
 
 [&quot;tabline_update&quot;, curtab, tabs, curbuf, buffers]
 	Tabline was updated. UIs should present this data in a custom tabline
-	widget. Note: <A HREF="options.html#options">options</A> `curbuf` + `buffers` were added in API7.
+	widget. Note: <A HREF="options\.html#options">选项</A> `curbuf` + `buffers` were added in API7.
 	curtab:   Current Tabpage
-	tabs:     <A HREF="eval.html#List">List</A> of Dicts <A HREF="motion.html#[{">[{</A> &quot;<A HREF="intro.html#tab">tab</A>&quot;: Tabpage, &quot;name&quot;: <A HREF="eval.html#String">String</A> }, ...]
+	tabs:     <A HREF="eval.html#list">列表</A> of Dicts <A HREF="motion.html#[{">[{</A> &quot;<A HREF="intro.html#tab">tab</A>&quot;: Tabpage, &quot;name&quot;: <A HREF="options\.html#options">字符串</A> }, ...]
 	curbuf:   Current buffer handle.
-	<A HREF="windows.html#buffers">buffers</A>:  <A HREF="eval.html#List">List</A> of Dicts <A HREF="motion.html#[{">[{</A> &quot;buffer&quot;: buffer handle, &quot;name&quot;: String}, ...]
+	<A HREF="windows.html#buffers">buffers</A>:  <A HREF="eval.html#list">列表</A> of Dicts <A HREF="motion.html#[{">[{</A> &quot;buffer&quot;: buffer handle, &quot;name&quot;: String}, ...]
 
 ==============================================================================
 
@@ -774,7 +774,7 @@ This <A HREF="#UI">UI</A> extension delegates presentation of the |<A HREF="cmdl
 For command-line <A HREF="options.html#'wildmenu'">'wildmenu'</A> <A HREF="#UI">UI</A> <A HREF="autocmd.html#events">events</A>, activate |<A HREF="#ui-popupmenu">ui-popupmenu</A>|.
 
 [&quot;cmdline_show&quot;, content, pos, firstc, prompt, indent, level]
-        content: <A HREF="eval.html#List">List</A> of [attrs, string]
+        content: <A HREF="eval.html#list">列表</A> of [attrs, string]
 	         [[{}, &quot;t&quot;], [attrs, &quot;est&quot;], ...]
 
 	Triggered when the <A HREF="cmdline.html#cmdline">cmdline</A> is displayed or changed.
@@ -817,7 +817,7 @@ For command-line <A HREF="options.html#'wildmenu'">'wildmenu'</A> <A HREF="#UI">
 <B>	    :  echo "foo"</B>
 <B>	    :</B>
  
-	`lines` is a <A HREF="eval.html#list">list</A> of lines of highlighted chunks, in the same form <A HREF="motion.html#as">as</A>
+	`lines` is a <A HREF="eval.html#list">列表</A> of lines of highlighted chunks, in the same form <A HREF="motion.html#as">as</A>
 	the &quot;cmdline_show&quot; `contents` parameter.
 
 [&quot;cmdline_block_append&quot;, line]
@@ -833,11 +833,11 @@ Message/Dialog Events					   *<A NAME="ui-messages"></A><B>ui-messages</B>*
 Activated by the `ext_messages` |<A HREF="#ui-option">ui-option</A>|.
 Activates |<A HREF="#ui-linegrid">ui-linegrid</A>| and |<A HREF="#ui-cmdline">ui-cmdline</A>| implicitly.
 
-This <A HREF="#UI">UI</A> extension delegates presentation of <A HREF="message.html#messages">messages</A> and dialogs. Messages
+This <A HREF="#UI">UI</A> extension delegates presentation of <A HREF="message.html#messages">信息</A> and dialogs. Messages
 that would otherwise render in the message/cmdline screen space, are emitted
 <A HREF="motion.html#as">as</A> <A HREF="#UI">UI</A> <A HREF="autocmd.html#events">events</A>.
 
-Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdline</A> or <A HREF="message.html#messages">messages</A>, and
+Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdline</A> or <A HREF="message.html#messages">信息</A>, and
 <A HREF="options.html#'cmdheight'">'cmdheight'</A> will be forced zero. <A HREF="cmdline.html#Cmdline">Cmdline</A> state is emitted <A HREF="motion.html#as">as</A> |<A HREF="#ui-cmdline">ui-cmdline</A>|
 <A HREF="autocmd.html#events">events</A>, which the <A HREF="#UI">UI</A> must handle.
 
@@ -855,7 +855,7 @@ Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdli
 		&quot;echoerr&quot;	|<A HREF="eval.html#:echoerr">:echoerr</A>| message
 		&quot;lua_error&quot;	Error in |<A HREF="lua.html#:lua">:lua</A>| code
 		&quot;rpc_error&quot;	Error response from |<A HREF="builtin.html#rpcrequest()">rpcrequest()</A>|
-		&quot;return_prompt&quot;	|<A HREF="message.html#press-enter">press-enter</A>| prompt after a multiple <A HREF="message.html#messages">messages</A>
+		&quot;return_prompt&quot;	|<A HREF="message.html#press-enter">press-enter</A>| prompt after a multiple <A HREF="message.html#messages">信息</A>
 		&quot;<A HREF="quickfix.html#quickfix">quickfix</A>&quot;	<A HREF="quickfix.html#Quickfix">Quickfix</A> <A HREF="motion.html#navigation">navigation</A> message
 		&quot;search_count&quot;	Search <A HREF="intro.html#count">count</A> message (&quot;S&quot; flag of <A HREF="options.html#'shortmess'">'shortmess'</A>)
 		&quot;wmsg&quot;		Warning (&quot;search hit BOTTOM&quot;, |<A HREF="message.html#W10">W10</A>|, …)
@@ -869,23 +869,23 @@ Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdli
 	    necessary <A HREF="pattern.html#whitespace">whitespace</A>. Messages can contain line breaks &quot;\n&quot;.
 
 	replace_last
-	    Decides how multiple <A HREF="message.html#messages">messages</A> should be displayed:
-	    false: Display the message together with all previous <A HREF="message.html#messages">messages</A>
+	    Decides how multiple <A HREF="message.html#messages">信息</A> should be displayed:
+	    false: Display the message together with all previous <A HREF="message.html#messages">信息</A>
 		   that are still visible.
 	    true:  <A HREF="insert.html#Replace">Replace</A> the message in the most-recent `msg_show` call,
 		   but any other visible message should still remain.
 
 [&quot;msg_clear&quot;]
-	Clear all <A HREF="message.html#messages">messages</A> currently displayed by &quot;msg_show&quot;. (Messages sent
+	Clear all <A HREF="message.html#messages">信息</A> currently displayed by &quot;msg_show&quot;. (Messages sent
 	by other &quot;msg_&quot; <A HREF="autocmd.html#events">events</A> below will not be affected).
 
 [&quot;msg_showmode&quot;, content]
-	Shows <A HREF="options.html#'showmode'">'showmode'</A> and |<A HREF="repeat.html#recording">recording</A>| <A HREF="message.html#messages">messages</A>. `content` has the same
+	Shows <A HREF="options.html#'showmode'">'showmode'</A> and |<A HREF="repeat.html#recording">recording</A>| <A HREF="message.html#messages">信息</A>. `content` has the same
 	format <A HREF="motion.html#as">as</A> in &quot;msg_show&quot;. This event is sent with empty `content` to
 	hide the last message.
 
 [&quot;msg_showcmd&quot;, content]
-	Shows <A HREF="options.html#'showcmd'">'showcmd'</A> <A HREF="message.html#messages">messages</A>. `content` has the same format <A HREF="motion.html#as">as</A> in &quot;msg_show&quot;.
+	Shows <A HREF="options.html#'showcmd'">'showcmd'</A> <A HREF="message.html#messages">信息</A>. `content` has the same format <A HREF="motion.html#as">as</A> in &quot;msg_show&quot;.
 	This event is sent with empty `content` to hide the last message.
 
 [&quot;msg_ruler&quot;, content]
@@ -894,7 +894,7 @@ Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdli
 	sent with empty `content` to hide the last message.
 
 [&quot;msg_history_show&quot;, entries]
-	Sent when |<A HREF="message.html#:messages">:messages</A>| command is invoked. History is sent <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">list</A> of
+	Sent when |<A HREF="message.html#:messages">:messages</A>| command is invoked. History is sent <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">列表</A> of
 	entries, where each entry is a `[kind, content]` tuple.
 
 ==============================================================================

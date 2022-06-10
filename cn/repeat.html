@@ -96,7 +96,7 @@ Single repeats						*<A NAME="single-repeat"></A><B>single-repeat</B>*
 			included in <A HREF="options.html#'cpoptions'">'cpoptions'</A>.  Does not repeat a
 			command-line command.
 
-Simple changes can be repeated with the &quot;<A HREF="#.">.</A>&quot; command.  Without a <A HREF="intro.html#count">count</A>, the
+Simple changes can be repeated with the &quot;<A HREF="#.">.</A>&quot;命令.  Without a <A HREF="intro.html#count">count</A>, the
 <A HREF="intro.html#count">count</A> of the last change is used.  If you enter a <A HREF="intro.html#count">count</A>, <A HREF="motion.html#it">它</A> will replace the
 last one.  |<A HREF="eval.html#v:count">v:count</A>| and |<A HREF="eval.html#v:count1">v:count1</A>| will be set.
 
@@ -139,7 +139,7 @@ This also makes <A HREF="motion.html#it">它</A> faster.
 Instead of the '<A HREF="pattern.html#/">/</A>' which surrounds the {pattern}, you can use any other
 single byte character, but not an alphabetic character, '\', &#39;&#34;'' or '&#124;'.
 This is useful if you want to include a '<A HREF="pattern.html#/">/</A>' in the search <A HREF="pattern.html#pattern">pattern</A> or
-replacement <A HREF="eval.html#string">string</A>.
+replacement <A HREF="options\.html#options">字符串</A>.
 
 For the definition of a pattern, 见 |<A HREF="pattern.html#pattern">pattern</A>|.
 
@@ -177,7 +177,7 @@ where the cursor was before the global command).
 
 The global command sets both the last used search <A HREF="pattern.html#pattern">pattern</A> and the last used
 substitute <A HREF="pattern.html#pattern">pattern</A> (this is <A HREF="intro.html#vi">vi</A> compatible).  This makes <A HREF="motion.html#it">它</A> easy to globally
-replace a <A HREF="eval.html#string">string</A>:
+replace a <A HREF="options\.html#options">字符串</A>:
 	:g/pat/s//PAT/g
 This replaces all occurrences of &quot;pat&quot; with &quot;PAT&quot;.  The same can be done with:
 	:&#37;s/pat/PAT/g
@@ -269,7 +269,7 @@ q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">r
 
 Using Vim scripts					*<A NAME="using-scripts"></A><B>using-scripts</B>*
 
-For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script">script</A>, see chapter 41 of the user manual |<A HREF="usr_41.html">usr_41.txt</A>|.
+For <A HREF="editing.html#writing">写</A> a Vim <A HREF="usr_41.html#script">script</A>, see chapter 41 of the user manual |<A HREF="usr_41.html">usr_41.txt</A>|.
 
 
 					*<A NAME=":so"></A><B>:so</B>* *<A NAME=":source"></A><B>:source</B>* *<A NAME="load-vim-script"></A><B>load-vim-script</B>*
@@ -298,21 +298,21 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 
  			There can be multiple space-separated <A HREF="editing.html#{file}">{file}</A>
 			arguments. Each <A HREF="editing.html#{file}">{file}</A> is searched for in the first
-			directory from <A HREF="options.html#'runtimepath'">'runtimepath'</A>, then in the second
+			directory from <A HREF="options.html#'runtimepath'">'runtimepath'</A>然后in the second
 			directory, etc.
 
 			When [!] is included, all found files are sourced.
 			Else only the first found file is sourced.
 
 			When [where] is omitted, first <A HREF="options.html#'runtimepath'">'runtimepath'</A> is
-			searched, then directories under &quot;start&quot; in <A HREF="options.html#'packpath'">'packpath'</A>
+			searched然后directories under &quot;start&quot; in <A HREF="options.html#'packpath'">'packpath'</A>
 			are searched.
 			Other values:
 				START	search only under &quot;start&quot; in <A HREF="options.html#'packpath'">'packpath'</A>
 				OPT 	search only under &quot;opt&quot; in <A HREF="options.html#'packpath'">'packpath'</A>
 				PACK	search under &quot;start&quot; and &quot;opt&quot; in
 					<A HREF="options.html#'packpath'">'packpath'</A>
-				ALL	first use <A HREF="options.html#'runtimepath'">'runtimepath'</A>, then search
+				ALL	first use <A HREF="options.html#'runtimepath'">'runtimepath'</A>然后search
 					under &quot;start&quot; and &quot;opt&quot; in <A HREF="options.html#'packpath'">'packpath'</A>
 
 			When <A HREF="editing.html#{file}">{file}</A> contains <A HREF="editing.html#wildcards">wildcards</A> <A HREF="motion.html#it">它</A> is expanded to all
@@ -377,7 +377,7 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			entry in <A HREF="options.html#'packpath'">'packpath'</A>.
 
 			First all the directories found are added to
-			<A HREF="options.html#'runtimepath'">'runtimepath'</A>, then the plugins found in the
+			<A HREF="options.html#'runtimepath'">'runtimepath'</A>然后the plugins found in the
 			directories are sourced.  This allows for a <A HREF="usr_05.html#plugin">plugin</A> to
 			depend on something of another <A HREF="usr_05.html#plugin">plugin</A>, e.g. an
 			&quot;<A HREF="eval.html#autoload">autoload</A>&quot; directory.  见 |<A HREF="#packload-two-steps">packload-two-steps</A>| for
@@ -432,7 +432,7 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 
 
 						*<A NAME=":scr"></A><B>:scr</B>* *<A NAME=":scriptnames"></A><B>:scriptnames</B>*
-:scr[iptnames]		<A HREF="eval.html#List">List</A> all sourced <A HREF="usr_41.html#script">script</A> names, in the order they were
+:scr[iptnames]		<A HREF="eval.html#list">列表</A> all sourced <A HREF="usr_41.html#script">script</A> names, in the order they were
 			first sourced.  The number is used for the <A HREF="usr_41.html#script">script</A> ID
 			|<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>|.
 
@@ -462,7 +462,7 @@ All commands and command sequences can be repeated by putting them in a named
   what you are doing.  If you make a mistake, &quot;p&quot;ut the <A HREF="intro.html#register">register</A> into the
   file, edit the command sequence, and then delete <A HREF="motion.html#it">它</A> into the <A HREF="intro.html#register">register</A>
   again.  You can continue <A HREF="#recording">recording</A> by appending to the <A HREF="intro.html#register">register</A> (use an
-  <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>).
+  <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>).
 - Delete or <A HREF="change.html#yank">yank</A> the command sequence into the <A HREF="intro.html#register">register</A>.
 
 Often used command sequences can be put under a function key with the '<A HREF="map.html#:map">:map</A>'
@@ -488,9 +488,9 @@ make a top-down hierarchy of <A HREF="usr_41.html#script">script</A> files.  The
 nested <A HREF="motion.html#as">as</A> deep <A HREF="motion.html#as">as</A> the number of files that can be opened at one time (about
 15).  The '<A HREF="#:source!">:source!</A>' command can be nested up to 15 levels deep.
 
-You can use the &quot;<A HREF="cmdline.html#&lt;sfile&gt;">&lt;sfile&gt;</A>&quot; <A HREF="eval.html#string">string</A> (literally, this is not a special key) inside
+You can use the &quot;<A HREF="cmdline.html#&lt;sfile&gt;">&lt;sfile&gt;</A>&quot; <A HREF="options\.html#options">字符串</A> (literally, this is not a special key) inside
 of the sourced file, in places where a file name is expected.  It will be
-replaced by the file name of the sourced file.  For example, if you have a
+replaced by the file name of the sourced file.例如, if you have a
 &quot;other.vimrc&quot; file in the same directory <A HREF="motion.html#as">as</A> your |<A HREF="init.html">init.vim</A>| file, you can
 source it from your |<A HREF="init.html">init.vim</A>| file with this command:
 <B>	:source &lt;sfile&gt;:h/other.vimrc</B>
@@ -499,7 +499,7 @@ In <A HREF="usr_41.html#script">script</A> files terminal-dependent key codes ar
 terminal-independent two character codes.  This means that they can be used
 in the same way on different kinds of terminals.  The first character of a
 key code is 0x80 or 128, shown on the screen <A HREF="motion.html#as">as</A> &quot;~@&quot;.  The second one can be
-found in the <A HREF="eval.html#list">list</A> |<A HREF="intro.html#key-notation">key-notation</A>|.  Any of these codes can also be entered
+found in the <A HREF="eval.html#list">列表</A> |<A HREF="intro.html#key-notation">key-notation</A>|.  Any of these codes can also be entered
 with <A HREF="visual.html#CTRL-V">CTRL-V</A> followed by the three digit decimal code.
 
 
@@ -546,7 +546,7 @@ space at the end of a line is hard to see and may be accidentally deleted.
 <B>		\ "very long regexp"</B>
 <B>		\ keepend</B>
 
-There is a problem with the &quot;<A HREF="insert.html#:append">:append</A>&quot; and &quot;<A HREF="insert.html#:insert">:insert</A>&quot; commands:
+There is a problem with the &quot;<A HREF="insert.html#:append">:append</A>&quot; and &quot;<A HREF="insert.html#:insert">:insert</A>&quot;命令:
 <B>   :1append</B>
 <B>   \asdf</B>
 <B>   .</B>
@@ -632,12 +632,12 @@ You would now have these files under ~/.local/share/nvim/site:
 
 							*<A NAME="runtime-search-path"></A><B>runtime-search-path</B>*
 When runtime files are searched for, first all paths in <A HREF="options.html#'runtimepath'">'runtimepath'</A> are
-searched, then all &quot;pack/*/start/*&quot; dirs are searched. However, package entries
+searched然后all &quot;pack/*/start/*&quot; dirs are searched. However, package entries
 are not visible in `:set rtp` or `echo &amp;rtp`, <A HREF="motion.html#as">as</A> the final concatenated path
-would be too long and get truncated. To <A HREF="eval.html#list">list</A> all used directories, use
+would be too long and get truncated. To <A HREF="eval.html#list">列表</A> all used directories, use
 |<A HREF="api.html#nvim_list_runtime_paths()">nvim_list_runtime_paths()</A>|. In addition |<A HREF="api.html#nvim_get_runtime_file()">nvim_get_runtime_file()</A>| can be used
 to query for specific files or sub-folders within the runtime path. For
-instance to <A HREF="eval.html#list">list</A> all runtime dirs and <A HREF="#packages">packages</A> with <A HREF="lua.html#lua">lua</A> paths, use
+instance to <A HREF="eval.html#list">列表</A> all runtime dirs and <A HREF="#packages">packages</A> with <A HREF="lua.html#lua">lua</A> paths, use
 
 <B>    :echo nvim_get_runtime_file("lua/", v:true)</B>
 
@@ -693,7 +693,7 @@ This searches for &quot;pack/*/opt/foodebug&quot; in <A HREF="options.html#'pack
 ~/.local/share/nvim/site/pack/foo/opt/foodebug/plugin/debugger.vim and source
 <A HREF="motion.html#it">它</A>.
 
-This could be done if some conditions are met.  For example, depending on
+This could be done if some conditions are met.例如, depending on
 whether Vim supports a feature or a dependency is missing.
 
 You can also load an optional <A HREF="usr_05.html#plugin">plugin</A> at <A HREF="starting.html#startup">startup</A>, by putting this command in
@@ -798,16 +798,16 @@ when sourcing the plugins.
 
 Debugging scripts					*<A NAME="debug-scripts"></A><B>debug-scripts</B>*
 
-Besides the obvious <A HREF="message.html#messages">messages</A> that you can add to your scripts to find out what
+Besides the obvious <A HREF="message.html#messages">信息</A> that you can add to your scripts to find out what
 they are doing, Vim offers a debug mode.  This allows you to step through a
 sourced file or user function and set breakpoints.
 
 NOTE: The debugging mode is far from perfect.  Debugging will have side
 effects on how Vim works.  You cannot use <A HREF="motion.html#it">它</A> to debug everything.  For
-example, the display is messed up by the debugging <A HREF="message.html#messages">messages</A>.
+example, the display is messed up by the debugging <A HREF="message.html#messages">信息</A>.
 
 An alternative to debug mode is setting the <A HREF="options.html#'verbose'">'verbose'</A> option.  With a bigger
-number <A HREF="motion.html#it">它</A> will give more <A HREF="starting.html#verbose">verbose</A> <A HREF="message.html#messages">messages</A> about what Vim is doing.
+number <A HREF="motion.html#it">它</A> will give more <A HREF="starting.html#verbose">verbose</A> <A HREF="message.html#messages">信息</A> about what Vim is doing.
 
 
 
@@ -844,20 +844,20 @@ separately.
 
 DEBUG MODE
 
-Once in debugging mode, the usual <A HREF="intro.html#Ex">Ex</A> commands can be used.  For example, to
+Once in debugging mode, the usual <A HREF="intro.html#Ex">Ex</A> commands can be used.例如, to
 inspect the value of a variable:
 <B>	echo idx</B>
 When inside a user function, this will print the value of the local variable
 &quot;idx&quot;.  Prepend &quot;<A HREF="eval.html#g:">g:</A>&quot; to get the value of a global variable:
 <B>	echo g:idx</B>
 All commands are executed in the <A HREF="#context">context</A> of the current function or <A HREF="usr_41.html#script">script</A>.
-You can also set <A HREF="options.html#options">options</A>, for example setting or resetting <A HREF="options.html#'verbose'">'verbose'</A> will show
+You can also set <A HREF="options\.html#options">选项</A>, for example setting or resetting <A HREF="options.html#'verbose'">'verbose'</A> will show
 what happens, but you might want to set <A HREF="motion.html#it">它</A> just before executing the lines you
 are interested in:
 <B>	:set verbose=20</B>
 
 Commands that require updating the screen should be avoided, because their
-effect won't be noticed until after leaving debug mode.  For example:
+effect won't be noticed until after leaving debug mode.例如:
 <B>	:help</B>
 won't be very helpful.
 
@@ -909,7 +909,7 @@ Additionally, these commands can be used:
 	where
 
 							*<A NAME="&gt;frame"></A><B>&gt;frame</B>*
-	frame N		Goes to N backtrace level. + and - <A HREF="sign.html#signs">signs</A> make <A HREF="intro.html#movement">movement</A>
+	frame N		Goes to N backtrace level. + and - <A HREF="sign.html#signs">signs</A> make <A HREF="intro.html#movement">移动</A>
 			relative.  E.g., &quot;:frame +3&quot; goes three frames up.
 
 							*<A NAME="&gt;up"></A><B>&gt;up</B>*
@@ -1038,7 +1038,7 @@ LISTING BREAKPOINTS
 
 							*<A NAME=":breakl"></A><B>:breakl</B>* *<A NAME=":breaklist"></A><B>:breaklist</B>*
 :breakl[ist]
-		<A HREF="eval.html#List">List</A> all breakpoints.
+		<A HREF="eval.html#list">列表</A> all breakpoints.
 
 
 OBSCURE
@@ -1195,10 +1195,10 @@ The following <A HREF="#Context">Context</A> items are supported:
 							*<A NAME="context-dict"></A><B>context-dict</B>*
 <A HREF="#Context">Context</A> <A HREF="vimindex.html#objects">objects</A> are dictionaries with the following key-value pairs:
 - &quot;jumps&quot;, &quot;regs&quot;, &quot;bufs&quot;, &quot;gvars&quot;:
-      |<A HREF="builtin.html#readfile()">readfile()</A>|-style |<A HREF="eval.html#List">List</A>| representation of corresponding msgpack
+      |<A HREF="builtin.html#readfile()">readfile()</A>|-style |<A HREF="eval.html#list">列表</A>| representation of corresponding msgpack
       <A HREF="vimindex.html#objects">objects</A> (见 |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| and |<A HREF="builtin.html#msgpackparse()">msgpackparse()</A>|).
 - &quot;funcs&quot; (includes |<A HREF="map.html#script-local">script-local</A>| <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> well):
-      |<A HREF="eval.html#List">List</A>| of |<A HREF="eval.html#:function">:function</A>| <A HREF="intro.html#definitions">definitions</A>.
+      |<A HREF="eval.html#list">列表</A>| of |<A HREF="eval.html#:function">:function</A>| <A HREF="intro.html#definitions">definitions</A>.
 
 
 							*<A NAME="context-stack"></A><B>context-stack</B>*

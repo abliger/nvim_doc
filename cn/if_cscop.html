@@ -106,7 +106,7 @@ all source files.  Think of <A HREF="motion.html#it">它</A> <A HREF="motion.htm
 
 <A HREF="#Cscope">Cscope</A> answers these questions from a symbol database that <A HREF="motion.html#it">它</A> builds the first
 time <A HREF="motion.html#it">它</A> is used on the source files.  On a subsequent call, <A HREF="#cscope">cscope</A> rebuilds
-the database only if a source file has changed or the <A HREF="eval.html#list">list</A> of source files is
+the database only if a source file has changed or the <A HREF="eval.html#list">列表</A> of source files is
 different.  When the database is rebuilt the data for the unchanged files is
 copied from the old database, which makes rebuilding much faster than the
 initial build.
@@ -122,7 +122,7 @@ initial build.
 All <A HREF="#cscope">cscope</A> commands are accessed through suboptions to the <A HREF="#cscope">cscope</A> commands.
 	`:cscope` or `:cs` is the main command
 	`:scscope` or `:scs` does the same and splits the<A HREF="windows.html#window">窗口</A>
-	`:lcscope` or `:lcs` uses the location <A HREF="eval.html#list">list</A>, 见 |<A HREF="#:lcscope">:lcscope</A>|
+	`:lcscope` or `:lcs` uses the location <A HREF="eval.html#list">列表</A>, 见 |<A HREF="#:lcscope">:lcscope</A>|
 
 The available subcommands are:
 
@@ -145,7 +145,7 @@ The available subcommands are:
  
 
 				      *<A NAME="cscope-find"></A><B>cscope-find</B>* *<A NAME="cs-find"></A><B>cs-find</B>* *<A NAME="E567"></A><B>E567</B>*
-    find  : Query <A HREF="#cscope">cscope</A>.  All <A HREF="#cscope">cscope</A> query <A HREF="options.html#options">options</A> are available
+    find  : Query <A HREF="#cscope">cscope</A>.  All <A HREF="#cscope">cscope</A> query <A HREF="options\.html#options">选项</A> are available
 	    except option #5 (&quot;Change this <A HREF="quickfix.html#grep">grep</A> pattern&quot;).
 
 	USAGE	<A HREF="#:cs">:cs</A> find {querytype} {name}
@@ -157,7 +157,7 @@ The available subcommands are:
 		1 or <A HREF="eval.html#g:">g:</A> Find this definition
 		2 or <A HREF="change.html#d">d</A>: Find <A HREF="eval.html#functions">functions</A> called by this function
 		3 or <A HREF="change.html#c">c</A>: Find <A HREF="eval.html#functions">functions</A> calling this function
-		4 or <A HREF="eval.html#t:">t:</A> Find this text <A HREF="eval.html#string">string</A>
+		4 or <A HREF="eval.html#t:">t:</A> Find this text <A HREF="options\.html#options">字符串</A>
 		6 or <A HREF="motion.html#e">e</A>: Find this egrep <A HREF="pattern.html#pattern">pattern</A>
 		7 or <A HREF="motion.html#f">f</A>: Find this file
 		8 or <A HREF="insert.html#i">i</A>: Find files #including this file
@@ -241,7 +241,7 @@ The available subcommands are:
 	    the pathname of the <A HREF="#cscope">cscope</A> database.  Kill a <A HREF="#cscope">cscope</A> connection
 	    using the partial name with caution!
 
-	    If the specified connection number is -1, then _ALL_ <A HREF="#cscope">cscope</A>
+	    If the specified connection number is -1然后_ALL_ <A HREF="#cscope">cscope</A>
 	    connections will be killed.
 
     reset : Reinit all <A HREF="#cscope">cscope</A> connections.
@@ -254,14 +254,14 @@ The available subcommands are:
 
 
 							*<A NAME=":lcscope"></A><B>:lcscope</B>* *<A NAME=":lcs"></A><B>:lcs</B>*
-This command is same <A HREF="motion.html#as">as</A> the &quot;<A HREF="#:cscope">:cscope</A>&quot; command, except when the
-<A HREF="options.html#'cscopequickfix'">'cscopequickfix'</A> option is set, the location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>is
-used instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> to show the <A HREF="#cscope">cscope</A> results.
+This command is same <A HREF="motion.html#as">as</A> the &quot;<A HREF="#:cscope">:cscope</A>&quot;命令, except when the
+<A HREF="options.html#'cscopequickfix'">'cscopequickfix'</A> option is set, the location <A HREF="eval.html#list">列表</A> for the current<A HREF="windows.html#window">窗口</A>is
+used instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> to show the <A HREF="#cscope">cscope</A> results.
 
 
 							*<A NAME=":cstag"></A><B>:cstag</B>* *<A NAME="E257"></A><B>E257</B>* *<A NAME="E562"></A><B>E562</B>*
 If you use <A HREF="#cscope">cscope</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> <A HREF="tagsrch.html#ctags">ctags</A>, |<A HREF="#:cstag">:cstag</A>| allows you to search one or
-the other before making a jump.  For example, you can choose to first
+the other before making a jump.例如, you can choose to first
 search your <A HREF="#cscope">cscope</A> database(s) for a match, and if one is not found, then
 your <A HREF="tagsrch.html#tags">标签</A> file(s) will be searched.  The order in which this happens
 is determined by the value of |<A HREF="#csto">csto</A>|.  见 |<A HREF="#cscope-options">cscope-options</A>| for more
@@ -276,9 +276,9 @@ through your <A HREF="tagsrch.html#tags">标签</A> file(s).
 
 ==============================================================================
 
-<A HREF="#Cscope">Cscope</A> <A HREF="options.html#options">options</A>						*<A NAME="cscope-options"></A><B>cscope-options</B>*
+<A HREF="#Cscope">Cscope</A> <A HREF="options\.html#options">选项</A>						*<A NAME="cscope-options"></A><B>cscope-options</B>*
 
-Use the |<A HREF="options.html#:set">:set</A>| command to set all <A HREF="#cscope">cscope</A> <A HREF="options.html#options">options</A>.  Ideally, you would <A HREF="diff.html#do">do</A>
+Use the |<A HREF="options.html#:set">:set</A>| command to set all <A HREF="#cscope">cscope</A> <A HREF="options\.html#options">选项</A>.  Ideally, you would <A HREF="diff.html#do">do</A>
 this in one of your <A HREF="starting.html#startup">startup</A> files (e.g., <A HREF="starting.html#vimrc">vimrc</A>).  Some <A HREF="#cscope">cscope</A> related
 <A HREF="eval.html#variables">variables</A> are only valid within |<A HREF="init.html">init.vim</A>|.  Setting them after vim has
 started will have no effect!
@@ -286,13 +286,13 @@ started will have no effect!
 
 							*<A NAME="cscopeprg"></A><B>cscopeprg</B>* *<A NAME="csprg"></A><B>csprg</B>*
 <A HREF="options.html#'cscopeprg'">'cscopeprg'</A> specifies the command to execute <A HREF="#cscope">cscope</A>.  The default is
-&quot;<A HREF="#cscope">cscope</A>&quot;.  For example:
+&quot;<A HREF="#cscope">cscope</A>&quot;.例如:
 <B>	:set csprg=/usr/local/bin/cscope</B>
  
 
 					    *<A NAME="cscopequickfix"></A><B>cscopequickfix</B>* *<A NAME="csqf"></A><B>csqf</B>* *<A NAME="E469"></A><B>E469</B>*
 <A HREF="options.html#'cscopequickfix'">'cscopequickfix'</A> specifies whether to use <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>to show <A HREF="#cscope">cscope</A>
-results.  This is a <A HREF="eval.html#list">list</A> of comma-separated values. Each item consists of
+results.  This is a <A HREF="eval.html#list">列表</A> of comma-separated values. Each item consists of
 |<A HREF="#cscope-find">cscope-find</A>| command (s, <A HREF="motion.html#g,">g,</A> d, c, t, e, f, i or <A HREF="motion.html#a)">a)</A> and flag (+, - or 0).
 '<A HREF="motion.html#+">+</A>' indicates that results must be appended to <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>,
 '<A HREF="motion.html#-">-</A>' implies previous results clearance, '<A HREF="motion.html#0">0</A>' or command absence - don't use
@@ -310,7 +310,7 @@ your <A HREF="tagsrch.html#tag">标签</A> files.  The default is off.
 
 
 							*<A NAME="cscoperelative"></A><B>cscoperelative</B>* *<A NAME="csre"></A><B>csre</B>*
-If <A HREF="options.html#'cscoperelative'">'cscoperelative'</A> is set, then in absence of a prefix given to <A HREF="#cscope">cscope</A>
+If <A HREF="options.html#'cscoperelative'">'cscoperelative'</A> is set然后in absence of a prefix given to <A HREF="#cscope">cscope</A>
 (prefix is the argument of -P option of cscope), basename of cscope.out
 location (usually the project root directory) will be used <A HREF="motion.html#as">as</A> the prefix
 to construct an absolute path.  The default is off.  Note: This option is
@@ -329,7 +329,7 @@ one, <A HREF="tagsrch.html#tag">标签</A> file(s) are searched before <A HREF="
 <A HREF="options.html#'cscopepathcomp'">'cscopepathcomp'</A> determines how many components of a file's path to display.
 With the default value of zero the entire path will be displayed.
 The value one will display only the filename with no path.  Other values
-display that many components.  For example:
+display that many components.例如:
 <B>	:set cscopepathcomp=3</B>
 will display the last 3 components of the file's path, including the file
 name itself.
@@ -400,7 +400,7 @@ this, the regular <A HREF="tagsrch.html#tag">标签</A> command not only searche
 files, but your <A HREF="#cscope">cscope</A> databases <A HREF="motion.html#as">as</A> well.
 
 Some users may want to keep the regular <A HREF="tagsrch.html#tag">标签</A> behavior and have a different
-shortcut to access <A HREF="#:cstag">:cstag</A>.  For example, one could map Ctrl-_  (underscore)
+shortcut to access <A HREF="#:cstag">:cstag</A>.例如, one could map Ctrl-_  (underscore)
 to <A HREF="#:cstag">:cstag</A> with the following command:
 
 <B>	map &lt;C-_&gt; :cstag &lt;C-R&gt;=expand("&lt;cword&gt;")&lt;CR&gt;&lt;CR&gt;</B>

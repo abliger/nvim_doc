@@ -99,7 +99,7 @@ To enable file type detection, use this command in your <A HREF="starting.html#v
 <B>	:filetype on</B>
 Each time a new or existing file is edited, Vim will try to recognize the type
 of the file and set the <A HREF="options.html#'filetype'">'filetype'</A> option.  This will trigger the <A HREF="autocmd.html#FileType">FileType</A>
-event, which can be used to set the <A HREF="syntax.html#syntax">syntax</A> highlighting, set <A HREF="options.html#options">options</A>, etc.
+event, which can be used to set the <A HREF="syntax.html#syntax">syntax</A> highlighting, set <A HREF="options\.html#options">选项</A>, etc.
 
 Detail: The &quot;<A HREF="#:filetype">:filetype</A> on&quot; command will load these files:
 		$VIMRUNTIME/filetype.lua
@@ -121,7 +121,7 @@ Detail: The &quot;<A HREF="#:filetype">:filetype</A> on&quot; command will load 
 
 To add your own file types, 见 |<A HREF="#new-filetype">new-filetype</A>| below.  To search for help on a
 <A HREF="#filetype">filetype</A> prepend &quot;ft-&quot; and optionally append &quot;-syntax&quot;, &quot;-indent&quot; or
-&quot;-plugin&quot;.  For example:
+&quot;-plugin&quot;.例如:
 <B>	:help ft-vim-indent</B>
 <B>	:help ft-vim-syntax</B>
 <B>	:help ft-man-plugin</B>
@@ -209,7 +209,7 @@ To disable one of the file types, add a line in your <A HREF="#filetype">filetyp
 To detect the file type again:
 <B>	:filetype detect</B>
 Use this if you started with an empty file and typed text that makes <A HREF="motion.html#it">它</A>
-possible to detect the file type.  For example, when you entered this in a
+possible to detect the file type.例如, when you entered this in a
 shell <A HREF="usr_41.html#script">script</A>: &quot;#!/bin/csh&quot;.
    When <A HREF="#filetype">filetype</A> detection was off, <A HREF="motion.html#it">它</A> will be enabled first, like the &quot;on&quot;
 argument was used.
@@ -265,7 +265,7 @@ or $VIMRUNTIME/filetype.vim files.  They will be overwritten when installing a
 new version of Nvim.
 
 A. If you want to overrule all default file type checks.
-   This works by <A HREF="editing.html#writing">writing</A> one file for each <A HREF="#filetype">filetype</A>.  The disadvantage is that
+   This works by <A HREF="editing.html#writing">写</A> one file for each <A HREF="#filetype">filetype</A>.  The disadvantage is that
    there can be many files.  The advantage is that you can simply drop this 
    file in the right directory to make <A HREF="motion.html#it">它</A> work.
 
@@ -282,7 +282,7 @@ A. If you want to overrule all default file type checks.
       when sourcing your file.  You could also use the <A HREF="pattern.html#pattern">pattern</A> &quot;*&quot; and then
       check the contents of the file to recognize <A HREF="motion.html#it">它</A>.
       Write this file <A HREF="motion.html#as">as</A> &quot;mine.vim&quot; in the &quot;<A HREF="#ftdetect">ftdetect</A>&quot; directory in your user
-      runtime directory.  For example, for Unix:
+      runtime directory.例如, for Unix:
 <B>	:w ~/.config/nvim/ftdetect/mine.vim</B>
 
    3. To use the new <A HREF="#filetype">filetype</A> detection you must restart Vim.
@@ -360,7 +360,7 @@ C. If your file type can be detected by the file name or extension.
 
    Your filetype.vim will be sourced before the default <A HREF="autocmd.html#FileType">FileType</A> autocommands
    have been installed.  Your autocommands will match first, and the
-   &quot;<A HREF="options.html#:setfiletype">:setfiletype</A>&quot; command will make sure that no other autocommands will set
+   &quot;<A HREF="options.html#:setfiletype">:setfiletype</A>&quot;命令 will make sure that no other autocommands will set
    <A HREF="options.html#'filetype'">'filetype'</A> after this.
 
 							*<A NAME="new-filetype-scripts"></A><B>new-filetype-scripts</B>*
@@ -399,7 +399,7 @@ a non-existing name to avoid that <A HREF="motion.html#it">它</A> will be set l
 <B>	:set filetype=ignored</B>
 
 If you are setting up a system with many users, and you don't want each user
-to add/remove the same <A HREF="#filetypes">filetypes</A>, consider <A HREF="editing.html#writing">writing</A> the filetype.vim and
+to add/remove the same <A HREF="#filetypes">filetypes</A>, consider <A HREF="editing.html#writing">写</A> the filetype.vim and
 scripts.vim files in a runtime directory that is used for everybody.  Check
 the <A HREF="options.html#'runtimepath'">'runtimepath'</A> for a directory to use.  If there isn't one, set
 <A HREF="options.html#'runtimepath'">'runtimepath'</A> in the |<A HREF="starting.html#system-vimrc">system-vimrc</A>|.  Be careful to keep the default
@@ -409,7 +409,7 @@ directories!
 							*<A NAME="plugin-details"></A><B>plugin-details</B>*
 The &quot;<A HREF="usr_05.html#plugin">plugin</A>&quot; directory can be in any of the directories in the <A HREF="options.html#'runtimepath'">'runtimepath'</A>
 option.  All of these directories will be searched for plugins and they are
-all loaded.  For example, if this command:
+all loaded.例如, if this command:
 
 <B>	set runtimepath</B>
 
@@ -434,7 +434,7 @@ happens when Vim starts up by using the |<A HREF="starting.html#-V">-V</A>| argu
 
 <B>	vim -V2</B>
 
-You will see a lot of <A HREF="message.html#messages">messages</A>, in between them is a remark about loading the
+You will see a lot of <A HREF="message.html#messages">信息</A>, in between them is a remark about loading the
 plugins.  It starts with:
 
 <B><FONT color="#3A6F2B">	Searching for "plugin/**/*.vim" in </FONT></B>
@@ -445,7 +445,7 @@ There you can see where Vim looks for your <A HREF="usr_05.html#plugin">plugin</
 
 2. Filetype <A HREF="usr_05.html#plugin">plugin</A>					*<A NAME="filetype-plugins"></A><B>filetype-plugins</B>*
 
-When loading filetype plugins has been enabled |<A HREF="#:filetype-plugin-on">:filetype-plugin-on</A>|, <A HREF="options.html#options">options</A>
+When loading filetype plugins has been enabled |<A HREF="#:filetype-plugin-on">:filetype-plugin-on</A>|, <A HREF="options\.html#options">选项</A>
 will be set and mappings defined.  These are all local to the buffer, they
 will not be used for other files.
 
@@ -460,7 +460,7 @@ define yourself.  There are a few ways to avoid this:
 2. Define your own <A HREF="map.html#mapping">mapping</A>.  Example:
 <B>	:map ,p &lt;Plug&gt;MailQuote</B>
    You need to check the description of the <A HREF="usr_05.html#plugin">plugin</A> file below for the
-   functionality <A HREF="motion.html#it">它</A> offers and the <A HREF="eval.html#string">string</A> to map to.
+   functionality <A HREF="motion.html#it">它</A> offers and the <A HREF="options\.html#options">字符串</A> to map to.
    You need to define your own <A HREF="map.html#mapping">mapping</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded (before
    editing a file of that type).  The <A HREF="usr_05.html#plugin">plugin</A> will then skip installing the
    default <A HREF="map.html#mapping">mapping</A>.
@@ -567,7 +567,7 @@ g:changelog_username	The name and email address of the user.
 g:changelog_new_date_format
 			The format to use when creating a new date-entry.
 			The following table describes special tokens in the
-			<A HREF="eval.html#string">string</A>:
+			<A HREF="options\.html#options">字符串</A>:
 				&#37;&#37;	insert a single '<A HREF="motion.html#&#37;">&#37;</A>' character
 				&#37;d	insert the date from above
 				&#37;u	insert the user from above
@@ -584,7 +584,7 @@ g:changelog_new_date_format
 g:changelog_new_entry_format
 			The format used when creating a new entry.
 			The following table describes special tokens in the
-			<A HREF="eval.html#string">string</A>:
+			<A HREF="options\.html#options">字符串</A>:
                                 &#37;p	insert result of b:changelog_entry_prefix
 				&#37;c	where to position cursor when done
 			The default is &quot;\t*&#37;c&quot;, which produces something
@@ -626,7 +626,7 @@ b:changelog_path
 b:changelog_entry_prefix
 			Name of a function to call to generate a prefix to a
 			new entry.  This function takes no arguments and
-			should return a <A HREF="eval.html#string">string</A> containing the prefix.
+			should return a <A HREF="options\.html#options">字符串</A> containing the prefix.
 			Returning an empty prefix is fine.
 			The default generates the shortest path between the
 			ChangeLog's pathname and the current <A HREF="windows.html#buffers">buffers</A> pathname.
@@ -728,8 +728,8 @@ Variables:
 
 *<A NAME="g:ft_man_folding_enable"></A><B>g:ft_man_folding_enable</B>*   Fold manpages with foldmethod=indent foldnestmax=1.
 
-*<A NAME="b:man_default_sects"></A><B>b:man_default_sects</B>*       Comma-separated, ordered <A HREF="eval.html#list">list</A> of preferred sections.
-                          For example in C one usually wants section 3 or 2:
+*<A NAME="b:man_default_sects"></A><B>b:man_default_sects</B>*       Comma-separated, ordered <A HREF="eval.html#list">列表</A> of preferred sections.
+                        例如 in C one usually wants section 3 or 2:
 <B>                               :let b:man_default_sections = '3,2'</B>
 
 *<A NAME="g:man_hardwrap"></A><B>g:man_hardwrap</B>*            Hard-wrap to $MANWIDTH or<A HREF="windows.html#window">窗口</A>width if $MANWIDTH is
@@ -777,7 +777,7 @@ These maps can be disabled with
 
 PYTHON						*<A NAME="ft-python-plugin"></A><B>ft-python-plugin</B>* *<A NAME="PEP8"></A><B>PEP8</B>*
 
-By default the following <A HREF="options.html#options">options</A> are set, in accordance with <A HREF="#PEP8">PEP8</A>:
+By default the following <A HREF="options\.html#options">选项</A> are set, in accordance with <A HREF="#PEP8">PEP8</A>:
 
 <B>	setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=8</B>
 
@@ -792,7 +792,7 @@ QF QUICKFIX					    *<A NAME="qf.vim"></A><B>qf.vim</B>* *<A NAME="ft-qf-plugin"
 The &quot;qf&quot; <A HREF="#filetype">filetype</A> is used for the quickfix window, 见 |<A HREF="quickfix.html#quickfix-window">quickfix-window</A>|.
 
 The <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> includes configuration for displaying the command
-that produced the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> in the |<A HREF="windows.html#status-line">status-line</A>|. To disable this setting,
+that produced the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> in the |<A HREF="windows.html#status-line">status-line</A>|. To disable this setting,
 configure <A HREF="motion.html#as">as</A> follows:
 <B>	:let g:qf_disable_statusline = 1</B>
 
@@ -861,7 +861,7 @@ settings:
 
 
 *<A NAME="g:shada#keep_old_header"></A><B>g:shada#keep_old_header</B>*	<A HREF="eval.html#Boolean">Boolean</A>, if set to false all header entries 
-				are ignored when <A HREF="editing.html#writing">writing</A>.  Defaults to 1.
+				are ignored when <A HREF="editing.html#writing">写</A>.  Defaults to 1.
 
 *<A NAME="g:shada#add_own_header"></A><B>g:shada#add_own_header</B>*	<A HREF="eval.html#Boolean">Boolean</A>, if set to true first written entry 
 				will always be header entry with two values in 
@@ -876,21 +876,21 @@ Format description:
    ShaDa format.  Lines containing no non-whitespace characters are also 
    ignored.
 2. Each entry starts with line that has format &quot;{type} with <A HREF="editing.html#timestamp">timestamp</A> 
-   {timestamp}:&quot;. {timestamp} is |strftime()|-formatted <A HREF="eval.html#string">string</A> representing 
+   {timestamp}:&quot;. {timestamp} is |strftime()|-formatted <A HREF="options\.html#options">字符串</A> representing 
    actual Unix <A HREF="editing.html#timestamp">timestamp</A> value. First <A HREF="builtin.html#strftime()">strftime()</A> argument is equal to
-   `&#37;Y-&#37;m-&#37;dT&#37;H:&#37;M:&#37;S`.  When <A HREF="editing.html#writing">writing</A> this <A HREF="editing.html#timestamp">timestamp</A> is parsed using 
+   `&#37;Y-&#37;m-&#37;dT&#37;H:&#37;M:&#37;S`.  When <A HREF="editing.html#writing">写</A> this <A HREF="editing.html#timestamp">timestamp</A> is parsed using 
    |<A HREF="pi_msgpack.html#msgpack#strptime()">msgpack#strptime()</A>|, with caching (it remembers which <A HREF="editing.html#timestamp">timestamp</A> produced 
    particular <A HREF="builtin.html#strftime()">strftime()</A> output and uses this value if you did not change 
    <A HREF="editing.html#timestamp">timestamp</A>). {type} is one of
     1 - Header
     2 - Search <A HREF="pattern.html#pattern">pattern</A>
-    3 - Replacement <A HREF="eval.html#string">string</A>
+    3 - Replacement <A HREF="options\.html#options">字符串</A>
     4 - History entry
     5 - Register
     6 - Variable
     7 - Global <A HREF="motion.html#mark">mark</A>
     8 - Jump
-    9 - Buffer <A HREF="eval.html#list">list</A>
+    9 - Buffer <A HREF="eval.html#list">列表</A>
    10 - Local <A HREF="motion.html#mark">mark</A>
    11 - Change
     &#42; - Unknown (0x{type-hex})
@@ -911,13 +911,13 @@ Format description:
       on width and contents, except that empty descriptions are allowed.  
       Description column may be omitted.
 
-      When <A HREF="editing.html#writing">writing</A> description is ignored.  Keys with values |<A HREF="pi_msgpack.html#msgpack#equal">msgpack#equal</A>| 
+      When <A HREF="editing.html#writing">写</A> description is ignored.  Keys with values |<A HREF="pi_msgpack.html#msgpack#equal">msgpack#equal</A>| 
       to default ones are ignored.  Order of keys is preserved.  All keys are 
       treated <A HREF="motion.html#as">as</A> strings (not binary strings).
 
-      Note: specifically for buffer <A HREF="eval.html#list">list</A> entries <A HREF="motion.html#it">它</A> is allowed to have more 
+      Note: specifically for buffer <A HREF="eval.html#list">列表</A> entries <A HREF="motion.html#it">它</A> is allowed to have more 
       then one map header.  Each map header starts a new map entry inside 
-      buffer <A HREF="eval.html#list">list</A> because ShaDa buffer <A HREF="eval.html#list">list</A> entry is an array of maps.  I.e.
+      buffer <A HREF="eval.html#list">列表</A> because ShaDa buffer <A HREF="eval.html#list">列表</A> entry is an array of maps.  I.e.
 
 <B>        Buffer list with timestamp 1970-01-01T00:00:00:</B>
 <B>          % Key  Description  Value</B>

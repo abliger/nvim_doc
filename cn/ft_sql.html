@@ -108,7 +108,7 @@ features for <A HREF="motion.html#navigation">navigation</A>, indentation and <A
 
 1. Navigation					*<A NAME="sql-navigation"></A><B>sql-navigation</B>*
 
-The SQL <A HREF="usr_41.html#ftplugin">ftplugin</A> provides a number of <A HREF="options.html#options">options</A> to assist with file
+The SQL <A HREF="usr_41.html#ftplugin">ftplugin</A> provides a number of <A HREF="options\.html#options">选项</A> to assist with file
 <A HREF="motion.html#navigation">navigation</A>.
 
 
@@ -118,7 +118,7 @@ The SQL <A HREF="usr_41.html#ftplugin">ftplugin</A> provides a number of <A HREF
 provides many additional features and can be customized for different
 languages.  The matchit <A HREF="usr_05.html#plugin">plugin</A> is configured by defining a local
 buffer variable, b:match_words.  Pressing the <A HREF="motion.html#&#37;">&#37;</A> key while on various
-keywords will move the cursor to its match.  For example, if the cursor
+keywords will move the cursor to its match.例如, if the cursor
 is on an &quot;if&quot;, pressing <A HREF="motion.html#&#37;">&#37;</A> will cycle between the &quot;else&quot;, &quot;elseif&quot; and
 &quot;end if&quot; keywords.
 
@@ -179,17 +179,17 @@ file):
 Most relational databases support various standard features, tables, indices,
 triggers and stored procedures.  Each vendor also has a variety of proprietary
 <A HREF="vimindex.html#objects">objects</A>.  The next set of maps have been created to help move between these
-<A HREF="vimindex.html#objects">objects</A>.  Depends on which database vendor you are using, the <A HREF="eval.html#list">list</A> of <A HREF="vimindex.html#objects">objects</A>
+<A HREF="vimindex.html#objects">objects</A>.  Depends on which database vendor you are using, the <A HREF="eval.html#list">列表</A> of <A HREF="vimindex.html#objects">objects</A>
 must be configurable.  The <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> attempts to define many of the
 standard <A HREF="vimindex.html#objects">objects</A>, plus many additional ones.  In order to make this <A HREF="motion.html#as">as</A>
-flexible <A HREF="motion.html#as">as</A> possible, you can override the <A HREF="eval.html#list">list</A> of <A HREF="vimindex.html#objects">objects</A> from within your
+flexible <A HREF="motion.html#as">as</A> possible, you can override the <A HREF="eval.html#list">列表</A> of <A HREF="vimindex.html#objects">objects</A> from within your
 |<A HREF="starting.html#vimrc">vimrc</A>| with the following:
 <B>    let g:ftplugin_sql_objects = 'function,procedure,event,table,trigger' ..</B>
 <B>		\ ',schema,service,publication,database,datatype,domain' ..</B>
 <B>		\ ',index,subscription,synchronization,view,variable'</B>
 
 The following |<A HREF="intro.html#Normal">Normal</A>| mode and |<A HREF="visual.html#Visual">Visual</A>| mode maps have been created which use
-the above <A HREF="eval.html#list">list</A>:
+the above <A HREF="eval.html#list">列表</A>:
 <B>    ]}		    move forward to the next 'create &lt;object name&gt;'</B>
 <B>    [{		    move backward to the previous 'create &lt;object name&gt;'</B>
 
@@ -336,7 +336,7 @@ examples:
 <B>    :SQLSetType mysql</B>
 
 The easiest approach is to the use <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> character which will first complete
-the command name (SQLSetType), after a space and another <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, display a <A HREF="eval.html#list">list</A>
+the command name (SQLSetType), after a space and another <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, display a <A HREF="eval.html#list">列表</A>
 of available Vim <A HREF="usr_41.html#script">script</A> names:
 <B>    :SQL&lt;Tab&gt;&lt;space&gt;&lt;Tab&gt;</B>
 
@@ -414,7 +414,7 @@ procedures names and more.
 4.1 Static Mode					*<A NAME="sql-completion-static"></A><B>sql-completion-static</B>*
 The static popups created contain items defined by the active <A HREF="syntax.html#syntax">syntax</A> rules
 while editing a file with a <A HREF="filetype.html#filetype">filetype</A> of SQL.  The <A HREF="usr_05.html#plugin">plugin</A> defines (by default)
-various maps to help the user refine the <A HREF="eval.html#list">list</A> of items to be displayed.
+various maps to help the user refine the <A HREF="eval.html#list">列表</A> of items to be displayed.
 The defaults static maps are:
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;a &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('syntax')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;k &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlKeyword')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
@@ -465,7 +465,7 @@ This command breaks down <A HREF="motion.html#as">as</A>:
 
 Using the <A HREF="options.html#'syntax'">'syntax'</A> keyword is a special <A HREF="change.html#case">case</A>.  This instructs the
 syntaxcomplete <A HREF="usr_05.html#plugin">plugin</A> to retrieve all <A HREF="syntax.html#syntax">syntax</A> items.  So this will effectively
-work for any of Vim's SQL <A HREF="syntax.html#syntax">syntax</A> files.  At the time of <A HREF="editing.html#writing">writing</A> this includes
+work for any of Vim's SQL <A HREF="syntax.html#syntax">syntax</A> files.  At the time of <A HREF="editing.html#writing">写</A> this includes
 10 different <A HREF="syntax.html#syntax">syntax</A> files for the different dialects of SQL (see section 3
 above, |<A HREF="#sql-dialects">sql-dialects</A>|).
 
@@ -493,7 +493,7 @@ order for the dynamic feature to be enabled you must have the dbext.vim
 Dynamic mode is used by several features of the SQL completion <A HREF="usr_05.html#plugin">plugin</A>.
 After installing the dbext <A HREF="usr_05.html#plugin">plugin</A> see the dbext-tutorial for additional
 configuration and usage.  The dbext <A HREF="usr_05.html#plugin">plugin</A> allows the SQL completion <A HREF="usr_05.html#plugin">plugin</A>
-to display a <A HREF="eval.html#list">list</A> of tables, procedures, views and columns.
+to display a <A HREF="eval.html#list">列表</A> of tables, procedures, views and columns.
 <B>     Table List</B>
 <B>	 - All tables for all schema owners</B>
 <B>     Procedure List</B>
@@ -506,19 +506,19 @@ to display a <A HREF="eval.html#list">list</A> of tables, procedures, views and 
 To enable the popup, while in INSERT mode, use the following key combinations
 for each group (where &lt;C-C&gt; means hold the CTRL key down while pressing
 the space bar):
-     Table <A HREF="eval.html#List">List</A>		   - &lt;C-C&gt;t
+     Table <A HREF="eval.html#list">列表</A>		   - &lt;C-C&gt;t
 			   - &lt;C-X&gt;&lt;C-O&gt; (the default map assumes tables)
-     Stored Procedure <A HREF="eval.html#List">List</A> - &lt;C-C&gt;p
-     <A HREF="starting.html#View">View</A> <A HREF="eval.html#List">List</A>		   - &lt;C-C&gt;v
-     Column <A HREF="eval.html#List">List</A>	   - &lt;C-C&gt;c
+     Stored Procedure <A HREF="eval.html#list">列表</A> - &lt;C-C&gt;p
+     <A HREF="starting.html#View">View</A> <A HREF="eval.html#list">列表</A>		   - &lt;C-C&gt;v
+     Column <A HREF="eval.html#list">列表</A>	   - &lt;C-C&gt;c
 
-     Drilling In / Out     - When viewing a popup<A HREF="windows.html#window">窗口</A>displaying the <A HREF="eval.html#list">list</A>
+     Drilling In / Out     - When viewing a popup<A HREF="windows.html#window">窗口</A>displaying the <A HREF="eval.html#list">列表</A>
 			     of tables, you can press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>, this will
 			     replace the table currently highlighted with
-			     the column <A HREF="eval.html#list">list</A> for that table.
-			   - When viewing a popup<A HREF="windows.html#window">窗口</A>displaying the <A HREF="eval.html#list">list</A>
+			     the column <A HREF="eval.html#list">列表</A> for that table.
+			   - When viewing a popup<A HREF="windows.html#window">窗口</A>displaying the <A HREF="eval.html#list">列表</A>
 			     of columns, you can press <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>, this will
-			     replace the column <A HREF="eval.html#list">list</A> with the <A HREF="eval.html#list">list</A> of tables.
+			     replace the column <A HREF="eval.html#list">列表</A> with the <A HREF="eval.html#list">列表</A> of tables.
 			   - This allows you to quickly drill down into a
 			     table to view its columns and back again.
 			   - <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> and <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> can also be chosen via
@@ -550,18 +550,18 @@ First, create a new buffer:
 Static features
 To take you through the various lists, simply enter insert mode, hit:
     &lt;C-C&gt;s   (show SQL statements)
-At this point, you can page down through the <A HREF="eval.html#list">list</A> until you find &quot;select&quot;.
+At this point, you can page down through the <A HREF="eval.html#list">列表</A> until you find &quot;select&quot;.
 If you are familiar with the item you are looking for, for example you know
 the statement begins with the <A HREF="print.html#letter">letter</A> &quot;<A HREF="change.html#s">s</A>&quot;.  You can type ahead (without the
 quotes) &quot;se&quot; then press:
     &lt;C-Space&gt;t
-Assuming &quot;select&quot; is highlighted in the popup <A HREF="eval.html#list">list</A> press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to choose
+Assuming &quot;select&quot; is highlighted in the popup <A HREF="eval.html#list">列表</A> press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to choose
 the entry.  Now type:
     &#42; fr&lt;C-C&gt;a (show all <A HREF="syntax.html#syntax">syntax</A> items)
-choose &quot;from&quot; from the popup <A HREF="eval.html#list">list</A>.
+choose &quot;from&quot; from the popup <A HREF="eval.html#list">列表</A>.
 
-When <A HREF="editing.html#writing">writing</A> stored procedures using the &quot;type&quot; <A HREF="eval.html#list">list</A> is useful.  It contains
-a <A HREF="eval.html#list">list</A> of all the database supported types.  This may or may not be true
+When <A HREF="editing.html#writing">写</A> stored procedures using the &quot;type&quot; <A HREF="eval.html#list">列表</A> is useful.  It contains
+a <A HREF="eval.html#list">列表</A> of all the database supported types.  This may or may not be true
 depending on the <A HREF="syntax.html#syntax">syntax</A> file you are using.  The SQL Anywhere <A HREF="syntax.html#syntax">syntax</A> file
 (sqlanywhere.vim) has support for this:
 <B>     BEGIN</B>
@@ -578,18 +578,18 @@ information.  Once connections have been setup, the SQL completion <A HREF="usr_
 uses the features of dbext in the background to populate the popups.
 
 What follows assumes dbext.vim has been correctly configured, a simple test
-is to run the command, :DBListTable.  If a <A HREF="eval.html#list">list</A> of tables is shown, you know
+is to run the command, :DBListTable.  If a <A HREF="eval.html#list">列表</A> of tables is shown, you know
 dbext.vim is working <A HREF="motion.html#as">as</A> expected.  If not, please consult the dbext.txt
 documentation.
 
 Assuming you have followed the dbext-tutorial you can press &lt;C-C&gt;t to
-display a <A HREF="eval.html#list">list</A> of tables.  There is a delay while dbext is creating the table
-<A HREF="eval.html#list">list</A>.  After the <A HREF="eval.html#list">list</A> is displayed press &lt;C-W&gt;.  This will remove both the
-popup<A HREF="windows.html#window">窗口</A>and the table name already chosen when the <A HREF="eval.html#list">list</A> became active.
+display a <A HREF="eval.html#list">列表</A> of tables.  There is a delay while dbext is creating the table
+<A HREF="eval.html#list">列表</A>.  After the <A HREF="eval.html#list">列表</A> is displayed press &lt;C-W&gt;.  This will remove both the
+popup<A HREF="windows.html#window">窗口</A>and the table name already chosen when the <A HREF="eval.html#list">列表</A> became active.
 
 <B> 4.3.1 Table Completion:			*sql-completion-tables*</B>
 
-Press &lt;C-C&gt;t to display a <A HREF="eval.html#list">list</A> of tables from within the database you
+Press &lt;C-C&gt;t to display a <A HREF="eval.html#list">列表</A> of tables from within the database you
 have connected via the dbext <A HREF="usr_05.html#plugin">plugin</A>.
 NOTE: All of the SQL completion popups support typing a prefix before pressing
 the key map.  This will limit the contents of the popup<A HREF="windows.html#window">窗口</A>to just items
@@ -597,22 +597,22 @@ beginning with those characters.
 
 <B> 4.3.2 Column Completion:			*sql-completion-columns*</B>
 
-The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can also display a <A HREF="eval.html#list">list</A> of columns for particular
+The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can also display a <A HREF="eval.html#list">列表</A> of columns for particular
 tables.  The column completion is triggered via &lt;C-C&gt;c.
 
-NOTE: The following example uses <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> to trigger a column <A HREF="eval.html#list">list</A> while
+NOTE: The following example uses <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> to trigger a column <A HREF="eval.html#list">列表</A> while
       the popup<A HREF="windows.html#window">窗口</A>is active.
 
 Example of using column completion:
-     - Press &lt;C-C&gt;t again to display the <A HREF="eval.html#list">list</A> of tables.
-     - When the <A HREF="eval.html#list">list</A> is displayed in the completion<A HREF="windows.html#window">窗口</A>, press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>,
-       this will replace the <A HREF="eval.html#list">list</A> of tables, with a <A HREF="eval.html#list">list</A> of columns for the
+     - Press &lt;C-C&gt;t again to display the <A HREF="eval.html#list">列表</A> of tables.
+     - When the <A HREF="eval.html#list">列表</A> is displayed in the completion<A HREF="windows.html#window">窗口</A>, press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>,
+       this will replace the <A HREF="eval.html#list">列表</A> of tables, with a <A HREF="eval.html#list">列表</A> of columns for the
        table highlighted (after the same short delay).
-     - If you press <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>, this will again replace the column <A HREF="eval.html#list">list</A> with the
-       <A HREF="eval.html#list">list</A> of tables.  This allows you to drill into tables and column lists
+     - If you press <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>, this will again replace the column <A HREF="eval.html#list">列表</A> with the
+       <A HREF="eval.html#list">列表</A> of tables.  This allows you to drill into tables and column lists
        very quickly.
      - Press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> again while the same table is highlighted.  You will
-       notice there is no delay since the column <A HREF="eval.html#list">list</A> has been cached.  If you
+       notice there is no delay since the column <A HREF="eval.html#list">列表</A> has been cached.  If you
        change the schema of a cached table you can press &lt;C-C&gt;R, which
        clears the SQL completion cache.
      - NOTE: <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> and <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> have been designed to work while the
@@ -620,37 +620,37 @@ Example of using column completion:
        not active, a normal <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> or <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> will be executed.
 
 Let's look at how we can build a SQL statement dynamically.  A select statement
-requires a <A HREF="eval.html#list">list</A> of columns.  There are two ways to build a column <A HREF="eval.html#list">list</A> using
+requires a <A HREF="eval.html#list">列表</A> of columns.  There are two ways to build a column <A HREF="eval.html#list">列表</A> using
 the SQL completion <A HREF="usr_05.html#plugin">plugin</A>.
 <B>    One column at a time:</B>
-        1. After typing SELECT press &lt;C-C&gt;t to display a <A HREF="eval.html#list">list</A> of tables.
-	2. Choose a table from the <A HREF="eval.html#list">list</A>.
-	3. Press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> to display a <A HREF="eval.html#list">list</A> of columns.
-	4. Choose the column from the <A HREF="eval.html#list">list</A> and press enter.
-	5. Enter a &quot;<A HREF="motion.html#,">,</A>&quot; and press &lt;C-C&gt;c.  Generating a column <A HREF="eval.html#list">list</A>
+        1. After typing SELECT press &lt;C-C&gt;t to display a <A HREF="eval.html#list">列表</A> of tables.
+	2. Choose a table from the <A HREF="eval.html#list">列表</A>.
+	3. Press <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> to display a <A HREF="eval.html#list">列表</A> of columns.
+	4. Choose the column from the <A HREF="eval.html#list">列表</A> and press enter.
+	5. Enter a &quot;<A HREF="motion.html#,">,</A>&quot; and press &lt;C-C&gt;c.  Generating a column <A HREF="eval.html#list">列表</A>
 	   generally requires having the cursor on a table name.  The <A HREF="usr_05.html#plugin">plugin</A>
-	   uses this name to determine what table to retrieve the column <A HREF="eval.html#list">list</A>.
+	   uses this name to determine what table to retrieve the column <A HREF="eval.html#list">列表</A>.
 	   In this step, since we are pressing &lt;C-C&gt;c without the cursor
-	   on a table name the column <A HREF="eval.html#list">list</A> displayed will be for the previous
+	   on a table name the column <A HREF="eval.html#list">列表</A> displayed will be for the previous
 	   table.  Choose a different column and move on.
 	6. Repeat step 5 <A HREF="motion.html#as">as</A> often <A HREF="motion.html#as">as</A> necessary.
 <B>    All columns for a table:</B>
- 	1. After typing SELECT press &lt;C-C&gt;t to display a <A HREF="eval.html#list">list</A> of tables.
-	2. Highlight the table you need the column <A HREF="eval.html#list">list</A> for.
-	3. Press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to choose the table from the <A HREF="eval.html#list">list</A>.
-	4. Press &lt;C-C&gt;l to request a comma-separated <A HREF="eval.html#list">list</A> of all columns
+ 	1. After typing SELECT press &lt;C-C&gt;t to display a <A HREF="eval.html#list">列表</A> of tables.
+	2. Highlight the table you need the column <A HREF="eval.html#list">列表</A> for.
+	3. Press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to choose the table from the <A HREF="eval.html#list">列表</A>.
+	4. Press &lt;C-C&gt;l to request a comma-separated <A HREF="eval.html#list">列表</A> of all columns
 	   for this table.
 	5. Based on the table name chosen in step 3, the <A HREF="usr_05.html#plugin">plugin</A> attempts to
 	   decide on a reasonable table alias.	You are then prompted to
 	   either accept of change the alias.  Press OK.
-	6. The table name is replaced with the column <A HREF="eval.html#list">list</A> of the table is
-	   replaced with the comma separate <A HREF="eval.html#list">list</A> of columns with the alias
+	6. The table name is replaced with the column <A HREF="eval.html#list">列表</A> of the table is
+	   replaced with the comma separate <A HREF="eval.html#list">列表</A> of columns with the alias
 	   prepended to each of the columns.
 	7. Step 3 and 4 can be replaced by pressing &lt;C-C&gt;L, which has
 	   a &lt;C-Y&gt; embedded in the map to choose the currently highlighted
-	   table in the <A HREF="eval.html#list">list</A>.
+	   table in the <A HREF="eval.html#list">列表</A>.
 
-There is a special provision when <A HREF="editing.html#writing">writing</A> select statements.  Consider the
+There is a special provision when <A HREF="editing.html#writing">写</A> select statements.  Consider the
 following statement:
 <B>     select *</B>
 <B>       from customer c,</B>
@@ -662,28 +662,28 @@ following statement:
 
 In INSERT mode after typing the final &quot;c.&quot; which is an alias for the
 &quot;customer&quot; table, you can press either &lt;C-C&gt;c or &lt;C-X&gt;&lt;C-O&gt;.  This will
-popup a <A HREF="eval.html#list">list</A> of columns for the customer table.  It does this by looking back
-to the beginning of the select statement and finding a <A HREF="eval.html#list">list</A> of the tables
-specified in the FROM clause.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> notes that in the <A HREF="eval.html#string">string</A>
+popup a <A HREF="eval.html#list">列表</A> of columns for the customer table.  It does this by looking back
+to the beginning of the select statement and finding a <A HREF="eval.html#list">列表</A> of the tables
+specified in the FROM clause.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> notes that in the <A HREF="options\.html#options">字符串</A>
 &quot;customer c&quot;, &quot;<A HREF="change.html#c">c</A>&quot; is an alias for the customer table.  The optional &quot;AS&quot;
 keyword is also supported, &quot;customer AS c&quot;.
 
 
 <B> 4.3.3 Procedure Completion:			*sql-completion-procedures*</B>
 
-Similar to the table <A HREF="eval.html#list">list</A>, &lt;C-C&gt;p, will display a <A HREF="eval.html#list">list</A> of stored
+Similar to the table <A HREF="eval.html#list">列表</A>, &lt;C-C&gt;p, will display a <A HREF="eval.html#list">列表</A> of stored
 procedures stored within the database.
 
 <B> 4.3.4 View Completion:				*sql-completion-views*</B>
 
-Similar to the table <A HREF="eval.html#list">list</A>, &lt;C-C&gt;v, will display a <A HREF="eval.html#list">list</A> of views in the
+Similar to the table <A HREF="eval.html#list">列表</A>, &lt;C-C&gt;v, will display a <A HREF="eval.html#list">列表</A> of views in the
 database.
 
 
 
 4.4 Completion Customization			*<A NAME="sql-completion-customization"></A><B>sql-completion-customization</B>*
 
-The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can be customized through various <A HREF="options.html#options">options</A> set in
+The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can be customized through various <A HREF="options\.html#options">选项</A> set in
 your YXXYinit.vim|:
 <B>    omni_sql_no_default_maps</B>
         - Default: This variable is not defined
@@ -693,8 +693,8 @@ your YXXYinit.vim|:
 <B>    omni_sql_use_tbl_alias</B>
  	- Default: a
 	- This setting is only used when generating a comma-separated
-	  column <A HREF="eval.html#list">list</A>.	By default the map is &lt;C-C&gt;l.  When generating
-	  a column <A HREF="eval.html#list">list</A>, an alias can be prepended to the beginning of each
+	  column <A HREF="eval.html#list">列表</A>.	By default the map is &lt;C-C&gt;l.  When generating
+	  a column <A HREF="eval.html#list">列表</A>, an alias can be prepended to the beginning of each
 	  column, for example:	e.emp_id, e.emp_name.  This option has three
 	  settings:
 <B>		n - do not use an alias</B>
@@ -702,7 +702,7 @@ your YXXYinit.vim|:
 <B>		a - ask to confirm the alias name</B>
  
 	  An alias is determined following a few rules:
-	       1.  If the table name has an '<A HREF="motion.html#_">_</A>', then use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a separator:
+	       1.  If the table name has an '<A HREF="motion.html#_">_</A>'然后use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a separator:
 <B>		   MY_TABLE_NAME --&gt; MTN</B>
 <B>		   my_table_name --&gt; mtn</B>
 <B>		   My_table_NAME --&gt; MtN</B>
@@ -717,16 +717,16 @@ your YXXYinit.vim|:
 <B>    omni_sql_ignorecase</B>
  	- Default: Current setting for <A HREF="options.html#'ignorecase'">'ignorecase'</A>
 	- Valid settings are 0 or 1.
-	- When entering a few letters before initiating completion, the <A HREF="eval.html#list">list</A>
+	- When entering a few letters before initiating completion, the <A HREF="eval.html#list">列表</A>
 	  will be filtered to display only the entries which begin with the
-	  <A HREF="eval.html#list">list</A> of characters.  When this option is set to 0, the <A HREF="eval.html#list">list</A> will be
+	  <A HREF="eval.html#list">列表</A> of characters.  When this option is set to 0, the <A HREF="eval.html#list">列表</A> will be
 	  filtered using <A HREF="change.html#case">case</A> sensitivity.
 
 <B>    omni_sql_include_owner</B>
  	- Default: 0, unless dbext.vim 3.00 has been installed
 	- Valid settings are 0 or 1.
 	- When completing tables, procedure or views and using dbext.vim 3.00
-	  or higher the <A HREF="eval.html#list">list</A> of <A HREF="vimindex.html#objects">objects</A> will also include the owner name.
+	  or higher the <A HREF="eval.html#list">列表</A> of <A HREF="vimindex.html#objects">objects</A> will also include the owner name.
 	  When completing these <A HREF="vimindex.html#objects">objects</A> and omni_sql_include_owner is enabled
 	  the owner name will be replaced.
 
@@ -736,7 +736,7 @@ your YXXYinit.vim|:
 	- sqlcomplete can be used in conjunction with other completion
 	  plugins.  This is outlined at |<A HREF="#sql-completion-filetypes">sql-completion-filetypes</A>|.  When the
 	  <A HREF="filetype.html#filetype">filetype</A> is changed temporarily to SQL, the sqlcompletion <A HREF="usr_05.html#plugin">plugin</A>
-	  will cache the <A HREF="syntax.html#syntax">syntax</A> groups listed in the <A HREF="eval.html#List">List</A> specified in this
+	  will cache the <A HREF="syntax.html#syntax">syntax</A> groups listed in the <A HREF="eval.html#list">列表</A> specified in this
 	  option.
 
 
@@ -744,10 +744,10 @@ your YXXYinit.vim|:
 4.5 SQL Maps					*<A NAME="sql-completion-maps"></A><B>sql-completion-maps</B>*
 
 The default SQL maps have been described in other sections of this document in
-greater detail.  Here is a <A HREF="eval.html#list">list</A> of the maps with a brief description of each.
+greater detail.  Here is a <A HREF="eval.html#list">列表</A> of the maps with a brief description of each.
 
 Static Maps
-These are maps which use populate the completion <A HREF="eval.html#list">list</A> using Vim's <A HREF="syntax.html#syntax">syntax</A>
+These are maps which use populate the completion <A HREF="eval.html#list">列表</A> using Vim's <A HREF="syntax.html#syntax">syntax</A>
 highlighting rules.
 <B>    &lt;C-C&gt;a</B>
         - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items.
@@ -763,36 +763,36 @@ highlighting rules.
         - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items defined <A HREF="motion.html#as">as</A> 'sqlStatement'.
 
 Dynamic Maps
-These are maps which use populate the completion <A HREF="eval.html#list">list</A> using the dbext.vim
+These are maps which use populate the completion <A HREF="eval.html#list">列表</A> using the dbext.vim
 <A HREF="usr_05.html#plugin">plugin</A>.
 <B>    &lt;C-C&gt;t</B>
-        - Displays a <A HREF="eval.html#list">list</A> of tables.
+        - Displays a <A HREF="eval.html#list">列表</A> of tables.
 <B>    &lt;C-C&gt;p</B>
-        - Displays a <A HREF="eval.html#list">list</A> of procedures.
+        - Displays a <A HREF="eval.html#list">列表</A> of procedures.
 <B>    &lt;C-C&gt;v</B>
-        - Displays a <A HREF="eval.html#list">list</A> of views.
+        - Displays a <A HREF="eval.html#list">列表</A> of views.
 <B>    &lt;C-C&gt;c</B>
-        - Displays a <A HREF="eval.html#list">list</A> of columns for a specific table.
+        - Displays a <A HREF="eval.html#list">列表</A> of columns for a specific table.
 <B>    &lt;C-C&gt;l</B>
-        - Displays a comma-separated <A HREF="eval.html#list">list</A> of columns for a specific table.
+        - Displays a comma-separated <A HREF="eval.html#list">列表</A> of columns for a specific table.
 <B>    &lt;C-C&gt;L</B>
-        - Displays a comma-separated <A HREF="eval.html#list">list</A> of columns for a specific table.
+        - Displays a comma-separated <A HREF="eval.html#list">列表</A> of columns for a specific table.
 	  This should only be used when the completion<A HREF="windows.html#window">窗口</A>is active.
 <B>    &lt;Right&gt;</B>
- 	- Displays a <A HREF="eval.html#list">list</A> of columns for the table currently highlighted in
+ 	- Displays a <A HREF="eval.html#list">列表</A> of columns for the table currently highlighted in
 	  the completion<A HREF="windows.html#window">窗口</A>.  <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> is not recognized on most Unix
 	  systems, so this maps is only created on the Windows platform.
 	  If you would like the same feature on Unix, choose a different key
 	  and make the same map in your <A HREF="starting.html#vimrc">vimrc</A>.
 <B>    &lt;Left&gt;</B>
- 	- Displays the <A HREF="eval.html#list">list</A> of tables.
+ 	- Displays the <A HREF="eval.html#list">列表</A> of tables.
 	  <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> is not recognized on most Unix systems, so this maps is
 	  only created on the Windows platform.  If you would like the same
 	  feature on Unix, choose a different key and make the same map in
 	  your <A HREF="starting.html#vimrc">vimrc</A>.
 <B>    &lt;C-C&gt;R</B>
  	- This maps removes all cached items and forces the SQL completion
-	  to regenerate the <A HREF="eval.html#list">list</A> of items.
+	  to regenerate the <A HREF="eval.html#list">列表</A> of items.
 
 Customizing Maps
 You can create <A HREF="motion.html#as">as</A> many additional key maps <A HREF="motion.html#as">as</A> you like.  Generally, the maps
@@ -816,7 +816,7 @@ platform you can also use &lt;C-Space&gt; or <A HREF="intro.html#ALT">ALT</A> ke
 
 4.6 Using with other <A HREF="filetype.html#filetypes">filetypes</A>			*<A NAME="sql-completion-filetypes"></A><B>sql-completion-filetypes</B>*
 
-Many times SQL can be used with different <A HREF="filetype.html#filetypes">filetypes</A>.  For example Perl, Java,
+Many times SQL can be used with different <A HREF="filetype.html#filetypes">filetypes</A>.例如 Perl, Java,
 PHP, Javascript can all interact with a database.  Often you need both the SQL
 completion and the completion capabilities for the current language you are
 editing.

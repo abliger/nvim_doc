@@ -98,7 +98,7 @@ space&quot;. Functions like |<A HREF="builtin.html#jobstart()">jobstart()</A>| r
 |<A HREF="builtin.html#jobstop()">jobstop()</A>|, |<A HREF="builtin.html#chansend()">chansend()</A>|, |<A HREF="builtin.html#rpcnotify()">rpcnotify()</A>|, and |<A HREF="builtin.html#rpcrequest()">rpcrequest()</A>| take job ids.
 
 Job stdio streams form a |<A HREF="channel.html#channel">channel</A>| which can send and receive raw bytes or
-|<A HREF="api.html#msgpack-rpc">msgpack-rpc</A>| <A HREF="message.html#messages">messages</A>.
+|<A HREF="api.html#msgpack-rpc">msgpack-rpc</A>| <A HREF="message.html#messages">信息</A>.
 
 ==============================================================================
 
@@ -152,7 +152,7 @@ Arguments passed to <A HREF="#on_exit">on_exit</A> callback:
   Note: Buffered stdout/stderr data which has not been flushed by the sender
 	will not trigger the on_stdout/on_stderr callback (but if the process
 	ends, the <A HREF="#on_exit">on_exit</A> callback will be invoked).
-        For example, &quot;<A HREF="if_ruby.html#ruby">ruby</A> -e&quot; <A HREF="windows.html#buffers">buffers</A> output, so small strings will be
+      例如, &quot;<A HREF="if_ruby.html#ruby">ruby</A> -e&quot; <A HREF="windows.html#buffers">buffers</A> output, so small strings will be
         buffered unless &quot;auto-flushing&quot; ($stdout.sync=true) is enabled.
 <B>          function! Receive(job_id, data, event)</B>
 <B>            echom printf('%s: %s',a:event,string(a:data))</B>
@@ -169,7 +169,7 @@ Arguments passed to <A HREF="#on_exit">on_exit</A> callback:
 	  - `abcdefg` may arrive <A HREF="motion.html#as">as</A> `['abc']`, `['defg']`.
 	  - `abc\nefg` may arrive <A HREF="motion.html#as">as</A> `['abc', '']`, `['efg']` or `['abc']`,
 	    `['','efg']`, or even `['ab']`, `['c','efg']`.
-	Easy way to deal with this: initialize a <A HREF="eval.html#list">list</A> <A HREF="motion.html#as">as</A> `['']`, then append
+	Easy way to deal with this: initialize a <A HREF="eval.html#list">列表</A> <A HREF="motion.html#as">as</A> `['']`然后append
 	to <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> follows:
 <B>	  let s:chunks = ['']</B>
 <B>	  func! s:on_stdout(job_id, data, event) dict</B>

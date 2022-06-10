@@ -186,7 +186,7 @@ VIM::message({msg})
 
 							*<A NAME="ruby-set_option"></A><B>ruby-set_option</B>*
 VIM::set_option({arg})
-	Sets a vim option.  {arg} can be any argument that the &quot;<A HREF="options.html#:set">:set</A>&quot; command
+	Sets a vim option.  {arg} can be any argument that the &quot;<A HREF="options.html#:set">:set</A>&quot;命令
 	accepts.  Note that this means that no spaces are allowed in the
 	argument!  见 |<A HREF="options.html#:set">:set</A>|.
 
@@ -199,8 +199,8 @@ VIM::command({cmd})
 							*<A NAME="ruby-evaluate"></A><B>ruby-evaluate</B>*
 VIM::evaluate({expr})
 	Evaluates {expr} using the vim internal <A HREF="eval.html#expression">expression</A> evaluator (see
-	|<A HREF="eval.html#expression">expression</A>|).  Returns the expression result <A HREF="motion.html#as">as</A> a <A HREF="eval.html#string">string</A>.
-	A |<A HREF="eval.html#List">List</A>| is turned into a <A HREF="eval.html#string">string</A> by joining the items and <A HREF="insert.html#inserting">inserting</A>
+	|<A HREF="eval.html#expression">expression</A>|).  Returns the expression result <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>.
+	A |<A HREF="eval.html#list">列表</A>| is turned into a <A HREF="options\.html#options">字符串</A> by joining the items and <A HREF="insert.html#inserting">inserting</A>
 	line breaks.
 
 ==============================================================================

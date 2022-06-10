@@ -82,7 +82,7 @@
 Testing Vim and Vim <A HREF="usr_41.html#script">script</A>			*<A NAME="testing-support"></A><B>testing-support</B>*
 
 Expression evaluation is explained in |<A HREF="eval.html">eval.txt</A>|.  This file goes into details
-about <A HREF="editing.html#writing">writing</A> tests in Vim <A HREF="usr_41.html#script">script</A>.  This can be used for <A HREF="#testing">testing</A> Vim itself
+about <A HREF="editing.html#writing">写</A> tests in Vim <A HREF="usr_41.html#script">script</A>.  This can be used for <A HREF="#testing">testing</A> Vim itself
 and for <A HREF="#testing">testing</A> plugins.
 
 1. Testing Vim				|<A HREF="#testing">testing</A>|
@@ -144,7 +144,7 @@ assert_equal({expected}, {actual} [, {msg}])
 		When {expected} and {actual} are not equal an error message is
 		added to |<A HREF="eval.html#v:errors">v:errors</A>| and 1 is returned.  Otherwise zero is
 		returned |<A HREF="eval.html#assert-return">assert-return</A>|.
-		There is no automatic conversion, the <A HREF="eval.html#String">String</A> &quot;4&quot; is different
+		There is no automatic conversion, the <A HREF="options\.html#options">字符串</A> &quot;4&quot; is different
 		from the <A HREF="eval.html#Number">Number</A> 4.  And the number 4 is different from the
 		<A HREF="eval.html#Float">Float</A> 4.0.  The value of <A HREF="options.html#'ignorecase'">'ignorecase'</A> is not used here, <A HREF="change.html#case">case</A>
 		always matters.
@@ -152,7 +152,7 @@ assert_equal({expected}, {actual} [, {msg}])
 		{expected} but got {actual}&quot; is produced.
 		Example:
 <B>	assert_equal('foo', 'bar')</B>
- 		Will result in a <A HREF="eval.html#string">string</A> to be added to YXXYv:errors|:
+ 		Will result in a <A HREF="options\.html#options">字符串</A> to be added to YXXYv:errors|:
 <B><FONT color="#3A6F2B">	test.vim line 12: Expected 'foo' but got 'bar' </FONT></B>
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -172,7 +172,7 @@ assert_equalfile({fname-one}, {fname-two})
 
 
 assert_exception({error} [, {msg}])			*<A NAME="assert_exception()"></A><B>assert_exception()</B>*
-		When <A HREF="eval.html#v:exception">v:exception</A> does not contain the <A HREF="eval.html#string">string</A> {error} an error
+		When <A HREF="eval.html#v:exception">v:exception</A> does not contain the <A HREF="options\.html#options">字符串</A> {error} an error
 		message is added to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 		This can be used to assert that a command throws an exception.
 		Using the error number, followed by a colon, avoids problems
@@ -227,7 +227,7 @@ assert_match({pattern}, {actual} [, {msg}])
 		like <A HREF="options.html#'magic'">'magic'</A> was set and <A HREF="options.html#'cpoptions'">'cpoptions'</A> is empty, no matter what
 		the actual value of <A HREF="options.html#'magic'">'magic'</A> or <A HREF="options.html#'cpoptions'">'cpoptions'</A> is.
 
-		{actual} is used <A HREF="motion.html#as">as</A> a <A HREF="eval.html#string">string</A>, automatic conversion applies.
+		{actual} is used <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>, automatic conversion applies.
 		Use &quot;<A HREF="motion.html#^">^</A>&quot; and &quot;<A HREF="motion.html#$">$</A>&quot; to match with the start and end of the text.
 		Use both to match the whole text.
 
@@ -235,7 +235,7 @@ assert_match({pattern}, {actual} [, {msg}])
 		&quot;<A HREF="pattern.html#Pattern">Pattern</A> {pattern} does not match {actual}&quot; is produced.
 		Example:
 <B>	assert_match('^f.*o$', 'foobar')</B>
- 		Will result in a <A HREF="eval.html#string">string</A> to be added to YXXYv:errors|:
+ 		Will result in a <A HREF="options\.html#options">字符串</A> to be added to YXXYv:errors|:
 <B><FONT color="#3A6F2B">	test.vim line 12: Pattern '^f.*o$' does not match 'foobar' </FONT></B>
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -273,7 +273,7 @@ assert_notmatch({pattern}, {actual} [, {msg}])
 
 
 assert_report({msg})					*<A NAME="assert_report()"></A><B>assert_report()</B>*
-		Report a test failure directly, using <A HREF="eval.html#String">String</A> {msg}.
+		Report a test failure directly, using <A HREF="options\.html#options">字符串</A> {msg}.
 		Always returns one.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:

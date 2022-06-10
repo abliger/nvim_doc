@@ -241,7 +241,7 @@ Vim would never have become what <A HREF="motion.html#it">它</A> is now, withou
 	Yegappan Lakshmanan	many <A HREF="quickfix.html#quickfix">quickfix</A> features
 
 I wish to thank all the people that sent me bug reports and suggestions.  The
-<A HREF="eval.html#list">list</A> is too long to mention them all here.  Vim would not be the same without
+<A HREF="eval.html#list">列表</A> is too long to mention them all here.  Vim would not be the same without
 the ideas from all these people: They keep Vim alive!
 
 *<A NAME="love"></A><B>love</B>* *<A NAME="peace"></A><B>peace</B>* *<A NAME="friendship"></A><B>friendship</B>* *<A NAME="gross-national-happiness"></A><B>gross-national-happiness</B>*
@@ -297,9 +297,9 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 		见 |<A HREF="change.html#registers">registers</A>|.  The <A HREF="change.html#x">x</A> is a single character between '<A HREF="insert.html#a">a</A>' and
 		'<A HREF="vimindex.html#z">z</A>' or '<A HREF="insert.html#A">A</A>' and 'Z' or &#39;&#34;'', and in some cases (with the put
 		command) between '<A HREF="motion.html#0">0</A>' and '9', '<A HREF="motion.html#&#37;">&#37;</A>', '<A HREF="pattern.html##">#</A>', or others.  The
-		<A HREF="change.html#uppercase">uppercase</A> and <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A> designate the same <A HREF="#register">register</A>,
-		but the <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A> is used to overwrite the previous
-		<A HREF="#register">register</A> contents, while the <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A> is used to
+		<A HREF="change.html#uppercase">大写</A> and <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> designate the same <A HREF="#register">register</A>,
+		but the <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> is used to overwrite the previous
+		<A HREF="#register">register</A> contents, while the <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> is used to
 		append to the previous <A HREF="#register">register</A> contents.  Without the &quot;&quot;x&quot; or
 		with &quot;&quot;&quot;&quot; the stored text is put into the unnamed <A HREF="#register">register</A>.
 
@@ -313,8 +313,8 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 
 							*<A NAME="{char1-char2}"></A><B>{char1-char2}</B>*
 <A HREF="#{char1-char2}">{char1-char2}</A>	A single character from the range char1 to char2.  For
-		example: {a-z} is a <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A>.  Multiple ranges may be
-		concatenated.  For example, {a-zA-Z0-9} is any alphanumeric
+		example: {a-z} is a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>.  Multiple ranges may be
+		concatenated.例如, {a-zA-Z0-9} is any alphanumeric
 		character.
 
 
@@ -328,18 +328,18 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 		This is used after an |<A HREF="motion.html#operator">operator</A>| command to move over the text
 		that is to be operated upon.
 		- If the motion includes a <A HREF="#count">count</A> and the <A HREF="motion.html#operator">operator</A> also has a
-		  <A HREF="#count">count</A>, the two counts are multiplied.  For example: &quot;2d3w&quot;
+		  <A HREF="#count">count</A>, the two counts are multiplied.例如: &quot;2d3w&quot;
 		  deletes six words.
 		- The motion can be backwards, e.g. &quot;db&quot; to delete to the
 		  start of the <A HREF="motion.html#word">单词</A>.
 		- The motion can also be a mouse click.  The mouse is not
 		  supported in every <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> though.
-		- The &quot;<A HREF="map.html#:omap">:omap</A>&quot; command can be used to map characters while an
+		- The &quot;<A HREF="map.html#:omap">:omap</A>&quot;命令 can be used to map characters while an
 		  <A HREF="motion.html#operator">operator</A> is pending.
 		- <A HREF="#Ex">Ex</A> commands can be used to move the cursor.  This can be
 		  used to call a function that does some complicated motion.
 		  The motion is always <A HREF="motion.html#charwise">charwise</A> <A HREF="motion.html#exclusive">exclusive</A>, no matter
-		  what &quot;<A HREF="cmdline.html#:">:</A>&quot; command is used.  This means it's impossible to
+		  what &quot;<A HREF="cmdline.html#:">:</A>&quot;命令 is used.  This means it's impossible to
 		  include the last character of a line without the line break
 		  (unless <A HREF="options.html#'virtualedit'">'virtualedit'</A> is set).
 		  If the <A HREF="#Ex">Ex</A> command changes the text before where the <A HREF="motion.html#operator">operator</A>
@@ -351,7 +351,7 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 
 							*<A NAME="{Visual}"></A><B>{Visual}</B>*
 <A HREF="#{Visual}">{Visual}</A>	A selected text area.  It is started with the &quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="visual.html#V">V</A>&quot;, or
-		<A HREF="visual.html#CTRL-V">CTRL-V</A> command, then any cursor <A HREF="#movement">movement</A> command can be used
+		<A HREF="visual.html#CTRL-V">CTRL-V</A> command然后any cursor <A HREF="#movement">movement</A> command can be used
 		to change the end of the selected text.
 		This is used before an |<A HREF="motion.html#operator">operator</A>| command to highlight the
 		text that is to be operated upon.
@@ -379,7 +379,7 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 
 							*<A NAME="'option'"></A><B>'option'</B>*
 <A HREF="#'option'">'option'</A>	An option, or parameter, that can be set to a value, is
-		enclosed in single quotes.  见 |<A HREF="options.html#options">options</A>|.
+		enclosed in single quotes.  见 |<A HREF="options\.html#options">选项</A>|.
 
 
 							*<A NAME="quotecommandquote"></A><B>quotecommandquote</B>*
@@ -391,7 +391,7 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 
 					*<A NAME="key-notation"></A><B>key-notation</B>* *<A NAME="key-codes"></A><B>key-codes</B>* *<A NAME="keycodes"></A><B>keycodes</B>*
 These names for keys are used in the documentation.  They can also be used
-with the &quot;<A HREF="map.html#:map">:map</A>&quot; command.
+with the &quot;<A HREF="map.html#:map">:map</A>&quot;命令.
 
 <B><FONT color="#3A6F2B">notation	meaning		    equivalent	decimal value(s)	</FONT></B>
 
@@ -526,7 +526,7 @@ Note:
 								*<A NAME="&lt;&gt;"></A><B>&lt;&gt;</B>*
 Examples are often given in the <A HREF="#&lt;&gt;">&lt;&gt;</A> <A HREF="#notation">notation</A>.  Sometimes this is just to make
 clear what you need to type, but often <A HREF="motion.html#it">它</A> can be typed literally, e.g., with
-the &quot;<A HREF="map.html#:map">:map</A>&quot; command.  The rules are:
+the &quot;<A HREF="map.html#:map">:map</A>&quot;命令.  The rules are:
  1.  Printable characters are typed directly, except <A HREF="#backslash">backslash</A> and &quot;<A HREF="change.html#&lt;">&lt;</A>&quot;
  2.  Backslash is represented with &quot;\\&quot;, double <A HREF="#backslash">backslash</A>, or &quot;<A HREF="#&lt;Bslash&gt;">&lt;Bslash&gt;</A>&quot;.
  3.  Literal &quot;<A HREF="change.html#&lt;">&lt;</A>&quot; is represented with &quot;\&lt;&quot; or &quot;<A HREF="#&lt;lt&gt;">&lt;lt&gt;</A>&quot;.  When there is no
@@ -653,7 +653,7 @@ CTRL-\ <A HREF="editing.html#CTRL-G">CTRL-G</A> works the same <A HREF="motion.h
 
 
 				*<A NAME="gQ"></A><B>gQ</B>* *<A NAME="mode-Ex"></A><B>mode-Ex</B>* *<A NAME="Ex-mode"></A><B>Ex-mode</B>* *<A NAME="Ex"></A><B>Ex</B>* *<A NAME="EX"></A><B>EX</B>* *<A NAME="E501"></A><B>E501</B>*
-<A HREF="#gQ">gQ</A>			Switch to <A HREF="#Ex">Ex</A> mode.  This is like typing &quot;<A HREF="cmdline.html#:">:</A>&quot; commands
+<A HREF="#gQ">gQ</A>			Switch to <A HREF="#Ex">Ex</A> mode.  This is like typing &quot;<A HREF="cmdline.html#:">:</A>&quot;命令
 			one after another, except:
 			- You don't have to keep pressing &quot;<A HREF="cmdline.html#:">:</A>&quot;.
 			- The screen doesn't get updated after each command.
@@ -721,7 +721,7 @@ The |<A HREF="syntax.html#hl-NonText">hl-NonText</A>| highlight group can be use
 for the '<A HREF="repeat.html#@">@</A>' and '<A HREF="change.html#~">~</A>' characters.  This makes <A HREF="motion.html#it">它</A> possible to distinguish them
 from real characters in the buffer.
 
-The <A HREF="options.html#'showbreak'">'showbreak'</A> option contains the <A HREF="eval.html#string">string</A> to put in front of wrapped lines.
+The <A HREF="options.html#'showbreak'">'showbreak'</A> option contains the <A HREF="options\.html#options">字符串</A> to put in front of wrapped lines.
 
 
 							*<A NAME="wrap-off"></A><B>wrap-off</B>*
@@ -754,8 +754,8 @@ In <A HREF="cmdline.html#Command-line">命令行</A>模式 only the command-line
 display of the buffer contents is updated <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> you go back to Command
 mode.
 
-The last line of the<A HREF="windows.html#window">窗口</A>is used for status and other <A HREF="message.html#messages">messages</A>.  The
-status <A HREF="message.html#messages">messages</A> will only be used if an option is on:
+The last line of the<A HREF="windows.html#window">窗口</A>is used for status and other <A HREF="message.html#messages">信息</A>.  The
+status <A HREF="message.html#messages">信息</A> will only be used if an option is on:
 
 <B><FONT color="#3A6F2B">status message			option	     default	Unix default	</FONT></B>
 current mode			<A HREF="options.html#'showmode'">'showmode'</A>	on	    on
@@ -765,7 +765,7 @@ cursor position			<A HREF="options.html#'ruler'">'ruler'</A>		off	    off
 The current mode is &quot;<A HREF="starting.html#--">--</A> INSERT --&quot; or &quot;<A HREF="starting.html#--">--</A> REPLACE --&quot;, 见 |<A HREF="options.html#'showmode'">'showmode'</A>|.  The
 command characters are those that you typed but were not used yet.
 
-If you have a slow <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> you can switch off the status <A HREF="message.html#messages">messages</A> to speed
+If you have a slow <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> you can switch off the status <A HREF="message.html#messages">信息</A> to speed
 up editing:
 	<A HREF="options.html#:set">:set</A> <A HREF="options.html#'nosc'">nosc</A> noru nosm
 
@@ -779,7 +779,7 @@ The name Vim and the full name of the current file name will be shown in the
 title <A HREF="motion.html#bar">bar</A>.  When the<A HREF="windows.html#window">窗口</A>is resized, Vim will automatically redraw the
 <A HREF="windows.html#window">窗口</A>.  You may make the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> small <A HREF="motion.html#as">as</A> you like, but if <A HREF="motion.html#it">它</A> gets too
 small not a single line will fit in <A HREF="motion.html#it">它</A>.  Make <A HREF="motion.html#it">它</A> at least 40 characters wide
-to be able to read most <A HREF="message.html#messages">messages</A> on the last line.
+to be able to read most <A HREF="message.html#messages">信息</A> on the last line.
 
 ==============================================================================
 
@@ -807,7 +807,7 @@ screen	&#124;<A HREF="windows.html#window">窗口</A>1	&#124;<A HREF="windows.ht
 	|command line			|
 	+-------------------------------+
 
-The command line is also used for <A HREF="message.html#messages">messages</A>.  It scrolls up the screen when
+The command line is also used for <A HREF="message.html#messages">信息</A>.  It scrolls up the screen when
 there is not enough room in the command line.
 
 A difference is made between four types of lines:

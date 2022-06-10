@@ -234,28 +234,28 @@ VIM::Msg({msg})
 
 							*<A NAME="perl-SetOption"></A><B>perl-SetOption</B>*
 VIM::SetOption({arg})	Sets a vim option.  {arg} can be any argument that the
-			&quot;<A HREF="options.html#:set">:set</A>&quot; command accepts.  Note that this means that no
+			&quot;<A HREF="options.html#:set">:set</A>&quot;命令 accepts.  Note that this means that no
 			spaces are allowed in the argument!  见 |<A HREF="options.html#:set">:set</A>|.
 
 
 							*<A NAME="perl-Buffers"></A><B>perl-Buffers</B>*
-VIM::Buffers([{bn}...])	With no arguments, returns a <A HREF="eval.html#list">list</A> of all the <A HREF="windows.html#buffers">buffers</A>
+VIM::Buffers([{bn}...])	With no arguments, returns a <A HREF="eval.html#list">列表</A> of all the <A HREF="windows.html#buffers">buffers</A>
 			in an array <A HREF="repeat.html#context">context</A> or returns the number of <A HREF="windows.html#buffers">buffers</A>
-			in a scalar <A HREF="repeat.html#context">context</A>.  For a <A HREF="eval.html#list">list</A> of buffer names or
-			numbers {bn}, returns a <A HREF="eval.html#list">list</A> of the <A HREF="windows.html#buffers">buffers</A> matching
+			in a scalar <A HREF="repeat.html#context">context</A>.  For a <A HREF="eval.html#list">列表</A> of buffer names or
+			numbers {bn}, returns a <A HREF="eval.html#list">列表</A> of the <A HREF="windows.html#buffers">buffers</A> matching
 			{bn}, using the same rules <A HREF="motion.html#as">as</A> Vim's internal
 			|<A HREF="builtin.html#bufname()">bufname()</A>| function.
-			WARNING: the <A HREF="eval.html#list">list</A> becomes invalid when |<A HREF="windows.html#:bwipe">:bwipe</A>| is
+			WARNING: the <A HREF="eval.html#list">列表</A> becomes invalid when |<A HREF="windows.html#:bwipe">:bwipe</A>| is
 			used.
 
 
 							*<A NAME="perl-Windows"></A><B>perl-Windows</B>*
-VIM::Windows([{wn}...])	With no arguments, returns a <A HREF="eval.html#list">list</A> of all the <A HREF="windows.html#windows">windows</A>
+VIM::Windows([{wn}...])	With no arguments, returns a <A HREF="eval.html#list">列表</A> of all the <A HREF="windows.html#windows">windows</A>
 			in an array <A HREF="repeat.html#context">context</A> or returns the number of <A HREF="windows.html#windows">windows</A>
-			in a scalar <A HREF="repeat.html#context">context</A>.  For a <A HREF="eval.html#list">list</A> of<A HREF="windows.html#window">窗口</A>numbers
-			{wn}, returns a <A HREF="eval.html#list">list</A> of the <A HREF="windows.html#windows">windows</A> with those
+			in a scalar <A HREF="repeat.html#context">context</A>.  For a <A HREF="eval.html#list">列表</A> of<A HREF="windows.html#window">窗口</A>numbers
+			{wn}, returns a <A HREF="eval.html#list">列表</A> of the <A HREF="windows.html#windows">windows</A> with those
 			numbers.
-			WARNING: the <A HREF="eval.html#list">list</A> becomes invalid when a<A HREF="windows.html#window">窗口</A>is
+			WARNING: the <A HREF="eval.html#list">列表</A> becomes invalid when a<A HREF="windows.html#window">窗口</A>is
 			closed.
 
 
@@ -264,7 +264,7 @@ VIM::DoCommand({cmd})	Executes <A HREF="intro.html#Ex">Ex</A> command {cmd}.
 
 
 							*<A NAME="perl-Eval"></A><B>perl-Eval</B>*
-VIM::Eval({expr})	Evaluates {expr} and returns (success, value) in <A HREF="eval.html#list">list</A>
+VIM::Eval({expr})	Evaluates {expr} and returns (success, value) in <A HREF="eval.html#list">列表</A>
 			<A HREF="repeat.html#context">context</A> or just value in scalar <A HREF="repeat.html#context">context</A>.
 			success=1 indicates that val contains the value of
 			{expr}; success=0 indicates a failure to evaluate
@@ -273,12 +273,12 @@ VIM::Eval({expr})	Evaluates {expr} and returns (success, value) in <A HREF="eval
 			value of internal |<A HREF="eval.html#variables">variables</A>| <A HREF="change.html#x">x</A>, and '$x' is equivalent
 			to perl's $ENV{x}.  All |<A HREF="eval.html#functions">functions</A>| accessible from
 			the command-line are valid for {expr}.
-			A |<A HREF="eval.html#List">List</A>| is turned into a <A HREF="eval.html#string">string</A> by joining the items
+			A |<A HREF="eval.html#list">列表</A>| is turned into a <A HREF="options\.html#options">字符串</A> by joining the items
 			and <A HREF="insert.html#inserting">inserting</A> line breaks.
 
 
 							*<A NAME="perl-Blob"></A><B>perl-Blob</B>*
-VIM::Blob({expr})	Return <A HREF="eval.html#Blob">Blob</A> literal <A HREF="eval.html#string">string</A> 0zXXXX from scalar value.
+VIM::Blob({expr})	Return <A HREF="eval.html#Blob">Blob</A> literal <A HREF="options\.html#options">字符串</A> 0zXXXX from scalar value.
 
 ==============================================================================
 
@@ -301,9 +301,9 @@ Count()		Returns the number of lines in the Buffer.
 
 							*<A NAME="perl-Buffer-Get"></A><B>perl-Buffer-Get</B>*
 Get({lnum}, {lnum}?, <A HREF="eval.html#...">...</A>)
-			Returns a text <A HREF="eval.html#string">string</A> of line {lnum} in the Buffer
+			Returns a text <A HREF="options\.html#options">字符串</A> of line {lnum} in the Buffer
 			for each {lnum} specified.  An array can be passed
-			with a <A HREF="eval.html#list">list</A> of {lnum}'s specified.
+			with a <A HREF="eval.html#list">列表</A> of {lnum}'s specified.
 
 
 							*<A NAME="perl-Buffer-Delete"></A><B>perl-Buffer-Delete</B>*
@@ -315,14 +315,14 @@ Delete({lnum}, {lnum}?)
 
 							*<A NAME="perl-Buffer-Append"></A><B>perl-Buffer-Append</B>*
 Append({lnum}, {line}, {line}?, <A HREF="eval.html#...">...</A>)
-			Appends each {line} <A HREF="eval.html#string">string</A> after Buffer line {lnum}.
-			The <A HREF="eval.html#list">list</A> of {line}s can be an array.
+			Appends each {line} <A HREF="options\.html#options">字符串</A> after Buffer line {lnum}.
+			The <A HREF="eval.html#list">列表</A> of {line}s can be an array.
 
 
 							*<A NAME="perl-Buffer-Set"></A><B>perl-Buffer-Set</B>*
 Set({lnum}, {line}, {line}?, <A HREF="eval.html#...">...</A>)
 			Replaces one or more Buffer lines with specified
-			{lines}s, starting at Buffer line {lnum}.  The <A HREF="eval.html#list">list</A> of
+			{lines}s, starting at Buffer line {lnum}.  The <A HREF="eval.html#list">列表</A> of
 			{line}s can be an array.  If the arguments are
 			invalid, replacement does not occur.
 

@@ -426,7 +426,7 @@ by <A HREF="change.html#deleting">deleting</A> letters within a <A HREF="motion.
 
 <B><FONT color="#3A6F2B">File Names </FONT></B>
 
-Filenames should be all <A HREF="change.html#lowercase">lowercase</A> and can include underscores (`_`).
+Filenames should be all <A HREF="change.html#lowercase">小写</A> and can include underscores (`_`).
 
 Use underscores to separate words. Examples of acceptable file names:
 
@@ -446,7 +446,7 @@ In general, make your filenames very specific. For example, use
 Typedef-ed structs and enums start with a capital <A HREF="print.html#letter">letter</A> and have a capital
 <A HREF="print.html#letter">letter</A> for each new <A HREF="motion.html#word">单词</A>, with no underscores: `MyExcitingStruct`.
 
-Non-Typedef-ed structs and enums are all <A HREF="change.html#lowercase">lowercase</A> with underscores between
+Non-Typedef-ed structs and enums are all <A HREF="change.html#lowercase">小写</A> with underscores between
 words: `struct my_exciting_struct` .
 
 <B>    struct my_struct {</B>
@@ -457,12 +457,12 @@ words: `struct my_exciting_struct` .
 
 <B><FONT color="#3A6F2B">Variable Names </FONT></B>
 
-Variable names are all <A HREF="change.html#lowercase">lowercase</A>, with underscores between words. For
+Variable names are all <A HREF="change.html#lowercase">小写</A>, with underscores between words. For
 instance: `my_exciting_local_variable`.
 
 <B><FONT color="#3A6F2B">    Common Variable names </FONT></B>
 
-    For example:
+  例如:
 
 <B>        string table_name;  // OK: uses underscore.</B>
 <B>        string tablename;   // OK: all lowercase.</B>
@@ -492,13 +492,13 @@ Use a `k` followed by mixed <A HREF="change.html#case">case</A>: `kDaysInAWeek`.
 
 All compile-time constants, whether they are declared locally or globally,
 follow a slightly different naming convention from other <A HREF="eval.html#variables">variables</A>. Use a `k`
-followed by words with <A HREF="change.html#uppercase">uppercase</A> first letters:
+followed by words with <A HREF="change.html#uppercase">大写</A> first letters:
 
 <B>    const int kDaysInAWeek = 7;</B>
 
 <B><FONT color="#3A6F2B">Function Names </FONT></B>
 
-Function names are all <A HREF="change.html#lowercase">lowercase</A>, with underscores between words. For
+Function names are all <A HREF="change.html#lowercase">小写</A>, with underscores between words. For
 instance: `my_exceptional_function()`. All <A HREF="eval.html#functions">functions</A> in the same header file
 should have a common prefix.
 
@@ -540,7 +540,7 @@ Comments are vital to keeping our code readable. The following rules describe
 what you should comment and where. But remember: while comments are very
 important, the best code is self-documenting.
 
-When <A HREF="editing.html#writing">writing</A> your comments, write for your audience: the next contributor who
+When <A HREF="editing.html#writing">写</A> your comments, write for your audience: the next contributor who
 will need to understand your code. Be generous — the next one may be you!
 
 Nvim uses Doxygen comments.
@@ -799,7 +799,7 @@ punctuation, spelling, and grammar help with that goal.
 Use `TODO` comments for code that is temporary, a short-term solution, or
 good-enough but not perfect.
 
-`TODO`s should include the <A HREF="eval.html#string">string</A> `TODO` in all caps, followed by the name,
+`TODO`s should include the <A HREF="options\.html#options">字符串</A> `TODO` in all caps, followed by the name,
 email address, or other identifier of the person who can best provide <A HREF="repeat.html#context">context</A>
 about the problem referenced by the `TODO`. The main purpose is to have a
 consistent `TODO` format that can be searched to find the person who can
@@ -820,7 +820,7 @@ responses.&quot;).
 
 <A HREF="motion.html#Mark">Mark</A> <A HREF="deprecated.html#deprecated">deprecated</A> interface points with `@deprecated` docstring token.
 
-You can <A HREF="motion.html#mark">mark</A> an interface <A HREF="motion.html#as">as</A> <A HREF="deprecated.html#deprecated">deprecated</A> by <A HREF="editing.html#writing">writing</A> a comment containing the
+You can <A HREF="motion.html#mark">mark</A> an interface <A HREF="motion.html#as">as</A> <A HREF="deprecated.html#deprecated">deprecated</A> by <A HREF="editing.html#writing">写</A> a comment containing the
 <A HREF="motion.html#word">单词</A> `@deprecated` in all caps. The comment goes either before the declaration
 of the interface or on the same line <A HREF="motion.html#as">as</A> the declaration.
 
@@ -962,10 +962,10 @@ In particular, this should be done if the function signature is so long that
 
 <B><FONT color="#3A6F2B">Braced Initializer Lists </FONT></B>
 
-Format a braced <A HREF="eval.html#list">list</A> exactly like you would format a function call in its
+Format a braced <A HREF="eval.html#list">列表</A> exactly like you would format a function call in its
 place but with one space after the `{` and one space before the `}`
 
-If the braced <A HREF="eval.html#list">list</A> follows a name (e.g. a type or variable name), format <A HREF="motion.html#as">as</A> if
+If the braced <A HREF="eval.html#list">列表</A> follows a name (e.g. a type or variable name), format <A HREF="motion.html#as">as</A> if
 the `{}` were the parentheses of a function call with that name. If there is
 no name, assume a zero-length name.
 

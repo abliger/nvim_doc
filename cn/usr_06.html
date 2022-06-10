@@ -114,7 +114,7 @@ There can be a number of reasons why you don't see colors:
 	colors.
 
 - Your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> does support colors, but Vim doesn't know this.
-	Make sure your <A HREF="term.html#$TERM">$TERM</A> setting is correct.  For example, when using an
+	Make sure your <A HREF="term.html#$TERM">$TERM</A> setting is correct.例如, when using an
 	xterm that supports colors:
 
 <B>		setenv TERM xterm-color</B>
@@ -140,7 +140,7 @@ There can be a number of reasons why you don't see colors:
  	To see which types are available, look in the directory
 	$VIMRUNTIME/syntax.  For the <A HREF="gui.html#GUI">GUI</A> you can use the <A HREF="autocmd.html#Syntax">Syntax</A> menu.
 	Setting the <A HREF="filetype.html#filetype">filetype</A> can also be done with a |<A HREF="options.html#modeline">modeline</A>|, so that the
-	file will be highlighted each time you edit <A HREF="motion.html#it">它</A>.  For example, this
+	file will be highlighted each time you edit <A HREF="motion.html#it">它</A>.例如, this
 	line can be used in a Makefile (put <A HREF="motion.html#it">它</A> near the start or end of the
 	file):
 
@@ -197,7 +197,7 @@ the <A HREF="gui.html#GUI">GUI</A> use the Edit/Color Scheme menu.  You can also
 &quot;evening&quot; is the name of the color scheme.  There are several others you might
 want to try out.  Look in the directory $VIMRUNTIME/colors.
 
-When you found the color scheme that you like, add the &quot;<A HREF="syntax.html#:colorscheme">:colorscheme</A>&quot; command
+When you found the color scheme that you like, add the &quot;<A HREF="syntax.html#:colorscheme">:colorscheme</A>&quot;命令
 to your |<A HREF="init.html">init.vim</A>| file.
 
 You could also write your own color scheme.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
@@ -220,7 +220,7 @@ You could also write your own color scheme.  This is how you <A HREF="diff.html#
 	guifg		foreground color in the <A HREF="gui.html#GUI">GUI</A>
 	guibg		background color in the <A HREF="gui.html#GUI">GUI</A>
 
-   For example, to make comments green:
+ 例如, to make comments green:
 
 <B>	:highlight Comment ctermfg=green guifg=green</B>
  
@@ -283,7 +283,7 @@ few settings.  If you have a color printer, the paper output should look the
 same <A HREF="motion.html#as">as</A> what you see inside Vim.  But when you use a dark background the
 colors will be adjusted to look good on white paper.
 
-There are several <A HREF="options.html#options">options</A> that change the way Vim prints:
+There are several <A HREF="options\.html#options">选项</A> that change the way Vim prints:
 	<A HREF="options.html#'printdevice'">'printdevice'</A>
 	<A HREF="options.html#'printheader'">'printheader'</A>
 	<A HREF="options.html#'printfont'">'printfont'</A>

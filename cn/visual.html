@@ -110,15 +110,15 @@ However, when the <A HREF="options.html#'selection'">'selection'</A> option is s
 after the <A HREF="#Visual">Visual</A> area, the character under the cursor is not included.
 
 With &quot;<A HREF="#v">v</A>&quot; the text before the start position and after the end position will
-not be highlighted.  However, all <A HREF="change.html#uppercase">uppercase</A> and non-alpha operators, except
-&quot;<A HREF="change.html#~">~</A>&quot; and &quot;<A HREF="undo.html#U">U</A>&quot;, will work on whole lines anyway.  See the <A HREF="eval.html#list">list</A> of operators
+not be highlighted.  However, all <A HREF="change.html#uppercase">大写</A> and non-alpha operators, except
+&quot;<A HREF="change.html#~">~</A>&quot; and &quot;<A HREF="undo.html#U">U</A>&quot;, will work on whole lines anyway.  See the <A HREF="eval.html#list">列表</A> of operators
 below.
 
 
 							*<A NAME="visual-block"></A><B>visual-block</B>*
 With <A HREF="#CTRL-V">CTRL-V</A> (blockwise <A HREF="#Visual">Visual</A> mode) the highlighted text will be a rectangle
 between start position and the cursor.  However, some operators work on whole
-lines anyway (see the <A HREF="eval.html#list">list</A> below).  The change and substitute operators will
+lines anyway (see the <A HREF="eval.html#list">列表</A> below).  The change and substitute operators will
 delete the highlighted text and then start insertion at the top left
 position.
 
@@ -239,7 +239,7 @@ of the old area is used (character, line or blockwise).
 - <A HREF="intro.html#Normal">Normal</A> <A HREF="#Visual">Visual</A> mode with several lines: The number of lines is multiplied
   with the <A HREF="intro.html#count">count</A>, in the last line the same number of characters is used <A HREF="motion.html#as">as</A>
   in the last line in the previously highlighted area.
-The start of the text is the Cursor position.  If the &quot;<A HREF="motion.html#$">$</A>&quot; command was used <A HREF="motion.html#as">as</A>
+The start of the text is the Cursor position.  If the &quot;<A HREF="motion.html#$">$</A>&quot;命令 was used <A HREF="motion.html#as">as</A>
 one of the last commands to extend the highlighted text, the area will be
 extended to the rightmost column of the longest line.
 
@@ -283,7 +283,7 @@ If you want to highlight exactly the same area <A HREF="motion.html#as">as</A> t
 
 
 							*<A NAME="v_$"></A><B>v_$</B>*
-When the &quot;<A HREF="motion.html#$">$</A>&quot; command is used with blockwise <A HREF="#Visual">Visual</A> mode, the right end of the
+When the &quot;<A HREF="motion.html#$">$</A>&quot;命令 is used with blockwise <A HREF="#Visual">Visual</A> mode, the right end of the
 highlighted text will be determined by the longest highlighted line.  This
 stops when a motion command is used that does not move straight up or down.
 
@@ -320,8 +320,8 @@ The <A HREF="vimindex.html#objects">objects</A> that can be used are:
 	iW	inner <A HREF="motion.html#word">单词</A>					|<A HREF="motion.html#v_iW">v_iW</A>|
 	as	a <A HREF="motion.html#sentence">sentence</A> (with white space)			|<A HREF="motion.html#v_as">v_as</A>|
 	is	inner <A HREF="motion.html#sentence">sentence</A>					|<A HREF="motion.html#v_is">v_is</A>|
-	ap	a <A HREF="motion.html#paragraph">paragraph</A> (with white space)			|<A HREF="motion.html#v_ap">v_ap</A>|
-	ip	inner <A HREF="motion.html#paragraph">paragraph</A>					|<A HREF="motion.html#v_ip">v_ip</A>|
+	ap	a <A HREF="motion.html#paragraph">段落</A> (with white space)			|<A HREF="motion.html#v_ap">v_ap</A>|
+	ip	inner <A HREF="motion.html#paragraph">段落</A>					|<A HREF="motion.html#v_ip">v_ip</A>|
 	ab	a () block (with parentheses)			|<A HREF="motion.html#v_ab">v_ab</A>|
 	ib	inner () block					|<A HREF="motion.html#v_ib">v_ib</A>|
 	aB	a <A HREF="intro.html#{}">{}</A> block (with braces)			|<A HREF="motion.html#v_aB">v_aB</A>|
@@ -332,12 +332,12 @@ The <A HREF="vimindex.html#objects">objects</A> that can be used are:
 	i&lt;	inner <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block					|<A HREF="motion.html#v_i&lt;">v_i&lt;</A>|
 	a[	a <A HREF="motion.html#[]">[]</A> block (with <A HREF="motion.html#[]">[]</A>)				|<A HREF="motion.html#v_a[">v_a[</A>|
 	i[	inner <A HREF="motion.html#[]">[]</A> block					|<A HREF="motion.html#v_i[">v_i[</A>|
-	a&quot;	a double quoted <A HREF="eval.html#string">string</A> (with quotes)		|<A HREF="motion.html#v_aquote">v_aquote</A>|
-	i&quot;	inner double quoted <A HREF="eval.html#string">string</A>			|<A HREF="motion.html#v_iquote">v_iquote</A>|
-	a'	a single quoted <A HREF="eval.html#string">string</A> (with quotes)		|<A HREF="motion.html#v_a'">v_a'</A>|
-	i'	inner simple quoted <A HREF="eval.html#string">string</A>			|<A HREF="motion.html#v_i'">v_i'</A>|
-	a`	a <A HREF="eval.html#string">string</A> in backticks (with backticks)		|<A HREF="motion.html#v_a`">v_a`</A>|
-	i`	inner <A HREF="eval.html#string">string</A> in backticks			|<A HREF="motion.html#v_i`">v_i`</A>|
+	a&quot;	a double quoted <A HREF="options\.html#options">字符串</A> (with quotes)		|<A HREF="motion.html#v_aquote">v_aquote</A>|
+	i&quot;	inner double quoted <A HREF="options\.html#options">字符串</A>			|<A HREF="motion.html#v_iquote">v_iquote</A>|
+	a'	a single quoted <A HREF="options\.html#options">字符串</A> (with quotes)		|<A HREF="motion.html#v_a'">v_a'</A>|
+	i'	inner simple quoted <A HREF="options\.html#options">字符串</A>			|<A HREF="motion.html#v_i'">v_i'</A>|
+	a`	a <A HREF="options\.html#options">字符串</A> in backticks (with backticks)		|<A HREF="motion.html#v_a`">v_a`</A>|
+	i`	inner <A HREF="options\.html#options">字符串</A> in backticks			|<A HREF="motion.html#v_i`">v_i`</A>|
 
 Additionally the following commands can be used:
 	:	start <A HREF="intro.html#Ex">Ex</A> command for highlighted lines (1)	|<A HREF="cmdline.html#v_:">v_:</A>|
@@ -353,8 +353,8 @@ Additionally the following commands can be used:
 	p	put						|<A HREF="change.html#v_p">v_p</A>|
 	P	put without overwriting <A HREF="change.html#registers">registers</A>		|<A HREF="change.html#v_P">v_P</A>|
 	J	join (1)					|<A HREF="change.html#v_J">v_J</A>|
-	U	make <A HREF="change.html#uppercase">uppercase</A>					|<A HREF="change.html#v_U">v_U</A>|
-	u	make <A HREF="change.html#lowercase">lowercase</A>					|<A HREF="change.html#v_u">v_u</A>|
+	U	make <A HREF="change.html#uppercase">大写</A>					|<A HREF="change.html#v_U">v_U</A>|
+	u	make <A HREF="change.html#lowercase">小写</A>					|<A HREF="change.html#v_u">v_u</A>|
 	^]	find <A HREF="tagsrch.html#tag">标签</A>					|<A HREF="tagsrch.html#v_CTRL-]">v_CTRL-]</A>|
 	I	block insert					|<A HREF="#v_b_I">v_b_I</A>|
 	A	block append					|<A HREF="#v_b_A">v_b_A</A>|
@@ -365,8 +365,8 @@ Additionally the following commands can be used:
      using <A HREF="#CTRL-V">CTRL-V</A>.
 (4): When using <A HREF="#CTRL-V">CTRL-V</A> operates on the block only.
 
-Note that the &quot;<A HREF="map.html#:vmap">:vmap</A>&quot; command can be used to specifically map keys in <A HREF="#Visual">Visual</A>
-mode.  For example, if you would like the &quot;<A HREF="pattern.html#/">/</A>&quot; command not to extend the <A HREF="#Visual">Visual</A>
+Note that the &quot;<A HREF="map.html#:vmap">:vmap</A>&quot;命令 can be used to specifically map keys in <A HREF="#Visual">Visual</A>
+mode.例如, if you would like the &quot;<A HREF="pattern.html#/">/</A>&quot;命令 not to extend the <A HREF="#Visual">Visual</A>
 area, but instead take the highlighted text and search for that:
 <B>	:vmap / y/&lt;C-R&gt;"&lt;CR&gt;</B>
 (In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">它</A> you should type <A HREF="motion.html#it">它</A> literally; you
@@ -380,11 +380,11 @@ If you want to give a <A HREF="intro.html#count">count</A> to the command, <A HR
 
 
 							*<A NAME="{move-around}"></A><B>{move-around}</B>*
-The <A HREF="#{move-around}">{move-around}</A> is any sequence of <A HREF="intro.html#movement">movement</A> commands.  Note the difference
-with <A HREF="intro.html#{motion}">{motion}</A>, which is only ONE <A HREF="intro.html#movement">movement</A> command.
+The <A HREF="#{move-around}">{move-around}</A> is any sequence of <A HREF="intro.html#movement">移动</A>命令.  Note the difference
+with <A HREF="intro.html#{motion}">{motion}</A>, which is only ONE <A HREF="intro.html#movement">移动</A>命令.
 
 Another way to operate on the <A HREF="#Visual">Visual</A> area is using the |<A HREF="pattern.html#/\&#37;V">/\&#37;V</A>| item in a
-<A HREF="pattern.html#pattern">pattern</A>.  For example, to replace all '<A HREF="motion.html#(">(</A>' in the <A HREF="#Visual">Visual</A> area with '<A HREF="pattern.html##">#</A>':
+<A HREF="pattern.html#pattern">pattern</A>.例如, to replace all '<A HREF="motion.html#(">(</A>' in the <A HREF="#Visual">Visual</A> area with '<A HREF="pattern.html##">#</A>':
 
 <B>	:'&lt;,'&gt;s/\%V(/#/g</B>
 
@@ -413,9 +413,9 @@ block on every line of the block.  There is some differing behavior where the
 block RHS is not straight, due to different line lengths:
 
 1. Block was created with &lt;C-v&gt;$
-    In this <A HREF="change.html#case">case</A> the <A HREF="eval.html#string">string</A> is appended to the end of each line.
+    In this <A HREF="change.html#case">case</A> the <A HREF="options\.html#options">字符串</A> is appended to the end of each line.
 2. Block was created with &lt;C-v&gt;{move-around}
-    In this <A HREF="change.html#case">case</A> the <A HREF="eval.html#string">string</A> is appended to the end of the block on each line,
+    In this <A HREF="change.html#case">case</A> the <A HREF="options\.html#options">字符串</A> is appended to the end of the block on each line,
     and <A HREF="pattern.html#whitespace">whitespace</A> is inserted to pad to the end-of-block column.
 见 |<A HREF="#v_b_A_example">v_b_A_example</A>|.
 Note: &quot;<A HREF="insert.html#I">I</A>&quot; and &quot;<A HREF="insert.html#A">A</A>&quot; behave differently for lines that don't extend into the
@@ -425,9 +425,9 @@ Works only for adding text to a line, not for deletions.
 
 
 Visual-block change						*<A NAME="v_b_c"></A><B>v_b_c</B>*
-All selected text in the block will be replaced by the same text <A HREF="eval.html#string">string</A>.  When
+All selected text in the block will be replaced by the same text <A HREF="options\.html#options">字符串</A>.  When
 using &quot;<A HREF="change.html#c">c</A>&quot; the selected text is deleted and <A HREF="intro.html#Insert">插入</A>模式 started.  You can then
-enter text (without a line break).  When you hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, the same <A HREF="eval.html#string">string</A> is
+enter text (without a line break).  When you hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, the same <A HREF="options\.html#options">字符串</A> is
 inserted in all previously selected lines.
 
 
@@ -465,7 +465,7 @@ same amount of text <A HREF="motion.html#as">as</A> the last time:
 - <A HREF="intro.html#Normal">Normal</A> <A HREF="#Visual">Visual</A> mode within one line: The same number of characters.
 - <A HREF="intro.html#Normal">Normal</A> <A HREF="#Visual">Visual</A> mode with several lines: The same number of lines, in the
   last line the same number of characters <A HREF="motion.html#as">as</A> in the last line the last time.
-The start of the text is the Cursor position.  If the &quot;<A HREF="motion.html#$">$</A>&quot; command was used <A HREF="motion.html#as">as</A>
+The start of the text is the Cursor position.  If the &quot;<A HREF="motion.html#$">$</A>&quot;命令 was used <A HREF="motion.html#as">as</A>
 one of the last commands to extend the highlighted text, the <A HREF="repeat.html#repeating">repeating</A> will
 be applied up to the rightmost column of the longest line.  Any <A HREF="intro.html#count">count</A> passed
 to the `.` command is not used.
@@ -477,7 +477,7 @@ to the `.` command is not used.
 
 
 							*<A NAME=":visual_example"></A><B>:visual_example</B>*
-Currently the &quot;<A HREF="cmdline.html#:">:</A>&quot; command works on whole lines only.  When you select part of
+Currently the &quot;<A HREF="cmdline.html#:">:</A>&quot;命令 works on whole lines only.  When you select part of
 a line, doing something like &quot;:!date&quot; will replace the whole line.  If you
 want only part of the line to be replaced you will have to make a <A HREF="map.html#mapping">mapping</A> for
 <A HREF="motion.html#it">它</A>.  In a future release &quot;<A HREF="cmdline.html#:">:</A>&quot; may work on partial lines.
@@ -578,20 +578,20 @@ When the <A HREF="options.html#'showmode'">'showmode'</A> option is set, &quot;<
 Entering <A HREF="#Select">Select</A> mode:
 - Using the mouse to select an area, and <A HREF="options.html#'selectmode'">'selectmode'</A> contains &quot;mouse&quot;.
   <A HREF="options.html#'mouse'">'mouse'</A> must also contain a flag for the current mode.
-- Using a non-printable <A HREF="intro.html#movement">movement</A> command, with the Shift key pressed, and
-  <A HREF="options.html#'selectmode'">'selectmode'</A> contains &quot;key&quot;.  For example: <A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> and &lt;S-End&gt;.  <A HREF="options.html#'keymodel'">'keymodel'</A>
+- Using a non-printable <A HREF="intro.html#movement">移动</A>命令, with the Shift key pressed, and
+  <A HREF="options.html#'selectmode'">'selectmode'</A> contains &quot;key&quot;.例如: <A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> and &lt;S-End&gt;.  <A HREF="options.html#'keymodel'">'keymodel'</A>
   must also contain &quot;startsel&quot;.
 - Using &quot;<A HREF="#v">v</A>&quot;, &quot;<A HREF="#V">V</A>&quot; or <A HREF="#CTRL-V">CTRL-V</A> command, and <A HREF="options.html#'selectmode'">'selectmode'</A> contains &quot;cmd&quot;.
-- Using &quot;<A HREF="#gh">gh</A>&quot;, &quot;<A HREF="#gH">gH</A>&quot; or &quot;<A HREF="#g_CTRL-H">g_CTRL-H</A>&quot; command in <A HREF="intro.html#Normal">正常</A>模式.
+- Using &quot;<A HREF="#gh">gh</A>&quot;, &quot;<A HREF="#gH">gH</A>&quot; or &quot;<A HREF="#g_CTRL-H">g_CTRL-H</A>&quot;命令 in <A HREF="intro.html#Normal">正常</A>模式.
 
 - From <A HREF="#Visual">Visual</A> mode, press <A HREF="editing.html#CTRL-G">CTRL-G</A>.			*<A NAME="v_CTRL-G"></A><B>v_CTRL-G</B>*
 
 Commands in <A HREF="#Select">Select</A> mode:
 - Printable characters, <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> and <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> cause the selection to be deleted, and
   Vim enters <A HREF="intro.html#Insert">插入</A>模式.  The typed character is inserted.
-- Non-printable <A HREF="intro.html#movement">movement</A> commands, with the Shift key pressed, extend the
+- Non-printable <A HREF="intro.html#movement">移动</A>命令, with the Shift key pressed, extend the
   selection.  <A HREF="options.html#'keymodel'">'keymodel'</A> must include &quot;startsel&quot;.
-- Non-printable <A HREF="intro.html#movement">movement</A> commands, with the Shift key NOT pressed, stop <A HREF="#Select">Select</A>
+- Non-printable <A HREF="intro.html#movement">移动</A>命令, with the Shift key NOT pressed, stop <A HREF="#Select">Select</A>
   mode.  <A HREF="options.html#'keymodel'">'keymodel'</A> must include &quot;stopsel&quot;.
 - ESC stops <A HREF="#Select">Select</A> mode.
 

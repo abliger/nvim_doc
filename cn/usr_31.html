@@ -107,7 +107,7 @@ browser, prepend &quot;browse&quot;:
 
 <B>	:browse split</B>
 
-<A HREF="visual.html#Select">Select</A> a file and then the &quot;<A HREF="windows.html#:split">:split</A>&quot; command will be executed with <A HREF="motion.html#it">它</A>.  If you
+<A HREF="visual.html#Select">Select</A> a file and then the &quot;<A HREF="windows.html#:split">:split</A>&quot;命令 will be executed with <A HREF="motion.html#it">它</A>.  If you
 cancel the file dialog nothing happens, the<A HREF="windows.html#window">窗口</A>isn't split.
    You can also specify a file name argument.  This is used to tell the file
 browser where to start.  Example:
@@ -116,7 +116,7 @@ browser where to start.  Example:
 
 The file browser will pop up, starting in the directory &quot;/etc&quot;.
 
-The &quot;<A HREF="editing.html#:browse">:browse</A>&quot; command can be prepended to just about any command that opens a
+The &quot;<A HREF="editing.html#:browse">:browse</A>&quot;命令 can be prepended to just about any command that opens a
 file.
    If no directory is specified, Vim will decide where to start the file
 browser.  By default <A HREF="motion.html#it">它</A> uses the same directory <A HREF="motion.html#as">as</A> the last time.  Thus when
@@ -130,7 +130,7 @@ values:
 	current		use the current directory
 
 For example, when you are in the directory &quot;/usr&quot;, editing the file
-&quot;/usr/local/share/readme&quot;, then the command:
+&quot;/usr/local/share/readme&quot;然后the command:
 
 <B>	:set browsedir=buffer</B>
 <B>	:browse edit</B>
@@ -151,7 +151,7 @@ Will start the browser in &quot;/usr&quot;.
 
 When you are not using the <A HREF="gui.html#GUI">GUI</A> version, you could use the file explorer<A HREF="windows.html#window">窗口</A>
 to select files like in a file browser.  However, this doesn't work for the
-&quot;<A HREF="editing.html#:browse">:browse</A>&quot; command.  见 |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|.
+&quot;<A HREF="editing.html#:browse">:browse</A>&quot;命令.  见 |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|.
 
 ==============================================================================
 
@@ -162,7 +162,7 @@ changes.  If you <A HREF="diff.html#do">do</A> something that might be a bad thi
 error message and suggests appending ! if you really want to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.
    To avoid retyping the command with the !, you can make Vim give you a
 dialog.  You can then press &quot;OK&quot; or &quot;Cancel&quot; to tell Vim what you want.
-   For example, you are editing a file and made changes to <A HREF="motion.html#it">它</A>.  You start
+ 例如, you are editing a file and made changes to <A HREF="motion.html#it">它</A>.  You start
 editing another file with:
 
 <B>	:confirm edit foo.txt</B>
@@ -181,7 +181,7 @@ you want to lose the changes for ever: &quot;NO&quot;.  If you forgot what you w
 doing and want to check what really changed use &quot;CANCEL&quot;.  You will be back in
 the same file, with the changes still there.
 
-Just like &quot;<A HREF="editing.html#:browse">:browse</A>&quot;, the &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot; command can be prepended to most commands
+Just like &quot;<A HREF="editing.html#:browse">:browse</A>&quot;, the &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot;命令 can be prepended to most commands
 that edit another file.  They can also be combined:
 
 <B>	:confirm browse edit</B>
@@ -195,7 +195,7 @@ pop up a file browser to select the file to edit.
 	Pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> selects the choice.  This depends on the system
 	though.
 
-When you are not using the <A HREF="gui.html#GUI">GUI</A>, the &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot; command works <A HREF="motion.html#as">as</A> well.  Instead
+When you are not using the <A HREF="gui.html#GUI">GUI</A>, the &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot;命令 works <A HREF="motion.html#as">as</A> well.  Instead
 of popping up a dialog, Vim will print the message at the bottom of the Vim
 <A HREF="windows.html#window">窗口</A>and ask you to press a key to make a choice.
 
@@ -215,7 +215,7 @@ select commands, without knowing what they are called.  But you have to move
 your hand from the keyboard and grab the mouse.
    Menus can often be selected with keys <A HREF="motion.html#as">as</A> well.  This depends on your
 system, but most often <A HREF="motion.html#it">它</A> works this way.  Use the &lt;Alt&gt; key in combination
-with the underlined <A HREF="print.html#letter">letter</A> of a menu.  For example, &lt;A-w&gt; (&lt;Alt&gt; and <A HREF="motion.html#w">w</A>) pops
+with the underlined <A HREF="print.html#letter">letter</A> of a menu.例如, &lt;A-w&gt; (&lt;Alt&gt; and <A HREF="motion.html#w">w</A>) pops
 up the Window menu.
    In the Window menu, the &quot;split&quot; item has the <A HREF="change.html#p">p</A> underlined.  To select <A HREF="motion.html#it">它</A>,
 let go of the &lt;Alt&gt; key and press <A HREF="change.html#p">p</A>.
@@ -247,7 +247,7 @@ This will only work in the <A HREF="gui.html#GUI">GUI</A>.  The output may look 
 <B><FONT color="#3A6F2B">	Window position: X 272, Y 103 </FONT></B>
 
 The position is given in screen pixels.  Now you can use the numbers to move
-Vim somewhere else.  For example, to move <A HREF="motion.html#it">它</A> to the left a hundred pixels:
+Vim somewhere else.例如, to move <A HREF="motion.html#it">它</A> to the left a hundred pixels:
 
 <B>	:winpos 172 103</B>
  
@@ -265,7 +265,7 @@ command:
 
 <B>	:set lines columns</B>
 
-To change the size set the <A HREF="options.html#'lines'">'lines'</A> and/or <A HREF="options.html#'columns'">'columns'</A> <A HREF="options.html#options">options</A> to a new value:
+To change the size set the <A HREF="options.html#'lines'">'lines'</A> and/or <A HREF="options.html#'columns'">'columns'</A> <A HREF="options\.html#options">选项</A> to a new value:
 
 <B>	:set lines=50</B>
 <B>	:set columns=80</B>
@@ -288,7 +288,7 @@ pixels.  Example:
 *<A NAME="31.5"></A><B>31.5</B>*	Various
 
 You can use gvim to edit an e-mail message.  In your e-mail program you must
-select gvim to be the editor for <A HREF="message.html#messages">messages</A>.  When you try that, you will
+select gvim to be the editor for <A HREF="message.html#messages">信息</A>.  When you try that, you will
 see that <A HREF="motion.html#it">它</A> doesn't work: The mail program thinks that editing is finished,
 while gvim is still running!
    What happens is that gvim disconnects from the shell <A HREF="motion.html#it">它</A> was started in.

@@ -103,7 +103,7 @@ Follow these steps to get <A HREF="#LSP">LSP</A> features:
   1. Install language servers using your package manager or by
      following the upstream installation instruction.
 
-     A <A HREF="eval.html#list">list</A> of language servers is available at:
+     A <A HREF="eval.html#list">列表</A> of language servers is available at:
 
      https://microsoft.github.io/language-server-protocol/implementors/servers/
 
@@ -179,14 +179,14 @@ a buffer with a started <A HREF="#LSP">LSP</A> client:
 <B>  :lua =vim.lsp.get_active_clients()[1].server_capabilties</B>
  
 
-Full <A HREF="eval.html#list">list</A> of features provided by default can be found in |<A HREF="#lsp-buf">lsp-buf</A>|.
+Full <A HREF="eval.html#list">列表</A> of features provided by default can be found in |<A HREF="#lsp-buf">lsp-buf</A>|.
 
 ================================================================================
 
 FAQ                                                     *<A NAME="lsp-faq"></A><B>lsp-faq</B>*
 
 - <A HREF="repeat.html#Q">Q</A>: How to force-reload <A HREF="#LSP">LSP</A>?
-  A: Stop all clients, then <A HREF="editing.html#reload">reload</A> the buffer.
+  A: Stop all clients然后<A HREF="editing.html#reload">reload</A> the buffer.
 
 <B>     :lua vim.lsp.stop_client(vim.lsp.get_active_clients())</B>
 <B>     :edit</B>
@@ -445,7 +445,7 @@ Handlers can be set by:
 - The {handlers} parameter for |<A HREF="vim.html">vim.lsp.start_client</A>|.
     This will set the |<A HREF="#lsp-handler">lsp-handler</A>| <A HREF="motion.html#as">as</A> the default handler for this server.
 
-    For example:
+  例如:
 
 <B>  vim.lsp.start_client {</B>
 <B>    ..., -- Other configuration omitted.</B>
@@ -457,7 +457,7 @@ Handlers can be set by:
 - The {handler} parameter for |<A HREF="vim.html">vim.lsp.buf_request()</A>|.
     This will set the |<A HREF="#lsp-handler">lsp-handler</A>| ONLY for the current request.
 
-    For example:
+  例如:
 
 <B>  vim.lsp.buf_request(</B>
 <B>    0,</B>
@@ -715,7 +715,7 @@ buf_request_sync({bufnr}, {method}, {params}, {timeout_ms})
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Map of client_id:request_result. On timeout, cancel or
-                    error, returns `(nil, err)` where `err` is a <A HREF="eval.html#string">string</A>
+                    error, returns `(nil, err)` where `err` is a <A HREF="options\.html#options">字符串</A>
                     describing the failure reason.
 
 
@@ -731,7 +731,7 @@ client()                                                      *<A NAME="vim.lsp.
                     {handler} is not specified, If one is not found there,
                     then an error will occur. Returns: {status},
                     {[client_id]}. {status} is a <A HREF="options.html#boolean">boolean</A> indicating if the
-                    notification was successful. If <A HREF="motion.html#it">它</A> is `false`, then <A HREF="motion.html#it">它</A>
+                    notification was successful. If <A HREF="motion.html#it">它</A> is `false`然后<A HREF="motion.html#it">它</A>
                     will always be `false` (the client has shutdown). If
                     {status} is `true`, the function returns {request_id} <A HREF="motion.html#as">as</A>
                     the second result. You can use this with
@@ -742,11 +742,11 @@ client()                                                      *<A NAME="vim.lsp.
                     Returns: { err=err, result=result }, a dictionary, where
                     `err` and `result` come from the |<A HREF="#lsp-handler">lsp-handler</A>|. On
                     timeout, cancel or error, returns `(nil, err)` where `err`
-                    is a <A HREF="eval.html#string">string</A> describing the failure reason. If the request
+                    is a <A HREF="options\.html#options">字符串</A> describing the failure reason. If the request
                     was unsuccessful returns `nil`.
                   • notify(method, params) Sends a notification to an <A HREF="#LSP">LSP</A>
                     server. Returns: a <A HREF="options.html#boolean">boolean</A> to indicate if the notification
-                    was successful. If <A HREF="motion.html#it">它</A> is false, then <A HREF="motion.html#it">它</A> will always be
+                    was successful. If <A HREF="motion.html#it">它</A> is false然后<A HREF="motion.html#it">它</A> will always be
                     false (the client has shutdown).
                   • cancel_request(id) Cancels a request with a given request
                     id. Returns: same <A HREF="motion.html#as">as</A> `notify()`.
@@ -765,7 +765,7 @@ client()                                                      *<A NAME="vim.lsp.
                   • {id} (number): The id allocated to the client.
                   • {name} (string): If a name is specified on creation, that
                     will be used. Otherwise <A HREF="motion.html#it">它</A> is just the client id. This is
-                    used for logs and <A HREF="message.html#messages">messages</A>.
+                    used for logs and <A HREF="message.html#messages">信息</A>.
                   • {rpc} (table): <A HREF="api.html#RPC">RPC</A> client object, for low level
                     interaction with the client. 见 |<A HREF="vim.html">vim.lsp.rpc.start()</A>|.
                   • {offset_encoding} (string): The encoding used for
@@ -824,7 +824,7 @@ formatexpr({opts})                                      *<A NAME="vim.lsp.format
                 'v:lua.vim.lsp.formatexpr(#{timeout_ms:250})')`.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) <A HREF="options.html#options">options</A> for customizing the <A HREF="change.html#formatting">formatting</A>
+                    {opts}  (table) <A HREF="options\.html#options">选项</A> for customizing the <A HREF="change.html#formatting">formatting</A>
                             <A HREF="eval.html#expression">expression</A> which takes the following optional
                             keys:
                             • timeout_ms (default 500ms). The timeout period
@@ -846,18 +846,18 @@ get_active_clients({filter})                    *<A NAME="vim.lsp.get_active_cli
                                 given name
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) <A HREF="eval.html#List">List</A> of |<A HREF="vim.html">vim.lsp.client</A>| <A HREF="vimindex.html#objects">objects</A>
+                    (table) <A HREF="eval.html#list">列表</A> of |<A HREF="vim.html">vim.lsp.client</A>| <A HREF="vimindex.html#objects">objects</A>
 
 
                                           *<A NAME="vim.lsp.get_buffers_by_client_id()"></A><B>vim.lsp.get_buffers_by_client_id()</B>*
 get_buffers_by_client_id({client_id})
-                Returns <A HREF="eval.html#list">list</A> of <A HREF="windows.html#buffers">buffers</A> attached to client_id.
+                Returns <A HREF="eval.html#list">列表</A> of <A HREF="windows.html#buffers">buffers</A> attached to client_id.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {client_id}  (number) client id
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#list">list</A> of buffer ids
+                    <A HREF="eval.html#list">列表</A> of buffer ids
 
 
 get_client_by_id({client_id})                     *<A NAME="vim.lsp.get_client_by_id()"></A><B>vim.lsp.get_client_by_id()</B>*
@@ -889,7 +889,7 @@ omnifunc({findstart}, {base})                             *<A NAME="vim.lsp.omni
                     (number) Decided by {findstart}:
                     • findstart=0: column where the completion starts, or -2
                       or -3
-                    • findstart=1: <A HREF="eval.html#list">list</A> of matches (actually just calls
+                    • findstart=1: <A HREF="eval.html#list">列表</A> of matches (actually just calls
                       |<A HREF="builtin.html#complete()">complete()</A>|)
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
@@ -931,13 +931,13 @@ start({config}, {opts})                                      *<A NAME="vim.lsp.s
 <B>    })</B>
  
 
-                见 |<A HREF="lsp.html">lsp.start_client</A>| for all available <A HREF="options.html#options">options</A>. The most
+                见 |<A HREF="lsp.html">lsp.start_client</A>| for all available <A HREF="options\.html#options">选项</A>. The most
                 important are:
 
                 `name` is an arbitrary name for the <A HREF="#LSP">LSP</A> client. It should be
                 unique per language server.
 
-                `cmd` the command <A HREF="motion.html#as">as</A> <A HREF="eval.html#list">list</A> - used to start the language server. The
+                `cmd` the command <A HREF="motion.html#as">as</A> <A HREF="eval.html#list">列表</A> - used to start the language server. The
                 command must be present in the `$PATH` environment variable or an absolute path to the executable.
                 Shell constructs like `~` are NOT expanded.
 
@@ -948,7 +948,7 @@ start({config}, {opts})                                      *<A NAME="vim.lsp.s
                 current directory until either a `pyproject.toml` or
                 `setup.py` file is found.
 
-                `workspace_folders` a <A HREF="eval.html#list">list</A> of { uri:string, name: <A HREF="eval.html#string">string</A> }
+                `workspace_folders` a <A HREF="eval.html#list">列表</A> of { uri:string, name: <A HREF="options\.html#options">字符串</A> }
                 tables. The project root folders used by the language server.
                 If `nil` the property is derived from the `root_dir` for
                 convenience.
@@ -986,7 +986,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                 table.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {cmd}                (required, <A HREF="eval.html#string">string</A> or <A HREF="eval.html#list">list</A> treated
+                    {cmd}                (required, <A HREF="options\.html#options">字符串</A> or <A HREF="eval.html#list">列表</A> treated
                                          like |<A HREF="builtin.html#jobstart()">jobstart()</A>|) Base command that
                                          initiates the <A HREF="#LSP">LSP</A> client.
                     {cmd_cwd}            (string, default=|<A HREF="builtin.html#getcwd()">getcwd()</A>|)
@@ -994,9 +994,9 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          process. Not related to `root_dir`.
                     {cmd_env}            (table) Environment flags to pass to
                                          the <A HREF="#LSP">LSP</A> on spawn. Can be specified
-                                         using keys like a map or <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">list</A>
+                                         using keys like a map or <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">列表</A>
                                          with `k=v` pairs or both. Non-string values are
-                                         coerced to <A HREF="eval.html#string">string</A>. Example:
+                                         coerced to <A HREF="options\.html#options">字符串</A>. Example:
 
 <B>                 { "PRODUCTION=true"; "TEST=123"; PORT = 8080; HOST = "0.0.0.0"; }</B>
  
@@ -1007,11 +1007,11 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          exit, but if Nvim fails to exit
                                          cleanly this could leave behind
                                          orphaned server processes.
-                    {workspace_folders}  (table) <A HREF="eval.html#List">List</A> of workspace folders
+                    {workspace_folders}  (table) <A HREF="eval.html#list">列表</A> of workspace folders
                                          passed to the language server. For
                                          backwards compatibility rootUri and
                                          rootPath will be derived from the
-                                         first workspace folder in this <A HREF="eval.html#list">list</A>.
+                                         first workspace folder in this <A HREF="eval.html#list">列表</A>.
                                          See `workspaceFolders` in the <A HREF="#LSP">LSP</A>
                                          spec.
                     {capabilities}       Map overriding the default
@@ -1033,7 +1033,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          language server if requested via
                                          `workspace/configuration`. Keys are
                                          case-sensitive.
-                    {commands}           (table) Table that maps <A HREF="eval.html#string">string</A> of
+                    {commands}           (table) Table that maps <A HREF="options\.html#options">字符串</A> of
                                          clientside commands to user-defined
                                          <A HREF="eval.html#functions">functions</A>. Commands passed to
                                          start_client take precedence over the
@@ -1047,9 +1047,9 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          request <A HREF="motion.html#as">as</A> `initializationOptions`.
                                          See `initialize` in the <A HREF="#LSP">LSP</A> spec.
                     {name}               (string, default=client-id) Name in
-                                         log <A HREF="message.html#messages">messages</A>.
+                                         log <A HREF="message.html#messages">信息</A>.
                     {get_language_id}    function(bufnr, <A HREF="filetype.html#filetype">filetype</A>) <A HREF="eval.html#-&gt;">-&gt;</A> language
-                                         ID <A HREF="motion.html#as">as</A> <A HREF="eval.html#string">string</A>. Defaults to the
+                                         ID <A HREF="motion.html#as">as</A> <A HREF="options\.html#options">字符串</A>. Defaults to the
                                          <A HREF="filetype.html#filetype">filetype</A>.
                     {offset_encoding}    (default=&quot;utf-16&quot;) One of &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot;,
                                          &quot;utf-16&quot;, or &quot;utf-32&quot; which is the
@@ -1099,7 +1099,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          • client_id: client handle
                     {on_attach}          Callback (client, bufnr) invoked when
                                          client attaches to a buffer.
-                    {trace}              &quot;off&quot; &#124; &quot;<A HREF="message.html#messages">messages</A>&quot; &#124; &quot;<A HREF="starting.html#verbose">verbose</A>&quot; &#124; nil
+                    {trace}              &quot;off&quot; &#124; &quot;<A HREF="message.html#messages">信息</A>&quot; &#124; &quot;<A HREF="starting.html#verbose">verbose</A>&quot; &#124; nil
                                          passed directly to the language
                                          server in the initialize request.
                                          Invalid/empty values will default to
@@ -1143,11 +1143,11 @@ stop_client({client_id}, {force})                      *<A NAME="vim.lsp.stop_cl
  
 
                 By default asks the server to shutdown, unless stop was
-                requested already for this client, then force-shutdown is
+                requested already for this client然后force-shutdown is
                 attempted.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {client_id}  client id or |<A HREF="vim.html">vim.lsp.client</A>| object, or <A HREF="eval.html#list">list</A>
+                    {client_id}  client id or |<A HREF="vim.html">vim.lsp.client</A>| object, or <A HREF="eval.html#list">列表</A>
                                  thereof
                     {force}      (boolean) (optional) shutdown forcefully
 
@@ -1167,7 +1167,7 @@ tagfunc({...})                                             *<A NAME="vim.lsp.tag
                     {flags}    见 |<A HREF="tagsrch.html#tag-function">tag-function</A>|
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    A <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">标签</A>
+                    A <A HREF="eval.html#list">列表</A> of matching <A HREF="tagsrch.html#tags">标签</A>
 
 
 with({handler}, {override_config})                            *<A NAME="vim.lsp.with()"></A><B>vim.lsp.with()</B>*
@@ -1205,7 +1205,7 @@ code_action({options})                             *<A NAME="vim.lsp.buf.code_ac
                                • <A HREF="repeat.html#context">context</A> (table|nil): Corresponds to `CodeActionContext` of the <A HREF="#LSP">LSP</A> specification:
                                  • diagnostics (table|nil): LSP`Diagnostic[]` . Inferred from the current position if not
                                    provided.
-                                 • only (table|nil): <A HREF="eval.html#List">List</A> of <A HREF="#LSP">LSP</A>
+                                 • only (table|nil): <A HREF="eval.html#list">列表</A> of <A HREF="#LSP">LSP</A>
                                    `CodeActionKind`s used to <A HREF="change.html#filter">filter</A> the code
                                    actions. Most language servers support
                                    values like `refactor` or `quickfix`.
@@ -1244,7 +1244,7 @@ declaration({options})                             *<A NAME="vim.lsp.buf.declara
                     |<A HREF="vim.html">vim.lsp.buf.definition()</A>| instead.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {options}  (table|nil) additional <A HREF="options.html#options">options</A>
+                    {options}  (table|nil) additional <A HREF="options\.html#options">选项</A>
                                • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
@@ -1253,7 +1253,7 @@ definition({options})                               *<A NAME="vim.lsp.buf.defini
                 Jumps to the definition of the symbol under the cursor.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {options}  (table|nil) additional <A HREF="options.html#options">options</A>
+                    {options}  (table|nil) additional <A HREF="options\.html#options">选项</A>
                                • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
@@ -1300,8 +1300,8 @@ format({options})                                       *<A NAME="vim.lsp.buf.fo
                                following optional fields:
                                • formatting_options (table|nil): Can be used
                                  to specify FormattingOptions. Some
-                                 unspecified <A HREF="options.html#options">options</A> will be automatically
-                                 derived from the current Neovim <A HREF="options.html#options">options</A>.
+                                 unspecified <A HREF="options\.html#options">选项</A> will be automatically
+                                 derived from the current Neovim <A HREF="options\.html#options">选项</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specification#textDocument_formatting
@@ -1334,9 +1334,9 @@ formatting({options})                               *<A NAME="vim.lsp.buf.format
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {options}  (table|nil) Can be used to specify
-                               FormattingOptions. Some unspecified <A HREF="options.html#options">options</A>
+                               FormattingOptions. Some unspecified <A HREF="options\.html#options">选项</A>
                                will be automatically derived from the current
-                               Neovim <A HREF="options.html#options">options</A>.
+                               Neovim <A HREF="options\.html#options">选项</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specification#textDocument_formatting
@@ -1360,11 +1360,11 @@ formatting_seq_sync({options}, {timeout_ms}, {order})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {options}     (table|nil) `FormattingOptions` entries
                     {timeout_ms}  (number|nil) Request timeout
-                    {order}       (table|nil) <A HREF="eval.html#List">List</A> of client names. Formatting
+                    {order}       (table|nil) <A HREF="eval.html#list">列表</A> of client names. Formatting
                                   is requested from clients in the following
                                   order: first all clients that are not in the
-                                  `order` <A HREF="eval.html#list">list</A>, then the remaining clients in
-                                  the order <A HREF="motion.html#as">as</A> they occur in the `order` <A HREF="eval.html#list">list</A>.
+                                  `order` <A HREF="eval.html#list">列表</A>然后the remaining clients in
+                                  the order <A HREF="motion.html#as">as</A> they occur in the `order` <A HREF="eval.html#list">列表</A>.
 
 
                                                *<A NAME="vim.lsp.buf.formatting_sync()"></A><B>vim.lsp.buf.formatting_sync()</B>*
@@ -1406,7 +1406,7 @@ incoming_calls()                                *<A NAME="vim.lsp.buf.incoming_c
 
 
 list_workspace_folders()                *<A NAME="vim.lsp.buf.list_workspace_folders()"></A><B>vim.lsp.buf.list_workspace_folders()</B>*
-                <A HREF="eval.html#List">List</A> workspace folders.
+                <A HREF="eval.html#list">列表</A> workspace folders.
 
 
 outgoing_calls()                                *<A NAME="vim.lsp.buf.outgoing_calls()"></A><B>vim.lsp.buf.outgoing_calls()</B>*
@@ -1423,7 +1423,7 @@ range_code_action({context}, {start_pos}, {end_pos})
                     {context}    (table|nil) `CodeActionContext` of the <A HREF="#LSP">LSP</A> specification:
                                  • diagnostics: (table|nil) LSP`Diagnostic[]` . Inferred from the current position if not
                                    provided.
-                                 • only: (table|nil) <A HREF="eval.html#List">List</A> of <A HREF="#LSP">LSP</A>
+                                 • only: (table|nil) <A HREF="eval.html#list">列表</A> of <A HREF="#LSP">LSP</A>
                                    `CodeActionKind`s used to <A HREF="change.html#filter">filter</A> the code
                                    actions. Most language servers support
                                    values like `refactor` or `quickfix`.
@@ -1474,7 +1474,7 @@ rename({new_name}, {options})                           *<A NAME="vim.lsp.buf.re
                     {new_name}  (string|nil) If not provided, the user will be
                                 prompted for a new name using
                                 |<A HREF="lua.html#vim.ui.input()">vim.ui.input()</A>|.
-                    {options}   (table|nil) additional <A HREF="options.html#options">options</A>
+                    {options}   (table|nil) additional <A HREF="options\.html#options">选项</A>
                                 • <A HREF="change.html#filter">filter</A> (function|nil): Predicate used to
                                   <A HREF="change.html#filter">filter</A> clients. Receives a client <A HREF="motion.html#as">as</A>
                                   argument and must return a <A HREF="options.html#boolean">boolean</A>. Clients
@@ -1502,7 +1502,7 @@ type_definition({options})                     *<A NAME="vim.lsp.buf.type_defini
                 cursor.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {options}  (table|nil) additional <A HREF="options.html#options">options</A>
+                    {options}  (table|nil) additional <A HREF="options\.html#options">选项</A>
                                • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
@@ -1511,9 +1511,9 @@ workspace_symbol({query})                     *<A NAME="vim.lsp.buf.workspace_sy
                 <A HREF="eval.html#Lists">Lists</A> all symbols in the current workspace in the <A HREF="quickfix.html#quickfix">quickfix</A>
                <A HREF="windows.html#window">窗口</A>.
 
-                The <A HREF="eval.html#list">list</A> is filtered against {query}; if the argument is
-                omitted from the call, the user is prompted to enter a <A HREF="eval.html#string">string</A>
-                on the command line. An empty <A HREF="eval.html#string">string</A> means no filtering is
+                The <A HREF="eval.html#list">列表</A> is filtered against {query}; if the argument is
+                omitted from the call, the user is prompted to enter a <A HREF="options\.html#options">字符串</A>
+                on the command line. An empty <A HREF="options\.html#options">字符串</A> means no filtering is
                 done.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -1537,7 +1537,7 @@ get_namespace({client_id})                *<A NAME="vim.lsp.diagnostic.get_names
 on_publish_diagnostics({_}, {result}, {ctx}, {config})
                 |<A HREF="#lsp-handler">lsp-handler</A>| for the <A HREF="eval.html#method">method</A> &quot;textDocument/publishDiagnostics&quot;
 
-                见 |<A HREF="vim.html">vim.diagnostic.config()</A>| for configuration <A HREF="options.html#options">options</A>.
+                见 |<A HREF="vim.html">vim.diagnostic.config()</A>| for configuration <A HREF="options\.html#options">选项</A>.
                 Handler-specific configuration can be set using
                 YXXYvim.lsp.with()|:
 
@@ -1671,14 +1671,14 @@ signature_help({_}, {result}, {ctx}, {config})
 
                                      *<A NAME="vim.lsp.util.apply_text_document_edit()"></A><B>vim.lsp.util.apply_text_document_edit()</B>*
 apply_text_document_edit({text_document_edit}, {index}, {offset_encoding})
-                Applies a `TextDocumentEdit`, which is a <A HREF="eval.html#list">list</A> of changes to a
+                Applies a `TextDocumentEdit`, which is a <A HREF="eval.html#list">列表</A> of changes to a
                 single document.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {text_document_edit}  table: a `TextDocumentEdit` object
                     {index}               number: Optional index of the edit,
-                                          if from a <A HREF="eval.html#list">list</A> of edits (or nil, if
-                                          not from a <A HREF="eval.html#list">list</A>)
+                                          if from a <A HREF="eval.html#list">列表</A> of edits (or nil, if
+                                          not from a <A HREF="eval.html#list">列表</A>)
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specifications/specification-current/#textDocumentEdit
@@ -1686,10 +1686,10 @@ apply_text_document_edit({text_document_edit}, {index}, {offset_encoding})
 
                                              *<A NAME="vim.lsp.util.apply_text_edits()"></A><B>vim.lsp.util.apply_text_edits()</B>*
 apply_text_edits({text_edits}, {bufnr}, {offset_encoding})
-                Applies a <A HREF="eval.html#list">list</A> of text edits to a buffer.
+                Applies a <A HREF="eval.html#list">列表</A> of text edits to a buffer.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {text_edits}       (table) <A HREF="eval.html#list">list</A> of `TextEdit` <A HREF="vimindex.html#objects">objects</A>
+                    {text_edits}       (table) <A HREF="eval.html#list">列表</A> of `TextEdit` <A HREF="vimindex.html#objects">objects</A>
                     {bufnr}            (number) Buffer id
                     {offset_encoding}  (string) utf-8|utf-16|utf-32
 
@@ -1715,11 +1715,11 @@ buf_clear_references({bufnr})            *<A NAME="vim.lsp.util.buf_clear_refere
 
                                      *<A NAME="vim.lsp.util.buf_highlight_references()"></A><B>vim.lsp.util.buf_highlight_references()</B>*
 buf_highlight_references({bufnr}, {references}, {offset_encoding})
-                Shows a <A HREF="eval.html#list">list</A> of document highlights for a certain buffer.
+                Shows a <A HREF="eval.html#list">列表</A> of document highlights for a certain buffer.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {bufnr}            (number) Buffer id
-                    {references}       (table) <A HREF="eval.html#List">List</A> of `DocumentHighlight`
+                    {references}       (table) <A HREF="eval.html#list">列表</A> of `DocumentHighlight`
                                        <A HREF="vimindex.html#objects">objects</A> to highlight
                     {offset_encoding}  (string) One of &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot;, &quot;utf-16&quot;,
                                        &quot;utf-32&quot;.
@@ -1749,7 +1749,7 @@ character_offset({buf}, {row}, {col}, {offset_encoding})
                               *<A NAME="vim.lsp.util.convert_input_to_markdown_lines()"></A><B>vim.lsp.util.convert_input_to_markdown_lines()</B>*
 convert_input_to_markdown_lines({input}, {contents})
                 Converts any of `MarkedString` &#124; `MarkedString[]` |
-                `MarkupContent` into a <A HREF="eval.html#list">list</A> of lines containing valid
+                `MarkupContent` into a <A HREF="eval.html#list">列表</A> of lines containing valid
                 markdown. Useful to populate the hover<A HREF="windows.html#window">窗口</A>for
                 `textDocument/hover`, for parsing the result of
                 `textDocument/signatureHelp`, and potentially others.
@@ -1757,7 +1757,7 @@ convert_input_to_markdown_lines({input}, {contents})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {input}     (`MarkedString` &#124; `MarkedString[]` |
                                 `MarkupContent`)
-                    {contents}  (table, optional, default `{}`) <A HREF="eval.html#List">List</A> of
+                    {contents}  (table, optional, default `{}`) <A HREF="eval.html#list">列表</A> of
                                 strings to extend with converted lines
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -1777,12 +1777,12 @@ convert_signature_help_to_markdown_lines({signature_help}, {ft}, {triggers})
                     {ft}              optional <A HREF="filetype.html#filetype">filetype</A> that will be use <A HREF="motion.html#as">as</A>
                                       the `lang` for the label markdown code
                                       block
-                    {triggers}        optional <A HREF="eval.html#list">list</A> of trigger characters from
+                    {triggers}        optional <A HREF="eval.html#list">列表</A> of trigger characters from
                                       the <A HREF="#lsp">lsp</A> server. used to better determine
                                       parameter offsets
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#list">list</A> of lines of converted markdown.
+                    <A HREF="eval.html#list">列表</A> of lines of converted markdown.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specifications/specification-current/#textDocument_signatureHelp
@@ -1797,7 +1797,7 @@ extract_completion_items({result})
                               `textDocument/completion` request
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) <A HREF="eval.html#List">List</A> of completion items
+                    (table) <A HREF="eval.html#list">列表</A> of completion items
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specification#textDocument_completion
@@ -1840,13 +1840,13 @@ locations_to_items({locations}, {offset_encoding})
                 |<A HREF="builtin.html#setqflist()">setqflist()</A>| or |<A HREF="builtin.html#setloclist()">setloclist()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {locations}        (table) <A HREF="eval.html#list">list</A> of `Location`s or
+                    {locations}        (table) <A HREF="eval.html#list">列表</A> of `Location`s or
                                        `LocationLink`s
                     {offset_encoding}  (string) offset_encoding for locations
                                        utf-8|utf-16|utf-32
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) <A HREF="eval.html#list">list</A> of items
+                    (table) <A HREF="eval.html#list">列表</A> of items
 
 
 lookup_section({settings}, {section})          *<A NAME="vim.lsp.util.lookup_section()"></A><B>vim.lsp.util.lookup_section()</B>*
@@ -1855,17 +1855,17 @@ lookup_section({settings}, {section})          *<A NAME="vim.lsp.util.lookup_sec
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {settings}  a table of language server settings
-                    {section}   a <A HREF="eval.html#string">string</A> indicating the field of the settings
+                    {section}   a <A HREF="options\.html#options">字符串</A> indicating the field of the settings
                                 table
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table or <A HREF="eval.html#string">string</A>) The value of settings accessed via
+                    (table or <A HREF="options\.html#options">字符串</A>) The value of settings accessed via
                     section
 
 
                                   *<A NAME="vim.lsp.util.make_floating_popup_options()"></A><B>vim.lsp.util.make_floating_popup_options()</B>*
 make_floating_popup_options({width}, {height}, {opts})
-                Creates a table with sensible default <A HREF="options.html#options">options</A> for a floating
+                Creates a table with sensible default <A HREF="options\.html#options">选项</A> for a floating
                <A HREF="windows.html#window">窗口</A>. The table can be passed to |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -2011,8 +2011,8 @@ open_floating_preview({contents}, {syntax}, {opts})
                                 • pad_bottom: (number) number of lines to pad
                                   contents at bottom
                                 • focus_id: (string) if a popup with this id
-                                  is opened, then focus <A HREF="motion.html#it">它</A>
-                                • close_events: (table) <A HREF="eval.html#list">list</A> of <A HREF="autocmd.html#events">events</A> that
+                                  is opened然后focus <A HREF="motion.html#it">它</A>
+                                • close_events: (table) <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#events">events</A> that
                                   closes the floating<A HREF="windows.html#window">窗口</A>
                                 • focusable: (boolean, default true) Make
                                   float focusable
@@ -2065,12 +2065,12 @@ set_lines({lines}, {A}, {B}, {new_lines})           *<A NAME="vim.lsp.util.set_l
                 CAUTION: Changes in-place!
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {lines}      (table) Original <A HREF="eval.html#list">list</A> of strings
+                    {lines}      (table) Original <A HREF="eval.html#list">列表</A> of strings
                     {A}          (table) Start position; a 2-tuple of {line,
                                  col} numbers
                     {B}          (table) End position; a 2-tuple of {line,
                                  col} numbers
-                    {new_lines}  A <A HREF="eval.html#list">list</A> of strings to replace the original
+                    {new_lines}  A <A HREF="eval.html#list">列表</A> of strings to replace the original
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) The modified {lines} object
@@ -2109,7 +2109,7 @@ stylize_markdown({bufnr}, {contents}, {opts})
 
 
 symbols_to_items({symbols}, {bufnr})         *<A NAME="vim.lsp.util.symbols_to_items()"></A><B>vim.lsp.util.symbols_to_items()</B>*
-                Converts symbols to <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> items.
+                Converts symbols to <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> items.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {symbols}  DocumentSymbol[] or SymbolInformation[]
@@ -2139,10 +2139,10 @@ trim_empty_lines({lines})                    *<A NAME="vim.lsp.util.trim_empty_l
                 Removes empty lines from the beginning and end.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {lines}  (table) <A HREF="eval.html#list">list</A> of lines to trim
+                    {lines}  (table) <A HREF="eval.html#list">列表</A> of lines to trim
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) trimmed <A HREF="eval.html#list">list</A> of lines
+                    (table) trimmed <A HREF="eval.html#list">列表</A> of lines
 
 
                                 *<A NAME="vim.lsp.util.try_trim_markdown_code_blocks()"></A><B>vim.lsp.util.try_trim_markdown_code_blocks()</B>*
@@ -2153,7 +2153,7 @@ try_trim_markdown_code_blocks({lines})
                 CAUTION: Modifies the input in-place!
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {lines}  (table) <A HREF="eval.html#list">list</A> of lines
+                    {lines}  (table) <A HREF="eval.html#list">列表</A> of lines
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (string) <A HREF="filetype.html#filetype">filetype</A> or 'markdown' if <A HREF="motion.html#it">它</A> was unchanged.
@@ -2270,7 +2270,7 @@ start({cmd}, {cmd_args}, {dispatchers}, {extra_spawn_params})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {cmd}                 (string) Command to start the <A HREF="#LSP">LSP</A>
                                           server.
-                    {cmd_args}            (table) <A HREF="eval.html#List">List</A> of additional <A HREF="eval.html#string">string</A>
+                    {cmd_args}            (table) <A HREF="eval.html#list">列表</A> of additional <A HREF="options\.html#options">字符串</A>
                                           arguments to pass to {cmd}.
                     {dispatchers}         (table, optional) Dispatchers for
                                           <A HREF="#LSP">LSP</A> message types. Valid dispatcher
@@ -2312,8 +2312,8 @@ compute_diff({prev_lines}, {curr_lines}, {firstline}, {lastline},
                 curr lines
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {prev_lines}       (table) <A HREF="eval.html#list">list</A> of lines
-                    {curr_lines}       (table) <A HREF="eval.html#list">list</A> of lines
+                    {prev_lines}       (table) <A HREF="eval.html#list">列表</A> of lines
+                    {curr_lines}       (table) <A HREF="eval.html#list">列表</A> of lines
                     {firstline}        (number) line to begin search for first
                                        difference
                     {lastline}         (number) line to begin search in

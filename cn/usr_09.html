@@ -236,7 +236,7 @@ Middle mouse click		<A HREF="provider.html#paste">paste</A> text from the <A HRE
 Right mouse click		display a pop-up menu
 
 
-The mouse can be further tuned.  Check out these <A HREF="options.html#options">options</A> if you want to change
+The mouse can be further tuned.  Check out these <A HREF="options\.html#options">选项</A> if you want to change
 the way how the mouse works:
 
 	<A HREF="options.html#'mouse'">'mouse'</A>			in which mode the mouse is used by Vim
@@ -257,7 +257,7 @@ In X-Windows there is the &quot;current selection&quot;.  This is the text that 
 currently highlighted.  In Vim this is the <A HREF="visual.html#Visual">Visual</A> area (this assumes you are
 using the default option settings).  You can <A HREF="provider.html#paste">paste</A> this selection in another
 application without any further action.
-   For example, in this text select a few words with the mouse.  Vim will
+ 例如, in this text select a few words with the mouse.  Vim will
 switch to <A HREF="visual.html#Visual">Visual</A> mode and highlight the text.  Now start another gvim, without
 a file name argument, so that <A HREF="motion.html#it">它</A> displays an empty<A HREF="windows.html#window">窗口</A>.  Click the middle
 mouse button.  The selected text will be inserted.
@@ -309,15 +309,15 @@ USING THE KEYBOARD
 If you don't like using the mouse, you can access the current selection and
 the real <A HREF="provider.html#clipboard">clipboard</A> with two <A HREF="change.html#registers">registers</A>.  The &quot;* <A HREF="intro.html#register">register</A> is for the current
 selection.
-   To make text become the current selection, use <A HREF="visual.html#Visual">Visual</A> mode.  For example,
+   To make text become the current selection, use <A HREF="visual.html#Visual">Visual</A> mode.例如,
 to select a whole line just press &quot;<A HREF="visual.html#V">V</A>&quot;.
    To insert the current selection before the cursor:
 
 <B>	"*P</B>
 
-Notice the <A HREF="change.html#uppercase">uppercase</A> &quot;<A HREF="change.html#P">P</A>&quot;.  The <A HREF="change.html#lowercase">lowercase</A> &quot;<A HREF="change.html#p">p</A>&quot; puts the text after the cursor.
+Notice the <A HREF="change.html#uppercase">大写</A> &quot;<A HREF="change.html#P">P</A>&quot;.  The <A HREF="change.html#lowercase">小写</A> &quot;<A HREF="change.html#p">p</A>&quot; puts the text after the cursor.
 
-The &quot;<A HREF="motion.html#+">+</A> <A HREF="intro.html#register">register</A> is used for the real <A HREF="provider.html#clipboard">clipboard</A>.  For example, to copy the text
+The &quot;<A HREF="motion.html#+">+</A> <A HREF="intro.html#register">register</A> is used for the real <A HREF="provider.html#clipboard">clipboard</A>.例如, to copy the text
 from the cursor position until the end of the line to the <A HREF="provider.html#clipboard">clipboard</A>:
 
 <B>	"+y$</B>
@@ -350,7 +350,7 @@ Now press a <A HREF="print.html#letter">letter</A>.  The selected text is delete
 replaces <A HREF="motion.html#it">它</A>.  You are in <A HREF="intro.html#Insert">插入</A>模式 now, thus you can continue typing.
 
 Since typing normal text causes the selected text to be deleted, you can not
-use the normal <A HREF="intro.html#movement">movement</A> commands &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot;, &quot;<A HREF="motion.html#w">w</A>&quot;, etc.  Instead, use the shifted
+use the normal <A HREF="intro.html#movement">移动</A>命令 &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot;, &quot;<A HREF="motion.html#w">w</A>&quot;, etc.  Instead, use the shifted
 function keys.  <A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> (shifted cursor left key) moves the cursor left.  The
 selected text is changed like in <A HREF="visual.html#Visual">Visual</A> mode.  The other shifted cursor keys
 <A HREF="diff.html#do">do</A> what you expect.  &lt;S-End&gt; and &lt;S-Home&gt; also work.

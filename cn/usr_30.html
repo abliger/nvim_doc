@@ -79,7 +79,7 @@
 			      Editing programs
 
 
-Vim has various commands that aid in <A HREF="editing.html#writing">writing</A> computer programs.  Compile a
+Vim has various commands that aid in <A HREF="editing.html#writing">写</A> computer programs.  Compile a
 program and directly jump to reported <A HREF="message.html#errors">errors</A>.  Automatically set the indent
 for many languages and format comments.
 
@@ -98,7 +98,7 @@ for many languages and format comments.
 
 *<A NAME="30.1"></A><B>30.1</B>*	Compiling
 
-Vim has a set of so called &quot;<A HREF="quickfix.html#quickfix">quickfix</A>&quot; commands.  They enable you to compile a
+Vim has a set of so called &quot;<A HREF="quickfix.html#quickfix">quickfix</A>&quot;命令.  They enable you to compile a
 program from within Vim and then go through the <A HREF="message.html#errors">errors</A> generated and fix them
 (hopefully).  You can then recompile and fix any new <A HREF="message.html#errors">errors</A> that are found
 until finally your program compiles without any error.
@@ -130,7 +130,7 @@ like this:
 From this you can see that you have <A HREF="message.html#errors">errors</A> in the file &quot;main.c&quot;.  When you
 press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>, Vim displays the file &quot;main.c&quot;, with the cursor positioned on
 line 6, the first line with an error.  You did not need to specify the file or
-the line number, Vim knew where to go by looking in the error <A HREF="message.html#messages">messages</A>.
+the line number, Vim knew where to go by looking in the error <A HREF="message.html#messages">信息</A>.
 
 		+---------------------------------------------------+
 		|int main()					    |
@@ -155,7 +155,7 @@ the whole message use:
 
 <B>	:cc</B>
 
-You can get an overview of all the error <A HREF="message.html#messages">messages</A> with the &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot; command.
+You can get an overview of all the error <A HREF="message.html#messages">信息</A> with the &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot;命令.
 The output looks like this:
 
 <B>	:clist</B>
@@ -164,9 +164,9 @@ The output looks like this:
 
 Only the lines where Vim recognized a file name and line number are listed
 here.  It assumes those are the interesting lines and the rest is just boring
-<A HREF="message.html#messages">messages</A>.  However, sometimes unrecognized lines <A HREF="diff.html#do">do</A> contain something you want
+<A HREF="message.html#messages">信息</A>.  However, sometimes unrecognized lines <A HREF="diff.html#do">do</A> contain something you want
 to see.  Output from the linker, for example, about an undefined function.
-To see all the <A HREF="message.html#messages">messages</A> add a &quot;<A HREF="change.html#!">!</A>&quot; to the command:
+To see all the <A HREF="message.html#messages">信息</A> add a &quot;<A HREF="change.html#!">!</A>&quot; to the command:
 
 <B>	:clist!</B>
 <B><FONT color="#3A6F2B"> 	1 gcc -g -Wall -o prog main.c sub.c </FONT></B>
@@ -180,7 +180,7 @@ Vim will highlight the current error.  To go back to the previous error, use:
 
 <B>	:cprevious</B>
 
-Other commands to move around in the error <A HREF="eval.html#list">list</A>:
+Other commands to move around in the error <A HREF="eval.html#list">列表</A>:
 
 	<A HREF="quickfix.html#:cfirst">:cfirst</A>		to first error
 	<A HREF="quickfix.html#:clast">:clast</A>		to last error
@@ -189,7 +189,7 @@ Other commands to move around in the error <A HREF="eval.html#list">list</A>:
 
 USING ANOTHER COMPILER
 
-The name of the program to run when the &quot;<A HREF="quickfix.html#:make">:make</A>&quot; command is executed is defined
+The name of the program to run when the &quot;<A HREF="quickfix.html#:make">:make</A>&quot;命令 is executed is defined
 by the <A HREF="options.html#'makeprg'">'makeprg'</A> option.  Usually this is set to &quot;make&quot;, but <A HREF="visual.html#Visual">Visual</A> C++ users
 should set this to &quot;nmake&quot; by executing the following command:
 
@@ -205,7 +205,7 @@ character expands to the name of the current file.  So if you execute the
 command:
 <B>	:set makeprg=make\ %:S</B>
 
-When you are editing main.c, then &quot;<A HREF="quickfix.html#:make">:make</A>&quot; executes the following command:
+When you are editing main.c然后&quot;<A HREF="quickfix.html#:make">:make</A>&quot; executes the following command:
 
 <B>	make main.c</B>
 
@@ -226,13 +226,13 @@ OLD ERROR LISTS
 Suppose you &quot;<A HREF="quickfix.html#:make">:make</A>&quot; a program.  There is a warning message in one file and an
 error message in another.  You fix the error and use &quot;<A HREF="quickfix.html#:make">:make</A>&quot; again to check if
 <A HREF="motion.html#it">它</A> was really fixed.  Now you want to look at the warning message.  It doesn't
-show up in the last error <A HREF="eval.html#list">list</A>, since the file with the warning wasn't
-compiled again.  You can go back to the previous error <A HREF="eval.html#list">list</A> with:
+show up in the last error <A HREF="eval.html#list">列表</A>, since the file with the warning wasn't
+compiled again.  You can go back to the previous error <A HREF="eval.html#list">列表</A> with:
 
 <B>	:colder</B>
 
 Then use &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot; and &quot;<A HREF="quickfix.html#:cc">:cc</A> {nr}&quot; to jump to the place with the warning.
-   To go forward to the next error <A HREF="eval.html#list">list</A>:
+   To go forward to the next error <A HREF="eval.html#list">列表</A>:
 
 <B>	:cnewer</B>
 
@@ -241,29 +241,29 @@ Vim remembers ten error lists.
 
 SWITCHING COMPILERS
 
-You have to tell Vim what format the error <A HREF="message.html#messages">messages</A> are that your compiler
+You have to tell Vim what format the error <A HREF="message.html#messages">信息</A> are that your compiler
 produces.  This is done with the <A HREF="options.html#'errorformat'">'errorformat'</A> option.  The <A HREF="syntax.html#syntax">syntax</A> of this
 option is quite complicated and <A HREF="motion.html#it">它</A> can be made to fit almost any compiler.
 You can find the explanation here: |<A HREF="quickfix.html#errorformat">errorformat</A>|.
 
 You might be using various different compilers.  Setting the <A HREF="options.html#'makeprg'">'makeprg'</A> option,
 and especially the <A HREF="options.html#'errorformat'">'errorformat'</A> each time is not easy.  Vim offers a simple
-<A HREF="eval.html#method">method</A> for this.  For example, to switch to using the Microsoft <A HREF="visual.html#Visual">Visual</A> C++
+<A HREF="eval.html#method">method</A> for this.例如, to switch to using the Microsoft <A HREF="visual.html#Visual">Visual</A> C++
 compiler:
 
 <B>	:compiler msvc</B>
 
 This will find the Vim <A HREF="usr_41.html#script">script</A> for the &quot;msvc&quot; compiler and set the appropriate
-<A HREF="options.html#options">options</A>.
+<A HREF="options\.html#options">选项</A>.
    You can write your own compiler files.  见 |<A HREF="usr_41.html#write-compiler-plugin">write-compiler-plugin</A>|.
 
 
 OUTPUT REDIRECTION
 
-The &quot;<A HREF="quickfix.html#:make">:make</A>&quot; command redirects the output of the executed program to an error
+The &quot;<A HREF="quickfix.html#:make">:make</A>&quot;命令 redirects the output of the executed program to an error
 file.  How this works depends on various things, such <A HREF="motion.html#as">as</A> the <A HREF="options.html#'shell'">'shell'</A>.  If your
-&quot;<A HREF="quickfix.html#:make">:make</A>&quot; command doesn't capture the output, check the <A HREF="options.html#'makeef'">'makeef'</A> and
-<A HREF="options.html#'shellpipe'">'shellpipe'</A> <A HREF="options.html#options">options</A>.  The <A HREF="options.html#'shellquote'">'shellquote'</A> and <A HREF="options.html#'shellxquote'">'shellxquote'</A> <A HREF="options.html#options">options</A> might also
+&quot;<A HREF="quickfix.html#:make">:make</A>&quot;命令 doesn't capture the output, check the <A HREF="options.html#'makeef'">'makeef'</A> and
+<A HREF="options.html#'shellpipe'">'shellpipe'</A> <A HREF="options\.html#options">选项</A>.  The <A HREF="options.html#'shellquote'">'shellquote'</A> and <A HREF="options.html#'shellxquote'">'shellxquote'</A> <A HREF="options\.html#options">选项</A> might also
 matter.
 
 In <A HREF="change.html#case">case</A> you can't get &quot;<A HREF="quickfix.html#:make">:make</A>&quot; to redirect the file for you, an alternative is
@@ -272,7 +272,7 @@ Then have Vim read this file with:
 
 <B>	:cfile {filename}</B>
 
-Jumping to <A HREF="message.html#errors">errors</A> will work like with the &quot;<A HREF="quickfix.html#:make">:make</A>&quot; command.
+Jumping to <A HREF="message.html#errors">errors</A> will work like with the &quot;<A HREF="quickfix.html#:make">:make</A>&quot;命令.
 
 ==============================================================================
 
@@ -283,7 +283,7 @@ indented.  Vim offers various ways to make this <A HREF="various.html#less">less
 programs like Java or C++, set the <A HREF="options.html#'cindent'">'cindent'</A> option.  Vim knows a lot about C
 programs and will try very hard to automatically set the indent for you.  Set
 the <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> option to the amount of spaces you want for a deeper level.
-Four spaces will work fine.  One &quot;<A HREF="options.html#:set">:set</A>&quot; command will <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
+Four spaces will work fine.  One &quot;<A HREF="options.html#:set">:set</A>&quot;命令 will <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
 
 <B>	:set cindent shiftwidth=4</B>
 
@@ -304,7 +304,7 @@ start and unindented at the end.  The unindenting will happen after typing the
 One side effect of automatic indentation is that <A HREF="motion.html#it">它</A> helps you catch <A HREF="message.html#errors">errors</A> in
 your code early.  When you type a } to finish a function, only to find that
 the automatic indentation gives <A HREF="motion.html#it">它</A> more indent than what you expected, there
-is probably a } missing.  Use the &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; command to find out which { matches the
+is probably a } missing.  Use the &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot;命令 to find out which { matches the
 } you typed.
    A missing ) and ; also cause extra indent.  Thus if you get more white
 space than you would expect, check the preceding lines.
@@ -338,7 +338,7 @@ pretty good <A HREF="job_control.html#job">job</A> of indenting in a way that 90
 different styles, however; so if you want to, you can customize the
 indentation style with the <A HREF="options.html#'cinoptions'">'cinoptions'</A> option.
    By default <A HREF="options.html#'cinoptions'">'cinoptions'</A> is empty and Vim uses the default style.  You can
-add various items where you want something different.  For example, to make
+add various items where you want something different.例如, to make
 curly braces be placed like this:
 
 <B><FONT color="#3A6F2B">	if (flag) </FONT></B>
@@ -432,7 +432,7 @@ When you are using <A HREF="options.html#'autoindent'">'autoindent'</A> or <A HR
 previous line, there will be many times when you need to add or remove one
 <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> worth of indent.  A quick way to <A HREF="diff.html#do">do</A> this is using the <A HREF="scroll.html#CTRL-D">CTRL-D</A> and
 <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> commands in <A HREF="intro.html#Insert">插入</A>模式.
-   For example, you are typing a shell <A HREF="usr_41.html#script">script</A> that is supposed to look like
+ 例如, you are typing a shell <A HREF="usr_41.html#script">script</A> that is supposed to look like
 this:
 
 <B><FONT color="#3A6F2B">	if test -n a; then </FONT></B>
@@ -440,7 +440,7 @@ this:
 <B><FONT color="#3A6F2B">	   echo "-------" </FONT></B>
 <B><FONT color="#3A6F2B">	fi </FONT></B>
 
-Start off by setting these <A HREF="options.html#options">options</A>:
+Start off by setting these <A HREF="options\.html#options">选项</A>:
 
 <B>	:set autoindent shiftwidth=3</B>
 
@@ -466,7 +466,7 @@ the indent is OK.  Then <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> and
 
 To remove the superfluous indent in the last line press <A HREF="scroll.html#CTRL-D">CTRL-D</A>.  This deletes
 one <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> worth of indent, no matter where you are in the line.
-   When you are in <A HREF="intro.html#Normal">正常</A>模式, you can use the &quot;<A HREF="change.html#&gt;&gt;">&gt;&gt;</A>&quot; and &quot;<A HREF="change.html#&lt;&lt;">&lt;&lt;</A>&quot; commands to
+   When you are in <A HREF="intro.html#Normal">正常</A>模式, you can use the &quot;<A HREF="change.html#&gt;&gt;">&gt;&gt;</A>&quot; and &quot;<A HREF="change.html#&lt;&lt;">&lt;&lt;</A>&quot;命令 to
 <A HREF="intro.html#shift">shift</A> lines.  &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; and &quot;<A HREF="change.html#&lt;">&lt;</A>&quot; are operators, thus you have the usual three ways to
 specify the lines you want to indent.  A useful combination is:
 
@@ -567,7 +567,7 @@ CHANGING TABS IN SPACES (AND BACK)
 
 Setting <A HREF="options.html#'expandtab'">'expandtab'</A> does not affect any existing tabs.换句话说, any
 tabs in the document remain tabs.  If you want to convert tabs to spaces, use
-the &quot;<A HREF="change.html#:retab">:retab</A>&quot; command.  Use these commands:
+the &quot;<A HREF="change.html#:retab">:retab</A>&quot;命令.  Use these commands:
 
 <B>	:set expandtab</B>
 <B>	:%retab</B>
@@ -579,11 +579,11 @@ be converted <A HREF="motion.html#as">as</A> well, add a !:
 <B>	:%retab!</B>
 
 This is a little bit dangerous, because <A HREF="motion.html#it">它</A> can also change tabs inside a
-<A HREF="eval.html#string">string</A>.  To check if these exist, you could use this:
+<A HREF="options\.html#options">字符串</A>.  To check if these exist, you could use this:
 
 <B>	/"[^"\t]*\t[^"]*"</B>
 
-It's recommended not to use hard tabs inside a <A HREF="eval.html#string">string</A>.  <A HREF="insert.html#Replace">Replace</A> them with
+It's recommended not to use hard tabs inside a <A HREF="options\.html#options">字符串</A>.  <A HREF="insert.html#Replace">Replace</A> them with
 &quot;\t&quot; to avoid trouble.
 
 The other way around works just <A HREF="motion.html#as">as</A> well:
@@ -653,7 +653,7 @@ The <A HREF="options.html#'comments'">'comments'</A> option defines what a comme
 between a single-line comment and a comment that has a different start, end
 and middle part.
    Many single-line comments start with a specific character.  In C++ // is
-used, in Makefiles #, in Vim scripts &quot;.  For example, to make Vim understand
+used, in Makefiles #, in Vim scripts &quot;.例如, to make Vim understand
 C++ comments:
 
 <B>	:set comments=://</B>
@@ -665,7 +665,7 @@ recognized.  The general form of an item in <A HREF="options.html#'comments'">'c
 
 The {flags} part can be empty, <A HREF="motion.html#as">as</A> in this <A HREF="change.html#case">case</A>.
    Several of these items can be concatenated, separated by commas.  This
-allows recognizing different types of comments at the same time.  For example,
+allows recognizing different types of comments at the same time.例如,
 let's edit an e-mail message.  When replying, the text that others wrote is
 preceded with &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; and &quot;<A HREF="change.html#!">!</A>&quot; characters.  This command would work:
 

@@ -127,7 +127,7 @@ Note: If you have problems <A HREF="#printing">printing</A> with |<A HREF="#:har
 Progress is displayed during <A HREF="#printing">printing</A> <A HREF="motion.html#as">as</A> a page number and a percentage.  To
 abort <A HREF="#printing">printing</A> use the interrupt key (CTRL-C or, on MS-systems, CTRL-Break).
 
-Printer output is controlled by the <A HREF="options.html#'printfont'">'printfont'</A> and <A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options.html#options">options</A>.
+Printer output is controlled by the <A HREF="options.html#'printfont'">'printfont'</A> and <A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options\.html#options">选项</A>.
 <A HREF="options.html#'printheader'">'printheader'</A> specifies the format of a page header.
 
 The printed file is always limited to the selected margins, irrespective of
@@ -138,31 +138,31 @@ considerations:
 1) The normal background is always rendered <A HREF="motion.html#as">as</A> white (i.e. blank paper).
 2) White text or the default foreground is rendered <A HREF="motion.html#as">as</A> black, so that <A HREF="motion.html#it">它</A> shows
    up!
-3) If <A HREF="options.html#'background'">'background'</A> is &quot;dark&quot;, then the colours are darkened to compensate for
+3) If <A HREF="options.html#'background'">'background'</A> is &quot;dark&quot;然后the colours are darkened to compensate for
    the fact that otherwise they would be too bright to show up clearly on
    white paper.
 
 ==============================================================================
 
-2. Print <A HREF="options.html#options">options</A>					*<A NAME="print-options"></A><B>print-options</B>*
+2. Print <A HREF="options\.html#options">选项</A>					*<A NAME="print-options"></A><B>print-options</B>*
 
-Here are the details for the <A HREF="options.html#options">options</A> that change the way <A HREF="#printing">printing</A> is done.
+Here are the details for the <A HREF="options\.html#options">选项</A> that change the way <A HREF="#printing">printing</A> is done.
 For generic info about setting options 见 |<A HREF="options.html">options.txt</A>|.
 
 
 							*<A NAME="pdev-option"></A><B>pdev-option</B>*
-<A HREF="options.html#'printdevice'">'printdevice'</A> <A HREF="options.html#'pdev'">'pdev'</A>	<A HREF="eval.html#string">string</A>	(default empty)
+<A HREF="options.html#'printdevice'">'printdevice'</A> <A HREF="options.html#'pdev'">'pdev'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
 			global
 This defines the name of the printer to be used when the |<A HREF="#:hardcopy">:hardcopy</A>| command
 is issued with a bang (!) to skip the printer selection dialog.  On Win32, <A HREF="motion.html#it">它</A>
 should be the printer name exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> appears in the standard printer
 dialog.
-If the option is empty, then vim will use the system default printer for
+If the option is empty然后vim will use the system default printer for
 &quot;:hardcopy!&quot;
 
 
 							*<A NAME="penc-option"></A><B>penc-option</B>* *<A NAME="E620"></A><B>E620</B>*
-<A HREF="options.html#'printencoding'">'printencoding'</A> <A HREF="options.html#'penc'">'penc'</A>	<A HREF="eval.html#String">String</A>	(default empty, except for:
+<A HREF="options.html#'printencoding'">'printencoding'</A> <A HREF="options.html#'penc'">'penc'</A>	<A HREF="options\.html#options">字符串</A>	(default empty, except for:
 					Windows: cp1252,
 					Macintosh: mac-roman,
 					HPUX: hp-roman8)
@@ -193,15 +193,15 @@ HPUX character encodings and are used by default on these platforms. Code page
 
 
 							*<A NAME="pexpr-option"></A><B>pexpr-option</B>*
-<A HREF="options.html#'printexpr'">'printexpr'</A> <A HREF="options.html#'pexpr'">'pexpr'</A>	<A HREF="eval.html#String">String</A>	(default: see below)
+<A HREF="options.html#'printexpr'">'printexpr'</A> <A HREF="options.html#'pexpr'">'pexpr'</A>	<A HREF="options\.html#options">字符串</A>	(default: see below)
 			global
 Expression that is evaluated to print the PostScript produced with
 |<A HREF="#:hardcopy">:hardcopy</A>|.
 The file name to be printed is in |<A HREF="eval.html#v:fname_in">v:fname_in</A>|.
-The arguments to the &quot;<A HREF="#:hardcopy">:hardcopy</A>&quot; command are in |<A HREF="eval.html#v:cmdarg">v:cmdarg</A>|.
+The arguments to the &quot;<A HREF="#:hardcopy">:hardcopy</A>&quot;命令 are in |<A HREF="eval.html#v:cmdarg">v:cmdarg</A>|.
 The <A HREF="eval.html#expression">expression</A> must take care of <A HREF="change.html#deleting">deleting</A> the file after <A HREF="#printing">printing</A> <A HREF="motion.html#it">它</A>.
 When there is an error, the <A HREF="eval.html#expression">expression</A> must return a non-zero number.
-If there is no error, return zero or an empty <A HREF="eval.html#string">string</A>.
+If there is no error, return zero or an empty <A HREF="options\.html#options">字符串</A>.
 The default for non MS-Windows systems is to simply use &quot;lpr&quot; to print the
 file:
 
@@ -242,7 +242,7 @@ reasons.
 
 
 							*<A NAME="pfn-option"></A><B>pfn-option</B>* *<A NAME="E613"></A><B>E613</B>*
-<A HREF="options.html#'printfont'">'printfont'</A> <A HREF="options.html#'pfn'">'pfn'</A>	<A HREF="eval.html#string">string</A>	(default &quot;courier&quot;)
+<A HREF="options.html#'printfont'">'printfont'</A> <A HREF="options.html#'pfn'">'pfn'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;courier&quot;)
 			global
 This is the name of the font that will be used for the |<A HREF="#:hardcopy">:hardcopy</A>| command's
 output.  It has the same format <A HREF="motion.html#as">as</A> the <A HREF="options.html#'guifont'">'guifont'</A> option, except that only one
@@ -256,7 +256,7 @@ the font.  When omitted, the point size is 10.
 
 
 							*<A NAME="pheader-option"></A><B>pheader-option</B>*
-<A HREF="options.html#'printheader'">'printheader'</A> <A HREF="options.html#'pheader'">'pheader'</A>  <A HREF="eval.html#string">string</A>  (default &quot;&#37;&lt;&#37;f&#37;h&#37;m&#37;=Page &#37;N&quot;)
+<A HREF="options.html#'printheader'">'printheader'</A> <A HREF="options.html#'pheader'">'pheader'</A>  <A HREF="options\.html#options">字符串</A>  (default &quot;&#37;&lt;&#37;f&#37;h&#37;m&#37;=Page &#37;N&quot;)
 			 global
 This defines the format of the header produced in |<A HREF="#:hardcopy">:hardcopy</A>| output.  The
 option is defined in the same way <A HREF="motion.html#as">as</A> the <A HREF="options.html#'statusline'">'statusline'</A> option.  The same simple
@@ -264,7 +264,7 @@ header is used when this option is empty.
 
 
 							*<A NAME="pmbcs-option"></A><B>pmbcs-option</B>*
-<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options.html#'pmbcs'">'pmbcs'</A>  <A HREF="eval.html#string">string</A> (default &quot;&quot;)
+<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options.html#'pmbcs'">'pmbcs'</A>  <A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
 			  global
 Sets the CJK character set to be used when generating CJK output from
 |<A HREF="#:hardcopy">:hardcopy</A>|.  The following predefined values are currently recognised by Vim:
@@ -339,9 +339,9 @@ defining the character set in the &quot;print&quot; directory in <A HREF="option
 
 
 							*<A NAME="pmbfn-option"></A><B>pmbfn-option</B>*
-<A HREF="options.html#'printmbfont'">'printmbfont'</A> <A HREF="options.html#'pmbfn'">'pmbfn'</A>	<A HREF="eval.html#string">string</A> (default &quot;&quot;)
+<A HREF="options.html#'printmbfont'">'printmbfont'</A> <A HREF="options.html#'pmbfn'">'pmbfn'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
 			global
-This is a comma-separated <A HREF="eval.html#list">list</A> of fields for font names to be used when
+This is a comma-separated <A HREF="eval.html#list">列表</A> of fields for font names to be used when
 generating CJK output from |<A HREF="#:hardcopy">:hardcopy</A>|.  Each font name has to be preceded
 with a <A HREF="#letter">letter</A> indicating the style the font is to be used for <A HREF="motion.html#as">as</A> follows:
 
@@ -354,9 +354,9 @@ A field with the <A HREF="change.html#r">r</A>: prefix must be specified when do
 other fontname specifiers are optional.  If a specifier is missing then
 another font will be used <A HREF="motion.html#as">as</A> follows:
 
-  if <A HREF="eval.html#b:">b:</A> is missing, then use <A HREF="change.html#r">r</A>:
-  if <A HREF="insert.html#i">i</A>: is missing, then use <A HREF="change.html#r">r</A>:
-  if <A HREF="insert.html#o">o</A>: is missing, then use <A HREF="eval.html#b:">b:</A>
+  if <A HREF="eval.html#b:">b:</A> is missing然后use <A HREF="change.html#r">r</A>:
+  if <A HREF="insert.html#i">i</A>: is missing然后use <A HREF="change.html#r">r</A>:
+  if <A HREF="insert.html#o">o</A>: is missing然后use <A HREF="eval.html#b:">b:</A>
 
 Some CJK fonts <A HREF="diff.html#do">do</A> not contain characters for codes in the ASCII code range.
 Also, some characters in the CJK ASCII code ranges differ in a few code points
@@ -377,9 +377,9 @@ character set:
  
 
 							*<A NAME="popt-option"></A><B>popt-option</B>*
-<A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options.html#'popt'">'popt'</A>	<A HREF="eval.html#string">string</A> (default &quot;&quot;)
+<A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options.html#'popt'">'popt'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
 			global
-This is a comma-separated <A HREF="eval.html#list">list</A> of items that <A HREF="intro.html#control">control</A> the format of the output
+This is a comma-separated <A HREF="eval.html#list">列表</A> of items that <A HREF="intro.html#control">control</A> the format of the output
 of YXXY:hardcopy|:
 
   left:{spec}		left margin (default: 10pc)
@@ -457,7 +457,7 @@ of YXXY:hardcopy|:
 
 The item indicated with (default) is used when the item is not present.  The
 values are not always used, especially when using a dialog to select the
-printer and <A HREF="options.html#options">options</A>.
+printer and <A HREF="options\.html#options">选项</A>.
 Example:
 <B>	:set printoptions=paper:letter,duplex:off</B>
 
@@ -536,7 +536,7 @@ print character encoding Vim will use.]
 							*<A NAME="E673"></A><B>E673</B>* *<A NAME="E674"></A><B>E674</B>* *<A NAME="E675"></A><B>E675</B>*
 
 Vim supports <A HREF="#printing">printing</A> of <A HREF="mbyte.html#Chinese">Chinese</A>, <A HREF="mbyte.html#Japanese">Japanese</A>, and <A HREF="mbyte.html#Korean">Korean</A> files.  Setting up Vim
-to correctly print CJK files requires setting up a few more <A HREF="options.html#options">options</A>.
+to correctly print CJK files requires setting up a few more <A HREF="options\.html#options">选项</A>.
 
 Each of these countries has many standard character sets and encodings which
 require that both be specified when <A HREF="#printing">printing</A>.  In addition, CJK fonts normally
@@ -545,7 +545,7 @@ style to achieve emphasis when <A HREF="#printing">printing</A>.  This in turn r
 approach to specifying fonts to use when <A HREF="#printing">printing</A>.
 
 The encoding and character set are specified with the <A HREF="options.html#'printencoding'">'printencoding'</A> and
-<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options.html#options">options</A>.  If <A HREF="options.html#'printencoding'">'printencoding'</A> is not specified then <A HREF="options.html#'encoding'">'encoding'</A>
+<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options\.html#options">选项</A>.  If <A HREF="options.html#'printencoding'">'printencoding'</A> is not specified then <A HREF="options.html#'encoding'">'encoding'</A>
 is used <A HREF="motion.html#as">as</A> normal.  If <A HREF="options.html#'printencoding'">'printencoding'</A> is specified then characters will be
 translated to this encoding for <A HREF="#printing">printing</A>.  You should ensure that the encoding
 is compatible with the character set needed for the file contents or some
@@ -612,7 +612,7 @@ There are a number of possible causes <A HREF="motion.html#as">as</A> to why the
   measure a sheet and compare <A HREF="motion.html#it">它</A> with the table of supported paper sizes listed
   for <A HREF="options.html#'printoptions'">'printoptions'</A>, using the paper that is closest in both width AND height.
   Note: The dimensions of actual paper may vary slightly from the ones listed.
-  If there is no paper listed close enough, then you may want to try psresize
+  If there is no paper listed close enough然后you may want to try psresize
   from PSUtils, discussed below.
 
 - Two-sided <A HREF="#printing">printing</A> (duplex).  Normally a PostScript printer that does not
@@ -753,10 +753,10 @@ step before <A HREF="#printing">printing</A>.
 ALTERNATE DUPLEX PRINTING
 
 It is possible to achieve a poor man's version of duplex <A HREF="#printing">printing</A> using the PS
-utility psselect.  This utility has <A HREF="options.html#options">options</A> <A HREF="starting.html#-e">-e</A> and <A HREF="starting.html#-o">-o</A> for <A HREF="#printing">printing</A> just the
+utility psselect.  This utility has <A HREF="options\.html#options">选项</A> <A HREF="starting.html#-e">-e</A> and <A HREF="starting.html#-o">-o</A> for <A HREF="#printing">printing</A> just the
 even or odd pages of a PS file respectively.
 
-First generate a PS file with the 'hardcopy' command, then generate new
+First generate a PS file with the 'hardcopy' command然后generate new
 files with all the odd and even numbered pages with:
 
 <B>	psselect -o test.ps odd.ps</B>
@@ -804,7 +804,7 @@ the formfeed character, the remainder of the line printed on the new page
 will not have a line number printed for <A HREF="motion.html#it">它</A> (in the same way <A HREF="motion.html#as">as</A> the wrapped
 lines of a long line when wrap in <A HREF="options.html#'printoptions'">'printoptions'</A> is enabled).
 
-If the formfeed character is the last character on a line, then <A HREF="#printing">printing</A> will
+If the formfeed character is the last character on a line然后<A HREF="#printing">printing</A> will
 continue on the second line of the new page, not the first.  This is due to
 Vim processing the end of the line after the formfeed character and moving
 down a line to continue <A HREF="#printing">printing</A>.

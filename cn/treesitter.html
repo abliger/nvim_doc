@@ -234,11 +234,11 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 <A HREF="#tsnode:range()">tsnode:range()</A>						*<A NAME="tsnode:range()"></A><B>tsnode:range()</B>*
 	Get the range of the node. Return four values: the row, column
-	of the start position, then the row, column of the end position.
+	of the start position然后the row, column of the end position.
 
 
 <A HREF="#tsnode:type()">tsnode:type()</A>						*<A NAME="tsnode:type()"></A><B>tsnode:type()</B>*
-	Get the node's type <A HREF="motion.html#as">as</A> a <A HREF="eval.html#string">string</A>.
+	Get the node's type <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>.
 
 
 <A HREF="#tsnode:symbol()">tsnode:symbol()</A>						*<A NAME="tsnode:symbol()"></A><B>tsnode:symbol()</B>*
@@ -247,7 +247,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 <A HREF="#tsnode:named()">tsnode:named()</A>						*<A NAME="tsnode:named()"></A><B>tsnode:named()</B>*
 	Check if the node is named. Named nodes correspond to named rules in
-	the  grammar, whereas anonymous nodes correspond to <A HREF="eval.html#string">string</A> literals
+	the  grammar, whereas anonymous nodes correspond to <A HREF="options\.html#options">字符串</A> literals
 	in the grammar.
 
 
@@ -261,7 +261,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 
 <A HREF="#tsnode:sexpr()">tsnode:sexpr()</A>						*<A NAME="tsnode:sexpr()"></A><B>tsnode:sexpr()</B>*
-	Get an S-expression representing the node <A HREF="motion.html#as">as</A> a <A HREF="eval.html#string">string</A>.
+	Get an S-expression representing the node <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>.
 
 
 <A HREF="#tsnode:id()">tsnode:id()</A>						*<A NAME="tsnode:id()"></A><B>tsnode:id()</B>*
@@ -269,7 +269,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 	No guarantees are made about this identifier's internal
 	representation, except for being a primitive <A HREF="lua.html#lua">lua</A> type with value
-	equality (so not a table). Presently <A HREF="motion.html#it">它</A> is a (non-printable) <A HREF="eval.html#string">string</A>.
+	equality (so not a table). Presently <A HREF="motion.html#it">它</A> is a (non-printable) <A HREF="options\.html#options">字符串</A>.
 
 	Note: the id is not guaranteed to be unique for nodes from different
 	trees.
@@ -295,7 +295,7 @@ https://tree-sitter.github.io/tree-sitter/using-parsers#query-syntax for more
 information on how to write queries.
 
 Note: The predicates listed in the web page above differ from those Neovim
-supports. 见 |<A HREF="#lua-treesitter-predicates">lua-treesitter-predicates</A>| for a complete <A HREF="eval.html#list">list</A> of predicates
+supports. 见 |<A HREF="#lua-treesitter-predicates">lua-treesitter-predicates</A>| for a complete <A HREF="eval.html#list">列表</A> of predicates
 supported by Neovim.
 
 A `query` consists of one or more patterns. A `pattern` is defined over node
@@ -308,13 +308,13 @@ to a match.
 
 Treesitter Query Predicates			    *<A NAME="lua-treesitter-predicates"></A><B>lua-treesitter-predicates</B>*
 
-When <A HREF="editing.html#writing">writing</A> queries for <A HREF="#treesitter">treesitter</A>, one might use `predicates`, that is,
+When <A HREF="editing.html#writing">写</A> queries for <A HREF="#treesitter">treesitter</A>, one might use `predicates`, that is,
 special scheme nodes that are evaluated to verify things on a captured node
 for example, the |<A HREF="intro.html#eq?">eq?</A>| predicate :
 <B>	((identifier) @foo (#eq? @foo "foo"))</B>
 
 This will only match identifier corresponding to the `&quot;foo&quot;` text.
-Here is a <A HREF="eval.html#list">list</A> of built-in predicates :
+Here is a <A HREF="eval.html#list">列表</A> of built-in predicates :
 
 
 	`eq?`						*<A NAME="ts-predicate-eq?"></A><B>ts-predicate-eq?</B>*
@@ -500,11 +500,11 @@ get_parser({bufnr}, {lang}, {opts})                             *<A NAME="get_pa
 
 
 get_string_parser({str}, {lang}, {opts})                 *<A NAME="get_string_parser()"></A><B>get_string_parser()</B>*
-                Gets a <A HREF="eval.html#string">string</A> parser
+                Gets a <A HREF="options\.html#options">字符串</A> parser
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}   The <A HREF="eval.html#string">string</A> to parse
-                    {lang}  The language of this <A HREF="eval.html#string">string</A>
+                    {str}   The <A HREF="options\.html#options">字符串</A> to parse
+                    {lang}  The language of this <A HREF="options\.html#options">字符串</A>
                     {opts}  Options to pass to the created language tree
 
 
@@ -568,7 +568,7 @@ get_node_text({node}, {source})                              *<A NAME="get_node_
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {node}    the node
-                    {source}  The buffer or <A HREF="eval.html#string">string</A> from which the node is
+                    {source}  The buffer or <A HREF="options\.html#options">字符串</A> from which the node is
                               extracted
 
 
@@ -585,7 +585,7 @@ get_query({lang}, {query_name})                                  *<A NAME="get_q
 
                                                            *<A NAME="get_query_files()"></A><B>get_query_files()</B>*
 get_query_files({lang}, {query_name}, {is_included})
-                Gets the <A HREF="eval.html#list">list</A> of files used to make up a query
+                Gets the <A HREF="eval.html#list">列表</A> of files used to make up a query
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {lang}         The language
@@ -598,30 +598,30 @@ get_query_files({lang}, {query_name}, {is_included})
                 <A HREF="eval.html#Lists">Lists</A> the currently available directives to use in queries.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    The <A HREF="eval.html#list">list</A> of supported directives.
+                    The <A HREF="eval.html#list">列表</A> of supported directives.
 
 
 <A HREF="#list_predicates()">list_predicates()</A>                                          *<A NAME="list_predicates()"></A><B>list_predicates()</B>*
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    The <A HREF="eval.html#list">list</A> of supported predicates.
+                    The <A HREF="eval.html#list">列表</A> of supported predicates.
 
 
 parse_query({lang}, {query})                                   *<A NAME="parse_query()"></A><B>parse_query()</B>*
-                Parse {query} <A HREF="motion.html#as">as</A> a <A HREF="eval.html#string">string</A>. (If the query is in a file, the
-                caller should read the contents into a <A HREF="eval.html#string">string</A> before calling).
+                Parse {query} <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>. (If the query is in a file, the
+                caller should read the contents into a <A HREF="options\.html#options">字符串</A> before calling).
 
                 Returns a `Query` (见 |<A HREF="#lua-treesitter-query">lua-treesitter-query</A>|) object which
                 can be used to search nodes in the <A HREF="syntax.html#syntax">syntax</A> tree for the
                 patterns defined in {query} using `iter_*` methods below.
 
                 Exposes `info` and `captures` with additional <A HREF="repeat.html#context">context</A> about {query}.
-                • `captures` contains the <A HREF="eval.html#list">list</A> of unique capture names defined
+                • `captures` contains the <A HREF="eval.html#list">列表</A> of unique capture names defined
                   in {query}. -`info.captures` also points to `captures`.
                 • `info.patterns` contains information about predicates.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {lang}   (string) The language
-                    {query}  (string) A <A HREF="eval.html#string">string</A> containing the query (s-expr
+                    {query}  (string) A <A HREF="options\.html#options">字符串</A> containing the query (s-expr
                              <A HREF="syntax.html#syntax">syntax</A>)
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -632,7 +632,7 @@ parse_query({lang}, {query})                                   *<A NAME="parse_q
 Query:iter_captures({self}, {node}, {source}, {start}, {stop})
                 Iterate over all captures from all matches inside {node}
 
-                {source} is needed if the query contains predicates, then the
+                {source} is needed if the query contains predicates然后the
                 caller must ensure to use a freshly parsed tree consistent
                 with the current text of the buffer (if relevant). {start_row}
                 and {end_row} can be used to limit matches inside a row range
@@ -658,7 +658,7 @@ Query:iter_captures({self}, {node}, {source}, {start}, {stop})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {node}    The node under which the search will occur
-                    {source}  The source buffer or <A HREF="eval.html#string">string</A> to extract text from
+                    {source}  The source buffer or <A HREF="options\.html#options">字符串</A> to extract text from
                     {start}   The starting line of the search
                     {stop}    The stopping line of the search (end-exclusive)
                     {self}
@@ -696,7 +696,7 @@ Query:iter_matches({self}, {node}, {source}, {start}, {stop})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {node}    The node under which the search will occur
-                    {source}  The source buffer or <A HREF="eval.html#string">string</A> to search
+                    {source}  The source buffer or <A HREF="options\.html#options">字符串</A> to search
                     {start}   The starting line of the search
                     {stop}    The stopping line of the search (end-exclusive)
                     {self}
@@ -713,10 +713,10 @@ set_query({lang}, {query_name}, {text})                          *<A NAME="set_q
                 configuration set by plugins.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {lang}        <A HREF="eval.html#string">string</A>: The language to use for the query
-                    {query_name}  <A HREF="eval.html#string">string</A>: The name of the query (i.e.
+                    {lang}        <A HREF="options\.html#options">字符串</A>: The language to use for the query
+                    {query_name}  <A HREF="options\.html#options">字符串</A>: The name of the query (i.e.
                                   &quot;highlights&quot;)
-                    {text}        <A HREF="eval.html#string">string</A>: The query text (unparsed).
+                    {text}        <A HREF="options\.html#options">字符串</A>: The query text (unparsed).
 
 
 ==============================================================================
@@ -800,7 +800,7 @@ LanguageTree:for_each_child({self}, {fn}, {include_self})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {fn}            The function to invoke. This is invoked
                                     with arguments (tree: LanguageTree, lang:
-                                    <A HREF="eval.html#string">string</A>)
+                                    <A HREF="options\.html#options">字符串</A>)
                     {include_self}  Whether to include the invoking tree in
                                     the results.
                     {self}
@@ -901,7 +901,7 @@ LanguageTree:set_included_regions({self}, {regions})
                 parser. A region is a set of nodes and/or ranges that will be
                 parsed in the same <A HREF="repeat.html#context">context</A>.
 
-                For example, <A HREF="motion.html#`{">`{</A> { node1 }, { node2} }` is two separate
+              例如, <A HREF="motion.html#`{">`{</A> { node1 }, { node2} }` is two separate
                 regions. This will be parsed by the parser in two different
                 contexts... thus resulting in two separate trees.
 
@@ -917,14 +917,14 @@ LanguageTree:set_included_regions({self}, {regions})
                 parsed again.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {regions}  (table) <A HREF="eval.html#list">list</A> of regions this tree should manage
+                    {regions}  (table) <A HREF="eval.html#list">列表</A> of regions this tree should manage
                                and parse.
                     {self}
 
 
 LanguageTree:source({self})                            *<A NAME="LanguageTree:source()"></A><B>LanguageTree:source()</B>*
                 Returns the source content of the language tree (bufnr or
-                <A HREF="eval.html#string">string</A>).
+                <A HREF="options\.html#options">字符串</A>).
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {self}
@@ -944,7 +944,7 @@ new({source}, {lang}, {opts})                             *<A NAME="languagetree
                 the tree.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {source}           Can be a bufnr or a <A HREF="eval.html#string">string</A> of text to
+                    {source}           Can be a bufnr or a <A HREF="options\.html#options">字符串</A> of text to
                                        parse
                     {lang}             The language this tree represents
                     {opts}             Options table

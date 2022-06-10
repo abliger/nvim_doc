@@ -100,7 +100,7 @@
 
  			<A HREF="#{subject}">{subject}</A> can include <A HREF="editing.html#wildcards">wildcards</A> such <A HREF="motion.html#as">as</A> &quot;*&quot;, &quot;<A HREF="pattern.html#?">?</A>&quot; and
 			&quot;[a-z]&quot;:
-			   <A HREF="#:help">:help</A> <A HREF="vimindex.html#z">z</A>?	jump to help for any &quot;<A HREF="vimindex.html#z">z</A>&quot; command
+			   <A HREF="#:help">:help</A> <A HREF="vimindex.html#z">z</A>?	jump to help for any &quot;<A HREF="vimindex.html#z">z</A>&quot;命令
 			   <A HREF="#:help">:help</A> <A HREF="scroll.html#z.">z.</A>	jump to the help for &quot;<A HREF="scroll.html#z.">z.</A>&quot;
 			But when a <A HREF="tagsrch.html#tag">标签</A> exists <A HREF="motion.html#it">它</A> is taken literally:
 			   <A HREF="#:help">:help</A> <A HREF="cmdline.html#:?">:?</A>	jump to help for &quot;<A HREF="cmdline.html#:?">:?</A>&quot;
@@ -143,8 +143,8 @@
  
 			It is also possible to first <A HREF="diff.html#do">do</A> &quot;<A HREF="#:help">:help</A>&quot; and then
 			use &quot;<A HREF="tagsrch.html#:tag">:tag</A> {pattern}&quot; in the help<A HREF="windows.html#window">窗口</A>.  The
-			&quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot; command can then be used to jump to other
-			matches, &quot;tselect&quot; to <A HREF="eval.html#list">list</A> matches and choose one.
+			&quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot;命令 can then be used to jump to other
+			matches, &quot;tselect&quot; to <A HREF="eval.html#list">列表</A> matches and choose one.
 <B>				:help index</B>
 <B>				:tselect /.*mode</B>
 
@@ -181,13 +181,13 @@
 
 							*<A NAME=":helpg"></A><B>:helpg</B>* *<A NAME=":helpgrep"></A><B>:helpgrep</B>*
 :helpg[rep] {pattern}[@xx]
-			Search all help text files and make a <A HREF="eval.html#list">list</A> of lines
+			Search all help text files and make a <A HREF="eval.html#list">列表</A> of lines
 			in which {pattern} matches.  Jumps to the first match.
 			The optional [@xx] specifies that only matches in the
 			&quot;xx&quot; language are to be found.
 			You can navigate through the matches with the
 			|<A HREF="quickfix.html#quickfix">quickfix</A>| commands, e.g., |<A HREF="quickfix.html#:cnext">:cnext</A>| to jump to the
-			next one.  Or use |<A HREF="quickfix.html#:cwindow">:cwindow</A>| to get the <A HREF="eval.html#list">list</A> of
+			next one.  Or use |<A HREF="quickfix.html#:cwindow">:cwindow</A>| to get the <A HREF="eval.html#list">列表</A> of
 			matches in the <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.
 			{pattern} is used <A HREF="motion.html#as">as</A> a Vim <A HREF="pattern.html#regexp">regexp</A> |<A HREF="pattern.html#pattern">pattern</A>|.
 			<A HREF="options.html#'ignorecase'">'ignorecase'</A> is not used, add &quot;\c&quot; to ignore <A HREF="change.html#case">case</A>.
@@ -199,7 +199,7 @@
 <B>				:helpgrep backspace@fr</B>
  			The <A HREF="pattern.html#pattern">pattern</A> does not support line breaks, <A HREF="motion.html#it">它</A> must
 			match within one line.  You can use |<A HREF="quickfix.html#:grep">:grep</A>| instead,
-			but then you need to get the <A HREF="eval.html#list">list</A> of help files in a
+			but then you need to get the <A HREF="eval.html#list">列表</A> of help files in a
 			complicated way.
 			Cannot be followed by another command, everything is
 			used <A HREF="motion.html#as">as</A> part of the <A HREF="pattern.html#pattern">pattern</A>.  But you can use
@@ -210,12 +210,12 @@
 
 							*<A NAME=":lh"></A><B>:lh</B>* *<A NAME=":lhelpgrep"></A><B>:lhelpgrep</B>*
 :lh[elpgrep] {pattern}[@xx]
-			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:helpgrep">:helpgrep</A>&quot;, except the location <A HREF="eval.html#list">list</A> is used
-			instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.  If the help<A HREF="windows.html#window">窗口</A>is
-			already opened, then the location <A HREF="eval.html#list">list</A> for that<A HREF="windows.html#window">窗口</A>
+			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:helpgrep">:helpgrep</A>&quot;, except the location <A HREF="eval.html#list">列表</A> is used
+			instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A>.  If the help<A HREF="windows.html#window">窗口</A>is
+			already opened然后the location <A HREF="eval.html#list">列表</A> for that<A HREF="windows.html#window">窗口</A>
 			is used.  Otherwise, a new help<A HREF="windows.html#window">窗口</A>is opened and
-			the location <A HREF="eval.html#list">list</A> for that<A HREF="windows.html#window">窗口</A>is set.  The
-			location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>is not changed
+			the location <A HREF="eval.html#list">列表</A> for that<A HREF="windows.html#window">窗口</A>is set.  The
+			location <A HREF="eval.html#list">列表</A> for the current<A HREF="windows.html#window">窗口</A>is not changed
 			then.
 
 
@@ -239,7 +239,7 @@ The initial height of the help<A HREF="windows.html#window">窗口</A>can be set
 (default 20).
 
 						*<A NAME="help-buffer-options"></A><B>help-buffer-options</B>*
-When the help buffer is created, several local <A HREF="options.html#options">options</A> are set to make sure
+When the help buffer is created, several local <A HREF="options\.html#options">选项</A> are set to make sure
 the help text is displayed <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was intended:
     <A HREF="options.html#'iskeyword'">'iskeyword'</A>		nearly all ASCII chars except '' '', '*', &#39;&#34;'' and '&#124;'
     <A HREF="options.html#'foldmethod'">'foldmethod'</A>	&quot;manual&quot;
@@ -259,7 +259,7 @@ the help text is displayed <A HREF="motion.html#as">as</A> <A HREF="motion.html#
     <A HREF="options.html#'spell'">'spell'</A>		off
 
 Jump to specific subjects by using <A HREF="tagsrch.html#tags">标签</A>.  This can be done in two ways:
-- Use the &quot;<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>&quot; command while standing on the name of a command or option.
+- Use the &quot;<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>&quot;命令 while standing on the name of a command or option.
   This only works when the <A HREF="tagsrch.html#tag">标签</A> is a keyword.  &quot;&lt;C-Leftmouse&gt;&quot; and
   &quot;<A HREF="tagsrch.html#g&lt;LeftMouse&gt;">g&lt;LeftMouse&gt;</A>&quot; work just like &quot;<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>&quot;.
 - use the &quot;<A HREF="tagsrch.html#:ta">:ta</A> {subject}&quot; command.  This also works with non-keyword
@@ -271,7 +271,7 @@ Use &quot;<A HREF="editing.html#:q">:q</A>&quot; to close the help<A HREF="windo
 If there are several matches for an item you are looking for, this is how you
 can jump to each one of them:
 1. Open a help<A HREF="windows.html#window">窗口</A>
-2. Use the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command with a slash prepended to the <A HREF="tagsrch.html#tag">标签</A>.  E.g.:
+2. Use the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;命令 with a slash prepended to the <A HREF="tagsrch.html#tag">标签</A>.  E.g.:
 <B>	:tag /min</B>
 3. Use &quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot; to jump to the next matching <A HREF="tagsrch.html#tag">标签</A>.
 
@@ -363,7 +363,7 @@ The first one finds the Italian user manual, even when <A HREF="options.html#'he
 The second one finds the English user manual, even when <A HREF="options.html#'helplang'">'helplang'</A> is set to
 &quot;<A HREF="motion.html#it">它</A>&quot;.
 
-When using command-line completion for the &quot;<A HREF="#:help">:help</A>&quot; command, the &quot;@en&quot;
+When using command-line completion for the &quot;<A HREF="#:help">:help</A>&quot;命令, the &quot;@en&quot;
 extension is only shown when a <A HREF="tagsrch.html#tag">标签</A> exists for multiple languages.  When the
 <A HREF="tagsrch.html#tag">标签</A> only exists for English &quot;@en&quot; is omitted.  When the first candidate has an
 &quot;@ab&quot; extension and <A HREF="motion.html#it">它</A> matches the first language in <A HREF="options.html#'helplang'">'helplang'</A> &quot;@ab&quot; is also
@@ -398,7 +398,7 @@ using the <A HREF="mailto:&quot;tag@en&quot;">&quot;tag@en&quot;</A> notation.
 3. Writing help files					*<A NAME="help-writing"></A><B>help-writing</B>*
 
 For ease of use, a Vim help file for a <A HREF="usr_05.html#plugin">plugin</A> should follow the format of the
-standard Vim help files, except for the first line.  If you are <A HREF="editing.html#writing">writing</A> a new
+standard Vim help files, except for the first line.  If you are <A HREF="editing.html#writing">写</A> a new
 help file it's best to copy one of the existing files and use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a
 <A HREF="autocmd.html#template">template</A>.
 
@@ -416,7 +416,7 @@ If you want to add a version number or last modification date, put <A HREF="moti
 second line, right aligned.
 
 At the bottom of the help file, place a Vim <A HREF="options.html#modeline">modeline</A> to set the <A HREF="options.html#'textwidth'">'textwidth'</A>
-and <A HREF="options.html#'tabstop'">'tabstop'</A> <A HREF="options.html#options">options</A> and the <A HREF="options.html#'filetype'">'filetype'</A> to &quot;help&quot;.  Never set a global option
+and <A HREF="options.html#'tabstop'">'tabstop'</A> <A HREF="options\.html#options">选项</A> and the <A HREF="options.html#'filetype'">'filetype'</A> to &quot;help&quot;.  Never set a global option
 in such a <A HREF="options.html#modeline">modeline</A>, that can have undesired consequences.
 
 

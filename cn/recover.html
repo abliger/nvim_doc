@@ -132,7 +132,7 @@ Advantages:
 Disadvantages:
 - You can get name collisions from files with the same name but in different
   directories (although Vim tries to avoid that by comparing the path name).
-  This will result in bogus <A HREF="usr_11.html#ATTENTION">ATTENTION</A> warning <A HREF="message.html#messages">messages</A>.
+  This will result in bogus <A HREF="usr_11.html#ATTENTION">ATTENTION</A> warning <A HREF="message.html#messages">信息</A>.
 - When you use your home directory, and somebody else tries to edit the same
   file, that user will not see your swap file and will not get the <A HREF="usr_11.html#ATTENTION">ATTENTION</A>
   warning message.
@@ -171,9 +171,9 @@ changed, not when you only moved around.  The reason why <A HREF="motion.html#it
 date all the time is that this would slow down normal work too much.  You can
 change the 200 character <A HREF="intro.html#count">count</A> with the <A HREF="options.html#'updatecount'">'updatecount'</A> option.  You can set
 the time with the <A HREF="options.html#'updatetime'">'updatetime'</A> option.  The time is given in milliseconds.
-After <A HREF="editing.html#writing">writing</A> to the swap file Vim syncs the file to disk.
+After <A HREF="editing.html#writing">写</A> to the swap file Vim syncs the file to disk.
 
-If the <A HREF="editing.html#writing">writing</A> to the swap file is not wanted, <A HREF="motion.html#it">它</A> can be switched off by
+If the <A HREF="editing.html#writing">写</A> to the swap file is not wanted, <A HREF="motion.html#it">它</A> can be switched off by
 setting the <A HREF="options.html#'updatecount'">'updatecount'</A> option to 0.  The same is done when starting Vim
 with the &quot;<A HREF="starting.html#-n">-n</A>&quot; option.  Writing can be switched back on by setting the
 <A HREF="options.html#'updatecount'">'updatecount'</A> option to non-zero.  Swap files will be created for all <A HREF="windows.html#buffers">buffers</A>
@@ -222,7 +222,7 @@ there are exceptions:
 
 Basic file <A HREF="#recovery">recovery</A> is explained in the user manual: |<A HREF="usr_11.html">usr_11.txt</A>|.
 
-Another way to <A HREF="diff.html#do">do</A> <A HREF="#recovery">recovery</A> is to start Vim and use the &quot;<A HREF="#:recover">:recover</A>&quot; command.
+Another way to <A HREF="diff.html#do">do</A> <A HREF="#recovery">recovery</A> is to start Vim and use the &quot;<A HREF="#:recover">:recover</A>&quot;命令.
 This is easy when you start Vim to edit a file and you get the &quot;ATTENTION:
 Found a swap file ...&quot; message.  In this <A HREF="change.html#case">case</A> the single command &quot;<A HREF="#:recover">:recover</A>&quot;
 will <A HREF="diff.html#do">do</A> the work.  You can also give the name of the file or the swap file to
@@ -255,7 +255,7 @@ file elsewhere and run <A HREF="options.html#'diff'">'diff'</A> to find out if t
 recovered file.  Or use |<A HREF="diff.html#:DiffOrig">:DiffOrig</A>|.
 
 Once you are sure the <A HREF="#recovery">recovery</A> is ok delete the swap file.  Otherwise, you
-will continue to get warning <A HREF="message.html#messages">messages</A> that the &quot;.swp&quot; file already exists.
+will continue to get warning <A HREF="message.html#messages">信息</A> that the &quot;.swp&quot; file already exists.
 
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

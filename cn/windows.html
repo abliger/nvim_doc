@@ -160,10 +160,10 @@ between a buffer name and the buffer number.
 By default, Vim starts with one <A HREF="#window">window</A>, just like <A HREF="intro.html#Vi">Vi</A>.
 
 The &quot;<A HREF="starting.html#-o">-o</A>&quot; and &quot;<A HREF="starting.html#-O">-O</A>&quot; arguments to Vim can be used to open a <A HREF="#window">window</A> for each file
-in the argument <A HREF="eval.html#list">list</A>.  The &quot;<A HREF="starting.html#-o">-o</A>&quot; argument will split the <A HREF="#windows">windows</A> horizontally;
+in the argument <A HREF="eval.html#list">列表</A>.  The &quot;<A HREF="starting.html#-o">-o</A>&quot; argument will split the <A HREF="#windows">windows</A> horizontally;
 the &quot;<A HREF="starting.html#-O">-O</A>&quot; argument will split the <A HREF="#windows">windows</A> vertically.  If both &quot;<A HREF="starting.html#-o">-o</A>&quot; and &quot;<A HREF="starting.html#-O">-O</A>&quot;
 are given, the last one encountered will be used to determine the split
-orientation.  For example, this will open three <A HREF="#windows">windows</A>, split horizontally:
+orientation.例如, this will open three <A HREF="#windows">windows</A>, split horizontally:
 <B>	vim -o file1 file2 file3</B>
 
 &quot;-oN&quot;, where N is a decimal number, opens N <A HREF="#windows">windows</A> split horizontally.  If
@@ -173,7 +173,7 @@ last few <A HREF="#windows">windows</A> will be editing empty <A HREF="#buffers"
 <A HREF="#windows">windows</A> split vertically, with the same restrictions.
 
 If there are many file names, the <A HREF="#windows">windows</A> will become very small.  You might
-want to set the <A HREF="options.html#'winheight'">'winheight'</A> and/or <A HREF="options.html#'winwidth'">'winwidth'</A> <A HREF="options.html#options">options</A> to create a workable
+want to set the <A HREF="options.html#'winheight'">'winheight'</A> and/or <A HREF="options.html#'winwidth'">'winwidth'</A> <A HREF="options\.html#options">选项</A> to create a workable
 situation.
 
 Buf/Win Enter/Leave |<A HREF="autocmd.html#autocommand">autocommand</A>|<A HREF="change.html#s">s</A> are not executed when opening the new
@@ -324,7 +324,7 @@ the filler characters.
 		Detach the current <A HREF="#window">window</A> <A HREF="motion.html#as">as</A> an external <A HREF="#window">window</A>.
 		Only available when using an <A HREF="ui.html#UI">UI</A> with |<A HREF="ui.html#ui-multigrid">ui-multigrid</A>| support.
 
-Note that the <A HREF="options.html#'splitbelow'">'splitbelow'</A> and <A HREF="options.html#'splitright'">'splitright'</A> <A HREF="options.html#options">options</A> influence where a new
+Note that the <A HREF="options.html#'splitbelow'">'splitbelow'</A> and <A HREF="options.html#'splitright'">'splitright'</A> <A HREF="options\.html#options">选项</A> influence where a new
 <A HREF="#window">window</A> will appear.
 
 								*<A NAME="E36"></A><B>E36</B>*
@@ -498,7 +498,7 @@ Closing a <A HREF="#window">window</A>
 		When <A HREF="options.html#'hidden'">'hidden'</A> is not set, and the <A HREF="options.html#'autowrite'">'autowrite'</A> option is set,
 		modified <A HREF="#buffers">buffers</A> are written.  Otherwise, <A HREF="#windows">windows</A> that have
 		<A HREF="#buffers">buffers</A> that are modified are not removed, unless the [!] is
-		given, then they become hidden.  But modified <A HREF="#buffers">buffers</A> are
+		given然后they become hidden.  But modified <A HREF="#buffers">buffers</A> are
 		never abandoned, so changes cannot get lost.
 
 ==============================================================================
@@ -619,7 +619,7 @@ These commands can also be executed with &quot;<A HREF="#:wincmd">:wincmd</A>&qu
 		exchange is only done in the row or column of <A HREF="#windows">windows</A> that the
 		current <A HREF="#window">window</A> is in.
 
-The following commands can be used to change the <A HREF="#window">window</A> layout.  For example,
+The following commands can be used to change the <A HREF="#window">window</A> layout.例如,
 when there are two vertically split <A HREF="#windows">windows</A>, <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="various.html#K">K</A> will change that in
 horizontally split <A HREF="#windows">windows</A>.  <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#H">H</A> does <A HREF="motion.html#it">它</A> the other way around.
 
@@ -735,7 +735,7 @@ have manually resized a vertically split <A HREF="#window">window</A> and want t
 Likewise, &quot;hor&quot; causes only the widths of <A HREF="#windows">windows</A> to be equalized.
 
 The option <A HREF="options.html#'cmdheight'">'cmdheight'</A> ('ch') is used to set the height of the command-line.
-If you are annoyed by the |<A HREF="message.html#hit-enter">hit-enter</A>| prompt for long <A HREF="message.html#messages">messages</A>, set this
+If you are annoyed by the |<A HREF="message.html#hit-enter">hit-enter</A>| prompt for long <A HREF="message.html#messages">信息</A>, set this
 option to 2 or 3.
 
 If there is only one <A HREF="#window">window</A>, resizing that <A HREF="#window">window</A> will also change the command
@@ -748,7 +748,7 @@ The minimal height and width of a <A HREF="#window">window</A> is set with <A HR
 
 ==============================================================================
 
-7. Argument and buffer <A HREF="eval.html#list">list</A> commands			*<A NAME="buffer-list"></A><B>buffer-list</B>*
+7. Argument and buffer <A HREF="eval.html#list">列表</A> commands			*<A NAME="buffer-list"></A><B>buffer-list</B>*
 
 <B><FONT color="#3A6F2B">      args list		       buffer list	   meaning </FONT></B>
 1. :[N]argument [N]	11. :[N]buffer [N]	to arg/buf N
@@ -772,8 +772,8 @@ The minimal height and width of a <A HREF="#window">window</A> is set with <A HR
 			38. <A HREF="#:sunhide">:sunhide</A>		edit all loaded <A HREF="#buffers">buffers</A>
 			39. :[N]sbmod [N]	split + to Nth modified buf
 
-40. <A HREF="editing.html#:args">:args</A>		<A HREF="eval.html#list">list</A> of arguments
-41. <A HREF="#:buffers">:buffers</A>		<A HREF="eval.html#list">list</A> of <A HREF="#buffers">buffers</A>
+40. <A HREF="editing.html#:args">:args</A>		<A HREF="eval.html#list">列表</A> of arguments
+41. <A HREF="#:buffers">:buffers</A>		<A HREF="eval.html#list">列表</A> of <A HREF="#buffers">buffers</A>
 
 The meaning of [N] depends on the command:
  [N] is the number of <A HREF="#buffers">buffers</A> to go forward/backward on 2/12/22/32,
@@ -782,21 +782,21 @@ The meaning of [N] depends on the command:
  [N] is a buffer number, defaulting to current buffer, for 11 and 31
  [N] is a <A HREF="intro.html#count">count</A> for 19 and 39
 
-Note: &quot;<A HREF="editing.html#:next">:next</A>&quot; is an exception, because <A HREF="motion.html#it">它</A> must accept a <A HREF="eval.html#list">list</A> of file names
+Note: &quot;<A HREF="editing.html#:next">:next</A>&quot; is an exception, because <A HREF="motion.html#it">它</A> must accept a <A HREF="eval.html#list">列表</A> of file names
 for compatibility with <A HREF="intro.html#Vi">Vi</A>.
 
 
-The argument <A HREF="eval.html#list">list</A> and multiple <A HREF="#windows">windows</A>
+The argument <A HREF="eval.html#list">列表</A> and multiple <A HREF="#windows">windows</A>
 
-The current position in the argument <A HREF="eval.html#list">list</A> can be different for each <A HREF="#window">window</A>.
-Remember that when doing &quot;<A HREF="editing.html#:e">:e</A> file&quot;, the position in the argument <A HREF="eval.html#list">list</A> stays
+The current position in the argument <A HREF="eval.html#list">列表</A> can be different for each <A HREF="#window">window</A>.
+Remember that when doing &quot;<A HREF="editing.html#:e">:e</A> file&quot;, the position in the argument <A HREF="eval.html#list">列表</A> stays
 the same, but you are not editing the file at that position.  To indicate
 this, the file message (and the title, if you have one) shows
-&quot;(file (N) of M)&quot;, where &quot;(N)&quot; is the current position in the file <A HREF="eval.html#list">list</A>, and
-&quot;<A HREF="motion.html#M">M</A>&quot; the number of files in the file <A HREF="eval.html#list">list</A>.
+&quot;(file (N) of M)&quot;, where &quot;(N)&quot; is the current position in the file <A HREF="eval.html#list">列表</A>, and
+&quot;<A HREF="motion.html#M">M</A>&quot; the number of files in the file <A HREF="eval.html#list">列表</A>.
 
-All the entries in the argument <A HREF="eval.html#list">list</A> are added to the buffer <A HREF="eval.html#list">list</A>.  Thus, you
-can also get to them with the buffer <A HREF="eval.html#list">list</A> commands, like &quot;<A HREF="#:bnext">:bnext</A>&quot;.
+All the entries in the argument <A HREF="eval.html#list">列表</A> are added to the buffer <A HREF="eval.html#list">列表</A>.  Thus, you
+can also get to them with the buffer <A HREF="eval.html#list">列表</A> commands, like &quot;<A HREF="#:bnext">:bnext</A>&quot;.
 
 
 :[N]al[l][!] [N]				*<A NAME=":al"></A><B>:al</B>* *<A NAME=":all"></A><B>:all</B>* *<A NAME=":sal"></A><B>:sal</B>* *<A NAME=":sall"></A><B>:sall</B>*
@@ -812,7 +812,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 		When <A HREF="options.html#'hidden'">'hidden'</A> is not set, and the <A HREF="options.html#'autowrite'">'autowrite'</A> option is set,
 		modified <A HREF="#buffers">buffers</A> are written.  Otherwise, <A HREF="#windows">windows</A> that have
 		<A HREF="#buffers">buffers</A> that are modified are not removed, unless the [!] is
-		given, then they become hidden.  But modified <A HREF="#buffers">buffers</A> are
+		given然后they become hidden.  But modified <A HREF="#buffers">buffers</A> are
 		never abandoned, so changes cannot get lost.
 		[N] is the maximum number of <A HREF="#windows">windows</A> to open.  <A HREF="options.html#'winheight'">'winheight'</A>
 		also <A HREF="vi_diff.html#limits">limits</A> the number of <A HREF="#windows">windows</A> opened ('winwidth' if
@@ -847,7 +847,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 						*<A NAME=":sre"></A><B>:sre</B>* *<A NAME=":srewind"></A><B>:srewind</B>*
 :sre[wind][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A>
 		Short for &quot;<A HREF="#:split">:split</A> &#124; rewind&quot;: split <A HREF="#window">window</A> and go to first
-		argument.  But when there is no argument <A HREF="eval.html#list">list</A>, the <A HREF="#window">window</A> is
+		argument.  But when there is no argument <A HREF="eval.html#list">列表</A>, the <A HREF="#window">window</A> is
 		not split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
@@ -859,7 +859,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 						*<A NAME=":sla"></A><B>:sla</B>* *<A NAME=":slast"></A><B>:slast</B>*
 :sla[st][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A>
 		Short for &quot;<A HREF="#:split">:split</A> &#124; last&quot;: split <A HREF="#window">window</A> and go to last
-		argument.  But when there is no argument <A HREF="eval.html#list">list</A>, the <A HREF="#window">window</A> is
+		argument.  But when there is no argument <A HREF="eval.html#list">列表</A>, the <A HREF="#window">window</A> is
 		not split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
@@ -871,7 +871,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 		- If the file is not open in a <A HREF="#window">window</A> edit the file in the
 		  current <A HREF="#window">window</A>.  If the current buffer can't be YXXYabandon|ed,
 		  the <A HREF="#window">window</A> is split first.
-		- Windows that are not in the argument <A HREF="eval.html#list">list</A> or are not full
+		- Windows that are not in the argument <A HREF="eval.html#list">列表</A> or are not full
 		  width will be closed if possible.
 		The |<A HREF="editing.html#argument-list">argument-list</A>| is set, like with the |<A HREF="editing.html#:next">:next</A>| command.
 		The purpose of this command is that <A HREF="motion.html#it">它</A> can be used from a
@@ -906,7 +906,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 
 
 							*<A NAME=":bufdo"></A><B>:bufdo</B>*
-:[range]bufdo[!] {cmd}	Execute {cmd} in each buffer in the buffer <A HREF="eval.html#list">list</A> or if
+:[range]bufdo[!] {cmd}	Execute {cmd} in each buffer in the buffer <A HREF="eval.html#list">列表</A> or if
 			<A HREF="cmdline.html#[range]">[range]</A> is given only for <A HREF="#buffers">buffers</A> for which their
 			buffer number is in the <A HREF="cmdline.html#[range]">[range]</A>. It works like doing
 			this:
@@ -924,7 +924,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 			the current buffer.
 			{cmd} can contain '&#124;' to concatenate several commands.
 			{cmd} must not delete <A HREF="#buffers">buffers</A> or add <A HREF="#buffers">buffers</A> to the
-			buffer <A HREF="eval.html#list">list</A>.
+			buffer <A HREF="eval.html#list">列表</A>.
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
 			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
@@ -980,7 +980,7 @@ the buffer.  The result is that all <A HREF="#buffers">buffers</A> will use the 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="scroll.html#CTRL-F">CTRL-F</A>	Split current <A HREF="#window">window</A> in two.  Edit file name under cursor.
 		Like &quot;<A HREF="#:split">:split</A> gf&quot;, but <A HREF="#window">window</A> isn't split if the file does not
 		exist.
-		Uses the <A HREF="options.html#'path'">'path'</A> variable <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">list</A> of directory names where to
+		Uses the <A HREF="options.html#'path'">'path'</A> variable <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">列表</A> of directory names where to
 		look for the file.  Also the path for current file is
 		used to search for the file name.
 		If the name is a hypertext link that looks like
@@ -1043,7 +1043,7 @@ option is set to have <A HREF="motion.html#it">它</A> keep the same height when
 		also |<A HREF="tagsrch.html#:tag">:tag</A>|.
 		See below for an example. |<A HREF="#CursorHold-example">CursorHold-example</A>|
 		Small difference from |:tag|: When [tagname] is equal to the
-		already displayed <A HREF="tagsrch.html#tag">标签</A>, the position in the matching <A HREF="tagsrch.html#tag">标签</A> <A HREF="eval.html#list">list</A>
+		already displayed <A HREF="tagsrch.html#tag">标签</A>, the position in the matching <A HREF="tagsrch.html#tag">标签</A> <A HREF="eval.html#list">列表</A>
 		is not reset.  This makes the <A HREF="autocmd.html#CursorHold">CursorHold</A> example work after a
 		|<A HREF="tagsrch.html#:ptnext">:ptnext</A>|.
 
@@ -1165,13 +1165,13 @@ write the file every time you get another buffer in a <A HREF="#window">window</
 							*<A NAME=":buffer-!"></A><B>:buffer-!</B>*
 If the option <A HREF="options.html#'hidden'">'hidden'</A> ('hid') is set, abandoned <A HREF="#buffers">buffers</A> are kept for all
 commands that start editing another file: &quot;<A HREF="editing.html#:edit">:edit</A>&quot;, &quot;<A HREF="editing.html#:next">:next</A>&quot;, &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;, etc.  The
-commands that move through the buffer <A HREF="eval.html#list">list</A> sometimes make the current buffer
+commands that move through the buffer <A HREF="eval.html#list">列表</A> sometimes make the current buffer
 hidden although the <A HREF="options.html#'hidden'">'hidden'</A> option is not set.  This happens when a buffer is
 modified, but is forced (with '<A HREF="change.html#!">!</A>') to be removed from a <A HREF="#window">window</A>, and
 <A HREF="options.html#'autowrite'">'autowrite'</A> is off or the buffer can't be written.
 
 You can make a hidden buffer not hidden by starting to edit <A HREF="motion.html#it">它</A> with any
-command, or by <A HREF="change.html#deleting">deleting</A> <A HREF="motion.html#it">它</A> with the &quot;<A HREF="#:bdelete">:bdelete</A>&quot; command.
+command, or by <A HREF="change.html#deleting">deleting</A> <A HREF="motion.html#it">它</A> with the &quot;<A HREF="#:bdelete">:bdelete</A>&quot;命令.
 
 The <A HREF="options.html#'hidden'">'hidden'</A> is global, <A HREF="motion.html#it">它</A> is used for all <A HREF="#buffers">buffers</A>.  The <A HREF="options.html#'bufhidden'">'bufhidden'</A> option
 can be used to make an exception for a specific buffer.  It can take these
@@ -1186,7 +1186,7 @@ values:
 							*<A NAME="hidden-quit"></A><B>hidden-quit</B>*
 When you try to quit Vim while there is a hidden, modified buffer, you will
 get an error message and Vim will make that buffer the current buffer.  You
-can then decide to write this buffer (&quot;:wq&quot;) or quit without <A HREF="editing.html#writing">writing</A> (&quot;:q!&quot;).
+can then decide to write this buffer (&quot;:wq&quot;) or quit without <A HREF="editing.html#writing">写</A> (&quot;:q!&quot;).
 Be careful: there may be more hidden, modified <A HREF="#buffers">buffers</A>!
 
 A buffer can also be unlisted.  This means <A HREF="motion.html#it">它</A> exists, but <A HREF="motion.html#it">它</A> is not in the
@@ -1204,7 +1204,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 <B><FONT color="#3A6F2B">			2u     "asdf"			line 0 </FONT></B>
 <B><FONT color="#3A6F2B">			3 %a + "version.c"		line 1 </FONT></B>
 
-		When the [!] is included the <A HREF="eval.html#list">list</A> will show unlisted <A HREF="#buffers">buffers</A>
+		When the [!] is included the <A HREF="eval.html#list">列表</A> will show unlisted <A HREF="#buffers">buffers</A>
 		(the term &quot;unlisted&quot; is a bit confusing then...).
 
 		Each buffer has a unique number.  That number will not change,
@@ -1252,7 +1252,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 						*<A NAME=":bad"></A><B>:bad</B>* *<A NAME=":badd"></A><B>:badd</B>*
 :bad[d]	[+lnum] {fname}
-		Add file name {fname} to the buffer <A HREF="eval.html#list">list</A>, without loading <A HREF="motion.html#it">它</A>,
+		Add file name {fname} to the buffer <A HREF="eval.html#list">列表</A>, without loading <A HREF="motion.html#it">它</A>,
 		if <A HREF="motion.html#it">它</A> wasn't listed yet.  If the buffer was previously
 		deleted, not wiped, <A HREF="motion.html#it">它</A> will be made listed again.
 		If &quot;lnum&quot; is specified, the cursor will be positioned at that
@@ -1269,12 +1269,12 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 :[N]bd[elete][!]			*<A NAME=":bd"></A><B>:bd</B>* *<A NAME=":bdel"></A><B>:bdel</B>* *<A NAME=":bdelete"></A><B>:bdelete</B>* *<A NAME="E516"></A><B>E516</B>*
 :bd[elete][!] [N]
 		Unload buffer [N] (default: current buffer) and delete <A HREF="motion.html#it">它</A> from
-		the buffer <A HREF="eval.html#list">list</A>.  If the buffer was changed, this fails,
+		the buffer <A HREF="eval.html#list">列表</A>.  If the buffer was changed, this fails,
 		unless when [!] is specified, in which <A HREF="change.html#case">case</A> changes are lost.
 		The file remains unaffected.  Any <A HREF="#windows">windows</A> for this buffer are
 		closed.  If buffer [N] is the current buffer, another buffer
 		will be displayed instead.  This is the most recent entry in
-		the jump <A HREF="eval.html#list">list</A> that points into a loaded buffer.
+		the jump <A HREF="eval.html#list">列表</A> that points into a loaded buffer.
 		Actually, the buffer isn't completely deleted, <A HREF="motion.html#it">它</A> is removed
 		from the buffer list |<A HREF="#unlisted-buffer">unlisted-buffer</A>| and option values,
 		<A HREF="eval.html#variables">variables</A> and mappings/abbreviations for the buffer are
@@ -1315,12 +1315,12 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 :bun[load][!] [N]
 		Unload buffer [N] (default: current buffer).  The memory
 		allocated for this buffer will be freed.  The buffer remains
-		in the buffer <A HREF="eval.html#list">list</A>.
+		in the buffer <A HREF="eval.html#list">列表</A>.
 		If the buffer was changed, this fails, unless when [!] is
 		specified, in which <A HREF="change.html#case">case</A> the changes are lost.
 		Any <A HREF="#windows">windows</A> for this buffer are closed.  If buffer [N] is the
 		current buffer, another buffer will be displayed instead.
-		This is the most recent entry in the jump <A HREF="eval.html#list">list</A> that points
+		This is the most recent entry in the jump <A HREF="eval.html#list">列表</A> that points
 		into a loaded buffer.
 
 :bunload[!] <A HREF="#{bufname}">{bufname}</A>
@@ -1338,38 +1338,38 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 
 :[N]b[uffer][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]		*<A NAME=":b"></A><B>:b</B>* *<A NAME=":bu"></A><B>:bu</B>* *<A NAME=":buf"></A><B>:buf</B>* *<A NAME=":buffer"></A><B>:buffer</B>* *<A NAME="E86"></A><B>E86</B>*
-		Edit buffer [N] from the buffer <A HREF="eval.html#list">list</A>.  If [N] is not given,
+		Edit buffer [N] from the buffer <A HREF="eval.html#list">列表</A>.  If [N] is not given,
 		the current buffer remains being edited.  见 |<A HREF="#:buffer-!">:buffer-!</A>| for
 		[!].  This will also edit a buffer that is not in the buffer
-		<A HREF="eval.html#list">list</A>, without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
+		<A HREF="eval.html#list">列表</A>, without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]b[uffer][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="#{bufname}">{bufname}</A>				*<A NAME="{bufname}"></A><B>{bufname}</B>*
-		Edit buffer for <A HREF="#{bufname}">{bufname}</A> from the buffer <A HREF="eval.html#list">list</A>.  A partial
-		name also works, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> is unique in the <A HREF="eval.html#list">list</A> of
+		Edit buffer for <A HREF="#{bufname}">{bufname}</A> from the buffer <A HREF="eval.html#list">列表</A>.  A partial
+		name also works, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> is unique in the <A HREF="eval.html#list">列表</A> of
 		<A HREF="#buffers">buffers</A>.
 		Note that a buffer whose name is a number cannot be referenced
 		by that name; use the buffer number instead.
 		<A HREF="insert.html#Insert">Insert</A> a <A HREF="intro.html#backslash">backslash</A> before a space in a buffer name.
 		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
-		This will also edit a buffer that is not in the buffer <A HREF="eval.html#list">list</A>,
+		This will also edit a buffer that is not in the buffer <A HREF="eval.html#list">列表</A>,
 		without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]sb[uffer] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]				*<A NAME=":sb"></A><B>:sb</B>* *<A NAME=":sbuffer"></A><B>:sbuffer</B>*
-		Split <A HREF="#window">window</A> and edit buffer [N] from the buffer <A HREF="eval.html#list">list</A>.  If [N]
+		Split <A HREF="#window">window</A> and edit buffer [N] from the buffer <A HREF="eval.html#list">列表</A>.  If [N]
 		is not given, the current buffer is edited.  Respects the
 		&quot;useopen&quot; setting of <A HREF="options.html#'switchbuf'">'switchbuf'</A> when splitting.  This will
-		also edit a buffer that is not in the buffer <A HREF="eval.html#list">list</A>, without
+		also edit a buffer that is not in the buffer <A HREF="eval.html#list">列表</A>, without
 		setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 :[N]sb[uffer] <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="#{bufname}">{bufname}</A>
 		Split <A HREF="#window">window</A> and edit buffer for |<A HREF="#{bufname}">{bufname}</A>| from the buffer
-		<A HREF="eval.html#list">list</A>.  This will also edit a buffer that is not in the buffer
-		<A HREF="eval.html#list">list</A>, without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
+		<A HREF="eval.html#list">列表</A>.  This will also edit a buffer that is not in the buffer
+		<A HREF="eval.html#list">列表</A>, without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
 		Note: If what you want to <A HREF="diff.html#do">do</A> is split the buffer, make a copy
 		under another name, you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> this way:
 <B>			:w foobar | sp #</B>
@@ -1377,8 +1377,8 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 
 :[N]bn[ext][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]				*<A NAME=":bn"></A><B>:bn</B>* *<A NAME=":bnext"></A><B>:bnext</B>* *<A NAME="E87"></A><B>E87</B>*
-		Go to [N]th next buffer in buffer <A HREF="eval.html#list">list</A>.  [N] defaults to one.
-		Wraps around the end of the buffer <A HREF="eval.html#list">list</A>.
+		Go to [N]th next buffer in buffer <A HREF="eval.html#list">列表</A>.  [N] defaults to one.
+		Wraps around the end of the buffer <A HREF="eval.html#list">列表</A>.
 		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 		If you are in a help buffer, this takes you to the next help
@@ -1391,29 +1391,29 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 							*<A NAME=":sbn"></A><B>:sbn</B>* *<A NAME=":sbnext"></A><B>:sbnext</B>*
 :[N]sbn[ext] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]
-		Split <A HREF="#window">window</A> and go to [N]th next buffer in buffer <A HREF="eval.html#list">list</A>.
-		Wraps around the end of the buffer <A HREF="eval.html#list">list</A>.  Uses <A HREF="options.html#'switchbuf'">'switchbuf'</A>
+		Split <A HREF="#window">window</A> and go to [N]th next buffer in buffer <A HREF="eval.html#list">列表</A>.
+		Wraps around the end of the buffer <A HREF="eval.html#list">列表</A>.  Uses <A HREF="options.html#'switchbuf'">'switchbuf'</A>
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]bN[ext][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]		*<A NAME=":bN"></A><B>:bN</B>* *<A NAME=":bNext"></A><B>:bNext</B>* *<A NAME=":bp"></A><B>:bp</B>* *<A NAME=":bprevious"></A><B>:bprevious</B>* *<A NAME="E88"></A><B>E88</B>*
 :[N]bp[revious][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]
-		Go to [N]th previous buffer in buffer <A HREF="eval.html#list">list</A>.  [N] defaults to
-		one.  Wraps around the start of the buffer <A HREF="eval.html#list">list</A>.
+		Go to [N]th previous buffer in buffer <A HREF="eval.html#list">列表</A>.  [N] defaults to
+		one.  Wraps around the start of the buffer <A HREF="eval.html#list">列表</A>.
 		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!] and <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]sbN[ext] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]			*<A NAME=":sbN"></A><B>:sbN</B>* *<A NAME=":sbNext"></A><B>:sbNext</B>* *<A NAME=":sbp"></A><B>:sbp</B>* *<A NAME=":sbprevious"></A><B>:sbprevious</B>*
 :[N]sbp[revious] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]
-		Split <A HREF="#window">window</A> and go to [N]th previous buffer in buffer <A HREF="eval.html#list">list</A>.
-		Wraps around the start of the buffer <A HREF="eval.html#list">list</A>.
+		Split <A HREF="#window">window</A> and go to [N]th previous buffer in buffer <A HREF="eval.html#list">列表</A>.
+		Wraps around the start of the buffer <A HREF="eval.html#list">列表</A>.
 		Uses <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :br[ewind][!] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":br"></A><B>:br</B>* *<A NAME=":bre"></A><B>:bre</B>* *<A NAME=":brewind"></A><B>:brewind</B>*
-		Go to first buffer in buffer <A HREF="eval.html#list">list</A>.  If the buffer <A HREF="eval.html#list">list</A> is
+		Go to first buffer in buffer <A HREF="eval.html#list">列表</A>.  If the buffer <A HREF="eval.html#list">列表</A> is
 		empty, go to the first unlisted buffer.
 		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
 
@@ -1424,8 +1424,8 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 
 :sbr[ewind] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":sbr"></A><B>:sbr</B>* *<A NAME=":sbrewind"></A><B>:sbrewind</B>*
-		Split <A HREF="#window">window</A> and go to first buffer in buffer <A HREF="eval.html#list">list</A>.  If the
-		buffer <A HREF="eval.html#list">list</A> is empty, go to the first unlisted buffer.
+		Split <A HREF="#window">window</A> and go to first buffer in buffer <A HREF="eval.html#list">列表</A>.  If the
+		buffer <A HREF="eval.html#list">列表</A> is empty, go to the first unlisted buffer.
 		Respects the <A HREF="options.html#'switchbuf'">'switchbuf'</A> option.
 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
@@ -1435,14 +1435,14 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 
 :bl[ast][!] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":bl"></A><B>:bl</B>* *<A NAME=":blast"></A><B>:blast</B>*
-		Go to last buffer in buffer <A HREF="eval.html#list">list</A>.  If the buffer <A HREF="eval.html#list">list</A> is
+		Go to last buffer in buffer <A HREF="eval.html#list">列表</A>.  If the buffer <A HREF="eval.html#list">列表</A> is
 		empty, go to the last unlisted buffer.
 		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
 
 
 :sbl[ast] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":sbl"></A><B>:sbl</B>* *<A NAME=":sblast"></A><B>:sblast</B>*
-		Split <A HREF="#window">window</A> and go to last buffer in buffer <A HREF="eval.html#list">list</A>.  If the
-		buffer <A HREF="eval.html#list">list</A> is empty, go to the last unlisted buffer.
+		Split <A HREF="#window">window</A> and go to last buffer in buffer <A HREF="eval.html#list">列表</A>.  If the
+		buffer <A HREF="eval.html#list">列表</A> is empty, go to the last unlisted buffer.
 		Respects <A HREF="options.html#'switchbuf'">'switchbuf'</A> option.
 
 
@@ -1455,19 +1455,19 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 :[N]sbm[odified] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]				*<A NAME=":sbm"></A><B>:sbm</B>* *<A NAME=":sbmodified"></A><B>:sbmodified</B>*
 		Split <A HREF="#window">window</A> and go to [N]th next modified buffer.
 		Respects <A HREF="options.html#'switchbuf'">'switchbuf'</A> option.
-		Note: this command also finds <A HREF="#buffers">buffers</A> not in the buffer <A HREF="eval.html#list">list</A>.
+		Note: this command also finds <A HREF="#buffers">buffers</A> not in the buffer <A HREF="eval.html#list">列表</A>.
 
 
 :[N]unh[ide] [N]			*<A NAME=":unh"></A><B>:unh</B>* *<A NAME=":unhide"></A><B>:unhide</B>* *<A NAME=":sun"></A><B>:sun</B>* *<A NAME=":sunhide"></A><B>:sunhide</B>*
 :[N]sun[hide] [N]
 		Rearrange the screen to open one <A HREF="#window">window</A> for each loaded buffer
-		in the buffer <A HREF="eval.html#list">list</A>.  When a <A HREF="intro.html#count">count</A> is given, this is the
+		in the buffer <A HREF="eval.html#list">列表</A>.  When a <A HREF="intro.html#count">count</A> is given, this is the
 		maximum number of <A HREF="#windows">windows</A> to open.
 
 
 :[N]ba[ll] [N]					*<A NAME=":ba"></A><B>:ba</B>* *<A NAME=":ball"></A><B>:ball</B>* *<A NAME=":sba"></A><B>:sba</B>* *<A NAME=":sball"></A><B>:sball</B>*
 :[N]sba[ll] [N]	Rearrange the screen to open one <A HREF="#window">window</A> for each buffer in
-		the buffer <A HREF="eval.html#list">list</A>.  When a <A HREF="intro.html#count">count</A> is given, this is the maximum
+		the buffer <A HREF="eval.html#list">列表</A>.  When a <A HREF="intro.html#count">count</A> is given, this is the maximum
 		number of <A HREF="#windows">windows</A> to open.  <A HREF="options.html#'winheight'">'winheight'</A> also <A HREF="vi_diff.html#limits">limits</A> the number
 		of <A HREF="#windows">windows</A> opened ('winwidth' if |<A HREF="#:vertical">:vertical</A>| was prepended).
 		Buf/Win Enter/Leave autocommands are not executed for the new
@@ -1476,7 +1476,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 		new <A HREF="intro.html#tab">tab</A>, up to <A HREF="options.html#'tabpagemax'">'tabpagemax'</A>.
 
 Note: All the commands above that start editing another buffer, keep the
-<A HREF="options.html#'readonly'">'readonly'</A> flag <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was.  This differs from the &quot;<A HREF="editing.html#:edit">:edit</A>&quot; command, which sets
+<A HREF="options.html#'readonly'">'readonly'</A> flag <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was.  This differs from the &quot;<A HREF="editing.html#:edit">:edit</A>&quot;命令, which sets
 the <A HREF="options.html#'readonly'">'readonly'</A> flag each time the file is read.
 
 ==============================================================================
@@ -1484,16 +1484,16 @@ the <A HREF="options.html#'readonly'">'readonly'</A> flag each time the file is 
 12. Special kinds of <A HREF="#buffers">buffers</A>			*<A NAME="special-buffers"></A><B>special-buffers</B>*
 
 Instead of containing the text of a file, <A HREF="#buffers">buffers</A> can also be used for other
-purposes.  A few <A HREF="options.html#options">options</A> can be set to change the behavior of a buffer:
+purposes.  A few <A HREF="options\.html#options">选项</A> can be set to change the behavior of a buffer:
 	<A HREF="options.html#'bufhidden'">'bufhidden'</A>	what happens when the buffer is no longer displayed
 			in a <A HREF="#window">window</A>.
 	<A HREF="options.html#'buftype'">'buftype'</A>	what kind of a buffer this is
 	<A HREF="options.html#'swapfile'">'swapfile'</A>	whether the buffer will have a swap file
-	<A HREF="options.html#'buflisted'">'buflisted'</A>	buffer shows up in the buffer <A HREF="eval.html#list">list</A>
+	<A HREF="options.html#'buflisted'">'buflisted'</A>	buffer shows up in the buffer <A HREF="eval.html#list">列表</A>
 
 A few useful kinds of a buffer:
 
-<A HREF="quickfix.html#quickfix">quickfix</A>	Used to contain the error <A HREF="eval.html#list">list</A> or the location <A HREF="eval.html#list">list</A>.  See
+<A HREF="quickfix.html#quickfix">quickfix</A>	Used to contain the error <A HREF="eval.html#list">列表</A> or the location <A HREF="eval.html#list">列表</A>.  See
 		|<A HREF="quickfix.html#:cwindow">:cwindow</A>| and |<A HREF="quickfix.html#:lwindow">:lwindow</A>|.  This command sets the <A HREF="options.html#'buftype'">'buftype'</A>
 		option to &quot;<A HREF="quickfix.html#quickfix">quickfix</A>&quot;.  You are not supposed to change this!
 		<A HREF="options.html#'swapfile'">'swapfile'</A> is off.
@@ -1527,9 +1527,9 @@ scratch		Contains text that can be discarded at any time.  It is kept
 
 
 						*<A NAME="unlisted-buffer"></A><B>unlisted-buffer</B>*
-unlisted	The buffer is not in the buffer <A HREF="eval.html#list">list</A>.  It is not used for
+unlisted	The buffer is not in the buffer <A HREF="eval.html#list">列表</A>.  It is not used for
 		normal editing, but to show a help file, remember a file name
-		or marks.  The &quot;<A HREF="#:bdelete">:bdelete</A>&quot; command will also set this option,
+		or marks.  The &quot;<A HREF="#:bdelete">:bdelete</A>&quot;命令 will also set this option,
 		thus <A HREF="motion.html#it">它</A> doesn't completely delete the buffer.  Settings:
 <B>			:setlocal nobuflisted</B>
  

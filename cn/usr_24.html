@@ -122,7 +122,7 @@ the first non-blank to the cursor is deleted.  With the cursor on the &quot;<A H
 <B><FONT color="#3A6F2B">	fallen to the </FONT></B>
 
 When you spot a mistake a few words back, you need to move the cursor there to
-correct <A HREF="motion.html#it">它</A>.  For example, you typed this:
+correct <A HREF="motion.html#it">它</A>.例如, you typed this:
 
 <B><FONT color="#3A6F2B">	The horse had follen to the ground </FONT></B>
 
@@ -151,7 +151,7 @@ This uses special keys to move around, while remaining in <A HREF="intro.html#In
 resembles what you would <A HREF="diff.html#do">do</A> in a modeless editor.  It's easier to remember,
 but takes more time (you have to move your hand from the letters to the cursor
 keys, and the <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A> key is hard to press without looking at the keyboard).
-   These special keys are most useful when <A HREF="editing.html#writing">writing</A> a <A HREF="map.html#mapping">mapping</A> that doesn't
+   These special keys are most useful when <A HREF="editing.html#writing">写</A> a <A HREF="map.html#mapping">mapping</A> that doesn't
 leave <A HREF="intro.html#Insert">插入</A>模式.  The extra typing doesn't matter then.
    An overview of the keys you can use in <A HREF="intro.html#Insert">插入</A>模式:
 
@@ -296,7 +296,7 @@ takes you to sub_exit.c.  The results:
 <B><FONT color="#3A6F2B">	The exit code is in the file sub_exit.c </FONT></B>
 
 If the file name starts with / (Unix) or C:\ (MS-Windows) you can find all
-files in the file system.  For example, type &quot;/u&quot; and <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-F">CTRL-F</A>.  This
+files in the file system.例如, type &quot;/u&quot; and <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-F">CTRL-F</A>.  This
 will match &quot;/usr&quot; (this is on Unix):
 
 <B><FONT color="#3A6F2B">	the file is found in /usr/ </FONT></B>
@@ -324,7 +324,7 @@ source:
 <B><FONT color="#3A6F2B">	    struct foo *p; </FONT></B>
 <B><FONT color="#3A6F2B">	    p-&gt; </FONT></B>
 
-The cursor is after &quot;p-&gt;&quot;.  Now type <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-O">CTRL-O</A>.  Vim will offer you a <A HREF="eval.html#list">list</A>
+The cursor is after &quot;p-&gt;&quot;.  Now type <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-O">CTRL-O</A>.  Vim will offer you a <A HREF="eval.html#list">列表</A>
 of alternatives, which are the items that &quot;struct foo&quot; contains.  That is
 quite different from using <A HREF="motion.html#CTRL-P">CTRL-P</A>, which would complete any <A HREF="motion.html#word">单词</A>, while only
 members of &quot;struct foo&quot; are valid here.
@@ -385,7 +385,7 @@ way of doing exactly the same insertion again.
 *<A NAME="24.5"></A><B>24.5</B>*	Copying from another line
 
 The <A HREF="scroll.html#CTRL-Y">CTRL-Y</A> command inserts the character above the cursor.  This is useful
-when you are duplicating a previous line.  For example, you have this line of
+when you are duplicating a previous line.例如, you have this line of
 C code:
 
 <B><FONT color="#3A6F2B">	b_array[i]-&gt;s_next = a_array[i]-&gt;s_next; </FONT></B>
@@ -417,7 +417,7 @@ cursor.
 *<A NAME="24.6"></A><B>24.6</B>*	Inserting a <A HREF="intro.html#register">register</A>
 
 The command <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A> inserts the contents of the <A HREF="intro.html#register">register</A>.  This is
-useful to avoid having to type a long <A HREF="motion.html#word">单词</A>.  For example, you need to type
+useful to avoid having to type a long <A HREF="motion.html#word">单词</A>.例如, you need to type
 this:
 
 <B><FONT color="#3A6F2B">	r = VeryLongFunction(a) + VeryLongFunction(b) + VeryLongFunction(c) </FONT></B>
@@ -499,18 +499,18 @@ characters: <A HREF="change.html#&lt;">&lt;</A>, <A HREF="change.html#S">S</A>, 
 
 FIXING TYPING MISTAKES
 
-It's very common to make the same typing mistake every time.  For example,
+It's very common to make the same typing mistake every time.例如,
 typing &quot;teh&quot; instead of &quot;the&quot;.  You can fix this with an abbreviation:
 
 <B>	:abbreviate teh the</B>
 
-You can add a whole <A HREF="eval.html#list">list</A> of these.  Add one each time you discover a common
+You can add a whole <A HREF="eval.html#list">列表</A> of these.  Add one each time you discover a common
 mistake.
 
 
 LISTING ABBREVIATIONS
 
-The &quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot; command lists the <A HREF="map.html#abbreviations">abbreviations</A>:
+The &quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot;命令 lists the <A HREF="map.html#abbreviations">abbreviations</A>:
 
 	<A HREF="map.html#:abbreviate">:abbreviate</A>
 	<A HREF="insert.html#i">i</A>  #e		  ****************************************/
@@ -526,7 +526,7 @@ only active in <A HREF="intro.html#Insert">插入</A>模式.  Other possible cha
 	!	both <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">命令行</A>模式	<A HREF="map.html#:abbreviate">:abbreviate</A>
 
 Since <A HREF="map.html#abbreviations">abbreviations</A> are not often useful in <A HREF="cmdline.html#Command-line">命令行</A>模式, you will mostly
-use the &quot;<A HREF="map.html#:iabbrev">:iabbrev</A>&quot; command.  That avoids, for example, that &quot;ad&quot; gets expanded
+use the &quot;<A HREF="map.html#:iabbrev">:iabbrev</A>&quot;命令.  That avoids, for example, that &quot;ad&quot; gets expanded
 when typing a command like:
 
 <B>	:edit ad</B>
@@ -534,7 +534,7 @@ when typing a command like:
 
 DELETING ABBREVIATIONS
 
-To get rid of an abbreviation, use the &quot;<A HREF="map.html#:unabbreviate">:unabbreviate</A>&quot; command.  Suppose you
+To get rid of an abbreviation, use the &quot;<A HREF="map.html#:unabbreviate">:unabbreviate</A>&quot;命令.  Suppose you
 have the following abbreviation:
 
 <B>	:abbreviate @f fresh</B>
@@ -558,14 +558,14 @@ abbreviation for &quot;fresh&quot;, but that's very unlikely).
 REMAPPING ABBREVIATIONS
 
 There is one thing to watch out for when defining an abbreviation: The
-resulting <A HREF="eval.html#string">string</A> should not be mapped.  For example:
+resulting <A HREF="options\.html#options">字符串</A> should not be mapped.例如:
 
 <B>	:abbreviate @a adder</B>
 <B>	:imap dd disk-door</B>
 
 When you now type @a, you will get &quot;adisk-doorer&quot;.  That's not what you want.
-To avoid this, use the &quot;<A HREF="map.html#:noreabbrev">:noreabbrev</A>&quot; command.  It does the same <A HREF="motion.html#as">as</A>
-&quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot;, but avoids that the resulting <A HREF="eval.html#string">string</A> is used for mappings:
+To avoid this, use the &quot;<A HREF="map.html#:noreabbrev">:noreabbrev</A>&quot;命令.  It does the same <A HREF="motion.html#as">as</A>
+&quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot;, but avoids that the resulting <A HREF="options\.html#options">字符串</A> is used for mappings:
 
 <B>	:noreabbrev @a adder</B>
 
@@ -590,7 +590,7 @@ the space after <A HREF="visual.html#CTRL-V">CTRL-V</A>, it's only to make this 
 	terminals, because <A HREF="motion.html#it">它</A> has a special meaning.
 
 You can also use the command <A HREF="visual.html#CTRL-V">CTRL-V</A> {digits} to insert a character with the
-decimal number {digits}.  For example, the character number 127 is the <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A>
+decimal number {digits}.例如, the character number 127 is the <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A>
 character (but not necessarily the <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A> key!).  To insert <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A> type:
 
 <B>	CTRL-V 127</B>
@@ -620,7 +620,7 @@ a 16 bit and a 32 bit number (e.g., for a <A HREF="mbyte.html#Unicode">Unicode</
 
 *<A NAME="24.9"></A><B>24.9</B>*	<A HREF="digraph.html#Digraphs">Digraphs</A>
 
-Some characters are not on the keyboard.  For example, the <A HREF="uganda.html#copyright">copyright</A> character
+Some characters are not on the keyboard.例如, the <A HREF="uganda.html#copyright">copyright</A> character
 (©).  To type these characters in Vim, you use <A HREF="digraph.html#digraphs">digraphs</A>, where two characters
 represent one.  To enter a ©, for example, you press three keys:
 
@@ -639,7 +639,7 @@ Vim will display the <A HREF="digraph.html#digraph">digraph</A> table.  Here are
 This shows, for example, that the <A HREF="digraph.html#digraph">digraph</A> you get by typing CTRL-K Pd is the
 character (£).  This is character number 163 (decimal).
    Pd is short for Pound.  Most <A HREF="digraph.html#digraphs">digraphs</A> are selected to give you a hint about
-the character they will produce.  If you look through the <A HREF="eval.html#list">list</A> you will
+the character they will produce.  If you look through the <A HREF="eval.html#list">列表</A> you will
 understand the logic.
    You can exchange the first and second character, if there is no <A HREF="digraph.html#digraph">digraph</A> for
 that combination.  Thus CTRL-K dP also works.  Since there is no <A HREF="digraph.html#digraph">digraph</A> for
@@ -671,7 +671,7 @@ here: |<A HREF="usr_45.html#45.5">45.5</A>|
 more.  When you want to use one, you usually leave <A HREF="intro.html#Insert">插入</A>模式 with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>,
 execute the <A HREF="intro.html#Normal">正常</A>模式 command, and re-enter <A HREF="intro.html#Insert">插入</A>模式 with &quot;<A HREF="insert.html#i">i</A>&quot; or &quot;<A HREF="insert.html#a">a</A>&quot;.
    There is a quicker way.  With <A HREF="motion.html#CTRL-O">CTRL-O</A> {command} you can execute any <A HREF="intro.html#Normal">Normal</A>
-mode command from <A HREF="intro.html#Insert">插入</A>模式.  For example, to delete from the cursor to the
+mode command from <A HREF="intro.html#Insert">插入</A>模式.例如, to delete from the cursor to the
 end of the line:
 
 <B>	CTRL-O D</B>

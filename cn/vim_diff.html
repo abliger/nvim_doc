@@ -131,7 +131,7 @@ centralized reference of the differences.
 - <A HREF="options.html#'listchars'">'listchars'</A> defaults to &quot;tab:&gt; ,trail:-,nbsp:+&quot;
 - <A HREF="options.html#'nrformats'">'nrformats'</A> defaults to &quot;bin,hex&quot;
 - <A HREF="options.html#'ruler'">'ruler'</A> is enabled
-- <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> includes &quot;unix,slash&quot;, excludes &quot;<A HREF="options.html#options">options</A>&quot;
+- <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> includes &quot;unix,slash&quot;, excludes &quot;<A HREF="options\.html#options">选项</A>&quot;
 - <A HREF="options.html#'shortmess'">'shortmess'</A> includes &quot;<A HREF="motion.html#F">F</A>&quot;, excludes &quot;<A HREF="change.html#S">S</A>&quot;
 - <A HREF="options.html#'showcmd'">'showcmd'</A> is enabled
 - <A HREF="options.html#'sidescroll'">'sidescroll'</A> defaults to 1
@@ -143,7 +143,7 @@ centralized reference of the differences.
 - <A HREF="options.html#'ttimeoutlen'">'ttimeoutlen'</A> defaults to 50
 - <A HREF="#'ttyfast'">'ttyfast'</A> is always set
 - <A HREF="options.html#'undodir'">'undodir'</A> defaults to ~/.local/state/nvim/undo// (|<A HREF="starting.html#xdg">xdg</A>|), auto-created
-- <A HREF="options.html#'viewoptions'">'viewoptions'</A> includes &quot;unix,slash&quot;, excludes &quot;<A HREF="options.html#options">options</A>&quot;
+- <A HREF="options.html#'viewoptions'">'viewoptions'</A> includes &quot;unix,slash&quot;, excludes &quot;<A HREF="options\.html#options">选项</A>&quot;
 - <A HREF="deprecated.html#'viminfo'">'viminfo'</A> includes &quot;<A HREF="change.html#!">!</A>&quot;
 - <A HREF="options.html#'wildmenu'">'wildmenu'</A> is enabled
 - <A HREF="options.html#'wildoptions'">'wildoptions'</A> defaults to &quot;pum,tagfile&quot;
@@ -221,7 +221,7 @@ Working intuitively and consistently is a major goal of Nvim.
 - Vim's internal test <A HREF="eval.html#functions">functions</A> (test_autochdir(), test_settime(), etc.) are
   not exposed (nor implemented); instead Nvim has a robust <A HREF="api.html#API">API</A>.
 
-- Behaviors, <A HREF="options.html#options">options</A>, documentation are removed if they cost users more time
+- Behaviors, <A HREF="options\.html#options">选项</A>, documentation are removed if they cost users more time
   than they save.
 
 Usability details have been improved where the benefit outweighs any
@@ -294,7 +294,7 @@ Highlight groups:
   |<A HREF="syntax.html#hl-NormalFloat">hl-NormalFloat</A>| highlights floating<A HREF="windows.html#window">窗口</A>
   |<A HREF="syntax.html#hl-NormalNC">hl-NormalNC</A>| highlights non-current <A HREF="windows.html#windows">windows</A>
   |<A HREF="syntax.html#hl-MsgArea">hl-MsgArea</A>| highlights messages/cmdline area
-  |<A HREF="syntax.html#hl-MsgSeparator">hl-MsgSeparator</A>| highlights separator for scrolled <A HREF="message.html#messages">messages</A>
+  |<A HREF="syntax.html#hl-MsgSeparator">hl-MsgSeparator</A>| highlights separator for scrolled <A HREF="message.html#messages">信息</A>
   |<A HREF="syntax.html#hl-Substitute">hl-Substitute</A>|
   |<A HREF="syntax.html#hl-TermCursor">hl-TermCursor</A>|
   |<A HREF="syntax.html#hl-TermCursorNC">hl-TermCursorNC</A>|
@@ -313,7 +313,7 @@ Input/Mappings:
 
 Options:
   <A HREF="options.html#'cpoptions'">'cpoptions'</A>   flags: |<A HREF="options.html#cpo-_">cpo-_</A>|
-  <A HREF="options.html#'display'">'display'</A>     flags: &quot;msgsep&quot; minimizes <A HREF="scroll.html#scrolling">scrolling</A> when showing <A HREF="message.html#messages">messages</A>
+  <A HREF="options.html#'display'">'display'</A>     flags: &quot;msgsep&quot; minimizes <A HREF="scroll.html#scrolling">scrolling</A> when showing <A HREF="message.html#messages">信息</A>
   <A HREF="options.html#'guicursor'">'guicursor'</A>   works in the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
   <A HREF="options.html#'fillchars'">'fillchars'</A>   flags: &quot;msgsep&quot; (see 'display'), &quot;horiz&quot;, &quot;horizup&quot;,
                 &quot;horizdown&quot;, &quot;vertleft&quot;, &quot;vertright&quot;, &quot;verthoriz&quot;
@@ -357,7 +357,7 @@ are always available and may be used simultaneously. 见 |<A HREF="provider.html
    with 0700 permissions. Vim mkdir will create /tmp/foo with 0755.
 2. If you try to create an existing directory with `'p'` (e.g. mkdir('/',
    'p')) <A HREF="builtin.html#mkdir()">mkdir()</A> will silently exit. In Vim this was an error.
-3. <A HREF="builtin.html#mkdir()">mkdir()</A> error <A HREF="message.html#messages">messages</A> now include strerror() text when mkdir fails.
+3. <A HREF="builtin.html#mkdir()">mkdir()</A> error <A HREF="message.html#messages">信息</A> now include strerror() text when mkdir fails.
 
 |<A HREF="builtin.html#string()">string()</A>| and |<A HREF="eval.html#:echo">:echo</A>| behaviour changed:
 1. No maximum recursion depth limit is applied to nested container
@@ -407,7 +407,7 @@ Additional differences:
 - ShaDa file keeps search direction (|<A HREF="eval.html#v:searchforward">v:searchforward</A>|), viminfo does not.
 
 |<A HREF="builtin.html#printf()">printf()</A>| returns something meaningful when used with `&#37;p` argument: in Vim 
-<A HREF="motion.html#it">它</A> used to return useless address of the <A HREF="eval.html#string">string</A> (strings are copied to the 
+<A HREF="motion.html#it">它</A> used to return useless address of the <A HREF="options\.html#options">字符串</A> (strings are copied to the 
 newly allocated memory all over the place) and fail on types which cannot be 
 coerced to strings. 见 |<A HREF="builtin.html#id()">id()</A>| for more details, currently <A HREF="motion.html#it">它</A> uses 
 `printf(&quot;&#37;p&quot;, {expr})` internally.
@@ -474,7 +474,7 @@ Shell:
   cannot &quot;mess up&quot; the screen. (You can still use &quot;chansend(v:stderr,…)&quot; if
   you want to mess up the screen :)
 
-  Nvim throttles (skips) <A HREF="message.html#messages">messages</A> from shell commands (|<A HREF="various.html#:!">:!</A>|, |<A HREF="quickfix.html#:grep">:grep</A>|, |<A HREF="quickfix.html#:make">:make</A>|)
+  Nvim throttles (skips) <A HREF="message.html#messages">信息</A> from shell commands (|<A HREF="various.html#:!">:!</A>|, |<A HREF="quickfix.html#:grep">:grep</A>|, |<A HREF="quickfix.html#:make">:make</A>|)
   if there is too much output. No data is lost, this only affects display and
   improves performance. |<A HREF="various.html#:terminal">:terminal</A>| output is never throttled.
 
@@ -620,7 +620,7 @@ Highlight groups:
 
   *<A NAME="hl-StatusLineTerm"></A><B>hl-StatusLineTerm</B>* *<A NAME="hl-StatusLineTermNC"></A><B>hl-StatusLineTermNC</B>* are unnecessary because Nvim
     supports <A HREF="options.html#'winhighlight'">'winhighlight'</A> window-local highlights.
-    For example, to mimic Vim's StatusLineTerm: 
+  例如, to mimic Vim's StatusLineTerm: 
 <B>      hi StatusLineTerm ctermfg=black ctermbg=green</B>
 <B>      hi StatusLineTermNC ctermfg=green</B>
 <B>      autocmd TermOpen,WinEnter * if &amp;buftype=='terminal'</B>
@@ -743,7 +743,7 @@ Test <A HREF="eval.html#functions">functions</A>:
 <A HREF="term.html#TUI">TUI</A>:
 
 			  *<A NAME="t_xx"></A><B>t_xx</B>* *<A NAME="termcap-options"></A><B>termcap-options</B>* *<A NAME="t_AB"></A><B>t_AB</B>* *<A NAME="t_Sb"></A><B>t_Sb</B>* *<A NAME="t_vb"></A><B>t_vb</B>* *<A NAME="t_SI"></A><B>t_SI</B>*
-  Nvim does not have special `t_XX` <A HREF="options.html#options">options</A> nor &lt;t_XX&gt; <A HREF="intro.html#keycodes">keycodes</A> to configure
+  Nvim does not have special `t_XX` <A HREF="options\.html#options">选项</A> nor &lt;t_XX&gt; <A HREF="intro.html#keycodes">keycodes</A> to configure
   <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> capabilities. Instead Nvim treats the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="motion.html#as">as</A> any other <A HREF="ui.html#UI">UI</A>,
   e.g. <A HREF="options.html#'guicursor'">'guicursor'</A> sets the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> cursor style if possible.
 

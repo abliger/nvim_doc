@@ -85,7 +85,7 @@ commands introduced in the previous chapters and a few more.
 
 |<A HREF="#12.1">12.1</A>|	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">单词</A>
 |<A HREF="#12.2">12.2</A>|	Change &quot;Last, First&quot; to &quot;First Last&quot;
-|<A HREF="#12.3">12.3</A>|	Sort a <A HREF="eval.html#list">list</A>
+|<A HREF="#12.3">12.3</A>|	Sort a <A HREF="eval.html#list">列表</A>
 |<A HREF="#12.4">12.4</A>|	Reverse line order
 |<A HREF="#12.5">12.5</A>|	Count words
 |<A HREF="#12.6">12.6</A>|	Find a man page
@@ -134,7 +134,7 @@ playback.
    Let's assume you have a directory with C++ files, all ending in &quot;.cpp&quot;.
 There is a function called &quot;GetResp&quot; that you want to rename to &quot;GetAnswer&quot;.
 
-	vim *.cpp		Start Vim, defining the argument <A HREF="eval.html#list">list</A> to
+	vim *.cpp		Start Vim, defining the argument <A HREF="eval.html#list">列表</A> to
 				contain all the C++ files.  You are now in the
 				first file.
 	qq			Start <A HREF="repeat.html#recording">recording</A> into the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">register</A>
@@ -166,7 +166,7 @@ The &quot;<A HREF="motion.html#e">e</A>&quot; flag tells &quot;<A HREF="change.h
 
 *<A NAME="12.2"></A><B>12.2</B>*	Change &quot;Last, First&quot; to &quot;First Last&quot;
 
-You have a <A HREF="eval.html#list">list</A> of names in this form:
+You have a <A HREF="eval.html#list">列表</A> of names in this form:
 
 <B><FONT color="#3A6F2B">	Doe, John </FONT></B>
 <B><FONT color="#3A6F2B">	Smith, Peter </FONT></B>
@@ -184,7 +184,7 @@ Let's break this down in parts.  Obviously <A HREF="motion.html#it">它</A> star
 command.  The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is the line range, which stands for the whole file.  Thus
 the substitution is done in every line in the file.
    The arguments for the substitute command are &quot;/from/to/&quot;.  The slashes
-separate the &quot;from&quot; <A HREF="pattern.html#pattern">pattern</A> and the &quot;to&quot; <A HREF="eval.html#string">string</A>.  This is what the &quot;from&quot;
+separate the &quot;from&quot; <A HREF="pattern.html#pattern">pattern</A> and the &quot;to&quot; <A HREF="options\.html#options">字符串</A>.  This is what the &quot;from&quot;
 <A HREF="pattern.html#pattern">pattern</A> contains:
 <B><FONT color="#3A6F2B">							\([^,]*\), \(.*\) </FONT></B>
 
@@ -206,9 +206,9 @@ special items in a substitute command, 见 |<A HREF="change.html#sub-replace-spe
 
 ==============================================================================
 
-*<A NAME="12.3"></A><B>12.3</B>*	Sort a <A HREF="eval.html#list">list</A>
+*<A NAME="12.3"></A><B>12.3</B>*	Sort a <A HREF="eval.html#list">列表</A>
 
-In a Makefile you often have a <A HREF="eval.html#list">list</A> of files.  For example:
+In a Makefile you often have a <A HREF="eval.html#list">列表</A> of files.例如:
 
 <B><FONT color="#3A6F2B">	OBJS = \ </FONT></B>
 <B><FONT color="#3A6F2B">		version.o \ </FONT></B>
@@ -220,7 +220,7 @@ In a Makefile you often have a <A HREF="eval.html#list">list</A> of files.  For 
 <B><FONT color="#3A6F2B">		patch.o \ </FONT></B>
 <B><FONT color="#3A6F2B">		backup.o </FONT></B>
 
-To sort this <A HREF="eval.html#list">list</A>, <A HREF="change.html#filter">filter</A> the text through the external sort command:
+To sort this <A HREF="eval.html#list">列表</A>, <A HREF="change.html#filter">filter</A> the text through the external sort command:
 
 <B>	/^OBJS</B>
 <B>	j</B>
@@ -331,7 +331,7 @@ For example, to look in section 3 for &quot;echo&quot;:
 <B>	:Man 3 echo</B>
 
 To jump to another man page, which is in the text with the typical form
-&quot;word(1)&quot;, press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">它</A>.  Further &quot;<A HREF="filetype.html#:Man">:Man</A>&quot; commands will use the same
+&quot;word(1)&quot;, press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">它</A>.  Further &quot;<A HREF="filetype.html#:Man">:Man</A>&quot;命令 will use the same
 <A HREF="windows.html#window">窗口</A>.
 
 To display a man page for the <A HREF="motion.html#word">单词</A> under the cursor, use this:
@@ -357,7 +357,7 @@ command:
 <B>	:%s/\s\+$//</B>
 
 The line range &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is used, thus this works on the whole file.  The <A HREF="pattern.html#pattern">pattern</A>
-that the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command matches with is &quot;\s\+$&quot;.  This finds white
+that the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 matches with is &quot;\s\+$&quot;.  This finds white
 space characters (\s), 1 or more of them (\+), before the end-of-line ($).
 Later will be explained how you write patterns like this, 见 |<A HREF="usr_27.html">usr_27.txt</A>|.
    The &quot;to&quot; part of the substitute command is empty: &quot;//&quot;.  Thus <A HREF="motion.html#it">它</A> replaces
@@ -383,22 +383,22 @@ If you are a Unix user, you can use a combination of Vim and the <A HREF="quickf
 to edit all the files that contain a given <A HREF="motion.html#word">单词</A>.  This is extremely useful if
 you are working on a program and want to view or edit all the files that
 contain a specific variable.
-   For example, suppose you want to edit all the C program files that contain
+ 例如, suppose you want to edit all the C program files that contain
 the <A HREF="motion.html#word">单词</A> &quot;frame_counter&quot;.  To <A HREF="diff.html#do">do</A> this you use the command:
 
 <B>	vim `grep -l frame_counter *.c`</B>
 
 Let's look at this command in detail.  The <A HREF="quickfix.html#grep">grep</A> command searches through a set
 of files for a given <A HREF="motion.html#word">单词</A>.  Because the <A HREF="starting.html#-l">-l</A> argument is specified, the command
-will only <A HREF="eval.html#list">list</A> the files containing the <A HREF="motion.html#word">单词</A> and not print the matching lines.
+will only <A HREF="eval.html#list">列表</A> the files containing the <A HREF="motion.html#word">单词</A> and not print the matching lines.
 The <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">它</A> is searching for is &quot;frame_counter&quot;.  Actually, this can be any
 regular <A HREF="eval.html#expression">expression</A>.  (Note: What <A HREF="quickfix.html#grep">grep</A> uses for regular expressions is not
 exactly the same <A HREF="motion.html#as">as</A> what Vim uses.)
    The entire command is enclosed in backticks (`).  This tells the Unix shell
 to run this command and pretend that the results were typed on the command
-line.  So what happens is that the <A HREF="quickfix.html#grep">grep</A> command is run and produces a <A HREF="eval.html#list">list</A> of
+line.  So what happens is that the <A HREF="quickfix.html#grep">grep</A> command is run and produces a <A HREF="eval.html#list">列表</A> of
 files, these files are put on the Vim command line.  This results in Vim
-editing the file <A HREF="eval.html#list">list</A> that is the output of <A HREF="quickfix.html#grep">grep</A>.  You can then use commands
+editing the file <A HREF="eval.html#list">列表</A> that is the output of <A HREF="quickfix.html#grep">grep</A>.  You can then use commands
 like &quot;<A HREF="editing.html#:next">:next</A>&quot; and &quot;<A HREF="editing.html#:first">:first</A>&quot; to browse through the files.
 
 
@@ -407,18 +407,18 @@ FINDING EACH LINE
 The above command only finds the files in which the <A HREF="motion.html#word">单词</A> is found.  You still
 have to find the <A HREF="motion.html#word">单词</A> within the files.
    Vim has a built-in command that you can use to search a set of files for a
-given <A HREF="eval.html#string">string</A>.  If you want to find all occurrences of &quot;error_string&quot; in all C
+given <A HREF="options\.html#options">字符串</A>.  If you want to find all occurrences of &quot;error_string&quot; in all C
 program files, for example, enter the following command:
 
 <B>	:grep error_string *.c</B>
 
-This causes Vim to search for the <A HREF="eval.html#string">string</A> &quot;error_string&quot; in all the specified
+This causes Vim to search for the <A HREF="options\.html#options">字符串</A> &quot;error_string&quot; in all the specified
 files (*.c).  The editor will now open the first file where a match is found
 and position the cursor on the first matching line.  To go to the next
-matching line (no matter in what file <A HREF="motion.html#it">它</A> is), use the &quot;<A HREF="quickfix.html#:cnext">:cnext</A>&quot; command.  To go
-to the previous match, use the &quot;<A HREF="quickfix.html#:cprev">:cprev</A>&quot; command.  Use &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot; to see all the
+matching line (no matter in what file <A HREF="motion.html#it">它</A> is), use the &quot;<A HREF="quickfix.html#:cnext">:cnext</A>&quot;命令.  To go
+to the previous match, use the &quot;<A HREF="quickfix.html#:cprev">:cprev</A>&quot;命令.  Use &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot; to see all the
 matches and where they are.
-   The &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot; command uses the external commands <A HREF="quickfix.html#grep">grep</A> (on Unix) or findstr
+   The &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot;命令 uses the external commands <A HREF="quickfix.html#grep">grep</A> (on Unix) or findstr
 (on Windows).  You can change this by setting the option <A HREF="options.html#'grepprg'">'grepprg'</A>.
 
 ==============================================================================

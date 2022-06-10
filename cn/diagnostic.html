@@ -85,7 +85,7 @@ Nvim provides a framework for displaying <A HREF="message.html#errors">errors</A
 tools, otherwise known <A HREF="motion.html#as">as</A> &quot;diagnostics&quot;. These diagnostics can come from a
 variety of sources, such <A HREF="motion.html#as">as</A> linters or <A HREF="lsp.html#LSP">LSP</A> servers. The diagnostic framework
 is an extension to existing error handling functionality such <A HREF="motion.html#as">as</A> the
-|<A HREF="quickfix.html#quickfix">quickfix</A>| <A HREF="eval.html#list">list</A>.
+|<A HREF="quickfix.html#quickfix">quickfix</A>| <A HREF="eval.html#list">列表</A>.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -99,7 +99,7 @@ report diagnostics:
 
 1. Create a namespace |<A HREF="api.html#nvim_create_namespace()">nvim_create_namespace()</A>|. Note that the namespace must
    have a name. Anonymous namespaces WILL NOT WORK.
-2. (Optional) Configure <A HREF="options.html#options">options</A> for the diagnostic <A HREF="api.html#namespace">namespace</A>
+2. (Optional) Configure <A HREF="options\.html#options">选项</A> for the diagnostic <A HREF="api.html#namespace">namespace</A>
    |<A HREF="vim.html">vim.diagnostic.config()</A>|.
 3. Generate diagnostics.
 4. Set the diagnostics for the buffer |<A HREF="vim.html">vim.diagnostic.set()</A>|.
@@ -176,8 +176,8 @@ Handlers can be configured with |<A HREF="vim.html">vim.diagnostic.config()</A>|
 creating a new key in `vim.diagnostic.handlers` (see
 |<A HREF="#diagnostic-handlers-example">diagnostic-handlers-example</A>|).
 
-The {opts} table passed to a handler is the full set of configuration <A HREF="options.html#options">options</A>
-(that is, <A HREF="motion.html#it">它</A> is not limited to just the <A HREF="options.html#options">options</A> for the handler itself). The
+The {opts} table passed to a handler is the full set of configuration <A HREF="options\.html#options">选项</A>
+(that is, <A HREF="motion.html#it">它</A> is not limited to just the <A HREF="options\.html#options">选项</A> for the handler itself). The
 values in the table are already resolved (i.e. if a user specifies a
 function for a <A HREF="starting.html#config">config</A> option, the function has already been evaluated).
 
@@ -337,23 +337,23 @@ DiagnosticUnderlineHint
 
 						*<A NAME="hl-DiagnosticFloatingError"></A><B>hl-DiagnosticFloatingError</B>*
 DiagnosticFloatingError
-  Used to color &quot;Error&quot; diagnostic <A HREF="message.html#messages">messages</A> in diagnostics float.
+  Used to color &quot;Error&quot; diagnostic <A HREF="message.html#messages">信息</A> in diagnostics float.
   见 |<A HREF="vim.html">vim.diagnostic.open_float()</A>|
 
 
 						*<A NAME="hl-DiagnosticFloatingWarn"></A><B>hl-DiagnosticFloatingWarn</B>*
 DiagnosticFloatingWarn
-  Used to color &quot;Warn&quot; diagnostic <A HREF="message.html#messages">messages</A> in diagnostics float.
+  Used to color &quot;Warn&quot; diagnostic <A HREF="message.html#messages">信息</A> in diagnostics float.
 
 
 						*<A NAME="hl-DiagnosticFloatingInfo"></A><B>hl-DiagnosticFloatingInfo</B>*
 DiagnosticFloatingInfo
-  Used to color &quot;Info&quot; diagnostic <A HREF="message.html#messages">messages</A> in diagnostics float.
+  Used to color &quot;Info&quot; diagnostic <A HREF="message.html#messages">信息</A> in diagnostics float.
 
 
 						*<A NAME="hl-DiagnosticFloatingHint"></A><B>hl-DiagnosticFloatingHint</B>*
 DiagnosticFloatingHint
-  Used to color &quot;Hint&quot; diagnostic <A HREF="message.html#messages">messages</A> in diagnostics float.
+  Used to color &quot;Hint&quot; diagnostic <A HREF="message.html#messages">信息</A> in diagnostics float.
 
 
 						*<A NAME="hl-DiagnosticSignError"></A><B>hl-DiagnosticSignError</B>*
@@ -410,7 +410,7 @@ Example:
 
 
 config({opts}, {namespace})                          *<A NAME="vim.diagnostic.config()"></A><B>vim.diagnostic.config()</B>*
-                Configure diagnostic <A HREF="options.html#options">options</A> globally or for a specific
+                Configure diagnostic <A HREF="options\.html#options">选项</A> globally or for a specific
                 diagnostic <A HREF="api.html#namespace">namespace</A>.
 
                 Configuration can be specified globally, per-namespace, or
@@ -419,7 +419,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                 configuration has highest priority, followed by <A HREF="api.html#namespace">namespace</A>
                 configuration, and finally global configuration.
 
-                For example, if a user enables virtual text globally with
+              例如, if a user enables virtual text globally with
 
 <B>                   vim.diagnostic.config({virtual_text = true})</B>
  
@@ -432,7 +432,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                 then virtual text will not be enabled for those diagnostics.
 
                 Note:
-                    Each of the configuration <A HREF="options.html#options">options</A> below accepts one of the
+                    Each of the configuration <A HREF="options\.html#options">选项</A> below accepts one of the
                     following:
                     • `false`: Disable this feature
                     • `true`: Enable this feature, use default settings.
@@ -459,7 +459,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                    • severity: Only show virtual text for
                                      diagnostics matching the given severity
                                      |<A HREF="#diagnostic-severity">diagnostic-severity</A>|
-                                   • source: (boolean or <A HREF="eval.html#string">string</A>) Include the
+                                   • source: (boolean or <A HREF="options\.html#options">字符串</A>) Include the
                                      diagnostic source in virtual text. Use
                                      &quot;if_many&quot; to only show sources if there
                                      is more than one diagnostic source in the
@@ -472,7 +472,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                      message with prefix.
                                    • format: (function) A function that takes
                                      a diagnostic <A HREF="motion.html#as">as</A> input and returns a
-                                     <A HREF="eval.html#string">string</A>. The return value is the text used
+                                     <A HREF="options\.html#options">字符串</A>. The return value is the text used
                                      to display the diagnostic. Example:
 
 <B>                                       function(diagnostic)</B>
@@ -507,9 +507,9 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                    displayed before lower severities (e.g.
                                    ERROR is displayed before WARN). Options:
                                    • reverse: (boolean) Reverse sort order
-                    {namespace}  (number|nil) Update the <A HREF="options.html#options">options</A> for the given
+                    {namespace}  (number|nil) Update the <A HREF="options\.html#options">选项</A> for the given
                                  <A HREF="api.html#namespace">namespace</A>. When omitted, update the global
-                                 diagnostic <A HREF="options.html#options">options</A>.
+                                 diagnostic <A HREF="options\.html#options">选项</A>.
 
 
 disable({bufnr}, {namespace})                       *<A NAME="vim.diagnostic.disable()"></A><B>vim.diagnostic.disable()</B>*
@@ -535,10 +535,10 @@ enable({bufnr}, {namespace})                         *<A NAME="vim.diagnostic.en
 
 
 fromqflist({list})                               *<A NAME="vim.diagnostic.fromqflist()"></A><B>vim.diagnostic.fromqflist()</B>*
-                Convert a <A HREF="eval.html#list">list</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items to a <A HREF="eval.html#list">list</A> of diagnostics.
+                Convert a <A HREF="eval.html#list">列表</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items to a <A HREF="eval.html#list">列表</A> of diagnostics.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {list}  (table) A <A HREF="eval.html#list">list</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items from
+                    {list}  (table) A <A HREF="eval.html#list">列表</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items from
                             |<A HREF="builtin.html#getqflist()">getqflist()</A>| or |<A HREF="builtin.html#getloclist()">getloclist()</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -560,7 +560,7 @@ get({bufnr}, {opts})                                    *<A NAME="vim.diagnostic
                              • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) A <A HREF="eval.html#list">list</A> of diagnostic items |<A HREF="#diagnostic-structure">diagnostic-structure</A>|.
+                    (table) A <A HREF="eval.html#list">列表</A> of diagnostic items |<A HREF="#diagnostic-structure">diagnostic-structure</A>|.
 
 
 get_namespace({namespace})                    *<A NAME="vim.diagnostic.get_namespace()"></A><B>vim.diagnostic.get_namespace()</B>*
@@ -577,7 +577,7 @@ get_namespaces()                             *<A NAME="vim.diagnostic.get_namesp
                 Get current diagnostic namespaces.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) A <A HREF="eval.html#list">list</A> of active diagnostic namespaces
+                    (table) A <A HREF="eval.html#list">列表</A> of active diagnostic namespaces
                     |<A HREF="vim.html">vim.diagnostic</A>|.
 
 
@@ -678,9 +678,9 @@ hide({namespace}, {bufnr})                             *<A NAME="vim.diagnostic.
 
                                                       *<A NAME="vim.diagnostic.match()"></A><B>vim.diagnostic.match()</B>*
 match({str}, {pat}, {groups}, {severity_map}, {defaults})
-                Parse a diagnostic from a <A HREF="eval.html#string">string</A>.
+                Parse a diagnostic from a <A HREF="options\.html#options">字符串</A>.
 
-                For example, consider a line of output from a linter:
+              例如, consider a line of output from a linter:
 
 <B>                 WARNING filename:27:3: Variable 'foo' does not exist</B>
  
@@ -695,9 +695,9 @@ match({str}, {pat}, {groups}, {severity_map}, {defaults})
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}           (string) <A HREF="eval.html#String">String</A> to parse diagnostics from.
+                    {str}           (string) <A HREF="options\.html#options">字符串</A> to parse diagnostics from.
                     {pat}           (string) <A HREF="lua.html#Lua">Lua</A> <A HREF="pattern.html#pattern">pattern</A> with capture groups.
-                    {groups}        (table) <A HREF="eval.html#List">List</A> of fields in a
+                    {groups}        (table) <A HREF="eval.html#list">列表</A> of fields in a
                                     |<A HREF="#diagnostic-structure">diagnostic-structure</A>| to associate with
                                     captures from {pat}.
                     {severity_map}  (table) A table <A HREF="map.html#mapping">mapping</A> the severity field
@@ -740,12 +740,12 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|. Overrides
                               the setting from |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • header: (string or table) <A HREF="eval.html#String">String</A> to use <A HREF="motion.html#as">as</A> the
+                            • header: (string or table) <A HREF="options\.html#options">字符串</A> to use <A HREF="motion.html#as">as</A> the
                               header for the floating<A HREF="windows.html#window">窗口</A>. If a table, <A HREF="motion.html#it">它</A>
                               is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group] tuple.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • source: (boolean or <A HREF="eval.html#string">string</A>) Include the
+                            • source: (boolean or <A HREF="options\.html#options">字符串</A>) Include the
                               diagnostic source in the message. Use &quot;if_many&quot;
                               to only show sources if there is more than one
                               source of diagnostics in the buffer. Otherwise,
@@ -753,24 +753,24 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               diagnostic source. Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • format: (function) A function that takes a
-                              diagnostic <A HREF="motion.html#as">as</A> input and returns a <A HREF="eval.html#string">string</A>. The
+                              diagnostic <A HREF="motion.html#as">as</A> input and returns a <A HREF="options\.html#options">字符串</A>. The
                               return value is the text used to display the
                               diagnostic. Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • prefix: (function, <A HREF="eval.html#string">string</A>, or table) Prefix each
+                            • prefix: (function, <A HREF="options\.html#options">字符串</A>, or table) Prefix each
                               diagnostic in the floating<A HREF="windows.html#window">窗口</A>. If a
                               function, <A HREF="motion.html#it">它</A> must have the signature
                               (diagnostic, <A HREF="insert.html#i">i</A>, total) <A HREF="eval.html#-&gt;">-&gt;</A> (string, string),
                               where {i} is the index of the diagnostic being
                               evaluated and {total} is the total number of
                               diagnostics displayed in the<A HREF="windows.html#window">窗口</A>. The
-                              function should return a <A HREF="eval.html#string">string</A> which is
+                              function should return a <A HREF="options\.html#options">字符串</A> which is
                               prepended to each diagnostic in the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A>
                               well <A HREF="motion.html#as">as</A> an (optional) highlight group which will
                               be used to highlight the prefix. If {prefix} is
                               a table, <A HREF="motion.html#it">它</A> is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group]
                               tuple <A HREF="motion.html#as">as</A> in |<A HREF="api.html#nvim_echo()">nvim_echo()</A>|; otherwise, if
-                              {prefix} is a <A HREF="eval.html#string">string</A>, <A HREF="motion.html#it">它</A> is prepended to each
+                              {prefix} is a <A HREF="options\.html#options">字符串</A>, <A HREF="motion.html#it">它</A> is prepended to each
                               diagnostic in the<A HREF="windows.html#window">窗口</A>with no highlight.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
@@ -803,14 +803,14 @@ set({namespace}, {bufnr}, {diagnostics}, {opts})        *<A NAME="vim.diagnostic
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {namespace}    (number) The diagnostic <A HREF="api.html#namespace">namespace</A>
                     {bufnr}        (number) Buffer number
-                    {diagnostics}  (table) A <A HREF="eval.html#list">list</A> of diagnostic items
+                    {diagnostics}  (table) A <A HREF="eval.html#list">列表</A> of diagnostic items
                                    |<A HREF="#diagnostic-structure">diagnostic-structure</A>|
-                    {opts}         (table|nil) Display <A HREF="options.html#options">options</A> to pass to
+                    {opts}         (table|nil) Display <A HREF="options\.html#options">选项</A> to pass to
                                    |<A HREF="vim.html">vim.diagnostic.show()</A>|
 
 
 setloclist({opts})                               *<A NAME="vim.diagnostic.setloclist()"></A><B>vim.diagnostic.setloclist()</B>*
-                Add buffer diagnostics to the location <A HREF="eval.html#list">list</A>.
+                Add buffer diagnostics to the location <A HREF="eval.html#list">列表</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  (table|nil) Configuration table with the following
@@ -818,25 +818,25 @@ setloclist({opts})                               *<A NAME="vim.diagnostic.setloc
                             • <A HREF="api.html#namespace">namespace</A>: (number) Only add diagnostics from
                               the given <A HREF="api.html#namespace">namespace</A>.
                             • winnr: (number, default 0) Window number to set
-                              location <A HREF="eval.html#list">list</A> for.
+                              location <A HREF="eval.html#list">列表</A> for.
                             • open: (boolean, default true) Open the location
-                              <A HREF="eval.html#list">list</A> after setting.
-                            • title: (string) Title of the location <A HREF="eval.html#list">list</A>.
+                              <A HREF="eval.html#list">列表</A> after setting.
+                            • title: (string) Title of the location <A HREF="eval.html#list">列表</A>.
                               Defaults to &quot;Diagnostics&quot;.
                             • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
 
 
 setqflist({opts})                                 *<A NAME="vim.diagnostic.setqflist()"></A><B>vim.diagnostic.setqflist()</B>*
-                Add all diagnostics to the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.
+                Add all diagnostics to the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  (table|nil) Configuration table with the following
                             keys:
                             • <A HREF="api.html#namespace">namespace</A>: (number) Only add diagnostics from
                               the given <A HREF="api.html#namespace">namespace</A>.
-                            • open: (boolean, default true) Open <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>
+                            • open: (boolean, default true) Open <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A>
                               after setting.
-                            • title: (string) Title of <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>. Defaults
+                            • title: (string) Title of <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A>. Defaults
                               to &quot;Diagnostics&quot;.
                             • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
 
@@ -855,20 +855,20 @@ show({namespace}, {bufnr}, {diagnostics}, {opts})
                     {diagnostics}  (table|nil) The diagnostics to display.
                                    When omitted, use the saved diagnostics for
                                    the given <A HREF="api.html#namespace">namespace</A> and buffer. This can be
-                                   used to display a <A HREF="eval.html#list">list</A> of diagnostics
+                                   used to display a <A HREF="eval.html#list">列表</A> of diagnostics
                                    without saving them or to display only a
                                    subset of diagnostics. May not be used when
                                    {namespace} or {bufnr} is nil.
-                    {opts}         (table|nil) Display <A HREF="options.html#options">options</A>. See
+                    {opts}         (table|nil) Display <A HREF="options\.html#options">选项</A>. See
                                    |<A HREF="vim.html">vim.diagnostic.config()</A>|.
 
 
 toqflist({diagnostics})                            *<A NAME="vim.diagnostic.toqflist()"></A><B>vim.diagnostic.toqflist()</B>*
-                Convert a <A HREF="eval.html#list">list</A> of diagnostics to a <A HREF="eval.html#list">list</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items that
+                Convert a <A HREF="eval.html#list">列表</A> of diagnostics to a <A HREF="eval.html#list">列表</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items that
                 can be passed to |<A HREF="builtin.html#setqflist()">setqflist()</A>| or |<A HREF="builtin.html#setloclist()">setloclist()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {diagnostics}  (table) <A HREF="eval.html#List">List</A> of diagnostics
+                    {diagnostics}  (table) <A HREF="eval.html#list">列表</A> of diagnostics
                                    |<A HREF="#diagnostic-structure">diagnostic-structure</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>

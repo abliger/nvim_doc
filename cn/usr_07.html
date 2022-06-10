@@ -80,11 +80,11 @@
 
 
 No matter how many files you have, you can edit them without leaving Vim.
-Define a <A HREF="eval.html#list">list</A> of files to work on and jump from one to the other.  Copy text
+Define a <A HREF="eval.html#list">列表</A> of files to work on and jump from one to the other.  Copy text
 from one file and put <A HREF="motion.html#it">它</A> in another one.
 
 |<A HREF="#07.1">07.1</A>|	Edit another file
-|<A HREF="#07.2">07.2</A>|	A <A HREF="eval.html#list">list</A> of files
+|<A HREF="#07.2">07.2</A>|	A <A HREF="eval.html#list">列表</A> of files
 |<A HREF="#07.3">07.3</A>|	Jumping from file to file
 |<A HREF="#07.4">07.4</A>|	Backup files
 |<A HREF="#07.5">07.5</A>|	Copy text between files
@@ -133,13 +133,13 @@ file yet, you can make <A HREF="motion.html#it">它</A> hidden:
 <B>	:hide edit foo.txt</B>
 
 The text with changes is still there, but you can't see <A HREF="motion.html#it">它</A>.  This is further
-explained in section |22.4|: The buffer <A HREF="eval.html#list">list</A>.
+explained in section |22.4|: The buffer <A HREF="eval.html#list">列表</A>.
 
 ==============================================================================
 
-*<A NAME="07.2"></A><B>07.2</B>*	A <A HREF="eval.html#list">list</A> of files
+*<A NAME="07.2"></A><B>07.2</B>*	A <A HREF="eval.html#list">列表</A> of files
 
-You can start Vim to edit a sequence of files.  For example:
+You can start Vim to edit a sequence of files.例如:
 
 <B>	vim one.c two.c three.c</B>
 
@@ -168,10 +168,10 @@ This does the same <A HREF="motion.html#as">as</A> using two separate commands:
 
 WHERE AM I?
 
-To see which file in the argument <A HREF="eval.html#list">list</A> you are editing, look in the<A HREF="windows.html#window">窗口</A>
+To see which file in the argument <A HREF="eval.html#list">列表</A> you are editing, look in the<A HREF="windows.html#window">窗口</A>
 title.  It should show something like &quot;(2 of 3)&quot;.  This means you are editing
 the second file out of three files.
-   If you want to see the <A HREF="eval.html#list">list</A> of files, use this command:
+   If you want to see the <A HREF="eval.html#list">列表</A> of files, use this command:
 
 <B>	:args</B>
 
@@ -189,13 +189,13 @@ To go back one file:
 
 <B>	:previous</B>
 
-This is just like the &quot;<A HREF="editing.html#:next">:next</A>&quot; command, except that <A HREF="motion.html#it">它</A> moves in the other
+This is just like the &quot;<A HREF="editing.html#:next">:next</A>&quot;命令, except that <A HREF="motion.html#it">它</A> moves in the other
 direction.  Again, there is a shortcut command for when you want to write the
 file first:
 
 <B>	:wprevious</B>
 
-To move to the very last file in the <A HREF="eval.html#list">list</A>:
+To move to the very last file in the <A HREF="eval.html#list">列表</A>:
 
 <B>	:last</B>
 
@@ -227,7 +227,7 @@ again:
 
 EDITING ANOTHER LIST OF FILES
 
-You can redefine the <A HREF="eval.html#list">list</A> of files without the need to exit Vim and start <A HREF="motion.html#it">它</A>
+You can redefine the <A HREF="eval.html#list">列表</A> of files without the need to exit Vim and start <A HREF="motion.html#it">它</A>
 again.  Use this command to edit three other files:
 
 <B>	:args five.c six.c seven.h</B>
@@ -236,7 +236,7 @@ Or use a <A HREF="editing.html#wildcard">wildcard</A>, like it's used in the she
 
 <B>	:args *.txt</B>
 
-Vim will take you to the first file in the <A HREF="eval.html#list">list</A>.  Again, if the current file
+Vim will take you to the first file in the <A HREF="eval.html#list">列表</A>.  Again, if the current file
 has changes, you can either write the file first, or use &quot;:args!&quot; (with !
 added) to <A HREF="editing.html#abandon">abandon</A> the changes.
 
@@ -244,9 +244,9 @@ added) to <A HREF="editing.html#abandon">abandon</A> the changes.
 DID YOU EDIT THE LAST FILE?
 
 							*<A NAME="arglist-quit"></A><B>arglist-quit</B>*
-When you use a <A HREF="eval.html#list">list</A> of files, Vim assumes you want to edit them all.  To
+When you use a <A HREF="eval.html#list">列表</A> of files, Vim assumes you want to edit them all.  To
 protect you from <A HREF="starting.html#exiting">exiting</A> too early, you will get this error when you didn't
-edit the last file in the <A HREF="eval.html#list">list</A> yet:
+edit the last file in the <A HREF="eval.html#list">列表</A> yet:
 
 <B><FONT color="#3A6F2B">	E173: 46 more files to edit </FONT></B>
 
@@ -273,7 +273,7 @@ you are back in two.c.  Another <A HREF="editing.html#CTRL-^">CTRL-^</A> and you
 <B>	:next</B>
 
 You are in three.c.  Notice that the <A HREF="editing.html#CTRL-^">CTRL-^</A> command does not change the idea
-of where you are in the <A HREF="eval.html#list">list</A> of files.  Only commands like &quot;<A HREF="editing.html#:next">:next</A>&quot; and
+of where you are in the <A HREF="eval.html#list">列表</A> of files.  Only commands like &quot;<A HREF="editing.html#:next">:next</A>&quot; and
 &quot;<A HREF="editing.html#:previous">:previous</A>&quot; <A HREF="diff.html#do">do</A> that.
 
 The file you were previously editing is called the &quot;alternate&quot; file.  When you
@@ -309,8 +309,8 @@ In section |<A HREF="usr_03.html#03.10">03.10</A>| was explained how you can pla
 and jump to that position with &quot;`x&quot;.  That works within one file.  If you edit
 another file and place marks there, these are specific for that file.  Thus
 each file has its own set of marks, they are local to the file.
-   So far we were using marks with a <A HREF="change.html#lowercase">lowercase</A> <A HREF="print.html#letter">letter</A>.  There are also marks
-with an <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>.  These are global, they can be used from any file.
+   So far we were 使用标记 with a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>.  There are also marks
+with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>.  These are global, they can be used from any file.
 For example suppose that we are editing the file &quot;foo.txt&quot;.  Go to halfway
 down the file (&quot;50&#37;&quot;) and place the <A HREF="motion.html#F">F</A> <A HREF="motion.html#mark">mark</A> there (F for foo):
 
@@ -327,10 +327,10 @@ The file marks are remembered until they are placed somewhere else.  Thus you
 can place the <A HREF="motion.html#mark">mark</A>, <A HREF="diff.html#do">do</A> hours of editing and still be able to jump back to that
 <A HREF="motion.html#mark">mark</A>.
    It's often useful to think of a simple connection between the <A HREF="motion.html#mark">mark</A> <A HREF="print.html#letter">letter</A>
-and where <A HREF="motion.html#it">它</A> is placed.  For example, use the <A HREF="motion.html#H">H</A> <A HREF="motion.html#mark">mark</A> in a header file, <A HREF="motion.html#M">M</A> in
+and where <A HREF="motion.html#it">它</A> is placed.例如, use the <A HREF="motion.html#H">H</A> <A HREF="motion.html#mark">mark</A> in a header file, <A HREF="motion.html#M">M</A> in
 a Makefile and C in a C code file.
 
-To see where a specific <A HREF="motion.html#mark">mark</A> is, give an argument to the &quot;<A HREF="motion.html#:marks">:marks</A>&quot; command:
+To see where a specific <A HREF="motion.html#mark">mark</A> is, give an argument to the &quot;<A HREF="motion.html#:marks">:marks</A>&quot;命令:
 
 <B>	:marks M</B>
 
@@ -365,9 +365,9 @@ directory <A HREF="motion.html#as">as</A> the original file, will mostly be the 
 
 	Note:
 	When the <A HREF="options.html#'backup'">'backup'</A> option isn't set but the <A HREF="options.html#'writebackup'">'writebackup'</A> is, Vim will
-	still create a <A HREF="editing.html#backup">backup</A> file.  However, <A HREF="motion.html#it">它</A> is deleted <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> <A HREF="editing.html#writing">writing</A>
+	still create a <A HREF="editing.html#backup">backup</A> file.  However, <A HREF="motion.html#it">它</A> is deleted <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> <A HREF="editing.html#writing">写</A>
 	the file was completed successfully.  This <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a safety
-	against losing your original file when <A HREF="editing.html#writing">writing</A> fails in some way (disk
+	against losing your original file when <A HREF="editing.html#writing">写</A> fails in some way (disk
 	full is the most common cause; being hit by lightning might be
 	another, although <A HREF="various.html#less">less</A> common).
 
@@ -401,7 +401,7 @@ simple example.  Edit the file that contains the text you want to copy.  Move
 the cursor to the start of the text and press &quot;<A HREF="visual.html#v">v</A>&quot;.  This starts <A HREF="visual.html#Visual">Visual</A> mode.
 Now move the cursor to the end of the text and press &quot;<A HREF="change.html#y">y</A>&quot;.  This yanks (copies)
 the selected text.
-   To copy the above <A HREF="motion.html#paragraph">paragraph</A>, you would <A HREF="diff.html#do">do</A>:
+   To copy the above <A HREF="motion.html#paragraph">段落</A>, you would <A HREF="diff.html#do">do</A>:
 
 <B>	:edit thisfile</B>
 <B>	/This</B>
@@ -414,11 +414,11 @@ there.
 <B>	/There</B>
 <B>	p</B>
 
-Of course you can use many other commands to <A HREF="change.html#yank">yank</A> the text.  For example, to
+Of course you can use many other commands to <A HREF="change.html#yank">yank</A> the text.例如, to
 select whole lines start <A HREF="visual.html#Visual">Visual</A> mode with &quot;<A HREF="visual.html#V">V</A>&quot;.  Or use <A HREF="visual.html#CTRL-V">CTRL-V</A> to select a
 rectangular block.  Or use &quot;<A HREF="change.html#yy">yy</A>&quot; to <A HREF="change.html#yank">yank</A> a single line, &quot;yaw&quot; to yank-a-word,
 etc.
-   The &quot;<A HREF="change.html#p">p</A>&quot; command puts the text after the cursor.  Use &quot;<A HREF="change.html#P">P</A>&quot; to put the text
+   The &quot;<A HREF="change.html#p">p</A>&quot;命令 puts the text after the cursor.  Use &quot;<A HREF="change.html#P">P</A>&quot; to put the text
 before the cursor.  Notice that Vim remembers if you yanked a whole line or a
 block, and puts <A HREF="motion.html#it">它</A> back that way.
 
@@ -426,7 +426,7 @@ block, and puts <A HREF="motion.html#it">它</A> back that way.
 USING REGISTERS
 
 When you want to copy several pieces of text from one file to another, having
-to switch between the files and <A HREF="editing.html#writing">writing</A> the target file takes a lot of time.
+to switch between the files and <A HREF="editing.html#writing">写</A> the target file takes a lot of time.
 To avoid this, copy each piece of text to its own <A HREF="intro.html#register">register</A>.
    A <A HREF="intro.html#register">register</A> is a place where Vim stores text.  Here we will use the
 <A HREF="change.html#registers">registers</A> named a to <A HREF="vimindex.html#z">z</A> (later you will find out there are others).  Let's copy
@@ -446,21 +446,21 @@ The <A HREF="intro.html#count">count</A> could be before the &quot;<A HREF="moti
 
 <B>	CTRL-Vjjww"by</B>
 
-Notice that the <A HREF="intro.html#register">register</A> specification &quot;<A HREF="motion.html#b">b</A> is just before the &quot;<A HREF="change.html#y">y</A>&quot; command.
-This is required.  If you would have put <A HREF="motion.html#it">它</A> before the &quot;<A HREF="motion.html#w">w</A>&quot; command, <A HREF="motion.html#it">它</A> would
+Notice that the <A HREF="intro.html#register">register</A> specification &quot;<A HREF="motion.html#b">b</A> is just before the &quot;<A HREF="change.html#y">y</A>&quot;命令.
+This is required.  If you would have put <A HREF="motion.html#it">它</A> before the &quot;<A HREF="motion.html#w">w</A>&quot;命令, <A HREF="motion.html#it">它</A> would
 not have worked.
    Now you have three pieces of text in the <A HREF="motion.html#f">f</A>, <A HREF="motion.html#l">l</A> and <A HREF="motion.html#b">b</A> <A HREF="change.html#registers">registers</A>.  Edit
 another file, move around and place the text where you want <A HREF="motion.html#it">它</A>:
 
 <B>	"fp</B>
 
-Again, the <A HREF="intro.html#register">register</A> specification &quot;<A HREF="motion.html#f">f</A> comes before the &quot;<A HREF="change.html#p">p</A>&quot; command.
+Again, the <A HREF="intro.html#register">register</A> specification &quot;<A HREF="motion.html#f">f</A> comes before the &quot;<A HREF="change.html#p">p</A>&quot;命令.
    You can put the <A HREF="change.html#registers">registers</A> in any order.  And the text stays in the <A HREF="intro.html#register">register</A>
 until you <A HREF="change.html#yank">yank</A> something else into <A HREF="motion.html#it">它</A>.  Thus you can put <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A>
 you like.
 
 When you delete text, you can also specify a <A HREF="intro.html#register">register</A>.  Use this to move
-several pieces of text around.  For example, to delete-a-word and write <A HREF="motion.html#it">它</A> in
+several pieces of text around.例如, to delete-a-word and write <A HREF="motion.html#it">它</A> in
 the <A HREF="motion.html#w">w</A> <A HREF="intro.html#register">register</A>:
 
 <B>	"wdaw</B>
@@ -505,7 +505,7 @@ will get an error message and the file won't be written.
 The change will be done though.  This allows for <A HREF="change.html#formatting">formatting</A> the file, for
 example, to be able to read <A HREF="motion.html#it">它</A> easily.
    If you make changes to a file and forgot that <A HREF="motion.html#it">它</A> was read-only, you can
-still write <A HREF="motion.html#it">它</A>.  Add the ! to the write command to force <A HREF="editing.html#writing">writing</A>.
+still write <A HREF="motion.html#it">它</A>.  Add the ! to the write command to force <A HREF="editing.html#writing">写</A>.
 
 If you really want to forbid making changes in a file, <A HREF="diff.html#do">do</A> this:
 
@@ -527,14 +527,14 @@ only voluntary though, since these commands will remove the protection:
 *<A NAME="07.7"></A><B>07.7</B>*	Changing the file name
 
 A clever way to start editing a new file is by using an existing file that
-contains most of what you need.  For example, you start <A HREF="editing.html#writing">writing</A> a new program
+contains most of what you need.例如, you start <A HREF="editing.html#writing">写</A> a new program
 to move a file.  You know that you already have a program that copies a file,
 thus you start with:
 
 <B>	:edit copy.c</B>
 
 You can delete the stuff you don't need.  Now you need to save the file under
-a new name.  The &quot;<A HREF="editing.html#:saveas">:saveas</A>&quot; command can be used for this:
+a new name.  The &quot;<A HREF="editing.html#:saveas">:saveas</A>&quot;命令 can be used for this:
 
 <B>	:saveas move.c</B>
 

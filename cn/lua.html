@@ -111,9 +111,9 @@ IMPORTING LUA MODULES                                            *<A NAME="lua-r
 Modules are searched for under the directories specified in <A HREF="options.html#'runtimepath'">'runtimepath'</A>, in
 the order they appear. Any `.` in the module name is treated <A HREF="motion.html#as">as</A> a directory
 separator when searching. For a module `foo.bar`, each directory is searched
-for `lua/foo/bar.lua`, then `lua/foo/bar/init.lua`. If no files are found,
+for `lua/foo/bar.lua`然后`lua/foo/bar/init.lua`. If no files are found,
 the directories are searched again for a shared library with a name matching
-`lua/foo/bar.?`, where `?` is a <A HREF="eval.html#list">list</A> of <A HREF="cmdline.html#suffixes">suffixes</A> (such <A HREF="motion.html#as">as</A> `so` or `dll`) derived from
+`lua/foo/bar.?`, where `?` is a <A HREF="eval.html#list">列表</A> of <A HREF="cmdline.html#suffixes">suffixes</A> (such <A HREF="motion.html#as">as</A> `so` or `dll`) derived from
 the initial value of `package.cpath`. If still no files are found, Nvim falls
 back to Lua's default search mechanism. The first <A HREF="usr_41.html#script">script</A> found is run and
 `require()` returns the value returned by the <A HREF="usr_41.html#script">script</A> if any, else `true`.
@@ -235,7 +235,7 @@ Additionally, if any extra parameters are passed, they are discarded
 completely.
 
 In <A HREF="#Lua">Lua</A>, <A HREF="motion.html#it">它</A> is also possible to omit the parentheses (only) if the function
-takes a single <A HREF="eval.html#string">string</A> or table literal (`&quot;foo&quot;` or &quot;`{1,2,3}`&quot;, respectively).
+takes a single <A HREF="options\.html#options">字符串</A> or table literal (`&quot;foo&quot;` or &quot;`{1,2,3}`&quot;, respectively).
 The latter is most often used to approximate &quot;keyword-style&quot; arguments with a
 single dictionary, for example:
 
@@ -416,7 +416,7 @@ arguments separated by &quot; &quot; (space) instead of &quot;\t&quot; (tab).
 :[range]luado {body}    Executes <A HREF="#Lua">Lua</A> chunk &quot;function(line, linenr) {body} end&quot;
                         for each buffer line in <A HREF="cmdline.html#[range]">[range]</A>, where `line` is the
                         current line text (without &lt;EOL&gt;), and `linenr` is the
-                        current line number. If the function returns a <A HREF="eval.html#string">string</A>
+                        current line number. If the function returns a <A HREF="options\.html#options">字符串</A>
                         that becomes the text of the corresponding buffer
                         line. Default <A HREF="cmdline.html#[range]">[range]</A> is the whole file: &quot;1,$&quot;.
 
@@ -447,7 +447,7 @@ arguments separated by &quot; &quot; (space) instead of &quot;\t&quot; (tab).
 <A HREF="#luaeval()">luaeval()</A>                                                 *<A NAME="lua-eval"></A><B>lua-eval</B>* *<A NAME="luaeval()"></A><B>luaeval()</B>*
 
 The (dual) equivalent of &quot;vim.eval&quot; for passing <A HREF="#Lua">Lua</A> values to Nvim is
-&quot;luaeval&quot;. &quot;luaeval&quot; takes an <A HREF="eval.html#expression">expression</A> <A HREF="eval.html#string">string</A> and an optional argument used
+&quot;luaeval&quot;. &quot;luaeval&quot; takes an <A HREF="eval.html#expression">expression</A> <A HREF="options\.html#options">字符串</A> and an optional argument used
 for _A inside <A HREF="eval.html#expression">expression</A> and returns the result of the <A HREF="eval.html#expression">expression</A>. It is
 semantically equivalent in <A HREF="#Lua">Lua</A> to:
 
@@ -458,7 +458,7 @@ semantically equivalent in <A HREF="#Lua">Lua</A> to:
 <B>    end</B>
  
 <A HREF="#Lua">Lua</A> nils, numbers, strings, tables and booleans are converted to their
-respective Vimscript types. If a <A HREF="#Lua">Lua</A> <A HREF="eval.html#string">string</A> contains a NUL byte, <A HREF="motion.html#it">它</A> will be
+respective Vimscript types. If a <A HREF="#Lua">Lua</A> <A HREF="options\.html#options">字符串</A> contains a NUL byte, <A HREF="motion.html#it">它</A> will be
 converted to a |<A HREF="eval.html#Blob">Blob</A>|. Conversion of other <A HREF="#Lua">Lua</A> types is an error.
 
 The magic global &quot;_A&quot; contains the second argument to <A HREF="#luaeval()">luaeval()</A>.
@@ -470,21 +470,21 @@ Example:
 <B>    foo</B>
  
 <A HREF="#Lua">Lua</A> tables are used <A HREF="motion.html#as">as</A> both dictionaries and lists, so <A HREF="motion.html#it">它</A> is impossible to
-determine whether empty table is meant to be empty <A HREF="eval.html#list">list</A> or empty dictionary.
+determine whether empty table is meant to be empty <A HREF="eval.html#list">列表</A> or empty dictionary.
 Additionally <A HREF="#Lua">Lua</A> does not have integer numbers. To distinguish between these
 cases there is the following agreement:
 
-0. Empty table is empty <A HREF="eval.html#list">list</A>.
+0. Empty table is empty <A HREF="eval.html#list">列表</A>.
 1. Table with N incrementally growing integral numbers, starting from 1 and
-   ending with N is considered to be a <A HREF="eval.html#list">list</A>.
-2. Table with <A HREF="eval.html#string">string</A> keys, none of which contains NUL byte, is considered to
+   ending with N is considered to be a <A HREF="eval.html#list">列表</A>.
+2. Table with <A HREF="options\.html#options">字符串</A> keys, none of which contains NUL byte, is considered to
    be a dictionary.
-3. Table with <A HREF="eval.html#string">string</A> keys, at least one of which contains NUL byte, is also
+3. Table with <A HREF="options\.html#options">字符串</A> keys, at least one of which contains NUL byte, is also
    considered to be a dictionary, but this time <A HREF="motion.html#it">它</A> is converted to
    a |<A HREF="builtin.html#msgpack-special-map">msgpack-special-map</A>|.
 
                                                              *<A NAME="lua-special-tbl"></A><B>lua-special-tbl</B>*
-4. Table with `vim.type_idx` key may be a dictionary, a <A HREF="eval.html#list">list</A> or floating-point
+4. Table with `vim.type_idx` key may be a dictionary, a <A HREF="eval.html#list">列表</A> or floating-point
    value:
    - `{[vim.type_idx]=vim.types.float, [vim.val_idx]=1}` is converted to
      a floating-point 1.0. Note that by default integral <A HREF="#Lua">Lua</A> numbers are
@@ -495,7 +495,7 @@ cases there is the following agreement:
      converted to a dictionary `{'a': 42}`: non-string keys are ignored.
      Without `vim.type_idx` key tables with keys not fitting in 1., 2. or 3.
      are <A HREF="message.html#errors">errors</A>.
-   - `{[vim.type_idx]=vim.types.array}` is converted to an empty <A HREF="eval.html#list">list</A>. As well
+   - `{[vim.type_idx]=vim.types.array}` is converted to an empty <A HREF="eval.html#list">列表</A>. As well
      <A HREF="motion.html#as">as</A> `{[vim.type_idx]=vim.types.array, [42]=1}`: integral keys that <A HREF="diff.html#do">do</A> not
      form a 1-step sequence from 1 to N are ignored, <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> all
      non-integral keys.
@@ -539,7 +539,7 @@ The `v:lua` prefix may be used to call <A HREF="#Lua">Lua</A> <A HREF="eval.html
 example:
 <B>    arg1-&gt;v:lua.somemod.func(arg2)</B>
  
-You can use `v:lua` in &quot;func&quot; <A HREF="options.html#options">options</A> like <A HREF="options.html#'tagfunc'">'tagfunc'</A>, <A HREF="options.html#'omnifunc'">'omnifunc'</A>, etc.
+You can use `v:lua` in &quot;func&quot; <A HREF="options\.html#options">选项</A> like <A HREF="options.html#'tagfunc'">'tagfunc'</A>, <A HREF="options.html#'omnifunc'">'omnifunc'</A>, etc.
 For example consider the following <A HREF="#Lua">Lua</A> omnifunc handler:
 
 <B>    function mymod.omnifunc(findstart, base)</B>
@@ -637,7 +637,7 @@ Example: <A HREF="repeat.html#repeating">repeating</A> <A HREF="builtin.html#tim
 <B>    -- Create a timer handle (implementation detail: uv_timer_t).</B>
 <B>    local timer = vim.loop.new_timer()</B>
 <B>    local i = 0</B>
-<B>    -- Waits 1000ms, then repeats every 750ms until timer:close().</B>
+<B>    -- Waits 1000ms然后repeats every 750ms until timer:close().</B>
 <B>    timer:start(1000, 750, function()</B>
 <B>      print('timer invoked! i='..tostring(i))</B>
 <B>      if i &gt; 4 then</B>
@@ -715,7 +715,7 @@ etc) be directly accessed from threads.
 A subset of the `vim.*` <A HREF="api.html#API">API</A> is available in threads. This includes:
 
 - `vim.loop` with a separate event loop per thread.
-- `vim.mpack` and `vim.json` (useful for serializing <A HREF="message.html#messages">messages</A> between threads)
+- `vim.mpack` and `vim.json` (useful for serializing <A HREF="message.html#messages">信息</A> between threads)
 - `require` in threads can use lua <A HREF="repeat.html#packages">packages</A> from the global |<A HREF="intro.html#lua-package-path">lua-package-path</A>|
 - `print()` and `vim.inspect`
 - `vim.diff`
@@ -799,7 +799,7 @@ Methods on the regex object:
 
 
 regex:match_str({str})                                     *<A NAME="regex:match_str()"></A><B>regex:match_str()</B>*
-        Match the <A HREF="eval.html#string">string</A> against the regex. If the <A HREF="eval.html#string">string</A> should match the
+        Match the <A HREF="options\.html#options">字符串</A> against the regex. If the <A HREF="options\.html#options">字符串</A> should match the
         regex precisely, surround the regex with `^` and `$`.
         If the was a match, the byte indices for the beginning and end of
         the match is returned. When there is no match, `nil` is returned.
@@ -810,7 +810,7 @@ regex:match_str({str})                                     *<A NAME="regex:match
 regex:match_line({bufnr}, {line_idx}[, {start}, {end}])   *<A NAME="regex:match_line()"></A><B>regex:match_line()</B>*
         Match line {line_idx} (zero-based) in buffer {bufnr}. If {start} and
         {end} are supplied, match only this byte index range. Otherwise see
-        |<A HREF="#regex:match_str()">regex:match_str()</A>|. If {start} is used, then the returned byte
+        |<A HREF="#regex:match_str()">regex:match_str()</A>|. If {start} is used然后the returned byte
         indices will be relative {start}.
 
 ------------------------------------------------------------------------------
@@ -839,8 +839,8 @@ vim.diff({a}, {b}, {opts})                                        *<A NAME="vim.
 <B>                    }</B>
  
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {a}      First <A HREF="eval.html#string">string</A> to compare
-                    {b}      Second <A HREF="eval.html#string">string</A> to compare
+                    {a}      First <A HREF="options\.html#options">字符串</A> to compare
+                    {b}      Second <A HREF="options\.html#options">字符串</A> to compare
                     {opts}   Optional parameters:
                              • `on_hunk` (callback):
                                Invoked for each hunk in the <A HREF="diff.html#diff">diff</A>. Return a
@@ -852,7 +852,7 @@ vim.diff({a}, {b}, {opts})                                        *<A NAME="vim.
                                • `start_b` (integer): Start line of hunk in {b}.
                                • `count_b` (integer): Hunk size in {b}.
                              • `result_type` (string): Form of the returned <A HREF="diff.html#diff">diff</A>:
-                               • &quot;unified&quot;: (default) <A HREF="eval.html#String">String</A> in unified format.
+                               • &quot;unified&quot;: (default) <A HREF="options\.html#options">字符串</A> in unified format.
                                • &quot;indices&quot;: Array of hunk locations.
                                Note: This option is ignored if `on_hunk` is
                                used.
@@ -893,7 +893,7 @@ from msgpack-encoded strings. Supports |<A HREF="vim.html">vim.NIL</A>| and |<A 
 
 
 vim.mpack.encode({obj})                                     *<A NAME="vim.mpack.encode"></A><B>vim.mpack.encode</B>*
-        Encodes (or &quot;packs&quot;) <A HREF="#Lua">Lua</A> object {obj} <A HREF="motion.html#as">as</A> msgpack in a <A HREF="#Lua">Lua</A> <A HREF="eval.html#string">string</A>.
+        Encodes (or &quot;packs&quot;) <A HREF="#Lua">Lua</A> object {obj} <A HREF="motion.html#as">as</A> msgpack in a <A HREF="#Lua">Lua</A> <A HREF="options\.html#options">字符串</A>.
 
 
 vim.mpack.decode({str})                                     *<A NAME="vim.mpack.decode"></A><B>vim.mpack.decode</B>*
@@ -921,10 +921,10 @@ vim.spell.check({str})                                     *<A NAME="vim.spell.c
 <B>            }</B>
  
 <B><FONT color="#3A6F2B">        Parameters: </FONT></B>
-            {str}    <A HREF="eval.html#String">String</A> to <A HREF="spell.html#spell">拼写</A> check.
+            {str}    <A HREF="options\.html#options">字符串</A> to <A HREF="spell.html#spell">拼写</A> check.
 
 <B><FONT color="#3A6F2B">        Return: </FONT></B>
-          <A HREF="eval.html#List">List</A> of tuples with three items:
+          <A HREF="eval.html#list">列表</A> of tuples with three items:
             - The badly spelled <A HREF="motion.html#word">单词</A>.
             - The type of the spelling error:
                 &quot;bad&quot;   spelling mistake
@@ -996,10 +996,10 @@ vim.stricmp({a}, {b})                                          *<A NAME="vim.str
 
 vim.str_utfindex({str}[, {index}])                        *<A NAME="vim.str_utfindex()"></A><B>vim.str_utfindex()</B>*
         Convert byte index to UTF-32 and UTF-16 indices. If {index} is not
-        supplied, the length of the <A HREF="eval.html#string">string</A> is used. All indices are zero-based.
+        supplied, the length of the <A HREF="options\.html#options">字符串</A> is used. All indices are zero-based.
         Returns two values: the UTF-32 and UTF-16 indices respectively.
 
-        Embedded NUL bytes are treated <A HREF="motion.html#as">as</A> terminating the <A HREF="eval.html#string">string</A>. Invalid
+        Embedded NUL bytes are treated <A HREF="motion.html#as">as</A> terminating the <A HREF="options\.html#options">字符串</A>. Invalid
         <A HREF="mbyte.html#UTF-8">UTF-8</A> bytes, and embedded surrogates are counted <A HREF="motion.html#as">as</A> one code
         point each. An {index} in the middle of a <A HREF="mbyte.html#UTF-8">UTF-8</A> sequence is rounded
         upwards to the end of that sequence.
@@ -1090,7 +1090,7 @@ vim.wait({time} [, {callback}, {interval}, {fast_only}])          *<A NAME="vim.
 <A HREF="#vim.type_idx">vim.type_idx</A>                                                    *<A NAME="vim.type_idx"></A><B>vim.type_idx</B>*
         Type index for use in |<A HREF="#lua-special-tbl">lua-special-tbl</A>|. Specifying one of the values
         from |<A HREF="vim.html">vim.types</A>| allows typing the empty table (it is unclear whether
-        empty <A HREF="#Lua">Lua</A> table represents empty <A HREF="eval.html#list">list</A> or empty array) and forcing
+        empty <A HREF="#Lua">Lua</A> table represents empty <A HREF="eval.html#list">列表</A> or empty array) and forcing
         integral numbers to be |<A HREF="eval.html#Float">Float</A>|. 见 |<A HREF="#lua-special-tbl">lua-special-tbl</A>| for more
         details.
 
@@ -1140,7 +1140,7 @@ Log levels are one of the values defined in `vim.log.levels`:
 LUA-VIMSCRIPT BRIDGE                                           *<A NAME="lua-vimscript"></A><B>lua-vimscript</B>*
 
 Nvim <A HREF="#Lua">Lua</A> provides an interface to Vimscript <A HREF="eval.html#variables">variables</A> and <A HREF="eval.html#functions">functions</A>, and
-editor commands and <A HREF="options.html#options">options</A>.
+editor commands and <A HREF="options\.html#options">选项</A>.
 See also https://github.com/nanotee/nvim-lua-guide.
 
 
@@ -1236,10 +1236,10 @@ Example:
 
                                                             *<A NAME="lua-vim-setlocal"></A><B>lua-vim-setlocal</B>*
 
-In Vimscript, there is a way to set <A HREF="options.html#options">options</A> |<A HREF="options.html#set-option">set-option</A>|. In <A HREF="#Lua">Lua</A>, the
+In Vimscript, there is a way to set <A HREF="options\.html#options">选项</A> |<A HREF="options.html#set-option">set-option</A>|. In <A HREF="#Lua">Lua</A>, the
 corresponding <A HREF="eval.html#method">method</A> is `vim.opt`.
 
-`vim.opt` provides several conveniences for setting and controlling <A HREF="options.html#options">options</A>
+`vim.opt` provides several conveniences for setting and controlling <A HREF="options\.html#options">选项</A>
 from within <A HREF="#Lua">Lua</A>.
 
 <B><FONT color="#3A6F2B">    Examples: </FONT></B>
@@ -1260,7 +1260,7 @@ from within <A HREF="#Lua">Lua</A>.
             `vim.opt.wildignore = '*.o,*.a,__pycache__'`
 
         However, <A HREF="#vim.opt">vim.opt</A> also supports a more elegent way of setting
-        list-style <A HREF="options.html#options">options</A> by using <A HREF="#lua">lua</A> tables:
+        list-style <A HREF="options\.html#options">选项</A> by using <A HREF="#lua">lua</A> tables:
             `vim.opt.wildignore = { '*.o', '*.a', '__pycache__' }`
 
     To replicate the behavior of |<A HREF="options.html#:set+=">:set+=</A>|, use:
@@ -1312,7 +1312,7 @@ An `Option` has the following methods:
                                                                *<A NAME="vim.opt:get()"></A><B>vim.opt:get()</B>*
 Option:get()
 
-    Returns a lua-representation of the option. <A HREF="eval.html#Boolean">Boolean</A>, number and <A HREF="eval.html#string">string</A>
+    Returns a lua-representation of the option. <A HREF="eval.html#Boolean">Boolean</A>, number and <A HREF="options\.html#options">字符串</A>
     values will be returned in exactly the same fashion.
 
     For values that are comma-separated lists, an array will be returned with
@@ -1355,7 +1355,7 @@ Option:get()
                                                             *<A NAME="vim.opt:append()"></A><B>vim.opt:append()</B>*
 Option:append(value)
 
-    Append a value to string-style <A HREF="options.html#options">options</A>. 见 |<A HREF="options.html#:set+=">:set+=</A>|
+    Append a value to string-style <A HREF="options\.html#options">选项</A>. 见 |<A HREF="options.html#:set+=">:set+=</A>|
 
     These are equivalent:
         `vim.opt.formatoptions:append('j')`
@@ -1365,7 +1365,7 @@ Option:append(value)
                                                            *<A NAME="vim.opt:prepend()"></A><B>vim.opt:prepend()</B>*
 Option:prepend(value)
 
-    Prepend a value to string-style <A HREF="options.html#options">options</A>. 见 |<A HREF="options.html#:set^=">:set^=</A>|
+    Prepend a value to string-style <A HREF="options\.html#options">选项</A>. 见 |<A HREF="options.html#:set^=">:set^=</A>|
 
     These are equivalent:
         `vim.opt.wildignore:prepend('*.o')`
@@ -1375,7 +1375,7 @@ Option:prepend(value)
                                                             *<A NAME="vim.opt:remove()"></A><B>vim.opt:remove()</B>*
 Option:remove(value)
 
-    Remove a value from string-style <A HREF="options.html#options">options</A>. 见 |<A HREF="options.html#:set-=">:set-=</A>|
+    Remove a value from string-style <A HREF="options\.html#options">选项</A>. 见 |<A HREF="options.html#:set-=">:set-=</A>|
 
     These are equivalent:
         `vim.opt.wildignore:remove('*.pyc')`
@@ -1383,8 +1383,8 @@ Option:remove(value)
 
 
 In general, using `vim.opt` will provide the expected result when the user is
-used to interacting with editor |<A HREF="options.html#options">options</A>| via `set`. There are still times
-where the user may want to set particular <A HREF="options.html#options">options</A> via a shorthand in <A HREF="#Lua">Lua</A>,
+used to interacting with editor |<A HREF="options\.html#options">选项</A>| via `set`. There are still times
+where the user may want to set particular <A HREF="options\.html#options">选项</A> via a shorthand in <A HREF="#Lua">Lua</A>,
 which is where |<A HREF="#vim.o">vim.o</A>|, |<A HREF="#vim.bo">vim.bo</A>|, |<A HREF="#vim.wo">vim.wo</A>|, and |<A HREF="#vim.go">vim.go</A>| come into play.
 
 The behavior of |<A HREF="#vim.o">vim.o</A>|, |<A HREF="#vim.bo">vim.bo</A>|, |<A HREF="#vim.wo">vim.wo</A>|, and |<A HREF="#vim.go">vim.go</A>| is designed to
@@ -1398,7 +1398,7 @@ vim.bo/vim.wo   <A HREF="options.html#:setlocal">:setlocal</A>            -     
 
 
 <A HREF="#vim.o">vim.o</A>                                                                  *<A NAME="vim.o"></A><B>vim.o</B>*
-        Get or set editor <A HREF="options.html#options">options</A>, like |<A HREF="options.html#:set">:set</A>|. Invalid key is an error.
+        Get or set editor <A HREF="options\.html#options">选项</A>, like |<A HREF="options.html#:set">:set</A>|. Invalid key is an error.
         Example:
 <B>            vim.o.cmdheight = 4</B>
 <B>            print(vim.o.columns)</B>
@@ -1410,7 +1410,7 @@ vim.bo/vim.wo   <A HREF="options.html#:setlocal">:setlocal</A>            -     
         This is a wrapper around |<A HREF="api.html#nvim_set_option()">nvim_set_option()</A>| and |<A HREF="api.html#nvim_get_option()">nvim_get_option()</A>|.
 
         NOTE: This is different than |<A HREF="#vim.o">vim.o</A>| because this ONLY sets the global
-        option, which generally produces confusing behavior for <A HREF="options.html#options">options</A> with
+        option, which generally produces confusing behavior for <A HREF="options\.html#options">选项</A> with
         |<A HREF="options.html#global-local">global-local</A>| values.
 
         Example:
@@ -1460,7 +1460,7 @@ cmd({command})                                                     *<A NAME="vim
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {command}  string|table Command(s) to execute. If a
-                               <A HREF="eval.html#string">string</A>, executes multiple lines of Vim <A HREF="usr_41.html#script">script</A>
+                               <A HREF="options\.html#options">字符串</A>, executes multiple lines of Vim <A HREF="usr_41.html#script">script</A>
                                at once. In this <A HREF="change.html#case">case</A>, <A HREF="motion.html#it">它</A> is an alias to
                                |<A HREF="api.html#nvim_exec()">nvim_exec()</A>|, where `output` is set to false.
                                Thus <A HREF="motion.html#it">它</A> works identical to |<A HREF="repeat.html#:source">:source</A>|. If a
@@ -1497,10 +1497,10 @@ deprecate({name}, {alternative}, {version}, {plugin}, {backtrace})
                 Display a deprecation notification to the user.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {name}         <A HREF="eval.html#string">string</A> Deprecated function.
+                    {name}         <A HREF="options\.html#options">字符串</A> Deprecated function.
                     {alternative}  (string|nil) Preferred alternative
                                    function.
-                    {version}      <A HREF="eval.html#string">string</A> Version in which the <A HREF="deprecated.html#deprecated">deprecated</A>
+                    {version}      <A HREF="options\.html#options">字符串</A> Version in which the <A HREF="deprecated.html#deprecated">deprecated</A>
                                    function will be removed.
                     {plugin}       string|nil Plugin name that the function
                                    will be removed from. Defaults to &quot;Nvim&quot;.
@@ -1566,7 +1566,7 @@ on_key({fn}, {ns_id})                                           *<A NAME="vim.on
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {fn}     function: Callback function. It should take one
-                             <A HREF="eval.html#string">string</A> argument. On each key press, Nvim passes
+                             <A HREF="options\.html#options">字符串</A> argument. On each key press, Nvim passes
                              the key char to fn(). |<A HREF="insert.html#i_CTRL-V">i_CTRL-V</A>| If {fn} is nil,
                              <A HREF="motion.html#it">它</A> removes the callback for the associated
                              {ns_id}
@@ -1599,7 +1599,7 @@ paste({lines}, {phase})                                          *<A NAME="vim.p
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {lines}  |readfile()|-style <A HREF="eval.html#list">list</A> of lines to <A HREF="provider.html#paste">paste</A>.
+                    {lines}  |readfile()|-style <A HREF="eval.html#list">列表</A> of lines to <A HREF="provider.html#paste">paste</A>.
                              |<A HREF="channel.html#channel-lines">channel-lines</A>|
                     {phase}  -1: &quot;non-streaming&quot; <A HREF="provider.html#paste">paste</A>: the call contains all
                              lines. If <A HREF="provider.html#paste">paste</A> is &quot;streamed&quot;, `phase` indicates the stream state:
@@ -1688,7 +1688,7 @@ endswith({s}, {suffix})                                       *<A NAME="vim.ends
                 Tests if `s` ends with `suffix`.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {s}       (string) <A HREF="eval.html#String">String</A>
+                    {s}       (string) <A HREF="options\.html#options">字符串</A>
                     {suffix}  (string) Suffix to match
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -1696,10 +1696,10 @@ endswith({s}, {suffix})                                       *<A NAME="vim.ends
 
 
 gsplit({s}, {sep}, {plain})                                     *<A NAME="vim.gsplit()"></A><B>vim.gsplit()</B>*
-                Splits a <A HREF="eval.html#string">string</A> at each instance of a separator.
+                Splits a <A HREF="options\.html#options">字符串</A> at each instance of a separator.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {s}      (string) <A HREF="eval.html#String">String</A> to split
+                    {s}      (string) <A HREF="options\.html#options">字符串</A> to split
                     {sep}    (string) Separator or <A HREF="pattern.html#pattern">pattern</A>
                     {plain}  (boolean) If `true` use `sep` literally (passed
                              to string.find)
@@ -1730,9 +1730,9 @@ list_extend({dst}, {src}, {start}, {finish})               *<A NAME="vim.list_ex
                 NOTE: This mutates dst!
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {dst}     (table) <A HREF="eval.html#List">List</A> which will be modified and appended
+                    {dst}     (table) <A HREF="eval.html#list">列表</A> which will be modified and appended
                               to
-                    {src}     (table) <A HREF="eval.html#List">List</A> from which values will be inserted
+                    {src}     (table) <A HREF="eval.html#list">列表</A> from which values will be inserted
                     {start}   (number) Start index on src. Defaults to 1
                     {finish}  (number) Final index on src. Defaults to `#src`
 
@@ -1761,17 +1761,17 @@ pesc({s})                                                         *<A NAME="vim.
                 Escapes magic chars in a <A HREF="#Lua">Lua</A> <A HREF="pattern.html#pattern">pattern</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {s}  (string) <A HREF="eval.html#String">String</A> to <A HREF="intro.html#escape">escape</A>
+                    {s}  (string) <A HREF="options\.html#options">字符串</A> to <A HREF="intro.html#escape">escape</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (string) &#37;-escaped <A HREF="pattern.html#pattern">pattern</A> <A HREF="eval.html#string">string</A>
+                    (string) &#37;-escaped <A HREF="pattern.html#pattern">pattern</A> <A HREF="options\.html#options">字符串</A>
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://github.com/rxi/lume
 
 
 split({s}, {sep}, {kwargs})                                      *<A NAME="vim.split()"></A><B>vim.split()</B>*
-                Splits a <A HREF="eval.html#string">string</A> at each instance of a separator.
+                Splits a <A HREF="options\.html#options">字符串</A> at each instance of a separator.
 
                 Examples:
 
@@ -1782,16 +1782,16 @@ split({s}, {sep}, {kwargs})                                      *<A NAME="vim.s
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {s}       (string) <A HREF="eval.html#String">String</A> to split
+                    {s}       (string) <A HREF="options\.html#options">字符串</A> to split
                     {sep}     (string) Separator or <A HREF="pattern.html#pattern">pattern</A>
                     {kwargs}  (table) Keyword arguments:
                               • plain: (boolean) If `true` use `sep` literally
                                 (passed to string.find)
                               • trimempty: (boolean) If `true` remove empty
-                                items from the front and back of the <A HREF="eval.html#list">list</A>
+                                items from the front and back of the <A HREF="eval.html#list">列表</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) <A HREF="eval.html#List">List</A> of split components
+                    (table) <A HREF="eval.html#list">列表</A> of split components
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     |<A HREF="vim.html">vim.gsplit()</A>|
@@ -1801,7 +1801,7 @@ startswith({s}, {prefix})                                   *<A NAME="vim.starts
                 Tests if `s` starts with `prefix`.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {s}       (string) <A HREF="eval.html#String">String</A>
+                    {s}       (string) <A HREF="options\.html#options">字符串</A>
                     {prefix}  (string) Prefix to match
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -1913,7 +1913,7 @@ tbl_flatten({t})                                           *<A NAME="vim.tbl_fla
 
 
 tbl_get({o}, {...})                                            *<A NAME="vim.tbl_get()"></A><B>vim.tbl_get()</B>*
-                Index into a table (first argument) via <A HREF="eval.html#string">string</A> keys passed <A HREF="motion.html#as">as</A>
+                Index into a table (first argument) via <A HREF="options\.html#options">字符串</A> keys passed <A HREF="motion.html#as">as</A>
                 subsequent arguments. Return `nil` if the key does not exist.
 
                 Examples:
@@ -1960,14 +1960,14 @@ tbl_islist({t})                                             *<A NAME="vim.tbl_is
 
 
 tbl_keys({t})                                                 *<A NAME="vim.tbl_keys()"></A><B>vim.tbl_keys()</B>*
-                Return a <A HREF="eval.html#list">list</A> of all keys used in a table. However, the order
+                Return a <A HREF="eval.html#list">列表</A> of all keys used in a table. However, the order
                 of the return table of keys is not guaranteed.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {t}  (table) Table
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) <A HREF="eval.html#List">List</A> of keys
+                    (table) <A HREF="eval.html#list">列表</A> of keys
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     From https://github.com/premake/premake-core/blob/master/src/base/table.lua
@@ -1985,25 +1985,25 @@ tbl_map({func}, {t})                                           *<A NAME="vim.tbl
 
 
 tbl_values({t})                                             *<A NAME="vim.tbl_values()"></A><B>vim.tbl_values()</B>*
-                Return a <A HREF="eval.html#list">list</A> of all values used in a table. However, the
+                Return a <A HREF="eval.html#list">列表</A> of all values used in a table. However, the
                 order of the return table of values is not guaranteed.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {t}  (table) Table
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table) <A HREF="eval.html#List">List</A> of values
+                    (table) <A HREF="eval.html#list">列表</A> of values
 
 
 trim({s})                                                         *<A NAME="vim.trim()"></A><B>vim.trim()</B>*
                 Trim <A HREF="pattern.html#whitespace">whitespace</A> (Lua <A HREF="pattern.html#pattern">pattern</A> &quot;&#37;s&quot;) from both sides of a
-                <A HREF="eval.html#string">string</A>.
+                <A HREF="options\.html#options">字符串</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {s}  (string) <A HREF="eval.html#String">String</A> to trim
+                    {s}  (string) <A HREF="options\.html#options">字符串</A> to trim
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (string) <A HREF="eval.html#String">String</A> with <A HREF="pattern.html#whitespace">whitespace</A> removed from its beginning
+                    (string) <A HREF="options\.html#options">字符串</A> with <A HREF="pattern.html#whitespace">whitespace</A> removed from its beginning
                     and end
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
@@ -2037,7 +2037,7 @@ validate({opt})                                               *<A NAME="vim.vali
 <B>                     =&gt; error('arg1: expected even number, got 3')</B>
  
 
-                If multiple types are valid they can be given <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">list</A>.
+                If multiple types are valid they can be given <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">列表</A>.
 
 <B>                  vim.validate{arg1={{'foo'}, {'table', 'string'}}, arg2={'foo', {'table', 'string'}}}</B>
 <B>                     =&gt; NOP (success)</B>
@@ -2053,9 +2053,9 @@ validate({opt})                                               *<A NAME="vim.vali
                            1. (arg_value, type_name, optional)
                               • arg_value: argument value
                               • type_name: string|table type name, one of:
-                                (&quot;table&quot;, &quot;<A HREF="motion.html#t">t</A>&quot;, &quot;<A HREF="eval.html#string">string</A>&quot;, &quot;<A HREF="change.html#s">s</A>&quot;, &quot;number&quot;, &quot;<A HREF="pattern.html#n">n</A>&quot;,
+                                (&quot;table&quot;, &quot;<A HREF="motion.html#t">t</A>&quot;, &quot;<A HREF="options\.html#options">字符串</A>&quot;, &quot;<A HREF="change.html#s">s</A>&quot;, &quot;number&quot;, &quot;<A HREF="pattern.html#n">n</A>&quot;,
                                 &quot;<A HREF="options.html#boolean">boolean</A>&quot;, &quot;<A HREF="motion.html#b">b</A>&quot;, &quot;function&quot;, &quot;<A HREF="motion.html#f">f</A>&quot;, &quot;nil&quot;,
-                                &quot;thread&quot;, &quot;userdata&quot;) or <A HREF="eval.html#list">list</A> of them.
+                                &quot;thread&quot;, &quot;userdata&quot;) or <A HREF="eval.html#list">列表</A> of them.
                               • optional: (optional) <A HREF="options.html#boolean">boolean</A>, if true, `nil`
                                 is valid
 
@@ -2066,7 +2066,7 @@ validate({opt})                                               *<A NAME="vim.vali
                                 valid. Can optionally return an additional
                                 informative error message <A HREF="motion.html#as">as</A> the second
                                 returned value.
-                              • msg: (optional) error <A HREF="eval.html#string">string</A> if validation
+                              • msg: (optional) error <A HREF="options\.html#options">字符串</A> if validation
                                 fails
 
 
@@ -2132,7 +2132,7 @@ input({opts}, {on_confirm})                                   *<A NAME="vim.ui.i
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}        (table) Additional <A HREF="options.html#options">options</A>. 见 |<A HREF="builtin.html#input()">input()</A>|
+                    {opts}        (table) Additional <A HREF="options\.html#options">选项</A>. 见 |<A HREF="builtin.html#input()">input()</A>|
                                   • prompt (string|nil) Text of the prompt.
                                     Defaults to `Input:`.
                                   • default (string|nil) Default reply to the
@@ -2173,13 +2173,13 @@ select({items}, {opts}, {on_choice})                         *<A NAME="vim.ui.se
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {items}      (table) Arbitrary items
-                    {opts}       (table) Additional <A HREF="options.html#options">options</A>
+                    {opts}       (table) Additional <A HREF="options\.html#options">选项</A>
                                  • prompt (string|nil) Text of the prompt.
                                    Defaults to `Select one of:`
                                  • format_item (function item <A HREF="eval.html#-&gt;">-&gt;</A> text)
                                    Function to format an individual item from
                                    `items`. Defaults to `tostring`.
-                                 • kind (string|nil) Arbitrary hint <A HREF="eval.html#string">string</A>
+                                 • kind (string|nil) Arbitrary hint <A HREF="options\.html#options">字符串</A>
                                    indicating the item shape. Plugins
                                    reimplementing `vim.ui.select` may wish to
                                    use this to infer the structure or
@@ -2202,16 +2202,16 @@ add({filetypes})                                          *<A NAME="vim.filetype
                 Filetype mappings can be added either by extension or by
                 filename (either the &quot;tail&quot; or the full file path). The full
                 file path is checked first, followed by the file name. If a
-                match is not found using the filename, then the filename is
-                matched against the <A HREF="eval.html#list">list</A> of |<A HREF="#lua-patterns">lua-patterns</A>| (sorted by
+                match is not found using the filename然后the filename is
+                matched against the <A HREF="eval.html#list">列表</A> of |<A HREF="#lua-patterns">lua-patterns</A>| (sorted by
                 priority) until a match is found. Lastly, if <A HREF="pattern.html#pattern">pattern</A> matching
-                does not find a <A HREF="filetype.html#filetype">filetype</A>, then the file extension is used.
+                does not find a <A HREF="filetype.html#filetype">filetype</A>然后the file extension is used.
 
-                The <A HREF="filetype.html#filetype">filetype</A> can be either a <A HREF="eval.html#string">string</A> (in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is used
+                The <A HREF="filetype.html#filetype">filetype</A> can be either a <A HREF="options\.html#options">字符串</A> (in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is used
                 <A HREF="motion.html#as">as</A> the <A HREF="filetype.html#filetype">filetype</A> directly) or a function. If a function, <A HREF="motion.html#it">它</A>
                 takes the full path and buffer number of the file <A HREF="motion.html#as">as</A> arguments
                 (along with captures from the matched <A HREF="pattern.html#pattern">pattern</A>, if any) and
-                should return a <A HREF="eval.html#string">string</A> that will be used <A HREF="motion.html#as">as</A> the buffer's
+                should return a <A HREF="options\.html#options">字符串</A> that will be used <A HREF="motion.html#as">as</A> the buffer's
                 <A HREF="filetype.html#filetype">filetype</A>.
 
                 Filename patterns can specify an optional priority to resolve
@@ -2327,15 +2327,15 @@ set({mode}, <A HREF="map.html#{lhs}">{lhs}</A>, <A HREF="map.html#{rhs}">{rhs}</
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {mode}  string|table Same mode short names <A HREF="motion.html#as">as</A>
-                            |<A HREF="api.html#nvim_set_keymap()">nvim_set_keymap()</A>|. Can also be <A HREF="eval.html#list">list</A> of modes to
+                            |<A HREF="api.html#nvim_set_keymap()">nvim_set_keymap()</A>|. Can also be <A HREF="eval.html#list">列表</A> of modes to
                             create <A HREF="map.html#mapping">mapping</A> on multiple modes.
                     {lhs}   (string) Left-hand side |<A HREF="map.html#{lhs}">{lhs}</A>| of the <A HREF="map.html#mapping">mapping</A>.
                     {rhs}   string|function Right-hand side |{rhs}| of the|||
                             <A HREF="map.html#mapping">mapping</A>. Can also be a <A HREF="#Lua">Lua</A> function. If a <A HREF="#Lua">Lua</A>
                             function and `opts.expr <A HREF="change.html#==">==</A> true`, returning `nil`
-                            is equivalent to an empty <A HREF="eval.html#string">string</A>.
+                            is equivalent to an empty <A HREF="options\.html#options">字符串</A>.
                     {opts}  (table) A table of |<A HREF="map.html#:map-arguments">:map-arguments</A>| such <A HREF="motion.html#as">as</A>
-                            &quot;silent&quot;. In addition to the <A HREF="options.html#options">options</A> listed in
+                            &quot;silent&quot;. In addition to the <A HREF="options\.html#options">选项</A> listed in
                             |<A HREF="api.html#nvim_set_keymap()">nvim_set_keymap()</A>|, this table also accepts the
                             following keys:
                             • buffer: (number or <A HREF="options.html#boolean">boolean</A>) Add a <A HREF="map.html#mapping">mapping</A> to the

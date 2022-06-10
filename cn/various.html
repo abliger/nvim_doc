@@ -142,7 +142,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			non-printable version is also given.
 
 			When the character is larger than 127, the &lt;M-x&gt; form
-			is also printed.  For example:
+			is also printed.例如:
 <B><FONT color="#3A6F2B">				&lt;~A&gt;  &lt;M-^A&gt;  129,  Hex 81,  Octal 201 </FONT></B>
 <B><FONT color="#3A6F2B">				&lt;p&gt;  &lt;|~&gt;  &lt;M-~&gt;  254,  Hex fe,  Octal 376 </FONT></B>
 			(where &lt;p&gt; is a special character)
@@ -273,7 +273,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 <A HREF="#:=">:=</A> [flags]		Print the last line number.
 			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 
-:{range}= [flags]	Prints the last line number in {range}.  For example,
+:{range}= [flags]	Prints the last line number in {range}.例如,
 			this prints the current line number:
 <B>				:.=</B>
  			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
@@ -324,7 +324,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			in the {range}.  Before executing the {commands}, the
 			cursor is positioned in the first column of the range,
 			for each line.  Otherwise it's the same <A HREF="motion.html#as">as</A> the
-			&quot;<A HREF="#:normal">:normal</A>&quot; command without a range.
+			&quot;<A HREF="#:normal">:normal</A>&quot;命令 without a range.
 
 
 						  *<A NAME=":sh"></A><B>:sh</B>* *<A NAME=":shell"></A><B>:shell</B>* *<A NAME="E371"></A><B>E371</B>* *<A NAME="E360"></A><B>E360</B>*
@@ -336,7 +336,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			|<A HREF="nvim_terminal_emulator.html#terminal-emulator">terminal-emulator</A>| buffer. Without {cmd}, start an
 			interactive <A HREF="options.html#'shell'">'shell'</A>.
 
-			Type |<A HREF="insert.html#i">i</A>| to enter |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>|, then keys are sent to
+			Type |<A HREF="insert.html#i">i</A>| to enter |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>|然后keys are sent to
 			the <A HREF="job_control.html#job">job</A> running in the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>. Type &lt;C-\&gt;&lt;C-N&gt; to
 			leave <A HREF="intro.html#Terminal-mode">Terminal-mode</A>. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
@@ -402,9 +402,9 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 
 							*<A NAME=":redi"></A><B>:redi</B>* *<A NAME=":redir"></A><B>:redir</B>*
-:redi[r][!] <A HREF="change.html#&gt;">&gt;</A> <A HREF="editing.html#{file}">{file}</A>	Redirect <A HREF="message.html#messages">messages</A> to file <A HREF="editing.html#{file}">{file}</A>.  The <A HREF="message.html#messages">messages</A> which
+:redi[r][!] <A HREF="change.html#&gt;">&gt;</A> <A HREF="editing.html#{file}">{file}</A>	Redirect <A HREF="message.html#messages">信息</A> to file <A HREF="editing.html#{file}">{file}</A>.  The <A HREF="message.html#messages">信息</A> which
 			are the output of commands are written to that file,
-			until redirection ends.  The <A HREF="message.html#messages">messages</A> are also still
+			until redirection ends.  The <A HREF="message.html#messages">信息</A> are also still
 			shown on the screen.  When [!] is included, an
 			existing file is overwritten.  When [!] is omitted,
 			and <A HREF="editing.html#{file}">{file}</A> exists, this command fails.
@@ -414,57 +414,57 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			starting redirection to the new target.  For recursive
 			use check out |<A HREF="builtin.html#execute()">execute()</A>|.
 
-			To stop the <A HREF="message.html#messages">messages</A> and commands from being echoed to
+			To stop the <A HREF="message.html#messages">信息</A> and commands from being echoed to
 			the screen, put the commands in a function and call <A HREF="motion.html#it">它</A>
 			with &quot;<A HREF="#:silent">:silent</A> call Function()&quot;.
 			Alternatives are the <A HREF="options.html#'verbosefile'">'verbosefile'</A> option or
 			|<A HREF="builtin.html#execute()">execute()</A>| function, these can be used in combination
 			with &quot;<A HREF="#:redir">:redir</A>&quot;.
 
-:redi[r] <A HREF="change.html#&gt;&gt;">&gt;&gt;</A> <A HREF="editing.html#{file}">{file}</A>	Redirect <A HREF="message.html#messages">messages</A> to file <A HREF="editing.html#{file}">{file}</A>.  Append if <A HREF="editing.html#{file}">{file}</A>
+:redi[r] <A HREF="change.html#&gt;&gt;">&gt;&gt;</A> <A HREF="editing.html#{file}">{file}</A>	Redirect <A HREF="message.html#messages">信息</A> to file <A HREF="editing.html#{file}">{file}</A>.  Append if <A HREF="editing.html#{file}">{file}</A>
 			already exists.
 
 :redi[r] @{a-zA-Z}
-:redi[r] @{a-zA-Z}&gt;	Redirect <A HREF="message.html#messages">messages</A> to <A HREF="intro.html#register">register</A> {a-z}.  Append to the
+:redi[r] @{a-zA-Z}&gt;	Redirect <A HREF="message.html#messages">信息</A> to <A HREF="intro.html#register">register</A> {a-z}.  Append to the
 			contents of the <A HREF="intro.html#register">register</A> if its name is given
-			<A HREF="change.html#uppercase">uppercase</A> {A-Z}.  The &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; after the <A HREF="intro.html#register">register</A> name is
+			<A HREF="change.html#uppercase">大写</A> {A-Z}.  The &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; after the <A HREF="intro.html#register">register</A> name is
 			optional.
-:redi[r] @{a-z}&gt;&gt;	Append <A HREF="message.html#messages">messages</A> to <A HREF="intro.html#register">register</A> {a-z}.
+:redi[r] @{a-z}&gt;&gt;	Append <A HREF="message.html#messages">信息</A> to <A HREF="intro.html#register">register</A> {a-z}.
 
 :redi[r] @*&gt;
-:redi[r] @+&gt;		Redirect <A HREF="message.html#messages">messages</A> to the selection or <A HREF="provider.html#clipboard">clipboard</A>. For
+:redi[r] @+&gt;		Redirect <A HREF="message.html#messages">信息</A> to the selection or <A HREF="provider.html#clipboard">clipboard</A>. For
 			backward compatibility, the &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; after the <A HREF="intro.html#register">register</A>
 			name can be omitted. 见 |<A HREF="provider.html#quotestar">quotestar</A>| and |<A HREF="provider.html#quoteplus">quoteplus</A>|.
 :redi[r] @*&gt;&gt;
-:redi[r] @+&gt;&gt;		Append <A HREF="message.html#messages">messages</A> to the selection or <A HREF="provider.html#clipboard">clipboard</A>.
+:redi[r] @+&gt;&gt;		Append <A HREF="message.html#messages">信息</A> to the selection or <A HREF="provider.html#clipboard">clipboard</A>.
 
-:redi[r] @&quot;&gt;		Redirect <A HREF="message.html#messages">messages</A> to the unnamed <A HREF="intro.html#register">register</A>. For
+:redi[r] @&quot;&gt;		Redirect <A HREF="message.html#messages">信息</A> to the unnamed <A HREF="intro.html#register">register</A>. For
 			backward compatibility, the &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; after the <A HREF="intro.html#register">register</A>
 			name can be omitted.
-:redi[r] @&quot;&gt;&gt;		Append <A HREF="message.html#messages">messages</A> to the unnamed <A HREF="intro.html#register">register</A>.
+:redi[r] @&quot;&gt;&gt;		Append <A HREF="message.html#messages">信息</A> to the unnamed <A HREF="intro.html#register">register</A>.
 
-:redi[r] =&gt; {var}	Redirect <A HREF="message.html#messages">messages</A> to a variable.  If the variable
-			doesn't exist, then <A HREF="motion.html#it">它</A> is created.  If the variable
-			exists, then <A HREF="motion.html#it">它</A> is initialized to an empty <A HREF="eval.html#string">string</A>.
+:redi[r] =&gt; {var}	Redirect <A HREF="message.html#messages">信息</A> to a variable.  If the variable
+			doesn't exist然后<A HREF="motion.html#it">它</A> is created.  If the variable
+			exists然后<A HREF="motion.html#it">它</A> is initialized to an empty <A HREF="options\.html#options">字符串</A>.
 			The variable will remain empty until redirection ends.
-			Only <A HREF="eval.html#string">string</A> <A HREF="eval.html#variables">variables</A> can be used.  After the
+			Only <A HREF="options\.html#options">字符串</A> <A HREF="eval.html#variables">variables</A> can be used.  After the
 			redirection starts, if the variable is removed or
-			locked or the variable type is changed, then further
-			command output <A HREF="message.html#messages">messages</A> will cause <A HREF="message.html#errors">errors</A>.
+			locked or the variable type is changed然后further
+			command output <A HREF="message.html#messages">信息</A> will cause <A HREF="message.html#errors">errors</A>.
 			To get the output of one command the |<A HREF="builtin.html#execute()">execute()</A>|
 			function can be used instead of redirection.
 
-:redi[r] =&gt;&gt; {var}	Append <A HREF="message.html#messages">messages</A> to an existing variable.  Only <A HREF="eval.html#string">string</A>
+:redi[r] =&gt;&gt; {var}	Append <A HREF="message.html#messages">信息</A> to an existing variable.  Only <A HREF="options\.html#options">字符串</A>
 			<A HREF="eval.html#variables">variables</A> can be used.
 
-:redi[r] END		End redirecting <A HREF="message.html#messages">messages</A>.
+:redi[r] END		End redirecting <A HREF="message.html#messages">信息</A>.
 
 
 							*<A NAME=":filt"></A><B>:filt</B>* *<A NAME=":filter"></A><B>:filter</B>*
 :filt[er][!] {pattern} {command}
 :filt[er][!] /{pattern}/ {command}
 			Restrict the output of {command} to lines matching
-			with {pattern}.  For example, to <A HREF="eval.html#list">list</A> only xml files:
+			with {pattern}.例如, to <A HREF="eval.html#list">列表</A> only xml files:
 <B>				:filter /\.xml$/ oldfiles</B>
  			If the [!] is given, restrict the output of {command}
 			to lines that <A HREF="diff.html#do">do</A> NOT match {pattern}.
@@ -495,18 +495,18 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 					   (does not work multi-line)
 			   |<A HREF="options.html#:set">:set</A>|        - <A HREF="change.html#filter">filter</A> by option name
 
-			Only normal <A HREF="message.html#messages">messages</A> are filtered, error <A HREF="message.html#messages">messages</A> are
+			Only normal <A HREF="message.html#messages">信息</A> are filtered, error <A HREF="message.html#messages">信息</A> are
 			not.
 
 
 						*<A NAME=":sil"></A><B>:sil</B>* *<A NAME=":silent"></A><B>:silent</B>* *<A NAME=":silent!"></A><B>:silent!</B>*
-:sil[ent][!] {command}	Execute {command} silently.  <A HREF="intro.html#Normal">Normal</A> <A HREF="message.html#messages">messages</A> will not
+:sil[ent][!] {command}	Execute {command} silently.  <A HREF="intro.html#Normal">Normal</A> <A HREF="message.html#messages">信息</A> will not
 			be given or added to the message <A HREF="cmdline.html#history">history</A>.
-			When [!] is added, error <A HREF="message.html#messages">messages</A> will also be
+			When [!] is added, error <A HREF="message.html#messages">信息</A> will also be
 			skipped, and commands and mappings will not be aborted
 			when an error is detected.  |<A HREF="eval.html#v:errmsg">v:errmsg</A>| is still set.
 			When [!] is not used, an error message will cause
-			further <A HREF="message.html#messages">messages</A> to be displayed normally.
+			further <A HREF="message.html#messages">信息</A> to be displayed normally.
 			Redirection, started with |<A HREF="#:redir">:redir</A>|, will continue <A HREF="motion.html#as">as</A>
 			usual, although there might be small differences.
 			This will allow redirecting the output of a command
@@ -515,8 +515,8 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 <B>			    :silent g/Aap/p</B>
 <B>			    :redir END</B>
  			To execute a <A HREF="intro.html#Normal">正常</A>模式 command silently, use the
-			|<A HREF="#:normal">:normal</A>| command.  For example, to search for a
-			<A HREF="eval.html#string">string</A> without <A HREF="message.html#messages">messages</A>:
+			|<A HREF="#:normal">:normal</A>| command.例如, to search for a
+			<A HREF="options\.html#options">字符串</A> without <A HREF="message.html#messages">信息</A>:
 <B>			    :silent exe "normal /path\&lt;CR&gt;"</B>
  			&quot;<A HREF="#:silent!">:silent!</A>&quot; is useful to execute a command that may
 			fail, but the failure is to be ignored.  Example:
@@ -536,7 +536,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			Use this for giving a message even when |<A HREF="#:silent">:silent</A>| was
 			used.  In this example |<A HREF="#:silent">:silent</A>| is used to avoid the
 			message about reading the file and |<A HREF="#:unsilent">:unsilent</A>| to be
-			able to <A HREF="eval.html#list">list</A> the first line of each file.
+			able to <A HREF="eval.html#list">列表</A> the first line of each file.
 <B>		:silent argdo unsilent echo expand('%') .. ": " .. getline(1)</B>
  
 
@@ -546,11 +546,11 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			Execute {command} with <A HREF="options.html#'verbose'">'verbose'</A> set to <A HREF="intro.html#[count]">[count]</A>.  If
 			<A HREF="intro.html#[count]">[count]</A> is omitted one is used. &quot;:0verbose&quot; can be
 			used to set <A HREF="options.html#'verbose'">'verbose'</A> to zero.
-			The additional use of &quot;<A HREF="#:silent">:silent</A>&quot; makes <A HREF="message.html#messages">messages</A>
+			The additional use of &quot;<A HREF="#:silent">:silent</A>&quot; makes <A HREF="message.html#messages">信息</A>
 			generated but not displayed.
 			The combination of &quot;<A HREF="#:silent">:silent</A>&quot; and &quot;<A HREF="#:verbose">:verbose</A>&quot; can be
-			used to generate <A HREF="message.html#messages">messages</A> and check them with
-			|<A HREF="eval.html#v:statusmsg">v:statusmsg</A>| and friends.  For example:
+			used to generate <A HREF="message.html#messages">信息</A> and check them with
+			|<A HREF="eval.html#v:statusmsg">v:statusmsg</A>| and friends.例如:
 <B>				:let v:statusmsg = ""</B>
 <B>				:silent verbose runtime foobar.vim</B>
 <B>				:if v:statusmsg != ""</B>
@@ -561,7 +561,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 <B>				:4verbose set verbose | set verbose</B>
 <B><FONT color="#3A6F2B"> 				  verbose=4 </FONT></B>
 <B><FONT color="#3A6F2B">				  verbose=0 </FONT></B>
-			For logging <A HREF="starting.html#verbose">verbose</A> <A HREF="message.html#messages">messages</A> in a file use the
+			For logging <A HREF="starting.html#verbose">verbose</A> <A HREF="message.html#messages">信息</A> in a file use the
 			<A HREF="options.html#'verbosefile'">'verbosefile'</A> option.
 
 
@@ -586,7 +586,7 @@ user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF=
 			- If <A HREF="options.html#'keywordprg'">'keywordprg'</A> is empty, |<A HREF="helphelp.html#:help">:help</A>| is used.
 			- When <A HREF="options.html#'keywordprg'">'keywordprg'</A> is equal to &quot;man&quot;, a <A HREF="intro.html#[count]">[count]</A>
 			  before &quot;<A HREF="#K">K</A>&quot; is inserted after the &quot;man&quot; command and
-			  before the keyword.  For example, using &quot;2K&quot; while
+			  before the keyword.例如, using &quot;2K&quot; while
 			  the cursor is on &quot;mkdir&quot;, results in:
 <B>				!man 2 mkdir</B>
  			- When <A HREF="options.html#'keywordprg'">'keywordprg'</A> is equal to &quot;man -s&quot;, a <A HREF="intro.html#[count]">[count]</A>
@@ -620,7 +620,7 @@ user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF=
 			&quot;<A HREF="#gs">gs</A>&quot; stands for &quot;goto sleep&quot;.
 			While sleeping the cursor is positioned in the text,
 			if at a visible position.
-			Queued <A HREF="message.html#messages">messages</A> are processed during the sleep.
+			Queued <A HREF="message.html#messages">信息</A> are processed during the sleep.
 
 
 							*<A NAME=":sl!"></A><B>:sl!</B>* *<A NAME=":sleep!"></A><B>:sleep!</B>*
@@ -639,13 +639,13 @@ This shell <A HREF="usr_41.html#script">script</A> uses the Vim <A HREF="usr_41.
 up mappings to simulate the commands that <A HREF="#less">less</A> supports.  Otherwise, you can
 still use the Vim commands.
 
-This isn't perfect.  For example, when viewing a short file Vim will still use
+This isn't perfect.例如, when viewing a short file Vim will still use
 the whole screen.  But <A HREF="motion.html#it">它</A> works well enough for most uses, and you get <A HREF="syntax.html#syntax">syntax</A>
 highlighting.
 
 The &quot;<A HREF="motion.html#h">h</A>&quot; key will give you a short overview of the available commands.
 
-If you want to set <A HREF="options.html#options">options</A> differently when using <A HREF="#less">less</A>, define the
+If you want to set <A HREF="options\.html#options">选项</A> differently when using <A HREF="#less">less</A>, define the
 LessInitFunc in your <A HREF="starting.html#vimrc">vimrc</A>, for example:
 
 <B>	func LessInitFunc()</B>

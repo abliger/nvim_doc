@@ -88,7 +88,7 @@ and <A HREF="#Korean">Korean</A>.  <A HREF="#Unicode">Unicode</A> is also covere
 
 For an introduction to the most common features, 见 |<A HREF="usr_45.html">usr_45.txt</A>| in the user
 manual.
-For <A HREF="change.html#changing">changing</A> the language of <A HREF="message.html#messages">messages</A> and <A HREF="gui.html#menus">menus</A> 见 |<A HREF="mlang.html">mlang.txt</A>|.
+For <A HREF="change.html#changing">changing</A> the language of <A HREF="message.html#messages">信息</A> and <A HREF="gui.html#menus">menus</A> 见 |<A HREF="mlang.html">mlang.txt</A>|.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -167,7 +167,7 @@ There are several ways to enter <A HREF="#multibyte">multibyte</A> characters:
 - For MS-Windows IME can be used.  见 |<A HREF="intro.html#IME">IME</A>|.
 - For all systems keymaps can be used.  见 |<A HREF="#mbyte-keymap">mbyte-keymap</A>|.
 
-The <A HREF="options.html#options">options</A> <A HREF="options.html#'iminsert'">'iminsert'</A>, <A HREF="options.html#'imsearch'">'imsearch'</A> and <A HREF="options.html#'imcmdline'">'imcmdline'</A> can be used to choose
+The <A HREF="options\.html#options">选项</A> <A HREF="options.html#'iminsert'">'iminsert'</A>, <A HREF="options.html#'imsearch'">'imsearch'</A> and <A HREF="options.html#'imcmdline'">'imcmdline'</A> can be used to choose
 the different input methods or disable them temporarily.
 
 ==============================================================================
@@ -373,7 +373,7 @@ the same encoding is used and it's called latin1.  <A HREF="options.html#'isprin
 display the characters 0x80 - 0xA0 or not.
 
 Several aliases can be used, they are translated to one of the names above.
-Incomplete <A HREF="eval.html#list">list</A>:
+Incomplete <A HREF="eval.html#list">列表</A>:
 
 1   ansi	same <A HREF="motion.html#as">as</A> latin1 (obsolete, for backward compatibility)
 2   japan	<A HREF="#Japanese">Japanese</A>: &quot;euc-jp&quot;
@@ -415,13 +415,13 @@ CONVERSION						*<A NAME="charset-conversion"></A><B>charset-conversion</B>*
 
 Vim will automatically convert from one to another encoding in several places:
 - When reading a file and <A HREF="options.html#'fileencoding'">'fileencoding'</A> is different from &quot;<A HREF="#utf-8">utf-8</A>&quot;
-- When <A HREF="editing.html#writing">writing</A> a file and <A HREF="options.html#'fileencoding'">'fileencoding'</A> is different from &quot;<A HREF="#utf-8">utf-8</A>&quot;
-- When displaying <A HREF="message.html#messages">messages</A> and the encoding used for LC_MESSAGES differs from
+- When <A HREF="editing.html#writing">写</A> a file and <A HREF="options.html#'fileencoding'">'fileencoding'</A> is different from &quot;<A HREF="#utf-8">utf-8</A>&quot;
+- When displaying <A HREF="message.html#messages">信息</A> and the encoding used for LC_MESSAGES differs from
   &quot;<A HREF="#utf-8">utf-8</A>&quot; (requires a gettext version that supports this).
 - When reading a Vim script where |<A HREF="repeat.html#:scriptencoding">:scriptencoding</A>| is different from
   &quot;<A HREF="#utf-8">utf-8</A>&quot;.
 Most of these require the |<A HREF="intro.html#+iconv">+iconv</A>| feature.  Conversion for reading and
-<A HREF="editing.html#writing">writing</A> files may also be specified with the <A HREF="options.html#'charconvert'">'charconvert'</A> option.
+<A HREF="editing.html#writing">写</A> files may also be specified with the <A HREF="options.html#'charconvert'">'charconvert'</A> option.
 
 Useful utilities for converting the <A HREF="#charset">charset</A>:
     All:	    iconv
@@ -459,7 +459,7 @@ Useful utilities for converting the <A HREF="#charset">charset</A>:
 
 
 							*<A NAME="mbyte-conversion"></A><B>mbyte-conversion</B>*
-When reading and <A HREF="editing.html#writing">writing</A> files in an encoding different from &quot;<A HREF="#utf-8">utf-8</A>&quot;,
+When reading and <A HREF="editing.html#writing">写</A> files in an encoding different from &quot;<A HREF="#utf-8">utf-8</A>&quot;,
 conversion needs to be done.  These conversions are supported:
 - All conversions between Latin-1 (ISO-8859-1), <A HREF="#UTF-8">UTF-8</A>, UCS-2 and UCS-4 are
   handled internally.
@@ -487,14 +487,14 @@ is suitable for complex input, such <A HREF="motion.html#as">as</A> CJK.
 							*<A NAME="IM-server"></A><B>IM-server</B>*
   In |<A HREF="#IM-server">IM-server</A>| type input structures, the input event is handled by either
   of the two ways: FrontEnd system and BackEnd system.  In the FrontEnd
-  system, input <A HREF="autocmd.html#events">events</A> are snatched by the |<A HREF="#IM-server">IM-server</A>| first, then |<A HREF="#IM-server">IM-server</A>|
+  system, input <A HREF="autocmd.html#events">events</A> are snatched by the |<A HREF="#IM-server">IM-server</A>| first然后|<A HREF="#IM-server">IM-server</A>|
   give the application the result of input.  On the other hand, the BackEnd
   system works reverse order.  MS-Windows adopt BackEnd system.  In X, most of
   |<A HREF="#IM-server">IM-server</A>|s adopt FrontEnd system.  The demerit of BackEnd system is the
   large overhead in communication, but <A HREF="motion.html#it">它</A> provides safe synchronization with
   no restrictions on applications.
 
-  For example, there are xwnmo and kinput2 <A HREF="#Japanese">Japanese</A> |<A HREF="#IM-server">IM-server</A>|, both are
+例如, there are xwnmo and kinput2 <A HREF="#Japanese">Japanese</A> |<A HREF="#IM-server">IM-server</A>|, both are
   FrontEnd system.  Xwnmo is distributed with Wnn (see below), kinput2 can be
  found at:	<A HREF="ftp://ftp.sra.co.jp/pub/x11/kinput2/">ftp://ftp.sra.co.jp/pub/x11/kinput2/</A>
 
@@ -514,7 +514,7 @@ is suitable for complex input, such <A HREF="motion.html#as">as</A> CJK.
   HanZi conversion server is needed.  For <A HREF="#Korean">Korean</A> inputting, if you want to
   input Hanja, Hangul-Hanja conversion server is needed.
 
-  For example, the <A HREF="#Japanese">Japanese</A> inputting process is divided into 2 steps.  First
+例如, the <A HREF="#Japanese">Japanese</A> inputting process is divided into 2 steps.  First
   we pre-input Hira-gana, second Kana-Kanji conversion.  There are so many
   Kanji characters (6349 Kanji characters are defined in JIS X 0208) and the
   number of Hira-gana characters are 76.  So, first, we pre-input text <A HREF="motion.html#as">as</A>
@@ -542,7 +542,7 @@ Use the RPM or port for your system.
       3. The area to display the next candidate for the selection.
       4. The area to display other tools.
 
-  The third area is needed when converting.  For example, in <A HREF="#Japanese">Japanese</A>
+  The third area is needed when converting.例如, in <A HREF="#Japanese">Japanese</A>
   inputting, multiple Kanji characters could have the same pronunciation, so
   a sequence of Hira-gana characters could map to a distinct sequence of Kanji
   characters.
@@ -620,7 +620,7 @@ But when using one of the other two methods, <A HREF="gui.html#GUI">GUI</A> Vim 
 only if <A HREF="motion.html#it">它</A> is not in <A HREF="intro.html#Normal">正常</A>模式.
 
 If your IM Server does not support |<A HREF="#OverTheSpot">OverTheSpot</A>|, and if you want to use your
-language with some <A HREF="intro.html#Normal">正常</A>模式 command like &quot;<A HREF="motion.html#f">f</A>&quot; or &quot;<A HREF="change.html#r">r</A>&quot;, then you should use a
+language with some <A HREF="intro.html#Normal">正常</A>模式 command like &quot;<A HREF="motion.html#f">f</A>&quot; or &quot;<A HREF="change.html#r">r</A>&quot;然后you should use a
 localized xterm  or an xterm which supports |<A HREF="#XIM">XIM</A>|
 
 If needed, you can set the XMODIFIERS environment variable:
@@ -933,12 +933,12 @@ character before <A HREF="motion.html#it">它</A>.  The combining characters are
 preceding character.
 Up to six combining characters can be displayed.
 When editing text a composing character is mostly considered part of the
-preceding character.  For example &quot;<A HREF="change.html#x">x</A>&quot; will delete a character and its
+preceding character.例如 &quot;<A HREF="change.html#x">x</A>&quot; will delete a character and its
 following composing characters by default.
-If the <A HREF="options.html#'delcombine'">'delcombine'</A> option is on, then pressing '<A HREF="change.html#x">x</A>' will delete the combining
-characters, one at a time, then the base character.  But when <A HREF="insert.html#inserting">inserting</A>, you
+If the <A HREF="options.html#'delcombine'">'delcombine'</A> option is on然后pressing '<A HREF="change.html#x">x</A>' will delete the combining
+characters, one at a time然后the base character.  But when <A HREF="insert.html#inserting">inserting</A>, you
 type the first character and the following composing characters separately,
-after which they will be joined.  The &quot;<A HREF="change.html#r">r</A>&quot; command will not allow you to type a
+after which they will be joined.  The &quot;<A HREF="change.html#r">r</A>&quot;命令 will not allow you to type a
 combining character, because <A HREF="motion.html#it">它</A> doesn't know one is coming.  Use &quot;<A HREF="change.html#R">R</A>&quot; instead.
 
 Bytes which are not part of a valid <A HREF="#UTF-8">UTF-8</A> byte sequence are handled like a
@@ -995,7 +995,7 @@ If you are using X-Windows, you should find an input <A HREF="eval.html#method">
 <A HREF="#UTF-8">UTF-8</A>.
 
 If your system does not provide support for typing <A HREF="#UTF-8">UTF-8</A>, you can use the
-<A HREF="options.html#'keymap'">'keymap'</A> feature.  This allows <A HREF="editing.html#writing">writing</A> a keymap file, which defines a <A HREF="#UTF-8">UTF-8</A>
+<A HREF="options.html#'keymap'">'keymap'</A> feature.  This allows <A HREF="editing.html#writing">写</A> a keymap file, which defines a <A HREF="#UTF-8">UTF-8</A>
 character <A HREF="motion.html#as">as</A> a sequence of ASCII characters.  见 |<A HREF="#mbyte-keymap">mbyte-keymap</A>|.
 
 If everything else fails, you can type any character <A HREF="motion.html#as">as</A> four hex bytes:
@@ -1025,14 +1025,14 @@ not everybody is able to type a composing character.
 
 ==============================================================================
 
-Overview of <A HREF="options.html#options">options</A>					*<A NAME="mbyte-options"></A><B>mbyte-options</B>*
+Overview of <A HREF="options\.html#options">选项</A>					*<A NAME="mbyte-options"></A><B>mbyte-options</B>*
 
-These <A HREF="options.html#options">options</A> are relevant for editing <A HREF="#multibyte">multibyte</A> files.
+These <A HREF="options\.html#options">选项</A> are relevant for editing <A HREF="#multibyte">multibyte</A> files.
 
 <A HREF="options.html#'fileencoding'">'fileencoding'</A>	Encoding of a file.  When it's different from &quot;<A HREF="#utf-8">utf-8</A>&quot;
-		conversion is done when reading or <A HREF="editing.html#writing">writing</A> the file.
+		conversion is done when reading or <A HREF="editing.html#writing">写</A> the file.
 
-<A HREF="options.html#'fileencodings'">'fileencodings'</A>	<A HREF="eval.html#List">List</A> of possible encodings of a file.  When opening a file
+<A HREF="options.html#'fileencodings'">'fileencodings'</A>	<A HREF="eval.html#list">列表</A> of possible encodings of a file.  When opening a file
 		these will be tried and the first one that doesn't cause an
 		error is used for <A HREF="options.html#'fileencoding'">'fileencoding'</A>.
 

@@ -113,7 +113,7 @@ The Ada mode handles a number of situations cleanly.
 For example, <A HREF="motion.html#it">它</A> knows that the &quot;<A HREF="motion.html#-">-</A>&quot; in &quot;-5&quot; is a number, but the same character
 in &quot;A-5&quot; is an <A HREF="motion.html#operator">operator</A>.  Normally, a &quot;with&quot; or &quot;use&quot; clause referencing
 another compilation unit is coloured the same way <A HREF="motion.html#as">as</A> C's &quot;#include&quot; is coloured.
-If you have &quot;Conditional&quot; or &quot;Repeat&quot; groups coloured differently, then &quot;end
+If you have &quot;Conditional&quot; or &quot;Repeat&quot; groups coloured differently然后&quot;end
 if&quot; and &quot;end loop&quot; will be coloured <A HREF="motion.html#as">as</A> part of those respective groups.
 
 You can set these to different colours using vim's &quot;highlight&quot; command (e.g.,
@@ -122,9 +122,9 @@ the colour specification; on simple terminals the colour specification
 ctermfg=White often shows well).
 
 There are several options you can select in this Ada mode. 见 |<A HREF="#ft-ada-options">ft-ada-options</A>|
-for a complete <A HREF="eval.html#list">list</A>.
+for a complete <A HREF="eval.html#list">列表</A>.
 
-To enable them, assign a value to the option.  For example, to turn one on:
+To enable them, assign a value to the option.例如, to turn one on:
 
 <B>    &gt; let g:ada_standard_types = 1</B>
 
@@ -279,37 +279,37 @@ g:gnat.Set_Project_File([{file}])
 		Set gnat project file and load associated session.  An open
 		project will be closed and the session written.  If called
 		without file name the file selector opens for selection of a
-		project file. If called with an empty <A HREF="eval.html#string">string</A> then the project
+		project file. If called with an empty <A HREF="options\.html#options">字符串</A> then the project
 		and associated session are closed.
 
 
 							 *<A NAME="g:gnat.Project_File"></A><B>g:gnat.Project_File</B>*
-<A HREF="#g:gnat.Project_File">g:gnat.Project_File</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:gnat.Project_File">g:gnat.Project_File</A>	<A HREF="options\.html#options">字符串</A>
 		Current project file.
 
 
 							 *<A NAME="g:gnat.Make_Command"></A><B>g:gnat.Make_Command</B>*
-<A HREF="#g:gnat.Make_Command">g:gnat.Make_Command</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:gnat.Make_Command">g:gnat.Make_Command</A>	<A HREF="options\.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Make()</A>| (|<A HREF="options.html#'makeprg'">'makeprg'</A>|).
 
 
 						       *<A NAME="g:gnat.Pretty_Program"></A><B>g:gnat.Pretty_Program</B>*
-<A HREF="#g:gnat.Pretty_Program">g:gnat.Pretty_Program</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:gnat.Pretty_Program">g:gnat.Pretty_Program</A>	<A HREF="options\.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Pretty()</A>|
 
 
 							 *<A NAME="g:gnat.Find_Program"></A><B>g:gnat.Find_Program</B>*
-<A HREF="#g:gnat.Find_Program">g:gnat.Find_Program</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:gnat.Find_Program">g:gnat.Find_Program</A>	<A HREF="options\.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Find()</A>|
 
 
 							 *<A NAME="g:gnat.Tags_Command"></A><B>g:gnat.Tags_Command</B>*
-<A HREF="#g:gnat.Tags_Command">g:gnat.Tags_Command</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:gnat.Tags_Command">g:gnat.Tags_Command</A>	<A HREF="options\.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Tags()</A>|
 
 
 							 *<A NAME="g:gnat.Error_Format"></A><B>g:gnat.Error_Format</B>*
-<A HREF="#g:gnat.Error_Format">g:gnat.Error_Format</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:gnat.Error_Format">g:gnat.Error_Format</A>	<A HREF="options\.html#options">字符串</A>
 		Error format (|<A HREF="options.html#'errorformat'">'errorformat'</A>|)
 
 ------------------------------------------------------------------------------
@@ -345,12 +345,12 @@ convention to convert the file into a unit name. Both '<A HREF="motion.html#-">-
 
 
 						       *<A NAME="g:decada.Make_Command"></A><B>g:decada.Make_Command</B>*
-<A HREF="#g:decada.Make_Command">g:decada.Make_Command</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:decada.Make_Command">g:decada.Make_Command</A>	<A HREF="options\.html#options">字符串</A>
 		External command used for |<A HREF="g:decada.html">g:decada.Make()</A>| (|<A HREF="options.html#'makeprg'">'makeprg'</A>|).
 
 
 						       *<A NAME="g:decada.Error_Format"></A><B>g:decada.Error_Format</B>*
-<A HREF="#g:decada.Error_Format">g:decada.Error_Format</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:decada.Error_Format">g:decada.Error_Format</A>	<A HREF="options\.html#options">字符串</A>
 		Error format (|<A HREF="options.html#'errorformat'">'errorformat'</A>|).
 
 ==============================================================================
@@ -451,9 +451,9 @@ convention to convert the file into a unit name. Both '<A HREF="motion.html#-">-
 
 						      *<A NAME="g:ada_extended_tagging"></A><B>g:ada_extended_tagging</B>*
 <A HREF="#g:ada_extended_tagging">g:ada_extended_tagging</A>	  enum ('jump', <A HREF="options.html#'list'">'list'</A>)
-		use extended tagging, two <A HREF="options.html#options">options</A> are available
+		use extended tagging, two <A HREF="options\.html#options">选项</A> are available
 		    'jump': use tjump to jump.
-		    <A HREF="options.html#'list'">'list'</A>: add <A HREF="tagsrch.html#tags">标签</A> quick fix <A HREF="eval.html#list">list</A>.
+		    <A HREF="options.html#'list'">'list'</A>: add <A HREF="tagsrch.html#tags">标签</A> quick fix <A HREF="eval.html#list">列表</A>.
 		<A HREF="intro.html#Normal">Normal</A> tagging does not support function or <A HREF="motion.html#operator">operator</A>
 		overloading <A HREF="motion.html#as">as</A> these features are not available in C and
 		tagging was originally developed for C.
@@ -478,7 +478,7 @@ convention to convert the file into a unit name. Both '<A HREF="motion.html#-">-
 
 
 						      *<A NAME="g:ada_default_compiler"></A><B>g:ada_default_compiler</B>*
-<A HREF="#g:ada_default_compiler">g:ada_default_compiler</A>	  <A HREF="eval.html#string">string</A>
+<A HREF="#g:ada_default_compiler">g:ada_default_compiler</A>	  <A HREF="options\.html#options">字符串</A>
 		set default compiler. Currently supported are 'gnat' and
 		'decada'.
 
@@ -558,23 +558,23 @@ All constants are locked. 见 |<A HREF="eval.html#:lockvar">:lockvar</A>| for de
 
 
 							     *<A NAME="g:ada#WordRegex"></A><B>g:ada#WordRegex</B>*
-<A HREF="#g:ada#WordRegex">g:ada#WordRegex</A>		<A HREF="eval.html#string">string</A>
+<A HREF="#g:ada#WordRegex">g:ada#WordRegex</A>		<A HREF="options\.html#options">字符串</A>
 		Regular <A HREF="eval.html#expression">expression</A> to search for Ada words.
 
 
 							  *<A NAME="g:ada#DotWordRegex"></A><B>g:ada#DotWordRegex</B>*
-<A HREF="#g:ada#DotWordRegex">g:ada#DotWordRegex</A>	<A HREF="eval.html#string">string</A>
+<A HREF="#g:ada#DotWordRegex">g:ada#DotWordRegex</A>	<A HREF="options\.html#options">字符串</A>
 		Regular <A HREF="eval.html#expression">expression</A> to search for Ada words separated by dots.
 
 
 							       *<A NAME="g:ada#Comment"></A><B>g:ada#Comment</B>*
-<A HREF="#g:ada#Comment">g:ada#Comment</A>		<A HREF="eval.html#string">string</A>
+<A HREF="#g:ada#Comment">g:ada#Comment</A>		<A HREF="options\.html#options">字符串</A>
 		Regular <A HREF="eval.html#expression">expression</A> to search for Ada comments.
 
 
 							      *<A NAME="g:ada#Keywords"></A><B>g:ada#Keywords</B>*
-<A HREF="#g:ada#Keywords">g:ada#Keywords</A>		<A HREF="eval.html#list">list</A> of dictionaries
-		<A HREF="eval.html#List">List</A> of keywords, attributes etc. pp. in the format used by
+<A HREF="#g:ada#Keywords">g:ada#Keywords</A>		<A HREF="eval.html#list">列表</A> of dictionaries
+		<A HREF="eval.html#list">列表</A> of keywords, attributes etc. pp. in the format used by
 		omni completion. 见 |<A HREF="insert.html#complete-items">complete-items</A>| for details.
 
 
@@ -595,13 +595,13 @@ ada#Word([{line}, {col}])					  *<A NAME="ada#Word()"></A><B>ada#Word()</B>*
 
 
 ada#List_Tag([{line}, {col}])				      *<A NAME="ada#Listtags()"></A><B>ada#Listtags()</B>*
-		<A HREF="eval.html#List">List</A> all occurrences of the Ada entity under the cursor (or at
+		<A HREF="eval.html#list">列表</A> all occurrences of the Ada entity under the cursor (or at
 		given line/column) inside the quick-fix<A HREF="windows.html#window">窗口</A>.
 
 
 ada#Jump_Tag ({ident}, {mode})				      *<A NAME="ada#Jump_Tag()"></A><B>ada#Jump_Tag()</B>*
-		<A HREF="eval.html#List">List</A> all occurrences of the Ada entity under the cursor (or at
-		given line/column) in the <A HREF="tagsrch.html#tag">标签</A> jump <A HREF="eval.html#list">list</A>. Mode can either be
+		<A HREF="eval.html#list">列表</A> all occurrences of the Ada entity under the cursor (or at
+		given line/column) in the <A HREF="tagsrch.html#tag">标签</A> jump <A HREF="eval.html#list">列表</A>. Mode can either be
 		'tjump' or 'stjump'.
 
 
@@ -617,7 +617,7 @@ ada#Create_Tags ({option})				   *<A NAME="ada#Create_Tags()"></A><B>ada#Create_
 
 
 ada#Switch_Syntax_Option ({option})		  *<A NAME="ada#Switch_Syntax_Option()"></A><B>ada#Switch_Syntax_Option()</B>*
-		Toggles highlighting <A HREF="options.html#options">options</A> on or off. Used for the Ada menu.
+		Toggles highlighting <A HREF="options\.html#options">选项</A> on or off. Used for the Ada menu.
 
 
 								  *<A NAME="gnat#New()"></A><B>gnat#New()</B>*

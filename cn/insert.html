@@ -184,7 +184,7 @@ CTRL-@		<A HREF="#Insert">Insert</A> previously inserted text and stop insert.
 CTRL-K {char1} [char2]
 		Enter digraph (见 |<A HREF="digraph.html#digraphs">digraphs</A>|).  When {char1} is a special
 		key, the code for that key is inserted in <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> form.  For
-		example, the <A HREF="eval.html#string">string</A> &quot;&lt;S-Space&gt;&quot; can be entered by typing
+		example, the <A HREF="options\.html#options">字符串</A> &quot;&lt;S-Space&gt;&quot; can be entered by typing
 		&lt;C-K&gt;&lt;S-Space&gt; (two keys).  Neither char is considered for
 		<A HREF="map.html#mapping">mapping</A>.
 
@@ -197,10 +197,10 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 		the second character, &#39;&#34;'' will be displayed to indicate that
 		you are expected to enter the name of a <A HREF="intro.html#register">register</A>.
 		The text is inserted <A HREF="motion.html#as">as</A> if you typed <A HREF="motion.html#it">它</A>, but mappings and
-		<A HREF="map.html#abbreviations">abbreviations</A> are not used.  If you have <A HREF="options.html#options">options</A> like
+		<A HREF="map.html#abbreviations">abbreviations</A> are not used.  If you have <A HREF="options\.html#options">选项</A> like
 		<A HREF="options.html#'textwidth'">'textwidth'</A>, <A HREF="options.html#'formatoptions'">'formatoptions'</A>, or <A HREF="options.html#'autoindent'">'autoindent'</A> set, this will
 		influence what will be inserted.  This is different from what
-		happens with the &quot;<A HREF="change.html#p">p</A>&quot; command and pasting with the mouse.
+		happens with the &quot;<A HREF="change.html#p">p</A>&quot;命令 and pasting with the mouse.
 		Special <A HREF="change.html#registers">registers</A>:
 			&#39;&#34;''	the unnamed <A HREF="intro.html#register">register</A>, containing the text of
 				the last delete or <A HREF="change.html#yank">yank</A>
@@ -221,11 +221,11 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 				the cursor up:
 					<A HREF="undo.html#CTRL-R">CTRL-R</A> =&quot;\&lt;Up&gt;&quot;
 				Use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> to insert text literally.
-				When the result is a |<A HREF="eval.html#List">List</A>| the items are used
+				When the result is a |<A HREF="eval.html#list">列表</A>| the items are used
 				<A HREF="motion.html#as">as</A> lines.  They can have line breaks inside
 				too.
 				When the result is a <A HREF="eval.html#Float">Float</A> it's automatically
-				converted to a <A HREF="eval.html#String">String</A>.
+				converted to a <A HREF="options\.html#options">字符串</A>.
 				When <A HREF="builtin.html#append()">append()</A> or <A HREF="builtin.html#setline()">setline()</A> is invoked the <A HREF="undo.html#undo">undo</A>
 				sequence will be broken.
 		见 |<A HREF="change.html#registers">registers</A>| about registers.
@@ -370,7 +370,7 @@ CTRL-_		Switch between languages, <A HREF="motion.html#as">as</A> follows:
 
 						*<A NAME="i_backspacing"></A><B>i_backspacing</B>*
 The effect of the <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>, <A HREF="vimindex.html#CTRL-W">CTRL-W</A>, and <A HREF="scroll.html#CTRL-U">CTRL-U</A> depend on the <A HREF="options.html#'backspace'">'backspace'</A> option
-(unless <A HREF="options.html#'revins'">'revins'</A> is set).  This is a comma-separated <A HREF="eval.html#list">list</A> of items:
+(unless <A HREF="options.html#'revins'">'revins'</A> is set).  This is a comma-separated <A HREF="eval.html#list">列表</A> of items:
 
 <B><FONT color="#3A6F2B">item	    action </FONT></B>
 indent	    allow backspacing over autoindent
@@ -409,7 +409,7 @@ invalid for the mode, the value before <A HREF="motion.html#it">它</A> will be 
 character is dealt with in the normal way.
 
 If you enter a value of 10, <A HREF="motion.html#it">它</A> will end up in the file <A HREF="motion.html#as">as</A> a 0.  The 10 is a
-<A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, which is used internally to represent the <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A> character.  When <A HREF="editing.html#writing">writing</A>
+<A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, which is used internally to represent the <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A> character.  When <A HREF="editing.html#writing">写</A>
 the buffer to a file, the <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> character is translated into <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A>.  The <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
 character is written at the end of each line.  Thus if you want to insert a
 <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> character in a file you will have to make a line break.
@@ -451,7 +451,7 @@ can use <A HREF="motion.html#CTRL-O">CTRL-O</A> if you want to map a function ke
 
 The changes (inserted or deleted characters) before and after these keys can
 be undone separately.  Only the last change can be redone and always behaves
-like an &quot;<A HREF="#i">i</A>&quot; command.
+like an &quot;<A HREF="#i">i</A>&quot;命令.
 
 <B><FONT color="#3A6F2B">char		action	</FONT></B>
 
@@ -475,13 +475,13 @@ like an &quot;<A HREF="#i">i</A>&quot; command.
 
 <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>		cursor one character right		     *<A NAME="i_&lt;Right&gt;"></A><B>i_&lt;Right&gt;</B>*
 
-<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot; command)	     *<A NAME="i_&lt;S-Left&gt;"></A><B>i_&lt;S-Left&gt;</B>*
+<A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot;命令)	     *<A NAME="i_&lt;S-Left&gt;"></A><B>i_&lt;S-Left&gt;</B>*
 
-<A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot; command)	     *<A NAME="i_&lt;C-Left&gt;"></A><B>i_&lt;C-Left&gt;</B>*
+<A HREF="motion.html#&lt;C-Left&gt;">&lt;C-Left&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> back (like &quot;<A HREF="motion.html#b">b</A>&quot;命令)	     *<A NAME="i_&lt;C-Left&gt;"></A><B>i_&lt;C-Left&gt;</B>*
 
-<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot; command)   *<A NAME="i_&lt;S-Right&gt;"></A><B>i_&lt;S-Right&gt;</B>*
+<A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot;命令)   *<A NAME="i_&lt;S-Right&gt;"></A><B>i_&lt;S-Right&gt;</B>*
 
-<A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot; command)   *<A NAME="i_&lt;C-Right&gt;"></A><B>i_&lt;C-Right&gt;</B>*
+<A HREF="motion.html#&lt;C-Right&gt;">&lt;C-Right&gt;</A>	cursor one <A HREF="motion.html#word">单词</A> forward (like &quot;<A HREF="motion.html#w">w</A>&quot;命令)   *<A NAME="i_&lt;C-Right&gt;"></A><B>i_&lt;C-Right&gt;</B>*
 
 <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>		cursor to first char in the line	     *<A NAME="i_&lt;Home&gt;"></A><B>i_&lt;Home&gt;</B>*
 
@@ -524,7 +524,7 @@ CTRL-\ <A HREF="motion.html#CTRL-O">CTRL-O</A>	like <A HREF="motion.html#CTRL-O"
 <A HREF="editing.html#CTRL-G">CTRL-G</A> <A HREF="undo.html#u">u</A>	break <A HREF="undo.html#undo">undo</A> sequence, start new change	     *<A NAME="i_CTRL-G_u"></A><B>i_CTRL-G_u</B>*
 
 <A HREF="editing.html#CTRL-G">CTRL-G</A> <A HREF="undo.html#U">U</A>	don't break <A HREF="undo.html#undo">undo</A> with next left/right cursor *<A NAME="i_CTRL-G_U"></A><B>i_CTRL-G_U</B>*
-		<A HREF="intro.html#movement">movement</A>, if the cursor stays within the
+		<A HREF="intro.html#movement">移动</A>, if the cursor stays within the
 		same the line
 
 The <A HREF="motion.html#CTRL-O">CTRL-O</A> command sometimes has a side effect: If the cursor was beyond the
@@ -544,7 +544,7 @@ mode.
 
 The shifted cursor keys are not available on all terminals.
 
-Another side effect is that a <A HREF="intro.html#count">count</A> specified before the &quot;<A HREF="#i">i</A>&quot; or &quot;<A HREF="#a">a</A>&quot; command is
+Another side effect is that a <A HREF="intro.html#count">count</A> specified before the &quot;<A HREF="#i">i</A>&quot; or &quot;<A HREF="#a">a</A>&quot;命令 is
 ignored.  That is because <A HREF="repeat.html#repeating">repeating</A> the effect of the command after <A HREF="motion.html#CTRL-O">CTRL-O</A> is
 too complicated.
 
@@ -606,7 +606,7 @@ When <A HREF="#inserting">inserting</A> the same text in front of the column in 
 
 ==============================================================================
 
-3. <A HREF="options.html#'textwidth'">'textwidth'</A> and <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> <A HREF="options.html#options">options</A>			*<A NAME="ins-textwidth"></A><B>ins-textwidth</B>*
+3. <A HREF="options.html#'textwidth'">'textwidth'</A> and <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> <A HREF="options\.html#options">选项</A>			*<A NAME="ins-textwidth"></A><B>ins-textwidth</B>*
 
 The <A HREF="options.html#'textwidth'">'textwidth'</A> option can be used to automatically break a line before <A HREF="motion.html#it">它</A>
 gets too long.  Set the <A HREF="options.html#'textwidth'">'textwidth'</A> option to the desired maximum line
@@ -646,15 +646,15 @@ If you want to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> in
 <A HREF="eval.html#expression">expression</A> that will take care of the line break.
 
 If you want to format a block of text, you can use the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">operator</A>.  Type
-&quot;<A HREF="change.html#gq">gq</A>&quot; and a <A HREF="intro.html#movement">movement</A> command to move the cursor to the end of the block.  In
+&quot;<A HREF="change.html#gq">gq</A>&quot; and a <A HREF="intro.html#movement">移动</A>命令 to move the cursor to the end of the block.  In
 many cases, the command &quot;gq}&quot; will <A HREF="diff.html#do">do</A> what you want (format until the end of
-<A HREF="motion.html#paragraph">paragraph</A>).  Alternatively, you can use &quot;<A HREF="change.html#gqap">gqap</A>&quot;, which will format the whole
-<A HREF="motion.html#paragraph">paragraph</A>, no matter where the cursor currently is.  Or you can use <A HREF="visual.html#Visual">Visual</A>
+<A HREF="motion.html#paragraph">段落</A>).  Alternatively, you can use &quot;<A HREF="change.html#gqap">gqap</A>&quot;, which will format the whole
+<A HREF="motion.html#paragraph">段落</A>, no matter where the cursor currently is.  Or you can use <A HREF="visual.html#Visual">Visual</A>
 mode: hit &quot;<A HREF="visual.html#v">v</A>&quot;, move to the end of the block, and type &quot;gq&quot;.  See also |<A HREF="change.html#gq">gq</A>|.
 
 ==============================================================================
 
-4. <A HREF="options.html#'expandtab'">'expandtab'</A>, <A HREF="options.html#'smarttab'">'smarttab'</A> and <A HREF="options.html#'softtabstop'">'softtabstop'</A> <A HREF="options.html#options">options</A>	*<A NAME="ins-expandtab"></A><B>ins-expandtab</B>*
+4. <A HREF="options.html#'expandtab'">'expandtab'</A>, <A HREF="options.html#'smarttab'">'smarttab'</A> and <A HREF="options.html#'softtabstop'">'softtabstop'</A> <A HREF="options\.html#options">选项</A>	*<A NAME="ins-expandtab"></A><B>ins-expandtab</B>*
 
 If the <A HREF="options.html#'expandtab'">'expandtab'</A> option is on, spaces will be used to fill the amount of
 <A HREF="pattern.html#whitespace">whitespace</A> of the <A HREF="intro.html#tab">tab</A>.  If you want to enter a real <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, type <A HREF="visual.html#CTRL-V">CTRL-V</A> first
@@ -683,7 +683,7 @@ correct when used by other applications.
 
 If <A HREF="options.html#'softtabstop'">'softtabstop'</A> is non-zero, a <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> will try to delete <A HREF="motion.html#as">as</A> much white space to
 move to the previous <A HREF="options.html#'softtabstop'">'softtabstop'</A> position, except when the previously
-inserted character is a space, then <A HREF="motion.html#it">它</A> will only delete the character before
+inserted character is a space然后<A HREF="motion.html#it">它</A> will only delete the character before
 the cursor.  Otherwise you cannot always delete a single character before the
 cursor.  You will have to delete <A HREF="options.html#'softtabstop'">'softtabstop'</A> characters first, and then type
 extra spaces to get where you want to be.
@@ -692,7 +692,7 @@ extra spaces to get where you want to be.
 
 5. <A HREF="#Replace">Replace</A> mode				*<A NAME="Replace"></A><B>Replace</B>* *<A NAME="Replace-mode"></A><B>Replace-mode</B>* *<A NAME="mode-replace"></A><B>mode-replace</B>*
 
-Enter <A HREF="#Replace">Replace</A> mode with the &quot;<A HREF="change.html#R">R</A>&quot; command in normal mode.
+Enter <A HREF="#Replace">Replace</A> mode with the &quot;<A HREF="change.html#R">R</A>&quot;命令 in normal mode.
 
 In <A HREF="#Replace">Replace</A> mode, one character in the line is deleted for every character you
 type.  If there is no character to delete (at the end of the line), the
@@ -719,7 +719,7 @@ last one).
 
 6. Virtual <A HREF="#Replace">Replace</A> mode		*<A NAME="vreplace-mode"></A><B>vreplace-mode</B>* *<A NAME="Virtual-Replace-mode"></A><B>Virtual-Replace-mode</B>*
 
-Enter Virtual <A HREF="#Replace">Replace</A> mode with the &quot;<A HREF="change.html#gR">gR</A>&quot; command in normal mode.
+Enter Virtual <A HREF="#Replace">Replace</A> mode with the &quot;<A HREF="change.html#gR">gR</A>&quot;命令 in normal mode.
 
 Virtual <A HREF="#Replace">Replace</A> mode is similar to <A HREF="#Replace">Replace</A> mode, but instead of <A HREF="change.html#replacing">replacing</A>
 actual characters in the file, you are <A HREF="change.html#replacing">replacing</A> screen real estate, so that
@@ -747,7 +747,7 @@ In <A HREF="options.html#'list'">'list'</A> mode, Virtual <A HREF="#Replace">Rep
 unless &quot;<A HREF="motion.html#L">L</A>&quot; is in <A HREF="options.html#'cpoptions'">'cpoptions'</A>.
 
 Note that the only situations for which characters beyond the cursor should
-appear to move are in <A HREF="eval.html#List">List</A> mode |<A HREF="options.html#'list'">'list'</A>|, and occasionally when <A HREF="options.html#'wrap'">'wrap'</A> is set
+appear to move are in <A HREF="eval.html#list">列表</A> mode |<A HREF="options.html#'list'">'list'</A>|, and occasionally when <A HREF="options.html#'wrap'">'wrap'</A> is set
 (and the line changes length to become shorter or wider than the width of the
 screen).  In other cases spaces may be inserted to avoid following characters
 to move.
@@ -824,7 +824,7 @@ As a special <A HREF="change.html#case">case</A>, typing <A HREF="undo.html#CTRL
 |<A HREF="#i_CTRL-R">i_CTRL-R</A>|) will not exit <A HREF="change.html#CTRL-X">CTRL-X</A> mode.  This is primarily to allow the use of
 the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">register</A> to call some function to determine the next operation.  If
 the contents of the <A HREF="intro.html#register">register</A> (or result of the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">register</A> evaluation) are
-not valid <A HREF="change.html#CTRL-X">CTRL-X</A> mode keys, then <A HREF="change.html#CTRL-X">CTRL-X</A> mode will be exited <A HREF="motion.html#as">as</A> if those keys
+not valid <A HREF="change.html#CTRL-X">CTRL-X</A> mode keys然后<A HREF="change.html#CTRL-X">CTRL-X</A> mode will be exited <A HREF="motion.html#as">as</A> if those keys
 had been typed.
 
 For example, the following will map <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> to either actually insert a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> if
@@ -898,8 +898,8 @@ with &quot;\&lt;&quot; prepended (meaning: start of a <A HREF="motion.html#word"
 <A HREF="motion.html#as">as</A> search <A HREF="pattern.html#pattern">pattern</A> (start of any keyword of at least two characters).
 
 In <A HREF="#Replace">Replace</A> mode, the number of characters that are replaced depends on the
-length of the matched <A HREF="eval.html#string">string</A>.  This works like typing the characters of the
-matched <A HREF="eval.html#string">string</A> in <A HREF="#Replace">Replace</A> mode.
+length of the matched <A HREF="options\.html#options">字符串</A>.  This works like typing the characters of the
+matched <A HREF="options\.html#options">字符串</A> in <A HREF="#Replace">Replace</A> mode.
 
 If there is not a valid keyword character before the cursor, any keyword of
 at least two characters is matched.
@@ -941,7 +941,7 @@ and <A HREF="motion.html#CTRL-N">CTRL-N</A> look just for strings of at least tw
 If the previous expansion was split, because <A HREF="motion.html#it">它</A> got longer than <A HREF="options.html#'textwidth'">'textwidth'</A>,
 then just the text in the current line will be used.
 
-If the match found is at the end of a line, then the first <A HREF="motion.html#word">单词</A> in the next
+If the match found is at the end of a line然后the first <A HREF="motion.html#word">单词</A> in the next
 line will be inserted and the message &quot;Word from other line&quot; displayed, if
 this <A HREF="motion.html#word">单词</A> is accepted the next <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> or <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-N">CTRL-N</A> will search
 for those lines starting with this <A HREF="motion.html#word">单词</A>.
@@ -960,7 +960,7 @@ Completing keywords in <A HREF="options.html#'dictionary'">'dictionary'</A>			*<
 			could potentially be pretty slow, since all matches
 			are found before the first match is used.  By default,
 			the <A HREF="options.html#'dictionary'">'dictionary'</A> option is empty.
-			For suggestions where to find a <A HREF="eval.html#list">list</A> of words, see the
+			For suggestions where to find a <A HREF="eval.html#list">列表</A> of words, see the
 			<A HREF="options.html#'dictionary'">'dictionary'</A> option.
 			<A HREF="options.html#'ignorecase'">'ignorecase'</A>, <A HREF="options.html#'smartcase'">'smartcase'</A> and <A HREF="options.html#'infercase'">'infercase'</A> apply.
 
@@ -1004,7 +1004,7 @@ complete the <A HREF="motion.html#word">单词</A> &quot;angry&quot;; subsequent
 Other uses include translation between two languages, or grouping <A HREF="api.html#API">API</A>
 <A HREF="eval.html#functions">functions</A> by keyword.
 
-An English <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">list</A> was added to this github issue:
+An English <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">列表</A> was added to this github issue:
 https://github.com/vim/vim/issues/629#issuecomment-443293282
 Unpack thesaurus_pkg.zip, put the thesaurus.txt file somewhere, e.g.
 ~/.vim/thesaurus/english.txt, and the <A HREF="options.html#'thesaurus'">'thesaurus'</A> option to this file name.
@@ -1013,8 +1013,8 @@ Unpack thesaurus_pkg.zip, put the thesaurus.txt file somewhere, e.g.
 
 Completing keywords with <A HREF="options.html#'thesaurusfunc'">'thesaurusfunc'</A>		*<A NAME="compl-thesaurusfunc"></A><B>compl-thesaurusfunc</B>*
 
-If the <A HREF="options.html#'thesaurusfunc'">'thesaurusfunc'</A> option is set, then the user specified function is
-invoked to get the <A HREF="eval.html#list">list</A> of completion matches and the <A HREF="options.html#'thesaurus'">'thesaurus'</A> option is
+If the <A HREF="options.html#'thesaurusfunc'">'thesaurusfunc'</A> option is set然后the user specified function is
+invoked to get the <A HREF="eval.html#list">列表</A> of completion matches and the <A HREF="options.html#'thesaurus'">'thesaurus'</A> option is
 not used. 见 |<A HREF="#complete-functions">complete-functions</A>| for an explanation of how the function is
 invoked and what <A HREF="motion.html#it">它</A> should return.
 
@@ -1143,7 +1143,7 @@ name.  The <A HREF="options.html#'path'">'path'</A> option is used to search for
 Completing Vim commands					*<A NAME="compl-vim"></A><B>compl-vim</B>*
 
 Completion is context-sensitive.  It works like on the <A HREF="cmdline.html#Command-line">Command-line</A>.  It
-completes an <A HREF="intro.html#Ex">Ex</A> command <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> its arguments.  This is useful when <A HREF="editing.html#writing">writing</A>
+completes an <A HREF="intro.html#Ex">Ex</A> command <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> its arguments.  This is useful when <A HREF="editing.html#writing">写</A>
 a Vim <A HREF="usr_41.html#script">script</A>.
 
 
@@ -1297,15 +1297,15 @@ On the second invocation the arguments are:
    a:base	the text with which matches should match; the text that was
 		located in the first call (can be empty)
 
-The function must return a <A HREF="eval.html#List">List</A> with the matching words.  These matches
+The function must return a <A HREF="eval.html#list">列表</A> with the matching words.  These matches
 usually include the &quot;a:base&quot; text.  When there are no matches return an empty
-<A HREF="eval.html#List">List</A>.  Note that the cursor may have moved since the first invocation, the
+<A HREF="eval.html#list">列表</A>.  Note that the cursor may have moved since the first invocation, the
 text may have been changed.
 
 In order to return more information than the matching words, return a <A HREF="eval.html#Dict">Dict</A>
-that contains the <A HREF="eval.html#List">List</A>.  The <A HREF="eval.html#Dict">Dict</A> can have these items:
-	words		The <A HREF="eval.html#List">List</A> of matching words (mandatory).
-	refresh		A <A HREF="eval.html#string">string</A> to <A HREF="intro.html#control">control</A> re-invocation of the function
+that contains the <A HREF="eval.html#list">列表</A>.  The <A HREF="eval.html#Dict">Dict</A> can have these items:
+	words		The <A HREF="eval.html#list">列表</A> of matching words (mandatory).
+	refresh		A <A HREF="options\.html#options">字符串</A> to <A HREF="intro.html#control">control</A> re-invocation of the function
 			(optional).
 			The only value currently recognized is &quot;always&quot;, the
 			effect is that the function is called whenever the
@@ -1320,7 +1320,7 @@ For example, the function can contain this:
  
 
 						*<A NAME="complete-items"></A><B>complete-items</B>*
-Each <A HREF="eval.html#list">list</A> item can either be a <A HREF="eval.html#string">string</A> or a <A HREF="eval.html#Dictionary">Dictionary</A>.  When <A HREF="motion.html#it">它</A> is a <A HREF="eval.html#string">string</A> <A HREF="motion.html#it">它</A>
+Each <A HREF="eval.html#list">列表</A> item can either be a <A HREF="options\.html#options">字符串</A> or a <A HREF="eval.html#Dictionary">Dictionary</A>.  When <A HREF="motion.html#it">它</A> is a <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#it">它</A>
 is used <A HREF="motion.html#as">as</A> the completion.  When <A HREF="motion.html#it">它</A> is a <A HREF="eval.html#Dictionary">Dictionary</A> <A HREF="motion.html#it">它</A> can contain these
 items:
 	<A HREF="motion.html#word">单词</A>		the text that will be inserted, mandatory
@@ -1340,15 +1340,15 @@ items:
 	dup		when non-zero this match will be added even when an
 			item with the same <A HREF="motion.html#word">单词</A> is already present.
 	empty		when non-zero this match will be added even when <A HREF="motion.html#it">它</A> is
-			an empty <A HREF="eval.html#string">string</A>
+			an empty <A HREF="options\.html#options">字符串</A>
 	user_data 	custom data which is associated with the item and
 			available in |<A HREF="eval.html#v:completed_item">v:completed_item</A>|; it can be any type;
-			defaults to an empty <A HREF="eval.html#string">string</A>
+			defaults to an empty <A HREF="options\.html#options">字符串</A>
 
-All of these except &quot;icase&quot;, &quot;equal&quot;, &quot;dup&quot; and &quot;empty&quot; must be a <A HREF="eval.html#string">string</A>.  If
+All of these except &quot;icase&quot;, &quot;equal&quot;, &quot;dup&quot; and &quot;empty&quot; must be a <A HREF="options\.html#options">字符串</A>.  If
 an item does not meet these requirements then an error message is given and
-further items in the <A HREF="eval.html#list">list</A> are not used.  You can mix <A HREF="eval.html#string">string</A> and <A HREF="eval.html#Dictionary">Dictionary</A>
-items in the returned <A HREF="eval.html#list">list</A>.
+further items in the <A HREF="eval.html#list">列表</A> are not used.  You can mix <A HREF="options\.html#options">字符串</A> and <A HREF="eval.html#Dictionary">Dictionary</A>
+items in the returned <A HREF="eval.html#list">列表</A>.
 
 The &quot;menu&quot; item is used in the popup menu and may be truncated, thus <A HREF="motion.html#it">它</A> should
 be relatively short.  The &quot;info&quot; item can be longer, <A HREF="motion.html#it">它</A> will  be displayed in
@@ -1368,8 +1368,8 @@ Currently these types can be used:
 	<A HREF="change.html#d">d</A>	#define or <A HREF="map.html#macro">macro</A>
 
 When searching for matches takes some time call |<A HREF="builtin.html#complete_add()">complete_add()</A>| to add each
-match to the total <A HREF="eval.html#list">list</A>.  These matches should then not appear in the returned
-<A HREF="eval.html#list">list</A>!  Call |<A HREF="builtin.html#complete_check()">complete_check()</A>| now and then to allow the user to press a key
+match to the total <A HREF="eval.html#list">列表</A>.  These matches should then not appear in the returned
+<A HREF="eval.html#list">列表</A>!  Call |<A HREF="builtin.html#complete_check()">complete_check()</A>| now and then to allow the user to press a key
 while still searching for matches.  Stop searching when <A HREF="motion.html#it">它</A> returns non-zero.
 
 
@@ -1448,7 +1448,7 @@ There are three states:
 2. A cursor key has been used to select another match.  The match was not
    inserted then, only the entry in the popup menu is highlighted.
 3. Only part of a match has been inserted and characters were typed or the
-   backspace key was used.  The <A HREF="eval.html#list">list</A> of matches was then adjusted for what is
+   backspace key was used.  The <A HREF="eval.html#list">列表</A> of matches was then adjusted for what is
    in front of the cursor.
 
 You normally start in the first state, with the first match being inserted.
@@ -1456,7 +1456,7 @@ When &quot;longest&quot; is in <A HREF="options.html#'completeopt'">'completeopt
 in the third state.
 
 If you select another match, e.g., with <A HREF="motion.html#CTRL-N">CTRL-N</A> or <A HREF="motion.html#CTRL-P">CTRL-P</A>, you go to the first
-state.  This doesn't change the <A HREF="eval.html#list">list</A> of matches.
+state.  This doesn't change the <A HREF="eval.html#list">列表</A> of matches.
 
 When you are back at the original text then you are in the third state.  To
 get there right away you can use a <A HREF="map.html#mapping">mapping</A> that uses <A HREF="motion.html#CTRL-P">CTRL-P</A> right after
@@ -1467,7 +1467,7 @@ starting the completion:
 						*<A NAME="popupmenu-keys"></A><B>popupmenu-keys</B>*
 In the first state these keys have a special meaning:
 <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> and <A HREF="motion.html#CTRL-H">CTRL-H</A>   Delete one character, find the matches for the <A HREF="motion.html#word">单词</A> before
-		  the cursor.  This reduces the <A HREF="eval.html#list">list</A> of matches, often to one
+		  the cursor.  This reduces the <A HREF="eval.html#list">列表</A> of matches, often to one
 		  entry, and switches to the second state.
 Any non-special character:
 		  Stop completion without <A HREF="change.html#changing">changing</A> the match and insert the
@@ -1484,7 +1484,7 @@ any printable, non-white character:
 In all three states these can be used:
 <A HREF="scroll.html#CTRL-Y">CTRL-Y</A>		  Yes: Accept the currently selected match and stop completion.
 <A HREF="scroll.html#CTRL-E">CTRL-E</A>		  End completion, go back to what was there before selecting a
-		  match (what was typed or longest common <A HREF="eval.html#string">string</A>).
+		  match (what was typed or longest common <A HREF="options\.html#options">字符串</A>).
 <A HREF="scroll.html#&lt;PageUp&gt;">&lt;PageUp&gt;</A>	  <A HREF="visual.html#Select">Select</A> a match several entries back, but don't insert <A HREF="motion.html#it">它</A>.
 <A HREF="scroll.html#&lt;PageDown&gt;">&lt;PageDown&gt;</A>	  <A HREF="visual.html#Select">Select</A> a match several entries further, but don't insert <A HREF="motion.html#it">它</A>.
 <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>		  <A HREF="visual.html#Select">Select</A> the previous match, <A HREF="motion.html#as">as</A> if <A HREF="motion.html#CTRL-P">CTRL-P</A> was used, but don't
@@ -1500,7 +1500,7 @@ second state:	  <A HREF="#Insert">Insert</A> the currently selected match.
 third state:	  Use the text <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> is and insert a line break.
 
 In other words: If you used the cursor keys to select another entry in the
-<A HREF="eval.html#list">list</A> of matches then the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> key inserts that match.  If you typed
+<A HREF="eval.html#list">列表</A> of matches then the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> key inserts that match.  If you typed
 something else then <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> inserts a line break.
 
 
@@ -1516,7 +1516,7 @@ you can use an <A HREF="#Insert">Insert</A> mode <A HREF="map.html#mapping">mapp
 <B>	:inoremap &lt;Down&gt; &lt;C-R&gt;=pumvisible() ? "\&lt;lt&gt;C-N&gt;" : "\&lt;lt&gt;Down&gt;"&lt;CR&gt;</B>
 
 You can use of &lt;expr&gt; in <A HREF="map.html#mapping">mapping</A> to have the popup menu used when typing a
-character and some condition is met.  For example, for typing a dot:
+character and some condition is met.例如, for typing a dot:
 <B>	inoremap &lt;expr&gt; . MayComplete()</B>
 <B>	func MayComplete()</B>
 <B>	    if (can complete)</B>
@@ -1590,7 +1590,7 @@ HTML							*<A NAME="ft-html-omni"></A><B>ft-html-omni</B>*
 XHTML							*<A NAME="ft-xhtml-omni"></A><B>ft-xhtml-omni</B>*
 
 <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-O">CTRL-O</A> provides completion of various elements of (X)HTML files.  It is
-designed to support <A HREF="editing.html#writing">writing</A> of XHTML 1.0 Strict files but will also work for
+designed to support <A HREF="editing.html#writing">写</A> of XHTML 1.0 Strict files but will also work for
 other versions of HTML. Features:
 
 - after &quot;<A HREF="change.html#&lt;">&lt;</A>&quot; complete <A HREF="tagsrch.html#tag">标签</A> name depending on <A HREF="repeat.html#context">context</A> (no div suggestion inside
@@ -1665,9 +1665,9 @@ market. Theoretically standards are created by W3C organisation
 <B><FONT color="#3A6F2B">		-	+	-    -		     </FONT></B>
 
 Regardless from state of implementation in browsers but if element is defined
-in standards, completion <A HREF="usr_05.html#plugin">plugin</A> will place element in suggestion <A HREF="eval.html#list">list</A>. When
+in standards, completion <A HREF="usr_05.html#plugin">plugin</A> will place element in suggestion <A HREF="eval.html#list">列表</A>. When
 both major engines implemented element, even if this is not in standards <A HREF="motion.html#it">它</A>
-will be suggested. All other elements are not placed in suggestion <A HREF="eval.html#list">list</A>.
+will be suggested. All other elements are not placed in suggestion <A HREF="eval.html#list">列表</A>.
 
 
 
@@ -1695,7 +1695,7 @@ Script completes:
     Still, to find myClass contents <A HREF="tagsrch.html#tags">标签</A> file is required.
 
 - function names with additional info:
-  - in <A HREF="change.html#case">case</A> of built-in <A HREF="eval.html#functions">functions</A> <A HREF="eval.html#list">list</A> of possible arguments and after &#124; type
+  - in <A HREF="change.html#case">case</A> of built-in <A HREF="eval.html#functions">functions</A> <A HREF="eval.html#list">列表</A> of possible arguments and after &#124; type
     data returned by function
   - in <A HREF="change.html#case">case</A> of user function arguments and name of file where function was
     defined (if <A HREF="motion.html#it">它</A> is not current file)
@@ -1718,7 +1718,7 @@ RUBY						 *<A NAME="ft-ruby-omni"></A><B>ft-ruby-omni</B>*
 
 NOTE: |<A HREF="#compl-omni">compl-omni</A>| for <A HREF="if_ruby.html#Ruby">Ruby</A> code requires |<A HREF="provider.html#provider-ruby">provider-ruby</A>| to be installed.
 
-<A HREF="if_ruby.html#Ruby">Ruby</A> completion will parse your buffer on demand in order to provide a <A HREF="eval.html#list">list</A> of
+<A HREF="if_ruby.html#Ruby">Ruby</A> completion will parse your buffer on demand in order to provide a <A HREF="eval.html#list">列表</A> of
 completions.  These completions will be drawn from modules loaded by 'require'
 and modules defined in the current buffer.
 
@@ -1740,7 +1740,7 @@ Notes:
    cause some code execution, which may be a concern. This is no longer
    enabled by default, to enable this feature add
 <B>     let g:rubycomplete_buffer_loading = 1</B>
- - In <A HREF="repeat.html#context">context</A> 1 above, Vim can parse the entire buffer to add a <A HREF="eval.html#list">list</A> of
+ - In <A HREF="repeat.html#context">context</A> 1 above, Vim can parse the entire buffer to add a <A HREF="eval.html#list">列表</A> of
    classes to the completion results. This feature is turned off by default,
    to enable <A HREF="motion.html#it">它</A> add
 <B>     let g:rubycomplete_classes_in_global = 1</B>
@@ -1761,7 +1761,7 @@ Vim has the ability to color <A HREF="syntax.html#syntax">syntax</A> highlight n
 this highlighting includes knowing what keywords are part of a language.  Many
 <A HREF="filetype.html#filetypes">filetypes</A> already have custom completion scripts written for them, the
 syntaxcomplete <A HREF="usr_05.html#plugin">plugin</A> provides basic completion for all other <A HREF="filetype.html#filetypes">filetypes</A>.  It
-does this by populating the omni completion <A HREF="eval.html#list">list</A> with the text Vim already
+does this by populating the omni completion <A HREF="eval.html#list">列表</A> with the text Vim already
 knows how to color highlight.  It can be used for any <A HREF="filetype.html#filetype">filetype</A> and provides a
 minimal language-sensitive completion.
 
@@ -1769,7 +1769,7 @@ To enable <A HREF="syntax.html#syntax">syntax</A> code completion you can run:
 <B>    setlocal omnifunc=syntaxcomplete#Complete</B>
 
 You can automate this by placing the following in your |<A HREF="init.html">init.vim</A>| (after any
-&quot;<A HREF="filetype.html#:filetype">:filetype</A>&quot; command):
+&quot;<A HREF="filetype.html#:filetype">:filetype</A>&quot;命令):
 <B>    if has("autocmd") &amp;&amp; exists("+omnifunc")</B>
 <B>	autocmd Filetype *</B>
 <B>		    \	if &amp;omnifunc == "" |</B>
@@ -1781,7 +1781,7 @@ The above will set completion to this <A HREF="usr_41.html#script">script</A> on
 not already exist for that <A HREF="filetype.html#filetype">filetype</A>.
 
 Each <A HREF="filetype.html#filetype">filetype</A> can have a wide range of <A HREF="syntax.html#syntax">syntax</A> items.  The <A HREF="usr_05.html#plugin">plugin</A> allows you to
-customize which <A HREF="syntax.html#syntax">syntax</A> groups to include or exclude from the <A HREF="eval.html#list">list</A>.  Let's have
+customize which <A HREF="syntax.html#syntax">syntax</A> groups to include or exclude from the <A HREF="eval.html#list">列表</A>.  Let's have
 a look at the PHP <A HREF="filetype.html#filetype">filetype</A> to see how this works.
 
 If you edit a file called, index.php, run the following command:
@@ -1790,7 +1790,7 @@ If you edit a file called, index.php, run the following command:
 The first thing you will notice is that there are many different <A HREF="syntax.html#syntax">syntax</A> groups.
 The PHP language can include elements from different languages like HTML,
 JavaScript and many more.  The <A HREF="syntax.html#syntax">syntax</A> <A HREF="usr_05.html#plugin">plugin</A> will only include <A HREF="syntax.html#syntax">syntax</A> groups
-that begin with the <A HREF="filetype.html#filetype">filetype</A>, &quot;php&quot;, in this <A HREF="change.html#case">case</A>.  For example these <A HREF="syntax.html#syntax">syntax</A>
+that begin with the <A HREF="filetype.html#filetype">filetype</A>, &quot;php&quot;, in this <A HREF="change.html#case">case</A>.例如 these <A HREF="syntax.html#syntax">syntax</A>
 groups are included by default with the PHP: phpEnvVar, phpIntVar,
 phpFunctions.
 
@@ -1803,7 +1803,7 @@ autoload/syntaxcomplete.vim) to add items.  Looking at the output from
 To pick up any JavaScript and HTML keyword <A HREF="syntax.html#syntax">syntax</A> groups while editing a PHP
 file, you can use 3 different regexs, one for each language.  Or you can
 simply restrict the include groups to a particular value, without using
-a regex <A HREF="eval.html#string">string</A>:
+a regex <A HREF="options\.html#options">字符串</A>:
 <B>    let g:omni_syntax_group_include_php = 'php\w\+,javaScript\w\+,html\w\+'</B>
 <B>    let g:omni_syntax_group_include_php = 'phpFunctions,phpMethods'</B>
  
@@ -1811,10 +1811,10 @@ The basic form of this variable is:
 <B>    let g:omni_syntax_group_include_{filetype} = 'regex,comma,separated'</B>
 
 The PHP language has an enormous number of items which <A HREF="motion.html#it">它</A> knows how to <A HREF="syntax.html#syntax">syntax</A>
-highlight.  These items will be available within the omni completion <A HREF="eval.html#list">list</A>.
+highlight.  These items will be available within the omni completion <A HREF="eval.html#list">列表</A>.
 
-Some people may find this <A HREF="eval.html#list">list</A> unwieldy or are only interested in certain
-items.  There are two ways to prune this <A HREF="eval.html#list">list</A> (if necessary).  If you find
+Some people may find this <A HREF="eval.html#list">列表</A> unwieldy or are only interested in certain
+items.  There are two ways to prune this <A HREF="eval.html#list">列表</A> (if necessary).  If you find
 certain <A HREF="syntax.html#syntax">syntax</A> groups you <A HREF="diff.html#do">do</A> not wish displayed you can use two different
 methods to identify these groups.  The first specifically lists the <A HREF="syntax.html#syntax">syntax</A>
 groups by name.  The second uses a regular <A HREF="eval.html#expression">expression</A> to identify both
@@ -1822,7 +1822,7 @@ groups by name.  The second uses a regular <A HREF="eval.html#expression">expres
 <B>    let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'</B>
 <B>    let g:omni_syntax_group_exclude_php = 'php\w*Constant'</B>
 
-Add <A HREF="motion.html#as">as</A> many <A HREF="syntax.html#syntax">syntax</A> groups to this <A HREF="eval.html#list">list</A> by comma separating them.  The basic
+Add <A HREF="motion.html#as">as</A> many <A HREF="syntax.html#syntax">syntax</A> groups to this <A HREF="eval.html#list">列表</A> by comma separating them.  The basic
 form of this variable is:
 <B>    let g:omni_syntax_group_exclude_{filetype} = 'regex,comma,separated'</B>
 
@@ -1830,7 +1830,7 @@ You can create <A HREF="motion.html#as">as</A> many of these <A HREF="eval.html#
 <A HREF="filetype.html#filetype">filetype</A> at the end of the variable name.
 
 The <A HREF="usr_05.html#plugin">plugin</A> uses the isKeyword option to determine where <A HREF="motion.html#word">单词</A> boundaries are
-for the <A HREF="syntax.html#syntax">syntax</A> items.  For example, in the Scheme language completion should
+for the <A HREF="syntax.html#syntax">syntax</A> items.例如, in the Scheme language completion should
 include the &quot;<A HREF="motion.html#-">-</A>&quot;, call-with-output-file.  Depending on your <A HREF="filetype.html#filetype">filetype</A>, this may
 not provide the words you are expecting.  Setting the
 g:omni_syntax_use_iskeyword option to 0 will force the <A HREF="syntax.html#syntax">syntax</A> <A HREF="usr_05.html#plugin">plugin</A> to break
@@ -1839,9 +1839,9 @@ on <A HREF="motion.html#word">单词</A> characters.   This can be controlled ad
 <B>    let g:omni_syntax_use_iskeyword = 0</B>
 
 For <A HREF="usr_05.html#plugin">plugin</A> developers, the <A HREF="usr_05.html#plugin">plugin</A> exposes a public function OmniSyntaxList.
-This function can be used to request a <A HREF="eval.html#List">List</A> of <A HREF="syntax.html#syntax">syntax</A> items.  When editing a
+This function can be used to request a <A HREF="eval.html#list">列表</A> of <A HREF="syntax.html#syntax">syntax</A> items.  When editing a
 SQL file (:e syntax.sql) you can use the &quot;<A HREF="syntax.html#:syntax">:syntax</A> list&quot; command to see the
-various groups and <A HREF="syntax.html#syntax">syntax</A> items.  For example:
+various groups and <A HREF="syntax.html#syntax">syntax</A> items.例如:
 <B>    syntax list</B>
 
 Yields data similar to this:
@@ -1855,7 +1855,7 @@ Yields data similar to this:
 <B><FONT color="#3A6F2B">                       image float integer timestamp real decimal </FONT></B>
 
 There are two <A HREF="syntax.html#syntax">syntax</A> groups listed here: sqlOperator and sqlType.  To retrieve
-a <A HREF="eval.html#List">List</A> of <A HREF="syntax.html#syntax">syntax</A> items you can call OmniSyntaxList a number of different
+a <A HREF="eval.html#list">列表</A> of <A HREF="syntax.html#syntax">syntax</A> items you can call OmniSyntaxList a number of different
 ways.  To retrieve all <A HREF="syntax.html#syntax">syntax</A> items regardless of <A HREF="syntax.html#syntax">syntax</A> group: 
 <B>    echo OmniSyntaxList( [] )</B>
 
@@ -1868,7 +1868,7 @@ To retrieve all <A HREF="syntax.html#syntax">syntax</A> items for both the sqlOp
 A regular <A HREF="eval.html#expression">expression</A> can also be used:
 <B>    echo OmniSyntaxList( ['sql\w\+'] )</B>
 
-From within a <A HREF="usr_05.html#plugin">plugin</A>, you would typically assign the output to a <A HREF="eval.html#List">List</A>:
+From within a <A HREF="usr_05.html#plugin">plugin</A>, you would typically assign the output to a <A HREF="eval.html#list">列表</A>:
 <B>    let myKeywords = []</B>
 <B>    let myKeywords = OmniSyntaxList( ['sqlKeyword'] )</B>
 
@@ -1882,7 +1882,7 @@ with data pulled directly from within a database.  For detailed instructions
 and a tutorial 见 |<A HREF="ft_sql.html#omni-sql-completion">omni-sql-completion</A>|.
 
 The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can be used in conjunction with other completion
-plugins.  For example, the PHP <A HREF="filetype.html#filetype">filetype</A> has its own completion <A HREF="usr_05.html#plugin">plugin</A>.
+plugins.例如, the PHP <A HREF="filetype.html#filetype">filetype</A> has its own completion <A HREF="usr_05.html#plugin">plugin</A>.
 Since PHP is often used to generate dynamic website by accessing a database,
 the SQL completion <A HREF="usr_05.html#plugin">plugin</A> can also be enabled.  This allows you to complete
 PHP code and SQL code at the same time.
@@ -1910,7 +1910,7 @@ XML data files are stored in the &quot;autoload/xml&quot; directory in <A HREF="
 Vim <A HREF="intro.html#distribution">distribution</A> provides examples of data files in the
 &quot;$VIMRUNTIME/autoload/xml&quot; directory.  They have a meaningful name which will
 be used in commands.  It should be a unique name which will not create
-conflicts.  For example, the name xhtml10s.vim means <A HREF="motion.html#it">它</A> is the data file for
+conflicts.例如, the name xhtml10s.vim means <A HREF="motion.html#it">它</A> is the data file for
 XHTML 1.0 Strict.
 
 Each file contains a variable with a name like g:xmldata_xhtml10s . It is
@@ -1924,7 +1924,7 @@ a compound from two parts:
 Part two must be exactly the same <A HREF="motion.html#as">as</A> name of file.
 
 The variable is a |<A HREF="eval.html#Dictionary">Dictionary</A>|.  Keys are <A HREF="tagsrch.html#tag">标签</A> names and each value is a two
-element |<A HREF="eval.html#List">List</A>|.  The first element of the List is also a List with the names
+element |<A HREF="eval.html#list">列表</A>|.  The first element of the List is also a List with the names
 of possible children.  The second element is a |<A HREF="eval.html#Dictionary">Dictionary</A>| with the names of
 attributes <A HREF="motion.html#as">as</A> keys and the possible values of attributes <A HREF="motion.html#as">as</A> values.  Example:
 
@@ -1959,16 +1959,16 @@ help to write this file:
 
 In the example four special elements are visible:
 
-1. &quot;vimxmlentities&quot; - a special key with <A HREF="eval.html#List">List</A> containing entities of this XML
+1. &quot;vimxmlentities&quot; - a special key with <A HREF="eval.html#list">列表</A> containing entities of this XML
    dialect.
-2. If the <A HREF="eval.html#list">list</A> containing possible values of attributes has one element and
+2. If the <A HREF="eval.html#list">列表</A> containing possible values of attributes has one element and
    this element is equal to the name of the attribute this attribute will be
    treated <A HREF="motion.html#as">as</A> <A HREF="options.html#boolean">boolean</A> and inserted <A HREF="motion.html#as">as</A> 'attrname' and not <A HREF="motion.html#as">as</A> 'attrname=&quot;'
 3. &quot;vimxmltaginfo&quot; - a special key with a <A HREF="eval.html#Dictionary">Dictionary</A> containing <A HREF="tagsrch.html#tag">标签</A>
-   names <A HREF="motion.html#as">as</A> keys and two element <A HREF="eval.html#List">List</A> <A HREF="motion.html#as">as</A> values, for additional menu info and
+   names <A HREF="motion.html#as">as</A> keys and two element <A HREF="eval.html#list">列表</A> <A HREF="motion.html#as">as</A> values, for additional menu info and
    the long description.
 4. &quot;vimxmlattrinfo&quot; - special key with <A HREF="eval.html#Dictionary">Dictionary</A> containing attribute names
-   <A HREF="motion.html#as">as</A> keys and two element <A HREF="eval.html#List">List</A> <A HREF="motion.html#as">as</A> values, for additional menu info and long
+   <A HREF="motion.html#as">as</A> keys and two element <A HREF="eval.html#list">列表</A> <A HREF="motion.html#as">as</A> values, for additional menu info and long
    description.
 
 Note: Tag names in the data file MUST not contain a <A HREF="api.html#namespace">namespace</A> description.
@@ -2001,7 +2001,7 @@ loading of the data file and connecting data with the proper <A HREF="api.html#n
 |<A HREF="#:XMLns">:XMLns</A>| command.  The first (obligatory) argument is the name of the data
 (xhtml10s, xsl).  The second argument is the code of <A HREF="api.html#namespace">namespace</A> (h, xsl).  When
 used without a second argument the dialect will be used <A HREF="motion.html#as">as</A> default - without
-<A HREF="api.html#namespace">namespace</A> declaration.  For example to use XML completion in .xsl files:
+<A HREF="api.html#namespace">namespace</A> declaration.例如 to use XML completion in .xsl files:
 
 <B>	:XMLns xhtml10s</B>
 <B>	:XMLns xsl xsl</B>
@@ -2043,7 +2043,7 @@ to get the name of the last open <A HREF="tagsrch.html#tag">标签</A> (b:unaryT
 8. <A HREF="#Insert">Insert</A> mode commands					*<A NAME="inserting"></A><B>inserting</B>*
 
 The following commands can be used to insert new text into the buffer.  They
-can all be undone and repeated with the &quot;<A HREF="repeat.html#.">.</A>&quot; command.
+can all be undone and repeated with the &quot;<A HREF="repeat.html#.">.</A>&quot;命令.
 
 
 							*<A NAME="a"></A><B>a</B>*
@@ -2213,8 +2213,8 @@ command.  They work on a line basis, insertion starts below the line in which
 the cursor is, or below the specified line.  To insert text above the first
 line use the command &quot;:0r {name}&quot;.
 
-After the &quot;<A HREF="#:read">:read</A>&quot; command, the cursor is left on the first non-blank in the
-first new line.  Unless in <A HREF="intro.html#Ex">Ex</A> mode, then the cursor is left on the last new
+After the &quot;<A HREF="#:read">:read</A>&quot;命令, the cursor is left on the first non-blank in the
+first new line.  Unless in <A HREF="intro.html#Ex">Ex</A> mode然后the cursor is left on the last new
 line (sorry, this is <A HREF="intro.html#Vi">Vi</A> compatible).
 
 If a file name is given with &quot;<A HREF="#:r">:r</A>&quot;, <A HREF="motion.html#it">它</A> becomes the alternate file.  This can be
@@ -2222,10 +2222,10 @@ used, for example, when you want to edit that file instead: &quot;:e! #&quot;.  
 be switched off by removing the '<A HREF="#a">a</A>' flag from the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option.
 
 Of the <A HREF="editing.html#[++opt]">[++opt]</A> arguments one is specifically for &quot;<A HREF="#:read">:read</A>&quot;, the <A HREF="editing.html#++edit">++edit</A> argument.
-This is useful when the &quot;<A HREF="#:read">:read</A>&quot; command is actually used to read a file into
+This is useful when the &quot;<A HREF="#:read">:read</A>&quot;命令 is actually used to read a file into
 the buffer <A HREF="motion.html#as">as</A> if editing that file.  Use this command in an empty buffer:
 <B>	:read ++edit filename</B>
-The effect is that the <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'bomb'">'bomb'</A>, etc. <A HREF="options.html#options">options</A> are
+The effect is that the <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'bomb'">'bomb'</A>, etc. <A HREF="options\.html#options">选项</A> are
 set to what has been detected for &quot;filename&quot;.  Note that a single empty line
 remains, you may want to delete <A HREF="motion.html#it">它</A>.
 

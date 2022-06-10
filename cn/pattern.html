@@ -306,7 +306,7 @@ with another <A HREF="motion.html#word">单词</A>:
  
 
 							*<A NAME="//;"></A><B>//;</B>* *<A NAME="E386"></A><B>E386</B>*
-A very special offset is '<A HREF="motion.html#;">;</A>' followed by another search command.  For example:
+A very special offset is '<A HREF="motion.html#;">;</A>' followed by another search command.例如:
 
 <B>   /test 1/;/test</B>
 <B>   /test.*/+1;?ing?</B>
@@ -316,7 +316,7 @@ occurrence of &quot;test&quot; after that.
 
 This is like executing two search commands after each other, except that:
 - It can be used <A HREF="motion.html#as">as</A> a single motion command after an <A HREF="motion.html#operator">operator</A>.
-- The direction for a following &quot;<A HREF="#n">n</A>&quot; or &quot;<A HREF="#N">N</A>&quot; command comes from the first
+- The direction for a following &quot;<A HREF="#n">n</A>&quot; or &quot;<A HREF="#N">N</A>&quot;命令 comes from the first
   search command.
 - When an error occurs the cursor is not moved at all.
 
@@ -339,7 +339,7 @@ the <A HREF="options.html#'hlsearch'">'hlsearch'</A> option.
 
 To clear the last used search <A HREF="#pattern">pattern</A>:
 <B>	:let @/ = ""</B>
-This will not set the <A HREF="#pattern">pattern</A> to an empty <A HREF="eval.html#string">string</A>, because that would match
+This will not set the <A HREF="#pattern">pattern</A> to an empty <A HREF="options\.html#options">字符串</A>, because that would match
 everywhere.  The <A HREF="#pattern">pattern</A> is really cleared, like when starting Vim.
 
 The search usually skips matches that don't move the cursor.  Whether the next
@@ -354,7 +354,7 @@ When searching backwards, searching starts at the start of the line, using the
 '<A HREF="change.html#c">c</A>' flag in <A HREF="options.html#'cpoptions'">'cpoptions'</A> <A HREF="motion.html#as">as</A> described above.  Then the last match before the
 cursor position is used.
 
-In <A HREF="intro.html#Vi">Vi</A> the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command sets the last search <A HREF="#pattern">pattern</A> when the <A HREF="tagsrch.html#tag">标签</A> is searched
+In <A HREF="intro.html#Vi">Vi</A> the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot;命令 sets the last search <A HREF="#pattern">pattern</A> when the <A HREF="tagsrch.html#tag">标签</A> is searched
 for.  In Vim this is not done, the previous search <A HREF="#pattern">pattern</A> is still remembered,
 unless the '<A HREF="motion.html#t">t</A>' flag is present in <A HREF="options.html#'cpoptions'">'cpoptions'</A>.  The search <A HREF="#pattern">pattern</A> is always
 put in the search <A HREF="cmdline.html#history">history</A>.
@@ -375,18 +375,18 @@ switched off by setting the '<A HREF="change.html#s">s</A>' flag in the <A HREF=
 
 							*<A NAME="search-range"></A><B>search-range</B>*
 You can limit the search command &quot;<A HREF="#/">/</A>&quot; to a certain range of lines by including
-\&#37;&gt;l items.  For example, to match the <A HREF="motion.html#word">单词</A> &quot;limit&quot; below line 199 and above
+\&#37;&gt;l items.例如, to match the <A HREF="motion.html#word">单词</A> &quot;limit&quot; below line 199 and above
 line 300:
 <B>	/\%&gt;199l\%&lt;300llimit</B>
 Also 见 |<A HREF="#/\&#37;&gt;l">/\&#37;&gt;l</A>|.
 
-Another way is to use the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command with the '<A HREF="change.html#c">c</A>' flag.  Example:
+Another way is to use the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 with the '<A HREF="change.html#c">c</A>' flag.  Example:
 <B>   :.,300s/Pattern//gc</B>
 This command will search from the cursor position until line 300 for
 &quot;<A HREF="#Pattern">Pattern</A>&quot;.  At the match, you will be asked to type a character.  Type '<A HREF="repeat.html#q">q</A>' to
 stop at this match, type '<A HREF="#n">n</A>' to find the next match.
 
-The &quot;*&quot;, &quot;<A HREF="##">#</A>&quot;, &quot;g*&quot; and &quot;<A HREF="#g#">g#</A>&quot; commands look for a <A HREF="motion.html#word">单词</A> near the cursor in this
+The &quot;*&quot;, &quot;<A HREF="##">#</A>&quot;, &quot;g*&quot; and &quot;<A HREF="#g#">g#</A>&quot;命令 look for a <A HREF="motion.html#word">单词</A> near the cursor in this
 order, the first one that is found is used:
 - The keyword currently under the cursor.
 - The first keyword to the right of the cursor, in the same line.
@@ -402,7 +402,7 @@ the &quot;*&quot; is under your right hand middle finger (search to the right an
 
 								*<A NAME="E956"></A><B>E956</B>*
 In very rare cases a regular <A HREF="eval.html#expression">expression</A> is used recursively.  This can happen
-when executing a <A HREF="#pattern">pattern</A> takes a long time and when checking for <A HREF="message.html#messages">messages</A> on
+when executing a <A HREF="#pattern">pattern</A> takes a long time and when checking for <A HREF="message.html#messages">信息</A> on
 channels a callback is invoked that also uses a <A HREF="#pattern">pattern</A> or an <A HREF="autocmd.html#autocommand">autocommand</A> is
 triggered.  In most cases this should be fine, but if a <A HREF="#pattern">pattern</A> is in use when
 it's used again <A HREF="motion.html#it">它</A> fails.  Usually this means there is something wrong with
@@ -446,7 +446,7 @@ For starters, read chapter 27 of the user manual |<A HREF="usr_27.html">usr_27.t
 						*<A NAME="/concat"></A><B>/concat</B>*
 3. A concat is one or more pieces, concatenated.  It matches a match for the
    first piece, followed by a match for the second piece, etc.  Example:
-   &quot;f[0-9]b&quot;, first matches &quot;<A HREF="motion.html#f">f</A>&quot;, then a digit and then &quot;<A HREF="motion.html#b">b</A>&quot;.
+   &quot;f[0-9]b&quot;, first matches &quot;<A HREF="motion.html#f">f</A>&quot;然后a digit and then &quot;<A HREF="motion.html#b">b</A>&quot;.
 
    concat  ::=	    piece
 		or  piece piece
@@ -464,7 +464,7 @@ For starters, read chapter 27 of the user manual |<A HREF="usr_27.html">usr_27.t
 
 
 						*<A NAME="/atom"></A><B>/atom</B>*
-5. An atom can be one of a long <A HREF="eval.html#list">list</A> of items.  Many atoms match one character
+5. An atom can be one of a long <A HREF="eval.html#list">列表</A> of items.  Many atoms match one character
    in the text.  It is often an ordinary character or a character class.
    Parentheses can be used to make a <A HREF="#pattern">pattern</A> into an atom.  The &quot;\z(\)&quot;
    construct is only for <A HREF="syntax.html#syntax">syntax</A> highlighting.
@@ -504,11 +504,11 @@ the <A HREF="#pattern">pattern</A> will not match.  This is only useful when deb
 
 Some characters in the <A HREF="#pattern">pattern</A>, such <A HREF="motion.html#as">as</A> letters, are taken literally.  They
 match exactly the same character in the text.  When preceded with a <A HREF="intro.html#backslash">backslash</A>
-however, these characters may get a special meaning.  For example, &quot;<A HREF="insert.html#a">a</A>&quot; matches
+however, these characters may get a special meaning.例如, &quot;<A HREF="insert.html#a">a</A>&quot; matches
 the <A HREF="print.html#letter">letter</A> &quot;<A HREF="insert.html#a">a</A>&quot;, while &quot;\a&quot; matches any alphabetic character.
 
 Other characters have a special meaning without a <A HREF="intro.html#backslash">backslash</A>.  They need to be
-preceded with a <A HREF="intro.html#backslash">backslash</A> to match literally.  For example &quot;<A HREF="repeat.html#.">.</A>&quot; matches any
+preceded with a <A HREF="intro.html#backslash">backslash</A> to match literally.例如 &quot;<A HREF="repeat.html#.">.</A>&quot; matches any
 character while &quot;\.&quot; matches a dot.
 
 If a character is taken literally or not depends on the <A HREF="options.html#'magic'">'magic'</A> option and the
@@ -537,7 +537,7 @@ Examples:
 	  \.	   \.	    .	     .		literal dot
 	  $	   $	    $	     \$		end-of-line
 	  &#42;	   &#42;	    \*	     \*		any number of the previous atom
-	  ~	   ~	    \~	     \~		latest substitute <A HREF="eval.html#string">string</A>
+	  ~	   ~	    \~	     \~		latest substitute <A HREF="options\.html#options">字符串</A>
 	  ()	   \(\)     \(\)     \(\)	group <A HREF="motion.html#as">as</A> an atom
 	  &#124;	   \&#124;	    \&#124;	     \&#124;		nothing: separates alternatives
 	  \\	   \\	    \\	     \\		literal <A HREF="intro.html#backslash">backslash</A>
@@ -640,9 +640,9 @@ Character classes:					*<A NAME="/character-classes"></A><B>/character-classes</
 |<A HREF="#/\H">/\H</A>|	\H	\H	non-head of <A HREF="motion.html#word">单词</A> character:	[^A-Za-z_]
 |<A HREF="#/\a">/\a</A>|	\a	\a	alphabetic character:		[A-Za-z]
 |<A HREF="#/\A">/\A</A>|	\A	\A	non-alphabetic character:	[^A-Za-z]
-|<A HREF="#/\l">/\l</A>|	\l	\l	<A HREF="change.html#lowercase">lowercase</A> character:		[a-z]
+|<A HREF="#/\l">/\l</A>|	\l	\l	<A HREF="change.html#lowercase">小写</A> character:		[a-z]
 |<A HREF="#/\L">/\L</A>|	\L	\L	non-lowercase character:	[^a-z]
-|<A HREF="#/\u">/\u</A>|	\u	\u	<A HREF="change.html#uppercase">uppercase</A> character:		[A-Z]
+|<A HREF="#/\u">/\u</A>|	\u	\u	<A HREF="change.html#uppercase">大写</A> character:		[A-Z]
 |<A HREF="#/\U">/\U</A>|	\U	\U	non-uppercase character		[^A-Z]
 |<A HREF="#/\_">/\_</A>|	\_x	\_x	where <A HREF="change.html#x">x</A> is any of the characters above: character
 			class with end-of-line included
@@ -654,8 +654,8 @@ Character classes:					*<A NAME="/character-classes"></A><B>/character-classes</
 |<A HREF="#/\r">/\r</A>|	\r	\r	<A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>
 |<A HREF="#/\b">/\b</A>|	\b	\b	<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>
 |<A HREF="#/\n">/\n</A>|	\n	\n	end-of-line
-|<A HREF="#/~">/~</A>|	~	\~	last given substitute <A HREF="eval.html#string">string</A>
-|<A HREF="#/\1">/\1</A>|	\1	\1	same <A HREF="eval.html#string">string</A> <A HREF="motion.html#as">as</A> matched by first \(\)
+|<A HREF="#/~">/~</A>|	~	\~	last given substitute <A HREF="options\.html#options">字符串</A>
+|<A HREF="#/\1">/\1</A>|	\1	\1	same <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#as">as</A> matched by first \(\)
 |<A HREF="#/\2">/\2</A>|	\2	\2	Like &quot;\1&quot;, but uses second \(\)
 	   <A HREF="eval.html#...">...</A>
 |<A HREF="#/\9">/\9</A>|	\9	\9	Like &quot;\1&quot;, but uses ninth \(\)
@@ -699,7 +699,7 @@ Character classes:					*<A NAME="/character-classes"></A><B>/character-classes</
 \(\.$\|\. \)		A period followed by <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> or a space.
 
 [.!?][])&quot;']*\($\|[ ]\)	A search <A HREF="#pattern">pattern</A> that finds the end of a <A HREF="motion.html#sentence">sentence</A>,
-			with almost the same definition <A HREF="motion.html#as">as</A> the &quot;<A HREF="motion.html#)">)</A>&quot; command.
+			with almost the same definition <A HREF="motion.html#as">as</A> the &quot;<A HREF="motion.html#)">)</A>&quot;命令.
 
 cat\Z			Both &quot;cat&quot; and &quot;càt&quot; (&quot;a&quot; followed by 0x0300)
 			Does not match &quot;càt&quot; (character 0x00e0), even
@@ -720,7 +720,7 @@ overview.
 	Matches 0 or more of the preceding atom, <A HREF="motion.html#as">as</A> many <A HREF="motion.html#as">as</A> possible.
 <B><FONT color="#3A6F2B">	Example  'nomagic'	matches </FONT></B>
 	a*	   a\*		&quot;&quot;, &quot;<A HREF="insert.html#a">a</A>&quot;, &quot;aa&quot;, &quot;aaa&quot;, etc.
-	.*	   \.\*		anything, also an empty <A HREF="eval.html#string">string</A>, no end-of-line
+	.*	   \.\*		anything, also an empty <A HREF="options\.html#options">字符串</A>, no end-of-line
 	\_.*	   \_.\*	everything up to the end of the buffer
 	\_.*END	   \_.\*END	everything up to and including the last &quot;END&quot;
 				in the buffer
@@ -729,7 +729,7 @@ overview.
 	&quot;<A HREF="motion.html#^">^</A>&quot; <A HREF="motion.html#it">它</A> matches the <A HREF="#star">star</A> character.
 
 	Be aware that <A HREF="repeat.html#repeating">repeating</A> &quot;\_.&quot; can match a lot of text and take a long
-	time.  For example, &quot;\_.*END&quot; matches all text from the current
+	time.例如, &quot;\_.*END&quot; matches all text from the current
 	position to the last occurrence of &quot;END&quot; in the file.  Since the &quot;*&quot;
 	will match <A HREF="motion.html#as">as</A> many <A HREF="motion.html#as">as</A> possible, this first skips over all lines until
 	the end of the file and then tries matching &quot;END&quot;, backing up one
@@ -771,7 +771,7 @@ overview.
 	<A HREF="#n">n</A> and <A HREF="motion.html#m">m</A> are positive decimal numbers or zero
 
 								*<A NAME="non-greedy"></A><B>non-greedy</B>*
-	If a &quot;<A HREF="motion.html#-">-</A>&quot; appears immediately after the &quot;<A HREF="motion.html#{">{</A>&quot;, then a shortest match
+	If a &quot;<A HREF="motion.html#-">-</A>&quot; appears immediately after the &quot;<A HREF="motion.html#{">{</A>&quot;然后a shortest match
 	first algorithm is used (see example below).  In particular, &quot;\{-}&quot; is
 	the same <A HREF="motion.html#as">as</A> &quot;*&quot; but uses the shortest match first algorithm.  BUT: A
 	match that starts earlier is preferred over a shorter match: &quot;a\{-}b&quot;
@@ -1015,15 +1015,15 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 
 
 						*<A NAME="/\&#37;^"></A><B>/\&#37;^</B>* *<A NAME="start-of-file"></A><B>start-of-file</B>*
-\&#37;^	Matches start of the file.  When matching with a <A HREF="eval.html#string">string</A>, matches the
-	start of the <A HREF="eval.html#string">string</A>.
+\&#37;^	Matches start of the file.  When matching with a <A HREF="options\.html#options">字符串</A>, matches the
+	start of the <A HREF="options\.html#options">字符串</A>.
 	For example, to find the first &quot;VIM&quot; in a file:
 <B>		/\%^\_.\{-}\zsVIM</B>
  
 
 						*<A NAME="/\&#37;$"></A><B>/\&#37;$</B>* *<A NAME="end-of-file"></A><B>end-of-file</B>*
-\&#37;$	Matches end of the file.  When matching with a <A HREF="eval.html#string">string</A>, matches the
-	end of the <A HREF="eval.html#string">string</A>.
+\&#37;$	Matches end of the file.  When matching with a <A HREF="options\.html#options">字符串</A>, matches the
+	end of the <A HREF="options\.html#options">字符串</A>.
 	Note that this does NOT find the last &quot;VIM&quot; in a file:
 <B>		/VIM\_.\{-}\%$</B>
  	It will find the next VIM, because the part after <A HREF="motion.html#it">它</A> will always
@@ -1105,7 +1105,7 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 \&#37;.c	Matches at the cursor column.
 \&#37;&lt;.c	Matches before the cursor column.
 \&#37;&gt;.c	Matches after the cursor column.
-	These six can be used to match specific columns in a buffer or <A HREF="eval.html#string">string</A>.
+	These six can be used to match specific columns in a buffer or <A HREF="options\.html#options">字符串</A>.
 	The &quot;23&quot; can be any column number.  The first column is 1.  Actually,
 	the column is the byte number (thus it's not exactly right for
 	<A HREF="mbyte.html#multibyte">multibyte</A> characters).
@@ -1133,7 +1133,7 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 \&#37;&lt;.v	Matches before the current virtual column.
 \&#37;&gt;.v	Matches after the current virtual column.
 	These six can be used to match specific virtual columns in a buffer or
-	<A HREF="eval.html#string">string</A>.  When not matching with a buffer in a<A HREF="windows.html#window">窗口</A>, the option
+	<A HREF="options\.html#options">字符串</A>.  When not matching with a buffer in a<A HREF="windows.html#window">窗口</A>, the option
 	values of the current<A HREF="windows.html#window">窗口</A>are used (e.g., <A HREF="options.html#'tabstop'">'tabstop'</A>).
 	The &quot;23&quot; can be any column number.  The first column is 1.
 	Note that some virtual column positions will never match, because they
@@ -1218,11 +1218,11 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 
 \A	non-alphabetic character:	[^A-Za-z]	*<A NAME="/\A"></A><B>/\A</B>*
 
-\l	<A HREF="change.html#lowercase">lowercase</A> character:		[a-z]		*<A NAME="/\l"></A><B>/\l</B>*
+\l	<A HREF="change.html#lowercase">小写</A> character:		[a-z]		*<A NAME="/\l"></A><B>/\l</B>*
 
 \L	non-lowercase character:	[^a-z]		*<A NAME="/\L"></A><B>/\L</B>*
 
-\u	<A HREF="change.html#uppercase">uppercase</A> character:		[A-Z]		*<A NAME="/\u"></A><B>/\u</B>*
+\u	<A HREF="change.html#uppercase">大写</A> character:		[A-Z]		*<A NAME="/\u"></A><B>/\u</B>*
 
 \U	non-uppercase character:	[^A-Z]		*<A NAME="/\U"></A><B>/\U</B>*
 
@@ -1252,11 +1252,11 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 \b	matches <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>					*<A NAME="/\b"></A><B>/\b</B>*
 
 \n	matches an end-of-line				*<A NAME="/\n"></A><B>/\n</B>*
-	When matching in a <A HREF="eval.html#string">string</A> instead of buffer text a literal newline
+	When matching in a <A HREF="options\.html#options">字符串</A> instead of buffer text a literal newline
 	character is matched.
 
 
-~	matches the last given substitute <A HREF="eval.html#string">string</A>	*<A NAME="/~"></A><B>/~</B>* *<A NAME="/\~"></A><B>/\~</B>*
+~	matches the last given substitute <A HREF="options\.html#options">字符串</A>	*<A NAME="/~"></A><B>/~</B>* *<A NAME="/\~"></A><B>/\~</B>*
 
 
 \(\)	A <A HREF="#pattern">pattern</A> enclosed by escaped parentheses.	*<A NAME="/\("></A><B>/\(</B>* *<A NAME="/\(\)"></A><B>/\(\)</B>* *<A NAME="/\)"></A><B>/\)</B>*
@@ -1267,7 +1267,7 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 	*<A NAME="E51"></A><B>E51</B>* *<A NAME="E54"></A><B>E54</B>* *<A NAME="E55"></A><B>E55</B>* *<A NAME="E872"></A><B>E872</B>* *<A NAME="E873"></A><B>E873</B>*
 
 
-\1      Matches the same <A HREF="eval.html#string">string</A> that was matched by	*<A NAME="/\1"></A><B>/\1</B>* *<A NAME="E65"></A><B>E65</B>*
+\1      Matches the same <A HREF="options\.html#options">字符串</A> that was matched by	*<A NAME="/\1"></A><B>/\1</B>* *<A NAME="E65"></A><B>E65</B>*
 	the first sub-expression in \( and \).
 	Example: &quot;\([a-z]\).\1&quot; matches &quot;ata&quot;, &quot;ehe&quot;, &quot;tot&quot;, etc.
 
@@ -1325,7 +1325,7 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 	If the sequence begins with &quot;<A HREF="motion.html#^">^</A>&quot;, <A HREF="motion.html#it">它</A> matches any single character NOT
 	in the collection: &quot;[^xyz]&quot; matches anything but '<A HREF="change.html#x">x</A>', '<A HREF="change.html#y">y</A>' and '<A HREF="vimindex.html#z">z</A>'.
 	- If two characters in the sequence are separated by '<A HREF="motion.html#-">-</A>', this is
-	  shorthand for the full <A HREF="eval.html#list">list</A> of ASCII characters between them.  E.g.,
+	  shorthand for the full <A HREF="eval.html#list">列表</A> of ASCII characters between them.  E.g.,
 	  &quot;[0-9]&quot; matches any decimal digit. If the starting character exceeds
 	  the ending character, e.g. [c-a], <A HREF="#E944">E944</A> occurs. Non-ASCII characters
 	  can be used, but the character values must not be more than 256 apart
@@ -1349,7 +1349,7 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 *<A NAME="[:graph:]"></A><B>[:graph:]</B>*	  <A HREF="#[:graph:]">[:graph:]</A>   isgraph	ASCII printable characters excluding
 					space
 
-*<A NAME="[:lower:]"></A><B>[:lower:]</B>*	  <A HREF="#[:lower:]">[:lower:]</A>   (1)	<A HREF="change.html#lowercase">lowercase</A> letters (all letters when
+*<A NAME="[:lower:]"></A><B>[:lower:]</B>*	  <A HREF="#[:lower:]">[:lower:]</A>   (1)	<A HREF="change.html#lowercase">小写</A> letters (all letters when
 					<A HREF="options.html#'ignorecase'">'ignorecase'</A> is used)
 
 *<A NAME="[:print:]"></A><B>[:print:]</B>*	  <A HREF="#[:print:]">[:print:]</A>   (2) 	printable characters including space
@@ -1359,7 +1359,7 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 *<A NAME="[:space:]"></A><B>[:space:]</B>*	  <A HREF="#[:space:]">[:space:]</A>     	<A HREF="#whitespace">whitespace</A> characters: space, <A HREF="intro.html#tab">tab</A>, CR,
 					NL, vertical <A HREF="intro.html#tab">tab</A>, form feed
 
-*<A NAME="[:upper:]"></A><B>[:upper:]</B>*	  <A HREF="#[:upper:]">[:upper:]</A>   (3)	<A HREF="change.html#uppercase">uppercase</A> letters (all letters when
+*<A NAME="[:upper:]"></A><B>[:upper:]</B>*	  <A HREF="#[:upper:]">[:upper:]</A>   (3)	<A HREF="change.html#uppercase">大写</A> letters (all letters when
 					<A HREF="options.html#'ignorecase'">'ignorecase'</A> is used)
 
 *<A NAME="[:xdigit:]"></A><B>[:xdigit:]</B>*	  <A HREF="#[:xdigit:]">[:xdigit:]</A>    	hexadecimal digits: 0-9, a-f, A-F
@@ -1378,9 +1378,9 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 
 *<A NAME="[:fname:]"></A><B>[:fname:]</B>*	  <A HREF="#[:fname:]">[:fname:]</A>		file name character (same <A HREF="motion.html#as">as</A> &quot;\f&quot;)
 	  The square brackets in character class expressions are additional to
-	  the square brackets delimiting a collection.  For example, the
+	  the square brackets delimiting a collection.例如, the
 	  following is a plausible <A HREF="#pattern">pattern</A> for a UNIX filename:
-	  &quot;[-./[:alnum:]_~]\+&quot;.  That is, a <A HREF="eval.html#list">list</A> of at least one character,
+	  &quot;[-./[:alnum:]_~]\+&quot;.  That is, a <A HREF="eval.html#list">列表</A> of at least one character,
 	  each of which is either '<A HREF="motion.html#-">-</A>', '<A HREF="repeat.html#.">.</A>', '<A HREF="#/">/</A>', alphabetic, numeric, '<A HREF="motion.html#_">_</A>' or
 	  '<A HREF="change.html#~">~</A>'.
 	  These items only work for 8-bit characters, except <A HREF="#[:lower:]">[:lower:]</A> and
@@ -1443,8 +1443,8 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 
 						*<A NAME="/\&#37;[]"></A><B>/\&#37;[]</B>* *<A NAME="E69"></A><B>E69</B>* *<A NAME="E70"></A><B>E70</B>* *<A NAME="E369"></A><B>E369</B>*
 \&#37;[]	A sequence of optionally matched atoms.  This always matches.
-	It matches <A HREF="motion.html#as">as</A> much of the <A HREF="eval.html#list">list</A> of atoms <A HREF="motion.html#it">它</A> contains <A HREF="motion.html#as">as</A> possible.  Thus
-	<A HREF="motion.html#it">它</A> stops at the first atom that doesn't match.  For example:
+	It matches <A HREF="motion.html#as">as</A> much of the <A HREF="eval.html#list">列表</A> of atoms <A HREF="motion.html#it">它</A> contains <A HREF="motion.html#as">as</A> possible.  Thus
+	<A HREF="motion.html#it">它</A> stops at the first atom that doesn't match.例如:
 <B>		/r\%[ead]</B>
  	matches &quot;<A HREF="change.html#r">r</A>&quot;, &quot;re&quot;, &quot;rea&quot; or &quot;read&quot;.  The longest that matches is used.
 	To match the <A HREF="intro.html#Ex">Ex</A> command &quot;function&quot;, where &quot;fu&quot; is required and
@@ -1480,7 +1480,7 @@ match ASCII characters, <A HREF="motion.html#as">as</A> indicated by the range.
 7. Ignoring <A HREF="change.html#case">case</A> in a <A HREF="#pattern">pattern</A>					*<A NAME="/ignorecase"></A><B>/ignorecase</B>*
 
 If the <A HREF="options.html#'ignorecase'">'ignorecase'</A> option is on, the <A HREF="change.html#case">case</A> of normal letters is ignored.
-<A HREF="options.html#'smartcase'">'smartcase'</A> can be set to ignore <A HREF="change.html#case">case</A> when the <A HREF="#pattern">pattern</A> contains <A HREF="change.html#lowercase">lowercase</A>
+<A HREF="options.html#'smartcase'">'smartcase'</A> can be set to ignore <A HREF="change.html#case">case</A> when the <A HREF="#pattern">pattern</A> contains <A HREF="change.html#lowercase">小写</A>
 letters only.
 
 							*<A NAME="/\c"></A><B>/\c</B>* *<A NAME="/\C"></A><B>/\C</B>*
@@ -1502,7 +1502,7 @@ Examples:
 
 Technical detail:				*<A NAME="NL-used-for-Nul"></A><B>NL-used-for-Nul</B>*
 <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A> characters in the file are stored <A HREF="motion.html#as">as</A> <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> in memory.  In the display
-they are shown <A HREF="motion.html#as">as</A> &quot;^@&quot;.  The translation is done when reading and <A HREF="editing.html#writing">writing</A>
+they are shown <A HREF="motion.html#as">as</A> &quot;^@&quot;.  The translation is done when reading and <A HREF="editing.html#writing">写</A>
 files.  To match a <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A> with a search <A HREF="#pattern">pattern</A> you can just enter CTRL-@ or
 &quot;<A HREF="visual.html#CTRL-V">CTRL-V</A> 000&quot;.  This is probably just what you expect.  Internally the
 character is replaced with a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> in the search <A HREF="#pattern">pattern</A>.  What is unusual is
@@ -1516,7 +1516,7 @@ characters internally.  In the text they are shown <A HREF="motion.html#as">as</
 works similar to the usage of <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> for a <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A>.
 
 When working with <A HREF="eval.html#expression">expression</A> evaluation, a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> character in the <A HREF="#pattern">pattern</A>
-matches a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> in the <A HREF="eval.html#string">string</A>.  The use of &quot;\n&quot; (backslash <A HREF="#n">n</A>) to match a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
+matches a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> in the <A HREF="options\.html#options">字符串</A>.  The use of &quot;\n&quot; (backslash <A HREF="#n">n</A>) to match a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
 doesn't work there, <A HREF="motion.html#it">它</A> only works to match text in the buffer.
 
 
@@ -1539,7 +1539,7 @@ Exception: If the <A HREF="#pattern">pattern</A> starts with one or more composi
 must match.
 
 							*<A NAME="/\&#37;C"></A><B>/\&#37;C</B>*
-Use &quot;\&#37;C&quot; to skip any composing characters.  For example, the <A HREF="#pattern">pattern</A> &quot;<A HREF="insert.html#a">a</A>&quot; does
+Use &quot;\&#37;C&quot; to skip any composing characters.例如, the <A HREF="#pattern">pattern</A> &quot;<A HREF="insert.html#a">a</A>&quot; does
 not match in &quot;càt&quot; (where the a has the composing character 0x0300), but
 &quot;a\&#37;C&quot; does.  Note that this does not match &quot;cát&quot; (where the á is character
 0xe1, <A HREF="motion.html#it">它</A> does not have a compositing character).  It does match &quot;cat&quot; (where
@@ -1587,7 +1587,7 @@ conservative quantifiers	\{-n,m}		*?, +?, ??, <A HREF="intro.html#{}">{}</A>?
 0-width preceding non-match	atom\@&lt;!	(?&lt;!atom)
 match without retry		atom\@&gt;		(?&gt;atom)
 
-Vim and Perl handle newline characters inside a <A HREF="eval.html#string">string</A> a bit differently:
+Vim and Perl handle newline characters inside a <A HREF="options\.html#options">字符串</A> a bit differently:
 
 In Perl, ^ and $ only match at the very beginning and end of the text,
 by default, but you can set the '<A HREF="motion.html#m">m</A>' flag, which lets them match at
@@ -1654,7 +1654,7 @@ Finally, these constructs are unique to Perl:
 
 		Also 见 |<A HREF="builtin.html#matcharg()">matcharg()</A>| and |<A HREF="builtin.html#getmatches()">getmatches()</A>|. The former returns
 		the highlight group and <A HREF="#pattern">pattern</A> of a previous |<A HREF="#:match">:match</A>|
-		command.  The latter returns a <A HREF="eval.html#list">list</A> with highlight groups and
+		command.  The latter returns a <A HREF="eval.html#list">列表</A> with highlight groups and
 		patterns defined by both |<A HREF="builtin.html#matchadd()">matchadd()</A>| and |<A HREF="#:match">:match</A>|.
 
 		Highlighting matches using |<A HREF="#:match">:match</A>| are limited to three
@@ -1689,7 +1689,7 @@ Finally, these constructs are unique to Perl:
 		there can be three matches active at the same time.  The match
 		with the lowest number has priority if several match at the
 		same position.
-		The &quot;<A HREF="#:3match">:3match</A>&quot; command is used by the |<A HREF="pi_paren.html#matchparen">matchparen</A>| <A HREF="usr_05.html#plugin">plugin</A>.  You
+		The &quot;<A HREF="#:3match">:3match</A>&quot;命令 is used by the |<A HREF="pi_paren.html#matchparen">matchparen</A>| <A HREF="usr_05.html#plugin">plugin</A>.  You
 		are suggested to use &quot;<A HREF="#:match">:match</A>&quot; for manual matching and
 		&quot;<A HREF="#:2match">:2match</A>&quot; for another <A HREF="usr_05.html#plugin">plugin</A>.
 
@@ -1697,15 +1697,15 @@ Finally, these constructs are unique to Perl:
 
 11. Fuzzy matching					*<A NAME="fuzzy-matching"></A><B>fuzzy-matching</B>*
 
-Fuzzy matching refers to matching strings using a non-exact search <A HREF="eval.html#string">string</A>.
-Fuzzy matching will match a <A HREF="eval.html#string">string</A>, if all the characters in the search <A HREF="eval.html#string">string</A>
-are present anywhere in the <A HREF="eval.html#string">string</A> in the same order. Case is ignored.  In a
-matched <A HREF="eval.html#string">string</A>, other characters can be present between two consecutive
-characters in the search <A HREF="eval.html#string">string</A>. If the search <A HREF="eval.html#string">string</A> has multiple words, then
-each <A HREF="motion.html#word">单词</A> is matched separately. So the words in the search <A HREF="eval.html#string">string</A> can be
-present in any order in a <A HREF="eval.html#string">string</A>.
+Fuzzy matching refers to matching strings using a non-exact search <A HREF="options\.html#options">字符串</A>.
+Fuzzy matching will match a <A HREF="options\.html#options">字符串</A>, if all the characters in the search <A HREF="options\.html#options">字符串</A>
+are present anywhere in the <A HREF="options\.html#options">字符串</A> in the same order. Case is ignored.  In a
+matched <A HREF="options\.html#options">字符串</A>, other characters can be present between two consecutive
+characters in the search <A HREF="options\.html#options">字符串</A>. If the search <A HREF="options\.html#options">字符串</A> has multiple words, then
+each <A HREF="motion.html#word">单词</A> is matched separately. So the words in the search <A HREF="options\.html#options">字符串</A> can be
+present in any order in a <A HREF="options\.html#options">字符串</A>.
 
-Fuzzy matching assigns a score for each matched <A HREF="eval.html#string">string</A> based on the following
+Fuzzy matching assigns a score for each matched <A HREF="options\.html#options">字符串</A> based on the following
 criteria:
     - The number of sequentially matching characters.
     - The number of characters (distance) between two consecutive matching
@@ -1713,16 +1713,16 @@ criteria:
     - Matches at the beginning of a <A HREF="motion.html#word">单词</A>
     - Matches at a camel <A HREF="change.html#case">case</A> character (e.g. Case in CamelCase)
     - Matches after a path separator or a hyphen.
-    - The number of unmatched characters in a <A HREF="eval.html#string">string</A>.
-The matching <A HREF="eval.html#string">string</A> with the highest score is returned first.
+    - The number of unmatched characters in a <A HREF="options\.html#options">字符串</A>.
+The matching <A HREF="options\.html#options">字符串</A> with the highest score is returned first.
 
-For example, when you search for the &quot;get pat&quot; <A HREF="eval.html#string">string</A> using fuzzy matching, <A HREF="motion.html#it">它</A>
+For example, when you search for the &quot;get pat&quot; <A HREF="options\.html#options">字符串</A> using fuzzy matching, <A HREF="motion.html#it">它</A>
 will match the strings &quot;GetPattern&quot;, &quot;PatternGet&quot;, &quot;getPattern&quot;, &quot;patGetter&quot;,
 &quot;getSomePattern&quot;, &quot;MatchpatternGet&quot; etc.
 
 The <A HREF="eval.html#functions">functions</A> |<A HREF="builtin.html#matchfuzzy()">matchfuzzy()</A>| and |<A HREF="builtin.html#matchfuzzypos()">matchfuzzypos()</A>| can be used to fuzzy search
-a <A HREF="eval.html#string">string</A> in a <A HREF="eval.html#List">List</A> of strings. The <A HREF="builtin.html#matchfuzzy()">matchfuzzy()</A> function returns a <A HREF="eval.html#List">List</A> of
-matching strings. The <A HREF="builtin.html#matchfuzzypos()">matchfuzzypos()</A> <A HREF="eval.html#functions">functions</A> returns the <A HREF="eval.html#List">List</A> of matches,
+a <A HREF="options\.html#options">字符串</A> in a <A HREF="eval.html#list">列表</A> of strings. The <A HREF="builtin.html#matchfuzzy()">matchfuzzy()</A> function returns a <A HREF="eval.html#list">列表</A> of
+matching strings. The <A HREF="builtin.html#matchfuzzypos()">matchfuzzypos()</A> <A HREF="eval.html#functions">functions</A> returns the <A HREF="eval.html#list">列表</A> of matches,
 the matching positions and the fuzzy match scores.
 
 The &quot;<A HREF="motion.html#f">f</A>&quot; flag of `:vimgrep` enables fuzzy matching.
