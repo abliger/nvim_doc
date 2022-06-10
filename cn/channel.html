@@ -102,7 +102,7 @@ There are several ways to open a <A HREF="#channel">channel</A>:
   4. By connecting to a TCP/IP socket or named pipe with |<A HREF="builtin.html#sockconnect()">sockconnect()</A>|.
 
   5. By another process connecting to a socket listened to by <A HREF="nvim.html#nvim">nvim</A>. This only
-     supports <A HREF="api.html#RPC">RPC</A> channels, see |<A HREF="api.html#rpc-connecting">rpc-connecting</A>|.
+     supports <A HREF="api.html#RPC">RPC</A> channels, 见 |<A HREF="api.html#rpc-connecting">rpc-connecting</A>|.
 
 Channels support multiple modes or protocols. In the most basic
 mode of operation, raw bytes are read and written to the <A HREF="#channel">channel</A>.
@@ -163,7 +163,7 @@ on_data({chan-id}, {data}, {name})		*<A NAME="on_data"></A><B>on_data</B>*
 
 
 							      *<A NAME="channel-lines"></A><B>channel-lines</B>*
-    Stream event handlers receive data <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> becomes available from the OS,
+    Stream event handlers receive data <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> becomes available from the OS,
     thus the first and last items in the {data} <A HREF="eval.html#list">list</A> may be partial lines.
     Empty <A HREF="eval.html#string">string</A> completes the previous partial line. Examples (not including
     the final `['']` emitted at EOF):
@@ -217,7 +217,7 @@ all data has been processed:
 <B>    call chanclose(id, 'stdin')</B>
 <B>    " now buffer has result</B>
  
-For additional examples with jobs, see |<A HREF="job_control.html#job-control">job-control</A>|.
+For additional examples with jobs, 见 |<A HREF="job_control.html#job-control">job-control</A>|.
 
 
 							      *<A NAME="channel-pty"></A><B>channel-pty</B>*
@@ -227,7 +227,7 @@ However, change of PTY size can be signaled to the slave using |<A HREF="builtin
 See also |<A HREF="nvim_terminal_emulator.html#terminal-emulator">terminal-emulator</A>|.
 
 Terminal characteristics (termios) for |<A HREF="various.html#:terminal">:terminal</A>| and PTY channels are copied
-from the host TTY, or if Nvim is |<A HREF="starting.html#--headless">--headless</A>| <A HREF="motion.html#it">it</A> uses default values:
+from the host TTY, or if Nvim is |<A HREF="starting.html#--headless">--headless</A>| <A HREF="motion.html#it">它</A> uses default values:
 <B>    :echo system('nvim --headless +"te stty -a" +"sleep 1" +"1,/^$/print" +q')</B>
 
 ==============================================================================
@@ -235,7 +235,7 @@ from the host TTY, or if Nvim is |<A HREF="starting.html#--headless">--headless<
 3. Communicating using <A HREF="api.html#msgpack-rpc">msgpack-rpc</A>			      *<A NAME="channel-rpc"></A><B>channel-rpc</B>*
 
 When channels are opened with the `rpc` option set to true, the <A HREF="#channel">channel</A> can be
-used for remote <A HREF="eval.html#method">method</A> calls in both directions, see |<A HREF="api.html#msgpack-rpc">msgpack-rpc</A>|. Note that
+used for remote <A HREF="eval.html#method">method</A> calls in both directions, 见 |<A HREF="api.html#msgpack-rpc">msgpack-rpc</A>|. Note that
 <A HREF="api.html#rpc">rpc</A> channels are implicitly trusted and the process at the other end can
 invoke any |<A HREF="api.html#api">api</A>| function!
 
@@ -271,7 +271,7 @@ If you want to type input for the <A HREF="job_control.html#job">job</A> in a Vi
   This will be complicated, since there are so many possible commands.
 - Use a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>.  This works well if what you type goes directly to
   the <A HREF="job_control.html#job">job</A> and the <A HREF="job_control.html#job">job</A> output is directly displayed in the<A HREF="windows.html#window">窗口</A>.
-  See |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|.
+  见 |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|.
 - Use a<A HREF="windows.html#window">窗口</A>with a prompt buffer. This works well when entering a line for
   the <A HREF="job_control.html#job">job</A> in Vim while displaying (possibly filtered) output from the <A HREF="job_control.html#job">job</A>.
 
@@ -281,7 +281,7 @@ normally only <A HREF="diff.html#do">do</A> that in a newly created buffer.
 The user can edit and enter one line of text at the very last line of the
 buffer.  When pressing Enter in the prompt line the callback set with
 |<A HREF="builtin.html#prompt_setcallback()">prompt_setcallback()</A>| is invoked.  It would normally send the line to a <A HREF="job_control.html#job">job</A>.
-Another callback would receive the output from the <A HREF="job_control.html#job">job</A> and display <A HREF="motion.html#it">it</A> in the
+Another callback would receive the output from the <A HREF="job_control.html#job">job</A> and display <A HREF="motion.html#it">它</A> in the
 buffer, below the prompt (and above the next prompt).
 
 Only the text in the last line, after the prompt, is editable. The rest of the

@@ -110,7 +110,7 @@ The {menu-item} describes where on the menu to put the item.  A typical
 
 <B>	:menu File.Save  :update&lt;CR&gt;</B>
 
-The &quot;<A HREF="editing.html#:update">:update</A>&quot; command writes the file when <A HREF="motion.html#it">it</A> was modified.
+The &quot;<A HREF="editing.html#:update">:update</A>&quot; command writes the file when <A HREF="motion.html#it">它</A> was modified.
    You can add another level: &quot;Edit.Settings.Shiftwidth&quot; defines a submenu
 &quot;Settings&quot; under the &quot;Edit&quot; menu, with an item &quot;Shiftwidth&quot;.  You could use
 even deeper levels.  Don't use this too much, you need to move the mouse quite
@@ -140,7 +140,7 @@ The actual definition of the File.Save menu item is <A HREF="motion.html#as">as<
 <B>	:menu 10.340 &amp;File.&amp;Save&lt;Tab&gt;:w  :confirm w&lt;CR&gt;</B>
 
 The number 10.340 is called the priority number.  It is used by the editor to
-decide where <A HREF="motion.html#it">it</A> places the menu item.  The first number (10) indicates the
+decide where <A HREF="motion.html#it">它</A> places the menu item.  The first number (10) indicates the
 position on the menu <A HREF="motion.html#bar">bar</A>.  Lower numbered <A HREF="gui.html#menus">menus</A> are positioned to the left,
 higher numbers to the right.
    These are the priorities used for the standard <A HREF="gui.html#menus">menus</A>:
@@ -151,7 +151,7 @@ higher numbers to the right.
 	&#124; File	Edit  Tools  <A HREF="autocmd.html#Syntax">Syntax</A>  Buffers  Window		Help |
 	+------------------------------------------------------------+
 
-Notice that the Help menu is given a very high number, to make <A HREF="motion.html#it">it</A> appear on
+Notice that the Help menu is given a very high number, to make <A HREF="motion.html#it">它</A> appear on
 the far right.
    The second number (340) determines the location of the item within the
 pull-down menu.  Lower numbers go on top, higher number on the bottom.  These
@@ -223,9 +223,9 @@ like the variations on the &quot;<A HREF="map.html#:map">:map</A>&quot; command:
 	<A HREF="gui.html#:nmenu">:nmenu</A>		<A HREF="intro.html#Normal">正常</A>模式
 	<A HREF="gui.html#:vmenu">:vmenu</A>		<A HREF="visual.html#Visual">Visual</A> mode
 	<A HREF="gui.html#:omenu">:omenu</A>		<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
-	<A HREF="gui.html#:menu">:menu</A>!		<A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode
+	<A HREF="gui.html#:menu">:menu</A>!		<A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">命令行</A>模式
 	<A HREF="gui.html#:imenu">:imenu</A>		<A HREF="intro.html#Insert">插入</A>模式
-	<A HREF="gui.html#:cmenu">:cmenu</A>		<A HREF="cmdline.html#Command-line">Command-line</A> mode
+	<A HREF="gui.html#:cmenu">:cmenu</A>		<A HREF="cmdline.html#Command-line">命令行</A>模式
 	<A HREF="gui.html#:amenu">:amenu</A>		All modes
 
 To avoid that the commands of a menu item are being mapped, use the command
@@ -247,9 +247,9 @@ Then the resulting menu commands will be:
 	<A HREF="visual.html#Visual">Visual</A> mode:		<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
 	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode:	<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
 	<A HREF="intro.html#Insert">插入</A>模式:		<A HREF="motion.html#CTRL-O">CTRL-O</A> *
-	<A HREF="cmdline.html#Command-line">Command-line</A> mode:	<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
+	<A HREF="cmdline.html#Command-line">命令行</A>模式:	<A HREF="pattern.html#CTRL-C">CTRL-C</A> *
 
-When in <A HREF="cmdline.html#Command-line">Command-line</A> mode the <A HREF="pattern.html#CTRL-C">CTRL-C</A> will <A HREF="editing.html#abandon">abandon</A> the command typed so far.
+When in <A HREF="cmdline.html#Command-line">命令行</A>模式 the <A HREF="pattern.html#CTRL-C">CTRL-C</A> will <A HREF="editing.html#abandon">abandon</A> the command typed so far.
 In <A HREF="visual.html#Visual">Visual</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A> mode <A HREF="pattern.html#CTRL-C">CTRL-C</A> will stop the mode.  The <A HREF="motion.html#CTRL-O">CTRL-O</A> in
 <A HREF="intro.html#Insert">插入</A>模式 will execute the command and then return to <A HREF="intro.html#Insert">插入</A>模式.
    <A HREF="motion.html#CTRL-O">CTRL-O</A> only works for one command.  If you need to use two or more
@@ -262,10 +262,10 @@ commands, put them in a function and call that function.  Example:
 <B>	:endfunction</B>
 
 This menu entry goes to the next file in the argument <A HREF="eval.html#list">list</A> with &quot;<A HREF="editing.html#:next">:next</A>&quot;.  Then
-<A HREF="motion.html#it">it</A> searches for the line that starts with &quot;Code&quot;.
+<A HREF="motion.html#it">它</A> searches for the line that starts with &quot;Code&quot;.
    The <A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A> before the function name is the <A HREF="usr_41.html#script">script</A> ID.  This makes the
 function local to the current Vim <A HREF="usr_41.html#script">script</A> file.  This avoids problems when a
-function with the same name is defined in another <A HREF="usr_41.html#script">script</A> file.  See |<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>|.
+function with the same name is defined in another <A HREF="usr_41.html#script">script</A> file.  见 |<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>|.
 
 
 SILENT MENUS
@@ -291,8 +291,8 @@ give them a hint about what they could have typed, instead of using the mouse.
 
 LISTING MENUS
 
-When a menu command is used without a {keys} part, <A HREF="motion.html#it">it</A> lists the already
-defined <A HREF="gui.html#menus">menus</A>.  You can specify a {menu-item}, or part of <A HREF="motion.html#it">it</A>, to <A HREF="eval.html#list">list</A> specific
+When a menu command is used without a {keys} part, <A HREF="motion.html#it">它</A> lists the already
+defined <A HREF="gui.html#menus">menus</A>.  You can specify a {menu-item}, or part of <A HREF="motion.html#it">它</A>, to <A HREF="eval.html#list">list</A> specific
 <A HREF="gui.html#menus">menus</A>.  Example:
 
 <B>	:amenu</B>
@@ -308,7 +308,7 @@ specific menu item for <A HREF="intro.html#Insert">插入</A>模式:
 <B>	:imenu Edit.Undo</B>
 
 Take care that you type exactly the right name.  Case matters here.  But the
-'<A HREF="change.html#&amp;">&amp;</A>' for accelerators can be omitted.  The <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> and what comes after <A HREF="motion.html#it">it</A> can be
+'<A HREF="change.html#&amp;">&amp;</A>' for accelerators can be omitted.  The <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> and what comes after <A HREF="motion.html#it">它</A> can be
 left out <A HREF="motion.html#as">as</A> well.
 
 
@@ -325,7 +325,7 @@ Example:
 
 <B>	:aunmenu Syntax</B>
 
-This deletes the <A HREF="autocmd.html#Syntax">Syntax</A> menu and all the items in <A HREF="motion.html#it">it</A>.
+This deletes the <A HREF="autocmd.html#Syntax">Syntax</A> menu and all the items in <A HREF="motion.html#it">它</A>.
 
 ==============================================================================
 
@@ -345,9 +345,9 @@ command like:
 			but are completely removed.  (Does not work on all
 			systems.)
 
-For translating menu items, see |<A HREF="mlang.html#:menutrans">:menutrans</A>|.
+For translating menu items, 见 |<A HREF="mlang.html#:menutrans">:menutrans</A>|.
 
-Since the mouse has to be used to select a menu item, <A HREF="motion.html#it">it</A> is a good idea to use
+Since the mouse has to be used to select a menu item, <A HREF="motion.html#it">它</A> is a good idea to use
 the &quot;<A HREF="editing.html#:browse">:browse</A>&quot; command for selecting a file.  And &quot;<A HREF="editing.html#:confirm">:confirm</A>&quot; to get a dialog
 instead of an error message, e.g., when the current buffer contains changes.
 These two can be combined:
@@ -384,10 +384,10 @@ item with a bitmap.  For example, define a new toolbar item with:
 <B>	:tmenu ToolBar.Compile  Compile the current file</B>
 <B>	:amenu ToolBar.Compile  :!cc %:S -o %:r:S&lt;CR&gt;</B>
 
-Now you need to create the icon.  For MS-Windows <A HREF="motion.html#it">it</A> must be in bitmap format,
+Now you need to create the icon.  For MS-Windows <A HREF="motion.html#it">它</A> must be in bitmap format,
 with the name &quot;Compile.bmp&quot;.  For Unix XPM format is used, the file name is
 &quot;Compile.xpm&quot;.  The size must be 18 by 18 pixels.  On MS-Windows other sizes
-can be used <A HREF="motion.html#as">as</A> well, but <A HREF="motion.html#it">it</A> will look ugly.
+can be used <A HREF="motion.html#as">as</A> well, but <A HREF="motion.html#it">它</A> will look ugly.
    Put the bitmap in the directory &quot;bitmaps&quot; in one of the directories from
 <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  E.g., for Unix &quot;~/.config/nvim/bitmaps/Compile.xpm&quot;.
 
@@ -413,14 +413,14 @@ quite a bit of space.
 POPUP MENU
 
 The popup menu pops up where the mouse pointer is.  On MS-Windows you activate
-<A HREF="motion.html#it">it</A> by clicking the right mouse button.  Then you can select an item with the
+<A HREF="motion.html#it">它</A> by clicking the right mouse button.  Then you can select an item with the
 left mouse button.  On Unix the popup menu is used by pressing and holding the
 right mouse button.
    The popup menu only appears when the <A HREF="options.html#'mousemodel'">'mousemodel'</A> has been set to &quot;popup&quot;
 or &quot;popup_setpos&quot;.  The difference between the two is that &quot;popup_setpos&quot;
 moves the cursor to the mouse pointer position.  When clicking inside a
 selection, the selection will be used unmodified.  When there is a selection
-but you click outside of <A HREF="motion.html#it">it</A>, the selection is removed.
+but you click outside of <A HREF="motion.html#it">它</A>, the selection is removed.
    There is a separate popup menu for each mode.  Thus there are never grey
 items like in the normal <A HREF="gui.html#menus">menus</A>.
 

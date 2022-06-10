@@ -81,7 +81,7 @@
 
 Filetypes						*<A NAME="filetype"></A><B>filetype</B>* *<A NAME="file-type"></A><B>file-type</B>*
 
-Also see |<A HREF="autocmd.html">autocmd.txt</A>|.
+Also 见 |<A HREF="autocmd.html">autocmd.txt</A>|.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -114,19 +114,19 @@ Detail: The &quot;<A HREF="#:filetype">:filetype</A> on&quot; command will load 
 	<A HREF="pattern.html#pattern">pattern</A>.
 
 	If the file type is not found by the name, the file
-	$VIMRUNTIME/scripts.vim is used to detect <A HREF="motion.html#it">it</A> from the contents of the
+	$VIMRUNTIME/scripts.vim is used to detect <A HREF="motion.html#it">它</A> from the contents of the
 	file.
 	When the <A HREF="gui.html#GUI">GUI</A> is running or will start soon, the |<A HREF="menu.html">menu.vim</A>| <A HREF="usr_41.html#script">script</A> is
-	also sourced.  See |<A HREF="options.html#'go-M'">'go-M'</A>| about avoiding that.
+	also sourced.  见 |<A HREF="options.html#'go-M'">'go-M'</A>| about avoiding that.
 
-To add your own file types, see |<A HREF="#new-filetype">new-filetype</A>| below.  To search for help on a
+To add your own file types, 见 |<A HREF="#new-filetype">new-filetype</A>| below.  To search for help on a
 <A HREF="#filetype">filetype</A> prepend &quot;ft-&quot; and optionally append &quot;-syntax&quot;, &quot;-indent&quot; or
 &quot;-plugin&quot;.  For example:
 <B>	:help ft-vim-indent</B>
 <B>	:help ft-vim-syntax</B>
 <B>	:help ft-man-plugin</B>
 
-If the file type is not detected automatically, or <A HREF="motion.html#it">it</A> finds the wrong type,
+If the file type is not detected automatically, or <A HREF="motion.html#it">它</A> finds the wrong type,
 you can either set the <A HREF="options.html#'filetype'">'filetype'</A> option manually, or add a <A HREF="options.html#modeline">modeline</A> to your
 file.  Example, for an IDL file use the command:
 <B>	:set filetype=idl</B>
@@ -138,14 +138,14 @@ or add this |<A HREF="options.html#modeline">modeline</A>| to the file:
 						*<A NAME=":filetype-plugin-on"></A><B>:filetype-plugin-on</B>*
 You can enable loading the <A HREF="usr_05.html#plugin">plugin</A> files for specific file types with:
 <B>	:filetype plugin on</B>
-If <A HREF="#filetype">filetype</A> detection was not switched on yet, <A HREF="motion.html#it">it</A> will be <A HREF="motion.html#as">as</A> well.
+If <A HREF="#filetype">filetype</A> detection was not switched on yet, <A HREF="motion.html#it">它</A> will be <A HREF="motion.html#as">as</A> well.
 This actually loads the file &quot;ftplugin.vim&quot; in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.
 The result is that when a file is edited its <A HREF="usr_05.html#plugin">plugin</A> file is loaded (if there
 is one for the detected <A HREF="#filetype">filetype</A>filetype). |<A HREF="usr_43.html#filetype-plugin">filetype-plugin</A>|
 
 
 						*<A NAME=":filetype-plugin-off"></A><B>:filetype-plugin-off</B>*
-You can disable <A HREF="motion.html#it">it</A> again with:
+You can disable <A HREF="motion.html#it">它</A> again with:
 <B>	:filetype plugin off</B>
 The <A HREF="#filetype">filetype</A> detection is not switched off then.  But if you <A HREF="diff.html#do">do</A> switch off
 <A HREF="#filetype">filetype</A> detection, the plugins will not be loaded either.
@@ -155,14 +155,14 @@ This actually loads the file &quot;ftplugof.vim&quot; in <A HREF="options.html#'
 						*<A NAME=":filetype-indent-on"></A><B>:filetype-indent-on</B>*
 You can enable loading the indent file for specific file types with:
 <B>	:filetype indent on</B>
-If <A HREF="#filetype">filetype</A> detection was not switched on yet, <A HREF="motion.html#it">it</A> will be <A HREF="motion.html#as">as</A> well.
+If <A HREF="#filetype">filetype</A> detection was not switched on yet, <A HREF="motion.html#it">它</A> will be <A HREF="motion.html#as">as</A> well.
 This actually loads the file &quot;indent.vim&quot; in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.
 The result is that when a file is edited its indent file is loaded (if there
 is one for the detected <A HREF="#filetype">filetype</A>). |<A HREF="indent.html#indent-expression">indent-expression</A>|
 
 
 						*<A NAME=":filetype-indent-off"></A><B>:filetype-indent-off</B>*
-You can disable <A HREF="motion.html#it">it</A> again with:
+You can disable <A HREF="motion.html#it">它</A> again with:
 <B>	:filetype indent off</B>
 The <A HREF="#filetype">filetype</A> detection is not switched off then.  But if you <A HREF="diff.html#do">do</A> switch off
 <A HREF="#filetype">filetype</A> detection, the indent files will not be loaded either.
@@ -208,16 +208,16 @@ To disable one of the file types, add a line in your <A HREF="#filetype">filetyp
 							*<A NAME="filetype-detect"></A><B>filetype-detect</B>*
 To detect the file type again:
 <B>	:filetype detect</B>
-Use this if you started with an empty file and typed text that makes <A HREF="motion.html#it">it</A>
+Use this if you started with an empty file and typed text that makes <A HREF="motion.html#it">它</A>
 possible to detect the file type.  For example, when you entered this in a
 shell <A HREF="usr_41.html#script">script</A>: &quot;#!/bin/csh&quot;.
-   When <A HREF="#filetype">filetype</A> detection was off, <A HREF="motion.html#it">it</A> will be enabled first, like the &quot;on&quot;
+   When <A HREF="#filetype">filetype</A> detection was off, <A HREF="motion.html#it">它</A> will be enabled first, like the &quot;on&quot;
 argument was used.
 
 
 							*<A NAME="filetype-overrule"></A><B>filetype-overrule</B>*
 When the same extension is used for multiple <A HREF="#filetypes">filetypes</A>, Vim tries to guess
-what kind of file <A HREF="motion.html#it">it</A> is.  This doesn't always work.  A number of global
+what kind of file <A HREF="motion.html#it">它</A> is.  This doesn't always work.  A number of global
 <A HREF="eval.html#variables">variables</A> can be used to overrule the <A HREF="#filetype">filetype</A> used for certain extensions:
 
 <B><FONT color="#3A6F2B">	file name	variable </FONT></B>
@@ -260,19 +260,19 @@ This means that the contents of compressed files are not inspected.
 
 							*<A NAME="new-filetype"></A><B>new-filetype</B>*
 If a file type that you want to use is not detected yet, there are a few ways
-to add <A HREF="motion.html#it">it</A>.  In any way, it's better not to modify the $VIMRUNTIME/filetype.lua
+to add <A HREF="motion.html#it">它</A>.  In any way, it's better not to modify the $VIMRUNTIME/filetype.lua
 or $VIMRUNTIME/filetype.vim files.  They will be overwritten when installing a
 new version of Nvim.
 
 A. If you want to overrule all default file type checks.
    This works by <A HREF="editing.html#writing">writing</A> one file for each <A HREF="#filetype">filetype</A>.  The disadvantage is that
    there can be many files.  The advantage is that you can simply drop this 
-   file in the right directory to make <A HREF="motion.html#it">it</A> work.
+   file in the right directory to make <A HREF="motion.html#it">它</A> work.
 
 							*<A NAME="ftdetect"></A><B>ftdetect</B>*
    1. Create your user runtime directory.  You would normally use the first
       item of the <A HREF="options.html#'runtimepath'">'runtimepath'</A> option.  Then create the directory &quot;<A HREF="#ftdetect">ftdetect</A>&quot;
-      inside <A HREF="motion.html#it">it</A>.  Example for Unix:
+      inside <A HREF="motion.html#it">它</A>.  Example for Unix:
 <B>	:!mkdir -p ~/.config/nvim/ftdetect</B>
  
    2. Create a file that contains an <A HREF="autocmd.html#autocommand">autocommand</A> to detect the file type.
@@ -280,7 +280,7 @@ A. If you want to overrule all default file type checks.
 <B>	au BufRead,BufNewFile *.mine		set filetype=mine</B>
       Note that there is no &quot;augroup&quot; command, this has already been done
       when sourcing your file.  You could also use the <A HREF="pattern.html#pattern">pattern</A> &quot;*&quot; and then
-      check the contents of the file to recognize <A HREF="motion.html#it">it</A>.
+      check the contents of the file to recognize <A HREF="motion.html#it">它</A>.
       Write this file <A HREF="motion.html#as">as</A> &quot;mine.vim&quot; in the &quot;<A HREF="#ftdetect">ftdetect</A>&quot; directory in your user
       runtime directory.  For example, for Unix:
 <B>	:w ~/.config/nvim/ftdetect/mine.vim</B>
@@ -338,10 +338,10 @@ C. If your file type can be detected by the file name or extension.
 <B>	  },</B>
 <B>	})</B>
  
-      See |<A HREF="vim.html">vim.filetype.add()</A>|.
+      见 |<A HREF="vim.html">vim.filetype.add()</A>|.
 
 						     *<A NAME="g:do_filetype_lua"></A><B>g:do_filetype_lua</B>*
-      For now, <A HREF="lua.html#Lua">Lua</A> <A HREF="#filetype">filetype</A> detection is opt-in. You can enable <A HREF="motion.html#it">it</A> by adding
+      For now, <A HREF="lua.html#Lua">Lua</A> <A HREF="#filetype">filetype</A> detection is opt-in. You can enable <A HREF="motion.html#it">它</A> by adding
       the following to your YXXYinit.vim|:
 <B>        let g:do_filetype_lua = 1</B>
 
@@ -394,8 +394,8 @@ C. If your file type can be detected by the file name or extension.
 
 						*<A NAME="remove-filetype"></A><B>remove-filetype</B>*
 If a file type is detected that is wrong for you, install a filetype.lua,
-filetype.vim or scripts.vim to catch <A HREF="motion.html#it">it</A> (see above).  You can set <A HREF="options.html#'filetype'">'filetype'</A> to
-a non-existing name to avoid that <A HREF="motion.html#it">it</A> will be set later anyway:
+filetype.vim or scripts.vim to catch <A HREF="motion.html#it">它</A> (see above).  You can set <A HREF="options.html#'filetype'">'filetype'</A> to
+a non-existing name to avoid that <A HREF="motion.html#it">它</A> will be set later anyway:
 <B>	:set filetype=ignored</B>
 
 If you are setting up a system with many users, and you don't want each user
@@ -429,7 +429,7 @@ Note that when using a <A HREF="usr_05.html#plugin">plugin</A> manager or |<A HR
 added to <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  These plugins each require their own directory, don't
 put them directly in ~/.config/nvim/plugin.
 
-What if <A HREF="motion.html#it">it</A> looks like your <A HREF="usr_05.html#plugin">plugin</A> is not being loaded?  You can find out what
+What if <A HREF="motion.html#it">它</A> looks like your <A HREF="usr_05.html#plugin">plugin</A> is not being loaded?  You can find out what
 happens when Vim starts up by using the |<A HREF="starting.html#-V">-V</A>| argument:
 
 <B>	vim -V2</B>
@@ -455,12 +455,12 @@ define yourself.  There are a few ways to avoid this:
    to start with.  Example:
 <B>	:let maplocalleader = ","</B>
    All mappings will then start with a comma instead of the default, which
-   is a <A HREF="intro.html#backslash">backslash</A>.  Also see |<A HREF="map.html#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A>|.
+   is a <A HREF="intro.html#backslash">backslash</A>.  Also 见 |<A HREF="map.html#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A>|.
 
 2. Define your own <A HREF="map.html#mapping">mapping</A>.  Example:
 <B>	:map ,p &lt;Plug&gt;MailQuote</B>
    You need to check the description of the <A HREF="usr_05.html#plugin">plugin</A> file below for the
-   functionality <A HREF="motion.html#it">it</A> offers and the <A HREF="eval.html#string">string</A> to map to.
+   functionality <A HREF="motion.html#it">它</A> offers and the <A HREF="eval.html#string">string</A> to map to.
    You need to define your own <A HREF="map.html#mapping">mapping</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded (before
    editing a file of that type).  The <A HREF="usr_05.html#plugin">plugin</A> will then skip installing the
    default <A HREF="map.html#mapping">mapping</A>.
@@ -486,18 +486,18 @@ ways to change this:
    <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  For Unix, for example you could use this file:
 <B>	vim ~/.config/nvim/ftplugin/fortran.vim</B>
    You can set those settings and mappings that you would like to add.  Note
-   that the global <A HREF="usr_05.html#plugin">plugin</A> will be loaded after this, <A HREF="motion.html#it">it</A> may overrule the
+   that the global <A HREF="usr_05.html#plugin">plugin</A> will be loaded after this, <A HREF="motion.html#it">它</A> may overrule the
    settings that you <A HREF="diff.html#do">do</A> here.  If this is the <A HREF="change.html#case">case</A>, you need to use one of the
    following two methods.
 
-2. Make a copy of the <A HREF="usr_05.html#plugin">plugin</A> and change <A HREF="motion.html#it">it</A>.
+2. Make a copy of the <A HREF="usr_05.html#plugin">plugin</A> and change <A HREF="motion.html#it">它</A>.
    You must put the copy in a directory early in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  For Unix, for
    example, you could <A HREF="diff.html#do">do</A> this:
 <B>	cp $VIMRUNTIME/ftplugin/fortran.vim ~/.config/nvim/ftplugin/fortran.vim</B>
    Then you can edit the copied file to your liking.  Since the b:did_ftplugin
    variable will be set, the global <A HREF="usr_05.html#plugin">plugin</A> will not be loaded.
    A disadvantage of this <A HREF="eval.html#method">method</A> is that when the distributed <A HREF="usr_05.html#plugin">plugin</A> gets
-   improved, you will have to copy and modify <A HREF="motion.html#it">it</A> again.
+   improved, you will have to copy and modify <A HREF="motion.html#it">它</A> again.
 
 3. Overrule the settings after loading the global <A HREF="usr_05.html#plugin">plugin</A>.
    You must create a new <A HREF="#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> in a directory from the end of
@@ -543,8 +543,8 @@ Global mappings:
 <B>				runtime ftplugin/changelog.vim</B>
  			in your |<A HREF="init.html">init.vim</A>|.
 &lt;Leader&gt;o		Switches to the ChangeLog buffer opened for the
-			current directory, or opens <A HREF="motion.html#it">it</A> in a new buffer if <A HREF="motion.html#it">it</A>
-			exists in the current directory.  Then <A HREF="motion.html#it">it</A> does the
+			current directory, or opens <A HREF="motion.html#it">它</A> in a new buffer if <A HREF="motion.html#it">它</A>
+			exists in the current directory.  Then <A HREF="motion.html#it">它</A> does the
 			same <A HREF="motion.html#as">as</A> the local &lt;Leader&gt;o described above.
 
 Variables:
@@ -559,7 +559,7 @@ g:changelog_username	The name and email address of the user.
 			system files.  It searches /etc/passwd for the comment
 			part of the current user, which informally contains
 			the real name of the user up to the first separating
-			comma.  then <A HREF="motion.html#it">it</A> checks the $NAME environment variable
+			comma.  then <A HREF="motion.html#it">它</A> checks the $NAME environment variable
 			and finally runs `whoami` and `hostname` to build an
 			email address.  The final form is
 <B>				Full Name  &lt;user@host&gt;</B>
@@ -575,7 +575,7 @@ g:changelog_new_date_format
 				&#37;c	where to position cursor when done
 			The default is &quot;&#37;d  &#37;u\n\n\t* &#37;p&#37;c\n\n&quot;, which produces
 			something like (| is where cursor will be, unless at
-			the start of the line where <A HREF="motion.html#it">it</A> denotes the beginning
+			the start of the line where <A HREF="motion.html#it">它</A> denotes the beginning
 			of the line)
 <B>				|2003-01-14  Full Name  &lt;user@host&gt;</B>
 <B>				|</B>
@@ -630,13 +630,13 @@ b:changelog_entry_prefix
 			Returning an empty prefix is fine.
 			The default generates the shortest path between the
 			ChangeLog's pathname and the current <A HREF="windows.html#buffers">buffers</A> pathname.
-			In the future, <A HREF="motion.html#it">it</A> will also be possible to use other
+			In the future, <A HREF="motion.html#it">它</A> will also be possible to use other
 			variable contexts for this variable, for example, <A HREF="eval.html#g:">g:</A>.
 
 The Changelog entries are inserted where they add the least amount of text.
 After figuring out the current date and user, the file is searched for an
 entry beginning with the current date and user and if found adds another item
-under <A HREF="motion.html#it">it</A>.  If not found, a new entry and item is prepended to the beginning of
+under <A HREF="motion.html#it">它</A>.  If not found, a new entry and item is prepended to the beginning of
 the Changelog.
 
 
@@ -651,7 +651,7 @@ Options:
 <A HREF="options.html#'formatoptions'">'formatoptions'</A> is set to break code and comment lines and to preserve long
 		lines.  You can format comments with |<A HREF="change.html#gq">gq</A>|.
 For further discussion of fortran_have_tabs and the <A HREF="eval.html#method">method</A> used for the
-detection of source format see |<A HREF="syntax.html#ft-fortran-syntax">ft-fortran-syntax</A>|.
+detection of source format 见 |<A HREF="syntax.html#ft-fortran-syntax">ft-fortran-syntax</A>|.
 
 
 GIT COMMIT                                              *<A NAME="ft-gitcommit-plugin"></A><B>ft-gitcommit-plugin</B>*
@@ -675,7 +675,7 @@ MAIL							*<A NAME="ft-mail-plugin"></A><B>ft-mail-plugin</B>*
 
 Options:
 <A HREF="options.html#'modeline'">'modeline'</A>	is switched off to avoid the danger of trojan horses, and to
-		avoid that a Subject line with &quot;Vim:&quot; in <A HREF="motion.html#it">it</A> will cause an
+		avoid that a Subject line with &quot;Vim:&quot; in <A HREF="motion.html#it">它</A> will cause an
 		error message.
 <A HREF="options.html#'textwidth'">'textwidth'</A>	is set to 72.  This is often recommended for e-mail.
 <A HREF="options.html#'formatoptions'">'formatoptions'</A>	is set to break text lines and to repeat the comment leader
@@ -692,7 +692,7 @@ Local mappings:
 MAN					*<A NAME="ft-man-plugin"></A><B>ft-man-plugin</B>* *<A NAME=":Man"></A><B>:Man</B>* *<A NAME="man.vim"></A><B>man.vim</B>*
 
 <A HREF="starting.html#View">View</A> manpages in Nvim. Supports highlighting, completion, locales, and
-<A HREF="motion.html#navigation">navigation</A>. Also see |<A HREF="usr_12.html#find-manpage">find-manpage</A>|.
+<A HREF="motion.html#navigation">navigation</A>. Also 见 |<A HREF="usr_12.html#find-manpage">find-manpage</A>|.
 
 <A HREF="#man.vim">man.vim</A> will always attempt to reuse the closest man<A HREF="windows.html#window">窗口</A>(above/left) but
 otherwise create a split.
@@ -741,7 +741,7 @@ To use Nvim <A HREF="motion.html#as">as</A> a manpager:
 
 Note that when running `man` from the shell and with that `MANPAGER` in your
 environment, `man` will pre-format the manpage using `groff`. Thus, Neovim
-will inevitably display the manual page <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> was passed to <A HREF="motion.html#it">it</A> from stdin. One
+will inevitably display the manual page <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was passed to <A HREF="motion.html#it">它</A> from stdin. One
 of the caveats of this is that the width will _always_ be hard-wrapped and not
 soft wrapped <A HREF="motion.html#as">as</A> with `g:man_hardwrap=0`. You can set in your environment:
 <B>     export MANWIDTH=999</B>
@@ -762,8 +762,8 @@ To enable <A HREF="fold.html#folding">folding</A> use this:
 
 PDF							*<A NAME="ft-pdf-plugin"></A><B>ft-pdf-plugin</B>*
 
-Two maps, &lt;C-]&gt; and &lt;C-T&gt;, are provided to simulate a <A HREF="tagsrch.html#tag">tag</A> stack for navigating
-the PDF.  The following are treated <A HREF="motion.html#as">as</A> <A HREF="tagsrch.html#tags">tags</A>:
+Two maps, &lt;C-]&gt; and &lt;C-T&gt;, are provided to simulate a <A HREF="tagsrch.html#tag">标签</A> stack for navigating
+the PDF.  The following are treated <A HREF="motion.html#as">as</A> <A HREF="tagsrch.html#tags">标签</A>:
 
 - The byte offset after &quot;startxref&quot; to the xref table
 - The byte offset after the /Prev key in the trailer to an earlier xref table
@@ -789,7 +789,7 @@ To disable this behavior, set the following variable in your <A HREF="starting.h
 
 QF QUICKFIX					    *<A NAME="qf.vim"></A><B>qf.vim</B>* *<A NAME="ft-qf-plugin"></A><B>ft-qf-plugin</B>*
 
-The &quot;qf&quot; <A HREF="#filetype">filetype</A> is used for the quickfix window, see |<A HREF="quickfix.html#quickfix-window">quickfix-window</A>|.
+The &quot;qf&quot; <A HREF="#filetype">filetype</A> is used for the quickfix window, 见 |<A HREF="quickfix.html#quickfix-window">quickfix-window</A>|.
 
 The <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> includes configuration for displaying the command
 that produced the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> in the |<A HREF="windows.html#status-line">status-line</A>|. To disable this setting,
@@ -800,7 +800,7 @@ configure <A HREF="motion.html#as">as</A> follows:
 
 <A HREF="change.html#R">R</A> MARKDOWN						*<A NAME="ft-rmd-plugin"></A><B>ft-rmd-plugin</B>*
 
-By default ftplugin/html.vim is not sourced. If you want <A HREF="motion.html#it">it</A> sourced, add to
+By default ftplugin/html.vim is not sourced. If you want <A HREF="motion.html#it">它</A> sourced, add to
 your YXXYvimrc|:
 <B>	let rmd_include_html = 1</B>
 
@@ -832,7 +832,7 @@ To enable this behavior, set the following variable in your <A HREF="starting.ht
 
 RPM SPEC						*<A NAME="ft-spec-plugin"></A><B>ft-spec-plugin</B>*
 
-Since the text for this <A HREF="usr_05.html#plugin">plugin</A> is rather long <A HREF="motion.html#it">it</A> has been put in a separate
+Since the text for this <A HREF="usr_05.html#plugin">plugin</A> is rather long <A HREF="motion.html#it">它</A> has been put in a separate
 file: |<A HREF="pi_spec.html">pi_spec.txt</A>|.
 
 
@@ -915,7 +915,7 @@ Format description:
       to default ones are ignored.  Order of keys is preserved.  All keys are 
       treated <A HREF="motion.html#as">as</A> strings (not binary strings).
 
-      Note: specifically for buffer <A HREF="eval.html#list">list</A> entries <A HREF="motion.html#it">it</A> is allowed to have more 
+      Note: specifically for buffer <A HREF="eval.html#list">list</A> entries <A HREF="motion.html#it">它</A> is allowed to have more 
       then one map header.  Each map header starts a new map entry inside 
       buffer <A HREF="eval.html#list">list</A> because ShaDa buffer <A HREF="eval.html#list">list</A> entry is an array of maps.  I.e.
 
@@ -985,14 +985,14 @@ Format description:
 
 RUST							*<A NAME="ft-rust"></A><B>ft-rust</B>*
 
-Since the text for this <A HREF="usr_05.html#plugin">plugin</A> is rather long <A HREF="motion.html#it">it</A> has been put in a separate
+Since the text for this <A HREF="usr_05.html#plugin">plugin</A> is rather long <A HREF="motion.html#it">它</A> has been put in a separate
 file: |<A HREF="ft_rust.html">ft_rust.txt</A>|.
 
 
 
 SQL							*<A NAME="ft-sql"></A><B>ft-sql</B>*
 
-Since the text for this <A HREF="usr_05.html#plugin">plugin</A> is rather long <A HREF="motion.html#it">it</A> has been put in a separate
+Since the text for this <A HREF="usr_05.html#plugin">plugin</A> is rather long <A HREF="motion.html#it">它</A> has been put in a separate
 file: |<A HREF="ft_sql.html">ft_sql.txt</A>|.
 
 
@@ -1003,7 +1003,7 @@ If the first line of a *.tex file has the form
 <B>	%&amp;&lt;format&gt;</B>
 then this determined the file type:  plaintex (for plain TeX), <A HREF="repeat.html#context">context</A> (for
 ConTeXt), or tex (for LaTeX).  Otherwise, the file is searched for keywords to
-choose <A HREF="repeat.html#context">context</A> or tex.  If no keywords are found, <A HREF="motion.html#it">it</A> defaults to plaintex.
+choose <A HREF="repeat.html#context">context</A> or tex.  If no keywords are found, <A HREF="motion.html#it">它</A> defaults to plaintex.
 You can change the default by defining the variable <A HREF="#g:tex_flavor">g:tex_flavor</A> to the format
 (not the file type) you use most.  Use one of these:
 <B>	let g:tex_flavor = "plain"</B>

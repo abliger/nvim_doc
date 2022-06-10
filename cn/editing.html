@@ -161,7 +161,7 @@ and then hit <A HREF="#CTRL-^">CTRL-^</A>.
 			Byte counts for the visually selected region are
 			displayed.
 			In Blockwise mode, Column <A HREF="intro.html#count">count</A> is also shown.  (For
-			<A HREF="intro.html#{Visual}">{Visual}</A> see |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.)
+			<A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.)
 
 
 							*<A NAME=":file_f"></A><B>:file_f</B>*
@@ -187,7 +187,7 @@ the full path name is being used if you used the &quot;:cd&quot; command |<A HRE
 
 							*<A NAME="home-replace"></A><B>home-replace</B>*
 If the environment variable <A HREF="options.html#$HOME">$HOME</A> is set, and the file name starts with that
-<A HREF="eval.html#string">string</A>, <A HREF="motion.html#it">it</A> is often displayed with HOME replaced with &quot;<A HREF="change.html#~">~</A>&quot;.  This was done to
+<A HREF="eval.html#string">string</A>, <A HREF="motion.html#it">它</A> is often displayed with HOME replaced with &quot;<A HREF="change.html#~">~</A>&quot;.  This was done to
 keep file names short.  When reading or <A HREF="#writing">writing</A> files the full name is still
 used, the &quot;<A HREF="change.html#~">~</A>&quot; is only used when displaying file names.  When <A HREF="change.html#replacing">replacing</A> the
 file name would result in just &quot;<A HREF="change.html#~">~</A>&quot;, &quot;~/&quot; is used instead (to avoid confusion
@@ -205,7 +205,7 @@ file by giving a file name argument to the &quot;<A HREF="#:write">:write</A>&qu
 
 This will create a file &quot;newfile&quot;, that is a modified copy of &quot;testfile&quot;.
 The file &quot;testfile&quot; will remain unchanged.  Anyway, if the <A HREF="options.html#'backup'">'backup'</A> option is
-set, Vim renames or copies the original file before <A HREF="motion.html#it">it</A> will be overwritten.
+set, Vim renames or copies the original file before <A HREF="motion.html#it">它</A> will be overwritten.
 You can use this file if you discover that you need the original file.  See
 also the <A HREF="options.html#'patchmode'">'patchmode'</A> option.  The name of the <A HREF="#backup">backup</A> file is normally the same
 <A HREF="motion.html#as">as</A> the original file with <A HREF="options.html#'backupext'">'backupext'</A> appended.  The default &quot;<A HREF="change.html#~">~</A>&quot; is a bit
@@ -216,9 +216,9 @@ directory by setting <A HREF="options.html#'backupdir'">'backupdir'</A>.
 When you started editing without giving a file name, &quot;No File&quot; is displayed in
 <A HREF="message.html#messages">messages</A>.  If the &quot;<A HREF="#:write">:write</A>&quot; command is used with a file name argument, the file
 name for the current file is set to that file name.  This only happens when
-the 'F' flag is included in <A HREF="options.html#'cpoptions'">'cpoptions'</A> (by default <A HREF="motion.html#it">it</A> is included) |<A HREF="options.html#cpo-F">cpo-F</A>|.
-This is useful when entering text in an empty buffer and then <A HREF="#writing">writing</A> <A HREF="motion.html#it">it</A> to a
-file.  If <A HREF="options.html#'cpoptions'">'cpoptions'</A> contains the '<A HREF="motion.html#f">f</A>' flag (by default <A HREF="motion.html#it">it</A> is NOT included)
+the 'F' flag is included in <A HREF="options.html#'cpoptions'">'cpoptions'</A> (by default <A HREF="motion.html#it">它</A> is included) |<A HREF="options.html#cpo-F">cpo-F</A>|.
+This is useful when entering text in an empty buffer and then <A HREF="#writing">writing</A> <A HREF="motion.html#it">它</A> to a
+file.  If <A HREF="options.html#'cpoptions'">'cpoptions'</A> contains the '<A HREF="motion.html#f">f</A>' flag (by default <A HREF="motion.html#it">它</A> is NOT included)
 |<A HREF="options.html#cpo-f">cpo-f</A>| the file name is set for the &quot;<A HREF="insert.html#:read">:read</A> file&quot; command.  This is useful
 when starting Vim without an argument and then doing &quot;<A HREF="insert.html#:read">:read</A> file&quot; to start
 editing a file.
@@ -248,8 +248,8 @@ If you want to automatically save the changes without asking, switch on the
 <A HREF="options.html#'autowriteall'">'autowriteall'</A> option.  <A HREF="options.html#'autowrite'">'autowrite'</A> is the associated Vi-compatible option
 that does not work for all commands.
 
-If you want to keep the changed buffer without saving <A HREF="motion.html#it">it</A>, switch on the
-<A HREF="options.html#'hidden'">'hidden'</A> option.  See |<A HREF="windows.html#hidden-buffer">hidden-buffer</A>|.  Some commands work like this even when
+If you want to keep the changed buffer without saving <A HREF="motion.html#it">它</A>, switch on the
+<A HREF="options.html#'hidden'">'hidden'</A> option.  见 |<A HREF="windows.html#hidden-buffer">hidden-buffer</A>|.  Some commands work like this even when
 <A HREF="options.html#'hidden'">'hidden'</A> is not set, check the help for the command.
 
 ==============================================================================
@@ -259,11 +259,11 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 
 							*<A NAME=":e"></A><B>:e</B>* *<A NAME=":edit"></A><B>:edit</B>* *<A NAME="reload"></A><B>reload</B>*
 :e[dit] <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>	Edit the current file.  This is useful to re-edit the
-			current file, when <A HREF="motion.html#it">it</A> has been changed outside of Vim.
+			current file, when <A HREF="motion.html#it">它</A> has been changed outside of Vim.
 			This fails when changes have been made to the current
 			buffer and <A HREF="options.html#'autowriteall'">'autowriteall'</A> isn't set or the file can't
 			be written.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 							*<A NAME=":edit!"></A><B>:edit!</B>* *<A NAME="discard"></A><B>discard</B>*
@@ -271,7 +271,7 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 			Edit the current file always.  Discard any changes to
 			the current buffer.  This is useful if you want to
 			start all over again.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 							*<A NAME=":edit_f"></A><B>:edit_f</B>*
@@ -280,14 +280,14 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 			This fails when changes have been made to the current
 			buffer, unless <A HREF="options.html#'hidden'">'hidden'</A> is set or <A HREF="options.html#'autowriteall'">'autowriteall'</A> is
 			set and the file can be written.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 							*<A NAME=":edit!_f"></A><B>:edit!_f</B>*
 :e[dit]! <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A> <A HREF="#{file}">{file}</A>
 			Edit <A HREF="#{file}">{file}</A> always.  Discard any changes to the
 			current buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 							*<A NAME=":edit_#"></A><B>:edit_#</B>* *<A NAME=":e#"></A><B>:e#</B>*
 :e[dit] <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A> #[count]
@@ -295,7 +295,7 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 			This command does the same <A HREF="motion.html#as">as</A> <A HREF="intro.html#[count]">[count]</A> <A HREF="#CTRL-^">CTRL-^</A>.  But &quot;<A HREF="#:e">:e</A>
 			#&quot; doesn't work if the alternate buffer doesn't have a
 			file name, while <A HREF="#CTRL-^">CTRL-^</A> still works then.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 							*<A NAME=":ene"></A><B>:ene</B>* *<A NAME=":enew"></A><B>:enew</B>*
@@ -348,10 +348,10 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 <A HREF="#CTRL-^">CTRL-^</A>			Edit the alternate file.  Mostly the alternate file is
 			the previously edited file.  This is a quick way to
 			toggle between two files.  It is equivalent to &quot;<A HREF="#:e">:e</A> #&quot;,
-			except that <A HREF="motion.html#it">it</A> also works when there is no file name.
+			except that <A HREF="motion.html#it">它</A> also works when there is no file name.
 
 			If the <A HREF="options.html#'autowrite'">'autowrite'</A> or <A HREF="options.html#'autowriteall'">'autowriteall'</A> option is on and
-			the buffer was changed, write <A HREF="motion.html#it">it</A>.
+			the buffer was changed, write <A HREF="motion.html#it">它</A>.
 			Mostly the ^ character is positioned on the 6 key,
 			pressing CTRL and 6 then gets you what we call <A HREF="#CTRL-^">CTRL-^</A>.
 			But on some non-US keyboards <A HREF="#CTRL-^">CTRL-^</A> is produced in
@@ -360,7 +360,7 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 {count}CTRL-^		Edit [count]th file in the buffer <A HREF="eval.html#list">list</A> (equivalent to
 			&quot;<A HREF="#:e">:e</A> #[count]&quot;).  This is a quick way to switch between
 			files.
-			See |<A HREF="#CTRL-^">CTRL-^</A>| above for further details.
+			见 |<A HREF="#CTRL-^">CTRL-^</A>| above for further details.
 
 
 							*<A NAME="gf"></A><B>gf</B>* *<A NAME="E446"></A><B>E446</B>* *<A NAME="E447"></A><B>E447</B>*
@@ -399,7 +399,7 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 			name of the file to edit.  <A HREF="options.html#'isfname'">'isfname'</A> is ignored.
 			Leading blanks are skipped, otherwise all blanks and
 			special characters are included in the file name.
-			(For <A HREF="intro.html#{Visual}">{Visual}</A> see |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.)
+			(For <A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.)
 
 
 							*<A NAME="gF"></A><B>gF</B>*
@@ -408,7 +408,7 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 			the file.
 			The file name and the number must be separated by a
 			non-filename (see <A HREF="options.html#'isfname'">'isfname'</A>) and non-numeric
-			character. &quot; line &quot; is also recognized, like <A HREF="motion.html#it">it</A> is
+			character. &quot; line &quot; is also recognized, like <A HREF="motion.html#it">它</A> is
 			used in the output of `:verbose command UserCmd`
 			White space between the filename, the separator and
 			the number are ignored.
@@ -424,9 +424,9 @@ If you want to keep the changed buffer without saving <A HREF="motion.html#it">i
 
 These commands are used to start editing a single file.  This means that the
 file is read into the buffer and the current file name is set.  The file that
-is opened depends on the current directory, see |<A HREF="#:cd">:cd</A>|.
+is opened depends on the current directory, 见 |<A HREF="#:cd">:cd</A>|.
 
-See |<A HREF="insert.html#read-messages">read-messages</A>| for an explanation of the message that is given after the
+见 |<A HREF="insert.html#read-messages">read-messages</A>| for an explanation of the message that is given after the
 file has been read.
 
 You can use the &quot;:e!&quot; command if you messed up the buffer and want to start
@@ -482,7 +482,7 @@ Finds files:
 <B><FONT color="#3A6F2B">	/usr/include/types.h </FONT></B>
 <B><FONT color="#3A6F2B">	/usr/include/sys/types.h </FONT></B>
 <B><FONT color="#3A6F2B">	/usr/inc/old/types.h </FONT></B>
-Note that the path with &quot;/sys&quot; is included because <A HREF="motion.html#it">it</A> does not need to match
+Note that the path with &quot;/sys&quot; is included because <A HREF="motion.html#it">它</A> does not need to match
 &quot;/inc&quot;.  Thus it's like matching &quot;/usr/inc*/*/*...&quot;, not
 &quot;/usr/inc*/inc*/inc*&quot;.
 
@@ -503,7 +503,7 @@ always return zero like so:
 
 The backslashes before the <A HREF="pattern.html#star">star</A> are required to prevent the shell from
 expanding &quot;ver*.c&quot; prior to execution of the find program.  The <A HREF="intro.html#backslash">backslash</A>
-before the shell pipe symbol &quot;|&quot; prevents Vim from parsing <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> command
+before the shell pipe symbol &quot;|&quot; prevents Vim from parsing <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> command
 termination.
 This also works for most other systems, with the restriction that the
 backticks must be around the whole item.  It is not possible to have text
@@ -522,7 +522,7 @@ does apply like to other <A HREF="#wildcards">wildcards</A>.
 Environment <A HREF="eval.html#variables">variables</A> in the <A HREF="eval.html#expression">expression</A> are expanded when evaluating the
 <A HREF="eval.html#expression">expression</A>, thus this works:
 <B>	:e `=$HOME .. '/.vimrc'`</B>
-This uses <A HREF="options.html#$HOME">$HOME</A> inside a <A HREF="eval.html#string">string</A> and <A HREF="motion.html#it">it</A> will be used literally, most likely not
+This uses <A HREF="options.html#$HOME">$HOME</A> inside a <A HREF="eval.html#string">string</A> and <A HREF="motion.html#it">它</A> will be used literally, most likely not
 what you intended:
 <B>	:e `='$HOME' .. '/.vimrc'`</B>
 
@@ -594,7 +594,7 @@ file, or execute any other command:
 	+/{pat}		Start at first line containing {pat}.
 	+{command}	Execute {command} after opening the new file.
 			{command} is any <A HREF="intro.html#Ex">Ex</A> command.
-To include a white space in the {pat} or {command}, precede <A HREF="motion.html#it">it</A> with a
+To include a white space in the {pat} or {command}, precede <A HREF="motion.html#it">它</A> with a
 <A HREF="intro.html#backslash">backslash</A>.  Double the number of backslashes.
 <B>	:edit  +/The\ book	     file</B>
 <B>	:edit  +/dir\ dirname\\      file</B>
@@ -616,12 +616,12 @@ The <A HREF="options.html#'fileformat'">'fileformat'</A> option sets the <A HREF
 When reading a file, the mentioned characters are interpreted <A HREF="motion.html#as">as</A> the <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>.
 In DOS format (default for Windows), &lt;CR&gt;&lt;NL&gt; and <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> are both interpreted <A HREF="motion.html#as">as</A>
 the <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>. Note that when <A HREF="#writing">writing</A> the file in DOS format, <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> characters will
-be added for each single <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>.  Also see |<A HREF="insert.html#file-read">file-read</A>|.
+be added for each single <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>.  Also 见 |<A HREF="insert.html#file-read">file-read</A>|.
 
 When <A HREF="#writing">writing</A> a file, the mentioned characters are used for <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>.  For DOS
-format &lt;CR&gt;&lt;NL&gt; is used.  Also see |<A HREF="#DOS-format-write">DOS-format-write</A>|.
+format &lt;CR&gt;&lt;NL&gt; is used.  Also 见 |<A HREF="#DOS-format-write">DOS-format-write</A>|.
 
-You can read a file in DOS format and write <A HREF="motion.html#it">it</A> in Unix format.  This will
+You can read a file in DOS format and write <A HREF="motion.html#it">它</A> in Unix format.  This will
 replace all &lt;CR&gt;&lt;NL&gt; pairs by <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> (assuming <A HREF="options.html#'fileformats'">'fileformats'</A> includes &quot;dos&quot;):
 <B>	:e file</B>
 <B>	:set fileformat=unix</B>
@@ -638,7 +638,7 @@ If you start editing a new file and the <A HREF="options.html#'fileformats'">'fi
 are separated by the specified formats.  When set to &quot;unix,dos&quot;, Vim will
 check for lines with a single <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> (as used on Unix) or by a &lt;CR&gt;&lt;NL&gt; pair
 (MS-Windows).  Only when ALL lines end in &lt;CR&gt;&lt;NL&gt;, <A HREF="options.html#'fileformat'">'fileformat'</A> is
-set to &quot;dos&quot;, otherwise <A HREF="motion.html#it">it</A> is set to &quot;unix&quot;.  When <A HREF="options.html#'fileformats'">'fileformats'</A> includes
+set to &quot;dos&quot;, otherwise <A HREF="motion.html#it">它</A> is set to &quot;unix&quot;.  When <A HREF="options.html#'fileformats'">'fileformats'</A> includes
 &quot;mac&quot;, and no <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> characters are found in the file, <A HREF="options.html#'fileformat'">'fileformat'</A> is set to
 &quot;mac&quot;.
 
@@ -673,7 +673,7 @@ If you give more than one file name when starting Vim, this <A HREF="eval.html#l
 Do not confuse this with the buffer <A HREF="eval.html#list">list</A>, which you can see with the
 |<A HREF="windows.html#:buffers">:buffers</A>| command.  The argument <A HREF="eval.html#list">list</A> was already present in <A HREF="intro.html#Vi">Vi</A>, the buffer
 <A HREF="eval.html#list">list</A> is new in Vim.  Every file name in the argument <A HREF="eval.html#list">list</A> will also be present
-in the buffer <A HREF="eval.html#list">list</A> (unless <A HREF="motion.html#it">it</A> was deleted with |<A HREF="windows.html#:bdel">:bdel</A>| or |<A HREF="windows.html#:bwipe">:bwipe</A>|).  But it's
+in the buffer <A HREF="eval.html#list">list</A> (unless <A HREF="motion.html#it">它</A> was deleted with |<A HREF="windows.html#:bdel">:bdel</A>| or |<A HREF="windows.html#:bwipe">:bwipe</A>|).  But it's
 common that names in the buffer <A HREF="eval.html#list">list</A> are not in the argument <A HREF="eval.html#list">list</A>.
 
 This subject is introduced in section |<A HREF="usr_07.html#07.2">07.2</A>| of the user manual.
@@ -696,18 +696,18 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			Define <A HREF="#{arglist}">{arglist}</A> <A HREF="motion.html#as">as</A> the new argument <A HREF="eval.html#list">list</A> and edit
 			the first one.  This fails when changes have been made
 			and Vim does not want to |<A HREF="#abandon">abandon</A>| the current buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 :ar[gs]! <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A> <A HREF="#{arglist}">{arglist}</A>			*<A NAME=":args_f!"></A><B>:args_f!</B>*
 			Define <A HREF="#{arglist}">{arglist}</A> <A HREF="motion.html#as">as</A> the new argument <A HREF="eval.html#list">list</A> and edit
 			the first one.  Discard any changes to the current
 			buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 :[count]arge[dit][!] <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A> {name} ..		*<A NAME=":arge"></A><B>:arge</B>* *<A NAME=":argedit"></A><B>:argedit</B>*
-			Add {name}s to the argument <A HREF="eval.html#list">list</A> and edit <A HREF="motion.html#it">it</A>.
+			Add {name}s to the argument <A HREF="eval.html#list">list</A> and edit <A HREF="motion.html#it">它</A>.
 			When {name} already exists in the argument <A HREF="eval.html#list">list</A>, this
 			entry is edited.
 			This is like using |<A HREF="#:argadd">:argadd</A>| and then |<A HREF="#:edit">:edit</A>|.
@@ -716,7 +716,7 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			If the current file cannot be |abandon|ed {name}s will
 			still be added to the argument <A HREF="eval.html#list">list</A>, but won't be
 			edited. No check for duplicates is done.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 :[count]arga[dd] {name} ..			*<A NAME=":arga"></A><B>:arga</B>* *<A NAME=":argadd"></A><B>:argadd</B>* *<A NAME="E479"></A><B>E479</B>*
@@ -736,7 +736,7 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 				:$argadd <A HREF="change.html#x">x</A>	a <A HREF="motion.html#b">b</A> <A HREF="change.html#c">c</A> <A HREF="change.html#x">x</A>
 			And after the last one:
 				:+2argadd <A HREF="change.html#y">y</A>	a <A HREF="motion.html#b">b</A> <A HREF="change.html#c">c</A> <A HREF="change.html#x">x</A> <A HREF="change.html#y">y</A>
-			There is no check for duplicates, <A HREF="motion.html#it">it</A> is possible to
+			There is no check for duplicates, <A HREF="motion.html#it">它</A> is possible to
 			add a file to the argument <A HREF="eval.html#list">list</A> <A HREF="if_cscop.html#twice">twice</A>.
 			The currently edited file is not changed.
 			Note: you can also use this <A HREF="eval.html#method">method</A>:
@@ -747,7 +747,7 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 :argd[elete] {pattern} ..		*<A NAME=":argd"></A><B>:argd</B>* *<A NAME=":argdelete"></A><B>:argdelete</B>* *<A NAME="E480"></A><B>E480</B>* *<A NAME="E610"></A><B>E610</B>*
 			Delete files from the argument <A HREF="eval.html#list">list</A> that match the
 			{pattern}s.  {pattern} is used like a file <A HREF="pattern.html#pattern">pattern</A>,
-			see |<A HREF="autocmd.html#file-pattern">file-pattern</A>|.  &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; can be used to delete the
+			见 |<A HREF="autocmd.html#file-pattern">file-pattern</A>|.  &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; can be used to delete the
 			current entry.
 			This command keeps the currently edited file, also
 			when it's deleted from the argument <A HREF="eval.html#list">list</A>.
@@ -775,23 +775,23 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			is omitted the current entry is used.  This fails
 			when changes have been made and Vim does not want to
 			|<A HREF="#abandon">abandon</A>| the current buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 :[count]argu[ment]! <A HREF="intro.html#[count]">[count]</A> <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>
 			Edit file <A HREF="intro.html#[count]">[count]</A> in the argument <A HREF="eval.html#list">list</A>, <A HREF="#discard">discard</A> any
 			changes to the current buffer.  When <A HREF="intro.html#[count]">[count]</A> is
 			omitted the current entry is used.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 :[count]n[ext] <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>			*<A NAME=":n"></A><B>:n</B>* *<A NAME=":ne"></A><B>:ne</B>* *<A NAME=":next"></A><B>:next</B>* *<A NAME="E165"></A><B>E165</B>* *<A NAME="E163"></A><B>E163</B>*
 			Edit <A HREF="intro.html#[count]">[count]</A> next file.  This fails when changes have
 			been made and Vim does not want to |<A HREF="#abandon">abandon</A>| the
-			current buffer.  Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			current buffer.  Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 :[count]n[ext]! <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>
 			Edit <A HREF="intro.html#[count]">[count]</A> next file, <A HREF="#discard">discard</A> any changes to the
-			buffer.  Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			buffer.  Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 :n[ext] <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A> <A HREF="#{arglist}">{arglist}</A>			*<A NAME=":next_f"></A><B>:next_f</B>*
@@ -805,16 +805,16 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			Edit <A HREF="intro.html#[count]">[count]</A> previous file in argument <A HREF="eval.html#list">list</A>.  This
 			fails when changes have been made and Vim does not
 			want to |<A HREF="#abandon">abandon</A>| the current buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 :[count]N[ext]! <A HREF="intro.html#[count]">[count]</A> <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>
 			Edit <A HREF="intro.html#[count]">[count]</A> previous file in argument <A HREF="eval.html#list">list</A>.  Discard
-			any changes to the buffer.  Also see |<A HREF="#++opt">++opt</A>| and
+			any changes to the buffer.  Also 见 |<A HREF="#++opt">++opt</A>| and
 			|<A HREF="#+cmd">+cmd</A>|.
 
 
 :[count]prev[ious] <A HREF="intro.html#[count]">[count]</A> <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>		*<A NAME=":prev"></A><B>:prev</B>* *<A NAME=":previous"></A><B>:previous</B>*
-			Same <A HREF="motion.html#as">as</A> <A HREF="#:Next">:Next</A>.  Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Same <A HREF="motion.html#as">as</A> <A HREF="#:Next">:Next</A>.  Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 							*<A NAME=":rew"></A><B>:rew</B>* *<A NAME=":rewind"></A><B>:rewind</B>*
@@ -822,11 +822,11 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			Start editing the first file in the argument <A HREF="eval.html#list">list</A>.
 			This fails when changes have been made and Vim does
 			not want to |<A HREF="#abandon">abandon</A>| the current buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 :rew[ind]! <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>
 			Start editing the first file in the argument <A HREF="eval.html#list">list</A>.
-			Discard any changes to the buffer.  Also see |<A HREF="#++opt">++opt</A>|
+			Discard any changes to the buffer.  Also 见 |<A HREF="#++opt">++opt</A>|
 			and |<A HREF="#+cmd">+cmd</A>|.
 
 
@@ -840,28 +840,28 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			Start editing the last file in the argument <A HREF="eval.html#list">list</A>.
 			This fails when changes have been made and Vim does
 			not want to |<A HREF="#abandon">abandon</A>| the current buffer.
-			Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 :la[st]! <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A>
 			Start editing the last file in the argument <A HREF="eval.html#list">list</A>.
-			Discard any changes to the buffer.  Also see |<A HREF="#++opt">++opt</A>|
+			Discard any changes to the buffer.  Also 见 |<A HREF="#++opt">++opt</A>|
 			and |<A HREF="#+cmd">+cmd</A>|.
 
 
 							*<A NAME=":wn"></A><B>:wn</B>* *<A NAME=":wnext"></A><B>:wnext</B>*
 :[count]wn[ext] <A HREF="#[++opt]">[++opt]</A>
 			Write current file and start editing the <A HREF="intro.html#[count]">[count]</A>
-			next file.  Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			next file.  Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 :[count]wn[ext] <A HREF="#[++opt]">[++opt]</A> <A HREF="#{file}">{file}</A>
 			Write current file to <A HREF="#{file}">{file}</A> and start editing the
 			<A HREF="intro.html#[count]">[count]</A> next file, unless <A HREF="#{file}">{file}</A> already exists and
-			the <A HREF="options.html#'writeany'">'writeany'</A> option is off.  Also see |<A HREF="#++opt">++opt</A>| and
+			the <A HREF="options.html#'writeany'">'writeany'</A> option is off.  Also 见 |<A HREF="#++opt">++opt</A>| and
 			|<A HREF="#+cmd">+cmd</A>|.
 
 :[count]wn[ext]! <A HREF="#[++opt]">[++opt]</A> <A HREF="#{file}">{file}</A>
 			Write current file to <A HREF="#{file}">{file}</A> and start editing the
-			<A HREF="intro.html#[count]">[count]</A> next file.  Also see |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
+			<A HREF="intro.html#[count]">[count]</A> next file.  Also 见 |<A HREF="#++opt">++opt</A>| and |<A HREF="#+cmd">+cmd</A>|.
 
 
 :[count]wN[ext][!] <A HREF="#[++opt]">[++opt]</A> [file]		*<A NAME=":wN"></A><B>:wN</B>* *<A NAME=":wNext"></A><B>:wNext</B>*
@@ -870,7 +870,7 @@ You can use the argument <A HREF="eval.html#list">list</A> with the following co
 			Same <A HREF="motion.html#as">as</A> <A HREF="#:wnext">:wnext</A>, but go to previous file instead of
 			next.
 
-The <A HREF="intro.html#[count]">[count]</A> in the commands above defaults to one.  For some commands <A HREF="motion.html#it">it</A> is
+The <A HREF="intro.html#[count]">[count]</A> in the commands above defaults to one.  For some commands <A HREF="motion.html#it">它</A> is
 possible to use two counts.  The last one (rightmost one) is used.
 
 If no <A HREF="#[+cmd]">[+cmd]</A> argument is present, the cursor is positioned at the last known
@@ -886,7 +886,7 @@ Thus you can use the command &quot;vim *.c&quot; to edit all the C files.  From 
 Vim the command &quot;<A HREF="#:n">:n</A> *.c&quot; does the same.
 
 White space is used to separate file names.  Put a <A HREF="intro.html#backslash">backslash</A> before a space or
-<A HREF="intro.html#tab">tab</A> to include <A HREF="motion.html#it">it</A> in a file name.  E.g., to edit the single file &quot;foo bar&quot;:
+<A HREF="intro.html#tab">tab</A> to include <A HREF="motion.html#it">它</A> in a file name.  E.g., to edit the single file &quot;foo bar&quot;:
 <B>	:next foo\ bar</B>
 
 On Unix and a few other systems you can also use backticks, for example:
@@ -900,10 +900,10 @@ When there is an argument <A HREF="eval.html#list">list</A> you can see which fi
 title of the<A HREF="windows.html#window">窗口</A>(if there is one and <A HREF="options.html#'title'">'title'</A> is on) and with the file
 message you get with the &quot;<A HREF="#CTRL-G">CTRL-G</A>&quot; command.  You will see something like
 	(file 4 of 11)
-If <A HREF="options.html#'shortmess'">'shortmess'</A> contains '<A HREF="motion.html#f">f</A>' <A HREF="motion.html#it">it</A> will be
+If <A HREF="options.html#'shortmess'">'shortmess'</A> contains '<A HREF="motion.html#f">f</A>' <A HREF="motion.html#it">它</A> will be
 	(4 of 11)
 If you are not really editing the file at the current position in the argument
-<A HREF="eval.html#list">list</A> <A HREF="motion.html#it">it</A> will be
+<A HREF="eval.html#list">list</A> <A HREF="motion.html#it">它</A> will be
 	(file (4) of 11)
 This means that you are position 4 in the argument <A HREF="eval.html#list">list</A>, but not editing the
 fourth file in the argument <A HREF="eval.html#list">list</A>.  This happens when you <A HREF="diff.html#do">do</A> &quot;<A HREF="#:e">:e</A> file&quot;.
@@ -933,7 +933,7 @@ LOCAL ARGUMENT LIST
 
 There can be several argument lists.  They can be shared between <A HREF="windows.html#windows">windows</A>.
 When they are shared, <A HREF="change.html#changing">changing</A> the argument <A HREF="eval.html#list">list</A> in one<A HREF="windows.html#window">窗口</A>will also
-change <A HREF="motion.html#it">it</A> in the other<A HREF="windows.html#window">窗口</A>.
+change <A HREF="motion.html#it">它</A> in the other<A HREF="windows.html#window">窗口</A>.
 
 When a<A HREF="windows.html#window">窗口</A>is split the new<A HREF="windows.html#window">窗口</A>inherits the argument <A HREF="eval.html#list">list</A> from the
 current<A HREF="windows.html#window">窗口</A>.  The two <A HREF="windows.html#windows">windows</A> then share this <A HREF="eval.html#list">list</A>, until one of them uses
@@ -961,16 +961,16 @@ USING THE ARGUMENT LIST
 			{cmd} can contain '&#124;' to concatenate several commands.
 			{cmd} must not change the argument <A HREF="eval.html#list">list</A>.
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">it</A> to
+			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each file.
-			Also see |<A HREF="windows.html#:windo">:windo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
+			Also 见 |<A HREF="windows.html#:windo">:windo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
 			|<A HREF="quickfix.html#:cfdo">:cfdo</A>| and |<A HREF="quickfix.html#:lfdo">:lfdo</A>|.
 
 Example:
 <B>	:args *.c</B>
 <B>	:argdo set ff=unix | update</B>
-This sets the <A HREF="options.html#'fileformat'">'fileformat'</A> option to &quot;unix&quot; and writes the file if <A HREF="motion.html#it">it</A> is now
+This sets the <A HREF="options.html#'fileformat'">'fileformat'</A> option to &quot;unix&quot; and writes the file if <A HREF="motion.html#it">它</A> is now
 changed.  This is done for all *.c files.
 
 Example:
@@ -996,7 +996,7 @@ Note: When the <A HREF="options.html#'write'">'write'</A> option is off, you are
 			the normal way to save changes to a file.  It fails
 			when the <A HREF="options.html#'readonly'">'readonly'</A> option is set or when there is
 			another reason why the file can't be written.
-			For ++opt see |<A HREF="#++opt">++opt</A>|, but only <A HREF="#++bin">++bin</A>, <A HREF="#++nobin">++nobin</A>, <A HREF="#++ff">++ff</A>
+			For ++opt 见 |<A HREF="#++opt">++opt</A>|, but only <A HREF="#++bin">++bin</A>, <A HREF="#++nobin">++nobin</A>, <A HREF="#++ff">++ff</A>
 			and <A HREF="#++enc">++enc</A> are effective.
 
 :w[rite]! <A HREF="#[++opt]">[++opt]</A>	Like &quot;<A HREF="#:write">:write</A>&quot;, but forcefully write when <A HREF="options.html#'readonly'">'readonly'</A> is
@@ -1014,7 +1014,7 @@ Note: When the <A HREF="options.html#'write'">'write'</A> option is off, you are
 
 							*<A NAME=":w_f"></A><B>:w_f</B>* *<A NAME=":write_f"></A><B>:write_f</B>*
 :[range]w[rite] <A HREF="#[++opt]">[++opt]</A>	<A HREF="#{file}">{file}</A>
-			Write the specified lines to <A HREF="#{file}">{file}</A>, unless <A HREF="motion.html#it">it</A>
+			Write the specified lines to <A HREF="#{file}">{file}</A>, unless <A HREF="motion.html#it">它</A>
 			already exists and the <A HREF="options.html#'writeany'">'writeany'</A> option is off.
 
 
@@ -1041,17 +1041,17 @@ Note: When the <A HREF="options.html#'write'">'write'</A> option is off, you are
 			the previous command |<A HREF="various.html#:!">:!</A>|.
 
 The default <A HREF="cmdline.html#[range]">[range]</A> for the &quot;<A HREF="#:w">:w</A>&quot; command is the whole buffer (1,$).  If you
-write the whole buffer, <A HREF="motion.html#it">it</A> is no longer considered changed.  When you
-write <A HREF="motion.html#it">it</A> to a different file with &quot;<A HREF="#:w">:w</A> somefile&quot; <A HREF="motion.html#it">it</A> depends on the &quot;<A HREF="motion.html#+">+</A>&quot; flag in
+write the whole buffer, <A HREF="motion.html#it">它</A> is no longer considered changed.  When you
+write <A HREF="motion.html#it">它</A> to a different file with &quot;<A HREF="#:w">:w</A> somefile&quot; <A HREF="motion.html#it">它</A> depends on the &quot;<A HREF="motion.html#+">+</A>&quot; flag in
 <A HREF="options.html#'cpoptions'">'cpoptions'</A>.  When included, the write command will reset the <A HREF="options.html#'modified'">'modified'</A> flag,
 even though the buffer itself may still be different from its file.
 
-If a file name is given with &quot;<A HREF="#:w">:w</A>&quot; <A HREF="motion.html#it">it</A> becomes the alternate file.  This can be
+If a file name is given with &quot;<A HREF="#:w">:w</A>&quot; <A HREF="motion.html#it">它</A> becomes the alternate file.  This can be
 used, for example, when the write fails and you want to try again later with
 &quot;<A HREF="#:w">:w</A> #&quot;.  This can be switched off by removing the '<A HREF="insert.html#A">A</A>' flag from the
 <A HREF="options.html#'cpoptions'">'cpoptions'</A> option.
 
-Note that the <A HREF="options.html#'fsync'">'fsync'</A> option matters here.  If it's set <A HREF="motion.html#it">it</A> may make writes
+Note that the <A HREF="options.html#'fsync'">'fsync'</A> option matters here.  If it's set <A HREF="motion.html#it">它</A> may make writes
 slower (but safer).
 
 
@@ -1087,7 +1087,7 @@ WRITING WITH MULTIPLE BUFFERS				*<A NAME="buffer-write"></A><B>buffer-write</B>
 
 
 Vim will warn you if you try to overwrite a file that has been changed
-elsewhere.  See |<A HREF="#timestamp">timestamp</A>|.
+elsewhere.  见 |<A HREF="#timestamp">timestamp</A>|.
 
 
 			    *<A NAME="backup"></A><B>backup</B>* *<A NAME="E207"></A><B>E207</B>* *<A NAME="E506"></A><B>E506</B>* *<A NAME="E507"></A><B>E507</B>* *<A NAME="E508"></A><B>E508</B>* *<A NAME="E509"></A><B>E509</B>* *<A NAME="E510"></A><B>E510</B>*
@@ -1140,14 +1140,14 @@ will preserve the permissions, but clear the s-bit.
 							*<A NAME="write-readonly"></A><B>write-readonly</B>*
 When the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option contains '<A HREF="motion.html#W">W</A>', Vim will refuse to overwrite a
 readonly file.  When '<A HREF="motion.html#W">W</A>' is not present, &quot;<A HREF="#:w!">:w!</A>&quot; will overwrite a readonly file,
-if the system allows <A HREF="motion.html#it">it</A> (the directory must be writable).
+if the system allows <A HREF="motion.html#it">它</A> (the directory must be writable).
 
 
 							*<A NAME="write-fail"></A><B>write-fail</B>*
 If the <A HREF="#writing">writing</A> of the new file fails, you have to be careful not to lose
 your changes AND the original file.  If there is no <A HREF="#backup">backup</A> file and <A HREF="#writing">writing</A>
 the new file failed, you have already lost the original file!  DON'T EXIT VIM
-UNTIL YOU WRITE OUT THE FILE!  If a <A HREF="#backup">backup</A> was made, <A HREF="motion.html#it">it</A> is put back in place
+UNTIL YOU WRITE OUT THE FILE!  If a <A HREF="#backup">backup</A> was made, <A HREF="motion.html#it">它</A> is put back in place
 of the original file (if possible).  If you exit Vim, and lose the changes
 you made, the original file will mostly still be there.  If putting back the
 original file fails, there will be an error message telling you that you
@@ -1173,7 +1173,7 @@ See also |<A HREF="#file-formats">file-formats</A>| and the <A HREF="options.htm
 						*<A NAME="ACL"></A><B>ACL</B>*
 <A HREF="#ACL">ACL</A> stands for Access Control <A HREF="eval.html#List">List</A>.  It is an advanced way to <A HREF="intro.html#control">control</A> access
 rights for a file.  It is used on new MS-Windows and Unix systems, but only
-when the filesystem supports <A HREF="motion.html#it">it</A>.
+when the filesystem supports <A HREF="motion.html#it">它</A>.
    Vim attempts to preserve the <A HREF="#ACL">ACL</A> info when <A HREF="#writing">writing</A> a file.  The <A HREF="#backup">backup</A> file
 will get the <A HREF="#ACL">ACL</A> info of the original file.
    The <A HREF="#ACL">ACL</A> info is also used to check if a file is read-only (when opening the
@@ -1181,7 +1181,7 @@ file).
 
 
 						*<A NAME="read-only-share"></A><B>read-only-share</B>*
-When MS-Windows shares a drive on the <A HREF="pi_netrw.html#network">network</A> <A HREF="motion.html#it">it</A> can be marked <A HREF="motion.html#as">as</A> read-only.
+When MS-Windows shares a drive on the <A HREF="pi_netrw.html#network">network</A> <A HREF="motion.html#it">它</A> can be marked <A HREF="motion.html#as">as</A> read-only.
 This means that even if the file read-only attribute is absent, and the <A HREF="#ACL">ACL</A>
 settings on NT <A HREF="pi_netrw.html#network">network</A> shared drives allow <A HREF="#writing">writing</A> to the file, you can still
 not write to the file.  Vim on Win32 platforms will detect read-only <A HREF="pi_netrw.html#network">network</A>
@@ -1222,14 +1222,14 @@ The names can be in upper- or <A HREF="change.html#lowercase">lowercase</A>.
 			<A HREF="windows.html#window">窗口</A>in the current <A HREF="intro.html#tab">tab</A> page the current <A HREF="intro.html#tab">tab</A> page is
 			closed |<A HREF="tabpage.html#tab-page">tab-page</A>|.
 			Triggers the |<A HREF="autocmd.html#QuitPre">QuitPre</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event.
-			See |<A HREF="windows.html#CTRL-W_q">CTRL-W_q</A>| for quitting another<A HREF="windows.html#window">窗口</A>.
+			见 |<A HREF="windows.html#CTRL-W_q">CTRL-W_q</A>| for quitting another<A HREF="windows.html#window">窗口</A>.
 
 :conf[irm] q[uit]	Quit, but give prompt when changes have been made, or
 			the last file in the argument <A HREF="eval.html#list">list</A> has not been
-			edited.  See |<A HREF="#:confirm">:confirm</A>| and <A HREF="options.html#'confirm'">'confirm'</A>.
+			edited.  见 |<A HREF="#:confirm">:confirm</A>| and <A HREF="options.html#'confirm'">'confirm'</A>.
 
 :q[uit]!		Quit without <A HREF="#writing">writing</A>, also when the current buffer has
-			changes.  The buffer is unloaded, also when <A HREF="motion.html#it">it</A> has
+			changes.  The buffer is unloaded, also when <A HREF="motion.html#it">它</A> has
 			<A HREF="options.html#'hidden'">'hidden'</A> set.
 			If this is the last<A HREF="windows.html#window">窗口</A>and there is a modified
 			hidden buffer, the current buffer is abandoned and the
@@ -1238,7 +1238,7 @@ The names can be in upper- or <A HREF="change.html#lowercase">lowercase</A>.
 			Use &quot;:qall!&quot; to exit always.
 
 :cq[uit]		Quit always, without <A HREF="#writing">writing</A>, and return an error
-			code.  See |<A HREF="quickfix.html#:cq">:cq</A>|.
+			code.  见 |<A HREF="quickfix.html#:cq">:cq</A>|.
 
 
 							*<A NAME=":wq"></A><B>:wq</B>*
@@ -1298,10 +1298,10 @@ MULTIPLE WINDOWS AND BUFFERS				*<A NAME="window-exit"></A><B>window-exit</B>*
 
 :conf[irm] qa[ll]
 		Exit Vim.  Bring up a prompt when some <A HREF="windows.html#buffers">buffers</A> have been
-		changed.  See |<A HREF="#:confirm">:confirm</A>|.
+		changed.  见 |<A HREF="#:confirm">:confirm</A>|.
 
 :qa[ll]!	Exit Vim.  Any changes to <A HREF="windows.html#buffers">buffers</A> are lost.
-		Also see |<A HREF="quickfix.html#:cquit">:cquit</A>|, it does the same but exits with a non-zero
+		Also 见 |<A HREF="quickfix.html#:cquit">:cquit</A>|, it does the same but exits with a non-zero
 		value.
 
 
@@ -1318,7 +1318,7 @@ MULTIPLE WINDOWS AND BUFFERS				*<A NAME="window-exit"></A><B>window-exit</B>*
 :conf[irm] xa[ll]
 		Write all changed <A HREF="windows.html#buffers">buffers</A> and exit Vim.  Bring up a prompt
 		when some <A HREF="windows.html#buffers">buffers</A> are readonly or cannot be written for
-		another reason.  See |<A HREF="#:confirm">:confirm</A>|.
+		another reason.  见 |<A HREF="#:confirm">:confirm</A>|.
 
 :wqa[ll]! <A HREF="#[++opt]">[++opt]</A>
 :xa[ll]!	Write all changed <A HREF="windows.html#buffers">buffers</A>, even the ones that are readonly,
@@ -1407,12 +1407,12 @@ command:
 You can override the <A HREF="change.html#filter">filter</A> setting on a per-buffer basis by setting the
 b:browsefilter variable.  You would most likely set b:browsefilter in a
 <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A>, so that the browse dialog would contain entries related to
-the type of file you are currently editing.  Disadvantage: This makes <A HREF="motion.html#it">it</A>
+the type of file you are currently editing.  Disadvantage: This makes <A HREF="motion.html#it">它</A>
 difficult to start editing a file of a different type.  To overcome this, you
 may want to add &quot;All Files\t*.*\n&quot; <A HREF="motion.html#as">as</A> the final <A HREF="change.html#filter">filter</A>, so that the user can
 still access any desired file.
 
-To avoid setting <A HREF="#browsefilter">browsefilter</A> when Vim does not actually support <A HREF="motion.html#it">it</A>, you can
+To avoid setting <A HREF="#browsefilter">browsefilter</A> when Vim does not actually support <A HREF="motion.html#it">它</A>, you can
 use has(&quot;browsefilter&quot;):
 
 <B>	if has("browsefilter")</B>
@@ -1443,7 +1443,7 @@ exist, the next-higher scope in the hierarchy applies.
 			systems.
 
 :cd[!] {path}		Change the current directory to {path}.
-			If {path} is relative, <A HREF="motion.html#it">it</A> is searched for in the
+			If {path} is relative, <A HREF="motion.html#it">它</A> is searched for in the
 			directories listed in |<A HREF="options.html#'cdpath'">'cdpath'</A>|.
 			Does not change the meaning of an already opened file,
 			because its full path name is remembered.  Files from
@@ -1496,7 +1496,7 @@ exist, the next-higher scope in the hierarchy applies.
 
 							*<A NAME=":pw"></A><B>:pw</B>* *<A NAME=":pwd"></A><B>:pwd</B>* *<A NAME="E187"></A><B>E187</B>*
 :pw[d]			Print the current directory name.
-			Also see |<A HREF="builtin.html#getcwd()">getcwd()</A>|.
+			Also 见 |<A HREF="builtin.html#getcwd()">getcwd()</A>|.
 
 							*<A NAME=":pwd-verbose"></A><B>:pwd-verbose</B>*
 			When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, |<A HREF="#:pwd">:pwd</A>| will also display
@@ -1523,7 +1523,7 @@ current directory for that<A HREF="windows.html#window">窗口</A>.  Windows whe
 been used stick to the global or tab-local directory.  When jumping to another
 <A HREF="windows.html#window">窗口</A>the current directory is changed to the last specified local current
 directory.  If none was specified, the global or tab-local directory is used.
-When creating a new<A HREF="windows.html#window">窗口</A><A HREF="motion.html#it">it</A> inherits the local directory of the current<A HREF="windows.html#window">窗口</A>.
+When creating a new<A HREF="windows.html#window">窗口</A><A HREF="motion.html#it">它</A> inherits the local directory of the current<A HREF="windows.html#window">窗口</A>.
 
 When <A HREF="change.html#changing">changing</A> tabs the same behaviour applies.  If the current <A HREF="intro.html#tab">tab</A> has no
 local working directory the global working directory is used.
@@ -1546,7 +1546,7 @@ filename before the &quot;<A HREF="#:cd">:cd</A>&quot;.
 
 8. Editing binary files					*<A NAME="edit-binary"></A><B>edit-binary</B>*
 
-Although Vim was made to edit text files, <A HREF="motion.html#it">it</A> is possible to edit binary
+Although Vim was made to edit text files, <A HREF="motion.html#it">它</A> is possible to edit binary
 files.  The |<A HREF="starting.html#-b">-b</A>| Vim argument (b for binary) makes Vim <A HREF="diff.html#do">do</A> file I/O in binary
 mode, and sets some <A HREF="options.html#options">options</A> for editing binary files ('binary' on, <A HREF="options.html#'textwidth'">'textwidth'</A>
 to 0, <A HREF="options.html#'modeline'">'modeline'</A> off, <A HREF="options.html#'expandtab'">'expandtab'</A> off).  Setting the <A HREF="options.html#'binary'">'binary'</A> option has the
@@ -1560,7 +1560,7 @@ There are a few things to remember when editing binary files:
   split in two.
 - When there are not many &lt;EOL&gt;s, the lines will become very long.  If you
   want to edit a line that does not fit on the screen reset the <A HREF="options.html#'wrap'">'wrap'</A> option.
-  Horizontal <A HREF="scroll.html#scrolling">scrolling</A> is used then.  If a line becomes too long (see |<A HREF="vi_diff.html#limits">limits</A>|)
+  Horizontal <A HREF="scroll.html#scrolling">scrolling</A> is used then.  If a line becomes too long (见 |<A HREF="vi_diff.html#limits">limits</A>|)
   you cannot edit that line.  The line will be split when reading the file.
   It is also possible that you get an &quot;out of memory&quot; error when reading the
   file.
@@ -1592,7 +1592,7 @@ Support for editing encrypted files has been removed.
 10. Timestamps					*<A NAME="timestamp"></A><B>timestamp</B>* *<A NAME="timestamps"></A><B>timestamps</B>*
 
 Vim remembers the modification <A HREF="#timestamp">timestamp</A>, mode and size of a file when you
-begin editing <A HREF="motion.html#it">it</A>.  This is used to avoid that you have two different versions
+begin editing <A HREF="motion.html#it">它</A>.  This is used to avoid that you have two different versions
 of the same file (without you knowing this).
 
 After a shell command is run (|<A HREF="various.html#:!cmd">:!cmd</A>| |<A HREF="starting.html#suspend">suspend</A>| |<A HREF="insert.html#:read!">:read!</A>| |<A HREF="various.html#K">K</A>|) <A HREF="#timestamps">timestamps</A>,
@@ -1603,7 +1603,7 @@ focus.
 
 
 							*<A NAME="E321"></A><B>E321</B>* *<A NAME="E462"></A><B>E462</B>*
-If you want to automatically <A HREF="#reload">reload</A> a file when <A HREF="motion.html#it">it</A> has been changed outside of
+If you want to automatically <A HREF="#reload">reload</A> a file when <A HREF="motion.html#it">它</A> has been changed outside of
 Vim, set the <A HREF="options.html#'autoread'">'autoread'</A> option.  This doesn't work at the moment you write the
 file though, only when the file wasn't changed inside of Vim.
 
@@ -1619,7 +1619,7 @@ Note that if a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A> <A H
 warning message or prompt.  The <A HREF="autocmd.html#autocommand">autocommand</A> is expected to handle this.
 
 There is no warning for a directory (e.g., with |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|).  But you <A HREF="diff.html#do">do</A>
-get warned if you started editing a new file and <A HREF="motion.html#it">it</A> was created <A HREF="motion.html#as">as</A> a directory
+get warned if you started editing a new file and <A HREF="motion.html#it">它</A> was created <A HREF="motion.html#as">as</A> a directory
 later.
 
 When Vim notices the <A HREF="#timestamp">timestamp</A> of a file has changed, and the file is being
@@ -1646,12 +1646,12 @@ If you don't get warned often enough you can use the following command.
 			you are offered the choice of reloading the file.  If
 			the file was deleted you get an error message.
 			If the file previously didn't exist you get a warning
-			if <A HREF="motion.html#it">it</A> exists now.
+			if <A HREF="motion.html#it">它</A> exists now.
 			Once a file has been checked the <A HREF="#timestamp">timestamp</A> is reset,
 			you will not be warned again.
 			<A HREF="autocmd.html#Syntax">Syntax</A> highlighting, marks, <A HREF="diff.html#diff">diff</A> status,
 			<A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'binary'">'binary'</A> <A HREF="options.html#options">options</A>
-			are not changed.  See |<A HREF="eval.html#v:fcs_choice">v:fcs_choice</A>| to <A HREF="#reload">reload</A> these
+			are not changed.  见 |<A HREF="eval.html#v:fcs_choice">v:fcs_choice</A>| to <A HREF="#reload">reload</A> these
 			too (for example, if a code <A HREF="change.html#formatting">formatting</A> tools has
 			changed the file).
 
@@ -1669,15 +1669,15 @@ Otherwise a special<A HREF="windows.html#window">窗口</A>is used, so that most
 can't close this<A HREF="windows.html#window">窗口</A>.  A few other restrictions apply.  Best is to make
 sure nothing happens outside of the current buffer.  E.g., setting
 window-local <A HREF="options.html#options">options</A> may end up in the wrong<A HREF="windows.html#window">窗口</A>.  Splitting the<A HREF="windows.html#window">窗口</A>,
-doing something there and closing <A HREF="motion.html#it">it</A> should be OK (if there are no side
+doing something there and closing <A HREF="motion.html#it">它</A> should be OK (if there are no side
 effects from other autocommands).  Closing unrelated <A HREF="windows.html#windows">windows</A> and <A HREF="windows.html#buffers">buffers</A> will
 get you into trouble.
 
-Before <A HREF="#writing">writing</A> a file the <A HREF="#timestamp">timestamp</A> is checked.  If <A HREF="motion.html#it">it</A> has changed, Vim will
+Before <A HREF="#writing">writing</A> a file the <A HREF="#timestamp">timestamp</A> is checked.  If <A HREF="motion.html#it">它</A> has changed, Vim will
 ask if you really want to overwrite the file:
 
 	WARNING: The file has been changed since reading it!!!
-	Do you really want to write to <A HREF="motion.html#it">it</A> (y/n)?
+	Do you really want to write to <A HREF="motion.html#it">它</A> (y/n)?
 
 If you hit '<A HREF="change.html#y">y</A>' Vim will continue <A HREF="#writing">writing</A> the file.  If you hit '<A HREF="pattern.html#n">n</A>' the write is
 aborted.  If you used &quot;<A HREF="#:wq">:wq</A>&quot; or &quot;<A HREF="#ZZ">ZZ</A>&quot; Vim will not exit, you will get another
@@ -1693,8 +1693,8 @@ It is also possible that you modified the file yourself, from another edit
 session or with another command (e.g., a <A HREF="change.html#filter">filter</A> command).  Then you will know
 which version of the file you want to keep.
 
-The accuracy of the time check depends on the filesystem.  On Unix <A HREF="motion.html#it">it</A> is
-usually sub-second.  With old file systems and on MS-Windows <A HREF="motion.html#it">it</A> is normally one
+The accuracy of the time check depends on the filesystem.  On Unix <A HREF="motion.html#it">它</A> is
+usually sub-second.  With old file systems and on MS-Windows <A HREF="motion.html#it">它</A> is normally one
 second.  Use `has('nanotime')` to check if sub-second time stamp checks are
 available.
 
@@ -1718,7 +1718,7 @@ There are three different types of searching:
    Downward search uses the <A HREF="#wildcards">wildcards</A> '*', '**' and possibly others
    supported by your operating system.  '*' and '**' are handled inside Vim,
    so they work on all operating systems.  Note that &quot;**&quot; only acts <A HREF="motion.html#as">as</A> a
-   special <A HREF="#wildcard">wildcard</A> when <A HREF="motion.html#it">it</A> is at the start of a name.
+   special <A HREF="#wildcard">wildcard</A> when <A HREF="motion.html#it">它</A> is at the start of a name.
 
    The usage of '*' is quite simple: It matches 0 or more characters.  In a
    search <A HREF="pattern.html#pattern">pattern</A> this would be &quot;.*&quot;.  Note that the &quot;<A HREF="repeat.html#.">.</A>&quot; is not used for file
@@ -1726,7 +1726,7 @@ There are three different types of searching:
 
    '**' is more sophisticated:
       - It ONLY matches directories.
-      - It matches up to 30 directories deep by default, so you can use <A HREF="motion.html#it">it</A> to
+      - It matches up to 30 directories deep by default, so you can use <A HREF="motion.html#it">它</A> to
 	search an entire directory tree
       - The maximum number of levels matched can be given by appending a number
 	to '**'.
@@ -1741,7 +1741,7 @@ There are three different types of searching:
  	It does NOT match '/usr/include/g++/std' <A HREF="motion.html#as">as</A> this would be three
 	levels.
 	The allowed number range is 0 ('**0' is removed) to 100
-	If the given number is smaller than 0 <A HREF="motion.html#it">it</A> defaults to 30, if it's
+	If the given number is smaller than 0 <A HREF="motion.html#it">它</A> defaults to 30, if it's
 	bigger than 100 then 100 is used.  The system also has a limit on the
 	path length, usually 256 or 1024 bytes.
       - '**' can only be at the end of the path or be followed by a path

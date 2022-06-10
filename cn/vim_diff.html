@@ -209,7 +209,7 @@ Working intuitively and consistently is a major goal of Nvim.
 
 							*<A NAME="feature-compile"></A><B>feature-compile</B>*
 - Nvim always includes ALL features, in contrast to Vim (which ships with
-  various combinations of 100+ optional features). Think of <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> a leaner
+  various combinations of 100+ optional features). Think of <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a leaner
   version of Vim's &quot;HUGE&quot; build. This reduces surface area for bugs, and
   removes a common source of confusion and friction for users.
 
@@ -232,7 +232,7 @@ backwards-compatibility cost. Some examples:
 
 Some features are built in that otherwise required external plugins:
 
-- Highlighting the yanked region, see |<A HREF="lua.html#lua-highlight">lua-highlight</A>|.
+- Highlighting the yanked region, 见 |<A HREF="lua.html#lua-highlight">lua-highlight</A>|.
 
 <B><FONT color="#3A6F2B">ARCHITECTURE </FONT></B>
 
@@ -347,7 +347,7 @@ certain features removed/added at compile-time. |<A HREF="#feature-compile">feat
 Some Vim features were changed in Nvim, and vice versa.
 
 If a <A HREF="if_pyth.html#Python">Python</A> interpreter is available on your `$PATH`, |<A HREF="if_pyth.html#:python">:python</A>| and |<A HREF="if_pyth.html#:python3">:python3</A>|
-are always available and may be used simultaneously. See |<A HREF="provider.html#provider-python">provider-python</A>|.
+are always available and may be used simultaneously. 见 |<A HREF="provider.html#provider-python">provider-python</A>|.
 
 |<A HREF="various.html#:redir">:redir</A>| nested in |<A HREF="builtin.html#execute()">execute()</A>| works.
 
@@ -369,22 +369,22 @@ are always available and may be used simultaneously. See |<A HREF="provider.html
 <B>       let l = []</B>
 <B>       echo [l, l]</B>
  
-   <A HREF="motion.html#it">it</A> does not use &quot;[...]&quot; (was: &quot;[[], [...]]&quot;, now: &quot;[[], []]&quot;). &quot;<A HREF="eval.html#...">...</A>&quot; is
+   <A HREF="motion.html#it">它</A> does not use &quot;[...]&quot; (was: &quot;[[], [...]]&quot;, now: &quot;[[], []]&quot;). &quot;<A HREF="eval.html#...">...</A>&quot; is
    only used for recursive containers.
 3. |<A HREF="eval.html#:echo">:echo</A>| <A HREF="print.html#printing">printing</A> nested containers adds &quot;@level&quot; after &quot;<A HREF="eval.html#...">...</A>&quot; designating
    the level at which recursive container was printed: |<A HREF="eval.html#:echo-self-refer">:echo-self-refer</A>|.
-   Same thing applies to |<A HREF="builtin.html#string()">string()</A>| (though <A HREF="motion.html#it">it</A> uses construct like
+   Same thing applies to |<A HREF="builtin.html#string()">string()</A>| (though <A HREF="motion.html#it">它</A> uses construct like
    &quot;{E724@level}&quot;), but this is not reliable because |<A HREF="builtin.html#string()">string()</A>| continues to
    error out.
 4. Stringifyed infinite and NaN values now use |<A HREF="builtin.html#str2float()">str2float()</A>| and can be evaled
    back.
 5. (internal) Trying to print or stringify VAR_UNKNOWN in Vim results in 
-   nothing, E908, in Nvim <A HREF="motion.html#it">it</A> is internal error.
+   nothing, E908, in Nvim <A HREF="motion.html#it">它</A> is internal error.
 
 |<A HREF="builtin.html#json_decode()">json_decode()</A>| behaviour changed:
 1. It may output |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>|.
 2. |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>| is emitted also in <A HREF="change.html#case">case</A> of duplicate keys, while in 
-   Vim <A HREF="motion.html#it">it</A> <A HREF="message.html#errors">errors</A> out.
+   Vim <A HREF="motion.html#it">它</A> <A HREF="message.html#errors">errors</A> out.
 3. It accepts only valid JSON.  Trailing commas are not accepted.
 
 |<A HREF="builtin.html#json_encode()">json_encode()</A>| behaviour slightly changed: now |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>| values 
@@ -402,14 +402,14 @@ Additional differences:
 - ShaDa file format was designed with forward and backward compatibility in
   mind. |<A HREF="starting.html#shada-compatibility">shada-compatibility</A>|
 - Some <A HREF="message.html#errors">errors</A> make ShaDa code keep temporary file in-place for user to decide
-  what to <A HREF="diff.html#do">do</A> with <A HREF="motion.html#it">it</A>.  Vim deletes temporary file in these cases.
+  what to <A HREF="diff.html#do">do</A> with <A HREF="motion.html#it">它</A>.  Vim deletes temporary file in these cases.
   |<A HREF="starting.html#shada-error-handling">shada-error-handling</A>|
 - ShaDa file keeps search direction (|<A HREF="eval.html#v:searchforward">v:searchforward</A>|), viminfo does not.
 
 |<A HREF="builtin.html#printf()">printf()</A>| returns something meaningful when used with `&#37;p` argument: in Vim 
-<A HREF="motion.html#it">it</A> used to return useless address of the <A HREF="eval.html#string">string</A> (strings are copied to the 
+<A HREF="motion.html#it">它</A> used to return useless address of the <A HREF="eval.html#string">string</A> (strings are copied to the 
 newly allocated memory all over the place) and fail on types which cannot be 
-coerced to strings. See |<A HREF="builtin.html#id()">id()</A>| for more details, currently <A HREF="motion.html#it">it</A> uses 
+coerced to strings. 见 |<A HREF="builtin.html#id()">id()</A>| for more details, currently <A HREF="motion.html#it">它</A> uses 
 `printf(&quot;&#37;p&quot;, {expr})` internally.
 
 |<A HREF="cmdline.html#c_CTRL-R">c_CTRL-R</A>| pasting a non-special <A HREF="intro.html#register">register</A> into |<A HREF="cmdline.html#cmdline">cmdline</A>| omits the last <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>.
@@ -445,7 +445,7 @@ Highlight groups:
   |<A HREF="deprecated.html#hl-VertSplit">hl-VertSplit</A>| superseded by |<A HREF="syntax.html#hl-WinSeparator">hl-WinSeparator</A>|
 
 Macro/|<A HREF="repeat.html#recording">recording</A>| behavior
-  Replay of a <A HREF="map.html#macro">macro</A> recorded during <A HREF="map.html#:lmap">:lmap</A> produces the same actions <A HREF="motion.html#as">as</A> when <A HREF="motion.html#it">it</A>
+  Replay of a <A HREF="map.html#macro">macro</A> recorded during <A HREF="map.html#:lmap">:lmap</A> produces the same actions <A HREF="motion.html#as">as</A> when <A HREF="motion.html#it">它</A>
   was recorded. In Vim if a <A HREF="map.html#macro">macro</A> is recorded while using :lmap'ped keys then
   the behaviour during record and replay differs.
 
@@ -470,7 +470,7 @@ Options:
   <A HREF="options.html#'shortmess'">'shortmess'</A> the &quot;<A HREF="motion.html#F">F</A>&quot; flag does not affect output from autocommands
 
 Shell:
-  Shell output (|<A HREF="various.html#:!">:!</A>|, |<A HREF="quickfix.html#:make">:make</A>|, …) is always routed through the <A HREF="ui.html#UI">UI</A>, so <A HREF="motion.html#it">it</A>
+  Shell output (|<A HREF="various.html#:!">:!</A>|, |<A HREF="quickfix.html#:make">:make</A>|, …) is always routed through the <A HREF="ui.html#UI">UI</A>, so <A HREF="motion.html#it">它</A>
   cannot &quot;mess up&quot; the screen. (You can still use &quot;chansend(v:stderr,…)&quot; if
   you want to mess up the screen :)
 
@@ -521,9 +521,9 @@ Startup:
   Nvim will use 256-colour capability on Linux virtual terminals.  Vim uses
   only 8 colours plus bright foreground on Linux VTs.
 
-  Vim combines what is in its |<A HREF="term.html#builtin-terms">builtin-terms</A>| with what <A HREF="motion.html#it">it</A> reads from <A HREF="term.html#terminfo">terminfo</A>,
+  Vim combines what is in its |<A HREF="term.html#builtin-terms">builtin-terms</A>| with what <A HREF="motion.html#it">它</A> reads from <A HREF="term.html#terminfo">terminfo</A>,
   and has a <A HREF="#'ttybuiltin'">'ttybuiltin'</A> setting to <A HREF="intro.html#control">control</A> how that combination works.  Nvim
-  uses one or the other, <A HREF="motion.html#it">it</A> does not attempt to <A HREF="diff.html#merge">merge</A> the two.
+  uses one or the other, <A HREF="motion.html#it">它</A> does not attempt to <A HREF="diff.html#merge">merge</A> the two.
 
 UI/Display:
   |<A HREF="visual.html#Visual">Visual</A>| selection highlights the character at cursor. |<A HREF="visual.html#visual-use">visual-use</A>|
@@ -594,8 +594,8 @@ Commands:
   :tearoff
 
 Compile-time features:
-  Emacs <A HREF="tagsrch.html#tags">tags</A> support
-  X11 integration (see |<A HREF="provider.html#x11-selection">x11-selection</A>|)
+  Emacs <A HREF="tagsrch.html#tags">标签</A> support
+  X11 integration (见 |<A HREF="provider.html#x11-selection">x11-selection</A>|)
 
 Eval:
   Vim9script
@@ -673,7 +673,7 @@ Options:
   *<A NAME="'maxcombine'"></A><B>'maxcombine'</B>* *<A NAME="'mco'"></A><B>'mco'</B>*
     Nvim always displays up to 6 combining characters.  You can still edit
     text with more than 6 combining characters, you just can't see them.
-    Use |<A HREF="various.html#g8">g8</A>| or |<A HREF="various.html#ga">ga</A>|.  See |<A HREF="mbyte.html#mbyte-combining">mbyte-combining</A>|.
+    Use |<A HREF="various.html#g8">g8</A>| or |<A HREF="various.html#ga">ga</A>|.  见 |<A HREF="mbyte.html#mbyte-combining">mbyte-combining</A>|.
   'maxmem' Nvim delegates memory-management to the OS.
   'maxmemtot' Nvim delegates memory-management to the OS.
 
@@ -753,7 +753,7 @@ Test <A HREF="eval.html#functions">functions</A>:
 
 
 			  *<A NAME="xterm-8bit"></A><B>xterm-8bit</B>* *<A NAME="xterm-8-bit"></A><B>xterm-8-bit</B>*
-  Xterm can be run in a mode where <A HREF="motion.html#it">it</A> uses true 8-bit CSI.  Supporting this
+  Xterm can be run in a mode where <A HREF="motion.html#it">它</A> uses true 8-bit CSI.  Supporting this
   requires autodetection of whether the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is in <A HREF="mbyte.html#UTF-8">UTF-8</A> mode or non-UTF-8
   mode, <A HREF="motion.html#as">as</A> the 8-bit CSI character has to be written differently in each <A HREF="change.html#case">case</A>.
   Vim issues a &quot;request version&quot; sequence to the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> at <A HREF="starting.html#startup">startup</A> and looks

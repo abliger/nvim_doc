@@ -158,15 +158,15 @@ You must be in the right directory, otherwise Vim can't find the swap file.
 
 *<A NAME="11.2"></A><B>11.2</B>*	Where is the swap file?
 
-Vim can store the swap file in several places.  Normally <A HREF="motion.html#it">it</A> is in the same
-directory <A HREF="motion.html#as">as</A> the original file.  To find <A HREF="motion.html#it">it</A>, change to the directory of the
+Vim can store the swap file in several places.  Normally <A HREF="motion.html#it">它</A> is in the same
+directory <A HREF="motion.html#as">as</A> the original file.  To find <A HREF="motion.html#it">它</A>, change to the directory of the
 file, and use:
 
 <B>	vim -r</B>
 
-Vim will <A HREF="eval.html#list">list</A> the swap files that <A HREF="motion.html#it">it</A> can find.  It will also look in other
+Vim will <A HREF="eval.html#list">list</A> the swap files that <A HREF="motion.html#it">它</A> can find.  It will also look in other
 directories where the swap file for files in the current directory may be
-located.  It will not find swap files in any other directories though, <A HREF="motion.html#it">it</A>
+located.  It will not find swap files in any other directories though, <A HREF="motion.html#it">它</A>
 doesn't search the directory tree.
    The output could look like this:
 
@@ -273,7 +273,7 @@ something wrong.  It may be one of these two situations.
 
    Then you very likely have a crashed edit session that is worth recovering.
       If the date of the file is newer than the date of the swap file, then
-   either <A HREF="motion.html#it">it</A> was changed after the crash (perhaps you recovered <A HREF="motion.html#it">it</A> earlier,
+   either <A HREF="motion.html#it">它</A> was changed after the crash (perhaps you recovered <A HREF="motion.html#it">它</A> earlier,
    but didn't delete the swap file?), or else the file was saved before the
    crash but after the last write of the swap file (then you're lucky: you
    don't even need that old swap file).  Vim will warn you for this with this
@@ -283,7 +283,7 @@ something wrong.  It may be one of these two situations.
 
 
 NOTE that in the following situation Vim knows the swap file is not useful and
-will automatically delete <A HREF="motion.html#it">it</A>:
+will automatically delete <A HREF="motion.html#it">它</A>:
 - The file is a valid swap file (Magic number is correct).
 - The flag that the file was modified is not set.
 - The process is not running.
@@ -303,7 +303,7 @@ depending on circumstances.
 
 It is good if a previous editing session crashed without having made any
 changes to the file.  Then a directory listing of the swap file will show
-that <A HREF="motion.html#it">it</A> has zero bytes.  You may delete <A HREF="motion.html#it">it</A> and proceed.
+that <A HREF="motion.html#it">它</A> has zero bytes.  You may delete <A HREF="motion.html#it">它</A> and proceed.
 
 It is slightly bad if you don't have read permission for the swap file.  You
 may want to view the file read-only, or quit.  On multi-user systems, if you
@@ -312,7 +312,7 @@ followed by a login under that other name might cure the &quot;read error&quot;.
 else you might want to find out who last edited (or is editing) the file and
 have a talk with them.
 
-It is very bad if <A HREF="motion.html#it">it</A> means there is a physical read error on the disk
+It is very bad if <A HREF="motion.html#it">它</A> means there is a physical read error on the disk
 containing the swap file.  Fortunately, this almost never happens.
 You may want to view the file read-only at first (if you can), to see the
 extent of the changes that were &quot;forgotten&quot;.  If you are the one in charge of
@@ -328,8 +328,8 @@ If dialogs are supported you will be asked to select one of six choices:
 <B><FONT color="#3A6F2B">  [O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort, (D)elete it: </FONT></B>
 
 <A HREF="insert.html#O">O</A>  Open the file readonly.  Use this when you just want to view the file and
-   don't need to recover <A HREF="motion.html#it">it</A>.  You might want to use this when you know someone
-   else is editing the file, but you just want to look in <A HREF="motion.html#it">it</A> and not make
+   don't need to recover <A HREF="motion.html#it">它</A>.  You might want to use this when you know someone
+   else is editing the file, but you just want to look in <A HREF="motion.html#it">它</A> and not make
    changes.
 
 <A HREF="motion.html#E">E</A>  Edit the file anyway.  Use this with caution!  If the file is being edited
@@ -350,14 +350,14 @@ A  Abort.  Like Quit, but also abort further commands.  This is useful when
    loading a <A HREF="usr_41.html#script">script</A> that edits several files, such <A HREF="motion.html#as">as</A> a session with multiple
    <A HREF="windows.html#windows">windows</A>.
 
-<A HREF="change.html#D">D</A>  Delete the swap file.  Use this when you are sure you no longer need <A HREF="motion.html#it">it</A>.
-   For example, when <A HREF="motion.html#it">it</A> doesn't contain changes, or when the file itself is
+<A HREF="change.html#D">D</A>  Delete the swap file.  Use this when you are sure you no longer need <A HREF="motion.html#it">它</A>.
+   For example, when <A HREF="motion.html#it">它</A> doesn't contain changes, or when the file itself is
    newer than the swap file.
       On Unix this choice is only offered when the process that created the
    swap file does not appear to be running.
 
 If you <A HREF="diff.html#do">do</A> not get the dialog (you are running a version of Vim that does not
-support it), you will have to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> manually.  To recover the file, use this
+support it), you will have to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> manually.  To recover the file, use this
 command:
 
 <B>	:recover</B>
@@ -365,13 +365,13 @@ command:
 
 Vim cannot always detect that a swap file already exists for a file.  This is
 the <A HREF="change.html#case">case</A> when the other edit session puts the swap files in another directory
-or when the path name for the file is different when editing <A HREF="motion.html#it">it</A> on different
+or when the path name for the file is different when editing <A HREF="motion.html#it">它</A> on different
 machines.  Therefore, don't rely on Vim always warning you.
 
 If you really don't want to see this message, you can add the '<A HREF="insert.html#A">A</A>' flag to the
 <A HREF="options.html#'shortmess'">'shortmess'</A> option.  But it's very unusual that you need this.
 
-For programmatic access to the swap file, see |<A HREF="builtin.html#swapinfo()">swapinfo()</A>|.
+For programmatic access to the swap file, 见 |<A HREF="builtin.html#swapinfo()">swapinfo()</A>|.
 
 ==============================================================================
 

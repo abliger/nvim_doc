@@ -96,14 +96,14 @@ in various languages is explained.
 
 *<A NAME="45.1"></A><B>45.1</B>*	Language for Messages
 
-When you start Vim, <A HREF="motion.html#it">it</A> checks the environment to find out what language you
+When you start Vim, <A HREF="motion.html#it">它</A> checks the environment to find out what language you
 are using.  Mostly this should work fine, and you get the <A HREF="message.html#messages">messages</A> in your
 language (if they are available).  To see what the current language is, use
 this command:
 
 <B>	:language</B>
 
-If <A HREF="motion.html#it">it</A> replies with &quot;<A HREF="change.html#C">C</A>&quot;, this means the default is being used, which is
+If <A HREF="motion.html#it">它</A> replies with &quot;<A HREF="change.html#C">C</A>&quot;, this means the default is being used, which is
 English.
 
 What if you would like your <A HREF="message.html#messages">messages</A> in a different language?  There are
@@ -126,14 +126,14 @@ error message when it's not supported on your system.  You don't get an error
 when translated <A HREF="message.html#messages">messages</A> are not available.  Vim will silently fall back to
 using English.
    To find out which languages are supported on your system, find the
-directory where they are listed.  On my system <A HREF="motion.html#it">it</A> is &quot;/usr/share/locale&quot;.  On
+directory where they are listed.  On my system <A HREF="motion.html#it">它</A> is &quot;/usr/share/locale&quot;.  On
 some systems it's in &quot;/usr/lib/locale&quot;.  The manual page for &quot;setlocale&quot;
-should give you a hint where <A HREF="motion.html#it">it</A> is found on your system.
-   Be careful to type the name exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> should be.  Upper and <A HREF="change.html#lowercase">lowercase</A>
+should give you a hint where <A HREF="motion.html#it">它</A> is found on your system.
+   Be careful to type the name exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> should be.  Upper and <A HREF="change.html#lowercase">lowercase</A>
 matter, and the '<A HREF="motion.html#-">-</A>' and '<A HREF="motion.html#_">_</A>' characters are easily confused.
 
 You can also set the language separately for <A HREF="message.html#messages">messages</A>, edited text and the
-time format.  See |<A HREF="mlang.html#:language">:language</A>|.
+time format.  见 |<A HREF="mlang.html#:language">:language</A>|.
 
 
 DO-IT-YOURSELF MESSAGE TRANSLATION
@@ -145,7 +145,7 @@ directory src/po/README.txt.
    It's not too difficult to <A HREF="diff.html#do">do</A> the translation.  You don't need to be a
 programmer.  You must know both English and the language you are translating
 to, of course.
-   When you are satisfied with the translation, consider making <A HREF="motion.html#it">it</A> available
+   When you are satisfied with the translation, consider making <A HREF="motion.html#it">它</A> available
  to others. Upload it at vim-online	<A HREF="http://vim.sf.net">http://vim.sf.net</A> or e-mail it to
 the Vim maintainer <A HREF="mailto:maintainer@vim.org">&lt;maintainer@vim.org&gt;</A>. Or both. 
 
@@ -156,7 +156,7 @@ the Vim maintainer <A HREF="mailto:maintainer@vim.org">&lt;maintainer@vim.org&gt
 The default <A HREF="gui.html#menus">menus</A> are in English.  To be able to use your local language, they
 must be translated.  Normally this is automatically done for you if the
 environment is set for your language, just like with <A HREF="message.html#messages">messages</A>.  You don't need
-to <A HREF="diff.html#do">do</A> anything extra for this.  But <A HREF="motion.html#it">it</A> only works if translations for the
+to <A HREF="diff.html#do">do</A> anything extra for this.  But <A HREF="motion.html#it">它</A> only works if translations for the
 language are available.
    Suppose you are in Germany, with the language set to German, but prefer to
 use &quot;File&quot; instead of &quot;Datei&quot;.  You can switch back to using the English <A HREF="gui.html#menus">menus</A>
@@ -173,7 +173,7 @@ differences are ignored here.
    The <A HREF="options.html#'langmenu'">'langmenu'</A> option must be set before the <A HREF="gui.html#menus">menus</A> are loaded.  Once the
 <A HREF="gui.html#menus">menus</A> have been defined <A HREF="change.html#changing">changing</A> <A HREF="options.html#'langmenu'">'langmenu'</A> has no direct effect.  Therefore,
 put the command to set <A HREF="options.html#'langmenu'">'langmenu'</A> in your <A HREF="starting.html#vimrc">vimrc</A> file.
-   If you really want to switch menu language while running Vim, you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>
+   If you really want to switch menu language while running Vim, you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>
 this way:
 
 <B>	:source $VIMRUNTIME/delmenu.vim</B>
@@ -192,7 +192,7 @@ To see which menu translations are available, look in this directory:
 
 The files are called menu_{language}.vim.  If you don't see the language you
 want to use, you can <A HREF="diff.html#do">do</A> your own translations.  The simplest way to <A HREF="diff.html#do">do</A> this is
-by <A HREF="uganda.html#copying">copying</A> one of the existing language files, and change <A HREF="motion.html#it">it</A>.
+by <A HREF="uganda.html#copying">copying</A> one of the existing language files, and change <A HREF="motion.html#it">它</A>.
    First find out the name of your language with the &quot;<A HREF="mlang.html#:language">:language</A>&quot; command.  Use
 this name, but with all letters made <A HREF="change.html#lowercase">lowercase</A>.  Then copy the file to your
 own runtime directory, <A HREF="motion.html#as">as</A> found early in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  For example, for Unix
@@ -214,7 +214,7 @@ encoding, providing for over ten thousand possible characters.  This still
 isn't enough when a text is to contain several different languages.  This is
 where <A HREF="mbyte.html#Unicode">Unicode</A> comes in.  It was designed to include all characters used in
 commonly used languages.  This is the &quot;Super encoding that replaces all
-others&quot;.  But <A HREF="motion.html#it">it</A> isn't used that much yet.
+others&quot;.  But <A HREF="motion.html#it">它</A> isn't used that much yet.
    Fortunately, Vim supports these three kinds of encodings.  And, with some
 restrictions, you can use them even when your environment uses another
 language than the text.
@@ -225,11 +225,11 @@ following is only relevant when you want to edit different languages.
 
 USING UNICODE IN THE <A HREF="gui.html#GUI">GUI</A>
 
-The nice thing about <A HREF="mbyte.html#Unicode">Unicode</A> is that other encodings can be converted to <A HREF="motion.html#it">it</A>
+The nice thing about <A HREF="mbyte.html#Unicode">Unicode</A> is that other encodings can be converted to <A HREF="motion.html#it">它</A>
 and back without losing information.  When you make Vim use <A HREF="mbyte.html#Unicode">Unicode</A>
 internally, you will be able to edit files in any encoding.
    Unfortunately, the number of systems supporting <A HREF="mbyte.html#Unicode">Unicode</A> is still limited.
-Thus it's unlikely that your language uses <A HREF="motion.html#it">it</A>.  You need to tell Vim you want
+Thus it's unlikely that your language uses <A HREF="motion.html#it">它</A>.  You need to tell Vim you want
 to use <A HREF="mbyte.html#Unicode">Unicode</A>, and how to handle interfacing with the rest of the system.
    Let's start with the <A HREF="gui.html#GUI">GUI</A> version of Vim, which is able to display <A HREF="mbyte.html#Unicode">Unicode</A>
 characters.  This should work:
@@ -244,7 +244,7 @@ of Vim.
    This example assumes you have this font on your system.  The name in the
 example is for the X Window System.  This font is in a package that is used to
 enhance xterm with <A HREF="mbyte.html#Unicode">Unicode</A> support.  If you don't have this font, you might
-find <A HREF="motion.html#it">it</A> here:
+find <A HREF="motion.html#it">它</A> here:
 
 <B><FONT color="#3A6F2B">	http://www.cl.cam.ac.uk/~mgk25/download/ucs-fonts.tar.gz </FONT></B>
 
@@ -255,8 +255,8 @@ though.  Example:
 
 <B>	:set guifont=courier_new:h12</B>
 
-If <A HREF="motion.html#it">it</A> doesn't work well, try getting a fontpack.  If Microsoft didn't move <A HREF="motion.html#it">it</A>,
-you can find <A HREF="motion.html#it">it</A> here:
+If <A HREF="motion.html#it">它</A> doesn't work well, try getting a fontpack.  If Microsoft didn't move <A HREF="motion.html#it">它</A>,
+you can find <A HREF="motion.html#it">它</A> here:
 
 <B><FONT color="#3A6F2B">	http://www.microsoft.com/typography/fonts/default.aspx </FONT></B>
 
@@ -284,7 +284,7 @@ Suppose you want to work with <A HREF="mbyte.html#Unicode">Unicode</A> files, bu
 supported by the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> will not be displayed.  The layout of the text
 will be preserved.
 
-Try editing a file with <A HREF="mbyte.html#Unicode">Unicode</A> characters in <A HREF="motion.html#it">it</A>.  You will notice that Vim
+Try editing a file with <A HREF="mbyte.html#Unicode">Unicode</A> characters in <A HREF="motion.html#it">它</A>.  You will notice that Vim
 will put a question <A HREF="motion.html#mark">mark</A> (or underscore or some other character) in places
 where a character should be that the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> can't display.  Move the cursor
 to a question <A HREF="motion.html#mark">mark</A> and use this command:
@@ -292,14 +292,14 @@ to a question <A HREF="motion.html#mark">mark</A> and use this command:
 <B>	ga</B>
 
 Vim will display a line with the code of the character.  This gives you a hint
-about what character <A HREF="motion.html#it">it</A> is.  You can look <A HREF="motion.html#it">it</A> up in a <A HREF="mbyte.html#Unicode">Unicode</A> table.  You could
+about what character <A HREF="motion.html#it">它</A> is.  You can look <A HREF="motion.html#it">它</A> up in a <A HREF="mbyte.html#Unicode">Unicode</A> table.  You could
 actually view a file that way, if you have lots of time at hand.
 
 	Note:
-	Since <A HREF="options.html#'encoding'">'encoding'</A> is used for all text inside Vim, <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">it</A> makes
+	Since <A HREF="options.html#'encoding'">'encoding'</A> is used for all text inside Vim, <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">它</A> makes
 	all non-ASCII text invalid.  You will notice this when using <A HREF="change.html#registers">registers</A>
 	and the |<A HREF="starting.html#shada-file">shada-file</A>| (e.g., a remembered search <A HREF="pattern.html#pattern">pattern</A>).  It's
-	recommended to set <A HREF="options.html#'encoding'">'encoding'</A> in your <A HREF="starting.html#vimrc">vimrc</A> file, and leave <A HREF="motion.html#it">it</A> alone.
+	recommended to set <A HREF="options.html#'encoding'">'encoding'</A> in your <A HREF="starting.html#vimrc">vimrc</A> file, and leave <A HREF="motion.html#it">它</A> alone.
 
 ==============================================================================
 
@@ -322,9 +322,9 @@ if it's one of these encodings:
 			bytes is illegal in <A HREF="mbyte.html#utf-8">utf-8</A>.
 	latin1		The good old 8-bit encoding.  Always works.
 
-When you start editing that 16-bit <A HREF="mbyte.html#Unicode">Unicode</A> file, and <A HREF="motion.html#it">it</A> has a BOM, Vim will
-detect this and convert the file to <A HREF="mbyte.html#utf-8">utf-8</A> when reading <A HREF="motion.html#it">it</A>.  The <A HREF="options.html#'fileencoding'">'fileencoding'</A>
-option (without <A HREF="change.html#s">s</A> at the end) is set to the detected value.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A>
+When you start editing that 16-bit <A HREF="mbyte.html#Unicode">Unicode</A> file, and <A HREF="motion.html#it">它</A> has a BOM, Vim will
+detect this and convert the file to <A HREF="mbyte.html#utf-8">utf-8</A> when reading <A HREF="motion.html#it">它</A>.  The <A HREF="options.html#'fileencoding'">'fileencoding'</A>
+option (without <A HREF="change.html#s">s</A> at the end) is set to the detected value.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A>
 is &quot;utf-16le&quot;.  That means it's <A HREF="mbyte.html#Unicode">Unicode</A>, 16-bit and little-endian.  This
 file format is common on MS-Windows (e.g., for registry files).
    When <A HREF="editing.html#writing">writing</A> the file, Vim will compare <A HREF="options.html#'fileencoding'">'fileencoding'</A> with <A HREF="options.html#'encoding'">'encoding'</A>.  If
@@ -332,15 +332,15 @@ they are different, the text will be converted.
    An empty value for <A HREF="options.html#'fileencoding'">'fileencoding'</A> means that no conversion is to be done.
 Thus the text is assumed to be encoded with <A HREF="options.html#'encoding'">'encoding'</A>.
 
-If the default <A HREF="options.html#'fileencodings'">'fileencodings'</A> value is not good for you, set <A HREF="motion.html#it">it</A> to the
+If the default <A HREF="options.html#'fileencodings'">'fileencodings'</A> value is not good for you, set <A HREF="motion.html#it">它</A> to the
 encodings you want Vim to try.  Only when a value is found to be invalid will
-the next one be used.  Putting &quot;latin1&quot; first doesn't work, because <A HREF="motion.html#it">it</A> is
+the next one be used.  Putting &quot;latin1&quot; first doesn't work, because <A HREF="motion.html#it">它</A> is
 never illegal.  An example, to fall back to <A HREF="mbyte.html#Japanese">Japanese</A> when the file doesn't
 have a BOM and isn't <A HREF="mbyte.html#utf-8">utf-8</A>:
 
 <B>	:set fileencodings=ucs-bom,utf-8,sjis</B>
 
-See |<A HREF="mbyte.html#encoding-values">encoding-values</A>| for suggested values.  Other values may work <A HREF="motion.html#as">as</A> well.
+见 |<A HREF="mbyte.html#encoding-values">encoding-values</A>| for suggested values.  Other values may work <A HREF="motion.html#as">as</A> well.
 This depends on the conversion available.
 
 
@@ -379,7 +379,7 @@ can use <A HREF="digraph.html#digraphs">digraphs</A>.  This was already explaine
 keyboard, you will want to use an Input Method (IM).  This requires learning
 the translation from typed keys to resulting character.  When you need an IM
 you probably already have one on your system.  It should work with Vim like
-with other programs.  For details see |<A HREF="mbyte.html#mbyte-XIM">mbyte-XIM</A>| for the X Window system and
+with other programs.  For details 见 |<A HREF="mbyte.html#mbyte-XIM">mbyte-XIM</A>| for the X Window system and
 |<A HREF="intro.html#mbyte-IME">mbyte-IME</A>| for MS-Windows.
 
 
@@ -401,7 +401,7 @@ switch between Hebrew and English:
 
 <B>	CTRL-^</B>
 
-This only works in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="cmdline.html#Command-line">Command-line</A> mode.  In <A HREF="intro.html#Normal">正常</A>模式 <A HREF="motion.html#it">it</A> does
+This only works in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="cmdline.html#Command-line">命令行</A>模式.  In <A HREF="intro.html#Normal">正常</A>模式 <A HREF="motion.html#it">它</A> does
 something completely different (jumps to alternate file).
    The usage of the keymap is indicated in the mode message, if you have the
 <A HREF="options.html#'showmode'">'showmode'</A> option set.  In the <A HREF="gui.html#GUI">GUI</A> Vim will indicate the usage of keymaps with
@@ -422,7 +422,7 @@ Edit/Keymap menu.  Otherwise you can use this command:
 DO-IT-YOURSELF KEYMAPS
 
 You can create your own keymap file.  It's not very difficult.  Start with
-a keymap file that is similar to the language you want to use.  Copy <A HREF="motion.html#it">it</A> to the
+a keymap file that is similar to the language you want to use.  Copy <A HREF="motion.html#it">它</A> to the
 &quot;keymap&quot; directory in your runtime directory.  For example, for Unix, you
 would use the directory &quot;~/.config/nvim/keymap&quot;.
    The name of the keymap file must look like this:
@@ -440,7 +440,7 @@ an underscore.  Examples:
 <B><FONT color="#3A6F2B">	keymap/hebrew_utf-8.vim </FONT></B>
 
 The contents of the file should be self-explanatory.  Look at a few of the
-keymaps that are distributed with Vim.  For the details, see |<A HREF="mbyte.html#mbyte-keymap">mbyte-keymap</A>|.
+keymaps that are distributed with Vim.  For the details, 见 |<A HREF="mbyte.html#mbyte-keymap">mbyte-keymap</A>|.
 
 
 LAST RESORT
@@ -453,7 +453,7 @@ If all other methods fail, you can enter any character with <A HREF="visual.html
 	16-bit     <A HREF="visual.html#CTRL-V">CTRL-V</A> <A HREF="undo.html#u">u</A> 013b	hexadecimal 0000-ffff
 	31-bit	   <A HREF="visual.html#CTRL-V">CTRL-V</A> <A HREF="undo.html#U">U</A> 001303a4	hexadecimal 00000000-7fffffff
 
-Don't type the spaces.  See |<A HREF="insert.html#i_CTRL-V_digit">i_CTRL-V_digit</A>| for the details.
+Don't type the spaces.  见 |<A HREF="insert.html#i_CTRL-V_digit">i_CTRL-V_digit</A>| for the details.
 
 ==============================================================================
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

@@ -89,7 +89,7 @@
 |<A HREF="#Q_pa">Q_pa</A>|	motion: <A HREF="pattern.html#Pattern">Pattern</A> searches	|<A HREF="#Q_ur">Q_ur</A>|	Undo/Redo commands
 |<A HREF="#Q_ma">Q_ma</A>|	motion: Marks			|<A HREF="#Q_et">Q_et</A>|	External commands
 |<A HREF="#Q_vm">Q_vm</A>|	motion: Various			|<A HREF="#Q_qf">Q_qf</A>|	<A HREF="quickfix.html#Quickfix">Quickfix</A> commands
-|<A HREF="#Q_ta">Q_ta</A>|	motion: Using <A HREF="tagsrch.html#tags">tags</A>		|<A HREF="#Q_vc">Q_vc</A>|	Various commands
+|<A HREF="#Q_ta">Q_ta</A>|	motion: Using <A HREF="tagsrch.html#tags">标签</A>		|<A HREF="#Q_vc">Q_vc</A>|	Various commands
 |<A HREF="#Q_sc">Q_sc</A>|	Scrolling			|<A HREF="#Q_ce">Q_ce</A>|	<A HREF="intro.html#Ex">Ex</A>: <A HREF="cmdline.html#Command-line">Command-line</A> editing
 |<A HREF="#Q_in">Q_in</A>|	insert: Inserting text		|<A HREF="#Q_ra">Q_ra</A>|	<A HREF="intro.html#Ex">Ex</A>: Ranges
 |<A HREF="#Q_ai">Q_ai</A>|	insert: Keys			|<A HREF="#Q_ex">Q_ex</A>|	<A HREF="intro.html#Ex">Ex</A>: Special characters
@@ -147,7 +147,7 @@ N is used to indicate an optional <A HREF="intro.html#count">count</A> that can 
 |<A HREF="motion.html#gg">gg</A>|	N  gg		goto line N (default: first line), on the first
 			   non-blank character
 |<A HREF="motion.html#N&#37;">N&#37;</A>|	N  &#37;		goto line N percentage down in the file; N must be
-			   given, otherwise <A HREF="motion.html#it">it</A> is the |<A HREF="motion.html#&#37;">&#37;</A>| command
+			   given, otherwise <A HREF="motion.html#it">它</A> is the |<A HREF="motion.html#&#37;">&#37;</A>| command
 |<A HREF="motion.html#gk">gk</A>|	N  gk		up N screen lines (differs from &quot;k&quot; when line wraps)
 |<A HREF="motion.html#gj">gj</A>|	N  gj		down N screen lines (differs from &quot;j&quot; when line wraps)
 ------------------------------------------------------------------------------
@@ -285,32 +285,32 @@ N is used to indicate an optional <A HREF="intro.html#count">count</A> that can 
 |<A HREF="motion.html#:go">:go</A>|	:[range]go[to] [off]	go to [off] byte in the buffer
 ------------------------------------------------------------------------------
 
-*<A NAME="Q_ta"></A><B>Q_ta</B>*		Using <A HREF="tagsrch.html#tags">tags</A>
+*<A NAME="Q_ta"></A><B>Q_ta</B>*		Using <A HREF="tagsrch.html#tags">标签</A>
 
-|<A HREF="tagsrch.html#:ta">:ta</A>|      :ta[g][!] {tag}	jump to <A HREF="tagsrch.html#tag">tag</A> {tag}
-|<A HREF="tagsrch.html#:ta">:ta</A>|      :[count]ta[g][!]	jump to [count]'th newer <A HREF="tagsrch.html#tag">tag</A> in <A HREF="tagsrch.html#tag">tag</A> <A HREF="eval.html#list">list</A>
-|<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>|      CTRL-]		jump to the <A HREF="tagsrch.html#tag">tag</A> under cursor, unless changes
+|<A HREF="tagsrch.html#:ta">:ta</A>|      :ta[g][!] {tag}	jump to <A HREF="tagsrch.html#tag">标签</A> {tag}
+|<A HREF="tagsrch.html#:ta">:ta</A>|      :[count]ta[g][!]	jump to [count]'th newer <A HREF="tagsrch.html#tag">标签</A> in <A HREF="tagsrch.html#tag">标签</A> <A HREF="eval.html#list">list</A>
+|<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>|      CTRL-]		jump to the <A HREF="tagsrch.html#tag">标签</A> under cursor, unless changes
 				   have been made
-|<A HREF="tagsrch.html#:ts">:ts</A>|      :ts[elect][!] [tag]	<A HREF="eval.html#list">list</A> matching <A HREF="tagsrch.html#tags">tags</A> and select one to jump to
-|<A HREF="tagsrch.html#:tjump">:tjump</A>|   :tj[ump][!] [tag]	jump to <A HREF="tagsrch.html#tag">tag</A> [tag] or select from <A HREF="eval.html#list">list</A> when
+|<A HREF="tagsrch.html#:ts">:ts</A>|      :ts[elect][!] [tag]	<A HREF="eval.html#list">list</A> matching <A HREF="tagsrch.html#tags">标签</A> and select one to jump to
+|<A HREF="tagsrch.html#:tjump">:tjump</A>|   :tj[ump][!] [tag]	jump to <A HREF="tagsrch.html#tag">标签</A> [tag] or select from <A HREF="eval.html#list">list</A> when
 				   there are multiple matches
-|<A HREF="tagsrch.html#:ltag">:ltag</A>|    :lt[ag][!] [tag]	jump to tag [tag] and add matching <A HREF="tagsrch.html#tags">tags</A> to the
+|<A HREF="tagsrch.html#:ltag">:ltag</A>|    :lt[ag][!] [tag]	jump to tag [tag] and add matching <A HREF="tagsrch.html#tags">标签</A> to the
 				   location <A HREF="eval.html#list">list</A>
 
 |<A HREF="tagsrch.html#:tags">:tags</A>|    :tags		print tag <A HREF="eval.html#list">list</A>
-|<A HREF="tagsrch.html#CTRL-T">CTRL-T</A>|   N  CTRL-T		jump back from Nth older <A HREF="tagsrch.html#tag">tag</A> in <A HREF="tagsrch.html#tag">tag</A> <A HREF="eval.html#list">list</A>
-|<A HREF="tagsrch.html#:po">:po</A>|      :[count]po[p][!]	jump back from [count]'th older <A HREF="tagsrch.html#tag">tag</A> in <A HREF="tagsrch.html#tag">tag</A> <A HREF="eval.html#list">list</A>
-|<A HREF="tagsrch.html#:tnext">:tnext</A>|   :[count]tn[ext][!]	jump to [count]'th next matching <A HREF="tagsrch.html#tag">tag</A>
-|<A HREF="tagsrch.html#:tp">:tp</A>|      :[count]tp[revious][!] jump to [count]'th previous matching <A HREF="tagsrch.html#tag">tag</A>
-|<A HREF="tagsrch.html#:tr">:tr</A>|      :[count]tr[ewind][!]	jump to [count]'th matching <A HREF="tagsrch.html#tag">tag</A>
-|<A HREF="tagsrch.html#:tl">:tl</A>|      :tl[ast][!]		jump to last matching <A HREF="tagsrch.html#tag">tag</A>
+|<A HREF="tagsrch.html#CTRL-T">CTRL-T</A>|   N  CTRL-T		jump back from Nth older <A HREF="tagsrch.html#tag">标签</A> in <A HREF="tagsrch.html#tag">标签</A> <A HREF="eval.html#list">list</A>
+|<A HREF="tagsrch.html#:po">:po</A>|      :[count]po[p][!]	jump back from [count]'th older <A HREF="tagsrch.html#tag">标签</A> in <A HREF="tagsrch.html#tag">标签</A> <A HREF="eval.html#list">list</A>
+|<A HREF="tagsrch.html#:tnext">:tnext</A>|   :[count]tn[ext][!]	jump to [count]'th next matching <A HREF="tagsrch.html#tag">标签</A>
+|<A HREF="tagsrch.html#:tp">:tp</A>|      :[count]tp[revious][!] jump to [count]'th previous matching <A HREF="tagsrch.html#tag">标签</A>
+|<A HREF="tagsrch.html#:tr">:tr</A>|      :[count]tr[ewind][!]	jump to [count]'th matching <A HREF="tagsrch.html#tag">标签</A>
+|<A HREF="tagsrch.html#:tl">:tl</A>|      :tl[ast][!]		jump to last matching <A HREF="tagsrch.html#tag">标签</A>
 
 |<A HREF="windows.html#:ptag">:ptag</A>|    :pt[ag] {tag}	open a preview<A HREF="windows.html#window">窗口</A>to show tag {tag}
-|<A HREF="windows.html#CTRL-W_}">CTRL-W_}</A>|    CTRL-W }		like <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> but show <A HREF="tagsrch.html#tag">tag</A> in preview<A HREF="windows.html#window">窗口</A>
-|<A HREF="tagsrch.html#:pts">:pts</A>|     :pts[elect]		like &quot;<A HREF="tagsrch.html#:tselect">:tselect</A>&quot; but show <A HREF="tagsrch.html#tag">tag</A> in preview<A HREF="windows.html#window">窗口</A>
-|<A HREF="tagsrch.html#:ptjump">:ptjump</A>|  :ptj[ump]		like &quot;<A HREF="tagsrch.html#:tjump">:tjump</A>&quot; but show <A HREF="tagsrch.html#tag">tag</A> in preview<A HREF="windows.html#window">窗口</A>
-|<A HREF="windows.html#:pclose">:pclose</A>|  :pc[lose]		close <A HREF="tagsrch.html#tag">tag</A> preview<A HREF="windows.html#window">窗口</A>
-|<A HREF="windows.html#CTRL-W_z">CTRL-W_z</A>|    CTRL-W z		close <A HREF="tagsrch.html#tag">tag</A> preview<A HREF="windows.html#window">窗口</A>
+|<A HREF="windows.html#CTRL-W_}">CTRL-W_}</A>|    CTRL-W }		like <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> but show <A HREF="tagsrch.html#tag">标签</A> in preview<A HREF="windows.html#window">窗口</A>
+|<A HREF="tagsrch.html#:pts">:pts</A>|     :pts[elect]		like &quot;<A HREF="tagsrch.html#:tselect">:tselect</A>&quot; but show <A HREF="tagsrch.html#tag">标签</A> in preview<A HREF="windows.html#window">窗口</A>
+|<A HREF="tagsrch.html#:ptjump">:ptjump</A>|  :ptj[ump]		like &quot;<A HREF="tagsrch.html#:tjump">:tjump</A>&quot; but show <A HREF="tagsrch.html#tag">标签</A> in preview<A HREF="windows.html#window">窗口</A>
+|<A HREF="windows.html#:pclose">:pclose</A>|  :pc[lose]		close <A HREF="tagsrch.html#tag">标签</A> preview<A HREF="windows.html#window">窗口</A>
+|<A HREF="windows.html#CTRL-W_z">CTRL-W_z</A>|    CTRL-W z		close <A HREF="tagsrch.html#tag">标签</A> preview<A HREF="windows.html#window">窗口</A>
 ------------------------------------------------------------------------------
 
 *<A NAME="Q_sc"></A><B>Q_sc</B>*		Scrolling
@@ -407,7 +407,7 @@ moving around:
 |<A HREF="digraph.html#:dig">:dig</A>|	   :dig[raphs] {char1}{char2} {number} <A HREF="eval.html#...">...</A>
 				add digraph(s) to the <A HREF="eval.html#list">list</A>
 
-In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line">Command-line</A> mode:
+In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line">命令行</A>模式:
 |<A HREF="insert.html#i_CTRL-K">i_CTRL-K</A>|	CTRL-K {char1} {char2}
 				  enter <A HREF="digraph.html#digraph">digraph</A>
 |<A HREF="digraph.html#i_digraph">i_digraph</A>|	{char1} <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> {char2}
@@ -568,8 +568,8 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 |<A HREF="motion.html#v_iB">v_iB</A>|	   N  iB	<A HREF="visual.html#Select">Select</A> &quot;inner Block&quot; (from &quot;<A HREF="motion.html#[{">[{</A>&quot; to &quot;<A HREF="motion.html#]}">]}</A>&quot;)
 |<A HREF="motion.html#v_a&gt;">v_a&gt;</A>|	   N  a&gt;	<A HREF="visual.html#Select">Select</A> &quot;a <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block&quot;
 |<A HREF="motion.html#v_i&gt;">v_i&gt;</A>|	   N  i&gt;	<A HREF="visual.html#Select">Select</A> &quot;inner <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block&quot;
-|<A HREF="motion.html#v_at">v_at</A>|	   N  at	<A HREF="visual.html#Select">Select</A> &quot;a <A HREF="tagsrch.html#tag">tag</A> block&quot; (from &lt;aaa&gt; to &lt;/aaa&gt;)
-|<A HREF="motion.html#v_it">v_it</A>|	   N  it	<A HREF="visual.html#Select">Select</A> &quot;inner <A HREF="tagsrch.html#tag">tag</A> block&quot; (from &lt;aaa&gt; to &lt;/aaa&gt;)
+|<A HREF="motion.html#v_at">v_at</A>|	   N  at	<A HREF="visual.html#Select">Select</A> &quot;a <A HREF="tagsrch.html#tag">标签</A> block&quot; (from &lt;aaa&gt; to &lt;/aaa&gt;)
+|<A HREF="motion.html#v_it">v_it</A>|	   N  it	<A HREF="visual.html#Select">Select</A> &quot;inner <A HREF="tagsrch.html#tag">标签</A> block&quot; (from &lt;aaa&gt; to &lt;/aaa&gt;)
 |<A HREF="motion.html#v_a'">v_a'</A>|	   N  a'	<A HREF="visual.html#Select">Select</A> &quot;a single quoted string&quot;
 |<A HREF="motion.html#v_i'">v_i'</A>|	   N  i'	<A HREF="visual.html#Select">Select</A> &quot;inner single quoted string&quot;
 |<A HREF="motion.html#v_aquote">v_aquote</A>| N  a&quot;	<A HREF="visual.html#Select">Select</A> &quot;a double quoted string&quot;
@@ -616,14 +616,14 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 |<A HREF="map.html#:unmap">:unmap</A>|     :unm[ap] <A HREF="map.html#{lhs}">{lhs}</A>	  remove the <A HREF="map.html#mapping">mapping</A> of <A HREF="map.html#{lhs}">{lhs}</A> for <A HREF="intro.html#Normal">Normal</A> and
 				     <A HREF="visual.html#Visual">Visual</A> mode
 |<A HREF="map.html#:unmap!">:unmap!</A>|    :unm[ap]! <A HREF="map.html#{lhs}">{lhs}</A>	  remove the <A HREF="map.html#mapping">mapping</A> of <A HREF="map.html#{lhs}">{lhs}</A> for <A HREF="insert.html#Insert">Insert</A> and
-				     <A HREF="cmdline.html#Command-line">Command-line</A> mode
+				     <A HREF="cmdline.html#Command-line">命令行</A>模式
 |<A HREF="map.html#:map_l">:map_l</A>|     :ma[p] [lhs]	  <A HREF="eval.html#list">list</A> mappings (starting with [lhs]) for
 				     <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode
 |<A HREF="map.html#:map_l!">:map_l!</A>|    :ma[p]! [lhs]	  <A HREF="eval.html#list">list</A> mappings (starting with [lhs]) for
-				     <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode
+				     <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">命令行</A>模式
 |<A HREF="map.html#:cmap">:cmap</A>|      :cmap/:cunmap/:cnoremap
 				  like &quot;:map!&quot;/&quot;:unmap!&quot;/&quot;:noremap!&quot; but for
-				     <A HREF="cmdline.html#Command-line">Command-line</A> mode only
+				     <A HREF="cmdline.html#Command-line">命令行</A>模式 only
 |<A HREF="map.html#:imap">:imap</A>|      :imap/:iunmap/:inoremap
 				  like &quot;:map!&quot;/&quot;:unmap!&quot;/&quot;:noremap!&quot; but for
 				     <A HREF="intro.html#Insert">插入</A>模式 only
@@ -663,7 +663,7 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 |<A HREF="map.html#:noreabbrev">:noreabbrev</A>|	:norea[bbrev] [lhs] [rhs]  like &quot;<A HREF="map.html#:ab">:ab</A>&quot;, but don't remap [rhs]
 |<A HREF="map.html#:iabbrev">:iabbrev</A>|	:iab/:iunab/:inoreab	   like &quot;<A HREF="map.html#:ab">:ab</A>&quot;, but only for <A HREF="intro.html#Insert">插入</A>模式
 |<A HREF="map.html#:cabbrev">:cabbrev</A>|	:cab/:cunab/:cnoreab	   like &quot;<A HREF="map.html#:ab">:ab</A>&quot;, but only for
-						<A HREF="cmdline.html#Command-line">Command-line</A> mode
+						<A HREF="cmdline.html#Command-line">命令行</A>模式
 |<A HREF="map.html#:abclear">:abclear</A>|	:abc[lear]		   remove all <A HREF="map.html#abbreviations">abbreviations</A>
 |<A HREF="map.html#:cabclear">:cabclear</A>|	:cabc[lear]		   remove all abbr's for <A HREF="cmdline.html#Cmdline">Cmdline</A> mode
 |<A HREF="map.html#:iabclear">:iabclear</A>|	:iabc[lear]		   remove all abbr's for <A HREF="intro.html#Insert">插入</A>模式
@@ -673,9 +673,9 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 
 |<A HREF="options.html#:set">:set</A>|		:se[t]			  show all modified <A HREF="options.html#options">options</A>
 |<A HREF="options.html#:set">:set</A>|		:se[t] all		  show all <A HREF="options.html#options">options</A>
-|<A HREF="options.html#:set">:set</A>|		:se[t] {option}		  set <A HREF="options.html#boolean">boolean</A> option (switch <A HREF="motion.html#it">it</A> on),
+|<A HREF="options.html#:set">:set</A>|		:se[t] {option}		  set <A HREF="options.html#boolean">boolean</A> option (switch <A HREF="motion.html#it">它</A> on),
 					  show <A HREF="eval.html#string">string</A> or number option
-|<A HREF="options.html#:set">:set</A>|		:se[t] no{option}	  reset <A HREF="options.html#boolean">boolean</A> option (switch <A HREF="motion.html#it">it</A> off)
+|<A HREF="options.html#:set">:set</A>|		:se[t] no{option}	  reset <A HREF="options.html#boolean">boolean</A> option (switch <A HREF="motion.html#it">它</A> off)
 |<A HREF="options.html#:set">:set</A>|		:se[t] inv{option}	  invert <A HREF="options.html#boolean">boolean</A> option
 |<A HREF="options.html#:set">:set</A>|		:se[t] {option}={value}	  set string/number option to {value}
 |<A HREF="options.html#:set">:set</A>|		:se[t] {option}+={value}  append {value} to <A HREF="eval.html#string">string</A> option, add
@@ -698,7 +698,7 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 
 Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>*
 <A HREF="options.html#'aleph'">'aleph'</A>		  <A HREF="options.html#'al'">'al'</A>	    ASCII code of the <A HREF="print.html#letter">letter</A> <A HREF="options.html#Aleph">Aleph</A> (Hebrew)
-<A HREF="options.html#'allowrevins'">'allowrevins'</A>	  <A HREF="options.html#'ari'">'ari'</A>     allow CTRL-_ in <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode
+<A HREF="options.html#'allowrevins'">'allowrevins'</A>	  <A HREF="options.html#'ari'">'ari'</A>     allow CTRL-_ in <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">命令行</A>模式
 <A HREF="options.html#'ambiwidth'">'ambiwidth'</A>	  <A HREF="options.html#'ambw'">'ambw'</A>    what to <A HREF="diff.html#do">do</A> with <A HREF="mbyte.html#Unicode">Unicode</A> chars of ambiguous width
 <A HREF="options.html#'autochdir'">'autochdir'</A>	  <A HREF="options.html#'acd'">'acd'</A>     change directory to the file in the current<A HREF="windows.html#window">窗口</A>
 <A HREF="options.html#'arabic'">'arabic'</A>	  <A HREF="options.html#'arab'">'arab'</A>    for <A HREF="arabic.html#Arabic">Arabic</A> <A HREF="motion.html#as">as</A> a default second language
@@ -757,9 +757,9 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'cscopeprg'">'cscopeprg'</A>       <A HREF="options.html#'csprg'">'csprg'</A>   command to execute <A HREF="if_cscop.html#cscope">cscope</A>
 <A HREF="options.html#'cscopequickfix'">'cscopequickfix'</A>  <A HREF="options.html#'csqf'">'csqf'</A>    use <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>for <A HREF="if_cscop.html#cscope">cscope</A> results
 <A HREF="options.html#'cscoperelative'">'cscoperelative'</A>  <A HREF="options.html#'csre'">'csre'</A>    Use cscope.out path basename <A HREF="motion.html#as">as</A> prefix
-<A HREF="options.html#'cscopetag'">'cscopetag'</A>       <A HREF="options.html#'cst'">'cst'</A>     use <A HREF="if_cscop.html#cscope">cscope</A> for <A HREF="tagsrch.html#tag">tag</A> commands
+<A HREF="options.html#'cscopetag'">'cscopetag'</A>       <A HREF="options.html#'cst'">'cst'</A>     use <A HREF="if_cscop.html#cscope">cscope</A> for <A HREF="tagsrch.html#tag">标签</A> commands
 <A HREF="options.html#'cscopetagorder'">'cscopetagorder'</A>  <A HREF="options.html#'csto'">'csto'</A>    determines &quot;<A HREF="if_cscop.html#:cstag">:cstag</A>&quot; search order
-<A HREF="options.html#'cursorbind'">'cursorbind'</A>	  <A HREF="options.html#'crb'">'crb'</A>     move cursor in<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> moves in other <A HREF="windows.html#windows">windows</A>
+<A HREF="options.html#'cursorbind'">'cursorbind'</A>	  <A HREF="options.html#'crb'">'crb'</A>     move cursor in<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> moves in other <A HREF="windows.html#windows">windows</A>
 <A HREF="options.html#'cursorcolumn'">'cursorcolumn'</A>	  <A HREF="options.html#'cuc'">'cuc'</A>	    highlight the screen column of the cursor
 <A HREF="options.html#'cursorline'">'cursorline'</A>	  <A HREF="options.html#'cul'">'cul'</A>	    highlight the screen line of the cursor
 <A HREF="options.html#'cursorlineopt'">'cursorlineopt'</A>	  <A HREF="options.html#'culopt'">'culopt'</A>  settings for <A HREF="options.html#'cursorline'">'cursorline'</A>
@@ -792,7 +792,7 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'filetype'">'filetype'</A>	  <A HREF="options.html#'ft'">'ft'</A>	    type of file, used for autocommands
 <A HREF="options.html#'fillchars'">'fillchars'</A>	  <A HREF="options.html#'fcs'">'fcs'</A>     characters to use for displaying special items
 <A HREF="options.html#'fixendofline'">'fixendofline'</A>	  <A HREF="options.html#'fixeol'">'fixeol'</A>  make sure last line in file has <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>
-<A HREF="options.html#'foldclose'">'foldclose'</A>	  <A HREF="options.html#'fcl'">'fcl'</A>     close a fold when the cursor leaves <A HREF="motion.html#it">it</A>
+<A HREF="options.html#'foldclose'">'foldclose'</A>	  <A HREF="options.html#'fcl'">'fcl'</A>     close a fold when the cursor leaves <A HREF="motion.html#it">它</A>
 <A HREF="options.html#'foldcolumn'">'foldcolumn'</A>	  <A HREF="options.html#'fdc'">'fdc'</A>     width of the column used to indicate <A HREF="fold.html#folds">folds</A>
 <A HREF="options.html#'foldenable'">'foldenable'</A>	  <A HREF="options.html#'fen'">'fen'</A>     set to display all <A HREF="fold.html#folds">folds</A> open
 <A HREF="options.html#'foldexpr'">'foldexpr'</A>	  <A HREF="options.html#'fde'">'fde'</A>     <A HREF="eval.html#expression">expression</A> used when <A HREF="options.html#'foldmethod'">'foldmethod'</A> is &quot;<A HREF="eval.html#expr">expr</A>&quot;
@@ -822,7 +822,7 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'helpfile'">'helpfile'</A>	  <A HREF="options.html#'hf'">'hf'</A>	    full path name of the main help file
 <A HREF="options.html#'helpheight'">'helpheight'</A>	  <A HREF="options.html#'hh'">'hh'</A>	    minimum height of a new help<A HREF="windows.html#window">窗口</A>
 <A HREF="options.html#'helplang'">'helplang'</A>	  <A HREF="options.html#'hlg'">'hlg'</A>     preferred help languages
-<A HREF="options.html#'hidden'">'hidden'</A>	  <A HREF="options.html#'hid'">'hid'</A>     don't unload buffer when <A HREF="motion.html#it">it</A> is YXXYabandon|ed
+<A HREF="options.html#'hidden'">'hidden'</A>	  <A HREF="options.html#'hid'">'hid'</A>     don't unload buffer when <A HREF="motion.html#it">它</A> is YXXYabandon|ed
 <A HREF="options.html#'hlsearch'">'hlsearch'</A>	  <A HREF="options.html#'hls'">'hls'</A>     highlight matches with last search <A HREF="pattern.html#pattern">pattern</A>
 <A HREF="options.html#'history'">'history'</A>	  <A HREF="options.html#'hi'">'hi'</A>	    number of command-lines that are remembered
 <A HREF="options.html#'hkmap'">'hkmap'</A>		  <A HREF="options.html#'hk'">'hk'</A>	    Hebrew keyboard <A HREF="map.html#mapping">mapping</A>
@@ -955,7 +955,7 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'shortmess'">'shortmess'</A>	  <A HREF="options.html#'shm'">'shm'</A>     <A HREF="eval.html#list">list</A> of flags, reduce length of <A HREF="message.html#messages">messages</A>
 <A HREF="options.html#'showbreak'">'showbreak'</A>	  <A HREF="options.html#'sbr'">'sbr'</A>     <A HREF="eval.html#string">string</A> to use at the start of wrapped lines
 <A HREF="options.html#'showcmd'">'showcmd'</A>	  <A HREF="options.html#'sc'">'sc'</A>	    show (partial) command in status line
-<A HREF="options.html#'showfulltag'">'showfulltag'</A>	  <A HREF="options.html#'sft'">'sft'</A>     show full <A HREF="tagsrch.html#tag">tag</A> <A HREF="pattern.html#pattern">pattern</A> when completing <A HREF="tagsrch.html#tag">tag</A>
+<A HREF="options.html#'showfulltag'">'showfulltag'</A>	  <A HREF="options.html#'sft'">'sft'</A>     show full <A HREF="tagsrch.html#tag">标签</A> <A HREF="pattern.html#pattern">pattern</A> when completing <A HREF="tagsrch.html#tag">标签</A>
 <A HREF="options.html#'showmatch'">'showmatch'</A>	  <A HREF="options.html#'sm'">'sm'</A>	    briefly jump to matching bracket if insert one
 <A HREF="options.html#'showmode'">'showmode'</A>	  <A HREF="options.html#'smd'">'smd'</A>     message on status line to show current mode
 <A HREF="options.html#'showtabline'">'showtabline'</A>	  <A HREF="options.html#'stal'">'stal'</A>    tells when the <A HREF="intro.html#tab">tab</A> pages line is displayed
@@ -966,11 +966,11 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'smartindent'">'smartindent'</A>	  <A HREF="options.html#'si'">'si'</A>	    smart autoindenting for C programs
 <A HREF="options.html#'smarttab'">'smarttab'</A>	  <A HREF="options.html#'sta'">'sta'</A>     use <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> when <A HREF="insert.html#inserting">inserting</A> <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>
 <A HREF="options.html#'softtabstop'">'softtabstop'</A>	  <A HREF="options.html#'sts'">'sts'</A>     number of spaces that <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> uses while editing
-<A HREF="options.html#'spell'">'spell'</A>			    enable <A HREF="spell.html#spell">spell</A> checking
+<A HREF="options.html#'spell'">'spell'</A>			    enable <A HREF="spell.html#spell">拼写</A> checking
 <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A>   <A HREF="options.html#'spc'">'spc'</A>     <A HREF="pattern.html#pattern">pattern</A> to locate end of a <A HREF="motion.html#sentence">sentence</A>
 <A HREF="options.html#'spellfile'">'spellfile'</A>	  <A HREF="options.html#'spf'">'spf'</A>     files where |<A HREF="spell.html#zg">zg</A>| and |<A HREF="spell.html#zw">zw</A>| store words
-<A HREF="options.html#'spelllang'">'spelllang'</A>	  <A HREF="options.html#'spl'">'spl'</A>     language(s) to <A HREF="diff.html#do">do</A> <A HREF="spell.html#spell">spell</A> checking for
-<A HREF="options.html#'spelloptions'">'spelloptions'</A>	  <A HREF="options.html#'spo'">'spo'</A>     <A HREF="options.html#options">options</A> for <A HREF="spell.html#spell">spell</A> checking
+<A HREF="options.html#'spelllang'">'spelllang'</A>	  <A HREF="options.html#'spl'">'spl'</A>     language(s) to <A HREF="diff.html#do">do</A> <A HREF="spell.html#spell">拼写</A> checking for
+<A HREF="options.html#'spelloptions'">'spelloptions'</A>	  <A HREF="options.html#'spo'">'spo'</A>     <A HREF="options.html#options">options</A> for <A HREF="spell.html#spell">拼写</A> checking
 <A HREF="options.html#'spellsuggest'">'spellsuggest'</A>	  <A HREF="options.html#'sps'">'sps'</A>     method(s) used to suggest spelling corrections
 <A HREF="options.html#'splitbelow'">'splitbelow'</A>	  <A HREF="options.html#'sb'">'sb'</A>	    new<A HREF="windows.html#window">窗口</A>from split is below the current one
 <A HREF="options.html#'splitright'">'splitright'</A>	  <A HREF="options.html#'spr'">'spr'</A>     new<A HREF="windows.html#window">窗口</A>is put right of the current one
@@ -985,12 +985,12 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'tabline'">'tabline'</A>	  <A HREF="options.html#'tal'">'tal'</A>     custom format for the console <A HREF="intro.html#tab">tab</A> pages line
 <A HREF="options.html#'tabpagemax'">'tabpagemax'</A>	  <A HREF="options.html#'tpm'">'tpm'</A>     maximum number of <A HREF="intro.html#tab">tab</A> pages for |<A HREF="starting.html#-p">-p</A>| and &quot;<A HREF="intro.html#tab">tab</A> all&quot;
 <A HREF="options.html#'tabstop'">'tabstop'</A>	  <A HREF="options.html#'ts'">'ts'</A>	    number of spaces that <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> in file uses
-<A HREF="options.html#'tagbsearch'">'tagbsearch'</A>	  <A HREF="options.html#'tbs'">'tbs'</A>     use binary searching in <A HREF="tagsrch.html#tags">tags</A> files
-<A HREF="options.html#'tagcase'">'tagcase'</A>	  <A HREF="options.html#'tc'">'tc'</A>      how to handle <A HREF="change.html#case">case</A> when searching in <A HREF="tagsrch.html#tags">tags</A> files
-<A HREF="options.html#'taglength'">'taglength'</A>	  <A HREF="options.html#'tl'">'tl'</A>	    number of significant characters for a <A HREF="tagsrch.html#tag">tag</A>
-<A HREF="options.html#'tagrelative'">'tagrelative'</A>	  <A HREF="options.html#'tr'">'tr'</A>	    file names in <A HREF="tagsrch.html#tag">tag</A> file are relative
-<A HREF="options.html#'tags'">'tags'</A>		  <A HREF="options.html#'tag'">'tag'</A>     <A HREF="eval.html#list">list</A> of file names used by the <A HREF="tagsrch.html#tag">tag</A> command
-<A HREF="options.html#'tagstack'">'tagstack'</A>	  <A HREF="options.html#'tgst'">'tgst'</A>    push <A HREF="tagsrch.html#tags">tags</A> onto the <A HREF="tagsrch.html#tag">tag</A> stack
+<A HREF="options.html#'tagbsearch'">'tagbsearch'</A>	  <A HREF="options.html#'tbs'">'tbs'</A>     use binary searching in <A HREF="tagsrch.html#tags">标签</A> files
+<A HREF="options.html#'tagcase'">'tagcase'</A>	  <A HREF="options.html#'tc'">'tc'</A>      how to handle <A HREF="change.html#case">case</A> when searching in <A HREF="tagsrch.html#tags">标签</A> files
+<A HREF="options.html#'taglength'">'taglength'</A>	  <A HREF="options.html#'tl'">'tl'</A>	    number of significant characters for a <A HREF="tagsrch.html#tag">标签</A>
+<A HREF="options.html#'tagrelative'">'tagrelative'</A>	  <A HREF="options.html#'tr'">'tr'</A>	    file names in <A HREF="tagsrch.html#tag">标签</A> file are relative
+<A HREF="options.html#'tags'">'tags'</A>		  <A HREF="options.html#'tag'">'tag'</A>     <A HREF="eval.html#list">list</A> of file names used by the <A HREF="tagsrch.html#tag">标签</A> command
+<A HREF="options.html#'tagstack'">'tagstack'</A>	  <A HREF="options.html#'tgst'">'tgst'</A>    push <A HREF="tagsrch.html#tags">标签</A> onto the <A HREF="tagsrch.html#tag">标签</A> stack
 <A HREF="vim_diff.html#'term'">'term'</A>			    name of the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
 <A HREF="options.html#'termbidi'">'termbidi'</A>	  <A HREF="options.html#'tbidi'">'tbidi'</A>   <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> takes care of bi-directionality
 <A HREF="options.html#'textwidth'">'textwidth'</A>	  <A HREF="options.html#'tw'">'tw'</A>	    maximum width of text that is being inserted
@@ -1114,13 +1114,13 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 *<A NAME="Q_ce"></A><B>Q_ce</B>*		<A HREF="cmdline.html#Command-line">Command-line</A> editing
 
 |<A HREF="cmdline.html#c_&lt;Esc&gt;">c_&lt;Esc&gt;</A>|	&lt;Esc&gt;		   <A HREF="editing.html#abandon">abandon</A> command-line (if <A HREF="options.html#'wildchar'">'wildchar'</A> is
-				      <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, type <A HREF="motion.html#it">it</A> <A HREF="if_cscop.html#twice">twice</A>)
+				      <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, type <A HREF="motion.html#it">它</A> <A HREF="if_cscop.html#twice">twice</A>)
 
 |<A HREF="cmdline.html#c_CTRL-V">c_CTRL-V</A>|	CTRL-V {char}	   insert {char} literally
 |<A HREF="cmdline.html#c_CTRL-V">c_CTRL-V</A>|	CTRL-V {number}    enter decimal value of character (up to
 				      three digits)
 |<A HREF="cmdline.html#c_CTRL-K">c_CTRL-K</A>|	CTRL-K {char1} {char2}
-				   enter <A HREF="digraph.html#digraph">digraph</A> (See |<A HREF="#Q_di">Q_di</A>|)
+				   enter <A HREF="digraph.html#digraph">digraph</A> (见 |<A HREF="#Q_di">Q_di</A>|)
 |<A HREF="cmdline.html#c_CTRL-R">c_CTRL-R</A>|	CTRL-R <A HREF="change.html#{register}">{register}</A>  insert the contents of a <A HREF="intro.html#register">register</A>
 
 |<A HREF="cmdline.html#c_&lt;Left&gt;">c_&lt;Left&gt;</A>|	&lt;Left&gt;/&lt;Right&gt;	   cursor left/right
@@ -1197,7 +1197,7 @@ Context-sensitive completion on the command-line:
 |<A HREF="cmdline.html#:&lt;cword&gt;">:&lt;cword&gt;</A>|  &lt;cword&gt;	word under the cursor (only where a file name is
 			   expected)
 |<A HREF="cmdline.html#:&lt;cWORD&gt;">:&lt;cWORD&gt;</A>|  &lt;cWORD&gt;	WORD under the cursor (only where a file name is
-			   expected) (see |<A HREF="motion.html#word">单词</A>|)
+			   expected) (见 |<A HREF="motion.html#word">单词</A>|)
 |<A HREF="cmdline.html#:&lt;cfile&gt;">:&lt;cfile&gt;</A>|  &lt;cfile&gt;	file name under the cursor (only where a file name is
 			   expected)
 |<A HREF="cmdline.html#:&lt;sfile&gt;">:&lt;sfile&gt;</A>|  &lt;sfile&gt;	file name of a &quot;<A HREF="repeat.html#:source">:source</A>&quot;d file, within that file (only
@@ -1220,7 +1220,7 @@ Context-sensitive completion on the command-line:
 |<A HREF="starting.html#-qf">-qf</A>|	   vim [options] -q [fname]	start editing in QuickFix mode,
 					   display the first error
 
-	Most useful Vim arguments (for full <A HREF="eval.html#list">list</A> see |<A HREF="starting.html#startup-options">startup-options</A>|)
+	Most useful Vim arguments (for full <A HREF="eval.html#list">list</A> 见 |<A HREF="starting.html#startup-options">startup-options</A>|)
 
 |<A HREF="starting.html#-+">-+</A>|	+[num]		    put the cursor at line [num] (default: last line)
 |<A HREF="starting.html#-+c">-+c</A>|	+{command}	    execute {command} after loading the file
@@ -1256,7 +1256,7 @@ Context-sensitive completion on the command-line:
 |<A HREF="editing.html#:edit_f">:edit_f</A>|  :e[dit][!] <A HREF="editing.html#{file}">{file}</A>	edit <A HREF="editing.html#{file}">{file}</A>
 |<A HREF="editing.html#:edit">:edit</A>|    :e[dit][!]		<A HREF="editing.html#reload">reload</A> the current file
 |<A HREF="editing.html#:enew">:enew</A>|    :ene[w][!]		edit a new, unnamed buffer
-|<A HREF="editing.html#:find">:find</A>|    :fin[d][!] <A HREF="editing.html#{file}">{file}</A>	find <A HREF="editing.html#{file}">{file}</A> in <A HREF="options.html#'path'">'path'</A> and edit <A HREF="motion.html#it">it</A>
+|<A HREF="editing.html#:find">:find</A>|    :fin[d][!] <A HREF="editing.html#{file}">{file}</A>	find <A HREF="editing.html#{file}">{file}</A> in <A HREF="options.html#'path'">'path'</A> and edit <A HREF="motion.html#it">它</A>
 
 |<A HREF="editing.html#CTRL-^">CTRL-^</A>|   N  CTRL-^		edit alternate file N (equivalent to &quot;<A HREF="editing.html#:e">:e</A> #N&quot;)
 |<A HREF="editing.html#gf">gf</A>|          gf  or <A HREF="deprecated.html#]f">]f</A>		edit the file whose name is under the cursor
@@ -1293,7 +1293,7 @@ Context-sensitive completion on the command-line:
 *<A NAME="Q_wq"></A><B>Q_wq</B>*		Writing and quitting
 
 |<A HREF="editing.html#:w">:w</A>|	  :[range]w[rite][!]		write to the current file
-|<A HREF="editing.html#:w_f">:w_f</A>|	  :[range]w[rite] <A HREF="editing.html#{file}">{file}</A>	write to <A HREF="editing.html#{file}">{file}</A>, unless <A HREF="motion.html#it">it</A> already
+|<A HREF="editing.html#:w_f">:w_f</A>|	  :[range]w[rite] <A HREF="editing.html#{file}">{file}</A>	write to <A HREF="editing.html#{file}">{file}</A>, unless <A HREF="motion.html#it">它</A> already
 					   exists
 |<A HREF="editing.html#:w_f">:w_f</A>|	  :[range]w[rite]! <A HREF="editing.html#{file}">{file}</A>	write to <A HREF="editing.html#{file}">{file}</A>.  Overwrite an existing
 					   file
@@ -1369,9 +1369,9 @@ Context-sensitive completion on the command-line:
 |<A HREF="windows.html#:vertical">:vertical</A>|	:vertical {cmd}		make {cmd} split vertically
 
 |<A HREF="windows.html#:sfind">:sfind</A>|	:sf[ind] <A HREF="editing.html#{file}">{file}</A>		split<A HREF="windows.html#window">窗口</A>, find <A HREF="editing.html#{file}">{file}</A> in <A HREF="options.html#'path'">'path'</A>
-					   and edit <A HREF="motion.html#it">it</A>
+					   and edit <A HREF="motion.html#it">它</A>
 |<A HREF="various.html#:terminal">:terminal</A>|	:terminal {cmd}		open a terminal<A HREF="windows.html#window">窗口</A>
-|<A HREF="windows.html#CTRL-W_]">CTRL-W_]</A>|	CTRL-W ]		split<A HREF="windows.html#window">窗口</A>and jump to <A HREF="tagsrch.html#tag">tag</A> under
+|<A HREF="windows.html#CTRL-W_]">CTRL-W_]</A>|	CTRL-W ]		split<A HREF="windows.html#window">窗口</A>and jump to <A HREF="tagsrch.html#tag">标签</A> under
 					   cursor
 |<A HREF="windows.html#CTRL-W_f">CTRL-W_f</A>|	CTRL-W f		split<A HREF="windows.html#window">窗口</A>and edit file name under
 					   the cursor
@@ -1415,7 +1415,7 @@ Context-sensitive completion on the command-line:
 
 |<A HREF="windows.html#:badd">:badd</A>|		:badd {fname}		add file name {fname} to the <A HREF="eval.html#list">list</A>
 |<A HREF="windows.html#:bunload">:bunload</A>|	:bunload[!] [N]		unload buffer [N] from memory
-|<A HREF="windows.html#:bdelete">:bdelete</A>|	:bdelete[!] [N]		unload buffer [N] and delete <A HREF="motion.html#it">it</A> from
+|<A HREF="windows.html#:bdelete">:bdelete</A>|	:bdelete[!] [N]		unload buffer [N] and delete <A HREF="motion.html#it">它</A> from
 					   the buffer <A HREF="eval.html#list">list</A>
 
 <B><FONT color="#3A6F2B">		in current window  in new window       </FONT></B>

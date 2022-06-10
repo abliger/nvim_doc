@@ -301,211 +301,157 @@ Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模�
 
 ==============================================================================
 
-*<A NAME="02.6"></A><B>02.6</B>*	Other editing commands
+*<A NAME="02.6"></A><B>02.6</B>*	其他编辑命令
 
-Vim has a large number of commands to change the text.  See |<A HREF="quickref.html#Q_in">Q_in</A>| and below.
-Here are a few often used ones.
+Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和下面的内容.
+这里是一些经常用到的.
 
 
-APPENDING
+添加
 
-The &quot;<A HREF="insert.html#i">i</A>&quot; command inserts a character before the character under the cursor.
-That works fine; but what happens if you want to add stuff to the end of the
-line?  For that you need to insert text after the cursor.  This is done with
-the &quot;<A HREF="insert.html#a">a</A>&quot; (append) command.
-   For example, to change the line
+&quot;<A HREF="insert.html#i">i</A>&quot;命令在光标之前插入字符.一般情况下，这就够用了，但如果你刚好想在
+行尾加东西怎么办?对于这种情况你需要在光标之后插入字符.使用&quot;<A HREF="insert.html#a">a</A>&quot;(附加)命令就可以了.
+   例如改变这行:
 
 <B><FONT color="#3A6F2B">	and that's not saying much for the turtle. </FONT></B>
-to
+到
 <B><FONT color="#3A6F2B">	and that's not saying much for the turtle!!! </FONT></B>
 
-move the cursor over to the dot at the end of the line. Then type &quot;<A HREF="change.html#x">x</A>&quot; to
-delete the period.  The cursor is now positioned at the end of the line on the
-<A HREF="motion.html#e">e</A> in turtle.  Now type
+移动光标到行尾的句号，然后键入&quot;<A HREF="change.html#x">x</A>&quot;删除句号.光标现在处于行尾‘turtle’的字符e上.现在键入
 
 <B>	a!!!&lt;Esc&gt;</B>
 
-to append three exclamation points after the <A HREF="motion.html#e">e</A> in turtle:
+添加三个感叹号到 turtle 的 "e" 后面:
 
 <B><FONT color="#3A6F2B">	and that's not saying much for the turtle!!! </FONT></B>
 
 
-OPENING UP A NEW LINE
+开始一个新行
 
-The &quot;<A HREF="insert.html#o">o</A>&quot; command creates a new, empty line below the cursor and puts Vim in
-<A HREF="intro.html#Insert">插入</A>模式.  Then you can type the text for the new line.
-   Suppose the cursor is somewhere in the first of these two lines:
+&quot;<A HREF="insert.html#o">o</A>&quot;命令时在光标下创建一个新的空白行并打开Vim的<A HREF="intro.html#Insert">插入</A>模式.然后你可以在新行中输入文本.
+   假定你的光标在下面两行中第一行的某个地方:
 
 <B><FONT color="#3A6F2B">	A very intelligent turtle </FONT></B>
 <B><FONT color="#3A6F2B">	Found programming Unix a hurdle </FONT></B>
 
-If you now use the &quot;<A HREF="insert.html#o">o</A>&quot; command and type new text:
+如果你使用&quot;<A HREF="insert.html#o">o</A>&quot;命令键入下面的文字:
 
 <B>	oThat liked using Vim&lt;Esc&gt;</B>
 
-The result is:
+结果是:
 
 <B><FONT color="#3A6F2B">	A very intelligent turtle </FONT></B>
 <B><FONT color="#3A6F2B">	That liked using Vim </FONT></B>
 <B><FONT color="#3A6F2B">	Found programming Unix a hurdle </FONT></B>
 
-The &quot;<A HREF="insert.html#O">O</A>&quot; command (uppercase) opens a line above the cursor.
+&quot;<A HREF="insert.html#O">O</A>&quot;命令(大写)在光标上方新建新行.
 
 
-USING A COUNT
+指定计数
 
-Suppose you want to move up nine lines.  You can type &quot;kkkkkkkkk&quot; or you can
-enter the command &quot;9k&quot;.  In fact, you can precede many commands with a number.
-Earlier in this chapter, for instance, you added three exclamation points to
-the end of a line by typing &quot;a!!!&lt;Esc&gt;&quot;.  Another way to <A HREF="diff.html#do">do</A> this is to use the
-command &quot;3a!&lt;Esc&gt;&quot;.  The <A HREF="intro.html#count">count</A> of 3 tells the command that follows to triple
-its effect.  Similarly, to delete three characters, use the command &quot;3x&quot;.  The
-<A HREF="intro.html#count">count</A> always comes before the command <A HREF="motion.html#it">it</A> applies to.
+如果你想要光标移动九行.你可能会键入&quot;kkkkkkkkk&quot;或者你能输入命令&quot;9k&quot;.实际上,你能在很多命令前添加数字.
+列如在本文前面提到了行尾添加了三个感叹号&quot;a!!!&lt;Esc&gt;&quot;.另外的方式使用命令&quot;3a!&lt;Esc&gt;&quot;.<A HREF="intro.html#count">数量</A>3告诉命令执行三次.同样的，删除三个字符，使用命令&quot;3x&quot;.<A HREF="intro.html#count">计数</A>总要放在引用的命令前面.
 
 ==============================================================================
 
 *<A NAME="02.7"></A><B>02.7</B>*	退出
 
-To exit, use the &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot; command.  This command writes the file and exits.
+退出可以使用&quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;命令.这个命令会保存文件并退出.
 
-	Note:
-	Unlike many other editors, Vim does not automatically make a <A HREF="editing.html#backup">backup</A>
-	file.  If you type &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;, your changes are committed and there's no
-	turning back.  You can configure the Vim editor to produce <A HREF="editing.html#backup">backup</A>
-	files; see |<A HREF="usr_07.html#07.4">07.4</A>|.
+	注意:
+	不向其他编辑器，不会自动<A HREF="editing.html#backup">备份</A>文件.如果你使用&quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;,你的修改将会提交且不能找回.你可以配置Vim去生成<A HREF="editing.html#backup">备份</A>文件;见|<A HREF="usr_07.html#07.4">07.4</A>|.
 
 
-DISCARDING CHANGES
+放弃修改
 
-Sometimes you will make a sequence of changes and suddenly realize you were
-better off before you started.  Not to worry; Vim has a
-quit-and-throw-things-away command.  It is:
+有时你会做了一系列的修改才突然发现还不如编辑之前.不要担心;Vim有放弃修改并退出命令.它就是:
 
 <B>	:q!</B>
 
-Don't forget to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to finish the command.
+使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>结束此命令.
 
-For those of you interested in the details, the three parts of this command
-are the colon (:), which enters <A HREF="cmdline.html#Command-line">Command-line</A> mode; the <A HREF="repeat.html#q">q</A> command, which tells
-the editor to quit; and the override command modifier (!).
-   The override command modifier is needed because Vim is reluctant to throw
-away changes.  If you were to just type &quot;<A HREF="editing.html#:q">:q</A>&quot;, Vim would display an error
-message and refuse to exit:
+如果你对细节感兴趣，此命令有三部分： 冒号 (:)，它使 Vim 进入<A HREF="cmdline.html#Command-line">命令行</A>模式;<A HREF="repeat.html#q">q</A>命令时Vim的退出命令，感叹号是强制命令修饰符.强制命令修饰符是必须的，它迫使Vim放弃文件的修改.如果只键入&quot;<A HREF="editing.html#:q">:q</A>&quot;,Vim会显示错误信息并拒绝退出:
 
 <B><FONT color="#3A6F2B">	E37: No write since last change (use ! to override) </FONT></B>
 
-By specifying the override, you are in effect telling Vim, &quot;<A HREF="insert.html#I">I</A> know that what
-I'm doing looks stupid, but I really want to <A HREF="diff.html#do">do</A> this.&quot;
-
-If you want to continue editing with Vim: The &quot;:e!&quot; command reloads the
-original version of the file.
+通过指定强制执行，你实际上在告诉 Vim: &quot;<A HREF="insert.html#I">我</A>知道这样做看起来很傻,到那时我真的想要这样<A HREF="diff.html#do">做</A>.&quot;
+如果你想要继续使用Vim编辑: The &quot;:e!&quot;命令可以重新装载原来的文件.
 
 ==============================================================================
 
 *<A NAME="02.8"></A><B>02.8</B>*	寻求帮助
 
-Everything you always wanted to know can be found in the Vim help files.
-Don't be afraid to ask!
+你想要知道的事情都可以在Vim帮助文件中找到答案.随便问!
 
-If you know what you are looking for, <A HREF="motion.html#it">it</A> is usually easier to search for <A HREF="motion.html#it">it</A>
-using the help system, instead of using Google.  Because the subjects follow
-a certain style guide.
+如果你知道你要找什么, 使用Vim的帮助会更简单的找到答案，而不是使用谷歌.因为所有主题符合一定的风格指导.帮助的另一个优点是对应于你特定的 Vim 系统。你不会看到之后加入的命令的帮助。这对你用不上.
 
-Also the help has the advantage of belonging to your particular Vim version.
-You won't see help for commands added later.  These would not work for you.
-
-To get generic help use this command:
+要获得一般的帮助，用这个命令:
 
 <B>	:help</B>
 
-You could also use the first function key <A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A>.  If your keyboard has a <A HREF="helphelp.html#&lt;Help&gt;">&lt;Help&gt;</A>
-key <A HREF="motion.html#it">it</A> might work <A HREF="motion.html#as">as</A> well.
-   If you don't supply a subject, &quot;<A HREF="helphelp.html#:help">:help</A>&quot; displays the general help<A HREF="windows.html#window">窗口</A>.
-The creators of Vim did something very clever (or very lazy) with the help
-system: They made the help<A HREF="windows.html#window">窗口</A>a normal editing<A HREF="windows.html#window">窗口</A>.  You can use all
-the normal Vim commands to move through the help information.  Therefore <A HREF="motion.html#h">h</A>, <A HREF="motion.html#j">j</A>,
-<A HREF="motion.html#k">k</A>, and <A HREF="motion.html#l">l</A> move left, down, up and right.
-   To get out of the help<A HREF="windows.html#window">窗口</A>, use the same command you use to get out of
-the editor: &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;.  This will only close the help<A HREF="windows.html#window">窗口</A>, not exit Vim.
+你也能使用第一个功能键<A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A>.如果你的键盘有<A HREF="helphelp.html#&lt;Help&gt;">&lt;Help&gt;</A>键<A HREF="motion.html#it">它</A>可能也能工作.
+如果你不指定一个主题,&quot;<A HREF="helphelp.html#:help">:help</A>&quot;显示综合帮助<A HREF="windows.html#window">窗口</A>.
+Vim 的作者在帮助系统方面使用了一个很聪明的方案 (也许可以说是很懒惰的方案): 它们使用一个普通的编辑<A HREF="windows.html#window">窗口</A>来显示帮助.你可以在帮助系统中使用所用的普通命令.因此<A HREF="motion.html#h">h</A>, <A HREF="motion.html#j">j</A>,<A HREF="motion.html#k">k</A>,和<A HREF="motion.html#l">l</A>还是表示左，下，上和右.
+离开帮助<A HREF="windows.html#window">窗口</A>和离开编辑器的指令是相同的: &quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;.它只能关闭<A HREF="windows.html#window">窗口</A>不能退出Vim.
 
-As you read the help text, you will notice some text enclosed in vertical <A HREF="index.html#bars">bars</A>
-(for example, |<A HREF="helphelp.html#help">help</A>|).  This indicates a hyperlink.  If you position the
-cursor anywhere between the <A HREF="index.html#bars">bars</A> and press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> (jump to tag), the help
-system takes you to the indicated subject.  (For reasons not discussed here,
-the Vim terminology for a hyperlink is <A HREF="tagsrch.html#tag">tag</A>.  So <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> jumps to the location
-of the <A HREF="tagsrch.html#tag">tag</A> given by the <A HREF="motion.html#word">单词</A> under the cursor.)
-   After a few jumps, you might want to go back.  <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> (pop <A HREF="tagsrch.html#tag">tag</A>) takes you
-back to the preceding position.  <A HREF="motion.html#CTRL-O">CTRL-O</A> (jump to older position) also works
-nicely here.
-   At the top of the help screen, there is the <A HREF="intro.html#notation">notation</A> *help.txt*.  This name
-between &quot;*&quot; characters is used by the help system to define a <A HREF="tagsrch.html#tag">tag</A> (hyperlink
-destination).
-   See |<A HREF="usr_29.html#29.1">29.1</A>| for details about using <A HREF="tagsrch.html#tags">tags</A>.
+当你读帮助文档时，你可能注意到一些文本使用<A HREF="index.html#bars">竖线</A>包裹起来.(例如|<A HREF="helphelp.html#help">帮助</A>|). 它表示一个超链接.如果你的光标在两个竖线之间并使用<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>(标签跳转命令),帮助系统会打开该链接. (至于原因不在这里讨论,Vim对于超链接的术语时<A HREF="tagsrch.html#tag">标签</A>.所以<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>跳转到给定光标下的<A HREF="motion.html#word">单词</A>的<A HREF="tagsrch.html#tag">标签</A>地址.)
+进行了一些跳转后，你可能想要回去.<A HREF="tagsrch.html#CTRL-T">CTRL-T</A> (<A HREF="tagsrch.html#tag">标签</A>退栈)把你送回前一个跳转点.<A HREF="motion.html#CTRL-O">CTRL-O</A>(跳转到前一个位置)也能完成相同的功能.
+在帮助系统的顶部,有着*help.txt*<A HREF="intro.html#notation">标记</A>.在&quot;*&quot;字符中间的名字被帮助系统用来定一个<A HREF="tagsrch.html#tag">标签</A>(也就是超级链接的目标).
+   见 |<A HREF="usr_29.html#29.1">29.1</A>|详细介绍了使用<A HREF="tagsrch.html#tags">标签</A>的细节.
 
-To get help on a given subject, use the following command:
+要获得特定主题的帮助，使用如下命令:
 
 <B>	:help {subject}</B>
 
-To get help on the &quot;<A HREF="change.html#x">x</A>&quot; command, for example, enter the following:
+获得&quot;<A HREF="change.html#x">x</A>&quot;命令的帮助,例如输入下面的命令:
 
 <B>	:help x</B>
 
-To find out how to delete text, use this command:
+找到怎样删除文本，使用这个命令:
 
 <B>	:help deleting</B>
 
-To get a complete index of all Vim commands, use the following command:
+获得所有命令的索引,使用下面的命令:
 
 <B>	:help index</B>
 
-When you need to get help for a <A HREF="intro.html#control">control</A> character command (for example,
-CTRL-A), you need to <A HREF="spell.html#spell">spell</A> <A HREF="motion.html#it">it</A> with the prefix &quot;CTRL-&quot;.
+当你需要包含<A HREF="intro.html#control">控制</A>字符命令(例如,CTRL-A)时, 你需要使用&quot;CTRL-&quot;去<A HREF="spell.html#spell">拼写</A><A HREF="motion.html#it">它</A>.
 
 <B>	:help CTRL-A</B>
 
-The Vim editor has many different modes.  By default, the help system displays
-the normal-mode commands.  For example, the following command displays help
-for the normal-mode <A HREF="motion.html#CTRL-H">CTRL-H</A> command:
+Vim编辑器有很多不同的模式.帮助系统默认为正常模式.例如,接下来的命令展示正常模式的<A HREF="motion.html#CTRL-H">CTRL-H</A>命令:
 
 <B>	:help CTRL-H</B>
 
-To identify other modes, use a mode prefix.  If you want the help for the
-insert-mode version of a command, use &quot;i_&quot;.  For <A HREF="motion.html#CTRL-H">CTRL-H</A> this gives you the
-following command:
+要表示其他模式需要使用模式前缀.如果你想要寻找插入模式的命令帮助，使用 &quot;i_&quot;. 例如对于<A HREF="motion.html#CTRL-H">CTRL-H</A>你可以使用下面的命令:
 
 <B>	:help i_CTRL-H</B>
 
-When you start the Vim editor, you can use several command-line arguments.
-These all begin with a dash (-).  To find what the <A HREF="starting.html#-t">-t</A> argument does, for
-example, use the command:
+当你启动 Vim，你可以使用一些命令行参数.这些参数以短横线开头 (-)。例如知道要<A HREF="starting.html#-t">-t</A>这个参数是干什么用的,例如使用这个命令:
 
 <B>	:help -t</B>
 
-The Vim editor has a number of <A HREF="options.html#options">options</A> that enable you to configure and
-customize the editor.  If you want help for an option, you need to enclose <A HREF="motion.html#it">it</A>
-in single quotation marks.  To find out what the <A HREF="options.html#'number'">'number'</A> option does, for
-example, use the following command:
+Vim编辑器有大量的<A HREF="options.html#options">选项</A>使你能够配置定制它.如果你想要获得选项的帮助，你需要使用单引号包裹住<A HREF="motion.html#it">它</A>.列如,需要查找<A HREF="options.html#'number'">'number'</A>选项，可以使用下面的例子:
 
 <B>	:help 'number'</B>
 
-The table with all mode prefixes can be found below: |<A HREF="#help-summary">help-summary</A>|.
+面有所有模式的前缀列表: |<A HREF="#help-summary">help-summary</A>|.
 
-Special keys are enclosed in angle brackets.  To find help on the up-arrow key
-in <A HREF="intro.html#Insert">插入</A>模式, for instance, use this command:
+特殊键以尖括号包围.例如<A HREF="intro.html#Insert">插入</A>模式中的向上方向键的帮助, 使用此命令:
 
 <B>	:help i_&lt;Up&gt;</B>
 
-If you see an error message that you don't understand, for example:
+如果你看到了你不懂的错误信息，例如:
 
 <B><FONT color="#3A6F2B">	E37: No write since last change (use ! to override) </FONT></B>
 
-You can use the error ID at the start to find help about <A HREF="motion.html#it">it</A>:
+你可以使用错误ID在帮助中查找<A HREF="motion.html#it">它</A>:
 
 <B>	:help E37</B>
 
 
 
-Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>* 
+总结: 					*<A NAME="help-summary"></A><B>help-summary</B>* 
 
 1) Use Ctrl-D after typing a topic and let Vim show all available topics.
    Or press <A HREF="intro.html#Tab">Tab</A> to complete:
@@ -626,7 +572,7 @@ Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>*
     commands.
 
 17) Use |<A HREF="helphelp.html#:helpgrep">:helpgrep</A>| to search in all help pages (and also of any installed
-    plugins).  See |<A HREF="helphelp.html#:helpgrep">:helpgrep</A>| for how to use <A HREF="motion.html#it">it</A>.
+    plugins).  见 |<A HREF="helphelp.html#:helpgrep">:helpgrep</A>| for how to use <A HREF="motion.html#it">它</A>.
     To search for a topic:
 <B>	:helpgrep topic</B>
      This takes you to the first match.  To go to the next one:
@@ -677,7 +623,7 @@ Summary: 					*<A NAME="help-summary"></A><B>help-summary</B>*
 25) Documentation for included <A HREF="filetype.html#filetype">filetype</A> specific functionality is usually
     available  in the form ft-&lt;filetype&gt;-&lt;functionality&gt;.  So
 <B>	:help ft-c-syntax</B>
-     talks about the C <A HREF="syntax.html#syntax">syntax</A> file and the option <A HREF="motion.html#it">it</A> provides.  Sometimes,
+     talks about the C <A HREF="syntax.html#syntax">syntax</A> file and the option <A HREF="motion.html#it">它</A> provides.  Sometimes,
     additional sections for omni completion
 <B>	:help ft-php-omni</B>
      or <A HREF="filetype.html#filetype">filetype</A> plugins

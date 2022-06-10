@@ -82,7 +82,7 @@
 When you are editing a file of a certain type, for example a C program or a
 shell <A HREF="usr_41.html#script">script</A>, you often use the same option settings and mappings.  You
 quickly get tired of manually setting these each time.  This chapter explains
-how to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> automatically.
+how to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> automatically.
 
 |<A HREF="#43.1">43.1</A>|	Plugins for a <A HREF="filetype.html#filetype">filetype</A>
 |<A HREF="#43.2">43.2</A>|	Adding a <A HREF="filetype.html#filetype">filetype</A>
@@ -126,8 +126,8 @@ three-line comment.  You <A HREF="diff.html#do">do</A> this with only two steps:
 Try editing a C file.  You should notice that the <A HREF="options.html#'softtabstop'">'softtabstop'</A> option is set
 to 4.  But when you edit another file it's reset to the default zero.  That is
 because the &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot; command was used.  This sets the <A HREF="options.html#'softtabstop'">'softtabstop'</A> option
-only locally to the buffer.  As soon <A HREF="motion.html#as">as</A> you edit another buffer, <A HREF="motion.html#it">it</A> will be
-set to the value set for that buffer.  For a new buffer <A HREF="motion.html#it">it</A> will get the
+only locally to the buffer.  As soon <A HREF="motion.html#as">as</A> you edit another buffer, <A HREF="motion.html#it">它</A> will be
+set to the value set for that buffer.  For a new buffer <A HREF="motion.html#it">它</A> will get the
 default value or the value from the last &quot;<A HREF="options.html#:set">:set</A>&quot; command.
 
 Likewise, the <A HREF="map.html#mapping">mapping</A> for &quot;\c&quot; will disappear when editing another buffer.
@@ -153,7 +153,7 @@ More details about <A HREF="editing.html#writing">writing</A> a <A HREF="filetyp
 *<A NAME="43.2"></A><B>43.2</B>*	Adding a <A HREF="filetype.html#filetype">filetype</A>
 
 If you are using a type of file that is not recognized by Vim, this is how to
-get <A HREF="motion.html#it">it</A> recognized.  You need a runtime directory of your own.  See
+get <A HREF="motion.html#it">它</A> recognized.  You need a runtime directory of your own.  See
 |<A HREF="#your-runtime-dir">your-runtime-dir</A>| above.
 
 Create a file &quot;filetype.vim&quot; which contains an <A HREF="autocmd.html#autocommand">autocommand</A> for your <A HREF="filetype.html#filetype">filetype</A>.
@@ -167,11 +167,11 @@ This will recognize all files that end in &quot;.xyz&quot; <A HREF="motion.html#
 &quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot; commands put this <A HREF="autocmd.html#autocommand">autocommand</A> in the &quot;filetypedetect&quot; group.  This
 allows removing all autocommands for <A HREF="filetype.html#filetype">filetype</A> detection when doing &quot;<A HREF="filetype.html#:filetype">:filetype</A>
 off&quot;.  The &quot;setf&quot; command will set the <A HREF="options.html#'filetype'">'filetype'</A> option to its argument,
-unless <A HREF="motion.html#it">it</A> was set already.  This will make sure that <A HREF="options.html#'filetype'">'filetype'</A> isn't set
+unless <A HREF="motion.html#it">它</A> was set already.  This will make sure that <A HREF="options.html#'filetype'">'filetype'</A> isn't set
 <A HREF="if_cscop.html#twice">twice</A>.
 
 You can use many different patterns to match the name of your file.  Directory
-names can also be included.  See |<A HREF="autocmd.html#autocmd-pattern">autocmd-pattern</A>|.  For example, the files
+names can also be included.  见 |<A HREF="autocmd.html#autocmd-pattern">autocmd-pattern</A>|.  For example, the files
 under &quot;/usr/share/scripts/&quot; are all &quot;<A HREF="if_ruby.html#ruby">ruby</A>&quot; files, but don't have the expected
 file name extension.  Adding this to the example above:
 
@@ -181,7 +181,7 @@ file name extension.  Adding this to the example above:
 <B>	augroup END</B>
 
 However, if you now edit a file /usr/share/scripts/README.txt, this is not a
-<A HREF="if_ruby.html#ruby">ruby</A> file.  The danger of a <A HREF="pattern.html#pattern">pattern</A> ending in &quot;*&quot; is that <A HREF="motion.html#it">it</A> quickly matches
+<A HREF="if_ruby.html#ruby">ruby</A> file.  The danger of a <A HREF="pattern.html#pattern">pattern</A> ending in &quot;*&quot; is that <A HREF="motion.html#it">它</A> quickly matches
 too many files.  To avoid trouble with this, put the filetype.vim file in
 another directory, one that is at the end of <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  For Unix for
 example, you could use &quot;~/.config/nvim/after/filetype.vim&quot;.
@@ -217,7 +217,7 @@ checked.  Only the one for <A HREF="if_ruby.html#ruby">ruby</A> matches and &quo
 RECOGNIZING BY CONTENTS
 
 If your file cannot be recognized by its file name, you might be able to
-recognize <A HREF="motion.html#it">it</A> by its contents.  For example, many <A HREF="usr_41.html#script">script</A> files start with a
+recognize <A HREF="motion.html#it">它</A> by its contents.  For example, many <A HREF="usr_41.html#script">script</A> files start with a
 line like:
 
 <B><FONT color="#3A6F2B">	#!/bin/xyz </FONT></B>

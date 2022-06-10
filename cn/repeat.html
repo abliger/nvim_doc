@@ -97,15 +97,15 @@ Single repeats						*<A NAME="single-repeat"></A><B>single-repeat</B>*
 			command-line command.
 
 Simple changes can be repeated with the &quot;<A HREF="#.">.</A>&quot; command.  Without a <A HREF="intro.html#count">count</A>, the
-<A HREF="intro.html#count">count</A> of the last change is used.  If you enter a <A HREF="intro.html#count">count</A>, <A HREF="motion.html#it">it</A> will replace the
+<A HREF="intro.html#count">count</A> of the last change is used.  If you enter a <A HREF="intro.html#count">count</A>, <A HREF="motion.html#it">它</A> will replace the
 last one.  |<A HREF="eval.html#v:count">v:count</A>| and |<A HREF="eval.html#v:count1">v:count1</A>| will be set.
 
 If the last change included a specification of a numbered <A HREF="intro.html#register">register</A>, the
-register number will be incremented.  See |<A HREF="undo.html#redo-register">redo-register</A>| for an example how
+register number will be incremented.  见 |<A HREF="undo.html#redo-register">redo-register</A>| for an example how
 to use this.
 
 Note that when <A HREF="#repeating">repeating</A> a command that used a <A HREF="visual.html#Visual">Visual</A> selection, the same SIZE
-of area is used, see |<A HREF="visual.html#visual-repeat">visual-repeat</A>|.
+of area is used, 见 |<A HREF="visual.html#visual-repeat">visual-repeat</A>|.
 
 
 							*<A NAME="@:"></A><B>@:</B>*
@@ -134,16 +134,16 @@ Multiple repeats					*<A NAME="multi-repeat"></A><B>multi-repeat</B>*
 Example:
 <B>	:g/^Obsolete/d _</B>
 Using the underscore after `:d` avoids clobbering <A HREF="change.html#registers">registers</A> or the <A HREF="provider.html#clipboard">clipboard</A>.
-This also makes <A HREF="motion.html#it">it</A> faster.
+This also makes <A HREF="motion.html#it">它</A> faster.
 
 Instead of the '<A HREF="pattern.html#/">/</A>' which surrounds the {pattern}, you can use any other
 single byte character, but not an alphabetic character, '\', &#39;&#34;'' or '&#124;'.
 This is useful if you want to include a '<A HREF="pattern.html#/">/</A>' in the search <A HREF="pattern.html#pattern">pattern</A> or
 replacement <A HREF="eval.html#string">string</A>.
 
-For the definition of a pattern, see |<A HREF="pattern.html#pattern">pattern</A>|.
+For the definition of a pattern, 见 |<A HREF="pattern.html#pattern">pattern</A>|.
 
-NOTE [cmd] may contain a range; see |<A HREF="tips.html#collapse">collapse</A>| and |<A HREF="usr_25.html#edit-paragraph-join">edit-paragraph-join</A>| for
+NOTE [cmd] may contain a range; 见 |<A HREF="tips.html#collapse">collapse</A>| and |<A HREF="usr_25.html#edit-paragraph-join">edit-paragraph-join</A>| for
 examples.
 
 The global commands work by first scanning through the <A HREF="cmdline.html#[range]">[range]</A> lines and
@@ -158,7 +158,7 @@ line is aborted and the global command continues with the next marked or
 unmarked line.
 
 								*<A NAME="E147"></A><B>E147</B>*
-When the command is used recursively, <A HREF="motion.html#it">it</A> only works on one line.  Giving a
+When the command is used recursively, <A HREF="motion.html#it">它</A> only works on one line.  Giving a
 range is then not allowed. This is useful to find all lines that match a
 <A HREF="pattern.html#pattern">pattern</A> and <A HREF="diff.html#do">do</A> not match another <A HREF="pattern.html#pattern">pattern</A>:
 <B>	:g/found/v/notfound/{cmd}</B>
@@ -169,14 +169,14 @@ To execute a non-Ex command, you can use the `:normal` command:
 <B>	:g/pat/normal {commands}</B>
 Make sure that {commands} ends with a whole command, otherwise Vim will wait
 for you to type the rest of the command for each match.  The screen will not
-have been updated, so you don't know what you are doing.  See |<A HREF="various.html#:normal">:normal</A>|.
+have been updated, so you don't know what you are doing.  见 |<A HREF="various.html#:normal">:normal</A>|.
 
 The undo/redo command will undo/redo the whole global command at once.
 The previous <A HREF="#context">context</A> <A HREF="motion.html#mark">mark</A> will only be set once (with &quot;'&#39;&#34;' you go back to
 where the cursor was before the global command).
 
 The global command sets both the last used search <A HREF="pattern.html#pattern">pattern</A> and the last used
-substitute <A HREF="pattern.html#pattern">pattern</A> (this is <A HREF="intro.html#vi">vi</A> compatible).  This makes <A HREF="motion.html#it">it</A> easy to globally
+substitute <A HREF="pattern.html#pattern">pattern</A> (this is <A HREF="intro.html#vi">vi</A> compatible).  This makes <A HREF="motion.html#it">它</A> easy to globally
 replace a <A HREF="eval.html#string">string</A>:
 	:g/pat/s//PAT/g
 This replaces all occurrences of &quot;pat&quot; with &quot;PAT&quot;.  The same can be done with:
@@ -197,7 +197,7 @@ Complex repeats						*<A NAME="complex-repeat"></A><B>complex-repeat</B>*
 							*<A NAME="q"></A><B>q</B>* *<A NAME="recording"></A><B>recording</B>*
 q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">register</A> {0-9a-zA-Z&quot;}
 			(uppercase to append).  The '<A HREF="#q">q</A>' command is disabled
-			while executing a <A HREF="intro.html#register">register</A>, and <A HREF="motion.html#it">it</A> doesn't work inside
+			while executing a <A HREF="intro.html#register">register</A>, and <A HREF="motion.html#it">它</A> doesn't work inside
 			a <A HREF="map.html#mapping">mapping</A> and |<A HREF="various.html#:normal">:normal</A>|.
 
 			Note: If the <A HREF="intro.html#register">register</A> being used for <A HREF="#recording">recording</A> is also
@@ -213,7 +213,7 @@ q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">r
 
 <A HREF="#q">q</A>			Stops <A HREF="#recording">recording</A>.
 			Implementation note: The '<A HREF="#q">q</A>' that stops <A HREF="#recording">recording</A> is
-			not stored in the <A HREF="intro.html#register">register</A>, unless <A HREF="motion.html#it">it</A> was the result
+			not stored in the <A HREF="intro.html#register">register</A>, unless <A HREF="motion.html#it">它</A> was the result
 			of a <A HREF="map.html#mapping">mapping</A>
 
 
@@ -236,14 +236,14 @@ q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">r
 
 							*<A NAME="Q"></A><B>Q</B>*
 <A HREF="#Q">Q</A>			Repeat the last recorded <A HREF="intro.html#register">register</A> <A HREF="intro.html#[count]">[count]</A> times.
-			See |<A HREF="builtin.html#reg_recorded()">reg_recorded()</A>|.
+			见 |<A HREF="builtin.html#reg_recorded()">reg_recorded()</A>|.
 
 
 							*<A NAME=":@"></A><B>:@</B>*
 :[addr]@{0-9a-z&quot;.=*+}	Execute the contents of <A HREF="intro.html#register">register</A> {0-9a-z&quot;.=*+} <A HREF="motion.html#as">as</A> an <A HREF="intro.html#Ex">Ex</A>
 			command.  First set cursor at line [addr] (default is
 			current line).  When the last line in the <A HREF="intro.html#register">register</A> does
-			not have a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> <A HREF="motion.html#it">it</A> will be added automatically when
+			not have a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> <A HREF="motion.html#it">它</A> will be added automatically when
 			the '<A HREF="motion.html#e">e</A>' flag is present in <A HREF="options.html#'cpoptions'">'cpoptions'</A>.
 			For &quot;:@=&quot; the last used <A HREF="eval.html#expression">expression</A> is used.  The
 			result of evaluating the <A HREF="eval.html#expression">expression</A> is executed <A HREF="motion.html#as">as</A> an
@@ -251,7 +251,7 @@ q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">r
 			Mappings are not recognized in these commands.
 			When the |<A HREF="#line-continuation">line-continuation</A>| character (\) is present
 			at the beginning of a line in a <A HREF="motion.html#linewise">linewise</A> <A HREF="intro.html#register">register</A>,
-			then <A HREF="motion.html#it">it</A> is combined with the previous line. This is
+			then <A HREF="motion.html#it">它</A> is combined with the previous line. This is
 			useful for yanking and executing parts of a Vim
 			<A HREF="usr_41.html#script">script</A>.
 
@@ -315,7 +315,7 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 				ALL	first use <A HREF="options.html#'runtimepath'">'runtimepath'</A>, then search
 					under &quot;start&quot; and &quot;opt&quot; in <A HREF="options.html#'packpath'">'packpath'</A>
 
-			When <A HREF="editing.html#{file}">{file}</A> contains <A HREF="editing.html#wildcards">wildcards</A> <A HREF="motion.html#it">it</A> is expanded to all
+			When <A HREF="editing.html#{file}">{file}</A> contains <A HREF="editing.html#wildcards">wildcards</A> <A HREF="motion.html#it">它</A> is expanded to all
 			matching files.  Example:
 <B>				:runtime! plugin/**/*.vim</B>
  			This is what Vim uses to load the <A HREF="usr_05.html#plugin">plugin</A> files when
@@ -334,9 +334,9 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			and source any <A HREF="usr_05.html#plugin">plugin</A> files found.  The directory must
 			match:
 <B><FONT color="#3A6F2B">				pack/*/opt/{name} </FONT></B>
-			The directory is added to <A HREF="options.html#'runtimepath'">'runtimepath'</A> if <A HREF="motion.html#it">it</A> wasn't
+			The directory is added to <A HREF="options.html#'runtimepath'">'runtimepath'</A> if <A HREF="motion.html#it">它</A> wasn't
 			there yet.
-			If the directory pack/*/opt/{name}/after exists <A HREF="motion.html#it">it</A> is
+			If the directory pack/*/opt/{name}/after exists <A HREF="motion.html#it">它</A> is
 			added at the end of <A HREF="options.html#'runtimepath'">'runtimepath'</A>.
 
 			If loading <A HREF="#packages">packages</A> from &quot;pack/*/start&quot; was skipped,
@@ -363,13 +363,13 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			<A HREF="filetype.html#ftdetect">ftdetect</A> scripts are loaded, only the matching
 			directories are added to <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  This is
 			useful in your |<A HREF="init.html">init.vim</A>|.  The plugins will then be
-			loaded during |<A HREF="starting.html#initialization">initialization</A>|, see |<A HREF="starting.html#load-plugins">load-plugins</A>| (note
+			loaded during |<A HREF="starting.html#initialization">initialization</A>|, 见 |<A HREF="starting.html#load-plugins">load-plugins</A>| (note
 			that the loading order will be reversed, because each
 			directory is inserted before others). In this <A HREF="change.html#case">case</A>, the
 			<A HREF="filetype.html#ftdetect">ftdetect</A> scripts will be loaded during |<A HREF="starting.html#initialization">initialization</A>|,
 			before the |<A HREF="starting.html#load-plugins">load-plugins</A>| step.
 
-			Also see |<A HREF="#pack-add">pack-add</A>|.
+			Also 见 |<A HREF="#pack-add">pack-add</A>|.
 
 
 						*<A NAME=":packl"></A><B>:packl</B>* *<A NAME=":packloadall"></A><B>:packloadall</B>*
@@ -380,11 +380,11 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			<A HREF="options.html#'runtimepath'">'runtimepath'</A>, then the plugins found in the
 			directories are sourced.  This allows for a <A HREF="usr_05.html#plugin">plugin</A> to
 			depend on something of another <A HREF="usr_05.html#plugin">plugin</A>, e.g. an
-			&quot;<A HREF="eval.html#autoload">autoload</A>&quot; directory.  See |<A HREF="#packload-two-steps">packload-two-steps</A>| for
+			&quot;<A HREF="eval.html#autoload">autoload</A>&quot; directory.  见 |<A HREF="#packload-two-steps">packload-two-steps</A>| for
 			how this can be useful.
 
 			This is normally done automatically during <A HREF="starting.html#startup">startup</A>,
-			after loading your .vimrc file.  With this command <A HREF="motion.html#it">it</A>
+			after loading your .vimrc file.  With this command <A HREF="motion.html#it">它</A>
 			can be done earlier.
 
 			Packages will be loaded only once.  Using
@@ -398,9 +398,9 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			means they are loaded again.  Plugins are expected to
 			handle that.
 
-			An error only causes sourcing the <A HREF="usr_41.html#script">script</A> where <A HREF="motion.html#it">it</A>
+			An error only causes sourcing the <A HREF="usr_41.html#script">script</A> where <A HREF="motion.html#it">它</A>
 			happens to be aborted, further plugins will be loaded.
-			See |<A HREF="#packages">packages</A>|.
+			见 |<A HREF="#packages">packages</A>|.
 
 
 :scripte[ncoding] [encoding]		*<A NAME=":scripte"></A><B>:scripte</B>* *<A NAME=":scriptencoding"></A><B>:scriptencoding</B>* *<A NAME="E167"></A><B>E167</B>*
@@ -427,7 +427,7 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			Don't use &quot;ucs-2&quot; or &quot;ucs-4&quot;, scripts cannot be in
 			these encodings (they would contain NUL bytes).
 			When a sourced <A HREF="usr_41.html#script">script</A> starts with a BOM (Byte Order
-			<A HREF="motion.html#Mark">Mark</A>) in <A HREF="mbyte.html#utf-8">utf-8</A> format Vim will recognize <A HREF="motion.html#it">it</A>, no need
+			<A HREF="motion.html#Mark">Mark</A>) in <A HREF="mbyte.html#utf-8">utf-8</A> format Vim will recognize <A HREF="motion.html#it">它</A>, no need
 			to use &quot;<A HREF="#:scriptencoding">:scriptencoding</A> utf-8&quot; then.
 
 
@@ -447,7 +447,7 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 						*<A NAME=":fini"></A><B>:fini</B>* *<A NAME=":finish"></A><B>:finish</B>* *<A NAME="E168"></A><B>E168</B>*
 :fini[sh]		Stop sourcing a <A HREF="usr_41.html#script">script</A>.  Can only be used in a Vim
 			<A HREF="usr_41.html#script">script</A> file.  This is a quick way to skip the rest of
-			the file.  If <A HREF="motion.html#it">it</A> is used after a |<A HREF="eval.html#:try">:try</A>| but before the
+			the file.  If <A HREF="motion.html#it">它</A> is used after a |<A HREF="eval.html#:try">:try</A>| but before the
 			matching |<A HREF="eval.html#:finally">:finally</A>| (if present), the commands
 			following the &quot;<A HREF="eval.html#:finally">:finally</A>&quot; up to the matching |<A HREF="eval.html#:endtry">:endtry</A>|
 			are executed first.  This process applies to all
@@ -455,12 +455,12 @@ For <A HREF="editing.html#writing">writing</A> a Vim <A HREF="usr_41.html#script
 			then stops sourcing the <A HREF="usr_41.html#script">script</A>.
 
 All commands and command sequences can be repeated by putting them in a named
-<A HREF="intro.html#register">register</A> and then executing <A HREF="motion.html#it">it</A>.  There are two ways to get the commands in the
+<A HREF="intro.html#register">register</A> and then executing <A HREF="motion.html#it">它</A>.  There are two ways to get the commands in the
 <A HREF="intro.html#register">register</A>:
 - Use the record command &quot;<A HREF="#q">q</A>&quot;.  You type the commands once, and while they are
   being executed they are stored in a <A HREF="intro.html#register">register</A>.  Easy, because you can see
   what you are doing.  If you make a mistake, &quot;p&quot;ut the <A HREF="intro.html#register">register</A> into the
-  file, edit the command sequence, and then delete <A HREF="motion.html#it">it</A> into the <A HREF="intro.html#register">register</A>
+  file, edit the command sequence, and then delete <A HREF="motion.html#it">它</A> into the <A HREF="intro.html#register">register</A>
   again.  You can continue <A HREF="#recording">recording</A> by appending to the <A HREF="intro.html#register">register</A> (use an
   <A HREF="change.html#uppercase">uppercase</A> <A HREF="print.html#letter">letter</A>).
 - Delete or <A HREF="change.html#yank">yank</A> the command sequence into the <A HREF="intro.html#register">register</A>.
@@ -475,11 +475,11 @@ the '<A HREF="map.html#:map">:map</A>' command to put complicated commands under
 The '<A HREF="#:source">:source</A>' command reads <A HREF="intro.html#Ex">Ex</A> commands from a file line by line.  You will
 have to type any needed keyboard input.  The '<A HREF="#:source!">:source!</A>' command reads from a
 <A HREF="usr_41.html#script">script</A> file character by character, interpreting each character <A HREF="motion.html#as">as</A> if you
-typed <A HREF="motion.html#it">it</A>.
+typed <A HREF="motion.html#it">它</A>.
 
 Example: When you give the &quot;:!ls&quot; command you get the |<A HREF="message.html#hit-enter">hit-enter</A>| prompt.  If
-you '<A HREF="#:source">:source</A>' a file with the line &quot;!ls&quot; in <A HREF="motion.html#it">it</A>, you will have to type the
-<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> yourself.  But if you '<A HREF="#:source!">:source!</A>' a file with the line &quot;:!ls&quot; in <A HREF="motion.html#it">it</A>,
+you '<A HREF="#:source">:source</A>' a file with the line &quot;!ls&quot; in <A HREF="motion.html#it">它</A>, you will have to type the
+<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> yourself.  But if you '<A HREF="#:source!">:source!</A>' a file with the line &quot;:!ls&quot; in <A HREF="motion.html#it">它</A>,
 the next characters from that file are read until a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is found.  You will
 not have to type <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> yourself, unless &quot;:!ls&quot; was the last line in the file.
 
@@ -536,11 +536,11 @@ are interpreted <A HREF="motion.html#as">as</A> if they were given in one line:
 	<A HREF="options.html#:set">:set</A> <A HREF="options.html#'comments'">comments</A>=sr:/*,mb:*,el:*/,://,b:#,:&#37;,n:&gt;,fb:-
 
 All leading <A HREF="pattern.html#whitespace">whitespace</A> characters in the line before a <A HREF="intro.html#backslash">backslash</A> are ignored.
-Note however that trailing <A HREF="pattern.html#whitespace">whitespace</A> in the line before <A HREF="motion.html#it">it</A> cannot be
-inserted freely; <A HREF="motion.html#it">it</A> depends on the position where a command is split up
+Note however that trailing <A HREF="pattern.html#whitespace">whitespace</A> in the line before <A HREF="motion.html#it">它</A> cannot be
+inserted freely; <A HREF="motion.html#it">它</A> depends on the position where a command is split up
 whether additional <A HREF="pattern.html#whitespace">whitespace</A> is allowed or not.
 
-When a space is required it's best to put <A HREF="motion.html#it">it</A> right after the <A HREF="intro.html#backslash">backslash</A>.  A
+When a space is required it's best to put <A HREF="motion.html#it">它</A> right after the <A HREF="intro.html#backslash">backslash</A>.  A
 space at the end of a line is hard to see and may be accidentally deleted.
 <B>	:syn match Comment</B>
 <B>		\ "very long regexp"</B>
@@ -562,7 +562,7 @@ To avoid this, add the '<A HREF="change.html#C">C</A>' flag to the <A HREF="opti
 <B>   :set cpo-=C</B>
 
 Note that when the commands are inside a function, you need to add the '<A HREF="change.html#C">C</A>'
-flag when defining the function, <A HREF="motion.html#it">it</A> is not relevant when executing <A HREF="motion.html#it">it</A>.
+flag when defining the function, <A HREF="motion.html#it">它</A> is not relevant when executing <A HREF="motion.html#it">它</A>.
 <B>   :set cpo+=C</B>
 <B>   :function Foo()</B>
 <B>   :1append</B>
@@ -590,12 +590,12 @@ Rationale:
  	Therefore the unusual leading <A HREF="intro.html#backslash">backslash</A> is used.
 
 	Starting a comment in a continuation line results in all following
-	continuation lines to be part of the comment.  Since <A HREF="motion.html#it">it</A> was like this
-	for a long time, when making <A HREF="motion.html#it">it</A> possible to add a comment halfway a
-	sequence of continuation lines, <A HREF="motion.html#it">it</A> was not possible to use \&quot;, since
+	continuation lines to be part of the comment.  Since <A HREF="motion.html#it">它</A> was like this
+	for a long time, when making <A HREF="motion.html#it">它</A> possible to add a comment halfway a
+	sequence of continuation lines, <A HREF="motion.html#it">它</A> was not possible to use \&quot;, since
 	that was a valid continuation line.  Using &#39;&#34;'\ '' comes closest, even
-	though <A HREF="motion.html#it">it</A> may look a bit weird.  Requiring the space after the
-	<A HREF="intro.html#backslash">backslash</A> is to make <A HREF="motion.html#it">it</A> very unlikely this is a normal comment line.
+	though <A HREF="motion.html#it">它</A> may look a bit weird.  Requiring the space after the
+	<A HREF="intro.html#backslash">backslash</A> is to make <A HREF="motion.html#it">它</A> very unlikely this is a normal comment line.
 
 ==============================================================================
 
@@ -604,9 +604,9 @@ Using Vim <A HREF="#packages">packages</A>					*<A NAME="packages"></A><B>packag
 A Vim package is a directory that contains one or more plugins.  The
 advantages over normal plugins:
 - A package can be downloaded <A HREF="motion.html#as">as</A> an archive and unpacked in its own directory.
-  Thus the files are not mixed with files of other plugins.  That makes <A HREF="motion.html#it">it</A>
+  Thus the files are not mixed with files of other plugins.  That makes <A HREF="motion.html#it">它</A>
   easy to update and remove.
-- A package can be a git, mercurial, etc. repository.  That makes <A HREF="motion.html#it">it</A> really
+- A package can be a git, mercurial, etc. repository.  That makes <A HREF="motion.html#it">它</A> really
   easy to update.
 - A package can contain multiple plugins that depend on each other.
 - A package can contain plugins that are automatically loaded on <A HREF="starting.html#startup">startup</A> and
@@ -641,11 +641,11 @@ instance to <A HREF="eval.html#list">list</A> all runtime dirs and <A HREF="#pac
 
 <B>    :echo nvim_get_runtime_file("lua/", v:true)</B>
 
- When Vim starts up, after processing your .vimrc, <A HREF="motion.html#it">it</A> scans all directories in
+ When Vim starts up, after processing your .vimrc, <A HREF="motion.html#it">它</A> scans all directories in
 <A HREF="options.html#'packpath'">'packpath'</A> for plugins under the &quot;pack/*/start&quot; directory, and all the plugins
 are loaded.
 
-In the example Vim will find &quot;pack/foo/start/foobar/plugin/foo.vim&quot; and load <A HREF="motion.html#it">it</A>.
+In the example Vim will find &quot;pack/foo/start/foobar/plugin/foo.vim&quot; and load <A HREF="motion.html#it">它</A>.
 
 If the &quot;foobar&quot; <A HREF="usr_05.html#plugin">plugin</A> kicks in and sets the <A HREF="options.html#'filetype'">'filetype'</A> to &quot;some&quot;, Vim will
 find the syntax/some.vim file, because its directory is in the runtime search
@@ -654,11 +654,11 @@ path.
 Vim will also load <A HREF="filetype.html#ftdetect">ftdetect</A> files, if there are any.
 
 Note that the files under &quot;pack/foo/opt&quot; are not loaded automatically, only the
-ones under &quot;pack/foo/start&quot;.  See |<A HREF="#pack-add">pack-add</A>| below for how the &quot;opt&quot; directory
+ones under &quot;pack/foo/start&quot;.  见 |<A HREF="#pack-add">pack-add</A>| below for how the &quot;opt&quot; directory
 is used.
 
 Loading <A HREF="#packages">packages</A> automatically will not happen if loading plugins is disabled,
-see |<A HREF="starting.html#load-plugins">load-plugins</A>|.
+见 |<A HREF="starting.html#load-plugins">load-plugins</A>|.
 
 To load <A HREF="#packages">packages</A> earlier, so that plugin/ files are sourced:
 	<A HREF="#:packloadall">:packloadall</A>
@@ -681,7 +681,7 @@ You would now have these files:
 	pack/foo/start/foobar/plugin/foo.vim
 	pack/foo/start/foobar/syntax/some.vim
 
-From here <A HREF="motion.html#it">it</A> works like above.
+From here <A HREF="motion.html#it">它</A> works like above.
 
 
 <B><FONT color="#3A6F2B">Optional plugins </FONT></B>
@@ -691,7 +691,7 @@ To load an optional <A HREF="usr_05.html#plugin">plugin</A> from a pack use the 
 <B>	:packadd foodebug</B>
 This searches for &quot;pack/*/opt/foodebug&quot; in <A HREF="options.html#'packpath'">'packpath'</A> and will find
 ~/.local/share/nvim/site/pack/foo/opt/foodebug/plugin/debugger.vim and source
-<A HREF="motion.html#it">it</A>.
+<A HREF="motion.html#it">它</A>.
 
 This could be done if some conditions are met.  For example, depending on
 whether Vim supports a feature or a dependency is missing.
@@ -703,7 +703,7 @@ The extra &quot;<A HREF="change.html#!">!</A>&quot; is so that the <A HREF="usr_
 |<A HREF="starting.html#--noplugin">--noplugin</A>|.
 
 It is perfectly normal for a package to only have files in the &quot;opt&quot;
-directory.  You then need to load each <A HREF="usr_05.html#plugin">plugin</A> when you want to use <A HREF="motion.html#it">it</A>.
+directory.  You then need to load each <A HREF="usr_05.html#plugin">plugin</A> when you want to use <A HREF="motion.html#it">它</A>.
 
 
 <B><FONT color="#3A6F2B">Where to put what </FONT></B>
@@ -740,7 +740,7 @@ package with optional plugins, and tell the user to add the preferred ones with
 Decide how you want to distribute the package.  You can create an archive or
 you could use a repository.  An archive can be used by more users, but is a
 bit harder to update to a new version.  A repository can usually be kept
-up-to-date easily, but <A HREF="motion.html#it">it</A> requires a program like &quot;git&quot; to be available.
+up-to-date easily, but <A HREF="motion.html#it">它</A> requires a program like &quot;git&quot; to be available.
 You can <A HREF="diff.html#do">do</A> both, github can automatically create an archive for a release.
 
 Your directory layout would be like this:
@@ -748,11 +748,11 @@ Your directory layout would be like this:
    start/foobar/plugin/bar.vim    	&quot; always loaded, defines commands
    start/foobar/autoload/foo.vim  	&quot; loaded when foo command used
    start/foobar/doc/foo.txt       	&quot; help for foo.vim
-   start/foobar/doc/tags          	&quot; help <A HREF="tagsrch.html#tags">tags</A>
+   start/foobar/doc/tags          	&quot; help <A HREF="tagsrch.html#tags">标签</A>
    opt/fooextra/plugin/extra.vim  	&quot; optional <A HREF="usr_05.html#plugin">plugin</A>, defines commands
    opt/fooextra/autoload/extra.vim  	&quot; loaded when extra command used
    opt/fooextra/doc/extra.txt  	        &quot; help for extra.vim
-   opt/fooextra/doc/tags  	        &quot; help <A HREF="tagsrch.html#tags">tags</A>
+   opt/fooextra/doc/tags  	        &quot; help <A HREF="tagsrch.html#tags">标签</A>
 
 This allows for the user to <A HREF="diff.html#do">do</A>:
 <B>	mkdir ~/.local/share/nvim/site/pack</B>
@@ -760,7 +760,7 @@ This allows for the user to <A HREF="diff.html#do">do</A>:
 <B>	git clone https://github.com/you/foobar.git myfoobar</B>
 
 Here &quot;myfoobar&quot; is a name that the user can choose, the only condition is that
-<A HREF="motion.html#it">it</A> differs from other <A HREF="#packages">packages</A>.
+<A HREF="motion.html#it">它</A> differs from other <A HREF="#packages">packages</A>.
 
 In your documentation you explain what the plugins <A HREF="diff.html#do">do</A>, and tell the user how
 to load the optional <A HREF="usr_05.html#plugin">plugin</A>:
@@ -781,7 +781,7 @@ the command after <A HREF="change.html#changing">changing</A> the <A HREF="usr_0
 
 							*<A NAME="packload-two-steps"></A><B>packload-two-steps</B>*
 Suppose you have two plugins that depend on the same functionality. You can
-put the common functionality in an <A HREF="eval.html#autoload">autoload</A> directory, so that <A HREF="motion.html#it">it</A> will be
+put the common functionality in an <A HREF="eval.html#autoload">autoload</A> directory, so that <A HREF="motion.html#it">它</A> will be
 found automatically.  Your package would have these files:
 
 	pack/foo/start/one/plugin/one.vim 
@@ -803,11 +803,11 @@ they are doing, Vim offers a debug mode.  This allows you to step through a
 sourced file or user function and set breakpoints.
 
 NOTE: The debugging mode is far from perfect.  Debugging will have side
-effects on how Vim works.  You cannot use <A HREF="motion.html#it">it</A> to debug everything.  For
+effects on how Vim works.  You cannot use <A HREF="motion.html#it">它</A> to debug everything.  For
 example, the display is messed up by the debugging <A HREF="message.html#messages">messages</A>.
 
 An alternative to debug mode is setting the <A HREF="options.html#'verbose'">'verbose'</A> option.  With a bigger
-number <A HREF="motion.html#it">it</A> will give more <A HREF="starting.html#verbose">verbose</A> <A HREF="message.html#messages">messages</A> about what Vim is doing.
+number <A HREF="motion.html#it">它</A> will give more <A HREF="starting.html#verbose">verbose</A> <A HREF="message.html#messages">messages</A> about what Vim is doing.
 
 
 
@@ -836,7 +836,7 @@ To enter debugging mode use one of these methods:
    This will run Vim and stop in the first line of the &quot;explorer.vim&quot; <A HREF="usr_41.html#script">script</A>.
    Breakpoints can also be set while in debugging mode.
 
-In debugging mode every executed command is displayed before <A HREF="motion.html#it">it</A> is executed.
+In debugging mode every executed command is displayed before <A HREF="motion.html#it">它</A> is executed.
 Comment lines, empty lines and lines that are not executed are skipped.  When
 a line contains two commands, separated by &quot;|&quot;, each command will be displayed
 separately.
@@ -852,7 +852,7 @@ When inside a user function, this will print the value of the local variable
 <B>	echo g:idx</B>
 All commands are executed in the <A HREF="#context">context</A> of the current function or <A HREF="usr_41.html#script">script</A>.
 You can also set <A HREF="options.html#options">options</A>, for example setting or resetting <A HREF="options.html#'verbose'">'verbose'</A> will show
-what happens, but you might want to set <A HREF="motion.html#it">it</A> just before executing the lines you
+what happens, but you might want to set <A HREF="motion.html#it">它</A> just before executing the lines you
 are interested in:
 <B>	:set verbose=20</B>
 
@@ -897,7 +897,7 @@ Additionally, these commands can be used:
 							*<A NAME="&gt;finish"></A><B>&gt;finish</B>*
 	finish		Finish the current <A HREF="usr_41.html#script">script</A> or user function and come
 			back to debug mode for the command after the one that
-			sourced or called <A HREF="motion.html#it">it</A>.
+			sourced or called <A HREF="motion.html#it">它</A>.
 
 							*<A NAME="&gt;bt"></A><B>&gt;bt</B>*
 
@@ -975,7 +975,7 @@ DEFINING BREAKPOINTS
 
 		Note if you watch a |<A HREF="eval.html#script-variable">script-variable</A>| this will break
 		when switching scripts, since the <A HREF="usr_41.html#script">script</A> variable is only
-		valid in the <A HREF="usr_41.html#script">script</A> where <A HREF="motion.html#it">it</A> has been defined and if that
+		valid in the <A HREF="usr_41.html#script">script</A> where <A HREF="motion.html#it">它</A> has been defined and if that
 		<A HREF="usr_41.html#script">script</A> is called from several other scripts, this will stop
 		whenever that particular variable will become visible or
 		inaccessible again.
@@ -1064,7 +1064,7 @@ Profiling means that Vim measures the time that is spent on executing
 
 You can also use the |<A HREF="builtin.html#reltime()">reltime()</A>| function to measure time.
 
-For <A HREF="#profiling">profiling</A> <A HREF="syntax.html#syntax">syntax</A> highlighting see |<A HREF="syntax.html#:syntime">:syntime</A>|.
+For <A HREF="#profiling">profiling</A> <A HREF="syntax.html#syntax">syntax</A> highlighting 见 |<A HREF="syntax.html#:syntime">:syntime</A>|.
 
 For example, to <A HREF="#profile">profile</A> the one_script.vim <A HREF="usr_41.html#script">script</A> file:
 <B>	:profile start /tmp/one_script_profile</B>
@@ -1077,7 +1077,7 @@ For example, to <A HREF="#profile">profile</A> the one_script.vim <A HREF="usr_4
 :prof[ile] start {fname}			*<A NAME=":prof"></A><B>:prof</B>* *<A NAME=":profile"></A><B>:profile</B>* *<A NAME="E750"></A><B>E750</B>*
 		Start <A HREF="#profiling">profiling</A>, write the output in {fname} upon exit.
 		&quot;~/&quot; and environment <A HREF="eval.html#variables">variables</A> in {fname} will be expanded.
-		If {fname} already exists <A HREF="motion.html#it">it</A> will be silently overwritten.
+		If {fname} already exists <A HREF="motion.html#it">它</A> will be silently overwritten.
 		The variable |<A HREF="eval.html#v:profiling">v:profiling</A>| is set to one.
 
 :prof[ile] stop
@@ -1093,13 +1093,13 @@ For example, to <A HREF="#profile">profile</A> the one_script.vim <A HREF="usr_4
 
 :prof[ile] func {pattern}
 		Profile function that matches the <A HREF="pattern.html#pattern">pattern</A> {pattern}.
-		See |<A HREF="#:debug-name">:debug-name</A>| for how {pattern} is used.
+		见 |<A HREF="#:debug-name">:debug-name</A>| for how {pattern} is used.
 
 :prof[ile][!] file {pattern}
 		Profile <A HREF="usr_41.html#script">script</A> file that matches the <A HREF="pattern.html#pattern">pattern</A> {pattern}.
-		See |<A HREF="#:debug-name">:debug-name</A>| for how {pattern} is used.
+		见 |<A HREF="#:debug-name">:debug-name</A>| for how {pattern} is used.
 		This only profiles the <A HREF="usr_41.html#script">script</A> itself, not the <A HREF="eval.html#functions">functions</A>
-		defined in <A HREF="motion.html#it">it</A>.
+		defined in <A HREF="motion.html#it">它</A>.
 		When the [!] is added then all <A HREF="eval.html#functions">functions</A> defined in the <A HREF="usr_41.html#script">script</A>
 		will also be profiled.
 		Note that <A HREF="#profiling">profiling</A> only starts when the <A HREF="usr_41.html#script">script</A> is loaded
@@ -1112,7 +1112,7 @@ For example, to <A HREF="#profile">profile</A> the one_script.vim <A HREF="usr_4
 
 
 :profd[el] <A HREF="eval.html#...">...</A>						*<A NAME=":profd"></A><B>:profd</B>* *<A NAME=":profdel"></A><B>:profdel</B>*
-		Stop <A HREF="#profiling">profiling</A> for the arguments specified. See |<A HREF="#:breakdel">:breakdel</A>|
+		Stop <A HREF="#profiling">profiling</A> for the arguments specified. 见 |<A HREF="#:breakdel">:breakdel</A>|
 		for the arguments.
 
 
@@ -1196,14 +1196,14 @@ The following <A HREF="#Context">Context</A> items are supported:
 <A HREF="#Context">Context</A> <A HREF="vimindex.html#objects">objects</A> are dictionaries with the following key-value pairs:
 - &quot;jumps&quot;, &quot;regs&quot;, &quot;bufs&quot;, &quot;gvars&quot;:
       |<A HREF="builtin.html#readfile()">readfile()</A>|-style |<A HREF="eval.html#List">List</A>| representation of corresponding msgpack
-      <A HREF="vimindex.html#objects">objects</A> (see |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| and |<A HREF="builtin.html#msgpackparse()">msgpackparse()</A>|).
+      <A HREF="vimindex.html#objects">objects</A> (见 |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| and |<A HREF="builtin.html#msgpackparse()">msgpackparse()</A>|).
 - &quot;funcs&quot; (includes |<A HREF="map.html#script-local">script-local</A>| <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> well):
       |<A HREF="eval.html#List">List</A>| of |<A HREF="eval.html#:function">:function</A>| <A HREF="intro.html#definitions">definitions</A>.
 
 
 							*<A NAME="context-stack"></A><B>context-stack</B>*
 An initially-empty internal <A HREF="#Context">Context</A> stack is maintained by the ctx-family
-functions (see |<A HREF="usr_41.html#ctx-functions">ctx-functions</A>|).
+functions (见 |<A HREF="usr_41.html#ctx-functions">ctx-functions</A>|).
 
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

@@ -82,7 +82,7 @@
 This chapter goes into mixing the use of other programs with Vim.  Either by
 executing program from inside Vim or by leaving Vim and coming back later.
 Furthermore, this is about the ways to remember the state of Vim and restore
-<A HREF="motion.html#it">it</A> later.
+<A HREF="motion.html#it">它</A> later.
 
 |<A HREF="#21.1">21.1</A>|	Suspend and resume
 |<A HREF="#21.2">21.2</A>|	Executing shell commands
@@ -100,7 +100,7 @@ Furthermore, this is about the ways to remember the state of Vim and restore
 *<A NAME="21.1"></A><B>21.1</B>*	Suspend and resume
 
 Like most Unix programs Vim can be suspended by pressing <A HREF="starting.html#CTRL-Z">CTRL-Z</A>.  This stops
-Vim and takes you back to the shell <A HREF="motion.html#it">it</A> was started in.  You can then <A HREF="diff.html#do">do</A> any
+Vim and takes you back to the shell <A HREF="motion.html#it">它</A> was started in.  You can then <A HREF="diff.html#do">do</A> any
 other commands until you are bored with them.  Then bring back Vim with the
 &quot;fg&quot; command.
 
@@ -130,7 +130,7 @@ see a directory listing:
 <B>	:!dir</B>
 
 The first one is for Unix, the second one for MS-Windows.
-   Vim will execute the program.  When <A HREF="motion.html#it">it</A> ends you will get a prompt to hit
+   Vim will execute the program.  When <A HREF="motion.html#it">它</A> ends you will get a prompt to hit
 <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.  This allows you to have a look at the output from the command before
 returning to the text you were editing.
    The &quot;<A HREF="change.html#!">!</A>&quot; is also used in other places where a program is run.  Let's take
@@ -142,11 +142,11 @@ a look at an overview:
 	:[range]!{program}	<A HREF="change.html#filter">filter</A> text through {program}
 
 Notice that the presence of a range before &quot;!{program}&quot; makes a big
-difference.  Without <A HREF="motion.html#it">it</A> executes the program normally, with the range a number
+difference.  Without <A HREF="motion.html#it">它</A> executes the program normally, with the range a number
 of text lines is filtered through the program.
 
 Executing a whole row of programs this way is possible.  But a shell is much
-better at <A HREF="motion.html#it">it</A>.  You can start a new shell with |<A HREF="various.html#:terminal">:terminal</A>|.
+better at <A HREF="motion.html#it">它</A>.  You can start a new shell with |<A HREF="various.html#:terminal">:terminal</A>|.
 
 This is similar to using <A HREF="starting.html#CTRL-Z">CTRL-Z</A> to <A HREF="starting.html#suspend">suspend</A> Vim.  The difference is that a new
 shell is started.
@@ -157,7 +157,7 @@ shell is started.
 
 After editing for a while you will have text in <A HREF="change.html#registers">registers</A>, marks in various
 files, a command line <A HREF="cmdline.html#history">history</A> filled with carefully crafted commands.  When
-you exit Vim all of this is lost.  But you can get <A HREF="motion.html#it">it</A> back!
+you exit Vim all of this is lost.  But you can get <A HREF="motion.html#it">它</A> back!
 
 The ShaDa (abbreviation of SHAred DAta) file is designed to store status 
 information:
@@ -168,12 +168,12 @@ information:
 	The buffer <A HREF="eval.html#list">list</A>
 	Global <A HREF="eval.html#variables">variables</A>
 
-Each time you exit Vim <A HREF="motion.html#it">it</A> will store this information in a file, the ShaDa
+Each time you exit Vim <A HREF="motion.html#it">它</A> will store this information in a file, the ShaDa
 file.  When Vim starts again, the ShaDa file is read and the information
 restored.
 
 The <A HREF="options.html#'shada'">'shada'</A> option is set by default to restore a limited number of items.
-You might want to set <A HREF="motion.html#it">it</A> to remember more information.  This is done through
+You might want to set <A HREF="motion.html#it">它</A> to remember more information.  This is done through
 the following command:
 
 <B>	:set shada=string</B>
@@ -189,7 +189,7 @@ looks like this:
 <B>	:set shada='1000</B>
 
 The <A HREF="motion.html#f">f</A> option controls whether global marks (A-Z and 0-9) are stored.  If this
-option is 0, none are stored.  If <A HREF="motion.html#it">it</A> is 1 or you <A HREF="diff.html#do">do</A> not specify an <A HREF="motion.html#f">f</A> option,
+option is 0, none are stored.  If <A HREF="motion.html#it">它</A> is 1 or you <A HREF="diff.html#do">do</A> not specify an <A HREF="motion.html#f">f</A> option,
 the marks are stored.  You want this feature, so now you have this:
 
 <B>	:set shada='1000,f1</B>
@@ -293,12 +293,12 @@ And in the second Vim <A HREF="diff.html#do">do</A>:
 
 Obviously, the &quot;<A HREF="motion.html#w">w</A>&quot; stands for &quot;write&quot; and the &quot;<A HREF="change.html#r">r</A>&quot; for &quot;read&quot;.
    The ! character is used by &quot;<A HREF="starting.html#:wshada">:wshada</A>&quot; to forcefully overwrite an existing
-file.  When <A HREF="motion.html#it">it</A> is omitted, and the file exists, the information is merged into
+file.  When <A HREF="motion.html#it">它</A> is omitted, and the file exists, the information is merged into
 the file.
    The ! character used for &quot;<A HREF="starting.html#:rshada">:rshada</A>&quot; means that all the information in ShaDa 
-file has priority over existing information, this may overwrite <A HREF="motion.html#it">it</A>.  Without 
+file has priority over existing information, this may overwrite <A HREF="motion.html#it">它</A>.  Without 
 the ! only information that wasn't set is used.
-   These commands can also be used to store info and use <A HREF="motion.html#it">it</A> again later.  You
+   These commands can also be used to store info and use <A HREF="motion.html#it">它</A> again later.  You
 could make a directory full of ShaDa files, each containing info for a
 different purpose.
 
@@ -306,9 +306,9 @@ different purpose.
 
 *<A NAME="21.4"></A><B>21.4</B>*	Sessions
 
-Suppose you are editing along, and <A HREF="motion.html#it">it</A> is the end of the day.  You want to quit
+Suppose you are editing along, and <A HREF="motion.html#it">它</A> is the end of the day.  You want to quit
 work and pick up where you left off the next day.  You can <A HREF="diff.html#do">do</A> this by saving
-your editing session and restoring <A HREF="motion.html#it">it</A> the next day.
+your editing session and restoring <A HREF="motion.html#it">它</A> the next day.
    A Vim session contains all the information about what you are editing.
 This includes things such <A HREF="motion.html#as">as</A> the file <A HREF="eval.html#list">list</A>,<A HREF="windows.html#window">窗口</A>layout, global <A HREF="eval.html#variables">variables</A>,
 <A HREF="options.html#options">options</A> and other information.  (Exactly what is remembered is controlled by
@@ -327,7 +327,7 @@ following command:
 <B>	vim -S vimbook.vim</B>
 
 This tells Vim to read a specific file on <A HREF="starting.html#startup">startup</A>.  The '<A HREF="change.html#S">S</A>' stands for
-session (actually, you can source any Vim <A HREF="usr_41.html#script">script</A> with <A HREF="starting.html#-S">-S</A>, thus <A HREF="motion.html#it">it</A> might <A HREF="motion.html#as">as</A>
+session (actually, you can source any Vim <A HREF="usr_41.html#script">script</A> with <A HREF="starting.html#-S">-S</A>, thus <A HREF="motion.html#it">它</A> might <A HREF="motion.html#as">as</A>
 well stand for &quot;source&quot;).
 
 The <A HREF="windows.html#windows">windows</A> that were open are restored, with the same position and size <A HREF="motion.html#as">as</A>
@@ -424,7 +424,7 @@ Sessions store many things, but not the position of marks, contents of
 for these things.
    In most situations you will want to use sessions separately from <A HREF="starting.html#shada">shada</A>.
 This can be used to switch to another session, but keep the command line
-<A HREF="cmdline.html#history">history</A>.  And <A HREF="change.html#yank">yank</A> text into <A HREF="change.html#registers">registers</A> in one session, and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">it</A> back in
+<A HREF="cmdline.html#history">history</A>.  And <A HREF="change.html#yank">yank</A> text into <A HREF="change.html#registers">registers</A> in one session, and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> back in
 another session.
    You might prefer to keep the info with the session.  You will have to <A HREF="diff.html#do">do</A>
 this yourself then.  Example:
@@ -446,7 +446,7 @@ properties for one<A HREF="windows.html#window">窗口</A>only, use a view.
    The use of a view is for when you want to edit a file in a specific way.
 For example, you have line numbers enabled with the <A HREF="options.html#'number'">'number'</A> option and
 defined a few <A HREF="fold.html#folds">folds</A>.  Just like with sessions, you can remember this view on
-the file and restore <A HREF="motion.html#it">it</A> later.  Actually, when you store a session, <A HREF="motion.html#it">it</A> stores
+the file and restore <A HREF="motion.html#it">它</A> later.  Actually, when you store a session, <A HREF="motion.html#it">它</A> stores
 the view of each<A HREF="windows.html#window">窗口</A>.
    There are two basic ways to use views.  The first is to let Vim pick a name
 for the view file.  You can restore the view when you later edit the same
@@ -459,7 +459,7 @@ you get the view back with this command:
 
 <B>	:loadview</B>
 
-That's easy, isn't <A HREF="motion.html#it">it</A>?
+That's easy, isn't <A HREF="motion.html#it">它</A>?
    Now you want to view the file without the <A HREF="options.html#'number'">'number'</A> option on, or with all
 <A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options.html#options">options</A> to make the<A HREF="windows.html#window">窗口</A>look that way.  Then
 store this view with:
@@ -487,7 +487,7 @@ saved them.
 
 <B>	:mkview ~/.config/nvim/main.vim</B>
 
-You can restore <A HREF="motion.html#it">it</A> with:
+You can restore <A HREF="motion.html#it">它</A> with:
 
 <B>	:source ~/.config/nvim/main.vim</B>
 
@@ -510,9 +510,9 @@ will <A HREF="diff.html#do">do</A> that:
 Put this line <A HREF="motion.html#as">as</A> one of the first or last five lines in the file.  When
 editing the file, you will notice that <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> will have been set to
 four.  When editing another file, it's set back to the default value of eight.
-   For some files the <A HREF="options.html#modeline">modeline</A> fits well in the header, thus <A HREF="motion.html#it">it</A> can be put at
+   For some files the <A HREF="options.html#modeline">modeline</A> fits well in the header, thus <A HREF="motion.html#it">它</A> can be put at
 the top of the file.  For text files and other files where the <A HREF="options.html#modeline">modeline</A> gets
-in the way of the normal contents, put <A HREF="motion.html#it">it</A> at the end of the file.
+in the way of the normal contents, put <A HREF="motion.html#it">它</A> at the end of the file.
 
 The <A HREF="options.html#'modelines'">'modelines'</A> option specifies how many lines at the start and end of the
 file are inspected for containing a <A HREF="options.html#modeline">modeline</A>.  To inspect ten lines:
@@ -530,14 +530,14 @@ Use this format for the <A HREF="options.html#modeline">modeline</A>:
 <B><FONT color="#3A6F2B">	any-text vim:set {option}={value} ... : any-text </FONT></B>
 
 The &quot;any-text&quot; indicates that you can put any text before and after the part
-that Vim will use.  This allows making <A HREF="motion.html#it">it</A> look like a comment, like what was
+that Vim will use.  This allows making <A HREF="motion.html#it">它</A> look like a comment, like what was
 done above with /* and *<A HREF="pattern.html#/.">/.</A>
    The &quot; vim:&quot; part is what makes Vim recognize this line.  There must be
 white space before &quot;vim&quot;, or &quot;vim&quot; must be at the start of the line.  Thus
 using something like &quot;gvim:&quot; will not work.
    The part between the colons is a &quot;<A HREF="options.html#:set">:set</A>&quot; command.  It works the same way <A HREF="motion.html#as">as</A>
 typing the &quot;<A HREF="options.html#:set">:set</A>&quot; command, except that you need to insert a <A HREF="intro.html#backslash">backslash</A> before a
-colon (otherwise <A HREF="motion.html#it">it</A> would be seen <A HREF="motion.html#as">as</A> the end of the <A HREF="options.html#modeline">modeline</A>).
+colon (otherwise <A HREF="motion.html#it">它</A> would be seen <A HREF="motion.html#as">as</A> the end of the <A HREF="options.html#modeline">modeline</A>).
 
 Another example:
 
@@ -547,7 +547,7 @@ There is an extra <A HREF="intro.html#backslash">backslash</A> before the first 
 the &quot;<A HREF="options.html#:set">:set</A>&quot; command.  The text after the second colon is ignored, thus a remark
 can be placed there.
 
-For more details see |<A HREF="options.html#modeline">modeline</A>|.
+For more details 见 |<A HREF="options.html#modeline">modeline</A>|.
 
 ==============================================================================
 

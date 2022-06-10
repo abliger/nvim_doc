@@ -111,7 +111,7 @@ who want to read and view the diagnostics for a buffer).  The APIs for
 producers require a {namespace} <A HREF="motion.html#as">as</A> their first argument, while those for
 consumers generally <A HREF="diff.html#do">do</A> not require a <A HREF="api.html#namespace">namespace</A> (though often one may be
 optionally supplied).  A good rule of thumb is that if a <A HREF="eval.html#method">method</A> is meant to
-modify the diagnostics for a buffer (e.g. |<A HREF="vim.html">vim.diagnostic.set()</A>|) then <A HREF="motion.html#it">it</A>
+modify the diagnostics for a buffer (e.g. |<A HREF="vim.html">vim.diagnostic.set()</A>|) then <A HREF="motion.html#it">它</A>
 requires a <A HREF="api.html#namespace">namespace</A>.
 
 
@@ -177,7 +177,7 @@ creating a new key in `vim.diagnostic.handlers` (see
 |<A HREF="#diagnostic-handlers-example">diagnostic-handlers-example</A>|).
 
 The {opts} table passed to a handler is the full set of configuration <A HREF="options.html#options">options</A>
-(that is, <A HREF="motion.html#it">it</A> is not limited to just the <A HREF="options.html#options">options</A> for the handler itself). The
+(that is, <A HREF="motion.html#it">它</A> is not limited to just the <A HREF="options.html#options">options</A> for the handler itself). The
 values in the table are already resolved (i.e. if a user specifies a
 function for a <A HREF="starting.html#config">config</A> option, the function has already been evaluated).
 
@@ -338,7 +338,7 @@ DiagnosticUnderlineHint
 						*<A NAME="hl-DiagnosticFloatingError"></A><B>hl-DiagnosticFloatingError</B>*
 DiagnosticFloatingError
   Used to color &quot;Error&quot; diagnostic <A HREF="message.html#messages">messages</A> in diagnostics float.
-  See |<A HREF="vim.html">vim.diagnostic.open_float()</A>|
+  见 |<A HREF="vim.html">vim.diagnostic.open_float()</A>|
 
 
 						*<A NAME="hl-DiagnosticFloatingWarn"></A><B>hl-DiagnosticFloatingWarn</B>*
@@ -388,7 +388,7 @@ can be customized using the following:
 <B>	sign define DiagnosticSignInfo text=I texthl=DiagnosticSignInfo linehl= numhl=</B>
 <B>	sign define DiagnosticSignHint text=H texthl=DiagnosticSignHint linehl= numhl=</B>
 
-When the &quot;severity_sort&quot; option is set (see |<A HREF="vim.html">vim.diagnostic.config()</A>|) the
+When the &quot;severity_sort&quot; option is set (见 |<A HREF="vim.html">vim.diagnostic.config()</A>|) the
 priority of each sign depends on the severity of the associated diagnostic.
 Otherwise, all <A HREF="sign.html#signs">signs</A> have the same priority (the value of the &quot;priority&quot;
 option in the &quot;<A HREF="sign.html#signs">signs</A>&quot; table of |<A HREF="vim.html">vim.diagnostic.config()</A>| or 10 if unset).
@@ -557,7 +557,7 @@ get({bufnr}, {opts})                                    *<A NAME="vim.diagnostic
                                given <A HREF="api.html#namespace">namespace</A>.
                              • lnum: (number) Limit diagnostics to the given
                                line number.
-                             • severity: See |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
+                             • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) A <A HREF="eval.html#list">list</A> of diagnostic items |<A HREF="#diagnostic-structure">diagnostic-structure</A>|.
@@ -585,7 +585,7 @@ get_next({opts})                                   *<A NAME="vim.diagnostic.get_
                 Get the next diagnostic closest to the cursor position.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) See |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
+                    {opts}  (table) 见 |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) Next diagnostic
@@ -596,7 +596,7 @@ get_next_pos({opts})                           *<A NAME="vim.diagnostic.get_next
                 buffer.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) See |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
+                    {opts}  (table) 见 |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) Next diagnostic position <A HREF="motion.html#as">as</A> a (row, col) tuple.
@@ -606,7 +606,7 @@ get_prev({opts})                                   *<A NAME="vim.diagnostic.get_
                 Get the previous diagnostic closest to the cursor position.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) See |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
+                    {opts}  (table) 见 |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) Previous diagnostic
@@ -617,7 +617,7 @@ get_prev_pos({opts})                           *<A NAME="vim.diagnostic.get_prev
                 buffer.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) See |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
+                    {opts}  (table) 见 |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) Previous diagnostic position <A HREF="motion.html#as">as</A> a (row, col)
@@ -638,7 +638,7 @@ goto_next({opts})                                 *<A NAME="vim.diagnostic.goto_
                               cursor position.
                             • wrap: (boolean, default true) Whether to loop
                               around file or not. Similar to <A HREF="options.html#'wrapscan'">'wrapscan'</A>.
-                            • severity: See |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
+                            • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
                             • float: (boolean or table, default true) If
                               &quot;true&quot;, call |<A HREF="vim.html">vim.diagnostic.open_float()</A>| after
                               moving. If a table, pass the table <A HREF="motion.html#as">as</A> the {opts}
@@ -653,7 +653,7 @@ goto_prev({opts})                                 *<A NAME="vim.diagnostic.goto_
                 Move to the previous diagnostic in the current buffer.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) See |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
+                    {opts}  (table) 见 |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|
 
 
 hide({namespace}, {bufnr})                             *<A NAME="vim.diagnostic.hide()"></A><B>vim.diagnostic.hide()</B>*
@@ -738,10 +738,10 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                             • severity_sort: (default false) Sort diagnostics
                               by severity. Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • severity: See |<A HREF="#diagnostic-severity">diagnostic-severity</A>|. Overrides
+                            • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|. Overrides
                               the setting from |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • header: (string or table) <A HREF="eval.html#String">String</A> to use <A HREF="motion.html#as">as</A> the
-                              header for the floating<A HREF="windows.html#window">窗口</A>. If a table, <A HREF="motion.html#it">it</A>
+                              header for the floating<A HREF="windows.html#window">窗口</A>. If a table, <A HREF="motion.html#it">它</A>
                               is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group] tuple.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
@@ -759,7 +759,7 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • prefix: (function, <A HREF="eval.html#string">string</A>, or table) Prefix each
                               diagnostic in the floating<A HREF="windows.html#window">窗口</A>. If a
-                              function, <A HREF="motion.html#it">it</A> must have the signature
+                              function, <A HREF="motion.html#it">它</A> must have the signature
                               (diagnostic, <A HREF="insert.html#i">i</A>, total) <A HREF="eval.html#-&gt;">-&gt;</A> (string, string),
                               where {i} is the index of the diagnostic being
                               evaluated and {total} is the total number of
@@ -768,9 +768,9 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               prepended to each diagnostic in the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A>
                               well <A HREF="motion.html#as">as</A> an (optional) highlight group which will
                               be used to highlight the prefix. If {prefix} is
-                              a table, <A HREF="motion.html#it">it</A> is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group]
+                              a table, <A HREF="motion.html#it">它</A> is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group]
                               tuple <A HREF="motion.html#as">as</A> in |<A HREF="api.html#nvim_echo()">nvim_echo()</A>|; otherwise, if
-                              {prefix} is a <A HREF="eval.html#string">string</A>, <A HREF="motion.html#it">it</A> is prepended to each
+                              {prefix} is a <A HREF="eval.html#string">string</A>, <A HREF="motion.html#it">它</A> is prepended to each
                               diagnostic in the<A HREF="windows.html#window">窗口</A>with no highlight.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
@@ -823,7 +823,7 @@ setloclist({opts})                               *<A NAME="vim.diagnostic.setloc
                               <A HREF="eval.html#list">list</A> after setting.
                             • title: (string) Title of the location <A HREF="eval.html#list">list</A>.
                               Defaults to &quot;Diagnostics&quot;.
-                            • severity: See |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
+                            • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
 
 
 setqflist({opts})                                 *<A NAME="vim.diagnostic.setqflist()"></A><B>vim.diagnostic.setqflist()</B>*
@@ -838,7 +838,7 @@ setqflist({opts})                                 *<A NAME="vim.diagnostic.setqf
                               after setting.
                             • title: (string) Title of <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>. Defaults
                               to &quot;Diagnostics&quot;.
-                            • severity: See |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
+                            • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|.
 
 
                                                        *<A NAME="vim.diagnostic.show()"></A><B>vim.diagnostic.show()</B>*

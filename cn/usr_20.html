@@ -79,7 +79,7 @@
 		     Typing command-line commands quickly
 
 
-Vim has a few generic features that makes <A HREF="motion.html#it">it</A> easier to enter commands.  Colon
+Vim has a few generic features that makes <A HREF="motion.html#it">它</A> easier to enter commands.  Colon
 commands can be abbreviated, edited and repeated.  Completion is available for
 nearly everything.
 
@@ -162,7 +162,7 @@ and type &quot;great&quot;:
 
 <B><FONT color="#3A6F2B">	/the greatpig </FONT></B>
 
-Oops, we lost the space.  Now, don't use <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>, because <A HREF="motion.html#it">it</A> would delete the
+Oops, we lost the space.  Now, don't use <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>, because <A HREF="motion.html#it">它</A> would delete the
 &quot;<A HREF="motion.html#t">t</A>&quot; (this is different from <A HREF="insert.html#Replace">Replace</A> mode).  Instead, press <A HREF="insert.html#&lt;Insert&gt;">&lt;Insert&gt;</A> to switch
 from overstrike to <A HREF="insert.html#inserting">inserting</A>, and type the space:
 
@@ -172,13 +172,13 @@ from overstrike to <A HREF="insert.html#inserting">inserting</A>, and type the s
 CANCELLING
 
 You thought of executing a : or / command, but changed your mind.  To get rid
-of what you already typed, without executing <A HREF="motion.html#it">it</A>, press <A HREF="pattern.html#CTRL-C">CTRL-C</A> or <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
+of what you already typed, without executing <A HREF="motion.html#it">它</A>, press <A HREF="pattern.html#CTRL-C">CTRL-C</A> or <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
 
 	Note:
 	<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is the universal &quot;get out&quot; key.  Unfortunately, in the good old
 	<A HREF="intro.html#Vi">Vi</A> pressing <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> in a command line executed the command!  Since that
 	might be considered to be a bug, Vim uses <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to cancel the command.
-	But with the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option <A HREF="motion.html#it">it</A> can be made <A HREF="intro.html#Vi">Vi</A> compatible.  And
+	But with the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option <A HREF="motion.html#it">它</A> can be made <A HREF="intro.html#Vi">Vi</A> compatible.  And
 	when using a <A HREF="map.html#mapping">mapping</A> (which might be written for <A HREF="intro.html#Vi">Vi</A>) <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> also works
 	<A HREF="intro.html#Vi">Vi</A> compatible.  Therefore, using <A HREF="pattern.html#CTRL-C">CTRL-C</A> is a <A HREF="eval.html#method">method</A> that always works.
 
@@ -196,7 +196,7 @@ Some of the &quot;<A HREF="cmdline.html#:">:</A>&quot; commands are really long.
 How short can a command get?  There are 26 letters, and many more commands.
 For example, &quot;<A HREF="options.html#:set">:set</A>&quot; also starts with &quot;<A HREF="change.html#:s">:s</A>&quot;, but &quot;<A HREF="change.html#:s">:s</A>&quot; doesn't start a &quot;<A HREF="options.html#:set">:set</A>&quot;
 command.  Instead &quot;<A HREF="options.html#:set">:set</A>&quot; can be abbreviated to &quot;<A HREF="options.html#:se">:se</A>&quot;.
-   When the shorter form of a command could be used for two commands, <A HREF="motion.html#it">it</A>
+   When the shorter form of a command could be used for two commands, <A HREF="motion.html#it">它</A>
 stands for only one of them.  There is no logic behind which one, you have to
 learn them.  In the help files the shortest form that works is mentioned.  For
 example:
@@ -213,7 +213,7 @@ will use &quot;:fun&quot;.  (Vim doesn't have a &quot;:funny&quot; command, othe
 be confusing too.)
 
 It is recommended that in Vim scripts you write the full command name.  That
-makes <A HREF="motion.html#it">it</A> easier to read back when you make later changes.  Except for some
+makes <A HREF="motion.html#it">它</A> easier to read back when you make later changes.  Except for some
 often used commands like &quot;<A HREF="editing.html#:w">:w</A>&quot; (&quot;:write&quot;) and &quot;<A HREF="insert.html#:r">:r</A>&quot; (&quot;:read&quot;).
    A particularly confusing one is &quot;<A HREF="eval.html#:end">:end</A>&quot;, which could stand for &quot;<A HREF="eval.html#:endif">:endif</A>&quot;,
 &quot;<A HREF="eval.html#:endwhile">:endwhile</A>&quot; or &quot;<A HREF="eval.html#:endfunction">:endfunction</A>&quot;.  Therefore, always use the full name.
@@ -266,18 +266,18 @@ Vim will beep, and give you:
 <B>	:edit info.txt</B>
 
 The beep means that Vim has found more than one match.  It then uses the first
-match <A HREF="motion.html#it">it</A> found (alphabetically).  If you press <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> again, you get:
+match <A HREF="motion.html#it">它</A> found (alphabetically).  If you press <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> again, you get:
 
 <B>	:edit intro.txt</B>
 
 Thus, if the first <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> doesn't give you the file you were looking for, press
-<A HREF="motion.html#it">it</A> again.  If there are more matches, you will see them all, one at a time.
+<A HREF="motion.html#it">它</A> again.  If there are more matches, you will see them all, one at a time.
    If you press <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> on the last matching entry, you will go back to what you
 first typed:
 
 <B>	:edit i</B>
 
-Then <A HREF="motion.html#it">it</A> starts all over again.  Thus Vim cycles through the <A HREF="eval.html#list">list</A> of matches.
+Then <A HREF="motion.html#it">它</A> starts all over again.  Thus Vim cycles through the <A HREF="eval.html#list">list</A> of matches.
 Use <A HREF="motion.html#CTRL-P">CTRL-P</A> to go through the <A HREF="eval.html#list">list</A> in the other direction:
 
 	      &lt;------------------- <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> -------------------------+
@@ -297,7 +297,7 @@ When you type &quot;<A HREF="options.html#:set">:set</A> <A HREF="insert.html#i"
 
 Hey, why didn't you get &quot;<A HREF="options.html#:set">:set</A> info.txt&quot;?  That's because Vim has <A HREF="repeat.html#context">context</A>
 sensitive completion.  The kind of words Vim will look for depends on the
-command before <A HREF="motion.html#it">it</A>.  Vim knows that you cannot use a file name just after a
+command before <A HREF="motion.html#it">它</A>.  Vim knows that you cannot use a file name just after a
 &quot;<A HREF="options.html#:set">:set</A>&quot; command, but you can use an option name.
    Again, if you repeat typing the <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, Vim will cycle through all matches.
 There are quite a few, it's better to type more characters first:
@@ -313,9 +313,9 @@ Now type &quot;<A HREF="change.html#=">=</A>&quot; and press <A HREF="motion.htm
 <B>	:set iskeyword=@,48-57,_,192-255</B>
 
 What happens here is that Vim inserts the old value of the option.  Now you
-can edit <A HREF="motion.html#it">it</A>.
+can edit <A HREF="motion.html#it">它</A>.
    What is completed with <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> is what Vim expects in that place.  Just try
-<A HREF="motion.html#it">it</A> out to see how <A HREF="motion.html#it">it</A> works.  In some situations you will not get what you
+<A HREF="motion.html#it">它</A> out to see how <A HREF="motion.html#it">它</A> works.  In some situations you will not get what you
 want.  That's either because Vim doesn't know what you want, or because
 completion was not implemented for that situation.  In that <A HREF="change.html#case">case</A> you will get
 a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> inserted (displayed <A HREF="motion.html#as">as</A> ^I).
@@ -335,7 +335,7 @@ results in:
 <B>	:set is</B>
 
 Vim lists the matches and then comes back with the text you typed.  You can
-now check the <A HREF="eval.html#list">list</A> for the item you wanted.  If <A HREF="motion.html#it">it</A> isn't there, you can use
+now check the <A HREF="eval.html#list">list</A> for the item you wanted.  If <A HREF="motion.html#it">它</A> isn't there, you can use
 <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> to correct the <A HREF="motion.html#word">单词</A>.  If there are many matches, type a few more
 characters before pressing <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> to complete the rest.
    If you have watched carefully, you will have noticed that &quot;incsearch&quot;
@@ -384,7 +384,7 @@ a good chance that this is the &quot;<A HREF="options.html#:set">:set</A>&quot; 
 you should not have to press <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> very often (unless &quot;<A HREF="options.html#:set">:set</A>&quot; commands is all
 you have done).
 
-The <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> key will use the text typed so far and compare <A HREF="motion.html#it">it</A> with the lines in
+The <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> key will use the text typed so far and compare <A HREF="motion.html#it">它</A> with the lines in
 the <A HREF="cmdline.html#history">history</A>.  Only matching lines will be used.
    If you <A HREF="diff.html#do">do</A> not find the line you were looking for, use <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> to go back to
 what you typed and correct that.  Or use <A HREF="scroll.html#CTRL-U">CTRL-U</A> to start all over again.
@@ -398,7 +398,7 @@ command:
 
 <B>	:history /</B>
 
-<A HREF="motion.html#CTRL-P">CTRL-P</A> will work like <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>, except that <A HREF="motion.html#it">it</A> doesn't matter what you already
+<A HREF="motion.html#CTRL-P">CTRL-P</A> will work like <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>, except that <A HREF="motion.html#it">它</A> doesn't matter what you already
 typed.  Similarly for <A HREF="motion.html#CTRL-N">CTRL-N</A> and <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A>.  <A HREF="motion.html#CTRL-P">CTRL-P</A> stands for previous, <A HREF="motion.html#CTRL-N">CTRL-N</A>
 for next.
 
@@ -448,7 +448,7 @@ matter whether Vim is in <A HREF="intro.html#Insert">插入</A>模式 or in <A H
 the end of the <A HREF="cmdline.html#history">history</A>, like with all executed commands.
 
 The command line<A HREF="windows.html#window">窗口</A>is very useful when you want to have overview of the
-<A HREF="cmdline.html#history">history</A>, lookup a similar command, change <A HREF="motion.html#it">it</A> a bit and execute <A HREF="motion.html#it">it</A>.  A search
+<A HREF="cmdline.html#history">history</A>, lookup a similar command, change <A HREF="motion.html#it">它</A> a bit and execute <A HREF="motion.html#it">它</A>.  A search
 command can be used to find something.
    In the previous example the &quot;?config&quot; search command could have been used
 to find the previous command that contains &quot;<A HREF="starting.html#config">config</A>&quot;.  It's a bit strange,

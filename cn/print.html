@@ -109,7 +109,7 @@ Note: If you have problems <A HREF="#printing">printing</A> with |<A HREF="#:har
 
 			For systems other than MS-Windows, PostScript is
 			written in a temp file and <A HREF="options.html#'printexpr'">'printexpr'</A> is used to
-			actually print <A HREF="motion.html#it">it</A>.  Then [arguments] can be used by
+			actually print <A HREF="motion.html#it">它</A>.  Then [arguments] can be used by
 			<A HREF="options.html#'printexpr'">'printexpr'</A> through |<A HREF="eval.html#v:cmdarg">v:cmdarg</A>|.  Otherwise [arguments]
 			is ignored.  <A HREF="options.html#'printoptions'">'printoptions'</A> can be used to specify
 			paper size, duplex, etc.
@@ -136,7 +136,7 @@ the current window's <A HREF="options.html#'wrap'">'wrap'</A> or <A HREF="option
 The current highlighting colors are used in the printout, with the following
 considerations:
 1) The normal background is always rendered <A HREF="motion.html#as">as</A> white (i.e. blank paper).
-2) White text or the default foreground is rendered <A HREF="motion.html#as">as</A> black, so that <A HREF="motion.html#it">it</A> shows
+2) White text or the default foreground is rendered <A HREF="motion.html#as">as</A> black, so that <A HREF="motion.html#it">它</A> shows
    up!
 3) If <A HREF="options.html#'background'">'background'</A> is &quot;dark&quot;, then the colours are darkened to compensate for
    the fact that otherwise they would be too bright to show up clearly on
@@ -147,15 +147,15 @@ considerations:
 2. Print <A HREF="options.html#options">options</A>					*<A NAME="print-options"></A><B>print-options</B>*
 
 Here are the details for the <A HREF="options.html#options">options</A> that change the way <A HREF="#printing">printing</A> is done.
-For generic info about setting options see |<A HREF="options.html">options.txt</A>|.
+For generic info about setting options 见 |<A HREF="options.html">options.txt</A>|.
 
 
 							*<A NAME="pdev-option"></A><B>pdev-option</B>*
 <A HREF="options.html#'printdevice'">'printdevice'</A> <A HREF="options.html#'pdev'">'pdev'</A>	<A HREF="eval.html#string">string</A>	(default empty)
 			global
 This defines the name of the printer to be used when the |<A HREF="#:hardcopy">:hardcopy</A>| command
-is issued with a bang (!) to skip the printer selection dialog.  On Win32, <A HREF="motion.html#it">it</A>
-should be the printer name exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> appears in the standard printer
+is issued with a bang (!) to skip the printer selection dialog.  On Win32, <A HREF="motion.html#it">它</A>
+should be the printer name exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> appears in the standard printer
 dialog.
 If the option is empty, then vim will use the system default printer for
 &quot;:hardcopy!&quot;
@@ -176,9 +176,9 @@ are converted to Vim standard names - see <A HREF="options.html#'encoding'">'enc
 not recognized by Vim will just be converted to lower <A HREF="change.html#case">case</A> and underscores
 replaced with '<A HREF="motion.html#-">-</A>' <A HREF="sign.html#signs">signs</A>.
 
-If <A HREF="options.html#'printencoding'">'printencoding'</A> is empty or Vim cannot find the file then <A HREF="motion.html#it">it</A> will use
-<A HREF="options.html#'encoding'">'encoding'</A> (if <A HREF="motion.html#it">it</A> is set an 8-bit encoding) to find the print character
-encoding file.  If Vim is unable to find a character encoding file then <A HREF="motion.html#it">it</A>
+If <A HREF="options.html#'printencoding'">'printencoding'</A> is empty or Vim cannot find the file then <A HREF="motion.html#it">它</A> will use
+<A HREF="options.html#'encoding'">'encoding'</A> (if <A HREF="motion.html#it">它</A> is set an 8-bit encoding) to find the print character
+encoding file.  If Vim is unable to find a character encoding file then <A HREF="motion.html#it">它</A>
 will use the &quot;latin1&quot; print character encoding file.
 
 When <A HREF="options.html#'encoding'">'encoding'</A> is set to a <A HREF="mbyte.html#multibyte">multibyte</A> encoding, Vim will try to convert
@@ -199,7 +199,7 @@ Expression that is evaluated to print the PostScript produced with
 |<A HREF="#:hardcopy">:hardcopy</A>|.
 The file name to be printed is in |<A HREF="eval.html#v:fname_in">v:fname_in</A>|.
 The arguments to the &quot;<A HREF="#:hardcopy">:hardcopy</A>&quot; command are in |<A HREF="eval.html#v:cmdarg">v:cmdarg</A>|.
-The <A HREF="eval.html#expression">expression</A> must take care of <A HREF="change.html#deleting">deleting</A> the file after <A HREF="#printing">printing</A> <A HREF="motion.html#it">it</A>.
+The <A HREF="eval.html#expression">expression</A> must take care of <A HREF="change.html#deleting">deleting</A> the file after <A HREF="#printing">printing</A> <A HREF="motion.html#it">它</A>.
 When there is an error, the <A HREF="eval.html#expression">expression</A> must return a non-zero number.
 If there is no error, return zero or an empty <A HREF="eval.html#string">string</A>.
 The default for non MS-Windows systems is to simply use &quot;lpr&quot; to print the
@@ -228,11 +228,11 @@ If you change this option, using a function is an easy way to avoid having to
 <B>	:endfunc</B>
 
 Be aware that some print programs return <A HREF="intro.html#control">control</A> before they have read the
-file.  If you delete the file too soon <A HREF="motion.html#it">it</A> will not be printed.  These programs
+file.  If you delete the file too soon <A HREF="motion.html#it">它</A> will not be printed.  These programs
 usually offer an option to have them remove the file when <A HREF="#printing">printing</A> is done.
 
 							*<A NAME="E365"></A><B>E365</B>*
-If evaluating the <A HREF="eval.html#expression">expression</A> fails or <A HREF="motion.html#it">it</A> results in a non-zero number, you get
+If evaluating the <A HREF="eval.html#expression">expression</A> fails or <A HREF="motion.html#it">它</A> results in a non-zero number, you get
 an error message.  In that <A HREF="change.html#case">case</A> Vim will delete the file.  In the default
 value for non-MS-Windows a trick is used: Adding &quot;<A HREF="eval.html#v:shell_error">v:shell_error</A>&quot; will result
 in a non-zero number when the <A HREF="builtin.html#system()">system()</A> call fails.
@@ -332,8 +332,8 @@ To set up the correct encoding and character set for <A HREF="#printing">printin
 <B>	:set printencoding=euc-jp</B>
 <B>	:set printmbcharset=JIS_X_1983</B>
 
-If <A HREF="options.html#'printmbcharset'">'printmbcharset'</A> is not one of the above values then <A HREF="motion.html#it">it</A> is assumed to
-specify a custom <A HREF="mbyte.html#multibyte">multibyte</A> character set and no check will be made that <A HREF="motion.html#it">it</A> is
+If <A HREF="options.html#'printmbcharset'">'printmbcharset'</A> is not one of the above values then <A HREF="motion.html#it">它</A> is assumed to
+specify a custom <A HREF="mbyte.html#multibyte">multibyte</A> character set and no check will be made that <A HREF="motion.html#it">它</A> is
 compatible with the value for <A HREF="options.html#'printencoding'">'printencoding'</A>.  Vim will look for a file
 defining the character set in the &quot;print&quot; directory in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.
 
@@ -473,16 +473,16 @@ you can find the help files, they probably are).
 There are currently a number of limitations with PostScript <A HREF="#printing">printing</A>:
 
 - <A HREF="options.html#'printfont'">'printfont'</A> - The font name is ignored (the Courier family is always used -
-  <A HREF="motion.html#it">it</A> should be available on all PostScript printers) but the font size is
+  <A HREF="motion.html#it">它</A> should be available on all PostScript printers) but the font size is
   used.
 
 - <A HREF="options.html#'printoptions'">'printoptions'</A> - The duplex setting is used when generating PostScript
-  output, but <A HREF="motion.html#it">it</A> is up to the printer to take notice of the setting.  If the
-  printer does not support duplex <A HREF="#printing">printing</A> then <A HREF="motion.html#it">it</A> should be silently ignored.
+  output, but <A HREF="motion.html#it">它</A> is up to the printer to take notice of the setting.  If the
+  printer does not support duplex <A HREF="#printing">printing</A> then <A HREF="motion.html#it">它</A> should be silently ignored.
   Some printers, however, don't print at all.
 
 - 8-bit support - While a number of 8-bit print character encodings are
-  supported <A HREF="motion.html#it">it</A> is possible that some characters will not print.  Whether a
+  supported <A HREF="motion.html#it">它</A> is possible that some characters will not print.  Whether a
   character will print depends on the font in the printer knowing the
   character.  Missing characters will be replaced with an upside down question
   <A HREF="motion.html#mark">mark</A>, or a space if that character is also not known by the font.  It may be
@@ -490,7 +490,7 @@ There are currently a number of limitations with PostScript <A HREF="#printing">
   new version of the Courier font family.
 
 - Multi-byte support - Currently Vim will try to convert <A HREF="mbyte.html#multibyte">multibyte</A> characters
-  to the 8-bit encoding specified by <A HREF="options.html#'printencoding'">'printencoding'</A> (or latin1 if <A HREF="motion.html#it">it</A> is
+  to the 8-bit encoding specified by <A HREF="options.html#'printencoding'">'printencoding'</A> (or latin1 if <A HREF="motion.html#it">它</A> is
   empty).  Any characters that are not successfully converted are shown <A HREF="motion.html#as">as</A>
   unknown characters.  Printing will fail if Vim cannot convert the <A HREF="mbyte.html#multibyte">multibyte</A>
   to the 8-bit encoding.
@@ -512,7 +512,7 @@ locate and use your print character encoding.
      with any of the recognized or standard encoding names that Vim uses (see
      |<A HREF="mbyte.html#encoding-names">encoding-names</A>| for a list), and that no one else is likely to use.
 ii.  Copy $VIMRUNTIME/print/latin1.ps to the print subdirectory in your
-     <A HREF="options.html#'runtimepath'">'runtimepath'</A> and rename <A HREF="motion.html#it">it</A> with your unique name.
+     <A HREF="options.html#'runtimepath'">'runtimepath'</A> and rename <A HREF="motion.html#it">它</A> with your unique name.
 iii. Edit your renamed copy of latin1.ps, <A HREF="change.html#replacing">replacing</A> all occurrences of latin1
      with your unique name (don't forget the line starting &#37;&#37;Title:), and
      modify the array of glyph names to define your new encoding vector.  The
@@ -525,7 +525,7 @@ content of the first 3 lines, other than the name of the encoding on the line
 starting &#37;&#37;Title: or the version number on the line starting &#37;&#37;Version:.
 
 [Technical explanation for those that know PostScript - Vim looks for a file
-with the same name <A HREF="motion.html#as">as</A> the encoding <A HREF="motion.html#it">it</A> will use when <A HREF="#printing">printing</A>.  The file
+with the same name <A HREF="motion.html#as">as</A> the encoding <A HREF="motion.html#it">它</A> will use when <A HREF="#printing">printing</A>.  The file
 defines a new PostScript Encoding resource called /VIM-name, where name is the
 print character encoding Vim will use.]
 
@@ -567,7 +567,7 @@ You can find descriptions of the various fonts in the read me file at
 
 Please read your printer documentation on how to install new fonts.
 
-CJK fonts can be large containing several thousand glyphs, and <A HREF="motion.html#it">it</A> is not
+CJK fonts can be large containing several thousand glyphs, and <A HREF="motion.html#it">它</A> is not
 uncommon to find that they only contain a subset of a national standard.  It
 is not unusual to find the fonts to not include characters for codes in the
 ASCII code range.  If you find half-width Roman characters are not appearing
@@ -609,14 +609,14 @@ There are a number of possible causes <A HREF="motion.html#as">as</A> to why the
   not support the requested paper size.  By default Vim uses A4 paper.  Find
   out what size paper your printer normally uses and set the appropriate paper
   size with <A HREF="options.html#'printoptions'">'printoptions'</A>.  If you cannot find the name of the paper used,
-  measure a sheet and compare <A HREF="motion.html#it">it</A> with the table of supported paper sizes listed
+  measure a sheet and compare <A HREF="motion.html#it">它</A> with the table of supported paper sizes listed
   for <A HREF="options.html#'printoptions'">'printoptions'</A>, using the paper that is closest in both width AND height.
   Note: The dimensions of actual paper may vary slightly from the ones listed.
   If there is no paper listed close enough, then you may want to try psresize
   from PSUtils, discussed below.
 
 - Two-sided <A HREF="#printing">printing</A> (duplex).  Normally a PostScript printer that does not
-  support two-sided <A HREF="#printing">printing</A> will ignore any request to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>.  However, some
+  support two-sided <A HREF="#printing">printing</A> will ignore any request to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.  However, some
   printers may abort the <A HREF="job_control.html#job">job</A> altogether.  Try <A HREF="#printing">printing</A> with duplex turned off.
   Note: Duplex prints can be achieved manually using PS utils - see below.
 
@@ -704,7 +704,7 @@ Linux
 
 	<A HREF="http://www.cs.wisc.edu/~ghost/gsview/">http://www.cs.wisc.edu/~ghost/gsview/</A>
 
-- BMV.  Different from Ghostview and <A HREF="visual.html#gv">gv</A> in that <A HREF="motion.html#it">it</A> doesn't use X but svgalib.
+- BMV.  Different from Ghostview and <A HREF="visual.html#gv">gv</A> in that <A HREF="motion.html#it">它</A> doesn't use X but svgalib.
   Obtainable from:
 
 	<A HREF="ftp://sunsite.unc.edu/pub/Linux/apps/graphics/viewers/svga/bmv-1.2.tgz">ftp://sunsite.unc.edu/pub/Linux/apps/graphics/viewers/svga/bmv-1.2.tgz</A>
@@ -732,7 +732,7 @@ complex print document creation.
 N-UP PRINTING
 
 The psnup utility takes an existing PostScript file generated from Vim and
-convert <A HREF="motion.html#it">it</A> to an n-up version.  The simplest way to create a 2-up printout is
+convert <A HREF="motion.html#it">它</A> to an n-up version.  The simplest way to create a 2-up printout is
 to first create a PostScript file with:
 
 <B>	:hardcopy &gt; test.ps</B>
@@ -763,7 +763,7 @@ files with all the odd and even numbered pages with:
 <B>	psselect -e test.ps even.ps</B>
 
 Next print odd.ps with your platform's normal print command.  Then take the
-print output, turn <A HREF="motion.html#it">it</A> over and place <A HREF="motion.html#it">it</A> back in the paper feeder.  Now print
+print output, turn <A HREF="motion.html#it">它</A> over and place <A HREF="motion.html#it">它</A> back in the paper feeder.  Now print
 even.ps with your platform's print command.  All the even pages should now
 appear on the back of the odd pages.
 
@@ -773,13 +773,13 @@ There are a couple of points to bear in mind:
    when <A HREF="#printing">printing</A> the odd pages then you need to reverse the order that the odd
    pages are printed.  This can be done with the <A HREF="starting.html#-r">-r</A> option to psselect.  This
    will ensure page 2 is printed on the back of page 1.
-   Note: <A HREF="motion.html#it">it</A> is better to reverse the odd numbered pages rather than the even
+   Note: <A HREF="motion.html#it">它</A> is better to reverse the odd numbered pages rather than the even
    numbered in <A HREF="change.html#case">case</A> there are an odd number of pages in the original PS file.
 
 2. Paper flipping.  When turning over the paper with the odd pages printed on
    them you may have to either flip them horizontally (along the long edge) or
    vertically (along the short edge), <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> possibly rotating them 180
-   degrees.  All this depends on the printer - <A HREF="motion.html#it">it</A> will be more obvious for
+   degrees.  All this depends on the printer - <A HREF="motion.html#it">它</A> will be more obvious for
    desktop ink jets than for small office laser printers where the paper path
    is hidden from view.
 
@@ -795,13 +795,13 @@ of the first line on a new page.  The use of formfeed characters provides
 rudimentary print <A HREF="intro.html#control">control</A> but there are certain things to be aware of.
 
 Vim will always start <A HREF="#printing">printing</A> a line (including a line number if enabled)
-containing a formfeed character, even if <A HREF="motion.html#it">it</A> is the first character on the
+containing a formfeed character, even if <A HREF="motion.html#it">它</A> is the first character on the
 line.  This means if a line starting with a formfeed character is the first
 line of a page then Vim will print a blank page.
 
 Since the line number is printed at the start of <A HREF="#printing">printing</A> the line containing
 the formfeed character, the remainder of the line printed on the new page
-will not have a line number printed for <A HREF="motion.html#it">it</A> (in the same way <A HREF="motion.html#as">as</A> the wrapped
+will not have a line number printed for <A HREF="motion.html#it">它</A> (in the same way <A HREF="motion.html#as">as</A> the wrapped
 lines of a long line when wrap in <A HREF="options.html#'printoptions'">'printoptions'</A> is enabled).
 
 If the formfeed character is the last character on a line, then <A HREF="#printing">printing</A> will
@@ -809,7 +809,7 @@ continue on the second line of the new page, not the first.  This is due to
 Vim processing the end of the line after the formfeed character and moving
 down a line to continue <A HREF="#printing">printing</A>.
 
-Due to the points made above <A HREF="motion.html#it">it</A> is recommended that when formfeed character
+Due to the points made above <A HREF="motion.html#it">它</A> is recommended that when formfeed character
 processing is enabled, <A HREF="#printing">printing</A> of line numbers is disabled, and that form
 feed characters are not the last character on a line.  Even then you may need
 to adjust the number of lines before a formfeed character to prevent

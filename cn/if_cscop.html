@@ -81,9 +81,9 @@
 							*<A NAME="cscope"></A><B>cscope</B>* *<A NAME="Cscope"></A><B>Cscope</B>*
 <A HREF="#Cscope">Cscope</A> is a &quot;code intelligence&quot; tool that helps you navigate C programs. It
 can also perform some refactoring tasks, such <A HREF="motion.html#as">as</A> renaming a global variable in
-all source files.  Think of <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> &quot;<A HREF="tagsrch.html#ctags">ctags</A> on steroids&quot;.
+all source files.  Think of <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> &quot;<A HREF="tagsrch.html#ctags">ctags</A> on steroids&quot;.
 
-See |<A HREF="#cscope-usage">cscope-usage</A>| for a quickstart.
+见 |<A HREF="#cscope-usage">cscope-usage</A>| for a quickstart.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -94,7 +94,7 @@ See |<A HREF="#cscope-usage">cscope-usage</A>| for a quickstart.
 
 <A HREF="#Cscope">Cscope</A> is designed to answer questions like:
        Where is this symbol used?
-       Where is <A HREF="motion.html#it">it</A> defined?
+       Where is <A HREF="motion.html#it">它</A> defined?
        Where did this variable get its value?
        What is this global symbol's definition?
        Where is this function in the source files?
@@ -104,14 +104,14 @@ See |<A HREF="#cscope-usage">cscope-usage</A>| for a quickstart.
        Where is this source file in the directory structure?
        What files include this header file?
 
-<A HREF="#Cscope">Cscope</A> answers these questions from a symbol database that <A HREF="motion.html#it">it</A> builds the first
-time <A HREF="motion.html#it">it</A> is used on the source files.  On a subsequent call, <A HREF="#cscope">cscope</A> rebuilds
+<A HREF="#Cscope">Cscope</A> answers these questions from a symbol database that <A HREF="motion.html#it">它</A> builds the first
+time <A HREF="motion.html#it">它</A> is used on the source files.  On a subsequent call, <A HREF="#cscope">cscope</A> rebuilds
 the database only if a source file has changed or the <A HREF="eval.html#list">list</A> of source files is
 different.  When the database is rebuilt the data for the unchanged files is
 copied from the old database, which makes rebuilding much faster than the
 initial build.
 
-See |<A HREF="#cscope-usage">cscope-usage</A>| to get started.
+见 |<A HREF="#cscope-usage">cscope-usage</A>| to get started.
 
 ==============================================================================
 
@@ -122,7 +122,7 @@ See |<A HREF="#cscope-usage">cscope-usage</A>| to get started.
 All <A HREF="#cscope">cscope</A> commands are accessed through suboptions to the <A HREF="#cscope">cscope</A> commands.
 	`:cscope` or `:cs` is the main command
 	`:scscope` or `:scs` does the same and splits the<A HREF="windows.html#window">窗口</A>
-	`:lcscope` or `:lcs` uses the location <A HREF="eval.html#list">list</A>, see |<A HREF="#:lcscope">:lcscope</A>|
+	`:lcscope` or `:lcs` uses the location <A HREF="eval.html#list">list</A>, 见 |<A HREF="#:lcscope">:lcscope</A>|
 
 The available subcommands are:
 
@@ -185,7 +185,7 @@ The available subcommands are:
 	    Executing this example on the source code for Vim 5.1 produces the
 	    following output:
 
-	    <A HREF="#Cscope">Cscope</A> <A HREF="tagsrch.html#tag">tag</A>: DEFAULT_TERM
+	    <A HREF="#Cscope">Cscope</A> <A HREF="tagsrch.html#tag">标签</A>: DEFAULT_TERM
 	       #   line  filename / <A HREF="repeat.html#context">context</A> / line
 	       1   1009  vim-5.1-gtk/src/term.c &lt;&lt;GLOBAL&gt;&gt;
 			 #define DEFAULT_TERM (char_u *)&quot;amiga&quot;
@@ -220,10 +220,10 @@ The available subcommands are:
 	    Enter nr of choice (&lt;CR&gt; to abort):
 
 	    The output shows several pieces of information:
-	    1. The <A HREF="tagsrch.html#tag">tag</A> number (there are 15 in this example).
-	    2. The line number where the <A HREF="tagsrch.html#tag">tag</A> occurs.
-	    3. The filename where the <A HREF="tagsrch.html#tag">tag</A> occurs.
-	    4. The <A HREF="repeat.html#context">context</A> of the <A HREF="tagsrch.html#tag">tag</A> (e.g., global, or the function name).
+	    1. The <A HREF="tagsrch.html#tag">标签</A> number (there are 15 in this example).
+	    2. The line number where the <A HREF="tagsrch.html#tag">标签</A> occurs.
+	    3. The filename where the <A HREF="tagsrch.html#tag">标签</A> occurs.
+	    4. The <A HREF="repeat.html#context">context</A> of the <A HREF="tagsrch.html#tag">标签</A> (e.g., global, or the function name).
 	    5. The line from the file itself.
 
     help  : Show a brief synopsis.
@@ -263,15 +263,15 @@ used instead of the <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.
 If you use <A HREF="#cscope">cscope</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> <A HREF="tagsrch.html#ctags">ctags</A>, |<A HREF="#:cstag">:cstag</A>| allows you to search one or
 the other before making a jump.  For example, you can choose to first
 search your <A HREF="#cscope">cscope</A> database(s) for a match, and if one is not found, then
-your <A HREF="tagsrch.html#tags">tags</A> file(s) will be searched.  The order in which this happens
-is determined by the value of |<A HREF="#csto">csto</A>|.  See |<A HREF="#cscope-options">cscope-options</A>| for more
+your <A HREF="tagsrch.html#tags">标签</A> file(s) will be searched.  The order in which this happens
+is determined by the value of |<A HREF="#csto">csto</A>|.  见 |<A HREF="#cscope-options">cscope-options</A>| for more
 details.
 
 |<A HREF="#:cstag">:cstag</A>| performs the equivalent of &quot;:cs find g&quot; on the identifier when
 searching through the <A HREF="#cscope">cscope</A> database(s).
 
 |<A HREF="#:cstag">:cstag</A>| performs the equivalent of |<A HREF="tagsrch.html#:tjump">:tjump</A>| on the identifier when searching
-through your <A HREF="tagsrch.html#tags">tags</A> file(s).
+through your <A HREF="tagsrch.html#tags">标签</A> file(s).
 
 
 ==============================================================================
@@ -306,7 +306,7 @@ seems to be useful:
 If <A HREF="options.html#'cscopetag'">'cscopetag'</A> is set, the commands &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; and <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> &quot;vim -t&quot;
 will always use |<A HREF="#:cstag">:cstag</A>| instead of the default <A HREF="tagsrch.html#:tag">:tag</A> behavior.  Effectively,
 by setting <A HREF="options.html#'cst'">'cst'</A>, you will always search your <A HREF="#cscope">cscope</A> databases <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A>
-your <A HREF="tagsrch.html#tag">tag</A> files.  The default is off.
+your <A HREF="tagsrch.html#tag">标签</A> files.  The default is off.
 
 
 							*<A NAME="cscoperelative"></A><B>cscoperelative</B>* *<A NAME="csre"></A><B>csre</B>*
@@ -321,8 +321,8 @@ path (-P).
 							*<A NAME="cscopetagorder"></A><B>cscopetagorder</B>* *<A NAME="csto"></A><B>csto</B>*
 The value of <A HREF="options.html#'csto'">'csto'</A> determines the order in which |<A HREF="#:cstag">:cstag</A>| performs a search.
 If <A HREF="options.html#'csto'">'csto'</A> is set to zero, <A HREF="#cscope">cscope</A> database(s) are searched first, followed
-by <A HREF="tagsrch.html#tag">tag</A> file(s) if <A HREF="#cscope">cscope</A> did not return any matches.  If <A HREF="options.html#'csto'">'csto'</A> is set to
-one, <A HREF="tagsrch.html#tag">tag</A> file(s) are searched before <A HREF="#cscope">cscope</A> database(s).  The default is zero.
+by <A HREF="tagsrch.html#tag">标签</A> file(s) if <A HREF="#cscope">cscope</A> did not return any matches.  If <A HREF="options.html#'csto'">'csto'</A> is set to
+one, <A HREF="tagsrch.html#tag">标签</A> file(s) are searched before <A HREF="#cscope">cscope</A> database(s).  The default is zero.
 
 
 						      *<A NAME="cscopepathcomp"></A><B>cscopepathcomp</B>* *<A NAME="cspc"></A><B>cspc</B>*
@@ -345,7 +345,7 @@ See the <A HREF="#cscope">cscope</A> manpage for details:
 <B>	:Man cscope</B>
 
 By default the <A HREF="#cscope">cscope</A> database file is named &quot;cscope.out&quot;. After building the
-database, connect to <A HREF="motion.html#it">it</A> from Nvim:
+database, connect to <A HREF="motion.html#it">它</A> from Nvim:
 <B>	:cscope add cscope.out</B>
 
 That establishes a <A HREF="#cscope">cscope</A> connection for Nvim to use.  You can check the
@@ -359,9 +359,9 @@ the results will be printed.  Queries are made using the command &quot;<A HREF="
 For example:
 <B>	:cs find g ALIGN_SIZE</B>
 
-To make this easier you can configure mappings, see |<A HREF="#cscope-suggestions">cscope-suggestions</A>|.
+To make this easier you can configure mappings, 见 |<A HREF="#cscope-suggestions">cscope-suggestions</A>|.
 
-If the results return only one match, you will automatically be taken to <A HREF="motion.html#it">it</A>.
+If the results return only one match, you will automatically be taken to <A HREF="motion.html#it">它</A>.
 If there is more than one match, you will be given a selection screen to pick
 the match you want to go to.  After you have jumped to the new location,
 simply hit Ctrl-T to get back to the previous one.
@@ -396,10 +396,10 @@ Copy this into your <A HREF="starting.html#init.vim">init.vim</A> (adjust paths 
 
 By setting <A HREF="options.html#'cscopetag'">'cscopetag'</A>, we have effectively replaced all instances of the <A HREF="tagsrch.html#:tag">:tag</A>
 command with <A HREF="#:cstag">:cstag</A>.  This includes <A HREF="tagsrch.html#:tag">:tag</A>, Ctrl-], and &quot;vim -t&quot;.  In doing
-this, the regular <A HREF="tagsrch.html#tag">tag</A> command not only searches your <A HREF="tagsrch.html#ctags">ctags</A> generated <A HREF="tagsrch.html#tag">tag</A>
+this, the regular <A HREF="tagsrch.html#tag">标签</A> command not only searches your <A HREF="tagsrch.html#ctags">ctags</A> generated <A HREF="tagsrch.html#tag">标签</A>
 files, but your <A HREF="#cscope">cscope</A> databases <A HREF="motion.html#as">as</A> well.
 
-Some users may want to keep the regular <A HREF="tagsrch.html#tag">tag</A> behavior and have a different
+Some users may want to keep the regular <A HREF="tagsrch.html#tag">标签</A> behavior and have a different
 shortcut to access <A HREF="#:cstag">:cstag</A>.  For example, one could map Ctrl-_  (underscore)
 to <A HREF="#:cstag">:cstag</A> with the following command:
 

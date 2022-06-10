@@ -110,13 +110,13 @@ A buffer can be in one of three states:
 
 							*<A NAME="active-buffer"></A><B>active-buffer</B>*
 active:   The buffer is displayed in a <A HREF="#window">window</A>.  If there is a file for this
-	  buffer, <A HREF="motion.html#it">it</A> has been read into the buffer.  The buffer may have been
+	  buffer, <A HREF="motion.html#it">它</A> has been read into the buffer.  The buffer may have been
 	  modified since then and thus be different from the file.
 
 							*<A NAME="hidden-buffer"></A><B>hidden-buffer</B>*
-hidden:   The buffer is not displayed.  If there is a file for this buffer, <A HREF="motion.html#it">it</A>
+hidden:   The buffer is not displayed.  If there is a file for this buffer, <A HREF="motion.html#it">它</A>
 	  has been read into the buffer.  Otherwise it's the same <A HREF="motion.html#as">as</A> an active
-	  buffer, you just can't see <A HREF="motion.html#it">it</A>.
+	  buffer, you just can't see <A HREF="motion.html#it">它</A>.
 
 							*<A NAME="inactive-buffer"></A><B>inactive-buffer</B>*
 inactive: The buffer is not displayed and does not contain anything.  Options
@@ -143,7 +143,7 @@ Each <A HREF="#window">window</A> has a unique identifier called the <A HREF="#w
 will not change within a Vim session. The |<A HREF="builtin.html#win_getid()">win_getid()</A>| and |<A HREF="builtin.html#win_id2tabwin()">win_id2tabwin()</A>|
 <A HREF="eval.html#functions">functions</A> can be used to convert between the window/tab number and the
 identifier.  There is also the <A HREF="#window">window</A> number, which may change whenever
-<A HREF="#windows">windows</A> are opened or closed, see |<A HREF="builtin.html#winnr()">winnr()</A>|.
+<A HREF="#windows">windows</A> are opened or closed, 见 |<A HREF="builtin.html#winnr()">winnr()</A>|.
 The <A HREF="#window">window</A> number is only valid in one specific <A HREF="intro.html#tab">tab</A>.  The <A HREF="#window">window</A> ID is valid
 across tabs.  For most <A HREF="eval.html#functions">functions</A> that take a <A HREF="#window">window</A> ID or a <A HREF="#window">window</A> number, the
 <A HREF="#window">window</A> number only applies to the current <A HREF="intro.html#tab">tab</A>, while the <A HREF="#window">window</A> ID can refer
@@ -229,16 +229,16 @@ the filler characters.
 		<A HREF="options.html#'eadirection'">'eadirection'</A> isn't &quot;hor&quot;, and one of them is higher than the
 		current or the new <A HREF="#window">window</A>).
 
-		If [file] is given <A HREF="motion.html#it">it</A> will be edited in the new <A HREF="#window">window</A>.  If <A HREF="motion.html#it">it</A>
-		is not loaded in any buffer, <A HREF="motion.html#it">it</A> will be read.  Else the new
+		If [file] is given <A HREF="motion.html#it">它</A> will be edited in the new <A HREF="#window">window</A>.  If <A HREF="motion.html#it">它</A>
+		is not loaded in any buffer, <A HREF="motion.html#it">它</A> will be read.  Else the new
 		<A HREF="#window">window</A> will use the already loaded buffer.
 
 		Note: CTRL-S does not work on all terminals and might block
 		further input, use CTRL-Q to get going again.
-		Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 							*<A NAME="E242"></A><B>E242</B>*
-		Be careful when splitting a <A HREF="#window">window</A> in an <A HREF="autocmd.html#autocommand">autocommand</A>, <A HREF="motion.html#it">it</A> may
+		Be careful when splitting a <A HREF="#window">window</A> in an <A HREF="autocmd.html#autocommand">autocommand</A>, <A HREF="motion.html#it">它</A> may
 		mess up the <A HREF="#window">window</A> layout if this happens while making other
 		<A HREF="#window">window</A> layout changes.
 
@@ -256,7 +256,7 @@ the filler characters.
 		4. one of the other <A HREF="#windows">windows</A> is wider than the current or new
 		   <A HREF="#window">window</A>.
 		Note: In other places CTRL-Q does the same <A HREF="motion.html#as">as</A> <A HREF="visual.html#CTRL-V">CTRL-V</A>, but here
-		<A HREF="motion.html#it">it</A> doesn't!
+		<A HREF="motion.html#it">它</A> doesn't!
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="pattern.html#n">n</A>						*<A NAME="CTRL-W_n"></A><B>CTRL-W_n</B>*
@@ -264,12 +264,12 @@ the filler characters.
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> CTRL_N						*<A NAME="CTRL-W_CTRL-N"></A><B>CTRL-W_CTRL-N</B>*
 
 :[N]new <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":new"></A><B>:new</B>*
-		Create a new <A HREF="#window">window</A> and start editing an empty file in <A HREF="motion.html#it">it</A>.
+		Create a new <A HREF="#window">window</A> and start editing an empty file in <A HREF="motion.html#it">它</A>.
 		Make new <A HREF="#window">window</A> N high (default is to use half the existing
 		height).  Reduces the current <A HREF="#window">window</A> height to create room (and
 		others, if the <A HREF="options.html#'equalalways'">'equalalways'</A> option is set and <A HREF="options.html#'eadirection'">'eadirection'</A>
 		isn't &quot;hor&quot;).
-		Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 		If <A HREF="options.html#'fileformats'">'fileformats'</A> is not empty, the first format given will be
 		used for the new buffer.  If <A HREF="options.html#'fileformats'">'fileformats'</A> is empty, the
 		<A HREF="options.html#'fileformat'">'fileformat'</A> of the current buffer is used.  This can be
@@ -285,13 +285,13 @@ the filler characters.
 :[N]new <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="editing.html#{file}">{file}</A>
 
 :[N]sp[lit] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="editing.html#{file}">{file}</A>			*<A NAME=":split_f"></A><B>:split_f</B>*
-		Create a new <A HREF="#window">window</A> and start editing file <A HREF="editing.html#{file}">{file}</A> in <A HREF="motion.html#it">it</A>.  This
+		Create a new <A HREF="#window">window</A> and start editing file <A HREF="editing.html#{file}">{file}</A> in <A HREF="motion.html#it">它</A>.  This
 		behaves almost like a &quot;<A HREF="#:split">:split</A>&quot; first, and then an &quot;<A HREF="editing.html#:edit">:edit</A>&quot;
 		command, but the alternate file name in the original <A HREF="#window">window</A> is
 		set to <A HREF="editing.html#{file}">{file}</A>.
 		If <A HREF="editing.html#[+cmd]">[+cmd]</A> is given, execute the command when the file has been
 		loaded |<A HREF="editing.html#+cmd">+cmd</A>|.
-		Also see |<A HREF="editing.html#++opt">++opt</A>|.
+		Also 见 |<A HREF="editing.html#++opt">++opt</A>|.
 		Make new <A HREF="#window">window</A> N high (default is to use half the existing
 		height).  Reduces the current <A HREF="#window">window</A> height to create room
 		(and others, if the <A HREF="options.html#'equalalways'">'equalalways'</A> option is set).
@@ -315,9 +315,9 @@ the filler characters.
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="editing.html#CTRL-^">CTRL-^</A>					*<A NAME="CTRL-W_CTRL-^"></A><B>CTRL-W_CTRL-^</B>* *<A NAME="CTRL-W_^"></A><B>CTRL-W_^</B>*
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> ^	Split the current <A HREF="#window">window</A> in two and edit the alternate file.
 		When a <A HREF="intro.html#count">count</A> N is given, split the current <A HREF="#window">window</A> and edit
-		buffer N.  Similar to &quot;<A HREF="#:sp">:sp</A> #&quot; and &quot;<A HREF="#:sp">:sp</A> #N&quot;, but <A HREF="motion.html#it">it</A> allows the
+		buffer N.  Similar to &quot;<A HREF="#:sp">:sp</A> #&quot; and &quot;<A HREF="#:sp">:sp</A> #N&quot;, but <A HREF="motion.html#it">它</A> allows the
 		other buffer to be unnamed.  This command matches the behavior
-		of |<A HREF="editing.html#CTRL-^">CTRL-^</A>|, except that <A HREF="motion.html#it">it</A> splits a <A HREF="#window">window</A> first.
+		of |<A HREF="editing.html#CTRL-^">CTRL-^</A>|, except that <A HREF="motion.html#it">它</A> splits a <A HREF="#window">window</A> first.
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#ge">ge</A>						*<A NAME="CTRL-W_ge"></A><B>CTRL-W_ge</B>*
@@ -335,16 +335,16 @@ and <A HREF="options.html#'winminwidth'">'winminwidth'</A> are relevant.
 
 						*<A NAME=":vert"></A><B>:vert</B>* *<A NAME=":vertical"></A><B>:vertical</B>*
 :vert[ical] {cmd}
-		Execute {cmd}.  If <A HREF="motion.html#it">it</A> contains a command that splits a <A HREF="#window">window</A>,
-		<A HREF="motion.html#it">it</A> will be split vertically.
+		Execute {cmd}.  If <A HREF="motion.html#it">它</A> contains a command that splits a <A HREF="#window">window</A>,
+		<A HREF="motion.html#it">它</A> will be split vertically.
 		Doesn't work for |<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
 
 
 :lefta[bove] {cmd}				*<A NAME=":lefta"></A><B>:lefta</B>* *<A NAME=":leftabove"></A><B>:leftabove</B>*
 
 :abo[veleft] {cmd}				*<A NAME=":abo"></A><B>:abo</B>* *<A NAME=":aboveleft"></A><B>:aboveleft</B>*
-		Execute {cmd}.  If <A HREF="motion.html#it">it</A> contains a command that splits a <A HREF="#window">window</A>,
-		<A HREF="motion.html#it">it</A> will be opened left (vertical split) or above (horizontal
+		Execute {cmd}.  If <A HREF="motion.html#it">它</A> contains a command that splits a <A HREF="#window">window</A>,
+		<A HREF="motion.html#it">它</A> will be opened left (vertical split) or above (horizontal
 		split) the current <A HREF="#window">window</A>.  Overrules <A HREF="options.html#'splitbelow'">'splitbelow'</A> and
 		<A HREF="options.html#'splitright'">'splitright'</A>.
 		Doesn't work for |<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
@@ -353,8 +353,8 @@ and <A HREF="options.html#'winminwidth'">'winminwidth'</A> are relevant.
 :rightb[elow] {cmd}				*<A NAME=":rightb"></A><B>:rightb</B>* *<A NAME=":rightbelow"></A><B>:rightbelow</B>*
 
 :bel[owright] {cmd}				*<A NAME=":bel"></A><B>:bel</B>* *<A NAME=":belowright"></A><B>:belowright</B>*
-		Execute {cmd}.  If <A HREF="motion.html#it">it</A> contains a command that splits a <A HREF="#window">window</A>,
-		<A HREF="motion.html#it">it</A> will be opened right (vertical split) or below (horizontal
+		Execute {cmd}.  If <A HREF="motion.html#it">它</A> contains a command that splits a <A HREF="#window">window</A>,
+		<A HREF="motion.html#it">它</A> will be opened right (vertical split) or below (horizontal
 		split) the current <A HREF="#window">window</A>.  Overrules <A HREF="options.html#'splitbelow'">'splitbelow'</A> and
 		<A HREF="options.html#'splitright'">'splitright'</A>.
 		Doesn't work for |<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
@@ -362,8 +362,8 @@ and <A HREF="options.html#'winminwidth'">'winminwidth'</A> are relevant.
 
 						*<A NAME=":topleft"></A><B>:topleft</B>* *<A NAME="E442"></A><B>E442</B>*
 :to[pleft] {cmd}
-		Execute {cmd}.  If <A HREF="motion.html#it">it</A> contains a command that splits a <A HREF="#window">window</A>,
-		<A HREF="motion.html#it">it</A> will appear at the top and occupy the full width of the Vim
+		Execute {cmd}.  If <A HREF="motion.html#it">它</A> contains a command that splits a <A HREF="#window">window</A>,
+		<A HREF="motion.html#it">它</A> will appear at the top and occupy the full width of the Vim
 		<A HREF="#window">window</A>.  When the split is vertical the <A HREF="#window">window</A> appears at the
 		far left and occupies the full height of the Vim <A HREF="#window">window</A>.
 		Doesn't work for |<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
@@ -371,8 +371,8 @@ and <A HREF="options.html#'winminwidth'">'winminwidth'</A> are relevant.
 
 						*<A NAME=":bo"></A><B>:bo</B>* *<A NAME=":botright"></A><B>:botright</B>*
 :bo[tright] {cmd}
-		Execute {cmd}.  If <A HREF="motion.html#it">it</A> contains a command that splits a <A HREF="#window">window</A>,
-		<A HREF="motion.html#it">it</A> will appear at the bottom and occupy the full width of the
+		Execute {cmd}.  If <A HREF="motion.html#it">它</A> contains a command that splits a <A HREF="#window">window</A>,
+		<A HREF="motion.html#it">它</A> will appear at the bottom and occupy the full width of the
 		Vim <A HREF="#window">window</A>.  When the split is vertical the <A HREF="#window">window</A> appears at
 		the far right and occupies the full height of the Vim <A HREF="#window">window</A>.
 		Doesn't work for |<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
@@ -380,7 +380,7 @@ and <A HREF="options.html#'winminwidth'">'winminwidth'</A> are relevant.
 These command modifiers can be combined to make a vertically split <A HREF="#window">window</A>
 occupy the full height.  Example:
 <B>	:vertical topleft split tags</B>
-Opens a vertically split, full-height <A HREF="#window">window</A> on the &quot;<A HREF="tagsrch.html#tags">tags</A>&quot; file at the far
+Opens a vertically split, full-height <A HREF="#window">window</A> on the &quot;<A HREF="tagsrch.html#tags">标签</A>&quot; file at the far
 left of the Vim <A HREF="#window">window</A>.
 
 
@@ -402,7 +402,7 @@ Closing a <A HREF="#window">window</A>
 		preview windows), exit Vim.
 
 		When <A HREF="options.html#'hidden'">'hidden'</A> is set, and there is only one <A HREF="#window">window</A> for the
-		current buffer, <A HREF="motion.html#it">it</A> becomes hidden. When <A HREF="options.html#'hidden'">'hidden'</A> is not set,
+		current buffer, <A HREF="motion.html#it">它</A> becomes hidden. When <A HREF="options.html#'hidden'">'hidden'</A> is not set,
 		and there is only one <A HREF="#window">window</A> for the current buffer, and the
 		buffer was changed, the command fails.
 		(Note: CTRL-Q does not work on all terminals).
@@ -438,7 +438,7 @@ Closing a <A HREF="#window">window</A>
 
 		When <A HREF="options.html#'hidden'">'hidden'</A> is set, or when the buffer was changed and the
 		[!] is used, the buffer becomes hidden (unless there is another
-		<A HREF="#window">window</A> editing <A HREF="motion.html#it">it</A>).
+		<A HREF="#window">window</A> editing <A HREF="motion.html#it">它</A>).
 
 		When there is only one |<A HREF="#edit-window">edit-window</A>| in the current <A HREF="intro.html#tab">tab</A> page
 		and there is another <A HREF="intro.html#tab">tab</A> page, this closes the current <A HREF="intro.html#tab">tab</A>
@@ -462,12 +462,12 @@ Closing a <A HREF="#window">window</A>
                                                                 *<A NAME=":hide"></A><B>:hide</B>*
 :hid[e]
 :{count}hid[e]
-		Without {count}: Quit the current <A HREF="#window">window</A>, unless <A HREF="motion.html#it">it</A> is the
+		Without {count}: Quit the current <A HREF="#window">window</A>, unless <A HREF="motion.html#it">它</A> is the
 		last <A HREF="#window">window</A> on the screen.
 		If {count} is given quit the {count} <A HREF="#window">window</A>.
 
 		The buffer becomes hidden (unless there is another <A HREF="#window">window</A>
-		editing <A HREF="motion.html#it">it</A> or <A HREF="options.html#'bufhidden'">'bufhidden'</A> is `unload`, `delete` or `wipe`).
+		editing <A HREF="motion.html#it">它</A> or <A HREF="options.html#'bufhidden'">'bufhidden'</A> is `unload`, `delete` or `wipe`).
 		If the <A HREF="#window">window</A> is the last one in the current <A HREF="intro.html#tab">tab</A> page the <A HREF="intro.html#tab">tab</A>
 		page is closed. |<A HREF="tabpage.html#tab-page">tab-page</A>|
 
@@ -479,7 +479,7 @@ Closing a <A HREF="#window">window</A>
 		<A HREF="options.html#'hidden'">'hidden'</A> is restored after {cmd} has been executed.
 		Example:
 <B>		    :hide edit Makefile</B>
- 		This will edit &quot;Makefile&quot;, and hide the current buffer if <A HREF="motion.html#it">it</A>
+ 		This will edit &quot;Makefile&quot;, and hide the current buffer if <A HREF="motion.html#it">它</A>
 		has any changes.
 
 :on[ly][!]
@@ -621,7 +621,7 @@ These commands can also be executed with &quot;<A HREF="#:wincmd">:wincmd</A>&qu
 
 The following commands can be used to change the <A HREF="#window">window</A> layout.  For example,
 when there are two vertically split <A HREF="#windows">windows</A>, <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="various.html#K">K</A> will change that in
-horizontally split <A HREF="#windows">windows</A>.  <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#H">H</A> does <A HREF="motion.html#it">it</A> the other way around.
+horizontally split <A HREF="#windows">windows</A>.  <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#H">H</A> does <A HREF="motion.html#it">它</A> the other way around.
 
 
 						*<A NAME="CTRL-W_K"></A><B>CTRL-W_K</B>*
@@ -660,7 +660,7 @@ horizontally split <A HREF="#windows">windows</A>.  <A HREF="vimindex.html#CTRL-
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#T">T</A>	Move the current <A HREF="#window">window</A> to a new <A HREF="intro.html#tab">tab</A> page.  This fails if
 		there is only one <A HREF="#window">window</A> in the current <A HREF="intro.html#tab">tab</A> page.
 		When a <A HREF="intro.html#count">count</A> is specified the new <A HREF="intro.html#tab">tab</A> page will be opened
-		before the <A HREF="intro.html#tab">tab</A> page with this index.  Otherwise <A HREF="motion.html#it">it</A> comes after
+		before the <A HREF="intro.html#tab">tab</A> page with this index.  Otherwise <A HREF="motion.html#it">它</A> comes after
 		the current <A HREF="intro.html#tab">tab</A> page.
 
 ==============================================================================
@@ -710,13 +710,13 @@ z{nr}&lt;CR&gt;	Set current <A HREF="#window">window</A> height to {nr}.
 You can also resize a <A HREF="#window">window</A> by dragging a status line up or down with the
 mouse.  Or by dragging a vertical separator line left or right.  This only
 works if the version of Vim that is being used supports the mouse and the
-<A HREF="options.html#'mouse'">'mouse'</A> option has been set to enable <A HREF="motion.html#it">it</A>.
+<A HREF="options.html#'mouse'">'mouse'</A> option has been set to enable <A HREF="motion.html#it">它</A>.
 
 The option <A HREF="options.html#'winheight'">'winheight'</A> ('wh') is used to set the minimal <A HREF="#window">window</A> height of the
 current <A HREF="#window">window</A>.  This option is used each time another <A HREF="#window">window</A> becomes the
-current <A HREF="#window">window</A>.  If the option is '<A HREF="motion.html#0">0</A>', <A HREF="motion.html#it">it</A> is disabled.  Set <A HREF="options.html#'winheight'">'winheight'</A> to a
+current <A HREF="#window">window</A>.  If the option is '<A HREF="motion.html#0">0</A>', <A HREF="motion.html#it">它</A> is disabled.  Set <A HREF="options.html#'winheight'">'winheight'</A> to a
 very large value, e.g., '9999', to make the current <A HREF="#window">window</A> always fill all
-available space.  Set <A HREF="motion.html#it">it</A> to a reasonable value, e.g., '10', to make editing in
+available space.  Set <A HREF="motion.html#it">它</A> to a reasonable value, e.g., '10', to make editing in
 the current <A HREF="#window">window</A> comfortable.
 
 The equivalent <A HREF="options.html#'winwidth'">'winwidth'</A> ('wiw') option is used to set the minimal width of
@@ -726,7 +726,7 @@ When the option <A HREF="options.html#'equalalways'">'equalalways'</A> ('ea') is
 made the same size after splitting or closing a <A HREF="#window">window</A>.  If you don't set this
 option, splitting a <A HREF="#window">window</A> will reduce the size of the current <A HREF="#window">window</A> and
 leave the other <A HREF="#windows">windows</A> the same.  When closing a <A HREF="#window">window</A>, the extra lines are
-given to the <A HREF="#window">window</A> above <A HREF="motion.html#it">it</A>.
+given to the <A HREF="#window">window</A> above <A HREF="motion.html#it">它</A>.
 
 The <A HREF="options.html#'eadirection'">'eadirection'</A> option <A HREF="vi_diff.html#limits">limits</A> the direction in which the <A HREF="options.html#'equalalways'">'equalalways'</A>
 option is applied.  The default &quot;both&quot; resizes in both directions.  When the
@@ -740,8 +740,8 @@ option to 2 or 3.
 
 If there is only one <A HREF="#window">window</A>, resizing that <A HREF="#window">window</A> will also change the command
 line height.  If there are several <A HREF="#windows">windows</A>, resizing the current <A HREF="#window">window</A> will
-also change the height of the <A HREF="#window">window</A> below <A HREF="motion.html#it">it</A> (and sometimes the <A HREF="#window">window</A> above
-<A HREF="motion.html#it">it</A>).
+also change the height of the <A HREF="#window">window</A> below <A HREF="motion.html#it">它</A> (and sometimes the <A HREF="#window">window</A> above
+<A HREF="motion.html#it">它</A>).
 
 The minimal height and width of a <A HREF="#window">window</A> is set with <A HREF="options.html#'winminheight'">'winminheight'</A> and
 <A HREF="options.html#'winminwidth'">'winminwidth'</A>.  These are hard values, a <A HREF="#window">window</A> will never become smaller.
@@ -782,7 +782,7 @@ The meaning of [N] depends on the command:
  [N] is a buffer number, defaulting to current buffer, for 11 and 31
  [N] is a <A HREF="intro.html#count">count</A> for 19 and 39
 
-Note: &quot;<A HREF="editing.html#:next">:next</A>&quot; is an exception, because <A HREF="motion.html#it">it</A> must accept a <A HREF="eval.html#list">list</A> of file names
+Note: &quot;<A HREF="editing.html#:next">:next</A>&quot; is an exception, because <A HREF="motion.html#it">它</A> must accept a <A HREF="eval.html#list">list</A> of file names
 for compatibility with <A HREF="intro.html#Vi">Vi</A>.
 
 
@@ -827,13 +827,13 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 :[N]sa[rgument][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]			*<A NAME=":sa"></A><B>:sa</B>* *<A NAME=":sargument"></A><B>:sargument</B>*
 		Short for &quot;<A HREF="#:split">:split</A> &#124; argument [N]&quot;: split <A HREF="#window">window</A> and go to Nth
 		argument.  But when there is no such argument, the <A HREF="#window">window</A> is
-		not split.  Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		not split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]sn[ext][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> [file ..]			*<A NAME=":sn"></A><B>:sn</B>* *<A NAME=":snext"></A><B>:snext</B>*
 		Short for &quot;<A HREF="#:split">:split</A> &#124; [N]next&quot;: split <A HREF="#window">window</A> and go to Nth next
 		argument.  But when there is no next file, the <A HREF="#window">window</A> is not
-		split.  Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]spr[evious][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]			*<A NAME=":spr"></A><B>:spr</B>* *<A NAME=":sprevious"></A><B>:sprevious</B>*
@@ -841,14 +841,14 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 :[N]sN[ext][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]			*<A NAME=":sN"></A><B>:sN</B>* *<A NAME=":sNext"></A><B>:sNext</B>*
 		Short for &quot;<A HREF="#:split">:split</A> &#124; [N]Next&quot;: split <A HREF="#window">window</A> and go to Nth
 		previous argument.  But when there is no previous file, the
-		<A HREF="#window">window</A> is not split.  Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		<A HREF="#window">window</A> is not split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 						*<A NAME=":sre"></A><B>:sre</B>* *<A NAME=":srewind"></A><B>:srewind</B>*
 :sre[wind][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A>
 		Short for &quot;<A HREF="#:split">:split</A> &#124; rewind&quot;: split <A HREF="#window">window</A> and go to first
 		argument.  But when there is no argument <A HREF="eval.html#list">list</A>, the <A HREF="#window">window</A> is
-		not split.  Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		not split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 						*<A NAME=":sfir"></A><B>:sfir</B>* *<A NAME=":sfirst"></A><B>:sfirst</B>*
@@ -860,7 +860,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 :sla[st][!] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A>
 		Short for &quot;<A HREF="#:split">:split</A> &#124; last&quot;: split <A HREF="#window">window</A> and go to last
 		argument.  But when there is no argument <A HREF="eval.html#list">list</A>, the <A HREF="#window">window</A> is
-		not split.  Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		not split.  Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 						*<A NAME=":dr"></A><B>:dr</B>* *<A NAME=":drop"></A><B>:drop</B>*
@@ -874,11 +874,11 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 		- Windows that are not in the argument <A HREF="eval.html#list">list</A> or are not full
 		  width will be closed if possible.
 		The |<A HREF="editing.html#argument-list">argument-list</A>| is set, like with the |<A HREF="editing.html#:next">:next</A>| command.
-		The purpose of this command is that <A HREF="motion.html#it">it</A> can be used from a
+		The purpose of this command is that <A HREF="motion.html#it">它</A> can be used from a
 		program that wants Vim to edit another file, e.g., a debugger.
 		When using the |<A HREF="tabpage.html#:tab">:tab</A>| modifier each argument is opened in a
 		<A HREF="intro.html#tab">tab</A> page.  The last <A HREF="#window">window</A> is used if it's empty.
-		Also see |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 ==============================================================================
 
@@ -901,7 +901,7 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 			the current <A HREF="#window">window</A>.
 			{cmd} can contain '&#124;' to concatenate several commands.
 			{cmd} must not open or close <A HREF="#windows">windows</A> or reorder them.
-			Also see |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
+			Also 见 |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
 			|<A HREF="quickfix.html#:cfdo">:cfdo</A>| and |<A HREF="quickfix.html#:lfdo">:lfdo</A>|.
 
 
@@ -926,10 +926,10 @@ can also get to them with the buffer <A HREF="eval.html#list">list</A> commands,
 			{cmd} must not delete <A HREF="#buffers">buffers</A> or add <A HREF="#buffers">buffers</A> to the
 			buffer <A HREF="eval.html#list">list</A>.
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">it</A> to
+			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each buffer.
-			Also see |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="#:windo">:windo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
+			Also 见 |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="#:windo">:windo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
 			|<A HREF="quickfix.html#:cfdo">:cfdo</A>| and |<A HREF="quickfix.html#:lfdo">:lfdo</A>|.
 
 Examples:
@@ -940,7 +940,7 @@ This resets the <A HREF="options.html#'list'">'list'</A> option and disables <A 
 
 <B>	:bufdo set fileencoding= | update</B>
 
-This resets the <A HREF="options.html#'fileencoding'">'fileencoding'</A> in each buffer and writes <A HREF="motion.html#it">it</A> if this changed
+This resets the <A HREF="options.html#'fileencoding'">'fileencoding'</A> in each buffer and writes <A HREF="motion.html#it">它</A> if this changed
 the buffer.  The result is that all <A HREF="#buffers">buffers</A> will use the <A HREF="options.html#'encoding'">'encoding'</A> encoding
 (if conversion succeeds).
 
@@ -957,22 +957,22 @@ the buffer.  The result is that all <A HREF="#buffers">buffers</A> will use the 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> ]					*<A NAME="CTRL-W_]"></A><B>CTRL-W_]</B>* *<A NAME="CTRL-W_CTRL-]"></A><B>CTRL-W_CTRL-]</B>*
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>	Split current <A HREF="#window">window</A> in two.  Use identifier under cursor <A HREF="motion.html#as">as</A> a
-		<A HREF="tagsrch.html#tag">tag</A> and jump to <A HREF="motion.html#it">it</A> in the new upper <A HREF="#window">window</A>.
-		In <A HREF="visual.html#Visual">Visual</A> mode uses the Visually selected text <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">tag</A>.
+		<A HREF="tagsrch.html#tag">标签</A> and jump to <A HREF="motion.html#it">它</A> in the new upper <A HREF="#window">window</A>.
+		In <A HREF="visual.html#Visual">Visual</A> mode uses the Visually selected text <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">标签</A>.
 		Make new <A HREF="#window">window</A> N high.
 
 
 							*<A NAME="CTRL-W_g]"></A><B>CTRL-W_g]</B>*
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="vimindex.html#g">g</A> ]	Split current <A HREF="#window">window</A> in two.  Use identifier under cursor <A HREF="motion.html#as">as</A> a
-		<A HREF="tagsrch.html#tag">tag</A> and perform &quot;<A HREF="tagsrch.html#:tselect">:tselect</A>&quot; on <A HREF="motion.html#it">it</A> in the new upper <A HREF="#window">window</A>.
-		In <A HREF="visual.html#Visual">Visual</A> mode uses the Visually selected text <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">tag</A>.
+		<A HREF="tagsrch.html#tag">标签</A> and perform &quot;<A HREF="tagsrch.html#:tselect">:tselect</A>&quot; on <A HREF="motion.html#it">它</A> in the new upper <A HREF="#window">window</A>.
+		In <A HREF="visual.html#Visual">Visual</A> mode uses the Visually selected text <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">标签</A>.
 		Make new <A HREF="#window">window</A> N high.
 
 
 							*<A NAME="CTRL-W_g_CTRL-]"></A><B>CTRL-W_g_CTRL-]</B>*
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="vimindex.html#g">g</A> <A HREF="tagsrch.html#CTRL-]">CTRL-]</A>	Split current <A HREF="#window">window</A> in two.  Use identifier under cursor <A HREF="motion.html#as">as</A> a
-		<A HREF="tagsrch.html#tag">tag</A> and perform &quot;<A HREF="tagsrch.html#:tjump">:tjump</A>&quot; on <A HREF="motion.html#it">it</A> in the new upper <A HREF="#window">window</A>.
-		In <A HREF="visual.html#Visual">Visual</A> mode uses the Visually selected text <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">tag</A>.
+		<A HREF="tagsrch.html#tag">标签</A> and perform &quot;<A HREF="tagsrch.html#:tjump">:tjump</A>&quot; on <A HREF="motion.html#it">它</A> in the new upper <A HREF="#window">window</A>.
+		In <A HREF="visual.html#Visual">Visual</A> mode uses the Visually selected text <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">标签</A>.
 		Make new <A HREF="#window">window</A> N high.
 
 
@@ -990,7 +990,7 @@ the buffer.  The result is that all <A HREF="#buffers">buffers</A> will use the 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#F">F</A>						*<A NAME="CTRL-W_F"></A><B>CTRL-W_F</B>*
 		Split current <A HREF="#window">window</A> in two.  Edit file name under cursor and
-		jump to the line number following the file name. See |<A HREF="editing.html#gF">gF</A>| for
+		jump to the line number following the file name. 见 |<A HREF="editing.html#gF">gF</A>| for
 		details on how the line number is obtained.
 
 
@@ -1014,7 +1014,7 @@ the buffer.  The result is that all <A HREF="#buffers">buffers</A> will use the 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="tabpage.html#gT">gT</A>						*<A NAME="CTRL-W_gT"></A><B>CTRL-W_gT</B>*
 		Go to previous <A HREF="intro.html#tab">tab</A> page, same <A HREF="motion.html#as">as</A> `gT`.
 
-Also see |CTRL-W_CTRL-I|: open <A HREF="#window">window</A> for an included file that includes
+Also 见 |CTRL-W_CTRL-I|: open <A HREF="#window">window</A> for an included file that includes
 the keyword under the cursor.
 
 ==============================================================================
@@ -1028,22 +1028,22 @@ function.
 There can be only one preview <A HREF="#window">window</A> (per <A HREF="intro.html#tab">tab</A> page).  It is created with one
 of the commands below.  The <A HREF="options.html#'previewheight'">'previewheight'</A> option can be set to specify the
 height of the preview <A HREF="#window">window</A> when it's opened.  The <A HREF="options.html#'previewwindow'">'previewwindow'</A> option is
-set in the preview <A HREF="#window">window</A> to be able to recognize <A HREF="motion.html#it">it</A>.  The <A HREF="options.html#'winfixheight'">'winfixheight'</A>
-option is set to have <A HREF="motion.html#it">it</A> keep the same height when opening/closing other
+set in the preview <A HREF="#window">window</A> to be able to recognize <A HREF="motion.html#it">它</A>.  The <A HREF="options.html#'winfixheight'">'winfixheight'</A>
+option is set to have <A HREF="motion.html#it">它</A> keep the same height when opening/closing other
 <A HREF="#windows">windows</A>.
 
 
 						*<A NAME=":pta"></A><B>:pta</B>* *<A NAME=":ptag"></A><B>:ptag</B>*
 :pta[g][!] [tagname]
-		Does &quot;:tag[!] [tagname]&quot; and shows the found <A HREF="tagsrch.html#tag">tag</A> in a
+		Does &quot;:tag[!] [tagname]&quot; and shows the found <A HREF="tagsrch.html#tag">标签</A> in a
 		&quot;Preview&quot; <A HREF="#window">window</A> without <A HREF="change.html#changing">changing</A> the current buffer or cursor
-		position.  If a &quot;Preview&quot; <A HREF="#window">window</A> already exists, <A HREF="motion.html#it">it</A> is re-used
+		position.  If a &quot;Preview&quot; <A HREF="#window">window</A> already exists, <A HREF="motion.html#it">它</A> is re-used
 		(like a help <A HREF="#window">window</A> is).  If a new one is opened,
 		<A HREF="options.html#'previewheight'">'previewheight'</A> is used for the height of the <A HREF="#window">window</A>.   See
 		also |<A HREF="tagsrch.html#:tag">:tag</A>|.
 		See below for an example. |<A HREF="#CursorHold-example">CursorHold-example</A>|
 		Small difference from |:tag|: When [tagname] is equal to the
-		already displayed <A HREF="tagsrch.html#tag">tag</A>, the position in the matching <A HREF="tagsrch.html#tag">tag</A> <A HREF="eval.html#list">list</A>
+		already displayed <A HREF="tagsrch.html#tag">标签</A>, the position in the matching <A HREF="tagsrch.html#tag">标签</A> <A HREF="eval.html#list">list</A>
 		is not reset.  This makes the <A HREF="autocmd.html#CursorHold">CursorHold</A> example work after a
 		|<A HREF="tagsrch.html#:ptnext">:ptnext</A>|.
 
@@ -1054,25 +1054,25 @@ option is set to have <A HREF="motion.html#it">it</A> keep the same height when 
 :pc[lose][!]	Close any &quot;Preview&quot; <A HREF="#window">window</A> currently open.  When the <A HREF="options.html#'hidden'">'hidden'</A>
 		option is set, or when the buffer was changed and the [!] is
 		used, the buffer becomes hidden (unless there is another
-		<A HREF="#window">window</A> editing <A HREF="motion.html#it">it</A>).  The command fails if any &quot;Preview&quot; buffer
+		<A HREF="#window">window</A> editing <A HREF="motion.html#it">它</A>).  The command fails if any &quot;Preview&quot; buffer
 		cannot be closed.  See also |<A HREF="#:close">:close</A>|.
 
 
 							*<A NAME=":pp"></A><B>:pp</B>* *<A NAME=":ppop"></A><B>:ppop</B>*
 :[count]pp[op][!]
-		Does &quot;:[count]pop[!]&quot; in the preview <A HREF="#window">window</A>.  See |<A HREF="tagsrch.html#:pop">:pop</A>| and
+		Does &quot;:[count]pop[!]&quot; in the preview <A HREF="#window">window</A>.  见 |<A HREF="tagsrch.html#:pop">:pop</A>| and
 		|<A HREF="#:ptag">:ptag</A>|.
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> }						*<A NAME="CTRL-W_}"></A><B>CTRL-W_}</B>*
-		Use identifier under cursor <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">tag</A> and perform a <A HREF="#:ptag">:ptag</A> on
-		<A HREF="motion.html#it">it</A>.  Make the new Preview <A HREF="#window">window</A> (if required) N high.  If N is
+		Use identifier under cursor <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">标签</A> and perform a <A HREF="#:ptag">:ptag</A> on
+		<A HREF="motion.html#it">它</A>.  Make the new Preview <A HREF="#window">window</A> (if required) N high.  If N is
 		not given, <A HREF="options.html#'previewheight'">'previewheight'</A> is used.
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="vimindex.html#g">g</A> }						*<A NAME="CTRL-W_g}"></A><B>CTRL-W_g}</B>*
-		Use identifier under cursor <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">tag</A> and perform a <A HREF="tagsrch.html#:ptjump">:ptjump</A> on
-		<A HREF="motion.html#it">it</A>.  Make the new Preview <A HREF="#window">window</A> (if required) N high.  If N is
+		Use identifier under cursor <A HREF="motion.html#as">as</A> a <A HREF="tagsrch.html#tag">标签</A> and perform a <A HREF="tagsrch.html#:ptjump">:ptjump</A> on
+		<A HREF="motion.html#it">它</A>.  Make the new Preview <A HREF="#window">window</A> (if required) N high.  If N is
 		not given, <A HREF="options.html#'previewheight'">'previewheight'</A> is used.
 
 
@@ -1094,7 +1094,7 @@ option is set to have <A HREF="motion.html#it">it</A> keep the same height when 
  		Like with the |<A HREF="#:ptag">:ptag</A>| command, you can use this to
 		automatically show information about the <A HREF="motion.html#word">单词</A> under the
 		cursor.  This is <A HREF="various.html#less">less</A> clever than using |<A HREF="#:ptag">:ptag</A>|, but you don't
-		need a <A HREF="tagsrch.html#tags">tags</A> file and <A HREF="motion.html#it">it</A> will also find matches in system
+		need a <A HREF="tagsrch.html#tags">标签</A> file and <A HREF="motion.html#it">它</A> will also find matches in system
 		include files.  Example:
 <B>  :au! CursorHold *.[ch] ++nested exe "silent! psearch " .. expand("&lt;cword&gt;")</B>
  		Warning: This can be slow.
@@ -1107,12 +1107,12 @@ Example						*<A NAME="CursorHold-example"></A><B>CursorHold-example</B>*
 This will cause a &quot;<A HREF="#:ptag">:ptag</A>&quot; to be executed for the keyword under the cursor,
 when the cursor hasn't moved for the time set with <A HREF="options.html#'updatetime'">'updatetime'</A>.  &quot;++nested&quot;
 makes other autocommands be executed, so that <A HREF="syntax.html#syntax">syntax</A> highlighting works in the
-preview <A HREF="#window">window</A>.  The &quot;silent!&quot; avoids an error message when the <A HREF="tagsrch.html#tag">tag</A> could not
-be found.  Also see |<A HREF="autocmd.html#CursorHold">CursorHold</A>|.  To disable this again:
+preview <A HREF="#window">window</A>.  The &quot;silent!&quot; avoids an error message when the <A HREF="tagsrch.html#tag">标签</A> could not
+be found.  Also 见 |<A HREF="autocmd.html#CursorHold">CursorHold</A>|.  To disable this again:
 
 <B>  :au! CursorHold</B>
 
-A nice addition is to highlight the found <A HREF="tagsrch.html#tag">tag</A>, avoid the &quot;<A HREF="#:ptag">:ptag</A>&quot; when there
+A nice addition is to highlight the found <A HREF="tagsrch.html#tag">标签</A>, avoid the &quot;<A HREF="#:ptag">:ptag</A>&quot; when there
 is no <A HREF="motion.html#word">单词</A> under the cursor, and a few other things:
 
 <B>  :au! CursorHold *.[ch] ++nested call PreviewWord()</B>
@@ -1158,7 +1158,7 @@ is no <A HREF="motion.html#word">单词</A> under the cursor, and a few other th
 11. Using hidden <A HREF="#buffers">buffers</A>				*<A NAME="buffer-hidden"></A><B>buffer-hidden</B>*
 
 A hidden buffer is not displayed in a <A HREF="#window">window</A>, but is still loaded into memory.
-This makes <A HREF="motion.html#it">it</A> possible to jump from file to file, without the need to read or
+This makes <A HREF="motion.html#it">它</A> possible to jump from file to file, without the need to read or
 write the file every time you get another buffer in a <A HREF="#window">window</A>.
 
 
@@ -1170,10 +1170,10 @@ hidden although the <A HREF="options.html#'hidden'">'hidden'</A> option is not s
 modified, but is forced (with '<A HREF="change.html#!">!</A>') to be removed from a <A HREF="#window">window</A>, and
 <A HREF="options.html#'autowrite'">'autowrite'</A> is off or the buffer can't be written.
 
-You can make a hidden buffer not hidden by starting to edit <A HREF="motion.html#it">it</A> with any
-command, or by <A HREF="change.html#deleting">deleting</A> <A HREF="motion.html#it">it</A> with the &quot;<A HREF="#:bdelete">:bdelete</A>&quot; command.
+You can make a hidden buffer not hidden by starting to edit <A HREF="motion.html#it">它</A> with any
+command, or by <A HREF="change.html#deleting">deleting</A> <A HREF="motion.html#it">它</A> with the &quot;<A HREF="#:bdelete">:bdelete</A>&quot; command.
 
-The <A HREF="options.html#'hidden'">'hidden'</A> is global, <A HREF="motion.html#it">it</A> is used for all <A HREF="#buffers">buffers</A>.  The <A HREF="options.html#'bufhidden'">'bufhidden'</A> option
+The <A HREF="options.html#'hidden'">'hidden'</A> is global, <A HREF="motion.html#it">它</A> is used for all <A HREF="#buffers">buffers</A>.  The <A HREF="options.html#'bufhidden'">'bufhidden'</A> option
 can be used to make an exception for a specific buffer.  It can take these
 values:
 	&lt;empty&gt;		Use the value of <A HREF="options.html#'hidden'">'hidden'</A>.
@@ -1189,7 +1189,7 @@ get an error message and Vim will make that buffer the current buffer.  You
 can then decide to write this buffer (&quot;:wq&quot;) or quit without <A HREF="editing.html#writing">writing</A> (&quot;:q!&quot;).
 Be careful: there may be more hidden, modified <A HREF="#buffers">buffers</A>!
 
-A buffer can also be unlisted.  This means <A HREF="motion.html#it">it</A> exists, but <A HREF="motion.html#it">it</A> is not in the
+A buffer can also be unlisted.  This means <A HREF="motion.html#it">它</A> exists, but <A HREF="motion.html#it">它</A> is not in the
 list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buffer</A>|
 
 
@@ -1216,7 +1216,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 			   |<A HREF="#unlisted-buffer">unlisted-buffer</A>|
 		 <A HREF="motion.html#&#37;">&#37;</A>	the buffer in the current <A HREF="#window">window</A>
 		 #	the alternate buffer for &quot;<A HREF="editing.html#:e">:e</A> #&quot; and <A HREF="editing.html#CTRL-^">CTRL-^</A>
-		  a	an active buffer: <A HREF="motion.html#it">it</A> is loaded and visible
+		  a	an active buffer: <A HREF="motion.html#it">它</A> is loaded and visible
 		  <A HREF="motion.html#h">h</A>	a hidden buffer: It is loaded, but currently not
 			   displayed in a <A HREF="#window">window</A> |<A HREF="#hidden-buffer">hidden-buffer</A>|
 		   -	a buffer with <A HREF="options.html#'modifiable'">'modifiable'</A> off
@@ -1252,9 +1252,9 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 						*<A NAME=":bad"></A><B>:bad</B>* *<A NAME=":badd"></A><B>:badd</B>*
 :bad[d]	[+lnum] {fname}
-		Add file name {fname} to the buffer <A HREF="eval.html#list">list</A>, without loading <A HREF="motion.html#it">it</A>,
-		if <A HREF="motion.html#it">it</A> wasn't listed yet.  If the buffer was previously
-		deleted, not wiped, <A HREF="motion.html#it">it</A> will be made listed again.
+		Add file name {fname} to the buffer <A HREF="eval.html#list">list</A>, without loading <A HREF="motion.html#it">它</A>,
+		if <A HREF="motion.html#it">它</A> wasn't listed yet.  If the buffer was previously
+		deleted, not wiped, <A HREF="motion.html#it">它</A> will be made listed again.
 		If &quot;lnum&quot; is specified, the cursor will be positioned at that
 		line when the buffer is first entered.  Note that other
 		commands after the + will be ignored.
@@ -1268,14 +1268,14 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 :[N]bd[elete][!]			*<A NAME=":bd"></A><B>:bd</B>* *<A NAME=":bdel"></A><B>:bdel</B>* *<A NAME=":bdelete"></A><B>:bdelete</B>* *<A NAME="E516"></A><B>E516</B>*
 :bd[elete][!] [N]
-		Unload buffer [N] (default: current buffer) and delete <A HREF="motion.html#it">it</A> from
+		Unload buffer [N] (default: current buffer) and delete <A HREF="motion.html#it">它</A> from
 		the buffer <A HREF="eval.html#list">list</A>.  If the buffer was changed, this fails,
 		unless when [!] is specified, in which <A HREF="change.html#case">case</A> changes are lost.
 		The file remains unaffected.  Any <A HREF="#windows">windows</A> for this buffer are
 		closed.  If buffer [N] is the current buffer, another buffer
 		will be displayed instead.  This is the most recent entry in
 		the jump <A HREF="eval.html#list">list</A> that points into a loaded buffer.
-		Actually, the buffer isn't completely deleted, <A HREF="motion.html#it">it</A> is removed
+		Actually, the buffer isn't completely deleted, <A HREF="motion.html#it">它</A> is removed
 		from the buffer list |<A HREF="#unlisted-buffer">unlisted-buffer</A>| and option values,
 		<A HREF="eval.html#variables">variables</A> and mappings/abbreviations for the buffer are
 		cleared. Examples:
@@ -1325,7 +1325,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 :bunload[!] <A HREF="#{bufname}">{bufname}</A>
 		Like &quot;:bunload[!] [N]&quot;, but buffer given by name.
-		Also see |<A HREF="#{bufname}">{bufname}</A>|.
+		Also 见 |<A HREF="#{bufname}">{bufname}</A>|.
 
 :N,Mbunload[!]	Do &quot;:bunload[!]&quot; for all <A HREF="#buffers">buffers</A> in the range N to <A HREF="motion.html#M">M</A>
 		|<A HREF="motion.html#inclusive">inclusive</A>|.
@@ -1339,23 +1339,23 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 
 :[N]b[uffer][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]		*<A NAME=":b"></A><B>:b</B>* *<A NAME=":bu"></A><B>:bu</B>* *<A NAME=":buf"></A><B>:buf</B>* *<A NAME=":buffer"></A><B>:buffer</B>* *<A NAME="E86"></A><B>E86</B>*
 		Edit buffer [N] from the buffer <A HREF="eval.html#list">list</A>.  If [N] is not given,
-		the current buffer remains being edited.  See |<A HREF="#:buffer-!">:buffer-!</A>| for
+		the current buffer remains being edited.  见 |<A HREF="#:buffer-!">:buffer-!</A>| for
 		[!].  This will also edit a buffer that is not in the buffer
 		<A HREF="eval.html#list">list</A>, without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]b[uffer][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="#{bufname}">{bufname}</A>				*<A NAME="{bufname}"></A><B>{bufname}</B>*
 		Edit buffer for <A HREF="#{bufname}">{bufname}</A> from the buffer <A HREF="eval.html#list">list</A>.  A partial
-		name also works, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> is unique in the <A HREF="eval.html#list">list</A> of
+		name also works, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> is unique in the <A HREF="eval.html#list">list</A> of
 		<A HREF="#buffers">buffers</A>.
 		Note that a buffer whose name is a number cannot be referenced
 		by that name; use the buffer number instead.
 		<A HREF="insert.html#Insert">Insert</A> a <A HREF="intro.html#backslash">backslash</A> before a space in a buffer name.
-		See |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
+		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
 		This will also edit a buffer that is not in the buffer <A HREF="eval.html#list">list</A>,
 		without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]sb[uffer] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]				*<A NAME=":sb"></A><B>:sb</B>* *<A NAME=":sbuffer"></A><B>:sbuffer</B>*
@@ -1364,27 +1364,27 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 		&quot;useopen&quot; setting of <A HREF="options.html#'switchbuf'">'switchbuf'</A> when splitting.  This will
 		also edit a buffer that is not in the buffer <A HREF="eval.html#list">list</A>, without
 		setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 :[N]sb[uffer] <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="#{bufname}">{bufname}</A>
 		Split <A HREF="#window">window</A> and edit buffer for |<A HREF="#{bufname}">{bufname}</A>| from the buffer
 		<A HREF="eval.html#list">list</A>.  This will also edit a buffer that is not in the buffer
 		<A HREF="eval.html#list">list</A>, without setting the <A HREF="options.html#'buflisted'">'buflisted'</A> flag.
 		Note: If what you want to <A HREF="diff.html#do">do</A> is split the buffer, make a copy
-		under another name, you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> this way:
+		under another name, you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> this way:
 <B>			:w foobar | sp #</B>
- 		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+ 		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]bn[ext][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]				*<A NAME=":bn"></A><B>:bn</B>* *<A NAME=":bnext"></A><B>:bnext</B>* *<A NAME="E87"></A><B>E87</B>*
 		Go to [N]th next buffer in buffer <A HREF="eval.html#list">list</A>.  [N] defaults to one.
 		Wraps around the end of the buffer <A HREF="eval.html#list">list</A>.
-		See |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 		If you are in a help buffer, this takes you to the next help
 		buffer (if there is one).  Similarly, if you are in a normal
 		(non-help) buffer, this takes you to the next normal buffer.
-		This is so that if you have invoked help, <A HREF="motion.html#it">it</A> doesn't get in
+		This is so that if you have invoked help, <A HREF="motion.html#it">它</A> doesn't get in
 		the way when you're browsing code/text <A HREF="#buffers">buffers</A>.  The next three
 		commands also work like this.
 
@@ -1393,15 +1393,15 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 :[N]sbn[ext] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]
 		Split <A HREF="#window">window</A> and go to [N]th next buffer in buffer <A HREF="eval.html#list">list</A>.
 		Wraps around the end of the buffer <A HREF="eval.html#list">list</A>.  Uses <A HREF="options.html#'switchbuf'">'switchbuf'</A>
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]bN[ext][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]		*<A NAME=":bN"></A><B>:bN</B>* *<A NAME=":bNext"></A><B>:bNext</B>* *<A NAME=":bp"></A><B>:bp</B>* *<A NAME=":bprevious"></A><B>:bprevious</B>* *<A NAME="E88"></A><B>E88</B>*
 :[N]bp[revious][!] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]
 		Go to [N]th previous buffer in buffer <A HREF="eval.html#list">list</A>.  [N] defaults to
 		one.  Wraps around the start of the buffer <A HREF="eval.html#list">list</A>.
-		See |<A HREF="#:buffer-!">:buffer-!</A>| for [!] and <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!] and <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :[N]sbN[ext] <A HREF="editing.html#[+cmd]">[+cmd]</A> [N]			*<A NAME=":sbN"></A><B>:sbN</B>* *<A NAME=":sbNext"></A><B>:sbNext</B>* *<A NAME=":sbp"></A><B>:sbp</B>* *<A NAME=":sbprevious"></A><B>:sbprevious</B>*
@@ -1409,25 +1409,25 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 		Split <A HREF="#window">window</A> and go to [N]th previous buffer in buffer <A HREF="eval.html#list">list</A>.
 		Wraps around the start of the buffer <A HREF="eval.html#list">list</A>.
 		Uses <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :br[ewind][!] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":br"></A><B>:br</B>* *<A NAME=":bre"></A><B>:bre</B>* *<A NAME=":brewind"></A><B>:brewind</B>*
 		Go to first buffer in buffer <A HREF="eval.html#list">list</A>.  If the buffer <A HREF="eval.html#list">list</A> is
 		empty, go to the first unlisted buffer.
-		See |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
+		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
 
 
 :bf[irst] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":bf"></A><B>:bf</B>* *<A NAME=":bfirst"></A><B>:bfirst</B>*
 		Same <A HREF="motion.html#as">as</A> |<A HREF="#:brewind">:brewind</A>|.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :sbr[ewind] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":sbr"></A><B>:sbr</B>* *<A NAME=":sbrewind"></A><B>:sbrewind</B>*
 		Split <A HREF="#window">window</A> and go to first buffer in buffer <A HREF="eval.html#list">list</A>.  If the
 		buffer <A HREF="eval.html#list">list</A> is empty, go to the first unlisted buffer.
 		Respects the <A HREF="options.html#'switchbuf'">'switchbuf'</A> option.
-		Also see |<A HREF="editing.html#+cmd">+cmd</A>|.
+		Also 见 |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 
 :sbf[irst] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":sbf"></A><B>:sbf</B>* *<A NAME=":sbfirst"></A><B>:sbfirst</B>*
@@ -1437,7 +1437,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 :bl[ast][!] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":bl"></A><B>:bl</B>* *<A NAME=":blast"></A><B>:blast</B>*
 		Go to last buffer in buffer <A HREF="eval.html#list">list</A>.  If the buffer <A HREF="eval.html#list">list</A> is
 		empty, go to the last unlisted buffer.
-		See |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
+		见 |<A HREF="#:buffer-!">:buffer-!</A>| for [!].
 
 
 :sbl[ast] <A HREF="editing.html#[+cmd]">[+cmd]</A>					*<A NAME=":sbl"></A><B>:sbl</B>* *<A NAME=":sblast"></A><B>:sblast</B>*
@@ -1476,7 +1476,7 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 		new <A HREF="intro.html#tab">tab</A>, up to <A HREF="options.html#'tabpagemax'">'tabpagemax'</A>.
 
 Note: All the commands above that start editing another buffer, keep the
-<A HREF="options.html#'readonly'">'readonly'</A> flag <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> was.  This differs from the &quot;<A HREF="editing.html#:edit">:edit</A>&quot; command, which sets
+<A HREF="options.html#'readonly'">'readonly'</A> flag <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was.  This differs from the &quot;<A HREF="editing.html#:edit">:edit</A>&quot; command, which sets
 the <A HREF="options.html#'readonly'">'readonly'</A> flag each time the file is read.
 
 ==============================================================================
@@ -1503,7 +1503,7 @@ help		Contains a help file.  Will only be created with the |<A HREF="helphelp.ht
 		and can't be changed.  The <A HREF="options.html#'buflisted'">'buflisted'</A> option will be reset
 		for a help buffer.
 
-terminal	A terminal <A HREF="#window">window</A> buffer, see |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|. The contents cannot
+terminal	A terminal <A HREF="#window">window</A> buffer, 见 |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|. The contents cannot
 		be read or changed until the <A HREF="job_control.html#job">job</A> ends.
 
 directory	Displays directory contents.  Can be used by a file explorer
@@ -1517,20 +1517,20 @@ directory	Displays directory contents.  Can be used by a file explorer
 
 						*<A NAME="scratch-buffer"></A><B>scratch-buffer</B>*
 scratch		Contains text that can be discarded at any time.  It is kept
-		when closing the <A HREF="#window">window</A>, <A HREF="motion.html#it">it</A> must be deleted explicitly.
+		when closing the <A HREF="#window">window</A>, <A HREF="motion.html#it">它</A> must be deleted explicitly.
 		Settings:
 <B>			:setlocal buftype=nofile</B>
 <B>			:setlocal bufhidden=hide</B>
 <B>			:setlocal noswapfile</B>
  		The buffer name can be used to identify the buffer, if you
-		give <A HREF="motion.html#it">it</A> a meaningful name.
+		give <A HREF="motion.html#it">它</A> a meaningful name.
 
 
 						*<A NAME="unlisted-buffer"></A><B>unlisted-buffer</B>*
 unlisted	The buffer is not in the buffer <A HREF="eval.html#list">list</A>.  It is not used for
 		normal editing, but to show a help file, remember a file name
 		or marks.  The &quot;<A HREF="#:bdelete">:bdelete</A>&quot; command will also set this option,
-		thus <A HREF="motion.html#it">it</A> doesn't completely delete the buffer.  Settings:
+		thus <A HREF="motion.html#it">它</A> doesn't completely delete the buffer.  Settings:
 <B>			:setlocal nobuflisted</B>
  
 

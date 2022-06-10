@@ -92,7 +92,7 @@ Background
 
 One way in which we keep the code base manageable is by enforcing consistency.
 It is very important that any programmer be able to look at another's code and
-quickly understand <A HREF="motion.html#it">it</A>.
+quickly understand <A HREF="motion.html#it">它</A>.
 
 Maintaining a uniform style and following conventions means that we can more
 easily use &quot;pattern-matching&quot; to infer what various symbols are and what
@@ -146,8 +146,8 @@ Place a function's <A HREF="eval.html#variables">variables</A> in the narrowest 
 
 C99 allows you to declare <A HREF="eval.html#variables">variables</A> anywhere in a function. Declare them in <A HREF="motion.html#as">as</A>
 local a scope <A HREF="motion.html#as">as</A> possible, and <A HREF="motion.html#as">as</A> close to the first use <A HREF="motion.html#as">as</A> possible. This
-makes <A HREF="motion.html#it">it</A> easier for the reader to find the declaration and see what type the
-variable is and what <A HREF="motion.html#it">it</A> was initialized to. In particular, <A HREF="starting.html#initialization">initialization</A>
+makes <A HREF="motion.html#it">它</A> easier for the reader to find the declaration and see what type the
+variable is and what <A HREF="motion.html#it">它</A> was initialized to. In particular, <A HREF="starting.html#initialization">initialization</A>
 should be used instead of declaration and assignment, e.g.
 
 <B>    int i;</B>
@@ -165,7 +165,7 @@ Use `clint.py` to detect style <A HREF="message.html#errors">errors</A>.
 
 `src/clint.py` is a <A HREF="if_pyth.html#Python">Python</A> <A HREF="usr_41.html#script">script</A> that reads a source file and identifies
 style <A HREF="message.html#errors">errors</A>. It is not perfect, and has both false positives and false
-negatives, but <A HREF="motion.html#it">it</A> is still a valuable tool. False positives can be ignored by
+negatives, but <A HREF="motion.html#it">它</A> is still a valuable tool. False positives can be ignored by
 putting `// NOLINT` at the end of the line.
 
 <B><FONT color="#3A6F2B">uncrustify </FONT></B>
@@ -204,16 +204,16 @@ Use `const` pointers whenever possible. Avoid `const` on non-pointer parameter <
 <B><FONT color="#3A6F2B">    Where to put the const </FONT></B>
 
     Some people favor the form `int const *foo` to `const int *foo` . They
-    argue that this is more readable because it's more consistent: <A HREF="motion.html#it">it</A> keeps
+    argue that this is more readable because it's more consistent: <A HREF="motion.html#it">它</A> keeps
     the rule that `const` always follows the object it's describing. However,
     this consistency argument doesn't apply in codebases with few
     deeply-nested pointer expressions since most `const` expressions have only
-    one `const`, and <A HREF="motion.html#it">it</A> applies to the underlying value. In such cases, there's
+    one `const`, and <A HREF="motion.html#it">它</A> applies to the underlying value. In such cases, there's
     no consistency to maintain. Putting the `const` first is arguably more
-    readable, since <A HREF="motion.html#it">it</A> follows English in putting the &quot;adjective&quot; (`const`)
+    readable, since <A HREF="motion.html#it">它</A> follows English in putting the &quot;adjective&quot; (`const`)
     before the &quot;noun&quot; (`int`).
 
-    That said, while we encourage putting `const` first, we <A HREF="diff.html#do">do</A> not require <A HREF="motion.html#it">it</A>.
+    That said, while we encourage putting `const` first, we <A HREF="diff.html#do">do</A> not require <A HREF="motion.html#it">它</A>.
     But be consistent with the code around you!
 
 <B>    void foo(const char *p, int i);</B>
@@ -407,7 +407,7 @@ Function names, variable names, and filenames should be descriptive; eschew
 abbreviation.
 
 Give <A HREF="motion.html#as">as</A> descriptive a name <A HREF="motion.html#as">as</A> possible, within reason. Do not worry about
-saving horizontal space <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> is far more important to make your code
+saving horizontal space <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> is far more important to make your code
 immediately understandable by a new reader. Do not use <A HREF="map.html#abbreviations">abbreviations</A> that are
 ambiguous or unfamiliar to readers outside your project, and <A HREF="diff.html#do">do</A> not abbreviate
 by <A HREF="change.html#deleting">deleting</A> letters within a <A HREF="motion.html#word">单词</A>.
@@ -572,7 +572,7 @@ Start each file with a description of its contents.
     are used. A `.c` file should contain more information about implementation
     details or discussions of tricky algorithms. If you feel the
     implementation details or a discussion of the algorithms would be useful
-    for someone reading the `.h`, feel free to put <A HREF="motion.html#it">it</A> there instead, but
+    for someone reading the `.h`, feel free to put <A HREF="motion.html#it">它</A> there instead, but
     mention in the `.c` that the documentation is in the `.h` file.
 
     Do not duplicate comments in both the `.h` and the `.c`. Duplicated
@@ -587,7 +587,7 @@ Start each file with a description of its contents.
 <B><FONT color="#3A6F2B">Struct Comments </FONT></B>
 
 Every struct definition should have accompanying comments that describes what
-<A HREF="motion.html#it">it</A> is for and how <A HREF="motion.html#it">it</A> should be used.
+<A HREF="motion.html#it">它</A> is for and how <A HREF="motion.html#it">它</A> should be used.
 
 <B>    /// Window info stored with a buffer.</B>
 <B>    ///</B>
@@ -634,10 +634,10 @@ of a function describe operation.
 
 <B><FONT color="#3A6F2B">    Function Declarations </FONT></B>
 
-    Every function declaration should have comments immediately preceding <A HREF="motion.html#it">it</A>
-    that describe what the function does and how to use <A HREF="motion.html#it">it</A>. These comments
+    Every function declaration should have comments immediately preceding <A HREF="motion.html#it">它</A>
+    that describe what the function does and how to use <A HREF="motion.html#it">它</A>. These comments
     should be descriptive (&quot;Opens the file&quot;) rather than imperative (&quot;Open the
-    file&quot;); the comment describes the function, <A HREF="motion.html#it">it</A> does not tell the function
+    file&quot;); the comment describes the function, <A HREF="motion.html#it">它</A> does not tell the function
     what to <A HREF="diff.html#do">do</A>. In general, these comments <A HREF="diff.html#do">do</A> not describe how the function
     performs its task. Instead, that should be left to comments in the
     function definition.
@@ -669,14 +669,14 @@ of a function describe operation.
     the definition comment you might describe any coding tricks you use, give
     an overview of the steps you go through, or explain why you chose to
     implement the function in the way you did rather than using a viable
-    alternative. For instance, you might mention why <A HREF="motion.html#it">it</A> must acquire a lock
-    for the first half of the function but why <A HREF="motion.html#it">it</A> is not needed for the second
+    alternative. For instance, you might mention why <A HREF="motion.html#it">它</A> must acquire a lock
+    for the first half of the function but why <A HREF="motion.html#it">它</A> is not needed for the second
     half.
 
     Note you should not just repeat the comments given with the function
     declaration, in the `.h` file or wherever. It's okay to recapitulate
     briefly what the function does, but the focus of the comments should be on
-    how <A HREF="motion.html#it">it</A> does <A HREF="motion.html#it">it</A>.
+    how <A HREF="motion.html#it">它</A> does <A HREF="motion.html#it">它</A>.
 
 <B>    // Note that we don't use Doxygen comments here.</B>
 <B>    Iterator *get_iterator(void *arg1, void *arg2)</B>
@@ -722,7 +722,7 @@ interesting, or important parts of your code.
     and comments that mention that an error has already been logged when the
     function returns.
 
-    If you have several comments on subsequent lines, <A HREF="motion.html#it">it</A> can often be more
+    If you have several comments on subsequent lines, <A HREF="motion.html#it">它</A> can often be more
     readable to line them up:
 
 <B>        do_something();                      // Comment here so the comments line up.</B>
@@ -779,7 +779,7 @@ interesting, or important parts of your code.
 
 <B><FONT color="#3A6F2B">Punctuation, Spelling and Grammar </FONT></B>
 
-Pay attention to punctuation, spelling, and grammar; <A HREF="motion.html#it">it</A> is easier to read
+Pay attention to punctuation, spelling, and grammar; <A HREF="motion.html#it">它</A> is easier to read
 well-written comments than badly written ones.
 
 Comments should be <A HREF="motion.html#as">as</A> readable <A HREF="motion.html#as">as</A> narrative text, with proper capitalization
@@ -788,8 +788,8 @@ and punctuation. In many cases, complete sentences are more readable than
 code, can sometimes be <A HREF="various.html#less">less</A> formal, but you should be consistent with your
 style.
 
-Although <A HREF="motion.html#it">it</A> can be frustrating to have a code reviewer point out that you are
-using a comma when you should be using a semicolon, <A HREF="motion.html#it">it</A> is very important that
+Although <A HREF="motion.html#it">它</A> can be frustrating to have a code reviewer point out that you are
+using a comma when you should be using a semicolon, <A HREF="motion.html#it">它</A> is very important that
 source code maintain a high level of clarity and readability. Proper
 punctuation, spelling, and grammar help with that goal.
 
@@ -804,7 +804,7 @@ email address, or other identifier of the person who can best provide <A HREF="r
 about the problem referenced by the `TODO`. The main purpose is to have a
 consistent `TODO` format that can be searched to find the person who can
 provide more details upon request. A `TODO` is not a commitment that the
-person referenced will fix the problem. Thus when you create a `TODO`, <A HREF="motion.html#it">it</A> is
+person referenced will fix the problem. Thus when you create a `TODO`, <A HREF="motion.html#it">它</A> is
 almost always your name that is given.
 
 <B>    // TODO(kl@gmail.com): Use a "*" here for concatenation operator.</B>
@@ -848,7 +848,7 @@ Formatting                                              *<A NAME="dev-style-form
 Coding style and <A HREF="change.html#formatting">formatting</A> are pretty arbitrary, but a project is much easier
 to follow if everyone uses the same style. Individuals may not agree with
 every aspect of the <A HREF="change.html#formatting">formatting</A> rules, and some of the rules may take some
-getting used to, but <A HREF="motion.html#it">it</A> is important that all project contributors follow the
+getting used to, but <A HREF="motion.html#it">它</A> is important that all project contributors follow the
 style rules so that they can all read and understand everyone's code easily.
 
 
@@ -858,14 +858,14 @@ Non-ASCII characters should be rare, and must use <A HREF="mbyte.html#UTF-8">UTF
 
 You shouldn't hard-code user-facing text in source (OR SHOULD YOU?), even
 English, so use of non-ASCII characters should be rare. However, in certain
-cases <A HREF="motion.html#it">it</A> is appropriate to include such words in your code. For example, if
-your code parses data files from foreign sources, <A HREF="motion.html#it">it</A> may be appropriate to
+cases <A HREF="motion.html#it">它</A> is appropriate to include such words in your code. For example, if
+your code parses data files from foreign sources, <A HREF="motion.html#it">它</A> may be appropriate to
 hard-code the non-ASCII string(s) used in those data files <A HREF="motion.html#as">as</A> delimiters. More
 commonly, unittest code (which does not need to be localized) might contain
 non-ASCII strings. In such cases, you should use <A HREF="mbyte.html#UTF-8">UTF-8</A>, since that is an
 encoding understood by most tools able to handle more than just ASCII.
 
-Hex encoding is also OK, and encouraged where <A HREF="motion.html#it">it</A> enhances readability — for
+Hex encoding is also OK, and encouraged where <A HREF="motion.html#it">它</A> enhances readability — for
 example, `&quot;\uFEFF&quot;`, is the <A HREF="mbyte.html#Unicode">Unicode</A> zero-width no-break space character, which
 would be invisible if included in the source <A HREF="motion.html#as">as</A> straight <A HREF="mbyte.html#UTF-8">UTF-8</A>.
 
@@ -921,7 +921,7 @@ Some points to note:
 
 <B><FONT color="#3A6F2B">Function Calls </FONT></B>
 
-On one line if <A HREF="motion.html#it">it</A> fits; otherwise, wrap arguments at the parenthesis.
+On one line if <A HREF="motion.html#it">它</A> fits; otherwise, wrap arguments at the parenthesis.
 
 Function calls have the following format:
 
@@ -957,7 +957,7 @@ argument:
 <B>      }</B>
 
 In particular, this should be done if the function signature is so long that
-<A HREF="motion.html#it">it</A> cannot fit within the maximum line length.
+<A HREF="motion.html#it">它</A> cannot fit within the maximum line length.
 
 
 <B><FONT color="#3A6F2B">Braced Initializer Lists </FONT></B>
@@ -1097,7 +1097,7 @@ Use of horizontal <A HREF="pattern.html#whitespace">whitespace</A> depends on lo
 
 Minimize use of vertical <A HREF="pattern.html#whitespace">whitespace</A>.
 
-The basic principle is: The more code that fits on one screen, the easier <A HREF="motion.html#it">it</A>
+The basic principle is: The more code that fits on one screen, the easier <A HREF="motion.html#it">它</A>
 is to follow and understand the <A HREF="intro.html#control">control</A> flow of the program. Of course,
 readability can suffer from code being too dense <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> too spread out, so
 use your judgment. But in general, minimize use of vertical <A HREF="pattern.html#whitespace">whitespace</A>.
@@ -1107,7 +1107,7 @@ use your judgment. But in general, minimize use of vertical <A HREF="pattern.htm
 Parting Words
 
 The style guide is intended to make the code more readable. If you think you
-must violate its rules for the sake of clarity, <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>! But please add a note
+must violate its rules for the sake of clarity, <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>! But please add a note
 to your pull request explaining your reasoning.
 
 

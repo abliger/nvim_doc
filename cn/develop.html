@@ -101,15 +101,15 @@ intentional.  A balance must be found.
 
 NVIM IS... IMPROVED					*<A NAME="design-improved"></A><B>design-improved</B>*
 
-The Neo bits of Nvim should make <A HREF="motion.html#it">it</A> a better Vim, without becoming a
+The Neo bits of Nvim should make <A HREF="motion.html#it">它</A> a better Vim, without becoming a
 completely different editor.
 - In matters of taste, prefer Vim/Unix tradition. If there is no relevant
   Vim/Unix tradition, consider the &quot;common case&quot;.
 - A feature that people <A HREF="diff.html#do">do</A> not know about is a useless feature.  Don't add
   obscure features, or at least add hints in documentation that they exist.
 - There is no limit to the features that can be added.  Selecting new features
-  is based on (1) what users ask for, (2) how much effort <A HREF="motion.html#it">it</A> takes to
-  implement and (3) someone actually implementing <A HREF="motion.html#it">it</A>.
+  is based on (1) what users ask for, (2) how much effort <A HREF="motion.html#it">它</A> takes to
+  implement and (3) someone actually implementing <A HREF="motion.html#it">它</A>.
 - Backwards compatibility is a feature.  The <A HREF="api.html#RPC">RPC</A> <A HREF="api.html#API">API</A> in particular should
   never break.
 
@@ -135,8 +135,8 @@ Keep Nvim small and fast.
   possible.  Useful commands may take longer.
 - Don't forget that some people use Vim over a slow connection.  Minimize the
   communication overhead.
-- Vim is a component among other components.  Don't turn <A HREF="motion.html#it">it</A> into a massive
-  application, but have <A HREF="motion.html#it">it</A> work well together with other programs.
+- Vim is a component among other components.  Don't turn <A HREF="motion.html#it">它</A> into a massive
+  application, but have <A HREF="motion.html#it">它</A> work well together with other programs.
 
 
 
@@ -154,7 +154,7 @@ NVIM IS... MAINTAINABLE					*<A NAME="design-maintain"></A><B>design-maintain</B
 
 NVIM IS... NOT						*<A NAME="design-not"></A><B>design-not</B>*
 
-Nvim is not an operating system; instead <A HREF="motion.html#it">it</A> should be composed with other
+Nvim is not an operating system; instead <A HREF="motion.html#it">它</A> should be composed with other
 tools or hosted <A HREF="motion.html#as">as</A> a component. Marvim once said: &quot;Unlike Emacs, Nvim does not
 include the kitchen sink... but it's good for plumbing.&quot;
 
@@ -191,7 +191,7 @@ in eval.c:
   value returned by the <A HREF="provider.html#provider">provider</A> will be discarded and empty value will be
   returned.
 - eval_has_provider(name): Checks the `g:loaded_{name}_provider` variable
-  which must be set to 2 by the <A HREF="provider.html#provider">provider</A> <A HREF="usr_41.html#script">script</A> to indicate that <A HREF="motion.html#it">it</A> is
+  which must be set to 2 by the <A HREF="provider.html#provider">provider</A> <A HREF="usr_41.html#script">script</A> to indicate that <A HREF="motion.html#it">它</A> is
   &quot;enabled and working&quot;. Called by |<A HREF="builtin.html#has()">has()</A>| to check if features are available.
 
 For example, the <A HREF="if_pyth.html#Python">Python</A> <A HREF="provider.html#provider">provider</A> is implemented by the
@@ -203,7 +203,7 @@ reflects whether <A HREF="if_pyth.html#Python">Python</A> support is working.
 							*<A NAME="provider-reload"></A><B>provider-reload</B>*
 Sometimes a <A HREF="gui.html#GUI">GUI</A> or other application may want to force a <A HREF="provider.html#provider">provider</A> to
 &quot;<A HREF="editing.html#reload">reload</A>&quot;.  To <A HREF="editing.html#reload">reload</A> a <A HREF="provider.html#provider">provider</A>, undefine its &quot;loaded&quot; flag, then use
-|<A HREF="repeat.html#:runtime">:runtime</A>| to <A HREF="editing.html#reload">reload</A> <A HREF="motion.html#it">it</A>:
+|<A HREF="repeat.html#:runtime">:runtime</A>| to <A HREF="editing.html#reload">reload</A> <A HREF="motion.html#it">它</A>:
 
 <B>    :unlet g:loaded_clipboard_provider</B>
 <B>    :runtime autoload/provider/clipboard.vim</B>
@@ -218,17 +218,17 @@ DOCUMENTATION						*<A NAME="dev-doc"></A><B>dev-doc</B>*
   optimize for the reader's time and energy: be &quot;precise yet concise&quot;.
     - Prefer the active voice: &quot;Foo does X&quot;, not &quot;<A HREF="change.html#X">X</A> is done by Foo&quot;.
 - Vim differences:
-    - Do not prefix help <A HREF="tagsrch.html#tags">tags</A> with &quot;nvim-&quot;. Use |<A HREF="vim_diff.html">vim_diff.txt</A>| to catalog
+    - Do not prefix help <A HREF="tagsrch.html#tags">标签</A> with &quot;nvim-&quot;. Use |<A HREF="vim_diff.html">vim_diff.txt</A>| to catalog
       differences from Vim; no other distinction is necessary.
-    - If a Vim feature is removed, delete its help section and move its <A HREF="tagsrch.html#tag">tag</A> to
+    - If a Vim feature is removed, delete its help section and move its <A HREF="tagsrch.html#tag">标签</A> to
       |<A HREF="vim_diff.html">vim_diff.txt</A>|.
 - Mention deprecated features in |<A HREF="deprecated.html">deprecated.txt</A>| and delete their old doc.
 - Use consistent language.
-    - &quot;<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>&quot; in a help <A HREF="tagsrch.html#tag">tag</A> always means &quot;the embedded <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator&quot;,
+    - &quot;<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>&quot; in a help <A HREF="tagsrch.html#tag">标签</A> always means &quot;the embedded <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator&quot;,
       not &quot;the user host terminal&quot;.
-    - Use &quot;tui-&quot; to prefix help <A HREF="tagsrch.html#tags">tags</A> related to the host <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, and &quot;<A HREF="term.html#TUI">TUI</A>&quot;
+    - Use &quot;tui-&quot; to prefix help <A HREF="tagsrch.html#tags">标签</A> related to the host <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, and &quot;<A HREF="term.html#TUI">TUI</A>&quot;
       in prose if possible.
-- Docstrings: <A HREF="diff.html#do">do</A> not start parameter descriptions with &quot;The&quot; or &quot;<A HREF="insert.html#A">A</A>&quot; unless <A HREF="motion.html#it">it</A>
+- Docstrings: <A HREF="diff.html#do">do</A> not start parameter descriptions with &quot;The&quot; or &quot;<A HREF="insert.html#A">A</A>&quot; unless <A HREF="motion.html#it">它</A>
   is critical to avoid ambiguity.
       GOOD:
 <B>      /// @param dirname Path fragment before `pend`</B>
@@ -303,7 +303,7 @@ vim.paste in runtime/lua/vim/_editor.lua like this:
 <B>    --- end)()</B>
 <B>    --- &lt;/pre&gt;</B>
 <B>    ---</B>
-<B>    ---@see |paste|</B>
+<B>    ---@见 |paste|</B>
 <B>    ---</B>
 <B>    ---@param lines  ...</B>
 <B>    ---@param phase  ...</B>
@@ -352,7 +352,7 @@ Example:
 
 Example:
     `nvim_list_bufs` operates in a global <A HREF="repeat.html#context">context</A> (first parameter is not
-    a Buffer). The common {action} &quot;<A HREF="eval.html#list">list</A>&quot; indicates that <A HREF="motion.html#it">it</A> lists all bufs
+    a Buffer). The common {action} &quot;<A HREF="eval.html#list">list</A>&quot; indicates that <A HREF="motion.html#it">它</A> lists all bufs
     (plural) in the global <A HREF="repeat.html#context">context</A>.
 
 Use this <A HREF="autocmd.html#template">template</A> to name new <A HREF="api.html#API">API</A> <A HREF="autocmd.html#events">events</A>:
@@ -368,7 +368,7 @@ API-CLIENT						*<A NAME="dev-api-client"></A><B>dev-api-client</B>*
 
 							*<A NAME="api-client"></A><B>api-client</B>*
 API clients wrap the Nvim |<A HREF="api.html#API">API</A>| to provide idiomatic &quot;SDKs&quot; for their
-respective platforms (see |<A HREF="intro.html#jargon">jargon</A>|). You can build a new <A HREF="api.html#API">API</A> client for your
+respective platforms (见 |<A HREF="intro.html#jargon">jargon</A>|). You can build a new <A HREF="api.html#API">API</A> client for your
 favorite platform or programming language.
 
 <A HREF="eval.html#List">List</A> of <A HREF="api.html#API">API</A> clients:
@@ -397,7 +397,7 @@ following ecosystem conventions.
 
 For example, <A HREF="if_pyth.html#Python">Python</A> <A HREF="repeat.html#packages">packages</A> tend to have &quot;py&quot; in the name, so &quot;<A HREF="#pynvim">pynvim</A>&quot; is
 a good name: it's idiomatic and unambiguous. If the package is named &quot;neovim&quot;,
-<A HREF="motion.html#it">it</A> confuses users, and complicates documentation and discussions.
+<A HREF="motion.html#it">它</A> confuses users, and complicates documentation and discussions.
 
 Examples of API-client package names:
         GOOD: nvim-racket

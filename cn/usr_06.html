@@ -80,11 +80,11 @@
 
 
 Black and white text is boring.  With colors your file comes to life.  This
-not only looks nice, <A HREF="motion.html#it">it</A> also speeds up your work.  Change the colors used for
+not only looks nice, <A HREF="motion.html#it">它</A> also speeds up your work.  Change the colors used for
 the different sorts of text.  Print your text, with the colors you see on the
 screen.
 
-|<A HREF="#06.1">06.1</A>|	Switching <A HREF="motion.html#it">it</A> on
+|<A HREF="#06.1">06.1</A>|	Switching <A HREF="motion.html#it">它</A> on
 |<A HREF="#06.2">06.2</A>|	No or wrong colors?
 |<A HREF="#06.3">06.3</A>|	Different colors
 |<A HREF="#06.4">06.4</A>|	With colors or without colors
@@ -97,7 +97,7 @@ screen.
 
 ==============================================================================
 
-*<A NAME="06.1"></A><B>06.1</B>*	Switching <A HREF="motion.html#it">it</A> on
+*<A NAME="06.1"></A><B>06.1</B>*	Switching <A HREF="motion.html#it">它</A> on
 
 <A HREF="autocmd.html#Syntax">Syntax</A> highlighting is enabled by default.  Nvim will automagically detect the
 type of file and load the right <A HREF="syntax.html#syntax">syntax</A> highlighting.
@@ -140,28 +140,28 @@ There can be a number of reasons why you don't see colors:
  	To see which types are available, look in the directory
 	$VIMRUNTIME/syntax.  For the <A HREF="gui.html#GUI">GUI</A> you can use the <A HREF="autocmd.html#Syntax">Syntax</A> menu.
 	Setting the <A HREF="filetype.html#filetype">filetype</A> can also be done with a |<A HREF="options.html#modeline">modeline</A>|, so that the
-	file will be highlighted each time you edit <A HREF="motion.html#it">it</A>.  For example, this
-	line can be used in a Makefile (put <A HREF="motion.html#it">it</A> near the start or end of the
+	file will be highlighted each time you edit <A HREF="motion.html#it">它</A>.  For example, this
+	line can be used in a Makefile (put <A HREF="motion.html#it">它</A> near the start or end of the
 	file):
 
 <B>		# vim: syntax=make</B>
 
  	You might know how to detect the file type yourself.  Often the file
 	name extension (after the dot) can be used.
-	See |<A HREF="filetype.html#new-filetype">new-filetype</A>| for how to tell Vim to detect that file type.
+	见 |<A HREF="filetype.html#new-filetype">new-filetype</A>| for how to tell Vim to detect that file type.
 
 - There is no highlighting for your file type.
-	You could try using a similar file type by manually setting <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A>
+	You could try using a similar file type by manually setting <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A>
 	mentioned above.  If that isn't good enough, you can write your own
-	syntax file, see |<A HREF="syntax.html#mysyntaxfile">mysyntaxfile</A>|.
+	syntax file, 见 |<A HREF="syntax.html#mysyntaxfile">mysyntaxfile</A>|.
 
 
 Or the colors could be wrong:
 
 - The colored text is very hard to read.
-	Vim guesses the background color that you are using.  If <A HREF="motion.html#it">it</A> is black
-	(or another dark color) <A HREF="motion.html#it">it</A> will use light colors for text.  If <A HREF="motion.html#it">it</A> is
-	white (or another light color) <A HREF="motion.html#it">it</A> will use dark colors for text.  If
+	Vim guesses the background color that you are using.  If <A HREF="motion.html#it">它</A> is black
+	(or another dark color) <A HREF="motion.html#it">它</A> will use light colors for text.  If <A HREF="motion.html#it">它</A> is
+	white (or another light color) <A HREF="motion.html#it">它</A> will use dark colors for text.  If
 	Vim guessed wrong the text will be hard to read.  To solve this, set
 	the <A HREF="options.html#'background'">'background'</A> option.  For a dark background:
 
@@ -181,8 +181,8 @@ Or the colors could be wrong:
 	wherever you are viewing the file.  That saves a lot of time, but
 	sometimes the colors are wrong.  A simple fix is hitting <A HREF="various.html#CTRL-L">CTRL-L</A>.  Or
 	scroll back a bit and then forward again.
-	For a real fix, see |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.  Some <A HREF="syntax.html#syntax">syntax</A> files have a way to make
-	<A HREF="motion.html#it">it</A> look further back, see the help for the specific <A HREF="syntax.html#syntax">syntax</A> file.  For
+	For a real fix, 见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.  Some <A HREF="syntax.html#syntax">syntax</A> files have a way to make
+	<A HREF="motion.html#it">它</A> look further back, see the help for the specific <A HREF="syntax.html#syntax">syntax</A> file.  For
 	example, |<A HREF="tex.html">tex.vim</A>| for the TeX <A HREF="syntax.html#syntax">syntax</A>.
 
 ==============================================================================
@@ -200,7 +200,7 @@ want to try out.  Look in the directory $VIMRUNTIME/colors.
 When you found the color scheme that you like, add the &quot;<A HREF="syntax.html#:colorscheme">:colorscheme</A>&quot; command
 to your |<A HREF="init.html">init.vim</A>| file.
 
-You could also write your own color scheme.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>:
+You could also write your own color scheme.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
 
 1. <A HREF="visual.html#Select">Select</A> a color scheme that comes close.  Copy this file to your own Vim
    directory.  For Unix, this should work:
@@ -208,7 +208,7 @@ You could also write your own color scheme.  This is how you <A HREF="diff.html#
 <B>	!mkdir -p ~/.config/nvim/colors</B>
 <B>	!cp $VIMRUNTIME/colors/morning.vim ~/.config/nvim/colors/mine.vim</B>
  
-   This is done from Vim, because <A HREF="motion.html#it">it</A> knows the value of <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>.
+   This is done from Vim, because <A HREF="motion.html#it">它</A> knows the value of <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>.
 
 2. Edit the color scheme file.  These entries are useful:
 
@@ -255,8 +255,8 @@ If you want to stop highlighting completely use:
 
 <B>	:syntax off</B>
 
-This will completely disable <A HREF="syntax.html#syntax">syntax</A> highlighting and remove <A HREF="motion.html#it">it</A> immediately for
-all <A HREF="windows.html#buffers">buffers</A>.  See |<A HREF="syntax.html#:syntax-off">:syntax-off</A>| for more details.
+This will completely disable <A HREF="syntax.html#syntax">syntax</A> highlighting and remove <A HREF="motion.html#it">它</A> immediately for
+all <A HREF="windows.html#buffers">buffers</A>.  见 |<A HREF="syntax.html#:syntax-off">:syntax-off</A>| for more details.
 
 
 							*<A NAME=":syn-manual"></A><B>:syn-manual</B>*
@@ -264,7 +264,7 @@ If you want <A HREF="syntax.html#syntax">syntax</A> highlighting only for specif
 
 <B>	:syntax manual</B>
 
-This will enable the <A HREF="syntax.html#syntax">syntax</A> highlighting, but not switch <A HREF="motion.html#it">it</A> on automatically
+This will enable the <A HREF="syntax.html#syntax">syntax</A> highlighting, but not switch <A HREF="motion.html#it">它</A> on automatically
 when starting to edit a buffer.  To switch highlighting on for the current
 buffer, set the <A HREF="options.html#'syntax'">'syntax'</A> option:
 
@@ -300,7 +300,7 @@ commands to move in <A HREF="visual.html#Visual">Visual</A> mode, of course.
 
 This also works on Unix, if you have a PostScript printer.  Otherwise, you
 will have to <A HREF="diff.html#do">do</A> a bit more work.  You need to convert the text to HTML first,
-and then print <A HREF="motion.html#it">it</A> from a web browser.
+and then print <A HREF="motion.html#it">它</A> from a web browser.
 
 Convert the current file to HTML with this command:
 
@@ -310,15 +310,15 @@ In <A HREF="change.html#case">case</A> that doesn't work:
 
 <B>	:source $VIMRUNTIME/syntax/2html.vim</B>
 
-You will see <A HREF="motion.html#it">it</A> crunching away, this can take quite a while for a large file.
+You will see <A HREF="motion.html#it">它</A> crunching away, this can take quite a while for a large file.
 Some time later another<A HREF="windows.html#window">窗口</A>shows the HTML code.  Now write this somewhere
-(doesn't matter where, you throw <A HREF="motion.html#it">it</A> away later):
+(doesn't matter where, you throw <A HREF="motion.html#it">它</A> away later):
 
 <B>	:write main.c.html</B>
 
-Open this file in your favorite browser and print <A HREF="motion.html#it">it</A> from there.  If all goes
-well, the output should look exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> does in Vim.  See |<A HREF="2html.html">2html.vim</A>| for
-details.  Don't forget to delete the HTML file when you are done with <A HREF="motion.html#it">it</A>.
+Open this file in your favorite browser and print <A HREF="motion.html#it">它</A> from there.  If all goes
+well, the output should look exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> does in Vim.  见 |<A HREF="2html.html">2html.vim</A>| for
+details.  Don't forget to delete the HTML file when you are done with <A HREF="motion.html#it">它</A>.
 
 Instead of <A HREF="print.html#printing">printing</A>, you could also put the HTML file on a web server, and let
 others look at the colored text.

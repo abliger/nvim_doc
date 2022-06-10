@@ -182,7 +182,7 @@ blockwise <A HREF="#Visual">Visual</A>    <A HREF="#Visual">Visual</A>	   <A HRE
 								*<A NAME="gn"></A><B>gn</B>* *<A NAME="v_gn"></A><B>v_gn</B>*
 <A HREF="#gn">gn</A>			Search forward for the last used search <A HREF="pattern.html#pattern">pattern</A>, like
 			with `n`, and start <A HREF="#Visual">Visual</A> mode to select the match.
-			If the cursor is on the match, visually selects <A HREF="motion.html#it">it</A>.
+			If the cursor is on the match, visually selects <A HREF="motion.html#it">它</A>.
 			If an <A HREF="motion.html#operator">operator</A> is pending, operates on the match.
 			E.g., &quot;<A HREF="motion.html#dgn">dgn</A>&quot; deletes the text of the next match.
 			If <A HREF="#Visual">Visual</A> mode is active, extends the selection
@@ -198,7 +198,7 @@ blockwise <A HREF="#Visual">Visual</A>    <A HREF="#Visual">Visual</A>	   <A HRE
 
 							*<A NAME="&lt;LeftMouse&gt;"></A><B>&lt;LeftMouse&gt;</B>*
 <A HREF="#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>		Set the current cursor position.  If <A HREF="#Visual">Visual</A> mode is
-			active <A HREF="motion.html#it">it</A> is stopped.  Only when <A HREF="options.html#'mouse'">'mouse'</A> option
+			active <A HREF="motion.html#it">它</A> is stopped.  Only when <A HREF="options.html#'mouse'">'mouse'</A> option
 			contains '<A HREF="pattern.html#n">n</A>' or '<A HREF="insert.html#a">a</A>'.  If the position is within <A HREF="options.html#'so'">'so'</A>
 			lines from the last line on the screen the text is
 			scrolled up.  If the position is within <A HREF="options.html#'so'">'so'</A> lines from
@@ -207,7 +207,7 @@ blockwise <A HREF="#Visual">Visual</A>    <A HREF="#Visual">Visual</A>	   <A HRE
 
 
 							*<A NAME="&lt;RightMouse&gt;"></A><B>&lt;RightMouse&gt;</B>*
-<A HREF="#&lt;RightMouse&gt;">&lt;RightMouse&gt;</A>		Start <A HREF="#Visual">Visual</A> mode if <A HREF="motion.html#it">it</A> is not active.  The text from
+<A HREF="#&lt;RightMouse&gt;">&lt;RightMouse&gt;</A>		Start <A HREF="#Visual">Visual</A> mode if <A HREF="motion.html#it">它</A> is not active.  The text from
 			the cursor position to the position of the click is
 			highlighted.  If <A HREF="#Visual">Visual</A> mode was already active move
 			the start or end of the highlighted text, whichever
@@ -219,7 +219,7 @@ blockwise <A HREF="#Visual">Visual</A>    <A HREF="#Visual">Visual</A>	   <A HRE
 
 
 							*<A NAME="&lt;LeftRelease&gt;"></A><B>&lt;LeftRelease&gt;</B>*
-<A HREF="#&lt;LeftRelease&gt;">&lt;LeftRelease&gt;</A>		This works like a <A HREF="#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>, if <A HREF="motion.html#it">it</A> is not at
+<A HREF="#&lt;LeftRelease&gt;">&lt;LeftRelease&gt;</A>		This works like a <A HREF="#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>, if <A HREF="motion.html#it">它</A> is not at
 			the same position <A HREF="motion.html#as">as</A> <A HREF="#&lt;LeftMouse&gt;">&lt;LeftMouse&gt;</A>.  In an older version
 			of xterm you won't see the selected area until the
 			button is released, unless there is access to the
@@ -258,7 +258,7 @@ If you want to highlight exactly the same area <A HREF="motion.html#as">as</A> t
 							*<A NAME="v_CTRL-C"></A><B>v_CTRL-C</B>*
 <A HREF="pattern.html#CTRL-C">CTRL-C</A>			In <A HREF="#Visual">Visual</A> mode: Stop <A HREF="#Visual">Visual</A> mode.  When insert mode is
 			pending (the mode message shows
-			&quot;<A HREF="starting.html#--">--</A> (insert) VISUAL --&quot;), <A HREF="motion.html#it">it</A> is also stopped.
+			&quot;<A HREF="starting.html#--">--</A> (insert) VISUAL --&quot;), <A HREF="motion.html#it">它</A> is also stopped.
 
 ==============================================================================
 
@@ -326,7 +326,7 @@ The <A HREF="vimindex.html#objects">objects</A> that can be used are:
 	ib	inner () block					|<A HREF="motion.html#v_ib">v_ib</A>|
 	aB	a <A HREF="intro.html#{}">{}</A> block (with braces)			|<A HREF="motion.html#v_aB">v_aB</A>|
 	iB	inner <A HREF="intro.html#{}">{}</A> block					|<A HREF="motion.html#v_iB">v_iB</A>|
-	at	a &lt;tag&gt; &lt;/tag&gt; block (with <A HREF="tagsrch.html#tags">tags</A>)		|<A HREF="motion.html#v_at">v_at</A>|
+	at	a &lt;tag&gt; &lt;/tag&gt; block (with <A HREF="tagsrch.html#tags">标签</A>)		|<A HREF="motion.html#v_at">v_at</A>|
 	it	inner &lt;tag&gt; &lt;/tag&gt; block			|<A HREF="motion.html#v_it">v_it</A>|
 	a&lt;	a <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block (with <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>)				|<A HREF="motion.html#v_a&lt;">v_a&lt;</A>|
 	i&lt;	inner <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block					|<A HREF="motion.html#v_i&lt;">v_i&lt;</A>|
@@ -355,11 +355,11 @@ Additionally the following commands can be used:
 	J	join (1)					|<A HREF="change.html#v_J">v_J</A>|
 	U	make <A HREF="change.html#uppercase">uppercase</A>					|<A HREF="change.html#v_U">v_U</A>|
 	u	make <A HREF="change.html#lowercase">lowercase</A>					|<A HREF="change.html#v_u">v_u</A>|
-	^]	find <A HREF="tagsrch.html#tag">tag</A>					|<A HREF="tagsrch.html#v_CTRL-]">v_CTRL-]</A>|
+	^]	find <A HREF="tagsrch.html#tag">标签</A>					|<A HREF="tagsrch.html#v_CTRL-]">v_CTRL-]</A>|
 	I	block insert					|<A HREF="#v_b_I">v_b_I</A>|
 	A	block append					|<A HREF="#v_b_A">v_b_A</A>|
 
-(1): Always whole lines, see |<A HREF="#:visual_example">:visual_example</A>|.
+(1): Always whole lines, 见 |<A HREF="#:visual_example">:visual_example</A>|.
 (2): Whole lines when not using <A HREF="#CTRL-V">CTRL-V</A>.
 (3): Whole lines when not using <A HREF="#CTRL-V">CTRL-V</A>, delete until the end of the line when
      using <A HREF="#CTRL-V">CTRL-V</A>.
@@ -369,7 +369,7 @@ Note that the &quot;<A HREF="map.html#:vmap">:vmap</A>&quot; command can be used
 mode.  For example, if you would like the &quot;<A HREF="pattern.html#/">/</A>&quot; command not to extend the <A HREF="#Visual">Visual</A>
 area, but instead take the highlighted text and search for that:
 <B>	:vmap / y/&lt;C-R&gt;"&lt;CR&gt;</B>
-(In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">it</A> you should type <A HREF="motion.html#it">it</A> literally; you
+(In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">它</A> you should type <A HREF="motion.html#it">它</A> literally; you
 need to remove the '<A HREF="motion.html#B">B</A>' flag from <A HREF="options.html#'cpoptions'">'cpoptions'</A>.)
 
 If you want to give a <A HREF="intro.html#register">register</A> name using the &quot;&quot;&quot; command, <A HREF="diff.html#do">do</A> this just before
@@ -404,7 +404,7 @@ With a blockwise selection, I{string}&lt;ESC&gt; will insert {string} at the sta
 of block on every line of the block, provided that the line extends into the
 block.  Thus lines that are short will remain unmodified.  TABs are split to
 retain visual columns.  Works only for adding text to a line, not for
-deletions.  See |<A HREF="#v_b_I_example">v_b_I_example</A>|.
+deletions.  见 |<A HREF="#v_b_I_example">v_b_I_example</A>|.
 
 
 Visual-block Append						*<A NAME="v_b_A"></A><B>v_b_A</B>*
@@ -417,9 +417,9 @@ block RHS is not straight, due to different line lengths:
 2. Block was created with &lt;C-v&gt;{move-around}
     In this <A HREF="change.html#case">case</A> the <A HREF="eval.html#string">string</A> is appended to the end of the block on each line,
     and <A HREF="pattern.html#whitespace">whitespace</A> is inserted to pad to the end-of-block column.
-See |<A HREF="#v_b_A_example">v_b_A_example</A>|.
+见 |<A HREF="#v_b_A_example">v_b_A_example</A>|.
 Note: &quot;<A HREF="insert.html#I">I</A>&quot; and &quot;<A HREF="insert.html#A">A</A>&quot; behave differently for lines that don't extend into the
-selected block.  This was done intentionally, so that you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> the way
+selected block.  This was done intentionally, so that you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> the way
 you want.
 Works only for adding text to a line, not for deletions.
 
@@ -443,15 +443,15 @@ The block is shifted by <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>.  T
 LHS of the block determines the point from which to apply a right <A HREF="intro.html#shift">shift</A>, and
 padding includes TABs optimally according to <A HREF="options.html#'ts'">'ts'</A> and <A HREF="options.html#'et'">'et'</A>.  The LHS of the
 block determines the point up to which to <A HREF="intro.html#shift">shift</A> left.
-See |<A HREF="#v_b_&gt;_example">v_b_&gt;_example</A>|.
-See |<A HREF="#v_b_&lt;_example">v_b_&lt;_example</A>|.
+见 |<A HREF="#v_b_&gt;_example">v_b_&gt;_example</A>|.
+见 |<A HREF="#v_b_&lt;_example">v_b_&lt;_example</A>|.
 
 
 Visual-block <A HREF="insert.html#Replace">Replace</A>						*<A NAME="v_b_r"></A><B>v_b_r</B>*
 Every screen char in the highlighted region is replaced with the same char, ie
 TABs are split and the virtual <A HREF="pattern.html#whitespace">whitespace</A> is replaced, maintaining screen
 layout.
-See |<A HREF="#v_b_r_example">v_b_r_example</A>|.
+见 |<A HREF="#v_b_r_example">v_b_r_example</A>|.
 
 
 ==============================================================================
@@ -480,12 +480,12 @@ to the `.` command is not used.
 Currently the &quot;<A HREF="cmdline.html#:">:</A>&quot; command works on whole lines only.  When you select part of
 a line, doing something like &quot;:!date&quot; will replace the whole line.  If you
 want only part of the line to be replaced you will have to make a <A HREF="map.html#mapping">mapping</A> for
-<A HREF="motion.html#it">it</A>.  In a future release &quot;<A HREF="cmdline.html#:">:</A>&quot; may work on partial lines.
+<A HREF="motion.html#it">它</A>.  In a future release &quot;<A HREF="cmdline.html#:">:</A>&quot; may work on partial lines.
 
 Here is an example, to replace the selected text with the output of &quot;date&quot;:
 <B>	:vmap _a &lt;Esc&gt;`&gt;a&lt;CR&gt;&lt;Esc&gt;`&lt;i&lt;CR&gt;&lt;Esc&gt;!!date&lt;CR&gt;kJJ</B>
 
-(In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">it</A> you should type <A HREF="motion.html#it">it</A> literally; you
+(In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">它</A> you should type <A HREF="motion.html#it">它</A> literally; you
 need to remove the '<A HREF="motion.html#B">B</A>' flag from <A HREF="options.html#'cpoptions'">'cpoptions'</A>)
 
 What this does is:
@@ -499,11 +499,11 @@ kJJ		Join the lines back together
 
 
 							*<A NAME="visual-search"></A><B>visual-search</B>*
-Here is an idea for a <A HREF="map.html#mapping">mapping</A> that makes <A HREF="motion.html#it">it</A> possible to <A HREF="diff.html#do">do</A> a search for the
+Here is an idea for a <A HREF="map.html#mapping">mapping</A> that makes <A HREF="motion.html#it">它</A> possible to <A HREF="diff.html#do">do</A> a search for the
 selected text:
 <B>	:vmap X y/&lt;C-R&gt;"&lt;CR&gt;</B>
 
-(In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">it</A> you should type <A HREF="motion.html#it">it</A> literally; you
+(In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">它</A> you should type <A HREF="motion.html#it">它</A> literally; you
 need to remove the '<A HREF="motion.html#B">B</A>' flag from <A HREF="options.html#'cpoptions'">'cpoptions'</A>)
 
 Note that special characters (like '<A HREF="repeat.html#.">.</A>' and '*') will cause problems.
@@ -607,7 +607,7 @@ Otherwise, typed characters are handled <A HREF="motion.html#as">as</A> in <A HR
 
 When using an <A HREF="motion.html#operator">operator</A> in <A HREF="#Select">Select</A> mode, and the selection is <A HREF="motion.html#linewise">linewise</A>, the
 selected lines are operated upon, but like in <A HREF="motion.html#charwise">charwise</A> selection.  For
-example, when a whole line is deleted, <A HREF="motion.html#it">it</A> can later be pasted in the middle of
+example, when a whole line is deleted, <A HREF="motion.html#it">它</A> can later be pasted in the middle of
 a line.
 
 
@@ -621,7 +621,7 @@ in <A HREF="#Visual">Visual</A> mode is effective.  If you don't want this use |
 
 Users will expect printable characters to replace the selected area.
 Therefore avoid <A HREF="map.html#mapping">mapping</A> printable characters in <A HREF="#Select">Select</A> mode.  Or use
-|<A HREF="map.html#:sunmap">:sunmap</A>|  after |<A HREF="map.html#:map">:map</A>| and |<A HREF="map.html#:vmap">:vmap</A>| to remove <A HREF="motion.html#it">it</A> for <A HREF="#Select">Select</A> mode.
+|<A HREF="map.html#:sunmap">:sunmap</A>|  after |<A HREF="map.html#:map">:map</A>| and |<A HREF="map.html#:vmap">:vmap</A>| to remove <A HREF="motion.html#it">它</A> for <A HREF="#Select">Select</A> mode.
 
 After the <A HREF="map.html#mapping">mapping</A> or menu finishes, the selection is enabled again and <A HREF="#Select">Select</A>
 mode entered, unless the selected area was deleted, another buffer became
@@ -629,7 +629,7 @@ the current one or the<A HREF="windows.html#window">窗口</A>layout was changed
 
 When a character was typed that causes the selection to be deleted and <A HREF="insert.html#Insert">Insert</A>
 mode started, <A HREF="intro.html#Insert">插入</A>模式 mappings are applied to this character.  This may
-cause some confusion, because <A HREF="motion.html#it">it</A> means <A HREF="intro.html#Insert">插入</A>模式 mappings apply to a
+cause some confusion, because <A HREF="motion.html#it">它</A> means <A HREF="intro.html#Insert">插入</A>模式 mappings apply to a
 character typed in <A HREF="#Select">Select</A> mode.  Language mappings apply <A HREF="motion.html#as">as</A> well.
 
 
@@ -637,7 +637,7 @@ character typed in <A HREF="#Select">Select</A> mode.  Language mappings apply <
 <A HREF="#gV">gV</A>			Avoid the automatic reselection of the <A HREF="#Visual">Visual</A> area
 			after a <A HREF="#Select">Select</A> mode <A HREF="map.html#mapping">mapping</A> or menu has finished.
 			Put this just before the end of the <A HREF="map.html#mapping">mapping</A> or menu.
-			At least <A HREF="motion.html#it">it</A> should be after any operations on the
+			At least <A HREF="motion.html#it">它</A> should be after any operations on the
 			selection.
 
 

@@ -169,9 +169,9 @@ identified <A HREF="motion.html#as">as</A> an <A HREF="eval.html#octal">octal</A
 
 *<A NAME="26.3"></A><B>26.3</B>*	Making a change in many files
 
-Suppose you have a variable called &quot;x_cnt&quot; and you want to change <A HREF="motion.html#it">it</A> to
+Suppose you have a variable called &quot;x_cnt&quot; and you want to change <A HREF="motion.html#it">它</A> to
 &quot;x_counter&quot;.  This variable is used in several of your C files.  You need to
-change <A HREF="motion.html#it">it</A> in all files.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>.
+change <A HREF="motion.html#it">它</A> in all files.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.
    Put all the relevant files in the argument <A HREF="eval.html#list">list</A>:
 
 <B>	:args *.c</B>
@@ -191,7 +191,7 @@ of &quot;x_cnt&quot; in the same line.  The &quot;<A HREF="motion.html#e">e</A>&
 when &quot;x_cnt&quot; does not appear in the file.  Otherwise &quot;<A HREF="editing.html#:argdo">:argdo</A>&quot; would abort on
 the first file where &quot;x_cnt&quot; was not found.
    The &quot;|&quot; separates two commands.  The following &quot;update&quot; command writes the
-file only if <A HREF="motion.html#it">it</A> was changed.  If no &quot;x_cnt&quot; was changed to &quot;x_counter&quot; nothing
+file only if <A HREF="motion.html#it">它</A> was changed.  If no &quot;x_cnt&quot; was changed to &quot;x_counter&quot; nothing
 happens.
 
 There is also the &quot;<A HREF="windows.html#:windo">:windo</A>&quot; command, which executes its argument in all
@@ -204,12 +204,12 @@ Check this with the &quot;<A HREF="windows.html#:buffers">:buffers</A>&quot; com
 *<A NAME="26.4"></A><B>26.4</B>*	Using Vim from a shell <A HREF="usr_41.html#script">script</A>
 
 Suppose you have a lot of files in which you need to change the <A HREF="eval.html#string">string</A>
-&quot;-person-&quot; to &quot;Jones&quot; and then print <A HREF="motion.html#it">it</A>.  How <A HREF="diff.html#do">do</A> you <A HREF="diff.html#do">do</A> that?  One way is to
+&quot;-person-&quot; to &quot;Jones&quot; and then print <A HREF="motion.html#it">它</A>.  How <A HREF="diff.html#do">do</A> you <A HREF="diff.html#do">do</A> that?  One way is to
 <A HREF="diff.html#do">do</A> a lot of typing.  The other is to write a shell <A HREF="usr_41.html#script">script</A> to <A HREF="diff.html#do">do</A> the work.
    The Vim editor does a superb <A HREF="job_control.html#job">job</A> <A HREF="motion.html#as">as</A> a screen-oriented editor when using
 <A HREF="intro.html#Normal">正常</A>模式 commands.  For batch processing, however, <A HREF="intro.html#Normal">正常</A>模式 commands <A HREF="diff.html#do">do</A>
 not result in clear, commented command files; so here you will use <A HREF="intro.html#Ex">Ex</A> mode
-instead.  This mode gives you a nice command-line interface that makes <A HREF="motion.html#it">it</A> easy
+instead.  This mode gives you a nice command-line interface that makes <A HREF="motion.html#it">它</A> easy
 to put into a batch file.  (&quot;Ex command&quot; is just another name for a
 command-line (:) command.)
    The <A HREF="intro.html#Ex">Ex</A> mode commands you need are <A HREF="motion.html#as">as</A> follows:
@@ -233,7 +233,7 @@ $file and reads commands from the file &quot;change.vim&quot;.  The <A HREF="sta
 Vim to operate in silent mode.换句话说, <A HREF="diff.html#do">do</A> not keep outputting the
 :prompt, or any other prompt for that matter.
    The &quot;lpr <A HREF="starting.html#-r">-r</A> tempfile&quot; command prints the resulting &quot;<A HREF="change.html#tempfile">tempfile</A>&quot; and deletes
-<A HREF="motion.html#it">it</A> (that's what the <A HREF="starting.html#-r">-r</A> argument does).
+<A HREF="motion.html#it">它</A> (that's what the <A HREF="starting.html#-r">-r</A> argument does).
 
 
 READING FROM STDIN
@@ -254,15 +254,15 @@ argument to read a <A HREF="usr_41.html#script">script</A>:
 
 NORMAL MODE SCRIPTS
 
-If you really want to use <A HREF="intro.html#Normal">正常</A>模式 commands in a <A HREF="usr_41.html#script">script</A>, you can use <A HREF="motion.html#it">it</A>
+If you really want to use <A HREF="intro.html#Normal">正常</A>模式 commands in a <A HREF="usr_41.html#script">script</A>, you can use <A HREF="motion.html#it">它</A>
 like this:
 
 <B>	vim -s script file.txt ...</B>
  
 	Note:
-	&quot;<A HREF="starting.html#-s">-s</A>&quot; has a different meaning when <A HREF="motion.html#it">it</A> is used without &quot;<A HREF="starting.html#-e">-e</A>&quot;.  Here <A HREF="motion.html#it">it</A>
+	&quot;<A HREF="starting.html#-s">-s</A>&quot; has a different meaning when <A HREF="motion.html#it">它</A> is used without &quot;<A HREF="starting.html#-e">-e</A>&quot;.  Here <A HREF="motion.html#it">它</A>
 	means to source the &quot;<A HREF="usr_41.html#script">script</A>&quot; <A HREF="motion.html#as">as</A> <A HREF="intro.html#Normal">正常</A>模式 commands.  When used with
-	&quot;<A HREF="starting.html#-e">-e</A>&quot; <A HREF="motion.html#it">it</A> means to be silent, and doesn't use the next argument <A HREF="motion.html#as">as</A> a
+	&quot;<A HREF="starting.html#-e">-e</A>&quot; <A HREF="motion.html#it">它</A> means to be silent, and doesn't use the next argument <A HREF="motion.html#as">as</A> a
 	file name.
 
 The commands in &quot;<A HREF="usr_41.html#script">script</A>&quot; are executed like you typed them.  Don't forget that

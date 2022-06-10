@@ -89,7 +89,7 @@ This subject is introduced in section |<A HREF="usr_30.html#30.1">30.1</A>| of t
 Vim has a special mode to speedup the edit-compile-edit cycle.  This is
 inspired by the <A HREF="#quickfix">quickfix</A> option of the Manx's Aztec C compiler on the Amiga.
 The idea is to save the error <A HREF="message.html#messages">messages</A> from the compiler in a file and use Vim
-to jump to the <A HREF="message.html#errors">errors</A> one by one.  You can examine each problem and fix <A HREF="motion.html#it">it</A>,
+to jump to the <A HREF="message.html#errors">errors</A> one by one.  You can examine each problem and fix <A HREF="motion.html#it">它</A>,
 without having to remember all the error <A HREF="message.html#messages">messages</A>.
 
 In Vim the <A HREF="#quickfix">quickfix</A> commands are used more generally to find a <A HREF="eval.html#list">list</A> of
@@ -104,7 +104,7 @@ From inside Vim an easy way to run a command and handle the output is with the
 |<A HREF="#:make">:make</A>| command (see below).
 
 The <A HREF="options.html#'errorformat'">'errorformat'</A> option should be set to match the error <A HREF="message.html#messages">messages</A> from your
-compiler (see |<A HREF="#errorformat">errorformat</A>| below).
+compiler (见 |<A HREF="#errorformat">errorformat</A>| below).
 
 
 							*<A NAME="quickfix-ID"></A><B>quickfix-ID</B>*
@@ -146,12 +146,12 @@ command with '<A HREF="motion.html#l">l</A>'.
 
 							*<A NAME="E924"></A><B>E924</B>*
 If the current<A HREF="windows.html#window">窗口</A>was closed by an |<A HREF="autocmd.html#autocommand">autocommand</A>| while processing a
-location <A HREF="eval.html#list">list</A> command, <A HREF="motion.html#it">it</A> will be aborted.
+location <A HREF="eval.html#list">list</A> command, <A HREF="motion.html#it">它</A> will be aborted.
 
 
 							*<A NAME="E925"></A><B>E925</B>* *<A NAME="E926"></A><B>E926</B>*
 If the current <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A> was changed by an |<A HREF="autocmd.html#autocommand">autocommand</A>| while
-processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A> command, <A HREF="motion.html#it">it</A> will be aborted.
+processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">list</A> command, <A HREF="motion.html#it">它</A> will be aborted.
 
 
 							*<A NAME=":cc"></A><B>:cc</B>*
@@ -178,7 +178,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 						*<A NAME=":cn"></A><B>:cn</B>* *<A NAME=":cne"></A><B>:cne</B>* *<A NAME=":cnext"></A><B>:cnext</B>* *<A NAME="E553"></A><B>E553</B>*
 :[count]cn[ext][!]	Display the <A HREF="intro.html#[count]">[count]</A> next error in the <A HREF="eval.html#list">list</A> that
 			includes a file name.  If there are no file names at
-			all, go to the <A HREF="intro.html#[count]">[count]</A> next error.  See |<A HREF="#:cc">:cc</A>| for
+			all, go to the <A HREF="intro.html#[count]">[count]</A> next error.  见 |<A HREF="#:cc">:cc</A>| for
 			[!] and <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
 
 
@@ -190,7 +190,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 :[count]cN[ext][!]		*<A NAME=":cp"></A><B>:cp</B>* *<A NAME=":cprevious"></A><B>:cprevious</B>*  *<A NAME=":cprev"></A><B>:cprev</B>* *<A NAME=":cN"></A><B>:cN</B>* *<A NAME=":cNext"></A><B>:cNext</B>*
 :[count]cp[revious][!]	Display the <A HREF="intro.html#[count]">[count]</A> previous error in the <A HREF="eval.html#list">list</A> that
 			includes a file name.  If there are no file names at
-			all, go to the <A HREF="intro.html#[count]">[count]</A> previous error.  See |<A HREF="#:cc">:cc</A>| for
+			all, go to the <A HREF="intro.html#[count]">[count]</A> previous error.  见 |<A HREF="#:cc">:cc</A>| for
 			[!] and <A HREF="options.html#'switchbuf'">'switchbuf'</A>.
 
 
@@ -271,7 +271,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 :[count]cnf[ile][!]	Display the first error in the <A HREF="intro.html#[count]">[count]</A> next file in
 			the <A HREF="eval.html#list">list</A> that includes a file name.  If there are no
 			file names at all or if there is no next file, go to
-			the <A HREF="intro.html#[count]">[count]</A> next error.  See |<A HREF="#:cc">:cc</A>| for [!] and
+			the <A HREF="intro.html#[count]">[count]</A> next error.  见 |<A HREF="#:cc">:cc</A>| for [!] and
 			<A HREF="options.html#'switchbuf'">'switchbuf'</A>.
 
 
@@ -284,7 +284,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 :[count]cpf[ile][!]	Display the last error in the <A HREF="intro.html#[count]">[count]</A> previous file in
 			the <A HREF="eval.html#list">list</A> that includes a file name.  If there are no
 			file names at all or if there is no next file, go to
-			the <A HREF="intro.html#[count]">[count]</A> previous error.  See |<A HREF="#:cc">:cc</A>| for [!] and
+			the <A HREF="intro.html#[count]">[count]</A> previous error.  见 |<A HREF="#:cc">:cc</A>| for [!] and
 			<A HREF="options.html#'switchbuf'">'switchbuf'</A>.
 
 
@@ -297,7 +297,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":crewind"></A><B>:crewind</B>* *<A NAME=":cr"></A><B>:cr</B>*
 :cr[ewind][!] [nr]	Display error [nr].  If [nr] is omitted, the FIRST
-			error is displayed.  See |<A HREF="#:cc">:cc</A>|.
+			error is displayed.  见 |<A HREF="#:cc">:cc</A>|.
 
 
 							*<A NAME=":lrewind"></A><B>:lrewind</B>* *<A NAME=":lr"></A><B>:lr</B>*
@@ -315,7 +315,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 							*<A NAME=":clast"></A><B>:clast</B>* *<A NAME=":cla"></A><B>:cla</B>*
 :cla[st][!] [nr]	Display error [nr].  If [nr] is omitted, the LAST
-			error is displayed.  See |<A HREF="#:cc">:cc</A>|.
+			error is displayed.  见 |<A HREF="#:cc">:cc</A>|.
 
 
 							*<A NAME=":llast"></A><B>:llast</B>* *<A NAME=":lla"></A><B>:lla</B>*
@@ -345,7 +345,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 			the <A HREF="starting.html#-q">-q</A> option.  You can use this command when you
 			keep Vim running while compiling.  If you give the
 			name of the errorfile, the <A HREF="options.html#'errorfile'">'errorfile'</A> option will
-			be set to [errorfile].  See |<A HREF="#:cc">:cc</A>| for [!].
+			be set to [errorfile].  见 |<A HREF="#:cc">:cc</A>| for [!].
 			If the encoding of the error file differs from the
 			<A HREF="options.html#'encoding'">'encoding'</A> option, you can use the <A HREF="options.html#'makeencoding'">'makeencoding'</A>
 			option to specify the encoding.
@@ -389,12 +389,12 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 
 						*<A NAME=":cb"></A><B>:cb</B>* *<A NAME=":cbuffer"></A><B>:cbuffer</B>* *<A NAME="E681"></A><B>E681</B>*
 :cb[uffer][!] [bufnr]	Read the error <A HREF="eval.html#list">list</A> from the current buffer.
-			When [bufnr] is given <A HREF="motion.html#it">it</A> must be the number of a
+			When [bufnr] is given <A HREF="motion.html#it">它</A> must be the number of a
 			loaded buffer.  That buffer will then be used instead
 			of the current buffer.
 			A range can be specified for the lines to be used.
 			Otherwise all lines in the buffer are used.
-			See |<A HREF="#:cc">:cc</A>| for [!].
+			见 |<A HREF="#:cc">:cc</A>| for [!].
 
 
 						*<A NAME=":lb"></A><B>:lb</B>* *<A NAME=":lbuffer"></A><B>:lbuffer</B>*
@@ -436,7 +436,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 			If {expr} is a <A HREF="eval.html#List">List</A>, then each <A HREF="eval.html#String">String</A> item in the <A HREF="eval.html#list">list</A>
 			is processed and added to the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>.  Non
 			<A HREF="eval.html#String">String</A> items in the <A HREF="eval.html#List">List</A> are ignored.
-			See |<A HREF="#:cc">:cc</A>| for [!].
+			见 |<A HREF="#:cc">:cc</A>| for [!].
 			Examples:
 <B>				:cexpr system('grep -n xyz *')</B>
 <B>				:cexpr getline(1, '$')</B>
@@ -461,7 +461,7 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 :cadde[xpr] {expr}	Evaluate {expr} and add the resulting lines to the
 			current <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A>. If a <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">list</A> is not
 			present, then a new <A HREF="eval.html#list">list</A> is created. The current
-			cursor position will not be changed. See |<A HREF="#:cexpr">:cexpr</A>| for
+			cursor position will not be changed. 见 |<A HREF="#:cexpr">:cexpr</A>| for
 			more information.
 			Example:
 <B>    :g/mypattern/caddexpr expand("%") .. ":" .. line(".") ..  ":" .. getline(".")</B>
@@ -627,10 +627,10 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
  			To skip entries 1 to 9.
 
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">it</A> to
+			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each buffer.
-			Also see |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="windows.html#:windo">:windo</A>|,
+			Also 见 |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="windows.html#:windo">:windo</A>|,
 			|<A HREF="#:ldo">:ldo</A>|, |<A HREF="#:cfdo">:cfdo</A>| and |<A HREF="#:lfdo">:lfdo</A>|.
 
 
@@ -642,7 +642,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 <B>				:cnfile</B>
 <B>				:{cmd}</B>
 <B>				etc.</B>
- 			Otherwise <A HREF="motion.html#it">it</A> works the same <A HREF="motion.html#as">as</A> `:cdo`.
+ 			Otherwise <A HREF="motion.html#it">它</A> works the same <A HREF="motion.html#as">as</A> `:cdo`.
 
 
 							*<A NAME=":ldo"></A><B>:ldo</B>*
@@ -655,7 +655,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 <B>				:{cmd}</B>
 <B>				etc.</B>
  			Only valid entries in the location <A HREF="eval.html#list">list</A> are used.
-			Otherwise <A HREF="motion.html#it">it</A> works the same <A HREF="motion.html#as">as</A> `:cdo`.
+			Otherwise <A HREF="motion.html#it">它</A> works the same <A HREF="motion.html#as">as</A> `:cdo`.
 
 
 							*<A NAME=":lfdo"></A><B>:lfdo</B>*
@@ -667,7 +667,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 <B>				:lnfile</B>
 <B>				:{cmd}</B>
 <B>				etc.</B>
- 			Otherwise <A HREF="motion.html#it">it</A> works the same <A HREF="motion.html#as">as</A> `:ldo`.
+ 			Otherwise <A HREF="motion.html#it">它</A> works the same <A HREF="motion.html#as">as</A> `:ldo`.
 
 FILTERING A QUICKFIX OR LOCATION LIST:
 
@@ -705,10 +705,10 @@ location <A HREF="eval.html#list">list</A>.
 			(if there is room).  When [height] is omitted the
 			<A HREF="windows.html#window">窗口</A>is made ten lines high.
 
-			If there already is a <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> will be made
+			If there already is a <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">它</A> will be made
 			the current<A HREF="windows.html#window">窗口</A>.  It is not possible to open a
 			second <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.  If [height] is given the
-			existing<A HREF="windows.html#window">窗口</A>will be resized to <A HREF="motion.html#it">it</A>.
+			existing<A HREF="windows.html#window">窗口</A>will be resized to <A HREF="motion.html#it">它</A>.
 
 
 							*<A NAME="quickfix-buffer"></A><B>quickfix-buffer</B>*
@@ -731,7 +731,7 @@ location <A HREF="eval.html#list">list</A>.
 :lop[en] [height]	Open a<A HREF="windows.html#window">窗口</A>to show the location <A HREF="eval.html#list">list</A> for the
 			current<A HREF="windows.html#window">窗口</A>. Works only when the location <A HREF="eval.html#list">list</A> for
 			the current<A HREF="windows.html#window">窗口</A>is present.  You can have more than
-			one location<A HREF="windows.html#window">窗口</A>opened at a time.  Otherwise, <A HREF="motion.html#it">it</A>
+			one location<A HREF="windows.html#window">窗口</A>opened at a time.  Otherwise, <A HREF="motion.html#it">它</A>
 			acts the same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:copen">:copen</A>&quot;.
 
 
@@ -757,9 +757,9 @@ location <A HREF="eval.html#list">list</A>.
 
 							*<A NAME=":cbo"></A><B>:cbo</B>* *<A NAME=":cbottom"></A><B>:cbottom</B>*
 :cbo[ttom]		Put the cursor in the last line of the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>
-			and scroll to make <A HREF="motion.html#it">it</A> visible.  This is useful for
+			and scroll to make <A HREF="motion.html#it">它</A> visible.  This is useful for
 			when <A HREF="message.html#errors">errors</A> are added by an asynchronous callback.
-			Only call <A HREF="motion.html#it">it</A> once in a while if there are many
+			Only call <A HREF="motion.html#it">它</A> once in a while if there are many
 			updates to avoid a lot of redrawing.
 
 
@@ -769,23 +769,23 @@ location <A HREF="eval.html#list">list</A>.
 
 Normally the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>is at the bottom of the screen.  If there are
 vertical splits, it's at the bottom of the rightmost column of <A HREF="windows.html#windows">windows</A>.  To
-make <A HREF="motion.html#it">it</A> always occupy the full width:
+make <A HREF="motion.html#it">它</A> always occupy the full width:
 <B>	:botright cwindow</B>
 You can move the window around with |<A HREF="windows.html#window-moving">window-moving</A>| commands.
-For example, to move <A HREF="motion.html#it">it</A> to the top: <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="various.html#K">K</A>
+For example, to move <A HREF="motion.html#it">它</A> to the top: <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="various.html#K">K</A>
 The <A HREF="options.html#'winfixheight'">'winfixheight'</A> option will be set, which means that the<A HREF="windows.html#window">窗口</A>will mostly
 keep its height, ignoring <A HREF="options.html#'winheight'">'winheight'</A> and <A HREF="options.html#'equalalways'">'equalalways'</A>.  You can change the
-height manually (e.g., by dragging the status line above <A HREF="motion.html#it">it</A> with the mouse).
+height manually (e.g., by dragging the status line above <A HREF="motion.html#it">它</A> with the mouse).
 
 In the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, each line is one error.  The line number is equal to
 the error number.  The current entry is highlighted with the QuickFixLine
-highlighting.  You can change <A HREF="motion.html#it">it</A> to your liking, e.g.:
+highlighting.  You can change <A HREF="motion.html#it">它</A> to your liking, e.g.:
 <B>	:hi QuickFixLine ctermbg=Yellow guibg=Yellow</B>
 
 You can use &quot;:.cc&quot; to jump to the error under the cursor.
 Hitting the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> key or double-clicking the mouse on a line has the same
 effect.  The file containing the error is opened in the<A HREF="windows.html#window">窗口</A>above the
-<A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.  If there already is a<A HREF="windows.html#window">窗口</A>for that file, <A HREF="motion.html#it">it</A> is used
+<A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>.  If there already is a<A HREF="windows.html#window">窗口</A>for that file, <A HREF="motion.html#it">它</A> is used
 instead.  If the buffer in the used<A HREF="windows.html#window">窗口</A>has changed, and the error is in
 another file, jumping to the error will fail.  You will first have to make
 sure the<A HREF="windows.html#window">窗口</A>contains a buffer which can be abandoned.
@@ -816,7 +816,7 @@ You can use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="intro.html#&lt;En
 
 When the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has been filled, two <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> are
 triggered.  First the <A HREF="options.html#'filetype'">'filetype'</A> option is set to &quot;qf&quot;, which triggers the
-<A HREF="autocmd.html#FileType">FileType</A> event (also see |<A HREF="qf.html">qf.vim</A>|).  Then the <A HREF="autocmd.html#BufReadPost">BufReadPost</A> event is triggered,
+<A HREF="autocmd.html#FileType">FileType</A> event (also 见 |<A HREF="qf.html">qf.vim</A>|).  Then the <A HREF="autocmd.html#BufReadPost">BufReadPost</A> event is triggered,
 using &quot;<A HREF="#quickfix">quickfix</A>&quot; for the buffer name.  This can be used to perform some action
 on the listed <A HREF="message.html#errors">errors</A>.  Example:
 <B>	au BufReadPost quickfix  setlocal modifiable</B>
@@ -835,13 +835,13 @@ Note: Making changes in the <A HREF="#quickfix">quickfix</A><A HREF="windows.htm
 <A HREF="message.html#errors">errors</A>.  <A HREF="options.html#'modifiable'">'modifiable'</A> is off to avoid making changes.  If you delete or insert
 lines anyway, the relation between the text and the error number is messed up.
 If you really want to <A HREF="diff.html#do">do</A> this, you could write the contents of the <A HREF="#quickfix">quickfix</A>
-<A HREF="windows.html#window">窗口</A>to a file and use &quot;<A HREF="#:cfile">:cfile</A>&quot; to have <A HREF="motion.html#it">it</A> parsed and used <A HREF="motion.html#as">as</A> the new error
+<A HREF="windows.html#window">窗口</A>to a file and use &quot;<A HREF="#:cfile">:cfile</A>&quot; to have <A HREF="motion.html#it">它</A> parsed and used <A HREF="motion.html#as">as</A> the new error
 <A HREF="eval.html#list">list</A>.
 
 
 						*<A NAME="location-list-window"></A><B>location-list-window</B>*
 The location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>displays the entries in a location <A HREF="eval.html#list">list</A>.  When you
-open a location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">it</A> is created below the current<A HREF="windows.html#window">窗口</A>and
+open a location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">它</A> is created below the current<A HREF="windows.html#window">窗口</A>and
 displays the location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>.  The location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>
 is similar to the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>, except that you can have more than one
 location <A HREF="eval.html#list">list</A><A HREF="windows.html#window">窗口</A>open at a time. When you use a location <A HREF="eval.html#list">list</A> command in
@@ -861,7 +861,7 @@ used to find a<A HREF="windows.html#window">窗口</A>to edit the file:
 5. If the above step fails, then the file is edited in a new<A HREF="windows.html#window">窗口</A>.
 
 In all of the above cases, if the location <A HREF="eval.html#list">list</A> for the selected<A HREF="windows.html#window">窗口</A>is not
-yet set, then <A HREF="motion.html#it">it</A> is set to the location <A HREF="eval.html#list">list</A> displayed in the location <A HREF="eval.html#list">list</A>
+yet set, then <A HREF="motion.html#it">它</A> is set to the location <A HREF="eval.html#list">list</A> displayed in the location <A HREF="eval.html#list">list</A>
 <A HREF="windows.html#window">窗口</A>.
 
 
@@ -1039,7 +1039,7 @@ lists.  They set one of the existing error lists <A HREF="motion.html#as">as</A>
 :[count]lhi[story]	Show the <A HREF="eval.html#list">list</A> of location lists, otherwise like
 			`:chistory`.
 
-When adding a new error <A HREF="eval.html#list">list</A>, <A HREF="motion.html#it">it</A> becomes the current <A HREF="eval.html#list">list</A>.
+When adding a new error <A HREF="eval.html#list">list</A>, <A HREF="motion.html#it">它</A> becomes the current <A HREF="eval.html#list">list</A>.
 
 When &quot;<A HREF="#:colder">:colder</A>&quot; has been used and &quot;<A HREF="#:make">:make</A>&quot; or &quot;<A HREF="#:grep">:grep</A>&quot; is used to add a new error
 <A HREF="eval.html#list">list</A>, one newer <A HREF="eval.html#list">list</A> is overwritten.  This is especially useful if you are
@@ -1066,11 +1066,11 @@ To get the number of the current <A HREF="eval.html#list">list</A> in the stack:
 			   <A HREF="windows.html#buffers">buffers</A>
 			3. An errorfile name is made from <A HREF="options.html#'makeef'">'makeef'</A>.  If
 			   <A HREF="options.html#'makeef'">'makeef'</A> doesn't contain &quot;##&quot;, and a file with this
-			   name already exists, <A HREF="motion.html#it">it</A> is deleted.
+			   name already exists, <A HREF="motion.html#it">它</A> is deleted.
 			4. The program given with the <A HREF="options.html#'makeprg'">'makeprg'</A> option is
 			   started (default &quot;make&quot;) with the optional
 			   [arguments] and the output is saved in the
-			   errorfile (for Unix <A HREF="motion.html#it">it</A> is also echoed on the
+			   errorfile (for Unix <A HREF="motion.html#it">它</A> is also echoed on the
 			   screen).
 			5. The errorfile is read using <A HREF="options.html#'errorformat'">'errorformat'</A>.
 			6. All relevant |<A HREF="autocmd.html#QuickFixCmdPost">QuickFixCmdPost</A>| autocommands are
@@ -1106,7 +1106,7 @@ example:
 
 [arguments] is anything that is typed after &quot;<A HREF="#:make">:make</A>&quot;.
 {shellpipe} is the <A HREF="options.html#'shellpipe'">'shellpipe'</A> option.
-{errorfile} is the <A HREF="options.html#'makeef'">'makeef'</A> option, with ## replaced to make <A HREF="motion.html#it">it</A> unique.
+{errorfile} is the <A HREF="options.html#'makeef'">'makeef'</A> option, with ## replaced to make <A HREF="motion.html#it">它</A> unique.
 
 The placeholder &quot;$*&quot; can be used for the argument <A HREF="eval.html#list">list</A> in {makeprg} if the
 command needs some additional characters after its arguments.  The $* is
@@ -1151,7 +1151,7 @@ Another option is using <A HREF="options.html#'makeencoding'">'makeencoding'</A>
 5. Using <A HREF="#:vimgrep">:vimgrep</A> and <A HREF="#:grep">:grep</A>				*<A NAME="grep"></A><B>grep</B>* *<A NAME="lid"></A><B>lid</B>*
 
 Vim has two ways to find matches for a <A HREF="pattern.html#pattern">pattern</A>: Internal and external.  The
-advantage of the internal <A HREF="#grep">grep</A> is that <A HREF="motion.html#it">it</A> works on all systems and uses the
+advantage of the internal <A HREF="#grep">grep</A> is that <A HREF="motion.html#it">它</A> works on all systems and uses the
 powerful Vim search patterns.  An external <A HREF="#grep">grep</A> program can be used when the
 Vim <A HREF="#grep">grep</A> does not <A HREF="diff.html#do">do</A> what you want.
 
@@ -1163,7 +1163,7 @@ advantages are:
 - When plugins are enabled: compressed and remote files can be searched.
 	|<A HREF="pi_gzip.html#gzip">gzip</A>| |<A HREF="pi_netrw.html#netrw">netrw</A>|
 
-To be able to <A HREF="diff.html#do">do</A> this Vim loads each file <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">it</A> is being edited.  When
+To be able to <A HREF="diff.html#do">do</A> this Vim loads each file <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">它</A> is being edited.  When
 there is no match in the file the associated buffer is wiped out again.  The
 <A HREF="options.html#'hidden'">'hidden'</A> option is ignored here to avoid running out of memory or file
 descriptors when searching many files.  However, when the |<A HREF="windows.html#:hide">:hide</A>| command
@@ -1190,10 +1190,10 @@ commands can be combined to create a NewGrep command:
 			searched last.
 
 			{pattern} is a Vim search <A HREF="pattern.html#pattern">pattern</A>.  Instead of
-			enclosing <A HREF="motion.html#it">it</A> in / any non-ID character (see
-			|<A HREF="options.html#'isident'">'isident'</A>|) can be used, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> does not
+			enclosing <A HREF="motion.html#it">它</A> in / any non-ID character (see
+			|<A HREF="options.html#'isident'">'isident'</A>|) can be used, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> does not
 			appear in {pattern}.
-			<A HREF="options.html#'ignorecase'">'ignorecase'</A> applies.  To overrule <A HREF="motion.html#it">it</A> put |<A HREF="pattern.html#/\c">/\c</A>| in the
+			<A HREF="options.html#'ignorecase'">'ignorecase'</A> applies.  To overrule <A HREF="motion.html#it">它</A> put |<A HREF="pattern.html#/\c">/\c</A>| in the
 			<A HREF="pattern.html#pattern">pattern</A> to ignore <A HREF="change.html#case">case</A> or |<A HREF="pattern.html#/\C">/\C</A>| to match <A HREF="change.html#case">case</A>.
 			<A HREF="options.html#'smartcase'">'smartcase'</A> is not used.
 			If {pattern} is empty (e.g. // is specified), the last
@@ -1217,7 +1217,7 @@ commands can be combined to create a NewGrep command:
 
 			|<A HREF="autocmd.html#QuickFixCmdPre">QuickFixCmdPre</A>| and |<A HREF="autocmd.html#QuickFixCmdPost">QuickFixCmdPost</A>| are triggered.
 			A file that is opened for matching may use a buffer
-			number, but <A HREF="motion.html#it">it</A> is reused if possible to avoid
+			number, but <A HREF="motion.html#it">它</A> is reused if possible to avoid
 			consuming buffer numbers.
 
 :{count}vim[grep] <A HREF="eval.html#...">...</A>
@@ -1233,7 +1233,7 @@ commands can be combined to create a NewGrep command:
 <B>				:vimgrep /an error/ *.c</B>
 <B>				:vimgrep /\&lt;FileName\&gt;/ *.h include/*</B>
 <B>				:vimgrep /myfunc/ **/*.c</B>
- 			For the use of &quot;**&quot; see |<A HREF="editing.html#starstar-wildcard">starstar-wildcard</A>|.
+ 			For the use of &quot;**&quot; 见 |<A HREF="editing.html#starstar-wildcard">starstar-wildcard</A>|.
 
 :vim[grep][!] {pattern} <A HREF="editing.html#{file}">{file}</A> <A HREF="eval.html#...">...</A>
 			Like above, but instead of enclosing the <A HREF="pattern.html#pattern">pattern</A> in a
@@ -1268,7 +1268,7 @@ commands can be combined to create a NewGrep command:
 5.2 External <A HREF="#grep">grep</A>
 
 Vim can interface with &quot;<A HREF="#grep">grep</A>&quot; and grep-like programs (such <A HREF="motion.html#as">as</A> the GNU
-id-utils) in a similar way to its compiler integration (see |<A HREF="#:make">:make</A>| above).
+id-utils) in a similar way to its compiler integration (见 |<A HREF="#:make">:make</A>| above).
 
 [Unix trivia: The name for the Unix &quot;<A HREF="#grep">grep</A>&quot; command comes from &quot;:g/re/p&quot;, where
 &quot;re&quot; stands for Regular Expression.]
@@ -1346,7 +1346,7 @@ your <A HREF="#grep">grep</A> outputs in a non-standard format, or you are using
 program with a special format.
 
 Once the results are parsed, Vim loads the first file containing a match and
-jumps to the appropriate line, in the same way that <A HREF="motion.html#it">it</A> jumps to a compiler
+jumps to the appropriate line, in the same way that <A HREF="motion.html#it">它</A> jumps to a compiler
 error in |<A HREF="#quickfix">quickfix</A>| mode.  You can then use the |<A HREF="#:cnext">:cnext</A>|, |<A HREF="#:clist">:clist</A>|, etc.
 commands to see the other matches.
 
@@ -1417,8 +1417,8 @@ To support older Vim versions, the plugins always use &quot;<A HREF="#current_co
 not &quot;b:current_compiler&quot;.  What the command actually does is the following:
 
 - Delete the &quot;<A HREF="#current_compiler">current_compiler</A>&quot; and &quot;b:current_compiler&quot; <A HREF="eval.html#variables">variables</A>.
-- Define the &quot;CompilerSet&quot; user command.  With &quot;<A HREF="change.html#!">!</A>&quot; <A HREF="motion.html#it">it</A> does &quot;<A HREF="options.html#:set">:set</A>&quot;, without &quot;<A HREF="change.html#!">!</A>&quot;
-  <A HREF="motion.html#it">it</A> does &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot;.
+- Define the &quot;CompilerSet&quot; user command.  With &quot;<A HREF="change.html#!">!</A>&quot; <A HREF="motion.html#it">它</A> does &quot;<A HREF="options.html#:set">:set</A>&quot;, without &quot;<A HREF="change.html#!">!</A>&quot;
+  <A HREF="motion.html#it">它</A> does &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot;.
 - Execute &quot;:runtime! compiler/{name}.(vim|lua)&quot;.  The plugins are expected to
   set <A HREF="options.html#options">options</A> with &quot;CompilerSet&quot; and set the &quot;<A HREF="#current_compiler">current_compiler</A>&quot; variable to the
   name of the compiler.
@@ -1427,7 +1427,7 @@ not &quot;b:current_compiler&quot;.  What the command actually does is the follo
 - Without &quot;<A HREF="change.html#!">!</A>&quot; the old value of &quot;<A HREF="#current_compiler">current_compiler</A>&quot; is restored.
 
 
-For <A HREF="editing.html#writing">writing</A> a compiler plugin, see |<A HREF="usr_41.html#write-compiler-plugin">write-compiler-plugin</A>|.
+For <A HREF="editing.html#writing">writing</A> a compiler plugin, 见 |<A HREF="usr_41.html#write-compiler-plugin">write-compiler-plugin</A>|.
 
 
 
@@ -1460,7 +1460,7 @@ PYUNIT COMPILER						*<A NAME="compiler-pyunit"></A><B>compiler-pyunit</B>*
 
 This is not actually a compiler, but a unit <A HREF="testing.html#testing">testing</A> framework for the
 <A HREF="if_pyth.html#Python">Python</A> language.  It is included into standard <A HREF="if_pyth.html#Python">Python</A> <A HREF="intro.html#distribution">distribution</A>
-starting from version 2.0.  For older versions, you can get <A HREF="motion.html#it">it</A> from
+starting from version 2.0.  For older versions, you can get <A HREF="motion.html#it">它</A> from
 	<A HREF="http://pyunit.sourceforge.net">http://pyunit.sourceforge.net</A>.
 
 When you run your tests with the help of the framework, possible <A HREF="message.html#errors">errors</A>
@@ -1480,7 +1480,7 @@ TEX COMPILER						*<A NAME="compiler-tex"></A><B>compiler-tex</B>*
 
 Included in the <A HREF="intro.html#distribution">distribution</A> compiler for TeX ($VIMRUNTIME/compiler/tex.vim)
 uses make command if possible.  If the compiler finds a file named &quot;Makefile&quot;
-or &quot;makefile&quot; in the current directory, <A HREF="motion.html#it">it</A> supposes that you want to process
+or &quot;makefile&quot; in the current directory, <A HREF="motion.html#it">它</A> supposes that you want to process
 your *TeX files with make, and the makefile does the right work.  In this <A HREF="change.html#case">case</A>
 compiler sets <A HREF="options.html#'errorformat'">'errorformat'</A> for *TeX output and leaves <A HREF="options.html#'makeprg'">'makeprg'</A> untouched.  If
 neither &quot;Makefile&quot; nor &quot;makefile&quot; is found, the compiler will not use make.
@@ -1488,10 +1488,10 @@ You can force the compiler to ignore makefiles by defining
 b:tex_ignore_makefile or g:tex_ignore_makefile variable (they are checked for
 existence only).
 
-If the compiler chose not to use make, <A HREF="motion.html#it">it</A> needs to choose a right program for
+If the compiler chose not to use make, <A HREF="motion.html#it">它</A> needs to choose a right program for
 processing your input.  If b:tex_flavor or <A HREF="filetype.html#g:tex_flavor">g:tex_flavor</A> (in this precedence)
-variable exists, <A HREF="motion.html#it">it</A> defines TeX flavor for <A HREF="#:make">:make</A> (actually, this is the name
-of executed command), and if both <A HREF="eval.html#variables">variables</A> <A HREF="diff.html#do">do</A> not exist, <A HREF="motion.html#it">it</A> defaults to
+variable exists, <A HREF="motion.html#it">它</A> defines TeX flavor for <A HREF="#:make">:make</A> (actually, this is the name
+of executed command), and if both <A HREF="eval.html#variables">variables</A> <A HREF="diff.html#do">do</A> not exist, <A HREF="motion.html#it">它</A> defaults to
 &quot;latex&quot;.  For example, while editing chapter2.tex \input-ed from mypaper.tex
 written in AMS-TeX:
 
@@ -1509,10 +1509,10 @@ filename.pdf or filename.some_result_extension according to compiler&quot;.
 
 Note: tex command line <A HREF="syntax.html#syntax">syntax</A> is set to usable both for MikTeX (suggestion
 by Srinath Avadhanula) and teTeX (checked by Artem Chuprina).  Suggestion
-from |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>| is too complex to keep <A HREF="motion.html#it">it</A> working for different
+from |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>| is too complex to keep <A HREF="motion.html#it">它</A> working for different
 shells and OSes and also does not allow to use other available TeX <A HREF="options.html#options">options</A>,
 if any.  If your TeX doesn't support &quot;-interaction=nonstopmode&quot;, please
-report <A HREF="motion.html#it">it</A> with different means to express \nonstopmode from the command line.
+report <A HREF="motion.html#it">它</A> with different means to express \nonstopmode from the command line.
 
 =============================================================================
 
@@ -1525,7 +1525,7 @@ report <A HREF="motion.html#it">it</A> with different means to express \nonstopm
 The <A HREF="options.html#'errorformat'">'errorformat'</A> option specifies a <A HREF="eval.html#list">list</A> of formats that are recognized.  The
 first format that matches with an error message is used.  You can add several
 formats for different <A HREF="message.html#messages">messages</A> your compiler produces, or even entries for
-multiple compilers.  See |<A HREF="#efm-entries">efm-entries</A>|.
+multiple compilers.  见 |<A HREF="#efm-entries">efm-entries</A>|.
 
 Each entry in <A HREF="options.html#'errorformat'">'errorformat'</A> is a scanf-like <A HREF="eval.html#string">string</A> that describes the format.
 First, you need to know how scanf works.  Look in the documentation of your
@@ -1534,7 +1534,7 @@ invalid.
 
 Special characters in <A HREF="options.html#'errorformat'">'errorformat'</A> are comma and <A HREF="intro.html#backslash">backslash</A>.  See
 |<A HREF="#efm-entries">efm-entries</A>| for how to deal with them.  Note that a literal &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is matched
-by &quot;&#37;&#37;&quot;, thus <A HREF="motion.html#it">it</A> is not escaped with a <A HREF="intro.html#backslash">backslash</A>.
+by &quot;&#37;&#37;&quot;, thus <A HREF="motion.html#it">它</A> is not escaped with a <A HREF="intro.html#backslash">backslash</A>.
 Keep in mind that in the `:make` and `:grep` output all NUL characters are
 replaced with SOH (0x01).
 
@@ -1581,7 +1581,7 @@ expanded to the home directory and environment <A HREF="eval.html#variables">var
 The &quot;&#37;f&quot; and &quot;&#37;m&quot; conversions have to detect the end of the <A HREF="eval.html#string">string</A>.  This
 normally happens by matching following characters and items.  When nothing is
 following the rest of the line is matched.  If &quot;&#37;f&quot; is followed by a '<A HREF="motion.html#&#37;">&#37;</A>' or a
-<A HREF="intro.html#backslash">backslash</A>, <A HREF="motion.html#it">it</A> will look for a sequence of <A HREF="options.html#'isfname'">'isfname'</A> characters.
+<A HREF="intro.html#backslash">backslash</A>, <A HREF="motion.html#it">它</A> will look for a sequence of <A HREF="options.html#'isfname'">'isfname'</A> characters.
 
 On Windows a leading &quot;C:&quot; will be included in &quot;&#37;f&quot;, even when using &quot;&#37;f:&quot;.
 This means that a file name which is a single alphabetical <A HREF="print.html#letter">letter</A> will not be
@@ -1593,18 +1593,18 @@ that output a line like:
 or
 <B>   ---------^</B>
 to indicate the column of the error.  This is to be used in a multi-line error
-message.  See |<A HREF="#errorformat-javac">errorformat-javac</A>| for a  useful example.
+message.  见 |<A HREF="#errorformat-javac">errorformat-javac</A>| for a  useful example.
 
 The &quot;&#37;s&quot; conversion specifies the text to search for, to locate the error line.
 The text is used <A HREF="motion.html#as">as</A> a literal <A HREF="eval.html#string">string</A>.  The anchors &quot;<A HREF="motion.html#^">^</A>&quot; and &quot;<A HREF="motion.html#$">$</A>&quot; are added to
 the text to locate the error line exactly matching the search text and the
-text is prefixed with the &quot;\V&quot; atom to make <A HREF="motion.html#it">it</A> &quot;very nomagic&quot;.  The &quot;&#37;s&quot;
+text is prefixed with the &quot;\V&quot; atom to make <A HREF="motion.html#it">它</A> &quot;very nomagic&quot;.  The &quot;&#37;s&quot;
 conversion can be used to locate lines without a line number in the error
 output.  Like the output of the &quot;<A HREF="#grep">grep</A>&quot; shell command.
 When the <A HREF="pattern.html#pattern">pattern</A> is present the line number will not be used.
 
 The &quot;&#37;o&quot; conversion specifies the module name in <A HREF="#quickfix">quickfix</A> entry.  If present
-<A HREF="motion.html#it">it</A> will be used in <A HREF="#quickfix">quickfix</A> error<A HREF="windows.html#window">窗口</A>instead of the filename.  The module
+<A HREF="motion.html#it">它</A> will be used in <A HREF="#quickfix">quickfix</A> error<A HREF="windows.html#window">窗口</A>instead of the filename.  The module
 name is used only for displaying purposes, the file name is used when jumping
 to the file.
 
@@ -1625,7 +1625,7 @@ internal directory stack.					*<A NAME="E379"></A><B>E379</B>*
 When defining an &quot;enter directory&quot; or &quot;leave directory&quot; format, the &quot;&#37;D&quot; or
 &quot;&#37;X&quot; has to be given at the start of that substring.  Vim tracks the directory
 changes and prepends the current directory to each erroneous file found with a
-relative path.  See |<A HREF="#quickfix-directory-stack">quickfix-directory-stack</A>| for details, <A HREF="tips.html#tips">tips</A> and
+relative path.  见 |<A HREF="#quickfix-directory-stack">quickfix-directory-stack</A>| for details, <A HREF="tips.html#tips">tips</A> and
 limitations.
 
 
@@ -1643,7 +1643,7 @@ prefixes are:
 	&#37;&gt;		for next line start with current <A HREF="pattern.html#pattern">pattern</A> again |<A HREF="#efm-&#37;&gt;">efm-&#37;&gt;</A>|
 	&#37;C		continuation of a multi-line message
 	&#37;Z		end of a multi-line message
-These can be used with '<A HREF="motion.html#+">+</A>' and '-', see |<A HREF="#efm-ignore">efm-ignore</A>| below.
+These can be used with '<A HREF="motion.html#+">+</A>' and '-', 见 |<A HREF="#efm-ignore">efm-ignore</A>| below.
 
 Using &quot;\n&quot; in the <A HREF="pattern.html#pattern">pattern</A> won't work to match multi-line <A HREF="message.html#messages">messages</A>.
 
@@ -1689,7 +1689,7 @@ Then the error format <A HREF="eval.html#string">string</A> could be defined <A 
 Note that the &#37;C <A HREF="eval.html#string">string</A> is given before the &#37;A here: since the <A HREF="eval.html#expression">expression</A>
 '' &#37;.&#37;#' (which stands for the regular <A HREF="eval.html#expression">expression</A> '' .*') matches every line
 starting with a space, followed by any characters to the end of the line,
-<A HREF="motion.html#it">it</A> also hides line 7 which would trigger a separate error message otherwise.
+<A HREF="motion.html#it">它</A> also hides line 7 which would trigger a separate error message otherwise.
 Error format strings are always parsed <A HREF="pattern.html#pattern">pattern</A> by <A HREF="pattern.html#pattern">pattern</A> until the first
 match occurs.
 
@@ -1753,11 +1753,11 @@ A call of |<A HREF="#:clist">:clist</A>| writes them accordingly with their corr
   9 a3.tt:67 col 3 warning: '<A HREF="change.html#s">s</A>' already defined
 
 Unlike the other prefixes that all match against whole lines, &#37;P, &#37;Q and &#37;O
-can be used to match several patterns in the same line.  Thus <A HREF="motion.html#it">it</A> is possible
+can be used to match several patterns in the same line.  Thus <A HREF="motion.html#it">它</A> is possible
 to parse even nested files like in the following line:
   {&quot;file1&quot; {&quot;file2&quot; error1} error2 {&quot;file3&quot; error3 {&quot;file4&quot; error4 error5}}}
 The &#37;O then parses over strings that <A HREF="diff.html#do">do</A> not contain any push/pop file name
-information.  See |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>| for an extended example.
+information.  见 |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>| for an extended example.
 
 
 
@@ -1778,7 +1778,7 @@ other headers that can be skipped.
 <A HREF="pattern.html#Pattern">Pattern</A> matching
 
 The scanf()-like &quot;&#37;*[]&quot; <A HREF="intro.html#notation">notation</A> is supported for backward-compatibility
-with previous versions of Vim.  However, <A HREF="motion.html#it">it</A> is also possible to specify
+with previous versions of Vim.  However, <A HREF="motion.html#it">它</A> is also possible to specify
 (nearly) any Vim supported regular <A HREF="eval.html#expression">expression</A> in format strings.
 Since meta characters of the regular <A HREF="eval.html#expression">expression</A> language can be part of
 ordinary matching strings or file names (and therefore internally have to
@@ -1793,11 +1793,11 @@ be escaped), meta symbols have to be written with leading '<A HREF="motion.html#
 			useful, the <A HREF="pattern.html#pattern">pattern</A> already matches end of line.
 	&#37;[		The single '<A HREF="vimindex.html#[">[</A>' character for a <A HREF="motion.html#[]">[]</A> character range.
 	&#37;~		The single '<A HREF="change.html#~">~</A>' character.
-When using character classes in expressions (see |<A HREF="pattern.html#/\i">/\i</A>| for an overview),
+When using character classes in expressions (见 |<A HREF="pattern.html#/\i">/\i</A>| for an overview),
 terms containing the &quot;\+&quot; quantifier can be written in the scanf() &quot;&#37;*&quot;
 <A HREF="intro.html#notation">notation</A>.  Example: &quot;&#37;\\d&#37;\\+&quot; (&quot;\d\+&quot;, &quot;any number&quot;) is equivalent to &quot;&#37;*\\d&quot;.
 Important note: The \(...\) grouping of sub-matches can not be used in format
-specifications because <A HREF="motion.html#it">it</A> is reserved for internal conversions.
+specifications because <A HREF="motion.html#it">它</A> is reserved for internal conversions.
 
 
 
@@ -1809,9 +1809,9 @@ are ignored).  The first <A HREF="pattern.html#pattern">pattern</A> that has a c
 match is found, matching parts from the last one will be used, although the
 file name is removed and the error message is set to the whole message.  If
 there is a <A HREF="pattern.html#pattern">pattern</A> that may match output from several compilers (but not in a
-right way), put <A HREF="motion.html#it">it</A> after one that is more restrictive.
+right way), put <A HREF="motion.html#it">它</A> after one that is more restrictive.
 
-To include a comma in a <A HREF="pattern.html#pattern">pattern</A> precede <A HREF="motion.html#it">it</A> with a <A HREF="intro.html#backslash">backslash</A> (you have to type
+To include a comma in a <A HREF="pattern.html#pattern">pattern</A> precede <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A> (you have to type
 two in a &quot;<A HREF="options.html#:set">:set</A>&quot; command).  To include a <A HREF="intro.html#backslash">backslash</A> itself give two backslashes
 (you have to type four in a &quot;<A HREF="options.html#:set">:set</A>&quot; command).  You also need to put a <A HREF="intro.html#backslash">backslash</A>
 before a space for &quot;<A HREF="options.html#:set">:set</A>&quot;.
@@ -1858,7 +1858,7 @@ Some examples for C compilers that produce single-line error outputs:
 					for GCC, with some extras
 
 Extended examples for the handling of multi-line <A HREF="message.html#messages">messages</A> are given below,
-see |<A HREF="#errorformat-Jikes">errorformat-Jikes</A>| and |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>|.
+见 |<A HREF="#errorformat-Jikes">errorformat-Jikes</A>| and |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>|.
 
 Note the <A HREF="intro.html#backslash">backslash</A> in front of a space and double <A HREF="change.html#quote.">quote.</A>  It is required for
 the <A HREF="options.html#:set">:set</A> command.  There are two backslashes in front of a comma, one for the
@@ -1873,7 +1873,7 @@ format <A HREF="eval.html#string">string</A>, you could write a program that tra
 into this format.  You can use this program with the &quot;<A HREF="#:make">:make</A>&quot; command by
 <A HREF="change.html#changing">changing</A> the <A HREF="options.html#'makeprg'">'makeprg'</A> option.  For example:
 <B>   :set mp=make\ \\\|&amp;\ error_filter</B>
-The backslashes before the pipe character are required to avoid <A HREF="motion.html#it">it</A> to be
+The backslashes before the pipe character are required to avoid <A HREF="motion.html#it">它</A> to be
 recognized <A HREF="motion.html#as">as</A> a command separator.  The <A HREF="intro.html#backslash">backslash</A> before each space is
 required for the set command.
 
@@ -1882,8 +1882,8 @@ required for the set command.
 8. The directory stack				*<A NAME="quickfix-directory-stack"></A><B>quickfix-directory-stack</B>*
 
 <A HREF="#Quickfix">Quickfix</A> maintains a stack for saving all used directories parsed from the
-make output.  For GNU-make this is rather simple, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> always prints the
-absolute path of all directories <A HREF="motion.html#it">it</A> enters and leaves.  Regardless if this is
+make output.  For GNU-make this is rather simple, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> always prints the
+absolute path of all directories <A HREF="motion.html#it">它</A> enters and leaves.  Regardless if this is
 done via a <A HREF="options.html#'cd'">'cd'</A> command in the makefile or with the parameter &quot;-C dir&quot; (change
 to directory before reading the makefile).  It may be useful to use the switch
 &quot;<A HREF="starting.html#-w">-w</A>&quot; to force GNU-make to print out the working directory before and after
@@ -1893,23 +1893,23 @@ Maintaining the correct directory is more complicated if you don't use
 GNU-make.  AIX-make for example doesn't print any information about its
 working directory.  Then you need to enhance the makefile.  In the makefile of
 LessTif there is a command which echoes &quot;Making {target} in {dir}&quot;.  The
-special problem here is that <A HREF="motion.html#it">it</A> doesn't print information on leaving the
-directory and that <A HREF="motion.html#it">it</A> doesn't print the absolute path.
+special problem here is that <A HREF="motion.html#it">它</A> doesn't print information on leaving the
+directory and that <A HREF="motion.html#it">它</A> doesn't print the absolute path.
 
 To solve the problem with relative paths and missing &quot;leave directory&quot;
 <A HREF="message.html#messages">messages</A> Vim uses the following algorithm:
 
 1) Check if the given directory is a subdirectory of the current directory.
-   If this is true, store <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> the current directory.
-2) If <A HREF="motion.html#it">it</A> is not a subdir of the current directory, try if this is a
+   If this is true, store <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> the current directory.
+2) If <A HREF="motion.html#it">它</A> is not a subdir of the current directory, try if this is a
    subdirectory of one of the upper directories.
-3) If the directory still isn't found, <A HREF="motion.html#it">it</A> is assumed to be a subdirectory
+3) If the directory still isn't found, <A HREF="motion.html#it">它</A> is assumed to be a subdirectory
    of Vim's current directory.
 
-Additionally <A HREF="motion.html#it">it</A> is checked for every file, if <A HREF="motion.html#it">it</A> really exists in the
-identified directory.  If not, <A HREF="motion.html#it">it</A> is searched in all other directories of the
-directory stack (NOT the directory subtree!).  If <A HREF="motion.html#it">it</A> is still not found, <A HREF="motion.html#it">it</A> is
-assumed that <A HREF="motion.html#it">it</A> is in Vim's current directory.
+Additionally <A HREF="motion.html#it">它</A> is checked for every file, if <A HREF="motion.html#it">它</A> really exists in the
+identified directory.  If not, <A HREF="motion.html#it">它</A> is searched in all other directories of the
+directory stack (NOT the directory subtree!).  If <A HREF="motion.html#it">它</A> is still not found, <A HREF="motion.html#it">它</A> is
+assumed that <A HREF="motion.html#it">它</A> is in Vim's current directory.
 
 There are limitations in this algorithm.  These examples assume that make just
 prints information about entering a directory in the form &quot;Making all in dir&quot;.
@@ -1972,7 +1972,7 @@ produces simple multi-line error <A HREF="message.html#messages">messages</A>.
 
 An <A HREF="options.html#'errorformat'">'errorformat'</A> <A HREF="eval.html#string">string</A> matching the produced <A HREF="message.html#messages">messages</A> is shown below.
 The following lines can be placed in the user's |<A HREF="init.html">init.vim</A>| to overwrite Vim's
-recognized default formats, or see |<A HREF="options.html#:set+=">:set+=</A>| how to install this format
+recognized default formats, or 见 |<A HREF="options.html#:set+=">:set+=</A>| how to install this format
 additionally to the default.
 
 <B>  :set efm=%A%f:%l:%c:%*\\d:%*\\d:,</B>
@@ -2000,7 +2000,7 @@ first:
 <B>  :setl makeprg=javac\ %:S\ 2&gt;&amp;1\ \\\|\ vim-javac-filter</B>
 
 You need to put the following in &quot;vim-javac-filter&quot; somewhere in your path
-(e.g., in ~/bin) and make <A HREF="motion.html#it">it</A> executable:
+(e.g., in ~/bin) and make <A HREF="motion.html#it">它</A> executable:
 <B>   #!/bin/sed -f</B>
 <B>   /\^$/s/\t/\ /g;/:[0-9]\+:/{h;d};/^[ \t]*\^/G;</B>
 
@@ -2009,7 +2009,7 @@ In English, that sed <A HREF="usr_41.html#script">script</A>:
 - Moves the line with the filename, line number, error message to just after
   the pointer line. That way, the unused error text between doesn't break
   vim's notion of a &quot;multi-line message&quot; and also doesn't force us to include
-  <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> a &quot;continuation of a multi-line message.&quot;
+  <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a &quot;continuation of a multi-line message.&quot;
 
 
 						*<A NAME="errorformat-ant"></A><B>errorformat-ant</B>*
@@ -2092,7 +2092,7 @@ remove the comment lines.  For the '\' <A HREF="intro.html#notation">notation</A
 		conversion indicates the &quot;rest&quot; of the line that will be
 		parsed in the next go until the end of line is reached.
 
-		Overread a file name enclosed in '('...')'; <A HREF="diff.html#do">do</A> not push <A HREF="motion.html#it">it</A>
+		Overread a file name enclosed in '('...')'; <A HREF="diff.html#do">do</A> not push <A HREF="motion.html#it">它</A>
 		on a stack since the file apparently does not contain any
 		error:
 <B>	\%+O(%f)%r,</B>
@@ -2112,7 +2112,7 @@ then.  The above example tries to catch the most relevant cases only.
 You can customize the given setting to suit your own purposes, for example,
 all the annoying &quot;Overfull ...&quot; warnings could be excluded from being
 recognized <A HREF="motion.html#as">as</A> an error.
-Alternatively to filtering the LaTeX compiler output, <A HREF="motion.html#it">it</A> is also possible
+Alternatively to filtering the LaTeX compiler output, <A HREF="motion.html#it">它</A> is also possible
 to directly read the *.log file that is produced by the [La]TeX compiler.
 This contains even more useful information about possible error causes.
 However, to properly parse such a complex file, an external <A HREF="change.html#filter">filter</A> should

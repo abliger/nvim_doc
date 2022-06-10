@@ -101,7 +101,7 @@ This appends the current date and time after the cursor (in &lt;&gt; <A HREF="in
 1.1 MAP COMMANDS					*<A NAME=":map-commands"></A><B>:map-commands</B>*
 
 There are commands to enter new mappings, remove mappings and <A HREF="eval.html#list">list</A> mappings.
-See |<A HREF="#map-overview">map-overview</A>| for the various forms of &quot;map&quot; and their relationships with
+见 |<A HREF="#map-overview">map-overview</A>| for the various forms of &quot;map&quot; and their relationships with
 modes.
 
 
@@ -137,7 +137,7 @@ modes.
 			allows for nested and recursive use of mappings.
 			Note: Trailing spaces are included in the <A HREF="#{rhs}">{rhs}</A>,
 			because space is a valid <A HREF="intro.html#Normal">正常</A>模式 command.
-			See |<A HREF="#map-trailing-white">map-trailing-white</A>|.
+			见 |<A HREF="#map-trailing-white">map-trailing-white</A>|.
 
 
 						*<A NAME=":nore"></A><B>:nore</B>* *<A NAME=":norem"></A><B>:norem</B>*
@@ -195,11 +195,11 @@ modes.
 :tunma[p] <A HREF="#{lhs}">{lhs}</A>			|<A HREF="#mapmode-t">mapmode-t</A>|		*<A NAME=":tunma"></A><B>:tunma</B>* *<A NAME=":tunmap"></A><B>:tunmap</B>*
 			Remove the <A HREF="#mapping">mapping</A> of <A HREF="#{lhs}">{lhs}</A> for the modes where the
 			map command applies.  The <A HREF="#mapping">mapping</A> may remain defined
-			for other modes where <A HREF="motion.html#it">it</A> applies.
+			for other modes where <A HREF="motion.html#it">它</A> applies.
 			It also works when <A HREF="#{lhs}">{lhs}</A> matches the <A HREF="#{rhs}">{rhs}</A> of a
 			<A HREF="#mapping">mapping</A>. This is for when an abbreviation applied.
 			Note: Trailing spaces are included in the <A HREF="#{lhs}">{lhs}</A>.
-			See |<A HREF="#map-trailing-white">map-trailing-white</A>|.
+			见 |<A HREF="#map-trailing-white">map-trailing-white</A>|.
 
 
 :mapc[lear]			|<A HREF="#mapmode-nvo">mapmode-nvo</A>|		*<A NAME=":mapc"></A><B>:mapc</B>*   *<A NAME=":mapclear"></A><B>:mapclear</B>*
@@ -271,7 +271,7 @@ modes.
 
 These commands are used to map a key or key sequence to a <A HREF="eval.html#string">string</A> of
 characters.  You can use this to put command sequences under function keys,
-translate one key into another, etc.  See |<A HREF="starting.html#:mkexrc">:mkexrc</A>| for how to save and
+translate one key into another, etc.  见 |<A HREF="starting.html#:mkexrc">:mkexrc</A>| for how to save and
 restore the current mappings.
 
 
@@ -280,7 +280,7 @@ When two mappings start with the same sequence of characters, they are
 ambiguous.  Example:
 <B>	:imap aa foo</B>
 <B>	:imap aaa bar</B>
-When Vim has read &quot;aa&quot;, <A HREF="motion.html#it">it</A> will need to get another character to be able to
+When Vim has read &quot;aa&quot;, <A HREF="motion.html#it">它</A> will need to get another character to be able to
 decide if &quot;aa&quot; or &quot;aaa&quot; should be mapped.  This means that after typing &quot;aa&quot;
 that <A HREF="#mapping">mapping</A> won't get expanded yet, Vim is waiting for another character.
 If you type a space, then &quot;foo&quot; will get inserted, plus the space.  If you
@@ -293,7 +293,7 @@ This unmap command does NOT work:
 <B>	:map @@ foo</B>
 <B>	:unmap @@ | print</B>
 
-Because <A HREF="motion.html#it">it</A> tries to unmap &quot;<A HREF="repeat.html#@@">@@</A> &quot;<A HREF="motion.html#,">,</A> including the white space before the command
+Because <A HREF="motion.html#it">它</A> tries to unmap &quot;<A HREF="repeat.html#@@">@@</A> &quot;<A HREF="motion.html#,">,</A> including the white space before the command
 separator &quot;|&quot;.  Other examples with trailing white space:
 <B>	unmap @@ </B>
 <B>	unmap @@     " comment</B>
@@ -326,23 +326,23 @@ exists.
 The &quot;&lt;buffer&gt;&quot; argument can also be used to clear mappings:
 <B>	:unmap &lt;buffer&gt; ,w</B>
 <B>	:mapclear &lt;buffer&gt;</B>
-Local mappings are also cleared when a buffer is deleted, but not when <A HREF="motion.html#it">it</A> is
+Local mappings are also cleared when a buffer is deleted, but not when <A HREF="motion.html#it">它</A> is
 unloaded.  Just like local option values.
-Also see |<A HREF="#map-precedence">map-precedence</A>|.
+Also 见 |<A HREF="#map-precedence">map-precedence</A>|.
 
 
 						*<A NAME=":map-&lt;nowait&gt;"></A><B>:map-&lt;nowait&gt;</B>* *<A NAME=":map-nowait"></A><B>:map-nowait</B>*
 When defining a buffer-local <A HREF="#mapping">mapping</A> for &quot;<A HREF="motion.html#,">,</A>&quot; there may be a global <A HREF="#mapping">mapping</A>
 that starts with &quot;<A HREF="motion.html#,">,</A>&quot;.  Then you need to type another character for Vim to know
 whether to use the &quot;<A HREF="motion.html#,">,</A>&quot; <A HREF="#mapping">mapping</A> or the longer one.  To avoid this add the
-&lt;nowait&gt; argument.  Then the <A HREF="#mapping">mapping</A> will be used when <A HREF="motion.html#it">it</A> matches, Vim does
+&lt;nowait&gt; argument.  Then the <A HREF="#mapping">mapping</A> will be used when <A HREF="motion.html#it">它</A> matches, Vim does
 not wait for more characters to be typed.  However, if the characters were
 already typed they are used.
 Note that this works when the &lt;nowait&gt; <A HREF="#mapping">mapping</A> fully matches and is found
 before any partial matches.  This works when:
 - There is only one matching buffer-local <A HREF="#mapping">mapping</A>, since these are always
   found before global mappings.
-- There is another buffer-local <A HREF="#mapping">mapping</A> that partly matches, but <A HREF="motion.html#it">it</A> is
+- There is another buffer-local <A HREF="#mapping">mapping</A> that partly matches, but <A HREF="motion.html#it">它</A> is
   defined earlier (last defined <A HREF="#mapping">mapping</A> is found first).
 
 
@@ -360,7 +360,7 @@ the command line to fail.
 
 
 						*<A NAME=":map-&lt;script&gt;"></A><B>:map-&lt;script&gt;</B>* *<A NAME=":map-script"></A><B>:map-script</B>*
-If the first argument to one of these commands is &quot;&lt;script&gt;&quot; and <A HREF="motion.html#it">it</A> is used to
+If the first argument to one of these commands is &quot;&lt;script&gt;&quot; and <A HREF="motion.html#it">它</A> is used to
 define a new <A HREF="#mapping">mapping</A> or abbreviation, the <A HREF="#mapping">mapping</A> will only remap characters
 in the <A HREF="#{rhs}">{rhs}</A> using mappings that were defined local to a <A HREF="usr_41.html#script">script</A>, starting with
 &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot;.  This can be used to avoid that mappings from outside a <A HREF="usr_41.html#script">script</A>
@@ -372,7 +372,7 @@ preferred, because it's clearer that remapping is (mostly) disabled.
 
 
 				*<A NAME=":map-&lt;unique&gt;"></A><B>:map-&lt;unique&gt;</B>* *<A NAME=":map-unique"></A><B>:map-unique</B>* *<A NAME="E226"></A><B>E226</B>* *<A NAME="E227"></A><B>E227</B>*
-If the first argument to one of these commands is &quot;&lt;unique&gt;&quot; and <A HREF="motion.html#it">it</A> is used to
+If the first argument to one of these commands is &quot;&lt;unique&gt;&quot; and <A HREF="motion.html#it">它</A> is used to
 define a new <A HREF="#mapping">mapping</A> or abbreviation, the command will fail if the <A HREF="#mapping">mapping</A> or
 abbreviation already exists.  Example:
 <B>	:map &lt;unique&gt; ,w  /[#&amp;!]&lt;CR&gt;</B>
@@ -381,12 +381,12 @@ already exists which is equal.
 Example of what will fail:
 <B>	:map ,w  /[#&amp;!]&lt;CR&gt;</B>
 <B>	:map &lt;buffer&gt; &lt;unique&gt; ,w  /[.,;]&lt;CR&gt;</B>
-If you want to map a key and then have <A HREF="motion.html#it">it</A> <A HREF="diff.html#do">do</A> what <A HREF="motion.html#it">it</A> was originally mapped to,
+If you want to map a key and then have <A HREF="motion.html#it">它</A> <A HREF="diff.html#do">do</A> what <A HREF="motion.html#it">它</A> was originally mapped to,
 have a look at |<A HREF="builtin.html#maparg()">maparg()</A>|.
 
 
 						*<A NAME=":map-&lt;expr&gt;"></A><B>:map-&lt;expr&gt;</B>* *<A NAME=":map-expression"></A><B>:map-expression</B>*
-If the first argument to one of these commands is &quot;&lt;expr&gt;&quot; and <A HREF="motion.html#it">it</A> is used to
+If the first argument to one of these commands is &quot;&lt;expr&gt;&quot; and <A HREF="motion.html#it">它</A> is used to
 define a new <A HREF="#mapping">mapping</A> or abbreviation, the argument is an <A HREF="eval.html#expression">expression</A>.  The
 <A HREF="eval.html#expression">expression</A> is evaluated to obtain the <A HREF="#{rhs}">{rhs}</A> that is used.  Example:
 <B>	:inoremap &lt;expr&gt; . &lt;SID&gt;InsertDot()</B>
@@ -426,19 +426,19 @@ Therefore the following is blocked for &lt;expr&gt; mappings:
 - Changing the buffer text |<A HREF="eval.html#textlock">textlock</A>|.
 - Editing another buffer.
 - The |<A HREF="various.html#:normal">:normal</A>| command.
-- Moving the cursor is allowed, but <A HREF="motion.html#it">it</A> is restored afterwards.
+- Moving the cursor is allowed, but <A HREF="motion.html#it">它</A> is restored afterwards.
 - If the <A HREF="cmdline.html#cmdline">cmdline</A> is changed, the old text and cursor position are restored.
 If you want the <A HREF="#mapping">mapping</A> to <A HREF="diff.html#do">do</A> any of these let the returned characters <A HREF="diff.html#do">do</A>
 that. (Or use a |<A HREF="#&lt;Cmd&gt;">&lt;Cmd&gt;</A>| <A HREF="#mapping">mapping</A> instead.)
 
-You can use <A HREF="builtin.html#getchar()">getchar()</A>, <A HREF="motion.html#it">it</A> consumes typeahead if there is any. E.g., if you
+You can use <A HREF="builtin.html#getchar()">getchar()</A>, <A HREF="motion.html#it">它</A> consumes typeahead if there is any. E.g., if you
 have these mappings:
 <B>  inoremap &lt;expr&gt; &lt;C-L&gt; nr2char(getchar())</B>
 <B>  inoremap &lt;expr&gt; &lt;C-L&gt;x "foo"</B>
 If you now type <A HREF="various.html#CTRL-L">CTRL-L</A> nothing happens yet, Vim needs the next character to
 decide what <A HREF="#mapping">mapping</A> to use.  If you type '<A HREF="change.html#x">x</A>' the second <A HREF="#mapping">mapping</A> is used and
 &quot;foo&quot; is inserted.  If you type any other key the first <A HREF="#mapping">mapping</A> is used,
-<A HREF="builtin.html#getchar()">getchar()</A> gets the typed key and returns <A HREF="motion.html#it">it</A>.
+<A HREF="builtin.html#getchar()">getchar()</A> gets the typed key and returns <A HREF="motion.html#it">它</A>.
 
 Here is an example that inserts a <A HREF="eval.html#list">list</A> number that increases:
 <B>	let counter = 0</B>
@@ -458,7 +458,7 @@ Here is an example that inserts a <A HREF="eval.html#list">list</A> number that 
 <A HREF="various.html#CTRL-L">CTRL-L</A> inserts the next number, <A HREF="undo.html#CTRL-R">CTRL-R</A> resets the <A HREF="intro.html#count">count</A>.  <A HREF="undo.html#CTRL-R">CTRL-R</A> returns an
 empty <A HREF="eval.html#string">string</A>, so that nothing is inserted.
 
-Note that using 0x80 <A HREF="motion.html#as">as</A> a single byte before other text does not work, <A HREF="motion.html#it">it</A> will
+Note that using 0x80 <A HREF="motion.html#as">as</A> a single byte before other text does not work, <A HREF="motion.html#it">它</A> will
 be seen <A HREF="motion.html#as">as</A> a special key.
 
 
@@ -476,11 +476,11 @@ preserved, so tricks with |<A HREF="visual.html#gv">gv</A>| are not needed.  Com
 directly in cmdline-mode (which would otherwise require <A HREF="builtin.html#timer">timer</A> hacks).
 
 Unlike &lt;expr&gt; mappings, there are no special restrictions on the <A HREF="#&lt;Cmd&gt;">&lt;Cmd&gt;</A>
-command: <A HREF="motion.html#it">it</A> is executed <A HREF="motion.html#as">as</A> if an (unrestricted) |<A HREF="autocmd.html#autocommand">autocommand</A>| was invoked
+command: <A HREF="motion.html#it">它</A> is executed <A HREF="motion.html#as">as</A> if an (unrestricted) |<A HREF="autocmd.html#autocommand">autocommand</A>| was invoked
 or an async event event was processed.
 
 Note:
-- Because <A HREF="#&lt;Cmd&gt;">&lt;Cmd&gt;</A> avoids mode-changes (unlike &quot;<A HREF="cmdline.html#:">:</A>&quot;) <A HREF="motion.html#it">it</A> does not trigger
+- Because <A HREF="#&lt;Cmd&gt;">&lt;Cmd&gt;</A> avoids mode-changes (unlike &quot;<A HREF="cmdline.html#:">:</A>&quot;) <A HREF="motion.html#it">它</A> does not trigger
   |<A HREF="autocmd.html#CmdlineEnter">CmdlineEnter</A>| and |<A HREF="autocmd.html#CmdlineLeave">CmdlineLeave</A>| <A HREF="autocmd.html#events">events</A>. This helps performance.
 - For the same reason, |<A HREF="intro.html#keycodes">keycodes</A>| like &lt;C-R&gt;&lt;C-W&gt; are interpreted <A HREF="motion.html#as">as</A> plain,
   unmapped keys.
@@ -510,11 +510,11 @@ There are seven sets of mappings
 - For <A HREF="intro.html#Operator-pending">Operator-pending</A> mode: When an <A HREF="motion.html#operator">operator</A> is pending (after &quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#y">y</A>&quot;, &quot;<A HREF="change.html#c">c</A>&quot;,
   etc.).  See below: |<A HREF="#omap-info">omap-info</A>|.
 - For <A HREF="intro.html#Insert">插入</A>模式.  These are also used in <A HREF="insert.html#Replace">Replace</A> mode.
-- For <A HREF="cmdline.html#Command-line">Command-line</A> mode: When entering a &quot;<A HREF="cmdline.html#:">:</A>&quot; or &quot;<A HREF="pattern.html#/">/</A>&quot; command.
+- For <A HREF="cmdline.html#Command-line">命令行</A>模式: When entering a &quot;<A HREF="cmdline.html#:">:</A>&quot; or &quot;<A HREF="pattern.html#/">/</A>&quot; command.
 - For Terminal mode: When typing in a |<A HREF="various.html#:terminal">:terminal</A>| buffer.
 
 Special <A HREF="change.html#case">case</A>: While typing a <A HREF="intro.html#count">count</A> for a command in <A HREF="intro.html#Normal">正常</A>模式, <A HREF="#mapping">mapping</A> zero
-is disabled.  This makes <A HREF="motion.html#it">it</A> possible to map zero without making <A HREF="motion.html#it">it</A> impossible
+is disabled.  This makes <A HREF="motion.html#it">它</A> possible to map zero without making <A HREF="motion.html#it">它</A> impossible
 to type a <A HREF="intro.html#count">count</A> with a zero.
 
 
@@ -576,7 +576,7 @@ better to explicitly use <A HREF="#:xmap">:xmap</A> and <A HREF="#:smap">:smap</
 
 
 			*<A NAME="mapmode-ic"></A><B>mapmode-ic</B>* *<A NAME="mapmode-i"></A><B>mapmode-i</B>* *<A NAME="mapmode-c"></A><B>mapmode-c</B>* *<A NAME="mapmode-l"></A><B>mapmode-l</B>*
-Some commands work both in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="cmdline.html#Command-line">Command-line</A> mode, some not:
+Some commands work both in <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="cmdline.html#Command-line">命令行</A>模式, some not:
 
 <B><FONT color="#3A6F2B">    COMMANDS				      MODES </FONT></B>
 <B><FONT color="#3A6F2B">					  Insert  Command-line	Lang-Arg </FONT></B>
@@ -585,7 +585,7 @@ Some commands work both in <A HREF="intro.html#Insert">插入</A>模式 and <A H
 <A HREF="#:cmap">:cmap</A>  <A HREF="#:cnoremap">:cnoremap</A>  <A HREF="#:cunmap">:cunmap</A>  <A HREF="#:cmapclear">:cmapclear</A>	     -	       yes	   -
 <A HREF="#:lmap">:lmap</A>  <A HREF="#:lnoremap">:lnoremap</A>  <A HREF="#:lunmap">:lunmap</A>  <A HREF="#:lmapclear">:lmapclear</A>	    yes*       yes*	  yes*
 
-* If <A HREF="options.html#'iminsert'">'iminsert'</A> is 1, see |<A HREF="#language-mapping">language-mapping</A>| below.
+* If <A HREF="options.html#'iminsert'">'iminsert'</A> is 1, 见 |<A HREF="#language-mapping">language-mapping</A>| below.
 
 The original <A HREF="intro.html#Vi">Vi</A> did not have separate mappings for
 Normal/Visual/Operator-pending mode and for Insert/Command-line mode.
@@ -606,10 +606,10 @@ that operates on a function name in the current line:
 <B>	onoremap &lt;silent&gt; F :&lt;C-U&gt;normal! 0f(hviw&lt;CR&gt;</B>
 The <A HREF="scroll.html#CTRL-U">CTRL-U</A> (&lt;C-U&gt;) is used to remove the range that Vim may insert.  The
 <A HREF="intro.html#Normal">正常</A>模式 commands find the first '<A HREF="motion.html#(">(</A>' character and select the first <A HREF="motion.html#word">单词</A>
-before <A HREF="motion.html#it">it</A>.  That usually is the function name.
+before <A HREF="motion.html#it">它</A>.  That usually is the function name.
 
 To enter a <A HREF="#mapping">mapping</A> for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode, but not <A HREF="intro.html#Operator-pending">Operator-pending</A> mode,
-first define <A HREF="motion.html#it">it</A> for all three modes, then unmap <A HREF="motion.html#it">it</A> for
+first define <A HREF="motion.html#it">它</A> for all three modes, then unmap <A HREF="motion.html#it">它</A> for
 <A HREF="intro.html#Operator-pending">Operator-pending</A> mode:
 <B>	:map    xx something-difficult</B>
 <B>	:ounmap xx</B>
@@ -621,7 +621,7 @@ Likewise for a <A HREF="#mapping">mapping</A> for <A HREF="visual.html#Visual">V
 						*<A NAME="language-mapping"></A><B>language-mapping</B>*
 &quot;<A HREF="#:lmap">:lmap</A>&quot; defines a <A HREF="#mapping">mapping</A> that applies to:
 - <A HREF="intro.html#Insert">插入</A>模式
-- <A HREF="cmdline.html#Command-line">Command-line</A> mode
+- <A HREF="cmdline.html#Command-line">命令行</A>模式
 - when entering a search <A HREF="pattern.html#pattern">pattern</A>
 - the argument of the commands that accept a text character, such <A HREF="motion.html#as">as</A> &quot;<A HREF="change.html#r">r</A>&quot; and
   &quot;<A HREF="motion.html#f">f</A>&quot;
@@ -630,8 +630,8 @@ Generally: Whenever a character is to be typed that is part of the text in the
 buffer, not a Vim command character.  &quot;Lang-Arg&quot; isn't really another mode,
 it's just used here for this situation.
    The simplest way to load a set of related language mappings is by using the
-<A HREF="options.html#'keymap'">'keymap'</A> option.  See |<A HREF="usr_45.html#45.5">45.5</A>|.
-   In <A HREF="intro.html#Insert">插入</A>模式 and in <A HREF="cmdline.html#Command-line">Command-line</A> mode the mappings can be disabled with
+<A HREF="options.html#'keymap'">'keymap'</A> option.  见 |<A HREF="usr_45.html#45.5">45.5</A>|.
+   In <A HREF="intro.html#Insert">插入</A>模式 and in <A HREF="cmdline.html#Command-line">命令行</A>模式 the mappings can be disabled with
 the CTRL-^ command |<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>| |<A HREF="cmdline.html#c_CTRL-^">c_CTRL-^</A>|. These commands change the value of
 the <A HREF="options.html#'iminsert'">'iminsert'</A> option.  When starting to enter a normal command line (not a
 search <A HREF="pattern.html#pattern">pattern</A>) the mappings are disabled until a <A HREF="editing.html#CTRL-^">CTRL-^</A> is typed.  The state
@@ -663,7 +663,7 @@ When listing mappings the characters in the first two columns are:
 	t	Terminal-Job
 
 Just before the <A HREF="#{rhs}">{rhs}</A> a special character can appear:
-	&#42;	indicates that <A HREF="motion.html#it">it</A> is not remappable
+	&#42;	indicates that <A HREF="motion.html#it">它</A> is not remappable
 	<A HREF="change.html#&amp;">&amp;</A>	indicates that only <A HREF="#script-local">script-local</A> mappings are remappable
 	@	indicates a buffer-local <A HREF="#mapping">mapping</A>
 
@@ -677,18 +677,18 @@ is the start of the last selected <A HREF="visual.html#Visual">Visual</A> area i
 The |<A HREF="various.html#:filter">:filter</A>| command can be used to select what mappings to <A HREF="eval.html#list">list</A>.  The
 <A HREF="pattern.html#pattern">pattern</A> is matched against the <A HREF="#{lhs}">{lhs}</A> and <A HREF="#{rhs}">{rhs}</A> in the raw form.  If a
 description was added using |<A HREF="api.html#nvim_set_keymap()">nvim_set_keymap()</A>| or |<A HREF="api.html#nvim_buf_set_keymap()">nvim_buf_set_keymap()</A>|
-then the <A HREF="pattern.html#pattern">pattern</A> is also matched against <A HREF="motion.html#it">it</A>.
+then the <A HREF="pattern.html#pattern">pattern</A> is also matched against <A HREF="motion.html#it">它</A>.
 
 
 							*<A NAME=":map-verbose"></A><B>:map-verbose</B>*
-When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing a key map will also display where <A HREF="motion.html#it">it</A> was
+When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing a key map will also display where <A HREF="motion.html#it">它</A> was
 last defined.  Example:
 
 <B>	:verbose map &lt;C-W&gt;*</B>
 <B>	n  &lt;C-W&gt;*      * &lt;C-W&gt;&lt;C-S&gt;*</B>
 <B>		Last set from ~/.config/nvim/init.vim</B>
 
-See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
+见 |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 
 
@@ -698,7 +698,7 @@ There are two ways to map a special key:
 1. The Vi-compatible <A HREF="eval.html#method">method</A>: Map the key code.  Often this is a sequence that
    starts with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.  To enter a <A HREF="#mapping">mapping</A> like this you type &quot;<A HREF="#:map">:map</A> &quot; and then
    you have to type <A HREF="visual.html#CTRL-V">CTRL-V</A> before hitting the function key.  Note that when
-   the key code for the key is in the |<A HREF="term.html#terminfo">terminfo</A>| entry, <A HREF="motion.html#it">it</A> will automatically
+   the key code for the key is in the |<A HREF="term.html#terminfo">terminfo</A>| entry, <A HREF="motion.html#it">它</A> will automatically
    be translated into the internal code and become the second way of <A HREF="#mapping">mapping</A>.
 2. The second <A HREF="eval.html#method">method</A> is to use the internal code for the function key.  To
    enter such a <A HREF="#mapping">mapping</A> type CTRL-K and then hit the function key, or use
@@ -708,13 +708,13 @@ There are two ways to map a special key:
    &quot;#2&quot;, and with &quot;&lt;F&gt;&quot;, like &quot;&lt;F2&gt;&quot;.  Both stand for function key 2.  &quot;#0&quot;
    refers to function key 10.
 
-DETAIL: Vim first checks if a sequence from the keyboard is mapped.  If <A HREF="motion.html#it">it</A>
-isn't the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> key codes are tried.  If a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> code is found <A HREF="motion.html#it">it</A> is
+DETAIL: Vim first checks if a sequence from the keyboard is mapped.  If <A HREF="motion.html#it">它</A>
+isn't the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> key codes are tried.  If a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> code is found <A HREF="motion.html#it">它</A> is
 replaced with the internal code.  Then the check for a <A HREF="#mapping">mapping</A> is done again
 (so you can map an internal code to something else).  What is written into the
 <A HREF="usr_41.html#script">script</A> file depends on what is recognized. If the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> key code was
 recognized <A HREF="motion.html#as">as</A> a <A HREF="#mapping">mapping</A> the key code itself is written to the <A HREF="usr_41.html#script">script</A> file.  If
-<A HREF="motion.html#it">it</A> was recognized <A HREF="motion.html#as">as</A> a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> code the internal code is written to the
+<A HREF="motion.html#it">它</A> was recognized <A HREF="motion.html#as">as</A> a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> code the internal code is written to the
 <A HREF="usr_41.html#script">script</A> file.
 
 
@@ -734,7 +734,7 @@ when using nested mappings.
 
 
 						*<A NAME="map_CTRL-C"></A><B>map_CTRL-C</B>* *<A NAME="map-CTRL-C"></A><B>map-CTRL-C</B>*
-Using <A HREF="pattern.html#CTRL-C">CTRL-C</A> in the <A HREF="#{lhs}">{lhs}</A> is possible, but <A HREF="motion.html#it">it</A> will only work when Vim is
+Using <A HREF="pattern.html#CTRL-C">CTRL-C</A> in the <A HREF="#{lhs}">{lhs}</A> is possible, but <A HREF="motion.html#it">它</A> will only work when Vim is
 waiting for a key, not when Vim is busy with something.  When Vim is busy
 <A HREF="pattern.html#CTRL-C">CTRL-C</A> interrupts/breaks the command.
 When using the <A HREF="gui.html#GUI">GUI</A> version on MS-Windows <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be mapped to allow a Copy
@@ -742,7 +742,7 @@ command to the <A HREF="provider.html#clipboard">clipboard</A>.  Use CTRL-Break 
 
 
 					*<A NAME="map_space_in_lhs"></A><B>map_space_in_lhs</B>* *<A NAME="map-space_in_lhs"></A><B>map-space_in_lhs</B>*
-To include a space in <A HREF="#{lhs}">{lhs}</A> precede <A HREF="motion.html#it">it</A> with a <A HREF="visual.html#CTRL-V">CTRL-V</A> (type two CTRL-Vs for
+To include a space in <A HREF="#{lhs}">{lhs}</A> precede <A HREF="motion.html#it">它</A> with a <A HREF="visual.html#CTRL-V">CTRL-V</A> (type two CTRL-Vs for
 each space).
 
 					*<A NAME="map_space_in_rhs"></A><B>map_space_in_rhs</B>* *<A NAME="map-space_in_rhs"></A><B>map-space_in_rhs</B>*
@@ -771,7 +771,7 @@ scenario:
 The <A HREF="#mapping">mapping</A> for &lt;M-C&gt; is defined with the latin1 encoding, resulting in a 0xc3
 byte.  If you type the character á (0xe1 &lt;M-a&gt;) in <A HREF="mbyte.html#UTF-8">UTF-8</A> encoding this is the
 two bytes 0xc3 0xa1.  You don't want the 0xc3 byte to be mapped then or
-otherwise <A HREF="motion.html#it">it</A> would be impossible to type the á character.
+otherwise <A HREF="motion.html#it">它</A> would be impossible to type the á character.
 
 
 					*<A NAME="&lt;Leader&gt;"></A><B>&lt;Leader&gt;</B>* *<A NAME="mapleader"></A><B>mapleader</B>*
@@ -792,7 +792,7 @@ mappings.
 
 
 					*<A NAME="&lt;LocalLeader&gt;"></A><B>&lt;LocalLeader&gt;</B>* *<A NAME="maplocalleader"></A><B>maplocalleader</B>*
-<A HREF="#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A> is just like <A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A>, except that <A HREF="motion.html#it">it</A> uses &quot;<A HREF="#maplocalleader">maplocalleader</A>&quot;
+<A HREF="#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A> is just like <A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A>, except that <A HREF="motion.html#it">它</A> uses &quot;<A HREF="#maplocalleader">maplocalleader</A>&quot;
 instead of &quot;<A HREF="#mapleader">mapleader</A>&quot;.  <A HREF="#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A> is to be used for mappings which are
 local to a buffer.  Example:
 <B>      :map &lt;buffer&gt; &lt;LocalLeader&gt;A  oanother line&lt;Esc&gt;</B>
@@ -807,7 +807,7 @@ underscore.
 
 							*<A NAME="map-&lt;SID&gt;"></A><B>map-&lt;SID&gt;</B>*
 In a <A HREF="usr_41.html#script">script</A> the special key name &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; can be used to define a <A HREF="#mapping">mapping</A>
-that's local to the <A HREF="usr_41.html#script">script</A>.  See |<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>| for details.
+that's local to the <A HREF="usr_41.html#script">script</A>.  见 |<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>| for details.
 
 
 							*<A NAME="&lt;Plug&gt;"></A><B>&lt;Plug&gt;</B>*
@@ -842,7 +842,7 @@ There are three methods:
    \&#124;	     '<A HREF="motion.html#b">b</A>' is not in <A HREF="options.html#'cpoptions'">'cpoptions'</A>	   <A HREF="#:map">:map</A> _l :!ls \&#124; more^M
    ^V&#124;	     always			   <A HREF="#:map">:map</A> _l :!ls ^V&#124; more^M
 
-(here ^V stands for <A HREF="visual.html#CTRL-V">CTRL-V</A>; to get one <A HREF="visual.html#CTRL-V">CTRL-V</A> you have to type <A HREF="motion.html#it">it</A> <A HREF="if_cscop.html#twice">twice</A>; you
+(here ^V stands for <A HREF="visual.html#CTRL-V">CTRL-V</A>; to get one <A HREF="visual.html#CTRL-V">CTRL-V</A> you have to type <A HREF="motion.html#it">它</A> <A HREF="if_cscop.html#twice">twice</A>; you
 cannot use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> &quot;&lt;C-V&gt;&quot; here).
 
 All three work when you use the default setting for <A HREF="options.html#'cpoptions'">'cpoptions'</A>.
@@ -854,11 +854,11 @@ illogical when compared to other commands.
 
 						*<A NAME="map_return"></A><B>map_return</B>* *<A NAME="map-return"></A><B>map-return</B>*
 When you have a <A HREF="#mapping">mapping</A> that contains an <A HREF="intro.html#Ex">Ex</A> command, you need to put a line
-terminator after <A HREF="motion.html#it">it</A> to have <A HREF="motion.html#it">it</A> executed.  The use of <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is recommended for
-this (see |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|).  Example:
+terminator after <A HREF="motion.html#it">它</A> to have <A HREF="motion.html#it">它</A> executed.  The use of <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is recommended for
+this (见 |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|).  Example:
 <B>   :map  _ls  :!ls -l %:S&lt;CR&gt;:echo "the end"&lt;CR&gt;</B>
 
-To avoid <A HREF="#mapping">mapping</A> of the characters you type in insert or <A HREF="cmdline.html#Command-line">Command-line</A> mode,
+To avoid <A HREF="#mapping">mapping</A> of the characters you type in insert or <A HREF="cmdline.html#Command-line">命令行</A>模式,
 type a <A HREF="visual.html#CTRL-V">CTRL-V</A> first.  The <A HREF="#mapping">mapping</A> in <A HREF="intro.html#Insert">插入</A>模式 is disabled if the <A HREF="options.html#'paste'">'paste'</A>
 option is on.
 
@@ -884,7 +884,7 @@ suggestions:
 - Meta-keys (with the <A HREF="intro.html#ALT">ALT</A> key pressed).  Depending on your keyboard accented
   characters may be used <A HREF="motion.html#as">as</A> well. |<A HREF="#:map-alt-keys">:map-alt-keys</A>|
 - Use the '<A HREF="motion.html#_">_</A>' or '<A HREF="motion.html#,">,</A>' character and then any other character.  The &quot;<A HREF="motion.html#_">_</A>&quot; and &quot;<A HREF="motion.html#,">,</A>&quot;
-  commands <A HREF="diff.html#do">do</A> exist in Vim (see |<A HREF="motion.html#_">_</A>| and |<A HREF="motion.html#,">,</A>|), but you probably never use them.
+  commands <A HREF="diff.html#do">do</A> exist in Vim (见 |<A HREF="motion.html#_">_</A>| and |<A HREF="motion.html#,">,</A>|), but you probably never use them.
 - Use a key that is a synonym for another command.  For example: <A HREF="motion.html#CTRL-P">CTRL-P</A> and
   <A HREF="motion.html#CTRL-N">CTRL-N</A>.  Use an extra character to allow more mappings.
 - The key defined by <A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A> and one or more other keys.  This is especially
@@ -922,13 +922,13 @@ The part between quotes is the <A HREF="eval.html#expression">expression</A> bei
 1.9 USING MAPPINGS					*<A NAME="map-typing"></A><B>map-typing</B>*
 
 Vim will compare what you type with the start of a mapped sequence.  If there
-is an incomplete match, <A HREF="motion.html#it">it</A> will get more characters until there either is a
+is an incomplete match, <A HREF="motion.html#it">它</A> will get more characters until there either is a
 complete match or until there is no match at all.  Example: If you map! &quot;qq&quot;,
 the first '<A HREF="repeat.html#q">q</A>' will not appear on the screen until you type another
 character.  This is because Vim cannot know if the next character will be a
 '<A HREF="repeat.html#q">q</A>' or not.  If the <A HREF="options.html#'timeout'">'timeout'</A> option is on (which is the default) Vim will
 only wait for one second (or <A HREF="motion.html#as">as</A> long <A HREF="motion.html#as">as</A> specified with the <A HREF="options.html#'timeoutlen'">'timeoutlen'</A>
-option).  After that <A HREF="motion.html#it">it</A> assumes that the '<A HREF="repeat.html#q">q</A>' is to be interpreted <A HREF="motion.html#as">as</A> such.  If
+option).  After that <A HREF="motion.html#it">它</A> assumes that the '<A HREF="repeat.html#q">q</A>' is to be interpreted <A HREF="motion.html#as">as</A> such.  If
 you type slowly, or your system is slow, reset the <A HREF="options.html#'timeout'">'timeout'</A> option.  Then you
 might want to set the <A HREF="options.html#'ttimeout'">'ttimeout'</A> option.
 
@@ -937,7 +937,7 @@ might want to set the <A HREF="options.html#'ttimeout'">'ttimeout'</A> option.
 Buffer-local mappings (defined using |<A HREF="#:map-&lt;buffer&gt;">:map-&lt;buffer&gt;</A>|) take precedence over
 global mappings.  When a buffer-local <A HREF="#mapping">mapping</A> is the same <A HREF="motion.html#as">as</A> a global <A HREF="#mapping">mapping</A>,
 Vim will use the buffer-local <A HREF="#mapping">mapping</A>.  In addition, Vim will use a complete
-<A HREF="#mapping">mapping</A> immediately if <A HREF="motion.html#it">it</A> was defined with &lt;nowait&gt;, even if a longer <A HREF="#mapping">mapping</A>
+<A HREF="#mapping">mapping</A> immediately if <A HREF="motion.html#it">它</A> was defined with &lt;nowait&gt;, even if a longer <A HREF="#mapping">mapping</A>
 has the same prefix.  For example, given the following two mappings:
 <B>    :map &lt;buffer&gt; &lt;nowait&gt; \a   :echo "Local \a"&lt;CR&gt;</B>
 <B>    :map                   \abc :echo "Global \abc"&lt;CR&gt;</B>
@@ -967,15 +967,15 @@ The result is that the key code is not recognized in this situation, and the
 Another solution is to use the actual key code in the <A HREF="#mapping">mapping</A> for the second
 special key:
 <B>	:map &lt;F1&gt;&lt;Esc&gt;OP :echo "yes"&lt;CR&gt;</B>
-Don't type a real <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, Vim will recognize the key code and replace <A HREF="motion.html#it">it</A> with
+Don't type a real <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, Vim will recognize the key code and replace <A HREF="motion.html#it">它</A> with
 <A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A> anyway.
 
 
 						*<A NAME="recursive_mapping"></A><B>recursive_mapping</B>*
 If you include the <A HREF="#{lhs}">{lhs}</A> in the <A HREF="#{rhs}">{rhs}</A> you have a recursive <A HREF="#mapping">mapping</A>.  When
-<A HREF="#{lhs}">{lhs}</A> is typed, <A HREF="motion.html#it">it</A> will be replaced with <A HREF="#{rhs}">{rhs}</A>.  When the <A HREF="#{lhs}">{lhs}</A> which is
-included in <A HREF="#{rhs}">{rhs}</A> is encountered <A HREF="motion.html#it">it</A> will be replaced with <A HREF="#{rhs}">{rhs}</A>, and so on.
-This makes <A HREF="motion.html#it">it</A> possible to repeat a command an infinite number of times.  The
+<A HREF="#{lhs}">{lhs}</A> is typed, <A HREF="motion.html#it">它</A> will be replaced with <A HREF="#{rhs}">{rhs}</A>.  When the <A HREF="#{lhs}">{lhs}</A> which is
+included in <A HREF="#{rhs}">{rhs}</A> is encountered <A HREF="motion.html#it">它</A> will be replaced with <A HREF="#{rhs}">{rhs}</A>, and so on.
+This makes <A HREF="motion.html#it">它</A> possible to repeat a command an infinite number of times.  The
 only problem is that the only way to stop this is by causing an error.  The
 macros to solve a maze uses this, look there for an example.  There is one
 exception: If the <A HREF="#{rhs}">{rhs}</A> starts with <A HREF="#{lhs}">{lhs}</A>, the first character is not mapped
@@ -1017,7 +1017,7 @@ to figure out whether <A HREF="intro.html#ALT">ALT</A> was pressed.  Terminals m
 <A HREF="intro.html#ALT">ALT</A> was pressed.  If ESC is followed by a {key} within <A HREF="options.html#'ttimeoutlen'">'ttimeoutlen'</A>
 milliseconds, the ESC is interpreted <A HREF="motion.html#as">as</A>:
         &lt;ALT-{key}&gt;
-otherwise <A HREF="motion.html#it">it</A> is interpreted <A HREF="motion.html#as">as</A> two key presses:
+otherwise <A HREF="motion.html#it">它</A> is interpreted <A HREF="motion.html#as">as</A> two key presses:
         &lt;ESC&gt; {key}
 
 
@@ -1038,7 +1038,7 @@ g@{motion}		Call the function set by the <A HREF="options.html#'operatorfunc'">'
 			    &quot;line&quot;	<A HREF="intro.html#{motion}">{motion}</A> was |<A HREF="motion.html#linewise">linewise</A>|
 			    &quot;char&quot;	<A HREF="intro.html#{motion}">{motion}</A> was |<A HREF="motion.html#charwise">charwise</A>|
 			    &quot;block&quot;	<A HREF="intro.html#{motion}">{motion}</A> was |<A HREF="visual.html#blockwise-visual">blockwise-visual</A>|
-			The type can be forced, see |<A HREF="motion.html#forced-motion">forced-motion</A>|.
+			The type can be forced, 见 |<A HREF="motion.html#forced-motion">forced-motion</A>|.
 
 Here is an example that counts the number of spaces with &lt;F4&gt;:
 
@@ -1084,17 +1084,17 @@ Also note that the <A HREF="options.html#'clipboard'">'clipboard'</A> option is 
 clobbering the `&quot;*` or `&quot;+` <A HREF="change.html#registers">registers</A>, if its value contains the item `unnamed`
 or `unnamedplus`.
 
-The `mode()` function will return the state <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> will be after applying the
+The `mode()` function will return the state <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> will be after applying the
 <A HREF="motion.html#operator">operator</A>.
 
 ==============================================================================
 
 2. <A HREF="#Abbreviations">Abbreviations</A>			*<A NAME="abbreviations"></A><B>abbreviations</B>* *<A NAME="Abbreviations"></A><B>Abbreviations</B>*
 
-<A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="insert.html#Replace">Replace</A> mode and <A HREF="cmdline.html#Command-line">Command-line</A> mode.
-If you enter a <A HREF="motion.html#word">单词</A> that is an abbreviation, <A HREF="motion.html#it">it</A> is replaced with the <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">it</A>
+<A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="insert.html#Replace">Replace</A> mode and <A HREF="cmdline.html#Command-line">命令行</A>模式.
+If you enter a <A HREF="motion.html#word">单词</A> that is an abbreviation, <A HREF="motion.html#it">它</A> is replaced with the <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">它</A>
 stands for.  This can be used to save typing for often used long words.  And
-you can use <A HREF="motion.html#it">it</A> to automatically correct obvious spelling <A HREF="message.html#errors">errors</A>.
+you can use <A HREF="motion.html#it">它</A> to automatically correct obvious spelling <A HREF="message.html#errors">errors</A>.
 Examples:
 
 	:iab ms Microsoft
@@ -1137,10 +1137,10 @@ an additional rule:
 
 full-id	  In front of the match is a non-keyword character, or this is where
 	  the line or insertion starts.  Exception: When the abbreviation is
-	  only one character, <A HREF="motion.html#it">it</A> is not recognized if there is a non-keyword
-	  character in front of <A HREF="motion.html#it">it</A>, other than a space or a <A HREF="intro.html#tab">tab</A>. However, for
+	  only one character, <A HREF="motion.html#it">它</A> is not recognized if there is a non-keyword
+	  character in front of <A HREF="motion.html#it">它</A>, other than a space or a <A HREF="intro.html#tab">tab</A>. However, for
 	  the command line &quot;'&lt;,'&gt;&quot; (or any other marks) is ignored, <A HREF="motion.html#as">as</A> if the
-	  command line starts after <A HREF="motion.html#it">it</A>.
+	  command line starts after <A HREF="motion.html#it">它</A>.
 
 end-id	  In front of the match is a keyword character, or a space or a <A HREF="intro.html#tab">tab</A>,
 	  or this is where the line or insertion starts.
@@ -1167,8 +1167,8 @@ that would trigger the abbreviation.  E.g. <A HREF="visual.html#CTRL-V">CTRL-V</
 the abbreviation, exit insert mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, re-enter insert mode with &quot;<A HREF="insert.html#a">a</A>&quot;
 and type the rest.
 
-To avoid the abbreviation in <A HREF="cmdline.html#Command-line">Command-line</A> mode: Type <A HREF="visual.html#CTRL-V">CTRL-V</A> <A HREF="if_cscop.html#twice">twice</A> somewhere in
-the abbreviation to avoid <A HREF="motion.html#it">it</A> to be replaced.  A <A HREF="visual.html#CTRL-V">CTRL-V</A> in front of a normal
+To avoid the abbreviation in <A HREF="cmdline.html#Command-line">命令行</A>模式: Type <A HREF="visual.html#CTRL-V">CTRL-V</A> <A HREF="if_cscop.html#twice">twice</A> somewhere in
+the abbreviation to avoid <A HREF="motion.html#it">它</A> to be replaced.  A <A HREF="visual.html#CTRL-V">CTRL-V</A> in front of a normal
 character is mostly ignored otherwise.
 
 It is possible to move the cursor after an abbreviation:
@@ -1202,30 +1202,30 @@ used in a |<A HREF="usr_43.html#filetype-plugin">filetype-plugin</A>| file.  Exa
 			column indicates the mode where the abbreviation is
 			used: '<A HREF="insert.html#i">i</A>' for insert mode, '<A HREF="change.html#c">c</A>' for <A HREF="cmdline.html#Command-line">Command-line</A>
 			mode, '<A HREF="change.html#!">!</A>' for both.  These are the same <A HREF="motion.html#as">as</A> for
-			mappings, see |<A HREF="#map-listing">map-listing</A>|.
+			mappings, 见 |<A HREF="#map-listing">map-listing</A>|.
 
 
 						*<A NAME=":abbreviate-verbose"></A><B>:abbreviate-verbose</B>*
-When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing an abbreviation will also display where <A HREF="motion.html#it">it</A>
+When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing an abbreviation will also display where <A HREF="motion.html#it">它</A>
 was last defined.  Example:
 
 <B>	:verbose abbreviate</B>
 <B>	!  teh		 the</B>
 <B>		Last set from /home/abcd/vim/abbr.vim</B>
 
-See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
+见 |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 :ab[breviate] <A HREF="#{lhs}">{lhs}</A>	<A HREF="eval.html#list">list</A> the <A HREF="#abbreviations">abbreviations</A> that start with <A HREF="#{lhs}">{lhs}</A>
-			You may need to insert a <A HREF="visual.html#CTRL-V">CTRL-V</A> (type <A HREF="motion.html#it">it</A> <A HREF="if_cscop.html#twice">twice</A>) to
+			You may need to insert a <A HREF="visual.html#CTRL-V">CTRL-V</A> (type <A HREF="motion.html#it">它</A> <A HREF="if_cscop.html#twice">twice</A>) to
 			avoid that a typed <A HREF="#{lhs}">{lhs}</A> is expanded, since
 			command-line <A HREF="#abbreviations">abbreviations</A> apply here.
 
 :ab[breviate] [&lt;expr&gt;] [&lt;buffer&gt;] <A HREF="#{lhs}">{lhs}</A> <A HREF="#{rhs}">{rhs}</A>
 			add abbreviation for <A HREF="#{lhs}">{lhs}</A> to <A HREF="#{rhs}">{rhs}</A>.  If <A HREF="#{lhs}">{lhs}</A> already
-			existed <A HREF="motion.html#it">it</A> is replaced with the new <A HREF="#{rhs}">{rhs}</A>.  <A HREF="#{rhs}">{rhs}</A> may
+			existed <A HREF="motion.html#it">它</A> is replaced with the new <A HREF="#{rhs}">{rhs}</A>.  <A HREF="#{rhs}">{rhs}</A> may
 			contain spaces.
-			See |<A HREF="#:map-&lt;expr&gt;">:map-&lt;expr&gt;</A>| for the optional &lt;expr&gt; argument.
-			See |<A HREF="#:map-&lt;buffer&gt;">:map-&lt;buffer&gt;</A>| for the optional &lt;buffer&gt; argument.
+			见 |<A HREF="#:map-&lt;expr&gt;">:map-&lt;expr&gt;</A>| for the optional &lt;expr&gt; argument.
+			见 |<A HREF="#:map-&lt;buffer&gt;">:map-&lt;buffer&gt;</A>| for the optional &lt;buffer&gt; argument.
 
 
 						*<A NAME=":una"></A><B>:una</B>* *<A NAME=":unabbreviate"></A><B>:unabbreviate</B>*
@@ -1234,7 +1234,7 @@ See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 			is found, remove <A HREF="#abbreviations">abbreviations</A> in which <A HREF="#{lhs}">{lhs}</A> matches
 			with the <A HREF="#{rhs}">{rhs}</A>.  This is done so that you can even
 			remove <A HREF="#abbreviations">abbreviations</A> after expansion.  To avoid
-			expansion insert a <A HREF="visual.html#CTRL-V">CTRL-V</A> (type <A HREF="motion.html#it">it</A> <A HREF="if_cscop.html#twice">twice</A>).
+			expansion insert a <A HREF="visual.html#CTRL-V">CTRL-V</A> (type <A HREF="motion.html#it">它</A> <A HREF="if_cscop.html#twice">twice</A>).
 
 
 						*<A NAME=":norea"></A><B>:norea</B>* *<A NAME=":noreabbrev"></A><B>:noreabbrev</B>*
@@ -1244,17 +1244,17 @@ See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 						*<A NAME=":ca"></A><B>:ca</B>* *<A NAME=":cab"></A><B>:cab</B>* *<A NAME=":cabbrev"></A><B>:cabbrev</B>*
 :ca[bbrev] [&lt;expr&gt;] [&lt;buffer&gt;] [lhs] [rhs]
-			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="cmdline.html#Command-line">Command-line</A> mode only.
+			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="cmdline.html#Command-line">命令行</A>模式 only.
 
 
 						*<A NAME=":cuna"></A><B>:cuna</B>* *<A NAME=":cunabbrev"></A><B>:cunabbrev</B>*
 :cuna[bbrev] [&lt;buffer&gt;] <A HREF="#{lhs}">{lhs}</A>
-			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:una">:una</A>&quot;, but for <A HREF="cmdline.html#Command-line">Command-line</A> mode only.
+			Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:una">:una</A>&quot;, but for <A HREF="cmdline.html#Command-line">命令行</A>模式 only.
 
 
 						*<A NAME=":cnorea"></A><B>:cnorea</B>* *<A NAME=":cnoreabbrev"></A><B>:cnoreabbrev</B>*
 :cnorea[bbrev] [&lt;expr&gt;] [&lt;buffer&gt;] [lhs] [rhs]
-			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="cmdline.html#Command-line">Command-line</A> mode only and no
+			same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:ab">:ab</A>&quot;, but for <A HREF="cmdline.html#Command-line">命令行</A>模式 only and no
 			remapping for this <A HREF="#{rhs}">{rhs}</A>
 
 
@@ -1283,7 +1283,7 @@ See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 
 							*<A NAME=":cabc"></A><B>:cabc</B>* *<A NAME=":cabclear"></A><B>:cabclear</B>*
-:cabc[lear] [&lt;buffer&gt;]	Remove all <A HREF="#abbreviations">abbreviations</A> for <A HREF="cmdline.html#Command-line">Command-line</A> mode.
+:cabc[lear] [&lt;buffer&gt;]	Remove all <A HREF="#abbreviations">abbreviations</A> for <A HREF="cmdline.html#Command-line">命令行</A>模式.
 
 
 							*<A NAME="using_CTRL-V"></A><B>using_CTRL-V</B>*
@@ -1305,11 +1305,11 @@ You type:   <A HREF="motion.html#ab">ab</A> esc ^V^V^V^V^V^[
 You see:    <A HREF="motion.html#ab">ab</A> esc ^V^V^[
 
 	The command-line contains two actual ^Vs before the ^[.  This is
-	how <A HREF="motion.html#it">it</A> should appear in your <A HREF="starting.html#vimrc">vimrc</A> file, if you choose to go that
+	how <A HREF="motion.html#it">它</A> should appear in your <A HREF="starting.html#vimrc">vimrc</A> file, if you choose to go that
 	route.  The first ^V is there to <A HREF="change.html#quote">quote</A> the second ^V; the <A HREF="#:ab">:ab</A>
 	command uses ^V <A HREF="motion.html#as">as</A> its own <A HREF="change.html#quote">quote</A> character, so you can include quoted
 	<A HREF="pattern.html#whitespace">whitespace</A> or the &#124; character in the abbreviation.  The <A HREF="#:ab">:ab</A> command
-	doesn't <A HREF="diff.html#do">do</A> anything special with the ^[ character, so <A HREF="motion.html#it">it</A> doesn't need
+	doesn't <A HREF="diff.html#do">do</A> anything special with the ^[ character, so <A HREF="motion.html#it">它</A> doesn't need
 	to be quoted.  (Although quoting isn't harmful; that's why typing 7
 	[but not 8!] ^Vs works.)
 
@@ -1348,20 +1348,20 @@ underscore.  Example:
 could define a <A HREF="#mapping">mapping</A> &quot;&lt;SNR&gt;23_Add&quot;.
 
 When defining a function in a <A HREF="usr_41.html#script">script</A>, &quot;s:&quot; can be prepended to the name to
-make <A HREF="motion.html#it">it</A> local to the <A HREF="usr_41.html#script">script</A>.  But when a <A HREF="#mapping">mapping</A> is executed from outside of
-the <A HREF="usr_41.html#script">script</A>, <A HREF="motion.html#it">it</A> doesn't know in which <A HREF="usr_41.html#script">script</A> the function was defined.  To
+make <A HREF="motion.html#it">它</A> local to the <A HREF="usr_41.html#script">script</A>.  But when a <A HREF="#mapping">mapping</A> is executed from outside of
+the <A HREF="usr_41.html#script">script</A>, <A HREF="motion.html#it">它</A> doesn't know in which <A HREF="usr_41.html#script">script</A> the function was defined.  To
 avoid this problem, use &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; instead of &quot;s:&quot;.  The same translation is done
-<A HREF="motion.html#as">as</A> for mappings.  This makes <A HREF="motion.html#it">it</A> possible to define a call to the function in
+<A HREF="motion.html#as">as</A> for mappings.  This makes <A HREF="motion.html#it">它</A> possible to define a call to the function in
 a <A HREF="#mapping">mapping</A>.
 
-When a local function is executed, <A HREF="motion.html#it">it</A> runs in the <A HREF="repeat.html#context">context</A> of the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">it</A> was
-defined in.  This means that new <A HREF="eval.html#functions">functions</A> and mappings <A HREF="motion.html#it">it</A> defines can also
-use &quot;s:&quot; or &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; and <A HREF="motion.html#it">it</A> will use the same unique number <A HREF="motion.html#as">as</A> when the
+When a local function is executed, <A HREF="motion.html#it">它</A> runs in the <A HREF="repeat.html#context">context</A> of the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">它</A> was
+defined in.  This means that new <A HREF="eval.html#functions">functions</A> and mappings <A HREF="motion.html#it">它</A> defines can also
+use &quot;s:&quot; or &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; and <A HREF="motion.html#it">它</A> will use the same unique number <A HREF="motion.html#as">as</A> when the
 function itself was defined.  Also, the &quot;<A HREF="eval.html#s:var">s:var</A>&quot; local <A HREF="usr_41.html#script">script</A> <A HREF="eval.html#variables">variables</A> can be
 used.
 
-When executing an <A HREF="autocmd.html#autocommand">autocommand</A> or a user command, <A HREF="motion.html#it">it</A> will run in the <A HREF="repeat.html#context">context</A> of
-the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">it</A> was defined in.  This makes <A HREF="motion.html#it">it</A> possible that the command calls a
+When executing an <A HREF="autocmd.html#autocommand">autocommand</A> or a user command, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of
+the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">它</A> was defined in.  This makes <A HREF="motion.html#it">它</A> possible that the command calls a
 local function or uses a local <A HREF="#mapping">mapping</A>.
 
 In <A HREF="change.html#case">case</A> the value is used in a <A HREF="repeat.html#context">context</A> where <A HREF="#&lt;SID&gt;">&lt;SID&gt;</A> cannot be correctly
@@ -1389,7 +1389,7 @@ and what their <A HREF="#&lt;SNR&gt;">&lt;SNR&gt;</A> number is.
 It is possible to define your own <A HREF="intro.html#Ex">Ex</A> commands.  A user-defined command can act
 just like a built-in command (it can have a range or arguments, arguments can
 be completed <A HREF="motion.html#as">as</A> filenames or buffer names, etc), except that when the command
-is executed, <A HREF="motion.html#it">it</A> is transformed into a normal <A HREF="intro.html#Ex">Ex</A> command and then executed.
+is executed, <A HREF="motion.html#it">它</A> is transformed into a normal <A HREF="intro.html#Ex">Ex</A> command and then executed.
 
 For starters: See section |<A HREF="usr_40.html#40.2">40.2</A>| in the user manual.
 
@@ -1440,7 +1440,7 @@ scripts.
 
 
 							*<A NAME=":command-verbose"></A><B>:command-verbose</B>*
-When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing a command will also display where <A HREF="motion.html#it">it</A> was
+When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing a command will also display where <A HREF="motion.html#it">它</A> was
 last defined and any completion argument. Example:
 
 <B>    :verbose command TOhtml</B>
@@ -1448,7 +1448,7 @@ last defined and any completion argument. Example:
 <B><FONT color="#3A6F2B">	TOhtml	    0	 %		 :call Convert2HTML(&lt;line1&gt;, &lt;line2&gt;) </FONT></B>
 <B><FONT color="#3A6F2B">	    Last set from /usr/share/vim/vim-7.0/plugin/tohtml.vim </FONT></B>
 
-See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
+见 |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 
 							*<A NAME="E174"></A><B>E174</B>* *<A NAME="E182"></A><B>E182</B>*
@@ -1494,11 +1494,11 @@ attributes are described below, by category.
 
 						*<A NAME="E175"></A><B>E175</B>* *<A NAME="E176"></A><B>E176</B>* *<A NAME=":command-nargs"></A><B>:command-nargs</B>*
 By default, a user defined command will take no arguments (and an error is
-reported if any are supplied).  However, <A HREF="motion.html#it">it</A> is possible to specify that the
+reported if any are supplied).  However, <A HREF="motion.html#it">它</A> is possible to specify that the
 command can take arguments, using the -nargs attribute.  Valid cases are:
 
 	-nargs=0    No arguments are allowed (the default)
-	-nargs=1    Exactly one argument is required, <A HREF="motion.html#it">it</A> includes spaces
+	-nargs=1    Exactly one argument is required, <A HREF="motion.html#it">它</A> includes spaces
 	-nargs=*    Any number of arguments are allowed (0, 1, or many),
 		    separated by white space
 	-nargs=?    0 or 1 arguments are allowed
@@ -1510,7 +1510,7 @@ the argument.
 
 Note that arguments are used <A HREF="motion.html#as">as</A> text, not <A HREF="motion.html#as">as</A> expressions.  Specifically,
 &quot;<A HREF="eval.html#s:var">s:var</A>&quot; will use the <A HREF="#script-local">script-local</A> variable in the <A HREF="usr_41.html#script">script</A> where the command was
-defined, not where <A HREF="motion.html#it">it</A> is invoked!  Example:
+defined, not where <A HREF="motion.html#it">它</A> is invoked!  Example:
     script1.vim:
 <B>	:let s:error = "None"</B>
 <B>	:command -nargs=1 Error echoerr &lt;args&gt;</B>
@@ -1561,8 +1561,8 @@ completion can be enabled:
 	-complete=sign		|<A HREF="sign.html#:sign">:sign</A>| suboptions
 	-complete=syntax	syntax file names |<A HREF="options.html#'syntax'">'syntax'</A>|
 	-complete=syntime	|<A HREF="syntax.html#:syntime">:syntime</A>| suboptions
-	-complete=tag		<A HREF="tagsrch.html#tags">tags</A>
-	-complete=tag_listfiles	<A HREF="tagsrch.html#tags">tags</A>, file names are shown when <A HREF="scroll.html#CTRL-D">CTRL-D</A> is hit
+	-complete=tag		<A HREF="tagsrch.html#tags">标签</A>
+	-complete=tag_listfiles	<A HREF="tagsrch.html#tags">标签</A>, file names are shown when <A HREF="scroll.html#CTRL-D">CTRL-D</A> is hit
 	-complete=user		user names
 	-complete=var		user <A HREF="eval.html#variables">variables</A>
 	-complete=custom,{func} custom completion, defined via {func}
@@ -1598,9 +1598,9 @@ The function arguments are:
 	ArgLead		the leading portion of the argument currently being
 			completed on
 	CmdLine		the entire command line
-	CursorPos	the cursor position in <A HREF="motion.html#it">it</A> (byte index)
+	CursorPos	the cursor position in <A HREF="motion.html#it">它</A> (byte index)
 The function may use these for determining <A HREF="repeat.html#context">context</A>.  For the &quot;custom&quot;
-argument, <A HREF="motion.html#it">it</A> is not necessary to <A HREF="change.html#filter">filter</A> candidates against the (implicit
+argument, <A HREF="motion.html#it">它</A> is not necessary to <A HREF="change.html#filter">filter</A> candidates against the (implicit
 <A HREF="pattern.html#pattern">pattern</A> in) ArgLead.  Vim will <A HREF="change.html#filter">filter</A> the candidates with its <A HREF="pattern.html#regexp">regexp</A> engine
 after function return, and this is probably more efficient in most cases. For
 the &quot;customlist&quot; argument, Vim will not <A HREF="change.html#filter">filter</A> the returned completion
@@ -1627,8 +1627,8 @@ This example does not work for file names with spaces!
 
 				*<A NAME="E177"></A><B>E177</B>* *<A NAME="E178"></A><B>E178</B>* *<A NAME=":command-range"></A><B>:command-range</B>* *<A NAME=":command-count"></A><B>:command-count</B>*
 By default, user-defined commands <A HREF="diff.html#do">do</A> not accept a line number range.  However,
-<A HREF="motion.html#it">it</A> is possible to specify that the command does take a range (the -range
-attribute), or that <A HREF="motion.html#it">it</A> takes an arbitrary <A HREF="intro.html#count">count</A> value, either in the line
+<A HREF="motion.html#it">它</A> is possible to specify that the command does take a range (the -range
+attribute), or that <A HREF="motion.html#it">它</A> takes an arbitrary <A HREF="intro.html#count">count</A> value, either in the line
 number position (-range=N, like the |<A HREF="windows.html#:split">:split</A>| command) or <A HREF="motion.html#as">as</A> a &quot;<A HREF="intro.html#count">count</A>&quot;
 argument (-count=N, like the |<A HREF="editing.html#:Next">:Next</A>| command).  The <A HREF="intro.html#count">count</A> will then be
 available in the argument with |<A HREF="#&lt;count&gt;">&lt;count&gt;</A>|.
@@ -1668,7 +1668,7 @@ Possible values are (second column is the short name used in listing):
 
                                                   *<A NAME=":command-preview"></A><B>:command-preview</B>* {nvim-api}
 Commands can show an <A HREF="options.html#'inccommand'">'inccommand'</A> (as-you-type) preview by defining a preview
-handler (only from <A HREF="lua.html#Lua">Lua</A>, see |<A HREF="api.html#nvim_create_user_command()">nvim_create_user_command()</A>|).
+handler (only from <A HREF="lua.html#Lua">Lua</A>, 见 |<A HREF="api.html#nvim_create_user_command()">nvim_create_user_command()</A>|).
 
 The preview callback must be a <A HREF="lua.html#Lua">Lua</A> function with this signature:
 
@@ -1687,7 +1687,7 @@ Your command preview routine must implement this protocol:
 3. Add required highlights to the current buffer. If preview buffer is
    provided, add required highlights to the preview buffer <A HREF="motion.html#as">as</A> well. All
    highlights must be added to the preview <A HREF="api.html#namespace">namespace</A> which is provided <A HREF="motion.html#as">as</A> an
-   argument to the preview callback (see |<A HREF="api.html#nvim_buf_add_highlight()">nvim_buf_add_highlight()</A>| and
+   argument to the preview callback (见 |<A HREF="api.html#nvim_buf_add_highlight()">nvim_buf_add_highlight()</A>| and
    |<A HREF="api.html#nvim_buf_set_extmark()">nvim_buf_set_extmark()</A>| for help on how to add highlights to a <A HREF="api.html#namespace">namespace</A>).
 4. Return an integer (0, 1, 2) which controls how Nvim behaves <A HREF="motion.html#as">as</A> follows:
    0: No preview is shown.
@@ -1792,7 +1792,7 @@ There are some special cases <A HREF="motion.html#as">as</A> well:
 		    the user command was invoked.
 
 In the cases of the -count and -register attributes, if the optional argument
-is supplied, <A HREF="motion.html#it">it</A> is removed from the argument <A HREF="eval.html#list">list</A> and is available to the
+is supplied, <A HREF="motion.html#it">它</A> is removed from the argument <A HREF="eval.html#list">list</A> and is available to the
 replacement text separately.
 Note that these arguments can be abbreviated, but that is a <A HREF="deprecated.html#deprecated">deprecated</A>
 feature.  Use the full name for new scripts.
@@ -1869,7 +1869,7 @@ The valid <A HREF="intro.html#escape">escape</A> sequences are
 
 							*<A NAME="&lt;q-args&gt;"></A><B>&lt;q-args&gt;</B>*
 If the first two characters of an <A HREF="intro.html#escape">escape</A> sequence are &quot;q-&quot; (for example,
-<A HREF="#&lt;q-args&gt;">&lt;q-args&gt;</A>) then the value is quoted in such a way <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">it</A> a valid value
+<A HREF="#&lt;q-args&gt;">&lt;q-args&gt;</A>) then the value is quoted in such a way <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">它</A> a valid value
 for use in an <A HREF="eval.html#expression">expression</A>.  This uses the argument <A HREF="motion.html#as">as</A> one single value.
 When there is no argument <A HREF="#&lt;q-args&gt;">&lt;q-args&gt;</A> is an empty <A HREF="eval.html#string">string</A>.
 
@@ -1933,16 +1933,16 @@ This will invoke:
 <B>   :endfunction</B>
 <B>   :command -nargs=+ -complete=command Allargs call Allargs(&lt;q-args&gt;)</B>
 
-The command Allargs takes any Vim command(s) <A HREF="motion.html#as">as</A> argument and executes <A HREF="motion.html#it">it</A> on all
+The command Allargs takes any Vim command(s) <A HREF="motion.html#as">as</A> argument and executes <A HREF="motion.html#it">它</A> on all
 files in the argument <A HREF="eval.html#list">list</A>.  Usage example (note use of the &quot;<A HREF="motion.html#e">e</A>&quot; flag to ignore
 <A HREF="message.html#errors">errors</A> and the &quot;update&quot; command to write modified buffers):
 <B>	:Allargs %s/foo/bar/ge|update</B>
 This will invoke:
 <B>	:call Allargs("%s/foo/bar/ge|update")</B>
  
-When defining a user command in a <A HREF="usr_41.html#script">script</A>, <A HREF="motion.html#it">it</A> will be able to call <A HREF="eval.html#functions">functions</A>
+When defining a user command in a <A HREF="usr_41.html#script">script</A>, <A HREF="motion.html#it">它</A> will be able to call <A HREF="eval.html#functions">functions</A>
 local to the <A HREF="usr_41.html#script">script</A> and use mappings local to the <A HREF="usr_41.html#script">script</A>.  When the user
-invokes the user command, <A HREF="motion.html#it">it</A> will run in the <A HREF="repeat.html#context">context</A> of the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">it</A> was
+invokes the user command, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">它</A> was
 defined in.  This matters if |<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>| is used in a command.
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

@@ -81,8 +81,8 @@
 
 Debugging Vim						*<A NAME="debug-vim"></A><B>debug-vim</B>*
 
-This is for debugging Vim itself, when <A HREF="motion.html#it">it</A> doesn't work properly.
-For debugging Vim scripts, <A HREF="eval.html#functions">functions</A>, etc. see |<A HREF="repeat.html#debug-scripts">debug-scripts</A>|
+This is for debugging Vim itself, when <A HREF="motion.html#it">它</A> doesn't work properly.
+For debugging Vim scripts, <A HREF="eval.html#functions">functions</A>, etc. 见 |<A HREF="repeat.html#debug-scripts">debug-scripts</A>|
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -97,7 +97,7 @@ This also applies when using the MingW tools.
 
 1. Compile Vim with the &quot;-g&quot; option (there is a line in the src/Makefile for
    this, which you can uncomment).  Also make sure &quot;strip&quot; is disabled (do not
-   install <A HREF="motion.html#it">it</A>, or use the line &quot;STRIP = /bin/true&quot;).
+   install <A HREF="motion.html#it">它</A>, or use the line &quot;STRIP = /bin/true&quot;).
 
 2. Execute these commands (replace &quot;11&quot; with the test that fails):
 <B>	cd testdir</B>
@@ -183,15 +183,15 @@ to the directory where you have the PDB file and click Open.
 
 At this point, you should have a full call stack with vim function names and
 line numbers.  Double-click one of the lines and the Find Source dialog will
-appear.  Navigate to the directory where the Vim source is (if you have <A HREF="motion.html#it">it</A>.)
+appear.  Navigate to the directory where the Vim source is (if you have <A HREF="motion.html#it">它</A>.)
 
 If you don't know how to debug this any further, follow the instructions
 at &quot;<A HREF="helphelp.html#:help">:help</A> bug-report&quot;.  Paste the call stack into the bug report.
 
 If you have a non-free version of <A HREF="visual.html#Visual">Visual</A> Studio, you can save a minidump via
-the Debug menu and send <A HREF="motion.html#it">it</A> with the bug report.  A minidump is a small file
+the Debug menu and send <A HREF="motion.html#it">它</A> with the bug report.  A minidump is a small file
 (&lt;100KB), which contains information about the state of your process.
-<A HREF="visual.html#Visual">Visual</A> C++ 2005 Express Edition cannot save minidumps and <A HREF="motion.html#it">it</A> cannot be
+<A HREF="visual.html#Visual">Visual</A> C++ 2005 Express Edition cannot save minidumps and <A HREF="motion.html#it">它</A> cannot be
 installed <A HREF="motion.html#as">as</A> a just-in-time debugger. Use WinDbg, |<A HREF="#debug-windbg">debug-windbg</A>|, if you
 need to save minidumps or you want a just-in-time (postmortem) debugger.
 
@@ -199,7 +199,7 @@ need to save minidumps or you want a just-in-time (postmortem) debugger.
 								*<A NAME="debug-windbg"></A><B>debug-windbg</B>*
 <B><FONT color="#3A6F2B">3.3 Debugging Vim crashes with WinDbg </FONT></B>
 
-See |<A HREF="#get-ms-debuggers">get-ms-debuggers</A>| to obtain a copy of WinDbg.
+见 |<A HREF="#get-ms-debuggers">get-ms-debuggers</A>| to obtain a copy of WinDbg.
 
 As with the <A HREF="visual.html#Visual">Visual</A> Studio IDE, you can attach WinDbg to a running Vim process.
 You can also have your system automatically invoke WinDbg <A HREF="motion.html#as">as</A> a postmortem
@@ -226,10 +226,10 @@ To save a minidump, type the following at the WinDbg command line:
 							*<A NAME="debug-minidump"></A><B>debug-minidump</B>*
 <B><FONT color="#3A6F2B">3.4 Opening a Minidump </FONT></B>
 
-If you have a minidump file, you can open <A HREF="motion.html#it">it</A> in <A HREF="visual.html#Visual">Visual</A> Studio or in WinDbg.
+If you have a minidump file, you can open <A HREF="motion.html#it">它</A> in <A HREF="visual.html#Visual">Visual</A> Studio or in WinDbg.
 
 In <A HREF="visual.html#Visual">Visual</A> Studio 2005: on the File menu, choose Open, then Project/Solution.
-Navigate to the .dmp file and open <A HREF="motion.html#it">it</A>. Now press F5 to invoke the debugger.
+Navigate to the .dmp file and open <A HREF="motion.html#it">它</A>. Now press F5 to invoke the debugger.
 Follow the instructions in |<A HREF="#debug-vs2005">debug-vs2005</A>| to set the Symbol File Path.
 
 In WinDbg: choose Open Crash Dump on the File menu. Follow the instructions in

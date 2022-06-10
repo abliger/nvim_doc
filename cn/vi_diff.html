@@ -109,7 +109,7 @@ Maximum lhs of a <A HREF="map.html#mapping">mapping</A>   50 characters.
 <A HREF="eval.html#Number">Number</A> of different highlighting types: over 30000
 Range of a <A HREF="eval.html#Number">Number</A> variable:  -2147483648 to 2147483647 (might be more on 64
 			   bit systems)
-Maximum length of a line in a <A HREF="tagsrch.html#tags">tags</A> file: 512 bytes.
+Maximum length of a line in a <A HREF="tagsrch.html#tags">标签</A> file: 512 bytes.
 
 Information for <A HREF="undo.html#undo">undo</A> and text in <A HREF="change.html#registers">registers</A> is kept in memory, thus when making
 (big) changes the amount of (virtual) memory available <A HREF="#limits">limits</A> the number of
@@ -129,10 +129,10 @@ Support for different systems.
 Multi level persistent undo.					|<A HREF="undo.html#undo">undo</A>|
 	'<A HREF="undo.html#u">u</A>' goes backward in time, '<A HREF="undo.html#CTRL-R">CTRL-R</A>' goes forward again.  Set option
 	<A HREF="options.html#'undolevels'">'undolevels'</A> to the number of changes to be remembered (default 1000).
-	Set <A HREF="options.html#'undolevels'">'undolevels'</A> to 0 for a Vi-compatible one level <A HREF="undo.html#undo">undo</A>.  Set <A HREF="motion.html#it">it</A> to
+	Set <A HREF="options.html#'undolevels'">'undolevels'</A> to 0 for a Vi-compatible one level <A HREF="undo.html#undo">undo</A>.  Set <A HREF="motion.html#it">它</A> to
 	-1 for no <A HREF="undo.html#undo">undo</A> at all.
 	When all changes in a buffer have been undone, the buffer is not
-	considered changed anymore.  You can exit <A HREF="motion.html#it">it</A> with <A HREF="editing.html#:q">:q</A>, without &lt;!&gt;.
+	considered changed anymore.  You can exit <A HREF="motion.html#it">它</A> with <A HREF="editing.html#:q">:q</A>, without &lt;!&gt;.
 	When undoing a few changes and then making a new change Vim will
 	create a branch in the <A HREF="undo.html#undo">undo</A> tree.  This means you can go back to any
 	state of the text, there is no risk of a change causing text to be
@@ -171,7 +171,7 @@ Multiple windows and <A HREF="windows.html#buffers">buffers</A>.				|<A HREF="wi
 	|<A HREF="options.html#'hlsearch'">'hlsearch'</A>|, matching parens |<A HREF="pi_paren.html#matchparen">matchparen</A>| and the cursor line and
 	column |<A HREF="options.html#'cursorline'">'cursorline'</A>| |<A HREF="options.html#'cursorcolumn'">'cursorcolumn'</A>|.
 
-Spell checking.						|<A HREF="spell.html#spell">spell</A>|
+Spell checking.						|<A HREF="spell.html#spell">拼写</A>|
 	When the <A HREF="options.html#'spell'">'spell'</A> option is set Vim will highlight spelling mistakes.
 	About 50 languages are currently supported, selected with the
 	<A HREF="options.html#'spelllang'">'spelllang'</A> option.  In source code only comments and strings are
@@ -197,7 +197,7 @@ Plugins.						|<A HREF="usr_05.html#add-plugin">add-plugin</A>|
 
 Asynchronous communication and <A HREF="builtin.html#timers">timers</A>.			|<A HREF="job_control.html#job-control">job-control</A>| |<A HREF="builtin.html#timer">timer</A>|
 	Vim can exchange <A HREF="message.html#messages">messages</A> with other processes in the background.
-	Vim can start a job, communicate with <A HREF="motion.html#it">it</A> and stop <A HREF="motion.html#it">it</A>. |<A HREF="job_control.html#job-control">job-control</A>|
+	Vim can start a job, communicate with <A HREF="motion.html#it">它</A> and stop <A HREF="motion.html#it">它</A>. |<A HREF="job_control.html#job-control">job-control</A>|
 	Timers can fire once or repeatedly and invoke a function to <A HREF="diff.html#do">do</A> any
 	work. |<A HREF="builtin.html#timer">timer</A>|
 
@@ -217,7 +217,7 @@ Flexible insert mode.					|<A HREF="insert.html#ins-special-special">ins-special
 
 Visual mode.						|<A HREF="visual.html#Visual-mode">Visual-mode</A>|
 	<A HREF="visual.html#Visual">Visual</A> mode can be used to first highlight a piece of text and then
-	give a command to <A HREF="diff.html#do">do</A> something with <A HREF="motion.html#it">it</A>.  This is an (easy to use)
+	give a command to <A HREF="diff.html#do">do</A> something with <A HREF="motion.html#it">它</A>.  This is an (easy to use)
 	alternative to first giving the <A HREF="motion.html#operator">operator</A> and then moving to the end of
 	the text to be operated upon.
 	|<A HREF="visual.html#v">v</A>| and |<A HREF="visual.html#V">V</A>| are used to start <A HREF="visual.html#Visual">Visual</A> mode.  |<A HREF="visual.html#v">v</A>| works on characters
@@ -260,7 +260,7 @@ Help system.						|<A HREF="helphelp.html#:help">:help</A>|
 	used to go to the begin/end of the command-line.
 	{Vi: can only alter the last character in the line}
 	{Vi: when hitting <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> the command-line is executed.  This is
-	unexpected for most people; therefore <A HREF="motion.html#it">it</A> was changed in Vim.  But when
+	unexpected for most people; therefore <A HREF="motion.html#it">它</A> was changed in Vim.  But when
 	the <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is part of a <A HREF="map.html#mapping">mapping</A>, the command-line is executed.  If you
 	want the <A HREF="intro.html#Vi">Vi</A> behaviour also when typing <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, use &quot;<A HREF="map.html#:cmap">:cmap</A> ^V&lt;Esc&gt;
 	^V^M&quot;}
@@ -275,7 +275,7 @@ Help system.						|<A HREF="helphelp.html#:help">:help</A>|
 	<A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> can be typed to complete
 <B><FONT color="#3A6F2B">	   what		example		</FONT></B>
 	- command	:e&lt;Tab&gt;
-	- <A HREF="tagsrch.html#tag">tag</A>		<A HREF="tagsrch.html#:ta">:ta</A> scr&lt;Tab&gt;
+	- <A HREF="tagsrch.html#tag">标签</A>		<A HREF="tagsrch.html#:ta">:ta</A> scr&lt;Tab&gt;
 	- option	<A HREF="options.html#:set">:set</A> sc&lt;Tab&gt;
 	- option value  <A HREF="options.html#:set">:set</A> <A HREF="options.html#'hf'">hf</A>=&lt;Tab&gt;
 	- file name	<A HREF="editing.html#:e">:e</A> ve&lt;Tab&gt;
@@ -301,7 +301,7 @@ Help system.						|<A HREF="helphelp.html#:help">:help</A>|
 	|<A HREF="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</A>|	words from <A HREF="options.html#'thesaurus'">'thesaurus'</A> files
 	|<A HREF="insert.html#i_CTRL-X_CTRL-I">i_CTRL-X_CTRL-I</A>|	words from included files
 	|<A HREF="insert.html#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</A>|	whole lines
-	|<A HREF="insert.html#i_CTRL-X_CTRL-]">i_CTRL-X_CTRL-]</A>|	words from the <A HREF="tagsrch.html#tags">tags</A> file
+	|<A HREF="insert.html#i_CTRL-X_CTRL-]">i_CTRL-X_CTRL-]</A>|	words from the <A HREF="tagsrch.html#tags">标签</A> file
 	|<A HREF="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</A>|	<A HREF="intro.html#definitions">definitions</A> or macros
 	|<A HREF="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</A>|	Omni completion: clever completion
 				specifically for a file type
@@ -389,7 +389,7 @@ Automatic commands.					|<A HREF="autocmd.html#autocommand">autocommand</A>|
 	Commands can be automatically executed when reading a file, <A HREF="editing.html#writing">writing</A> a
 	file, jumping to another buffer, etc., depending on the file name.
 	This is useful to set <A HREF="options.html#options">options</A> and mappings for C programs,
-	documentation, plain text, e-mail, etc.  This also makes <A HREF="motion.html#it">it</A> possible
+	documentation, plain text, e-mail, etc.  This also makes <A HREF="motion.html#it">它</A> possible
 	to edit compressed files.
 
 Scripts and Expressions.				|<A HREF="eval.html#expression">expression</A>|
@@ -403,7 +403,7 @@ Scripts and Expressions.				|<A HREF="eval.html#expression">expression</A>|
 			Variable types are <A HREF="eval.html#Number">Number</A>, <A HREF="eval.html#String">String</A>, <A HREF="eval.html#List">List</A> and <A HREF="eval.html#Dictionary">Dictionary</A>.
 	|<A HREF="eval.html#:execute">:execute</A>|	Execute a command formed by an <A HREF="eval.html#expression">expression</A>.
 	|<A HREF="eval.html#:try">:try</A>|		Catch exceptions.
-	etc., etc.  See |<A HREF="eval.html#eval">eval</A>|.
+	etc., etc.  见 |<A HREF="eval.html#eval">eval</A>|.
 	Debugging and <A HREF="repeat.html#profiling">profiling</A> are supported. |<A HREF="repeat.html#debug-scripts">debug-scripts</A>| |<A HREF="repeat.html#profile">profile</A>|
 	If this is not enough, an interface is provided to |<A HREF="if_pyth.html#Python">Python</A>|.
 
@@ -426,11 +426,11 @@ Mouse support.						|<A HREF="term.html#mouse-using">mouse-using</A>|
 
 Usage of key names.					|<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>| |<A HREF="intro.html#key-notation">key-notation</A>|
 	Special keys now all have a name like <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>, <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>, etc.
-	This name can be used in mappings, to make <A HREF="motion.html#it">it</A> easy to edit them.
+	This name can be used in mappings, to make <A HREF="motion.html#it">它</A> easy to edit them.
 
 Editing binary files.					|<A HREF="editing.html#edit-binary">edit-binary</A>|
 	Vim can edit binary files.  You can change a few characters in an
-	executable file, without corrupting <A HREF="motion.html#it">it</A>.  Vim doesn't remove NUL
+	executable file, without corrupting <A HREF="motion.html#it">它</A>.  Vim doesn't remove NUL
 	characters (they are represented <A HREF="motion.html#as">as</A> <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> internally).
 	|<A HREF="starting.html#-b">-b</A>|		command-line argument to start editing a binary file
 	|<A HREF="options.html#'binary'">'binary'</A>|	Option set by |<A HREF="starting.html#-b">-b</A>|.  Prevents adding an <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> for the

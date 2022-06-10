@@ -101,7 +101,7 @@ Example: this sets &quot;g:gui&quot; to the value of the UI's &quot;rgb&quot; fi
 :winp[os]
 		Display current position of the top left corner of the <A HREF="#GUI">GUI</A> vim
 		<A HREF="windows.html#window">窗口</A>in pixels.  Does not work in all versions.
-		Also see |<A HREF="builtin.html#getwinpos()">getwinpos()</A>|, |<A HREF="builtin.html#getwinposx()">getwinposx()</A>| and |<A HREF="builtin.html#getwinposy()">getwinposy()</A>|.
+		Also 见 |<A HREF="builtin.html#getwinpos()">getwinpos()</A>|, |<A HREF="builtin.html#getwinposx()">getwinposx()</A>| and |<A HREF="builtin.html#getwinposy()">getwinposy()</A>|.
 
 
 :winp[os] {X} {Y}							*<A NAME="E466"></A><B>E466</B>*
@@ -156,7 +156,7 @@ only useful when <A HREF="options.html#'nowrap'">'nowrap'</A> is set.
 
 VERTICAL SCROLLBARS					*<A NAME="gui-vert-scroll"></A><B>gui-vert-scroll</B>*
 
-Each Vim<A HREF="windows.html#window">窗口</A>has a scrollbar next to <A HREF="motion.html#it">it</A> which may be scrolled up and down
+Each Vim<A HREF="windows.html#window">窗口</A>has a scrollbar next to <A HREF="motion.html#it">它</A> which may be scrolled up and down
 to move through the text in that buffer.  The size of the scrollbar-thumb
 indicates the fraction of the buffer which can be seen in the<A HREF="windows.html#window">窗口</A>.
 When the scrollbar is dragged all the way down, the last line of the file
@@ -165,7 +165,7 @@ will appear in the top of the<A HREF="windows.html#window">窗口</A>.
 If a<A HREF="windows.html#window">窗口</A>is shrunk to zero height (by the growth of another<A HREF="windows.html#window">窗口</A>) its
 scrollbar disappears.  It reappears when the<A HREF="windows.html#window">窗口</A>is restored.
 
-If a<A HREF="windows.html#window">窗口</A>is vertically split, <A HREF="motion.html#it">it</A> will get a scrollbar when <A HREF="motion.html#it">it</A> is the
+If a<A HREF="windows.html#window">窗口</A>is vertically split, <A HREF="motion.html#it">它</A> will get a scrollbar when <A HREF="motion.html#it">它</A> is the
 current<A HREF="windows.html#window">窗口</A>and when, taking the middle of the current<A HREF="windows.html#window">窗口</A>and drawing a
 vertical line, this line goes through the<A HREF="windows.html#window">窗口</A>.
 When there are scrollbars on both sides, and the middle of the current<A HREF="windows.html#window">窗口</A>
@@ -180,11 +180,11 @@ The horizontal scrollbar (at the bottom of the Vim <A HREF="#GUI">GUI</A>) may b
 scroll text sideways when the <A HREF="options.html#'wrap'">'wrap'</A> option is turned off.  The
 scrollbar-thumb size is such that the text of the longest visible line may be
 scrolled <A HREF="motion.html#as">as</A> far <A HREF="motion.html#as">as</A> possible left and right.  The cursor is moved when
-necessary, <A HREF="motion.html#it">it</A> must remain on a visible character (unless <A HREF="options.html#'virtualedit'">'virtualedit'</A> is
+necessary, <A HREF="motion.html#it">它</A> must remain on a visible character (unless <A HREF="options.html#'virtualedit'">'virtualedit'</A> is
 set).
 
 Computing the length of the longest visible line takes quite a bit of
-computation, and <A HREF="motion.html#it">it</A> has to be done every time something changes.  If this
+computation, and <A HREF="motion.html#it">它</A> has to be done every time something changes.  If this
 takes too much time or you don't like the cursor jumping to another line,
 include the '<A HREF="motion.html#h">h</A>' flag in <A HREF="options.html#'guioptions'">'guioptions'</A>.  Then the <A HREF="scroll.html#scrolling">scrolling</A> is limited by the
 text of the current cursor line.
@@ -201,7 +201,7 @@ file's directory.  If you hold Ctrl Vim will always split a new<A HREF="windows.
 file.  Otherwise it's only done if the current buffer has been changed.
 
 You can also drop a directory on Vim.  This starts the explorer <A HREF="usr_05.html#plugin">plugin</A> for
-that directory (assuming <A HREF="motion.html#it">it</A> was enabled, otherwise you'll get an error
+that directory (assuming <A HREF="motion.html#it">它</A> was enabled, otherwise you'll get an error
 message).  Keep Shift pressed to change to the directory instead.
 
 If Vim happens to be editing a command line, the names of the dropped files
@@ -213,7 +213,7 @@ names with any <A HREF="intro.html#Ex">Ex</A> command.  Special characters (spac
 
 Menus							*<A NAME="menus"></A><B>menus</B>*
 
-For an introduction see |<A HREF="usr_42.html">usr_42.txt</A>| in the user manual.
+For an introduction 见 |<A HREF="usr_42.html">usr_42.txt</A>| in the user manual.
 
 
 
@@ -225,8 +225,8 @@ Long-time Vim users won't use <A HREF="#menus">menus</A> much.  But the power is
 <A HREF="#menus">menus</A> and menu items.  They are most useful for things that you can't remember
 what the key sequence was.
 
-For creating <A HREF="#menus">menus</A> in a different language, see |<A HREF="mlang.html#:menutrans">:menutrans</A>|.
-If you don't want to use <A HREF="#menus">menus</A> at all, see |<A HREF="options.html#'go-M'">'go-M'</A>|.
+For creating <A HREF="#menus">menus</A> in a different language, 见 |<A HREF="mlang.html#:menutrans">:menutrans</A>|.
+If you don't want to use <A HREF="#menus">menus</A> at all, 见 |<A HREF="options.html#'go-M'">'go-M'</A>|.
 
 
 							*<A NAME="menu.vim"></A><B>menu.vim</B>*
@@ -252,7 +252,7 @@ that (if you want to change them).
 
 							*<A NAME="console-menus"></A><B>console-menus</B>*
 Although this documentation is in the <A HREF="#GUI">GUI</A> section, you can actually use <A HREF="#menus">menus</A>
-in console mode too.  You will have to load |<A HREF="menu.html">menu.vim</A>| explicitly then, <A HREF="motion.html#it">it</A> is
+in console mode too.  You will have to load |<A HREF="menu.html">menu.vim</A>| explicitly then, <A HREF="motion.html#it">它</A> is
 not done by default.  You can use the |<A HREF="#:emenu">:emenu</A>| command and command-line
 completion with <A HREF="options.html#'wildmenu'">'wildmenu'</A> to access the menu entries almost like a real menu
 system.  To <A HREF="diff.html#do">do</A> this, put these commands in your <A HREF="starting.html#vimrc">vimrc</A> file:
@@ -262,7 +262,7 @@ system.  To <A HREF="diff.html#do">do</A> this, put these commands in your <A HR
 <B>	:set wcm=&lt;C-Z&gt;</B>
 <B>	:map &lt;F4&gt; :emenu &lt;C-Z&gt;</B>
 Pressing &lt;F4&gt; will start the menu.  You can now use the cursor keys to select
-a menu entry.  Hit <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to execute <A HREF="motion.html#it">it</A>.  Hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> if you want to cancel.
+a menu entry.  Hit <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to execute <A HREF="motion.html#it">它</A>.  Hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> if you want to cancel.
 
 
 Creating New Menus					*<A NAME="creating-menus"></A><B>creating-menus</B>*
@@ -274,7 +274,7 @@ Creating New Menus					*<A NAME="creating-menus"></A><B>creating-menus</B>*
 
 				*<A NAME="E328"></A><B>E328</B>* *<A NAME="E329"></A><B>E329</B>* *<A NAME="E337"></A><B>E337</B>* *<A NAME="E792"></A><B>E792</B>*
 To create a new menu item, use the &quot;<A HREF="#:menu">:menu</A>&quot; commands.  They are mostly like
-the &quot;<A HREF="map.html#:map">:map</A>&quot; set of commands (see |<A HREF="map.html#map-modes">map-modes</A>|), but the first argument is a menu
+the &quot;<A HREF="map.html#:map">:map</A>&quot; set of commands (见 |<A HREF="map.html#map-modes">map-modes</A>|), but the first argument is a menu
 item name, given <A HREF="motion.html#as">as</A> a path of <A HREF="#menus">menus</A> and submenus with a '<A HREF="repeat.html#.">.</A>' between them,
 e.g.:
 
@@ -295,7 +295,7 @@ Special characters in a menu name:
 	<A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>	Separates the menu name from right-aligned text.  This can be
 		used to show the equivalent typed command.  The text &quot;<A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>&quot;
 		can be used here for convenience.  If you are using a real
-		<A HREF="intro.html#tab">tab</A>, don't forget to put a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">it</A>!
+		<A HREF="intro.html#tab">tab</A>, don't forget to put a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">它</A>!
 Example:
 
 <B>   :amenu &amp;File.&amp;Open&lt;Tab&gt;:e  :browse e&lt;CR&gt;</B>
@@ -303,7 +303,7 @@ Example:
 [typed literally]
 With the shortcut &quot;<A HREF="motion.html#F">F</A>&quot; (while keeping the &lt;Alt&gt; key pressed), and then &quot;<A HREF="insert.html#O">O</A>&quot;,
 this menu can be used.  The second part is shown <A HREF="motion.html#as">as</A> &quot;Open     :e&quot;.  The &quot;<A HREF="editing.html#:e">:e</A>&quot;
-is right aligned, and the &quot;<A HREF="insert.html#O">O</A>&quot; is underlined, to indicate <A HREF="motion.html#it">it</A> is the shortcut.
+is right aligned, and the &quot;<A HREF="insert.html#O">O</A>&quot; is underlined, to indicate <A HREF="motion.html#it">它</A> is the shortcut.
 
 
 					*<A NAME=":am"></A><B>:am</B>*  *<A NAME=":amenu"></A><B>:amenu</B>*  *<A NAME=":an"></A><B>:an</B>*      *<A NAME=":anoremenu"></A><B>:anoremenu</B>*
@@ -336,9 +336,9 @@ the &quot;<A HREF="#:imenu">:imenu</A>&quot; command.  For <A HREF="insert.html#
 
 <B>   :amenu Insert.foobar   "='foobar'&lt;CR&gt;P</B>
 
-The special text <A HREF="map.html#&lt;Cmd&gt;">&lt;Cmd&gt;</A> begins a &quot;command menu&quot;, <A HREF="motion.html#it">it</A> executes the command
+The special text <A HREF="map.html#&lt;Cmd&gt;">&lt;Cmd&gt;</A> begins a &quot;command menu&quot;, <A HREF="motion.html#it">它</A> executes the command
 directly without <A HREF="change.html#changing">changing</A> modes.  Where you might use &quot;:...&lt;CR&gt;&quot; you can
-instead use &quot;&lt;Cmd&gt;...&lt;CR&gt;&quot;.  See |<A HREF="map.html#&lt;Cmd&gt;">&lt;Cmd&gt;</A>| for more info.  Example:
+instead use &quot;&lt;Cmd&gt;...&lt;CR&gt;&quot;.  见 |<A HREF="map.html#&lt;Cmd&gt;">&lt;Cmd&gt;</A>| for more info.  Example:
 <B>	anoremenu File.Next &lt;Cmd&gt;next&lt;CR&gt;</B>
 
 Note that <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> in <A HREF="cmdline.html#Cmdline">Cmdline</A> mode executes the command, like in a <A HREF="map.html#mapping">mapping</A>.  This
@@ -413,7 +413,7 @@ The default <A HREF="#menus">menus</A> have these priorities:
 When no or zero priority is given, 500 is used.
 The priority for the PopUp menu is not used.
 
-You can use a priority higher than 9999, to make <A HREF="motion.html#it">it</A> go after the Help menu,
+You can use a priority higher than 9999, to make <A HREF="motion.html#it">它</A> go after the Help menu,
 but that is non-standard and is discouraged.  The highest possible priority is
 about 32000.  The lowest is 1.
 
@@ -426,11 +426,11 @@ Giving the sub-menu priority is only needed when the item is not to be put
 in a normal position.  For example, to put a sub-menu before the other items:
 <B>	:menu 80.100 Buffer.first :brew&lt;CR&gt;</B>
 Or to put a sub-menu after the other items, and further items with default
-priority will be put before <A HREF="motion.html#it">it</A>:
+priority will be put before <A HREF="motion.html#it">它</A>:
 <B>	:menu 80.900 Buffer.last :blast&lt;CR&gt;</B>
 When a number is missing, the default value 500 will be used:
 <B>	:menu .900 myMenu.test :echo "text"&lt;CR&gt;</B>
-The menu priority is only used when creating a new menu.  When <A HREF="motion.html#it">it</A> already
+The menu priority is only used when creating a new menu.  When <A HREF="motion.html#it">它</A> already
 existed, e.g., in another mode, the priority will not change.  Thus, the
 priority only needs to be given the first time a menu is used.
 An exception is the PopUp menu.  There is a separate menu for each mode
@@ -444,13 +444,13 @@ NOTE: sub-menu priorities currently don't work for all versions of the <A HREF="
 Menu items can be separated by a special item that inserts some space between
 items.  Depending on the system this is displayed <A HREF="motion.html#as">as</A> a line or a dotted line.
 These items must start with a '<A HREF="motion.html#-">-</A>' and end in a '<A HREF="motion.html#-">-</A>'.  The part in between is
-used to give <A HREF="motion.html#it">it</A> a unique name.  Priorities can be used <A HREF="motion.html#as">as</A> with normal items.
+used to give <A HREF="motion.html#it">它</A> a unique name.  Priorities can be used <A HREF="motion.html#as">as</A> with normal items.
 Example:
 <B>	:menu Example.item1	:do something</B>
 <B>	:menu Example.-Sep-	:</B>
 <B>	:menu Example.item2	:do something different</B>
-Note that the separator also requires a rhs.  It doesn't matter what <A HREF="motion.html#it">it</A> is,
-because the item will never be selected.  Use a single colon to keep <A HREF="motion.html#it">it</A>
+Note that the separator also requires a rhs.  It doesn't matter what <A HREF="motion.html#it">它</A> is,
+because the item will never be selected.  Use a single colon to keep <A HREF="motion.html#it">它</A>
 simple.
 
 
@@ -466,12 +466,12 @@ The toolbar is defined <A HREF="motion.html#as">as</A> a special menu called Too
 level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> follows:
 1)  If an &quot;icon=&quot; argument was specified, the file with this name is used.
     The file can either be specified with the full path or with the base name.
-    In the last <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> is searched for in the &quot;bitmaps&quot; directory in
+    In the last <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is searched for in the &quot;bitmaps&quot; directory in
     <A HREF="options.html#'runtimepath'">'runtimepath'</A>, like in point 3.  Examples:
 <B>	:amenu icon=/usr/local/pixmaps/foo_icon.xpm ToolBar.Foo :echo "Foo"&lt;CR&gt;</B>
 <B>	:amenu icon=FooIcon ToolBar.Foo :echo "Foo"&lt;CR&gt;</B>
     Note that in the first <A HREF="change.html#case">case</A> the extension is included, while in the second
-    <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> is omitted.
+    <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is omitted.
     If the file cannot be opened the next points are tried.
     A space in the file name must be escaped with a <A HREF="intro.html#backslash">backslash</A>.
     A menu priority must come _after_ the icon argument:
@@ -485,7 +485,7 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
     toolbar button image.  Note that the exact filename is OS-specific: For
     example, under Win32 the command
 <B>	:amenu ToolBar.Hello :echo "hello"&lt;CR&gt;</B>
-    would find the file 'hello.bmp'.  Under X11 <A HREF="motion.html#it">it</A> is 'Hello.xpm'.
+    would find the file 'hello.bmp'.  Under X11 <A HREF="motion.html#it">它</A> is 'Hello.xpm'.
     For MS-Windows and the bitmap is scaled to fit the button.  For
     MS-Windows a size of 18 by 18 pixels works best.
     For MS-Windows the bitmap should have 16 colors with the standard palette.
@@ -529,8 +529,8 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
 23  FindNext		search again, forward
 24  FindHelp		prompt for <A HREF="motion.html#word">单词</A> to search help for
 25  Make		run make and jump to first error
-26  TagJump		jump to <A HREF="tagsrch.html#tag">tag</A> under the cursor
-27  RunCtags		build <A HREF="tagsrch.html#tags">tags</A> for files in current directory
+26  TagJump		jump to <A HREF="tagsrch.html#tag">标签</A> under the cursor
+27  RunCtags		build <A HREF="tagsrch.html#tags">标签</A> for files in current directory
 28  WinVSplit		split current<A HREF="windows.html#window">窗口</A>vertically
 29  WinMaxWidth		make current<A HREF="windows.html#window">窗口</A>use many columns
 30  WinMinWidth		make current<A HREF="windows.html#window">窗口</A>use few columns
@@ -538,7 +538,7 @@ level.  Vim interprets the items in this menu <A HREF="motion.html#as">as</A> fo
 
 					*<A NAME="hidden-menus"></A><B>hidden-menus</B>* *<A NAME="win32-hidden-menus"></A><B>win32-hidden-menus</B>*
 In the Win32 <A HREF="#GUI">GUI</A>, starting a menu name with '<A HREF="vimindex.html#]">]</A>' excludes that menu from the
-main menu <A HREF="motion.html#bar">bar</A>.  You must then use the |<A HREF="#:popup">:popup</A>| command to display <A HREF="motion.html#it">it</A>.
+main menu <A HREF="motion.html#bar">bar</A>.  You must then use the |<A HREF="#:popup">:popup</A>| command to display <A HREF="motion.html#it">它</A>.
 
 When splitting the<A HREF="windows.html#window">窗口</A>the<A HREF="windows.html#window">窗口</A>toolbar is not copied to the new<A HREF="windows.html#window">窗口</A>.
 
@@ -556,13 +556,13 @@ To see what an existing menu is mapped to, use just one argument after the
 menu commands (just like you would with the &quot;<A HREF="map.html#:map">:map</A>&quot; commands).  If the menu
 specified is a submenu, then all <A HREF="#menus">menus</A> under that hierarchy will be shown.
 If no argument is given after <A HREF="#:menu">:menu</A> at all, then ALL menu items are shown
-for the appropriate mode (e.g., <A HREF="cmdline.html#Command-line">Command-line</A> mode for <A HREF="#:cmenu">:cmenu</A>).
+for the appropriate mode (e.g., <A HREF="cmdline.html#Command-line">命令行</A>模式 for <A HREF="#:cmenu">:cmenu</A>).
 
 Special characters in the <A HREF="eval.html#list">list</A>, just before the rhs:
 *	The menu was defined with &quot;nore&quot; to disallow remapping.
 <A HREF="change.html#&amp;">&amp;</A>	The menu was defined with &quot;&lt;script&gt;&quot; to allow remapping <A HREF="map.html#script-local">script-local</A>
 	mappings only.
-<A HREF="change.html#s">s</A>	The menu was defined with &quot;&lt;silent&gt;&quot; to avoid showing what <A HREF="motion.html#it">it</A> is
+<A HREF="change.html#s">s</A>	The menu was defined with &quot;&lt;silent&gt;&quot; to avoid showing what <A HREF="motion.html#it">它</A> is
 	mapped to when triggered.
 -	The menu was disabled.
 
@@ -577,9 +577,9 @@ Executing Menus						*<A NAME="execute-menus"></A><B>execute-menus</B>*
 						*<A NAME=":em"></A><B>:em</B>*  *<A NAME=":emenu"></A><B>:emenu</B>* *<A NAME="E334"></A><B>E334</B>* *<A NAME="E335"></A><B>E335</B>*
 :[range]em[enu] {menu}		Execute {menu} from the command line.
 				The default is to execute the <A HREF="intro.html#Normal">正常</A>模式
-				menu.  If a range is specified, <A HREF="motion.html#it">it</A> executes
+				menu.  If a range is specified, <A HREF="motion.html#it">它</A> executes
 				the <A HREF="visual.html#Visual">Visual</A> mode menu.
-				If used from &lt;c-o&gt;, <A HREF="motion.html#it">it</A> executes the
+				If used from &lt;c-o&gt;, <A HREF="motion.html#it">它</A> executes the
 				insert-mode menu Eg:
 <B>	:emenu File.Exit</B>
 
@@ -603,7 +603,7 @@ analogous to the unmap commands.  Eg:
 <B>    :unmenu! Edit.Paste</B>
 
 This will remove the Paste item from the Edit menu for <A HREF="insert.html#Insert">Insert</A> and
-<A HREF="cmdline.html#Command-line">Command-line</A> modes.
+<A HREF="cmdline.html#Command-line">命令行</A>模式s.
 
 Note that hitting <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> while entering a menu name after an umenu command
 may be used to complete the name of the menu item for the appropriate mode.
@@ -623,7 +623,7 @@ Disabling Menus						*<A NAME="disable-menus"></A><B>disable-menus</B>*
 
 
 						*<A NAME=":menu-disable"></A><B>:menu-disable</B>* *<A NAME=":menu-enable"></A><B>:menu-enable</B>*
-If you <A HREF="diff.html#do">do</A> not want to remove a menu, but disable <A HREF="motion.html#it">it</A> for a moment, this can be
+If you <A HREF="diff.html#do">do</A> not want to remove a menu, but disable <A HREF="motion.html#it">它</A> for a moment, this can be
 done by adding the &quot;enable&quot; or &quot;disable&quot; keyword to a &quot;<A HREF="#:menu">:menu</A>&quot; command.
 Examples:
 <B>	:menu disable &amp;File.&amp;Open\.\.\.</B>
@@ -633,7 +633,7 @@ Examples:
 The command applies to the modes <A HREF="motion.html#as">as</A> used with all menu commands.  Note that
 characters like &quot;<A HREF="change.html#&amp;">&amp;</A>&quot; need to be included for translated names to be found.
 When the argument is &quot;*&quot;, all <A HREF="#menus">menus</A> are affected.  Otherwise the given menu
-name and all existing submenus below <A HREF="motion.html#it">it</A> are affected.
+name and all existing submenus below <A HREF="motion.html#it">它</A> are affected.
 
 
 
@@ -670,11 +670,11 @@ See section |<A HREF="usr_42.html#42.4">42.4</A>| in the user manual.
 :tu[nmenu] {menupath}		Remove a tip for a menu or tool.
 				{only in X11 and Win32 GUI}
 
-When a tip is defined for a menu item, <A HREF="motion.html#it">it</A> appears in the command-line area
+When a tip is defined for a menu item, <A HREF="motion.html#it">它</A> appears in the command-line area
 when the mouse is over that item, much like a standard Windows menu hint in
-the status <A HREF="motion.html#bar">bar</A>.  (Except when Vim is in <A HREF="cmdline.html#Command-line">Command-line</A> mode, when of course
+the status <A HREF="motion.html#bar">bar</A>.  (Except when Vim is in <A HREF="cmdline.html#Command-line">命令行</A>模式, when of course
 nothing is displayed.)
-When a tip is defined for a ToolBar item, <A HREF="motion.html#it">it</A> appears <A HREF="motion.html#as">as</A> a tooltip when the
+When a tip is defined for a ToolBar item, <A HREF="motion.html#it">它</A> appears <A HREF="motion.html#as">as</A> a tooltip when the
 mouse pauses over that button, in the usual fashion.  Use the |<A HREF="syntax.html#hl-Tooltip">hl-Tooltip</A>|
 highlight group to change its colors.
 
@@ -683,13 +683,13 @@ item like this:
 <B>	:amenu MyMenu.Hello :echo "Hello"&lt;CR&gt;</B>
 The tip is defined like this:
 <B>	:tmenu MyMenu.Hello Displays a greeting.</B>
-And delete <A HREF="motion.html#it">it</A> with:
+And delete <A HREF="motion.html#it">它</A> with:
 <B>	:tunmenu MyMenu.Hello</B>
 
 Tooltips are currently only supported for the X11 and Win32 <A HREF="#GUI">GUI</A>.  However, they
 should appear for the other <A HREF="#gui">gui</A> platforms in the not too distant future.
 
-The &quot;<A HREF="#:tmenu">:tmenu</A>&quot; command works just like other menu commands, <A HREF="motion.html#it">it</A> uses the same
+The &quot;<A HREF="#:tmenu">:tmenu</A>&quot; command works just like other menu commands, <A HREF="motion.html#it">它</A> uses the same
 arguments.  &quot;<A HREF="#:tunmenu">:tunmenu</A>&quot; deletes an existing menu tip, in the same way <A HREF="motion.html#as">as</A> the
 other unmenu commands.
 
@@ -703,14 +703,14 @@ a menu item - you don't need to <A HREF="diff.html#do">do</A> a <A HREF="#:tunme
 In the Win32 <A HREF="#GUI">GUI</A>, you can cause a menu to popup at the cursor.  This behaves
 similarly to the PopUp <A HREF="#menus">menus</A> except that any menu tree can be popped up.
 
-This command is for backwards compatibility, using <A HREF="motion.html#it">it</A> is discouraged, because
-<A HREF="motion.html#it">it</A> behaves in a strange way.
+This command is for backwards compatibility, using <A HREF="motion.html#it">它</A> is discouraged, because
+<A HREF="motion.html#it">它</A> behaves in a strange way.
 
 
 							*<A NAME=":popup"></A><B>:popup</B>* *<A NAME=":popu"></A><B>:popu</B>*
 :popu[p] {name}			Popup the menu {name}.  The menu named must
 				have at least one subentry, but need not
-				appear on the menu-bar (see |<A HREF="#hidden-menus">hidden-menus</A>|).
+				appear on the menu-bar (见 |<A HREF="#hidden-menus">hidden-menus</A>|).
 				{only available for Win32 GUI}
 
 :popu[p]! {name}		Like above, but use the position of the mouse

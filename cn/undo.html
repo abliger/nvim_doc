@@ -98,10 +98,10 @@ The basics are explained in section |<A HREF="usr_02.html#02.5">02.5</A>| of the
 :u[ndo]			Undo one change.
 
 								*<A NAME="E830"></A><B>E830</B>*
-:u[ndo] {N}		Jump to after change number {N}.  See |<A HREF="#undo-branches">undo-branches</A>|
+:u[ndo] {N}		Jump to after change number {N}.  见 |<A HREF="#undo-branches">undo-branches</A>|
 			for the meaning of {N}.
 
-:u[ndo]!		Undo one change and remove <A HREF="motion.html#it">it</A> from <A HREF="#undo">undo</A> <A HREF="cmdline.html#history">history</A>.
+:u[ndo]!		Undo one change and remove <A HREF="motion.html#it">它</A> from <A HREF="#undo">undo</A> <A HREF="cmdline.html#history">history</A>.
 
 								*<A NAME="E5767"></A><B>E5767</B>*
 :u[ndo]! {N}		Like &quot;:u[ndo] {N}&quot;, but forget all changes in the
@@ -125,16 +125,16 @@ The basics are explained in section |<A HREF="usr_02.html#02.5">02.5</A>| of the
 			a change, and thus |<A HREF="#U">U</A>| undoes a previous |<A HREF="#U">U</A>|.
 
 The last changes are remembered.  You can use the <A HREF="#undo">undo</A> and <A HREF="#redo">redo</A> commands above
-to revert the text to how <A HREF="motion.html#it">it</A> was before each change.  You can also apply the
+to revert the text to how <A HREF="motion.html#it">它</A> was before each change.  You can also apply the
 changes again, getting back the text before the <A HREF="#undo">undo</A>.
 
 The &quot;<A HREF="#U">U</A>&quot; command is treated by undo/redo just like any other command.  Thus a
-&quot;<A HREF="#u">u</A>&quot; command undoes a &quot;<A HREF="#U">U</A>&quot; command and a '<A HREF="#CTRL-R">CTRL-R</A>' command redoes <A HREF="motion.html#it">it</A> again.  When
+&quot;<A HREF="#u">u</A>&quot; command undoes a &quot;<A HREF="#U">U</A>&quot; command and a '<A HREF="#CTRL-R">CTRL-R</A>' command redoes <A HREF="motion.html#it">它</A> again.  When
 mixing &quot;<A HREF="#U">U</A>&quot;, &quot;<A HREF="#u">u</A>&quot; and '<A HREF="#CTRL-R">CTRL-R</A>' you will notice that the &quot;<A HREF="#U">U</A>&quot; command will
 restore the situation of a line to before the previous &quot;<A HREF="#U">U</A>&quot; command.  This may
-be confusing.  Try <A HREF="motion.html#it">it</A> out to get used to <A HREF="motion.html#it">it</A>.
+be confusing.  Try <A HREF="motion.html#it">它</A> out to get used to <A HREF="motion.html#it">它</A>.
 The &quot;<A HREF="#U">U</A>&quot; command will always <A HREF="motion.html#mark">mark</A> the buffer <A HREF="motion.html#as">as</A> changed.  When &quot;<A HREF="#U">U</A>&quot; changes the
-buffer back to how <A HREF="motion.html#it">it</A> was without changes, <A HREF="motion.html#it">it</A> is still considered changed.
+buffer back to how <A HREF="motion.html#it">它</A> was without changes, <A HREF="motion.html#it">它</A> is still considered changed.
 Use &quot;<A HREF="#u">u</A>&quot; to <A HREF="#undo">undo</A> changes until the buffer becomes unchanged.
 
 ==============================================================================
@@ -162,7 +162,7 @@ repeat a change command, use &quot;<A HREF="repeat.html#.">.</A>&quot; for that.
 
 Rationale:  <A HREF="intro.html#Nvi">Nvi</A> uses the &quot;<A HREF="repeat.html#.">.</A>&quot; command instead of <A HREF="#CTRL-R">CTRL-R</A>.  Unfortunately, this
 	    is not <A HREF="intro.html#Vi">Vi</A> compatible.  For example &quot;dwdwu.&quot; in <A HREF="intro.html#Vi">Vi</A> deletes two
-	    words, in <A HREF="intro.html#Nvi">Nvi</A> <A HREF="motion.html#it">it</A> does nothing.
+	    words, in <A HREF="intro.html#Nvi">Nvi</A> <A HREF="motion.html#it">它</A> does nothing.
 
 ==============================================================================
 
@@ -179,7 +179,7 @@ change but joins in with the previous change use this command:
 
 						*<A NAME=":undoj"></A><B>:undoj</B>* *<A NAME=":undojoin"></A><B>:undojoin</B>* *<A NAME="E790"></A><B>E790</B>*
 :undoj[oin]		Join further changes with the previous <A HREF="#undo">undo</A> block.
-			Warning: Use with care, <A HREF="motion.html#it">it</A> may prevent the user from
+			Warning: Use with care, <A HREF="motion.html#it">它</A> may prevent the user from
 			properly undoing changes.  Don't use this after <A HREF="#undo">undo</A>
 			or <A HREF="#redo">redo</A>.
 
@@ -208,7 +208,7 @@ is equal to the old value:
 
 4. Undo branches				*<A NAME="undo-branches"></A><B>undo-branches</B>* *<A NAME="undo-tree"></A><B>undo-tree</B>*
 
-Above we only discussed one line of undo/redo.  But <A HREF="motion.html#it">it</A> is also possible to
+Above we only discussed one line of undo/redo.  But <A HREF="motion.html#it">它</A> is also possible to
 branch off.  This happens when you <A HREF="#undo">undo</A> a few changes and then make a new
 change.  The undone changes become a branch.  You can go to that branch with
 the following commands.
@@ -226,7 +226,7 @@ This is explained in the user manual: |<A HREF="usr_32.html">usr_32.txt</A>|.
 
 			The &quot;number&quot; column is the change number.  This number
 			continuously increases and can be used to identify a
-			specific undo-able change, see |<A HREF="#:undo">:undo</A>|.
+			specific undo-able change, 见 |<A HREF="#:undo">:undo</A>|.
 			The &quot;changes&quot; column is the number of changes to this
 			leaf from the root of the tree.
 			The &quot;when&quot; column is the date and time when this
@@ -236,7 +236,7 @@ This is explained in the user manual: |<A HREF="usr_32.html">usr_32.txt</A>|.
 			    MM/DD HH:MM:SS       idem, with month and day
 			    YYYY/MM/DD HH:MM:SS  idem, with year
 			The &quot;saved&quot; column specifies, if this change was
-			written to disk and which file write <A HREF="motion.html#it">it</A> was. This can
+			written to disk and which file write <A HREF="motion.html#it">它</A> was. This can
 			be used with the |<A HREF="#:later">:later</A>| and |<A HREF="#:earlier">:earlier</A>| commands.
 			For more details use the |<A HREF="builtin.html#undotree()">undotree()</A>| function.
 
@@ -255,7 +255,7 @@ This is explained in the user manual: |<A HREF="usr_32.html">usr_32.txt</A>|.
 <A HREF="#:earlier">:earlier</A> {N}f		Go to older text state {N} file writes before.
 			When changes were made since the last write
 			&quot;<A HREF="#:earlier">:earlier</A> 1f&quot; will revert the text to the state when
-			<A HREF="motion.html#it">it</A> was written.  Otherwise <A HREF="motion.html#it">it</A> will go to the write
+			<A HREF="motion.html#it">它</A> was written.  Otherwise <A HREF="motion.html#it">它</A> will go to the write
 			before that.
 			When at the state of the first file write, or when
 			the file was not written, &quot;<A HREF="#:earlier">:earlier</A> 1f&quot; will go to
@@ -342,8 +342,8 @@ for, you can use a <A HREF="autocmd.html#BufWritePre">BufWritePre</A> <A HREF="a
 
 Vim saves <A HREF="#undo">undo</A> trees in a separate <A HREF="#undo">undo</A> file, one for each edited file, using
 a simple scheme that maps filesystem paths directly to <A HREF="#undo">undo</A> files. Vim will
-detect if an <A HREF="#undo">undo</A> file is no longer synchronized with the file <A HREF="motion.html#it">it</A> was written
-for (with a hash of the file contents) and ignore <A HREF="motion.html#it">it</A> when the file was changed
+detect if an <A HREF="#undo">undo</A> file is no longer synchronized with the file <A HREF="motion.html#it">它</A> was written
+for (with a hash of the file contents) and ignore <A HREF="motion.html#it">它</A> when the file was changed
 after the <A HREF="#undo">undo</A> file was written, to prevent corruption.  An <A HREF="#undo">undo</A> file is also
 ignored if its owner differs from the owner of the edited file, except when
 the owner of the <A HREF="#undo">undo</A> file is the current user.  Set <A HREF="options.html#'verbose'">'verbose'</A> to get a
@@ -358,15 +358,15 @@ respectively:
 							*<A NAME=":wundo"></A><B>:wundo</B>* *<A NAME=":rundo"></A><B>:rundo</B>*
 :wundo[!] <A HREF="editing.html#{file}">{file}</A>
 		Write <A HREF="#undo">undo</A> <A HREF="cmdline.html#history">history</A> to <A HREF="editing.html#{file}">{file}</A>.
-		When <A HREF="editing.html#{file}">{file}</A> exists and <A HREF="motion.html#it">it</A> does not look like an <A HREF="#undo">undo</A> file
+		When <A HREF="editing.html#{file}">{file}</A> exists and <A HREF="motion.html#it">它</A> does not look like an <A HREF="#undo">undo</A> file
 		(the magic number at the start of the file is wrong), then
 		this fails, unless the ! was added.
-		If <A HREF="motion.html#it">it</A> exists and does look like an <A HREF="#undo">undo</A> file <A HREF="motion.html#it">it</A> is
+		If <A HREF="motion.html#it">它</A> exists and does look like an <A HREF="#undo">undo</A> file <A HREF="motion.html#it">它</A> is
 		overwritten. If there is no undo-history, nothing will be
 		written.
 		Implementation detail: Overwriting happens by first <A HREF="change.html#deleting">deleting</A>
 		the existing file and then creating a new file with the same
-		name. So <A HREF="motion.html#it">it</A> is not possible to overwrite an existing undofile
+		name. So <A HREF="motion.html#it">它</A> is not possible to overwrite an existing undofile
 		in a write-protected directory.
 
 <A HREF="#:rundo">:rundo</A> <A HREF="editing.html#{file}">{file}</A>	Read <A HREF="#undo">undo</A> <A HREF="cmdline.html#history">history</A> from <A HREF="editing.html#{file}">{file}</A>.
@@ -403,17 +403,17 @@ NOTE: <A HREF="#undo">undo</A> files are never deleted by Vim.  You need to dele
 
 Reading an existing <A HREF="#undo">undo</A> file may fail for several reasons:
 
-*<A NAME="E822"></A><B>E822</B>*	It cannot be opened, because the file permissions don't allow <A HREF="motion.html#it">it</A>.
+*<A NAME="E822"></A><B>E822</B>*	It cannot be opened, because the file permissions don't allow <A HREF="motion.html#it">它</A>.
 
 *<A NAME="E823"></A><B>E823</B>*	The magic number at the start of the file doesn't match.  This usually
-	means <A HREF="motion.html#it">it</A> is not an <A HREF="#undo">undo</A> file.
+	means <A HREF="motion.html#it">它</A> is not an <A HREF="#undo">undo</A> file.
 
 *<A NAME="E824"></A><B>E824</B>*	The version number of the <A HREF="#undo">undo</A> file indicates that it's written by a
-	newer version of Vim.  You need that newer version to open <A HREF="motion.html#it">it</A>.  Don't
+	newer version of Vim.  You need that newer version to open <A HREF="motion.html#it">它</A>.  Don't
 	write the buffer if you want to keep the <A HREF="#undo">undo</A> info in the file.
 &quot;File contents changed, cannot use <A HREF="#undo">undo</A> info&quot;
 	The file text differs from when the <A HREF="#undo">undo</A> file was written.  This means
-	the <A HREF="#undo">undo</A> file cannot be used, <A HREF="motion.html#it">it</A> would corrupt the text.  This also
+	the <A HREF="#undo">undo</A> file cannot be used, <A HREF="motion.html#it">它</A> would corrupt the text.  This also
 	happens when <A HREF="options.html#'encoding'">'encoding'</A> differs from when the <A HREF="#undo">undo</A> file was written.
 
 *<A NAME="E825"></A><B>E825</B>*  The <A HREF="#undo">undo</A> file does not contain valid contents and cannot be used.
@@ -428,12 +428,12 @@ Writing an <A HREF="#undo">undo</A> file may fail for these reasons:
 &quot;Cannot write <A HREF="#undo">undo</A> file in any directory in 'undodir&#39;&#34;'
 	None of the directories in <A HREF="options.html#'undodir'">'undodir'</A> can be used.
 &quot;Will not overwrite with <A HREF="#undo">undo</A> file, cannot read&quot;
-	A file exists with the name of the <A HREF="#undo">undo</A> file to be written, but <A HREF="motion.html#it">it</A>
-	cannot be read.  You may want to delete this file or rename <A HREF="motion.html#it">it</A>.
+	A file exists with the name of the <A HREF="#undo">undo</A> file to be written, but <A HREF="motion.html#it">它</A>
+	cannot be read.  You may want to delete this file or rename <A HREF="motion.html#it">它</A>.
 &quot;Will not overwrite, this is not an <A HREF="#undo">undo</A> file&quot;
-	A file exists with the name of the <A HREF="#undo">undo</A> file to be written, but <A HREF="motion.html#it">it</A>
+	A file exists with the name of the <A HREF="#undo">undo</A> file to be written, but <A HREF="motion.html#it">它</A>
 	does not start with the right magic number.  You may want to delete
-	this file or rename <A HREF="motion.html#it">it</A>.
+	this file or rename <A HREF="motion.html#it">它</A>.
 &quot;Skipping <A HREF="#undo">undo</A> file write, nothing to undo&quot;
 	There is no <A HREF="#undo">undo</A> information to be written, nothing has been changed
 	or <A HREF="options.html#'undolevels'">'undolevels'</A> is negative.
@@ -446,7 +446,7 @@ Writing an <A HREF="#undo">undo</A> file may fail for these reasons:
 6. Remarks about <A HREF="#undo">undo</A>					*<A NAME="undo-remarks"></A><B>undo-remarks</B>*
 
 The number of changes that are remembered is set with the <A HREF="options.html#'undolevels'">'undolevels'</A> option.
-If <A HREF="motion.html#it">it</A> is zero, the Vi-compatible way is always used.  If <A HREF="motion.html#it">it</A> is negative no
+If <A HREF="motion.html#it">它</A> is zero, the Vi-compatible way is always used.  If <A HREF="motion.html#it">它</A> is negative no
 <A HREF="#undo">undo</A> is possible.  Use this if you are running out of memory.
 
 
@@ -470,11 +470,11 @@ Note that this is relative to the last write of the file.  Typing &quot;<A HREF=
 is considered changed then.
 
 When manual |<A HREF="fold.html#folding">folding</A>| is being used, the <A HREF="fold.html#folds">folds</A> are not saved and restored.
-Only changes completely within a fold will keep the fold <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> was, because
+Only changes completely within a fold will keep the fold <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was, because
 the first and last line of the fold don't change.
 
 The numbered <A HREF="change.html#registers">registers</A> can also be used for undoing deletes.  Each time you
-delete text, <A HREF="motion.html#it">it</A> is put into <A HREF="intro.html#register">register</A> &quot;1.  The contents of <A HREF="intro.html#register">register</A> &quot;1 are
+delete text, <A HREF="motion.html#it">它</A> is put into <A HREF="intro.html#register">register</A> &quot;1.  The contents of <A HREF="intro.html#register">register</A> &quot;1 are
 shifted to &quot;2, etc.  The contents of <A HREF="intro.html#register">register</A> &quot;9 are lost.  You can now get
 back the most recent deleted text with the put command: &#39;&#34;'1P'.  (also, if the
 deleted text was the result of the last delete or copy operation, '<A HREF="change.html#P">P</A>' or '<A HREF="change.html#p">p</A>'
@@ -488,12 +488,12 @@ special feature of the repeat command &quot;<A HREF="repeat.html#.">.</A>&quot;.
 <A HREF="intro.html#register">register</A> used.  So if you first <A HREF="diff.html#do">do</A> &#39;&#34;'1P', the following &quot;<A HREF="repeat.html#.">.</A>&quot; will result in a
 &#39;&#34;'2P'.  Repeating this will result in all numbered <A HREF="change.html#registers">registers</A> being inserted.
 
-Example:	If you deleted text with 'dd....' <A HREF="motion.html#it">it</A> can be restored with
+Example:	If you deleted text with 'dd....' <A HREF="motion.html#it">它</A> can be restored with
 		&#39;&#34;'1P....'.
 
 If you don't know in which <A HREF="intro.html#register">register</A> the deleted text is, you can use the
 <A HREF="change.html#:display">:display</A> command.  An alternative is to try the first <A HREF="intro.html#register">register</A> with &#39;&#34;'1P', and
-if <A HREF="motion.html#it">it</A> is not what you want <A HREF="diff.html#do">do</A> 'u.'.  This will remove the contents of the
+if <A HREF="motion.html#it">它</A> is not what you want <A HREF="diff.html#do">do</A> 'u.'.  This will remove the contents of the
 first put, and repeat the put command for the second <A HREF="intro.html#register">register</A>.  Repeat the
 'u.' until you got what you want.
 

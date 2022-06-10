@@ -86,9 +86,9 @@ This is about editing text in languages which have many characters that can
 not be represented using one byte (one octet).  Examples are <A HREF="#Chinese">Chinese</A>, <A HREF="#Japanese">Japanese</A>
 and <A HREF="#Korean">Korean</A>.  <A HREF="#Unicode">Unicode</A> is also covered here.
 
-For an introduction to the most common features, see |<A HREF="usr_45.html">usr_45.txt</A>| in the user
+For an introduction to the most common features, 见 |<A HREF="usr_45.html">usr_45.txt</A>| in the user
 manual.
-For <A HREF="change.html#changing">changing</A> the language of <A HREF="message.html#messages">messages</A> and <A HREF="gui.html#menus">menus</A> see |<A HREF="mlang.html">mlang.txt</A>|.
+For <A HREF="change.html#changing">changing</A> the language of <A HREF="message.html#messages">messages</A> and <A HREF="gui.html#menus">menus</A> 见 |<A HREF="mlang.html">mlang.txt</A>|.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -96,19 +96,19 @@ For <A HREF="change.html#changing">changing</A> the language of <A HREF="message
 
 Getting started						*<A NAME="mbyte-first"></A><B>mbyte-first</B>*
 
-This is a summary of the <A HREF="#multibyte">multibyte</A> features in Vim.  If you are lucky <A HREF="motion.html#it">it</A> works
+This is a summary of the <A HREF="#multibyte">multibyte</A> features in Vim.  If you are lucky <A HREF="motion.html#it">它</A> works
 <A HREF="motion.html#as">as</A> described and you can start using Vim without much trouble.  If something
-doesn't work you will have to read the rest.  Don't be surprised if <A HREF="motion.html#it">it</A> takes
+doesn't work you will have to read the rest.  Don't be surprised if <A HREF="motion.html#it">它</A> takes
 quite a bit of work and experimenting to make Vim use all the <A HREF="#multibyte">multibyte</A>
 features.  Unfortunately, every system has its own way to deal with <A HREF="#multibyte">multibyte</A>
-languages and <A HREF="motion.html#it">it</A> is quite complicated.
+languages and <A HREF="motion.html#it">它</A> is quite complicated.
 
 
 LOCALE
 
 First of all, you must make sure your current <A HREF="#locale">locale</A> is set correctly.  If
-your system has been installed to use the language, <A HREF="motion.html#it">it</A> probably works right
-away.  If not, you can often make <A HREF="motion.html#it">it</A> work by setting the $LANG environment
+your system has been installed to use the language, <A HREF="motion.html#it">它</A> probably works right
+away.  If not, you can often make <A HREF="motion.html#it">它</A> work by setting the $LANG environment
 variable in your shell:
 
 <B>	setenv LANG ja_JP.EUC</B>
@@ -124,9 +124,9 @@ To change the <A HREF="#locale">locale</A> inside Vim use:
 
 Vim will give an error message if this doesn't work.  This is a good way to
 experiment and find the <A HREF="#locale">locale</A> name you want to use.  But it's always better
-to set the <A HREF="#locale">locale</A> in the shell, so that <A HREF="motion.html#it">it</A> is used right from the start.
+to set the <A HREF="#locale">locale</A> in the shell, so that <A HREF="motion.html#it">它</A> is used right from the start.
 
-See |<A HREF="#mbyte-locale">mbyte-locale</A>| for details.
+见 |<A HREF="#mbyte-locale">mbyte-locale</A>| for details.
 
 
 ENCODING
@@ -138,13 +138,13 @@ All the text that is used inside Vim will be in <A HREF="#UTF-8">UTF-8</A>. Not 
 the <A HREF="windows.html#buffers">buffers</A>, but also in <A HREF="change.html#registers">registers</A>, <A HREF="eval.html#variables">variables</A>, etc.
 
 You can edit files in different encodings than <A HREF="#UTF-8">UTF-8</A>.  Nvim
-will convert the file when you read <A HREF="motion.html#it">it</A> and convert <A HREF="motion.html#it">it</A> back when you write <A HREF="motion.html#it">it</A>.
+will convert the file when you read <A HREF="motion.html#it">它</A> and convert <A HREF="motion.html#it">它</A> back when you write <A HREF="motion.html#it">它</A>.
 See <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'fileencodings'">'fileencodings'</A> and |<A HREF="editing.html#++enc">++enc</A>|.
 
 
 DISPLAY AND FONTS
 
-If you are working in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (emulator) you must make sure <A HREF="motion.html#it">it</A> accepts
+If you are working in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (emulator) you must make sure <A HREF="motion.html#it">它</A> accepts
 <A HREF="#UTF-8">UTF-8</A>, the encoding which Vim is working with. Otherwise only ASCII can
 be displayed and edited correctly.
 
@@ -163,9 +163,9 @@ You can also set <A HREF="options.html#'guifont'">'guifont'</A> alone, the Nvim 
 INPUT
 
 There are several ways to enter <A HREF="#multibyte">multibyte</A> characters:
-- For X11 XIM can be used.  See |<A HREF="#XIM">XIM</A>|.
-- For MS-Windows IME can be used.  See |<A HREF="intro.html#IME">IME</A>|.
-- For all systems keymaps can be used.  See |<A HREF="#mbyte-keymap">mbyte-keymap</A>|.
+- For X11 XIM can be used.  见 |<A HREF="#XIM">XIM</A>|.
+- For MS-Windows IME can be used.  见 |<A HREF="intro.html#IME">IME</A>|.
+- For all systems keymaps can be used.  见 |<A HREF="#mbyte-keymap">mbyte-keymap</A>|.
 
 The <A HREF="options.html#options">options</A> <A HREF="options.html#'iminsert'">'iminsert'</A>, <A HREF="options.html#'imsearch'">'imsearch'</A> and <A HREF="options.html#'imcmdline'">'imcmdline'</A> can be used to choose
 the different input methods or disable them temporarily.
@@ -189,10 +189,10 @@ information about the used language, the <A HREF="#charset">charset</A>, collati
 date format, currency format and so on.  For Vim only the language and <A HREF="#charset">charset</A>
 really matter.
 
-You can only use a <A HREF="#locale">locale</A> if your system has support for <A HREF="motion.html#it">it</A>.  Some systems
+You can only use a <A HREF="#locale">locale</A> if your system has support for <A HREF="motion.html#it">它</A>.  Some systems
 have only a few locales, especially in the USA.  The language which you want
 to use may not be on your system.  In that <A HREF="change.html#case">case</A> you might be able to install
-<A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> an extra package.  Check your system documentation for how to <A HREF="diff.html#do">do</A> that.
+<A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> an extra package.  Check your system documentation for how to <A HREF="diff.html#do">do</A> that.
 
 The location in which the locales are installed varies from system to system.
 For example, &quot;/usr/share/locale&quot; or &quot;/usr/lib/locale&quot;.  See your system's
@@ -204,7 +204,7 @@ different.  Some systems have a locale.alias file, which allows translation
 from a short name like &quot;nl&quot; to the full name &quot;nl_NL.ISO_8859-1&quot;.
 
 Note that X-windows has its own <A HREF="#locale">locale</A> stuff.  And unfortunately uses <A HREF="#locale">locale</A>
-names different from what is used elsewhere.  This is confusing!  For Vim <A HREF="motion.html#it">it</A>
+names different from what is used elsewhere.  This is confusing!  For Vim <A HREF="motion.html#it">它</A>
 matters what the setlocale() function uses, which is generally NOT the
 X-windows stuff.  You might have to <A HREF="diff.html#do">do</A> some experiments to find out what
 really works.
@@ -222,7 +222,7 @@ example, the <A HREF="#locale">locale</A> name &quot;ja_JP.eucJP&quot; means:
 	ja	the language is <A HREF="#Japanese">Japanese</A>
 	JP	the country is Japan
 	eucJP	the <A HREF="#codeset">codeset</A> is EUC-JP
-But <A HREF="motion.html#it">it</A> also could be &quot;ja&quot;, &quot;ja_JP.EUC&quot;, &quot;ja_JP.ujis&quot;, etc.  And unfortunately,
+But <A HREF="motion.html#it">它</A> also could be &quot;ja&quot;, &quot;ja_JP.EUC&quot;, &quot;ja_JP.ujis&quot;, etc.  And unfortunately,
 the <A HREF="#locale">locale</A> name for a specific language, territory and <A HREF="#codeset">codeset</A> is not unified
 and depends on your system.
 
@@ -239,7 +239,7 @@ Examples of <A HREF="#locale">locale</A> name:
 USING A LOCALE
 
 To start using a <A HREF="#locale">locale</A> for the whole system, see the documentation of your
-system.  Mostly you need to set <A HREF="motion.html#it">it</A> in a configuration file in &quot;/etc&quot;.
+system.  Mostly you need to set <A HREF="motion.html#it">它</A> in a configuration file in &quot;/etc&quot;.
 
 To use a <A HREF="#locale">locale</A> in a shell, set the $LANG environment value.  When you want to
 use <A HREF="#Korean">Korean</A> and the |<A HREF="#locale">locale</A>| name is &quot;ko&quot;, <A HREF="diff.html#do">do</A> this:
@@ -247,7 +247,7 @@ use <A HREF="#Korean">Korean</A> and the |<A HREF="#locale">locale</A>| name is 
     sh:    export LANG=ko
     csh:   setenv LANG ko
 
-You can put this in your ~/.profile or ~/.cshrc file to always use <A HREF="motion.html#it">it</A>.
+You can put this in your ~/.profile or ~/.cshrc file to always use <A HREF="motion.html#it">它</A>.
 
 To use a <A HREF="#locale">locale</A> in Vim only, use the |<A HREF="mlang.html#:language">:language</A>| command:
 
@@ -285,7 +285,7 @@ encoding.  This allows using much more than 256 characters, which is required
 for most East Asian languages.
 
 Most <A HREF="#multibyte">multibyte</A> encodings use one byte for the first 127 characters.  These
-are equal to ASCII, which makes <A HREF="motion.html#it">it</A> easy to exchange plain-ASCII text, no
+are equal to ASCII, which makes <A HREF="motion.html#it">它</A> easy to exchange plain-ASCII text, no
 matter what language is used.  Thus you might see the right text even when the
 encoding was set wrong.
 
@@ -399,7 +399,7 @@ first):
 	    ucs-4	11 22 33 44	11223344
 	    ucs-4le	44 33 22 11	11223344
 
-On MS-Windows systems you often want to use &quot;ucs-2le&quot;, because <A HREF="motion.html#it">it</A> uses little
+On MS-Windows systems you often want to use &quot;ucs-2le&quot;, because <A HREF="motion.html#it">它</A> uses little
 endian UCS-2.
 
 There are a few encodings which are similar, but not exactly the same.  Vim
@@ -450,7 +450,7 @@ Useful utilities for converting the <A HREF="#charset">charset</A>:
 	<A HREF="ftp://ftp.kaist.ac.kr/pub/hangul/code/hmconv/">ftp://ftp.kaist.ac.kr/pub/hangul/code/hmconv/</A>
 
     Multilingual:   lv
-	Lv is a Powerful Multilingual File Viewer.  And <A HREF="motion.html#it">it</A> can be worked <A HREF="motion.html#as">as</A>
+	Lv is a Powerful Multilingual File Viewer.  And <A HREF="motion.html#it">它</A> can be worked <A HREF="motion.html#as">as</A>
 	|<A HREF="#charset">charset</A>| converter.  Supported |<A HREF="#charset">charset</A>|: ISO-2022-CN, ISO-2022-JP,
 	ISO-2022-KR, EUC-CN, EUC-JP, EUC-KR, EUC-TW, UTF-7, <A HREF="#UTF-8">UTF-8</A>, ISO-8859
 	series, Shift_JIS, Big5 and HZ.  Lv can be found at:
@@ -466,7 +466,7 @@ conversion needs to be done.  These conversions are supported:
 - For MS-Windows, conversion from and
   to any codepage should work.
 - Conversion specified with <A HREF="options.html#'charconvert'">'charconvert'</A>
-- Conversion with the iconv library, if <A HREF="motion.html#it">it</A> is available.
+- Conversion with the iconv library, if <A HREF="motion.html#it">它</A> is available.
 	Old versions of GNU <A HREF="builtin.html#iconv()">iconv()</A> may cause the conversion to fail (they
 	request a very large buffer, more than Vim is willing to provide).
 	Try getting another <A HREF="builtin.html#iconv()">iconv()</A> implementation.
@@ -491,7 +491,7 @@ is suitable for complex input, such <A HREF="motion.html#as">as</A> CJK.
   give the application the result of input.  On the other hand, the BackEnd
   system works reverse order.  MS-Windows adopt BackEnd system.  In X, most of
   |<A HREF="#IM-server">IM-server</A>|s adopt FrontEnd system.  The demerit of BackEnd system is the
-  large overhead in communication, but <A HREF="motion.html#it">it</A> provides safe synchronization with
+  large overhead in communication, but <A HREF="motion.html#it">它</A> provides safe synchronization with
   no restrictions on applications.
 
   For example, there are xwnmo and kinput2 <A HREF="#Japanese">Japanese</A> |<A HREF="#IM-server">IM-server</A>|, both are
@@ -499,7 +499,7 @@ is suitable for complex input, such <A HREF="motion.html#as">as</A> CJK.
  found at:	<A HREF="ftp://ftp.sra.co.jp/pub/x11/kinput2/">ftp://ftp.sra.co.jp/pub/x11/kinput2/</A>
 
   For <A HREF="#Chinese">Chinese</A>, there's a great <A HREF="#XIM">XIM</A> server named &quot;xcin&quot;, you can input both
-  Traditional and Simplified <A HREF="#Chinese">Chinese</A> characters.  And <A HREF="motion.html#it">it</A> can accept other
+  Traditional and Simplified <A HREF="#Chinese">Chinese</A> characters.  And <A HREF="motion.html#it">它</A> can accept other
   <A HREF="#locale">locale</A> if you make a correct input table.  Xcin can be found at:
 	<A HREF="http://cle.linux.org.tw/xcin/">http://cle.linux.org.tw/xcin/</A>
  Others are scim:	<A HREF="http://scim.freedesktop.org/">http://scim.freedesktop.org/</A> and fcitx:
@@ -509,8 +509,8 @@ is suitable for complex input, such <A HREF="motion.html#as">as</A> CJK.
 
 							*<A NAME="conversion-server"></A><B>conversion-server</B>*
   Some system needs additional server: conversion server.  Most of <A HREF="#Japanese">Japanese</A>
-  |<A HREF="#IM-server">IM-server</A>|s need <A HREF="motion.html#it">it</A>, Kana-Kanji conversion server.  For <A HREF="#Chinese">Chinese</A> inputting,
-  <A HREF="motion.html#it">it</A> depends on the <A HREF="eval.html#method">method</A> of inputting, in some methods, PinYin or ZhuYin to
+  |<A HREF="#IM-server">IM-server</A>|s need <A HREF="motion.html#it">它</A>, Kana-Kanji conversion server.  For <A HREF="#Chinese">Chinese</A> inputting,
+  <A HREF="motion.html#it">它</A> depends on the <A HREF="eval.html#method">method</A> of inputting, in some methods, PinYin or ZhuYin to
   HanZi conversion server is needed.  For <A HREF="#Korean">Korean</A> inputting, if you want to
   input Hanja, Hangul-Hanja conversion server is needed.
 
@@ -537,7 +537,7 @@ Use the RPM or port for your system.
 
 							*<A NAME="xim-input-style"></A><B>xim-input-style</B>*
   When inputting CJK, there are four areas:
-      1. The area to display of the input while <A HREF="motion.html#it">it</A> is being composed
+      1. The area to display of the input while <A HREF="motion.html#it">它</A> is being composed
       2. The area to display the currently active input mode.
       3. The area to display the next candidate for the selection.
       4. The area to display other tools.
@@ -567,7 +567,7 @@ Use the RPM or port for your system.
     Status Area is created in a fixed position within the area of application,
     in <A HREF="change.html#case">case</A> of Vim, the position is the additional status line.  Preedit Area
     is made at present input position of application.  The input <A HREF="eval.html#method">method</A>
-    displays pre-edit data in a<A HREF="windows.html#window">窗口</A>which <A HREF="motion.html#it">it</A> brings up directly over the
+    displays pre-edit data in a<A HREF="windows.html#window">窗口</A>which <A HREF="motion.html#it">它</A> brings up directly over the
     text insertion position.
 *.  off-the-spot					*OffTheSpot*
     Preedit Area and Status Area are performed in the area of application, in
@@ -586,7 +586,7 @@ USING <A HREF="#XIM">XIM</A>			*<A NAME="multibyte-input"></A><B>multibyte-input
 					*<A NAME="E288"></A><B>E288</B>* *<A NAME="E289"></A><B>E289</B>*
 
 Note that Display and Input are independent.  It is possible to see your
-language even though you have no input <A HREF="eval.html#method">method</A> for <A HREF="motion.html#it">it</A>.  But when your Display
+language even though you have no input <A HREF="eval.html#method">method</A> for <A HREF="motion.html#it">它</A>.  But when your Display
 <A HREF="eval.html#method">method</A> doesn't match your Input <A HREF="eval.html#method">method</A>, the text will be displayed wrong.
 
 To input your language you should run the |<A HREF="#IM-server">IM-server</A>| which supports your
@@ -617,7 +617,7 @@ For example, when you are using kinput2 <A HREF="motion.html#as">as</A> |<A HREF
 When using |<A HREF="#OverTheSpot">OverTheSpot</A>|, <A HREF="gui.html#GUI">GUI</A> Vim always connects to the IM Server even in
 <A HREF="intro.html#Normal">正常</A>模式, so you can input your language with commands like &quot;<A HREF="motion.html#f">f</A>&quot; and &quot;<A HREF="change.html#r">r</A>&quot;.
 But when using one of the other two methods, <A HREF="gui.html#GUI">GUI</A> Vim connects to the IM Server
-only if <A HREF="motion.html#it">it</A> is not in <A HREF="intro.html#Normal">正常</A>模式.
+only if <A HREF="motion.html#it">它</A> is not in <A HREF="intro.html#Normal">正常</A>模式.
 
 If your IM Server does not support |<A HREF="#OverTheSpot">OverTheSpot</A>|, and if you want to use your
 language with some <A HREF="intro.html#Normal">正常</A>模式 command like &quot;<A HREF="motion.html#f">f</A>&quot; or &quot;<A HREF="change.html#r">r</A>&quot;, then you should use a
@@ -656,13 +656,13 @@ The file name with &quot;<A HREF="#utf-8">utf-8</A>&quot; included is tried firs
 available keymap files, use this:
 <B>	:echo globpath(&amp;rtp, "keymap/*.vim")</B>
 
-In <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A> mode you can use <A HREF="editing.html#CTRL-^">CTRL-^</A> to toggle between using the
+In <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">命令行</A>模式 you can use <A HREF="editing.html#CTRL-^">CTRL-^</A> to toggle between using the
 keyboard map or not. |<A HREF="insert.html#i_CTRL-^">i_CTRL-^</A>| |<A HREF="cmdline.html#c_CTRL-^">c_CTRL-^</A>|
 This flag is remembered for <A HREF="intro.html#Insert">插入</A>模式 with the <A HREF="options.html#'iminsert'">'iminsert'</A> option.  When
 leaving and entering <A HREF="intro.html#Insert">插入</A>模式 the previous value is used.  The same value
 is also used for commands that take a single character argument, like |<A HREF="motion.html#f">f</A>| and
 |<A HREF="change.html#r">r</A>|.
-For <A HREF="cmdline.html#Command-line">Command-line</A> mode the flag is NOT remembered.  You are expected to type an
+For <A HREF="cmdline.html#Command-line">命令行</A>模式 the flag is NOT remembered.  You are expected to type an
 <A HREF="intro.html#Ex">Ex</A> command first, which is ASCII.
 For typing search patterns the <A HREF="options.html#'imsearch'">'imsearch'</A> option is used.  It can be set to
 use the same value <A HREF="motion.html#as">as</A> for <A HREF="options.html#'iminsert'">'iminsert'</A>.
@@ -712,7 +712,7 @@ It's possible to have more than one character in the first column.  This works
 like a dead key.  Example:
 <B>	'a	á</B>
 Since Vim doesn't know if the next character after a <A HREF="change.html#quote">quote</A> is really an &quot;<A HREF="insert.html#a">a</A>&quot;,
-<A HREF="motion.html#it">it</A> will wait for the next character.  To be able to insert a single <A HREF="change.html#quote">quote</A>,
+<A HREF="motion.html#it">它</A> will wait for the next character.  To be able to insert a single <A HREF="change.html#quote">quote</A>,
 also add this line:
 <B>	''	'</B>
 Since the <A HREF="map.html#mapping">mapping</A> is defined with |<A HREF="map.html#:lmap">:lmap</A>| the resulting <A HREF="change.html#quote">quote</A> will not be
@@ -750,7 +750,7 @@ meaning in the mappings.  Examples:
 <B>	\\	y	maps \ to y</B>
 
 If you write a keymap file that will be useful for others, consider submitting
-<A HREF="motion.html#it">it</A> to the Vim maintainer for inclusion in the <A HREF="intro.html#distribution">distribution</A>:
+<A HREF="motion.html#it">它</A> to the Vim maintainer for inclusion in the <A HREF="intro.html#distribution">distribution</A>:
 <A HREF="mailto:maintainer@vim.org">&lt;maintainer@vim.org&gt;</A> 
 
 
@@ -892,7 +892,7 @@ Using <A HREF="#UTF-8">UTF-8</A>				*<A NAME="mbyte-utf8"></A><B>mbyte-utf8</B>*
 
 							*<A NAME="Unicode"></A><B>Unicode</B>* *<A NAME="unicode"></A><B>unicode</B>*
 The <A HREF="#Unicode">Unicode</A> character set was designed to include all characters from other
-character sets.  Therefore <A HREF="motion.html#it">it</A> is possible to write text in any language using
+character sets.  Therefore <A HREF="motion.html#it">它</A> is possible to write text in any language using
 <A HREF="#Unicode">Unicode</A> (with a few rarely used languages excluded).  And it's mostly possible
 to mix these languages in one file, which is impossible with other encodings.
 
@@ -929,7 +929,7 @@ widespread <A HREF="motion.html#as">as</A> file format.
 
 					*<A NAME="mbyte-combining"></A><B>mbyte-combining</B>* *<A NAME="mbyte-composing"></A><B>mbyte-composing</B>*
 A composing or combining character is used to change the meaning of the
-character before <A HREF="motion.html#it">it</A>.  The combining characters are drawn on top of the
+character before <A HREF="motion.html#it">它</A>.  The combining characters are drawn on top of the
 preceding character.
 Up to six combining characters can be displayed.
 When editing text a composing character is mostly considered part of the
@@ -939,7 +939,7 @@ If the <A HREF="options.html#'delcombine'">'delcombine'</A> option is on, then p
 characters, one at a time, then the base character.  But when <A HREF="insert.html#inserting">inserting</A>, you
 type the first character and the following composing characters separately,
 after which they will be joined.  The &quot;<A HREF="change.html#r">r</A>&quot; command will not allow you to type a
-combining character, because <A HREF="motion.html#it">it</A> doesn't know one is coming.  Use &quot;<A HREF="change.html#R">R</A>&quot; instead.
+combining character, because <A HREF="motion.html#it">它</A> doesn't know one is coming.  Use &quot;<A HREF="change.html#R">R</A>&quot; instead.
 
 Bytes which are not part of a valid <A HREF="#UTF-8">UTF-8</A> byte sequence are handled like a
 single character and displayed <A HREF="motion.html#as">as</A> &lt;xx&gt;, where &quot;xx&quot; is the hex value of the
@@ -996,7 +996,7 @@ If you are using X-Windows, you should find an input <A HREF="eval.html#method">
 
 If your system does not provide support for typing <A HREF="#UTF-8">UTF-8</A>, you can use the
 <A HREF="options.html#'keymap'">'keymap'</A> feature.  This allows <A HREF="editing.html#writing">writing</A> a keymap file, which defines a <A HREF="#UTF-8">UTF-8</A>
-character <A HREF="motion.html#as">as</A> a sequence of ASCII characters.  See |<A HREF="#mbyte-keymap">mbyte-keymap</A>|.
+character <A HREF="motion.html#as">as</A> a sequence of ASCII characters.  见 |<A HREF="#mbyte-keymap">mbyte-keymap</A>|.
 
 If everything else fails, you can type any character <A HREF="motion.html#as">as</A> four hex bytes:
 
@@ -1012,7 +1012,7 @@ COMMAND ARGUMENTS					*<A NAME="utf-8-char-arg"></A><B>utf-8-char-arg</B>*
 Commands like |<A HREF="motion.html#f">f</A>|, |<A HREF="motion.html#F">F</A>|, |<A HREF="motion.html#t">t</A>| and |<A HREF="change.html#r">r</A>| take an argument of one character.  For
 <A HREF="#UTF-8">UTF-8</A> this argument may include one or two composing characters.  These need
 to be produced together with the base character, Vim doesn't wait for the next
-character to be typed to find out if <A HREF="motion.html#it">it</A> is a composing character or not.
+character to be typed to find out if <A HREF="motion.html#it">它</A> is a composing character or not.
 Using <A HREF="options.html#'keymap'">'keymap'</A> or |<A HREF="map.html#:lmap">:lmap</A>| is a nice way to type these characters.
 
 The commands that search for a character in a line handle composing characters

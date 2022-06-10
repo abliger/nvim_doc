@@ -79,8 +79,8 @@
 This is a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> to work with rpm spec files.
 
 Currently, this Vim <A HREF="usr_05.html#plugin">plugin</A> allows you to easily update the &#37;changelog
-section in RPM spec files.  It will even create a section for you if <A HREF="motion.html#it">it</A>
-doesn't exist yet.  If you've already inserted an entry today, <A HREF="motion.html#it">it</A> will
+section in RPM spec files.  It will even create a section for you if <A HREF="motion.html#it">它</A>
+doesn't exist yet.  If you've already inserted an entry today, <A HREF="motion.html#it">它</A> will
 give you the opportunity to just add a new item in today's entry.  If you
 don't provide a format <A HREF="eval.html#string">string</A> (|<A HREF="#spec_chglog_format">spec_chglog_format</A>|), it'll ask you an
 email address and build a format <A HREF="eval.html#string">string</A> by itself.
@@ -90,7 +90,7 @@ email address and build a format <A HREF="eval.html#string">string</A> by itself
 
 ==============================================================================
 
-1. How to use <A HREF="motion.html#it">it</A>				*<A NAME="spec-how-to-use-it"></A><B>spec-how-to-use-it</B>*
+1. How to use <A HREF="motion.html#it">它</A>				*<A NAME="spec-how-to-use-it"></A><B>spec-how-to-use-it</B>*
 
 The spec_chglog <A HREF="usr_05.html#plugin">plugin</A> provides a map like the following:
 
@@ -101,12 +101,12 @@ your <A HREF="map.html#maplocalleader">maplocalleader</A> key (default is '\') p
 |<A HREF="#spec_chglog_format">spec_chglog_format</A>| set, the <A HREF="usr_05.html#plugin">plugin</A> will ask you for an email address
 to use in this edit session.
 
-Every time you run the <A HREF="usr_05.html#plugin">plugin</A>, <A HREF="motion.html#it">it</A> will check to see if the last entry in the
-changelog has been written today and by you.  If the entry matches, <A HREF="motion.html#it">it</A> will
-just insert a new changelog item, otherwise <A HREF="motion.html#it">it</A> will create a new changelog
-entry.  If you are running with |<A HREF="#spec_chglog_release_info">spec_chglog_release_info</A>| enabled, <A HREF="motion.html#it">it</A> will
+Every time you run the <A HREF="usr_05.html#plugin">plugin</A>, <A HREF="motion.html#it">它</A> will check to see if the last entry in the
+changelog has been written today and by you.  If the entry matches, <A HREF="motion.html#it">它</A> will
+just insert a new changelog item, otherwise <A HREF="motion.html#it">它</A> will create a new changelog
+entry.  If you are running with |<A HREF="#spec_chglog_release_info">spec_chglog_release_info</A>| enabled, <A HREF="motion.html#it">它</A> will
 also check if the name, version and release matches.  The <A HREF="usr_05.html#plugin">plugin</A> is smart
-enough to ask you if <A HREF="motion.html#it">it</A> should update the package release, if you have not
+enough to ask you if <A HREF="motion.html#it">它</A> should update the package release, if you have not
 done so.
 
 
@@ -121,7 +121,7 @@ the &lt;F5&gt; key:
 	au <A HREF="autocmd.html#FileType">FileType</A> spec map &lt;buffer&gt; &lt;F5&gt; &lt;Plug&gt;SpecChangelog
 
 Note: the <A HREF="usr_05.html#plugin">plugin</A> will respect your desire to change the default <A HREF="map.html#mapping">mapping</A>
-      and won't set <A HREF="motion.html#it">it</A>.
+      and won't set <A HREF="motion.html#it">它</A>.
 
 This command will add a map only in the spec file <A HREF="windows.html#buffers">buffers</A>.
 
@@ -141,7 +141,7 @@ this:
 
 Note that &quot;&#37;a &#37;b &#37;d &#37;Y&quot; is the most used time format.  If you don't provide
 a format <A HREF="eval.html#string">string</A>, when you run the SpecChangelog command for the first
-time, <A HREF="motion.html#it">it</A> will ask you an email address and build the |<A HREF="#spec_chglog_format">spec_chglog_format</A>|
+time, <A HREF="motion.html#it">它</A> will ask you an email address and build the |<A HREF="#spec_chglog_format">spec_chglog_format</A>|
 variable for you.  This way, you will only need to provide your email
 address once.
 
@@ -157,16 +157,16 @@ not the entry itself) after the existing ones.  If you set the
 
 <B>	let spec_chglog_prepend = 1</B>
 
-<A HREF="motion.html#it">it</A> will insert new items before the existing ones.
+<A HREF="motion.html#it">它</A> will insert new items before the existing ones.
 
 
 Inserting release info				*<A NAME="spec_chglog_release_info"></A><B>spec_chglog_release_info</B>*
 
 If you want, the <A HREF="usr_05.html#plugin">plugin</A> may automatically insert release information
 on each changelog entry.  One advantage of turning this feature on is
-that <A HREF="motion.html#it">it</A> may <A HREF="intro.html#control">control</A> if the release has been updated after the last
+that <A HREF="motion.html#it">它</A> may <A HREF="intro.html#control">control</A> if the release has been updated after the last
 change in the package or not.  If you have not updated the package
-version or release, <A HREF="motion.html#it">it</A> will ask you if <A HREF="motion.html#it">it</A> should update the package
+version or release, <A HREF="motion.html#it">它</A> will ask you if <A HREF="motion.html#it">它</A> should update the package
 release for you.  To turn this feature on, just insert the following
 code in your <A HREF="starting.html#vimrc">vimrc</A>:
 
@@ -177,7 +177,7 @@ Then, the first item in your changelog entry will be something like:
 <B>	+ name-1.0-1cl</B>
 
 If you don't like the release updating feature and don't want to answer
-&quot;No&quot; each time <A HREF="motion.html#it">it</A> detects an old release, you may disable <A HREF="motion.html#it">it</A> with
+&quot;No&quot; each time <A HREF="motion.html#it">它</A> detects an old release, you may disable <A HREF="motion.html#it">它</A> with
 
 <B>	let spec_chglog_never_increase_release = 1</B>
 

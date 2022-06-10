@@ -143,7 +143,7 @@ behavior of the <A HREF="usr_05.html#plugin">plugin</A>.
         Set this option to enable vim indentation and textwidth settings to
         conform to style conventions of the <A HREF="#rust">rust</A> standard library (i.e. use 4
         spaces for indents and sets <A HREF="options.html#'textwidth'">'textwidth'</A> to 99). This option is enabled
-	by default. To disable <A HREF="motion.html#it">it</A>:
+	by default. To disable <A HREF="motion.html#it">它</A>:
 <B>	    let g:rust_recommended_style = 0</B>
  
 
@@ -180,28 +180,28 @@ behavior of the <A HREF="usr_05.html#plugin">plugin</A>.
                                                        *<A NAME="g:rustfmt_command"></A><B>g:rustfmt_command</B>*
 <B><FONT color="#3A6F2B">g:rustfmt_command</FONT></B>
 	Set this option to the name of the 'rustfmt' executable in your $PATH. If
-	not specified <A HREF="motion.html#it">it</A> defaults to 'rustfmt' :
+	not specified <A HREF="motion.html#it">它</A> defaults to 'rustfmt' :
 <B>	    let g:rustfmt_command = 'rustfmt'</B>
  
 
                                                        *<A NAME="g:rustfmt_autosave"></A><B>g:rustfmt_autosave</B>*
 <B><FONT color="#3A6F2B">g:rustfmt_autosave</FONT></B>
 	Set this option to 1 to run |<A HREF="#:RustFmt">:RustFmt</A>| automatically when saving a
-	buffer. If not specified <A HREF="motion.html#it">it</A> defaults to 0 :
+	buffer. If not specified <A HREF="motion.html#it">它</A> defaults to 0 :
 <B>	    let g:rustfmt_autosave = 0</B>
  
 
                                                        *<A NAME="g:rustfmt_fail_silently"></A><B>g:rustfmt_fail_silently</B>*
 <B><FONT color="#3A6F2B">g:rustfmt_fail_silently</FONT></B>
 	Set this option to 1 to prevent 'rustfmt' from populating the
-	|<A HREF="quickfix.html#location-list">location-list</A>| with <A HREF="message.html#errors">errors</A>. If not specified <A HREF="motion.html#it">it</A> defaults to 0:
+	|<A HREF="quickfix.html#location-list">location-list</A>| with <A HREF="message.html#errors">errors</A>. If not specified <A HREF="motion.html#it">它</A> defaults to 0:
 <B>	    let g:rustfmt_fail_silently = 0</B>
  
 
                                                        *<A NAME="g:rustfmt_options"></A><B>g:rustfmt_options</B>*
 <B><FONT color="#3A6F2B">g:rustfmt_options</FONT></B>
 	Set this option to a <A HREF="eval.html#string">string</A> of <A HREF="options.html#options">options</A> to pass to 'rustfmt'. The
-	write-mode is already set to 'overwrite'. If not specified <A HREF="motion.html#it">it</A>
+	write-mode is already set to 'overwrite'. If not specified <A HREF="motion.html#it">它</A>
 	defaults to <A HREF="motion.html#''">''</A> :
 <B>	    let g:rustfmt_options = ''</B>
  
@@ -228,9 +228,9 @@ COMMANDS                                                       *<A NAME="rust-co
 
 <A HREF="#:RustRun">:RustRun</A>  [args]                                                    *<A NAME=":RustRun"></A><B>:RustRun</B>*
 <A HREF="#:RustRun">:RustRun</A>! [rustc-args] [--] [args]
-		Compiles and runs the current file. If <A HREF="motion.html#it">it</A> has unsaved changes,
-		<A HREF="motion.html#it">it</A> will be saved first using |<A HREF="editing.html#:update">:update</A>|. If the current file is
-		an unnamed buffer, <A HREF="motion.html#it">it</A> will be written to a temporary file
+		Compiles and runs the current file. If <A HREF="motion.html#it">它</A> has unsaved changes,
+		<A HREF="motion.html#it">它</A> will be saved first using |<A HREF="editing.html#:update">:update</A>|. If the current file is
+		an unnamed buffer, <A HREF="motion.html#it">它</A> will be written to a temporary file
 		first. The compiled binary is always placed in a temporary
 		directory, but is run from the current directory.
 
@@ -241,16 +241,16 @@ COMMANDS                                                       *<A NAME="rust-co
 		A &quot;<A HREF="starting.html#--">--</A>&quot; argument will separate the rustc arguments from the
 		arguments passed to the binary.
 
-		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
-		Otherwise <A HREF="motion.html#it">it</A> is assumed rustc can be found in $PATH.
+		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
+		Otherwise <A HREF="motion.html#it">它</A> is assumed rustc can be found in $PATH.
 
 
 <A HREF="#:RustExpand">:RustExpand</A>  [args]                                              *<A NAME=":RustExpand"></A><B>:RustExpand</B>*
 <A HREF="#:RustExpand">:RustExpand</A>! [TYPE] [args]
 		Expands the current file using --pretty and displays the
 		results in a new split. If the current file has unsaved
-		changes, <A HREF="motion.html#it">it</A> will be saved first using |<A HREF="editing.html#:update">:update</A>|. If the
-		current file is an unnamed buffer, <A HREF="motion.html#it">it</A> will be written to a
+		changes, <A HREF="motion.html#it">它</A> will be saved first using |<A HREF="editing.html#:update">:update</A>|. If the
+		current file is an unnamed buffer, <A HREF="motion.html#it">它</A> will be written to a
 		temporary file first.
 
 		The arguments given to |<A HREF="#:RustExpand">:RustExpand</A>| will be passed to rustc.
@@ -258,35 +258,35 @@ COMMANDS                                                       *<A NAME="rust-co
 		configurations.
 
 		If ! is specified, the first argument is the expansion type to
-		pass to rustc --pretty. Otherwise <A HREF="motion.html#it">it</A> will default to
+		pass to rustc --pretty. Otherwise <A HREF="motion.html#it">它</A> will default to
 		&quot;expanded&quot;.
 
-		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
-		Otherwise <A HREF="motion.html#it">it</A> is assumed rustc can be found in $PATH.
+		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
+		Otherwise <A HREF="motion.html#it">它</A> is assumed rustc can be found in $PATH.
 
 
 <A HREF="#:RustEmitIr">:RustEmitIr</A> [args]                                               *<A NAME=":RustEmitIr"></A><B>:RustEmitIr</B>*
 		Compiles the current file to LLVM IR and displays the results
-		in a new split. If the current file has unsaved changes, <A HREF="motion.html#it">it</A>
+		in a new split. If the current file has unsaved changes, <A HREF="motion.html#it">它</A>
 		will be saved first using |<A HREF="editing.html#:update">:update</A>|. If the current file is an
-		unnamed buffer, <A HREF="motion.html#it">it</A> will be written to a temporary file first.
+		unnamed buffer, <A HREF="motion.html#it">它</A> will be written to a temporary file first.
 
 		The arguments given to |<A HREF="#:RustEmitIr">:RustEmitIr</A>| will be passed to rustc.
 
-		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
-		Otherwise <A HREF="motion.html#it">it</A> is assumed rustc can be found in $PATH.
+		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
+		Otherwise <A HREF="motion.html#it">它</A> is assumed rustc can be found in $PATH.
 
 
 <A HREF="#:RustEmitAsm">:RustEmitAsm</A> [args]                                             *<A NAME=":RustEmitAsm"></A><B>:RustEmitAsm</B>*
 		Compiles the current file to assembly and displays the results
-		in a new split. If the current file has unsaved changes, <A HREF="motion.html#it">it</A>
+		in a new split. If the current file has unsaved changes, <A HREF="motion.html#it">它</A>
 		will be saved first using |<A HREF="editing.html#:update">:update</A>|. If the current file is an
-		unnamed buffer, <A HREF="motion.html#it">it</A> will be written to a temporary file first.
+		unnamed buffer, <A HREF="motion.html#it">它</A> will be written to a temporary file first.
 
 		The arguments given to |<A HREF="#:RustEmitAsm">:RustEmitAsm</A>| will be passed to rustc.
 
-		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
-		Otherwise <A HREF="motion.html#it">it</A> is assumed rustc can be found in $PATH.
+		If |<A HREF="#g:rustc_path">g:rustc_path</A>| is defined, <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the path to rustc.
+		Otherwise <A HREF="motion.html#it">它</A> is assumed rustc can be found in $PATH.
 
 
 <A HREF="#:RustPlay">:RustPlay</A>                                                          *<A NAME=":RustPlay"></A><B>:RustPlay</B>*
@@ -308,10 +308,10 @@ COMMANDS                                                       *<A NAME="rust-co
 		|<A HREF="#g:rustfmt_options">g:rustfmt_options</A>| is set then those will be passed to the
 		executable.
 
-		If |<A HREF="#g:rustfmt_fail_silently">g:rustfmt_fail_silently</A>| is 0 (the default) then <A HREF="motion.html#it">it</A>
+		If |<A HREF="#g:rustfmt_fail_silently">g:rustfmt_fail_silently</A>| is 0 (the default) then <A HREF="motion.html#it">它</A>
 		will populate the |<A HREF="quickfix.html#location-list">location-list</A>| with the <A HREF="message.html#errors">errors</A> from
 		|<A HREF="#g:rustfmt_command">g:rustfmt_command</A>|. If |<A HREF="#g:rustfmt_fail_silently">g:rustfmt_fail_silently</A>| is set to 1
-		then <A HREF="motion.html#it">it</A> will not populate the |<A HREF="quickfix.html#location-list">location-list</A>|.
+		then <A HREF="motion.html#it">它</A> will not populate the |<A HREF="quickfix.html#location-list">location-list</A>|.
 
 
 <A HREF="#:RustFmtRange">:RustFmtRange</A>                                                  *<A NAME=":RustFmtRange"></A><B>:RustFmtRange</B>*
@@ -335,7 +335,7 @@ It also has a few other mappings:
 							*<A NAME="rust_&lt;D-R&gt;"></A><B>rust_&lt;D-R&gt;</B>*
 &lt;D-R&gt;			Populates the command line with |:RustRun|! using the
 			arguments given to the last invocation, but does not
-			execute <A HREF="motion.html#it">it</A>.
+			execute <A HREF="motion.html#it">它</A>.
 			Note: This binding is only available in MacVim.
 
 ==============================================================================

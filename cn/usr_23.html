@@ -194,18 +194,18 @@ example:
 <B><FONT color="#3A6F2B">	You can find the information here: </FONT></B>
 <B><FONT color="#3A6F2B">		ftp://ftp.vim.org/pub/vim/README </FONT></B>
 
-You could start a program to <A HREF="intro.html#download">download</A> the file, save <A HREF="motion.html#it">it</A> on your local disk and
-then start Vim to edit <A HREF="motion.html#it">it</A>.
+You could start a program to <A HREF="intro.html#download">download</A> the file, save <A HREF="motion.html#it">它</A> on your local disk and
+then start Vim to edit <A HREF="motion.html#it">它</A>.
    There is a much simpler way.  Move the cursor to any character of the URL.
 Then use this command:
 
 <B>	gf</B>
 
 With a bit of luck, Vim will figure out which program to use for downloading
-the file, <A HREF="intro.html#download">download</A> <A HREF="motion.html#it">it</A> and edit the copy.  To open the file in a new<A HREF="windows.html#window">窗口</A>use
+the file, <A HREF="intro.html#download">download</A> <A HREF="motion.html#it">它</A> and edit the copy.  To open the file in a new<A HREF="windows.html#window">窗口</A>use
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#f">f</A>.
    If something goes wrong you will get an error message.  It's possible that
-the URL is wrong, you don't have permission to read <A HREF="motion.html#it">it</A>, the <A HREF="pi_netrw.html#network">network</A> connection
+the URL is wrong, you don't have permission to read <A HREF="motion.html#it">它</A>, the <A HREF="pi_netrw.html#network">network</A> connection
 is down, etc.  Unfortunately, it's hard to tell the cause of the error.  You
 might want to try the manual way of downloading the file.
 
@@ -217,7 +217,7 @@ with these formats are recognized:
 	scp://		uses <A HREF="pi_netrw.html#scp">scp</A>
 	<A HREF="http://">http://</A> uses wget reading only
 
-Vim doesn't <A HREF="diff.html#do">do</A> the communication itself, <A HREF="motion.html#it">it</A> relies on the mentioned programs
+Vim doesn't <A HREF="diff.html#do">do</A> the communication itself, <A HREF="motion.html#it">它</A> relies on the mentioned programs
 to be available on your computer.  On most Unix systems &quot;ftp&quot; and &quot;<A HREF="pi_netrw.html#rcp">rcp</A>&quot; will
 be present.  &quot;<A HREF="pi_netrw.html#scp">scp</A>&quot; and &quot;wget&quot; might need to be installed.
 
@@ -225,7 +225,7 @@ Vim detects these URLs for each command that starts editing a new file, also
 with &quot;<A HREF="editing.html#:edit">:edit</A>&quot; and &quot;<A HREF="windows.html#:split">:split</A>&quot;, for example.  Write commands also work, except for
 	<A HREF="http://">http://</A>.
 
-For more information, also about passwords, see |<A HREF="pi_netrw.html#netrw">netrw</A>|.
+For more information, also about passwords, 见 |<A HREF="pi_netrw.html#netrw">netrw</A>|.
 
 ==============================================================================
 
@@ -233,7 +233,7 @@ For more information, also about passwords, see |<A HREF="pi_netrw.html#netrw">n
 
 You can edit binary files with Vim.  Vim wasn't really made for this, thus
 there are a few restrictions.  But you can read a file, change a character and
-write <A HREF="motion.html#it">it</A> back, with the result that only that one character was changed and
+write <A HREF="motion.html#it">它</A> back, with the result that only that one character was changed and
 the file is identical otherwise.
    To make sure that Vim does not use its clever tricks in the wrong way, add
 the &quot;<A HREF="starting.html#-b">-b</A>&quot; argument when starting Vim:
@@ -245,7 +245,7 @@ effects are turned off.  For example, <A HREF="options.html#'textwidth'">'textwi
 automatic <A HREF="change.html#formatting">formatting</A> of lines.  And files are always read in Unix file format.
 
 Binary mode can be used to change a message in a program.  Be careful not to
-insert or delete any characters, <A HREF="motion.html#it">it</A> would stop the program from working.  Use
+insert or delete any characters, <A HREF="motion.html#it">它</A> would stop the program from working.  Use
 &quot;<A HREF="change.html#R">R</A>&quot; to enter replace mode.
 
 Many characters in the file will be unprintable.  To see them in Hex format:
@@ -285,7 +285,7 @@ example, to move to byte 2345:
 
 USING XXD
 
-A real binary editor shows the text in two ways: <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> is and in hex format.
+A real binary editor shows the text in two ways: <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> is and in hex format.
 You can <A HREF="diff.html#do">do</A> this in Vim by first converting the file with the &quot;xxd&quot; program.
 This comes with Vim.
    First edit the file in binary mode:
@@ -305,7 +305,7 @@ The text will look like this:
 You can now view and edit the text <A HREF="motion.html#as">as</A> you like.  Vim treats the information <A HREF="motion.html#as">as</A>
 ordinary text.  Changing the hex does not cause the printable character to be
 changed, or the other way around.
-   Finally convert <A HREF="motion.html#it">it</A> back with:
+   Finally convert <A HREF="motion.html#it">它</A> back with:
 
 <B>	:%!xxd -r</B>
 
@@ -319,8 +319,8 @@ See the manual page of xxd for more information.
 *<A NAME="23.4"></A><B>23.4</B>*	Compressed files
 
 This is easy: You can edit a compressed file just like any other file.  The
-&quot;<A HREF="pi_gzip.html#gzip">gzip</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> takes care of decompressing the file when you edit <A HREF="motion.html#it">it</A>.  And
-compressing <A HREF="motion.html#it">it</A> again when you write <A HREF="motion.html#it">it</A>.
+&quot;<A HREF="pi_gzip.html#gzip">gzip</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> takes care of decompressing the file when you edit <A HREF="motion.html#it">它</A>.  And
+compressing <A HREF="motion.html#it">它</A> again when you write <A HREF="motion.html#it">它</A>.
    These compression methods are currently supported:
 
 	.Z	<A HREF="pi_gzip.html#compress">compress</A>

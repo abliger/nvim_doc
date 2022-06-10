@@ -107,7 +107,7 @@ By default an internal <A HREF="#diff">diff</A> library will be used.  When <A H
 works when such a <A HREF="#diff">diff</A> program is available.
 
 Diffs are local to the current tab page |<A HREF="tabpage.html#tab-page">tab-page</A>|.  You can't see diffs with
-a<A HREF="windows.html#window">窗口</A>in another <A HREF="intro.html#tab">tab</A> page.  This does make <A HREF="motion.html#it">it</A> possible to have several
+a<A HREF="windows.html#window">窗口</A>in another <A HREF="intro.html#tab">tab</A> page.  This does make <A HREF="motion.html#it">它</A> possible to have several
 diffs at the same time, each in their own <A HREF="intro.html#tab">tab</A> page.
 
 What happens is that Nvim opens a<A HREF="windows.html#window">窗口</A>for each of the files.  This is like
@@ -166,7 +166,7 @@ While already in Vim you can start <A HREF="#diff">diff</A> mode in three ways.
 
 
 :diffp[atch] {patchfile}			 *<A NAME="E816"></A><B>E816</B>* *<A NAME=":diffp"></A><B>:diffp</B>* *<A NAME=":diffpatch"></A><B>:diffpatch</B>*
-		Use the current buffer, patch <A HREF="motion.html#it">it</A> with the <A HREF="#diff">diff</A> found in
+		Use the current buffer, patch <A HREF="motion.html#it">它</A> with the <A HREF="#diff">diff</A> found in
 		{patchfile} and open a buffer on the result.  This sets the
 		<A HREF="options.html#options">options</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
 		{patchfile} can be in any format that the &quot;patch&quot; program
@@ -175,7 +175,7 @@ While already in Vim you can start <A HREF="#diff">diff</A> mode in three ways.
 		the current file.  If {patchfile} contains diffs for other
 		files <A HREF="motion.html#as">as</A> well, the results are unpredictable.  Vim changes
 		directory to /tmp to avoid files in the current directory
-		accidentally being patched.  But <A HREF="motion.html#it">it</A> may still result in
+		accidentally being patched.  But <A HREF="motion.html#it">它</A> may still result in
 		various &quot;.rej&quot; files to be created.  And when absolute path
 		names are present these files may get patched anyway.
 
@@ -202,7 +202,7 @@ file for a moment and come back to the same file and be in <A HREF="#diff">diff<
 		in the current <A HREF="intro.html#tab">tab</A> page where <A HREF="options.html#'diff'">'diff'</A> is set.  Resetting
 		related <A HREF="options.html#options">options</A> only happens in a<A HREF="windows.html#window">窗口</A>that has <A HREF="options.html#'diff'">'diff'</A> set,
 		if the current<A HREF="windows.html#window">窗口</A>does not have <A HREF="options.html#'diff'">'diff'</A> set then no <A HREF="options.html#options">options</A>
-		in <A HREF="motion.html#it">it</A> are changed.
+		in <A HREF="motion.html#it">它</A> are changed.
 		Hidden <A HREF="windows.html#buffers">buffers</A> are also removed from the <A HREF="eval.html#list">list</A> of diff'ed
 		<A HREF="windows.html#buffers">buffers</A>.
 
@@ -252,12 +252,12 @@ need another buffer.  This command is useful:
 <B>	 command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_</B>
 <B>		\ | diffthis | wincmd p | diffthis</B>
 Use &quot;<A HREF="#:DiffOrig">:DiffOrig</A>&quot; to see the differences
-between the current buffer and the file <A HREF="motion.html#it">it</A> was loaded from.
+between the current buffer and the file <A HREF="motion.html#it">它</A> was loaded from.
 
-A buffer that is unloaded cannot be used for the <A HREF="#diff">diff</A>.  But <A HREF="motion.html#it">it</A> does work for
+A buffer that is unloaded cannot be used for the <A HREF="#diff">diff</A>.  But <A HREF="motion.html#it">它</A> does work for
 hidden <A HREF="windows.html#buffers">buffers</A>.  You can use &quot;<A HREF="windows.html#:hide">:hide</A>&quot; to close a<A HREF="windows.html#window">窗口</A>without unloading the
 buffer.  If you don't want a buffer to remain used for the <A HREF="#diff">diff</A> <A HREF="#do">do</A> &quot;<A HREF="options.html#:set">:set</A>
-nodiff&quot; before hiding <A HREF="motion.html#it">it</A>.
+nodiff&quot; before hiding <A HREF="motion.html#it">它</A>.
 
 
 						*<A NAME=":dif"></A><B>:dif</B>* *<A NAME=":diff"></A><B>:diff</B>* *<A NAME=":diffupdate"></A><B>:diffupdate</B>*
@@ -280,7 +280,7 @@ this file.  Removing &quot;filler&quot; from the <A HREF="options.html#'diffopt'
 display these filler lines.
 
 
-Folds are used to hide the text that wasn't changed.  See |<A HREF="fold.html#folding">folding</A>| for all
+Folds are used to hide the text that wasn't changed.  见 |<A HREF="fold.html#folding">folding</A>| for all
 the commands that can be used with <A HREF="fold.html#folds">folds</A>.
 
 The <A HREF="repeat.html#context">context</A> of lines above a difference that are not included in the fold can
@@ -315,11 +315,11 @@ Two commands can be used to jump to diffs:
 
 								*<A NAME="[c"></A><B>[c</B>*
 	<A HREF="#[c">[c</A>		Jump backwards to the previous start of a change.
-			When a <A HREF="intro.html#count">count</A> is used, <A HREF="#do">do</A> <A HREF="motion.html#it">it</A> that many times.
+			When a <A HREF="intro.html#count">count</A> is used, <A HREF="#do">do</A> <A HREF="motion.html#it">它</A> that many times.
 
 								*<A NAME="]c"></A><B>]c</B>*
 	<A HREF="#]c">]c</A>		Jump forwards to the next start of a change.
-			When a <A HREF="intro.html#count">count</A> is used, <A HREF="#do">do</A> <A HREF="motion.html#it">it</A> that many times.
+			When a <A HREF="intro.html#count">count</A> is used, <A HREF="#do">do</A> <A HREF="motion.html#it">它</A> that many times.
 
 It is an error if there is no change for the cursor to move to.
 
@@ -354,20 +354,20 @@ that the <A HREF="windows.html#buffers">buffers</A> will be equal within the spe
 
 							*<A NAME="do"></A><B>do</B>*
 [count]do	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:diffget">:diffget</A>&quot; without range.  The &quot;<A HREF="insert.html#o">o</A>&quot; stands for &quot;obtain&quot;
-		(&quot;dg&quot; can't be used, <A HREF="motion.html#it">it</A> could be the start of &quot;dgg&quot;!). Note:
+		(&quot;dg&quot; can't be used, <A HREF="motion.html#it">它</A> could be the start of &quot;dgg&quot;!). Note:
 		this doesn't work in <A HREF="visual.html#Visual">Visual</A> mode.
-		If you give a <A HREF="intro.html#[count]">[count]</A>, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the [bufspec] argument
+		If you give a <A HREF="intro.html#[count]">[count]</A>, <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the [bufspec] argument
 		for &quot;<A HREF="#:diffget">:diffget</A>&quot;.
 
 
 							*<A NAME="dp"></A><B>dp</B>*
 [count]dp	Same <A HREF="motion.html#as">as</A> &quot;<A HREF="#:diffput">:diffput</A>&quot; without range.  Note: this doesn't work in
 		<A HREF="visual.html#Visual">Visual</A> mode.
-		If you give a <A HREF="intro.html#[count]">[count]</A>, <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the [bufspec] argument
+		If you give a <A HREF="intro.html#[count]">[count]</A>, <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the [bufspec] argument
 		for &quot;<A HREF="#:diffput">:diffput</A>&quot;.
 
 
-When no <A HREF="cmdline.html#[range]">[range]</A> is given, the <A HREF="#diff">diff</A> at the cursor position or just above <A HREF="motion.html#it">it</A> is
+When no <A HREF="cmdline.html#[range]">[range]</A> is given, the <A HREF="#diff">diff</A> at the cursor position or just above <A HREF="motion.html#it">它</A> is
 affected.  When <A HREF="cmdline.html#[range]">[range]</A> is used, Vim tries to only put or get the specified
 lines.  When there are deleted lines, this may not always be possible.
 
@@ -402,12 +402,12 @@ name or a part of a buffer name.  Examples:
 
 5. Diff <A HREF="options.html#options">options</A>						*<A NAME="diff-options"></A><B>diff-options</B>*
 
-Also see |<A HREF="options.html#'diffopt'">'diffopt'</A>| and the &quot;diff&quot; item of |<A HREF="options.html#'fillchars'">'fillchars'</A>|.
+Also 见 |<A HREF="options.html#'diffopt'">'diffopt'</A>| and the &quot;diff&quot; item of |<A HREF="options.html#'fillchars'">'fillchars'</A>|.
 
 
 					    *<A NAME="diff-slow"></A><B>diff-slow</B>* *<A NAME="diff_translations"></A><B>diff_translations</B>*
 For very long lines, the <A HREF="#diff">diff</A> <A HREF="syntax.html#syntax">syntax</A> highlighting might be slow, especially
-since <A HREF="motion.html#it">it</A> tries to match all different kind of localisations. To disable
+since <A HREF="motion.html#it">它</A> tries to match all different kind of localisations. To disable
 localisations and speed up the <A HREF="syntax.html#syntax">syntax</A> highlighting, set the global variable
 g:diff_translations to zero:
 
@@ -452,7 +452,7 @@ The &quot;1a2&quot; item appends the line &quot;bbb&quot;.
 The &quot;4d4&quot; item deletes the line &quot;111&quot;.
 The &quot;7c7&quot; item replaces the line &quot;GGG&quot; with &quot;ggg&quot;.
 
-When <A HREF="options.html#'diffexpr'">'diffexpr'</A> is not empty, Vim evaluates <A HREF="motion.html#it">it</A> to obtain a <A HREF="#diff">diff</A> file in the
+When <A HREF="options.html#'diffexpr'">'diffexpr'</A> is not empty, Vim evaluates <A HREF="motion.html#it">它</A> to obtain a <A HREF="#diff">diff</A> file in the
 format mentioned.  These <A HREF="eval.html#variables">variables</A> are set to the file names used:
 
 	<A HREF="eval.html#v:fname_in">v:fname_in</A>		original file
@@ -488,18 +488,18 @@ shell command shows something on the display or not.
 
 
 						*<A NAME="E810"></A><B>E810</B>* *<A NAME="E97"></A><B>E97</B>*
-Vim will <A HREF="#do">do</A> a test if the <A HREF="#diff">diff</A> output looks alright.  If <A HREF="motion.html#it">it</A> doesn't, you will
+Vim will <A HREF="#do">do</A> a test if the <A HREF="#diff">diff</A> output looks alright.  If <A HREF="motion.html#it">它</A> doesn't, you will
 get an error message.  Possible causes:
 -  The &quot;<A HREF="#diff">diff</A>&quot; program cannot be executed.
 -  The &quot;<A HREF="#diff">diff</A>&quot; program doesn't produce normal &quot;ed&quot; style diffs (see above).
 -  The <A HREF="options.html#'shell'">'shell'</A> and associated <A HREF="options.html#options">options</A> are not set correctly.  Try if filtering
    works with a command like &quot;:!sort&quot;.
--  You are using <A HREF="options.html#'diffexpr'">'diffexpr'</A> and <A HREF="motion.html#it">it</A> doesn't work.
+-  You are using <A HREF="options.html#'diffexpr'">'diffexpr'</A> and <A HREF="motion.html#it">它</A> doesn't work.
 If it's not clear what the problem is set the <A HREF="options.html#'verbose'">'verbose'</A> option to one or more
 to see more <A HREF="message.html#messages">messages</A>.
 
 The self-installing Vim for MS-Windows includes a <A HREF="#diff">diff</A> program.  If you don't
-have <A HREF="motion.html#it">it</A> you might want to <A HREF="intro.html#download">download</A> a diff.exe.  For example from
+have <A HREF="motion.html#it">它</A> you might want to <A HREF="intro.html#download">download</A> a diff.exe.  For example from
 	<A HREF="http://gnuwin32.sourceforge.net/packages/diffutils.htm">http://gnuwin32.sourceforge.net/packages/diffutils.htm</A>.
 
 
@@ -514,7 +514,7 @@ When <A HREF="options.html#'patchexpr'">'patchexpr'</A> is empty, Vim will call 
 <B>	patch -o outfile origfile &lt; patchfile</B>
 
 This should work fine with most versions of the &quot;patch&quot; program.  Note that a
-CR in the middle of a line may cause problems, <A HREF="motion.html#it">it</A> is seen <A HREF="motion.html#as">as</A> a line break.
+CR in the middle of a line may cause problems, <A HREF="motion.html#it">它</A> is seen <A HREF="motion.html#as">as</A> a line break.
 
 If the default doesn't work for you, set the <A HREF="options.html#'patchexpr'">'patchexpr'</A> to an <A HREF="eval.html#expression">expression</A> that
 will have the same effect.  These <A HREF="eval.html#variables">variables</A> are set to the file names used:

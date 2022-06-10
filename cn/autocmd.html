@@ -93,7 +93,7 @@ You can specify commands to be executed automatically when reading or <A HREF="e
 a file, when entering or leaving a buffer or<A HREF="windows.html#window">窗口</A>, and when <A HREF="starting.html#exiting">exiting</A> Vim.
 For example, you can create an <A HREF="#autocommand">autocommand</A> to set the <A HREF="options.html#'cindent'">'cindent'</A> option for
 files matching *.c.  You can also use autocommands to implement advanced
-features, such <A HREF="motion.html#as">as</A> editing compressed files (see |<A HREF="#gzip-example">gzip-example</A>|).  The usual
+features, such <A HREF="motion.html#as">as</A> editing compressed files (见 |<A HREF="#gzip-example">gzip-example</A>|).  The usual
 place to put autocommands is in your <A HREF="starting.html#vimrc">vimrc</A> file.
 
 
@@ -102,7 +102,7 @@ WARNING: Using autocommands is very powerful, and may lead to unexpected side
 effects.  Be careful not to destroy your text.
 - It's a good idea to <A HREF="diff.html#do">do</A> some <A HREF="testing.html#testing">testing</A> on an expendable copy of a file first.
   For example: If you use autocommands to decompress a file when starting to
-  edit <A HREF="motion.html#it">it</A>, make sure that the autocommands for compressing when <A HREF="editing.html#writing">writing</A> work
+  edit <A HREF="motion.html#it">它</A>, make sure that the autocommands for compressing when <A HREF="editing.html#writing">writing</A> work
   correctly.
 - Be prepared for an error halfway through (e.g., disk full).  Vim will mostly
   be able to <A HREF="undo.html#undo">undo</A> the changes to the buffer, but you may have to clean up the
@@ -127,14 +127,14 @@ effects.  Be careful not to destroy your text.
 			<A HREF="#:autocmd">:autocmd</A> and won't start a comment.
 			Nvim always adds {cmd} after existing autocommands so
 			they execute in the order in which they were defined.
-			See |<A HREF="#autocmd-nested">autocmd-nested</A>| for [++nested].
+			见 |<A HREF="#autocmd-nested">autocmd-nested</A>| for [++nested].
 
 							*<A NAME="autocmd-once"></A><B>autocmd-once</B>*
 			If [++once] is supplied the command is executed once,
 			then removed (&quot;one shot&quot;).
 
 The special <A HREF="pattern.html#pattern">pattern</A> &lt;buffer&gt; or <A HREF="#&lt;buffer=N&gt;">&lt;buffer=N&gt;</A> defines a buffer-local <A HREF="#autocommand">autocommand</A>.
-See |<A HREF="#autocmd-buflocal">autocmd-buflocal</A>|.
+见 |<A HREF="#autocmd-buflocal">autocmd-buflocal</A>|.
 
 Note: The &quot;<A HREF="#:autocmd">:autocmd</A>&quot; command can only be followed by another command when the
 '&#124;' appears where the <A HREF="pattern.html#pattern">pattern</A> is expected.  This works:
@@ -186,12 +186,12 @@ with &quot;<A HREF="#:au">:au</A> group ...&quot;; use &quot;<A HREF="#:augroup"
 
 While <A HREF="testing.html#testing">testing</A> autocommands, you might find the <A HREF="options.html#'verbose'">'verbose'</A> option to be useful:
 <B>	:set verbose=9</B>
-This setting makes Vim echo the autocommands <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> executes them.
+This setting makes Vim echo the autocommands <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> executes them.
 
-When defining an <A HREF="#autocommand">autocommand</A> in a <A HREF="usr_41.html#script">script</A>, <A HREF="motion.html#it">it</A> will be able to call <A HREF="eval.html#functions">functions</A>
+When defining an <A HREF="#autocommand">autocommand</A> in a <A HREF="usr_41.html#script">script</A>, <A HREF="motion.html#it">它</A> will be able to call <A HREF="eval.html#functions">functions</A>
 local to the <A HREF="usr_41.html#script">script</A> and use mappings local to the <A HREF="usr_41.html#script">script</A>.  When the event is
-triggered and the command executed, <A HREF="motion.html#it">it</A> will run in the <A HREF="repeat.html#context">context</A> of the <A HREF="usr_41.html#script">script</A>
-<A HREF="motion.html#it">it</A> was defined in.  This matters if |<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>| is used in a command.
+triggered and the command executed, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of the <A HREF="usr_41.html#script">script</A>
+<A HREF="motion.html#it">它</A> was defined in.  This matters if |<A HREF="map.html#&lt;SID&gt;">&lt;SID&gt;</A>| is used in a command.
 
 When executing the commands, the message from one command overwrites a
 previous message.  This is different from when executing the commands
@@ -205,8 +205,8 @@ prompt.  When one command outputs two <A HREF="message.html#messages">messages</
 :au[tocmd]! [group] <A HREF="#{event}">{event}</A> <A HREF="#{aupat}">{aupat}</A> [++once] [++nested] {cmd}
 			Remove all autocommands associated with <A HREF="#{event}">{event}</A> and
 			<A HREF="#{aupat}">{aupat}</A>, and add the command {cmd}.
-			See |<A HREF="#autocmd-once">autocmd-once</A>| for [++once].
-			See |<A HREF="#autocmd-nested">autocmd-nested</A>| for [++nested].
+			见 |<A HREF="#autocmd-once">autocmd-once</A>| for [++once].
+			见 |<A HREF="#autocmd-nested">autocmd-nested</A>| for [++nested].
 
 :au[tocmd]! [group] <A HREF="#{event}">{event}</A> <A HREF="#{aupat}">{aupat}</A>
 			Remove all autocommands associated with <A HREF="#{event}">{event}</A> and
@@ -219,14 +219,14 @@ prompt.  When one command outputs two <A HREF="message.html#messages">messages</
 :au[tocmd]! [group] <A HREF="#{event}">{event}</A>
 			Remove ALL autocommands for <A HREF="#{event}">{event}</A>.
 			Warning: You should not <A HREF="diff.html#do">do</A> this without a group for
-			|<A HREF="#BufRead">BufRead</A>| and other common <A HREF="#events">events</A>, <A HREF="motion.html#it">it</A> can break
+			|<A HREF="#BufRead">BufRead</A>| and other common <A HREF="#events">events</A>, <A HREF="motion.html#it">它</A> can break
 			plugins, <A HREF="syntax.html#syntax">syntax</A> highlighting, etc.
 
 :au[tocmd]! [group]	Remove ALL autocommands.
 			Note: a <A HREF="change.html#quote">quote</A> will be seen <A HREF="motion.html#as">as</A> argument to the <A HREF="#:autocmd">:autocmd</A>
 			and won't start a comment.
 			Warning: You should normally not <A HREF="diff.html#do">do</A> this without a
-			group, <A HREF="motion.html#it">it</A> breaks plugins, <A HREF="syntax.html#syntax">syntax</A> highlighting, etc.
+			group, <A HREF="motion.html#it">它</A> breaks plugins, <A HREF="syntax.html#syntax">syntax</A> highlighting, etc.
 
 When the [group] argument is not given, Vim uses the current group (as defined
 with &quot;:augroup&quot;); otherwise, Vim uses the group defined with [group].
@@ -253,11 +253,11 @@ If you provide the [group] argument, Vim lists only the autocommands for
 argument behavior differs from that for defining and removing autocommands.
 
 In order to <A HREF="eval.html#list">list</A> buffer-local autocommands, use a <A HREF="pattern.html#pattern">pattern</A> in the form &lt;buffer&gt;
-or <A HREF="#&lt;buffer=N&gt;">&lt;buffer=N&gt;</A>.  See |<A HREF="#autocmd-buflocal">autocmd-buflocal</A>|.
+or <A HREF="#&lt;buffer=N&gt;">&lt;buffer=N&gt;</A>.  见 |<A HREF="#autocmd-buflocal">autocmd-buflocal</A>|.
 
 
 							*<A NAME=":autocmd-verbose"></A><B>:autocmd-verbose</B>*
-When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing an <A HREF="#autocommand">autocommand</A> will also display where <A HREF="motion.html#it">it</A>
+When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing an <A HREF="#autocommand">autocommand</A> will also display where <A HREF="motion.html#it">它</A>
 was last defined. Example:
 
 <B>    :verbose autocmd BufEnter</B>
@@ -265,7 +265,7 @@ was last defined. Example:
 <B>	*	  call s:LocalBrowse(expand("&lt;amatch&gt;"))</B>
 <B>	    Last set from /usr/share/vim/vim-7.0/plugin/NetrwPlugin.vim</B>
  
-See |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
+见 |<A HREF="various.html#:verbose-cmd">:verbose-cmd</A>| for more information.
 
 ==============================================================================
 
@@ -370,7 +370,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 						*<A NAME="BufRead"></A><B>BufRead</B>* *<A NAME="BufReadPost"></A><B>BufReadPost</B>*
 <A HREF="#BufRead">BufRead</A> or <A HREF="#BufReadPost">BufReadPost</A>		When starting to edit a new buffer, after
 				reading the file into the buffer, before
-				processing modelines.  See |<A HREF="#BufWinEnter">BufWinEnter</A>| to <A HREF="diff.html#do">do</A>
+				processing modelines.  见 |<A HREF="#BufWinEnter">BufWinEnter</A>| to <A HREF="diff.html#do">do</A>
 				something after processing modelines.
 				Also triggered:
 				- when <A HREF="editing.html#writing">writing</A> an unnamed buffer in a way that
@@ -414,7 +414,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				since the buffer does not change, or <A HREF="windows.html#:split">:split</A>
 				with a file already open in a<A HREF="windows.html#window">窗口</A>.
 				Triggered for &quot;<A HREF="windows.html#:split">:split</A>&quot; with the name of the
-				current buffer, since <A HREF="motion.html#it">it</A> reloads that buffer.
+				current buffer, since <A HREF="motion.html#it">它</A> reloads that buffer.
 
 							*<A NAME="BufWinLeave"></A><B>BufWinLeave</B>*
 <A HREF="#BufWinLeave">BufWinLeave</A>			Before a buffer is removed from a<A HREF="windows.html#window">窗口</A>.
@@ -460,31 +460,31 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				client of a <A HREF="api.html#RPC">RPC</A> <A HREF="channel.html#channel">channel</A> described itself.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
 				    info
-				See |<A HREF="api.html#nvim_get_chan_info()">nvim_get_chan_info()</A>| for the format of
+				见 |<A HREF="api.html#nvim_get_chan_info()">nvim_get_chan_info()</A>| for the format of
 				the info <A HREF="eval.html#Dictionary">Dictionary</A>.
 
 							*<A NAME="ChanOpen"></A><B>ChanOpen</B>*
 <A HREF="#ChanOpen">ChanOpen</A>			Just after a <A HREF="channel.html#channel">channel</A> was opened.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
 				    info
-				See |<A HREF="api.html#nvim_get_chan_info()">nvim_get_chan_info()</A>| for the format of
+				见 |<A HREF="api.html#nvim_get_chan_info()">nvim_get_chan_info()</A>| for the format of
 				the info <A HREF="eval.html#Dictionary">Dictionary</A>.
 
 							*<A NAME="CmdUndefined"></A><B>CmdUndefined</B>*
-<A HREF="#CmdUndefined">CmdUndefined</A>			When a user command is used but <A HREF="motion.html#it">it</A> isn't
+<A HREF="#CmdUndefined">CmdUndefined</A>			When a user command is used but <A HREF="motion.html#it">它</A> isn't
 				defined.  Useful for defining a command only
 				when it's used.  The <A HREF="pattern.html#pattern">pattern</A> is matched
 				against the command name.  Both <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> and
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expand to the command name.
 				NOTE: Autocompletion won't work until the
 				command is defined.  An alternative is to
-				always define the user command and have <A HREF="motion.html#it">it</A>
-				invoke an autoloaded function.  See |<A HREF="eval.html#autoload">autoload</A>|.
+				always define the user command and have <A HREF="motion.html#it">它</A>
+				invoke an autoloaded function.  见 |<A HREF="eval.html#autoload">autoload</A>|.
 
 							*<A NAME="CmdlineChanged"></A><B>CmdlineChanged</B>*
 <A HREF="#CmdlineChanged">CmdlineChanged</A>			After a change was made to the text inside
 				command line.  Be careful not to mess up the
-				command line, <A HREF="motion.html#it">it</A> may cause Vim to lock up.
+				command line, <A HREF="motion.html#it">它</A> may cause Vim to lock up.
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expands to the |<A HREF="cmdline.html#cmdline-char">cmdline-char</A>|.
 
 							*<A NAME="CmdlineEnter"></A><B>CmdlineEnter</B>*
@@ -507,7 +507,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				    cmdtype
 				Note: `abort` can only be changed from false
 				to true: cannot execute an already aborted
-				<A HREF="cmdline.html#cmdline">cmdline</A> by <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">it</A> to false.
+				<A HREF="cmdline.html#cmdline">cmdline</A> by <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">它</A> to false.
 
 							*<A NAME="CmdwinEnter"></A><B>CmdwinEnter</B>*
 <A HREF="#CmdwinEnter">CmdwinEnter</A>			After entering the command-line<A HREF="windows.html#window">窗口</A>.
@@ -547,7 +547,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				that.
 
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
-				    completed_item	See |<A HREF="insert.html#complete-items">complete-items</A>|.
+				    completed_item	见 |<A HREF="insert.html#complete-items">complete-items</A>|.
 				    height		nr of items visible
 				    width		screen cells
 				    row			top screen row
@@ -578,7 +578,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				completion. |<A HREF="insert.html#ins-completion">ins-completion</A>|
 				|<A HREF="builtin.html#complete_info()">complete_info()</A>| cannot be used, the info is
 				cleared before triggering <A HREF="#CompleteDone">CompleteDone</A>.  Use
-				<A HREF="#CompleteDonePre">CompleteDonePre</A> if you need <A HREF="motion.html#it">it</A>.
+				<A HREF="#CompleteDonePre">CompleteDonePre</A> if you need <A HREF="motion.html#it">它</A>.
 				|<A HREF="eval.html#v:completed_item">v:completed_item</A>| gives the completed item.
 
 
@@ -587,8 +587,8 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				specified with <A HREF="options.html#'updatetime'">'updatetime'</A>.  Not triggered
 				until the user has pressed a key (i.e. doesn't
 				fire every <A HREF="options.html#'updatetime'">'updatetime'</A> ms if you leave Vim to
-				make some coffee. :)  See |<A HREF="windows.html#CursorHold-example">CursorHold-example</A>|
-				for previewing <A HREF="tagsrch.html#tags">tags</A>.
+				make some coffee. :)  见 |<A HREF="windows.html#CursorHold-example">CursorHold-example</A>|
+				for previewing <A HREF="tagsrch.html#tags">标签</A>.
 				This event is only triggered in <A HREF="intro.html#Normal">正常</A>模式.
 				It is not triggered when waiting for a command
 				argument to be typed, or a <A HREF="intro.html#movement">movement</A> after an
@@ -627,7 +627,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				while executing commands in a <A HREF="usr_41.html#script">script</A> file, or
 				when an <A HREF="motion.html#operator">operator</A> is pending. Always triggered
 				when moving to another<A HREF="windows.html#window">窗口</A>.
-				For an example see |<A HREF="tips.html#match-parens">match-parens</A>|.
+				For an example 见 |<A HREF="tips.html#match-parens">match-parens</A>|.
 				Note: Cannot be skipped with |<A HREF="#:noautocmd">:noautocmd</A>|.
 				Careful: This is triggered very often, don't
 				<A HREF="diff.html#do">do</A> anything that the user does not expect or
@@ -672,7 +672,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				Non-recursive (event cannot trigger itself).
 
 							*<A NAME="ExitPre"></A><B>ExitPre</B>*
-<A HREF="#ExitPre">ExitPre</A>				When using `:quit`, `:wq` in a way <A HREF="motion.html#it">it</A> makes
+<A HREF="#ExitPre">ExitPre</A>				When using `:quit`, `:wq` in a way <A HREF="motion.html#it">它</A> makes
 				Vim exit, or using `:qall`, just after
 				|<A HREF="#QuitPre">QuitPre</A>|.  Can be used to close any
 				non-essential<A HREF="windows.html#window">窗口</A>.  Exiting may still be
@@ -760,7 +760,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				option was set.  <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> is the new value of
 				<A HREF="options.html#'filetype'">'filetype'</A>.
 				Cannot switch <A HREF="windows.html#windows">windows</A> or <A HREF="windows.html#buffers">buffers</A>.
-				See |<A HREF="filetype.html#filetypes">filetypes</A>|.
+				见 |<A HREF="filetype.html#filetypes">filetypes</A>|.
 
 							*<A NAME="FileWriteCmd"></A><B>FileWriteCmd</B>*
 <A HREF="#FileWriteCmd">FileWriteCmd</A>			Before <A HREF="editing.html#writing">writing</A> to a file, when not <A HREF="editing.html#writing">writing</A> the
@@ -817,14 +817,14 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				a <A HREF="gui.html#GUI">GUI</A> dialog pops up.
 
 							*<A NAME="FuncUndefined"></A><B>FuncUndefined</B>*
-<A HREF="#FuncUndefined">FuncUndefined</A>			When a user function is used but <A HREF="motion.html#it">it</A> isn't
+<A HREF="#FuncUndefined">FuncUndefined</A>			When a user function is used but <A HREF="motion.html#it">它</A> isn't
 				defined.  Useful for defining a function only
 				when it's used.  The <A HREF="pattern.html#pattern">pattern</A> is matched
 				against the function name.  Both <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> and
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> are set to the name of the function.
 				NOTE: When <A HREF="editing.html#writing">writing</A> Vim scripts a better
 				alternative is to use an autoloaded function.
-				See |<A HREF="eval.html#autoload-functions">autoload-functions</A>|.
+				见 |<A HREF="eval.html#autoload-functions">autoload-functions</A>|.
 
 							*<A NAME="UIEnter"></A><B>UIEnter</B>*
 <A HREF="#UIEnter">UIEnter</A>				After a <A HREF="ui.html#UI">UI</A> connects via |<A HREF="api.html#nvim_ui_attach()">nvim_ui_attach()</A>|, or
@@ -874,7 +874,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 							*<A NAME="InsertLeavePre"></A><B>InsertLeavePre</B>*
 <A HREF="#InsertLeavePre">InsertLeavePre</A>			Just before leaving <A HREF="intro.html#Insert">插入</A>模式.  Also when
 				using CTRL-O |<A HREF="insert.html#i_CTRL-O">i_CTRL-O</A>|.  Be careful not to
-				change mode or use `:normal`, <A HREF="motion.html#it">it</A> will likely
+				change mode or use `:normal`, <A HREF="motion.html#it">它</A> will likely
 				cause trouble.
 
 							*<A NAME="InsertLeave"></A><B>InsertLeave</B>*
@@ -900,7 +900,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				example match against `*:c` to simulate
 				|<A HREF="#CmdlineEnter">CmdlineEnter</A>|.
 				The following values of |<A HREF="eval.html#v:event">v:event</A>| are set:
-					old_mode The mode before <A HREF="motion.html#it">it</A> changed.
+					old_mode The mode before <A HREF="motion.html#it">它</A> changed.
 					new_mode The new mode <A HREF="motion.html#as">as</A> also returned
 						by |<A HREF="builtin.html#mode()">mode()</A>| called with a
 						non-zero argument.
@@ -924,7 +924,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				|<A HREF="eval.html#v:option_type">v:option_type</A>| indicates whether it's global
 				or local scoped.
 				|<A HREF="eval.html#v:option_command">v:option_command</A>| indicates what type of
-				set/let command was used (follow the <A HREF="tagsrch.html#tag">tag</A> to
+				set/let command was used (follow the <A HREF="tagsrch.html#tag">标签</A> to
 				see the table).
 				|<A HREF="eval.html#v:option_new">v:option_new</A>| indicates the newly set value.
 				|<A HREF="eval.html#v:option_oldlocal">v:option_oldlocal</A>| has the old local value.
@@ -940,7 +940,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				option with |<A HREF="options.html#:set">:set</A>|, then |<A HREF="eval.html#v:option_old">v:option_old</A>| is the
 				old global value. However, for all other kinds
 				of <A HREF="options.html#options">options</A> (local <A HREF="eval.html#string">string</A> <A HREF="options.html#options">options</A>, <A HREF="options.html#global-local">global-local</A>
-				number <A HREF="options.html#options">options</A>, <A HREF="eval.html#...">...</A>) <A HREF="motion.html#it">it</A> is the old local
+				number <A HREF="options.html#options">options</A>, <A HREF="eval.html#...">...</A>) <A HREF="motion.html#it">它</A> is the old local
 				value.
 
 				<A HREF="#OptionSet">OptionSet</A> is not triggered on <A HREF="starting.html#startup">startup</A> and for
@@ -948,7 +948,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 				Usage example: Check for the existence of the
 				directory in the <A HREF="options.html#'backupdir'">'backupdir'</A> and <A HREF="options.html#'undodir'">'undodir'</A>
-				<A HREF="options.html#options">options</A>, create the directory if <A HREF="motion.html#it">it</A> doesn't
+				<A HREF="options.html#options">options</A>, create the directory if <A HREF="motion.html#it">它</A> doesn't
 				exist yet.
 
 				Note: Do not reset the same option during this
@@ -972,7 +972,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				|<A HREF="quickfix.html#:caddbuffer">:caddbuffer</A>|).
 				The <A HREF="pattern.html#pattern">pattern</A> is matched against the command
 				being run.  When |<A HREF="quickfix.html#:grep">:grep</A>| is used but <A HREF="options.html#'grepprg'">'grepprg'</A>
-				is set to &quot;internal&quot; <A HREF="motion.html#it">it</A> still matches &quot;<A HREF="quickfix.html#grep">grep</A>&quot;.
+				is set to &quot;internal&quot; <A HREF="motion.html#it">它</A> still matches &quot;<A HREF="quickfix.html#grep">grep</A>&quot;.
 				This command cannot be used to set the
 				<A HREF="options.html#'makeprg'">'makeprg'</A> and <A HREF="options.html#'grepprg'">'grepprg'</A> <A HREF="eval.html#variables">variables</A>.
 				If this command causes an error, the <A HREF="quickfix.html#quickfix">quickfix</A>
@@ -982,13 +982,13 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 <A HREF="#QuickFixCmdPost">QuickFixCmdPost</A>			Like <A HREF="#QuickFixCmdPre">QuickFixCmdPre</A>, but after a <A HREF="quickfix.html#quickfix">quickfix</A>
 				command is run, before jumping to the first
 				location. For |<A HREF="quickfix.html#:cfile">:cfile</A>| and |<A HREF="quickfix.html#:lfile">:lfile</A>| commands
-				<A HREF="motion.html#it">it</A> is run after error file is read and before
+				<A HREF="motion.html#it">它</A> is run after error file is read and before
 				moving to the first error.
-				See |<A HREF="quickfix.html#QuickFixCmdPost-example">QuickFixCmdPost-example</A>|.
+				见 |<A HREF="quickfix.html#QuickFixCmdPost-example">QuickFixCmdPost-example</A>|.
 
 							*<A NAME="QuitPre"></A><B>QuitPre</B>*
 <A HREF="#QuitPre">QuitPre</A>				When using `:quit`, `:wq` or `:qall`, before
-				deciding whether <A HREF="motion.html#it">it</A> closes the current<A HREF="windows.html#window">窗口</A>
+				deciding whether <A HREF="motion.html#it">它</A> closes the current<A HREF="windows.html#window">窗口</A>
 				or quits Vim.  For `:wq` the buffer is written
 				before <A HREF="#QuitPre">QuitPre</A> is triggered.  Can be used to
 				close any non-essential<A HREF="windows.html#window">窗口</A>if the current
@@ -1004,7 +1004,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				reply <A HREF="eval.html#string">string</A>.
 				Note that even if an <A HREF="#autocommand">autocommand</A> is defined,
 				the reply should be read with |<A HREF="intro.html#remote_read()">remote_read()</A>|
-				to consume <A HREF="motion.html#it">it</A>.
+				to consume <A HREF="motion.html#it">它</A>.
 
 							*<A NAME="SearchWrapped"></A><B>SearchWrapped</B>*
 <A HREF="#SearchWrapped">SearchWrapped</A>			After making a search with |<A HREF="pattern.html#n">n</A>| or |<A HREF="pattern.html#N">N</A>| if the
@@ -1068,8 +1068,8 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				|<A HREF="#Cmd-event">Cmd-event</A>|
 
 							*<A NAME="SpellFileMissing"></A><B>SpellFileMissing</B>*
-<A HREF="#SpellFileMissing">SpellFileMissing</A>		When trying to load a <A HREF="spell.html#spell">spell</A> checking file and
-				<A HREF="motion.html#it">it</A> can't be found.  The <A HREF="pattern.html#pattern">pattern</A> is matched
+<A HREF="#SpellFileMissing">SpellFileMissing</A>		When trying to load a <A HREF="spell.html#spell">拼写</A> checking file and
+				<A HREF="motion.html#it">它</A> can't be found.  The <A HREF="pattern.html#pattern">pattern</A> is matched
 				against the language.  <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> is the
 				language, <A HREF="options.html#'encoding'">'encoding'</A> also matters.  See
 				|<A HREF="spell.html#spell-SpellFileMissing">spell-SpellFileMissing</A>|.
@@ -1084,7 +1084,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="SwapExists"></A><B>SwapExists</B>*
 <A HREF="#SwapExists">SwapExists</A>			Detected an existing swap file when starting
-				to edit a file.  Only when <A HREF="motion.html#it">it</A> is possible to
+				to edit a file.  Only when <A HREF="motion.html#it">它</A> is possible to
 				select a way to handle the situation, when Vim
 				would ask the user what to <A HREF="diff.html#do">do</A>.
 				The |<A HREF="eval.html#v:swapname">v:swapname</A>| variable holds the name of
@@ -1113,7 +1113,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expands to the name of the file where
 				this option was set. <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> expands to the
 				new value of <A HREF="options.html#'syntax'">'syntax'</A>.
-				See |<A HREF="syntax.html#:syn-on">:syn-on</A>|.
+				见 |<A HREF="syntax.html#:syn-on">:syn-on</A>|.
 
 							*<A NAME="TabEnter"></A><B>TabEnter</B>*
 <A HREF="#TabEnter">TabEnter</A>			Just after entering a tab page. |<A HREF="tabpage.html#tab-page">tab-page</A>|
@@ -1323,8 +1323,8 @@ two ways:
 1. When there is no '<A HREF="pattern.html#/">/</A>' in the <A HREF="pattern.html#pattern">pattern</A>, Vim checks for a match against only
    the tail part of the file name (without its leading directory path).
 2. When there is a '<A HREF="pattern.html#/">/</A>' in the <A HREF="pattern.html#pattern">pattern</A>, Vim checks for a match against both the
-   short file name (as you typed <A HREF="motion.html#it">it</A>) and the full file name (after expanding
-   <A HREF="motion.html#it">it</A> to a full path and resolving symbolic links).
+   short file name (as you typed <A HREF="motion.html#it">它</A>) and the full file name (after expanding
+   <A HREF="motion.html#it">它</A> to a full path and resolving symbolic links).
 
 The special <A HREF="pattern.html#pattern">pattern</A> &lt;buffer&gt; or <A HREF="#&lt;buffer=N&gt;">&lt;buffer=N&gt;</A> is used for buffer-local
 autocommands |<A HREF="#autocmd-buflocal">autocmd-buflocal</A>|.  This <A HREF="pattern.html#pattern">pattern</A> is not matched against the name
@@ -1420,7 +1420,7 @@ still executed.
 
 Buffer-local autocommands are attached to a specific buffer.  They are useful
 if the buffer does not have a name and when the name does not match a specific
-<A HREF="pattern.html#pattern">pattern</A>.  But <A HREF="motion.html#it">it</A> also means they must be explicitly added to each buffer.
+<A HREF="pattern.html#pattern">pattern</A>.  But <A HREF="motion.html#it">它</A> also means they must be explicitly added to each buffer.
 
 Instead of a <A HREF="pattern.html#pattern">pattern</A> buffer-local autocommands use one of these forms:
 	&lt;buffer&gt;	current buffer
@@ -1444,8 +1444,8 @@ simply use the special <A HREF="eval.html#string">string</A> instead of the <A H
 <B>    :au * &lt;buffer&gt;		     " list buffer-local autocommands for</B>
 <B>				     " current buffer</B>
 
-Note that when an <A HREF="#autocommand">autocommand</A> is defined for the current buffer, <A HREF="motion.html#it">it</A> is stored
-with the buffer number.  Thus <A HREF="motion.html#it">it</A> uses the form &quot;&lt;buffer=12&gt;&quot;, where 12 is the
+Note that when an <A HREF="#autocommand">autocommand</A> is defined for the current buffer, <A HREF="motion.html#it">它</A> is stored
+with the buffer number.  Thus <A HREF="motion.html#it">它</A> uses the form &quot;&lt;buffer=12&gt;&quot;, where 12 is the
 number of the current buffer.  You will see this when listing autocommands,
 for example.
 
@@ -1455,7 +1455,7 @@ To test for presence of buffer-local autocommands use the |<A HREF="builtin.html
 <B>    :if exists("#CursorHold#&lt;buffer&gt;") | ... | endif    " for current buffer</B>
 
 When a buffer is wiped out its buffer-local autocommands are also gone, of
-course.  Note that when <A HREF="change.html#deleting">deleting</A> a buffer, e.g., with &quot;<A HREF="windows.html#:bdel">:bdel</A>&quot;, <A HREF="motion.html#it">it</A> is only
+course.  Note that when <A HREF="change.html#deleting">deleting</A> a buffer, e.g., with &quot;<A HREF="windows.html#:bdel">:bdel</A>&quot;, <A HREF="motion.html#it">它</A> is only
 unlisted, the autocommands are still present.  In order to see the removal of
 buffer-local autocommands:
 <B>    :set verbose=6</B>
@@ -1501,7 +1501,7 @@ name!
 :aug[roup]! {name}		Delete the <A HREF="#autocmd">autocmd</A> group {name}.  Don't use
 				this if there is still an <A HREF="#autocommand">autocommand</A> using
 				this group!  You will get a warning if doing
-				<A HREF="motion.html#it">it</A> anyway.  When the group is the current
+				<A HREF="motion.html#it">它</A> anyway.  When the group is the current
 				group you will get error <A HREF="#E936">E936</A>.
 
 To enter autocommands for a specific group, use this <A HREF="eval.html#method">method</A>:
@@ -1603,7 +1603,7 @@ of these sets for a write command:
 <A HREF="#FileAppendCmd">FileAppendCmd</A>	<A HREF="#FileAppendPre">FileAppendPre</A>	<A HREF="#FileAppendPost">FileAppendPost</A>	appending to a file
 <A HREF="#FileWriteCmd">FileWriteCmd</A>	<A HREF="#FileWritePre">FileWritePre</A>	<A HREF="#FileWritePost">FileWritePost</A>	any other file write
 
-When there is a matching &quot;*Cmd&quot; <A HREF="#autocommand">autocommand</A>, <A HREF="motion.html#it">it</A> is assumed <A HREF="motion.html#it">it</A> will <A HREF="diff.html#do">do</A> the
+When there is a matching &quot;*Cmd&quot; <A HREF="#autocommand">autocommand</A>, <A HREF="motion.html#it">它</A> is assumed <A HREF="motion.html#it">它</A> will <A HREF="diff.html#do">do</A> the
 <A HREF="editing.html#writing">writing</A>.  No further <A HREF="editing.html#writing">writing</A> is done and the other <A HREF="#events">events</A> are not triggered.
 |<A HREF="#Cmd-event">Cmd-event</A>|
 
@@ -1632,7 +1632,7 @@ Careful: <A HREF="motion.html#'[">'[</A> and <A HREF="motion.html#']">']</A> cha
 In commands which expect a file name, you can use &quot;<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A>&quot; for the file name
 that is being read |<A HREF="cmdline.html#:&lt;afile&gt;">:&lt;afile&gt;</A>| (you can also use &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; for the current file
 name).  &quot;<A HREF="cmdline.html#&lt;abuf&gt;">&lt;abuf&gt;</A>&quot; can be used for the buffer number of the currently effective
-buffer.  This also works for <A HREF="windows.html#buffers">buffers</A> that don't have a name.  But <A HREF="motion.html#it">it</A> doesn't
+buffer.  This also works for <A HREF="windows.html#buffers">buffers</A> that don't have a name.  But <A HREF="motion.html#it">它</A> doesn't
 work for files without a buffer (e.g., with &quot;<A HREF="insert.html#:r">:r</A> file&quot;).
 
 
@@ -1656,7 +1656,7 @@ Examples for reading and <A HREF="editing.html#writing">writing</A> compressed f
 The &quot;<A HREF="pi_gzip.html#gzip">gzip</A>&quot; group is used to be able to delete any existing autocommands with
 &quot;:autocmd!&quot;, for when the file is sourced <A HREF="if_cscop.html#twice">twice</A>.
 
-(&quot;&lt;afile&gt;:r&quot; is the file name without the extension, see |<A HREF="cmdline.html#:_&#37;:">:_&#37;:</A>|)
+(&quot;&lt;afile&gt;:r&quot; is the file name without the extension, 见 |<A HREF="cmdline.html#:_&#37;:">:_&#37;:</A>|)
 
 The commands executed for the <A HREF="#BufNewFile">BufNewFile</A>, BufRead/BufReadPost, <A HREF="#BufWritePost">BufWritePost</A>,
 <A HREF="#FileAppendPost">FileAppendPost</A> and <A HREF="#VimLeave">VimLeave</A> <A HREF="#events">events</A> <A HREF="diff.html#do">do</A> not set or reset the changed flag of the
@@ -1671,8 +1671,8 @@ command.  Use with care!  If the <A HREF="intro.html#Normal">正常</A>模式 co
 needs to type characters (e.g., after &quot;<A HREF="various.html#:normal">:normal</A> m&quot; you need to type a <A HREF="motion.html#mark">mark</A>
 name).
 
-If you want the buffer to be unmodified after <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">it</A>, reset the
-<A HREF="options.html#'modified'">'modified'</A> option.  This makes <A HREF="motion.html#it">it</A> possible to exit the buffer with &quot;<A HREF="editing.html#:q">:q</A>&quot;
+If you want the buffer to be unmodified after <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">它</A>, reset the
+<A HREF="options.html#'modified'">'modified'</A> option.  This makes <A HREF="motion.html#it">它</A> possible to exit the buffer with &quot;<A HREF="editing.html#:q">:q</A>&quot;
 instead of &quot;:q!&quot;.
 
 
@@ -1736,7 +1736,7 @@ To read a <A HREF="#skeleton">skeleton</A> (template) file when opening a new fi
 <B>  :autocmd BufNewFile  *.h	0r ~/vim/skeleton.h</B>
 <B>  :autocmd BufNewFile  *.java	0r ~/vim/skeleton.java</B>
 
-To insert the current date and time in a *.html file when <A HREF="editing.html#writing">writing</A> <A HREF="motion.html#it">it</A>:
+To insert the current date and time in a *.html file when <A HREF="editing.html#writing">writing</A> <A HREF="motion.html#it">它</A>:
 
 <B>  :autocmd BufWritePre,FileWritePre *.html   ks|call LastMod()|'s</B>
 <B>  :fun LastMod()</B>
@@ -1751,7 +1751,7 @@ To insert the current date and time in a *.html file when <A HREF="editing.html#
 
 You need to have a line &quot;Last modified: &lt;date time&gt;&quot; in the first 20 lines
 of the file for this to work.  Vim replaces &lt;date time&gt; (and anything in the
-same line after <A HREF="motion.html#it">it</A>) with the current date and time.  Explanation:
+same line after <A HREF="motion.html#it">它</A>) with the current date and time.  Explanation:
 	ks		<A HREF="motion.html#mark">mark</A> current position with <A HREF="motion.html#mark">mark</A> '<A HREF="change.html#s">s</A>'
 	call LastMod()  call the LastMod() function to <A HREF="diff.html#do">do</A> the work
 	's		return the cursor to the old position
@@ -1768,7 +1768,7 @@ names may be done (with <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, <A HR
 Vim executes all matching autocommands in the order that you specify them.
 It is recommended that your first <A HREF="#autocommand">autocommand</A> be used for all files by using
 &quot;*&quot; <A HREF="motion.html#as">as</A> the file <A HREF="pattern.html#pattern">pattern</A>.  This means that you can define defaults you like
-here for any settings, and if there is another matching <A HREF="#autocommand">autocommand</A> <A HREF="motion.html#it">it</A> will
+here for any settings, and if there is another matching <A HREF="#autocommand">autocommand</A> <A HREF="motion.html#it">它</A> will
 override these.  But if there is no other matching <A HREF="#autocommand">autocommand</A>, then at least
 your default settings are recovered (if entering this file from another for
 which autocommands did match).  Note that &quot;*&quot; will also match files starting
@@ -1781,7 +1781,7 @@ search patterns before executing autocommands then restores them after the
 autocommands finish.  This means that autocommands <A HREF="diff.html#do">do</A> not affect the strings
 highlighted with the <A HREF="options.html#'hlsearch'">'hlsearch'</A> option.  Within autocommands, you can still
 use search patterns normally, e.g., with the &quot;<A HREF="pattern.html#n">n</A>&quot; command.
-If you want an <A HREF="#autocommand">autocommand</A> to set the search <A HREF="pattern.html#pattern">pattern</A>, such that <A HREF="motion.html#it">it</A> is used
+If you want an <A HREF="#autocommand">autocommand</A> to set the search <A HREF="pattern.html#pattern">pattern</A>, such that <A HREF="motion.html#it">它</A> is used
 after the <A HREF="#autocommand">autocommand</A> finishes, use the &quot;<A HREF="eval.html#:let">:let</A> <A HREF="change.html#@/">@/</A> =&quot; command.
 The search-highlighting cannot be switched off with &quot;<A HREF="pattern.html#:nohlsearch">:nohlsearch</A>&quot; in an
 <A HREF="#autocommand">autocommand</A>.  Use the '<A HREF="motion.html#h">h</A>' flag in the <A HREF="options.html#'shada'">'shada'</A> option to disable search-
@@ -1792,12 +1792,12 @@ highlighting when starting Vim.
 When using one of the &quot;*Cmd&quot; <A HREF="#events">events</A>, the matching autocommands are expected to
 <A HREF="diff.html#do">do</A> the file reading, <A HREF="editing.html#writing">writing</A> or sourcing.  This can be used when working with
 a special kind of file, for example on a remote system.
-CAREFUL: If you use these <A HREF="#events">events</A> in a wrong way, <A HREF="motion.html#it">it</A> may have the effect of
-making <A HREF="motion.html#it">it</A> impossible to read or write the matching files!  Make sure you test
+CAREFUL: If you use these <A HREF="#events">events</A> in a wrong way, <A HREF="motion.html#it">它</A> may have the effect of
+making <A HREF="motion.html#it">它</A> impossible to read or write the matching files!  Make sure you test
 your autocommands properly.  Best is to use a <A HREF="pattern.html#pattern">pattern</A> that will never match a
  normal file name, for example &quot;ftp://*&quot;.
 
-When defining a <A HREF="#BufReadCmd">BufReadCmd</A> <A HREF="motion.html#it">it</A> will be difficult for Vim to recover a crashed
+When defining a <A HREF="#BufReadCmd">BufReadCmd</A> <A HREF="motion.html#it">它</A> will be difficult for Vim to recover a crashed
 editing session.  When recovering from the original file, Vim reads only those
 parts of a file that are not found in the swap file.  Since that is not
 possible with a <A HREF="#BufReadCmd">BufReadCmd</A>, use the |<A HREF="recover.html#:preserve">:preserve</A>| command to make sure the

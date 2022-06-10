@@ -93,7 +93,7 @@ and for <A HREF="#testing">testing</A> plugins.
 
 1. Testing Vim						*<A NAME="testing"></A><B>testing</B>*
 
-Vim can be tested after building <A HREF="motion.html#it">it</A>, usually with &quot;make test&quot;.
+Vim can be tested after building <A HREF="motion.html#it">它</A>, usually with &quot;make test&quot;.
 The tests are located in the directory &quot;src/testdir&quot;.
 
 There are several types of tests added over time:
@@ -130,9 +130,9 @@ Find more information in the file src/testdir/README.txt.
 
 
 assert_beeps({cmd})					*<A NAME="assert_beeps()"></A><B>assert_beeps()</B>*
-		Run {cmd} and add an error message to |<A HREF="eval.html#v:errors">v:errors</A>| if <A HREF="motion.html#it">it</A> does
+		Run {cmd} and add an error message to |<A HREF="eval.html#v:errors">v:errors</A>| if <A HREF="motion.html#it">它</A> does
 		NOT produce a beep or visual bell.
-		Also see |<A HREF="#assert_fails()">assert_fails()</A>|, |<A HREF="#assert_nobeep()">assert_nobeep()</A>| and
+		Also 见 |<A HREF="#assert_fails()">assert_fails()</A>|, |<A HREF="#assert_nobeep()">assert_nobeep()</A>| and
 		|<A HREF="eval.html#assert-return">assert-return</A>|.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -163,7 +163,7 @@ assert_equal({expected}, {actual} [, {msg}])
 assert_equalfile({fname-one}, {fname-two})
 		When the files {fname-one} and {fname-two} <A HREF="diff.html#do">do</A> not contain
 		exactly the same text an error message is added to |<A HREF="eval.html#v:errors">v:errors</A>|.
-		Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
+		Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 		When {fname-one} or {fname-two} does not exist the error will
 		mention that.
 
@@ -173,7 +173,7 @@ assert_equalfile({fname-one}, {fname-two})
 
 assert_exception({error} [, {msg}])			*<A NAME="assert_exception()"></A><B>assert_exception()</B>*
 		When <A HREF="eval.html#v:exception">v:exception</A> does not contain the <A HREF="eval.html#string">string</A> {error} an error
-		message is added to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
+		message is added to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 		This can be used to assert that a command throws an exception.
 		Using the error number, followed by a colon, avoids problems
 		with translations:
@@ -186,9 +186,9 @@ assert_exception({error} [, {msg}])			*<A NAME="assert_exception()"></A><B>asser
 
 
 assert_fails({cmd} [, {error} [, {msg}]])			*<A NAME="assert_fails()"></A><B>assert_fails()</B>*
-		Run {cmd} and add an error message to |<A HREF="eval.html#v:errors">v:errors</A>| if <A HREF="motion.html#it">it</A> does
-		NOT produce an error.  Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
-		When {error} is given <A HREF="motion.html#it">it</A> must match in |<A HREF="eval.html#v:errmsg">v:errmsg</A>|.
+		Run {cmd} and add an error message to |<A HREF="eval.html#v:errors">v:errors</A>| if <A HREF="motion.html#it">它</A> does
+		NOT produce an error.  Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
+		When {error} is given <A HREF="motion.html#it">它</A> must match in |<A HREF="eval.html#v:errmsg">v:errmsg</A>|.
 		Note that beeping is not considered an error, and some failing
 		commands only beep.  Use |<A HREF="#assert_beeps()">assert_beeps()</A>| for those.
 
@@ -199,8 +199,8 @@ assert_fails({cmd} [, {error} [, {msg}]])			*<A NAME="assert_fails()"></A><B>ass
 assert_false({actual} [, {msg}])				*<A NAME="assert_false()"></A><B>assert_false()</B>*
 		When {actual} is not false an error message is added to
 		|<A HREF="eval.html#v:errors">v:errors</A>|, like with |<A HREF="#assert_equal()">assert_equal()</A>|.
-		Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
-		A value is false when <A HREF="motion.html#it">it</A> is zero. When {actual} is not a
+		Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
+		A value is false when <A HREF="motion.html#it">它</A> is zero. When {actual} is not a
 		number the assert fails.
 		When {msg} is omitted an error in the form
 		&quot;Expected False but got {actual}&quot; is produced.
@@ -212,7 +212,7 @@ assert_false({actual} [, {msg}])				*<A NAME="assert_false()"></A><B>assert_fals
 assert_inrange({lower}, {upper}, {actual} [, {msg}])	 *<A NAME="assert_inrange()"></A><B>assert_inrange()</B>*
 		This asserts number and |<A HREF="eval.html#Float">Float</A>| values.  When {actual}  is lower
 		than {lower} or higher than {upper} an error message is added
-		to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
+		to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 		When {msg} is omitted an error in the form
 		&quot;Expected range {lower} - {upper}, but got {actual}&quot; is
 		produced.
@@ -221,7 +221,7 @@ assert_inrange({lower}, {upper}, {actual} [, {msg}])	 *<A NAME="assert_inrange()
 								*<A NAME="assert_match()"></A><B>assert_match()</B>*
 assert_match({pattern}, {actual} [, {msg}])
 		When {pattern} does not match {actual} an error message is
-		added to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
+		added to |<A HREF="eval.html#v:errors">v:errors</A>|.  Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 
 		{pattern} is used <A HREF="motion.html#as">as</A> with |=~|: The matching is always done
 		like <A HREF="options.html#'magic'">'magic'</A> was set and <A HREF="options.html#'cpoptions'">'cpoptions'</A> is empty, no matter what
@@ -243,9 +243,9 @@ assert_match({pattern}, {actual} [, {msg}])
  
 
 assert_nobeep({cmd})					*<A NAME="assert_nobeep()"></A><B>assert_nobeep()</B>*
-		Run {cmd} and add an error message to |<A HREF="eval.html#v:errors">v:errors</A>| if <A HREF="motion.html#it">it</A>
+		Run {cmd} and add an error message to |<A HREF="eval.html#v:errors">v:errors</A>| if <A HREF="motion.html#it">它</A>
 		produces a beep or visual bell.
-		Also see |<A HREF="#assert_beeps()">assert_beeps()</A>|.
+		Also 见 |<A HREF="#assert_beeps()">assert_beeps()</A>|.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetCmd()-&gt;assert_nobeep()</B>
@@ -255,7 +255,7 @@ assert_nobeep({cmd})					*<A NAME="assert_nobeep()"></A><B>assert_nobeep()</B>*
 assert_notequal({expected}, {actual} [, {msg}])
 		The opposite of `assert_equal()`: add an error message to
 		|<A HREF="eval.html#v:errors">v:errors</A>| when {expected} and {actual} are equal.
-		Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
+		Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			mylist-&gt;assert_notequal([1, 2, 3])</B>
@@ -265,7 +265,7 @@ assert_notequal({expected}, {actual} [, {msg}])
 assert_notmatch({pattern}, {actual} [, {msg}])
 		The opposite of `assert_match()`: add an error message to
 		|<A HREF="eval.html#v:errors">v:errors</A>| when {pattern} matches {actual}.
-		Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
+		Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			getFile()-&gt;assert_notmatch('bar.*')</B>
@@ -284,8 +284,8 @@ assert_report({msg})					*<A NAME="assert_report()"></A><B>assert_report()</B>*
 assert_true({actual} [, {msg}])				*<A NAME="assert_true()"></A><B>assert_true()</B>*
 		When {actual} is not true an error message is added to
 		|<A HREF="eval.html#v:errors">v:errors</A>|, like with |<A HREF="#assert_equal()">assert_equal()</A>|.
-		Also see |<A HREF="eval.html#assert-return">assert-return</A>|.
-		A value is |<A HREF="eval.html#TRUE">TRUE</A>| when <A HREF="motion.html#it">it</A> is a non-zero number or |<A HREF="eval.html#v:true">v:true</A>|.
+		Also 见 |<A HREF="eval.html#assert-return">assert-return</A>|.
+		A value is |<A HREF="eval.html#TRUE">TRUE</A>| when <A HREF="motion.html#it">它</A> is a non-zero number or |<A HREF="eval.html#v:true">v:true</A>|.
 		When {actual} is not a number or |<A HREF="eval.html#v:true">v:true</A>| the assert fails.
 		When {msg} is omitted an error in the form &quot;Expected True but
 		got {actual}&quot; is produced.

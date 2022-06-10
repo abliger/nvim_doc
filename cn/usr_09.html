@@ -98,14 +98,14 @@ that the <A HREF="gui.html#GUI">GUI</A> offers.
 *<A NAME="09.1"></A><B>09.1</B>*	Parts of the <A HREF="gui.html#GUI">GUI</A>
 
 You might have an icon on your desktop that starts gvim.  Otherwise, one of
-these commands should <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>:
+these commands should <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
 
 <B>	gvim file.txt</B>
 <B>	vim -g file.txt</B>
 
 If this doesn't work you don't have a version of Vim with <A HREF="gui.html#GUI">GUI</A> support.  You
 will have to install one first.
-   Vim will open a<A HREF="windows.html#window">窗口</A>and display &quot;file.txt&quot; in <A HREF="motion.html#it">it</A>.  What the<A HREF="windows.html#window">窗口</A>looks
+   Vim will open a<A HREF="windows.html#window">窗口</A>and display &quot;file.txt&quot; in <A HREF="motion.html#it">它</A>.  What the<A HREF="windows.html#window">窗口</A>looks
 like depends on the version of Vim.  It should resemble the following picture
 (for <A HREF="motion.html#as">as</A> far <A HREF="motion.html#as">as</A> this can be shown in ASCII!).
 
@@ -162,7 +162,7 @@ THE TOOLBAR
 
 This contains icons for the most often used actions.  Hopefully the icons are
 self-explanatory.  There are tooltips to get an extra hint (move the mouse
-pointer to the icon without clicking and don't move <A HREF="motion.html#it">it</A> for a second).
+pointer to the icon without clicking and don't move <A HREF="motion.html#it">它</A> for a second).
 
 The &quot;Edit/Global Settings/Toggle Toolbar&quot; menu item can be used to make the
 toolbar disappear.  If you never want a toolbar, use this command in your
@@ -171,7 +171,7 @@ toolbar disappear.  If you never want a toolbar, use this command in your
 <B>	:set guioptions-=T</B>
 
 This removes the '<A HREF="motion.html#T">T</A>' flag from the <A HREF="options.html#'guioptions'">'guioptions'</A> option.  Other parts of the
-<A HREF="gui.html#GUI">GUI</A> can also be enabled or disabled with this option.  See the help for <A HREF="motion.html#it">it</A>.
+<A HREF="gui.html#GUI">GUI</A> can also be enabled or disabled with this option.  See the help for <A HREF="motion.html#it">它</A>.
 
 
 THE SCROLLBARS
@@ -184,7 +184,7 @@ when the <A HREF="options.html#'wrap'">'wrap'</A> option has been reset (more ab
 
 When there are vertically split <A HREF="windows.html#windows">windows</A>, only the <A HREF="windows.html#windows">windows</A> on the right side
 will have a scrollbar.  However, when you move the cursor to a<A HREF="windows.html#window">窗口</A>on the
-left, <A HREF="motion.html#it">it</A> will be this one that the scrollbar controls.  This takes a bit of
+left, <A HREF="motion.html#it">它</A> will be this one that the scrollbar controls.  This takes a bit of
 time to get used to.
    When you work with vertically split <A HREF="windows.html#windows">windows</A>, consider adding a scrollbar on
 the left.  This can be done with a menu item, or with the <A HREF="options.html#'guioptions'">'guioptions'</A> option:
@@ -213,7 +213,7 @@ The following command makes the mouse work like a Microsoft Windows mouse:
 
 The default behavior of the mouse on Unix systems is xterm.  The default
 behavior on Windows systems is selected during the installation process.  For
-details about what the two behaviors are, see |<A HREF="options.html#:behave">:behave</A>|.  Here follows a
+details about what the two behaviors are, 见 |<A HREF="options.html#:behave">:behave</A>|.  Here follows a
 summary.
 
 
@@ -229,7 +229,7 @@ Right mouse click		extend the selected text until the mouse
 MSWIN MOUSE BEHAVIOR
 
 Left mouse click		position the cursor
-Left mouse drag			select text in <A HREF="visual.html#Select">Select</A> mode (see |<A HREF="#09.4">09.4</A>|)
+Left mouse drag			select text in <A HREF="visual.html#Select">Select</A> mode (见 |<A HREF="#09.4">09.4</A>|)
 Left mouse click, with Shift	extend the selected text until the mouse
 				pointer
 Middle mouse click		<A HREF="provider.html#paste">paste</A> text from the <A HREF="provider.html#clipboard">clipboard</A>
@@ -259,13 +259,13 @@ using the default option settings).  You can <A HREF="provider.html#paste">paste
 application without any further action.
    For example, in this text select a few words with the mouse.  Vim will
 switch to <A HREF="visual.html#Visual">Visual</A> mode and highlight the text.  Now start another gvim, without
-a file name argument, so that <A HREF="motion.html#it">it</A> displays an empty<A HREF="windows.html#window">窗口</A>.  Click the middle
+a file name argument, so that <A HREF="motion.html#it">它</A> displays an empty<A HREF="windows.html#window">窗口</A>.  Click the middle
 mouse button.  The selected text will be inserted.
 
 The &quot;current selection&quot; will only remain valid until some other text is
 selected.  After doing the <A HREF="provider.html#paste">paste</A> in the other gvim, now select some characters
 in that<A HREF="windows.html#window">窗口</A>.  You will notice that the words that were previously selected
-in the other gvim<A HREF="windows.html#window">窗口</A>are displayed differently.  This means that <A HREF="motion.html#it">it</A> no
+in the other gvim<A HREF="windows.html#window">窗口</A>are displayed differently.  This means that <A HREF="motion.html#it">它</A> no
 longer is the current selection.
 
 You don't need to select text with the mouse, using the keyboard commands for
@@ -288,7 +288,7 @@ Edit/Paste menu.  You will see the text from the real <A HREF="provider.html#cli
 USING BOTH
 
 This use of both the &quot;current selection&quot; and the &quot;real clipboard&quot; might sound
-a bit confusing.  But <A HREF="motion.html#it">it</A> is very useful.  Let's show this with an example.
+a bit confusing.  But <A HREF="motion.html#it">它</A> is very useful.  Let's show this with an example.
 Use one gvim with a text file and perform these actions:
 
 -  <A HREF="visual.html#Select">Select</A> two words in <A HREF="visual.html#Visual">Visual</A> mode.
@@ -335,19 +335,19 @@ instead of the <A HREF="pattern.html#star">star</A> (*) <A HREF="intro.html#regi
 *<A NAME="09.4"></A><B>09.4</B>*	<A HREF="visual.html#Select">Select</A> mode
 
 And now something that is used more often on MS-Windows than on X-Windows.
-But both can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>.  You already know about <A HREF="visual.html#Visual">Visual</A> mode.  <A HREF="visual.html#Select">Select</A> mode is like
-<A HREF="visual.html#Visual">Visual</A> mode, because <A HREF="motion.html#it">it</A> is also used to select text.  But there is an obvious
+But both can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.  You already know about <A HREF="visual.html#Visual">Visual</A> mode.  <A HREF="visual.html#Select">Select</A> mode is like
+<A HREF="visual.html#Visual">Visual</A> mode, because <A HREF="motion.html#it">它</A> is also used to select text.  But there is an obvious
 difference: When typing text, the selected text is deleted and the typed text
-replaces <A HREF="motion.html#it">it</A>.
+replaces <A HREF="motion.html#it">它</A>.
 
-To start working with <A HREF="visual.html#Select">Select</A> mode, you must first enable <A HREF="motion.html#it">it</A> (for MS-Windows
-<A HREF="motion.html#it">it</A> is probably already enabled, but you can <A HREF="diff.html#do">do</A> this anyway):
+To start working with <A HREF="visual.html#Select">Select</A> mode, you must first enable <A HREF="motion.html#it">它</A> (for MS-Windows
+<A HREF="motion.html#it">它</A> is probably already enabled, but you can <A HREF="diff.html#do">do</A> this anyway):
 
 <B>	:set selectmode+=mouse</B>
 
 Now use the mouse to select some text.  It is highlighted like in <A HREF="visual.html#Visual">Visual</A> mode.
 Now press a <A HREF="print.html#letter">letter</A>.  The selected text is deleted, and the single <A HREF="print.html#letter">letter</A>
-replaces <A HREF="motion.html#it">it</A>.  You are in <A HREF="intro.html#Insert">插入</A>模式 now, thus you can continue typing.
+replaces <A HREF="motion.html#it">它</A>.  You are in <A HREF="intro.html#Insert">插入</A>模式 now, thus you can continue typing.
 
 Since typing normal text causes the selected text to be deleted, you can not
 use the normal <A HREF="intro.html#movement">movement</A> commands &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot;, &quot;<A HREF="motion.html#w">w</A>&quot;, etc.  Instead, use the shifted

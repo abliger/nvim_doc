@@ -112,11 +112,11 @@ below.
 :[count]ta[g][!] {name}
 			Jump to the definition of {name}, using the
 			information in the <A HREF="#tags">tags</A> file(s).  Put {name} in the
-			tag stack.  See |<A HREF="#tag-!">tag-!</A>| for [!].
-			{name} can be a regexp <A HREF="pattern.html#pattern">pattern</A>, see |<A HREF="#tag-regexp">tag-regexp</A>|.
+			tag stack.  见 |<A HREF="#tag-!">tag-!</A>| for [!].
+			{name} can be a regexp <A HREF="pattern.html#pattern">pattern</A>, 见 |<A HREF="#tag-regexp">tag-regexp</A>|.
 			When there are several matching <A HREF="#tags">tags</A> for {name}, jump
 			to the <A HREF="intro.html#[count]">[count]</A> one.  When <A HREF="intro.html#[count]">[count]</A> is omitted the
-			first one is jumped to. See |<A HREF="#tag-matchlist">tag-matchlist</A>| for
+			first one is jumped to. 见 |<A HREF="#tag-matchlist">tag-matchlist</A>| for
 			jumping to other matching <A HREF="#tags">tags</A>.
 
 
@@ -128,7 +128,7 @@ below.
 			keyword under or after cursor.
 			When there are several matching <A HREF="#tags">tags</A> for {name}, jump
 			to the <A HREF="intro.html#[count]">[count]</A> one.  When no <A HREF="intro.html#[count]">[count]</A> is given the
-			first one is jumped to. See |<A HREF="#tag-matchlist">tag-matchlist</A>| for
+			first one is jumped to. 见 |<A HREF="#tag-matchlist">tag-matchlist</A>| for
 			jumping to other matching <A HREF="#tags">tags</A>.
 
 
@@ -199,10 +199,10 @@ Tags are only pushed onto the stack when the <A HREF="options.html#'tagstack'">'
 
 						*<A NAME=":po"></A><B>:po</B>* *<A NAME=":pop"></A><B>:pop</B>* *<A NAME="E555"></A><B>E555</B>* *<A NAME="E556"></A><B>E556</B>*
 :[count]po[p][!]	Jump to <A HREF="intro.html#[count]">[count]</A> older entry in <A HREF="#tag">tag</A> stack (default 1).
-			See |<A HREF="#tag-!">tag-!</A>| for [!].
+			见 |<A HREF="#tag-!">tag-!</A>| for [!].
 
 :[count]ta[g][!]	Jump to <A HREF="intro.html#[count]">[count]</A> newer entry in <A HREF="#tag">tag</A> stack (default 1).
-			See |<A HREF="#tag-!">tag-!</A>| for [!].
+			见 |<A HREF="#tag-!">tag-!</A>| for [!].
 
 
 							*<A NAME=":tags"></A><B>:tags</B>*
@@ -293,7 +293,7 @@ Push a new item onto the <A HREF="#tag">tag</A> stack:
  
 
 							*<A NAME="E73"></A><B>E73</B>*
-When you try to use the <A HREF="#tag">tag</A> stack while <A HREF="motion.html#it">it</A> doesn't contain anything you will
+When you try to use the <A HREF="#tag">tag</A> stack while <A HREF="motion.html#it">它</A> doesn't contain anything you will
 get an error message.
 
 ==============================================================================
@@ -310,11 +310,11 @@ the same entry.
 			information in the <A HREF="#tags">tags</A> file(s).
 			When [name] is not given, the last <A HREF="#tag">tag</A> name from the
 			<A HREF="#tag">tag</A> stack is used.
-			See |<A HREF="#tag-!">tag-!</A>| for [!].
+			见 |<A HREF="#tag-!">tag-!</A>| for [!].
 			With a '<A HREF="change.html#&gt;">&gt;</A>' in the first column is indicated which is
 			the current position in the <A HREF="eval.html#list">list</A> (if there is one).
-			[name] can be a regexp <A HREF="pattern.html#pattern">pattern</A>, see |<A HREF="#tag-regexp">tag-regexp</A>|.
-			See |<A HREF="#tag-priority">tag-priority</A>| for the priorities used in the
+			[name] can be a regexp <A HREF="pattern.html#pattern">pattern</A>, 见 |<A HREF="#tag-regexp">tag-regexp</A>|.
+			见 |<A HREF="#tag-priority">tag-priority</A>| for the priorities used in the
 			listing.
 			Example output:
 
@@ -328,7 +328,7 @@ the same entry.
 <B>			mch_delay(msec, ignoreinput)</B>
 <B>	Type number and &lt;Enter&gt; (empty cancels):</B>
  
-			See |<A HREF="#tag-priority">tag-priority</A>| for the &quot;pri&quot; column.  Note that
+			见 |<A HREF="#tag-priority">tag-priority</A>| for the &quot;pri&quot; column.  Note that
 			this depends on the current file, thus using
 			&quot;<A HREF="#:tselect">:tselect</A> xxx&quot; can produce different results.
 			The &quot;kind&quot; column gives the kind of <A HREF="#tag">tag</A>, if this was
@@ -381,7 +381,7 @@ the same entry.
 
 							*<A NAME=":tp"></A><B>:tp</B>* *<A NAME=":tprevious"></A><B>:tprevious</B>*
 :[count]tp[revious][!]	Jump to <A HREF="intro.html#[count]">[count]</A> previous matching <A HREF="#tag">tag</A> (default 1).
-			See |<A HREF="#tag-!">tag-!</A>| for [!].
+			见 |<A HREF="#tag-!">tag-!</A>| for [!].
 
 
 							*<A NAME=":tN"></A><B>:tN</B>* *<A NAME=":tNext"></A><B>:tNext</B>*
@@ -390,7 +390,7 @@ the same entry.
 
 							*<A NAME=":tr"></A><B>:tr</B>* *<A NAME=":trewind"></A><B>:trewind</B>*
 :[count]tr[ewind][!]	Jump to first matching <A HREF="#tag">tag</A>.  If <A HREF="intro.html#[count]">[count]</A> is given, jump
-			to [count]th matching tag.  See |<A HREF="#tag-!">tag-!</A>| for [!].
+			to [count]th matching tag.  见 |<A HREF="#tag-!">tag-!</A>| for [!].
 
 
 							*<A NAME=":tf"></A><B>:tf</B>* *<A NAME=":tfirst"></A><B>:tfirst</B>*
@@ -398,19 +398,19 @@ the same entry.
 
 
 							*<A NAME=":tl"></A><B>:tl</B>* *<A NAME=":tlast"></A><B>:tlast</B>*
-:tl[ast][!]		Jump to last matching tag.  See |<A HREF="#tag-!">tag-!</A>| for [!].
+:tl[ast][!]		Jump to last matching tag.  见 |<A HREF="#tag-!">tag-!</A>| for [!].
 
 
 							*<A NAME=":lt"></A><B>:lt</B>* *<A NAME=":ltag"></A><B>:ltag</B>*
 :lt[ag][!] [name]	Jump to <A HREF="#tag">tag</A> [name] and add the matching <A HREF="#tags">tags</A> to a new
 			location <A HREF="eval.html#list">list</A> for the current<A HREF="windows.html#window">窗口</A>.  [name] can be
-			a regexp <A HREF="pattern.html#pattern">pattern</A>, see |<A HREF="#tag-regexp">tag-regexp</A>|.  When [name] is
+			a regexp <A HREF="pattern.html#pattern">pattern</A>, 见 |<A HREF="#tag-regexp">tag-regexp</A>|.  When [name] is
 			not given, the last <A HREF="#tag">tag</A> name from the <A HREF="#tag">tag</A> stack is
 			used.  The search <A HREF="pattern.html#pattern">pattern</A> to locate the <A HREF="#tag">tag</A> line is
 			prefixed with &quot;\V&quot; to <A HREF="intro.html#escape">escape</A> all the special
 			characters (very nomagic). The location <A HREF="eval.html#list">list</A> showing
 			the matching <A HREF="#tags">tags</A> is independent of the <A HREF="#tag">tag</A> stack.
-			See |<A HREF="#tag-!">tag-!</A>| for [!].
+			见 |<A HREF="#tag-!">tag-!</A>| for [!].
 
 When there is no other message, Vim shows which matching <A HREF="#tag">tag</A> has been jumped
 to, and the number of matching <A HREF="#tags">tags</A>:
@@ -419,7 +419,7 @@ The &quot; or more&quot; is used to indicate that Vim didn't try all the <A HREF
 When using &quot;<A HREF="#:tnext">:tnext</A>&quot; a few times, or with &quot;<A HREF="#:tlast">:tlast</A>&quot;, more matches may be found.
 
 When you didn't see this message because of some other message, or you just
-want to know where you are, this command will show <A HREF="motion.html#it">it</A> again (and jump to the
+want to know where you are, this command will show <A HREF="motion.html#it">它</A> again (and jump to the
 same <A HREF="#tag">tag</A> <A HREF="motion.html#as">as</A> last time):
 <B>	:0tn</B>
  
@@ -438,20 +438,20 @@ the same <A HREF="motion.html#as">as</A> above, with a &quot;<A HREF="change.htm
 
 							*<A NAME=":pts"></A><B>:pts</B>* *<A NAME=":ptselect"></A><B>:ptselect</B>*
 :pts[elect][!] [name]	Does &quot;:tselect[!] [name]&quot; and shows the new <A HREF="#tag">tag</A> in a
-			&quot;Preview&quot;<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
+			&quot;Preview&quot;<A HREF="windows.html#window">窗口</A>.  见 |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
 
 
 							*<A NAME=":ptj"></A><B>:ptj</B>* *<A NAME=":ptjump"></A><B>:ptjump</B>*
 :ptj[ump][!] [name]	Does &quot;:tjump[!] [name]&quot; and shows the new <A HREF="#tag">tag</A> in a
-			&quot;Preview&quot;<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
+			&quot;Preview&quot;<A HREF="windows.html#window">窗口</A>.  见 |<A HREF="windows.html#:ptag">:ptag</A>| for more info.
 
 
 							*<A NAME=":ptn"></A><B>:ptn</B>* *<A NAME=":ptnext"></A><B>:ptnext</B>*
-:[count]ptn[ext][!]	&quot;<A HREF="#:tnext">:tnext</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:[count]ptn[ext][!]	&quot;<A HREF="#:tnext">:tnext</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  见 |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 
 							*<A NAME=":ptp"></A><B>:ptp</B>* *<A NAME=":ptprevious"></A><B>:ptprevious</B>*
-:[count]ptp[revious][!]	&quot;<A HREF="#:tprevious">:tprevious</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:[count]ptp[revious][!]	&quot;<A HREF="#:tprevious">:tprevious</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  见 |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 
 							*<A NAME=":ptN"></A><B>:ptN</B>* *<A NAME=":ptNext"></A><B>:ptNext</B>*
@@ -459,7 +459,7 @@ the same <A HREF="motion.html#as">as</A> above, with a &quot;<A HREF="change.htm
 
 
 							*<A NAME=":ptr"></A><B>:ptr</B>* *<A NAME=":ptrewind"></A><B>:ptrewind</B>*
-:[count]ptr[ewind][!]	&quot;<A HREF="#:trewind">:trewind</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:[count]ptr[ewind][!]	&quot;<A HREF="#:trewind">:trewind</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  见 |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 
 							*<A NAME=":ptf"></A><B>:ptf</B>* *<A NAME=":ptfirst"></A><B>:ptfirst</B>*
@@ -467,7 +467,7 @@ the same <A HREF="motion.html#as">as</A> above, with a &quot;<A HREF="change.htm
 
 
 							*<A NAME=":ptl"></A><B>:ptl</B>* *<A NAME=":ptlast"></A><B>:ptlast</B>*
-:ptl[ast][!]		&quot;<A HREF="#:tlast">:tlast</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  See |<A HREF="windows.html#:ptag">:ptag</A>|.
+:ptl[ast][!]		&quot;<A HREF="#:tlast">:tlast</A>&quot; in the preview<A HREF="windows.html#window">窗口</A>.  见 |<A HREF="windows.html#:ptag">:ptag</A>|.
 
 ==============================================================================
 
@@ -480,7 +480,7 @@ this could be a static function.
 
 In <A HREF="intro.html#Vi">Vi</A> jumping to a <A HREF="#tag">tag</A> sets the current search <A HREF="pattern.html#pattern">pattern</A>.  This means that the
 &quot;<A HREF="pattern.html#n">n</A>&quot; command after jumping to a <A HREF="#tag">tag</A> does not search for the same <A HREF="pattern.html#pattern">pattern</A> that
-<A HREF="motion.html#it">it</A> did before jumping to the <A HREF="#tag">tag</A>.  Vim does not <A HREF="diff.html#do">do</A> this <A HREF="motion.html#as">as</A> we consider <A HREF="motion.html#it">it</A> to
+<A HREF="motion.html#it">它</A> did before jumping to the <A HREF="#tag">tag</A>.  Vim does not <A HREF="diff.html#do">do</A> this <A HREF="motion.html#as">as</A> we consider <A HREF="motion.html#it">它</A> to
 be a bug.  If you really want the old <A HREF="intro.html#Vi">Vi</A> behavior, set the '<A HREF="motion.html#t">t</A>' flag in
 <A HREF="options.html#'cpoptions'">'cpoptions'</A>.
 
@@ -502,8 +502,8 @@ See <A HREF="options.html#'tagbsearch'">'tagbsearch'</A> for details.
 							*<A NAME="tag-regexp"></A><B>tag-regexp</B>*
 The &quot;<A HREF="#:tag">:tag</A>&quot; and &quot;<A HREF="#:tselect">:tselect</A>&quot; commands accept a regular <A HREF="eval.html#expression">expression</A> argument.  See
 |<A HREF="pattern.html#pattern">pattern</A>| for the special characters that can be used.
-When the argument starts with '<A HREF="pattern.html#/">/</A>', <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> a <A HREF="pattern.html#pattern">pattern</A>.  If the argument
-does not start with '<A HREF="pattern.html#/">/</A>', <A HREF="motion.html#it">it</A> is taken literally, <A HREF="motion.html#as">as</A> a full <A HREF="#tag">tag</A> name.
+When the argument starts with '<A HREF="pattern.html#/">/</A>', <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> a <A HREF="pattern.html#pattern">pattern</A>.  If the argument
+does not start with '<A HREF="pattern.html#/">/</A>', <A HREF="motion.html#it">它</A> is taken literally, <A HREF="motion.html#as">as</A> a full <A HREF="#tag">tag</A> name.
 Examples:
 <B>    :tag main</B>
  	jumps to the <A HREF="#tag">tag</A> &quot;main&quot; that has the highest priority.
@@ -589,7 +589,7 @@ used.  If <A HREF="change.html#case">case</A> is ignored, and a matching global 
 <A HREF="change.html#case">case</A> is found, this one is used, no further <A HREF="#tags">tags</A> files are searched.
 
 When a <A HREF="#tag">tag</A> file name starts with &quot;./&quot;, the '<A HREF="repeat.html#.">.</A>' is replaced with the path of
-the current file.  This makes <A HREF="motion.html#it">it</A> possible to use a <A HREF="#tags">tags</A> file in the directory
+the current file.  This makes <A HREF="motion.html#it">它</A> possible to use a <A HREF="#tags">tags</A> file in the directory
 where the current file is (no matter what the current directory is).  The idea
 of using &quot;./&quot; is that you can define which <A HREF="#tag">tag</A> file is searched first: In the
 current directory (&quot;tags,./tags&quot;) or in the directory of the current file
@@ -600,11 +600,11 @@ For example:
 
 In this example the <A HREF="#tag">tag</A> will first be searched for in the file &quot;<A HREF="#tags">tags</A>&quot; in the
 directory where the current file is.  Next the &quot;<A HREF="#tags">tags</A>&quot; file in the current
-directory.  If <A HREF="motion.html#it">it</A> is not found there, then the file &quot;/home/user/commontags&quot;
+directory.  If <A HREF="motion.html#it">它</A> is not found there, then the file &quot;/home/user/commontags&quot;
 will be searched for the <A HREF="#tag">tag</A>.
 
 This can be switched off by including the '<A HREF="change.html#d">d</A>' flag in <A HREF="options.html#'cpoptions'">'cpoptions'</A>, to make
-<A HREF="motion.html#it">it</A> <A HREF="intro.html#Vi">Vi</A> compatible.  &quot;./tags&quot; will then be the <A HREF="#tags">tags</A> file in the current
+<A HREF="motion.html#it">它</A> <A HREF="intro.html#Vi">Vi</A> compatible.  &quot;./tags&quot; will then be the <A HREF="#tags">tags</A> file in the current
 directory, instead of the <A HREF="#tags">tags</A> file in the directory where the current file
 is.
 
@@ -659,7 +659,7 @@ The lines in the <A HREF="#tags">tags</A> file must have one of these two format
 1.  {tagname}		{TAB} {tagfile} {TAB} {tagaddress}
 2.  {tagname}		{TAB} {tagfile} {TAB} {tagaddress} {term} {field} ..
 
-Previously an old format was supported, see |<A HREF="#tag-old-static">tag-old-static</A>|.
+Previously an old format was supported, 见 |<A HREF="#tag-old-static">tag-old-static</A>|.
 
 The first format is a normal <A HREF="#tag">tag</A>, which is completely compatible with <A HREF="intro.html#Vi">Vi</A>.  It
 is the only format produced by traditional <A HREF="#ctags">ctags</A> implementations.  This is
@@ -673,7 +673,7 @@ fields at the end of each line.  It is backwards compatible with <A HREF="intro.
 only supported by new versions of <A HREF="#ctags">ctags</A> (such <A HREF="motion.html#as">as</A> Universal <A HREF="#ctags">ctags</A> or Exuberant
 <A HREF="#ctags">ctags</A>).
 
-{tagname}	The identifier.  Normally the name of a function, but <A HREF="motion.html#it">it</A> can
+{tagname}	The identifier.  Normally the name of a function, but <A HREF="motion.html#it">它</A> can
 		be any identifier.  It cannot contain a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.
 {TAB}		One <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> character.  Note: previous versions allowed any
 		white space here.  This has been abandoned to allow spaces in
@@ -689,7 +689,7 @@ only supported by new versions of <A HREF="#ctags">ctags</A> (such <A HREF="moti
 {term}		;&quot; The two characters semicolon and double <A HREF="change.html#quote.">quote.</A>  This is
 		interpreted by <A HREF="intro.html#Vi">Vi</A> <A HREF="motion.html#as">as</A> the start of a comment, which makes the
 		following be ignored.  This is for backwards compatibility
-		with <A HREF="intro.html#Vi">Vi</A>, <A HREF="motion.html#it">it</A> ignores the following fields. Example:
+		with <A HREF="intro.html#Vi">Vi</A>, <A HREF="motion.html#it">它</A> ignores the following fields. Example:
 			APP	file	/^static int APP;$/;&quot;	<A HREF="visual.html#v">v</A>
 		When {tagaddress} is not a line number or search <A HREF="pattern.html#pattern">pattern</A>, then
 		{term} must be |;&quot;.  Here the <A HREF="motion.html#bar">bar</A> ends the command (excluding
@@ -711,8 +711,8 @@ only supported by new versions of <A HREF="#ctags">ctags</A> (such <A HREF="moti
 			&quot;\\&quot; stands for a single '\' character
 
 		There is one field that doesn't have a '<A HREF="cmdline.html#:">:</A>'.  This is the kind
-		of the <A HREF="#tag">tag</A>.  It is handled like <A HREF="motion.html#it">it</A> was preceded with &quot;kind:&quot;.
-		See the documentation of <A HREF="#ctags">ctags</A> for the kinds <A HREF="motion.html#it">it</A> produces.
+		of the <A HREF="#tag">tag</A>.  It is handled like <A HREF="motion.html#it">它</A> was preceded with &quot;kind:&quot;.
+		See the documentation of <A HREF="#ctags">ctags</A> for the kinds <A HREF="motion.html#it">它</A> produces.
 
 		The only other field currently recognized by Vim is &quot;file:&quot;
 		(with an empty value).  It is used for a static <A HREF="#tag">tag</A>.
@@ -741,14 +741,14 @@ listing <A HREF="#tags">tags</A> the reverse happens.  When the conversion fails
 
 
 							*<A NAME="tag-search"></A><B>tag-search</B>*
-The command can be any <A HREF="intro.html#Ex">Ex</A> command, but often <A HREF="motion.html#it">it</A> is a search command.
+The command can be any <A HREF="intro.html#Ex">Ex</A> command, but often <A HREF="motion.html#it">它</A> is a search command.
 Examples:
 <B><FONT color="#3A6F2B">	tag1	file1	/^main(argc, argv)/ </FONT></B>
 <B><FONT color="#3A6F2B">	tag2	file2	108 </FONT></B>
 
 The command is always executed with <A HREF="options.html#'magic'">'magic'</A> not set.  The only special
 characters in a search <A HREF="pattern.html#pattern">pattern</A> are &quot;<A HREF="motion.html#^">^</A>&quot; (begin-of-line) and &quot;<A HREF="motion.html#$">$</A>&quot; (&lt;EOL&gt;).
-See |<A HREF="pattern.html#pattern">pattern</A>|.  Note that you must put a <A HREF="intro.html#backslash">backslash</A> before each <A HREF="intro.html#backslash">backslash</A> in
+见 |<A HREF="pattern.html#pattern">pattern</A>|.  Note that you must put a <A HREF="intro.html#backslash">backslash</A> before each <A HREF="intro.html#backslash">backslash</A> in
 the search text.  This is for backwards compatibility with <A HREF="intro.html#Vi">Vi</A>.
 
 
@@ -763,7 +763,7 @@ If the command is a normal search command (it starts and ends with &quot;<A HREF
   a search is done for:
 	&quot;^tagname[ \t]*(&quot;
   (the <A HREF="#tag">tag</A> with '<A HREF="motion.html#^">^</A>' prepended and &quot;[ \t]*(&quot; appended).  When using function
-  names, this will find the function name when <A HREF="motion.html#it">it</A> is in column 0.  This will
+  names, this will find the function name when <A HREF="motion.html#it">它</A> is in column 0.  This will
   help when the arguments to the function have changed since the <A HREF="#tags">tags</A> file was
   made.  If this search also fails another search is done with:
 	&quot;^[#a-zA-Z_].*\&lt;tagname[ \t]*(&quot;
@@ -800,7 +800,7 @@ buffer, use the commands listed at |<A HREF="pattern.html#pattern-searches">patt
 
 When a line is encountered that includes another file, that file is searched
 before continuing in the current buffer.  Files included by included files are
-also searched.  When an include file could not be found <A HREF="motion.html#it">it</A> is silently
+also searched.  When an include file could not be found <A HREF="motion.html#it">它</A> is silently
 ignored.  Use the |<A HREF="#:checkpath">:checkpath</A>| command to discover which files could not be
 found, possibly your <A HREF="options.html#'path'">'path'</A> option is not set up correctly.  Note: the
 included file is searched, not a buffer that may be editing that file.  Only
@@ -822,7 +822,7 @@ file.  The commands that start with &quot;<A HREF="vimindex.html#]">]</A>&quot; 
 The <A HREF="options.html#'include'">'include'</A> option is used to define a line that includes another file.  The
 default is &quot;\^#\s*include&quot;, which is for C programs.  Note: Vim does not
 recognize C <A HREF="syntax.html#syntax">syntax</A>, if the <A HREF="options.html#'include'">'include'</A> option matches a line inside
-&quot;#ifdef/#endif&quot; or inside a comment, <A HREF="motion.html#it">it</A> is searched anyway.  The <A HREF="options.html#'isfname'">'isfname'</A>
+&quot;#ifdef/#endif&quot; or inside a comment, <A HREF="motion.html#it">它</A> is searched anyway.  The <A HREF="options.html#'isfname'">'isfname'</A>
 option is used to recognize the file name that comes after the matched
 <A HREF="pattern.html#pattern">pattern</A>.
 
@@ -832,7 +832,7 @@ The <A HREF="options.html#'path'">'path'</A> option is used to find the director
 The <A HREF="options.html#'comments'">'comments'</A> option is used for the commands that display a single line or
 jump to a line.  It defines patterns that may start a comment.  Those lines
 are ignored for the search, unless [!] is used.  One exception: When the line
-matches the <A HREF="pattern.html#pattern">pattern</A> &quot;^# *define&quot; <A HREF="motion.html#it">it</A> is not considered to be a comment.
+matches the <A HREF="pattern.html#pattern">pattern</A> &quot;^# *define&quot; <A HREF="motion.html#it">它</A> is not considered to be a comment.
 
 If you want to <A HREF="eval.html#list">list</A> matches, and then select one to jump to, you could use a
 <A HREF="map.html#mapping">mapping</A> to <A HREF="diff.html#do">do</A> that for you.  Here is an example:
@@ -857,7 +857,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]is[earch][!] <A HREF="intro.html#[count]">[count]</A> [/]pattern[/]
 			Like &quot;<A HREF="#[i">[i</A>&quot;  and &quot;<A HREF="#]i">]i</A>&quot;, but search in <A HREF="cmdline.html#[range]">[range]</A> lines
 			(default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 							*<A NAME="[I"></A><B>[I</B>*
@@ -875,7 +875,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]il[ist][!] [/]pattern[/]
 			Like &quot;<A HREF="#[I">[I</A>&quot; and &quot;<A HREF="#]I">]I</A>&quot;, but search in <A HREF="cmdline.html#[range]">[range]</A> lines
 			(default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 							*<A NAME="[_CTRL-I"></A><B>[_CTRL-I</B>*
@@ -896,7 +896,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]ij[ump][!] <A HREF="intro.html#[count]">[count]</A> [/]pattern[/]
 			Like &quot;[ CTRL-I&quot;  and &quot;<A HREF="vimindex.html#]">]</A> CTRL-I&quot;, but search in
 			<A HREF="cmdline.html#[range]">[range]</A> lines (default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#CTRL-I">CTRL-I</A>					*<A NAME="CTRL-W_CTRL-I"></A><B>CTRL-W_CTRL-I</B>* *<A NAME="CTRL-W_i"></A><B>CTRL-W_i</B>*
@@ -913,7 +913,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]isp[lit][!] <A HREF="intro.html#[count]">[count]</A> [/]pattern[/]
 			Like &quot;<A HREF="vimindex.html#CTRL-W">CTRL-W</A> i&quot;  and &quot;<A HREF="vimindex.html#CTRL-W">CTRL-W</A> i&quot;, but search in
 			<A HREF="cmdline.html#[range]">[range]</A> lines (default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 							*<A NAME="[d"></A><B>[d</B>*
@@ -931,7 +931,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]ds[earch][!] <A HREF="intro.html#[count]">[count]</A> [/]string[/]
 			Like &quot;<A HREF="#[d">[d</A>&quot;  and &quot;<A HREF="#]d">]d</A>&quot;, but search in <A HREF="cmdline.html#[range]">[range]</A> lines
 			(default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 							*<A NAME="[D"></A><B>[D</B>*
@@ -949,7 +949,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]dli[st][!] [/]string[/]
 			Like `[D`  and `]D`, but search in <A HREF="cmdline.html#[range]">[range]</A> lines
 			(default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 			Note that `:dl` works like `:delete` with the &quot;<A HREF="motion.html#l">l</A>&quot;
 			flag, not `:dlist`.
 
@@ -970,7 +970,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]dj[ump][!] <A HREF="intro.html#[count]">[count]</A> [/]string[/]
 			Like &quot;[ CTRL-D&quot;  and &quot;<A HREF="vimindex.html#]">]</A> CTRL-D&quot;, but search  in
 			<A HREF="cmdline.html#[range]">[range]</A> lines (default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>					*<A NAME="CTRL-W_CTRL-D"></A><B>CTRL-W_CTRL-D</B>* *<A NAME="CTRL-W_d"></A><B>CTRL-W_d</B>*
@@ -985,7 +985,7 @@ If you want to <A HREF="eval.html#list">list</A> matches, and then select one to
 :[range]dsp[lit][!] <A HREF="intro.html#[count]">[count]</A> [/]string[/]
 			Like &quot;<A HREF="vimindex.html#CTRL-W">CTRL-W</A> d&quot;, but search in <A HREF="cmdline.html#[range]">[range]</A> lines
 			(default: whole file).
-			See |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
+			见 |<A HREF="#:search-args">:search-args</A>| for [/] and [!].
 
 
 					*<A NAME=":che"></A><B>:che</B>* *<A NAME=":chec"></A><B>:chec</B>* *<A NAME=":check"></A><B>:check</B>* *<A NAME=":checkpath"></A><B>:checkpath</B>*
@@ -1001,12 +1001,12 @@ Common arguments for the commands above:
 	comment (according to 'comments'), or the match is in a C comment
 	(after &quot;//&quot; or inside /* */).  Note that a match may be missed if a
 	line is recognized <A HREF="motion.html#as">as</A> a comment, but the comment ends halfway the line.
-	And if the line is a comment, but <A HREF="motion.html#it">it</A> is not recognized (according to
-	<A HREF="options.html#'comments'">'comments'</A>) a match may be found in <A HREF="motion.html#it">it</A> anyway.  Example:
+	And if the line is a comment, but <A HREF="motion.html#it">它</A> is not recognized (according to
+	<A HREF="options.html#'comments'">'comments'</A>) a match may be found in <A HREF="motion.html#it">它</A> anyway.  Example:
 <B>		/* comment</B>
 <B>		   foobar */</B>
  	A match for &quot;foobar&quot; is found, because this line is not recognized <A HREF="motion.html#as">as</A>
-	a comment (even though <A HREF="syntax.html#syntax">syntax</A> highlighting does recognize <A HREF="motion.html#it">it</A>).
+	a comment (even though <A HREF="syntax.html#syntax">syntax</A> highlighting does recognize <A HREF="motion.html#it">它</A>).
 	Note: Since a <A HREF="map.html#macro">macro</A> definition mostly doesn't look like a comment, the
 	[!] makes no difference for &quot;<A HREF="#:dlist">:dlist</A>&quot;, &quot;<A HREF="#:dsearch">:dsearch</A>&quot; and &quot;<A HREF="#:djump">:djump</A>&quot;.
 [/]	A <A HREF="pattern.html#pattern">pattern</A> can be surrounded by '<A HREF="pattern.html#/">/</A>'.  Without '<A HREF="pattern.html#/">/</A>' only whole words are
@@ -1040,7 +1040,7 @@ Currently up to three flags may be passed to the <A HREF="#tag">tag</A> function
   '<A HREF="insert.html#i">i</A>'		In <A HREF="intro.html#Insert">插入</A>模式, the user was completing a <A HREF="#tag">tag</A> (with
 		|<A HREF="insert.html#i_CTRL-X_CTRL-]">i_CTRL-X_CTRL-]</A>| or <A HREF="options.html#'completeopt'">'completeopt'</A> contains `t`).
   '<A HREF="change.html#r">r</A>'		The first argument to tagfunc should be interpreted <A HREF="motion.html#as">as</A> a
-		|<A HREF="pattern.html#pattern">pattern</A>| (see |<A HREF="#tag-regexp">tag-regexp</A>|), such <A HREF="motion.html#as">as</A> when using:
+		|<A HREF="pattern.html#pattern">pattern</A>| (见 |<A HREF="#tag-regexp">tag-regexp</A>|), such <A HREF="motion.html#as">as</A> when using:
 <B>		  :tag /pat</B>
  		It is also given when completing in insert mode.
 		If this flag is not present, the argument is usually taken
@@ -1058,7 +1058,7 @@ include the following entries and each value must be a <A HREF="eval.html#string
 			either relative to the current directory or a full path.
 	cmd		<A HREF="intro.html#Ex">Ex</A> command used to locate the <A HREF="#tag">tag</A> in the file.  This
 			can be either an <A HREF="intro.html#Ex">Ex</A> search <A HREF="pattern.html#pattern">pattern</A> or a line number.
-Note that the format is similar to that of |<A HREF="builtin.html#taglist()">taglist()</A>|, which makes <A HREF="motion.html#it">it</A> possible
+Note that the format is similar to that of |<A HREF="builtin.html#taglist()">taglist()</A>|, which makes <A HREF="motion.html#it">它</A> possible
 to use its output to generate the result.
 The following fields are optional:
 	kind		Type of the <A HREF="#tag">tag</A>.

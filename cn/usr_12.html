@@ -180,7 +180,7 @@ This can be done with just one command:
 
 <B>	:%s/\([^,]*\), \(.*\)/\2 \1/</B>
 
-Let's break this down in parts.  Obviously <A HREF="motion.html#it">it</A> starts with a substitute
+Let's break this down in parts.  Obviously <A HREF="motion.html#it">它</A> starts with a substitute
 command.  The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is the line range, which stands for the whole file.  Thus
 the substitution is done in every line in the file.
    The arguments for the substitute command are &quot;/from/to/&quot;.  The slashes
@@ -202,7 +202,7 @@ refers to the text matched by the second &quot;\( \)&quot;, which is the &quot;F
 &quot;\1&quot; refers to the first &quot;\( \)&quot;, which is the &quot;Last&quot; name.
    You can use up to nine backreferences in the &quot;to&quot; part of a substitute
 command.  &quot;<A HREF="change.html#\0">\0</A>&quot; stands for the whole matched <A HREF="pattern.html#pattern">pattern</A>.  There are a few more
-special items in a substitute command, see |<A HREF="change.html#sub-replace-special">sub-replace-special</A>|.
+special items in a substitute command, 见 |<A HREF="change.html#sub-replace-special">sub-replace-special</A>|.
 
 ==============================================================================
 
@@ -227,7 +227,7 @@ To sort this <A HREF="eval.html#list">list</A>, <A HREF="change.html#filter">fil
 <B>	:.,/^$/-1!sort</B>
 
 This goes to the first line, where &quot;OBJS&quot; is the first thing in the line.
-Then <A HREF="motion.html#it">it</A> goes one line down and filters the lines until the next empty line.
+Then <A HREF="motion.html#it">它</A> goes one line down and filters the lines until the next empty line.
 You could also select the lines in <A HREF="visual.html#Visual">Visual</A> mode and then use &quot;!sort&quot;.  That's
 easier to type, but more work when there are many lines.
    The result is this:
@@ -245,11 +245,11 @@ easier to type, but more work when there are many lines.
 
 Notice that a <A HREF="intro.html#backslash">backslash</A> at the end of each line is used to indicate the line
 continues.  After <A HREF="change.html#sorting">sorting</A>, this is wrong!  The &quot;backup.o&quot; line that was at
-the end didn't have a <A HREF="intro.html#backslash">backslash</A>.  Now that <A HREF="motion.html#it">it</A> sorts to another place, <A HREF="motion.html#it">it</A>
+the end didn't have a <A HREF="intro.html#backslash">backslash</A>.  Now that <A HREF="motion.html#it">它</A> sorts to another place, <A HREF="motion.html#it">它</A>
 must have a <A HREF="intro.html#backslash">backslash</A>.
    The simplest solution is to add the <A HREF="intro.html#backslash">backslash</A> with &quot;A \&lt;Esc&gt;&quot;.  You can
 keep the <A HREF="intro.html#backslash">backslash</A> in the last line, if you make sure an empty line comes
-after <A HREF="motion.html#it">it</A>.  That way you don't have this problem again.
+after <A HREF="motion.html#it">它</A>.  That way you don't have this problem again.
 
 ==============================================================================
 
@@ -272,7 +272,7 @@ As the |<A HREF="repeat.html#:global">:global</A>| command is not confused by th
 the first.
 
 This also works on a range of lines.  First move to above the first line and
-<A HREF="motion.html#mark">mark</A> <A HREF="motion.html#it">it</A> with &quot;mt&quot;.  Then move the cursor to the last line in the range and
+<A HREF="motion.html#mark">mark</A> <A HREF="motion.html#it">它</A> with &quot;mt&quot;.  Then move the cursor to the last line in the range and
 type:
 
 <B>	:'t+1,.g/^/m 't</B>
@@ -305,7 +305,7 @@ want to <A HREF="intro.html#count">count</A> words in.  Then type <A HREF="vimin
 
 <B><FONT color="#3A6F2B">	Selected 5 of 293 Lines; 70 of 1884 Words; 359 of 10928 Bytes </FONT></B>
 
-For other ways to count words, lines and other items, see |<A HREF="tips.html#count-items">count-items</A>|.
+For other ways to count words, lines and other items, 见 |<A HREF="tips.html#count-items">count-items</A>|.
 
 ==============================================================================
 
@@ -317,7 +317,7 @@ simple way: Move the cursor to the <A HREF="motion.html#word">单词</A> you wan
 
 <B>	K</B>
 
-Nvim will run |<A HREF="filetype.html#:Man">:Man</A>| on the <A HREF="motion.html#word">单词</A>.  If the man page is found, <A HREF="motion.html#it">it</A> is displayed.
+Nvim will run |<A HREF="filetype.html#:Man">:Man</A>| on the <A HREF="motion.html#word">单词</A>.  If the man page is found, <A HREF="motion.html#it">它</A> is displayed.
 You can also use the |<A HREF="filetype.html#:Man">:Man</A>| command to open a<A HREF="windows.html#window">窗口</A>on a man page:
 
 <B>	:Man csh</B>
@@ -331,7 +331,7 @@ For example, to look in section 3 for &quot;echo&quot;:
 <B>	:Man 3 echo</B>
 
 To jump to another man page, which is in the text with the typical form
-&quot;word(1)&quot;, press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">it</A>.  Further &quot;<A HREF="filetype.html#:Man">:Man</A>&quot; commands will use the same
+&quot;word(1)&quot;, press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">它</A>.  Further &quot;<A HREF="filetype.html#:Man">:Man</A>&quot; commands will use the same
 <A HREF="windows.html#window">窗口</A>.
 
 To display a man page for the <A HREF="motion.html#word">单词</A> under the cursor, use this:
@@ -359,8 +359,8 @@ command:
 The line range &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is used, thus this works on the whole file.  The <A HREF="pattern.html#pattern">pattern</A>
 that the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command matches with is &quot;\s\+$&quot;.  This finds white
 space characters (\s), 1 or more of them (\+), before the end-of-line ($).
-Later will be explained how you write patterns like this, see |<A HREF="usr_27.html">usr_27.txt</A>|.
-   The &quot;to&quot; part of the substitute command is empty: &quot;//&quot;.  Thus <A HREF="motion.html#it">it</A> replaces
+Later will be explained how you write patterns like this, 见 |<A HREF="usr_27.html">usr_27.txt</A>|.
+   The &quot;to&quot; part of the substitute command is empty: &quot;//&quot;.  Thus <A HREF="motion.html#it">它</A> replaces
 with nothing, effectively <A HREF="change.html#deleting">deleting</A> the matched white space.
 
 Another wasteful use of spaces is placing them before a <A HREF="intro.html#tab">tab</A>.  Often these can
@@ -369,9 +369,9 @@ Therefore, you can best <A HREF="diff.html#do">do</A> this manually.  Use this s
 
 <B>	/ 	</B>
 
-You cannot see <A HREF="motion.html#it">it</A>, but there is a space before a <A HREF="intro.html#tab">tab</A> in this command.  Thus
+You cannot see <A HREF="motion.html#it">它</A>, but there is a space before a <A HREF="intro.html#tab">tab</A> in this command.  Thus
 it's &quot;/&lt;Space&gt;&lt;Tab&gt;&quot;.   Now use &quot;<A HREF="change.html#x">x</A>&quot; to delete the space and check that the
-amount of white space doesn't change.  You might have to insert a <A HREF="intro.html#tab">tab</A> if <A HREF="motion.html#it">it</A>
+amount of white space doesn't change.  You might have to insert a <A HREF="intro.html#tab">tab</A> if <A HREF="motion.html#it">它</A>
 does change.  Type &quot;<A HREF="pattern.html#n">n</A>&quot; to find the next match.  Repeat this until no more
 matches can be found.
 
@@ -391,7 +391,7 @@ the <A HREF="motion.html#word">单词</A> &quot;frame_counter&quot;.  To <A HREF
 Let's look at this command in detail.  The <A HREF="quickfix.html#grep">grep</A> command searches through a set
 of files for a given <A HREF="motion.html#word">单词</A>.  Because the <A HREF="starting.html#-l">-l</A> argument is specified, the command
 will only <A HREF="eval.html#list">list</A> the files containing the <A HREF="motion.html#word">单词</A> and not print the matching lines.
-The <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">it</A> is searching for is &quot;frame_counter&quot;.  Actually, this can be any
+The <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">它</A> is searching for is &quot;frame_counter&quot;.  Actually, this can be any
 regular <A HREF="eval.html#expression">expression</A>.  (Note: What <A HREF="quickfix.html#grep">grep</A> uses for regular expressions is not
 exactly the same <A HREF="motion.html#as">as</A> what Vim uses.)
    The entire command is enclosed in backticks (`).  This tells the Unix shell
@@ -415,7 +415,7 @@ program files, for example, enter the following command:
 This causes Vim to search for the <A HREF="eval.html#string">string</A> &quot;error_string&quot; in all the specified
 files (*.c).  The editor will now open the first file where a match is found
 and position the cursor on the first matching line.  To go to the next
-matching line (no matter in what file <A HREF="motion.html#it">it</A> is), use the &quot;<A HREF="quickfix.html#:cnext">:cnext</A>&quot; command.  To go
+matching line (no matter in what file <A HREF="motion.html#it">它</A> is), use the &quot;<A HREF="quickfix.html#:cnext">:cnext</A>&quot; command.  To go
 to the previous match, use the &quot;<A HREF="quickfix.html#:cprev">:cprev</A>&quot; command.  Use &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot; to see all the
 matches and where they are.
    The &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot; command uses the external commands <A HREF="quickfix.html#grep">grep</A> (on Unix) or findstr

@@ -148,7 +148,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			(where &lt;p&gt; is a special character)
 
 			The <A HREF="intro.html#&lt;Nul&gt;">&lt;Nul&gt;</A> character in a file is stored internally <A HREF="motion.html#as">as</A>
-			<A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, but <A HREF="motion.html#it">it</A> will be shown <A HREF="motion.html#as">as</A>:
+			<A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, but <A HREF="motion.html#it">它</A> will be shown <A HREF="motion.html#as">as</A>:
 <B><FONT color="#3A6F2B">				&lt;^@&gt;  0,  Hex 00,  Octal 000 </FONT></B>
 
 			If the character has composing characters these are
@@ -164,7 +164,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 							*<A NAME="g8"></A><B>g8</B>*
 <A HREF="#g8">g8</A>			Print the hex values of the bytes used in the
-			character under the cursor, assuming <A HREF="motion.html#it">it</A> is in |<A HREF="mbyte.html#UTF-8">UTF-8</A>|
+			character under the cursor, assuming <A HREF="motion.html#it">它</A> is in |<A HREF="mbyte.html#UTF-8">UTF-8</A>|
 			encoding.  This also shows composing characters.  The
 			value of <A HREF="vim_diff.html#'maxcombine'">'maxcombine'</A> doesn't matter.
 			Example of a character with two composing characters:
@@ -177,9 +177,9 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			1. when <A HREF="options.html#'encoding'">'encoding'</A> is any 8-bit encoding
 			2. when <A HREF="options.html#'encoding'">'encoding'</A> is &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot; and <A HREF="options.html#'fileencoding'">'fileencoding'</A> is
 			   any 8-bit encoding
-			Thus <A HREF="motion.html#it">it</A> can be used when editing a file that was
-			supposed to be <A HREF="mbyte.html#UTF-8">UTF-8</A> but was read <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">it</A> is an 8-bit
-			encoding because <A HREF="motion.html#it">it</A> contains illegal bytes.
+			Thus <A HREF="motion.html#it">它</A> can be used when editing a file that was
+			supposed to be <A HREF="mbyte.html#UTF-8">UTF-8</A> but was read <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">它</A> is an 8-bit
+			encoding because <A HREF="motion.html#it">它</A> contains illegal bytes.
 			Does not wrap around the end of the file.
 			Note that when the cursor is on an illegal byte or the
 			cursor is halfway through a <A HREF="mbyte.html#multibyte">multibyte</A> character the
@@ -190,16 +190,16 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 :[range]p[rint] [flags]
 			Print <A HREF="cmdline.html#[range]">[range]</A> lines (default current line).
 			Note: If you are looking for a way to print your text
-			on paper see |<A HREF="print.html#:hardcopy">:hardcopy</A>|.  In the <A HREF="gui.html#GUI">GUI</A> you can use the
+			on paper 见 |<A HREF="print.html#:hardcopy">:hardcopy</A>|.  In the <A HREF="gui.html#GUI">GUI</A> you can use the
 			File.Print menu entry.
-			See |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
+			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 			The |<A HREF="#:filter">:filter</A>| command can be used to only show lines
 			matching a <A HREF="pattern.html#pattern">pattern</A>.
 
 :[range]p[rint] {count} [flags]
 			Print {count} lines, starting with <A HREF="cmdline.html#[range]">[range]</A> (default
 			current line |<A HREF="cmdline.html#cmdline-ranges">cmdline-ranges</A>|).
-			See |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
+			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 
 
 							*<A NAME=":l"></A><B>:l</B>* *<A NAME=":list"></A><B>:list</B>*
@@ -207,14 +207,14 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			Same <A HREF="motion.html#as">as</A> <A HREF="#:print">:print</A>, but show tabs <A HREF="motion.html#as">as</A> &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, trailing spaces
 			<A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#-">-</A>&quot;, and non-breakable space characters <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#+">+</A>&quot; by
 			default.  Further changed by the <A HREF="options.html#'listchars'">'listchars'</A> option.
-			See |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
+			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 
 
 							*<A NAME=":nu"></A><B>:nu</B>* *<A NAME=":number"></A><B>:number</B>*
 :[range]nu[mber] <A HREF="intro.html#[count]">[count]</A> [flags]
 			Same <A HREF="motion.html#as">as</A> <A HREF="#:print">:print</A>, but precede each line with its line
 			number.  (See also |<A HREF="syntax.html#hl-LineNr">hl-LineNr</A>| and <A HREF="options.html#'numberwidth'">'numberwidth'</A>).
-			See |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
+			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 
 
 							*<A NAME=":#"></A><B>:#</B>*
@@ -261,7 +261,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 							*<A NAME=":z!"></A><B>:z!</B>*
 :[range]z![+-^.=][count]
-			Like &quot;<A HREF="#:z">:z</A>&quot;, but when <A HREF="intro.html#[count]">[count]</A> is not specified, <A HREF="motion.html#it">it</A>
+			Like &quot;<A HREF="#:z">:z</A>&quot;, but when <A HREF="intro.html#[count]">[count]</A> is not specified, <A HREF="motion.html#it">它</A>
 			defaults to the Vim<A HREF="windows.html#window">窗口</A>height minus one.
 
 
@@ -271,23 +271,23 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 							*<A NAME=":="></A><B>:=</B>*
 <A HREF="#:=">:=</A> [flags]		Print the last line number.
-			See |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
+			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 
 :{range}= [flags]	Prints the last line number in {range}.  For example,
 			this prints the current line number:
 <B>				:.=</B>
- 			See |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
+ 			见 |<A HREF="cmdline.html#ex-flags">ex-flags</A>| for [flags].
 
 
 :norm[al][!] {commands}					*<A NAME=":norm"></A><B>:norm</B>* *<A NAME=":normal"></A><B>:normal</B>*
 			Execute <A HREF="intro.html#Normal">正常</A>模式 commands {commands}.  This makes
-			<A HREF="motion.html#it">it</A> possible to execute <A HREF="intro.html#Normal">正常</A>模式 commands typed on
+			<A HREF="motion.html#it">它</A> possible to execute <A HREF="intro.html#Normal">正常</A>模式 commands typed on
 			the command-line.  {commands} are executed like they
 			are typed.  For <A HREF="undo.html#undo">undo</A> all commands are undone together.
 			Execution stops when an error is encountered.
 
 			If the [!] is given, mappings will not be used.
-			Without <A HREF="motion.html#it">it</A>, when this command is called from a
+			Without <A HREF="motion.html#it">它</A>, when this command is called from a
 			non-remappable <A HREF="map.html#mapping">mapping</A> (|<A HREF="map.html#:noremap">:noremap</A>|), the argument can
 			be mapped anyway.
 
@@ -295,14 +295,14 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			{commands} does not finish a command, the last one
 			will be aborted <A HREF="motion.html#as">as</A> if <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> or &lt;C-C&gt; was typed.
 			This implies that an insert command must be completed
-			(to start <A HREF="intro.html#Insert">插入</A>模式, see |<A HREF="insert.html#:startinsert">:startinsert</A>|).  A &quot;:&quot;
+			(to start <A HREF="intro.html#Insert">插入</A>模式, 见 |<A HREF="insert.html#:startinsert">:startinsert</A>|).  A &quot;:&quot;
 			command must be completed <A HREF="motion.html#as">as</A> well.  And you can't use
 			&quot;<A HREF="repeat.html#Q">Q</A>&quot; or &quot;<A HREF="intro.html#gQ">gQ</A>&quot; to start <A HREF="intro.html#Ex">Ex</A> mode.
 
 			The display is not updated while &quot;<A HREF="#:normal">:normal</A>&quot; is busy.
 
 			{commands} cannot start with a space.  Put a <A HREF="intro.html#count">count</A> of
-			1 (one) before <A HREF="motion.html#it">it</A>, &quot;1 &quot; is one space.
+			1 (one) before <A HREF="motion.html#it">它</A>, &quot;1 &quot; is one space.
 
 			This command cannot be followed by another command,
 			since any '&#124;' is considered part of the command.
@@ -367,7 +367,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			&quot;:!echo ! \! \\!&quot; executes &quot;echo ls ! \!&quot;.
 
 			Any &quot;|&quot; in {cmd} is passed to the shell, you cannot
-			use <A HREF="motion.html#it">it</A> to append a Vim command.  See |<A HREF="cmdline.html#:bar">:bar</A>|.
+			use <A HREF="motion.html#it">它</A> to append a Vim command.  见 |<A HREF="cmdline.html#:bar">:bar</A>|.
 
 			Any &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; in {cmd} is expanded to the current file name.
 			Any &quot;<A HREF="pattern.html##">#</A>&quot; in {cmd} is expanded to the alternate file name.
@@ -415,7 +415,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			use check out |<A HREF="builtin.html#execute()">execute()</A>|.
 
 			To stop the <A HREF="message.html#messages">messages</A> and commands from being echoed to
-			the screen, put the commands in a function and call <A HREF="motion.html#it">it</A>
+			the screen, put the commands in a function and call <A HREF="motion.html#it">它</A>
 			with &quot;<A HREF="#:silent">:silent</A> call Function()&quot;.
 			Alternatives are the <A HREF="options.html#'verbosefile'">'verbosefile'</A> option or
 			|<A HREF="builtin.html#execute()">execute()</A>| function, these can be used in combination
@@ -434,7 +434,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 :redi[r] @*&gt;
 :redi[r] @+&gt;		Redirect <A HREF="message.html#messages">messages</A> to the selection or <A HREF="provider.html#clipboard">clipboard</A>. For
 			backward compatibility, the &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; after the <A HREF="intro.html#register">register</A>
-			name can be omitted. See |<A HREF="provider.html#quotestar">quotestar</A>| and |<A HREF="provider.html#quoteplus">quoteplus</A>|.
+			name can be omitted. 见 |<A HREF="provider.html#quotestar">quotestar</A>| and |<A HREF="provider.html#quoteplus">quoteplus</A>|.
 :redi[r] @*&gt;&gt;
 :redi[r] @+&gt;&gt;		Append <A HREF="message.html#messages">messages</A> to the selection or <A HREF="provider.html#clipboard">clipboard</A>.
 
@@ -444,8 +444,8 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 :redi[r] @&quot;&gt;&gt;		Append <A HREF="message.html#messages">messages</A> to the unnamed <A HREF="intro.html#register">register</A>.
 
 :redi[r] =&gt; {var}	Redirect <A HREF="message.html#messages">messages</A> to a variable.  If the variable
-			doesn't exist, then <A HREF="motion.html#it">it</A> is created.  If the variable
-			exists, then <A HREF="motion.html#it">it</A> is initialized to an empty <A HREF="eval.html#string">string</A>.
+			doesn't exist, then <A HREF="motion.html#it">它</A> is created.  If the variable
+			exists, then <A HREF="motion.html#it">它</A> is initialized to an empty <A HREF="eval.html#string">string</A>.
 			The variable will remain empty until redirection ends.
 			Only <A HREF="eval.html#string">string</A> <A HREF="eval.html#variables">variables</A> can be used.  After the
 			redirection starts, if the variable is removed or
@@ -470,14 +470,14 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			to lines that <A HREF="diff.html#do">do</A> NOT match {pattern}.
 
 			{pattern} is a Vim search <A HREF="pattern.html#pattern">pattern</A>.  Instead of enclosing
-			<A HREF="motion.html#it">it</A> in / any non-ID character (see |<A HREF="options.html#'isident'">'isident'</A>|) can be
-			used, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> does not appear in {pattern}.
+			<A HREF="motion.html#it">它</A> in / any non-ID character (见 |<A HREF="options.html#'isident'">'isident'</A>|) can be
+			used, so long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> does not appear in {pattern}.
 			Without the enclosing character the <A HREF="pattern.html#pattern">pattern</A> cannot
 			include the <A HREF="motion.html#bar">bar</A> character. <A HREF="options.html#'ignorecase'">'ignorecase'</A> is not used.
 
 			The <A HREF="pattern.html#pattern">pattern</A> is matched against the relevant part of
 			the output, not necessarily the whole line. Only some
-			commands support filtering, try <A HREF="motion.html#it">it</A> out to check if <A HREF="motion.html#it">it</A>
+			commands support filtering, try <A HREF="motion.html#it">它</A> out to check if <A HREF="motion.html#it">它</A>
 			works. Some of the commands that support filtering:
 			   |<A HREF="#:#">:#</A>|          - <A HREF="change.html#filter">filter</A> whole line
 			   |<A HREF="quickfix.html#:clist">:clist</A>|      - <A HREF="change.html#filter">filter</A> by file name or module name
@@ -510,7 +510,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			Redirection, started with |<A HREF="#:redir">:redir</A>|, will continue <A HREF="motion.html#as">as</A>
 			usual, although there might be small differences.
 			This will allow redirecting the output of a command
-			without seeing <A HREF="motion.html#it">it</A> on the screen.  Example:
+			without seeing <A HREF="motion.html#it">它</A> on the screen.  Example:
 <B>			    :redir &gt;/tmp/foobar</B>
 <B>			    :silent g/Aap/p</B>
 <B>			    :redir END</B>
@@ -568,11 +568,11 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 							*<A NAME=":verbose-cmd"></A><B>:verbose-cmd</B>*
 When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing the value of a Vim option or a key map or
 an abbreviation or a user-defined function or a command or a highlight group
-or an <A HREF="autocmd.html#autocommand">autocommand</A> will also display where <A HREF="motion.html#it">it</A> was last defined. If they were
+or an <A HREF="autocmd.html#autocommand">autocommand</A> will also display where <A HREF="motion.html#it">它</A> was last defined. If they were
 defined in <A HREF="lua.html#Lua">Lua</A> they will only be located if <A HREF="options.html#'verbose'">'verbose'</A> is set. So Start
-<A HREF="nvim.html#nvim">nvim</A> with -V1 arg to see them. If <A HREF="motion.html#it">it</A> was defined manually then there
-will be no &quot;Last set&quot; message.  When <A HREF="motion.html#it">it</A> was defined while executing a function,
-user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">it</A> was defined is reported.
+<A HREF="nvim.html#nvim">nvim</A> with -V1 arg to see them. If <A HREF="motion.html#it">它</A> was defined manually then there
+will be no &quot;Last set&quot; message.  When <A HREF="motion.html#it">它</A> was defined while executing a function,
+user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
 
 
 							*<A NAME="K"></A><B>K</B>*
@@ -581,7 +581,7 @@ user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF=
 			cursor. Default is &quot;man&quot;. Works like this:
 <B>				:tabnew | terminal {program} {keyword}</B>
  			Special cases:
-			- If <A HREF="options.html#'keywordprg'">'keywordprg'</A> begins with &quot;<A HREF="cmdline.html#:">:</A>&quot; <A HREF="motion.html#it">it</A> is invoked <A HREF="motion.html#as">as</A>
+			- If <A HREF="options.html#'keywordprg'">'keywordprg'</A> begins with &quot;<A HREF="cmdline.html#:">:</A>&quot; <A HREF="motion.html#it">它</A> is invoked <A HREF="motion.html#as">as</A>
 			  a Vim command with <A HREF="intro.html#[count]">[count]</A>.
 			- If <A HREF="options.html#'keywordprg'">'keywordprg'</A> is empty, |<A HREF="helphelp.html#:help">:help</A>| is used.
 			- When <A HREF="options.html#'keywordprg'">'keywordprg'</A> is equal to &quot;man&quot;, a <A HREF="intro.html#[count]">[count]</A>
@@ -624,7 +624,7 @@ user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF=
 
 
 							*<A NAME=":sl!"></A><B>:sl!</B>* *<A NAME=":sleep!"></A><B>:sleep!</B>*
-:[N]sl[eep]! [N][m]	Same <A HREF="motion.html#as">as</A> above. Unlike Vim, <A HREF="motion.html#it">it</A> does not hide the
+:[N]sl[eep]! [N][m]	Same <A HREF="motion.html#as">as</A> above. Unlike Vim, <A HREF="motion.html#it">它</A> does not hide the
 			cursor. |<A HREF="vim_diff.html#vim-differences">vim-differences</A>|
 
 ==============================================================================
@@ -640,7 +640,7 @@ up mappings to simulate the commands that <A HREF="#less">less</A> supports.  Ot
 still use the Vim commands.
 
 This isn't perfect.  For example, when viewing a short file Vim will still use
-the whole screen.  But <A HREF="motion.html#it">it</A> works well enough for most uses, and you get <A HREF="syntax.html#syntax">syntax</A>
+the whole screen.  But <A HREF="motion.html#it">它</A> works well enough for most uses, and you get <A HREF="syntax.html#syntax">syntax</A>
 highlighting.
 
 The &quot;<A HREF="motion.html#h">h</A>&quot; key will give you a short overview of the available commands.

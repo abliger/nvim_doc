@@ -97,7 +97,7 @@ between alternatives.  Use keyboard shortcuts to access menu items quickly.
 
 *<A NAME="31.1"></A><B>31.1</B>*	The file browser
 
-When using the File/Open... menu you get a file browser.  This makes <A HREF="motion.html#it">it</A> easier
+When using the File/Open... menu you get a file browser.  This makes <A HREF="motion.html#it">它</A> easier
 to find the file you want to edit.  But what if you want to split a<A HREF="windows.html#window">窗口</A>to
 edit another file?  There is no menu entry for this.  You could first use
 Window/Split and then File/Open..., but that's more work.
@@ -107,7 +107,7 @@ browser, prepend &quot;browse&quot;:
 
 <B>	:browse split</B>
 
-<A HREF="visual.html#Select">Select</A> a file and then the &quot;<A HREF="windows.html#:split">:split</A>&quot; command will be executed with <A HREF="motion.html#it">it</A>.  If you
+<A HREF="visual.html#Select">Select</A> a file and then the &quot;<A HREF="windows.html#:split">:split</A>&quot; command will be executed with <A HREF="motion.html#it">它</A>.  If you
 cancel the file dialog nothing happens, the<A HREF="windows.html#window">窗口</A>isn't split.
    You can also specify a file name argument.  This is used to tell the file
 browser where to start.  Example:
@@ -119,9 +119,9 @@ The file browser will pop up, starting in the directory &quot;/etc&quot;.
 The &quot;<A HREF="editing.html#:browse">:browse</A>&quot; command can be prepended to just about any command that opens a
 file.
    If no directory is specified, Vim will decide where to start the file
-browser.  By default <A HREF="motion.html#it">it</A> uses the same directory <A HREF="motion.html#as">as</A> the last time.  Thus when
+browser.  By default <A HREF="motion.html#it">它</A> uses the same directory <A HREF="motion.html#as">as</A> the last time.  Thus when
 you used &quot;<A HREF="editing.html#:browse">:browse</A> split&quot; and selected a file in &quot;/usr/local/share&quot;, the next
-time you use a &quot;<A HREF="editing.html#:browse">:browse</A>&quot; <A HREF="motion.html#it">it</A> will start in &quot;/usr/local/share&quot; again.
+time you use a &quot;<A HREF="editing.html#:browse">:browse</A>&quot; <A HREF="motion.html#it">它</A> will start in &quot;/usr/local/share&quot; again.
    This can be changed with the <A HREF="options.html#'browsedir'">'browsedir'</A> option.  It can have one of three
 values:
 
@@ -144,14 +144,14 @@ Will start the browser in &quot;/usr&quot;.
 
 	Note:
 	To avoid using the mouse, most file browsers offer using key presses
-	to navigate.  Since this is different for every system, <A HREF="motion.html#it">it</A> is not
+	to navigate.  Since this is different for every system, <A HREF="motion.html#it">它</A> is not
 	explained here.  Vim uses a standard browser when possible, your
 	system documentation should contain an explanation on the keyboard
 	shortcuts somewhere.
 
 When you are not using the <A HREF="gui.html#GUI">GUI</A> version, you could use the file explorer<A HREF="windows.html#window">窗口</A>
 to select files like in a file browser.  However, this doesn't work for the
-&quot;<A HREF="editing.html#:browse">:browse</A>&quot; command.  See |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|.
+&quot;<A HREF="editing.html#:browse">:browse</A>&quot; command.  见 |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|.
 
 ==============================================================================
 
@@ -159,10 +159,10 @@ to select files like in a file browser.  However, this doesn't work for the
 
 Vim protects you from accidentally overwriting a file and other ways to lose
 changes.  If you <A HREF="diff.html#do">do</A> something that might be a bad thing to <A HREF="diff.html#do">do</A>, Vim produces an
-error message and suggests appending ! if you really want to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>.
+error message and suggests appending ! if you really want to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.
    To avoid retyping the command with the !, you can make Vim give you a
 dialog.  You can then press &quot;OK&quot; or &quot;Cancel&quot; to tell Vim what you want.
-   For example, you are editing a file and made changes to <A HREF="motion.html#it">it</A>.  You start
+   For example, you are editing a file and made changes to <A HREF="motion.html#it">它</A>.  You start
 editing another file with:
 
 <B>	:confirm edit foo.txt</B>
@@ -186,7 +186,7 @@ that edit another file.  They can also be combined:
 
 <B>	:confirm browse edit</B>
 
-This will produce a dialog when the current buffer was changed.  Then <A HREF="motion.html#it">it</A> will
+This will produce a dialog when the current buffer was changed.  Then <A HREF="motion.html#it">它</A> will
 pop up a file browser to select the file to edit.
 
 	Note:
@@ -214,21 +214,21 @@ The keyboard is used for all Vim commands.  The <A HREF="gui.html#menus">menus</
 select commands, without knowing what they are called.  But you have to move
 your hand from the keyboard and grab the mouse.
    Menus can often be selected with keys <A HREF="motion.html#as">as</A> well.  This depends on your
-system, but most often <A HREF="motion.html#it">it</A> works this way.  Use the &lt;Alt&gt; key in combination
+system, but most often <A HREF="motion.html#it">它</A> works this way.  Use the &lt;Alt&gt; key in combination
 with the underlined <A HREF="print.html#letter">letter</A> of a menu.  For example, &lt;A-w&gt; (&lt;Alt&gt; and <A HREF="motion.html#w">w</A>) pops
 up the Window menu.
-   In the Window menu, the &quot;split&quot; item has the <A HREF="change.html#p">p</A> underlined.  To select <A HREF="motion.html#it">it</A>,
+   In the Window menu, the &quot;split&quot; item has the <A HREF="change.html#p">p</A> underlined.  To select <A HREF="motion.html#it">它</A>,
 let go of the &lt;Alt&gt; key and press <A HREF="change.html#p">p</A>.
 
 After the first selection of a menu with the &lt;Alt&gt; key, you can use the cursor
 keys to move through the <A HREF="gui.html#menus">menus</A>.  <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> selects a submenu and &lt;left&gt; closes
-<A HREF="motion.html#it">it</A>.  <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> also closes a menu.  <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> selects a menu item.
+<A HREF="motion.html#it">它</A>.  <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> also closes a menu.  <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> selects a menu item.
 
 There is a conflict between using the &lt;Alt&gt; key to select menu items, and
 using &lt;Alt&gt; key combinations for mappings.  The <A HREF="options.html#'winaltkeys'">'winaltkeys'</A> option tells Vim
-what <A HREF="motion.html#it">it</A> should <A HREF="diff.html#do">do</A> with the &lt;Alt&gt; key.
+what <A HREF="motion.html#it">它</A> should <A HREF="diff.html#do">do</A> with the &lt;Alt&gt; key.
    The default value &quot;menu&quot; is the smart choice: If the key combination is a
-menu shortcut <A HREF="motion.html#it">it</A> can't be mapped.  All other keys are available for <A HREF="map.html#mapping">mapping</A>.
+menu shortcut <A HREF="motion.html#it">它</A> can't be mapped.  All other keys are available for <A HREF="map.html#mapping">mapping</A>.
    The value &quot;no&quot; doesn't use any &lt;Alt&gt; keys for the <A HREF="gui.html#menus">menus</A>.  Thus you must use
 the mouse for the <A HREF="gui.html#menus">menus</A>, and all &lt;Alt&gt; keys can be mapped.
    The value &quot;yes&quot; means that Vim will use any &lt;Alt&gt; keys for the <A HREF="gui.html#menus">menus</A>.  Some
@@ -247,7 +247,7 @@ This will only work in the <A HREF="gui.html#GUI">GUI</A>.  The output may look 
 <B><FONT color="#3A6F2B">	Window position: X 272, Y 103 </FONT></B>
 
 The position is given in screen pixels.  Now you can use the numbers to move
-Vim somewhere else.  For example, to move <A HREF="motion.html#it">it</A> to the left a hundred pixels:
+Vim somewhere else.  For example, to move <A HREF="motion.html#it">它</A> to the left a hundred pixels:
 
 <B>	:winpos 172 103</B>
  
@@ -289,16 +289,16 @@ pixels.  Example:
 
 You can use gvim to edit an e-mail message.  In your e-mail program you must
 select gvim to be the editor for <A HREF="message.html#messages">messages</A>.  When you try that, you will
-see that <A HREF="motion.html#it">it</A> doesn't work: The mail program thinks that editing is finished,
+see that <A HREF="motion.html#it">它</A> doesn't work: The mail program thinks that editing is finished,
 while gvim is still running!
-   What happens is that gvim disconnects from the shell <A HREF="motion.html#it">it</A> was started in.
+   What happens is that gvim disconnects from the shell <A HREF="motion.html#it">它</A> was started in.
 That is fine when you start gvim in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, so that you can <A HREF="diff.html#do">do</A> other work
 in that <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  But when you really want to wait for gvim to finish, you
-must prevent <A HREF="motion.html#it">it</A> from disconnecting.  The &quot;-f&quot; argument does this:
+must prevent <A HREF="motion.html#it">它</A> from disconnecting.  The &quot;-f&quot; argument does this:
 
 <B>	gvim -f file.txt</B>
 
-The &quot;-f&quot; stands for foreground.  Now Vim will block the shell <A HREF="motion.html#it">it</A> was started
+The &quot;-f&quot; stands for foreground.  Now Vim will block the shell <A HREF="motion.html#it">它</A> was started
 in until you finish editing and exit.
 
 
@@ -306,7 +306,7 @@ DELAYED START OF THE <A HREF="gui.html#GUI">GUI</A>
 
 On Unix it's possible to first start Vim in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  That's useful if you
 <A HREF="diff.html#do">do</A> various tasks in the same shell.  If you are editing a file and decide you
-want to use the <A HREF="gui.html#GUI">GUI</A> after all, you can start <A HREF="motion.html#it">it</A> with:
+want to use the <A HREF="gui.html#GUI">GUI</A> after all, you can start <A HREF="motion.html#it">它</A> with:
 
 <B>	:gui</B>
 

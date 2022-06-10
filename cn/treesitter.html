@@ -113,14 +113,14 @@ A parser can also be loaded manually using a full path:
 <B>    vim.treesitter.require_language("python", "/path/to/python.so")</B>
 
  Create a parser for a buffer and a given language (if another <A HREF="usr_05.html#plugin">plugin</A> uses the
-same buffer/language combination, <A HREF="motion.html#it">it</A> will be safely reused). Use
+same buffer/language combination, <A HREF="motion.html#it">它</A> will be safely reused). Use
 
 <B>    parser = vim.treesitter.get_parser(bufnr, lang)</B>
 
  `bufnr=0` can be used for current buffer. `lang` will default to <A HREF="options.html#'filetype'">'filetype'</A>.
 Currently, the parser will be retained for the lifetime of a buffer but this
 is subject to change. A <A HREF="usr_05.html#plugin">plugin</A> should keep a reference to the parser object <A HREF="motion.html#as">as</A>
-long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> wants incremental updates.
+long <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> wants incremental updates.
 
 
 
@@ -134,7 +134,7 @@ Whenever you need to access the current <A HREF="syntax.html#syntax">syntax</A> 
 
  This will return a table of immutable trees that represent the current state
 of the buffer. When the <A HREF="usr_05.html#plugin">plugin</A> wants to access the state after a (possible)
-edit <A HREF="motion.html#it">it</A> should call `parse()` again. If the buffer wasn't edited, the same tree
+edit <A HREF="motion.html#it">它</A> should call `parse()` again. If the buffer wasn't edited, the same tree
 will be returned again without extra work. If the buffer was parsed before,
 incremental parsing will be done of the changed parts.
 
@@ -269,7 +269,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 	No guarantees are made about this identifier's internal
 	representation, except for being a primitive <A HREF="lua.html#lua">lua</A> type with value
-	equality (so not a table). Presently <A HREF="motion.html#it">it</A> is a (non-printable) <A HREF="eval.html#string">string</A>.
+	equality (so not a table). Presently <A HREF="motion.html#it">它</A> is a (non-printable) <A HREF="eval.html#string">string</A>.
 
 	Note: the id is not guaranteed to be unique for nodes from different
 	trees.
@@ -295,7 +295,7 @@ https://tree-sitter.github.io/tree-sitter/using-parsers#query-syntax for more
 information on how to write queries.
 
 Note: The predicates listed in the web page above differ from those Neovim
-supports. See |<A HREF="#lua-treesitter-predicates">lua-treesitter-predicates</A>| for a complete <A HREF="eval.html#list">list</A> of predicates
+supports. 见 |<A HREF="#lua-treesitter-predicates">lua-treesitter-predicates</A>| for a complete <A HREF="eval.html#list">list</A> of predicates
 supported by Neovim.
 
 A `query` consists of one or more patterns. A `pattern` is defined over node
@@ -352,7 +352,7 @@ Here is a <A HREF="eval.html#list">list</A> of built-in predicates :
 <B>			((identifier) @foo (#any-of? @foo "foo" "bar"))</B>
  
 		This is the recommended way to check if the node matches one
-		of many keywords for example, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> has been optimized for
+		of many keywords for example, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> has been optimized for
 		this.
 <A HREF="change.html#&lt;">&lt;</A>
 
@@ -610,7 +610,7 @@ parse_query({lang}, {query})                                   *<A NAME="parse_q
                 Parse {query} <A HREF="motion.html#as">as</A> a <A HREF="eval.html#string">string</A>. (If the query is in a file, the
                 caller should read the contents into a <A HREF="eval.html#string">string</A> before calling).
 
-                Returns a `Query` (see |<A HREF="#lua-treesitter-query">lua-treesitter-query</A>|) object which
+                Returns a `Query` (见 |<A HREF="#lua-treesitter-query">lua-treesitter-query</A>|) object which
                 can be used to search nodes in the <A HREF="syntax.html#syntax">syntax</A> tree for the
                 patterns defined in {query} using `iter_*` methods below.
 
@@ -757,7 +757,7 @@ TSHighlighter:get_query({self}, {lang})            *<A NAME="TSHighlighter:get_q
 LanguageTree:add_child({self}, {lang})              *<A NAME="LanguageTree:add_child()"></A><B>LanguageTree:add_child()</B>*
                 Adds a child language to this tree.
 
-                If the language already exists <A HREF="motion.html#as">as</A> a child, <A HREF="motion.html#it">it</A> will first be
+                If the language already exists <A HREF="motion.html#as">as</A> a child, <A HREF="motion.html#it">它</A> will first be
                 removed.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -786,7 +786,7 @@ LanguageTree:destroy({self})                          *<A NAME="LanguageTree:des
 
                 Any cleanup logic should be performed here.
 
-                Note: This DOES NOT remove this tree from a parent. Instead, `remove_child` must be called on the parent to remove <A HREF="motion.html#it">it</A>.
+                Note: This DOES NOT remove this tree from a parent. Instead, `remove_child` must be called on the parent to remove <A HREF="motion.html#it">它</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {self}
@@ -853,7 +853,7 @@ LanguageTree:language_for_range({self}, {range})
                 Gets the appropriate language that contains {range}
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {range}  A text range, see |<A HREF="intro.html#LanguageTree:contains">LanguageTree:contains</A>|
+                    {range}  A text range, 见 |<A HREF="intro.html#LanguageTree:contains">LanguageTree:contains</A>|
                     {self}
 
 
@@ -873,7 +873,7 @@ LanguageTree:register_cbs({self}, {cbs})         *<A NAME="LanguageTree:register
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {cbs}   (table) An |nvim_buf_attach()|-like table argument
                             with the following keys :
-                            • `on_bytes` : see |<A HREF="api.html#nvim_buf_attach()">nvim_buf_attach()</A>|, but this will be
+                            • `on_bytes` : 见 |<A HREF="api.html#nvim_buf_attach()">nvim_buf_attach()</A>|, but this will be
                               called after the parsers callback.
                             • `on_changedtree` : a callback that will be
                               called every time the tree has syntactical
@@ -913,7 +913,7 @@ LanguageTree:set_included_regions({self}, {regions})
                 across different nodes, which is useful for templating
                 languages like ERB and EJS.
 
-                Note, this call invalidates the tree and requires <A HREF="motion.html#it">it</A> to be
+                Note, this call invalidates the tree and requires <A HREF="motion.html#it">它</A> to be
                 parsed again.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>

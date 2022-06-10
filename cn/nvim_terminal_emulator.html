@@ -124,7 +124,7 @@ Input						*<A NAME="terminal-input"></A><B>terminal-input</B>*
 
 To send input, enter |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>| with |<A HREF="insert.html#i">i</A>|, |<A HREF="insert.html#I">I</A>|, |<A HREF="insert.html#a">a</A>|, |<A HREF="insert.html#A">A</A>| or
 |<A HREF="insert.html#:startinsert">:startinsert</A>|. In this mode all keys except &lt;C-\&gt; are sent to the underlying
-program. If &lt;C-\&gt; is pressed, the next key is sent unless <A HREF="motion.html#it">it</A> is &lt;C-N&gt;. Use
+program. If &lt;C-\&gt; is pressed, the next key is sent unless <A HREF="motion.html#it">它</A> is &lt;C-N&gt;. Use
 &lt;C-\&gt;&lt;C-N&gt; to return to normal-mode. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
 <A HREF="intro.html#Terminal-mode">Terminal-mode</A> forces these local <A HREF="options.html#options">options</A>:
@@ -197,7 +197,7 @@ Only works for RGB UIs (see 'termguicolors'); for 256-color terminals the
 color index is just forwarded.
 
 Editor highlighting (|<A HREF="syntax.html#syntax-highlighting">syntax-highlighting</A>|, |<A HREF="syntax.html#highlight-groups">highlight-groups</A>|, etc.) has
-higher precedence: <A HREF="motion.html#it">it</A> is applied after <A HREF="#terminal">terminal</A> colors are resolved.
+higher precedence: <A HREF="motion.html#it">它</A> is applied after <A HREF="#terminal">terminal</A> colors are resolved.
 
 ==============================================================================
 
@@ -248,7 +248,7 @@ This opens two <A HREF="windows.html#windows">windows</A>:
 
 program<A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>for the executed program.  When &quot;run&quot; is
 		used in <A HREF="debug.html#gdb">gdb</A> the program I/O will happen in this<A HREF="windows.html#window">窗口</A>, so
-		that <A HREF="motion.html#it">it</A> does not interfere with controlling <A HREF="debug.html#gdb">gdb</A>.
+		that <A HREF="motion.html#it">它</A> does not interfere with controlling <A HREF="debug.html#gdb">gdb</A>.
 
 The current<A HREF="windows.html#window">窗口</A>is used to show the source code.  When <A HREF="debug.html#gdb">gdb</A> pauses the
 source file location will be displayed, if possible.  A sign is used to
@@ -257,7 +257,7 @@ highlight the current position, using highlight group debugPC.
 If the buffer in the current<A HREF="windows.html#window">窗口</A>is modified, another<A HREF="windows.html#window">窗口</A>will be opened
 to display the current <A HREF="debug.html#gdb">gdb</A> position.
 
-Focus the <A HREF="#terminal">terminal</A> of the executed program to interact with <A HREF="motion.html#it">it</A>.  This works
+Focus the <A HREF="#terminal">terminal</A> of the executed program to interact with <A HREF="motion.html#it">它</A>.  This works
 the same <A HREF="motion.html#as">as</A> any command running in a <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>.
 
 When the debugger ends, typically by typing &quot;quit&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>, the two
@@ -400,7 +400,7 @@ breakpoint, or use the &quot;Clear breakpoint&quot; right-click menu entry.
 
 					*<A NAME="termdebug-variables"></A><B>termdebug-variables</B>* *<A NAME=":Evaluate"></A><B>:Evaluate</B>*
  `:Evaluate`	    evaluate the <A HREF="eval.html#expression">expression</A> under the cursor
- `K`		    same (see |<A HREF="#termdebug_map_K">termdebug_map_K</A>| to disable)
+ `K`		    same (见 |<A HREF="#termdebug_map_K">termdebug_map_K</A>| to disable)
  `:Evaluate` {expr}   evaluate {expr}
  `:'&lt;,'&gt;Evaluate`     evaluate the Visually selected text
 
@@ -416,10 +416,10 @@ You can usually shorten `:Evaluate` to `:Ev`.
 
  *<A NAME=":Program"></A><B>:Program</B>*    jump to the<A HREF="windows.html#window">窗口</A>with the running program
 
- *<A NAME=":Source"></A><B>:Source</B>*     jump to the<A HREF="windows.html#window">窗口</A>with the source code, create <A HREF="motion.html#it">it</A> if there
+ *<A NAME=":Source"></A><B>:Source</B>*     jump to the<A HREF="windows.html#window">窗口</A>with the source code, create <A HREF="motion.html#it">它</A> if there
 	     isn't one
 
- *<A NAME=":Asm"></A><B>:Asm</B>*	     jump to the<A HREF="windows.html#window">窗口</A>with the disassembly, create <A HREF="motion.html#it">it</A> if there
+ *<A NAME=":Asm"></A><B>:Asm</B>*	     jump to the<A HREF="windows.html#window">窗口</A>with the disassembly, create <A HREF="motion.html#it">它</A> if there
 	     isn't one
 
 
@@ -495,7 +495,7 @@ Any value greater than 1 will set the Asm<A HREF="windows.html#window">窗口</A
 
 						*<A NAME="termdebug-communication"></A><B>termdebug-communication</B>*
 There is another, hidden, buffer, which is used for Vim to communicate with
-<A HREF="debug.html#gdb">gdb</A>.  The buffer name is &quot;<A HREF="debug.html#gdb">gdb</A> communication&quot;.  Do not delete this buffer, <A HREF="motion.html#it">it</A>
+<A HREF="debug.html#gdb">gdb</A>.  The buffer name is &quot;<A HREF="debug.html#gdb">gdb</A> communication&quot;.  Do not delete this buffer, <A HREF="motion.html#it">它</A>
 will break the debugger.
 
 Gdb has some weird behavior, the <A HREF="usr_05.html#plugin">plugin</A> does its best to work around that.

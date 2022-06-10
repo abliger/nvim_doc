@@ -80,8 +80,8 @@
 
 
 Vim is an extensible editor.  You can take a sequence of commands you use
-often and turn <A HREF="motion.html#it">it</A> into a new command.  Or redefine an existing command.
-Autocommands make <A HREF="motion.html#it">it</A> possible to execute commands automatically.
+often and turn <A HREF="motion.html#it">它</A> into a new command.  Or redefine an existing command.
+Autocommands make <A HREF="motion.html#it">它</A> possible to execute commands automatically.
 
 |<A HREF="#40.1">40.1</A>|	Key <A HREF="map.html#mapping">mapping</A>
 |<A HREF="#40.2">40.2</A>|	Defining command-line commands
@@ -112,7 +112,7 @@ inserted and <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> takes you out of i
 itself.  This makes the mappings better readable and you can copy and <A HREF="provider.html#paste">paste</A>
 the text without problems.
    The &quot;<A HREF="cmdline.html#:">:</A>&quot; character takes Vim to the command line.  The &quot;<A HREF="insert.html#:read">:read</A> !date&quot; command
-reads the output from the &quot;date&quot; command and appends <A HREF="motion.html#it">it</A> below the current
+reads the output from the &quot;date&quot; command and appends <A HREF="motion.html#it">它</A> below the current
 line.  The <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is required to execute the &quot;<A HREF="insert.html#:read">:read</A>&quot; command.
    At this point of execution the text looks like this:
 
@@ -120,22 +120,22 @@ line.  The <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is required to execut
 <B><FONT color="#3A6F2B">	Fri Jun 15 12:54:34 CEST 2001 </FONT></B>
 
 Now &quot;kJ&quot; moves the cursor up and joins the lines together.
-   To decide which key or keys you use for <A HREF="map.html#mapping">mapping</A>, see |<A HREF="map.html#map-which-keys">map-which-keys</A>|.
+   To decide which key or keys you use for <A HREF="map.html#mapping">mapping</A>, 见 |<A HREF="map.html#map-which-keys">map-which-keys</A>|.
 
 
 MAPPING AND MODES
 
 The &quot;<A HREF="map.html#:map">:map</A>&quot; command defines remapping for keys in <A HREF="intro.html#Normal">正常</A>模式.  You can also
 define mappings for other modes.  For example, &quot;<A HREF="map.html#:imap">:imap</A>&quot; applies to <A HREF="intro.html#Insert">插入</A>模式.
-You can use <A HREF="motion.html#it">it</A> to insert a date below the cursor:
+You can use <A HREF="motion.html#it">它</A> to insert a date below the cursor:
 
 <B>	:imap &lt;F2&gt; &lt;CR&gt;Date: &lt;Esc&gt;:read !date&lt;CR&gt;kJ</B>
 
 It looks a lot like the <A HREF="map.html#mapping">mapping</A> for &lt;F2&gt; in <A HREF="intro.html#Normal">正常</A>模式, only the start is
 different.  The &lt;F2&gt; <A HREF="map.html#mapping">mapping</A> for <A HREF="intro.html#Normal">正常</A>模式 is still there.  Thus you can map
 the same key differently for each mode.
-   Notice that, although this <A HREF="map.html#mapping">mapping</A> starts in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="motion.html#it">it</A> ends in <A HREF="intro.html#Normal">Normal</A>
-mode.  If you want <A HREF="motion.html#it">it</A> to continue in <A HREF="intro.html#Insert">插入</A>模式, append an &quot;<A HREF="insert.html#a">a</A>&quot; to the
+   Notice that, although this <A HREF="map.html#mapping">mapping</A> starts in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="motion.html#it">它</A> ends in <A HREF="intro.html#Normal">Normal</A>
+mode.  If you want <A HREF="motion.html#it">它</A> to continue in <A HREF="intro.html#Insert">插入</A>模式, append an &quot;<A HREF="insert.html#a">a</A>&quot; to the
 <A HREF="map.html#mapping">mapping</A>.
 
 Here is an overview of map commands and in which mode they work:
@@ -161,7 +161,7 @@ the following command:
 <B>	:omap &lt;F7&gt; a{</B>
 
 This causes &lt;F7&gt; to perform a select block &quot;<A HREF="motion.html#a{">a{</A>&quot; in operator-pending mode, just
-like you typed <A HREF="motion.html#it">it</A>.  This <A HREF="map.html#mapping">mapping</A> is useful if typing a { on your keyboard is a
+like you typed <A HREF="motion.html#it">它</A>.  This <A HREF="map.html#mapping">mapping</A> is useful if typing a { on your keyboard is a
 bit difficult.
 
 
@@ -183,13 +183,13 @@ This is &quot;<A HREF="pattern.html#n">n</A>&quot; for <A HREF="intro.html#Norma
 <A HREF="map.html#mapping">mapping</A> defined with &quot;<A HREF="map.html#:map">:map</A>&quot;, thus effective in both <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode.
    One useful purpose of listing the <A HREF="map.html#mapping">mapping</A> is to check if special keys in <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>
 form have been recognized (this only works when color is supported).  For
-example, when <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is displayed in color, <A HREF="motion.html#it">it</A> stands for the <A HREF="intro.html#escape">escape</A> character.
-When <A HREF="motion.html#it">it</A> has the same color <A HREF="motion.html#as">as</A> the other text, <A HREF="motion.html#it">it</A> is five characters.
+example, when <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is displayed in color, <A HREF="motion.html#it">它</A> stands for the <A HREF="intro.html#escape">escape</A> character.
+When <A HREF="motion.html#it">它</A> has the same color <A HREF="motion.html#as">as</A> the other text, <A HREF="motion.html#it">它</A> is five characters.
 
 
 REMAPPING
 
-The result of a <A HREF="map.html#mapping">mapping</A> is inspected for other mappings in <A HREF="motion.html#it">it</A>.  For example,
+The result of a <A HREF="map.html#mapping">mapping</A> is inspected for other mappings in <A HREF="motion.html#it">它</A>.  For example,
 the mappings for &lt;F2&gt; above could be shortened to:
 
 <B>	:map &lt;F2&gt; G&lt;F3&gt;</B>
@@ -201,7 +201,7 @@ For <A HREF="intro.html#Normal">正常</A>模式 &lt;F2&gt; is mapped to go to t
 also uses &lt;F3&gt;.  Then &lt;F3&gt; is mapped to <A HREF="diff.html#do">do</A> the actual work.
 
 Suppose you hardly ever use <A HREF="intro.html#Ex">Ex</A> mode, and want to use the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command to format
-text (this was so in old versions of Vim).  This <A HREF="map.html#mapping">mapping</A> will <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>:
+text (this was so in old versions of Vim).  This <A HREF="map.html#mapping">mapping</A> will <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
 
 <B>	:map Q gq</B>
 
@@ -210,7 +210,7 @@ that you can still go to <A HREF="intro.html#Ex">Ex</A> mode:
 
 <B>	:map gQ Q</B>
 
-What happens now is that when you type &quot;<A HREF="intro.html#gQ">gQ</A>&quot; <A HREF="motion.html#it">it</A> is mapped to &quot;<A HREF="repeat.html#Q">Q</A>&quot;.  So far so
+What happens now is that when you type &quot;<A HREF="intro.html#gQ">gQ</A>&quot; <A HREF="motion.html#it">它</A> is mapped to &quot;<A HREF="repeat.html#Q">Q</A>&quot;.  So far so
 good.  But then &quot;<A HREF="repeat.html#Q">Q</A>&quot; is mapped to &quot;<A HREF="change.html#gq">gq</A>&quot;, thus typing &quot;<A HREF="intro.html#gQ">gQ</A>&quot; results in &quot;<A HREF="change.html#gq">gq</A>&quot;, and
 you don't get to <A HREF="intro.html#Ex">Ex</A> mode at all.
    To avoid keys to be mapped again, use the &quot;<A HREF="map.html#:noremap">:noremap</A>&quot; command:
@@ -218,7 +218,7 @@ you don't get to <A HREF="intro.html#Ex">Ex</A> mode at all.
 <B>	:noremap gQ Q</B>
 
 Now Vim knows that the &quot;<A HREF="repeat.html#Q">Q</A>&quot; is not to be inspected for mappings that apply to
-<A HREF="motion.html#it">it</A>.  There is a similar command for every mode:
+<A HREF="motion.html#it">它</A>.  There is a similar command for every mode:
 
 	<A HREF="map.html#:noremap">:noremap</A>	<A HREF="intro.html#Normal">Normal</A>, <A HREF="visual.html#Visual">Visual</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A>
 	<A HREF="map.html#:vnoremap">:vnoremap</A>	<A HREF="visual.html#Visual">Visual</A>
@@ -231,7 +231,7 @@ Now Vim knows that the &quot;<A HREF="repeat.html#Q">Q</A>&quot; is not to be in
 
 RECURSIVE MAPPING
 
-When a <A HREF="map.html#mapping">mapping</A> triggers itself, <A HREF="motion.html#it">it</A> will run forever.  This can be used to
+When a <A HREF="map.html#mapping">mapping</A> triggers itself, <A HREF="motion.html#it">它</A> will run forever.  This can be used to
 repeat an action an unlimited number of times.
    For example, you have a <A HREF="eval.html#list">list</A> of files that contain a version number in the
 first line.  You edit these files with &quot;vim *.txt&quot;.  You are now editing the
@@ -240,10 +240,10 @@ first file.  Define this <A HREF="map.html#mapping">mapping</A>:
 <B>	:map ,, :s/5.1/5.2/&lt;CR&gt;:wnext&lt;CR&gt;,,</B>
 
 Now you type &quot;,,&quot;.  This triggers the <A HREF="map.html#mapping">mapping</A>.  It replaces &quot;5.1&quot; with &quot;5.2&quot;
-in the first line.  Then <A HREF="motion.html#it">it</A> does a &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; to write the file and edit the
+in the first line.  Then <A HREF="motion.html#it">它</A> does a &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; to write the file and edit the
 next one.  The <A HREF="map.html#mapping">mapping</A> ends in &quot;,,&quot;.  This triggers the same <A HREF="map.html#mapping">mapping</A> again,
 thus doing the substitution, etc.
-   This continues until there is an error.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> could be a file
+   This continues until there is an error.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> could be a file
 where the substitute command doesn't find a match for &quot;5.1&quot;.  You can then
 make a change to insert &quot;5.1&quot; and continue by typing &quot;,,&quot; again.  Or the
 &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; fails, because you are in the last file in the <A HREF="eval.html#list">list</A>.
@@ -265,8 +265,8 @@ applies to depends on the command used:
 	<A HREF="map.html#:cunmap">:cunmap</A>		<A HREF="cmdline.html#Command-line">Command-line</A>
 
 There is a trick to define a <A HREF="map.html#mapping">mapping</A> that works in <A HREF="intro.html#Normal">Normal</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A>
-mode, but not in <A HREF="visual.html#Visual">Visual</A> mode.  First define <A HREF="motion.html#it">it</A> for all three modes, then
-delete <A HREF="motion.html#it">it</A> for <A HREF="visual.html#Visual">Visual</A> mode:
+mode, but not in <A HREF="visual.html#Visual">Visual</A> mode.  First define <A HREF="motion.html#it">它</A> for all three modes, then
+delete <A HREF="motion.html#it">它</A> for <A HREF="visual.html#Visual">Visual</A> mode:
 
 <B>	:map &lt;C-A&gt; /---&gt;&lt;CR&gt;</B>
 <B>	:vunmap &lt;C-A&gt;</B>
@@ -274,7 +274,7 @@ delete <A HREF="motion.html#it">it</A> for <A HREF="visual.html#Visual">Visual</
 Notice that the five characters &quot;&lt;C-A&gt;&quot; stand for the single key <A HREF="change.html#CTRL-A">CTRL-A</A>.
 
 To remove all mappings use the |<A HREF="map.html#:mapclear">:mapclear</A>| command.  You can guess the
-variations for different modes by now.  Be careful with this command, <A HREF="motion.html#it">it</A> can't
+variations for different modes by now.  Be careful with this command, <A HREF="motion.html#it">它</A> can't
 be undone.
 
 
@@ -317,7 +317,7 @@ abbreviation is triggered by typing a non-word character after the <A HREF="moti
 inserted in the text while you type them.  When the abbreviation is triggered
 these characters are deleted and replaced by what the abbreviation produces.
 When typing the characters for a <A HREF="map.html#mapping">mapping</A>, nothing is inserted until you type
-the last character that triggers <A HREF="motion.html#it">it</A>.  If the <A HREF="options.html#'showcmd'">'showcmd'</A> option is set, the
+the last character that triggers <A HREF="motion.html#it">它</A>.  If the <A HREF="options.html#'showcmd'">'showcmd'</A> option is set, the
 typed characters are displayed in the last line of the Vim<A HREF="windows.html#window">窗口</A>.
    An exception is when a <A HREF="map.html#mapping">mapping</A> is ambiguous.  Suppose you have done two
 mappings:
@@ -325,9 +325,9 @@ mappings:
 <B>	:imap aa foo</B>
 <B>	:imap aaa bar</B>
 
-Now, when you type &quot;aa&quot;, Vim doesn't know if <A HREF="motion.html#it">it</A> should apply the first or the
-second <A HREF="map.html#mapping">mapping</A>.  It waits for another character to be typed.  If <A HREF="motion.html#it">it</A> is an &quot;<A HREF="insert.html#a">a</A>&quot;,
-the second <A HREF="map.html#mapping">mapping</A> is applied and results in &quot;<A HREF="motion.html#bar">bar</A>&quot;.  If <A HREF="motion.html#it">it</A> is a space, for
+Now, when you type &quot;aa&quot;, Vim doesn't know if <A HREF="motion.html#it">它</A> should apply the first or the
+second <A HREF="map.html#mapping">mapping</A>.  It waits for another character to be typed.  If <A HREF="motion.html#it">它</A> is an &quot;<A HREF="insert.html#a">a</A>&quot;,
+the second <A HREF="map.html#mapping">mapping</A> is applied and results in &quot;<A HREF="motion.html#bar">bar</A>&quot;.  If <A HREF="motion.html#it">它</A> is a space, for
 example, the first <A HREF="map.html#mapping">mapping</A> is applied, resulting in &quot;foo&quot;, and then the space
 is inserted.
 
@@ -338,13 +338,13 @@ The &lt;script&gt; keyword can be used to make a <A HREF="map.html#mapping">mapp
 |<A HREF="map.html#:map-&lt;script&gt;">:map-&lt;script&gt;</A>|.
 
 The &lt;buffer&gt; keyword can be used to make a <A HREF="map.html#mapping">mapping</A> local to a specific buffer.
-See |<A HREF="map.html#:map-&lt;buffer&gt;">:map-&lt;buffer&gt;</A>|
+见 |<A HREF="map.html#:map-&lt;buffer&gt;">:map-&lt;buffer&gt;</A>|
 
-The &lt;unique&gt; keyword can be used to make defining a new <A HREF="map.html#mapping">mapping</A> fail when <A HREF="motion.html#it">it</A>
+The &lt;unique&gt; keyword can be used to make defining a new <A HREF="map.html#mapping">mapping</A> fail when <A HREF="motion.html#it">它</A>
 already exists.  Otherwise a new <A HREF="map.html#mapping">mapping</A> simply overwrites the old one.  See
 |<A HREF="map.html#:map-&lt;unique&gt;">:map-&lt;unique&gt;</A>|.
 
-To make a key <A HREF="diff.html#do">do</A> nothing, map <A HREF="motion.html#it">it</A> to <A HREF="intro.html#&lt;Nop&gt;">&lt;Nop&gt;</A> (five characters).  This will make
+To make a key <A HREF="diff.html#do">do</A> nothing, map <A HREF="motion.html#it">它</A> to <A HREF="intro.html#&lt;Nop&gt;">&lt;Nop&gt;</A> (five characters).  This will make
 the &lt;F7&gt; key <A HREF="diff.html#do">do</A> nothing at all:
 
 <B>	:map &lt;F7&gt; &lt;Nop&gt;| map! &lt;F7&gt; &lt;Nop&gt;</B>
@@ -356,7 +356,7 @@ There must be no space after <A HREF="intro.html#&lt;Nop&gt;">&lt;Nop&gt;</A>.
 *<A NAME="40.2"></A><B>40.2</B>*	Defining command-line commands
 
 The Vim editor enables you to define your own commands.  You execute these
-commands just like any other <A HREF="cmdline.html#Command-line">Command-line</A> mode command.
+commands just like any other <A HREF="cmdline.html#Command-line">命令行</A>模式 command.
    To define a command, use the &quot;<A HREF="map.html#:command">:command</A>&quot; command, <A HREF="motion.html#as">as</A> follows:
 
 <B>	:command DeleteFirst 1delete</B>
@@ -382,7 +382,7 @@ NUMBER OF ARGUMENTS
 
 User-defined commands can take a series of arguments.  The number of arguments
 must be specified by the -nargs option.  For instance, the example
-:DeleteFirst command takes no arguments, so you could have defined <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A>
+:DeleteFirst command takes no arguments, so you could have defined <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A>
 follows:
 
 <B>	:command -nargs=0 DeleteFirst 1delete</B>
@@ -408,7 +408,7 @@ Now when you type
 
 <B>	:Say Hello World</B>
 
-Vim echoes &quot;Hello World&quot;.  However, if you add a double <A HREF="change.html#quote">quote</A>, <A HREF="motion.html#it">it</A> won't work.
+Vim echoes &quot;Hello World&quot;.  However, if you add a double <A HREF="change.html#quote">quote</A>, <A HREF="motion.html#it">它</A> won't work.
 For example:
 
 <B>	:Say he said "hello"</B>
@@ -441,7 +441,7 @@ this option are <A HREF="motion.html#as">as</A> follows:
 
 	-range		Range is allowed; default is the current line.
 	-range=&#37;	Range is allowed; default is the whole file.
-	-range={count}	Range is allowed; the last number in <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> a
+	-range={count}	Range is allowed; the last number in <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> a
 			single number whose default is {count}.
 
 When a range is specified, the keywords <A HREF="map.html#&lt;line1&gt;">&lt;line1&gt;</A> and <A HREF="map.html#&lt;line2&gt;">&lt;line2&gt;</A> get the values of
@@ -509,7 +509,7 @@ That is used in the |<A HREF="pi_gzip.html#gzip">gzip</A>| <A HREF="usr_05.html#
 avoid typing many commands.  Use them carelessly and they will cause a lot of
 trouble.
 
-Suppose you want to replace a datestamp on the end of a file every time <A HREF="motion.html#it">it</A> is
+Suppose you want to replace a datestamp on the end of a file every time <A HREF="motion.html#it">它</A> is
 written.  First you define a function:
 
 <B>	:function DateInsert()</B>
@@ -524,9 +524,9 @@ to a file.  This will make that happen:
 
 &quot;<A HREF="autocmd.html#BufWritePre">BufWritePre</A>&quot; is the event for which this <A HREF="autocmd.html#autocommand">autocommand</A> is triggered: Just
 before (pre) <A HREF="editing.html#writing">writing</A> a buffer to a file.  The &quot;*&quot; is a <A HREF="pattern.html#pattern">pattern</A> to match with
-the file name.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> matches all files.
+the file name.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> matches all files.
    With this command enabled, when you <A HREF="diff.html#do">do</A> a &quot;<A HREF="editing.html#:write">:write</A>&quot;, Vim checks for any
-matching <A HREF="autocmd.html#BufWritePre">BufWritePre</A> autocommands and executes them, and then <A HREF="motion.html#it">it</A>
+matching <A HREF="autocmd.html#BufWritePre">BufWritePre</A> autocommands and executes them, and then <A HREF="motion.html#it">它</A>
 performs the &quot;<A HREF="editing.html#:write">:write</A>&quot;.
    The general form of the <A HREF="autocmd.html#:autocmd">:autocmd</A> command is <A HREF="motion.html#as">as</A> follows:
 
@@ -550,7 +550,7 @@ right, define this <A HREF="autocmd.html#autocommand">autocommand</A>:
 
 <B>	:autocmd BufReadPost *.gsm  set filetype=asm</B>
 
-If Vim is able to detect the type of file, <A HREF="motion.html#it">it</A> will set the <A HREF="options.html#'filetype'">'filetype'</A> option
+If Vim is able to detect the type of file, <A HREF="motion.html#it">它</A> will set the <A HREF="options.html#'filetype'">'filetype'</A> option
 for you.  This triggers the Filetype event.  Use this to <A HREF="diff.html#do">do</A> something when a
 certain type of file is edited.  For example, to load a <A HREF="eval.html#list">list</A> of <A HREF="map.html#abbreviations">abbreviations</A>
 for text files:
@@ -561,7 +561,7 @@ When starting to edit a new file, you could make Vim insert a <A HREF="autocmd.h
 
 <B>	:autocmd BufNewFile *.[ch]  0read ~/skeletons/skel.c</B>
 
-See |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>| for a complete <A HREF="eval.html#list">list</A> of events.
+见 |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>| for a complete <A HREF="eval.html#list">list</A> of events.
 
 
 PATTERNS
@@ -580,7 +580,7 @@ used ones:
 When the <A HREF="pattern.html#pattern">pattern</A> includes a slash (/) Vim will compare directory names.
 Without the slash only the last part of a file name is used.  For example,
 &quot;*.txt&quot; matches &quot;/home/biep/readme.txt&quot;.  The <A HREF="pattern.html#pattern">pattern</A> &quot;/home/biep/*&quot; would
-also match <A HREF="motion.html#it">it</A>.  But &quot;home/foo/*.txt&quot; wouldn't.
+also match <A HREF="motion.html#it">它</A>.  But &quot;home/foo/*.txt&quot; wouldn't.
    When including a slash, Vim matches the <A HREF="pattern.html#pattern">pattern</A> against both the full path
 of the file (&quot;/home/biep/readme.txt&quot;) and the relative path (e.g.,
 &quot;biep/readme.txt&quot;).
@@ -588,13 +588,13 @@ of the file (&quot;/home/biep/readme.txt&quot;) and the relative path (e.g.,
 	Note:
 	When working on a system that uses a <A HREF="intro.html#backslash">backslash</A> <A HREF="motion.html#as">as</A> file separator, such
 	<A HREF="motion.html#as">as</A> MS-Windows, you still use forward slashes in autocommands.  This
-	makes <A HREF="motion.html#it">it</A> easier to write the <A HREF="pattern.html#pattern">pattern</A>, since a <A HREF="intro.html#backslash">backslash</A> has a special
+	makes <A HREF="motion.html#it">它</A> easier to write the <A HREF="pattern.html#pattern">pattern</A>, since a <A HREF="intro.html#backslash">backslash</A> has a special
 	meaning.  It also makes the autocommands portable.
 
 
 DELETING
 
-To delete an <A HREF="autocmd.html#autocommand">autocommand</A>, use the same command <A HREF="motion.html#as">as</A> what <A HREF="motion.html#it">it</A> was defined with,
+To delete an <A HREF="autocmd.html#autocommand">autocommand</A>, use the same command <A HREF="motion.html#as">as</A> what <A HREF="motion.html#it">它</A> was defined with,
 but leave out the {command} at the end and use a !.  Example:
 
 <B>	:autocmd! FileWritePre *</B>
@@ -652,7 +652,7 @@ NESTING
 
 Generally, commands executed <A HREF="motion.html#as">as</A> the result of an <A HREF="autocmd.html#autocommand">autocommand</A> event will not
 trigger any new <A HREF="autocmd.html#events">events</A>.  If you read a file in response to a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A>
-event, <A HREF="motion.html#it">it</A> will not trigger the autocommands that would set the <A HREF="syntax.html#syntax">syntax</A>, for
+event, <A HREF="motion.html#it">它</A> will not trigger the autocommands that would set the <A HREF="syntax.html#syntax">syntax</A>, for
 example.  To make the <A HREF="autocmd.html#events">events</A> triggered, add the &quot;++nested&quot; flag:
 
 <B>	:autocmd FileChangedShell * ++nested  edit</B>
@@ -667,7 +667,7 @@ This is useful to have one <A HREF="autocmd.html#autocommand">autocommand</A> tr
 
 This defines an <A HREF="autocmd.html#autocommand">autocommand</A> that is triggered when a new file has been edited.
 The file name must end in &quot;.new&quot;.  The &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command uses <A HREF="eval.html#expression">expression</A>
-evaluation to form a new command and execute <A HREF="motion.html#it">it</A>.  When editing the file
+evaluation to form a new command and execute <A HREF="motion.html#it">它</A>.  When editing the file
 &quot;tryout.c.new&quot; the executed command will be:
 
 <B>	:doautocmd BufReadPost tryout.c</B>
@@ -677,7 +677,7 @@ name the <A HREF="autocmd.html#autocommand">autocommand</A> was executed for, an
 with &quot;<A HREF="insert.html#:r">:r</A>&quot;.
 
 &quot;<A HREF="autocmd.html#:doautocmd">:doautocmd</A>&quot; executes on the current buffer.  The &quot;<A HREF="autocmd.html#:doautoall">:doautoall</A>&quot; command works
-like &quot;doautocmd&quot; except <A HREF="motion.html#it">it</A> executes on all the <A HREF="windows.html#buffers">buffers</A>.
+like &quot;doautocmd&quot; except <A HREF="motion.html#it">它</A> executes on all the <A HREF="windows.html#buffers">buffers</A>.
 
 
 USING NORMAL MODE COMMANDS
@@ -689,15 +689,15 @@ Example:
 <B>	:autocmd BufReadPost *.log normal G</B>
 
 This will make the cursor jump to the last line of *.log files when you start
-to edit <A HREF="motion.html#it">it</A>.
+to edit <A HREF="motion.html#it">它</A>.
    Using the &quot;<A HREF="various.html#:normal">:normal</A>&quot; command is a bit tricky.  First of all, make sure its
 argument is a complete command, including all the arguments.  When you use &quot;<A HREF="insert.html#i">i</A>&quot;
 to go to <A HREF="intro.html#Insert">插入</A>模式, there must also be a <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to leave <A HREF="intro.html#Insert">插入</A>模式 again.
 If you use a &quot;<A HREF="pattern.html#/">/</A>&quot; to start a search <A HREF="pattern.html#pattern">pattern</A>, there must be a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> to execute
-<A HREF="motion.html#it">it</A>.
-   The &quot;<A HREF="various.html#:normal">:normal</A>&quot; command uses all the text after <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> commands.  Thus there
+<A HREF="motion.html#it">它</A>.
+   The &quot;<A HREF="various.html#:normal">:normal</A>&quot; command uses all the text after <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> commands.  Thus there
 can be no &#124; and another command following.  To work around this, put the
-&quot;<A HREF="various.html#:normal">:normal</A>&quot; command inside an &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command.  This also makes <A HREF="motion.html#it">it</A> possible
+&quot;<A HREF="various.html#:normal">:normal</A>&quot; command inside an &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command.  This also makes <A HREF="motion.html#it">它</A> possible
 to pass unprintable characters in a convenient way.  Example:
 
 <B>	:autocmd BufReadPost *.chg execute "normal ONew entry:\&lt;Esc&gt;" |</B>
@@ -708,7 +708,7 @@ lines.  This can be used in Vim scripts (not at the command line).
 
 When you want the <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="diff.html#do">do</A> something complicated, which involves jumping
 around in the file and then returning to the original position, you may want
-to restore the view on the file.  See |<A HREF="tips.html#restore-position">restore-position</A>| for an example.
+to restore the view on the file.  见 |<A HREF="tips.html#restore-position">restore-position</A>| for an example.
 
 
 IGNORING EVENTS
@@ -723,7 +723,7 @@ To ignore all <A HREF="autocmd.html#events">events</A>, use the following comman
 
 <B>	:set eventignore=all</B>
 
-To set <A HREF="motion.html#it">it</A> back to the normal behavior, make <A HREF="options.html#'eventignore'">'eventignore'</A> empty:
+To set <A HREF="motion.html#it">它</A> back to the normal behavior, make <A HREF="options.html#'eventignore'">'eventignore'</A> empty:
 
 <B>	:set eventignore=</B>
 

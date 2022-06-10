@@ -88,7 +88,7 @@ Sign Support Features				*<A NAME="sign-support"></A><B>sign-support</B>*
 
 1. Introduction					*<A NAME="sign-intro"></A><B>sign-intro</B>* *<A NAME="signs"></A><B>signs</B>*
 
-When a debugger or other IDE tool is driving an editor <A HREF="motion.html#it">it</A> needs to be able
+When a debugger or other IDE tool is driving an editor <A HREF="motion.html#it">它</A> needs to be able
 to give specific highlights which quickly tell the user useful information
 about the file.  One example of this would be a debugger which had an icon
 in the left-hand column denoting a breakpoint.  Another example might be an
@@ -170,7 +170,7 @@ line 23 of the current file:
 <B>	:sign define piet text=&gt;&gt; texthl=Search</B>
 <B>	:exe ":sign place 2 line=23 name=piet file=" .. expand("%:p")</B>
 
-And here is the command to delete <A HREF="motion.html#it">it</A> again:
+And here is the command to delete <A HREF="motion.html#it">它</A> again:
 <B>	:sign unplace 2</B>
 
 Note that the &quot;<A HREF="#:sign">:sign</A>&quot; command cannot be followed by another command or a
@@ -180,7 +180,7 @@ comment.  If you <A HREF="diff.html#do">do</A> need that, use the |<A HREF="eval
 
 DEFINING A SIGN.			*<A NAME=":sign-define"></A><B>:sign-define</B>* *<A NAME="E255"></A><B>E255</B>* *<A NAME="E160"></A><B>E160</B>* *<A NAME="E612"></A><B>E612</B>*
 
-See |<A HREF="#sign_define()">sign_define()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_define()">sign_define()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> define {name} {argument}...
 		Define a new sign or set attributes for an existing sign.
@@ -194,7 +194,7 @@ See |<A HREF="#sign_define()">sign_define()</A>| for the equivalent Vim <A HREF=
 	icon={bitmap}
 		Define the file name where the bitmap can be found.  Should be
 		a full path.  The bitmap should fit in the place of two
-		characters.  This is not checked.  If the bitmap is too big <A HREF="motion.html#it">it</A>
+		characters.  This is not checked.  If the bitmap is too big <A HREF="motion.html#it">它</A>
 		will cause redraw problems.
 <B><FONT color="#3A6F2B">			toolkit		supports </FONT></B>
 			Win32		.bmp, .ico, .cur
@@ -228,7 +228,7 @@ See |<A HREF="#sign_define()">sign_define()</A>| for the equivalent Vim <A HREF=
 
 DELETING A SIGN						*<A NAME=":sign-undefine"></A><B>:sign-undefine</B>* *<A NAME="E155"></A><B>E155</B>*
 
-See |<A HREF="#sign_undefine()">sign_undefine()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_undefine()">sign_undefine()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> undefine {name}
 		Deletes a previously defined sign.  If <A HREF="#signs">signs</A> with this {name}
@@ -241,7 +241,7 @@ See |<A HREF="#sign_undefine()">sign_undefine()</A>| for the equivalent Vim <A H
 
 LISTING SIGNS						*<A NAME=":sign-list"></A><B>:sign-list</B>* *<A NAME="E156"></A><B>E156</B>*
 
-See |<A HREF="#sign_getdefined()">sign_getdefined()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_getdefined()">sign_getdefined()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> <A HREF="eval.html#list">list</A>	<A HREF="eval.html#Lists">Lists</A> all defined <A HREF="#signs">signs</A> and their attributes.
 
@@ -252,7 +252,7 @@ See |<A HREF="#sign_getdefined()">sign_getdefined()</A>| for the equivalent Vim 
 
 PLACING SIGNS						*<A NAME=":sign-place"></A><B>:sign-place</B>* *<A NAME="E158"></A><B>E158</B>*
 
-See |<A HREF="#sign_place()">sign_place()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_place()">sign_place()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> place {id} line={lnum} name={name} file={fname}
 		Place sign defined <A HREF="motion.html#as">as</A> {name} at line {lnum} in file {fname}.
@@ -303,7 +303,7 @@ See |<A HREF="#sign_place()">sign_place()</A>| for the equivalent Vim <A HREF="u
 		Change the placed sign {id} in file {fname} to use the defined
 		sign {name}.  See remark above about {fname} |<A HREF="#:sign-fname">:sign-fname</A>|.
 		This can be used to change the displayed sign without moving
-		<A HREF="motion.html#it">it</A> (e.g., when the debugger has stopped at a breakpoint).
+		<A HREF="motion.html#it">它</A> (e.g., when the debugger has stopped at a breakpoint).
 
 		The optional &quot;group={group}&quot; attribute can be used before
 		&quot;file=&quot; to select a sign in a particular group.  The optional
@@ -325,7 +325,7 @@ See |<A HREF="#sign_place()">sign_place()</A>| for the equivalent Vim <A HREF="u
 
 REMOVING SIGNS						*<A NAME=":sign-unplace"></A><B>:sign-unplace</B>* *<A NAME="E159"></A><B>E159</B>*
 
-See |<A HREF="#sign_unplace()">sign_unplace()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_unplace()">sign_unplace()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> unplace {id} file={fname}
 		Remove the previously placed sign {id} from file {fname}.
@@ -367,16 +367,16 @@ See |<A HREF="#sign_unplace()">sign_unplace()</A>| for the equivalent Vim <A HRE
 		Remove all placed <A HREF="#signs">signs</A> in all the groups from buffer {nr}.
 
 <A HREF="#:sign">:sign</A> unplace {id}
-		Remove the previously placed sign {id} from all files <A HREF="motion.html#it">it</A>
+		Remove the previously placed sign {id} from all files <A HREF="motion.html#it">它</A>
 		appears in.
 
 <A HREF="#:sign">:sign</A> unplace {id} group={group}
 		Remove the previously placed sign {id} in group {group} from
-		all files <A HREF="motion.html#it">it</A> appears in.
+		all files <A HREF="motion.html#it">它</A> appears in.
 
 <A HREF="#:sign">:sign</A> unplace {id} group=*
 		Remove the previously placed sign {id} in all the groups from
-		all the files <A HREF="motion.html#it">it</A> appears in.
+		all the files <A HREF="motion.html#it">它</A> appears in.
 
 <A HREF="#:sign">:sign</A> unplace *
 		Remove all placed <A HREF="#signs">signs</A> in the global group from all the files.
@@ -402,7 +402,7 @@ See |<A HREF="#sign_unplace()">sign_unplace()</A>| for the equivalent Vim <A HRE
 
 LISTING PLACED SIGNS					*<A NAME=":sign-place-list"></A><B>:sign-place-list</B>*
 
-See |<A HREF="#sign_getplaced()">sign_getplaced()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_getplaced()">sign_getplaced()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> place file={fname}
 		<A HREF="eval.html#List">List</A> <A HREF="#signs">signs</A> placed in file {fname}.
@@ -434,7 +434,7 @@ See |<A HREF="#sign_getplaced()">sign_getplaced()</A>| for the equivalent Vim <A
 
 JUMPING TO A SIGN					*<A NAME=":sign-jump"></A><B>:sign-jump</B>* *<A NAME="E157"></A><B>E157</B>*
 
-See |<A HREF="#sign_jump()">sign_jump()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
+见 |<A HREF="#sign_jump()">sign_jump()</A>| for the equivalent Vim <A HREF="usr_41.html#script">script</A> function.
 
 <A HREF="#:sign">:sign</A> jump {id} file={fname}
 		Open the file {fname} or jump to the<A HREF="windows.html#window">窗口</A>that contains
@@ -558,18 +558,18 @@ sign_getplaced([{buf} [, {dict}]])			*<A NAME="sign_getplaced()"></A><B>sign_get
 
 		If the optional buffer name {buf} is specified, then only the
 		<A HREF="eval.html#list">list</A> of <A HREF="#signs">signs</A> placed in that buffer is returned.  For the use
-		of {buf}, see |<A HREF="builtin.html#bufname()">bufname()</A>|. The optional {dict} can contain
+		of {buf}, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|. The optional {dict} can contain
 		the following entries:
 		   group	select only <A HREF="#signs">signs</A> in this group
 		   id		select sign with this identifier
 		   lnum		select <A HREF="#signs">signs</A> placed in this line. For the use
-				of {lnum}, see |<A HREF="builtin.html#line()">line()</A>|.
+				of {lnum}, 见 |<A HREF="builtin.html#line()">line()</A>|.
 		If {group} is '*', then <A HREF="#signs">signs</A> in all the groups including the
 		global group are returned. If {group} is not supplied or is an
 		empty <A HREF="eval.html#string">string</A>, then only <A HREF="#signs">signs</A> in the global group are
 		returned.  If no arguments are supplied, then <A HREF="#signs">signs</A> in the
 		global group placed in all the <A HREF="windows.html#buffers">buffers</A> are returned.
-		See |<A HREF="#sign-group">sign-group</A>|.
+		见 |<A HREF="#sign-group">sign-group</A>|.
 
 		Each <A HREF="eval.html#list">list</A> item in the returned value is a dictionary with the
 		following entries:
@@ -622,7 +622,7 @@ sign_jump({id}, {group}, {buf})
 		{buf} and position the cursor at sign {id} in group {group}.
 		This is similar to the |<A HREF="#:sign-jump">:sign-jump</A>| command.
 
-		For the use of {buf}, see |<A HREF="builtin.html#bufname()">bufname()</A>|.
+		For the use of {buf}, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|.
 
 		Returns the line number of the sign. Returns -1 if the
 		arguments are invalid.
@@ -650,16 +650,16 @@ sign_place({id}, {group}, {name}, {buf} [, {dict}])
 
 		{name} refers to a defined sign.
 		{buf} refers to a buffer name or number. For the accepted
-		values, see |<A HREF="builtin.html#bufname()">bufname()</A>|.
+		values, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|.
 
 		The optional {dict} argument supports the following entries:
 			lnum		line number in the file or buffer
 					{buf} where the sign is to be placed.
-					For the accepted values, see |<A HREF="builtin.html#line()">line()</A>|.
+					For the accepted values, 见 |<A HREF="builtin.html#line()">line()</A>|.
 			priority	priority of the sign. See
 					|<A HREF="#sign-priority">sign-priority</A>| for more information.
 
-		If the optional {dict} is not specified, then <A HREF="motion.html#it">it</A> modifies the
+		If the optional {dict} is not specified, then <A HREF="motion.html#it">它</A> modifies the
 		placed sign {id} in group {group} to use the defined sign
 		{name}.
 
@@ -695,7 +695,7 @@ sign_placelist({list})
 		<A HREF="eval.html#List">List</A> of <A HREF="#signs">signs</A> to place. Each <A HREF="eval.html#list">list</A> item is a <A HREF="eval.html#dict">dict</A> with the
 		following sign attributes:
 		    buffer	buffer name or number. For the accepted
-				values, see |<A HREF="builtin.html#bufname()">bufname()</A>|.
+				values, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|.
 		    group	sign group. {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A>
 				for {id}, thus two groups can use the same
 				IDs. If not specified or set to an empty
@@ -707,8 +707,8 @@ sign_placelist({list})
 				|<A HREF="#sign-identifier">sign-identifier</A>| for more information.
 		    lnum	line number in the buffer {buf} where the
 				sign is to be placed. For the accepted values,
-				see |<A HREF="builtin.html#line()">line()</A>|.
-		    name	name of the sign to place. See |<A HREF="#sign_define()">sign_define()</A>|
+				见 |<A HREF="builtin.html#line()">line()</A>|.
+		    name	name of the sign to place. 见 |<A HREF="#sign_define()">sign_define()</A>|
 		    		for more information.
 		    priority	priority of the sign. When multiple <A HREF="#signs">signs</A> are
 				placed on a line, the sign with the highest
@@ -788,7 +788,7 @@ sign_unplace({group} [, {dict}])			*<A NAME="sign_unplace()"></A><B>sign_unplace
 		The <A HREF="#signs">signs</A> in {group} are selected based on the entries in
 		{dict}.  The following optional entries in {dict} are
 		supported:
-			buffer	buffer name or number. See |<A HREF="builtin.html#bufname()">bufname()</A>|.
+			buffer	buffer name or number. 见 |<A HREF="builtin.html#bufname()">bufname()</A>|.
 			id	sign identifier
 		If {dict} is not supplied, then all the <A HREF="#signs">signs</A> in {group} are
 		removed.
@@ -831,7 +831,7 @@ sign_unplacelist({list})				*<A NAME="sign_unplacelist()"></A><B>sign_unplacelis
 		The {list} argument specifies the <A HREF="eval.html#List">List</A> of <A HREF="#signs">signs</A> to remove.
 		Each <A HREF="eval.html#list">list</A> item is a <A HREF="eval.html#dict">dict</A> with the following sign attributes:
 		    buffer	buffer name or number. For the accepted
-				values, see |<A HREF="builtin.html#bufname()">bufname()</A>|. If not specified,
+				values, 见 |<A HREF="builtin.html#bufname()">bufname()</A>|. If not specified,
 				then the specified sign is removed from all
 				the <A HREF="windows.html#buffers">buffers</A>.
 		    group	sign group name. If not specified or set to an

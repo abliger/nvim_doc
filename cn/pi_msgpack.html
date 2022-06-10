@@ -122,7 +122,7 @@ This <A HREF="usr_05.html#plugin">plugin</A> contains utility <A HREF="eval.html
 FUNCTION ARGUMENTS				*<A NAME="msgpack.vim-arguments"></A><B>msgpack.vim-arguments</B>*
 
 Disambiguation of arguments described below.  Note: if e.g. function is listed 
-<A HREF="motion.html#as">as</A> accepting |<A HREF="#{msgpack-integer}">{msgpack-integer}</A>| (or anything else) <A HREF="motion.html#it">it</A> means that function 
+<A HREF="motion.html#as">as</A> accepting |<A HREF="#{msgpack-integer}">{msgpack-integer}</A>| (or anything else) <A HREF="motion.html#it">它</A> means that function 
 does not check whether argument matches its description.
 
 
@@ -157,7 +157,7 @@ msgpack#strftime({format}, <A HREF="#{msgpack-integer}">{msgpack-integer}</A>)		
 msgpack#strptime({format}, {time})			*<A NAME="msgpack#strptime()"></A><B>msgpack#strptime()</B>*
 	Reverse of |msgpack#strftime()|: for any time and format 
 	|msgpack#equal|( |msgpack#strptime|(format, |msgpack#strftime|(format, |||
-	time)), time) be true.  Requires |<A HREF="intro.html#+python">+python</A>| or |<A HREF="intro.html#+python3">+python3</A>|, without <A HREF="motion.html#it">it</A> 
+	time)), time) be true.  Requires |<A HREF="intro.html#+python">+python</A>| or |<A HREF="intro.html#+python3">+python3</A>|, without <A HREF="motion.html#it">它</A> 
 	only supports non-|<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>| nonnegative times and format 
 	equal to `&#37;Y-&#37;m-&#37;dT&#37;H:&#37;M:&#37;S`.
 
@@ -169,22 +169,22 @@ msgpack#int_dict_to_str({msgpack-special-int})	*<A NAME="msgpack#int_dict_to_str
 
 
 msgpack#special_type({msgpack-value})		*<A NAME="msgpack#special_type()"></A><B>msgpack#special_type()</B>*
-	Returns zero if <A HREF="#{msgpack-value}">{msgpack-value}</A> is not |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>|.  If <A HREF="motion.html#it">it</A> 
-	is <A HREF="motion.html#it">it</A> returns name of the key in |<A HREF="eval.html#v:msgpack_types">v:msgpack_types</A>| which represents 
+	Returns zero if <A HREF="#{msgpack-value}">{msgpack-value}</A> is not |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>|.  If <A HREF="motion.html#it">它</A> 
+	is <A HREF="motion.html#it">它</A> returns name of the key in |<A HREF="eval.html#v:msgpack_types">v:msgpack_types</A>| which represents 
 	<A HREF="#{msgpack-value}">{msgpack-value}</A> type.
 
 
 msgpack#type({msgpack-value})				*<A NAME="msgpack#type()"></A><B>msgpack#type()</B>*
 	Returns name of the key in |<A HREF="eval.html#v:msgpack_types">v:msgpack_types</A>| that represents 
 	<A HREF="#{msgpack-value}">{msgpack-value}</A> type.  Never returns zero: this function returns 
-	msgpack type which will be dumped by |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| should <A HREF="motion.html#it">it</A> receive 
+	msgpack type which will be dumped by |<A HREF="builtin.html#msgpackdump()">msgpackdump()</A>| should <A HREF="motion.html#it">它</A> receive 
 	a <A HREF="eval.html#list">list</A> with single <A HREF="#{msgpack-value}">{msgpack-value}</A> <A HREF="motion.html#as">as</A> input.
 
 
 msgpack#deepcopy({msgpack-value})			*<A NAME="msgpack#deepcopy()"></A><B>msgpack#deepcopy()</B>*
 	Like |<A HREF="builtin.html#deepcopy()">deepcopy()</A>|, but works correctly with |<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>| 
 	values.  Plain |<A HREF="builtin.html#deepcopy()">deepcopy()</A>| will destroy all types in 
-	|<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>| values because <A HREF="motion.html#it">it</A> will copy _TYPE key values, 
+	|<A HREF="builtin.html#msgpack-special-dict">msgpack-special-dict</A>| values because <A HREF="motion.html#it">它</A> will copy _TYPE key values, 
 	while they should be preserved.
 
 

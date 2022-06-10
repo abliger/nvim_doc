@@ -115,7 +115,7 @@ Now you start typing (ruler added):
 <B><FONT color="#3A6F2B">	I taught programming for a whi </FONT></B>
 
 If you type &quot;<A HREF="motion.html#l">l</A>&quot; next, this makes the line longer than the 30-character limit.
-When Vim sees this, <A HREF="motion.html#it">it</A> inserts a line break and you get the following:
+When Vim sees this, <A HREF="motion.html#it">它</A> inserts a line break and you get the following:
 
 		 1	   2	     3
 	12345678901234567890123456789012345
@@ -173,10 +173,10 @@ the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">o
 <B><FONT color="#3A6F2B">	story. </FONT></B>
 
 Note: there is a way to <A HREF="diff.html#do">do</A> automatic <A HREF="change.html#formatting">formatting</A> for specific types of text
-layouts, see |<A HREF="change.html#auto-format">auto-format</A>|.
+layouts, 见 |<A HREF="change.html#auto-format">auto-format</A>|.
 
 Since &quot;<A HREF="change.html#gq">gq</A>&quot; is an <A HREF="motion.html#operator">operator</A>, you can use one of the three ways to select the
-text <A HREF="motion.html#it">it</A> works on: With <A HREF="visual.html#Visual">Visual</A> mode, with a <A HREF="intro.html#movement">movement</A> and with a text object.
+text <A HREF="motion.html#it">它</A> works on: With <A HREF="visual.html#Visual">Visual</A> mode, with a <A HREF="intro.html#movement">movement</A> and with a text object.
    The example above could also be done with &quot;gq4j&quot;.  That's <A HREF="various.html#less">less</A> typing, but
 you have to know the line <A HREF="intro.html#count">count</A>.  A more useful motion command is &quot;<A HREF="motion.html#}">}</A>&quot;.  This
 moves to the end of a <A HREF="motion.html#paragraph">paragraph</A>.  Thus &quot;gq}&quot; formats from the cursor to the
@@ -197,7 +197,7 @@ whole file by typing this:
 together.  A common mistake is to have a line with a space or <A HREF="intro.html#tab">tab</A>.  That's a
 blank line, but not an empty line.
 
-Vim is able to format more than just plain text.  See |<A HREF="change.html#fo-table">fo-table</A>| for how to
+Vim is able to format more than just plain text.  见 |<A HREF="change.html#fo-table">fo-table</A>| for how to
 change this.  See the <A HREF="options.html#'joinspaces'">'joinspaces'</A> option to change the number of spaces used
 after a full stop.
    It is possible to use an external program for <A HREF="change.html#formatting">formatting</A>.  This is useful
@@ -213,7 +213,7 @@ To center a range of lines, use the following command:
 <B>	:{range}center [width]</B>
 
 {range} is the usual command-line range.  [width] is an optional line width to
-use for centering.  If [width] is not specified, <A HREF="motion.html#it">it</A> defaults to the value of
+use for centering.  If [width] is not specified, <A HREF="motion.html#it">它</A> defaults to the value of
 <A HREF="options.html#'textwidth'">'textwidth'</A>.  (If <A HREF="options.html#'textwidth'">'textwidth'</A> is 0, the default is 80.)
    For example:
 
@@ -249,9 +249,9 @@ Finally there is this command:
 <B>	:{range}left [margin]</B>
 
 Unlike &quot;<A HREF="change.html#:center">:center</A>&quot; and &quot;<A HREF="change.html#:right">:right</A>&quot;, however, the argument to &quot;<A HREF="change.html#:left">:left</A>&quot; is not the
-length of the line.  Instead <A HREF="motion.html#it">it</A> is the left margin.  If <A HREF="motion.html#it">it</A> is omitted, the
+length of the line.  Instead <A HREF="motion.html#it">它</A> is the left margin.  If <A HREF="motion.html#it">它</A> is omitted, the
 text will be put against the left side of the screen (using a zero margin
-would <A HREF="diff.html#do">do</A> the same).  If <A HREF="motion.html#it">it</A> is 5, the text will be indented 5 spaces.  For
+would <A HREF="diff.html#do">do</A> the same).  If <A HREF="motion.html#it">它</A> is 5, the text will be indented 5 spaces.  For
 example, use these commands:
 
 <B>	:1left 5</B>
@@ -303,7 +303,7 @@ This is entered by typing a <A HREF="intro.html#tab">tab</A>, some text, <A HREF
 
 <B>	:set autoindent</B>
 
-When a new line is started <A HREF="motion.html#it">it</A> gets the same indent <A HREF="motion.html#as">as</A> the previous line.  In
+When a new line is started <A HREF="motion.html#it">它</A> gets the same indent <A HREF="motion.html#as">as</A> the previous line.  In
 the above example, the <A HREF="intro.html#tab">tab</A> after the <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> is not needed anymore.
 
 
@@ -340,16 +340,16 @@ option.)
 
 	Note:
 	You could set the <A HREF="options.html#'tabstop'">'tabstop'</A> option to 4.  However, if you edit the
-	file another time, with <A HREF="options.html#'tabstop'">'tabstop'</A> set to the default value of 8, <A HREF="motion.html#it">it</A>
+	file another time, with <A HREF="options.html#'tabstop'">'tabstop'</A> set to the default value of 8, <A HREF="motion.html#it">它</A>
 	will look wrong.  In other programs and when <A HREF="print.html#printing">printing</A> the indent will
-	also be wrong.  Therefore <A HREF="motion.html#it">it</A> is recommended to keep <A HREF="options.html#'tabstop'">'tabstop'</A> at eight
+	also be wrong.  Therefore <A HREF="motion.html#it">它</A> is recommended to keep <A HREF="options.html#'tabstop'">'tabstop'</A> at eight
 	all the time.  That's the standard value everywhere.
 
 
 CHANGING TABS
 
-You edit a file which was written with a tabstop of 3.  In Vim <A HREF="motion.html#it">it</A> looks ugly,
-because <A HREF="motion.html#it">it</A> uses the normal tabstop value of 8.  You can fix this by setting
+You edit a file which was written with a tabstop of 3.  In Vim <A HREF="motion.html#it">它</A> looks ugly,
+because <A HREF="motion.html#it">它</A> uses the normal tabstop value of 8.  You can fix this by setting
 <A HREF="options.html#'tabstop'">'tabstop'</A> to 3.  But you have to <A HREF="diff.html#do">do</A> this every time you edit this file.
    Vim can change the use of tabstops in your file.  First, set <A HREF="options.html#'tabstop'">'tabstop'</A> to
 make the indents look good, then use the &quot;<A HREF="change.html#:retab">:retab</A>&quot; command:
@@ -358,10 +358,10 @@ make the indents look good, then use the &quot;<A HREF="change.html#:retab">:ret
 <B>	:retab 8</B>
 
 The &quot;<A HREF="change.html#:retab">:retab</A>&quot; command will change <A HREF="options.html#'tabstop'">'tabstop'</A> to 8, while <A HREF="change.html#changing">changing</A> the text such
-that <A HREF="motion.html#it">it</A> looks the same.  It changes spans of white space into tabs and spaces
-for this.  You can now write the file.  Next time you edit <A HREF="motion.html#it">it</A> the indents will
+that <A HREF="motion.html#it">它</A> looks the same.  It changes spans of white space into tabs and spaces
+for this.  You can now write the file.  Next time you edit <A HREF="motion.html#it">它</A> the indents will
 be right without setting an option.
-   Warning: When using &quot;<A HREF="change.html#:retab">:retab</A>&quot; on a program, <A HREF="motion.html#it">it</A> may change white space inside
+   Warning: When using &quot;<A HREF="change.html#:retab">:retab</A>&quot; on a program, <A HREF="motion.html#it">它</A> may change white space inside
 a <A HREF="eval.html#string">string</A> constant.  Therefore it's a good habit to use &quot;\t&quot; instead of a
 real <A HREF="intro.html#tab">tab</A>.
 
@@ -376,7 +376,7 @@ on the screen.
 line on the screen.  Then the ends of the long lines disappear off the screen
 to the right.
    When you move the cursor to a character that can't be seen, Vim will scroll
-the text to show <A HREF="motion.html#it">it</A>.  This is like moving a viewport over the text in the
+the text to show <A HREF="motion.html#it">它</A>.  This is like moving a viewport over the text in the
 horizontal direction.
    By default, Vim does not display a horizontal scrollbar in the <A HREF="gui.html#GUI">GUI</A>.  If you
 want to enable one, use the following command:
@@ -385,7 +385,7 @@ want to enable one, use the following command:
 
 One horizontal scrollbar will appear at the bottom of the Vim<A HREF="windows.html#window">窗口</A>.
 
-If you don't have a scrollbar or don't want to use <A HREF="motion.html#it">it</A>, use these commands to
+If you don't have a scrollbar or don't want to use <A HREF="motion.html#it">它</A>, use these commands to
 scroll the text.  The cursor will stay in the same place, but it's moved back
 into the visible text if necessary.
 
@@ -401,7 +401,7 @@ into the visible text if necessary.
 Let's attempt to show this with one line of text.  The cursor is on the &quot;<A HREF="motion.html#w">w</A>&quot; of
 &quot;which&quot;.  The &quot;current window&quot; above the line indicates the text that is
 currently visible.  The &quot;<A HREF="windows.html#window">窗口</A>&quot;s below the text indicate the text that is
-visible after the command left of <A HREF="motion.html#it">it</A>.
+visible after the command left of <A HREF="motion.html#it">它</A>.
 
 			      |&lt;-- current<A HREF="windows.html#window">窗口</A>--&gt;|
 <B><FONT color="#3A6F2B">		some long text, part of which is visible in the window </FONT></B>
@@ -456,7 +456,7 @@ After:
 
 <B>	:set linebreak</B>
 
-<A HREF="motion.html#it">it</A> looks like this:
+<A HREF="motion.html#it">它</A> looks like this:
 
 	+---------------------------------+
 	|letter generation program for a  |
@@ -495,7 +495,7 @@ lines, this is how you turn each <A HREF="motion.html#paragraph">paragraph</A> i
 
 <B>	:g/./,/^$/join</B>
 
-That looks complicated.  Let's break <A HREF="motion.html#it">it</A> up in pieces:
+That looks complicated.  Let's break <A HREF="motion.html#it">它</A> up in pieces:
 
 	:g/./		A &quot;<A HREF="repeat.html#:global">:global</A>&quot; command that finds all lines that contain
 			at least one character.
@@ -528,7 +528,7 @@ You end up with two lines:
 	+----------------------------------+
 
 Note that this doesn't work when the separating line is blank but not empty;
-when <A HREF="motion.html#it">it</A> contains spaces and/or tabs.  This command does work with blank lines:
+when <A HREF="motion.html#it">它</A> contains spaces and/or tabs.  This command does work with blank lines:
 
 <B>	:g/\S/,/^\s*$/join</B>
 
@@ -585,7 +585,7 @@ placed before the &quot;test 1&quot; column.  Do this in seven steps:
 3.  Move the cursor down two lines with &quot;2j&quot;.  You are now in &quot;virtual space&quot;:
     the &quot;input B&quot; line of the &quot;test 3&quot; column.
 4.  Move the cursor right, to include the whole column in the selection, plus
-    the space that you want between the columns.  &quot;9l&quot; should <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>.
+    the space that you want between the columns.  &quot;9l&quot; should <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.
 5.  Yank the selected rectangle with &quot;<A HREF="change.html#y">y</A>&quot;.
 6.  Move the cursor to &quot;test 1&quot;, where the new column must be placed.
 7.  Press &quot;<A HREF="change.html#P">P</A>&quot;.
@@ -606,7 +606,7 @@ Go back to non-virtual cursor movements with:
 
 VIRTUAL REPLACE MODE
 
-The disadvantage of using <A HREF="options.html#'virtualedit'">'virtualedit'</A> is that <A HREF="motion.html#it">it</A> &quot;feels&quot; different.  You
+The disadvantage of using <A HREF="options.html#'virtualedit'">'virtualedit'</A> is that <A HREF="motion.html#it">它</A> &quot;feels&quot; different.  You
 can't recognize tabs or spaces beyond the end of line when moving the cursor
 around.  Another <A HREF="eval.html#method">method</A> can be used: Virtual <A HREF="insert.html#Replace">Replace</A> mode.
    Suppose you have a line in a table that contains both tabs and other
@@ -633,10 +633,10 @@ The layout is messed up.  To avoid that, use the &quot;<A HREF="change.html#gr">
 What happens is that the &quot;<A HREF="change.html#gr">gr</A>&quot; command makes sure the new character takes the
 right amount of screen space.  Extra spaces or tabs are inserted to fill the
 gap.  Thus what actually happens is that a <A HREF="intro.html#tab">tab</A> is replaced by &quot;<A HREF="change.html#x">x</A>&quot; and then
-blanks added to make the text after <A HREF="motion.html#it">it</A> keep its place.  In this <A HREF="change.html#case">case</A> a
+blanks added to make the text after <A HREF="motion.html#it">它</A> keep its place.  In this <A HREF="change.html#case">case</A> a
 <A HREF="intro.html#tab">tab</A> is inserted.
    When you need to replace more than one character, you use the &quot;<A HREF="change.html#R">R</A>&quot; command
-to go to <A HREF="insert.html#Replace">Replace</A> mode (see |<A HREF="usr_04.html#04.9">04.9</A>|).  This messes up the layout and replaces
+to go to <A HREF="insert.html#Replace">Replace</A> mode (见 |<A HREF="usr_04.html#04.9">04.9</A>|).  This messes up the layout and replaces
 the wrong characters:
 
 <B><FONT color="#3A6F2B">	inp	0	0.534	0.693 </FONT></B>

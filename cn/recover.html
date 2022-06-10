@@ -152,10 +152,10 @@ The <A HREF="options.html#'swapfile'">'swapfile'</A> option can be reset to avoi
 
 
 :nos[wapfile]   {command}			*<A NAME=":nos"></A><B>:nos</B>* *<A NAME=":noswapfile"></A><B>:noswapfile</B>*
-		Execute {command}. If <A HREF="motion.html#it">it</A> contains a command that loads a new
-		buffer, <A HREF="motion.html#it">it</A> will be loaded without creating a swapfile and the
+		Execute {command}. If <A HREF="motion.html#it">它</A> contains a command that loads a new
+		buffer, <A HREF="motion.html#it">它</A> will be loaded without creating a swapfile and the
 		<A HREF="options.html#'swapfile'">'swapfile'</A> option will be reset.  If a buffer already had a
-		swapfile <A HREF="motion.html#it">it</A> is not removed and <A HREF="options.html#'swapfile'">'swapfile'</A> is not reset.
+		swapfile <A HREF="motion.html#it">它</A> is not removed and <A HREF="options.html#'swapfile'">'swapfile'</A> is not reset.
 
 
 <B><FONT color="#3A6F2B">Detecting an existing swap file </FONT></B>
@@ -167,18 +167,18 @@ You can find this in the user manual, section |<A HREF="usr_11.html#11.3">11.3</
 
 The swap file is updated after typing 200 characters or when you have not
 typed anything for four seconds.  This only happens if the buffer was
-changed, not when you only moved around.  The reason why <A HREF="motion.html#it">it</A> is not kept up to
+changed, not when you only moved around.  The reason why <A HREF="motion.html#it">它</A> is not kept up to
 date all the time is that this would slow down normal work too much.  You can
 change the 200 character <A HREF="intro.html#count">count</A> with the <A HREF="options.html#'updatecount'">'updatecount'</A> option.  You can set
 the time with the <A HREF="options.html#'updatetime'">'updatetime'</A> option.  The time is given in milliseconds.
 After <A HREF="editing.html#writing">writing</A> to the swap file Vim syncs the file to disk.
 
-If the <A HREF="editing.html#writing">writing</A> to the swap file is not wanted, <A HREF="motion.html#it">it</A> can be switched off by
+If the <A HREF="editing.html#writing">writing</A> to the swap file is not wanted, <A HREF="motion.html#it">它</A> can be switched off by
 setting the <A HREF="options.html#'updatecount'">'updatecount'</A> option to 0.  The same is done when starting Vim
 with the &quot;<A HREF="starting.html#-n">-n</A>&quot; option.  Writing can be switched back on by setting the
 <A HREF="options.html#'updatecount'">'updatecount'</A> option to non-zero.  Swap files will be created for all <A HREF="windows.html#buffers">buffers</A>
 when doing this.  But when setting <A HREF="options.html#'updatecount'">'updatecount'</A> to zero, the existing swap
-files will not be removed, <A HREF="motion.html#it">it</A> will only affect files that will be opened
+files will not be removed, <A HREF="motion.html#it">它</A> will only affect files that will be opened
 after this.
 
 If you want to make sure that your changes are in the swap file use this
@@ -196,7 +196,7 @@ After that comes the version number, e.g., &quot;3.0&quot;.
 
 <B><FONT color="#3A6F2B">Links and symbolic links </FONT></B>
 
-On Unix <A HREF="motion.html#it">it</A> is possible to have two names for the same file.  This can be done
+On Unix <A HREF="motion.html#it">它</A> is possible to have two names for the same file.  This can be done
 with hard links and with symbolic links (symlinks).
 
 For hard links Vim does not know the other name of the file.  Therefore, the
@@ -206,7 +206,7 @@ cannot find the other swapfile (except for searching all of your harddisk,
 which would be very slow).
 
 For symbolic links Vim resolves the links to find the name of the actual file.
-The swap file name is based on that name.  Thus <A HREF="motion.html#it">it</A> doesn't matter by what name
+The swap file name is based on that name.  Thus <A HREF="motion.html#it">它</A> doesn't matter by what name
 you edit the file, the swap file name will normally be the same.  However,
 there are exceptions:
 - When the directory of the actual file is not writable the swapfile is put
@@ -240,7 +240,7 @@ the recover command:
 
 							*<A NAME="E312"></A><B>E312</B>* *<A NAME="E309"></A><B>E309</B>* *<A NAME="E310"></A><B>E310</B>*
 Vim has some intelligence about what to <A HREF="diff.html#do">do</A> if the swap file is corrupt in
-some way.  If Vim has doubt about what <A HREF="motion.html#it">it</A> found, <A HREF="motion.html#it">it</A> will give an error
+some way.  If Vim has doubt about what <A HREF="motion.html#it">它</A> found, <A HREF="motion.html#it">它</A> will give an error
 message and insert lines with &quot;???&quot; in the text.  If you see an error message
 while recovering, search in the file for &quot;???&quot; to see what is wrong.  You may
 want to cut and <A HREF="provider.html#paste">paste</A> to get the text you need.

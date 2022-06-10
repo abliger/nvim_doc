@@ -91,7 +91,7 @@ the screen may be messed up or keys may not be recognized.
 
 Startup						*<A NAME="startup-terminal"></A><B>startup-terminal</B>*
 
-Nvim guesses the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type when <A HREF="motion.html#it">it</A> starts (except in |<A HREF="starting.html#--embed">--embed</A>| and
+Nvim guesses the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type when <A HREF="motion.html#it">它</A> starts (except in |<A HREF="starting.html#--embed">--embed</A>| and
 |<A HREF="starting.html#--headless">--headless</A>| modes). The |<A HREF="#$TERM">$TERM</A>| environment variable is the primary hint that
 determines the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type.
 
@@ -116,7 +116,7 @@ The <A HREF="#$TERM">$TERM</A> environment variable must match the <A HREF="nvim
 Otherwise Nvim cannot know what sequences your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> expects, and weird
 or sub-optimal behavior will result (scrolling quirks, wrong colors, etc.).
 
-<A HREF="#$TERM">$TERM</A> is also important because <A HREF="motion.html#it">it</A> is forwarded by SSH to the remote session,
+<A HREF="#$TERM">$TERM</A> is also important because <A HREF="motion.html#it">它</A> is forwarded by SSH to the remote session,
 unlike most other environment <A HREF="eval.html#variables">variables</A>.
 
   For this <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>           Set <A HREF="#$TERM">$TERM</A> to                  |<A HREF="#builtin-terms">builtin-terms</A>|
@@ -148,7 +148,7 @@ table, or &quot;ansi&quot; if there is no match. For example &quot;TERM=putty-25
 be mapped to the builtin &quot;putty&quot; entry. See also |<A HREF="#tui-colors">tui-colors</A>|.
 
 The builtin <A HREF="#terminfo">terminfo</A> is not combined with any external <A HREF="#terminfo">terminfo</A> database, nor
-can <A HREF="motion.html#it">it</A> be used in preference to one.  You can thus entirely override any
+can <A HREF="motion.html#it">它</A> be used in preference to one.  You can thus entirely override any
 omissions or out-of-date information in the builtin <A HREF="#terminfo">terminfo</A> database by
 supplying an external one with entries for the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type.
 
@@ -186,7 +186,7 @@ used.
 This will not speed up <A HREF="scroll.html#scrolling">scrolling</A> in a<A HREF="windows.html#window">窗口</A>that is not the full width of the
 <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  Xterm has an extra ability, not described by <A HREF="#terminfo">terminfo</A>, to set left
 and right scroll margins <A HREF="motion.html#as">as</A> well.  If Nvim detects that the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is Xterm,
-<A HREF="motion.html#it">it</A> will make use of this ability to speed up <A HREF="scroll.html#scrolling">scrolling</A> that is not the full
+<A HREF="motion.html#it">它</A> will make use of this ability to speed up <A HREF="scroll.html#scrolling">scrolling</A> that is not the full
 width of the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
 
 
@@ -209,11 +209,11 @@ meant that Nvim also could not map these keys separately.
 Modern <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulators are able to distinguish between these pairs of keys
 by encoding <A HREF="intro.html#control">control</A> modifiers differently. There are two common but distinct
 ways of doing this, known <A HREF="motion.html#as">as</A> &quot;modifyOtherKeys&quot; and &quot;CSI u&quot;. Nvim supports both
-encoding methods and at <A HREF="starting.html#startup">startup</A> will tell the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator that <A HREF="motion.html#it">it</A>
-understands these key encodings. If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator supports <A HREF="motion.html#it">it</A> then
+encoding methods and at <A HREF="starting.html#startup">startup</A> will tell the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator that <A HREF="motion.html#it">它</A>
+understands these key encodings. If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator supports <A HREF="motion.html#it">它</A> then
 this will allow you to map the key pairs listed above separately.
 
-At <A HREF="starting.html#startup">startup</A> Nvim will query your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to see if <A HREF="motion.html#it">it</A> supports the CSI <A HREF="undo.html#u">u</A>
+At <A HREF="starting.html#startup">startup</A> Nvim will query your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to see if <A HREF="motion.html#it">它</A> supports the CSI <A HREF="undo.html#u">u</A>
 encoding by <A HREF="editing.html#writing">writing</A> the sequence
 
 <B>	CSI ? u CSI c</B>
@@ -223,7 +223,7 @@ If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator res
 <B>	CSI ? &lt;flags&gt; u</B>
 
 this means your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports the CSI <A HREF="undo.html#u">u</A> encoding and Nvim will tell your
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to enable <A HREF="motion.html#it">it</A> by <A HREF="editing.html#writing">writing</A> the sequence
+<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to enable <A HREF="motion.html#it">它</A> by <A HREF="editing.html#writing">writing</A> the sequence
 
 <B>	CSI &gt; 1 u</B>
 
@@ -232,7 +232,7 @@ If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> does not sup
 
 <B>	CSI &gt; 4 ; 2 m</B>
 
-When Nvim exits cleanly <A HREF="motion.html#it">it</A> will send the corresponding sequence to disable the
+When Nvim exits cleanly <A HREF="motion.html#it">它</A> will send the corresponding sequence to disable the
 special key encoding. If Nvim does not exit cleanly then your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
 emulator could be in a bad state. If this happens, simply run &quot;reset&quot;.
 
@@ -280,7 +280,7 @@ extension.  So Nvim simply assumes that (all) &quot;dtterm&quot;, &quot;xterm&qu
 							*<A NAME="tui-cursor-shape"></A><B>tui-cursor-shape</B>*
 Nvim will adjust the shape of the cursor from a block to a line when in insert
 mode (or <A HREF="motion.html#as">as</A> specified by the <A HREF="options.html#'guicursor'">'guicursor'</A> option), on terminals that support
-<A HREF="motion.html#it">it</A>.  It uses the same |<A HREF="#terminfo">terminfo</A>| extensions that were pioneered by tmux for
+<A HREF="motion.html#it">它</A>.  It uses the same |<A HREF="#terminfo">terminfo</A>| extensions that were pioneered by tmux for
 this: &quot;Ss&quot; and &quot;Se&quot;.
 Similarly, if you set the cursor highlight group with blend=100, Nvim hides
 the cursor through the &quot;cvvis&quot; and &quot;civis&quot; extensions.
@@ -289,14 +289,14 @@ If your <A HREF="#terminfo">terminfo</A> definition is missing them, then Nvim w
 add them to your <A HREF="#terminfo">terminfo</A> definition, by looking at <A HREF="#$TERM">$TERM</A> and other
 environment <A HREF="eval.html#variables">variables</A>.  For the &quot;rxvt&quot;, &quot;putty&quot;, &quot;linux&quot;, &quot;screen&quot;,
 &quot;teraterm&quot;, and &quot;iterm&quot; <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> types, or when Konsole, a libvte-based
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator, or genuine Xterm are detected, <A HREF="motion.html#it">it</A> will add constructed
+<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator, or genuine Xterm are detected, <A HREF="motion.html#it">它</A> will add constructed
 &quot;Ss&quot; and &quot;Se&quot; capabilities.
 
 
 							*<A NAME="tui-cursor-tmux"></A><B>tui-cursor-tmux</B>*
-Within tmux <A HREF="motion.html#it">it</A> may appear that Nvim is not <A HREF="change.html#changing">changing</A> the cursor, but in fact <A HREF="motion.html#it">it</A>
+Within tmux <A HREF="motion.html#it">它</A> may appear that Nvim is not <A HREF="change.html#changing">changing</A> the cursor, but in fact <A HREF="motion.html#it">它</A>
 is tmux receiving instructions from Nvim to change the cursor and not knowing
-what to <A HREF="diff.html#do">do</A> in turn.  tmux must translate what <A HREF="motion.html#it">it</A> receives from Nvim into
+what to <A HREF="diff.html#do">do</A> in turn.  tmux must translate what <A HREF="motion.html#it">它</A> receives from Nvim into
 whatever <A HREF="intro.html#control">control</A> sequence is appropriate for the host <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  It shares
 a common mechanism with Nvim, of using the &quot;Ss&quot; and &quot;Se&quot; capabilities from
 <A HREF="#terminfo">terminfo</A> (for the output <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>) if they are present. Unlike Nvim, if they
@@ -325,7 +325,7 @@ On Unix systems, three methods are tried to get the<A HREF="windows.html#window"
 If everything fails a default size of 24 lines and 80 columns is assumed.  If
 a <A HREF="windows.html#window-resize">window-resize</A> signal is received the size will be set again.  If the<A HREF="windows.html#window">窗口</A>
 size is wrong you can use the <A HREF="options.html#'lines'">'lines'</A> and <A HREF="options.html#'columns'">'columns'</A> <A HREF="options.html#options">options</A> to set the
-correct values. See |<A HREF="various.html#:mode">:mode</A>|.
+correct values. 见 |<A HREF="various.html#:mode">:mode</A>|.
 
 ==============================================================================
 
@@ -403,7 +403,7 @@ Overview of what the mouse buttons <A HREF="diff.html#do">do</A>, when <A HREF="
 In a help<A HREF="windows.html#window">窗口</A>:
 <B><FONT color="#3A6F2B">event	      position	   selection	  change  action	</FONT></B>
 <B><FONT color="#3A6F2B">	       cursor			  window		</FONT></B>
-<A HREF="#&lt;2-LeftMouse&gt;">&lt;2-LeftMouse&gt;</A>   yes     (cannot be active)  no	   &quot;^]&quot; (jump to help <A HREF="tagsrch.html#tag">tag</A>)
+<A HREF="#&lt;2-LeftMouse&gt;">&lt;2-LeftMouse&gt;</A>   yes     (cannot be active)  no	   &quot;^]&quot; (jump to help <A HREF="tagsrch.html#tag">标签</A>)
 
 When <A HREF="options.html#'mousemodel'">'mousemodel'</A> is &quot;popup&quot;, these are different:
 
@@ -470,7 +470,7 @@ that has a match selects until that match (like using &quot;v&#37;&quot;).  If t
 an #if/#else/#endif block, the selection becomes <A HREF="motion.html#linewise">linewise</A>.
 For MS-Windows and xterm the time for double clicking can be set with the
 <A HREF="options.html#'mousetime'">'mousetime'</A> option. For the other systems this time is defined outside of Vim.
-An example, for using a double click to jump to the <A HREF="tagsrch.html#tag">tag</A> under the cursor:
+An example, for using a double click to jump to the <A HREF="tagsrch.html#tag">标签</A> under the cursor:
 <B>	:map &lt;2-LeftMouse&gt; :exe "tag " .. expand("&lt;cword&gt;")&lt;CR&gt;</B>
 
 Dragging the mouse with a double click (button-down, button-up, button-down
@@ -479,7 +479,7 @@ until the button is released, at which point the selection is per character
 again.
 
 In <A HREF="intro.html#Insert">插入</A>模式, when a selection is started, Vim goes into <A HREF="intro.html#Normal">正常</A>模式
-temporarily.  When <A HREF="visual.html#Visual">Visual</A> or <A HREF="visual.html#Select">Select</A> mode ends, <A HREF="motion.html#it">it</A> returns to <A HREF="intro.html#Insert">插入</A>模式.
+temporarily.  When <A HREF="visual.html#Visual">Visual</A> or <A HREF="visual.html#Select">Select</A> mode ends, <A HREF="motion.html#it">它</A> returns to <A HREF="intro.html#Insert">插入</A>模式.
 This is like using <A HREF="motion.html#CTRL-O">CTRL-O</A> in <A HREF="intro.html#Insert">插入</A>模式.  <A HREF="visual.html#Select">Select</A> mode is used when the
 <A HREF="options.html#'selectmode'">'selectmode'</A> option contains &quot;mouse&quot;.
 

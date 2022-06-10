@@ -128,7 +128,7 @@ Example:
 <B>    let job1 = jobstart(['bash'], extend({'shell': 'shell 1'}, s:callbacks))</B>
 <B>    let job2 = jobstart(['bash', '-c', 'for i in {1..10}; do echo hello $i!; sleep 1; done'], extend({'shell': 'shell 2'}, s:callbacks))</B>
 
-To test the above <A HREF="usr_41.html#script">script</A>, copy <A HREF="motion.html#it">it</A> to a file ~/foo.vim and run <A HREF="motion.html#it">it</A>:
+To test the above <A HREF="usr_41.html#script">script</A>, copy <A HREF="motion.html#it">它</A> to a file ~/foo.vim and run <A HREF="motion.html#it">它</A>:
 <B>    nvim -u ~/foo.vim</B>
  
 Description of what happens:
@@ -140,7 +140,7 @@ Description of what happens:
   - `OnEvent()` callback is passed to |<A HREF="builtin.html#jobstart()">jobstart()</A>| to handle various job
     <A HREF="autocmd.html#events">events</A>. It displays stdout/stderr data received from the shells.
 
-For |<A HREF="channel.html#on_stdout">on_stdout</A>| and |<A HREF="channel.html#on_stderr">on_stderr</A>| see |<A HREF="channel.html#channel-callback">channel-callback</A>|.
+For |<A HREF="channel.html#on_stdout">on_stdout</A>| and |<A HREF="channel.html#on_stderr">on_stderr</A>| 见 |<A HREF="channel.html#channel-callback">channel-callback</A>|.
 
 							*<A NAME="on_exit"></A><B>on_exit</B>*
 Arguments passed to <A HREF="#on_exit">on_exit</A> callback:
@@ -170,7 +170,7 @@ Arguments passed to <A HREF="#on_exit">on_exit</A> callback:
 	  - `abc\nefg` may arrive <A HREF="motion.html#as">as</A> `['abc', '']`, `['efg']` or `['abc']`,
 	    `['','efg']`, or even `['ab']`, `['c','efg']`.
 	Easy way to deal with this: initialize a <A HREF="eval.html#list">list</A> <A HREF="motion.html#as">as</A> `['']`, then append
-	to <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> follows:
+	to <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> follows:
 <B>	  let s:chunks = ['']</B>
 <B>	  func! s:on_stdout(job_id, data, event) dict</B>
 <B>	    let s:chunks[-1] .= a:data[0]</B>
@@ -219,7 +219,7 @@ A job may be killed at any time with the |<A HREF="builtin.html#jobstop()">jobst
 
 <B>    :call jobstop(job1)</B>
  
-Individual streams can be closed without killing the <A HREF="#job">job</A>, see |<A HREF="builtin.html#chanclose()">chanclose()</A>|.
+Individual streams can be closed without killing the <A HREF="#job">job</A>, 见 |<A HREF="builtin.html#chanclose()">chanclose()</A>|.
 
 ==============================================================================
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

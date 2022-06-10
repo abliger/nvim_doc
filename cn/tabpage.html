@@ -115,7 +115,7 @@ close the <A HREF="intro.html#tab">tab</A> page.
 OPENING A NEW TAB PAGE:
 
 When starting Vim &quot;vim <A HREF="starting.html#-p">-p</A> filename ...&quot; opens each file argument in a separate
-<A HREF="intro.html#tab">tab</A> page (up to <A HREF="options.html#'tabpagemax'">'tabpagemax'</A>).  See |<A HREF="starting.html#-p">-p</A>|
+<A HREF="intro.html#tab">tab</A> page (up to <A HREF="options.html#'tabpagemax'">'tabpagemax'</A>).  见 |<A HREF="starting.html#-p">-p</A>|
 
 A double click with the mouse in the non-GUI <A HREF="intro.html#tab">tab</A> pages line opens a new, empty
 <A HREF="intro.html#tab">tab</A> page.  It is placed left of the position of the click.  The first click
@@ -127,7 +127,7 @@ right of the labels.
 In the <A HREF="gui.html#GUI">GUI</A> <A HREF="intro.html#tab">tab</A> pages line you can use the right mouse button to open menu.
 |<A HREF="#tabline-menu">tabline-menu</A>|.
 
-For the related autocommands see |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
+For the related autocommands 见 |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
 
 
 :[count]tabe[dit]				*<A NAME=":tabe"></A><B>:tabe</B>* *<A NAME=":tabedit"></A><B>:tabedit</B>* *<A NAME=":tabnew"></A><B>:tabnew</B>*
@@ -147,16 +147,16 @@ For the related autocommands see |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
 :[count]tabe[dit] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="editing.html#{file}">{file}</A>
 :[count]tabnew <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="editing.html#{file}">{file}</A>
 		Open a new <A HREF="intro.html#tab">tab</A> page and edit <A HREF="editing.html#{file}">{file}</A>, like with |<A HREF="editing.html#:edit">:edit</A>|.
-		For <A HREF="intro.html#[count]">[count]</A> see |<A HREF="#:tabnew">:tabnew</A>| above.
+		For <A HREF="intro.html#[count]">[count]</A> 见 |<A HREF="#:tabnew">:tabnew</A>| above.
 
 
 :[count]tabf[ind] <A HREF="editing.html#[++opt]">[++opt]</A> <A HREF="editing.html#[+cmd]">[+cmd]</A> <A HREF="editing.html#{file}">{file}</A>			*<A NAME=":tabf"></A><B>:tabf</B>* *<A NAME=":tabfind"></A><B>:tabfind</B>*
 		Open a new <A HREF="intro.html#tab">tab</A> page and edit <A HREF="editing.html#{file}">{file}</A> in <A HREF="options.html#'path'">'path'</A>, like with
-		|<A HREF="editing.html#:find">:find</A>|.  For <A HREF="intro.html#[count]">[count]</A> see |<A HREF="#:tabnew">:tabnew</A>| above.
+		|<A HREF="editing.html#:find">:find</A>|.  For <A HREF="intro.html#[count]">[count]</A> 见 |<A HREF="#:tabnew">:tabnew</A>| above.
 
 
 :[count]tab {cmd}					*<A NAME=":tab"></A><B>:tab</B>*
-		Execute {cmd} and when <A HREF="motion.html#it">it</A> opens a new<A HREF="windows.html#window">窗口</A>open a new <A HREF="intro.html#tab">tab</A>
+		Execute {cmd} and when <A HREF="motion.html#it">它</A> opens a new<A HREF="windows.html#window">窗口</A>open a new <A HREF="intro.html#tab">tab</A>
 		page instead.  Doesn't work for |<A HREF="diff.html#:diffsplit">:diffsplit</A>|, |<A HREF="diff.html#:diffpatch">:diffpatch</A>|,
 		|<A HREF="eval.html#:execute">:execute</A>| and |<A HREF="various.html#:normal">:normal</A>|.
 		If <A HREF="intro.html#[count]">[count]</A> is given the new <A HREF="intro.html#tab">tab</A> page appears after the <A HREF="intro.html#tab">tab</A>
@@ -176,11 +176,11 @@ For the related autocommands see |<A HREF="#tabnew-autocmd">tabnew-autocmd</A>|.
 <B>				    " one</B>
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="editing.html#gf">gf</A>	Open a new <A HREF="intro.html#tab">tab</A> page and edit the file name under the cursor.
-		See |<A HREF="windows.html#CTRL-W_gf">CTRL-W_gf</A>|.
+		见 |<A HREF="windows.html#CTRL-W_gf">CTRL-W_gf</A>|.
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="editing.html#gF">gF</A>	Open a new <A HREF="intro.html#tab">tab</A> page and edit the file name under the cursor
 		and jump to the line number following the file name.
-		See |<A HREF="windows.html#CTRL-W_gF">CTRL-W_gF</A>|.
+		见 |<A HREF="windows.html#CTRL-W_gF">CTRL-W_gF</A>|.
 
 CLOSING A TAB PAGE:
 
@@ -296,7 +296,7 @@ next tab page.  |<A HREF="options.html#'tabline'">'tabline'</A>|
 {count}&lt;C-PageUp&gt;
 {count}gT	Go {count} <A HREF="intro.html#tab">tab</A> pages back.  Wraps around from the first one
 		to the last one.  Note that the use of {count} is different
-		from |<A HREF="#:tabnext">:tabnext</A>|, where <A HREF="motion.html#it">it</A> is used <A HREF="motion.html#as">as</A> the tab page number.
+		from |<A HREF="#:tabnext">:tabnext</A>|, where <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> the tab page number.
 
 
 :tabr[ewind]			*<A NAME=":tabfir"></A><B>:tabfir</B>* *<A NAME=":tabfirst"></A><B>:tabfirst</B>* *<A NAME=":tabr"></A><B>:tabr</B>* *<A NAME=":tabrewind"></A><B>:tabrewind</B>*
@@ -358,9 +358,9 @@ REORDERING TAB PAGES:
 <B>		    :tabmove +1	" as above</B>
 
 
-Note that although <A HREF="motion.html#it">it</A> is possible to move a <A HREF="intro.html#tab">tab</A> behind the N-th one by using
-:Ntabmove. And move <A HREF="motion.html#it">it</A> by N places by using :+Ntabmove. For clarification what
-+N means in this <A HREF="repeat.html#context">context</A> see |<A HREF="cmdline.html#[range]">[range]</A>|.
+Note that although <A HREF="motion.html#it">它</A> is possible to move a <A HREF="intro.html#tab">tab</A> behind the N-th one by using
+:Ntabmove. And move <A HREF="motion.html#it">它</A> by N places by using :+Ntabmove. For clarification what
++N means in this <A HREF="repeat.html#context">context</A> 见 |<A HREF="cmdline.html#[range]">[range]</A>|.
 
 
 LOOPING OVER TAB PAGES:
@@ -383,7 +383,7 @@ LOOPING OVER TAB PAGES:
 		current <A HREF="intro.html#tab">tab</A> page.
 		{cmd} can contain '&#124;' to concatenate several commands.
 		{cmd} must not open or close <A HREF="intro.html#tab">tab</A> pages or reorder them.
-		Also see |<A HREF="windows.html#:windo">:windo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|, |<A HREF="quickfix.html#:cfdo">:cfdo</A>|
+		Also 见 |<A HREF="windows.html#:windo">:windo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|, |<A HREF="quickfix.html#:cfdo">:cfdo</A>|
 		and |<A HREF="quickfix.html#:lfdo">:lfdo</A>|.
 
 ==============================================================================
@@ -465,7 +465,7 @@ the whole option.  Something like:
 <B>	:set tabline=%!MyTabLine()</B>
 
 Then define the MyTabLine() function to <A HREF="eval.html#list">list</A> all the <A HREF="intro.html#tab">tab</A> pages labels.  A
-convenient <A HREF="eval.html#method">method</A> is to split <A HREF="motion.html#it">it</A> in two parts:  First go over all the <A HREF="intro.html#tab">tab</A>
+convenient <A HREF="eval.html#method">method</A> is to split <A HREF="motion.html#it">它</A> in two parts:  First go over all the <A HREF="intro.html#tab">tab</A>
 pages and define labels for them.  Then get the label for each <A HREF="intro.html#tab">tab</A> page.
 
 <B>	function MyTabLine()</B>
@@ -520,7 +520,7 @@ specifies the whole <A HREF="intro.html#tab">tab</A> pages line at once, <A HREF
 label separately.
 
 <A HREF="options.html#'guitabtooltip'">'guitabtooltip'</A> is very similar and is used for the tooltip of the same label.
-This only appears when the mouse pointer hovers over the label, thus <A HREF="motion.html#it">it</A>
+This only appears when the mouse pointer hovers over the label, thus <A HREF="motion.html#it">它</A>
 usually is longer.  Only supported on some systems though.
 
 See the <A HREF="options.html#'statusline'">'statusline'</A> option for the format of the value.

@@ -79,7 +79,7 @@
 			      Set your settings
 
 
-Vim can be tuned to work like you want <A HREF="motion.html#it">it</A> to.  This chapter shows you how to
+Vim can be tuned to work like you want <A HREF="motion.html#it">它</A> to.  This chapter shows you how to
 make Vim start with <A HREF="options.html#options">options</A> set to different values.  Add plugins to extend
 Vim's capabilities.  Or define your own macros.
 
@@ -103,14 +103,14 @@ Vim's capabilities.  Or define your own macros.
 You probably got tired of typing commands that you use very often.  To start
 Vim with all your favorite option settings and mappings, you write them in
 what is called the <A HREF="starting.html#init.vim">init.vim</A> file.  Vim executes the commands in this file when 
-<A HREF="motion.html#it">it</A> starts up.
+<A HREF="motion.html#it">它</A> starts up.
 
 If you already have a <A HREF="starting.html#init.vim">init.vim</A> file (e.g., when your sysadmin has one setup 
-for you), you can edit <A HREF="motion.html#it">it</A> this way:
+for you), you can edit <A HREF="motion.html#it">它</A> this way:
 
 <B>	:edit $MYVIMRC</B>
 
-If you don't have a <A HREF="starting.html#vimrc">vimrc</A> file yet, see |<A HREF="init.html">init.vim</A>| to find out where you can
+If you don't have a <A HREF="starting.html#vimrc">vimrc</A> file yet, 见 |<A HREF="init.html">init.vim</A>| to find out where you can
 create a <A HREF="starting.html#vimrc">vimrc</A> file.
 
 This file is always used and is recommended:
@@ -124,7 +124,7 @@ start with the <A HREF="options.html#'ignorecase'">'ignorecase'</A> option on, a
 
 <B>	set ignorecase</B>
 
-For this new line to take effect you need to exit Vim and start <A HREF="motion.html#it">it</A> again.
+For this new line to take effect you need to exit Vim and start <A HREF="motion.html#it">它</A> again.
 Later you will learn how to <A HREF="diff.html#do">do</A> this without <A HREF="starting.html#exiting">exiting</A> Vim.
 
 This chapter only explains the most basic items.  For more information on how
@@ -161,8 +161,8 @@ new line.
 
 <B>	set backup</B>
 
-This tells Vim to keep a <A HREF="editing.html#backup">backup</A> copy of a file when overwriting <A HREF="motion.html#it">it</A>. The <A HREF="editing.html#backup">backup</A>
-file will have the same name <A HREF="motion.html#as">as</A> the original file with &quot;<A HREF="change.html#~">~</A>&quot; added.  See |<A HREF="usr_07.html#07.4">07.4</A>|
+This tells Vim to keep a <A HREF="editing.html#backup">backup</A> copy of a file when overwriting <A HREF="motion.html#it">它</A>. The <A HREF="editing.html#backup">backup</A>
+file will have the same name <A HREF="motion.html#as">as</A> the original file with &quot;<A HREF="change.html#~">~</A>&quot; added.  见 |<A HREF="usr_07.html#07.4">07.4</A>|
 
 
 <B>	set history=50</B>
@@ -203,15 +203,15 @@ Display matches for a search <A HREF="pattern.html#pattern">pattern</A> while yo
 
 This defines a key <A HREF="map.html#mapping">mapping</A>.  More about that in the next section.  This
 defines the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command to <A HREF="diff.html#do">do</A> <A HREF="change.html#formatting">formatting</A> with the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">operator</A>.  This is how
-<A HREF="motion.html#it">it</A> worked before Vim 5.0.  Otherwise the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command starts <A HREF="intro.html#Ex">Ex</A> mode, but you
-will not need <A HREF="motion.html#it">it</A>.
+<A HREF="motion.html#it">它</A> worked before Vim 5.0.  Otherwise the &quot;<A HREF="repeat.html#Q">Q</A>&quot; command starts <A HREF="intro.html#Ex">Ex</A> mode, but you
+will not need <A HREF="motion.html#it">它</A>.
 
 
 <B>	vnoremap _g y:exe "grep /" .. escape(@", '\\/') .. "/ *.c *.h"&lt;CR&gt;</B>
 
-This <A HREF="map.html#mapping">mapping</A> yanks the visually selected text and searches for <A HREF="motion.html#it">it</A> in C files.
+This <A HREF="map.html#mapping">mapping</A> yanks the visually selected text and searches for <A HREF="motion.html#it">它</A> in C files.
 This is a complicated <A HREF="map.html#mapping">mapping</A>.  You can see that mappings can be used to <A HREF="diff.html#do">do</A>
-quite complicated things.  Still, <A HREF="motion.html#it">it</A> is just a sequence of commands that are
+quite complicated things.  Still, <A HREF="motion.html#it">它</A> is just a sequence of commands that are
 executed like you typed them.
 
 
@@ -230,10 +230,10 @@ This switches on three very clever mechanisms:
    Whenever you start editing a file, Vim will try to figure out what kind of
    file this is.  When you edit &quot;main.c&quot;, Vim will see the &quot;.c&quot; extension and
    recognize this <A HREF="motion.html#as">as</A> a &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype.html#filetype">filetype</A>.  When you edit a file that starts with
-   &quot;#!/bin/sh&quot;, Vim will recognize <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> a &quot;sh&quot; <A HREF="filetype.html#filetype">filetype</A>.
+   &quot;#!/bin/sh&quot;, Vim will recognize <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a &quot;sh&quot; <A HREF="filetype.html#filetype">filetype</A>.
    The <A HREF="filetype.html#filetype">filetype</A> detection is used for <A HREF="syntax.html#syntax">syntax</A> highlighting and the other two
    items below.
-   See |<A HREF="filetype.html#filetypes">filetypes</A>|.
+   见 |<A HREF="filetype.html#filetypes">filetypes</A>|.
 
 2. Using <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A> files
    Many different <A HREF="filetype.html#filetypes">filetypes</A> are edited with different <A HREF="options.html#options">options</A>.  For example,
@@ -245,7 +245,7 @@ This switches on three very clever mechanisms:
 3. Using indent files
    When editing programs, the indent of a line can often be computed
    automatically.  Vim comes with these indent rules for a number of
-   <A HREF="filetype.html#filetypes">filetypes</A>.  See |<A HREF="filetype.html#:filetype-indent-on">:filetype-indent-on</A>| and <A HREF="options.html#'indentexpr'">'indentexpr'</A>.
+   <A HREF="filetype.html#filetypes">filetypes</A>.  见 |<A HREF="filetype.html#:filetype-indent-on">:filetype-indent-on</A>| and <A HREF="options.html#'indentexpr'">'indentexpr'</A>.
 
 
 
@@ -253,11 +253,11 @@ This switches on three very clever mechanisms:
 <B>    autocmd BufRead * autocmd FileType &lt;buffer&gt; ++once</B>
 <B>      \ if &amp;ft !~# 'commit\|rebase' &amp;&amp; line("'\"") &gt; 1 &amp;&amp; line("'\"") &lt;= line("$") | exe 'normal! g`"' | endif</B>
 
-Another <A HREF="autocmd.html#autocommand">autocommand</A>.  This time <A HREF="motion.html#it">it</A> is used after reading any file.  The
-complicated stuff after <A HREF="motion.html#it">it</A> checks if the &#39;&#34;' <A HREF="motion.html#mark">mark</A> is defined, and jumps to <A HREF="motion.html#it">it</A>
+Another <A HREF="autocmd.html#autocommand">autocommand</A>.  This time <A HREF="motion.html#it">它</A> is used after reading any file.  The
+complicated stuff after <A HREF="motion.html#it">它</A> checks if the &#39;&#34;' <A HREF="motion.html#mark">mark</A> is defined, and jumps to <A HREF="motion.html#it">它</A>
 if so.  The <A HREF="intro.html#backslash">backslash</A> at the start of a line is used to continue the command
 from the previous line.  That avoids a line getting very long.
-See |<A HREF="repeat.html#line-continuation">line-continuation</A>|.  This only works in a Vim <A HREF="usr_41.html#script">script</A> file, not when
+见 |<A HREF="repeat.html#line-continuation">line-continuation</A>|.  This only works in a Vim <A HREF="usr_41.html#script">script</A> file, not when
 typing commands at the command-line.
 
 
@@ -265,7 +265,7 @@ typing commands at the command-line.
 <B>		  \ | wincmd p | diffthis</B>
 
 This adds the &quot;<A HREF="diff.html#:DiffOrig">:DiffOrig</A>&quot; command.  Use this in a modified buffer to see the
-differences with the file <A HREF="motion.html#it">it</A> was loaded from.  See |<A HREF="diff.html#diff">diff</A>| and |<A HREF="diff.html#:DiffOrig">:DiffOrig</A>|.
+differences with the file <A HREF="motion.html#it">它</A> was loaded from.  见 |<A HREF="diff.html#diff">diff</A>| and |<A HREF="diff.html#:DiffOrig">:DiffOrig</A>|.
 
 
 <B>	set nolangremap</B>
@@ -305,7 +305,7 @@ Let's break this down:
 After you execute the &quot;<A HREF="map.html#:map">:map</A>&quot; command, all you have to <A HREF="diff.html#do">do</A> to put <A HREF="intro.html#{}">{}</A> around a
 <A HREF="motion.html#word">单词</A> is to put the cursor on the first character and press F5.
 
-In this example, the trigger is a single key; <A HREF="motion.html#it">it</A> can be any <A HREF="eval.html#string">string</A>.  But when
+In this example, the trigger is a single key; <A HREF="motion.html#it">它</A> can be any <A HREF="eval.html#string">string</A>.  But when
 you use an existing Vim command, that command will no longer be available.
 You better avoid that.
    One key that can be used with mappings is the <A HREF="intro.html#backslash">backslash</A>.  Since you
@@ -336,14 +336,14 @@ vimballs (self-installing Vim <A HREF="#plugin">plugin</A> archives).
 To start using the vimball <A HREF="#plugin">plugin</A>, add one line to your <A HREF="starting.html#vimrc">vimrc</A> file:
 <B>	packadd vimball</B>
 
-That's all!  You can also type the command to try <A HREF="motion.html#it">it</A> out.  Now you can find
+That's all!  You can also type the command to try <A HREF="motion.html#it">它</A> out.  Now you can find
 help about this <A HREF="#plugin">plugin</A>:
 <B>	:help vimball</B>
 
-This works, because when `:packadd` loaded the <A HREF="#plugin">plugin</A> <A HREF="motion.html#it">it</A> also added the
+This works, because when `:packadd` loaded the <A HREF="#plugin">plugin</A> <A HREF="motion.html#it">它</A> also added the
 package directory in <A HREF="options.html#'runtimepath'">'runtimepath'</A>, so that the help file can be found.  The
-<A HREF="tagsrch.html#tags">tags</A> for vimball's help are already created.  If you need to generate the help
-<A HREF="tagsrch.html#tags">tags</A> for a package, see the `:helptags` command.
+<A HREF="tagsrch.html#tags">标签</A> for vimball's help are already created.  If you need to generate the help
+<A HREF="tagsrch.html#tags">标签</A> for a package, see the `:helptags` command.
 
 You can find <A HREF="repeat.html#packages">packages</A> on the Internet in various places.  It usually comes <A HREF="motion.html#as">as</A>
 an archive or <A HREF="motion.html#as">as</A> a repository.  For an archive you can follow these steps:
@@ -358,7 +358,7 @@ an archive or <A HREF="motion.html#as">as</A> a repository.  For an archive you 
  	   If the archive layout is different make sure that you end up with a
 	   path like this:
 <B><FONT color="#3A6F2B">		~/.local/share/nvim/site/pack/fancy/start/fancytext/plugin/fancy.vim </FONT></B>
-	   Here &quot;fancytext&quot; is the name of the package, <A HREF="motion.html#it">it</A> can be anything
+	   Here &quot;fancytext&quot; is the name of the package, <A HREF="motion.html#it">它</A> can be anything
 	   else.
 
 More information about packages can be found here: |<A HREF="repeat.html#packages">packages</A>|.
@@ -369,7 +369,7 @@ More information about packages can be found here: |<A HREF="repeat.html#package
 
 Vim's functionality can be extended by adding plugins.  A <A HREF="#plugin">plugin</A> is nothing
 more than a Vim <A HREF="usr_41.html#script">script</A> file that is loaded automatically when Vim starts.  You
-can add a <A HREF="#plugin">plugin</A> very easily by dropping <A HREF="motion.html#it">it</A> in your <A HREF="#plugin">plugin</A> directory.
+can add a <A HREF="#plugin">plugin</A> very easily by dropping <A HREF="motion.html#it">它</A> in your <A HREF="#plugin">plugin</A> directory.
 
 There are two types of plugins:
 
@@ -383,18 +383,18 @@ The global plugins will be discussed first, then the <A HREF="filetype.html#file
 
 GLOBAL PLUGINS						*<A NAME="standard-plugin"></A><B>standard-plugin</B>*
 
-When you start Vim, <A HREF="motion.html#it">it</A> will automatically load a number of global plugins.
+When you start Vim, <A HREF="motion.html#it">它</A> will automatically load a number of global plugins.
 You don't have to <A HREF="diff.html#do">do</A> anything for this.  They add functionality that most
 people will want to use, but which was implemented <A HREF="motion.html#as">as</A> a Vim <A HREF="usr_41.html#script">script</A> instead of
 being compiled into Vim.  You can find them listed in the help index
-|<A HREF="index.html#standard-plugin-list">standard-plugin-list</A>|.  Also see |<A HREF="starting.html#load-plugins">load-plugins</A>|.
+|<A HREF="index.html#standard-plugin-list">standard-plugin-list</A>|.  Also 见 |<A HREF="starting.html#load-plugins">load-plugins</A>|.
 
 
 							*<A NAME="add-global-plugin"></A><B>add-global-plugin</B>*
 You can add a global <A HREF="#plugin">plugin</A> to add functionality that will always be present
 when you use Vim.  There are only two steps for adding a global <A HREF="#plugin">plugin</A>:
 1. Get a copy of the <A HREF="#plugin">plugin</A>.
-2. Drop <A HREF="motion.html#it">it</A> in the right directory.
+2. Drop <A HREF="motion.html#it">它</A> in the right directory.
 
 
 GETTING A GLOBAL PLUGIN
@@ -405,7 +405,7 @@ Where can you find plugins?
   and its sub-directories and under $VIM/vimfiles/pack/dist/opt/.
  - Download from the net. There is a large collection on	<A HREF="http://www.vim.org">http://www.vim.org</A>.
 - They are sometimes posted in a Vim maillist.
-- You could write one yourself, see |<A HREF="usr_41.html#write-plugin">write-plugin</A>|.
+- You could write one yourself, 见 |<A HREF="usr_41.html#write-plugin">write-plugin</A>|.
 
 
 USING A GLOBAL PLUGIN
@@ -437,12 +437,12 @@ you can start using with this command:
 
 <B>	:filetype plugin on</B>
 
-That's all!  See |<A HREF="#vimrc-filetype">vimrc-filetype</A>|.
+That's all!  见 |<A HREF="#vimrc-filetype">vimrc-filetype</A>|.
 
 If you are missing a <A HREF="#plugin">plugin</A> for a <A HREF="filetype.html#filetype">filetype</A> you are using, or you found a
-better one, you can add <A HREF="motion.html#it">it</A>.  There are two steps for adding a <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A>:
+better one, you can add <A HREF="motion.html#it">它</A>.  There are two steps for adding a <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A>:
 1. Get a copy of the <A HREF="#plugin">plugin</A>.
-2. Drop <A HREF="motion.html#it">it</A> in the right directory.
+2. Drop <A HREF="motion.html#it">它</A> in the right directory.
 
 
 GETTING A FILETYPE PLUGIN
@@ -456,7 +456,7 @@ plugins are in $VIMRUNTIME/ftplugin.
 
 USING A FILETYPE PLUGIN					*<A NAME="ftplugin-name"></A><B>ftplugin-name</B>*
 
-You can add a <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A> by dropping <A HREF="motion.html#it">it</A> in the right directory.  The
+You can add a <A HREF="filetype.html#filetype">filetype</A> <A HREF="#plugin">plugin</A> by dropping <A HREF="motion.html#it">它</A> in the right directory.  The
 name of this directory is in the same directory mentioned above for global
 plugins, but the last part is &quot;<A HREF="usr_41.html#ftplugin">ftplugin</A>&quot;.  Suppose you have found a <A HREF="#plugin">plugin</A> for
 the &quot;stuff&quot; <A HREF="filetype.html#filetype">filetype</A>, and you are on Unix.  Then you can move this file to the
@@ -472,7 +472,7 @@ adding.  If it's OK, you can give the new one another name:
 <B>	mv thefile ~/.local/share/nvim/site/ftplugin/stuff_too.vim</B>
 
 The underscore is used to separate the name of the <A HREF="filetype.html#filetype">filetype</A> from the rest,
-which can be anything.  If you use &quot;otherstuff.vim&quot; <A HREF="motion.html#it">it</A> wouldn't work, <A HREF="motion.html#it">it</A> would
+which can be anything.  If you use &quot;otherstuff.vim&quot; <A HREF="motion.html#it">它</A> wouldn't work, <A HREF="motion.html#it">它</A> would
 be loaded for the &quot;otherstuff&quot; <A HREF="filetype.html#filetype">filetype</A>.
 
 The generic names for the <A HREF="filetype.html#filetype">filetype</A> plugins are:
@@ -490,8 +490,8 @@ Examples for the &quot;stuff&quot; <A HREF="filetype.html#filetype">filetype</A>
 
 The &lt;filetype&gt; part is the name of the <A HREF="filetype.html#filetype">filetype</A> the <A HREF="#plugin">plugin</A> is to be used for.
 Only files of this <A HREF="filetype.html#filetype">filetype</A> will use the settings from the <A HREF="#plugin">plugin</A>.  The &lt;name&gt;
-part of the <A HREF="#plugin">plugin</A> file doesn't matter, you can use <A HREF="motion.html#it">it</A> to have several plugins
-for the same <A HREF="filetype.html#filetype">filetype</A>.  Note that <A HREF="motion.html#it">it</A> must end in &quot;.vim&quot; or &quot;.lua&quot;.
+part of the <A HREF="#plugin">plugin</A> file doesn't matter, you can use <A HREF="motion.html#it">它</A> to have several plugins
+for the same <A HREF="filetype.html#filetype">filetype</A>.  Note that <A HREF="motion.html#it">它</A> must end in &quot;.vim&quot; or &quot;.lua&quot;.
 
 
 Further reading:
@@ -534,9 +534,9 @@ You can see an entry for the local help file when you <A HREF="diff.html#do">do<
 
 The title lines from the local help files are automagically added to this
 section.  There you can see which local help files have been added and jump to
-them through the <A HREF="tagsrch.html#tag">tag</A>.
+them through the <A HREF="tagsrch.html#tag">标签</A>.
 
-For <A HREF="editing.html#writing">writing</A> a local help file, see |<A HREF="usr_41.html#write-local-help">write-local-help</A>|.
+For <A HREF="editing.html#writing">writing</A> a local help file, 见 |<A HREF="usr_41.html#write-local-help">write-local-help</A>|.
 
 ==============================================================================
 
@@ -563,7 +563,7 @@ When you hit <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>, the line will
 The option has now been switched off.
 
 Just above this line is a short description of the <A HREF="options.html#'wrap'">'wrap'</A> option.  Move the
-cursor one line up to place <A HREF="motion.html#it">it</A> in this line.  Now hit <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> and you jump to
+cursor one line up to place <A HREF="motion.html#it">它</A> in this line.  Now hit <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> and you jump to
 the full help on the <A HREF="options.html#'wrap'">'wrap'</A> option.
 
 For <A HREF="options.html#options">options</A> that take a number or <A HREF="eval.html#string">string</A> argument you can edit the value.
@@ -572,10 +572,10 @@ lines up to this line:
 
 <B><FONT color="#3A6F2B">	set so=0 </FONT></B>
 
-Position the cursor on the zero with &quot;<A HREF="motion.html#$">$</A>&quot;.  Change <A HREF="motion.html#it">it</A> into a five with &quot;r5&quot;.
+Position the cursor on the zero with &quot;<A HREF="motion.html#$">$</A>&quot;.  Change <A HREF="motion.html#it">它</A> into a five with &quot;r5&quot;.
 Then press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to apply the new value.  When you now move the cursor
 around you will notice that the text starts <A HREF="scroll.html#scrolling">scrolling</A> before you reach the
-border.  This is what the <A HREF="options.html#'scrolloff'">'scrolloff'</A> option does, <A HREF="motion.html#it">it</A> specifies an offset
+border.  This is what the <A HREF="options.html#'scrolloff'">'scrolloff'</A> option does, <A HREF="motion.html#it">它</A> specifies an offset
 from the<A HREF="windows.html#window">窗口</A>border where <A HREF="scroll.html#scrolling">scrolling</A> starts.
 
 ==============================================================================
@@ -589,7 +589,7 @@ before and after the option name.  For example:
 
 <B>	:help 'wrap'</B>
 
-In <A HREF="change.html#case">case</A> you have messed up an option value, you can set <A HREF="motion.html#it">it</A> back to the
+In <A HREF="change.html#case">case</A> you have messed up an option value, you can set <A HREF="motion.html#it">它</A> back to the
 default by putting an ampersand (&amp;) after the option name.  Example:
 
 <B>	:set iskeyword&amp;</B>
@@ -609,13 +609,13 @@ displayed.  To see a <A HREF="repeat.html#context">context</A> of ten characters
 
 <B>	:set sidescroll=10</B>
 
-This doesn't change the text in the file, only the way <A HREF="motion.html#it">it</A> is displayed.
+This doesn't change the text in the file, only the way <A HREF="motion.html#it">它</A> is displayed.
 
 
 WRAPPING MOVEMENT COMMANDS
 
 Most commands for moving around will stop moving at the start and end of a
-line.  You can change that with the <A HREF="options.html#'whichwrap'">'whichwrap'</A> option.  This sets <A HREF="motion.html#it">it</A> to the
+line.  You can change that with the <A HREF="options.html#'whichwrap'">'whichwrap'</A> option.  This sets <A HREF="motion.html#it">它</A> to the
 default value:
 
 <B>	:set whichwrap=b,s</B>
@@ -652,7 +652,7 @@ and tabs <A HREF="motion.html#as">as</A> highlighted characters.  Use the <A HRE
 <B>	:set listchars=tab:&gt;-,trail:-</B>
 
 Now every <A HREF="intro.html#tab">tab</A> will be displayed <A HREF="motion.html#as">as</A> &quot;&gt;---&quot; (with more or <A HREF="various.html#less">less</A> &quot;<A HREF="motion.html#-">-</A>&quot;) and trailing
-white space <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#-">-</A>&quot;.  Looks a lot better, doesn't <A HREF="motion.html#it">it</A>?
+white space <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#-">-</A>&quot;.  Looks a lot better, doesn't <A HREF="motion.html#it">它</A>?
 
 
 KEYWORDS
@@ -666,7 +666,7 @@ The &quot;<A HREF="repeat.html#@">@</A>&quot; stands for all alphabetic letters.
 characters 48 to 57, which are the numbers 0 to 9.  &quot;192-255&quot; are the
 printable latin characters.
    Sometimes you will want to include a dash in keywords, so that commands
-like &quot;<A HREF="motion.html#w">w</A>&quot; consider &quot;upper-case&quot; to be one <A HREF="motion.html#word">单词</A>.  You can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> like this:
+like &quot;<A HREF="motion.html#w">w</A>&quot; consider &quot;upper-case&quot; to be one <A HREF="motion.html#word">单词</A>.  You can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> like this:
 
 <B>	:set iskeyword+=-</B>
 <B>	:set iskeyword</B>
@@ -685,8 +685,8 @@ This time a comma is automatically deleted.
 ROOM FOR MESSAGES
 
 When Vim starts there is one line at the bottom that is used for <A HREF="message.html#messages">messages</A>.
-When a message is long, <A HREF="motion.html#it">it</A> is either truncated, thus you can only see part of
-<A HREF="motion.html#it">it</A>, or the text scrolls and you have to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to continue.
+When a message is long, <A HREF="motion.html#it">它</A> is either truncated, thus you can only see part of
+<A HREF="motion.html#it">它</A>, or the text scrolls and you have to press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to continue.
    You can set the <A HREF="options.html#'cmdheight'">'cmdheight'</A> option to the number of lines used for
 <A HREF="message.html#messages">messages</A>.  Example:
 

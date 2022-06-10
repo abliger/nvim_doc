@@ -105,14 +105,14 @@ these commands below |<A HREF="quickref.html#Q_lr">Q_lr</A>|.
 
 To move the cursor forward one <A HREF="motion.html#word">单词</A>, use the &quot;<A HREF="motion.html#w">w</A>&quot; command.  Like most Vim
 commands, you can use a numeric prefix to move past multiple words.  For
-example, &quot;3w&quot; moves three words.  This figure shows how <A HREF="motion.html#it">it</A> works (starting at
+example, &quot;3w&quot; moves three words.  This figure shows how <A HREF="motion.html#it">它</A> works (starting at
 the position marked with &quot;x&quot;):
 
 <B><FONT color="#3A6F2B">	This is a line with example text </FONT></B>
 	  x--&gt;--&gt;-&gt;-----------------&gt;
 	   <A HREF="motion.html#w">w</A>  <A HREF="motion.html#w">w</A>  <A HREF="motion.html#w">w</A>    3w
 
-Notice that &quot;<A HREF="motion.html#w">w</A>&quot; moves to the start of the next <A HREF="motion.html#word">单词</A> if <A HREF="motion.html#it">it</A> already is at the
+Notice that &quot;<A HREF="motion.html#w">w</A>&quot; moves to the start of the next <A HREF="motion.html#word">单词</A> if <A HREF="motion.html#it">它</A> already is at the
 start of a <A HREF="motion.html#word">单词</A>.
    The &quot;<A HREF="motion.html#b">b</A>&quot; command moves backward to the start of the previous <A HREF="motion.html#word">单词</A>:
 
@@ -155,7 +155,7 @@ forward and backward through a <A HREF="motion.html#paragraph">paragraph</A>.
 *<A NAME="03.2"></A><B>03.2</B>*	Moving to the start or end of a line
 
 The &quot;<A HREF="motion.html#$">$</A>&quot; command moves the cursor to the end of a line.  If your keyboard has
-an <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A> key <A HREF="motion.html#it">it</A> will <A HREF="diff.html#do">do</A> the same thing.
+an <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A> key <A HREF="motion.html#it">它</A> will <A HREF="diff.html#do">do</A> the same thing.
 
 The &quot;<A HREF="motion.html#^">^</A>&quot; command moves to the first non-blank character of the line.  The &quot;<A HREF="motion.html#0">0</A>&quot;
 command (zero) moves to the very first character of the line, and the <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>
@@ -170,7 +170,7 @@ key does the same thing.  In a picture (&quot;.&quot; indicates a space):
 (the &quot;.....&quot; indicates blanks here)
 
    The &quot;<A HREF="motion.html#$">$</A>&quot; command takes a <A HREF="intro.html#count">count</A>, like most <A HREF="intro.html#movement">movement</A> commands.  But moving to
-the end of the line several times doesn't make sense.  Therefore <A HREF="motion.html#it">it</A> causes the
+the end of the line several times doesn't make sense.  Therefore <A HREF="motion.html#it">它</A> causes the
 editor to move to the end of another line.  For example, &quot;1$&quot; moves you to
 the end of the first line (the one you're on), &quot;2$&quot; to the end of the next
 line, and so on.
@@ -207,7 +207,7 @@ The &quot;<A HREF="motion.html#F">F</A>&quot; command searches to the left:
 		  &lt;---------------------
 			    Fh
 
-The &quot;tx&quot; command works like the &quot;fx&quot; command, except <A HREF="motion.html#it">it</A> stops one character
+The &quot;tx&quot; command works like the &quot;fx&quot; command, except <A HREF="motion.html#it">它</A> stops one character
 before the searched character.  Hint: &quot;<A HREF="motion.html#t">t</A>&quot; stands for &quot;To&quot;.  The backward
 version of this command is &quot;Tx&quot;.
 
@@ -231,7 +231,7 @@ operations, not just searches.
 
 When <A HREF="editing.html#writing">writing</A> a program you often end up with nested () constructs.  Then the
 &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; command is very handy: It moves to the matching paren.  If the cursor is
-on a &quot;<A HREF="motion.html#(">(</A>&quot; <A HREF="motion.html#it">it</A> will move to the matching &quot;<A HREF="motion.html#)">)</A>&quot;.  If it's on a &quot;<A HREF="motion.html#)">)</A>&quot; <A HREF="motion.html#it">it</A> will move to
+on a &quot;<A HREF="motion.html#(">(</A>&quot; <A HREF="motion.html#it">它</A> will move to the matching &quot;<A HREF="motion.html#)">)</A>&quot;.  If it's on a &quot;<A HREF="motion.html#)">)</A>&quot; <A HREF="motion.html#it">它</A> will move to
 the matching &quot;<A HREF="motion.html#(">(</A>&quot;.
 
 			    <A HREF="motion.html#&#37;">&#37;</A>
@@ -245,7 +245,7 @@ This also works for <A HREF="motion.html#[]">[]</A> and <A HREF="intro.html#{}">
 
 When the cursor is not on a useful character, &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; will search forward to find
 one.  Thus if the cursor is at the start of the line of the previous example,
-&quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; will search forward and find the first &quot;<A HREF="motion.html#(">(</A>&quot;.  Then <A HREF="motion.html#it">it</A> moves to its match:
+&quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; will search forward and find the first &quot;<A HREF="motion.html#(">(</A>&quot;.  Then <A HREF="motion.html#it">它</A> moves to its match:
 
 <B><FONT color="#3A6F2B">		if (a == (b * c) / d) </FONT></B>
 		---+----------------&gt;
@@ -262,7 +262,7 @@ the following:
 
 This tells you that you might want to fix something on line 33.  So how <A HREF="diff.html#do">do</A> you
 find line 33?  One way is to <A HREF="diff.html#do">do</A> &quot;9999k&quot; to go to the top of the file and &quot;32j&quot;
-to go down thirty-two lines.  It is not a good way, but <A HREF="motion.html#it">it</A> works.  A much
+to go down thirty-two lines.  It is not a good way, but <A HREF="motion.html#it">它</A> works.  A much
 better way of doing things is to use the &quot;<A HREF="motion.html#G">G</A>&quot; command.  With a <A HREF="intro.html#count">count</A>, this
 command positions you at the given line number.  For example, &quot;33G&quot; puts you
 on line 33.  (For a better way of going through a compiler's error <A HREF="eval.html#list">list</A>, see
@@ -334,8 +334,8 @@ To see where you are in a file, there are three ways:
 <B>	:set nonumber</B>
  
     Since <A HREF="options.html#'number'">'number'</A> is a <A HREF="options.html#boolean">boolean</A> option, prepending &quot;no&quot; to its name has the
-    effect of switching <A HREF="motion.html#it">it</A> off.  A <A HREF="options.html#boolean">boolean</A> option has only these two values,
-    <A HREF="motion.html#it">it</A> is either on or off.
+    effect of switching <A HREF="motion.html#it">它</A> off.  A <A HREF="options.html#boolean">boolean</A> option has only these two values,
+    <A HREF="motion.html#it">它</A> is either on or off.
        Vim has many <A HREF="options.html#options">options</A>.  Besides the <A HREF="options.html#boolean">boolean</A> ones there are <A HREF="options.html#options">options</A> with
     a numerical value and <A HREF="eval.html#string">string</A> <A HREF="options.html#options">options</A>.  You will see examples of this where
     they are used.
@@ -345,7 +345,7 @@ To see where you are in a file, there are three ways:
 
 <B>	:set ruler</B>
 
-Using the <A HREF="options.html#'ruler'">'ruler'</A> option has the advantage that <A HREF="motion.html#it">it</A> doesn't take much room,
+Using the <A HREF="options.html#'ruler'">'ruler'</A> option has the advantage that <A HREF="motion.html#it">它</A> doesn't take much room,
 thus there is more space for your text.
 
 ==============================================================================
@@ -401,7 +401,7 @@ the cursor.  That's done with the &quot;<A HREF="scroll.html#zz">zz</A>&quot; co
 	+------------------+		 +------------------+
 
 The &quot;<A HREF="scroll.html#zt">zt</A>&quot; command puts the cursor line at the top, &quot;<A HREF="scroll.html#zb">zb</A>&quot; at the bottom.  There
-are a few more <A HREF="scroll.html#scrolling">scrolling</A> commands, see |<A HREF="quickref.html#Q_sc">Q_sc</A>|.  To always keep a few lines of
+are a few more <A HREF="scroll.html#scrolling">scrolling</A> commands, 见 |<A HREF="quickref.html#Q_sc">Q_sc</A>|.  To always keep a few lines of
 <A HREF="repeat.html#context">context</A> around the cursor, use the <A HREF="options.html#'scrolloff'">'scrolloff'</A> option.
 
 ==============================================================================
@@ -449,7 +449,7 @@ about upper or <A HREF="change.html#lowercase">lowercase</A> in a <A HREF="motio
 
 <B>	:set ignorecase</B>
 
-If you now search for &quot;<A HREF="motion.html#word">单词</A>&quot;, <A HREF="motion.html#it">it</A> will also match &quot;Word&quot; and &quot;<A HREF="motion.html#word">单词</A>&quot;.  To match
+If you now search for &quot;<A HREF="motion.html#word">单词</A>&quot;, <A HREF="motion.html#it">它</A> will also match &quot;Word&quot; and &quot;<A HREF="motion.html#word">单词</A>&quot;.  To match
 <A HREF="change.html#case">case</A> again:
 
 <B>	:set noignorecase</B>
@@ -471,21 +471,21 @@ press of <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> moves you to &quot;/one
    You can also use the <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> cursor key to move through the <A HREF="cmdline.html#history">history</A> of
 search commands in the other direction.
 
-If you know what a previously used <A HREF="pattern.html#pattern">pattern</A> starts with, and you want to use <A HREF="motion.html#it">it</A>
+If you know what a previously used <A HREF="pattern.html#pattern">pattern</A> starts with, and you want to use <A HREF="motion.html#it">它</A>
 again, type that character before pressing <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>.  With the previous example,
 you can type &quot;/o&lt;Up&gt;&quot; and Vim will put &quot;/one&quot; on the command line.
 
 The commands starting with &quot;<A HREF="cmdline.html#:">:</A>&quot; also have a <A HREF="cmdline.html#history">history</A>.  That allows you to recall
-a previous command and execute <A HREF="motion.html#it">it</A> again.  These two histories are separate.
+a previous command and execute <A HREF="motion.html#it">它</A> again.  These two histories are separate.
 
 
 SEARCHING FOR A <A HREF="motion.html#word">单词</A> IN THE TEXT
 
 Suppose you see the <A HREF="motion.html#word">单词</A> &quot;TheLongFunctionName&quot; in the text and you want to
-find the next occurrence of <A HREF="motion.html#it">it</A>.  You could type &quot;/TheLongFunctionName&quot;, but
-that's a lot of typing.  And when you make a mistake Vim won't find <A HREF="motion.html#it">it</A>.
+find the next occurrence of <A HREF="motion.html#it">它</A>.  You could type &quot;/TheLongFunctionName&quot;, but
+that's a lot of typing.  And when you make a mistake Vim won't find <A HREF="motion.html#it">它</A>.
    There is an easier way: Position the cursor on the <A HREF="motion.html#word">单词</A> and use the &quot;*&quot;
-command.  Vim will grab the <A HREF="motion.html#word">单词</A> under the cursor and use <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> the search
+command.  Vim will grab the <A HREF="motion.html#word">单词</A> under the cursor and use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> the search
 <A HREF="eval.html#string">string</A>.
    The &quot;<A HREF="pattern.html##">#</A>&quot; command does the same in the other direction.  You can prepend a
 <A HREF="intro.html#count">count</A>: &quot;3*&quot; searches for the third occurrence of the <A HREF="motion.html#word">单词</A> under the cursor.
@@ -493,7 +493,7 @@ command.  Vim will grab the <A HREF="motion.html#word">单词</A> under the curs
 
 SEARCHING FOR WHOLE WORDS
 
-If you type &quot;/the&quot; <A HREF="motion.html#it">it</A> will also match &quot;there&quot;.  To only find words that end
+If you type &quot;/the&quot; <A HREF="motion.html#it">它</A> will also match &quot;there&quot;.  To only find words that end
 in &quot;the&quot; use:
 
 <B>	/the\&gt;</B>
@@ -521,7 +521,7 @@ variable is used, without the need to type commands.
 
 <B>	:set nohlsearch</B>
 
-Then you need to switch <A HREF="motion.html#it">it</A> on again if you want to use <A HREF="motion.html#it">it</A> for the next search
+Then you need to switch <A HREF="motion.html#it">它</A> on again if you want to use <A HREF="motion.html#it">它</A> for the next search
 command:
 
 <B>	:set hlsearch</B>
@@ -530,7 +530,7 @@ If you only want to remove the highlighting, use this command:
 
 <B>	:nohlsearch</B>
 
-This doesn't reset the option.  Instead, <A HREF="motion.html#it">it</A> disables the highlighting.  As
+This doesn't reset the option.  Instead, <A HREF="motion.html#it">它</A> disables the highlighting.  As
 soon <A HREF="motion.html#as">as</A> you execute a search command, the highlighting will be used again.
 Also for the &quot;<A HREF="pattern.html#n">n</A>&quot; and &quot;<A HREF="pattern.html#N">N</A>&quot; commands.
 
@@ -543,7 +543,7 @@ essential ones:
 <B>	:set nowrapscan</B>
 
 This stops the search at the end of the file.  Or, when you are searching
-backwards, <A HREF="motion.html#it">it</A> stops the search at the start of the file.  The <A HREF="options.html#'wrapscan'">'wrapscan'</A>
+backwards, <A HREF="motion.html#it">它</A> stops the search at the start of the file.  The <A HREF="options.html#'wrapscan'">'wrapscan'</A>
 option is on by default, thus searching wraps around the end of the file.
 
 <B>	:set noincsearch</B>
@@ -554,13 +554,13 @@ search.
 
 INTERMEZZO
 
-If you like one of the <A HREF="options.html#options">options</A> mentioned before, and set <A HREF="motion.html#it">it</A> each time you use
+If you like one of the <A HREF="options.html#options">options</A> mentioned before, and set <A HREF="motion.html#it">它</A> each time you use
 Vim, you can put the command in your Vim <A HREF="starting.html#startup">startup</A> file.  Edit the file, for
 example with:
 
 <B>	:edit ~/.config/nvim/init.vim</B>
 
-Then add a line with the command to set the option, just like you typed <A HREF="motion.html#it">it</A> in
+Then add a line with the command to set the option, just like you typed <A HREF="motion.html#it">它</A> in
 Vim.  Example:
 
 <B>	Go:set hlsearch&lt;Esc&gt;</B>
@@ -589,11 +589,11 @@ the full explanation here: |<A HREF="pattern.html#pattern">pattern</A>|.
 BEGINNING AND END OF A LINE
 
 The ^ character matches the beginning of a line.  On an English-US keyboard
-you find <A HREF="motion.html#it">it</A> above the 6.  The <A HREF="pattern.html#pattern">pattern</A> &quot;include&quot; matches the <A HREF="motion.html#word">单词</A> include
+you find <A HREF="motion.html#it">它</A> above the 6.  The <A HREF="pattern.html#pattern">pattern</A> &quot;include&quot; matches the <A HREF="motion.html#word">单词</A> include
 anywhere on the line.  But the <A HREF="pattern.html#pattern">pattern</A> &quot;^include&quot; matches the <A HREF="motion.html#word">单词</A> include
-only if <A HREF="motion.html#it">it</A> is at the beginning of a line.
+only if <A HREF="motion.html#it">它</A> is at the beginning of a line.
    The $ character matches the end of a line.  Therefore, &quot;was$&quot; matches the
-<A HREF="motion.html#word">单词</A> was only if <A HREF="motion.html#it">it</A> is at the end of a line.
+<A HREF="motion.html#word">单词</A> was only if <A HREF="motion.html#it">它</A> is at the end of a line.
 
 Let's <A HREF="motion.html#mark">mark</A> the places where &quot;/the&quot; matches in this example line with &quot;x&quot;s:
 
@@ -609,7 +609,7 @@ And with &quot;/^the&quot; we find this one:
 <B><FONT color="#3A6F2B">	the solder holding one of the chips melted and the </FONT></B>
 	xxx
 
-You can try searching with &quot;/^the$&quot;; <A HREF="motion.html#it">it</A> will only match a single line
+You can try searching with &quot;/^the$&quot;; <A HREF="motion.html#it">它</A> will only match a single line
 consisting entirely of &quot;the&quot;.  White space does matter here, thus if a line
 contains a space after the <A HREF="motion.html#word">单词</A>, like &quot;the &quot;<A HREF="motion.html#,">,</A> the <A HREF="pattern.html#pattern">pattern</A> will not match.
 
@@ -627,7 +627,7 @@ character is anything, and whose third character is <A HREF="motion.html#m">m</A
 MATCHING SPECIAL CHARACTERS
 
 If you really want to match a dot, you must avoid its special meaning by
-putting a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">it</A>.
+putting a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">它</A>.
    If you search for &quot;ter.&quot;, you will find these matches:
 
 <B><FONT color="#3A6F2B">	We use a computer that became the cummin winter. </FONT></B>

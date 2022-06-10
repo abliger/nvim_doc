@@ -93,11 +93,11 @@ Vim has <A HREF="options.html#options">options</A> for automatically indenting C
 programming languages including Java and C++ follow very closely the
 <A HREF="change.html#formatting">formatting</A> conventions established with C.  These <A HREF="options.html#options">options</A> affect only the
 indent and <A HREF="diff.html#do">do</A> not perform other <A HREF="change.html#formatting">formatting</A>.  There are additional <A HREF="options.html#options">options</A> that
-affect other kinds of <A HREF="change.html#formatting">formatting</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> indenting, see |<A HREF="change.html#format-comments">format-comments</A>|,
+affect other kinds of <A HREF="change.html#formatting">formatting</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> indenting, 见 |<A HREF="change.html#format-comments">format-comments</A>|,
 |<A HREF="change.html#fo-table">fo-table</A>|, |<A HREF="change.html#gq">gq</A>| and |<A HREF="change.html#formatting">formatting</A>| for the main ones.
 
 There are in fact four main methods available for indentation, each one
-overrides the previous if <A HREF="motion.html#it">it</A> is enabled, or non-empty for <A HREF="options.html#'indentexpr'">'indentexpr'</A>:
+overrides the previous if <A HREF="motion.html#it">它</A> is enabled, or non-empty for <A HREF="options.html#'indentexpr'">'indentexpr'</A>:
 <A HREF="options.html#'autoindent'">'autoindent'</A>	uses the indent from the previous line.
 <A HREF="options.html#'smartindent'">'smartindent'</A>	is like <A HREF="options.html#'autoindent'">'autoindent'</A> but also recognizes some C <A HREF="syntax.html#syntax">syntax</A> to
 		increase/reduce the indent where appropriate.
@@ -105,11 +105,11 @@ overrides the previous if <A HREF="motion.html#it">it</A> is enabled, or non-emp
 		different indenting styles.
 <A HREF="options.html#'indentexpr'">'indentexpr'</A>	The most flexible of all: Evaluates an <A HREF="eval.html#expression">expression</A> to compute
 		the indent of a line.  When non-empty this <A HREF="eval.html#method">method</A> overrides
-		the other ones.  See |<A HREF="#indent-expression">indent-expression</A>|.
+		the other ones.  见 |<A HREF="#indent-expression">indent-expression</A>|.
 The rest of this section describes the <A HREF="options.html#'cindent'">'cindent'</A> option.
 
 Note that <A HREF="options.html#'cindent'">'cindent'</A> indenting does not work for every code scenario.  Vim
-is not a C compiler: <A HREF="motion.html#it">it</A> does not recognize all <A HREF="syntax.html#syntax">syntax</A>.  One requirement is
+is not a C compiler: <A HREF="motion.html#it">它</A> does not recognize all <A HREF="syntax.html#syntax">syntax</A>.  One requirement is
 that toplevel <A HREF="eval.html#functions">functions</A> have a '<A HREF="motion.html#{">{</A>' in the first column.  Otherwise they are
 easily confused with declarations.
 
@@ -123,8 +123,8 @@ These five <A HREF="options.html#options">options</A> <A HREF="intro.html#contro
 If <A HREF="options.html#'lisp'">'lisp'</A> is not on and <A HREF="options.html#'equalprg'">'equalprg'</A> is empty, the &quot;<A HREF="change.html#=">=</A>&quot; <A HREF="motion.html#operator">operator</A> indents using
 Vim's built-in algorithm rather than calling an external program.
 
-See |<A HREF="autocmd.html#autocommand">autocommand</A>| for how to set the <A HREF="options.html#'cindent'">'cindent'</A> option automatically for C code
-files and reset <A HREF="motion.html#it">it</A> for others.
+见 |<A HREF="autocmd.html#autocommand">autocommand</A>| for how to set the <A HREF="options.html#'cindent'">'cindent'</A> option automatically for C code
+files and reset <A HREF="motion.html#it">它</A> for others.
 
 
 					*<A NAME="cinkeys-format"></A><B>cinkeys-format</B>* *<A NAME="indentkeys-format"></A><B>indentkeys-format</B>*
@@ -169,7 +169,7 @@ type the key.  So '<A HREF="motion.html#;">;</A>' sets the indentation of a line
 
 Special key names:
 <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>	Angle brackets mean spelled-out names of keys.  For example: &quot;<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>&quot;,
-	&quot;&lt;Ins&gt;&quot; (see |<A HREF="intro.html#key-notation">key-notation</A>|).
+	&quot;&lt;Ins&gt;&quot; (见 |<A HREF="intro.html#key-notation">key-notation</A>|).
 ^	Letters preceded by a caret (^) are <A HREF="intro.html#control">control</A> characters.  For example:
 	&quot;^F&quot; is <A HREF="scroll.html#CTRL-F">CTRL-F</A>.
 <A HREF="insert.html#o">o</A>	Reindent a line when you use the &quot;<A HREF="insert.html#o">o</A>&quot; command or when Vim opens a new
@@ -249,9 +249,9 @@ The examples below assume a <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>
 
 							*<A NAME="cino-n"></A><B>cino-n</B>*
 	nN    Add N to the prevailing indent for a statement after an &quot;if&quot;,
-	      &quot;while&quot;, etc., if <A HREF="motion.html#it">it</A> is NOT inside a set of braces.  This is
+	      &quot;while&quot;, etc., if <A HREF="motion.html#it">它</A> is NOT inside a set of braces.  This is
 	      useful if you want a different indent when there is no '<A HREF="motion.html#{">{</A>'
-	      before the statement from when there is a '<A HREF="motion.html#{">{</A>' before <A HREF="motion.html#it">it</A>.
+	      before the statement from when there is a '<A HREF="motion.html#{">{</A>' before <A HREF="motion.html#it">它</A>.
 	      (default 0).
 
 		cino=		    cino=n2		cino=n-2
@@ -300,7 +300,7 @@ The examples below assume a <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>
 							*<A NAME="cino-^"></A><B>cino-^</B>*
 	^N    Add N to the prevailing indent inside a set of braces if the
 	      opening brace is in column 0.  This can specify a different
-	      indent for whole of a function (some may like to set <A HREF="motion.html#it">it</A> to a
+	      indent for whole of a function (some may like to set <A HREF="motion.html#it">它</A> to a
 	      negative number).  (default 0).
 
 		cino=		    cino=^-2		cino=^-s
@@ -352,7 +352,7 @@ The examples below assume a <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>
 
 							*<A NAME="cino-l"></A><B>cino-l</B>*
 	lN    If N != 0 Vim will align with a <A HREF="change.html#case">case</A> label instead of the
-	      statement after <A HREF="motion.html#it">it</A> in the same line.
+	      statement after <A HREF="motion.html#it">它</A> in the same line.
 
 		cino=			    cino=l1
 <B>		    switch (a) {	      switch (a) {</B>
@@ -569,7 +569,7 @@ The examples below assume a <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>
 							*<A NAME="cino-W"></A><B>cino-W</B>*
 	WN    When in unclosed parentheses and N is non-zero and either
 	      using &quot;(0&quot; or &quot;u0&quot;, respectively and the unclosed parenthesis is
-	      the last non-white character in its line and <A HREF="motion.html#it">it</A> is not the
+	      the last non-white character in its line and <A HREF="motion.html#it">它</A> is not the
 	      closing parenthesis, indent the following line N characters
 	      relative to the outer <A HREF="repeat.html#context">context</A> (i.e. start of the line or the
 	      next unclosed parenthesis).  (default: 0).
@@ -708,7 +708,7 @@ Vim puts a line in column 1 if:
 The basics for using flexible indenting are explained in section |<A HREF="usr_30.html#30.3">30.3</A>| of the
 user manual.
 
-If you want to write your own indent file, <A HREF="motion.html#it">it</A> must set the <A HREF="options.html#'indentexpr'">'indentexpr'</A>
+If you want to write your own indent file, <A HREF="motion.html#it">它</A> must set the <A HREF="options.html#'indentexpr'">'indentexpr'</A>
 option.  Setting the <A HREF="options.html#'indentkeys'">'indentkeys'</A> option is often useful.
 See the $VIMRUNTIME/indent/README.txt file for hints.
 See the $VIMRUNTIME/indent directory for examples.
@@ -841,7 +841,7 @@ free source form, whereas they are not indented if the Fortran is in fixed
 source form because of the left margin requirements.  Hence manual indent
 corrections will be necessary for labelled statements and continuation lines
 when fixed source form is being used.  For further discussion of the <A HREF="eval.html#method">method</A>
-used for the detection of source format see |<A HREF="syntax.html#ft-fortran-syntax">ft-fortran-syntax</A>|.
+used for the detection of source format 见 |<A HREF="syntax.html#ft-fortran-syntax">ft-fortran-syntax</A>|.
 
 <B><FONT color="#3A6F2B">Do loops </FONT></B>
 All <A HREF="diff.html#do">do</A> loops are left unindented by default.  Do loops can be unstructured in
@@ -908,12 +908,12 @@ You can set the indent for attributes after an open &lt;tag line:
       2		auto indent, two indent steps (default)
       <A HREF="change.html#&gt;">&gt;</A> 2	auto indent, more indent steps
 
-Many <A HREF="tagsrch.html#tags">tags</A> increase the indent for what follows per default (see &quot;Add Indent
-Tags&quot; in the <A HREF="usr_41.html#script">script</A>).  You can add further <A HREF="tagsrch.html#tags">tags</A> with:
+Many <A HREF="tagsrch.html#tags">标签</A> increase the indent for what follows per default (see &quot;Add Indent
+Tags&quot; in the <A HREF="usr_41.html#script">script</A>).  You can add further <A HREF="tagsrch.html#tags">标签</A> with:
 
 <B>      :let g:html_indent_inctags = "html,body,head,tbody"</B>
 
-You can also remove such <A HREF="tagsrch.html#tags">tags</A> with:
+You can also remove such <A HREF="tagsrch.html#tags">标签</A> with:
 
 <B>      :let g:html_indent_autotags = "th,td,tr,tfoot,thead"</B>
 
@@ -974,7 +974,7 @@ own 'formatoptions'):
 <B>    :let g:PHP_autoformatcomment = 0</B>
 
 Else, '<A HREF="motion.html#t">t</A>' will be removed from the <A HREF="options.html#'formatoptions'">'formatoptions'</A> <A HREF="eval.html#string">string</A> and &quot;qrowcb&quot; will be
-added, see |<A HREF="change.html#fo-table">fo-table</A>| for more information.
+added, 见 |<A HREF="change.html#fo-table">fo-table</A>| for more information.
 
 
 							*<A NAME="PHP_outdentSLComments"></A><B>PHP_outdentSLComments</B>*
@@ -1010,7 +1010,7 @@ For example, with N = 1, this will give:
 
 
 							*<A NAME="PHP_outdentphpescape"></A><B>PHP_outdentphpescape</B>*
-To indent PHP <A HREF="intro.html#escape">escape</A> <A HREF="tagsrch.html#tags">tags</A> <A HREF="motion.html#as">as</A> the surrounding non-PHP code (only affects the
+To indent PHP <A HREF="intro.html#escape">escape</A> <A HREF="tagsrch.html#tags">标签</A> <A HREF="motion.html#as">as</A> the surrounding non-PHP code (only affects the
 PHP <A HREF="intro.html#escape">escape</A> tags):
 <B>    :let g:PHP_outdentphpescape = 0</B>
 
@@ -1120,7 +1120,7 @@ Indent for a continuation line:
 <B>	let g:pyindent_continue = 'shiftwidth() * 2'</B>
 
 The <A HREF="eval.html#method">method</A> uses |<A HREF="builtin.html#searchpair()">searchpair()</A>| to look back for unclosed parentheses.  This
-can sometimes be slow, thus <A HREF="motion.html#it">it</A> timeouts after 150 msec.  If you notice the
+can sometimes be slow, thus <A HREF="motion.html#it">它</A> timeouts after 150 msec.  If you notice the
 indenting isn't correct, you can set a larger timeout in msec:
 <B>	let g:pyindent_searchpair_timeout = 500</B>
 
@@ -1153,7 +1153,7 @@ r_indent_comment_column, <A HREF="motion.html#as">as</A> in the example below:
 <B>   let r_indent_comment_column = 30</B>
  
 Any code after a line that ends with &quot;&lt;-&quot; is indented. Emacs/ESS does not
-indent the code if <A HREF="motion.html#it">it</A> is a top level function. If you prefer that the
+indent the code if <A HREF="motion.html#it">它</A> is a top level function. If you prefer that the
 Vim-R-plugin behaves like Emacs/ESS in this regard, put in your YXXYvimrc|:
 
 <B>   let r_indent_ess_compatible = 1</B>

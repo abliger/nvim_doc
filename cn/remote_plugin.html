@@ -108,7 +108,7 @@ check whether a <A HREF="usr_05.html#plugin">plugin</A> host is available for th
 Plugin hosts are programs that provide a high-level environment for plugins,
 taking care of most boilerplate involved in defining commands, autocmds, and
 <A HREF="eval.html#functions">functions</A> that are implemented over |<A HREF="api.html#RPC">RPC</A>| connections. Hosts are loaded only
-when one of their registered plugins require <A HREF="motion.html#it">it</A>, keeping Nvim's <A HREF="starting.html#startup">startup</A> <A HREF="motion.html#as">as</A>
+when one of their registered plugins require <A HREF="motion.html#it">它</A>, keeping Nvim's <A HREF="starting.html#startup">startup</A> <A HREF="motion.html#as">as</A>
 fast <A HREF="motion.html#as">as</A> possible, even if many plugins/hosts are installed.
 
 ==============================================================================
@@ -117,8 +117,8 @@ fast <A HREF="motion.html#as">as</A> possible, even if many plugins/hosts are in
 
 The best way to learn about remote plugins is with an example, so let's see
 what a <A HREF="if_pyth.html#Python">Python</A> <A HREF="usr_05.html#plugin">plugin</A> looks like. This <A HREF="usr_05.html#plugin">plugin</A> exports a command, a function, and
-an <A HREF="autocmd.html#autocmd">autocmd</A>. The <A HREF="usr_05.html#plugin">plugin</A> is called 'Limit', and all <A HREF="motion.html#it">it</A> does is limit the number
-of requests made to <A HREF="motion.html#it">it</A>. Here's the <A HREF="usr_05.html#plugin">plugin</A> source code:
+an <A HREF="autocmd.html#autocmd">autocmd</A>. The <A HREF="usr_05.html#plugin">plugin</A> is called 'Limit', and all <A HREF="motion.html#it">它</A> does is limit the number
+of requests made to <A HREF="motion.html#it">它</A>. Here's the <A HREF="usr_05.html#plugin">plugin</A> source code:
 
 <B>    import pynvim</B>
 
@@ -167,7 +167,7 @@ value. Without the &quot;sync&quot; flag, the call is made using a fire and forg
 approach with |<A HREF="builtin.html#rpcnotify()">rpcnotify()</A>|, meaning return values or exceptions raised in the
 handler function are ignored.
 
-To test the above <A HREF="usr_05.html#plugin">plugin</A>, <A HREF="motion.html#it">it</A> must be saved in &quot;rplugin/python&quot; in a
+To test the above <A HREF="usr_05.html#plugin">plugin</A>, <A HREF="motion.html#it">它</A> must be saved in &quot;rplugin/python&quot; in a
 <A HREF="options.html#'runtimepath'">'runtimepath'</A> directory (~/.config/nvim/rplugin/python/limit.py for example).
 Then, the remote <A HREF="usr_05.html#plugin">plugin</A> manifest must be generated with
 |<A HREF="#:UpdateRemotePlugins">:UpdateRemotePlugins</A>|.
@@ -199,12 +199,12 @@ would also be spawned, which could take seconds!
 
 With the manifest, each host will only be loaded when required. Continuing with
 the example, say the Java <A HREF="usr_05.html#plugin">plugin</A> is a semantic completion engine for Java code.
-If <A HREF="motion.html#it">it</A> defines the <A HREF="autocmd.html#autocommand">autocommand</A> &quot;<A HREF="autocmd.html#BufEnter">BufEnter</A> *.java&quot;, then the Java host is spawned
+If <A HREF="motion.html#it">它</A> defines the <A HREF="autocmd.html#autocommand">autocommand</A> &quot;<A HREF="autocmd.html#BufEnter">BufEnter</A> *.java&quot;, then the Java host is spawned
 only when Nvim loads a buffer matching &quot;*.java&quot;.
 
 If the explicit call to |<A HREF="#:UpdateRemotePlugins">:UpdateRemotePlugins</A>| seems inconvenient, try to see
-<A HREF="motion.html#it">it</A> like this: It's a way to provide IDE capabilities in Nvim while still
-keeping <A HREF="motion.html#it">it</A> fast and lightweight for general use. It's also analogous to the
+<A HREF="motion.html#it">它</A> like this: It's a way to provide IDE capabilities in Nvim while still
+keeping <A HREF="motion.html#it">它</A> fast and lightweight for general use. It's also analogous to the
 |<A HREF="helphelp.html#:helptags">:helptags</A>| command.
 
 

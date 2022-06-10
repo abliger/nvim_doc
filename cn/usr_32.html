@@ -114,18 +114,18 @@ Note that these commands really work in time sequence.  This matters if you
 made changes after undoing some changes.  It's explained in the next section.
 
 Also note that we are talking about text writes here.  For <A HREF="editing.html#writing">writing</A> the <A HREF="undo.html#undo">undo</A>
-information in a file see |<A HREF="undo.html#undo-persistence">undo-persistence</A>|.
+information in a file 见 |<A HREF="undo.html#undo-persistence">undo-persistence</A>|.
 
 ==============================================================================
 
 *<A NAME="32.2"></A><B>32.2</B>*	Numbering changes
 
-In section |<A HREF="usr_02.html#02.5">02.5</A>| we only discussed one line of undo/redo.  But <A HREF="motion.html#it">it</A> is also
+In section |<A HREF="usr_02.html#02.5">02.5</A>| we only discussed one line of undo/redo.  But <A HREF="motion.html#it">它</A> is also
 possible to branch off.  This happens when you <A HREF="undo.html#undo">undo</A> a few changes and then
 make a new change.  The new changes become a branch in the <A HREF="undo.html#undo">undo</A> tree.
 
 Let's start with the text &quot;one&quot;.  The first change to make is to append
-&quot; too&quot;.  And then move to the first '<A HREF="insert.html#o">o</A>' and change <A HREF="motion.html#it">it</A> into '<A HREF="motion.html#w">w</A>'.  We then have
+&quot; too&quot;.  And then move to the first '<A HREF="insert.html#o">o</A>' and change <A HREF="motion.html#it">它</A> into '<A HREF="motion.html#w">w</A>'.  We then have
 two changes, numbered 1 and 2, and three states of the text:
 
 <B><FONT color="#3A6F2B">		one </FONT></B>
@@ -162,7 +162,7 @@ state of the text.
 
 Note that only the changes are numbered, the text shown in the tree above has
 no identifier.  They are mostly referred to by the number of the change above
-<A HREF="motion.html#it">it</A>.  But sometimes by the number of one of the changes below <A HREF="motion.html#it">it</A>, especially
+<A HREF="motion.html#it">它</A>.  But sometimes by the number of one of the changes below <A HREF="motion.html#it">它</A>, especially
 when moving up in the tree, so that you know which change was just undone.
 
 ==============================================================================
@@ -193,7 +193,7 @@ Now make another change: change &quot;one&quot; to &quot;not&quot;:
 <B><FONT color="#3A6F2B">	 not two </FONT></B>
 
 Now you change your mind and want to go back to &quot;me too&quot;.  Use the |<A HREF="undo.html#g-">g-</A>|
-command.  This moves back in time.  Thus <A HREF="motion.html#it">it</A> doesn't walk the tree upwards or
+command.  This moves back in time.  Thus <A HREF="motion.html#it">它</A> doesn't walk the tree upwards or
 downwards, but goes to the change made before.
 
 You can repeat |<A HREF="undo.html#g-">g-</A>| and you will see the text change:
@@ -247,7 +247,7 @@ To travel forward in time again use the |<A HREF="undo.html#:later">:later</A>| 
 The arguments are &quot;<A HREF="change.html#s">s</A>&quot;, &quot;<A HREF="motion.html#m">m</A>&quot; and &quot;<A HREF="motion.html#h">h</A>&quot;, just like with |<A HREF="undo.html#:earlier">:earlier</A>|.
 
 If you want even more details, or want to manipulate the information, you can
-use the |<A HREF="builtin.html#undotree()">undotree()</A>| function.  To see what <A HREF="motion.html#it">it</A> returns:
+use the |<A HREF="builtin.html#undotree()">undotree()</A>| function.  To see what <A HREF="motion.html#it">它</A> returns:
 
 <B>	:echo undotree()</B>
 

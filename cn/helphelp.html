@@ -94,7 +94,7 @@
 			键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
 						*<A NAME="{subject}"></A><B>{subject}</B>* *<A NAME="E149"></A><B>E149</B>* *<A NAME="E661"></A><B>E661</B>*
-:h[elp] <A HREF="#{subject}">{subject}</A>	Like &quot;<A HREF="#:help">:help</A>&quot;, additionally jump to the <A HREF="tagsrch.html#tag">tag</A> <A HREF="#{subject}">{subject}</A>.
+:h[elp] <A HREF="#{subject}">{subject}</A>	Like &quot;<A HREF="#:help">:help</A>&quot;, additionally jump to the <A HREF="tagsrch.html#tag">标签</A> <A HREF="#{subject}">{subject}</A>.
 			For example: 
 <B>				:help options</B>
 
@@ -102,7 +102,7 @@
 			&quot;[a-z]&quot;:
 			   <A HREF="#:help">:help</A> <A HREF="vimindex.html#z">z</A>?	jump to help for any &quot;<A HREF="vimindex.html#z">z</A>&quot; command
 			   <A HREF="#:help">:help</A> <A HREF="scroll.html#z.">z.</A>	jump to the help for &quot;<A HREF="scroll.html#z.">z.</A>&quot;
-			But when a <A HREF="tagsrch.html#tag">tag</A> exists <A HREF="motion.html#it">it</A> is taken literally:
+			But when a <A HREF="tagsrch.html#tag">标签</A> exists <A HREF="motion.html#it">它</A> is taken literally:
 			   <A HREF="#:help">:help</A> <A HREF="cmdline.html#:?">:?</A>	jump to help for &quot;<A HREF="cmdline.html#:?">:?</A>&quot;
 
 			If there is no full match for the <A HREF="pattern.html#pattern">pattern</A>, or there
@@ -115,14 +115,14 @@
 			- A match that starts after a non-alphanumeric
 			  character is better than a match in the middle of a
 			  <A HREF="motion.html#word">单词</A>.
-			- A match at or near the beginning of the <A HREF="tagsrch.html#tag">tag</A> is
+			- A match at or near the beginning of the <A HREF="tagsrch.html#tag">标签</A> is
 			  better than a match further on.
 			- The more alphanumeric characters match, the better.
 			- The shorter the length of the match, the better.
 
 			The <A HREF="options.html#'helplang'">'helplang'</A> option is used to select a language, if
 			the <A HREF="#{subject}">{subject}</A> is available in several languages.
-			To find a <A HREF="tagsrch.html#tag">tag</A> in a specific language, append &quot;@ab&quot;,
+			To find a <A HREF="tagsrch.html#tag">标签</A> in a specific language, append &quot;@ab&quot;,
 			where &quot;<A HREF="motion.html#ab">ab</A>&quot; is the two-letter language code.  See
 			|<A HREF="#help-translated">help-translated</A>|.
 
@@ -167,14 +167,14 @@
  
 
 :h[elp]! [subject]	Like &quot;<A HREF="#:help">:help</A>&quot;, but in non-English help files prefer to
-			find a <A HREF="tagsrch.html#tag">tag</A> in a file with the same language <A HREF="motion.html#as">as</A> the
-			current file.  See |<A HREF="#help-translated">help-translated</A>|.
+			find a <A HREF="tagsrch.html#tag">标签</A> in a file with the same language <A HREF="motion.html#as">as</A> the
+			current file.  见 |<A HREF="#help-translated">help-translated</A>|.
 
 
 							*<A NAME=":helpc"></A><B>:helpc</B>* *<A NAME=":helpclose"></A><B>:helpclose</B>*
 :helpc[lose]		Close one help<A HREF="windows.html#window">窗口</A>, if there is one.
 			Vim will try to restore the<A HREF="windows.html#window">窗口</A>layout (including
-			cursor position) to the same layout <A HREF="motion.html#it">it</A> was before
+			cursor position) to the same layout <A HREF="motion.html#it">它</A> was before
 			opening the help<A HREF="windows.html#window">窗口</A>initially.  This might cause
 			triggering several autocommands.
 
@@ -197,7 +197,7 @@
 <B>				:helpgrep uganda\c</B>
  			Example for searching in French help:
 <B>				:helpgrep backspace@fr</B>
- 			The <A HREF="pattern.html#pattern">pattern</A> does not support line breaks, <A HREF="motion.html#it">it</A> must
+ 			The <A HREF="pattern.html#pattern">pattern</A> does not support line breaks, <A HREF="motion.html#it">它</A> must
 			match within one line.  You can use |<A HREF="quickfix.html#:grep">:grep</A>| instead,
 			but then you need to get the <A HREF="eval.html#list">list</A> of help files in a
 			complicated way.
@@ -229,7 +229,7 @@
 			the <A HREF="intro.html#Nvi">Nvi</A> command.
 
 When no argument is given to |<A HREF="#:help">:help</A>| the file given with the <A HREF="options.html#'helpfile'">'helpfile'</A> option
-will be opened.  Otherwise the specified <A HREF="tagsrch.html#tag">tag</A> is searched for in all &quot;doc/tags&quot;
+will be opened.  Otherwise the specified <A HREF="tagsrch.html#tag">标签</A> is searched for in all &quot;doc/tags&quot;
 files in the directories specified in the <A HREF="options.html#'runtimepath'">'runtimepath'</A> option.
 
 If you would like to open the help in the current<A HREF="windows.html#window">窗口</A>, see this tip:
@@ -240,7 +240,7 @@ The initial height of the help<A HREF="windows.html#window">窗口</A>can be set
 
 						*<A NAME="help-buffer-options"></A><B>help-buffer-options</B>*
 When the help buffer is created, several local <A HREF="options.html#options">options</A> are set to make sure
-the help text is displayed <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> was intended:
+the help text is displayed <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was intended:
     <A HREF="options.html#'iskeyword'">'iskeyword'</A>		nearly all ASCII chars except '' '', '*', &#39;&#34;'' and '&#124;'
     <A HREF="options.html#'foldmethod'">'foldmethod'</A>	&quot;manual&quot;
     <A HREF="options.html#'tabstop'">'tabstop'</A>		8
@@ -258,9 +258,9 @@ the help text is displayed <A HREF="motion.html#as">as</A> <A HREF="motion.html#
     <A HREF="options.html#'scrollbind'">'scrollbind'</A>	off
     <A HREF="options.html#'spell'">'spell'</A>		off
 
-Jump to specific subjects by using <A HREF="tagsrch.html#tags">tags</A>.  This can be done in two ways:
+Jump to specific subjects by using <A HREF="tagsrch.html#tags">标签</A>.  This can be done in two ways:
 - Use the &quot;<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>&quot; command while standing on the name of a command or option.
-  This only works when the <A HREF="tagsrch.html#tag">tag</A> is a keyword.  &quot;&lt;C-Leftmouse&gt;&quot; and
+  This only works when the <A HREF="tagsrch.html#tag">标签</A> is a keyword.  &quot;&lt;C-Leftmouse&gt;&quot; and
   &quot;<A HREF="tagsrch.html#g&lt;LeftMouse&gt;">g&lt;LeftMouse&gt;</A>&quot; work just like &quot;<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>&quot;.
 - use the &quot;<A HREF="tagsrch.html#:ta">:ta</A> {subject}&quot; command.  This also works with non-keyword
   characters.
@@ -271,14 +271,14 @@ Use &quot;<A HREF="editing.html#:q">:q</A>&quot; to close the help<A HREF="windo
 If there are several matches for an item you are looking for, this is how you
 can jump to each one of them:
 1. Open a help<A HREF="windows.html#window">窗口</A>
-2. Use the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command with a slash prepended to the <A HREF="tagsrch.html#tag">tag</A>.  E.g.:
+2. Use the &quot;<A HREF="tagsrch.html#:tag">:tag</A>&quot; command with a slash prepended to the <A HREF="tagsrch.html#tag">标签</A>.  E.g.:
 <B>	:tag /min</B>
-3. Use &quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot; to jump to the next matching <A HREF="tagsrch.html#tag">tag</A>.
+3. Use &quot;<A HREF="tagsrch.html#:tnext">:tnext</A>&quot; to jump to the next matching <A HREF="tagsrch.html#tag">标签</A>.
 
 It is possible to add help files for plugins and other items.  You don't need
-to change the distributed help files for that.  See |<A HREF="usr_05.html#add-local-help">add-local-help</A>|.
+to change the distributed help files for that.  见 |<A HREF="usr_05.html#add-local-help">add-local-help</A>|.
 
-To write a local help file, see |<A HREF="usr_41.html#write-local-help">write-local-help</A>|.
+To write a local help file, 见 |<A HREF="usr_41.html#write-local-help">write-local-help</A>|.
 
 Note that the title lines from the local help files are automagically added to
 the &quot;LOCAL ADDITIONS&quot; section in the &quot;<A HREF="index.html#help.txt">help.txt</A>&quot; help file |<A HREF="index.html#local-additions">local-additions</A>|.
@@ -298,24 +298,24 @@ command:
 
 			*<A NAME="E150"></A><B>E150</B>* *<A NAME="E151"></A><B>E151</B>* *<A NAME="E152"></A><B>E152</B>* *<A NAME="E153"></A><B>E153</B>* *<A NAME="E154"></A><B>E154</B>* *<A NAME="E670"></A><B>E670</B>* *<A NAME="E856"></A><B>E856</B>*
 :helpt[ags] [++t] {dir}
-			Generate the help <A HREF="tagsrch.html#tags">tags</A> file(s) for directory {dir}.
+			Generate the help <A HREF="tagsrch.html#tags">标签</A> file(s) for directory {dir}.
 			When {dir} is ALL then all &quot;doc&quot; directories in
 			<A HREF="options.html#'runtimepath'">'runtimepath'</A> will be used.
 
 			All &quot;*.txt&quot; and &quot;*.??x&quot; files in the directory and
-			sub-directories are scanned for a help <A HREF="tagsrch.html#tag">tag</A> definition
+			sub-directories are scanned for a help <A HREF="tagsrch.html#tag">标签</A> definition
 			in between stars.  The &quot;*.??x&quot; files are for
 			translated docs, they generate the &quot;tags-??&quot; file, see
-			|<A HREF="#help-translated">help-translated</A>|.  The generated <A HREF="tagsrch.html#tags">tags</A> files are
+			|<A HREF="#help-translated">help-translated</A>|.  The generated <A HREF="tagsrch.html#tags">标签</A> files are
 			sorted.
 			When there are duplicates an error message is given.
-			An existing <A HREF="tagsrch.html#tags">tags</A> file is silently overwritten.
+			An existing <A HREF="tagsrch.html#tags">标签</A> file is silently overwritten.
 
 			The optional &quot;++t&quot; argument forces adding the
-			&quot;<A HREF="tags.html#help-tags">help-tags</A>&quot; <A HREF="tagsrch.html#tag">tag</A>.  This is also done when the {dir} is
+			&quot;<A HREF="tags.html#help-tags">help-tags</A>&quot; <A HREF="tagsrch.html#tag">标签</A>.  This is also done when the {dir} is
 			equal to $VIMRUNTIME/doc.
 
-			To rebuild the help <A HREF="tagsrch.html#tags">tags</A> in the runtime directory
+			To rebuild the help <A HREF="tagsrch.html#tags">标签</A> in the runtime directory
 			(requires write permission there):
 <B>				:helptags $VIMRUNTIME/doc</B>
  
@@ -352,25 +352,25 @@ A set of translated help files consists of these files:
 	tags-it
 
 The <A HREF="options.html#'helplang'">'helplang'</A> option can be set to the preferred language(s).  The default is
-set according to the environment.  Vim will first try to find a matching <A HREF="tagsrch.html#tag">tag</A>
-in the preferred language(s).  English is used when <A HREF="motion.html#it">it</A> cannot be found.
+set according to the environment.  Vim will first try to find a matching <A HREF="tagsrch.html#tag">标签</A>
+in the preferred language(s).  English is used when <A HREF="motion.html#it">它</A> cannot be found.
 
-To find a <A HREF="tagsrch.html#tag">tag</A> in a specific language, append &quot;@ab&quot; to a <A HREF="tagsrch.html#tag">tag</A>, where &quot;<A HREF="motion.html#ab">ab</A>&quot; is the
+To find a <A HREF="tagsrch.html#tag">标签</A> in a specific language, append &quot;@ab&quot; to a <A HREF="tagsrch.html#tag">标签</A>, where &quot;<A HREF="motion.html#ab">ab</A>&quot; is the
 two-letter language code.  Example:
 <B>	:he user-manual@it</B>
 <B>	:he user-manual@en</B>
 The first one finds the Italian user manual, even when <A HREF="options.html#'helplang'">'helplang'</A> is empty.
 The second one finds the English user manual, even when <A HREF="options.html#'helplang'">'helplang'</A> is set to
-&quot;<A HREF="motion.html#it">it</A>&quot;.
+&quot;<A HREF="motion.html#it">它</A>&quot;.
 
 When using command-line completion for the &quot;<A HREF="#:help">:help</A>&quot; command, the &quot;@en&quot;
-extension is only shown when a <A HREF="tagsrch.html#tag">tag</A> exists for multiple languages.  When the
-<A HREF="tagsrch.html#tag">tag</A> only exists for English &quot;@en&quot; is omitted.  When the first candidate has an
-&quot;@ab&quot; extension and <A HREF="motion.html#it">it</A> matches the first language in <A HREF="options.html#'helplang'">'helplang'</A> &quot;@ab&quot; is also
+extension is only shown when a <A HREF="tagsrch.html#tag">标签</A> exists for multiple languages.  When the
+<A HREF="tagsrch.html#tag">标签</A> only exists for English &quot;@en&quot; is omitted.  When the first candidate has an
+&quot;@ab&quot; extension and <A HREF="motion.html#it">它</A> matches the first language in <A HREF="options.html#'helplang'">'helplang'</A> &quot;@ab&quot; is also
 omitted.
 
 When using |<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>| or &quot;:help!&quot; in a non-English help file Vim will try to
-find the <A HREF="tagsrch.html#tag">tag</A> in the same language.  If not found then <A HREF="options.html#'helplang'">'helplang'</A> will be used
+find the <A HREF="tagsrch.html#tag">标签</A> in the same language.  If not found then <A HREF="options.html#'helplang'">'helplang'</A> will be used
 to select a language.
 
 Help files must use latin1 or <A HREF="mbyte.html#utf-8">utf-8</A> encoding.  Vim assumes the encoding is
@@ -383,12 +383,12 @@ a different encoding for help files of the same language but in a different
 directory.
 
 Hints for translators:
-- Do not translate the <A HREF="tagsrch.html#tags">tags</A>.  This makes <A HREF="motion.html#it">it</A> possible to use <A HREF="options.html#'helplang'">'helplang'</A> to
-  specify the preferred language.  You may add new <A HREF="tagsrch.html#tags">tags</A> in your language.
-- When you <A HREF="diff.html#do">do</A> not translate a part of a file, add <A HREF="tagsrch.html#tags">tags</A> to the English version,
+- Do not translate the <A HREF="tagsrch.html#tags">标签</A>.  This makes <A HREF="motion.html#it">它</A> possible to use <A HREF="options.html#'helplang'">'helplang'</A> to
+  specify the preferred language.  You may add new <A HREF="tagsrch.html#tags">标签</A> in your language.
+- When you <A HREF="diff.html#do">do</A> not translate a part of a file, add <A HREF="tagsrch.html#tags">标签</A> to the English version,
 using the <A HREF="mailto:&quot;tag@en&quot;">&quot;tag@en&quot;</A> notation. 
-- Make a package with all the files and the <A HREF="tagsrch.html#tags">tags</A> file available for <A HREF="intro.html#download">download</A>.
-  Users can drop <A HREF="motion.html#it">it</A> in one of the &quot;doc&quot; directories and start use <A HREF="motion.html#it">it</A>.
+- Make a package with all the files and the <A HREF="tagsrch.html#tags">标签</A> file available for <A HREF="intro.html#download">download</A>.
+  Users can drop <A HREF="motion.html#it">它</A> in one of the &quot;doc&quot; directories and start use <A HREF="motion.html#it">它</A>.
   Report this to Bram, so that he can add a link on www.vim.org.
 - Use the |<A HREF="#:helptags">:helptags</A>| command to generate the tags files.  It will find all
   languages in the specified directory.
@@ -399,7 +399,7 @@ using the <A HREF="mailto:&quot;tag@en&quot;">&quot;tag@en&quot;</A> notation.
 
 For ease of use, a Vim help file for a <A HREF="usr_05.html#plugin">plugin</A> should follow the format of the
 standard Vim help files, except for the first line.  If you are <A HREF="editing.html#writing">writing</A> a new
-help file it's best to copy one of the existing files and use <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> a
+help file it's best to copy one of the existing files and use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a
 <A HREF="autocmd.html#template">template</A>.
 
 The first line in a help file should have the following format:
@@ -407,12 +407,12 @@ The first line in a help file should have the following format:
 
 *<A NAME="plugin_name.txt"></A><B>plugin_name.txt</B>*	{short description of the plugin}
 
-The first field is a help <A HREF="tagsrch.html#tag">tag</A> where &quot;<A HREF="#:help">:help</A> plugin_name&quot; will jump to.  The
+The first field is a help <A HREF="tagsrch.html#tag">标签</A> where &quot;<A HREF="#:help">:help</A> plugin_name&quot; will jump to.  The
 remainder of the line, after a <A HREF="intro.html#Tab">Tab</A>, describes the <A HREF="usr_05.html#plugin">plugin</A> purpose in a short
 way.  This will show up in the &quot;LOCAL ADDITIONS&quot; section of the main help
 file.  Check there that it shows up properly: |<A HREF="index.html#local-additions">local-additions</A>|.
 
-If you want to add a version number or last modification date, put <A HREF="motion.html#it">it</A> in the
+If you want to add a version number or last modification date, put <A HREF="motion.html#it">它</A> in the
 second line, right aligned.
 
 At the bottom of the help file, place a Vim <A HREF="options.html#modeline">modeline</A> to set the <A HREF="options.html#'textwidth'">'textwidth'</A>
@@ -422,12 +422,12 @@ in such a <A HREF="options.html#modeline">modeline</A>, that can have undesired 
 
 TAGS
 
-To define a help <A HREF="tagsrch.html#tag">tag</A>, place the name between asterisks (*tag-name*).  The
-tag-name should be different from all the Vim help <A HREF="tagsrch.html#tag">tag</A> names and ideally
-should begin with the name of the Vim <A HREF="usr_05.html#plugin">plugin</A>.  The <A HREF="tagsrch.html#tag">tag</A> name is usually right
+To define a help <A HREF="tagsrch.html#tag">标签</A>, place the name between asterisks (*tag-name*).  The
+tag-name should be different from all the Vim help <A HREF="tagsrch.html#tag">标签</A> names and ideally
+should begin with the name of the Vim <A HREF="usr_05.html#plugin">plugin</A>.  The <A HREF="tagsrch.html#tag">标签</A> name is usually right
 aligned on a line.
 
-When referring to an existing help <A HREF="tagsrch.html#tag">tag</A> and to create a hot-link, place the
+When referring to an existing help <A HREF="tagsrch.html#tag">标签</A> and to create a hot-link, place the
 name between two bars (|) eg. |help-writing|.|||
 
 When referring to a Vim command and to create a hot-link, place the
@@ -438,7 +438,7 @@ When referring to a Vim option in the help file, place the option name between
 two single quotes, eg. <A HREF="options.html#'statusline'">'statusline'</A>
 
 When referring to any other technical term, such <A HREF="motion.html#as">as</A> a filename or function
-parameter, surround <A HREF="motion.html#it">it</A> in backticks, eg. `~/.path/to/init.vim`.
+parameter, surround <A HREF="motion.html#it">它</A> in backticks, eg. `~/.path/to/init.vim`.
 
 
 HIGHLIGHTING
@@ -455,7 +455,7 @@ differently.
 To <A HREF="change.html#quote">quote</A> a block of ex-commands verbatim, place a greater than (&gt;) character
 at the end of the line before the block and a <A HREF="various.html#less">less</A> than (&lt;) character <A HREF="motion.html#as">as</A> the
 first non-blank on a line following the block.  Any line starting in column 1
-also implicitly stops the block of ex-commands before <A HREF="motion.html#it">it</A>.  E.g.
+also implicitly stops the block of ex-commands before <A HREF="motion.html#it">它</A>.  E.g.
 <B>    function Example_Func()</B>
 <B>	echo "Example"</B>
 <B>    endfunction</B>

@@ -110,7 +110,7 @@ The &quot;<A HREF="#g&lt;">g&lt;</A>&quot; command can be used to see the last p
 This is especially useful if you accidentally typed <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A> at the <A HREF="#hit-enter">hit-enter</A>
 prompt.  You are then back at the <A HREF="#hit-enter">hit-enter</A> prompt and can then scroll further
 back.
-Note: If the output has been stopped with &quot;<A HREF="repeat.html#q">q</A>&quot; at the more prompt, <A HREF="motion.html#it">it</A> will only
+Note: If the output has been stopped with &quot;<A HREF="repeat.html#q">q</A>&quot; at the more prompt, <A HREF="motion.html#it">它</A> will only
 be displayed up to this point.
 The previous command output is cleared when another command produces output.
 The &quot;<A HREF="#g&lt;">g&lt;</A>&quot; output is not redirected.
@@ -128,7 +128,7 @@ Use:
 
 <B>	:help E72</B>
 
-If you are lazy, <A HREF="motion.html#it">it</A> also works without the <A HREF="intro.html#shift">shift</A> key:
+If you are lazy, <A HREF="motion.html#it">它</A> also works without the <A HREF="intro.html#shift">shift</A> key:
 
 <B>	:help e72</B>
 
@@ -136,8 +136,8 @@ If you are lazy, <A HREF="motion.html#it">it</A> also works without the <A HREF=
 
 2. Error <A HREF="#messages">messages</A>				*<A NAME="error-messages"></A><B>error-messages</B>* *<A NAME="errors"></A><B>errors</B>*
 
-When an error message is displayed, but <A HREF="motion.html#it">it</A> is removed before you could read
-<A HREF="motion.html#it">it</A>, you can see <A HREF="motion.html#it">it</A> again with:
+When an error message is displayed, but <A HREF="motion.html#it">它</A> is removed before you could read
+<A HREF="motion.html#it">它</A>, you can see <A HREF="motion.html#it">它</A> again with:
 <B>  :echo v:errmsg</B>
 Or view a <A HREF="eval.html#list">list</A> of recent <A HREF="#messages">messages</A> with:
 <B>  :messages</B>
@@ -172,14 +172,14 @@ LIST OF MESSAGES
 <B>  fatal error in cs_manage_matches</B>
 <B>  Invalid count for del_bytes(): {N}</B>
 
-This is an internal error.  If you can reproduce <A HREF="motion.html#it">it</A>, please send in a bug
+This is an internal error.  If you can reproduce <A HREF="motion.html#it">它</A>, please send in a bug
 report. |<A HREF="intro.html#bugs">bugs</A>|
 
 
 <B>  ATTENTION</B>
 <B>  Found a swap file by the name ...</B>
 
-See |<A HREF="usr_11.html#ATTENTION">ATTENTION</A>|.
+见 |<A HREF="usr_11.html#ATTENTION">ATTENTION</A>|.
 
 
 							*<A NAME="E92"></A><B>E92</B>* 
@@ -216,7 +216,7 @@ larger.  When it's more there probably is an endless loop.  Probably a
 							*<A NAME="E254"></A><B>E254</B>* 
 <B>  Cannot allocate color {name}</B>
 
-The color name {name} is unknown.  See |<A HREF="syntax.html#gui-colors">gui-colors</A>| for a <A HREF="eval.html#list">list</A> of colors that
+The color name {name} is unknown.  见 |<A HREF="syntax.html#gui-colors">gui-colors</A>| for a <A HREF="eval.html#list">list</A> of colors that
 are available on most systems.
 
 
@@ -228,9 +228,9 @@ run, but some of the colors will not appear in the specified color.  Try
 stopping other applications that use many colors, or start them after starting
 gvim.
 Browsers are known to consume a lot of colors.  You can avoid this with
-netscape by telling <A HREF="motion.html#it">it</A> to use its own colormap:
+netscape by telling <A HREF="motion.html#it">它</A> to use its own colormap:
 <B>	netscape -install</B>
-Or tell <A HREF="motion.html#it">it</A> to limit to a certain number of colors (64 should work well):
+Or tell <A HREF="motion.html#it">它</A> to limit to a certain number of colors (64 should work well):
 <B>	netscape -ncols 64</B>
 This can also be done with a line in your Xdefaults file:
 <B>	Netscape*installColormap: Yes</B>
@@ -317,7 +317,7 @@ there is no different error message for that.
 <B>  Command not allowed from exrc/vimrc in current dir or tag search</B>
 
 Some commands are not allowed for security reasons.  These commands mostly
-come from a .exrc or .nvimrc file in the current directory, or from a <A HREF="tagsrch.html#tags">tags</A>
+come from a .exrc or .nvimrc file in the current directory, or from a <A HREF="tagsrch.html#tags">标签</A>
 file.  Also see <A HREF="options.html#'secure'">'secure'</A>.
 
 
@@ -336,8 +336,8 @@ format of the file.  The file will not be marked unmodified.  If you care
 about the loss of information, set the <A HREF="options.html#'fileencoding'">'fileencoding'</A> option to another value
 that can handle the characters in the buffer and write again.  If you don't
 care, you can <A HREF="editing.html#abandon">abandon</A> the buffer or reset the <A HREF="options.html#'modified'">'modified'</A> option.
-If there is a <A HREF="editing.html#backup">backup</A> file, when <A HREF="options.html#'writebackup'">'writebackup'</A> or <A HREF="options.html#'backup'">'backup'</A> is set, <A HREF="motion.html#it">it</A> will not
-be deleted, so you can move <A HREF="motion.html#it">it</A> back into place if you want to <A HREF="editing.html#discard">discard</A> the
+If there is a <A HREF="editing.html#backup">backup</A> file, when <A HREF="options.html#'writebackup'">'writebackup'</A> or <A HREF="options.html#'backup'">'backup'</A> is set, <A HREF="motion.html#it">它</A> will not
+be deleted, so you can move <A HREF="motion.html#it">它</A> back into place if you want to <A HREF="editing.html#discard">discard</A> the
 changes.
 
 
@@ -353,7 +353,7 @@ This failed and the old swap file is now still used.  Mostly harmless.
 <B>  Corrupted regexp program</B>
 
 Something inside Vim went wrong and resulted in a corrupted <A HREF="pattern.html#regexp">regexp</A>.  If you
-know how to reproduce this problem, please report <A HREF="motion.html#it">it</A>. |<A HREF="intro.html#bugs">bugs</A>|
+know how to reproduce this problem, please report <A HREF="motion.html#it">它</A>. |<A HREF="intro.html#bugs">bugs</A>|
 
 
 							*<A NAME="E208"></A><B>E208</B>* *<A NAME="E209"></A><B>E209</B>* *<A NAME="E210"></A><B>E210</B>* 
@@ -370,7 +370,7 @@ and the destination file may be incomplete.
 <B>  Vim: Error reading input, exiting...</B>
 
 This occurs when Vim cannot read typed characters while input is required.
-Vim got stuck, the only thing <A HREF="motion.html#it">it</A> can <A HREF="diff.html#do">do</A> is exit.  This can happen when both
+Vim got stuck, the only thing <A HREF="motion.html#it">它</A> can <A HREF="diff.html#do">do</A> is exit.  This can happen when both
 stdin and stderr are redirected and executing a <A HREF="usr_41.html#script">script</A> that doesn't exit Vim.
 
 
@@ -454,7 +454,7 @@ You probably need to append a file name.
 
 You are using a <A HREF="motion.html#mark">mark</A> that has a line number that doesn't exist.  This can
 happen when you have a <A HREF="motion.html#mark">mark</A> in another file, and some other program has
-deleted lines from <A HREF="motion.html#it">it</A>.
+deleted lines from <A HREF="motion.html#it">它</A>.
 
 
 							*<A NAME="E219"></A><B>E219</B>* *<A NAME="E220"></A><B>E220</B>* 
@@ -469,7 +469,7 @@ the other way around.  It should be used like this: {foo,bar}.  This matches
 							*<A NAME="E315"></A><B>E315</B>* 
 <B>  ml_get: invalid lnum: {number}</B>
 
-This is an internal Vim error.  Please try to find out how <A HREF="motion.html#it">it</A> can be
+This is an internal Vim error.  Please try to find out how <A HREF="motion.html#it">它</A> can be
 reproduced, and submit a |<A HREF="intro.html#bug-report">bug-report</A>|.
 
 
@@ -478,28 +478,28 @@ reproduced, and submit a |<A HREF="intro.html#bug-report">bug-report</A>|.
 
 You are trying to exit, while the last item in the argument <A HREF="eval.html#list">list</A> has not been
 edited.  This protects you from accidentally <A HREF="starting.html#exiting">exiting</A> when you still have more
-files to work on.  See |<A HREF="editing.html#argument-list">argument-list</A>|.  If you <A HREF="diff.html#do">do</A> want to exit, just <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A>
-again and <A HREF="motion.html#it">it</A> will work.
+files to work on.  见 |<A HREF="editing.html#argument-list">argument-list</A>|.  If you <A HREF="diff.html#do">do</A> want to exit, just <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>
+again and <A HREF="motion.html#it">它</A> will work.
 
 
 							*<A NAME="E23"></A><B>E23</B>* *<A NAME="E194"></A><B>E194</B>* 
 <B>  No alternate file</B>
 <B>  No alternate file name to substitute for '#'</B>
 
-The alternate file is not defined yet.  See |<A HREF="editing.html#alternate-file">alternate-file</A>|.
+The alternate file is not defined yet.  见 |<A HREF="editing.html#alternate-file">alternate-file</A>|.
 
 
 							*<A NAME="E32"></A><B>E32</B>* 
 <B>  No file name</B>
 
-The current buffer has no name.  To write <A HREF="motion.html#it">it</A>, use &quot;<A HREF="editing.html#:w">:w</A> fname&quot;.  Or give the
+The current buffer has no name.  To write <A HREF="motion.html#it">它</A>, use &quot;<A HREF="editing.html#:w">:w</A> fname&quot;.  Or give the
 buffer a name with &quot;<A HREF="editing.html#:file">:file</A> fname&quot;.
 
 
 							*<A NAME="E141"></A><B>E141</B>* 
 <B>  No file name for buffer {number}</B>
 
-One of the <A HREF="windows.html#buffers">buffers</A> that was changed does not have a file name.  Therefore <A HREF="motion.html#it">it</A>
+One of the <A HREF="windows.html#buffers">buffers</A> that was changed does not have a file name.  Therefore <A HREF="motion.html#it">它</A>
 cannot be written.  You need to give the buffer a file name:
 <B>	:buffer {number}</B>
 <B>	:file {filename}</B>
@@ -508,9 +508,9 @@ cannot be written.  You need to give the buffer a file name:
 							*<A NAME="E33"></A><B>E33</B>* 
 <B>  No previous substitute regular expression</B>
 
-When using the '<A HREF="change.html#~">~</A>' character in a <A HREF="pattern.html#pattern">pattern</A>, <A HREF="motion.html#it">it</A> is replaced with the previously
+When using the '<A HREF="change.html#~">~</A>' character in a <A HREF="pattern.html#pattern">pattern</A>, <A HREF="motion.html#it">它</A> is replaced with the previously
 used <A HREF="pattern.html#pattern">pattern</A> in a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command.  This fails when no such command has
-been used yet.  See |<A HREF="pattern.html#/~">/~</A>|.  This also happens when using &quot;:s/pat/&#37;/&quot;, where the
+been used yet.  见 |<A HREF="pattern.html#/~">/~</A>|.  This also happens when using &quot;:s/pat/&#37;/&quot;, where the
 &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; stands for the previous substitute <A HREF="eval.html#string">string</A>.
 
 
@@ -546,7 +546,7 @@ You have used an &quot;<A HREF="map.html#:unmap">:unmap</A>&quot; command with a
 
 You are trying to |<A HREF="editing.html#abandon">abandon</A>| a file that has changes.  Vim protects you from
 losing your work.  You can either write the changed file with &quot;<A HREF="editing.html#:w">:w</A>&quot;, or, if you
-are sure, |<A HREF="editing.html#abandon">abandon</A>| <A HREF="motion.html#it">it</A> anyway, and lose all the changes.  This can be done by
+are sure, |<A HREF="editing.html#abandon">abandon</A>| <A HREF="motion.html#it">它</A> anyway, and lose all the changes.  This can be done by
 adding a '<A HREF="change.html#!">!</A>' character just after the command you used.  Example:
 <B>	:e other_file</B>
 changes to:
@@ -573,7 +573,7 @@ changed.  To avoid the message reset the <A HREF="options.html#'warn'">'warn'</A
 <B>  Null argument</B>
 
 Something inside Vim went wrong and resulted in a NULL pointer.  If you know
-how to reproduce this problem, please report <A HREF="motion.html#it">it</A>. |<A HREF="intro.html#bugs">bugs</A>|
+how to reproduce this problem, please report <A HREF="motion.html#it">它</A>. |<A HREF="intro.html#bugs">bugs</A>|
 
 
 						*<A NAME="E41"></A><B>E41</B>* *<A NAME="E82"></A><B>E82</B>* *<A NAME="E83"></A><B>E83</B>* *<A NAME="E342"></A><B>E342</B>* 
@@ -623,7 +623,7 @@ changes to:
 
 Vim tried to read text from the |<A HREF="recover.html#swap-file">swap-file</A>|, but something went wrong.  The
 text in the related buffer may now be corrupted!  Check carefully before you
-write a buffer.  You may want to write <A HREF="motion.html#it">it</A> in another file and check for
+write a buffer.  You may want to write <A HREF="motion.html#it">它</A> in another file and check for
 differences.
 
 
@@ -634,7 +634,7 @@ You are using a &quot;<A HREF="various.html#:normal">:normal</A>&quot; command, 
 command in a recursive way.  This is restricted to <A HREF="options.html#'maxmapdepth'">'maxmapdepth'</A> levels.  This
 example illustrates how to get this message:
 <B>	:map gq :normal gq&lt;CR&gt;</B>
-If you type &quot;<A HREF="change.html#gq">gq</A>&quot;, <A HREF="motion.html#it">it</A> will execute this <A HREF="map.html#mapping">mapping</A>, which will call &quot;<A HREF="change.html#gq">gq</A>&quot; again.
+If you type &quot;<A HREF="change.html#gq">gq</A>&quot;, <A HREF="motion.html#it">它</A> will execute this <A HREF="map.html#mapping">mapping</A>, which will call &quot;<A HREF="change.html#gq">gq</A>&quot; again.
 
 
 							*<A NAME="E22"></A><B>E22</B>* 
@@ -649,7 +649,7 @@ there is a recursive loop and stops with this error message.
 							*<A NAME="E300"></A><B>E300</B>* 
 <B>  Swap file already exists (symlink attack?)</B>
 
-This message appears when Vim is trying to open a swap file and finds <A HREF="motion.html#it">it</A>
+This message appears when Vim is trying to open a swap file and finds <A HREF="motion.html#it">它</A>
 already exists or finds a symbolic link in its place.  This shouldn't happen,
 because Vim already checked that the file doesn't exist.  Either someone else
 opened the same file at exactly the same moment (very unlikely) or someone is
@@ -660,11 +660,11 @@ attempting a symlink attack (could happen when editing a file in /tmp or when
 							*<A NAME="E432"></A><B>E432</B>* 
 <B>  Tags file not sorted: {file name}</B>
 
-Vim (and <A HREF="intro.html#Vi">Vi</A>) expect <A HREF="tagsrch.html#tags">tags</A> files to be sorted in ASCII order.  Binary searching
-can then be used, which is a lot faster than a linear search.  If your <A HREF="tagsrch.html#tags">tags</A>
+Vim (and <A HREF="intro.html#Vi">Vi</A>) expect <A HREF="tagsrch.html#tags">标签</A> files to be sorted in ASCII order.  Binary searching
+can then be used, which is a lot faster than a linear search.  If your <A HREF="tagsrch.html#tags">标签</A>
 files are not properly sorted, reset the |<A HREF="options.html#'tagbsearch'">'tagbsearch'</A>| option.
 This message is only given when Vim detects a problem when searching for a
-<A HREF="tagsrch.html#tag">tag</A>.  Sometimes this message is not given, even though the <A HREF="tagsrch.html#tags">tags</A> file is not
+<A HREF="tagsrch.html#tag">标签</A>.  Sometimes this message is not given, even though the <A HREF="tagsrch.html#tags">标签</A> file is not
 properly sorted.
 
 
@@ -696,7 +696,7 @@ to avoid this error.  This error is not given when <A HREF="options.html#'direct
 							*<A NAME="E140"></A><B>E140</B>* 
 <B>  Use ! to write partial buffer</B>
 
-When using a range to write part of a buffer, <A HREF="motion.html#it">it</A> is unusual to overwrite the
+When using a range to write part of a buffer, <A HREF="motion.html#it">它</A> is unusual to overwrite the
 original file.  It is probably a mistake (e.g., when <A HREF="visual.html#Visual">Visual</A> mode was active
 when using &quot;:w&quot;), therefore Vim requires using a !  after the command, e.g.:
 &quot;:3,10w!&quot;.
@@ -714,7 +714,7 @@ X11 configuration is wrong.  You can find a hint on how to solve this here:
 							*<A NAME="W10"></A><B>W10</B>* 
 <B>  Warning: Changing a readonly file</B>
 
-The file is read-only and you are making a change to <A HREF="motion.html#it">it</A> anyway.  You can use
+The file is read-only and you are making a change to <A HREF="motion.html#it">它</A> anyway.  You can use
 the |<A HREF="autocmd.html#FileChangedRO">FileChangedRO</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event to avoid this message (the <A HREF="autocmd.html#autocommand">autocommand</A>
 must reset the <A HREF="options.html#'readonly'">'readonly'</A> option).  See <A HREF="options.html#'modifiable'">'modifiable'</A> to completely disallow
 making changes to a file.
@@ -724,7 +724,7 @@ This message is only given for the first change after <A HREF="options.html#'rea
 							*<A NAME="W13"></A><B>W13</B>* 
 <B>  Warning: File "{filename}" has been created after editing started</B>
 
-You are editing a file in Vim when <A HREF="motion.html#it">it</A> didn't exist, but <A HREF="motion.html#it">it</A> does exist now.
+You are editing a file in Vim when <A HREF="motion.html#it">它</A> didn't exist, but <A HREF="motion.html#it">它</A> does exist now.
 You will have to decide if you want to keep the version in Vim or the newly
 created file.  This message is not given when <A HREF="options.html#'buftype'">'buftype'</A> is not empty.
 
@@ -785,7 +785,7 @@ changes.  This message is not given when <A HREF="options.html#'buftype'">'bufty
 
 You must be using an awful lot of <A HREF="windows.html#buffers">buffers</A>.  It's now possible that two <A HREF="windows.html#buffers">buffers</A>
 have the same number, which causes various problems.  You might want to exit
-Vim and restart <A HREF="motion.html#it">it</A>.
+Vim and restart <A HREF="motion.html#it">它</A>.
 
 
 							*<A NAME="E931"></A><B>E931</B>* 
@@ -810,7 +810,7 @@ when this problem persists.
 
 A command line started with a <A HREF="intro.html#backslash">backslash</A> or the range of a command contained a
 <A HREF="intro.html#backslash">backslash</A> in a wrong place.  This is often caused by command-line continuation
-being disabled.  Remove the '<A HREF="change.html#C">C</A>' flag from the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option to enable <A HREF="motion.html#it">it</A>.
+being disabled.  Remove the '<A HREF="change.html#C">C</A>' flag from the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option to enable <A HREF="motion.html#it">它</A>.
 
 
 							*<A NAME="E471"></A><B>E471</B>* 
@@ -931,7 +931,7 @@ and the screen is about to be redrawn:
 <A HREF="eval.html#-&gt;">-&gt;</A> Press &lt;C-Y&gt; to copy (yank) a modeless selection to the <A HREF="provider.html#clipboard">clipboard</A> <A HREF="intro.html#register">register</A>.
 <A HREF="eval.html#-&gt;">-&gt;</A> Use a menu.  The characters defined for <A HREF="cmdline.html#Cmdline-mode">Cmdline-mode</A> are used.
 <A HREF="eval.html#-&gt;">-&gt;</A> When <A HREF="options.html#'mouse'">'mouse'</A> contains the '<A HREF="change.html#r">r</A>' flag, clicking the left mouse button works
-   like pressing <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A>.  This makes <A HREF="motion.html#it">it</A> impossible to select text though.
+   like pressing <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A>.  This makes <A HREF="motion.html#it">它</A> impossible to select text though.
 <A HREF="eval.html#-&gt;">-&gt;</A> For the <A HREF="gui.html#GUI">GUI</A> clicking the left mouse button in the last line works like
    pressing <A HREF="motion.html#&lt;Space&gt;">&lt;Space&gt;</A>.
 
@@ -988,7 +988,7 @@ Any other key causes the meaning of the keys to be displayed.
      - When '<A HREF="change.html#r">r</A>' is included in <A HREF="options.html#'mouse'">'mouse'</A> (but then selecting text won't work).
 
 
-Note: The typed key is directly obtained from the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, <A HREF="motion.html#it">it</A> is not mapped
+Note: The typed key is directly obtained from the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, <A HREF="motion.html#it">它</A> is not mapped
 and typeahead is ignored.
 
 The |<A HREF="#g&lt;">g&lt;</A>| command can be used to see the last page of previous command output.

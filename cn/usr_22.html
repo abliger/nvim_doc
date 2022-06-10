@@ -97,7 +97,7 @@ before.
 
 *<A NAME="22.1"></A><B>22.1</B>*	The file browser
 
-Vim has a <A HREF="usr_05.html#plugin">plugin</A> that makes <A HREF="motion.html#it">it</A> possible to edit a directory.  Try this:
+Vim has a <A HREF="usr_05.html#plugin">plugin</A> that makes <A HREF="motion.html#it">它</A> possible to edit a directory.  Try this:
 
 <B>	:edit .</B>
 
@@ -133,7 +133,7 @@ You can see these items:
     the parent directory.
 
 If you have <A HREF="syntax.html#syntax">syntax</A> highlighting enabled, the different parts are highlighted
-so <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">it</A> easier to spot them.
+so <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">它</A> easier to spot them.
 
 You can use <A HREF="intro.html#Normal">正常</A>模式 Vim commands to move around in the text.  For example,
 move the cursor atop a file and press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>; you will then be editing that
@@ -218,7 +218,7 @@ urls such <A HREF="motion.html#as">as</A>:    (that trailing / is important)
  :Explore	<A HREF="ftp://somehost/path/to/dir/">ftp://somehost/path/to/dir/</A>
 	<A HREF="editing.html#:e">:e</A> scp://somehost/path/to/dir/
 
-See |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>| for more.
+见 |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>| for more.
 
 ==============================================================================
 
@@ -245,7 +245,7 @@ directory is with the &quot;<A HREF="editing.html#:pwd">:pwd</A>&quot; command:
 <B>	:pwd</B>
 <B>	/home/Bram/VeryLongFileName</B>
 
-Vim remembers the last directory that you used.  Use &quot;cd -&quot; to go back to <A HREF="motion.html#it">it</A>.
+Vim remembers the last directory that you used.  Use &quot;cd -&quot; to go back to <A HREF="motion.html#it">它</A>.
 Example:
 
 <B>	:pwd</B>
@@ -265,7 +265,7 @@ WINDOW LOCAL DIRECTORY
 
 When you split a<A HREF="windows.html#window">窗口</A>, both <A HREF="windows.html#windows">windows</A> use the same current directory.  When
 you want to edit a number of files somewhere else in the new<A HREF="windows.html#window">窗口</A>, you can
-make <A HREF="motion.html#it">it</A> use a different directory, without <A HREF="change.html#changing">changing</A> the current directory in
+make <A HREF="motion.html#it">它</A> use a different directory, without <A HREF="change.html#changing">changing</A> the current directory in
 the other<A HREF="windows.html#window">窗口</A>.  This is called a local directory.
 
 <B>	:pwd</B>
@@ -282,14 +282,14 @@ So long <A HREF="motion.html#as">as</A> no `:lcd` command has been used, all <A 
 directory.  Doing a `:cd` command in one<A HREF="windows.html#window">窗口</A>will also change the current
 directory of the other<A HREF="windows.html#window">窗口</A>.
    For a<A HREF="windows.html#window">窗口</A>where `:lcd` has been used a different current directory is
-remembered.  Using `:cd` or `:lcd` in other <A HREF="windows.html#windows">windows</A> will not change <A HREF="motion.html#it">it</A>.
+remembered.  Using `:cd` or `:lcd` in other <A HREF="windows.html#windows">windows</A> will not change <A HREF="motion.html#it">它</A>.
    When using a `:cd` command in a<A HREF="windows.html#window">窗口</A>that uses a different current
-directory, <A HREF="motion.html#it">it</A> will go back to using the shared directory.
+directory, <A HREF="motion.html#it">它</A> will go back to using the shared directory.
 
 
 TAB LOCAL DIRECTORY
 
-When you open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="motion.html#it">it</A> uses the directory of the<A HREF="windows.html#window">窗口</A>in the
+When you open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="motion.html#it">它</A> uses the directory of the<A HREF="windows.html#window">窗口</A>in the
 previous <A HREF="intro.html#tab">tab</A> page from which the new <A HREF="intro.html#tab">tab</A> page was opened. You can change the
 directory of the current <A HREF="intro.html#tab">tab</A> page using the `:tcd` command. All the <A HREF="windows.html#windows">windows</A> in
 a <A HREF="intro.html#tab">tab</A> page share this directory except for <A HREF="windows.html#windows">windows</A> with a window-local
@@ -297,7 +297,7 @@ directory. Any new <A HREF="windows.html#windows">windows</A> opened in this <A 
 the current working directory. Using a `:cd` command in a <A HREF="intro.html#tab">tab</A> page will not
 change the working directory of <A HREF="intro.html#tab">tab</A> pages which have a <A HREF="intro.html#tab">tab</A> local directory.
 When the global working directory is changed using the &quot;<A HREF="editing.html#:cd">:cd</A>&quot; command in a <A HREF="intro.html#tab">tab</A>
-page, <A HREF="motion.html#it">it</A> will also change the current <A HREF="intro.html#tab">tab</A> page working directory.
+page, <A HREF="motion.html#it">它</A> will also change the current <A HREF="intro.html#tab">tab</A> page working directory.
 
 
 ==============================================================================
@@ -313,16 +313,16 @@ of the file and type:
 
 <B>	gf</B>
 
-Vim will find the file and edit <A HREF="motion.html#it">it</A>.
+Vim will find the file and edit <A HREF="motion.html#it">它</A>.
    What if the file is not in the current directory?  Vim will use the <A HREF="options.html#'path'">'path'</A>
 option to find the file.  This option is a <A HREF="eval.html#list">list</A> of directory names where to
 look for your file.
    Suppose you have your include files located in &quot;c:/prog/include&quot;.  This
-command will add <A HREF="motion.html#it">it</A> to the <A HREF="options.html#'path'">'path'</A> option:
+command will add <A HREF="motion.html#it">它</A> to the <A HREF="options.html#'path'">'path'</A> option:
 
 <B>	:set path+=c:/prog/include</B>
 
-This directory is an absolute path.  No matter where you are, <A HREF="motion.html#it">it</A> will be the
+This directory is an absolute path.  No matter where you are, <A HREF="motion.html#it">它</A> will be the
 same place.  What if you have located files in a subdirectory, below where the
 file is?  Then you can specify a relative path name.  This starts with a dot:
 
@@ -342,7 +342,7 @@ file name, and which ones are not (e.g., the &quot; character in the example
 above).
 
 When you know the file name, but it's not to be found in the file, you can
-type <A HREF="motion.html#it">it</A>:
+type <A HREF="motion.html#it">它</A>:
 
 <B>	:find inits.h</B>
 
@@ -368,7 +368,7 @@ The Vim editor uses the term buffer to describe a file being edited.
 Actually, a buffer is a copy of the file that you edit.  When you finish
 <A HREF="change.html#changing">changing</A> the buffer, you write the contents of the buffer to the file.
 Buffers not only contain file contents, but also all the marks, settings, and
-other stuff that goes with <A HREF="motion.html#it">it</A>.
+other stuff that goes with <A HREF="motion.html#it">它</A>.
 
 
 HIDDEN BUFFERS
@@ -381,19 +381,19 @@ solution for you:
 <B>	:hide edit two.txt</B>
 
 The buffer &quot;one.txt&quot; disappears from the screen, but Vim still knows that you
-are editing this buffer, so <A HREF="motion.html#it">it</A> keeps the modified text.  This is called a
-hidden buffer: The buffer contains text, but you can't see <A HREF="motion.html#it">it</A>.
+are editing this buffer, so <A HREF="motion.html#it">它</A> keeps the modified text.  This is called a
+hidden buffer: The buffer contains text, but you can't see <A HREF="motion.html#it">它</A>.
    The argument of &quot;<A HREF="windows.html#:hide">:hide</A>&quot; is another command.  &quot;<A HREF="windows.html#:hide">:hide</A>&quot; makes that command
 behave <A HREF="motion.html#as">as</A> if the <A HREF="options.html#'hidden'">'hidden'</A> option was set.  You could also set this option
-yourself.  The effect is that when any buffer is abandoned, <A HREF="motion.html#it">it</A> becomes hidden.
+yourself.  The effect is that when any buffer is abandoned, <A HREF="motion.html#it">它</A> becomes hidden.
    Be careful!  When you have hidden <A HREF="windows.html#buffers">buffers</A> with changes, don't exit Vim
 without making sure you have saved all the <A HREF="windows.html#buffers">buffers</A>.
 
 
 INACTIVE BUFFERS
 
-   When a buffer has been used once, Vim remembers some information about <A HREF="motion.html#it">it</A>.
-When <A HREF="motion.html#it">it</A> is not displayed in a<A HREF="windows.html#window">窗口</A>and <A HREF="motion.html#it">it</A> is not hidden, <A HREF="motion.html#it">it</A> is still in the
+   When a buffer has been used once, Vim remembers some information about <A HREF="motion.html#it">它</A>.
+When <A HREF="motion.html#it">它</A> is not displayed in a<A HREF="windows.html#window">窗口</A>and <A HREF="motion.html#it">它</A> is not hidden, <A HREF="motion.html#it">它</A> is still in the
 buffer <A HREF="eval.html#list">list</A>.  This is called an inactive buffer.  Overview:
 
    Active		Appears in a<A HREF="windows.html#window">窗口</A>, text loaded.
@@ -446,12 +446,12 @@ name:
 <B>	:buffer 2</B>
 
 But the only way to know the number is by looking in the buffer <A HREF="eval.html#list">list</A>.  You can
-use the name, or part of <A HREF="motion.html#it">it</A>, instead:
+use the name, or part of <A HREF="motion.html#it">它</A>, instead:
 
 <B>	:buffer help</B>
 
 Vim will find the best match for the name you type.  If there is only one
-buffer that matches the name, <A HREF="motion.html#it">it</A> will be used.  In this <A HREF="change.html#case">case</A> &quot;<A HREF="index.html#help.txt">help.txt</A>&quot;.
+buffer that matches the name, <A HREF="motion.html#it">它</A> will be used.  In this <A HREF="change.html#case">case</A> &quot;<A HREF="index.html#help.txt">help.txt</A>&quot;.
    To open a buffer in a new<A HREF="windows.html#window">窗口</A>:
 
 <B>	:sbuffer 3</B>
@@ -475,12 +475,12 @@ To remove a buffer from the <A HREF="eval.html#list">list</A>, use this command:
 Again, this also works with a name.
    If you delete a buffer that was active (visible in a window), that<A HREF="windows.html#window">窗口</A>
 will be closed.  If you delete the current buffer, the current<A HREF="windows.html#window">窗口</A>will be
-closed.  If <A HREF="motion.html#it">it</A> was the last<A HREF="windows.html#window">窗口</A>, Vim will find another buffer to edit.  You
+closed.  If <A HREF="motion.html#it">它</A> was the last<A HREF="windows.html#window">窗口</A>, Vim will find another buffer to edit.  You
 can't be editing nothing!
 
 	Note:
-	Even after removing the buffer with &quot;<A HREF="windows.html#:bdelete">:bdelete</A>&quot; Vim still remembers <A HREF="motion.html#it">it</A>.
-	It's actually made &quot;unlisted&quot;, <A HREF="motion.html#it">it</A> no longer appears in the <A HREF="eval.html#list">list</A> from
+	Even after removing the buffer with &quot;<A HREF="windows.html#:bdelete">:bdelete</A>&quot; Vim still remembers <A HREF="motion.html#it">它</A>.
+	It's actually made &quot;unlisted&quot;, <A HREF="motion.html#it">它</A> no longer appears in the <A HREF="eval.html#list">list</A> from
 	&quot;<A HREF="windows.html#:buffers">:buffers</A>&quot;.  The &quot;:buffers!&quot; command will <A HREF="eval.html#list">list</A> unlisted <A HREF="windows.html#buffers">buffers</A> (yes,
 	Vim can <A HREF="diff.html#do">do</A> the impossible).  To really make Vim forget about a buffer,
 	use &quot;<A HREF="windows.html#:bwipe">:bwipe</A>&quot;.  Also see the <A HREF="options.html#'buflisted'">'buflisted'</A> option.

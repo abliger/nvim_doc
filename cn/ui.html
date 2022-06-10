@@ -97,7 +97,7 @@ have some elements (&quot;widgets&quot;) presented by the <A HREF="#UI">UI</A> i
 							*<A NAME="ui-option"></A><B>ui-option</B>*
 Call |<A HREF="api.html#nvim_ui_attach()">nvim_ui_attach()</A>| to tell Nvim that your program wants to draw the Nvim
 screen grid with a size of width × height cells. This is typically done by an
-embedder at startup (see |<A HREF="#ui-startup">ui-startup</A>|), but UIs can also connect to a running
+embedder at startup (见 |<A HREF="#ui-startup">ui-startup</A>|), but UIs can also connect to a running
 Nvim instance and invoke <A HREF="api.html#nvim_ui_attach()">nvim_ui_attach()</A>. The `options` parameter is a map
 with these (optional) keys:
 
@@ -132,9 +132,9 @@ with these (optional) keys:
 	`term_name`		Sets the name of the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="vim_diff.html#'term'">'term'</A>.
 	`term_colors`		Sets the number of supported colors 't_Co'.
 	`term_background`	Sets the default value of <A HREF="options.html#'background'">'background'</A>.
-	`stdin_fd`		Read buffer from `fd` <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">it</A> was a stdin pipe
+	`stdin_fd`		Read buffer from `fd` <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">它</A> was a stdin pipe
 				This option can only used by |<A HREF="starting.html#--embed">--embed</A>| <A HREF="#ui">ui</A>,
-				see |<A HREF="#ui-startup-stdin">ui-startup-stdin</A>|.
+				见 |<A HREF="#ui-startup-stdin">ui-startup-stdin</A>|.
 
 
 
@@ -174,7 +174,7 @@ Example of a typical &quot;redraw&quot; batch in a single <A HREF="api.html#RPC"
 <B>      ]</B>
 <B>    ]</B>
 
-Events must be handled in-order. Nvim sends a &quot;flush&quot; event when <A HREF="motion.html#it">it</A> has
+Events must be handled in-order. Nvim sends a &quot;flush&quot; event when <A HREF="motion.html#it">它</A> has
 completed a redraw of the entire screen (so all <A HREF="windows.html#windows">windows</A> have a consistent view
 of buffer state, <A HREF="options.html#options">options</A>, etc.). Multiple &quot;redraw&quot; batches may be sent before
 the entire screen has been redrawn, with &quot;flush&quot; following only the last
@@ -233,10 +233,10 @@ An <A HREF="#UI">UI</A> can support the native read from stdin feature <A HREF="
 The embedding process can detect that its stdin is open to a file which
 not is a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, just like <A HREF="nvim.html#nvim">nvim</A> does. It then needs to forward this fd
 to Nvim. As fd=0 is already is used to send <A HREF="api.html#rpc">rpc</A> data from the embedder to
-Nvim, <A HREF="motion.html#it">it</A> needs to use some other file descriptor, like fd=3 or higher.
+Nvim, <A HREF="motion.html#it">它</A> needs to use some other file descriptor, like fd=3 or higher.
 
 Then, `stdin_fd` option should be passed to `nvim_ui_attach` and <A HREF="nvim.html#nvim">nvim</A> will
-implicitly read <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> a buffer. This option can only be used when Nvim is
+implicitly read <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a buffer. This option can only be used when Nvim is
 launched with `--embed` option, <A HREF="motion.html#as">as</A> described above.
 
 
@@ -264,7 +264,7 @@ the editor.
 <B><FONT color="#3A6F2B">	KEY		DESCRIPTION </FONT></B>
 	`cursor_shape`:	&quot;block&quot;, &quot;horizontal&quot;, &quot;vertical&quot;
 	`cell_percentage`: Cell <A HREF="motion.html#&#37;">&#37;</A> occupied by the cursor.
-	`blinkwait`, `blinkon`, `blinkoff`: See |<A HREF="options.html#cursor-blinking">cursor-blinking</A>|.
+	`blinkwait`, `blinkon`, `blinkoff`: 见 |<A HREF="options.html#cursor-blinking">cursor-blinking</A>|.
 	`attr_id`:	Cursor attribute id (defined by `hl_attr_define`).
 			When attr_id is 0, the background and foreground
 			colors should be swapped.
@@ -323,13 +323,13 @@ the editor.
 
 [&quot;busy_start&quot;]
 [&quot;busy_stop&quot;]
-	Indicates to the <A HREF="#UI">UI</A> that <A HREF="motion.html#it">it</A> must stop rendering the cursor. This event
+	Indicates to the <A HREF="#UI">UI</A> that <A HREF="motion.html#it">它</A> must stop rendering the cursor. This event
 	is misnamed and does not actually have anything to <A HREF="diff.html#do">do</A> with busyness.
 
 [&quot;suspend&quot;]
 	|<A HREF="starting.html#:suspend">:suspend</A>| command or |<A HREF="starting.html#CTRL-Z">CTRL-Z</A>| <A HREF="map.html#mapping">mapping</A> is used. A <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> client (or
-	another client where <A HREF="motion.html#it">it</A> makes sense) could <A HREF="starting.html#suspend">suspend</A> itself.  Other
-	clients can safely ignore <A HREF="motion.html#it">it</A>.
+	another client where <A HREF="motion.html#it">它</A> makes sense) could <A HREF="starting.html#suspend">suspend</A> itself.  Other
+	clients can safely ignore <A HREF="motion.html#it">它</A>.
 
 [&quot;update_menu&quot;]
 	The menu mappings changed.
@@ -465,7 +465,7 @@ numerical highlight ids to the actual attributes.
 
 [&quot;grid_destroy&quot;, grid]
 	`grid` will not be used anymore and the <A HREF="#UI">UI</A> can free any data associated
-	with <A HREF="motion.html#it">it</A>.
+	with <A HREF="motion.html#it">它</A>.
 
 [&quot;grid_cursor_goto&quot;, grid, row, column]
 	Makes `grid` the current grid and `row, column` the cursor position on this
@@ -624,7 +624,7 @@ By default Nvim will only describe grid cells using the final calculated
 highlight attributes, <A HREF="motion.html#as">as</A> described by the <A HREF="eval.html#dict">dict</A> keys in |<A HREF="#ui-event-highlight_set">ui-event-highlight_set</A>|.
 The `ext_hlstate` extension allows to the <A HREF="#UI">UI</A> to also receive a semantic
 description of the highlights active in a cell. In this mode highlights will be
-predefined in a table, see |<A HREF="#ui-event-hl_attr_define">ui-event-hl_attr_define</A>| and |<A HREF="#ui-event-grid_line">ui-event-grid_line</A>|.
+predefined in a table, 见 |<A HREF="#ui-event-hl_attr_define">ui-event-hl_attr_define</A>| and |<A HREF="#ui-event-grid_line">ui-event-grid_line</A>|.
 The `info` parameter in `hl_attr_define` will contain a semantic description
 of the highlights. As highlight groups can be combined, this will be an array
 of items, with the item with highest priority last. Each item is a dictionary
@@ -655,9 +655,9 @@ Multigrid Events 	  					 *<A NAME="ui-multigrid"></A><B>ui-multigrid</B>*
 Activated by the `ext_multigrid` |<A HREF="#ui-option">ui-option</A>|.
 Activates |<A HREF="#ui-linegrid">ui-linegrid</A>| implicitly.
 
-See |<A HREF="#ui-linegrid">ui-linegrid</A>| for grid <A HREF="autocmd.html#events">events</A>.
-See |<A HREF="api.html#nvim_ui_try_resize_grid()">nvim_ui_try_resize_grid()</A>| to request <A HREF="change.html#changing">changing</A> the grid size.
-See |<A HREF="api.html#nvim_input_mouse()">nvim_input_mouse()</A>| for sending mouse <A HREF="autocmd.html#events">events</A> to Nvim.
+见 |<A HREF="#ui-linegrid">ui-linegrid</A>| for grid <A HREF="autocmd.html#events">events</A>.
+见 |<A HREF="api.html#nvim_ui_try_resize_grid()">nvim_ui_try_resize_grid()</A>| to request <A HREF="change.html#changing">changing</A> the grid size.
+见 |<A HREF="api.html#nvim_input_mouse()">nvim_input_mouse()</A>| for sending mouse <A HREF="autocmd.html#events">events</A> to Nvim.
 
 The multigrid extension gives UIs more <A HREF="intro.html#control">control</A> over how <A HREF="windows.html#windows">windows</A> are displayed:
 - UIs receive updates on a separate grid for each<A HREF="windows.html#window">窗口</A>.
@@ -680,14 +680,14 @@ tabs.
 
 [&quot;win_pos&quot;, grid, win, start_row, start_col, width, height]
 	Set the position and size of the grid in Nvim (i.e. the outer grid
-	size). If the<A HREF="windows.html#window">窗口</A>was previously hidden, <A HREF="motion.html#it">it</A> should now be shown
+	size). If the<A HREF="windows.html#window">窗口</A>was previously hidden, <A HREF="motion.html#it">它</A> should now be shown
 	again.
 
 [&quot;win_float_pos&quot;, grid, win, anchor, anchor_grid, anchor_row, anchor_col, focusable]
 	Display or reconfigure floating<A HREF="windows.html#window">窗口</A>`win`. The<A HREF="windows.html#window">窗口</A>should be
 	displayed above another grid `anchor_grid` at the specified position
 	`anchor_row` and `anchor_col`. For the meaning of `anchor` and more
-	details of positioning, see |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
+	details of positioning, 见 |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
 
 [&quot;win_external_pos&quot;, grid, win]
 	Display or reconfigure external<A HREF="windows.html#window">窗口</A>`win`. The<A HREF="windows.html#window">窗口</A>should be
@@ -781,7 +781,7 @@ For command-line <A HREF="options.html#'wildmenu'">'wildmenu'</A> <A HREF="#UI">
 	The `content` is the full content that should be displayed in the
 	<A HREF="cmdline.html#cmdline">cmdline</A>, and the `pos` is the position of the cursor that in the
 	<A HREF="cmdline.html#cmdline">cmdline</A>. The content is divided into chunks with different highlight
-	attributes represented <A HREF="motion.html#as">as</A> a <A HREF="eval.html#dict">dict</A> (see |<A HREF="#ui-event-highlight_set">ui-event-highlight_set</A>|).
+	attributes represented <A HREF="motion.html#as">as</A> a <A HREF="eval.html#dict">dict</A> (见 |<A HREF="#ui-event-highlight_set">ui-event-highlight_set</A>|).
 
 	`firstc` and `prompt` are text, that if non-empty should be
 	displayed in front of the command line. `firstc` always indicates
@@ -803,7 +803,7 @@ For command-line <A HREF="options.html#'wildmenu'">'wildmenu'</A> <A HREF="#UI">
 	Display a special char in the <A HREF="cmdline.html#cmdline">cmdline</A> at the cursor position. This is
 	typically used to indicate a pending state, e.g. after |<A HREF="cmdline.html#c_CTRL-V">c_CTRL-V</A>|. If
 	`shift` is true the text after the cursor should be shifted, otherwise
-	<A HREF="motion.html#it">it</A> should overwrite the char at the cursor.
+	<A HREF="motion.html#it">它</A> should overwrite the char at the cursor.
 
 	Should be hidden at next cmdline_show.
 

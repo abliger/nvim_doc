@@ -106,7 +106,7 @@ In chapter 2 you learned the &quot;<A HREF="change.html#x">x</A>&quot; command t
 using a <A HREF="intro.html#count">count</A>: &quot;4x&quot; deletes four characters.
    The &quot;dw&quot; command deletes a <A HREF="motion.html#word">单词</A>.  You may recognize the &quot;<A HREF="motion.html#w">w</A>&quot; command <A HREF="motion.html#as">as</A> the
 move <A HREF="motion.html#word">单词</A> command.  In fact, the &quot;<A HREF="change.html#d">d</A>&quot; command may be followed by any motion
-command, and <A HREF="motion.html#it">it</A> deletes from the current location to the place where the
+command, and <A HREF="motion.html#it">它</A> deletes from the current location to the place where the
 cursor winds up.
    The &quot;4w&quot; command, for example, moves the cursor over four words.  The &quot;d4w&quot;
 command deletes four words.
@@ -130,7 +130,7 @@ guesses that you <A HREF="diff.html#do">do</A> want to include that last charact
 
 Whether the character under the cursor is included depends on the command you
 used to move to that character.  The reference manual calls this &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot;
-when the character isn't included and &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot; when <A HREF="motion.html#it">it</A> is.
+when the character isn't included and &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot; when <A HREF="motion.html#it">它</A> is.
 
 The &quot;<A HREF="motion.html#$">$</A>&quot; command moves to the end of a line.  The &quot;d$&quot; command deletes from the
 cursor to the end of the line.  This is an <A HREF="motion.html#inclusive">inclusive</A> motion, thus the last
@@ -151,8 +151,8 @@ For example, &quot;<A HREF="change.html#d">d</A>&quot; is the delete <A HREF="mo
 *<A NAME="04.2"></A><B>04.2</B>*	Changing text
 
 Another <A HREF="motion.html#operator">operator</A> is &quot;<A HREF="change.html#c">c</A>&quot;, change.  It acts just like the &quot;<A HREF="change.html#d">d</A>&quot; <A HREF="motion.html#operator">operator</A>, except
-<A HREF="motion.html#it">it</A> leaves you in <A HREF="intro.html#Insert">插入</A>模式.  For example, &quot;<A HREF="change.html#cw">cw</A>&quot; changes a <A HREF="motion.html#word">单词</A>.  Or more
-specifically, <A HREF="motion.html#it">it</A> deletes a <A HREF="motion.html#word">单词</A> and then puts you in <A HREF="intro.html#Insert">插入</A>模式.
+<A HREF="motion.html#it">它</A> leaves you in <A HREF="intro.html#Insert">插入</A>模式.  For example, &quot;<A HREF="change.html#cw">cw</A>&quot; changes a <A HREF="motion.html#word">单词</A>.  Or more
+specifically, <A HREF="motion.html#it">它</A> deletes a <A HREF="motion.html#word">单词</A> and then puts you in <A HREF="intro.html#Insert">插入</A>模式.
 
 <B><FONT color="#3A6F2B">	To err is human </FONT></B>
 	   -------&gt;
@@ -173,7 +173,7 @@ simple, clear, and wrong.  That is the <A HREF="change.html#case">case</A> with 
 &quot;<A HREF="change.html#cw">cw</A>&quot; command.  The <A HREF="change.html#c">c</A> <A HREF="motion.html#operator">operator</A> works just like the <A HREF="change.html#d">d</A> <A HREF="motion.html#operator">operator</A>, with one
 exception: &quot;<A HREF="change.html#cw">cw</A>&quot;.  It actually works like &quot;ce&quot;, change to end of <A HREF="motion.html#word">单词</A>.  Thus
 the space after the <A HREF="motion.html#word">单词</A> isn't included.  This is an exception that dates back
-to the old <A HREF="intro.html#Vi">Vi</A>.  Since many people are used to <A HREF="motion.html#it">it</A> now, the inconsistency has
+to the old <A HREF="intro.html#Vi">Vi</A>.  Since many people are used to <A HREF="motion.html#it">它</A> now, the inconsistency has
 remained in Vim.
 
 
@@ -212,7 +212,7 @@ distinction.  You can actually put in two counts, however.  For example,
 REPLACING WITH ONE CHARACTER
 
 The &quot;<A HREF="change.html#r">r</A>&quot; command is not an <A HREF="motion.html#operator">operator</A>.  It waits for you to type a character, and
-will replace the character under the cursor with <A HREF="motion.html#it">it</A>.  You could <A HREF="diff.html#do">do</A> the same
+will replace the character under the cursor with <A HREF="motion.html#it">它</A>.  You could <A HREF="diff.html#do">do</A> the same
 with &quot;cl&quot; or with the &quot;<A HREF="change.html#s">s</A>&quot; command, but with &quot;<A HREF="change.html#r">r</A>&quot; you don't have to press <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>
 to get back out of insert mode.
 
@@ -240,10 +240,10 @@ line break.
 
 The &quot;<A HREF="repeat.html#.">.</A>&quot; command is one of the simplest yet powerful commands in Vim.  It
 repeats the last change.  For instance, suppose you are editing an HTML file
-and want to delete all the &lt;B&gt; <A HREF="tagsrch.html#tags">tags</A>.  You position the cursor on the first <A HREF="change.html#&lt;">&lt;</A>
+and want to delete all the &lt;B&gt; <A HREF="tagsrch.html#tags">标签</A>.  You position the cursor on the first <A HREF="change.html#&lt;">&lt;</A>
 and delete the &lt;B&gt; with the command &quot;df&gt;&quot;.  You then go to the <A HREF="change.html#&lt;">&lt;</A> of the next
-&lt;/B&gt; and delete <A HREF="motion.html#it">it</A> using the &quot;<A HREF="repeat.html#.">.</A>&quot; command.  The &quot;<A HREF="repeat.html#.">.</A>&quot; command executes the last
-change command (in this <A HREF="change.html#case">case</A>, &quot;df&gt;&quot;).  To delete another <A HREF="tagsrch.html#tag">tag</A>, position the
+&lt;/B&gt; and delete <A HREF="motion.html#it">它</A> using the &quot;<A HREF="repeat.html#.">.</A>&quot; command.  The &quot;<A HREF="repeat.html#.">.</A>&quot; command executes the last
+change command (in this <A HREF="change.html#case">case</A>, &quot;df&gt;&quot;).  To delete another <A HREF="tagsrch.html#tag">标签</A>, position the
 cursor on the <A HREF="change.html#&lt;">&lt;</A> and use the &quot;<A HREF="repeat.html#.">.</A>&quot; command.
 
 <B><FONT color="#3A6F2B">			      To &lt;B&gt;generate&lt;/B&gt; a table of &lt;B&gt;contents </FONT></B>
@@ -326,7 +326,7 @@ If you want to work on a rectangular block of characters, use <A HREF="visual.ht
 To delete the middle &quot;Q2&quot; column, move the cursor to the &quot;<A HREF="repeat.html#Q">Q</A>&quot; of &quot;Q2&quot;.  Press
 <A HREF="visual.html#CTRL-V">CTRL-V</A> to start blockwise <A HREF="visual.html#Visual">Visual</A> mode.  Now move the cursor three lines down
 with &quot;3j&quot; and to the next <A HREF="motion.html#word">单词</A> with &quot;<A HREF="motion.html#w">w</A>&quot;.  You can see the first character of
-the last column is included.  To exclude <A HREF="motion.html#it">it</A>, use &quot;<A HREF="motion.html#h">h</A>&quot;.  Now press &quot;<A HREF="change.html#d">d</A>&quot; and the
+the last column is included.  To exclude <A HREF="motion.html#it">它</A>, use &quot;<A HREF="motion.html#h">h</A>&quot;.  Now press &quot;<A HREF="change.html#d">d</A>&quot; and the
 middle column is gone.
 
 
@@ -350,7 +350,7 @@ where they open a new line below or above the cursor.
 *<A NAME="04.5"></A><B>04.5</B>*	Moving text
 
 When you delete something with &quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#x">x</A>&quot;, or another command, the text is
-saved.  You can <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">it</A> back by using the &quot;<A HREF="change.html#p">p</A>&quot; command.  (The Vim name for
+saved.  You can <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> back by using the &quot;<A HREF="change.html#p">p</A>&quot; command.  (The Vim name for
 this is put).
    Take a look at how this works.  First you will delete an entire line, by
 putting the cursor on the line you want to delete and typing &quot;<A HREF="change.html#dd">dd</A>&quot;.  Now you
@@ -363,7 +363,7 @@ command.  The line is inserted on the line below the cursor.
 
 Because you deleted an entire line, the &quot;<A HREF="change.html#p">p</A>&quot; command placed the text line below
 the cursor.  If you delete part of a line (a <A HREF="motion.html#word">单词</A>, for instance), the &quot;<A HREF="change.html#p">p</A>&quot;
-command puts <A HREF="motion.html#it">it</A> just after the cursor.
+command puts <A HREF="motion.html#it">它</A> just after the cursor.
 
 <B><FONT color="#3A6F2B">	Some more boring try text to out commands. </FONT></B>
 			 ----&gt;
@@ -379,8 +379,8 @@ command puts <A HREF="motion.html#it">it</A> just after the cursor.
 MORE ON PUTTING
 
 The &quot;<A HREF="change.html#P">P</A>&quot; command puts text like &quot;<A HREF="change.html#p">p</A>&quot;, but before the cursor.  When you deleted a
-whole line with &quot;<A HREF="change.html#dd">dd</A>&quot;, &quot;<A HREF="change.html#P">P</A>&quot; will put <A HREF="motion.html#it">it</A> back above the cursor.  When you deleted
-a <A HREF="motion.html#word">单词</A> with &quot;dw&quot;, &quot;<A HREF="change.html#P">P</A>&quot; will put <A HREF="motion.html#it">it</A> back just before the cursor.
+whole line with &quot;<A HREF="change.html#dd">dd</A>&quot;, &quot;<A HREF="change.html#P">P</A>&quot; will put <A HREF="motion.html#it">它</A> back above the cursor.  When you deleted
+a <A HREF="motion.html#word">单词</A> with &quot;dw&quot;, &quot;<A HREF="change.html#P">P</A>&quot; will put <A HREF="motion.html#it">它</A> back just before the cursor.
 
 You can repeat putting <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A> you like.  The same text will be used.
 
@@ -393,9 +393,9 @@ SWAPPING TWO CHARACTERS
 
 Frequently when you are typing, your fingers get ahead of your brain (or the
 other way around?).  The result is a typo such <A HREF="motion.html#as">as</A> &quot;teh&quot; for &quot;the&quot;.  Vim
-makes <A HREF="motion.html#it">it</A> easy to correct such problems.  Just put the cursor on the <A HREF="motion.html#e">e</A> of &quot;teh&quot;
+makes <A HREF="motion.html#it">它</A> easy to correct such problems.  Just put the cursor on the <A HREF="motion.html#e">e</A> of &quot;teh&quot;
 and execute the command &quot;xp&quot;.  This works <A HREF="motion.html#as">as</A> follows: &quot;<A HREF="change.html#x">x</A>&quot; deletes the
-character <A HREF="motion.html#e">e</A> and places <A HREF="motion.html#it">it</A> in a <A HREF="intro.html#register">register</A>.  &quot;<A HREF="change.html#p">p</A>&quot; puts the text after the cursor,
+character <A HREF="motion.html#e">e</A> and places <A HREF="motion.html#it">它</A> in a <A HREF="intro.html#register">register</A>.  &quot;<A HREF="change.html#p">p</A>&quot; puts the text after the cursor,
 which is after the <A HREF="motion.html#h">h</A>.
 
 <B><FONT color="#3A6F2B">	teh     th     the </FONT></B>
@@ -405,13 +405,13 @@ which is after the <A HREF="motion.html#h">h</A>.
 
 *<A NAME="04.6"></A><B>04.6</B>*	Copying text
 
-To copy text from one place to another, you could delete <A HREF="motion.html#it">it</A>, use &quot;<A HREF="undo.html#u">u</A>&quot; to <A HREF="undo.html#undo">undo</A>
-the deletion and then &quot;<A HREF="change.html#p">p</A>&quot; to put <A HREF="motion.html#it">it</A> somewhere else.  There is an easier way:
+To copy text from one place to another, you could delete <A HREF="motion.html#it">它</A>, use &quot;<A HREF="undo.html#u">u</A>&quot; to <A HREF="undo.html#undo">undo</A>
+the deletion and then &quot;<A HREF="change.html#p">p</A>&quot; to put <A HREF="motion.html#it">它</A> somewhere else.  There is an easier way:
 yanking.  The &quot;<A HREF="change.html#y">y</A>&quot; <A HREF="motion.html#operator">operator</A> copies text into a <A HREF="intro.html#register">register</A>.  Then a &quot;<A HREF="change.html#p">p</A>&quot; command
-can be used to put <A HREF="motion.html#it">it</A>.
+can be used to put <A HREF="motion.html#it">它</A>.
    Yanking is just a Vim name for <A HREF="uganda.html#copying">copying</A>.  The &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="print.html#letter">letter</A> was already used
 for the change <A HREF="motion.html#operator">operator</A>, and &quot;<A HREF="change.html#y">y</A>&quot; was still available.  Calling this
-<A HREF="motion.html#operator">operator</A> &quot;<A HREF="change.html#yank">yank</A>&quot; made <A HREF="motion.html#it">it</A> easier to remember to use the &quot;<A HREF="change.html#y">y</A>&quot; key.
+<A HREF="motion.html#operator">operator</A> &quot;<A HREF="change.html#yank">yank</A>&quot; made <A HREF="motion.html#it">它</A> easier to remember to use the &quot;<A HREF="change.html#y">y</A>&quot; key.
 
 Since &quot;<A HREF="change.html#y">y</A>&quot; is an <A HREF="motion.html#operator">operator</A>, you use &quot;yw&quot; to <A HREF="change.html#yank">yank</A> a <A HREF="motion.html#word">单词</A>.  A <A HREF="intro.html#count">count</A> is possible <A HREF="motion.html#as">as</A>
 usual.  To <A HREF="change.html#yank">yank</A> two words use &quot;y2w&quot;.  Example:
@@ -437,7 +437,7 @@ The &quot;<A HREF="change.html#yy">yy</A>&quot; command yanks a whole line, just
 
 &quot;<A HREF="change.html#Y">Y</A>&quot; was originally equivalent to &quot;<A HREF="change.html#yank">yank</A> the entire line&quot;, <A HREF="motion.html#as">as</A> opposed to &quot;<A HREF="change.html#D">D</A>&quot;
 which is &quot;delete to end of the line&quot;.  &quot;<A HREF="change.html#Y">Y</A>&quot; has thus been remapped to mean
-&quot;<A HREF="change.html#yank">yank</A> to end of the line&quot; to make <A HREF="motion.html#it">it</A> consistent with the behavior of &quot;<A HREF="change.html#D">D</A>&quot;.
+&quot;<A HREF="change.html#yank">yank</A> to end of the line&quot; to make <A HREF="motion.html#it">它</A> consistent with the behavior of &quot;<A HREF="change.html#D">D</A>&quot;.
 Mappings will be covered in later chapters.
 
 ==============================================================================
@@ -450,7 +450,7 @@ Edit/Copy menu item.  The selected text is now copied to the <A HREF="provider.h
 can <A HREF="provider.html#paste">paste</A> the text in other programs.  In Vim itself too.
 
 If you have copied text to the <A HREF="provider.html#clipboard">clipboard</A> in another application, you can <A HREF="provider.html#paste">paste</A>
-<A HREF="motion.html#it">it</A> in Vim with the Edit/Paste menu item.  This works in <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="insert.html#Insert">Insert</A>
+<A HREF="motion.html#it">它</A> in Vim with the Edit/Paste menu item.  This works in <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="insert.html#Insert">Insert</A>
 mode.  In <A HREF="visual.html#Visual">Visual</A> mode the selected text is replaced with the pasted text.
 
 The &quot;Cut&quot; menu item deletes the text before it's put on the <A HREF="provider.html#clipboard">clipboard</A>.  The
@@ -460,7 +460,7 @@ also find these items there.
 
 If you are not using the <A HREF="gui.html#GUI">GUI</A>, or if you don't like using a menu, you have to
 use another way.  You use the normal &quot;<A HREF="change.html#y">y</A>&quot; (yank) and &quot;<A HREF="change.html#p">p</A>&quot; (put) commands, but
-prepend &quot;* (double-quote <A HREF="pattern.html#star">star</A>) before <A HREF="motion.html#it">it</A>.  To copy a line to the <A HREF="provider.html#clipboard">clipboard</A>:
+prepend &quot;* (double-quote <A HREF="pattern.html#star">star</A>) before <A HREF="motion.html#it">它</A>.  To copy a line to the <A HREF="provider.html#clipboard">clipboard</A>:
 
 <B>	"*yy</B>
 
@@ -543,13 +543,13 @@ you type <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
 <B><FONT color="#3A6F2B">	This is interesting. </FONT></B>
 
 You may have noticed that this command replaced 5 characters in the line with
-twelve others.  The &quot;<A HREF="change.html#R">R</A>&quot; command automatically extends the line if <A HREF="motion.html#it">it</A> runs out
+twelve others.  The &quot;<A HREF="change.html#R">R</A>&quot; command automatically extends the line if <A HREF="motion.html#it">它</A> runs out
 of characters to replace.  It will not continue on the next line.
 
 You can switch between <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="insert.html#Replace">Replace</A> mode with the <A HREF="insert.html#&lt;Insert&gt;">&lt;Insert&gt;</A> key.
 
 When you use <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> (backspace) to make a correction, you will notice that the
-old text is put back.  Thus <A HREF="motion.html#it">it</A> works like an <A HREF="undo.html#undo">undo</A> command for the previously
+old text is put back.  Thus <A HREF="motion.html#it">它</A> works like an <A HREF="undo.html#undo">undo</A> command for the previously
 typed character.
 
 ==============================================================================
@@ -584,8 +584,8 @@ else:
 
 	~	Change <A HREF="change.html#case">case</A> of the character under the cursor, and move the
 		cursor to the next character.  This is not an <A HREF="motion.html#operator">operator</A> (unless
-		<A HREF="options.html#'tildeop'">'tildeop'</A> is set), thus you can't use <A HREF="motion.html#it">it</A> with a motion
-		command.  It does work in <A HREF="visual.html#Visual">Visual</A> mode, where <A HREF="motion.html#it">it</A> changes <A HREF="change.html#case">case</A>
+		<A HREF="options.html#'tildeop'">'tildeop'</A> is set), thus you can't use <A HREF="motion.html#it">它</A> with a motion
+		command.  It does work in <A HREF="visual.html#Visual">Visual</A> mode, where <A HREF="motion.html#it">它</A> changes <A HREF="change.html#case">case</A>
 		for all the selected text.
 
 	I	Start <A HREF="intro.html#Insert">插入</A>模式 after moving the cursor to the first

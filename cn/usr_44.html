@@ -81,7 +81,7 @@
 
 Vim comes with highlighting for a couple of hundred different file types.  If
 the file you are editing isn't included, read this chapter to find out how to
-get this type of file highlighted.  Also see |<A HREF="syntax.html#:syn-define">:syn-define</A>| in the reference
+get this type of file highlighted.  Also 见 |<A HREF="syntax.html#:syn-define">:syn-define</A>| in the reference
 manual.
 
 |<A HREF="#44.1">44.1</A>|	Basic <A HREF="syntax.html#syntax">syntax</A> commands
@@ -108,7 +108,7 @@ manual.
 Using an existing <A HREF="syntax.html#syntax">syntax</A> file to start with will save you a lot of time.  Try
 finding a <A HREF="syntax.html#syntax">syntax</A> file in $VIMRUNTIME/syntax for a language that is similar.
 These files will also show you the normal layout of a <A HREF="syntax.html#syntax">syntax</A> file.  To
-understand <A HREF="motion.html#it">it</A>, you need to read the following.
+understand <A HREF="motion.html#it">它</A>, you need to read the following.
 
 Let's start with the basic arguments.  Before we start defining any new
 <A HREF="syntax.html#syntax">syntax</A>, we need to clear out any old <A HREF="intro.html#definitions">definitions</A>:
@@ -187,7 +187,7 @@ names.  You <A HREF="diff.html#do">do</A> this with the following commands:
 <B>	:highlight link xStatement Statement</B>
 
 This tells Vim to highlight &quot;xType&quot; like &quot;Type&quot; and &quot;xStatement&quot; like
-&quot;Statement&quot;.  See |<A HREF="syntax.html#group-name">group-name</A>| for the standard names.
+&quot;Statement&quot;.  见 |<A HREF="syntax.html#group-name">group-name</A>| for the standard names.
 
 
 UNUSUAL KEYWORDS
@@ -201,7 +201,7 @@ message for this.
 <B>	:syntax keyword xStatement when-not</B>
 
 The &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot; command is used to change <A HREF="options.html#'iskeyword'">'iskeyword'</A> only for the current
-buffer.  Still <A HREF="motion.html#it">it</A> does change the behavior of commands like &quot;<A HREF="motion.html#w">w</A>&quot; and &quot;*&quot;.  If
+buffer.  Still <A HREF="motion.html#it">它</A> does change the behavior of commands like &quot;<A HREF="motion.html#w">w</A>&quot; and &quot;*&quot;.  If
 that is not wanted, don't define a keyword but use a match (explained in the
 next section).
 
@@ -232,13 +232,13 @@ The part at the end is a <A HREF="pattern.html#pattern">pattern</A>, like it's u
 used to surround the <A HREF="pattern.html#pattern">pattern</A> (like how it's done in a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; command).
 You can use any other character, like a plus or a <A HREF="change.html#quote.">quote.</A>
 
-Now define a match for a comment.  In the <A HREF="change.html#x">x</A> language <A HREF="motion.html#it">it</A> is anything from # to
+Now define a match for a comment.  In the <A HREF="change.html#x">x</A> language <A HREF="motion.html#it">它</A> is anything from # to
 the end of a line:
 
 <B>	:syntax match xComment /#.*/</B>
 
 Since you can use any search <A HREF="pattern.html#pattern">pattern</A>, you can highlight very complex things
-with a match item.  See |<A HREF="pattern.html#pattern">pattern</A>| for help on search patterns.
+with a match item.  见 |<A HREF="pattern.html#pattern">pattern</A>| for help on search patterns.
 
 ==============================================================================
 
@@ -269,7 +269,7 @@ item is a single <A HREF="pattern.html#pattern">pattern</A>, which must match <A
 soon <A HREF="motion.html#as">as</A> the &quot;start&quot; <A HREF="pattern.html#pattern">pattern</A> matches.  Whether the &quot;end&quot; <A HREF="pattern.html#pattern">pattern</A> is found or
 not doesn't matter.  Thus when the item depends on the &quot;end&quot; <A HREF="pattern.html#pattern">pattern</A> to match,
 you cannot use a region.  Otherwise, regions are often simpler to define.  And
-<A HREF="motion.html#it">it</A> is easier to use nested items, <A HREF="motion.html#as">as</A> is explained in the next section.
+<A HREF="motion.html#it">它</A> is easier to use nested items, <A HREF="motion.html#as">as</A> is explained in the next section.
 
 ==============================================================================
 
@@ -279,7 +279,7 @@ Take a look at this comment:
 
 <B><FONT color="#3A6F2B">	%Get input  TODO: Skip white space </FONT></B>
 
-You want to highlight TODO in big yellow letters, even though <A HREF="motion.html#it">it</A> is in a
+You want to highlight TODO in big yellow letters, even though <A HREF="motion.html#it">它</A> is in a
 comment that is highlighted blue.  To let Vim know about this, you define the
 following <A HREF="syntax.html#syntax">syntax</A> groups:
 
@@ -288,9 +288,9 @@ following <A HREF="syntax.html#syntax">syntax</A> groups:
 
 In the first line, the &quot;contained&quot; argument tells Vim that this keyword can
 exist only inside another <A HREF="syntax.html#syntax">syntax</A> item.  The next line has &quot;contains=xTodo&quot;.
-This indicates that the xTodo <A HREF="syntax.html#syntax">syntax</A> element is inside <A HREF="motion.html#it">it</A>.  The result is that
+This indicates that the xTodo <A HREF="syntax.html#syntax">syntax</A> element is inside <A HREF="motion.html#it">它</A>.  The result is that
 the comment line <A HREF="motion.html#as">as</A> a whole is matched with &quot;xComment&quot; and made blue.  The
-<A HREF="motion.html#word">单词</A> TODO inside <A HREF="motion.html#it">it</A> is matched by xTodo and highlighted yellow (highlighting
+<A HREF="motion.html#word">单词</A> TODO inside <A HREF="motion.html#it">它</A> is matched by xTodo and highlighted yellow (highlighting
 for xTodo was setup for this).
 
 
@@ -310,11 +310,11 @@ Suppose you have this text:
 <B><FONT color="#3A6F2B">	} </FONT></B>
 
 First a xBlock starts at the { in the first line.  In the second line another
-{ is found.  Since we are inside a xBlock item, and <A HREF="motion.html#it">it</A> contains itself, a
+{ is found.  Since we are inside a xBlock item, and <A HREF="motion.html#it">它</A> contains itself, a
 nested xBlock item will start here.  Thus the &quot;<A HREF="motion.html#b">b</A> = c&quot; line is inside the
 second level xBlock region.  Then a } is found in the next line, which matches
 with the end <A HREF="pattern.html#pattern">pattern</A> of the region.  This ends the nested xBlock.  Because the
-} is included in the nested region, <A HREF="motion.html#it">it</A> is hidden from the first xBlock region.
+} is included in the nested region, <A HREF="motion.html#it">它</A> is hidden from the first xBlock region.
 Then at the last } the first xBlock region ends.
 
 
@@ -365,7 +365,7 @@ groups but the ones that are listed:
 
 With the &quot;TOP&quot; item you can include all items that don't have a &quot;contained&quot;
 argument.  &quot;CONTAINED&quot; is used to only include items with a &quot;contained&quot;
-argument.  See |<A HREF="syntax.html#:syn-contains">:syn-contains</A>| for the details.
+argument.  见 |<A HREF="syntax.html#:syn-contains">:syn-contains</A>| for the details.
 
 ==============================================================================
 
@@ -418,7 +418,7 @@ region with a different highlight group (in this <A HREF="change.html#case">case
 <B>	:syntax region xInside matchgroup=xParen start=/(/ end=/)/</B>
 
 The &quot;matchgroup&quot; argument applies to the start or end match that comes after
-<A HREF="motion.html#it">it</A>.  In the previous example both start and end are highlighted with xParen.
+<A HREF="motion.html#it">它</A>.  In the previous example both start and end are highlighted with xParen.
 To highlight the end with xParenEnd:
 
 <B>	:syntax region xInside matchgroup=xParen start=/(/</B>
@@ -442,14 +442,14 @@ sure the () highlighting stops at the matching ).  This is one way to <A HREF="d
 <B>	:syntax region cCondNest start=/(/ end=/)/ contained transparent</B>
 
 Now you can give cWhile and cFor different highlighting.  The cCondNest item
-can appear in either of them, but take over the highlighting of the item <A HREF="motion.html#it">it</A> is
+can appear in either of them, but take over the highlighting of the item <A HREF="motion.html#it">它</A> is
 contained in.  The &quot;transparent&quot; argument causes this.
    Notice that the &quot;matchgroup&quot; argument has the same group <A HREF="motion.html#as">as</A> the item
-itself.  Why define <A HREF="motion.html#it">it</A> then?  Well, the side effect of using a matchgroup is
+itself.  Why define <A HREF="motion.html#it">它</A> then?  Well, the side effect of using a matchgroup is
 that contained items are not found in the match with the start item then.
 This avoids that the cCondNest group matches the ( just after the &quot;while&quot; or
-&quot;for&quot;.  If this would happen, <A HREF="motion.html#it">it</A> would span the whole text until the matching
-) and the region would continue after <A HREF="motion.html#it">it</A>.  Now cCondNest only matches after
+&quot;for&quot;.  If this would happen, <A HREF="motion.html#it">它</A> would span the whole text until the matching
+) and the region would continue after <A HREF="motion.html#it">它</A>.  Now cCondNest only matches after
 the match with the start <A HREF="pattern.html#pattern">pattern</A>, thus after the first (.
 
 
@@ -505,13 +505,13 @@ way you handle this is to allow the <A HREF="syntax.html#syntax">syntax</A> item
 <B>	:syntax match xLineContinue "\\$" contained</B>
 
 In this <A HREF="change.html#case">case</A>, although xPreProc normally matches a single line, the group
-contained in <A HREF="motion.html#it">it</A> (namely xLineContinue) lets <A HREF="motion.html#it">it</A> go on for more than one line.
-For example, <A HREF="motion.html#it">it</A> would match both of these lines:
+contained in <A HREF="motion.html#it">它</A> (namely xLineContinue) lets <A HREF="motion.html#it">它</A> go on for more than one line.
+For example, <A HREF="motion.html#it">它</A> would match both of these lines:
 
 <B><FONT color="#3A6F2B">	#define SPAM  spam spam spam \ </FONT></B>
 <B><FONT color="#3A6F2B">			bacon and spam </FONT></B>
 
-In this <A HREF="change.html#case">case</A>, this is what you want.  If <A HREF="motion.html#it">it</A> is not what you want, you can call
+In this <A HREF="change.html#case">case</A>, this is what you want.  If <A HREF="motion.html#it">它</A> is not what you want, you can call
 for the region to be on a single line by adding &quot;excludenl&quot; to the contained
 <A HREF="pattern.html#pattern">pattern</A>.  For example, you want to highlight &quot;end&quot; in xPreProc, but only at
 the end of the line.  To avoid making the xPreProc continue on the next line,
@@ -523,7 +523,7 @@ like xLineContinue does, use &quot;excludenl&quot; like this:
 <B>	:syntax match xLineContinue "\\$" contained</B>
 
 &quot;excludenl&quot; must be placed before the <A HREF="pattern.html#pattern">pattern</A>.  Since &quot;xLineContinue&quot; doesn't
-have &quot;excludenl&quot;, a match with <A HREF="motion.html#it">it</A> will extend xPreProc to the next line <A HREF="motion.html#as">as</A>
+have &quot;excludenl&quot;, a match with <A HREF="motion.html#it">它</A> will extend xPreProc to the next line <A HREF="motion.html#as">as</A>
 before.
 
 ==============================================================================
@@ -542,7 +542,7 @@ and identifiers.  You define them like this:
 <B>	:syntax match xWhile /^while.*/ contains=xNumber,xIdent</B>
 
 You have to repeat the same &quot;contains=&quot; every time.  If you want to add
-another contained item, you have to add <A HREF="motion.html#it">it</A> three times.  <A HREF="autocmd.html#Syntax">Syntax</A> clusters
+another contained item, you have to add <A HREF="motion.html#it">它</A> three times.  <A HREF="autocmd.html#Syntax">Syntax</A> clusters
 simplify these <A HREF="intro.html#definitions">definitions</A> by enabling you to have one cluster stand for
 several <A HREF="syntax.html#syntax">syntax</A> groups.
    To define a cluster for the two items that the three groups contain, use
@@ -589,9 +589,9 @@ This works just like in any other <A HREF="syntax.html#syntax">syntax</A> file.
 Now consider the Perl language.  A Perl <A HREF="usr_41.html#script">script</A> consists of two distinct parts:
 a documentation section in POD format, and a program written in Perl itself.
 The POD section starts with &quot;=head&quot; and ends with &quot;=cut&quot;.
-   You want to define the POD <A HREF="syntax.html#syntax">syntax</A> in one file, and use <A HREF="motion.html#it">it</A> from the Perl
+   You want to define the POD <A HREF="syntax.html#syntax">syntax</A> in one file, and use <A HREF="motion.html#it">它</A> from the Perl
 <A HREF="syntax.html#syntax">syntax</A> file.  The &quot;<A HREF="syntax.html#:syntax">:syntax</A> include&quot; command reads in a <A HREF="syntax.html#syntax">syntax</A> file and stores
-the elements <A HREF="motion.html#it">it</A> defined in a <A HREF="syntax.html#syntax">syntax</A> cluster.  For Perl, the statements are <A HREF="motion.html#as">as</A>
+the elements <A HREF="motion.html#it">它</A> defined in a <A HREF="syntax.html#syntax">syntax</A> cluster.  For Perl, the statements are <A HREF="motion.html#as">as</A>
 follows:
 
 <B>	:syntax include @Pod &lt;sfile&gt;:p:h/pod.vim</B>
@@ -604,9 +604,9 @@ region ends and we go back to the items defined in the Perl file.
    The &quot;<A HREF="syntax.html#:syntax">:syntax</A> include&quot; command is clever enough to ignore a &quot;<A HREF="syntax.html#:syntax">:syntax</A> clear&quot;
 command in the included file.  And an argument such <A HREF="motion.html#as">as</A> &quot;contains=ALL&quot; will
 only contain items defined in the included file, not in the file that includes
-<A HREF="motion.html#it">it</A>.
+<A HREF="motion.html#it">它</A>.
    The &quot;&lt;sfile&gt;:p:h/&quot; part uses the name of the current file (&lt;sfile&gt;),
-expands <A HREF="motion.html#it">it</A> to a full path (:p) and then takes the head (:h).  This results in
+expands <A HREF="motion.html#it">它</A> to a full path (:p) and then takes the head (:h).  This results in
 the directory name of the file.  This causes the pod.vim file in the same
 directory to be included.
 
@@ -614,11 +614,11 @@ directory to be included.
 
 *<A NAME="44.10"></A><B>44.10</B>*	Synchronizing
 
-Compilers have <A HREF="motion.html#it">it</A> easy.  They start at the beginning of a file and parse <A HREF="motion.html#it">it</A>
-straight through.  Vim does not have <A HREF="motion.html#it">it</A> so easy.  It must start in the middle,
-where the editing is being done.  So how does <A HREF="motion.html#it">it</A> tell where <A HREF="motion.html#it">it</A> is?
+Compilers have <A HREF="motion.html#it">它</A> easy.  They start at the beginning of a file and parse <A HREF="motion.html#it">它</A>
+straight through.  Vim does not have <A HREF="motion.html#it">它</A> so easy.  It must start in the middle,
+where the editing is being done.  So how does <A HREF="motion.html#it">它</A> tell where <A HREF="motion.html#it">它</A> is?
    The secret is the &quot;<A HREF="syntax.html#:syntax">:syntax</A> sync&quot; command.  This tells Vim how to figure out
-where <A HREF="motion.html#it">it</A> is.  For example, the following command tells Vim to scan backward
+where <A HREF="motion.html#it">它</A> is.  For example, the following command tells Vim to scan backward
 for the beginning or end of a C-style comment and begin <A HREF="syntax.html#syntax">syntax</A> <A HREF="syntax.html#coloring">coloring</A> from
 there:
 
@@ -632,8 +632,8 @@ before the top of the screen:
 
 <B>	:syntax sync ccomment minlines=10 maxlines=500</B>
 
-If <A HREF="motion.html#it">it</A> cannot figure out where <A HREF="motion.html#it">it</A> is in that space, <A HREF="motion.html#it">it</A> starts looking farther
-and farther back until <A HREF="motion.html#it">it</A> figures out what to <A HREF="diff.html#do">do</A>.  But <A HREF="motion.html#it">it</A> looks no farther
+If <A HREF="motion.html#it">它</A> cannot figure out where <A HREF="motion.html#it">它</A> is in that space, <A HREF="motion.html#it">它</A> starts looking farther
+and farther back until <A HREF="motion.html#it">它</A> figures out what to <A HREF="diff.html#do">do</A>.  But <A HREF="motion.html#it">它</A> looks no farther
 back than 500 lines.  (A large &quot;maxlines&quot; slows down processing.  A small one
 might cause synchronization to fail.)
    To make synchronizing go a bit faster, tell Vim which <A HREF="syntax.html#syntax">syntax</A> items can be
@@ -645,7 +645,7 @@ different <A HREF="syntax.html#syntax">syntax</A> group:
 
 <B>	:syntax sync ccomment xAltComment</B>
 
-If your programming language does not have C-style comments in <A HREF="motion.html#it">it</A>, you can try
+If your programming language does not have C-style comments in <A HREF="motion.html#it">它</A>, you can try
 another <A HREF="eval.html#method">method</A> of synchronization.  The simplest way is to tell Vim to space
 back a number of lines and try to figure out things from there.  The following
 command tells Vim to go back 150 lines and start parsing from there:
@@ -659,10 +659,10 @@ backwards in the file.
 <B>	:syntax sync match {sync-group-name}</B>
 <B>		\ grouphere {group-name} {pattern}</B>
 
-This tells Vim that when <A HREF="motion.html#it">it</A> sees {pattern} the <A HREF="syntax.html#syntax">syntax</A> group named <A HREF="syntax.html#{group-name}">{group-name}</A>
+This tells Vim that when <A HREF="motion.html#it">它</A> sees {pattern} the <A HREF="syntax.html#syntax">syntax</A> group named <A HREF="syntax.html#{group-name}">{group-name}</A>
 begins just after the <A HREF="pattern.html#pattern">pattern</A> given.  The {sync-group-name} is used to give a
 name to this synchronization specification.  For example, the sh scripting
-language begins an if statement with &quot;if&quot; and ends <A HREF="motion.html#it">it</A> with &quot;fi&quot;:
+language begins an if statement with &quot;if&quot; and ends <A HREF="motion.html#it">它</A> with &quot;fi&quot;:
 
 <B><FONT color="#3A6F2B">	if [ --f file.txt ] ; then </FONT></B>
 <B><FONT color="#3A6F2B">		echo "File exists" </FONT></B>
@@ -684,7 +684,7 @@ region.  In particular, you are not inside an if block.
 You also can define matches and regions that are with no &quot;grouphere&quot; or
 &quot;groupthere&quot; arguments.  These groups are for <A HREF="syntax.html#syntax">syntax</A> groups skipped during
 synchronization.  For example, the following skips over anything inside <A HREF="intro.html#{}">{}</A>,
-even if <A HREF="motion.html#it">it</A> would normally match another synchronization <A HREF="eval.html#method">method</A>:
+even if <A HREF="motion.html#it">它</A> would normally match another synchronization <A HREF="eval.html#method">method</A>:
 
 <B>	:syntax sync match xSpecial /{.*}/</B>
 
@@ -694,16 +694,16 @@ More about synchronizing in the reference manual: |<A HREF="syntax.html#:syn-syn
 
 *<A NAME="44.11"></A><B>44.11</B>*	Installing a <A HREF="syntax.html#syntax">syntax</A> file
 
-When your new <A HREF="syntax.html#syntax">syntax</A> file is ready to be used, drop <A HREF="motion.html#it">it</A> in a &quot;<A HREF="syntax.html#syntax">syntax</A>&quot; directory
+When your new <A HREF="syntax.html#syntax">syntax</A> file is ready to be used, drop <A HREF="motion.html#it">它</A> in a &quot;<A HREF="syntax.html#syntax">syntax</A>&quot; directory
 in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  For Unix that would be &quot;~/.config/nvim/syntax&quot;.
   The name of the <A HREF="syntax.html#syntax">syntax</A> file must be equal to the file type, with &quot;.vim&quot;
 added.  Thus for the <A HREF="change.html#x">x</A> language, the full path of the file would be:
 
 <B><FONT color="#3A6F2B">	~/.config/nvim/syntax/x.vim </FONT></B>
 
-You must also make the file type be recognized.  See |<A HREF="usr_43.html#43.2">43.2</A>|.
+You must also make the file type be recognized.  见 |<A HREF="usr_43.html#43.2">43.2</A>|.
 
-If your file works well, you might want to make <A HREF="motion.html#it">it</A> available to other Vim
+If your file works well, you might want to make <A HREF="motion.html#it">它</A> available to other Vim
 users.  First read the next section to make sure your file works well for
 others. Then e-mail it to the Vim maintainer: <A HREF="mailto:maintainer@vim.org">&lt;maintainer@vim.org&gt;</A>. Also 
 explain how the <A HREF="filetype.html#filetype">filetype</A> can be detected.  With a bit of luck your file will
@@ -722,8 +722,8 @@ existing <A HREF="syntax.html#syntax">syntax</A>.  For example, to add new varia
 <B>	:syntax keyword cType off_t uint</B>
 
 Write the file with the same name <A HREF="motion.html#as">as</A> the original <A HREF="syntax.html#syntax">syntax</A> file.  In this <A HREF="change.html#case">case</A>
-&quot;<A HREF="syntax.html#c.vim">c.vim</A>&quot;.  Place <A HREF="motion.html#it">it</A> in a directory near the end of <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  This makes
-<A HREF="motion.html#it">it</A> loaded after the original <A HREF="syntax.html#syntax">syntax</A> file.  For Unix this would be:
+&quot;<A HREF="syntax.html#c.vim">c.vim</A>&quot;.  Place <A HREF="motion.html#it">它</A> in a directory near the end of <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  This makes
+<A HREF="motion.html#it">它</A> loaded after the original <A HREF="syntax.html#syntax">syntax</A> file.  For Unix this would be:
 
 <B><FONT color="#3A6F2B">	~/.config/nvim/after/syntax/c.vim </FONT></B>
 
@@ -731,12 +731,12 @@ Write the file with the same name <A HREF="motion.html#as">as</A> the original <
 
 *<A NAME="44.12"></A><B>44.12</B>*	Portable <A HREF="syntax.html#syntax">syntax</A> file layout
 
-Wouldn't <A HREF="motion.html#it">it</A> be nice if all Vim users exchange <A HREF="syntax.html#syntax">syntax</A> files?  To make this
+Wouldn't <A HREF="motion.html#it">它</A> be nice if all Vim users exchange <A HREF="syntax.html#syntax">syntax</A> files?  To make this
 possible, the <A HREF="syntax.html#syntax">syntax</A> file must follow a few guidelines.
 
 Start with a header that explains what the <A HREF="syntax.html#syntax">syntax</A> file is for, who maintains
-<A HREF="motion.html#it">it</A> and when <A HREF="motion.html#it">it</A> was last updated.  Don't include too much information about
-changes <A HREF="cmdline.html#history">history</A>, not many people will read <A HREF="motion.html#it">it</A>.  Example:
+<A HREF="motion.html#it">它</A> and when <A HREF="motion.html#it">它</A> was last updated.  Don't include too much information about
+changes <A HREF="cmdline.html#history">history</A>, not many people will read <A HREF="motion.html#it">它</A>.  Example:
 
 <B>	" Vim syntax file</B>
 <B>	" Language:	C</B>
@@ -748,11 +748,11 @@ Use the same layout <A HREF="motion.html#as">as</A> the other <A HREF="syntax.ht
 <A HREF="motion.html#as">as</A> an example will save you a lot of time.
 
 Choose a good, descriptive name for your <A HREF="syntax.html#syntax">syntax</A> file.  Use <A HREF="change.html#lowercase">lowercase</A> letters
-and digits.  Don't make <A HREF="motion.html#it">it</A> too long, <A HREF="motion.html#it">it</A> is used in many places: The name of
+and digits.  Don't make <A HREF="motion.html#it">它</A> too long, <A HREF="motion.html#it">它</A> is used in many places: The name of
 the <A HREF="syntax.html#syntax">syntax</A> file &quot;name.vim&quot;, <A HREF="options.html#'filetype'">'filetype'</A>, b:current_syntax and the start of each
 <A HREF="syntax.html#syntax">syntax</A> group (nameType, nameStatement, nameString, etc).
 
-Start with a check for &quot;b:current_syntax&quot;.  If <A HREF="motion.html#it">it</A> is defined, some other
+Start with a check for &quot;b:current_syntax&quot;.  If <A HREF="motion.html#it">它</A> is defined, some other
 <A HREF="syntax.html#syntax">syntax</A> file, earlier in <A HREF="options.html#'runtimepath'">'runtimepath'</A> was already loaded:
 
 <B>	if exists("b:current_syntax")</B>
@@ -767,12 +767,12 @@ Do not include anything that is a user preference.  Don't set <A HREF="options.h
 <A HREF="options.html#'expandtab'">'expandtab'</A>, etc.  These belong in a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A>.
 
 Do not include mappings or <A HREF="map.html#abbreviations">abbreviations</A>.  Only include setting <A HREF="options.html#'iskeyword'">'iskeyword'</A> if
-<A HREF="motion.html#it">it</A> is really necessary for recognizing keywords.
+<A HREF="motion.html#it">它</A> is really necessary for recognizing keywords.
 
 To allow users select their own preferred colors, make a different group name
 for every kind of highlighted item.  Then link each of them to one of the
-standard highlight groups.  That will make <A HREF="motion.html#it">it</A> work with every color scheme.
-If you select specific colors <A HREF="motion.html#it">it</A> will look bad with some color schemes.  And
+standard highlight groups.  That will make <A HREF="motion.html#it">它</A> work with every color scheme.
+If you select specific colors <A HREF="motion.html#it">它</A> will look bad with some color schemes.  And
 don't forget that some people use a different background color, or have only
 eight colors available.
 

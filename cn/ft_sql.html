@@ -308,19 +308,19 @@ you must either create:
     2.  Custom autocmds
     3.  Manual steps / commands
 
-The majority of people work with only one vendor's database product, <A HREF="motion.html#it">it</A> would
+The majority of people work with only one vendor's database product, <A HREF="motion.html#it">它</A> would
 be nice to specify a default in your |<A HREF="init.html">init.vim</A>|.
 
 
 
 2.1 <A HREF="#SQLSetType">SQLSetType</A>					*<A NAME="sqlsettype"></A><B>sqlsettype</B>* *<A NAME="SQLSetType"></A><B>SQLSetType</B>*
-For the people that work with many different databases, <A HREF="motion.html#it">it</A> is nice to be
+For the people that work with many different databases, <A HREF="motion.html#it">它</A> is nice to be
 able to flip between the various vendors rules (indent, <A HREF="syntax.html#syntax">syntax</A>) on a per
 buffer basis, at any time.  The ftplugin/sql.vim file defines this function:
 <B>    SQLSetType</B>
 
 Executing this function without any parameters will set the indent and <A HREF="syntax.html#syntax">syntax</A>
-scripts back to their defaults, see |<A HREF="#sql-type-default">sql-type-default</A>|.  You can use the <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>
+scripts back to their defaults, 见 |<A HREF="#sql-type-default">sql-type-default</A>|.  You can use the <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>
 key to complete the optional parameter.
 
 After typing the function name and a space, you can use the completion to
@@ -424,7 +424,7 @@ The defaults static maps are:
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;s &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlStatement')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
 
 The use of &quot;&lt;C-C&gt;&quot; can be user chosen by using the following in your |<A HREF="init.html">init.vim</A>|
-<A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> may not work properly on all platforms:
+<A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> may not work properly on all platforms:
 <B>    let g:ftplugin_sql_omni_key = '&lt;C-C&gt;'</B>
 
 The static maps (which are based on the <A HREF="syntax.html#syntax">syntax</A> highlight groups) follow this
@@ -528,7 +528,7 @@ the space bar):
 
 The SQL completion <A HREF="usr_05.html#plugin">plugin</A> caches various lists that are displayed in
 the popup<A HREF="windows.html#window">窗口</A>.  This makes the re-displaying of these lists very
-fast.  If new tables or columns are added to the database <A HREF="motion.html#it">it</A> may become
+fast.  If new tables or columns are added to the database <A HREF="motion.html#it">它</A> may become
 necessary to clear the plugins cache.  The default map for this is:
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;R &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('ResetCache')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
 
@@ -664,7 +664,7 @@ In INSERT mode after typing the final &quot;c.&quot; which is an alias for the
 &quot;customer&quot; table, you can press either &lt;C-C&gt;c or &lt;C-X&gt;&lt;C-O&gt;.  This will
 popup a <A HREF="eval.html#list">list</A> of columns for the customer table.  It does this by looking back
 to the beginning of the select statement and finding a <A HREF="eval.html#list">list</A> of the tables
-specified in the FROM clause.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">it</A> notes that in the <A HREF="eval.html#string">string</A>
+specified in the FROM clause.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> notes that in the <A HREF="eval.html#string">string</A>
 &quot;customer c&quot;, &quot;<A HREF="change.html#c">c</A>&quot; is an alias for the customer table.  The optional &quot;AS&quot;
 keyword is also supported, &quot;customer AS c&quot;.
 
@@ -688,7 +688,7 @@ your YXXYinit.vim|:
 <B>    omni_sql_no_default_maps</B>
         - Default: This variable is not defined
 	- If this variable is defined, no maps are created for OMNI
-	  completion.  See |<A HREF="#sql-completion-maps">sql-completion-maps</A>| for further discussion.
+	  completion.  见 |<A HREF="#sql-completion-maps">sql-completion-maps</A>| for further discussion.
 
 <B>    omni_sql_use_tbl_alias</B>
  	- Default: a
@@ -702,7 +702,7 @@ your YXXYinit.vim|:
 <B>		a - ask to confirm the alias name</B>
  
 	  An alias is determined following a few rules:
-	       1.  If the table name has an '<A HREF="motion.html#_">_</A>', then use <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> a separator:
+	       1.  If the table name has an '<A HREF="motion.html#_">_</A>', then use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> a separator:
 <B>		   MY_TABLE_NAME --&gt; MTN</B>
 <B>		   my_table_name --&gt; mtn</B>
 <B>		   My_table_NAME --&gt; MtN</B>
@@ -807,9 +807,9 @@ Do not edit ftplugin/sql.vim directly!  If you change this file your changes
 will be over written on future updates.  Vim has a special directory structure
 which allows you to make customizations without <A HREF="change.html#changing">changing</A> the files that are
 included with the Vim <A HREF="intro.html#distribution">distribution</A>.  If you wish to customize the maps
-create an after/ftplugin/sql.vim (see |<A HREF="options.html#after-directory">after-directory</A>|) and place the same
-maps from the ftplugin/sql.vim in <A HREF="motion.html#it">it</A> using your own key strokes.  &lt;C-C&gt; was
-chosen since <A HREF="motion.html#it">it</A> will work on both Windows and *nix platforms.  On the <A HREF="windows.html#windows">windows</A>
+create an after/ftplugin/sql.vim (见 |<A HREF="options.html#after-directory">after-directory</A>|) and place the same
+maps from the ftplugin/sql.vim in <A HREF="motion.html#it">它</A> using your own key strokes.  &lt;C-C&gt; was
+chosen since <A HREF="motion.html#it">它</A> will work on both Windows and *nix platforms.  On the <A HREF="windows.html#windows">windows</A>
 platform you can also use &lt;C-Space&gt; or <A HREF="intro.html#ALT">ALT</A> keys.
 
 
@@ -837,7 +837,7 @@ the <A HREF="syntax.html#syntax">syntax</A> items for Perl.
 Step 2
 Manually setting the <A HREF="filetype.html#filetype">filetype</A> to 'sql' will also fire the appropriate <A HREF="filetype.html#filetype">filetype</A>
 files ftplugin/sql.vim.  This file will define a number of buffer specific
-maps for SQL completion, see |<A HREF="#sql-completion-maps">sql-completion-maps</A>|.  Now these maps have
+maps for SQL completion, 见 |<A HREF="#sql-completion-maps">sql-completion-maps</A>|.  Now these maps have
 been created and the SQL completion <A HREF="usr_05.html#plugin">plugin</A> has been initialized.  All SQL
 <A HREF="syntax.html#syntax">syntax</A> items have been cached in preparation.  The SQL <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_41.html#script">script</A> detects
 we are attempting to use two different completion plugins.  Since the SQL maps

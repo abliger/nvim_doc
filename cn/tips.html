@@ -85,7 +85,7 @@ These are just a few that we thought would be helpful for many users.
 You can find many more <A HREF="#tips">tips</A> on the wiki.  The URL can be found on
 	<A HREF="http://www.vim.org">http://www.vim.org</A>
 
-Don't forget to browse the user manual, <A HREF="motion.html#it">it</A> also contains lots of useful <A HREF="#tips">tips</A>
+Don't forget to browse the user manual, <A HREF="motion.html#it">它</A> also contains lots of useful <A HREF="#tips">tips</A>
 |<A HREF="usr_toc.html">usr_toc.txt</A>|.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
@@ -95,7 +95,7 @@ Don't forget to browse the user manual, <A HREF="motion.html#it">it</A> also con
 Editing C programs					*<A NAME="C-editing"></A><B>C-editing</B>*
 
 There are quite a few features in Vim to help you edit C program files.  Here
-is an overview with <A HREF="tagsrch.html#tags">tags</A> to jump to:
+is an overview with <A HREF="tagsrch.html#tags">标签</A> to jump to:
 
 |<A HREF="usr_29.html">usr_29.txt</A>|		Moving through programs chapter in the user manual.
 |<A HREF="usr_30.html">usr_30.txt</A>|		Editing programs chapter in the user manual.
@@ -113,10 +113,10 @@ is an overview with <A HREF="tagsrch.html#tags">tags</A> to jump to:
 |<A HREF="tagsrch.html#[d">[d</A>|			Search for define under cursor in current and included
 			files.
 
-|<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>|		Jump to <A HREF="tagsrch.html#tag">tag</A> under cursor (e.g., definition of a
+|<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>|		Jump to <A HREF="tagsrch.html#tag">标签</A> under cursor (e.g., definition of a
 			function).
 |<A HREF="tagsrch.html#CTRL-T">CTRL-T</A>|		Jump back to before a <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> command.
-|<A HREF="tagsrch.html#:tselect">:tselect</A>|		<A HREF="visual.html#Select">Select</A> one <A HREF="tagsrch.html#tag">tag</A> out of a <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">tags</A>.
+|<A HREF="tagsrch.html#:tselect">:tselect</A>|		<A HREF="visual.html#Select">Select</A> one <A HREF="tagsrch.html#tag">标签</A> out of a <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">标签</A>.
 
 |<A HREF="pattern.html#gd">gd</A>|			Go to Declaration of local variable under cursor.
 |<A HREF="pattern.html#gD">gD</A>|			Go to Declaration of global variable under cursor.
@@ -142,7 +142,7 @@ is an overview with <A HREF="tagsrch.html#tags">tags</A> to jump to:
 
 Finding where identifiers are used			*<A NAME="ident-search"></A><B>ident-search</B>*
 
-You probably already know that |<A HREF="tagsrch.html#tags">tags</A>| can be used to jump to the place where a
+You probably already know that |<A HREF="tagsrch.html#tags">标签</A>| can be used to jump to the place where a
 function or variable is defined.  But sometimes you wish you could jump to all
 the places where a function or variable is being used.  This is possible in
 two ways:
@@ -158,7 +158,7 @@ What you need:
 - The GNU id-tools installed (mkid is needed to create ID and <A HREF="quickfix.html#lid">lid</A> is needed to
   use the macros).
 - An identifier database file called &quot;ID&quot; in the current directory.  You can
-  create <A HREF="motion.html#it">it</A> with the shell command &quot;mkid file1 file2 ..&quot;.
+  create <A HREF="motion.html#it">它</A> with the shell command &quot;mkid file1 file2 ..&quot;.
 
 Put this in your YXXYinit.vim|:
 <B>	map _u :call ID_search()&lt;Bar&gt;execute "/\\&lt;" .. g:word .. "\\&gt;"&lt;CR&gt;</B>
@@ -171,7 +171,7 @@ Put this in your YXXYinit.vim|:
 <B>	  execute "next " .. x</B>
 <B>	endfun</B>
 
-To use <A HREF="motion.html#it">it</A>, place the cursor on a <A HREF="motion.html#word">单词</A>, type &quot;_u&quot; and vim will load the file
+To use <A HREF="motion.html#it">它</A>, place the cursor on a <A HREF="motion.html#word">单词</A>, type &quot;_u&quot; and vim will load the file
 that contains the <A HREF="motion.html#word">单词</A>.  Search for the next occurrence of the <A HREF="motion.html#word">单词</A> in the
 same file with &quot;<A HREF="pattern.html#n">n</A>&quot;.  Go to the next file with &quot;_n&quot;.
 
@@ -266,7 +266,7 @@ Breaking up restoring the position:
 	<A HREF="scroll.html#zt">zt</A>	scroll to move this line to the top of the<A HREF="windows.html#window">窗口</A>
 	`s	jump to the original position of the cursor
 
-For something more advanced see |<A HREF="builtin.html#winsaveview()">winsaveview()</A>| and |<A HREF="builtin.html#winrestview()">winrestview()</A>|.
+For something more advanced 见 |<A HREF="builtin.html#winsaveview()">winsaveview()</A>| and |<A HREF="builtin.html#winrestview()">winrestview()</A>|.
 
 ==============================================================================
 
@@ -280,7 +280,7 @@ charset.c
 digraph.c
 <A HREF="eval.html#...">...</A>
 
-and I want to rename *.c *.bla.  I'd <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">it</A> like this:
+and I want to rename *.c *.bla.  I'd <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> like this:
 
 <B>	$ vim</B>
 <B>	:r !ls *.c</B>
@@ -306,7 +306,7 @@ Example for using a <A HREF="usr_41.html#script">script</A> file to change a nam
 <B>		vim *.let</B>
 <B>		argdo source subs.vim</B>
 
-See |<A HREF="editing.html#:argdo">:argdo</A>|.
+见 |<A HREF="editing.html#:argdo">:argdo</A>|.
 
 ==============================================================================
 
@@ -317,7 +317,7 @@ can also slow down <A HREF="editing.html#wildcard">wildcard</A> expansion on Uni
 increase the speed.
 
 If your .cshrc (or other file, depending on the shell used) is very long, you
-should separate <A HREF="motion.html#it">it</A> into a section for interactive use and a section for
+should separate <A HREF="motion.html#it">它</A> into a section for interactive use and a section for
 non-interactive use (often called secondary shells).  When you execute a
 command from Vim like &quot;:!ls&quot;, you <A HREF="diff.html#do">do</A> not need the interactive things (for
 example, setting the prompt).  Put the stuff that is not needed after these
@@ -433,7 +433,7 @@ Hex editing					*<A NAME="hex-editing"></A><B>hex-editing</B>* *<A NAME="using-x
 See section |<A HREF="usr_23.html#23.3">23.3</A>| of the user manual.
 
 If one has a particular extension that one uses for binary files (such <A HREF="motion.html#as">as</A> exe,
-bin, etc), you may find <A HREF="motion.html#it">it</A> helpful to automate the process with the following
+bin, etc), you may find <A HREF="motion.html#it">它</A> helpful to automate the process with the following
 bit of autocmds for your |<A HREF="init.html">init.vim</A>|.  Change that &quot;*.bin&quot; to whatever
 comma-separated <A HREF="eval.html#list">list</A> of extension(s) you find yourself wanting to edit:
 
@@ -471,14 +471,14 @@ get the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation"
 <B> autocmd BufNewFile,BufReadPre * normal i</B>
 
 Another <A HREF="eval.html#method">method</A>, perhaps better, is to use the &quot;<A HREF="eval.html#:execute">:execute</A>&quot; command.  In the
-<A HREF="eval.html#string">string</A> you can use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> by preceding <A HREF="motion.html#it">it</A> with a <A HREF="intro.html#backslash">backslash</A>.  Don't
+<A HREF="eval.html#string">string</A> you can use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> by preceding <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A>.  Don't
 forget to double the number of existing backslashes and put a <A HREF="intro.html#backslash">backslash</A> before
 &#39;&#34;''.
 
 <B>  autocmd BufNewFile,BufReadPre * exe "normal O\&lt;C-R&gt;%\&lt;Esc&gt;:.g/\\./s/\\./\\\\./g\&lt;CR&gt;0\"9y$u:menu Buffers.\&lt;C-R&gt;9 :buffer \&lt;C-R&gt;%\&lt;C-V&gt;\&lt;CR&gt;\&lt;CR&gt;"</B>
 
-For a real buffer menu, user <A HREF="eval.html#functions">functions</A> should be used (see |<A HREF="eval.html#:function">:function</A>|), but
-then the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> isn't used, which defeats using <A HREF="motion.html#it">it</A> <A HREF="motion.html#as">as</A> an example here.
+For a real buffer menu, user <A HREF="eval.html#functions">functions</A> should be used (见 |<A HREF="eval.html#:function">:function</A>|), but
+then the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> isn't used, which defeats using <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> an example here.
 
 ==============================================================================
 
@@ -491,7 +491,7 @@ This example shows the use of a few advanced tricks:
 - using |<A HREF="pattern.html#:match">:match</A>| to highlight something
 - using a |<A HREF="pattern.html#pattern">pattern</A>| to match a specific position in the file.
 
-This should be put in a Vim <A HREF="usr_41.html#script">script</A> file, since <A HREF="motion.html#it">it</A> uses <A HREF="map.html#script-local">script-local</A> <A HREF="eval.html#variables">variables</A>.
+This should be put in a Vim <A HREF="usr_41.html#script">script</A> file, since <A HREF="motion.html#it">它</A> uses <A HREF="map.html#script-local">script-local</A> <A HREF="eval.html#variables">variables</A>.
 It skips matches in strings or comments, unless the cursor started in <A HREF="eval.html#string">string</A>
 or comment.  This requires <A HREF="syntax.html#syntax">syntax</A> highlighting.
 
@@ -546,7 +546,7 @@ A slightly more advanced version is used in the |<A HREF="pi_paren.html#matchpar
 
 Opening help in the current<A HREF="windows.html#window">窗口</A>				*<A NAME="help-curwin"></A><B>help-curwin</B>*
 
-By default, help is displayed in a split<A HREF="windows.html#window">窗口</A>.  If you prefer <A HREF="motion.html#it">it</A> opens in
+By default, help is displayed in a split<A HREF="windows.html#window">窗口</A>.  If you prefer <A HREF="motion.html#it">它</A> opens in
 the current<A HREF="windows.html#window">窗口</A>, try this custom `:HelpCurwin` command:
 
 <B>	command -bar -nargs=? -complete=help HelpCurwin execute s:HelpCurwin(&lt;q-args&gt;)</B>

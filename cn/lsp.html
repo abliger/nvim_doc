@@ -81,7 +81,7 @@
 
 <A HREF="#LSP">LSP</A> client/framework                                     *<A NAME="lsp"></A><B>lsp</B>* *<A NAME="LSP"></A><B>LSP</B>*
 
-Nvim supports the Language Server Protocol (LSP), which means <A HREF="motion.html#it">it</A> acts <A HREF="motion.html#as">as</A>
+Nvim supports the Language Server Protocol (LSP), which means <A HREF="motion.html#it">它</A> acts <A HREF="motion.html#as">as</A>
 a client to <A HREF="#LSP">LSP</A> servers and includes a <A HREF="lua.html#Lua">Lua</A> framework `vim.lsp` for building
 enhanced <A HREF="#LSP">LSP</A> tools.
 
@@ -116,10 +116,10 @@ Follow these steps to get <A HREF="#LSP">LSP</A> features:
 <B>        root_dir = vim.fs.dirname(vim.fs.find({'setup.py', 'pyproject.toml'}, { upward = true })[1]),</B>
 <B>     })</B>
  
-     See |<A HREF="vim.html">vim.lsp.start</A>| for details.
+     见 |<A HREF="vim.html">vim.lsp.start</A>| for details.
 
   3. Configure keymaps and autocmds to utilize <A HREF="#LSP">LSP</A> features.
-     See |<A HREF="#lsp-config">lsp-config</A>|.
+     见 |<A HREF="#lsp-config">lsp-config</A>|.
 <A HREF="change.html#&lt;">&lt;</A>
 
                                                         *<A NAME="lsp-config"></A><B>lsp-config</B>*
@@ -202,7 +202,7 @@ FAQ                                                     *<A NAME="lsp-faq"></A><
      &quot;after/ftplugin/python.vim&quot;.
 
 - <A HREF="repeat.html#Q">Q</A>: How <A HREF="diff.html#do">do</A> I run a request synchronously (e.g. for <A HREF="change.html#formatting">formatting</A> on file save)?
-  A: Use the `_sync` variant of the function provided by |<A HREF="#lsp-buf">lsp-buf</A>|, if <A HREF="motion.html#it">it</A>
+  A: Use the `_sync` variant of the function provided by |<A HREF="#lsp-buf">lsp-buf</A>|, if <A HREF="motion.html#it">它</A>
      exists.
 
      E.g. code <A HREF="change.html#formatting">formatting</A>:
@@ -220,7 +220,7 @@ FAQ                                                     *<A NAME="lsp-faq"></A><
      <A HREF="intro.html#definitions">definitions</A> in external libraries and more.
 
      Treesitter is a language parsing library that provides excellent tools
-     for incrementally parsing text and handling <A HREF="message.html#errors">errors</A>. This makes <A HREF="motion.html#it">it</A> a great
+     for incrementally parsing text and handling <A HREF="message.html#errors">errors</A>. This makes <A HREF="motion.html#it">它</A> a great
      fit for editors to understand the contents of the current file for things
      like <A HREF="syntax.html#syntax">syntax</A> highlighting, simple goto-definitions, scope analysis and
      more.
@@ -288,11 +288,11 @@ For |<A HREF="intro.html#lsp-request">lsp-request</A>|, each |<A HREF="#lsp-hand
             {err}       (table|nil)
                             When the language server is unable to complete a
                             request, a table with information about the error
-                            is sent. Otherwise, <A HREF="motion.html#it">it</A> is `nil`. See |<A HREF="#lsp-response">lsp-response</A>|.
+                            is sent. Otherwise, <A HREF="motion.html#it">它</A> is `nil`. 见 |<A HREF="#lsp-response">lsp-response</A>|.
             {result}    (Result &#124; Params &#124; nil)
                             When the language server is able to successfully
                             complete a request, this contains the `result` key
-                            of the response. See |<A HREF="#lsp-response">lsp-response</A>|.
+                            of the response. 见 |<A HREF="#lsp-response">lsp-response</A>|.
             {ctx}       (table)
                             <A HREF="repeat.html#Context">Context</A> describes additional calling state
                             associated with the handler. It consists of the
@@ -334,10 +334,10 @@ For |<A HREF="#lsp-notification">lsp-notification</A>|, each |<A HREF="#lsp-hand
 <B><FONT color="#3A6F2B">        Parameters: </FONT></B>
             {err}       (nil)
                             This is always `nil`.
-                            See |<A HREF="#lsp-notification">lsp-notification</A>|
+                            见 |<A HREF="#lsp-notification">lsp-notification</A>|
             {result}    (Result)
                             This contains the `params` key of the notification.
-                            See |<A HREF="#lsp-notification">lsp-notification</A>|
+                            见 |<A HREF="#lsp-notification">lsp-notification</A>|
             {ctx}       (table)
                             <A HREF="repeat.html#Context">Context</A> describes additional calling state
                             associated with the handler. It consists of the
@@ -624,7 +624,7 @@ buf_attach_client({bufnr}, {client_id})          *<A NAME="vim.lsp.buf_attach_cl
 buf_detach_client({bufnr}, {client_id})          *<A NAME="vim.lsp.buf_detach_client()"></A><B>vim.lsp.buf_detach_client()</B>*
                 Detaches client from the specified buffer. Note: While the
                 server is notified that the text document (buffer) was closed,
-                <A HREF="motion.html#it">it</A> is still able to send notifications should <A HREF="motion.html#it">it</A> ignore this
+                <A HREF="motion.html#it">它</A> is still able to send notifications should <A HREF="motion.html#it">它</A> ignore this
                 notification.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -662,7 +662,7 @@ buf_request({bufnr}, {method}, {params}, {handler})
                     {method}   (string) <A HREF="#LSP">LSP</A> <A HREF="eval.html#method">method</A> name
                     {params}   (optional, table) Parameters to send to the
                                server
-                    {handler}  (optional, function) See |<A HREF="#lsp-handler">lsp-handler</A>| If nil,
+                    {handler}  (optional, function) 见 |<A HREF="#lsp-handler">lsp-handler</A>| If nil,
                                follows resolution strategy defined in
                                |<A HREF="#lsp-handler-configuration">lsp-handler-configuration</A>|
 
@@ -731,7 +731,7 @@ client()                                                      *<A NAME="vim.lsp.
                     {handler} is not specified, If one is not found there,
                     then an error will occur. Returns: {status},
                     {[client_id]}. {status} is a <A HREF="options.html#boolean">boolean</A> indicating if the
-                    notification was successful. If <A HREF="motion.html#it">it</A> is `false`, then <A HREF="motion.html#it">it</A>
+                    notification was successful. If <A HREF="motion.html#it">它</A> is `false`, then <A HREF="motion.html#it">它</A>
                     will always be `false` (the client has shutdown). If
                     {status} is `true`, the function returns {request_id} <A HREF="motion.html#as">as</A>
                     the second result. You can use this with
@@ -746,28 +746,28 @@ client()                                                      *<A NAME="vim.lsp.
                     was unsuccessful returns `nil`.
                   • notify(method, params) Sends a notification to an <A HREF="#LSP">LSP</A>
                     server. Returns: a <A HREF="options.html#boolean">boolean</A> to indicate if the notification
-                    was successful. If <A HREF="motion.html#it">it</A> is false, then <A HREF="motion.html#it">it</A> will always be
+                    was successful. If <A HREF="motion.html#it">它</A> is false, then <A HREF="motion.html#it">它</A> will always be
                     false (the client has shutdown).
                   • cancel_request(id) Cancels a request with a given request
                     id. Returns: same <A HREF="motion.html#as">as</A> `notify()`.
                   • stop([force]) Stops a client, optionally with force. By
-                    default, <A HREF="motion.html#it">it</A> will just ask the server to shutdown without
+                    default, <A HREF="motion.html#it">它</A> will just ask the server to shutdown without
                     force. If you request to stop a client which has
-                    previously been requested to shutdown, <A HREF="motion.html#it">it</A> will
+                    previously been requested to shutdown, <A HREF="motion.html#it">它</A> will
                     automatically escalate and force shutdown.
                   • is_stopped() Checks whether a client is stopped. Returns:
                     true if the client is fully stopped.
                   • on_attach(client, bufnr) Runs the on_attach function from
-                    the client's <A HREF="starting.html#config">config</A> if <A HREF="motion.html#it">it</A> was defined. Useful for
+                    the client's <A HREF="starting.html#config">config</A> if <A HREF="motion.html#it">它</A> was defined. Useful for
                     buffer-local setup.
 
                 • Members
                   • {id} (number): The id allocated to the client.
                   • {name} (string): If a name is specified on creation, that
-                    will be used. Otherwise <A HREF="motion.html#it">it</A> is just the client id. This is
+                    will be used. Otherwise <A HREF="motion.html#it">它</A> is just the client id. This is
                     used for logs and <A HREF="message.html#messages">messages</A>.
                   • {rpc} (table): <A HREF="api.html#RPC">RPC</A> client object, for low level
-                    interaction with the client. See |<A HREF="vim.html">vim.lsp.rpc.start()</A>|.
+                    interaction with the client. 见 |<A HREF="vim.html">vim.lsp.rpc.start()</A>|.
                   • {offset_encoding} (string): The encoding used for
                     communicating with the server. You can modify this in the
                     `config`'s `on_init` <A HREF="eval.html#method">method</A> before text is sent to the
@@ -931,7 +931,7 @@ start({config}, {opts})                                      *<A NAME="vim.lsp.s
 <B>    })</B>
  
 
-                See |<A HREF="lsp.html">lsp.start_client</A>| for all available <A HREF="options.html#options">options</A>. The most
+                见 |<A HREF="lsp.html">lsp.start_client</A>| for all available <A HREF="options.html#options">options</A>. The most
                 important are:
 
                 `name` is an arbitrary name for the <A HREF="#LSP">LSP</A> client. It should be
@@ -957,7 +957,7 @@ start({config}, {opts})                                      *<A NAME="vim.lsp.s
                 like the dependencies of your project and they tend to index
                 the contents within the project folder.
 
-                To ensure a language server is only started for languages <A HREF="motion.html#it">it</A>
+                To ensure a language server is only started for languages <A HREF="motion.html#it">它</A>
                 can handle, make sure to call |<A HREF="vim.html">vim.lsp.start</A>| within a
                 |<A HREF="autocmd.html#FileType">FileType</A>| autocmd. Either use |<A HREF="autocmd.html#:au">:au</A>|, |<A HREF="api.html#nvim_create_autocmd()">nvim_create_autocmd()</A>|
                 or put the call in a `ftplugin/&lt;filetype_name&gt;.lua` (See
@@ -1001,7 +1001,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
 <B>                 { "PRODUCTION=true"; "TEST=123"; PORT = 8080; HOST = "0.0.0.0"; }</B>
  
                     {detached}           (boolean, default true) Daemonize the
-                                         server process so that <A HREF="motion.html#it">it</A> runs in a
+                                         server process so that <A HREF="motion.html#it">它</A> runs in a
                                          separate process group from Nvim.
                                          Nvim will shutdown the process on
                                          exit, but if Nvim fails to exit
@@ -1024,7 +1024,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          • Note: To send an empty dictionary
                                            use
                                            `{[vim.type_idx]=vim.types.dictionary}`,
-                                           else <A HREF="motion.html#it">it</A> will be encoded <A HREF="motion.html#as">as</A> an
+                                           else <A HREF="motion.html#it">它</A> will be encoded <A HREF="motion.html#as">as</A> an
                                            array.
                     {handlers}           Map of language server <A HREF="eval.html#method">method</A> names
                                          to |<A HREF="#lsp-handler">lsp-handler</A>|
@@ -1061,7 +1061,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          throws an error. `code` is a number
                                          describing the error. Other arguments
                                          may be passed depending on the error
-                                         kind. See |<A HREF="vim.html">vim.lsp.rpc.client_errors</A>|
+                                         kind. 见 |<A HREF="vim.html">vim.lsp.rpc.client_errors</A>|
                                          for possible <A HREF="message.html#errors">errors</A>. Use
                                          `vim.lsp.rpc.client_errors[code]` to
                                          get human-friendly name.
@@ -1081,7 +1081,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          send. For example, clangd sends
                                          `initialize_result.offsetEncoding` if
                                          `capabilities.offsetEncoding` was
-                                         sent to <A HREF="motion.html#it">it</A>. You can only modify the
+                                         sent to <A HREF="motion.html#it">它</A>. You can only modify the
                                          `client.offset_encoding` here before
                                          any notifications are sent. Most
                                          language servers expect to be sent
@@ -1158,23 +1158,23 @@ tagfunc({...})                                             *<A NAME="vim.lsp.tag
 
                 When used with normal mode commands (e.g. |<A HREF="tagsrch.html#CTRL-]">CTRL-]</A>|) this will
                 invoke the &quot;textDocument/definition&quot; <A HREF="#LSP">LSP</A> <A HREF="eval.html#method">method</A> to find the
-                <A HREF="tagsrch.html#tag">tag</A> under the cursor. Otherwise, uses &quot;workspace/symbol&quot;. If
+                <A HREF="tagsrch.html#tag">标签</A> under the cursor. Otherwise, uses &quot;workspace/symbol&quot;. If
                 no results are returned from any <A HREF="#LSP">LSP</A> servers, falls back to
-                using built-in <A HREF="tagsrch.html#tags">tags</A>.
+                using built-in <A HREF="tagsrch.html#tags">标签</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {pattern}  <A HREF="pattern.html#Pattern">Pattern</A> used to find a workspace symbol
-                    {flags}    See |<A HREF="tagsrch.html#tag-function">tag-function</A>|
+                    {flags}    见 |<A HREF="tagsrch.html#tag-function">tag-function</A>|
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    A <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">tags</A>
+                    A <A HREF="eval.html#list">list</A> of matching <A HREF="tagsrch.html#tags">标签</A>
 
 
 with({handler}, {override_config})                            *<A NAME="vim.lsp.with()"></A><B>vim.lsp.with()</B>*
                 Function to manage overriding defaults for <A HREF="#LSP">LSP</A> handlers.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {handler}          (function) See |<A HREF="#lsp-handler">lsp-handler</A>|
+                    {handler}          (function) 见 |<A HREF="#lsp-handler">lsp-handler</A>|
                     {override_config}  (table) Table containing the keys to
                                        override behavior of the {handler}
 
@@ -1229,7 +1229,7 @@ completion({context})                               *<A NAME="vim.lsp.buf.comple
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {context}  (context support not yet implemented)
                                Additional information about the <A HREF="repeat.html#context">context</A> in
-                               which a completion was triggered (how <A HREF="motion.html#it">it</A> was
+                               which a completion was triggered (how <A HREF="motion.html#it">它</A> was
                                triggered, and by which trigger character, if
                                applicable)
 
@@ -1537,7 +1537,7 @@ get_namespace({client_id})                *<A NAME="vim.lsp.diagnostic.get_names
 on_publish_diagnostics({_}, {result}, {ctx}, {config})
                 |<A HREF="#lsp-handler">lsp-handler</A>| for the <A HREF="eval.html#method">method</A> &quot;textDocument/publishDiagnostics&quot;
 
-                See |<A HREF="vim.html">vim.diagnostic.config()</A>| for configuration <A HREF="options.html#options">options</A>.
+                见 |<A HREF="vim.html">vim.diagnostic.config()</A>| for configuration <A HREF="options.html#options">options</A>.
                 Handler-specific configuration can be set using
                 YXXYvim.lsp.with()|:
 
@@ -1640,7 +1640,7 @@ hover({_}, {result}, {ctx}, {config})               *<A NAME="vim.lsp.handlers.h
                     {config}  (table) Configuration table.
                               • border: (default=nil)
                                 • Add borders to the floating<A HREF="windows.html#window">窗口</A>
-                                • See |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|
+                                • 见 |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|
 
 
                                            *<A NAME="vim.lsp.handlers.signature_help()"></A><B>vim.lsp.handlers.signature_help()</B>*
@@ -1661,7 +1661,7 @@ signature_help({_}, {result}, {ctx}, {config})
                     {config}  (table) Configuration table.
                               • border: (default=nil)
                                 • Add borders to the floating<A HREF="windows.html#window">窗口</A>
-                                • See |<A HREF="vim.html">vim.api.nvim_open_win()</A>|
+                                • 见 |<A HREF="vim.html">vim.api.nvim_open_win()</A>|
 
 
 ==============================================================================
@@ -2011,7 +2011,7 @@ open_floating_preview({contents}, {syntax}, {opts})
                                 • pad_bottom: (number) number of lines to pad
                                   contents at bottom
                                 • focus_id: (string) if a popup with this id
-                                  is opened, then focus <A HREF="motion.html#it">it</A>
+                                  is opened, then focus <A HREF="motion.html#it">它</A>
                                 • close_events: (table) <A HREF="eval.html#list">list</A> of <A HREF="autocmd.html#events">events</A> that
                                   closes the floating<A HREF="windows.html#window">窗口</A>
                                 • focusable: (boolean, default true) Make
@@ -2156,7 +2156,7 @@ try_trim_markdown_code_blocks({lines})
                     {lines}  (table) <A HREF="eval.html#list">list</A> of lines
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (string) <A HREF="filetype.html#filetype">filetype</A> or 'markdown' if <A HREF="motion.html#it">it</A> was unchanged.
+                    (string) <A HREF="filetype.html#filetype">filetype</A> or 'markdown' if <A HREF="motion.html#it">它</A> was unchanged.
 
 
 ==============================================================================
@@ -2264,7 +2264,7 @@ rpc_response_error({code}, {message}, {data})
                                                          *<A NAME="vim.lsp.rpc.start()"></A><B>vim.lsp.rpc.start()</B>*
 start({cmd}, {cmd_args}, {dispatchers}, {extra_spawn_params})
                 Starts an <A HREF="#LSP">LSP</A> server process and create an <A HREF="#LSP">LSP</A> <A HREF="api.html#RPC">RPC</A> client
-                object to interact with <A HREF="motion.html#it">it</A>. Communication with the server is
+                object to interact with <A HREF="motion.html#it">它</A>. Communication with the server is
                 currently limited to stdio.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>

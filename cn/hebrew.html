@@ -94,7 +94,7 @@ and <A HREF="options.html#'rightleftcmd'">'rightleftcmd'</A>.
 The <A HREF="options.html#'rightleft'">'rightleft'</A> mode reverses the display order, so characters are displayed
 from right to left instead of the usual left to right.  This is useful
 primarily when editing Hebrew or other Middle-Eastern languages.
-See |<A HREF="rileft.html">rileft.txt</A>| for further details.
+见 |<A HREF="rileft.html">rileft.txt</A>| for further details.
 
 Details
 +  Options:
@@ -120,7 +120,7 @@ Details
    +  Under Unix, ISO 8859-8 encoding (Hebrew letters codes: 224-250).
    +  Under MS DOS, PC encoding (Hebrew letters codes: 128-154).
       These are defaults, that can be overridden using the <A HREF="options.html#'aleph'">'aleph'</A> option.
-   +  You should prefer using UTF8, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">it</A> supports the combining-characters
+   +  You should prefer using UTF8, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> supports the combining-characters
       ('deco' does nothing if UTF8 encoding is not active).
 
 +  Vim arguments:
@@ -129,7 +129,7 @@ Details
 
 +  Keyboard:
    +  The <A HREF="options.html#'allowrevins'">'allowrevins'</A> option enables the CTRL-_ command in <A HREF="intro.html#Insert">插入</A>模式 and
-      in <A HREF="cmdline.html#Command-line">Command-line</A> mode.
+      in <A HREF="cmdline.html#Command-line">命令行</A>模式.
 
    +  CTRL-_ in insert/replace modes toggles <A HREF="options.html#'revins'">'revins'</A> and <A HREF="options.html#'hkmap'">'hkmap'</A> <A HREF="motion.html#as">as</A> follows:
 
@@ -159,7 +159,7 @@ Details
 	  ז ס ב ה נ מ צ ת ץ .
 
       This is also the keymap when 'keymap=hebrew' is set.  The advantage of
-      <A HREF="options.html#'keymap'">'keymap'</A> is that <A HREF="motion.html#it">it</A> works properly when using UTF8, e.g. <A HREF="motion.html#it">it</A> inserts the
+      <A HREF="options.html#'keymap'">'keymap'</A> is that <A HREF="motion.html#it">它</A> works properly when using UTF8, e.g. <A HREF="motion.html#it">它</A> inserts the
       correct characters; <A HREF="options.html#'hkmap'">'hkmap'</A> does not.  The <A HREF="options.html#'keymap'">'keymap'</A> keyboard can also
       insert niqud and te`amim.  To see what those mappings are, look at the
       keymap file 'hebrew.vim' etc.
@@ -190,10 +190,10 @@ text (if possible).
 
 
 Pasting when in a rightleft<A HREF="windows.html#window">窗口</A>
-When cutting text with the mouse and pasting <A HREF="motion.html#it">it</A> in a rightleft<A HREF="windows.html#window">窗口</A>
+When cutting text with the mouse and pasting <A HREF="motion.html#it">它</A> in a rightleft<A HREF="windows.html#window">窗口</A>
 the text will be reversed, because the characters come from the cut buffer
 from the left to the right, while inserted in the file from the right to
-the left.   In order to avoid <A HREF="motion.html#it">it</A>, toggle <A HREF="options.html#'revins'">'revins'</A> (by typing CTRL-? or CTRL-_)
+the left.   In order to avoid <A HREF="motion.html#it">它</A>, toggle <A HREF="options.html#'revins'">'revins'</A> (by typing CTRL-? or CTRL-_)
 before pasting.
 
 
