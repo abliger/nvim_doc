@@ -278,13 +278,8 @@
 
 *<A NAME="03.7"></A><B>03.7</B>*	滚动
 
-The <A HREF="scroll.html#CTRL-U">CTRL-U</A> command scrolls down half a screen of text.  Think of looking
-through a viewing<A HREF="windows.html#window">窗口</A>at the text and moving this<A HREF="windows.html#window">窗口</A>up by half the
-height of the<A HREF="windows.html#window">窗口</A>.  Thus the<A HREF="windows.html#window">窗口</A>moves up over the text, which is
-backward in the file.  Don't worry if you have a little trouble remembering
-which end is up.  Most users have the same problem.
-   The <A HREF="scroll.html#CTRL-D">CTRL-D</A> command moves the viewing<A HREF="windows.html#window">窗口</A>down half a screen in the file,
-thus scrolls the text up half a screen.
+<A HREF="scroll.html#CTRL-U">CTRL-U</A> 命令向下滚动半屏.想象一下通过<A HREF="windows.html#window">窗口</A>查看文本并且移动该<A HREF="windows.html#window">窗口</A>一般的高度.因此<A HREF="windows.html#window">窗口</A>移动到当前文字的上面，而文字则移到窗口的下面。不用担心记不住那边是上。很多人都是这样.
+   <A HREF="scroll.html#CTRL-D">CTRL-D</A>命令把<A HREF="windows.html#window">窗口</A>命令把视窗向下移动半屏，所以把文字向上移动半屏.
 
 				       +----------------+
 				       &#124; some text	|
@@ -304,18 +299,11 @@ thus scrolls the text up half a screen.
 				       &#124; example	|
 				       +----------------+
 
-To scroll one line at a time use <A HREF="scroll.html#CTRL-E">CTRL-E</A> (scroll up) and <A HREF="scroll.html#CTRL-Y">CTRL-Y</A> (scroll down).
-Think of <A HREF="scroll.html#CTRL-E">CTRL-E</A> to give you one line Extra.  (If you use MS-Windows compatible
-key mappings <A HREF="scroll.html#CTRL-Y">CTRL-Y</A> will <A HREF="undo.html#redo">redo</A> a change instead of scroll.)
+每次滚动一行可以使用<A HREF="scroll.html#CTRL-E">CTRL-E</A> (向上)和<A HREF="scroll.html#CTRL-Y">CTRL-Y</A> (向下).可以认为<A HREF="scroll.html#CTRL-E">CTRL-E</A>给了你额外的一行a.  (如果你使用MS-Windows兼容的按键映射<A HREF="scroll.html#CTRL-Y">CTRL-Y</A>会使用<A HREF="undo.html#redo">重做</A>代替滚动.)
 
-To scroll forward by a whole screen (except for two lines) use <A HREF="scroll.html#CTRL-F">CTRL-F</A>.  To
-scroll backwards, use <A HREF="scroll.html#CTRL-B">CTRL-B</A>.  These should be easy to remember: <A HREF="motion.html#F">F</A> for
-Forwards and <A HREF="motion.html#B">B</A> for Backwards.
+正向滚动整屏(减去两行)使用<A HREF="scroll.html#CTRL-F">CTRL-F</A>.相反的使用<A HREF="scroll.html#CTRL-B">CTRL-B</A>.应该很容易记住: <A HREF="motion.html#F">F</A>代表Forwards和<A HREF="motion.html#B">B</A>代表Backwards.
 
-A common issue is that after moving down many lines with &quot;<A HREF="motion.html#j">j</A>&quot; your cursor is at
-the bottom of the screen.  You would like to see the <A HREF="repeat.html#context">context</A> of the line with
-the cursor.  That's done with the &quot;<A HREF="scroll.html#zz">zz</A>&quot;命令.
-
+有一个问题是当向下移动很多行时在使用&quot;<A HREF="motion.html#j">j</A>&quot;你的光标是在屏幕的最下面.而你可能想要看到光标所在行的<A HREF="repeat.html#context">内容</A>.这可以使用&quot;<A HREF="scroll.html#zz">zz</A>&quot;命令实现.
 	+------------------+		 +------------------+
 	&#124; earlier text	   &#124;		 &#124; earlier text	    |
 	&#124; earlier text	   &#124;		 &#124; earlier text	    |
@@ -326,276 +314,190 @@ the cursor.  That's done with the &quot;<A HREF="scroll.html#zz">zz</A>&quot;命
 	&#124; line with cursor &#124;		 &#124; later text	    |
 	+------------------+		 +------------------+
 
-The &quot;<A HREF="scroll.html#zt">zt</A>&quot;命令 puts the cursor line at the top, &quot;<A HREF="scroll.html#zb">zb</A>&quot; at the bottom.  There
-are a few more <A HREF="scroll.html#scrolling">scrolling</A> commands, 见 |<A HREF="quickref.html#Q_sc">Q_sc</A>|.  To always keep a few lines of
-<A HREF="repeat.html#context">context</A> around the cursor, use the <A HREF="options.html#'scrolloff'">'scrolloff'</A> option.
+&quot;<A HREF="scroll.html#zt">zt</A>&quot;命令把光标所在行放到顶部,&quot;<A HREF="scroll.html#zb">zb</A>&quot;放在底部.有很多<A HREF="scroll.html#scrolling">滚动</A>命令, 见 |<A HREF="quickref.html#Q_sc">Q_sc</A>|.要使一些行的<A HREF="repeat.html#context">内容</A>总是保持在光标周围,使用<A HREF="options.html#'scrolloff'">'scrolloff'</A>选项.
 
 ==============================================================================
 
 *<A NAME="03.8"></A><B>03.8</B>*	简单搜索
 
-To search for a <A HREF="options\.html#options">字符串</A>, use the &quot;/string&quot; command.  To find the <A HREF="motion.html#word">单词</A> include,
-for example, use the command:
+搜索一个<A HREF="options\.html#options">字符串</A>,使用&quot;/string&quot;命令.例如，查找<A HREF="motion.html#word">单词</A> include,使用命令:
 
 <B>	/include</B>
 
-You will notice that when you type the &quot;<A HREF="pattern.html#/">/</A>&quot; the cursor jumps to the last line
-of the Vim<A HREF="windows.html#window">窗口</A>, like with colon commands.  That is where you type the <A HREF="motion.html#word">单词</A>.
-You can press the backspace key (backarrow or <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>) to make corrections.  Use
-the <A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A> and <A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A> cursor keys when necessary.
-   Pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> executes the command.
+你会注意到当你键入&quot;<A HREF="pattern.html#/">/</A>&quot;时光标会想冒号命令一样跳转到Vim<A HREF="windows.html#window">窗口</A>的最后一行.那是你键入<A HREF="motion.html#word">单词</A>.你可以使用空格键(方向键和<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>)去更正错误.使用<A HREF="motion.html#&lt;Left&gt;">&lt;Left&gt;</A>和<A HREF="motion.html#&lt;Right&gt;">&lt;Right&gt;</A>当你需要的时候.使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>执行命令.
 
-	Note:
-	The characters .*[]^&#37;/\?~$ have special meanings.  If you want to use
-	them in a search you must put a \ in front of them.  See below.
+	注意:
+	字符.*[]^&#37;/\?~$有特殊含义.如果你想要在查找时找到它们，你必须使用\符号在输入前转义它们。见下面.
 
-To find the next occurrence of the same <A HREF="options\.html#options">字符串</A> use the &quot;<A HREF="pattern.html#n">n</A>&quot;命令.  Use this
-to find the first #include after the cursor:
+使用&quot;<A HREF="pattern.html#n">n</A>&quot;命令查找下一个匹配的字符串.使用下面的命令去发现光标后第一个#include:
 
 <B>	/#include</B>
 
-And then type &quot;<A HREF="pattern.html#n">n</A>&quot; several times.  You will move to each #include in the text.
-You can also use a <A HREF="intro.html#count">count</A> if you know which match you want.  Thus &quot;3n&quot; finds
-the third match.  You can also use a <A HREF="intro.html#count">count</A> with &quot;<A HREF="pattern.html#/">/</A>&quot;: &quot;4/the&quot; goes to the
-fourth match of &quot;the&quot;.
+然后键入几次&quot;<A HREF="pattern.html#n">n</A>&quot;.你会在之后的文本中找到每一个#include.如果你知道匹配的<A HREF="intro.html#count">次数</A>可以在这个命令前面增加计数前缀.因此&quot;3n&quot;是第三个匹配的位置置.你也能在&quot;<A HREF="pattern.html#/">/</A>&quot;前添加数量: &quot;4/the&quot;会找到第四个匹配&quot;the&quot;的位置.
 
-The &quot;<A HREF="pattern.html#?">?</A>&quot;命令 works like &quot;<A HREF="pattern.html#/">/</A>&quot; but searches backwards:
+&quot;<A HREF="pattern.html#?">?</A>&quot;命令像&quot;<A HREF="pattern.html#/">/</A>&quot;但是是反方向查找:
 
 <B>	?word</B>
 
-The &quot;<A HREF="pattern.html#N">N</A>&quot;命令 repeats the last search the opposite direction.  Thus using
-&quot;<A HREF="pattern.html#N">N</A>&quot; after a &quot;<A HREF="pattern.html#/">/</A>&quot;命令 searches backwards, using &quot;<A HREF="pattern.html#N">N</A>&quot; after &quot;<A HREF="pattern.html#?">?</A>&quot; searches
-forwards.
+&quot;<A HREF="pattern.html#N">N</A>&quot;命令反方向重复查找.因此在&quot;<a href="pattern.html#/">/</a>&quot;命令后,使用&quot;<A href="pattern.html#n">n</a>&quot;反方向查找,在&quot;<A HREF="pattern.html#?">?</A>&quot;后使用&quot;<A HREF="pattern.html#N">N</A>&quot;正向查找.
 
 
-IGNORING CASE
+忽略大小写
 
-Normally you have to type exactly what you want to find.  If you don't care
-about upper or <A HREF="change.html#lowercase">小写</A> in a <A HREF="motion.html#word">单词</A>, set the <A HREF="options.html#'ignorecase'">'ignorecase'</A> option:
+通常，你需要正确的键入你想要查找的内容Normally you have to type exactly what you want to find.如果你不关心单词的大写或者<A HREF="change.html#lowercase">小写</A>,可以查看<A HREF="options.html#'ignorecase'">'ignorecase'</A>选项:
 
 <B>	:set ignorecase</B>
 
-If you now search for &quot;<A HREF="motion.html#word">单词</A>&quot;, <A HREF="motion.html#it">它</A> will also match &quot;Word&quot; and &quot;<A HREF="motion.html#word">单词</A>&quot;.  To match
-<A HREF="change.html#case">case</A> again:
+如果你想查找&quot;<A HREF="motion.html#word">word</A>&quot;, <A HREF="motion.html#it">它</A> 也会匹配&quot;Word&quot;和&quot;<A HREF="motion.html#word">WORD</A>&quot;.如果要进行区分使用下面的命令:
 
 <B>	:set noignorecase</B>
 
 
-HISTORY
+历史
 
-Suppose you <A HREF="diff.html#do">do</A> three searches:
+加入你<A HREF="diff.html#do">做</A>了三次查询:
 
 <B>	/one</B>
 <B>	/two</B>
 <B>	/three</B>
 
-Now let's start searching by typing a simple &quot;<A HREF="pattern.html#/">/</A>&quot; without pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.  If
-you press <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> (the cursor key), Vim puts &quot;/three&quot; on the command line.
-Pressing <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> at this point searches for three.  If you <A HREF="diff.html#do">do</A> not press
-<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>, but press <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> instead, Vim changes the prompt to &quot;/two&quot;.  Another
-press of <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> moves you to &quot;/one&quot;.
-   You can also use the <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> cursor key to move through the <A HREF="cmdline.html#history">history</A> of
-search commands in the other direction.
+现在我们输入&quot;<A HREF="pattern.html#/">/</A>&quot;进行简单的查找，但先不使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>.如果你使用<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> (上箭头),Vim会把&quot;/three&quot;放到你的命令行上. 使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>会在当前位置查找three.如果你没有使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>,继续使用<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>,Vim会显示&quot;/two&quot;.继续使用<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>Vim显示&quot;/one&quot;.
+   如果你使用<A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> 会在<A HREF="cmdline.html#history">历史</A>记录钟反向查找.
 
-If you know what a previously used <A HREF="pattern.html#pattern">pattern</A> starts with, and you want to use <A HREF="motion.html#it">它</A>
-again, type that character before pressing <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>.  With the previous example,
-you can type &quot;/o&lt;Up&gt;&quot; and Vim will put &quot;/one&quot; on the command line.
+如果你知道之前<A HREF="pattern.html#pattern">正则表达式</A>的开头,并且你想要再一次使用<A HREF="motion.html#it">它</A>,在使用<A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>前先键入正则表达式的前几个字符.例如,你可以键入&quot;/o&lt;Up&gt;&quot;会在命令行上显示&quot;/one&quot;.
 
-The commands starting with &quot;<A HREF="cmdline.html#:">:</A>&quot; also have a <A HREF="cmdline.html#history">history</A>.  That allows you to recall
-a previous command and execute <A HREF="motion.html#it">它</A> again.  These two histories are separate.
+使用&quot;<A HREF="cmdline.html#:">:</A>&quot;开头的命令也有<A HREF="cmdline.html#history">历史</A>记录.这会让你能取到之前的命令并执行<A HREF="motion.html#it">它</A>.这两种历史记录是分开的.
 
 
-SEARCHING FOR A <A HREF="motion.html#word">单词</A> IN THE TEXT
+在文本中查找<A HREF="motion.html#word">单词</A> 
 
-Suppose you see the <A HREF="motion.html#word">单词</A> &quot;TheLongFunctionName&quot; in the text and you want to
-find the next occurrence of <A HREF="motion.html#it">它</A>.  You could type &quot;/TheLongFunctionName&quot;, but
-that's a lot of typing.  And when you make a mistake Vim won't find <A HREF="motion.html#it">它</A>.
-   There is an easier way: Position the cursor on the <A HREF="motion.html#word">单词</A> and use the &quot;*&quot;
-command.  Vim will grab the <A HREF="motion.html#word">单词</A> under the cursor and use <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> the search
-<A HREF="options\.html#options">字符串</A>.
-   The &quot;<A HREF="pattern.html##">#</A>&quot;命令 does the same in the other direction.  You can prepend a
-<A HREF="intro.html#count">count</A>: &quot;3*&quot; searches for the third occurrence of the <A HREF="motion.html#word">单词</A> under the cursor.
+假如你在文本中看到一个<A HREF="motion.html#word">单词</A> &quot;TheLongFunctionName&quot;并且找到下一个相同的单词.你可以键入&quot;/TheLongFunctionName&quot;,但是这样做会输入很多字符.并且如果输错了，Vim 是不可能找到你要找的单词的。
+   有一种简单的方法解决: 让光标移动到你要查询的<A HREF="motion.html#word">单词</A>上并且使用&quot;*&quot;命令.Vim将会抓取在光标下的<A HREF="motion.html#word">单词</A>并且使用<A HREF="motion.html#it">它</A> <A HREF="motion.html#as">作为</A>查询<A HREF="options\.html#options">字符串</A>.
+   &quot;<A HREF="pattern.html##">#</A>&quot;命令反方向做同样的事.你可以添加一个<A HREF="intro.html#count">数字</A>前缀: &quot;3*&quot;查询光标下第三次出现的相同<A HREF="motion.html#word">单词</A>.
 
 
-SEARCHING FOR WHOLE WORDS
+查找整个单词
 
-If you type &quot;/the&quot; <A HREF="motion.html#it">它</A> will also match &quot;there&quot;.  To only find words that end
-in &quot;the&quot; use:
+如果你键入&quot;/the&quot; <A HREF="motion.html#it">它</A>可能会匹配&quot;there&quot;.只要查找&quot;the&quot;可以使用:
 
 <B>	/the\&gt;</B>
 
-The &quot;\&gt;&quot; item is a special marker that only matches at the end of a <A HREF="motion.html#word">单词</A>.
-Similarly &quot;\&lt;&quot; only matches at the beginning of a <A HREF="motion.html#word">单词</A>.  Thus to search for
-the <A HREF="motion.html#word">单词</A> &quot;the&quot; only:
+&quot;\&gt;&quot;是一个只匹配<A HREF="motion.html#word">单词</A>结尾的特殊符号.同样的还有&quot;\&lt;&quot;只匹配<A HREF="motion.html#word">单词</A>的开头.因此只查询<A HREF="motion.html#word">单词</A> &quot;the&quot;使用:
 
 <B>	/\&lt;the\&gt;</B>
 
-This does not match &quot;there&quot; or &quot;soothe&quot;.  Notice that the &quot;*&quot; and &quot;<A HREF="pattern.html##">#</A>&quot;命令
-use these start-of-word and end-of-word markers to only find whole words (you
-can use &quot;g*&quot; and &quot;<A HREF="pattern.html#g#">g#</A>&quot; to match partial words).
+这就不会匹配&quot;there&quot;或&quot;soothe&quot;.注意使用&quot;*&quot;和&quot;<A HREF="pattern.html##">#</A>&quot;命令使用了词首词尾标记整个单词(你可以使用&quot;g*&quot;和&quot;<A HREF="pattern.html#g#">g#</A>&quot;去部分匹配).
 
 
-HIGHLIGHTING MATCHES
+高亮匹配
 
-While editing a program you see a variable called &quot;nr&quot;.  You want to check
-where it's used.  You could move the cursor to &quot;nr&quot; and use the &quot;*&quot; command
-and press &quot;<A HREF="pattern.html#n">n</A>&quot; to go along all the matches.
+当你编辑程序时，你看到一个叫&quot;nr&quot;的变量.你想要查看它在哪里使用到.你可以移动光标到&quot;nr&quot; 然后使用&quot;*&quot;命令，然后使用&quot;<A HREF="pattern.html#n">n</A>&quot;命令遍历所有的匹配项.
 
-Vim will highlight all matches. That is a very good way to see where the
-variable is used, without the need to type commands.
-   To switch this off:
+Vim会高亮所有的匹配项。这是一个查看所有变量使用的好方法，而且还不需要键入命令。
+   关掉此功能使用:
 
 <B>	:set nohlsearch</B>
 
-Then you need to switch <A HREF="motion.html#it">它</A> on again if you want to use <A HREF="motion.html#it">它</A> for the next search
-command:
+如果你想要下一次查询时使用高亮，你可以这样启用<A HREF="motion.html#it">它</A>:
 
 <B>	:set hlsearch</B>
 
-If you only want to remove the highlighting, use this command:
+如果你想要移除高亮:
 
 <B>	:nohlsearch</B>
 
-This doesn't reset the option.  Instead, <A HREF="motion.html#it">它</A> disables the highlighting.  As
-soon <A HREF="motion.html#as">as</A> you execute a search command, the highlighting will be used again.
-Also for the &quot;<A HREF="pattern.html#n">n</A>&quot; and &quot;<A HREF="pattern.html#N">N</A>&quot;命令.
+它没有复位设置.实际上, <A HREF="motion.html#it">它</A>只是关闭了高亮.当你再一次进行查询时，高亮会再次出现。对于&quot;<A HREF="pattern.html#n">n</A>&quot; and &quot;<A HREF="pattern.html#N">N</A>&quot;命令也成立.
 
 
-TUNING SEARCHES
+调节查询
 
-There are a few <A HREF="options\.html#options">选项</A> that change how searching works.  These are the
-essential ones:
+有一些改变查询工作方式的<A HREF="options\.html#options">选项</A>.有一些重要的选项:
 
 <B>	:set nowrapscan</B>
 
-This stops the search at the end of the file.  Or, when you are searching
-backwards, <A HREF="motion.html#it">它</A> stops the search at the start of the file.  The <A HREF="options.html#'wrapscan'">'wrapscan'</A>
-option is on by default, thus searching wraps around the end of the file.
+查询到文件尾后停止查询.或者当你反相向查找时，<A HREF="motion.html#it">它</A>在文件首停止查询.<A HREF="options.html#'wrapscan'">'wrapscan'</A>选项时默认开启的,所以在找到文件尾的时候会自动折返到文件头.
 
 <B>	:set noincsearch</B>
 
-This disables the display of the matches while you are still typing your
-search.
+这会在你键入查询内容时不展示匹配项.
 
+插曲
 
-INTERMEZZO
-
-If you like one of the <A HREF="options\.html#options">选项</A> mentioned before, and set <A HREF="motion.html#it">它</A> each time you use
-Vim, you can put the command in your Vim <A HREF="starting.html#startup">startup</A> file.  Edit the file, for
-example with:
+如果你喜欢之前提及的<A HREF="options\.html#options">选项</A>,你不许在每次使用Vim的时候设置<A HREF="motion.html#it">它</A>,你可以把这些命令放到Vim的<A HREF="starting.html#startup">开始</A>文件中.编辑这个文件,例如:
 
 <B>	:edit ~/.config/nvim/init.vim</B>
 
-Then add a line with the command to set the option, just like you typed <A HREF="motion.html#it">它</A> in
-Vim.  Example:
+然后在文中加一行命令来设置这些选项，就好像你在 Vim 中输入一样，例如:
 
 <B>	Go:set hlsearch&lt;Esc&gt;</B>
 
-&quot;<A HREF="motion.html#G">G</A>&quot; moves to the end of the file.  &quot;<A HREF="insert.html#o">o</A>&quot; starts a new line, where you type the
-&quot;<A HREF="options.html#:set">:set</A>&quot;命令.  You end insert mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.  Then write and close the
-file:
+&quot;<A HREF="motion.html#G">G</A>&quot;移动到文件尾.  &quot;<A HREF="insert.html#o">o</A>&quot;新建一行，然后在哪里输入&quot;<A HREF="options.html#:set">:set</A>&quot;命令.然后使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>结束插入模式.保存关闭文件:
 
 <B>	ZZ</B>
 
-If you now start Vim again, the <A HREF="options.html#'hlsearch'">'hlsearch'</A> option will already be set.
+如果重新打开Vim，<A HREF="options.html#'hlsearch'">'hlsearch'</A>已经被设置了.
 
 ==============================================================================
 
 *<A NAME="03.9"></A><B>03.9</B>*	简单搜索模式
 
-The Vim editor uses regular expressions to specify what to search for.
-Regular expressions are an extremely powerful and compact way to specify a
-search <A HREF="pattern.html#pattern">pattern</A>.  Unfortunately, this power comes at a price, because regular
-expressions are a bit tricky to specify.
-   In this section we mention only a few essential ones.  More about search
-patterns and commands can be found in chapter 27 |<A HREF="usr_27.html">usr_27.txt</A>|.  You can find
-the full explanation here: |<A HREF="pattern.html#pattern">pattern</A>|.
+Vim使用正则表达式去要求查找内容.正则表达式时一种非常强大的并且紧凑轻易查询<A HREF="pattern.html#pattern">模式</A>的方法.但是非常不幸，这种强大的功能是有代价的，因为使用它需要掌握一些技巧.
+   本章我们只介绍一些基本的正则表达式。要了解更多的关于查找模式和命令，请参考 第 27 章|<A HREF="usr_27.html">usr_27.txt</A>|.这里你能知道所有的正则描述: |<A HREF="pattern.html#pattern">pattern</A>|.
 
+行首和行尾
 
-BEGINNING AND END OF A LINE
+^字符匹配一行的开始.在英语键盘上你能在数字6上找到<A HREF="motion.html#it">它</A>.<A HREF="pattern.html#pattern">模式</A> &quot;include&quot;匹配在一行上任意位置的<A HREF="motion.html#word">单词</A> include.但是使用<A HREF="pattern.html#pattern">模式</A> &quot;^include&quot;只匹配行首<A HREF="motion.html#word">单词</A>是include的.
+   $字符只匹配行尾.因此,&quot;was$&quot;只匹配行尾<A HREF="motion.html#word">单词</A>是was的.
 
-The ^ character matches the beginning of a line.  On an English-US keyboard
-you find <A HREF="motion.html#it">它</A> above the 6.  The <A HREF="pattern.html#pattern">pattern</A> &quot;include&quot; matches the <A HREF="motion.html#word">单词</A> include
-anywhere on the line.  But the <A HREF="pattern.html#pattern">pattern</A> &quot;^include&quot; matches the <A HREF="motion.html#word">单词</A> include
-only if <A HREF="motion.html#it">它</A> is at the beginning of a line.
-   The $ character matches the end of a line.  Therefore, &quot;was$&quot; matches the
-<A HREF="motion.html#word">单词</A> was only if <A HREF="motion.html#it">它</A> is at the end of a line.
-
-Let's <A HREF="motion.html#mark">mark</A> the places where &quot;/the&quot; matches in this example line with &quot;x&quot;s:
+让我们使用&quot;x&quot;<A HREF="motion.html#mark">标记出</A>&quot;/the&quot;在例子中匹配的地方:
 
 <B><FONT color="#3A6F2B">	the solder holding one of the chips melted and the </FONT></B>
 	xxx			  xxx		       xxx
 
-Using &quot;/the$&quot; we find this match:
+如果使用&quot;/the$&quot;是这样:
 
 <B><FONT color="#3A6F2B">	the solder holding one of the chips melted and the </FONT></B>
 						       xxx
 
-And with &quot;/^the&quot; we find this one:
+如果使用&quot;/^the&quot;是这样:
 <B><FONT color="#3A6F2B">	the solder holding one of the chips melted and the </FONT></B>
 	xxx
 
-You can try searching with &quot;/^the$&quot;; <A HREF="motion.html#it">它</A> will only match a single line
-consisting entirely of &quot;the&quot;.  White space does matter here, thus if a line
-contains a space after the <A HREF="motion.html#word">单词</A>, like &quot;the &quot;<A HREF="motion.html#,">,</A> the <A HREF="pattern.html#pattern">pattern</A> will not match.
+你可以使用&quot;/^the$&quot;去查找; <A HREF="motion.html#it">它</A>会只匹配完全由&quot;the&quot;构成的单行.空格并不会被匹配,因此如果一个<A HREF="motion.html#word">单词</A>后面有空格,向&quot;the &quot;<A HREF="motion.html#,">,</A>这个<A HREF="pattern.html#pattern">模式</A>不会匹配.
 
+匹配单个字符
 
-MATCHING ANY SINGLE CHARACTER
-
-The . (dot) character matches any existing character.例如, the
-<A HREF="pattern.html#pattern">pattern</A> &quot;c.m&quot; matches a <A HREF="options\.html#options">字符串</A> whose first character is a <A HREF="change.html#c">c</A>, whose second
-character is anything, and whose third character is <A HREF="motion.html#m">m</A>.  Example:
+. (点)会和任何字符匹配.例如,<A HREF="pattern.html#pattern">模式</A> &quot;c.m&quot;会匹配一个<A HREF="options\.html#options">字符串</A>.这个字符串的第一个字符是<A HREF="change.html#c">c</A>,第二个字符没有限制,第三个字符是<A HREF="motion.html#m">m</A>.例如:
 
 <B><FONT color="#3A6F2B">	We use a computer that became the cummin winter. </FONT></B>
 		 xxx		 xxx	  xxx
 
+匹配特殊字符
 
-MATCHING SPECIAL CHARACTERS
-
-If you really want to match a dot, you must avoid its special meaning by
-putting a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">它</A>.
-   If you search for &quot;ter.&quot;, you will find these matches:
+如果你真的想要匹配一个点,你必须在它之前，使用<A HREF="intro.html#backslash">反斜线</A>避免特殊含义.例如如果你要搜索&quot;ter.&quot;,你会发现这些匹配项:
 
 <B><FONT color="#3A6F2B">	We use a computer that became the cummin winter. </FONT></B>
 		      xxxx			    xxxx
 
-Searching for &quot;ter\.&quot; only finds the second match.
+使用&quot;ter\.&quot;只会匹配第二个匹配项.
 
 ==============================================================================
 
 *<A NAME="03.10"></A><B>03.10</B>*	使用标记
 
-When you make a jump to a position with the &quot;<A HREF="motion.html#G">G</A>&quot;命令, Vim remembers the
-position from before this jump.  This position is called a <A HREF="motion.html#mark">mark</A>.  To go back
-where you came from, use this command:
+当你使用&quot;<A HREF="motion.html#G">G</A>&quot;命令去跳转到一个地方时,Vim会在跳转前记住这个地方.这个地方叫做<A HREF="motion.html#mark">标记</A>.使用这个命令回到原来的地方:
 
 <B>	``</B>
 
-This ` is a backtick or open single-quote character.
-   If you use the same command a second time you will jump back again.  That's
-because the &quot;<A HREF="motion.html#`">`</A>&quot;命令 is a jump itself, and the position from before this
-jump is remembered.
+`是一个反引号或者单音好也可.如果你第二次使用，他会再次跳转到原来的位置.这是因为&quot;<A HREF="motion.html#`">`</A>&quot;命令自身就是一个跳转,并且在使用&quot;`&quot;跳转前已经标记了该位置.一般地,每次你<A HREF="diff.html#do">执行的</A>会将光标移动到本行之外的命令都叫跳转.这包狂查询命令&quot;<A HREF="pattern.html#/">/</A>&quot;和&quot;<A HREF="pattern.html#n">n</A>&quot;命令(无论多远).但不包括&quot;fx&quot;和&quot;tx&quot;和<A HREF="motion.html#word">单词</A>移动&quot;<A HREF="motion.html#w">w</A>&quot;和&quot;<A HREF="motion.html#e">e</A>&quot;.此外, &quot;<A HREF="motion.html#j">j</A>&quot;和&quot;<A HREF="motion.html#k">k</A>&quot;也不认为是一个跳转,甚至是使用<A HREF="intro.html#count">数字</A>去修饰它们也不行.
 
-Generally, every time you <A HREF="diff.html#do">do</A> a command that can move the cursor further than
-within the same line, this is called a jump.  This includes the search
-commands &quot;<A HREF="pattern.html#/">/</A>&quot; and &quot;<A HREF="pattern.html#n">n</A>&quot; (it doesn't matter how far away the match is).  But not
-the character searches with &quot;fx&quot; and &quot;tx&quot; or the <A HREF="motion.html#word">单词</A> movements &quot;<A HREF="motion.html#w">w</A>&quot; and &quot;<A HREF="motion.html#e">e</A>&quot;.
-   Also, &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot; are not considered to be a jump, even when you use a
-<A HREF="intro.html#count">count</A> to make them move the cursor quite a long way away.
-
-The &quot;<A HREF="motion.html#``">``</A>&quot;命令 jumps back and forth, between two points.  The <A HREF="motion.html#CTRL-O">CTRL-O</A> command
-jumps to older positions (Hint: <A HREF="insert.html#O">O</A> for older).  <A HREF="motion.html#CTRL-I">CTRL-I</A> then jumps back to newer
-positions (Hint: for many common keyboard layouts, I is just next to <A HREF="insert.html#O">O</A>).
-Consider this sequence of commands:
+&quot;<A HREF="motion.html#``">``</A>&quot;命令可以前后跳转.<A HREF="motion.html#CTRL-O">CTRL-O</A>命令会跳转到较老的位置(提示: <A HREF="insert.html#O">O</A>代表older).  <A HREF="motion.html#CTRL-I">CTRL-I</A>跳转到较新的位置(提示: 在普通的键盘布局中，I紧挨着<A HREF="insert.html#O">O</A>).考虑如下命令:
 
 <B>	33G</B>
 <B>	/^The</B>
 <B>	CTRL-O</B>
 
-You first jump to line 33然后search for a line that starts with &quot;The&quot;.
-Then with <A HREF="motion.html#CTRL-O">CTRL-O</A> you jump back to line 33.  Another <A HREF="motion.html#CTRL-O">CTRL-O</A> takes you back to
-where you started.  If you now use <A HREF="motion.html#CTRL-I">CTRL-I</A> you jump to line 33 again.  And
-to the match for &quot;The&quot; with another <A HREF="motion.html#CTRL-I">CTRL-I</A>.
+你第一次跳转到33行，然后查询以&quot;The&quot;单词开始的行.然后使用<A HREF="motion.html#CTRL-O">CTRL-O</A>回到33行.再次执行<A HREF="motion.html#CTRL-O">CTRL-O</A>回到开始的地方.如果你现在使用<A HREF="motion.html#CTRL-I">CTRL-I</A>你又会回到33行.再次使再次使用用<A HREF="motion.html#CTRL-I">CTRL-I</A>回到The的地方.
 
 
 	     &#124;	example text   ^	     |
@@ -608,58 +510,46 @@ to the match for &quot;The&quot; with another <A HREF="motion.html#CTRL-I">CTRL-
 		example text
 
 	Note:
-	<A HREF="motion.html#CTRL-I">CTRL-I</A> is the same <A HREF="motion.html#as">as</A> <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.
+	<A HREF="motion.html#CTRL-I">CTRL-I</A>和<A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>功能一样.
 
-The &quot;<A HREF="motion.html#:jumps">:jumps</A>&quot;命令 gives a <A HREF="eval.html#list">列表</A> of positions you jumped to.  The entry which
-you used last is marked with a &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;.
-
+&quot;<A HREF="motion.html#:jumps">:jumps</A>&quot;命令会给你跳转过的<A HREF="eval.html#list">列表</A>.最后一个使用过的标记会用&quot;<A HREF="change.html#&gt;">&gt;</A>&quot;标记出来.
 
 
-NAMED MARKS							*<A NAME="bookmark"></A><B>bookmark</B>*
 
-Vim enables you to place your own marks in the text.  The command &quot;ma&quot; marks
-the place under the cursor <A HREF="motion.html#as">as</A> <A HREF="motion.html#mark">mark</A> a.  You can place 26 marks (a through <A HREF="vimindex.html#z">z</A>) in
-your text.  You can't see them, it's just a position that Vim remembers.
-   To go to a <A HREF="motion.html#mark">mark</A>, use the command `{mark}, where {mark} is the <A HREF="motion.html#mark">mark</A> <A HREF="print.html#letter">letter</A>.
-Thus to move to the a <A HREF="motion.html#mark">mark</A>:
+名称标记							*<A NAME="bookmark"></A><B>bookmark</B>*
+
+Vim允许你在文本中添加自己的标记.使用命令&quot;ma&quot;让光标之下的位置<A HREF="motion.html#as">当作</A> <A HREF="motion.html#mark">标记</A> a.你能放置26个标记(a到<A HREF="vimindex.html#z">z</A>).这些标记是不可见的，只是一个由 Vim 记住的位置.
+跳转到<A HREF="motion.html#mark">标记</A>,使用命令`{mark}，这里的{mark}是指<A HREF="motion.html#mark">标记</A> <A HREF="print.html#letter">字母</A>.因此移动<A HREF="motion.html#mark">标记</A>的命令是:
 
 <B>	`a</B>
 
-The command &quot;'mark&quot; (single quotation <A HREF="motion.html#mark">mark</A>, or apostrophe) moves you to the
-beginning of the line containing the <A HREF="motion.html#mark">mark</A>.  This differs from the &quot;`mark&quot;
-command, which also moves you to the marked column.
+命令&quot;'mark&quot; (单引号加<A HREF="motion.html#mark">标记字符</A>)会移动到标记所在行的行首.与&quot;`mark&quot;命令不同的是,它会同时移动到标记的列上.
 
-The marks can be very useful when working on two related parts in a file.
-Suppose you have some text near the start of the file you need to look at,
-while working on some text near the end of the file.
-   Move to the text at the start and place the <A HREF="change.html#s">s</A> (start) <A HREF="motion.html#mark">mark</A> there:
-
+标记在需要处理一个文件的两个相关地方的时候非常有用。假设你在处理文件末的时候需 要查看文件首的一些内容。
+    先移动到文件首，设置一个标记 s (start，开始): 
 <B>	ms</B>
 
-Then move to the text you want to work on and put the <A HREF="motion.html#e">e</A> (end) <A HREF="motion.html#mark">mark</A> there:
+然后在你需要处理的地方放置标记<A HREF="motion.html#e">e</A>(end):
 
 <B>	me</B>
 
-Now you can move around, and when you want to look at the start of the file,
-you use this to jump there:
+现在你可以随意移动，当你需要看开头的地方，可以使用这个命令移到那里:
 
 <B>	's</B>
 
-Then you can use <A HREF="motion.html#''">''</A> to jump back to where you were, or 'e to jump to the text
-you were working on at the end.
-   There is nothing special about using <A HREF="change.html#s">s</A> for start and <A HREF="motion.html#e">e</A> for end, they are
-just easy to remember.
+然后你可以使用<A HREF="motion.html#''">''</A>跳转回来,或者使用'e跳转到你需要处理的的地方.
+	 这里使用 s 和 e 作标记名没有特别的含义，只是为了好记而已。
 
-You can use this command to get a <A HREF="eval.html#list">列表</A> of marks:
+你可以使用这个命令获得标记列表<A HREF="eval.html#list">列表</A>:
 
 <B>	:marks</B>
 
-You will notice a few special marks.  These include:
+你会注意到有一些特殊的标记，包括:
 
-	''	The cursor position before doing a jump
-	&quot;	The cursor position when last editing the file
-	[	Start of the last change
-	]	End of the last change
+	''	跳转前光标的位置	
+	&quot;	最后编辑的光标位置	
+	[	最后改变的开始位置	
+	]	最后改变的结束位置	
 
 ==============================================================================
 
