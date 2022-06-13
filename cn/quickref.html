@@ -98,10 +98,10 @@
 |<A HREF="#Q_si">Q_si</A>|	insert: Special inserts		|<A HREF="#Q_fl">Q_fl</A>|	Using the argument <A HREF="eval.html#list">列表</A>
 |<A HREF="#Q_de">Q_de</A>|	change: Deleting text		|<A HREF="#Q_wq">Q_wq</A>|	Writing and quitting
 |<A HREF="#Q_cm">Q_cm</A>|	change: Copying and moving	|<A HREF="#Q_ac">Q_ac</A>|	Automatic commands
-|<A HREF="#Q_ch">Q_ch</A>|	change: Changing text		|<A HREF="#Q_wi">Q_wi</A>|	Multi-window commands
+|<A HREF="#Q_ch">Q_ch</A>|	change: 改变文本		|<A HREF="#Q_wi">Q_wi</A>|	Multi-window commands
 |<A HREF="#Q_co">Q_co</A>|	change: Complex			|<A HREF="#Q_bu">Q_bu</A>|	Buffer <A HREF="eval.html#list">列表</A> commands
-|<A HREF="#Q_vi">Q_vi</A>|	<A HREF="visual.html#Visual">Visual</A> mode			|<A HREF="#Q_sy">Q_sy</A>|	<A HREF="autocmd.html#Syntax">Syntax</A> highlighting
-|<A HREF="#Q_to">Q_to</A>|	Text <A HREF="vimindex.html#objects">objects</A>			|<A HREF="#Q_gu">Q_gu</A>|	<A HREF="gui.html#GUI">GUI</A> commands
+|<A HREF="#Q_vi">Q_vi</A>|	<A HREF="visual\.html#Visual">可视</A>模式			|<A HREF="#Q_sy">Q_sy</A>|	<A HREF="autocmd.html#Syntax">Syntax</A> highlighting
+|<A HREF="#Q_to">Q_to</A>|	文本<A HREF="vimindex\.html#objects">对象</A>			|<A HREF="#Q_gu">Q_gu</A>|	<A HREF="gui.html#GUI">GUI</A> commands
 					|<A HREF="#Q_fo">Q_fo</A>|	<A HREF="fold.html#Folding">Folding</A>
 
 ------------------------------------------------------------------------------
@@ -342,7 +342,7 @@ These only work when <A HREF="options.html#'wrap'">'wrap'</A> is off:
 |<A HREF="insert.html#o">o</A>|	N  o	open a new line below the current line, append text (N times)
 |<A HREF="insert.html#O">O</A>|	N  O	open a new line above the current line, append text (N times)
 |<A HREF="insert.html#:startinsert">:startinsert</A>|  :star[tinsert][!]  start <A HREF="intro.html#Insert">插入</A>模式, append when [!] used
-|<A HREF="insert.html#:startreplace">:startreplace</A>| :startr[eplace][!]  start <A HREF="insert.html#Replace">Replace</A> mode, at EOL when [!] used
+|<A HREF="insert.html#:startreplace">:startreplace</A>| :startr[eplace][!]  start <A HREF="insert\\.html#Replace">替代</A>模式, at EOL when [!] used
 
 in <A HREF="visual.html#Visual">Visual</A> block mode:
 |<A HREF="visual.html#v_b_I">v_b_I</A>|	   I	insert the same text in front of all the selected lines
@@ -358,7 +358,7 @@ leaving <A HREF="intro.html#Insert">插入</A>模式:
 |<A HREF="insert.html#i_CTRL-C">i_CTRL-C</A>|	CTRL-C		  like <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, but <A HREF="diff.html#do">do</A> not use an abbreviation
 |<A HREF="insert.html#i_CTRL-O">i_CTRL-O</A>|	CTRL-O {command}  execute {command} and return to <A HREF="intro.html#Insert">插入</A>模式
 
-moving around:
+移动:
 |<A HREF="insert.html#i_&lt;Up&gt;">i_&lt;Up&gt;</A>|	cursor keys	  move cursor left/right/up/down
 |<A HREF="insert.html#i_&lt;S-Left&gt;">i_&lt;S-Left&gt;</A>|	shift-left/right  one <A HREF="motion.html#word">单词</A> left/right
 |<A HREF="insert.html#i_&lt;S-Up&gt;">i_&lt;S-Up&gt;</A>|	shift-up/down	  one screenful backward/forward
@@ -437,7 +437,7 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 |<A HREF="change.html#:d">:d</A>|	:[range]d [x]	delete <A HREF="cmdline.html#[range]">[range]</A> lines [into <A HREF="intro.html#register">register</A> x]
 ------------------------------------------------------------------------------
 
-*<A NAME="Q_cm"></A><B>Q_cm</B>*		Copying and moving text
+*<A NAME="Q_cm"></A><B>Q_cm</B>*		Copying and 移动文本
 
 |<A HREF="change.html#quote">quote</A>|	  &quot;{char}	use <A HREF="intro.html#register">register</A> {char} for the next delete, <A HREF="change.html#yank">yank</A>, or put
 |<A HREF="change.html#:reg">:reg</A>|	  :reg		show the contents of all <A HREF="change.html#registers">registers</A>
@@ -455,12 +455,12 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 |<A HREF="change.html#gP">gP</A>|	  N  gP		like P, but leave cursor after the new text
 ------------------------------------------------------------------------------
 
-*<A NAME="Q_ch"></A><B>Q_ch</B>*		Changing text
+*<A NAME="Q_ch"></A><B>Q_ch</B>*		改变文本
 
 |<A HREF="change.html#r">r</A>|	  N  r{char}	replace N characters with {char}
 |<A HREF="change.html#gr">gr</A>|	  N  gr{char}	replace N characters without affecting layout
-|<A HREF="change.html#R">R</A>|	  N  R		enter <A HREF="insert.html#Replace">Replace</A> mode (repeat the entered text N times)
-|<A HREF="change.html#gR">gR</A>|	  N  gR		enter virtual <A HREF="insert.html#Replace">Replace</A> mode: Like <A HREF="insert.html#Replace">Replace</A> mode but
+|<A HREF="change.html#R">R</A>|	  N  R		enter <A HREF="insert\\.html#Replace">替代</A>模式 (repeat the entered text N times)
+|<A HREF="change.html#gR">gR</A>|	  N  gR		enter virtual <A HREF="insert\\.html#Replace">替代</A>模式: Like <A HREF="insert\\.html#Replace">替代</A>模式 but
 			   without affecting layout
 |<A HREF="visual.html#v_b_r">v_b_r</A>|	     {visual}r{char}
 			in <A HREF="visual.html#Visual">Visual</A> block mode: <A HREF="insert.html#Replace">Replace</A> each char of the
@@ -538,9 +538,9 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 			   accordingly
 ------------------------------------------------------------------------------
 
-*<A NAME="Q_vi"></A><B>Q_vi</B>*		<A HREF="visual.html#Visual">Visual</A> mode
+*<A NAME="Q_vi"></A><B>Q_vi</B>*		<A HREF="visual\.html#Visual">可视</A>模式
 
-|<A HREF="vimindex.html#visual-index">visual-index</A>|	<A HREF="eval.html#list">列表</A> of <A HREF="visual.html#Visual">Visual</A> mode commands.
+|<A HREF="vimindex.html#visual-index">visual-index</A>|	<A HREF="eval.html#list">列表</A> of <A HREF="visual\.html#Visual">可视</A>模式 commands.
 
 |<A HREF="visual.html#v">v</A>|        v		start highlighting characters  }  move cursor and use
 |<A HREF="visual.html#V">V</A>|        V		start highlighting <A HREF="motion.html#linewise">linewise</A>    }  <A HREF="motion.html#operator">operator</A> to affect
@@ -552,7 +552,7 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 |<A HREF="visual.html#v_CTRL-V">v_CTRL-V</A>| CTRL-V	highlight blockwise or stop highlighting
 ------------------------------------------------------------------------------
 
-*<A NAME="Q_to"></A><B>Q_to</B>*		Text <A HREF="vimindex.html#objects">objects</A> (only in <A HREF="visual.html#Visual">Visual</A> mode or after an <A HREF="motion.html#operator">operator</A>)
+*<A NAME="Q_to"></A><B>Q_to</B>*		文本<A HREF="vimindex\.html#objects">对象</A> (only in <A HREF="visual\.html#Visual">可视</A>模式 or after an <A HREF="motion.html#operator">operator</A>)
 
 |<A HREF="motion.html#v_aw">v_aw</A>|	   N  aw	<A HREF="visual.html#Select">Select</A> &quot;a word&quot;
 |<A HREF="motion.html#v_iw">v_iw</A>|	   N  iw	<A HREF="visual.html#Select">Select</A> &quot;inner word&quot;
@@ -608,17 +608,17 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 
 *<A NAME="Q_km"></A><B>Q_km</B>*		Key <A HREF="map.html#mapping">mapping</A>
 
-|<A HREF="map.html#:map">:map</A>|       :ma[p] <A HREF="map.html#{lhs}">{lhs}</A> <A HREF="map.html#{rhs}">{rhs}</A>	  map <A HREF="map.html#{lhs}">{lhs}</A> to <A HREF="map.html#{rhs}">{rhs}</A> in <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode
+|<A HREF="map.html#:map">:map</A>|       :ma[p] <A HREF="map.html#{lhs}">{lhs}</A> <A HREF="map.html#{rhs}">{rhs}</A>	  map <A HREF="map.html#{lhs}">{lhs}</A> to <A HREF="map.html#{rhs}">{rhs}</A> in <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual\.html#Visual">可视</A>模式
 |<A HREF="map.html#:map!">:map!</A>|      :ma[p]! <A HREF="map.html#{lhs}">{lhs}</A> <A HREF="map.html#{rhs}">{rhs}</A>  map <A HREF="map.html#{lhs}">{lhs}</A> to <A HREF="map.html#{rhs}">{rhs}</A> in <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">Command-line</A>
 				     mode
 |<A HREF="map.html#:noremap">:noremap</A>|   :no[remap][!] <A HREF="map.html#{lhs}">{lhs}</A> <A HREF="map.html#{rhs}">{rhs}</A>
 				  same <A HREF="motion.html#as">as</A> &quot;<A HREF="map.html#:map">:map</A>&quot;, no remapping for this <A HREF="map.html#{rhs}">{rhs}</A>
 |<A HREF="map.html#:unmap">:unmap</A>|     :unm[ap] <A HREF="map.html#{lhs}">{lhs}</A>	  remove the <A HREF="map.html#mapping">mapping</A> of <A HREF="map.html#{lhs}">{lhs}</A> for <A HREF="intro.html#Normal">Normal</A> and
-				     <A HREF="visual.html#Visual">Visual</A> mode
+				     <A HREF="visual\.html#Visual">可视</A>模式
 |<A HREF="map.html#:unmap!">:unmap!</A>|    :unm[ap]! <A HREF="map.html#{lhs}">{lhs}</A>	  remove the <A HREF="map.html#mapping">mapping</A> of <A HREF="map.html#{lhs}">{lhs}</A> for <A HREF="insert.html#Insert">Insert</A> and
 				     <A HREF="cmdline.html#Command-line">命令行</A>模式
 |<A HREF="map.html#:map_l">:map_l</A>|     :ma[p] [lhs]	  <A HREF="eval.html#list">列表</A> mappings (starting with [lhs]) for
-				     <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode
+				     <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual\.html#Visual">可视</A>模式
 |<A HREF="map.html#:map_l!">:map_l!</A>|    :ma[p]! [lhs]	  <A HREF="eval.html#list">列表</A> mappings (starting with [lhs]) for
 				     <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Command-line">命令行</A>模式
 |<A HREF="map.html#:cmap">:cmap</A>|      :cmap/:cunmap/:cnoremap
@@ -632,14 +632,14 @@ In <A HREF="insert.html#Insert">Insert</A> or <A HREF="cmdline.html#Command-line
 				     <A HREF="intro.html#Normal">正常</A>模式 only
 |<A HREF="map.html#:vmap">:vmap</A>|      :vmap/:vunmap/:vnoremap
 				  like &quot;:map&quot;/&quot;:unmap&quot;/&quot;:noremap&quot; but for
-				     <A HREF="visual.html#Visual">Visual</A> mode only
+				     <A HREF="visual\.html#Visual">可视</A>模式 only
 |<A HREF="map.html#:omap">:omap</A>|      :omap/:ounmap/:onoremap
 				  like &quot;:map&quot;/&quot;:unmap&quot;/&quot;:noremap&quot; but only for
 				     when an <A HREF="motion.html#operator">operator</A> is pending
-|<A HREF="map.html#:mapc">:mapc</A>|      :mapc[lear]	  remove mappings for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">Visual</A> mode
+|<A HREF="map.html#:mapc">:mapc</A>|      :mapc[lear]	  remove mappings for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual\.html#Visual">可视</A>模式
 |<A HREF="map.html#:mapc">:mapc</A>|      :mapc[lear]!	  remove mappings for <A HREF="insert.html#Insert">Insert</A> and <A HREF="cmdline.html#Cmdline">Cmdline</A> mode
 |<A HREF="map.html#:imapc">:imapc</A>|     :imapc[lear]	  remove mappings for <A HREF="intro.html#Insert">插入</A>模式
-|<A HREF="map.html#:vmapc">:vmapc</A>|     :vmapc[lear]	  remove mappings for <A HREF="visual.html#Visual">Visual</A> mode
+|<A HREF="map.html#:vmapc">:vmapc</A>|     :vmapc[lear]	  remove mappings for <A HREF="visual\.html#Visual">可视</A>模式
 |<A HREF="map.html#:omapc">:omapc</A>|     :omapc[lear]	  remove mappings for <A HREF="intro.html#Operator-pending">Operator-pending</A> mode
 |<A HREF="map.html#:nmapc">:nmapc</A>|     :nmapc[lear]	  remove mappings for <A HREF="intro.html#Normal">正常</A>模式
 |<A HREF="map.html#:cmapc">:cmapc</A>|     :cmapc[lear]	  remove mappings for <A HREF="cmdline.html#Cmdline">Cmdline</A> mode
@@ -938,7 +938,7 @@ Short explanation of each option:		*<A NAME="option-list"></A><B>option-list</B>
 <A HREF="options.html#'sections'">'sections'</A>	  <A HREF="options.html#'sect'">'sect'</A>    nroff macros that separate sections
 <A HREF="options.html#'secure'">'secure'</A>		    secure mode for reading .vimrc in current dir
 <A HREF="options.html#'selection'">'selection'</A>	  <A HREF="options.html#'sel'">'sel'</A>     what type of selection to use
-<A HREF="options.html#'selectmode'">'selectmode'</A>	  <A HREF="options.html#'slm'">'slm'</A>     when to use <A HREF="visual.html#Select">Select</A> mode instead of <A HREF="visual.html#Visual">Visual</A> mode
+<A HREF="options.html#'selectmode'">'selectmode'</A>	  <A HREF="options.html#'slm'">'slm'</A>     when to use <A HREF="visual.html#Select">Select</A> mode instead of <A HREF="visual\.html#Visual">可视</A>模式
 <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>  <A HREF="options.html#'ssop'">'ssop'</A>    <A HREF="options\.html#options">选项</A> for |<A HREF="starting.html#:mksession">:mksession</A>|
 <A HREF="options.html#'shada'">'shada'</A>		  <A HREF="options.html#'sd'">'sd'</A>	    use .shada file upon <A HREF="starting.html#startup">startup</A> and <A HREF="starting.html#exiting">exiting</A>
 <A HREF="options.html#'shell'">'shell'</A>		  <A HREF="options.html#'sh'">'sh'</A>	    name of shell to use for external commands

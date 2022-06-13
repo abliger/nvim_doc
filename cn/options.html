@@ -1636,13 +1636,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	When the current mode is listed then concealing happens just like in
 	other lines.
 	  <A HREF="pattern.html#n">n</A>		<A HREF="intro.html#Normal">正常</A>模式
-	  <A HREF="visual.html#v">v</A>		<A HREF="visual.html#Visual">Visual</A> mode
+	  <A HREF="visual.html#v">v</A>		<A HREF="visual\.html#Visual">可视</A>模式
 	  <A HREF="insert.html#i">i</A>		<A HREF="intro.html#Insert">插入</A>模式
 	  <A HREF="change.html#c">c</A>		Command line editing, for <A HREF="#'incsearch'">'incsearch'</A>
 
 	'<A HREF="visual.html#v">v</A>' applies to all lines in the <A HREF="visual.html#Visual">Visual</A> area, not only the cursor.
 	A useful value is &quot;nc&quot;.  This is used in help files.  So long <A HREF="motion.html#as">as</A> you
-	are moving around text is concealed, but when starting to insert text
+	are 移动 text is concealed, but when starting to insert text
 	or selecting a <A HREF="visual.html#Visual">Visual</A> area the concealed text is displayed, so that
 	you can see what you are doing.
 	Keep in mind that the cursor position is not always where it's
@@ -1817,7 +1817,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="cpo-L"></A><B>cpo-L</B>*
 		<A HREF="motion.html#L">L</A>	When the <A HREF="#'list'">'list'</A> option is set, <A HREF="#'wrapmargin'">'wrapmargin'</A>,
-			<A HREF="#'textwidth'">'textwidth'</A>, <A HREF="#'softtabstop'">'softtabstop'</A> and Virtual <A HREF="insert.html#Replace">Replace</A> mode
+			<A HREF="#'textwidth'">'textwidth'</A>, <A HREF="#'softtabstop'">'softtabstop'</A> and Virtual <A HREF="insert\\.html#Replace">替代</A>模式
 			(见 |<A HREF="change.html#gR">gR</A>|) <A HREF="intro.html#count">count</A> a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> <A HREF="motion.html#as">as</A> two characters, instead of
 			the normal behavior of a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.
 
@@ -2054,7 +2054,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			local to<A HREF="windows.html#window">窗口</A>
 	Highlight the text line of the cursor with CursorLine |<A HREF="syntax.html#hl-CursorLine">hl-CursorLine</A>|.
 	Useful to easily spot the cursor.  Will make screen redrawing slower.
-	When <A HREF="visual.html#Visual">Visual</A> mode is active the highlighting isn't used to make <A HREF="motion.html#it">它</A>
+	When <A HREF="visual\.html#Visual">可视</A>模式 is active the highlighting isn't used to make <A HREF="motion.html#it">它</A>
 	easier to see the selected text.
 
 
@@ -3087,15 +3087,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		mode-list:argument-list,mode-list:argument-list,..
 	The mode-list is a dash separated <A HREF="eval.html#list">列表</A> of these modes:
 		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
-		<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> mode
-		ve	<A HREF="visual.html#Visual">Visual</A> mode with <A HREF="#'selection'">'selection'</A> &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; (same <A HREF="motion.html#as">as</A> '<A HREF="visual.html#v">v</A>',
+		<A HREF="visual.html#v">v</A>	<A HREF="visual\.html#Visual">可视</A>模式
+		ve	<A HREF="visual\.html#Visual">可视</A>模式 with <A HREF="#'selection'">'selection'</A> &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; (same <A HREF="motion.html#as">as</A> '<A HREF="visual.html#v">v</A>',
 			if not specified)
 		<A HREF="insert.html#o">o</A>	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
 		<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
-		<A HREF="change.html#r">r</A>	<A HREF="insert.html#Replace">Replace</A> mode
+		<A HREF="change.html#r">r</A>	<A HREF="insert\\.html#Replace">替代</A>模式
 		<A HREF="change.html#c">c</A>	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="intro.html#Normal">Normal</A> (append) mode
 		ci	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="intro.html#Insert">插入</A>模式
-		cr	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="insert.html#Replace">Replace</A> mode
+		cr	<A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="insert\\.html#Replace">替代</A>模式
 		sm	showmatch in <A HREF="intro.html#Insert">插入</A>模式
 		a	all modes
 	The <A HREF="editing.html#argument-list">argument-list</A> is a dash separated <A HREF="eval.html#list">列表</A> of these arguments:
@@ -3129,7 +3129,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			are. |<A HREF="map.html#language-mapping">language-mapping</A>|
 
 	Examples of parts:
-	   n-c-v:block-nCursor	In <A HREF="intro.html#Normal">Normal</A>, <A HREF="cmdline.html#Command-line">Command-line</A> and <A HREF="visual.html#Visual">Visual</A> mode, use a
+	   n-c-v:block-nCursor	In <A HREF="intro.html#Normal">Normal</A>, <A HREF="cmdline.html#Command-line">Command-line</A> and <A HREF="visual\.html#Visual">可视</A>模式, use a
 				block cursor with colors from the &quot;nCursor&quot;
 				highlight group
 	   n-v-c-sm:block,i-ci-ve:ver25-Cursor,r-cr-o:hor20
@@ -3249,7 +3249,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		or the <A HREF="visual.html#Visual">Visual</A> area extended, Vim tries to become the owner of
 		the windowing system's global selection.  This means that the
 		Visually highlighted text is available for pasting into other
-		applications <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> into Vim itself.  When the <A HREF="visual.html#Visual">Visual</A> mode
+		applications <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> into Vim itself.  When the <A HREF="visual\.html#Visual">可视</A>模式
 		ends, possibly due to an operation on the text, or when an
 		application wants to <A HREF="provider.html#paste">paste</A> the selection, the highlighted text
 		is automatically yanked into the &quot;* selection <A HREF="intro.html#register">register</A>.
@@ -3882,7 +3882,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="eval.html#list">列表</A> of comma-separated words, which enable special things that keys
 	can <A HREF="diff.html#do">do</A>.  These values can be used:
 	   startsel	Using a shifted special key starts selection (either
-			<A HREF="visual.html#Select">Select</A> mode or <A HREF="visual.html#Visual">Visual</A> mode, depending on &quot;key&quot; being
+			<A HREF="visual.html#Select">Select</A> mode or <A HREF="visual\.html#Visual">可视</A>模式, depending on &quot;key&quot; being
 			present in <A HREF="#'selectmode'">'selectmode'</A>).
 	   stopsel	Using a not-shifted special key stops selection.
 	Special keys in this <A HREF="repeat.html#context">context</A> are the cursor keys, <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>, <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>,
@@ -4447,7 +4447,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 
 	Enables mouse support. For example, to enable the mouse in <A HREF="intro.html#Normal">正常</A>模式
-	and <A HREF="visual.html#Visual">Visual</A> mode:
+	and <A HREF="visual\.html#Visual">可视</A>模式:
 <B>		:set mouse=nv</B>
  
 	To temporarily disable mouse support, hold the <A HREF="intro.html#shift">shift</A> key while using
@@ -4455,7 +4455,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	Mouse support can be enabled for different modes:
 		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
-		<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> mode
+		<A HREF="visual.html#v">v</A>	<A HREF="visual\.html#Visual">可视</A>模式
 		<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 		<A HREF="change.html#c">c</A>	<A HREF="cmdline.html#Command-line">命令行</A>模式
 		<A HREF="motion.html#h">h</A>	all previous modes when editing a help file
@@ -4481,7 +4481,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#'mousefocus'">'mousefocus'</A>	<A HREF="windows.html#window">窗口</A>focus follows mouse pointer
 	<A HREF="#'mousemodel'">'mousemodel'</A>	what mouse button does which action
 	<A HREF="#'mousehide'">'mousehide'</A>	hide mouse pointer while typing text
-	<A HREF="#'selectmode'">'selectmode'</A>	whether to start <A HREF="visual.html#Select">Select</A> mode or <A HREF="visual.html#Visual">Visual</A> mode
+	<A HREF="#'selectmode'">'selectmode'</A>	whether to start <A HREF="visual.html#Select">Select</A> mode or <A HREF="visual\.html#Visual">可视</A>模式
 
 	The <A HREF="#:behave">:behave</A> command provides some &quot;profiles&quot; for mouse behavior.
 
@@ -4534,7 +4534,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			If clicking inside a selection, that selection will
 			be acted upon, i.e. no cursor move.  This implies of
 			course, that right clicking outside a selection will
-			end <A HREF="visual.html#Visual">Visual</A> mode.
+			end <A HREF="visual\.html#Visual">可视</A>模式.
 	Overview of what button does what for each model:
 <B><FONT color="#3A6F2B">	mouse		    extend		popup(_setpos) </FONT></B>
 	left click	    place cursor	place cursor
@@ -4584,12 +4584,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	The mode-list is a dash separated <A HREF="eval.html#list">列表</A> of these modes/locations:
 <B><FONT color="#3A6F2B">			In a normal window: </FONT></B>
 		<A HREF="pattern.html#n">n</A>	<A HREF="intro.html#Normal">正常</A>模式
-		<A HREF="visual.html#v">v</A>	<A HREF="visual.html#Visual">Visual</A> mode
-		ve	<A HREF="visual.html#Visual">Visual</A> mode with <A HREF="#'selection'">'selection'</A> &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; (same <A HREF="motion.html#as">as</A> '<A HREF="visual.html#v">v</A>',
+		<A HREF="visual.html#v">v</A>	<A HREF="visual\.html#Visual">可视</A>模式
+		ve	<A HREF="visual\.html#Visual">可视</A>模式 with <A HREF="#'selection'">'selection'</A> &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot; (same <A HREF="motion.html#as">as</A> '<A HREF="visual.html#v">v</A>',
 			if not specified)
 		<A HREF="insert.html#o">o</A>	<A HREF="intro.html#Operator-pending">Operator-pending</A> mode
 		<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
-		<A HREF="change.html#r">r</A>	<A HREF="insert.html#Replace">Replace</A> mode
+		<A HREF="change.html#r">r</A>	<A HREF="insert\\.html#Replace">替代</A>模式
 
 <B><FONT color="#3A6F2B">			Others: </FONT></B>
 		<A HREF="change.html#c">c</A>	appending to the command-line
@@ -5500,7 +5500,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'selectmode'">'selectmode'</A> <A HREF="#'slm'">'slm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	This is a comma-separated <A HREF="eval.html#list">列表</A> of words, which specifies when to start
-	<A HREF="visual.html#Select">Select</A> mode instead of <A HREF="visual.html#Visual">Visual</A> mode, when a selection is started.
+	<A HREF="visual.html#Select">Select</A> mode instead of <A HREF="visual\.html#Visual">可视</A>模式, when a selection is started.
 	Possible values:
 	   mouse	when using the mouse
 	   key		when using shifted special keys
@@ -5990,7 +5990,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	Show (partial) command in the last line of the screen.  Set this
 	option off if your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is slow.
-	In <A HREF="visual.html#Visual">Visual</A> mode the size of the selected area is shown:
+	In <A HREF="visual\.html#Visual">可视</A>模式 the size of the selected area is shown:
 	- When selecting characters within a line, the number of characters.
 	  If the number of bytes is different <A HREF="motion.html#it">它</A> is also displayed: &quot;2-6&quot;
 	  means two characters and six bytes.
@@ -6037,7 +6037,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 				 *<A NAME="'showmode'"></A><B>'showmode'</B>* *<A NAME="'smd'"></A><B>'smd'</B>* *<A NAME="'noshowmode'"></A><B>'noshowmode'</B>* *<A NAME="'nosmd'"></A><B>'nosmd'</B>*
 <A HREF="#'showmode'">'showmode'</A> <A HREF="#'smd'">'smd'</A>	<A HREF="#boolean">boolean</A>	(default: on)
 			global
-	If in <A HREF="insert.html#Insert">Insert</A>, <A HREF="insert.html#Replace">Replace</A> or <A HREF="visual.html#Visual">Visual</A> mode put a message on the last line.
+	If in <A HREF="insert.html#Insert">Insert</A>, <A HREF="insert.html#Replace">Replace</A> or <A HREF="visual\.html#Visual">可视</A>模式 put a message on the last line.
 	The |<A HREF="syntax.html#hl-ModeMsg">hl-ModeMsg</A>| highlight group determines the highlighting.
 
 
@@ -7301,7 +7301,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	Virtual editing means that the cursor can be positioned where there is
 	no actual character.  This can be halfway into a <A HREF="intro.html#tab">tab</A> or beyond the end
-	of the line.  Useful for selecting a rectangle in <A HREF="visual.html#Visual">Visual</A> mode and
+	of the line.  Useful for selecting a rectangle in <A HREF="visual\.html#Visual">可视</A>模式 and
 	editing a table.
 	&quot;onemore&quot; is not the same, <A HREF="motion.html#it">它</A> will only allow moving the cursor just
 	after the last character of the line.  This makes some commands more

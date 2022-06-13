@@ -164,7 +164,7 @@ For <A HREF="insert.html#inserting">inserting</A> text 见 |<A HREF="insert.html
 			<A HREF="intro.html#register">register</A> x].
 
 These commands delete text.  You can repeat them with the `.` command
-(except `:d`) and <A HREF="undo.html#undo">undo</A> them.  Use <A HREF="visual.html#Visual">Visual</A> mode to delete blocks of text.  See
+(except `:d`) and <A HREF="undo.html#undo">undo</A> them.  Use <A HREF="visual\.html#Visual">可视</A>模式 to delete blocks of text.  See
 |<A HREF="#registers">registers</A>| for an explanation of registers.
 
 An exception for the d{motion} command: If the motion is not <A HREF="motion.html#linewise">linewise</A>, the
@@ -240,14 +240,14 @@ of the resulting line.
 
 
 							*<A NAME="R"></A><B>R</B>*
-<A HREF="#R">R</A>			Enter <A HREF="insert.html#Replace">Replace</A> mode: Each character you type replaces
+<A HREF="#R">R</A>			Enter <A HREF="insert\\.html#Replace">替代</A>模式: Each character you type replaces
 			an existing character, starting with the character
 			under the cursor.  Repeat the entered text [count]-1
 			times.  见 |<A HREF="insert.html#Replace-mode">Replace-mode</A>| for more details.
 
 
 							*<A NAME="gR"></A><B>gR</B>*
-<A HREF="#gR">gR</A>			Enter Virtual <A HREF="insert.html#Replace">Replace</A> mode: Each character you type
+<A HREF="#gR">gR</A>			Enter Virtual <A HREF="insert\\.html#Replace">替代</A>模式: Each character you type
 			replaces existing characters in screen space.  So a
 			<A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> may replace several characters at once.
 			Repeat the entered text [count]-1 times.  See
@@ -312,21 +312,21 @@ of the resulting line.
 			<A HREF="motion.html#it">它</A> might work differently.
 
 Notes:
-- You can end <A HREF="insert.html#Insert">Insert</A> and <A HREF="insert.html#Replace">Replace</A> mode with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
-- See the section &quot;<A HREF="insert.html#Insert">Insert</A> and <A HREF="insert.html#Replace">Replace</A> mode&quot; |<A HREF="insert.html#mode-ins-repl">mode-ins-repl</A>| for the other
+- You can end <A HREF="insert.html#Insert">Insert</A> and <A HREF="insert\\.html#Replace">替代</A>模式 with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
+- See the section &quot;<A HREF="insert.html#Insert">Insert</A> and <A HREF="insert\\.html#Replace">替代</A>模式&quot; |<A HREF="insert.html#mode-ins-repl">mode-ins-repl</A>| for the other
   special characters in these modes.
-- The effect of <A HREF="intro.html#[count]">[count]</A> takes place after Vim exits <A HREF="insert.html#Insert">Insert</A> or <A HREF="insert.html#Replace">Replace</A> mode.
+- The effect of <A HREF="intro.html#[count]">[count]</A> takes place after Vim exits <A HREF="insert.html#Insert">Insert</A> or <A HREF="insert\\.html#Replace">替代</A>模式.
 - When the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option contains '<A HREF="motion.html#$">$</A>' and the change is within one line,
   Vim continues to show the text to be deleted and puts a '<A HREF="motion.html#$">$</A>' at the last
   deleted character.
 
 见 |<A HREF="#registers">registers</A>| for an explanation of registers.
 
-<A HREF="insert.html#Replace">Replace</A> mode is just like <A HREF="intro.html#Insert">插入</A>模式, except that every character you enter
+<A HREF="insert\\.html#Replace">替代</A>模式 is just like <A HREF="intro.html#Insert">插入</A>模式, except that every character you enter
 deletes one character.  If you reach the end of a line, Vim appends any
-further characters (just like <A HREF="intro.html#Insert">插入</A>模式).  In <A HREF="insert.html#Replace">Replace</A> mode, the backspace
+further characters (just like <A HREF="intro.html#Insert">插入</A>模式).  In <A HREF="insert\\.html#Replace">替代</A>模式, the backspace
 key restores the original text (if there was any).  (See section &quot;<A HREF="insert.html#Insert">Insert</A> and
-<A HREF="insert.html#Replace">Replace</A> mode&quot; |<A HREF="insert.html#mode-ins-repl">mode-ins-repl</A>|).
+<A HREF="insert\\.html#Replace">替代</A>模式&quot; |<A HREF="insert.html#mode-ins-repl">mode-ins-repl</A>|).
 
 
 						*<A NAME="cw"></A><B>cw</B>* *<A NAME="cW"></A><B>cW</B>*
@@ -646,7 +646,7 @@ if necessary).  If the <A HREF="options.html#'expandtab'">'expandtab'</A> option
 you can use &quot;&gt;&gt;&lt;&lt;&quot; to replace &lt;Tab&gt;s in the indent by spaces (or use
 `:retab!`).
 
-To move a line several 'shiftwidth's, use <A HREF="visual.html#Visual">Visual</A> mode or the `:` commands.
+To move a line several 'shiftwidth's, use <A HREF="visual\.html#Visual">可视</A>模式 or the `:` commands.
 For example:
 <B>	Vjj4&gt;		move three lines 4 indents to the right</B>
 <B>	:&lt;&lt;&lt;		move current line 3 indents to the left</B>
@@ -1151,7 +1151,7 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
 
 ==============================================================================
 
-5. Copying and moving text				*<A NAME="copy-move"></A><B>copy-move</B>*
+5. Copying and 移动文本				*<A NAME="copy-move"></A><B>copy-move</B>*
 
 
 							*<A NAME="quote"></A><B>quote</B>*
@@ -1336,7 +1336,7 @@ the cursor to the start.
 
 
 						*<A NAME="put-Visual-mode"></A><B>put-Visual-mode</B>* *<A NAME="v_p"></A><B>v_p</B>* *<A NAME="v_P"></A><B>v_P</B>*
-When using a put command like |<A HREF="#p">p</A>| or |<A HREF="#P">P</A>| in <A HREF="visual.html#Visual">Visual</A> mode, Vim will try to
+When using a put command like |<A HREF="#p">p</A>| or |<A HREF="#P">P</A>| in <A HREF="visual\.html#Visual">可视</A>模式, Vim will try to
 replace the selected text with the contents of the <A HREF="intro.html#register">register</A>.  Whether this
 works well depends on the type of selection and the type of the text in the
 <A HREF="intro.html#register">register</A>.  With blockwise selection <A HREF="motion.html#it">它</A> also depends on the size of the block
@@ -1353,14 +1353,14 @@ the text to copy, Visually select the text to replace and use &quot;0p .  You ca
 repeat this <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A> you like, and the unnamed <A HREF="intro.html#register">register</A> will be
 changed each time.
 
-When you use a blockwise <A HREF="visual.html#Visual">Visual</A> mode command and <A HREF="#yank">yank</A> only a single line into
+When you use a blockwise <A HREF="visual\.html#Visual">可视</A>模式 command and <A HREF="#yank">yank</A> only a single line into
 a <A HREF="intro.html#register">register</A>, a <A HREF="provider.html#paste">paste</A> on a visual selected area will <A HREF="provider.html#paste">paste</A> that single line on
 each of the selected lines (thus <A HREF="#replacing">replacing</A> the blockwise selected region by a
 block of the pasted line).
 
 
 							*<A NAME="blockwise-register"></A><B>blockwise-register</B>*
-If you use a blockwise <A HREF="visual.html#Visual">Visual</A> mode command to get the text into the <A HREF="intro.html#register">register</A>,
+If you use a blockwise <A HREF="visual\.html#Visual">可视</A>模式 command to get the text into the <A HREF="intro.html#register">register</A>,
 the block of text will be inserted before (&quot;P&quot;) or after (&quot;p&quot;) the cursor
 column in the current and next lines.  Vim makes the whole block of text start
 in the same column.  Thus the inserted text looks the same <A HREF="motion.html#as">as</A> when <A HREF="motion.html#it">它</A> was

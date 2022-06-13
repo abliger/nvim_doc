@@ -81,7 +81,7 @@
 
 In chapter 4 several ways to make small changes were explained.  This chapter
 goes into making changes that are repeated or can affect a large amount of
-text.  The <A HREF="visual.html#Visual">Visual</A> mode allows doing various things with blocks of text.  Use
+text.  The <A HREF="visual\.html#Visual">可视</A>模式 allows doing various things with blocks of text.  Use
 an external program to <A HREF="diff.html#do">do</A> really complicated things.
 
 |<A HREF="#10.1">10.1</A>|	Record and playback commands
@@ -382,7 +382,7 @@ to specify the lines between the marks (including the lines with the marks):
 
 VISUAL MODE AND RANGES
 
-You can select text with <A HREF="visual.html#Visual">Visual</A> mode.  If you then press &quot;<A HREF="cmdline.html#:">:</A>&quot; to start a colon
+You can select text with <A HREF="visual\.html#Visual">可视</A>模式.  If you then press &quot;<A HREF="cmdline.html#:">:</A>&quot; to start a colon
 command, you will see this:
 
 <B>	:'&lt;,'&gt;</B>
@@ -391,7 +391,7 @@ Now you can type the command and <A HREF="motion.html#it">它</A> will be applie
 was visually selected.
 
 	Note:
-	When using <A HREF="visual.html#Visual">Visual</A> mode to select part of a line, or using <A HREF="visual.html#CTRL-V">CTRL-V</A> to
+	When using <A HREF="visual\.html#Visual">可视</A>模式 to select part of a line, or using <A HREF="visual.html#CTRL-V">CTRL-V</A> to
 	select a block of text, the colon commands will still apply to whole
 	lines.  This might change in a future version of Vim.
 
@@ -535,7 +535,7 @@ Making the same selection by moving the cursor to the end of the longest line
 with other <A HREF="intro.html#movement">移动</A>命令 will not have the same result.
 
 
-CHANGING TEXT
+改变文本
 
 The <A HREF="visual.html#Visual">Visual</A> block &quot;<A HREF="change.html#c">c</A>&quot;命令 deletes the block and then throws you into <A HREF="insert.html#Insert">Insert</A>
 mode to enable you to type in a <A HREF="options\.html#options">字符串</A>.  The <A HREF="options\.html#options">字符串</A> will be inserted in each
@@ -763,7 +763,7 @@ The &quot;<A HREF="change.html#gu">gu</A>&quot; <A HREF="motion.html#operator">o
  	SECTION header	    ----&gt;      section header
 
 You can also use &quot;<A HREF="change.html#g~">g~</A>&quot; to swap <A HREF="change.html#case">case</A>.  All these are operators, thus they work
-with any motion command, with text <A HREF="vimindex.html#objects">objects</A> and in <A HREF="visual.html#Visual">Visual</A> mode.
+with any motion command, with 文本<A HREF="vimindex\.html#objects">对象</A> and in <A HREF="visual\.html#Visual">可视</A>模式.
    To make an <A HREF="motion.html#operator">operator</A> work on lines you double <A HREF="motion.html#it">它</A>.  The delete <A HREF="motion.html#operator">operator</A> is
 &quot;<A HREF="change.html#d">d</A>&quot;, thus to delete a line you use &quot;<A HREF="change.html#dd">dd</A>&quot;.  Similarly, &quot;<A HREF="change.html#gugu">gugu</A>&quot; makes a whole line
 <A HREF="change.html#lowercase">小写</A>.  This can be shortened to &quot;<A HREF="change.html#guu">guu</A>&quot;.  &quot;<A HREF="change.html#gUgU">gUgU</A>&quot; is shortened to &quot;<A HREF="change.html#gUU">gUU</A>&quot; and

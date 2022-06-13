@@ -79,37 +79,30 @@
 			     做小改动
 
 
-This chapter shows you several ways of making corrections and moving text
-around.  It teaches you the three basic ways to change text: operator-motion,
-<A HREF="visual.html#Visual">Visual</A> mode and text <A HREF="vimindex.html#objects">objects</A>.
+此章节会介绍几个修正和移动文本的方法.会教你三种改变文本的基本方法: 操作符移动, <A HREF="visual\.html#Visual">可视</A>模式和文本<A HREF="vimindex\.html#objects">对象</A>.
 
-|<A HREF="#04.1">04.1</A>|	Operators and motions
-|<A HREF="#04.2">04.2</A>|	Changing text
-|<A HREF="#04.3">04.3</A>|	Repeating a change
-|<A HREF="#04.4">04.4</A>|	<A HREF="visual.html#Visual">Visual</A> mode
-|<A HREF="#04.5">04.5</A>|	Moving text
-|<A HREF="#04.6">04.6</A>|	Copying text
-|<A HREF="#04.7">04.7</A>|	Using the <A HREF="provider.html#clipboard">clipboard</A>
-|<A HREF="#04.8">04.8</A>|	Text <A HREF="vimindex.html#objects">objects</A>
-|<A HREF="#04.9">04.9</A>|	<A HREF="insert.html#Replace">Replace</A> mode
-|<A HREF="#04.10">04.10</A>|	Conclusion
+|<A HREF="#04.1">04.1</A>|	操作符和动作
+|<A HREF="#04.2">04.2</A>|	改变文本
+|<A HREF="#04.3">04.3</A>|	重复一个修改
+|<A HREF="#04.4">04.4</A>|	<A HREF="visual\.html#Visual">可视</A>模式
+|<A HREF="#04.5">04.5</A>|	移动文本
+|<A HREF="#04.6">04.6</A>|	复制文本
+|<A HREF="#04.7">04.7</A>|	使用<A HREF="provider\.html#clipboard">剪切板</A>
+|<A HREF="#04.8">04.8</A>|	文本<A HREF="vimindex\.html#objects">对象</A>
+|<A HREF="#04.9">04.9</A>|	<A HREF="insert\\.html#Replace">替代</A>模式
+|<A HREF="#04.10">04.10</A>|	总结
 
-下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
-上一章: |<A HREF="usr_03.html">usr_03.txt</A>|  Moving around
+下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  自定义配置
+上一章: |<A HREF="usr_03.html">usr_03.txt</A>|  移动
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="04.1"></A><B>04.1</B>*	Operators and motions
+*<A NAME="04.1"></A><B>04.1</B>*	操作符和动作
 
-In chapter 2 you learned the &quot;<A HREF="change.html#x">x</A>&quot;命令 to delete a single character.  And
-using a <A HREF="intro.html#count">count</A>: &quot;4x&quot; deletes four characters.
-   The &quot;dw&quot; command deletes a <A HREF="motion.html#word">单词</A>.  You may recognize the &quot;<A HREF="motion.html#w">w</A>&quot;命令 <A HREF="motion.html#as">as</A> the
-move <A HREF="motion.html#word">单词</A> command.  In fact, the &quot;<A HREF="change.html#d">d</A>&quot;命令 may be followed by any motion
-command, and <A HREF="motion.html#it">它</A> deletes from the current location to the place where the
-cursor winds up.
-   The &quot;4w&quot; command, for example, moves the cursor over four words.  The &quot;d4w&quot;
-command deletes four words.
+再章节2，你学会使用&quot;<A HREF="change.html#x">x</A>&quot;命令去删除单个字符.和使用<A HREF="intro.html#count">count</A>: &quot;4x&quot; deletes four characters.
+   &quot;dw&quot;命令会会删除一个<A HREF="motion.html#word">单词</A>.你可能会意识到&quot;<A HREF="motion.html#w">w</A>&quot;命令 <A HREF="motion.html#as">是</A>移动<A HREF="motion.html#word">单词</A>的命令.实际上&quot;<A HREF="change.html#d">d</A>&quot;命令可以跟随任何移动命令,并且<A HREF="motion.html#it">它</A>会删除从光标当前位置到目标位置的全部内容.
+   例如，&quot;4w&quot;命令,光标向后移动四个单词.&quot;d4w&quot;命令会向后删除四个单词.
 
 <B><FONT color="#3A6F2B">	To err is human. To really foul up you need a computer. </FONT></B>
 			 ------------------&gt;
@@ -117,10 +110,7 @@ command deletes four words.
 
 <B><FONT color="#3A6F2B">	To err is human. you need a computer. </FONT></B>
 
-Vim only deletes up to the position where the motion takes the cursor.  That's
-because Vim knows that you probably don't want to delete the first character
-of a <A HREF="motion.html#word">单词</A>.  If you use the &quot;<A HREF="motion.html#e">e</A>&quot;命令 to move to the end of a <A HREF="motion.html#word">单词</A>, Vim
-guesses that you <A HREF="diff.html#do">do</A> want to include that last character:
+Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要删除<A HREF="motion.html#word">单词</A>的第一个字符.如果你使用&quot;<A HREF="motion.html#e">e</A>&quot;命令去移动到<A HREF="motion.html#word">单词</A>的结束,Vim会猜测你想要删除最后一个字符:
 
 <B><FONT color="#3A6F2B">	To err is human. you need a computer. </FONT></B>
 			--------&gt;
@@ -128,13 +118,9 @@ guesses that you <A HREF="diff.html#do">do</A> want to include that last charact
 
 <B><FONT color="#3A6F2B">	To err is human. a computer. </FONT></B>
 
-Whether the character under the cursor is included depends on the command you
-used to move to that character.  The reference manual calls this &quot;<A HREF="motion.html#exclusive">exclusive</A>&quot;
-when the character isn't included and &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot; when <A HREF="motion.html#it">它</A> is.
+是否包含光标所在字符取决于你使用的移动命令.当字符不包含其中，我们叫做&quot;<A HREF="motion.html#exclusive">非包含的</A>&quot;相反是&quot;<A HREF="motion.html#inclusive">包含的</A>&quot;.
 
-The &quot;<A HREF="motion.html#$">$</A>&quot;命令 moves to the end of a line.  The &quot;d$&quot; command deletes from the
-cursor to the end of the line.  This is an <A HREF="motion.html#inclusive">inclusive</A> motion, thus the last
-character of the line is included in the delete operation:
+&quot;<A HREF="motion.html#$">$</A>&quot;命令移动到行尾.&quot;d$&quot;命令会从光标到行尾的所有内容都删除.他是一个<A HREF="motion.html#inclusive">包含</A>动作,因此最后一个字符也会删除:
 
 <B><FONT color="#3A6F2B">	To err is human. a computer. </FONT></B>
 		       ------------&gt;
@@ -142,17 +128,13 @@ character of the line is included in the delete operation:
 
 <B><FONT color="#3A6F2B">	To err is human </FONT></B>
 
-There is a <A HREF="pattern.html#pattern">pattern</A> here: operator-motion.  You first type an <A HREF="motion.html#operator">operator</A> command.
-For example, &quot;<A HREF="change.html#d">d</A>&quot; is the delete <A HREF="motion.html#operator">operator</A>.  Then you type a motion command like
-&quot;4l&quot; or &quot;<A HREF="motion.html#w">w</A>&quot;.  This way you can operate on any text you can move over.
+这就是操作符动作组合模式.首先键入<A HREF="motion.html#operator">操作</A>命令.例如,&quot;<A HREF="change.html#d">d</A>&quot;是删除<A HREF="motion.html#operator">操作符</A>.然后键入移动命令像&quot;4l&quot;或&quot;<A HREF="motion.html#w">w</A>&quot;.使用这种方式你可以操作任何动作命令中的文字.
 
 ==============================================================================
 
-*<A NAME="04.2"></A><B>04.2</B>*	Changing text
+*<A NAME="04.2"></A><B>04.2</B>*	改变文本
 
-Another <A HREF="motion.html#operator">operator</A> is &quot;<A HREF="change.html#c">c</A>&quot;, change.  It acts just like the &quot;<A HREF="change.html#d">d</A>&quot; <A HREF="motion.html#operator">operator</A>, except
-<A HREF="motion.html#it">它</A> leaves you in <A HREF="intro.html#Insert">插入</A>模式.例如, &quot;<A HREF="change.html#cw">cw</A>&quot; changes a <A HREF="motion.html#word">单词</A>.  Or more
-specifically, <A HREF="motion.html#it">它</A> deletes a <A HREF="motion.html#word">单词</A> and then puts you in <A HREF="intro.html#Insert">插入</A>模式.
+另一个<A HREF="motion.html#operator">操作符</A>是&quot;<A HREF="change.html#c">c</A>&quot;,改变命令.它的行为有点像&quot;<A HREF="change.html#d">d</A>&quot;除了<A HREF="motion.html#it">它</A>会使你进入<A HREF="intro.html#Insert">插入</A>模式.例如, &quot;<A HREF="change.html#cw">cw</A>&quot;修改一个<A HREF="motion.html#word">单词</A>.更具体的说,<A HREF="motion.html#it">它</A>是删除一个<A HREF="motion.html#word">单词</A>然后使你进入<A HREF="intro.html#Insert">插入</A>模式.
 
 <B><FONT color="#3A6F2B">	To err is human </FONT></B>
 	   -------&gt;
@@ -160,127 +142,88 @@ specifically, <A HREF="motion.html#it">它</A> deletes a <A HREF="motion.html#wo
 
 <B><FONT color="#3A6F2B">	To be human </FONT></B>
 
-This &quot;c2wbe&lt;Esc&gt;&quot; contains these bits:
+&quot;c2wbe&lt;Esc&gt;&quot;包含以下操作:
 
-	<A HREF="change.html#c">c</A>	the change <A HREF="motion.html#operator">operator</A>
-	2w	move two words (they are deleted and <A HREF="intro.html#Insert">插入</A>模式 started)
-	be	insert this text
-	<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>	back to <A HREF="intro.html#Normal">正常</A>模式
+	<A HREF="change.html#c">c</A>	修改<A HREF="motion.html#operator">操作符</A>
+	2w	向后移动两个单词(单词会被删除并且进入<A HREF="intro.html#Insert">插入</A>模式)
+	be	插入be
+	<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>	返回<A HREF="intro.html#Normal">正常</A>模式
 
-You will have noticed something strange: The space before &quot;human&quot; isn't
-deleted.  There is a saying that for every problem there is an answer that is
-simple, clear, and wrong.  That is the <A HREF="change.html#case">case</A> with the example used here for the
-&quot;<A HREF="change.html#cw">cw</A>&quot;命令.  The <A HREF="change.html#c">c</A> <A HREF="motion.html#operator">operator</A> works just like the <A HREF="change.html#d">d</A> <A HREF="motion.html#operator">operator</A>, with one
-exception: &quot;<A HREF="change.html#cw">cw</A>&quot;.  It actually works like &quot;ce&quot;, change to end of <A HREF="motion.html#word">单词</A>.  Thus
-the space after the <A HREF="motion.html#word">单词</A> isn't included.  This is an exception that dates back
-to the old <A HREF="intro.html#Vi">Vi</A>.  Since many people are used to <A HREF="motion.html#it">它</A> now, the inconsistency has
-remained in Vim.
+你会发现一个奇怪的地方: human 前面的空格没有被删除。有一句谚语说道: 任何问题都 有一个简单，清楚但错误的回答。"cw" 命令就属于这种情况。c 操作符在很多地方都和 d 一样，但有一个例外，"cw"。它实际上像 "ce" 一样，删除到单词尾。这样单词后面的 空格就不包括在内了。这要追溯到使用 Vi 的旧日子。由于很多人已经习惯了这种方式， 这个不一致之处就留在 Vim 里了.
 
+更多修改命令
 
-MORE CHANGES
+像&quot;<A HREF="change.html#dd">dd</A>&quot;删除整行, &quot;<A HREF="change.html#cc">cc</A>&quot;修改整行.它会保持缩进.
 
-Like &quot;<A HREF="change.html#dd">dd</A>&quot; deletes a whole line, &quot;<A HREF="change.html#cc">cc</A>&quot; changes a whole line.  It keeps the
-existing indent (leading white space) though.
-
-Just like &quot;d$&quot; deletes until the end of the line, &quot;c$&quot; changes until the end
-of the line.  It's like doing &quot;d$&quot; to delete the text and then &quot;<A HREF="insert.html#a">a</A>&quot; to start
-<A HREF="intro.html#Insert">插入</A>模式 and append new text.
+就像&quot;d$&quot;删除到行尾, &quot;c$&quot;会修改到行尾.相当于&quot;d$&quot;删除文本后使用&quot;<A HREF="insert.html#a">a</A>&quot;进入<A HREF="intro.html#Insert">插入</A>模式以便插入文字.
 
 
-SHORTCUTS
+快捷键
 
-Some operator-motion commands are used so often that they have been given a
-single-letter command:
+一些操作移动命令经常用到，所以设置为单字符命令:
 
-	<A HREF="change.html#x">x</A>  stands for  <A HREF="change.html#dl">dl</A>  (delete character under the cursor)
-	X  stands for  <A HREF="change.html#dh">dh</A>  (delete character left of the cursor)
-	<A HREF="change.html#D">D</A>  stands for  d$  (delete to end of the line)
-	C  stands for  c$  (change to end of the line)
-	<A HREF="change.html#s">s</A>  stands for  cl  (change one character)
-	<A HREF="change.html#S">S</A>  stands for  <A HREF="change.html#cc">cc</A>  (change a whole line)
-
-
-WHERE TO PUT THE COUNT
-
-The commands &quot;3dw&quot; and &quot;d3w&quot; delete three words.  If you want to get really
-picky about things, the first command, &quot;3dw&quot;, deletes one <A HREF="motion.html#word">单词</A> three times;
-the command &quot;d3w&quot; deletes three words once.  This is a difference without a
-distinction.  You can actually put in two counts, however.例如,
-&quot;3d2w&quot; deletes two words, repeated three times, for a total of six words.
+	<A HREF="change.html#x">x</A>  代表<A HREF="change.html#dl">dl</A>  (删除光标后的一个字符)
+	X  代表<A HREF="change.html#dh">dh</A>  (删除光标前的一个字符)
+	<A HREF="change.html#D">D</A>  代表d$  (删除到行尾)
+	C  代表c$  (修改到行尾)
+	<A HREF="change.html#s">s</A>  代表cl  (修改一个字符)
+	<A HREF="change.html#S">S</A>  代表<A HREF="change.html#cc">cc</A>  (修改 整行)
 
 
-REPLACING WITH ONE CHARACTER
+在哪里放置数字修饰符
 
-The &quot;<A HREF="change.html#r">r</A>&quot;命令 is not an <A HREF="motion.html#operator">operator</A>.  It waits for you to type a character, and
-will replace the character under the cursor with <A HREF="motion.html#it">它</A>.  You could <A HREF="diff.html#do">do</A> the same
-with &quot;cl&quot; or with the &quot;<A HREF="change.html#s">s</A>&quot;命令, but with &quot;<A HREF="change.html#r">r</A>&quot; you don't have to press <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>
-to get back out of insert mode.
+命令&quot;3dw&quot;和&quot;d3w&quot;删除三行.如果你真的解决整个问题,那么命令&quot;3dw&quot;,是删除一个<A HREF="motion.html#word">单词</A>重复三次;命令&quot;d3w&quot;删除三个三次一次.这是一个没有区别的区别.实际上你也可以添加两个数字,例如, &quot;3d2w&quot;删除两个单词三次总共六个单词.
+
+替换单个字符
+
+&quot;<A HREF="change.html#r">r</A>&quot;命令不是一个<A HREF="motion.html#operator">操作符</A>.他等待你输入一个字符,并使用<A HREF="motion.html#it">它</A>替代光标下的字符.你能<A HREF="diff.html#do">使用</A>&quot;cl&quot;或者&quot;<A HREF="change.html#s">s</A>&quot;命令做相同的事,但是使用&quot;<A HREF="change.html#r">r</A>&quot;你不需要使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>返回正常模式.
 
 <B><FONT color="#3A6F2B">	there is somerhing grong here </FONT></B>
 	rT	     rt    rw
 
 <B><FONT color="#3A6F2B">	There is something wrong here </FONT></B>
 
-Using a <A HREF="intro.html#count">count</A> with &quot;<A HREF="change.html#r">r</A>&quot; causes that many characters to be replaced with the
-same character.  Example:
+使用<A HREF="intro.html#count">数量</A>修饰&quot;<A HREF="change.html#r">r</A>&quot;会造成向后的n个字符用相同的字符替代.例如:
 
 <B><FONT color="#3A6F2B">	There is something wrong here </FONT></B>
 			   5rx
 
 <B><FONT color="#3A6F2B">	There is something xxxxx here </FONT></B>
 
-To replace a character with a line break use &quot;r&lt;Enter&gt;&quot;.  This deletes one
-character and inserts a line break.  Using a <A HREF="intro.html#count">count</A> here only applies to the
-number of characters deleted: &quot;4r&lt;Enter&gt;&quot; replaces four characters with one
-line break.
+如果要使用回车符替换，可以使用&quot;r&lt;Enter&gt;&quot;.删除一个字符并插入换行符.使用<A HREF="intro.html#count">数字</A>前缀会删除多个字符，但只插入一次换行符: &quot;4r&lt;Enter&gt;&quot; 使用一个换行符替代四个字符.
 
 ==============================================================================
 
-*<A NAME="04.3"></A><B>04.3</B>*	Repeating a change
+*<A NAME="04.3"></A><B>04.3</B>*	重复一个修改
 
-The &quot;<A HREF="repeat.html#.">.</A>&quot;命令 is one of the simplest yet powerful commands in Vim.  It
-repeats the last change.  For instance, suppose you are editing an HTML file
-and want to delete all the &lt;B&gt; <A HREF="tagsrch.html#tags">标签</A>.  You position the cursor on the first <A HREF="change.html#&lt;">&lt;</A>
-and delete the &lt;B&gt; with the command &quot;df&gt;&quot;.  You then go to the <A HREF="change.html#&lt;">&lt;</A> of the next
-&lt;/B&gt; and delete <A HREF="motion.html#it">它</A> using the &quot;<A HREF="repeat.html#.">.</A>&quot;命令.  The &quot;<A HREF="repeat.html#.">.</A>&quot;命令 executes the last
-change command (in this <A HREF="change.html#case">case</A>, &quot;df&gt;&quot;).  To delete another <A HREF="tagsrch.html#tag">标签</A>, position the
-cursor on the <A HREF="change.html#&lt;">&lt;</A> and use the &quot;<A HREF="repeat.html#.">.</A>&quot;命令.
+&quot;<A HREF="repeat.html#.">.</A>&quot;命令再Vim中是一个简单且有效的命令之一.它会重复最后一次修改.比如,假设编辑一个HTML文件并且想要删除所有的&lt;B&gt; <A HREF="tagsrch.html#tags">标签</A>.你的位置再第一个<A HREF="change.html#&lt;">&lt;</A>使用with the command &quot;df&gt;&quot;去删除&lt;B&lt;.然后你就可以使用&quot;<A HREF="repeat.html#.">.</A>&quot;命令删除它.&quot;<A HREF="repeat.html#.">.</A>&quot;命令会执行最后一次修改(本例就是, &quot;df&gt;&quot;).
 
 <B><FONT color="#3A6F2B">			      To &lt;B&gt;generate&lt;/B&gt; a table of &lt;B&gt;contents </FONT></B>
-	f&lt;   find first <A HREF="change.html#&lt;">&lt;</A>     ---&gt;
-	df&gt;  delete to <A HREF="change.html#&gt;">&gt;</A>	 --&gt;
-	f&lt;   find next <A HREF="change.html#&lt;">&lt;</A>	   ---------&gt;
-	.    repeat df&gt;			    ---&gt;
-	f&lt;   find next <A HREF="change.html#&lt;">&lt;</A>		       -------------&gt;
-	.    repeat df&gt;					    --&gt;
+	f&lt;   找到第一个<A HREF="change.html#&lt;">&lt;</A>     ---&gt;
+	df&gt;  删除到<A HREF="change.html#&gt;">&gt;</A>	 --&gt;
+	f&lt;   找到下一个<A HREF="change.html#&lt;">&lt;</A>	   ---------&gt;
+	.    重复删除df&gt;			    ---&gt;
+	f&lt;   找到下一个<A HREF="change.html#&lt;">&lt;</A>		       -------------&gt;
+	.    重复删除df&gt;					    --&gt;
 
-The &quot;<A HREF="repeat.html#.">.</A>&quot;命令 works for all changes you make, except for &quot;<A HREF="undo.html#u">u</A>&quot; (undo), <A HREF="undo.html#CTRL-R">CTRL-R</A>
-(redo) and commands that start with a colon (:).
+&quot;<A HREF="repeat.html#.">.</A>&quot;命令会对你所有的改变有效，除了&quot;<A HREF="undo.html#u">u</A>&quot; (回退), <A HREF="undo.html#CTRL-R">CTRL-R</A> (重做)和以冒号开始的命令.
 
-Another example: You want to change the <A HREF="motion.html#word">单词</A> &quot;four&quot; to &quot;five&quot;.  It appears
-several times in your text.  You can <A HREF="diff.html#do">do</A> this quickly with this sequence of
-commands:
+其他例子: 你想要改变<A HREF="motion.html#word">单词</A> &quot;four&quot;为&quot;five&quot;.它在你的文本中出现好几次，你可以使用下面的命令快速操作:
 
-	/four&lt;Enter&gt;	find the first <A HREF="options\.html#options">字符串</A> &quot;four&quot;
-	cwfive&lt;Esc&gt;	change the <A HREF="motion.html#word">单词</A> to &quot;five&quot;
-	<A HREF="pattern.html#n">n</A>		find the next &quot;four&quot;
-	.		repeat the change to &quot;five&quot;
-	<A HREF="pattern.html#n">n</A>		find the next &quot;four&quot;
-	.		repeat the change
-			etc.
+	/four&lt;Enter&gt;	找到第一个<A HREF="options\.html#options">字符串</A> &quot;four&quot;
+	cwfive&lt;Esc&gt;	修改<A HREF="motion.html#word">单词</A>为&quot;five&quot;
+	<A HREF="pattern.html#n">n</A>		找到下一个&quot;four&quot;
+	.		重复修改&quot;five&quot;
+	<A HREF="pattern.html#n">n</A>		找到下一个&quot;four&quot;
+	.		重复修改，如此类推.
 
 ==============================================================================
 
-*<A NAME="04.4"></A><B>04.4</B>*	<A HREF="visual.html#Visual">Visual</A> mode
+*<A NAME="04.4"></A><B>04.4</B>*	<A HREF="visual\.html#Visual">可视</A>模式
 
-To delete simple items the operator-motion changes work quite well.  But often
-it's not so easy to decide which command will move over the text you want to
-change.  Then you can use <A HREF="visual.html#Visual">Visual</A> mode.
+删除一些简单的事项操作移动模式完成的很好.但是常常移动到你想要修改的位置事不容易的.那么你就可以使用<A HREF="visual\.html#Visual">可视</A>模式.
 
-You start <A HREF="visual.html#Visual">Visual</A> mode by pressing &quot;<A HREF="visual.html#v">v</A>&quot;.  You move the cursor over the text you
-want to work on.  While you <A HREF="diff.html#do">do</A> this, the text is highlighted.  Finally type
-the <A HREF="motion.html#operator">operator</A> command.
- 例如, to delete from the middle of a <A HREF="motion.html#word">单词</A> to the middle of another:
+可以使用&quot;<A HREF="visual.html#v">v</A>&quot;开启<A HREF="visual\.html#Visual">可视</A>模式.你可以移动光标到你想要修改的文字上.当你如此做后，文字就会高亮.最后键入<A HREF="motion.html#operator">操作</A>命令.例如,删除从一个单词的中间到另一个单词的中间部分:
 
 <B><FONT color="#3A6F2B">		This is an examination sample of visual mode </FONT></B>
 			       ----------&gt;
@@ -288,21 +231,13 @@ the <A HREF="motion.html#operator">operator</A> command.
 
 <B><FONT color="#3A6F2B">		This is an example of visual mode </FONT></B>
 
-When doing this you don't really have to <A HREF="intro.html#count">count</A> how many times you have to
-press &quot;<A HREF="motion.html#l">l</A>&quot; to end up in the right position.  You can immediately see what text
-will be deleted when you press &quot;<A HREF="change.html#d">d</A>&quot;.
+你真的不需要算需要数出按压&quot;<A HREF="motion.html#l">l</A>&quot;的次数.  当你按压&quot;<A HREF="change.html#d">d</A>&quot;前你可以清楚看到选中的文字.
 
-If at any time you decide you don't want to <A HREF="diff.html#do">do</A> anything with the highlighted
-text, just press <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> and <A HREF="visual.html#Visual">Visual</A> mode will stop without doing anything.
+如果你改变了注意，使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>退出<A HREF="visual\.html#Visual">可视</A>模式.
 
+按行选择
 
-SELECTING LINES
-
-If you want to work on whole lines, use &quot;<A HREF="visual.html#V">V</A>&quot; to start <A HREF="visual.html#Visual">Visual</A> mode.  You will
-see right away that the whole line is highlighted, without moving around.
-When you move left or right nothing changes.  When you move up or down the
-selection is extended whole lines at a time.
- 例如, select three lines with &quot;Vjj&quot;:
+如果你想选择整行,使用&quot;<A HREF="visual.html#V">V</A>&quot;进入<A HREF="visual\.html#Visual">可视</A>模式.你可以看到整行都会高亮，上下移动后整行都会被高亮.左右移动不会做任何事.例如,使用&quot;Vjj&quot;选择三行:
 
 			  +------------------------+
 			  &#124; text more text	   |
@@ -312,58 +247,38 @@ selection is extended whole lines at a time.
 			  &#124; more text more	   |
 			  +------------------------+
 
+块选择
 
-SELECTING BLOCKS
-
-If you want to work on a rectangular block of characters, use <A HREF="visual.html#CTRL-V">CTRL-V</A> to start
-<A HREF="visual.html#Visual">Visual</A> mode.  This is very useful when working on tables.
+如果你想处理矩形字符,使用<A HREF="visual.html#CTRL-V">CTRL-V</A>进入<A HREF="visual\.html#Visual">可视</A>模式.这对于表格是很有用的.
 
 		name		Q1	Q2	Q3
 		pierre		123	455	234
 		john		0	90	39
 		steve		392	63	334
 
-To delete the middle &quot;Q2&quot; column, move the cursor to the &quot;<A HREF="repeat.html#Q">Q</A>&quot; of &quot;Q2&quot;.  Press
-<A HREF="visual.html#CTRL-V">CTRL-V</A> to start blockwise <A HREF="visual.html#Visual">Visual</A> mode.  Now move the cursor three lines down
-with &quot;3j&quot; and to the next <A HREF="motion.html#word">单词</A> with &quot;<A HREF="motion.html#w">w</A>&quot;.  You can see the first character of
-the last column is included.  To exclude <A HREF="motion.html#it">它</A>, use &quot;<A HREF="motion.html#h">h</A>&quot;.  Now press &quot;<A HREF="change.html#d">d</A>&quot; and the
-middle column is gone.
+删除中间的&quot;Q2&quot;列,把光标移动到&&quot;Q2&quot;的&quot;<A HREF="repeat.html#Q">Q</A>&quot;.使用<A HREF="visual.html#CTRL-V">CTRL-V</A>开启块<A HREF="visual\.html#Visual">可视</A>模式.使用&quot;3j&quot;向下移动三行并且使用&quot;<A HREF="motion.html#w">w</A>&quot;移动到下一个单词.你可以看到最后一列的第一个字符是高亮的.排除<A HREF="motion.html#it">它</A>,使用&quot;<A HREF="motion.html#h">h</A>&quot;.现在使用&quot;<A HREF="change.html#d">d</A>&quot;中间的列消失了.
+
+移动到另一边
+
+如果你在<A HREF="visual\.html#Visual">可视</A>模式选中了一些文字,然后你发现你需要去修改被选中文字的另一边,可以使用&quot;<A HREF="insert.html#o">o</A>&quot;命令 (提示: <A HREF="insert.html#o">o</A>表示other end).光标会移动到另一边。再移动到选中区域开始的地方，再次使用&quot;<A HREF="insert.html#o">o</A>&quot;回到另一端.
 
 
-GOING TO THE OTHER SIDE
+使用块选择时有四个角.&quot;<A HREF="insert.html#o">o</A>&quot;只能进行对角跳转.使用&quot;<A HREF="insert.html#O">O</A>&quot;让你移动到行的另一边.
 
-If you have selected some text in <A HREF="visual.html#Visual">Visual</A> mode, and discover that you need to
-change the other end of the selection, use the &quot;<A HREF="insert.html#o">o</A>&quot;命令 (Hint: <A HREF="insert.html#o">o</A> for other
-end).  The cursor will go to the other end, and you can move the cursor to
-change where the selection starts.  Pressing &quot;<A HREF="insert.html#o">o</A>&quot; again brings you back to the
-other end.
-
-When using blockwise selection, you have four corners.  &quot;<A HREF="insert.html#o">o</A>&quot; only takes you to
-one of the other corners, diagonally.  Use &quot;<A HREF="insert.html#O">O</A>&quot; to move to the other corner in
-the same line.
-
-Note that &quot;<A HREF="insert.html#o">o</A>&quot; and &quot;<A HREF="insert.html#O">O</A>&quot; in <A HREF="visual.html#Visual">Visual</A> mode work very differently from <A HREF="intro.html#Normal">正常</A>模式,
-where they open a new line below or above the cursor.
+注意&quot;<A HREF="insert.html#o">o</A>&quot;和&quot;<A HREF="insert.html#O">O</A>&quot;在<A HREF="visual\.html#Visual">可视</A>模式的运行不同于<A HREF="intro.html#Normal">正常</A>模式, 正常模式下它们会在光标下上创建新的一行.
 
 ==============================================================================
 
-*<A NAME="04.5"></A><B>04.5</B>*	Moving text
+*<A NAME="04.5"></A><B>04.5</B>*	移动文本
 
-When you delete something with &quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#x">x</A>&quot;, or another command, the text is
-saved.  You can <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> back by using the &quot;<A HREF="change.html#p">p</A>&quot;命令.  (The Vim name for
-this is put).
-   Take a look at how this works.  First you will delete an entire line, by
-putting the cursor on the line you want to delete and typing &quot;<A HREF="change.html#dd">dd</A>&quot;.  Now you
-move the cursor to where you want to put the line and use the &quot;<A HREF="change.html#p">p</A>&quot; (put)
-command.  The line is inserted on the line below the cursor.
+当你使用&quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#x">x</A>&quot;,或者其他的命令删除一些东西时,文字会被保存.你可以使用&quot;<A HREF="change.html#p">p</A>&quot;命令<A HREF="provider.html#paste">粘贴</A><A HREF="motion.html#it">它</A>.  (p代表put 放置).
+   看一下它是如何工作的.首先把光标放到你想要删除的行键入&quot;<A HREF="change.html#dd">dd</A>&quot;删除整行.之后把光标移到你想到移动的地方使用&quot;<A HREF="change.html#p">p</A>&quot; (放置)命令.会在光标下面插入删除的行.
 
 	a line		a line	      a line
 	line 2	  <A HREF="change.html#dd">dd</A>	line 3	  <A HREF="change.html#p">p</A>   line 3
 	line 3			      line 2
 
-Because you deleted an entire line, the &quot;<A HREF="change.html#p">p</A>&quot;命令 placed the text line below
-the cursor.  If you delete part of a line (a <A HREF="motion.html#word">单词</A>, for instance), the &quot;<A HREF="change.html#p">p</A>&quot;
-command puts <A HREF="motion.html#it">它</A> just after the cursor.
+因为你删除的是一整行,&quot;<A HREF="change.html#p">p</A>&quot;命令会使删除行出现在光标下面.如果你删除的是行的一部分(比如，一个<A HREF="motion.html#word">单词</A>),&quot;<A HREF="change.html#p">p</A>&quot;命令会把<A HREF="motion.html#it">它</A>放置到光标后.
 
 <B><FONT color="#3A6F2B">	Some more boring try text to out commands. </FONT></B>
 			 ----&gt;
@@ -375,46 +290,29 @@ command puts <A HREF="motion.html#it">它</A> just after the cursor.
 
 <B><FONT color="#3A6F2B">	Some more boring text to try out commands. </FONT></B>
 
+更多关于黏贴的东西
 
-MORE ON PUTTING
+&quot;<A HREF="change.html#P">P</A>&quot;命令像&quot;<A HREF="change.html#p">p</A>&quot;命令,但是是放置在光标前.当你使用&quot;<A HREF="change.html#dd">dd</A>&quot;删除整行, &quot;<A HREF="change.html#P">P</A>&quot;会把<A HREF="motion.html#it">它</A>插入到光标上面的一行.当你使用&quot;dw&quot;删除<A HREF="motion.html#word">单词</A>, &quot;<A HREF="change.html#P">P</A>&quot;会把<A HREF="motion.html#it">它</A>放置到光标之前.
 
-The &quot;<A HREF="change.html#P">P</A>&quot;命令 puts text like &quot;<A HREF="change.html#p">p</A>&quot;, but before the cursor.  When you deleted a
-whole line with &quot;<A HREF="change.html#dd">dd</A>&quot;, &quot;<A HREF="change.html#P">P</A>&quot; will put <A HREF="motion.html#it">它</A> back above the cursor.  When you deleted
-a <A HREF="motion.html#word">单词</A> with &quot;dw&quot;, &quot;<A HREF="change.html#P">P</A>&quot; will put <A HREF="motion.html#it">它</A> back just before the cursor.
+你可以重复执行它，每次黏贴会使用相同的文本.
 
-You can repeat putting <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A> you like.  The same text will be used.
+你可以在&quot;<A HREF="change.html#p">p</A>&quot;和&quot;<A HREF="change.html#P">P</A>&quot;前使用数字前缀.数字表示重复黏贴的次数.因此使用&quot;<A HREF="change.html#dd">dd</A>&quot;然后使用&quot;3p&quot;会把删除行黏贴三次.
 
-You can use a <A HREF="intro.html#count">count</A> with &quot;<A HREF="change.html#p">p</A>&quot; and &quot;<A HREF="change.html#P">P</A>&quot;.  The text will be repeated <A HREF="motion.html#as">as</A> many times
-<A HREF="motion.html#as">as</A> specified with the <A HREF="intro.html#count">count</A>.  Thus &quot;<A HREF="change.html#dd">dd</A>&quot; and then &quot;3p&quot; puts three copies of the
-same deleted line.
+交换两个字符
 
-
-SWAPPING TWO CHARACTERS
-
-Frequently when you are typing, your fingers get ahead of your brain (or the
-other way around?).  The result is a typo such <A HREF="motion.html#as">as</A> &quot;teh&quot; for &quot;the&quot;.  Vim
-makes <A HREF="motion.html#it">它</A> easy to correct such problems.  Just put the cursor on the <A HREF="motion.html#e">e</A> of &quot;teh&quot;
-and execute the command &quot;xp&quot;.  This works <A HREF="motion.html#as">as</A> follows: &quot;<A HREF="change.html#x">x</A>&quot; deletes the
-character <A HREF="motion.html#e">e</A> and places <A HREF="motion.html#it">它</A> in a <A HREF="intro.html#register">register</A>.  &quot;<A HREF="change.html#p">p</A>&quot; puts the text after the cursor,
-which is after the <A HREF="motion.html#h">h</A>.
+肯定经常出现，在你输入是手比脑快(或者相反?).这样的结果是想要输入&quot;the&quot;却输入为&quot;teh&quot;.Vim可以很简单的纠正错误.把光标放到&quot;teh&quot;的&quot;e&quot;执行命令&quot;xp&quot;.它是这样工作的: &quot;<A HREF="change.html#x">x</A>&quot;删除字符<A HREF="motion.html#e">e</A>并把它放到<A HREF="intro.html#register">寄存器</A>.&quot;<A HREF="change.html#p">p</A>&quot;把字符放到光标后面.
 
 <B><FONT color="#3A6F2B">	teh     th     the </FONT></B>
 	 <A HREF="change.html#x">x</A>       <A HREF="change.html#p">p</A>
 
 ==============================================================================
 
-*<A NAME="04.6"></A><B>04.6</B>*	Copying text
+*<A NAME="04.6"></A><B>04.6</B>*	复制文本
 
-To copy text from one place to another, you could delete <A HREF="motion.html#it">它</A>, use &quot;<A HREF="undo.html#u">u</A>&quot; to <A HREF="undo.html#undo">undo</A>
-the deletion and then &quot;<A HREF="change.html#p">p</A>&quot; to put <A HREF="motion.html#it">它</A> somewhere else.  There is an easier way:
-yanking.  The &quot;<A HREF="change.html#y">y</A>&quot; <A HREF="motion.html#operator">operator</A> copies text into a <A HREF="intro.html#register">register</A>.  Then a &quot;<A HREF="change.html#p">p</A>&quot;命令
-can be used to put <A HREF="motion.html#it">它</A>.
-   Yanking is just a Vim name for <A HREF="uganda.html#copying">copying</A>.  The &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="print.html#letter">letter</A> was already used
-for the change <A HREF="motion.html#operator">operator</A>, and &quot;<A HREF="change.html#y">y</A>&quot; was still available.  Calling this
-<A HREF="motion.html#operator">operator</A> &quot;<A HREF="change.html#yank">yank</A>&quot; made <A HREF="motion.html#it">它</A> easier to remember to use the &quot;<A HREF="change.html#y">y</A>&quot; key.
+你能使用&quot;<A HREF="undo.html#u">u</A>&quot;去<A HREF="undo.html#undo">回退</A>删除的部分然后使用&quot;<A HREF="change.html#p">p</A>&quot;把<A HREF="motion.html#it">它</A>黏贴到任何地方已完成从一处到另一处的拷贝. 抽出（yanking）方法是更简单的.&quot;<A HREF="change.html#y">y</A>&quot;<A HREF="motion.html#operator">操作符</A>把文本放到<A HREF="intro.html#register">寄存器</A>.然后使用&quot;<A HREF="change.html#p">p</A>&quot;命令去黏贴<A HREF="motion.html#it">它</A>.
+   抽出（Yanking）是<A HREF="uganda.html#copying">拷贝</A>在Vim的另一个名字.&quot;因为<A HREF="change.html#c">c</A>&quot;<A HREF="print.html#letter">字母</A>已经被修改<A HREF="motion.html#operator">操作符</A>占用,&quot;<A HREF="change.html#y">y</A>&quot;还是可用的.叫<A HREF="motion.html#operator">操作符</A> &quot;<A HREF="change.html#yank">yank</A>&quot;使<A HREF="motion.html#it">它</A>更容易记住&quot;<A HREF="change.html#y">y</A>&quot;键.
 
-Since &quot;<A HREF="change.html#y">y</A>&quot; is an <A HREF="motion.html#operator">operator</A>, you use &quot;yw&quot; to <A HREF="change.html#yank">yank</A> a <A HREF="motion.html#word">单词</A>.  A <A HREF="intro.html#count">count</A> is possible <A HREF="motion.html#as">as</A>
-usual.  To <A HREF="change.html#yank">yank</A> two words use &quot;y2w&quot;.  Example:
+因为&quot;<A HREF="change.html#y">y</A>&quot;是一个<A HREF="motion.html#operator">操作符</A>,使用&quot;yw&quot;去<A HREF="change.html#yank">拷贝</A>一个<A HREF="motion.html#word">单词</A>.当然<A HREF="intro.html#count">数字</A>前缀也是有效的.<A HREF="change.html#yank">拷贝</A>连个单词&quot;y2w&quot;.例如:
 
 <B><FONT color="#3A6F2B">	let sqr = LongVariable * </FONT></B>
 		 --------------&gt;
@@ -425,178 +323,124 @@ usual.  To <A HREF="change.html#yank">yank</A> two words use &quot;y2w&quot;.  E
 
 <B><FONT color="#3A6F2B">	let sqr = LongVariable * LongVariable </FONT></B>
 
-Notice that &quot;yw&quot; includes the white space after a <A HREF="motion.html#word">单词</A>.  If you don't want
-this, use &quot;ye&quot;.
+注意&quot;yw&quot;拷贝是包括<A HREF="motion.html#word">单词</A>前的空格.如果你不想要这样可以使用&quot;ye&quot;.
 
-The &quot;<A HREF="change.html#yy">yy</A>&quot;命令 yanks a whole line, just like &quot;<A HREF="change.html#dd">dd</A>&quot; deletes a whole line.
+&quot;<A HREF="change.html#yy">yy</A>&quot;命令拷贝整行,就像&quot;<A HREF="change.html#dd">dd</A>&quot;删除整行.
 
 	a text line   <A HREF="change.html#yy">yy</A>	a text line	       a text line
 	line 2			line 2		<A HREF="change.html#p">p</A>      line 2
 	last line		last line	       a text line
 						       last line
 
-&quot;<A HREF="change.html#Y">Y</A>&quot; was originally equivalent to &quot;<A HREF="change.html#yank">yank</A> the entire line&quot;, <A HREF="motion.html#as">as</A> opposed to &quot;<A HREF="change.html#D">D</A>&quot;
-which is &quot;delete to end of the line&quot;.  &quot;<A HREF="change.html#Y">Y</A>&quot; has thus been remapped to mean
-&quot;<A HREF="change.html#yank">yank</A> to end of the line&quot; to make <A HREF="motion.html#it">它</A> consistent with the behavior of &quot;<A HREF="change.html#D">D</A>&quot;.
-Mappings will be covered in later chapters.
+&quot;<A HREF="change.html#Y">Y</A>&quot;本来是&quot;<A HREF="change.html#yank">拷贝</A>&quot;整行,但为了和删除到行尾的&quot;<A HREF="change.html#D">D</A>&quot;命令一致.  &quot;<A HREF="change.html#Y">Y</A>&quot;因此修改成&quot;<A HREF="change.html#yank">拷贝</A>&quot;到行尾，使之能与D命令逻辑一致.
 
 ==============================================================================
 
-*<A NAME="04.7"></A><B>04.7</B>*	Using the <A HREF="provider.html#clipboard">clipboard</A>
+*<A NAME="04.7"></A><B>04.7</B>*	使用<A HREF="provider\.html#clipboard">剪切板</A>
 
-If you are using the <A HREF="gui.html#GUI">GUI</A> version of Vim (gvim), you can find the &quot;Copy&quot; item
-in the &quot;Edit&quot; menu.  First select some text with <A HREF="visual.html#Visual">Visual</A> mode然后use the
-Edit/Copy menu item.  The selected text is now copied to the <A HREF="provider.html#clipboard">clipboard</A>.  You
-can <A HREF="provider.html#paste">paste</A> the text in other programs.  In Vim itself too.
+如果你使用Vim的<A HREF="gui.html#GUI">GUI</A>版本,你可能发现&quot;Copy&quot;在&quot;编辑&quot;菜单中.首先在<A HREF="visual\.html#Visual">可视</A>模式选择文本，然后使用编辑菜单.现在被选择的文本拷贝到了<A HREF="provider.html#clipboard">剪切板</A>.你能<A HREF="provider.html#paste">黏贴</A>文本到其他地方.
 
-If you have copied text to the <A HREF="provider.html#clipboard">clipboard</A> in another application, you can <A HREF="provider.html#paste">paste</A>
-<A HREF="motion.html#it">它</A> in Vim with the Edit/Paste menu item.  This works in <A HREF="intro.html#Normal">正常</A>模式 and <A HREF="insert.html#Insert">Insert</A>
-mode.  In <A HREF="visual.html#Visual">Visual</A> mode the selected text is replaced with the pasted text.
+如果已有文本在<A HREF="provider.html#clipboard">剪切板</A>中,你可以在Vim的编辑菜单中使用<A HREF="provider.html#paste">黏贴</A><A HREF="motion.html#it">它</A>.在<A HREF="intro.html#Normal">正常</A>模式和<A HREF="insert.html#Insert">插入</A>模式会正常工作.在<A HREF="visual\.html#Visual">可视</A>模式剪切板的文本会替换被选中的文本.
 
-The &quot;Cut&quot; menu item deletes the text before it's put on the <A HREF="provider.html#clipboard">clipboard</A>.  The
-&quot;Copy&quot;, &quot;Cut&quot; and &quot;Paste&quot; items are also available in the popup menu (only
-when there is a popup menu, of course).  If your Vim has a toolbar, you can
-also find these items there.
+&quot;Cut&quot;菜单会在文本放到<A HREF="provider.html#clipboard">剪切搬</A>前删除它.
 
-If you are not using the <A HREF="gui.html#GUI">GUI</A>, or if you don't like using a menu, you have to
-use another way.  You use the normal &quot;<A HREF="change.html#y">y</A>&quot; (yank) and &quot;<A HREF="change.html#p">p</A>&quot; (put) commands, but
-prepend &quot;* (double-quote <A HREF="pattern.html#star">star</A>) before <A HREF="motion.html#it">它</A>.  To copy a line to the <A HREF="provider.html#clipboard">clipboard</A>:
+如果你没有使用<A HREF="gui.html#GUI">GUI</A>,后者如果你不喜欢使用菜单,那么只能使用其他方式.你可以使用下面的方式把一整行拷贝到剪切板中:
 
 <B>	"*yy</B>
 
-To put text from the <A HREF="provider.html#clipboard">clipboard</A> back into the text:
+从<A HREF="provider.html#clipboard">剪切板</A>黏贴:
 
 <B>	"*p</B>
 
-This only works on versions of Vim that include <A HREF="provider.html#clipboard">clipboard</A> support.  More about
-the clipboard can be found in section |<A HREF="usr_09.html#09.3">09.3</A>| and here: |<A HREF="provider.html#clipboard">clipboard</A>|.
+这仅在支持剪贴板的 Vim 版本中才能工作。关于剪贴板的更多内容请参见<A HREF="usr_09.html#09.3">09.3</A>|和|<A HREF="provider.html#clipboard">剪切板</A>|.
 
 ==============================================================================
 
-*<A NAME="04.8"></A><B>04.8</B>*	Text <A HREF="vimindex.html#objects">objects</A>
+*<A NAME="04.8"></A><B>04.8</B>*	文本<A HREF="vimindex\.html#objects">对象</A>
 
-If the cursor is in the middle of a <A HREF="motion.html#word">单词</A> and you want to delete that <A HREF="motion.html#word">单词</A>, you
-need to move back to its start before you can <A HREF="diff.html#do">do</A> &quot;dw&quot;.  There is a simpler way
-to <A HREF="diff.html#do">do</A> this: &quot;<A HREF="motion.html#daw">daw</A>&quot;.
+如果光标在<A HREF="motion.html#word">单词</A>的中间且你想删除那个<A HREF="motion.html#word">单词</A>,在你使用&quot;dw&quot;前你需要移动光标到单词的词首.&quot;<A HREF="motion.html#daw">daw</A>&quot;这种方式可能更简单.
 
 <B><FONT color="#3A6F2B">	this is some example text. </FONT></B>
 		       <A HREF="motion.html#daw">daw</A>
 
 <B><FONT color="#3A6F2B">	this is some text. </FONT></B>
 
-The &quot;<A HREF="change.html#d">d</A>&quot; of &quot;<A HREF="motion.html#daw">daw</A>&quot; is the delete <A HREF="motion.html#operator">operator</A>.  &quot;<A HREF="motion.html#aw">aw</A>&quot; is a text object.  Hint: &quot;<A HREF="motion.html#aw">aw</A>&quot;
-stands for &quot;A Word&quot;.  Thus &quot;<A HREF="motion.html#daw">daw</A>&quot; is &quot;Delete A Word&quot;.  To be precise, the white
-space after the <A HREF="motion.html#word">单词</A> is also deleted (or the white space before the <A HREF="motion.html#word">单词</A> if at
-the end of the line).
+&quot;<A HREF="motion.html#daw">daw</A>&quot;的&quot;<A HREF="change.html#d">d</A>&quot;是删除<A HREF="motion.html#operator">操作符</A>.&quot;<A HREF="motion.html#aw">aw</A>&quot;是文本对象.提示: &quot;<A HREF="motion.html#aw">aw</A>&quot;代表&quot;A Word&quot;.因此&quot;<A HREF="motion.html#daw">daw</A>&quot;表示&quot;删除一个单词（Delete A Word）&quot;. 注意<A HREF="motion.html#word">单词</A>的空格也会被删除(或者在行尾删除<A HREF="motion.html#word">单词</A>前面的单词).
 
-Using text <A HREF="vimindex.html#objects">objects</A> is the third way to make changes in Vim.  We already had
-operator-motion and <A HREF="visual.html#Visual">Visual</A> mode.  Now we add operator-text object.
-   It is very similar to operator-motion, but instead of operating on the text
-between the cursor position before and after a <A HREF="intro.html#movement">移动</A>命令, the text
-object is used <A HREF="motion.html#as">as</A> a whole.  It doesn't matter where in the object the cursor
-was.
-
-To change a whole <A HREF="motion.html#sentence">sentence</A> use &quot;cis&quot;.  Take this text:
+使用文本<A HREF="vimindex\.html#objects">对象</A>是在Vim第三种改变方式.我们已经介绍了操作符移动模式和<A HREF="visual\.html#Visual">可视</A>模式.现在我们添加一个操作文本对象.和操作移动模式一样, 但它不是操作于从当前位置到移动目标间的内容， 而是对光标所在位置的文本对象进行操作。文本对象是作为一个整体来处理的。现在光标 在对象中的位置无关紧要。
+使用&quot;cis&quot;改变整句话.如:
 
 <B><FONT color="#3A6F2B">	Hello there.  This </FONT></B>
 <B><FONT color="#3A6F2B">	is an example.  Just </FONT></B>
 <B><FONT color="#3A6F2B">	some text. </FONT></B>
 
-Move to the start of the second line, on &quot;is an&quot;.  Now use &quot;cis&quot;:
+移动到第二行开始处&quot;is an&quot;.使用&quot;cis&quot;:
 
 <B><FONT color="#3A6F2B">	Hello there.    Just </FONT></B>
 <B><FONT color="#3A6F2B">	some text. </FONT></B>
 
-The cursor is in between the blanks in the first line.  Now you type the new
-<A HREF="motion.html#sentence">sentence</A> &quot;Another line.&quot;:
+光标会到第一行的空白位置.键入&quot;Another line.&quot;:
 
 <B><FONT color="#3A6F2B">	Hello there.  Another line.  Just </FONT></B>
 <B><FONT color="#3A6F2B">	some text. </FONT></B>
 
-&quot;cis&quot; consists of the &quot;<A HREF="change.html#c">c</A>&quot; (change) <A HREF="motion.html#operator">operator</A> and the &quot;is&quot; text object.  This
-stands for &quot;Inner Sentence&quot;.  There is also the &quot;<A HREF="motion.html#as">as</A>&quot; (&quot;A Sentence&quot;) object.
-The difference is that &quot;<A HREF="motion.html#as">as</A>&quot; includes the white space after the <A HREF="motion.html#sentence">sentence</A> and
-&quot;is&quot; doesn't.  If you would delete a <A HREF="motion.html#sentence">sentence</A>, you want to delete the white
-space at the same time, thus use &quot;<A HREF="motion.html#das">das</A>&quot;.  If you want to type new text the
-white space can remain, thus you use &quot;cis&quot;.
+&quot;cis&quot;是由&quot;<A HREF="change.html#c">c</A>&quot; (change) <A HREF="motion.html#operator">操作符</A>和&quot;is&quot;文本对象组成.&quot;is&quot;代表&quot;Inner Sentence&quot;.还有一个文本对象是&quot;<A HREF="motion.html#as">as</A>&quot; (&quot;A Sentence&quot;).不同点在于&quot;<A HREF="motion.html#as">as</A>&quot;包括<A HREF="motion.html#sentence">句子</A>后的空格而&quot;is&quot;不包含.如果你要删除<A HREF="motion.html#sentence">句子</A>, 你一定会同时删除句尾空格,那么就使用&quot;<A HREF="motion.html#das">das</A>&quot;.如果你要替换句子就使用&quot;cis&quot;更好.
 
-You can also use text <A HREF="vimindex.html#objects">objects</A> in <A HREF="visual.html#Visual">Visual</A> mode.  It will include the text object
-in the <A HREF="visual.html#Visual">Visual</A> selection.  <A HREF="visual.html#Visual">Visual</A> mode continues, thus you can <A HREF="diff.html#do">do</A> this several
-times.例如, start <A HREF="visual.html#Visual">Visual</A> mode with &quot;<A HREF="visual.html#v">v</A>&quot; and select a <A HREF="motion.html#sentence">sentence</A> with
-&quot;<A HREF="motion.html#as">as</A>&quot;.  Now you can repeat &quot;<A HREF="motion.html#as">as</A>&quot; to include more sentences.  Finally you use an
-<A HREF="motion.html#operator">operator</A> to <A HREF="diff.html#do">do</A> something with the selected sentences.
-
-You can find a long <A HREF="eval.html#list">列表</A> of text objects here: |<A HREF="motion.html#text-objects">text-objects</A>|.
+你能在<A HREF="visual\.html#Visual">可视</A>模式使用文本<A HREF="vimindex\.html#objects">对象</A>.这样会选中一个文本对象，而且继续留在可视模 式，你可以继续多次执行文本对象命令.例如,开始<A HREF="visual\.html#Visual">可视</A>模式，使用&quot;<A HREF="motion.html#as">as</A>&quot;选择一句话.现在重复执行 "as"，就会继续选中更多的句子。最后你可以使用一 个操作符去处理这些被选中的句子。
+你可以在这里找到一个详细的文本对象的列表: |<A HREF="motion.html#text-objects">text-objects</A>|.
 
 ==============================================================================
 
-*<A NAME="04.9"></A><B>04.9</B>*	<A HREF="insert.html#Replace">Replace</A> mode
+*<A NAME="04.9"></A><B>04.9</B>*	<A HREF="insert\\.html#Replace">替代</A>模式
 
-The &quot;<A HREF="change.html#R">R</A>&quot;命令 causes Vim to enter replace mode.  In this mode, each
-character you type replaces the one under the cursor.  This continues until
-you type <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
-   In this example you start <A HREF="insert.html#Replace">Replace</A> mode on the first &quot;<A HREF="motion.html#t">t</A>&quot; of &quot;text&quot;:
+&quot;<A HREF="change.html#R">R</A>&quot;命令会让Vim进入代替模式.在此模式,你输入的每一个字符都会代替光标下的字符.直到键入<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.在此例中你在&quot;text&quot;第一个字符&quot;<A HREF="motion.html#t">t</A>&quot;上开启<A HREF="insert\\.html#Replace">替代</A>模式:
+t
 
 <B><FONT color="#3A6F2B">	This is text. </FONT></B>
 		Rinteresting.&lt;Esc&gt;
 
 <B><FONT color="#3A6F2B">	This is interesting. </FONT></B>
+&quot;text&quot;
+你可能注意到命令使用两倍的内容替换了5个字符.因为&quot;<A HREF="change.html#R">R</A>&quot;命令会自动拓展行，而不是替换到下一行.
 
-You may have noticed that this command replaced 5 characters in the line with
-twelve others.  The &quot;<A HREF="change.html#R">R</A>&quot;命令 automatically extends the line if <A HREF="motion.html#it">它</A> runs out
-of characters to replace.  It will not continue on the next line.
+你可以使用<A HREF="insert.html#&lt;Insert&gt;">&lt;Insert&gt;</A>键在插入模式和替代模式进行切换.
 
-You can switch between <A HREF="intro.html#Insert">插入</A>模式 and <A HREF="insert.html#Replace">Replace</A> mode with the <A HREF="insert.html#&lt;Insert&gt;">&lt;Insert&gt;</A> key.
-
-When you use <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> (backspace) to make a correction, you will notice that the
-old text is put back.  Thus <A HREF="motion.html#it">它</A> works like an <A HREF="undo.html#undo">undo</A> command for the previously
+当你使用<A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> (空格键)进行修改时,你会之一到以前的字符回来了.这就像<A HREF="undo.html#undo">回退</A>命令.
 typed character.
 
 ==============================================================================
 
-*<A NAME="04.10"></A><B>04.10</B>*	Conclusion
+*<A NAME="04.10"></A><B>04.10</B>*	总结
 
-The operators, <A HREF="intro.html#movement">移动</A>命令 and text <A HREF="vimindex.html#objects">objects</A> give you the possibility to
-make lots of combinations.  Now that you know how they work, you can use N
-operators with <A HREF="motion.html#M">M</A> <A HREF="intro.html#movement">移动</A>命令 to make N &#42; <A HREF="motion.html#M">M</A> commands!
+操作符, <A HREF="intro.html#movement">移动</A>命令和文本<A HREF="vimindex\.html#objects">对象</A>可以有多种组合.
+在这寻找操作的列表: |<A HREF="motion.html#operator">operator</A>|.
 
-You can find a <A HREF="eval.html#list">列表</A> of operators here: |<A HREF="motion.html#operator">operator</A>|.
+例如,有很多方式去删除文本:
 
-For example, there are many other ways to delete pieces of text.  Here are a
-few common ones:
+<A HREF="change.html#x">x</A>	删除光标后的一个字符(既&quot;<A HREF="change.html#dl">dl</A>&quot;)
+X	删除光标前的一个字符(机&quot;<A HREF="change.html#dh">dh</A>&quot;)
+<A HREF="change.html#D">D</A>	删除到行尾(既&quot;d$&quot;)
+dw	向后删除一个<A HREF="motion.html#word">单词</A>
+db	向前删除一个<A HREF="motion.html#word">单词</A>
+<A HREF="motion.html#diw">diw</A>	删除光标下的<A HREF="motion.html#word">单词</A>(不包括空格)
+<A HREF="motion.html#daw">daw</A>	删除光标下的<A HREF="motion.html#word">单词</A>(包括空格)
+dG	删除到文件未
+dgg	删除到文件头
 
-<A HREF="change.html#x">x</A>	delete character under the cursor (short for &quot;<A HREF="change.html#dl">dl</A>&quot;)
-X	delete character before the cursor (short for &quot;<A HREF="change.html#dh">dh</A>&quot;)
-<A HREF="change.html#D">D</A>	delete from cursor to end of line (short for &quot;d$&quot;)
-dw	delete from cursor to next start of <A HREF="motion.html#word">单词</A>
-db	delete from cursor to previous start of <A HREF="motion.html#word">单词</A>
-<A HREF="motion.html#diw">diw</A>	delete <A HREF="motion.html#word">单词</A> under the cursor (excluding white space)
-<A HREF="motion.html#daw">daw</A>	delete <A HREF="motion.html#word">单词</A> under the cursor (including white space)
-dG	delete until the end of the file
-dgg	delete until the start of the file
-
-If you use &quot;<A HREF="change.html#c">c</A>&quot; instead of &quot;<A HREF="change.html#d">d</A>&quot; they become change commands.  And with &quot;<A HREF="change.html#y">y</A>&quot; you
-<A HREF="change.html#yank">yank</A> the text.  And so forth.
+如果你用 "c" 代替 "d"，这会变成修改命令；而改用 "y"，则变成拷贝命令，等等等。
 
 
-There are a few common commands to make changes that didn't fit somewhere
-else:
+还有一些常用的进行修改的命令，放在哪一章都不合适，列在这里:
 
-	~	Change <A HREF="change.html#case">case</A> of the character under the cursor, and move the
-		cursor to the next character.  This is not an <A HREF="motion.html#operator">operator</A> (unless
-		<A HREF="options.html#'tildeop'">'tildeop'</A> is set), thus you can't use <A HREF="motion.html#it">它</A> with a motion
-		command.  It does work in <A HREF="visual.html#Visual">Visual</A> mode, where <A HREF="motion.html#it">它</A> changes <A HREF="change.html#case">case</A>
-		for all the selected text.
+	~	修改光标下字符的大小写，并移动到下一个字符。这不是一个操作符 (除非设置了 'tildeop')，所以你不能连接一个动作命令。这个命令在 可视模式下也有效，它会改变被选中的所有文本的大小写。
 
-	I	Start <A HREF="intro.html#Insert">插入</A>模式 after moving the cursor to the first
-		non-blank in the line.
+	I	移到当前行的第一个非空字符并启动插入模式。
 
-	A	Start <A HREF="intro.html#Insert">插入</A>模式 after moving the cursor to the end of the
-		line.
+	A	移动到行尾并启动插入模式。
 
 ==============================================================================
 
-下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  Set your settings
+下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  自定义配置
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
 	</div>

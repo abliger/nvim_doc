@@ -220,7 +220,7 @@ summary.
 XTERM MOUSE BEHAVIOR
 
 Left mouse click		position the cursor
-Left mouse drag			select text in <A HREF="visual.html#Visual">Visual</A> mode
+Left mouse drag			select text in <A HREF="visual\.html#Visual">可视</A>模式
 Middle mouse click		<A HREF="provider.html#paste">paste</A> text from the <A HREF="provider.html#clipboard">clipboard</A>
 Right mouse click		extend the selected text until the mouse
 				pointer
@@ -258,7 +258,7 @@ currently highlighted.  In Vim this is the <A HREF="visual.html#Visual">Visual</
 using the default option settings).  You can <A HREF="provider.html#paste">paste</A> this selection in another
 application without any further action.
  例如, in this text select a few words with the mouse.  Vim will
-switch to <A HREF="visual.html#Visual">Visual</A> mode and highlight the text.  Now start another gvim, without
+switch to <A HREF="visual\.html#Visual">可视</A>模式 and highlight the text.  Now start another gvim, without
 a file name argument, so that <A HREF="motion.html#it">它</A> displays an empty<A HREF="windows.html#window">窗口</A>.  Click the middle
 mouse button.  The selected text will be inserted.
 
@@ -269,7 +269,7 @@ in the other gvim<A HREF="windows.html#window">窗口</A>are displayed different
 longer is the current selection.
 
 You don't need to select text with the mouse, using the keyboard commands for
-<A HREF="visual.html#Visual">Visual</A> mode works just <A HREF="motion.html#as">as</A> well.
+<A HREF="visual\.html#Visual">可视</A>模式 works just <A HREF="motion.html#as">as</A> well.
 
 
 THE REAL CLIPBOARD
@@ -291,9 +291,9 @@ This use of both the &quot;current selection&quot; and the &quot;real clipboard&
 a bit confusing.  But <A HREF="motion.html#it">它</A> is very useful.  Let's show this with an example.
 Use one gvim with a text file and perform these actions:
 
--  <A HREF="visual.html#Select">Select</A> two words in <A HREF="visual.html#Visual">Visual</A> mode.
+-  <A HREF="visual.html#Select">Select</A> two words in <A HREF="visual\.html#Visual">可视</A>模式.
 -  Use the Edit/Copy menu to get these words onto the <A HREF="provider.html#clipboard">clipboard</A>.
--  <A HREF="visual.html#Select">Select</A> one other <A HREF="motion.html#word">单词</A> in <A HREF="visual.html#Visual">Visual</A> mode.
+-  <A HREF="visual.html#Select">Select</A> one other <A HREF="motion.html#word">单词</A> in <A HREF="visual\.html#Visual">可视</A>模式.
 -  Use the Edit/Paste menu item.  What will happen is that the single selected
    <A HREF="motion.html#word">单词</A> is replaced with the two words from the <A HREF="provider.html#clipboard">clipboard</A>.
 -  Move the mouse pointer somewhere else and click the middle button.  You
@@ -309,7 +309,7 @@ USING THE KEYBOARD
 If you don't like using the mouse, you can access the current selection and
 the real <A HREF="provider.html#clipboard">clipboard</A> with two <A HREF="change.html#registers">registers</A>.  The &quot;* <A HREF="intro.html#register">register</A> is for the current
 selection.
-   To make text become the current selection, use <A HREF="visual.html#Visual">Visual</A> mode.例如,
+   To make text become the current selection, use <A HREF="visual\.html#Visual">可视</A>模式.例如,
 to select a whole line just press &quot;<A HREF="visual.html#V">V</A>&quot;.
    To insert the current selection before the cursor:
 
@@ -335,8 +335,8 @@ instead of the <A HREF="pattern.html#star">star</A> (*) <A HREF="intro.html#regi
 *<A NAME="09.4"></A><B>09.4</B>*	<A HREF="visual.html#Select">Select</A> mode
 
 And now something that is used more often on MS-Windows than on X-Windows.
-But both can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.  You already know about <A HREF="visual.html#Visual">Visual</A> mode.  <A HREF="visual.html#Select">Select</A> mode is like
-<A HREF="visual.html#Visual">Visual</A> mode, because <A HREF="motion.html#it">它</A> is also used to select text.  But there is an obvious
+But both can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>.  You already know about <A HREF="visual\.html#Visual">可视</A>模式.  <A HREF="visual.html#Select">Select</A> mode is like
+<A HREF="visual\.html#Visual">可视</A>模式, because <A HREF="motion.html#it">它</A> is also used to select text.  But there is an obvious
 difference: When typing text, the selected text is deleted and the typed text
 replaces <A HREF="motion.html#it">它</A>.
 
@@ -345,14 +345,14 @@ To start working with <A HREF="visual.html#Select">Select</A> mode, you must fir
 
 <B>	:set selectmode+=mouse</B>
 
-Now use the mouse to select some text.  It is highlighted like in <A HREF="visual.html#Visual">Visual</A> mode.
+Now use the mouse to select some text.  It is highlighted like in <A HREF="visual\.html#Visual">可视</A>模式.
 Now press a <A HREF="print.html#letter">letter</A>.  The selected text is deleted, and the single <A HREF="print.html#letter">letter</A>
 replaces <A HREF="motion.html#it">它</A>.  You are in <A HREF="intro.html#Insert">插入</A>模式 now, thus you can continue typing.
 
 Since typing normal text causes the selected text to be deleted, you can not
 use the normal <A HREF="intro.html#movement">移动</A>命令 &quot;<A HREF="usr_02.html#hjkl">hjkl</A>&quot;, &quot;<A HREF="motion.html#w">w</A>&quot;, etc.  Instead, use the shifted
 function keys.  <A HREF="motion.html#&lt;S-Left&gt;">&lt;S-Left&gt;</A> (shifted cursor left key) moves the cursor left.  The
-selected text is changed like in <A HREF="visual.html#Visual">Visual</A> mode.  The other shifted cursor keys
+selected text is changed like in <A HREF="visual\.html#Visual">可视</A>模式.  The other shifted cursor keys
 <A HREF="diff.html#do">do</A> what you expect.  &lt;S-End&gt; and &lt;S-Home&gt; also work.
 
 You can tune the way <A HREF="visual.html#Select">Select</A> mode works with the <A HREF="options.html#'selectmode'">'selectmode'</A> option.
