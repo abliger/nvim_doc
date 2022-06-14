@@ -2852,7 +2852,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	|<A HREF="fold.html#fold-indent">fold-indent</A>|	indent	    Lines with equal indent form a fold.
 	|<A HREF="fold.html#fold-expr">fold-expr</A>|	expr	    <A HREF="#'foldexpr'">'foldexpr'</A> gives the fold level of a line.
 	|<A HREF="fold.html#fold-marker">fold-marker</A>|	marker	    Markers are used to specify <A HREF="fold.html#folds">folds</A>.
-	|<A HREF="fold.html#fold-syntax">fold-syntax</A>|	syntax	    <A HREF="autocmd.html#Syntax">Syntax</A> highlighting items specify <A HREF="fold.html#folds">folds</A>.
+	|<A HREF="fold.html#fold-syntax">fold-syntax</A>|	syntax	    <A HREF="autocmd\.html#Syntax">语法</A>高亮 items specify <A HREF="fold.html#folds">folds</A>.
 	|<A HREF="fold.html#fold-diff">fold-diff</A>|	diff	    Fold text that is not changed.
 
 
@@ -3180,7 +3180,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	settings (for X, <A HREF="motion.html#it">它</A> will use the Vim.font resource), and finally <A HREF="motion.html#it">它</A>
 	will try some builtin default which should always be there (&quot;7x13&quot; in
 	the <A HREF="change.html#case">case</A> of X).  The font names given should be &quot;normal&quot; fonts.  Vim
-	will try to find the related <A HREF="syntax.html#bold">bold</A> and <A HREF="syntax.html#italic">italic</A> fonts.
+	will try to find the related <A HREF="syntax\.html#bold">粗体</A> and <A HREF="syntax\.html#bold">斜体</A> fonts.
 
 	For Win32 and Mac OS:
 <B>	    :set guifont=*</B>
@@ -3203,8 +3203,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	- takes these <A HREF="#options">options</A> in the font name:
 		hXX - height is XX (points, can be floating-point)
 		wXX - width is XX (points, can be floating-point)
-		<A HREF="motion.html#b">b</A>   - <A HREF="syntax.html#bold">bold</A>
-		<A HREF="insert.html#i">i</A>   - <A HREF="syntax.html#italic">italic</A>
+		<A HREF="motion.html#b">b</A>   - <A HREF="syntax\.html#bold">粗体</A>
+		<A HREF="insert.html#i">i</A>   - <A HREF="syntax\.html#bold">斜体</A>
 		<A HREF="undo.html#u">u</A>   - <A HREF="syntax.html#underline">underline</A>
 		<A HREF="change.html#s">s</A>   - strikeout
 		cXX - character set XX.  Valid charsets are: ANSI, ARABIC,
@@ -4705,7 +4705,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'numberwidth'">'numberwidth'</A> <A HREF="#'nuw'">'nuw'</A>	number	(default: 4)
 			local to<A HREF="windows.html#window">窗口</A>
 	Minimal number of columns to use for the line number.  Only relevant
-	when the <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A> option is set or <A HREF="print.html#printing">printing</A> lines
+	when the <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A> option is set or <A HREF="print\.html#printing">打印</A> lines
 	with a line number. Since one space is always between the number and
 	the text, there is one <A HREF="various.html#less">less</A> character for the number itself.
 	The value is the minimum width.  A bigger width is used when needed to
@@ -4965,7 +4965,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'printencoding'"></A><B>'printencoding'</B>* *<A NAME="'penc'"></A><B>'penc'</B>*
 <A HREF="#'printencoding'">'printencoding'</A> <A HREF="#'penc'">'penc'</A>	<A HREF="options\.html#options">字符串</A>	(default empty, except for some systems)
 			global
-	Sets the character encoding used when <A HREF="print.html#printing">printing</A>.
+	Sets the character encoding used when <A HREF="print\.html#printing">打印</A>.
 	见 |<A HREF="print.html#penc-option">penc-option</A>|.
 
 
@@ -5297,7 +5297,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	  menu.vim	<A HREF="gui.html#GUI">GUI</A> <A HREF="gui.html#menus">menus</A> |<A HREF="menu.html">menu.vim</A>|
 	  pack/		<A HREF="repeat.html#packages">packages</A> |<A HREF="repeat.html#:packadd">:packadd</A>|
 	  plugin/	plugin scripts |<A HREF="usr_41.html#write-plugin">write-plugin</A>|
-	  print/	files for <A HREF="print.html#printing">printing</A> |<A HREF="print.html#postscript-print-encoding">postscript-print-encoding</A>|
+	  print/	files for <A HREF="print\.html#printing">打印</A> |<A HREF="print.html#postscript-print-encoding">postscript-print-encoding</A>|
 	  rplugin/	|<A HREF="remote_plugin.html#remote-plugin">remote-plugin</A>| scripts
 	  spell/	spell checking files |<A HREF="spell.html#spell">拼写</A>|
 	  syntax/	syntax files |<A HREF="syntax.html#mysyntaxfile">mysyntaxfile</A>|
@@ -6746,7 +6746,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	the |<A HREF="change.html#:retab">:retab</A>| command, and the <A HREF="#'softtabstop'">'softtabstop'</A> option.
 
 	Note: Setting <A HREF="#'tabstop'">'tabstop'</A> to any other value than 8 can make your file
-	appear wrong in many places, e.g., when <A HREF="print.html#printing">printing</A> <A HREF="motion.html#it">它</A>.
+	appear wrong in many places, e.g., when <A HREF="print\.html#printing">打印</A> <A HREF="motion.html#it">它</A>.
 	The value must be more than 0 and <A HREF="various.html#less">less</A> than 10000.
 
 	There are four main ways to use tabs in Vim:

@@ -79,230 +79,177 @@
 			  使用<A HREF="syntax\.html#syntax">语法</A>高亮
 
 
-Black and white text is boring.  With colors your file comes to life.  This
-not only looks nice, <A HREF="motion.html#it">它</A> also speeds up your work.  Change the colors used for
-the different sorts of text.  Print your text, with the colors you see on the
-screen.
+黑白的文字让人厌倦了，增加一些色彩能为你的文件带来生气。这不但看起来漂亮，还能够提高你的工作效率。本章介绍如何使用不同颜色显示不同文本并把它打印出来.
 
-|<A HREF="#06.1">06.1</A>|	Switching <A HREF="motion.html#it">它</A> on
-|<A HREF="#06.2">06.2</A>|	No or wrong colors?
-|<A HREF="#06.3">06.3</A>|	Different colors
-|<A HREF="#06.4">06.4</A>|	With colors or without colors
-|<A HREF="#06.5">06.5</A>|	Printing with colors
-|<A HREF="#06.6">06.6</A>|	Further reading
+|<A HREF="#06.1">06.1</A>|	打开<A HREF="motion\.html#it">它</A>
+|<A HREF="#06.2">06.2</A>|	颜色错误或者没有颜色?
+|<A HREF="#06.3">06.3</A>|	使用不同的颜色
+|<A HREF="#06.4">06.4</A>|	是否使用颜色
+|<A HREF="#06.5">06.5</A>|	带颜色打印
+|<A HREF="#06.6">06.6</A>|	深入阅读
 
-下一章: |<A HREF="usr_07.html">usr_07.txt</A>|  Editing more than one file
+下一章: |<A HREF="usr_07.html">usr_07.txt</A>|  编辑更多文件
 上一章: |<A HREF="usr_05.html">usr_05.txt</A>|  自定义配置
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="06.1"></A><B>06.1</B>*	Switching <A HREF="motion.html#it">它</A> on
+*<A NAME="06.1"></A><B>06.1</B>*	打开<A HREF="motion\.html#it">它</A>
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting is enabled by default.  Nvim will automagically detect the
-type of file and load the right <A HREF="syntax\.html#syntax">语法</A> highlighting.
+<A HREF="autocmd\.html#Syntax">语法</A>高亮默认开启.Nvim自动发现文件类型并加载正确的<A HREF="syntax\.html#syntax">语法</A>高亮.
 
 ==============================================================================
 
-*<A NAME="06.2"></A><B>06.2</B>*	No or wrong colors?
+*<A NAME="06.2"></A><B>06.2</B>*	颜色错误或者没有颜色?
 
-There can be a number of reasons why you don't see colors:
+你看不到颜色有很多原因:
 
-- Your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> does not support colors.
-	Vim will use <A HREF="syntax.html#bold">bold</A>, <A HREF="syntax.html#italic">italic</A> and underlined text, but this doesn't look
-	very nice.  You probably will want to try to get a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> with
-	colors.
+- 你的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>不支持颜色.
+	Vim会使用<A HREF="syntax\.html#bold">粗体</A>,<A HREF="syntax\.html#bold">斜体</A>和下划线展示文字,但是看起来不怎么样. 你可以使用支持颜色的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
-- Your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> does support colors, but Vim doesn't know this.
-	Make sure your <A HREF="term.html#$TERM">$TERM</A> setting is correct.例如, when using an
-	xterm that supports colors:
+- 你的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>支持颜色,但Vim不知道.确保<A HREF="term.html#$TERM">$TERM</A>设置是正确的.例如,当使用支持颜色的xterm终端:
 
 <B>		setenv TERM xterm-color</B>
  
-	or (depending on your shell):
+	或者(取决于你的shell):
 
 <B>		TERM=xterm-color; export TERM</B>
 
- 	The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> name must match the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you are using.
+设置的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>的名字必须和你使用的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>相同.
 
-- The file type is not recognized.
-	Vim doesn't know all file types, and sometimes it's near to impossible
-	to tell what language a file uses.  Try this command:
+- 文件类型不能识别.
+  Vim 不可能识别所有文件，而且有时很难说一个文件是什么类型的。试一下这个命令:
 
 <B>		:set filetype</B>
  
-	If the result is &quot;filetype=&quot; then the problem is indeed that Vim
-	doesn't know what type of file this is.  You can set the type
-	manually:
+	如果结果是&quot;filetype=&quot;那么问题就是出在文件类型上了。你可以手工指定文件类型:
 
 <B>		:set filetype=fortran</B>
 
- 	To see which types are available, look in the directory
-	$VIMRUNTIME/syntax.  For the <A HREF="gui.html#GUI">GUI</A> you can use the <A HREF="autocmd.html#Syntax">Syntax</A> menu.
-	Setting the <A HREF="filetype\.html#filetype">文件类型</A> can also be done with a |<A HREF="options.html#modeline">modeline</A>|, so that the
-	file will be highlighted each time you edit <A HREF="motion.html#it">它</A>.例如, this
-	line can be used in a Makefile (put <A HREF="motion.html#it">它</A> near the start or end of the
-	file):
+  要知道哪些类型是有效的，查看一下 $VIMRUNTIME/syntax. 对于<A HREF="gui.html#GUI">GUI</A> ，你可以使用<A HREF="autocmd.html#Syntax">Syntax</A> 菜单.设置<A HREF="filetype\.html#filetype">文件类型</A>也能通过|<A HREF="options.html#modeline">modeline</A>|设置,以便每次编辑<A HREF="motion.html#it">它</A>时都会进行好靓.例如, Makefile文件高亮 (把<A HREF="motion.html#it">它</A>放到文件首位):
 
 <B>		# vim: syntax=make</B>
 
- 	You might know how to detect the file type yourself.  Often the file
-	name extension (after the dot) can be used.
-	见 |<A HREF="filetype.html#new-filetype">new-filetype</A>| for how to tell Vim to detect that file type.
+  你可能知道怎么检测自己的文件类型，通常的方法是检查文件的扩展名 (就是点后面的内容).  见 |<A HREF="filetype.html#new-filetype">new-filetype</A>| 去告诉Vim怎样确定文件类型.
 
-- There is no highlighting for your file type.
-	You could try using a similar file type by manually setting <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A>
-	mentioned above.  If that isn't good enough, you can write your own
-	syntax file, 见 |<A HREF="syntax.html#mysyntaxfile">mysyntaxfile</A>|.
+- 你的文件类型没有语法高亮定义.
+  你可以找一个相似的文件类型并人工设置为那种类型。如果觉得不好，你可以自  己写一个, 见 |<A HREF="syntax.html#mysyntaxfile">mysyntaxfile</A>|.
 
 
-Or the colors could be wrong:
+颜色错误:
 
-- The colored text is very hard to read.
-	Vim guesses the background color that you are using.  If <A HREF="motion.html#it">它</A> is black
-	(or another dark color) <A HREF="motion.html#it">它</A> will use light colors for text.  If <A HREF="motion.html#it">它</A> is
-	white (or another light color) <A HREF="motion.html#it">它</A> will use dark colors for text.  If
-	Vim guessed wrong the text will be hard to read.  To solve this, set
-	the <A HREF="options.html#'background'">'background'</A> option.  For a dark background:
+- 带颜色的文本以至于难以阅读.
+  Vim 自动猜测你使用的背景色.如果是黑的 (或者其它深色的色彩)，它会用浅色作为前景色。如果是白的 (或者其它浅色)，它会使用深色作为前景色。如果Vim 猜错了，文字就很难认了。要解决这个问题，设置一下background' 选项。对于深色:
 
 <B>		:set background=dark</B>
 
- 	And for a light background:
+  对于亮色背景:
 
 <B>		:set background=light</B>
 
- 	Make sure you put this _before_ the &quot;<A HREF="syntax.html#:syntax">:syntax</A> enable&quot; command,
-	otherwise the colors will already have been set.  You could <A HREF="diff.html#do">do</A>
-	&quot;<A HREF="syntax.html#:syntax">:syntax</A> reset&quot; after setting <A HREF="options.html#'background'">'background'</A> to make Vim set the default
-	colors again.
+ 	确保在&quot;<A HREF="syntax.html#:syntax">:syntax</A> enable&quot;命令前调用前两个命令,否则不起作用.你可以<A HREF="diff.html#do">使用</A>&quot;<A HREF="syntax.html#:syntax">:syntax</A> 重置&quot; 在设置<A HREF="options.html#'background'">'background'</A>后使Vim重新染色.
 
-- The colors are wrong when <A HREF="scroll.html#scrolling">scrolling</A> bottom to top.
-	Vim doesn't read the whole file to parse the text.  It starts parsing
-	wherever you are viewing the file.  That saves a lot of time, but
-	sometimes the colors are wrong.  A simple fix is hitting <A HREF="various.html#CTRL-L">CTRL-L</A>.  Or
-	scroll back a bit and then forward again.
-	For a real fix, 见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.  Some <A HREF="syntax\.html#syntax">语法</A> files have a way to make
-	<A HREF="motion.html#it">它</A> look further back, see the help for the specific <A HREF="syntax\.html#syntax">语法</A> file.  For
-	example, |<A HREF="tex.html">tex.vim</A>| for the TeX <A HREF="syntax\.html#syntax">语法</A>.
+- 从下向上<A HREF="scroll.html#scrolling">滚动</A>使颜色错误.
+	Vim解析文件不是直接解析整个文件. 它只分析你要显示的部分。这样能省不少时间，但也会因此带来错误。一个简单的修正方法是敲<A HREF="various.html#CTRL-L">CTRL-L</A>. 或者往回滚动一下再回来.真正修复见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.一些<A HREF="syntax\.html#syntax">语法</A>文件会让<A HREF="motion.html#it">它</A>看前面的内容,参见相应的<A HREF="syntax\.html#syntax">语法</A>定义文件.如,|<A HREF="tex.html">tex.vim</A>|关于TeX <A HREF="syntax\.html#syntax">语法</A>.
 
 ==============================================================================
 
-*<A NAME="06.3"></A><B>06.3</B>*	Different colors				*<A NAME=":syn-default-override"></A><B>:syn-default-override</B>*
+*<A NAME="06.3"></A><B>06.3</B>*	使用不同的颜色				*<A NAME=":syn-default-override"></A><B>:syn-default-override</B>*
 
-If you don't like the default colors, you can select another color scheme.  In
-the <A HREF="gui.html#GUI">GUI</A> use the Edit/Color Scheme menu.  You can also type the command:
+如果你不喜欢默认的颜色方案，你可以选另一个色彩方案。在 GUI 版本中可以使用Edit/Color 菜单。你也可以使用这个命令:
 
 <B>	:colorscheme evening</B>
 
-&quot;evening&quot; is the name of the color scheme.  There are several others you might
-want to try out.  Look in the directory $VIMRUNTIME/colors.
+&quot;evening&quot;是色彩方案的名称。还有几种备选方案可以试一下. 从$VIMRUNTIME/colors找到他们.
 
-When you found the color scheme that you like, add the &quot;<A HREF="syntax.html#:colorscheme">:colorscheme</A>&quot;命令
-to your |<A HREF="init.html">init.vim</A>| file.
+当你找到你喜欢的颜色主题, 添加&quot;<A HREF="syntax.html#:colorscheme">:colorscheme</A>&quot;命令到你的|<A HREF="init.html">init.vim</A>|文件.
 
-You could also write your own color scheme.  This is how you <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>:
+你可以自己编写色彩方案，方法如下:
 
-1. <A HREF="visual.html#Select">Select</A> a color scheme that comes close.  Copy this file to your own Vim
-   directory.  For Unix, this should work:
+1. <A HREF="visual.html#Select">选择</A>你满意的颜色主题.把这个文件拷贝到你自己的 Vim 目录中。在Unix 上，可以这样:
 
 <B>	!mkdir -p ~/.config/nvim/colors</B>
 <B>	!cp $VIMRUNTIME/colors/morning.vim ~/.config/nvim/colors/mine.vim</B>
  
-   This is done from Vim, because <A HREF="motion.html#it">它</A> knows the value of <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>.
+   这样做是因为<A HREF="motion.html#it">它</A>知道<A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>的值.
 
-2. Edit the color scheme file.  These entries are useful:
+2. 编辑这个色彩方案，常用的有下面的这些条目:
 
-	term		attributes in a B&amp;W <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
-	cterm		attributes in a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
-	ctermfg		foreground color in a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
-	ctermbg		background color in a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
-	<A HREF="gui.html#gui">gui</A>		attributes in the <A HREF="gui.html#GUI">GUI</A>
-	guifg		foreground color in the <A HREF="gui.html#GUI">GUI</A>
-	guibg		background color in the <A HREF="gui.html#GUI">GUI</A>
+	term		黑白<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>的属性
+	cterm		支持颜色<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>的属性
+	ctermfg		<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>前景色
+	ctermbg		<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>背景色
+	<A HREF="gui.html#gui">gui</A>		<A HREF="gui.html#GUI">GUI</A>属性
+	guifg		<A HREF="gui.html#GUI">GUI</A>前景色
+	guibg		<A HREF="gui.html#GUI">GUI</A>背景色
 
- 例如, to make comments green:
+ 例如, 使用绿色注释:
 
 <B>	:highlight Comment ctermfg=green guifg=green</B>
  
-   Attributes you can use for &quot;cterm&quot; and &quot;<A HREF="gui.html#gui">gui</A>&quot; are &quot;<A HREF="syntax.html#bold">bold</A>&quot; and &quot;<A HREF="syntax.html#underline">underline</A>&quot;.
-   If you want both, use &quot;bold,underline&quot;.  For details see the |<A HREF="syntax.html#:highlight">:highlight</A>|
-   command.
+   对于&quot;cterm&quot;和&quot;<A HREF="gui.html#gui">gui</A>&quot;可以使用&quot;<A HREF="syntax\.html#bold">粗体</A>&quot; and &quot;<A HREF="syntax.html#underline">下划线</A>&quot;属性修饰. 使用&quot;bold,underline&quot;都设置.  查看细节使用|<A HREF="syntax.html#:highlight">:highlight</A>|命令.
 
-3. Tell Vim to always use your color scheme.  Put this line in your YXXYvimrc|:
+3. 告诉 Vim 总使用你这个色彩方案。把如下语句加入你的 vimrc 中:
 
 <B>	colorscheme mine</B>
 
-If you want to see what the most often used color combinations look like, use
-this command:
+如果你要测试一下常用的色彩组合，用如下命令:
 
 <B>	:runtime syntax/colortest.vim</B>
 
-You will see text in various color combinations.  You can check which ones are
-readable and look nice.
+这样你会看到不同的颜色组合。你可以很容易的看到哪一种可读性好而且漂亮.
 
 ==============================================================================
 
-*<A NAME="06.4"></A><B>06.4</B>*	With colors or without colors
+*<A NAME="06.4"></A><B>06.4</B>*	是否使用颜色
 
-Displaying text in color takes a lot of effort.  If you find the displaying
-too slow, you might want to disable <A HREF="syntax\.html#syntax">语法</A> highlighting for a moment:
+使用色彩显示文本会影响效率。如果你觉得显示得很慢，可以临时关掉这个功能:
 
 <B>	:syntax clear</B>
 
-When editing another file (or the same one) the colors will come back.
+当你开始编辑另一个文件 (或者同一个文件)，色彩会重新生效.
 
-If you want to stop highlighting completely use:
+如果你要完全关闭这个功能:
 
 <B>	:syntax off</B>
 
-This will completely disable <A HREF="syntax\.html#syntax">语法</A> highlighting and remove <A HREF="motion.html#it">它</A> immediately for
-all <A HREF="windows.html#buffers">buffers</A>.  见 |<A HREF="syntax.html#:syntax-off">:syntax-off</A>| for more details.
+T这个命令会停止对所有缓冲区的所有语法高亮.详见 |<A HREF="syntax.html#:syntax-off">:syntax-off</A>|.
 
 
 							*<A NAME=":syn-manual"></A><B>:syn-manual</B>*
-If you want <A HREF="syntax\.html#syntax">语法</A> highlighting only for specific files, use this:
+如果你只想在几个文件中打开<A HREF="syntax\.html#syntax">语法</A>高亮，使用:
 
 <B>	:syntax manual</B>
 
-This will enable the <A HREF="syntax\.html#syntax">语法</A> highlighting, but not switch <A HREF="motion.html#it">它</A> on automatically
-when starting to edit a buffer.  To switch highlighting on for the current
-buffer, set the <A HREF="options.html#'syntax'">'syntax'</A> option:
+这个命令激活语法高亮功能，但不会在你开始编辑一个缓冲区时自动生效，要在当前缓冲区中使用高亮，需要设置<A HREF="options.html#'syntax'">'syntax'</A>选项:
 
 <B>	:set syntax=ON</B>
  
 ==============================================================================
 
-*<A NAME="06.5"></A><B>06.5</B>*	Printing with colors				*<A NAME="syntax-printing"></A><B>syntax-printing</B>*
+*<A NAME="06.5"></A><B>06.5</B>*	带颜色打印				*<A NAME="syntax-printing"></A><B>syntax-printing</B>*
 
-In the MS-Windows version you can print the current file with this command:
+在 MS-Windows 版本上，你可以用如下命令打印当前文件:
 
 <B>	:hardcopy</B>
 
-You will get the usual printer dialog, where you can select the printer and a
-few settings.  If you have a color printer, the paper output should look the
-same <A HREF="motion.html#as">as</A> what you see inside Vim.  But when you use a dark background the
-colors will be adjusted to look good on white paper.
+你可以获得打印窗口，通过它选择打印机和进行打印设置.如果你有彩色打印机,输出会和在Vim中的相同.但当你使用黑暗背景，颜色会适应白纸以便更好查看.
 
-There are several <A HREF="options\.html#options">选项</A> that change the way Vim prints:
+有几个改变Vim打印行为的<A HREF="options\.html#options">选项</A>:
 	<A HREF="options.html#'printdevice'">'printdevice'</A>
 	<A HREF="options.html#'printheader'">'printheader'</A>
 	<A HREF="options.html#'printfont'">'printfont'</A>
 	<A HREF="options.html#'printoptions'">'printoptions'</A>
 
-To print only a range of lines,  use <A HREF="visual\.html#Visual">可视</A>模式 to select the lines and then
-type the command:
+只打印一定范围的行,使用<A HREF="visual\.html#Visual">可视</A>模式选择这些行，如:
 
 <B>	v100j:hardcopy</B>
 
-&quot;<A HREF="visual.html#v">v</A>&quot; starts <A HREF="visual\.html#Visual">可视</A>模式.  &quot;100j&quot; moves a hundred lines down, they will be
-highlighted.  Then &quot;<A HREF="print.html#:hardcopy">:hardcopy</A>&quot; will print those lines.  You can use other
-commands to move in <A HREF="visual\.html#Visual">可视</A>模式, of course.
+&quot;<A HREF="visual.html#v">v</A>&quot;进入<A HREF="visual\.html#Visual">可视</A>模式.&quot;100j&quot;向下选中100行.然后使用&quot;<A HREF="print.html#:hardcopy">:hardcopy</A>&quot; 打印这些行.
 
-This also works on Unix, if you have a PostScript printer.  Otherwise, you
-will have to <A HREF="diff.html#do">do</A> a bit more work.  You need to convert the text to HTML first,
-and then print <A HREF="motion.html#it">它</A> from a web browser.
+如果你有一台 PostScript 打印机，上面的方法也适合 Unix 系统。否则，你必须做一些额外的处理: 你需要先把文件转换成 HTML 类型，然后用浏览器打印.
 
-Convert the current file to HTML with this command:
+如下命令把当前文件转换成 HTML 格式:
 
 <B>	:TOhtml</B>
 
@@ -310,29 +257,24 @@ In <A HREF="change.html#case">case</A> that doesn't work:
 
 <B>	:source $VIMRUNTIME/syntax/2html.vim</B>
 
-You will see <A HREF="motion.html#it">它</A> crunching away, this can take quite a while for a large file.
-Some time later another<A HREF="windows.html#window">窗口</A>shows the HTML code.  Now write this somewhere
-(doesn't matter where, you throw <A HREF="motion.html#it">它</A> away later):
+你发现它会嘎吱嘎吱执行一阵子，(如果文件很大，这可能要花点时间)。之后，Vim 会打开一个新的窗口并显示 HTML 代码。现在把这个文件存下来 (存在哪都不要紧，反正最后你要删掉它的):
 
 <B>	:write main.c.html</B>
 
-Open this file in your favorite browser and print <A HREF="motion.html#it">它</A> from there.  If all goes
-well, the output should look exactly <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> does in Vim.  见 |<A HREF="2html.html">2html.vim</A>| for
-details.  Don't forget to delete the HTML file when you are done with <A HREF="motion.html#it">它</A>.
+用你喜欢的浏览器打开这个文件，并通过它打印这个文件。如果一切顺利，这个输出应该与 Vim 中显示的一样.详见|<A HREF="2html.html">2html.vim</A>|.处理完后别忘了删掉那个 HTML 文件.
 
-Instead of <A HREF="print.html#printing">printing</A>, you could also put the HTML file on a web server, and let
-others look at the colored text.
+除了<A HREF="print\.html#printing">打印</A>,你还可以把这个 HTML 文件，放到 WEB 服务器上，让其他人可以通过彩色文本阅读.
 
 ==============================================================================
 
-*<A NAME="06.6"></A><B>06.6</B>*	Further reading
+*<A NAME="06.6"></A><B>06.6</B>*	深入阅读
 
-|<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax\.html#syntax">语法</A> highlighted.
-|<A HREF="syntax\.html#syntax">语法</A>|      All the details.
+|<A HREF="usr_44.html">usr_44.txt</A>|  自定义<A HREF="syntax\.html#syntax">语法</A>高亮.
+|<A HREF="syntax\.html#syntax">语法</A>|      所有的细节.
 
 ==============================================================================
 
-下一章: |<A HREF="usr_07.html">usr_07.txt</A>|  Editing more than one file
+下一章: |<A HREF="usr_07.html">usr_07.txt</A>|  编辑更多文件
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

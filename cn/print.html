@@ -346,8 +346,8 @@ generating CJK output from |<A HREF="#:hardcopy">:hardcopy</A>|.  Each font name
 with a <A HREF="#letter">letter</A> indicating the style the font is to be used for <A HREF="motion.html#as">as</A> follows:
 
   r:{font-name}		font to use for normal characters
-  b:{font-name}		font to use for <A HREF="syntax.html#bold">bold</A> characters
-  i:{font-name}		font to use for <A HREF="syntax.html#italic">italic</A> characters
+  b:{font-name}		font to use for <A HREF="syntax\.html#bold">粗体</A> characters
+  i:{font-name}		font to use for <A HREF="syntax\.html#bold">斜体</A> characters
   o:{font-name}		font to use for bold-italic characters
 
 A field with the <A HREF="change.html#r">r</A>: prefix must be specified when doing CJK <A HREF="#printing">printing</A>.  The
@@ -370,7 +370,7 @@ from traditional ASCII characters.  There are two additional fields to <A HREF="
   a:no (default)	code range.
 
 The following is an example of specifying two <A HREF="mbyte.html#multibyte">multibyte</A> fonts, one for normal
-and <A HREF="syntax.html#italic">italic</A> <A HREF="#printing">printing</A> and one for <A HREF="syntax.html#bold">bold</A> and bold-italic <A HREF="#printing">printing</A>, and using
+and <A HREF="syntax\.html#bold">斜体</A> <A HREF="#printing">printing</A> and one for <A HREF="syntax\.html#bold">粗体</A> and bold-italic <A HREF="#printing">printing</A>, and using
 Courier to print codes in the ASCII code range but using the national
 character set:
 <B>	:set printmbfont=r:WadaMin-Regular,b:WadaMin-Bold,c:yes</B>
@@ -540,7 +540,7 @@ to correctly print CJK files requires setting up a few more <A HREF="options\.ht
 
 Each of these countries has many standard character sets and encodings which
 require that both be specified when <A HREF="#printing">printing</A>.  In addition, CJK fonts normally
-<A HREF="diff.html#do">do</A> not have the concept of <A HREF="syntax.html#italic">italic</A> glyphs and use different weight or stroke
+<A HREF="diff.html#do">do</A> not have the concept of <A HREF="syntax\.html#bold">斜体</A> glyphs and use different weight or stroke
 style to achieve emphasis when <A HREF="#printing">printing</A>.  This in turn requires a different
 approach to specifying fonts to use when <A HREF="#printing">printing</A>.
 
@@ -553,7 +553,7 @@ characters may not appear when printed.
 
 The fonts to use for CJK <A HREF="#printing">printing</A> are specified with <A HREF="options.html#'printmbfont'">'printmbfont'</A>.  This
 option allows you to specify different fonts to use when <A HREF="#printing">printing</A> characters
-which are <A HREF="syntax\.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax.html#italic">italic</A>, <A HREF="syntax.html#bold">bold</A> and
+which are <A HREF="syntax\.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax\.html#bold">斜体</A>, <A HREF="syntax\.html#bold">粗体</A> and
 bold-italic.
 
 No CJK fonts are supplied with Vim.  There are some free <A HREF="mbyte.html#Korean">Korean</A>, <A HREF="mbyte.html#Japanese">Japanese</A>, and
@@ -624,7 +624,7 @@ There are a number of possible causes <A HREF="motion.html#as">as</A> to why the
   <A HREF="diff.html#do">do</A> not support collating printouts will ignore a request to <A HREF="diff.html#do">do</A> so.  Some may
   not.  Try <A HREF="#printing">printing</A> with collation turned off.
 
-- <A HREF="autocmd.html#Syntax">Syntax</A> highlighting.  Some print management code may prevent the generated
+- <A HREF="autocmd\.html#Syntax">语法</A>高亮.  Some print management code may prevent the generated
   PostScript file from being printed on a black and white printer when <A HREF="syntax\.html#syntax">语法</A>
   highlighting is turned on, even if solid black is the only color used.  Try
   <A HREF="#printing">printing</A> with <A HREF="syntax\.html#syntax">语法</A> highlighting turned off.

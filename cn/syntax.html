@@ -79,9 +79,9 @@
 
 
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting		*<A NAME="syntax"></A><B>syntax</B>* *<A NAME="syntax-highlighting"></A><B>syntax-highlighting</B>* *<A NAME="coloring"></A><B>coloring</B>*
+<A HREF="autocmd\.html#Syntax">语法</A>高亮		*<A NAME="syntax"></A><B>syntax</B>* *<A NAME="syntax-highlighting"></A><B>syntax-highlighting</B>* *<A NAME="coloring"></A><B>coloring</B>*
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting enables Vim to show parts of the text in another font or
+<A HREF="autocmd\.html#Syntax">语法</A>高亮 enables Vim to show parts of the text in another font or
 color.	Those parts can be specific keywords or text matching a <A HREF="pattern.html#pattern">pattern</A>.  Vim
 doesn't parse the whole file (to keep <A HREF="motion.html#it">它</A> fast), so the highlighting has its
 limitations.  Lexical highlighting might be a better name, but since everybody
@@ -103,7 +103,7 @@ In the <A HREF="autocmd.html#User">User</A> Manual:
 
 
 				*<A NAME=":syn-enable"></A><B>:syn-enable</B>* *<A NAME=":syntax-enable"></A><B>:syntax-enable</B>* *<A NAME=":syn-on"></A><B>:syn-on</B>* *<A NAME=":syntax-on"></A><B>:syntax-on</B>*
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting is enabled by default. If you need to enable <A HREF="motion.html#it">它</A> again
+<A HREF="autocmd\.html#Syntax">语法</A>高亮 is enabled by default. If you need to enable <A HREF="motion.html#it">它</A> again
 after <A HREF="motion.html#it">它</A> was disabled (see below), use:
 
 <B>	:syntax enable</B>
@@ -920,7 +920,7 @@ ADA
 ANT						*<A NAME="ant.vim"></A><B>ant.vim</B>* *<A NAME="ft-ant-syntax"></A><B>ft-ant-syntax</B>*
 
 The ant <A HREF="#syntax">syntax</A> file provides <A HREF="#syntax">syntax</A> highlighting for javascript and <A HREF="if_pyth.html#python">python</A>
-by default.  <A HREF="autocmd.html#Syntax">Syntax</A> highlighting for other <A HREF="usr_41.html#script">script</A> languages can be installed
+by default.  <A HREF="autocmd\.html#Syntax">语法</A>高亮 for other <A HREF="usr_41.html#script">script</A> languages can be installed
 by the function AntSyntaxScript(), which takes the <A HREF="tagsrch.html#tag">标签</A> name <A HREF="motion.html#as">as</A> first argument
 and the <A HREF="usr_41.html#script">script</A> <A HREF="#syntax">syntax</A> file name <A HREF="motion.html#as">as</A> second argument.  Example:
 
@@ -1211,7 +1211,7 @@ CLOJURE							*<A NAME="ft-clojure-syntax"></A><B>ft-clojure-syntax</B>*
 
 						*<A NAME="g:clojure_syntax_keywords"></A><B>g:clojure_syntax_keywords</B>*
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting of public vars in &quot;clojure.core&quot; is provided by default,
+<A HREF="autocmd\.html#Syntax">语法</A>高亮 of public vars in &quot;clojure.core&quot; is provided by default,
 but additional symbols can be highlighted by adding them to the
 |<A HREF="#g:clojure_syntax_keywords">g:clojure_syntax_keywords</A>| variable.  The value should be a |<A HREF="eval.html#Dictionary">Dictionary</A>| of
 <A HREF="#syntax">syntax</A> group names, each containing a |<A HREF="eval.html#list">列表</A>| of identifiers.
@@ -1640,7 +1640,7 @@ FLEXWIKI				*<A NAME="flexwiki.vim"></A><B>flexwiki.vim</B>* *<A NAME="ft-flexwi
 NOTE: This site currently doesn't work, on Wikipedia is mentioned that
 <A HREF="develop.html#development">development</A> stopped in 2009.
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting is available for the most common elements of FlexWiki
+<A HREF="autocmd\.html#Syntax">语法</A>高亮 is available for the most common elements of FlexWiki
 <A HREF="#syntax">syntax</A>. The associated <A HREF="usr_41.html#ftplugin">ftplugin</A> <A HREF="usr_41.html#script">script</A> sets some buffer-local <A HREF="options\.html#options">选项</A> to make
 editing FlexWiki pages more convenient. FlexWiki considers a newline <A HREF="motion.html#as">as</A> the
 start of a new <A HREF="motion.html#paragraph">段落</A>, so the <A HREF="usr_41.html#ftplugin">ftplugin</A> sets 'tw'=0 (unlimited line length),
@@ -2023,7 +2023,7 @@ HTML/OS (by Aestiva)				*<A NAME="htmlos.vim"></A><B>htmlos.vim</B>* *<A NAME="f
 The <A HREF="#coloring">coloring</A> scheme for HTML/OS works <A HREF="motion.html#as">as</A> follows:
 
 Functions and variable names are the same color by default, because VIM
-doesn't specify different colors for Functions and Identifiers.  To change
+doesn't specify 使用不同的颜色 for Functions and Identifiers.  To change
 this (which is recommended if you want function names to be recognizable in a
 different color) you need to add the following line to your <A HREF="starting.html#vimrc">vimrc</A>:
 <B>  :hi Function cterm=bold ctermfg=LightGray</B>
@@ -2176,7 +2176,7 @@ CSS.  The <A HREF="options\.html#options">选项</A> to use are
 <B>	:let java_css=1</B>
 <B>	:let java_vb=1</B>
 
-In order to highlight nested parens with different colors define colors
+In order to highlight nested parens with 使用不同的颜色 define colors
 for javaParen, javaParen1 and javaParen2, for example with
 <B>	:hi link javaParen Comment</B>
 or
@@ -3034,7 +3034,7 @@ the following extensions are recognized <A HREF="motion.html#as">as</A> rego fil
 
 RESTRUCTURED TEXT			*<A NAME="rst.vim"></A><B>rst.vim</B>* *<A NAME="ft-rst-syntax"></A><B>ft-rst-syntax</B>*
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting is enabled for code blocks within the document for a
+<A HREF="autocmd\.html#Syntax">语法</A>高亮 is enabled for code blocks within the document for a
 select number of file types.  See $VIMRUNTIME/syntax/rst.vim for the default
 <A HREF="#syntax">syntax</A> <A HREF="eval.html#list">列表</A>.
 
@@ -3485,7 +3485,7 @@ TEX				*<A NAME="tex.vim"></A><B>tex.vim</B>* *<A NAME="ft-tex-syntax"></A><B>ft
 	Tex: Don't Want Spell Checking In Comments?	|<A HREF="#tex-nospell">tex-nospell</A>|
 	Tex: Want Spell Checking in Verbatim Zones?	|<A HREF="#tex-verb">tex-verb</A>|
 	Tex: Run-on Comments or MathZones		|<A HREF="#tex-runon">tex-runon</A>|
-	Tex: Slow <A HREF="autocmd.html#Syntax">Syntax</A> Highlighting?			|<A HREF="#tex-slow">tex-slow</A>|
+	Tex: Slow <A HREF="autocmd\.html#Syntax">语法</A>高亮?			|<A HREF="#tex-slow">tex-slow</A>|
 	Tex: Want To Highlight More Commands?		|<A HREF="#tex-morecommands">tex-morecommands</A>|
 	Tex: Excessive Error Highlighting?		|<A HREF="#tex-error">tex-error</A>|
 	Tex: Need a new Math Group?			|<A HREF="#tex-math">tex-math</A>|
@@ -4284,7 +4284,7 @@ DEFINING REGIONS	*<A NAME=":syn-region"></A><B>:syn-region</B>* *<A NAME=":syn-s
 	match that is highlighted with &quot;matchgroup&quot;.
 
 	Here is an example, which highlights three levels of parentheses in
-	different colors:
+	使用不同的颜色:
 <B>   :sy region par1 matchgroup=par1 start=/(/ end=/)/ contains=par2</B>
 <B>   :sy region par2 matchgroup=par2 start=/(/ end=/)/ contains=par3 contained</B>
 <B>   :sy region par3 matchgroup=par3 start=/(/ end=/)/ contains=par1 contained</B>

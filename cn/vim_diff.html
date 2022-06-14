@@ -102,7 +102,7 @@ centralized reference of the differences.
 
 - Filetype detection is enabled by default. This can be disabled by adding
   &quot;<A HREF="filetype.html#:filetype">:filetype</A> off&quot; to |<A HREF="init.html">init.vim</A>|.
-- <A HREF="autocmd.html#Syntax">Syntax</A> highlighting is enabled by default. This can be disabled by adding
+- <A HREF="autocmd\.html#Syntax">语法</A>高亮 is enabled by default. This can be disabled by adding
   &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot; to |<A HREF="init.html">init.vim</A>|.
 
 - <A HREF="options.html#'autoindent'">'autoindent'</A> is enabled
@@ -371,7 +371,7 @@ are always available and may be used simultaneously. 见 |<A HREF="provider.html
  
    <A HREF="motion.html#it">它</A> does not use &quot;[...]&quot; (was: &quot;[[], [...]]&quot;, now: &quot;[[], []]&quot;). &quot;<A HREF="eval.html#...">...</A>&quot; is
    only used for recursive containers.
-3. |<A HREF="eval.html#:echo">:echo</A>| <A HREF="print.html#printing">printing</A> nested containers adds &quot;@level&quot; after &quot;<A HREF="eval.html#...">...</A>&quot; designating
+3. |<A HREF="eval.html#:echo">:echo</A>| <A HREF="print\.html#printing">打印</A> nested containers adds &quot;@level&quot; after &quot;<A HREF="eval.html#...">...</A>&quot; designating
    the level at which recursive container was printed: |<A HREF="eval.html#:echo-self-refer">:echo-self-refer</A>|.
    Same thing applies to |<A HREF="builtin.html#string()">string()</A>| (though <A HREF="motion.html#it">它</A> uses construct like
    &quot;{E724@level}&quot;), but this is not reliable because |<A HREF="builtin.html#string()">string()</A>| continues to
@@ -496,7 +496,7 @@ Startup:
     - works by default: &quot;<A HREF="motion.html#-">-</A>&quot; file is optional
     - works in more cases: |<A HREF="starting.html#-Es">-Es</A>|, file args
 
-<A HREF="autocmd.html#Syntax">Syntax</A> highlighting:
+<A HREF="autocmd\.html#Syntax">语法</A>高亮:
   syncolor.vim has been removed. Nvim now sets up default highlighting groups
   automatically for both light and dark backgrounds, regardless of whether or
   not syntax highlighting is enabled. This means that |<A HREF="syntax.html#:syntax-on">:syntax-on</A>| and
