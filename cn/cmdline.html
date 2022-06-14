@@ -1046,7 +1046,7 @@ Note: these are typed literally, they are not special keys!
 							*<A NAME=":&lt;amatch&gt;"></A><B>:&lt;amatch&gt;</B>* *<A NAME="&lt;amatch&gt;"></A><B>&lt;amatch&gt;</B>*
 	<A HREF="#&lt;amatch&gt;">&lt;amatch&gt;</A>   When executing autocommands, is replaced with the match for
 
-		   which this <A HREF="autocmd.html#autocommand">autocommand</A> was executed.  *<A NAME="E497"></A><B>E497</B>*
+		   which this <A HREF="autocmd\.html#autocommand">自动命令</A> was executed.  *<A NAME="E497"></A><B>E497</B>*
 		   It differs from <A HREF="#&lt;afile&gt;">&lt;afile&gt;</A> when the file name isn't used to
 		   match with (for <A HREF="autocmd.html#FileType">FileType</A>, <A HREF="autocmd.html#Syntax">Syntax</A> and <A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>
 		   <A HREF="autocmd.html#events">events</A>).
@@ -1315,7 +1315,7 @@ The command-line<A HREF="windows.html#window">窗口</A>cannot be used when ther
 <A HREF="windows.html#window">窗口</A>(no nesting).
 
 Some <A HREF="options\.html#options">选项</A> are set when the command-line<A HREF="windows.html#window">窗口</A>is opened:
-<A HREF="options.html#'filetype'">'filetype'</A>	&quot;vim&quot;, when editing an <A HREF="intro.html#Ex">Ex</A> command-line; this starts Vim <A HREF="syntax.html#syntax">syntax</A>
+<A HREF="options.html#'filetype'">'filetype'</A>	&quot;vim&quot;, when editing an <A HREF="intro.html#Ex">Ex</A> command-line; this starts Vim <A HREF="syntax\.html#syntax">语法</A>
 		highlighting if <A HREF="motion.html#it">它</A> was enabled
 <A HREF="options.html#'rightleft'">'rightleft'</A>	off
 <A HREF="options.html#'modifiable'">'modifiable'</A>	on
@@ -1335,7 +1335,7 @@ character.  That way <A HREF="motion.html#it">它</A> works at the end of the li
 If you don't want these mappings, disable them with:
 <B>	au CmdwinEnter [:&gt;] iunmap &lt;buffer&gt; &lt;Tab&gt;</B>
 <B>	au CmdwinEnter [:&gt;] nunmap &lt;buffer&gt; &lt;Tab&gt;</B>
-You could put these lines in your <A HREF="starting.html#vimrc">vimrc</A> file.
+You could put these lines in your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
 While in the command-line<A HREF="windows.html#window">窗口</A>you cannot use the mouse to put the cursor in
 another<A HREF="windows.html#window">窗口</A>, or drag statuslines of other <A HREF="windows.html#windows">windows</A>.  You can drag the
@@ -1353,7 +1353,7 @@ You can disable this in your <A HREF="starting.html#config">config</A> with &quo
 
 AUTOCOMMANDS
 
-Two <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> are used: |<A HREF="autocmd.html#CmdwinEnter">CmdwinEnter</A>| and |<A HREF="autocmd.html#CmdwinLeave">CmdwinLeave</A>|.  You can use
+Two <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> are used: |<A HREF="autocmd.html#CmdwinEnter">CmdwinEnter</A>| and |<A HREF="autocmd.html#CmdwinLeave">CmdwinLeave</A>|.  You can use
 the Cmdwin <A HREF="autocmd.html#events">events</A> to <A HREF="diff.html#do">do</A> settings specifically for the command-line<A HREF="windows.html#window">窗口</A>.
 Be careful not to cause side effects!
 Example:

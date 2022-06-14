@@ -198,7 +198,7 @@ This is only done when specific option values are requested, not for &quot;<A HR
 set all&quot; or &quot;<A HREF="various.html#:verbose">:verbose</A> set&quot; without an argument.
 When the option was set by hand there is no &quot;Last set&quot; message.
 When the option was set while executing a function, user command or
-<A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
+<A HREF="autocmd\.html#autocommand">自动命令</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
 A few special texts:
 <B><FONT color="#3A6F2B">	Last set from modeline line 1 </FONT></B>
 		Option was set in a |<A HREF="#modeline">modeline</A>|.
@@ -406,7 +406,7 @@ Note: In the future more global <A HREF="#options">options</A> can be made |<A H
 &quot;<A HREF="#:setlocal">:setlocal</A>&quot; on a global option might work differently then.
 
 
-Setting the <A HREF="filetype.html#filetype">filetype</A>
+Setting the <A HREF="filetype\.html#filetype">文件类型</A>
 
 
 :setf[iletype] [FALLBACK] {filetype}			*<A NAME=":setf"></A><B>:setf</B>* *<A NAME=":setfiletype"></A><B>:setfiletype</B>*
@@ -418,11 +418,11 @@ Setting the <A HREF="filetype.html#filetype">filetype</A>
 <B>				:endif</B>
  			This command is used in a filetype.vim file to avoid
 			setting the <A HREF="#'filetype'">'filetype'</A> option <A HREF="if_cscop.html#twice">twice</A>, causing different
-			settings and <A HREF="syntax.html#syntax">syntax</A> files to be loaded.
+			settings and <A HREF="syntax\.html#syntax">语法</A> files to be loaded.
 
 			When the optional FALLBACK argument is present, a
 			later <A HREF="#:setfiletype">:setfiletype</A> command will override the
-			<A HREF="#'filetype'">'filetype'</A>.  This is to be used for <A HREF="filetype.html#filetype">filetype</A>
+			<A HREF="#'filetype'">'filetype'</A>.  This is to be used for <A HREF="filetype\.html#filetype">文件类型</A>
 			detections that are just a guess.  |<A HREF="builtin.html#did_filetype()">did_filetype()</A>|
 			will return false after this command.
 
@@ -491,7 +491,7 @@ to set <A HREF="#options">options</A> automatically for one or more files:
    |<A HREF="starting.html#:mksession">:mksession</A>|.
 2. If you start editing a new file, the automatic commands are executed.
    This can be used to set <A HREF="#options">options</A> for files matching a particular <A HREF="pattern.html#pattern">pattern</A> and
-   many other things.  见 |<A HREF="autocmd.html#autocommand">autocommand</A>|.
+   many other things.  见 |<A HREF="autocmd\.html#autocommand">自动命令</A>|.
 3. If you start editing a new file, and the <A HREF="#'modeline'">'modeline'</A> option is on, a
    number of lines at the beginning and end of the file are checked for
    modelines.  This is explained here.
@@ -609,7 +609,7 @@ So disable modelines before editing untrusted text.  The mail <A HREF="usr_41.ht
 this, for example.
 
 Hint: If you would like to <A HREF="diff.html#do">do</A> something else than setting an option, you could
-define an <A HREF="autocmd.html#autocommand">autocommand</A> that checks the file for a specific <A HREF="options\.html#options">字符串</A>.  For
+define an <A HREF="autocmd\.html#autocommand">自动命令</A> that checks the file for a specific <A HREF="options\.html#options">字符串</A>.  For
 example:
 <B>	au BufReadPost * if getline(1) =~ "VAR" | call SetVar() | endif</B>
 And define a function SetVar() that does something with the line containing
@@ -711,7 +711,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	therefore those fonts have &quot;wide&quot; glyphs for them.  This is also
 	true of some line drawing characters used to make tables in text
 	file.  Therefore, when a CJK font is used for <A HREF="gui.html#GUI">GUI</A> Vim or
-	Vim is running inside a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (emulators) that uses a CJK font
+	Vim is running inside a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> (emulators) that uses a CJK font
 	(or Vim is run inside an xterm invoked with &quot;-cjkwidth&quot; option.),
 	this option should be set to &quot;double&quot; to match the width perceived
 	by Vim with the width of glyphs in the font.  Perhaps <A HREF="motion.html#it">它</A> also has
@@ -815,7 +815,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Note that for some commands the <A HREF="#'autowrite'">'autowrite'</A> option is not used, see
 	<A HREF="#'autowriteall'">'autowriteall'</A> for that.
 	Some <A HREF="windows.html#buffers">buffers</A> will not be written, specifically when <A HREF="#'buftype'">'buftype'</A> is
-	&quot;nowrite&quot;, &quot;nofile&quot;, &quot;<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>&quot; or &quot;prompt&quot;.
+	&quot;nowrite&quot;, &quot;nofile&quot;, &quot;<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>&quot; or &quot;prompt&quot;.
 
 
 			 *<A NAME="'autowriteall'"></A><B>'autowriteall'</B>* *<A NAME="'awa'"></A><B>'awa'</B>* *<A NAME="'noautowriteall'"></A><B>'noautowriteall'</B>* *<A NAME="'noawa'"></A><B>'noawa'</B>*
@@ -845,8 +845,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	However, if the color scheme sets <A HREF="#'background'">'background'</A> itself the effect may
 	be undone.  First delete the &quot;<A HREF="#g:colors_name">g:colors_name</A>&quot; variable when needed.
 
-	Normally this option would be set in the <A HREF="starting.html#vimrc">vimrc</A> file.  Possibly
-	depending on the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> name.  Example:
+	Normally this option would be set in <A HREF="starting\.html#vimrc">vimrc</A>文件.  Possibly
+	depending on the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> name.  Example:
 <B>		:if $TERM ==# "xterm"</B>
 <B>		:  set background=dark</B>
 <B>		:endif</B>
@@ -854,7 +854,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	will change.  To use other settings, place &quot;<A HREF="syntax.html#:highlight">:highlight</A>&quot;命令 AFTER
 	the setting of the <A HREF="#'background'">'background'</A> option.
 	This option is also used in the &quot;$VIMRUNTIME/syntax/syntax.vim&quot; file
-	to select the colors for <A HREF="syntax.html#syntax">syntax</A> highlighting.  After <A HREF="change.html#changing">changing</A> this
+	to select the colors for <A HREF="syntax\.html#syntax">语法</A> highlighting.  After <A HREF="change.html#changing">changing</A> this
 	option, you must load syntax.vim again to see the result.  This can be
 	done with &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;.
 
@@ -1023,7 +1023,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Only normal file name characters can be used; &quot;/\*?[|&lt;&gt;&quot; are illegal.
 
 	If you like to keep a lot of backups, you could use a <A HREF="autocmd.html#BufWritePre">BufWritePre</A>
-	<A HREF="autocmd.html#autocommand">autocommand</A> to change <A HREF="#'backupext'">'backupext'</A> just before <A HREF="editing.html#writing">写</A> the file to
+	<A HREF="autocmd\.html#autocommand">自动命令</A> to change <A HREF="#'backupext'">'backupext'</A> just before <A HREF="editing.html#writing">写</A> the file to
 	include a <A HREF="editing.html#timestamp">timestamp</A>.
 <B>		:au BufWritePre * let &amp;bex = '-' .. strftime("%Y%b%d%X") .. '~'</B>
  	Use <A HREF="#'backupdir'">'backupdir'</A> to put the <A HREF="editing.html#backup">backup</A> in a different directory.
@@ -1316,7 +1316,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	The default value is taken from $CDPATH, with a &quot;<A HREF="motion.html#,">,</A>&quot; prepended to look
 	in the current directory first.
 	If the default value taken from $CDPATH is not what you want, include
-	a modified version of the following command in your <A HREF="starting.html#vimrc">vimrc</A> file to
+	a modified version of the following command in your <A HREF="starting\.html#vimrc">vimrc</A>文件 to
 	override <A HREF="motion.html#it">它</A>:
 <B>	  :let &amp;cdpath = ',' .. substitute(substitute($CDPATH, '[, ]', '\\\0', 'g'), ':', ',', 'g')</B>
  	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
@@ -1499,9 +1499,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'columns'"></A><B>'columns'</B>* *<A NAME="'co'"></A><B>'co'</B>* *<A NAME="E594"></A><B>E594</B>*
-<A HREF="#'columns'">'columns'</A> <A HREF="#'co'">'co'</A>		number	(default 80 or <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> width)
+<A HREF="#'columns'">'columns'</A> <A HREF="#'co'">'co'</A>		number	(default 80 or <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> width)
 			global
-	<A HREF="eval.html#Number">Number</A> of columns of the screen.  Normally this is set by the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
+	<A HREF="eval.html#Number">Number</A> of columns of the screen.  Normally this is set by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
 	<A HREF="starting.html#initialization">initialization</A> and does not have to be set by hand.
 	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable<A HREF="windows.html#window">窗口</A>, setting this
 	option will cause the<A HREF="windows.html#window">窗口</A>size to be changed.  When you only want
@@ -1653,13 +1653,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'conceallevel'"></A><B>'conceallevel'</B>* *<A NAME="'cole'"></A><B>'cole'</B>*
 <A HREF="#'conceallevel'">'conceallevel'</A> <A HREF="#'cole'">'cole'</A>	number (default 0)
 			local to<A HREF="windows.html#window">窗口</A>
-	Determine how text with the &quot;conceal&quot; <A HREF="syntax.html#syntax">syntax</A> attribute |<A HREF="syntax.html#:syn-conceal">:syn-conceal</A>|
+	Determine how text with the &quot;conceal&quot; <A HREF="syntax\.html#syntax">语法</A> attribute |<A HREF="syntax.html#:syn-conceal">:syn-conceal</A>|
 	is shown:
 
 <B><FONT color="#3A6F2B">	Value		Effect </FONT></B>
 	0		Text is shown normally
 	1		Each block of concealed text is replaced with one
-			character.  If the <A HREF="syntax.html#syntax">syntax</A> item does not have a custom
+			character.  If the <A HREF="syntax\.html#syntax">语法</A> item does not have a custom
 			replacement character defined (见 |<A HREF="syntax.html#:syn-cchar">:syn-cchar</A>|) the
 			character defined in <A HREF="#'listchars'">'listchars'</A> is used.
 			It is highlighted with the &quot;Conceal&quot; highlight group.
@@ -2463,8 +2463,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'eventignore'"></A><B>'eventignore'</B>* *<A NAME="'ei'"></A><B>'ei'</B>*
 <A HREF="#'eventignore'">'eventignore'</A> <A HREF="#'ei'">'ei'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
 			global
-	A <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#autocommand">autocommand</A> event names, which are to be ignored.
-	When set to &quot;all&quot; or when &quot;all&quot; is one of the items, all <A HREF="autocmd.html#autocommand">autocommand</A>
+	A <A HREF="eval.html#list">列表</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> event names, which are to be ignored.
+	When set to &quot;all&quot; or when &quot;all&quot; is one of the items, all <A HREF="autocmd\.html#autocommand">自动命令</A>
 	<A HREF="autocmd.html#events">events</A> are ignored, autocommands will not be executed.
 	Otherwise this is a comma-separated <A HREF="eval.html#list">列表</A> of event names.  Example:
 <B>	    :set ei=WinEnter,WinLeave</B>
@@ -2538,7 +2538,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	For an empty file or a file with only ASCII characters most encodings
 	will work and the first entry of <A HREF="#'fileencodings'">'fileencodings'</A> will be used (except
 	&quot;ucs-bom&quot;, which requires the BOM to be present).  If you prefer
-	another encoding use an <A HREF="autocmd.html#BufReadPost">BufReadPost</A> <A HREF="autocmd.html#autocommand">autocommand</A> event to test if your
+	another encoding use an <A HREF="autocmd.html#BufReadPost">BufReadPost</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event to test if your
 	preferred encoding is to be used.  Example:
 <B>		au BufReadPost * if search('\S', 'w') == 0 |</B>
 <B>			\ set fenc=iso-2022-jp | endif</B>
@@ -2636,7 +2636,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	can overrule this by setting <A HREF="#'fileformat'">'fileformat'</A> in your .vimrc.
 
 	For systems with a Dos-like <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> (&lt;CR&gt;&lt;NL&gt;), when reading files that
-	are &quot;:source&quot;ed and for <A HREF="starting.html#vimrc">vimrc</A> files, automatic <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> detection may be
+	are &quot;:source&quot;ed and for <A HREF="starting\.html#vimrc">vimrc</A>文件s, automatic <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> detection may be
 	done:
 	- When <A HREF="#'fileformats'">'fileformats'</A> is empty, there is no automatic detection.  Dos
 	  format will be used.
@@ -2658,7 +2658,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					*<A NAME="'filetype'"></A><B>'filetype'</B>* *<A NAME="'ft'"></A><B>'ft'</B>*
 <A HREF="#'filetype'">'filetype'</A> <A HREF="#'ft'">'ft'</A>		<A HREF="options\.html#options">字符串</A> (default: &quot;&quot;)
 			local to buffer
-	When this option is set, the <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd.html#autocommand">autocommand</A> event is triggered.
+	When this option is set, the <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event is triggered.
 	All autocommands that match with the value of this option will be
 	executed.  Thus the value of <A HREF="#'filetype'">'filetype'</A> is used in place of the file
 	name.
@@ -2669,12 +2669,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	for a file for which the file type is not automatically recognized.
 	Example, for in an IDL file:
 <B><FONT color="#3A6F2B">		/* vim: set filetype=idl : */ </FONT></B>
-	|<A HREF="autocmd.html#FileType">FileType</A>| |<A HREF="filetype.html#filetypes">filetypes</A>|
-	When a dot appears in the value then this separates two <A HREF="filetype.html#filetype">filetype</A>
+	|<A HREF="autocmd.html#FileType">FileType</A>| |<A HREF="filetype\.html#filetypes">文件类型</A>|
+	When a dot appears in the value then this separates two <A HREF="filetype\.html#filetype">文件类型</A>
 	names.  Example:
 <B><FONT color="#3A6F2B">		/* vim: set filetype=c.doxygen : */ </FONT></B>
-	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype.html#filetype">filetype</A> first然后the &quot;doxygen&quot; <A HREF="filetype.html#filetype">filetype</A>.
-	This works both for <A HREF="filetype.html#filetype">filetype</A> plugins and for <A HREF="syntax.html#syntax">syntax</A> files.  More than
+	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype\.html#filetype">文件类型</A> first然后the &quot;doxygen&quot; <A HREF="filetype\.html#filetype">文件类型</A>.
+	This works both for <A HREF="filetype\.html#filetype">文件类型</A> plugins and for <A HREF="syntax\.html#syntax">语法</A> files.  More than
 	one dot may appear.
 	This option is not copied to another buffer, independent of the '<A HREF="change.html#s">s</A>' or
 	'<A HREF="change.html#S">S</A>' flag in <A HREF="#'cpoptions'">'cpoptions'</A>.
@@ -2871,7 +2871,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'foldnestmax'"></A><B>'foldnestmax'</B>* *<A NAME="'fdn'"></A><B>'fdn'</B>*
 <A HREF="#'foldnestmax'">'foldnestmax'</A> <A HREF="#'fdn'">'fdn'</A>	number (default: 20)
 			local to<A HREF="windows.html#window">窗口</A>
-	Sets the maximum nesting of <A HREF="fold.html#folds">folds</A> for the &quot;indent&quot; and &quot;<A HREF="syntax.html#syntax">syntax</A>&quot;
+	Sets the maximum nesting of <A HREF="fold.html#folds">folds</A> for the &quot;indent&quot; and &quot;<A HREF="syntax\.html#syntax">语法</A>&quot;
 	methods.  This avoids that too many <A HREF="fold.html#folds">folds</A> will be created.  Using more
 	than 20 doesn't work, because the internal limit is 20.
 
@@ -3135,7 +3135,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   n-v-c-sm:block,i-ci-ve:ver25-Cursor,r-cr-o:hor20
 				In <A HREF="intro.html#Normal">Normal</A> et al. modes, use a block cursor
 				with the default colors defined by the host
-				<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  In Insert-likes modes, use
+				<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  In Insert-likes modes, use
 				a vertical <A HREF="motion.html#bar">bar</A> cursor with colors from
 				&quot;Cursor&quot; highlight group.  In Replace-likes
 				modes, use a <A HREF="syntax.html#underline">underline</A> cursor with
@@ -3297,8 +3297,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="'go-M'"></A><B>'go-M'</B>*
 	  '<A HREF="motion.html#M">M</A>'	The system menu &quot;$VIMRUNTIME/menu.vim&quot; is not sourced.  Note
-		that this flag must be added in the <A HREF="starting.html#vimrc">vimrc</A> file, before
-		switching on <A HREF="syntax.html#syntax">syntax</A> or <A HREF="filetype.html#filetype">filetype</A> recognition (when the |<A HREF="gui.html#gvimrc">gvimrc</A>|
+		that this flag must be added in <A HREF="starting\.html#vimrc">vimrc</A>文件, before
+		switching on <A HREF="syntax\.html#syntax">语法</A> or <A HREF="filetype\.html#filetype">文件类型</A> recognition (when the |<A HREF="gui.html#gvimrc">gvimrc</A>|
 		file is sourced the system menu has already been loaded; the
 		`:syntax on` and `:filetype on` commands load the menu too).
 
@@ -3503,7 +3503,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#'iconstring'">'iconstring'</A> (if <A HREF="motion.html#it">它</A> is not empty), or to the name of the file
 	currently being edited.  Only the last part of the name is used.
 	Overridden by the <A HREF="#'iconstring'">'iconstring'</A> option.
-	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports setting<A HREF="windows.html#window">窗口</A>icons.
+	Only works if the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports setting<A HREF="windows.html#window">窗口</A>icons.
 
 
 						*<A NAME="'iconstring'"></A><B>'iconstring'</B>*
@@ -3511,7 +3511,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	When this option is not empty, <A HREF="motion.html#it">它</A> will be used for the icon text of
 	the<A HREF="windows.html#window">窗口</A>.  This happens only when the <A HREF="#'icon'">'icon'</A> option is on.
-	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports setting<A HREF="windows.html#window">窗口</A>icon text
+	Only works if the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports setting<A HREF="windows.html#window">窗口</A>icon text
 	When this option contains printf-style '<A HREF="motion.html#&#37;">&#37;</A>' items, they will be
 	expanded according to the rules used for <A HREF="#'statusline'">'statusline'</A>.  See
 	<A HREF="#'titlestring'">'titlestring'</A> for example settings.
@@ -3812,7 +3812,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	'*', &#39;&#34;'' and '&#124;' (so that <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on a command finds the help for that
 	command).
 	When the <A HREF="#'lisp'">'lisp'</A> option is on the '<A HREF="motion.html#-">-</A>' character is always included.
-	This option also influences <A HREF="syntax.html#syntax">syntax</A> highlighting, unless the <A HREF="syntax.html#syntax">syntax</A>
+	This option also influences <A HREF="syntax\.html#syntax">语法</A> highlighting, unless the <A HREF="syntax\.html#syntax">语法</A>
 	uses |<A HREF="syntax.html#:syn-iskeyword">:syn-iskeyword</A>|.
 
 
@@ -3968,8 +3968,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	If your $LANG is set to a non-English language but you <A HREF="diff.html#do">do</A> want to use
 	the English <A HREF="gui.html#menus">menus</A>:
 <B>		:set langmenu=none</B>
- 	This option must be set before loading <A HREF="gui.html#menus">menus</A>, switching on <A HREF="filetype.html#filetype">filetype</A>
-	detection or <A HREF="syntax.html#syntax">syntax</A> highlighting.  Once the <A HREF="gui.html#menus">menus</A> are defined setting
+ 	This option must be set before loading <A HREF="gui.html#menus">menus</A>, switching on <A HREF="filetype\.html#filetype">文件类型</A>
+	detection or <A HREF="syntax\.html#syntax">语法</A> highlighting.  Once the <A HREF="gui.html#menus">menus</A> are defined setting
 	this option has no effect.  But you could <A HREF="diff.html#do">do</A> this:
 <B>		:source $VIMRUNTIME/delmenu.vim</B>
 <B>		:set langmenu=de_DE.ISO_8859-1</B>
@@ -4022,11 +4022,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'lines'"></A><B>'lines'</B>* *<A NAME="E593"></A><B>E593</B>*
-<A HREF="#'lines'">'lines'</A>			number	(default 24 or <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> height)
+<A HREF="#'lines'">'lines'</A>			number	(default 24 or <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> height)
 			global
 	<A HREF="eval.html#Number">Number</A> of lines of the Vim<A HREF="windows.html#window">窗口</A>.
 	Normally you don't need to set this.  It is done automatically by the
-	<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="starting.html#initialization">initialization</A> code.
+	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="starting.html#initialization">initialization</A> code.
 	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable<A HREF="windows.html#window">窗口</A>, setting this
 	option will cause the<A HREF="windows.html#window">窗口</A>size to be changed.  When you only want
 	to use the size for the <A HREF="gui.html#GUI">GUI</A>, put the command in your |<A HREF="gui.html#gvimrc">gvimrc</A>| file.
@@ -4321,7 +4321,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Running into the limit often means that the <A HREF="pattern.html#pattern">pattern</A> is very
 	inefficient or too complex.  This may already happen with the <A HREF="pattern.html#pattern">pattern</A>
 	&quot;\(.\)*&quot; on a very long line.  &quot;.*&quot; works much better.
-	Might also happen on redraw, when <A HREF="syntax.html#syntax">syntax</A> rules try to match a complex
+	Might also happen on redraw, when <A HREF="syntax\.html#syntax">语法</A> rules try to match a complex
 	text structure.
 	Vim may run out of memory before hitting the <A HREF="#'maxmempattern'">'maxmempattern'</A> limit, in
 	which <A HREF="change.html#case">case</A> you get an &quot;Out of memory&quot; error instead.
@@ -4426,7 +4426,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   Similarly for <A HREF="#'eol'">'eol'</A> and <A HREF="#'bomb'">'bomb'</A>.
 	This option is not set when a change is made to the buffer <A HREF="motion.html#as">as</A> the
 	result of a <A HREF="autocmd.html#BufNewFile">BufNewFile</A>, BufRead/BufReadPost, <A HREF="autocmd.html#BufWritePost">BufWritePost</A>,
-	<A HREF="autocmd.html#FileAppendPost">FileAppendPost</A> or <A HREF="autocmd.html#VimLeave">VimLeave</A> <A HREF="autocmd.html#autocommand">autocommand</A> event.  见 |<A HREF="autocmd.html#gzip-example">gzip-example</A>| for
+	<A HREF="autocmd.html#FileAppendPost">FileAppendPost</A> or <A HREF="autocmd.html#VimLeave">VimLeave</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event.  见 |<A HREF="autocmd.html#gzip-example">gzip-example</A>| for
 	an explanation.
 	When <A HREF="#'buftype'">'buftype'</A> is &quot;nowrite&quot; or &quot;nofile&quot; this option may be set, but
 	will be ignored.
@@ -4474,7 +4474,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	For <A HREF="scroll.html#scrolling">scrolling</A> with a mouse wheel 见 |<A HREF="scroll.html#scroll-mouse-wheel">scroll-mouse-wheel</A>|.
 
-	Note: When enabling the mouse in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, copy/paste will use the
+	Note: When enabling the mouse in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, copy/paste will use the
 	&quot;* <A HREF="intro.html#register">register</A> if possible. See also <A HREF="#'clipboard'">'clipboard'</A>.
 
 	Related <A HREF="#options">options</A>:
@@ -4723,7 +4723,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	completion with CTRL-X CTRL-O. |<A HREF="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</A>|
 	见 |<A HREF="insert.html#complete-functions">complete-functions</A>| for an explanation of how the function is
 	invoked and what <A HREF="motion.html#it">它</A> should return.
-	This option is usually set by a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A>:
+	This option is usually set by a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>:
 	|<A HREF="filetype.html#:filetype-plugin-on">:filetype-plugin-on</A>|
 	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
 	security reasons.
@@ -4773,13 +4773,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Put Vim in Paste mode.  This is useful if you want to cut or copy
 	some text from one<A HREF="windows.html#window">窗口</A>and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> in Vim.  This will avoid
 	unexpected effects.
-	Setting this option is useful when using Vim in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, where Vim
+	Setting this option is useful when using Vim in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, where Vim
 	cannot distinguish between typed text and pasted text.  In the <A HREF="gui.html#GUI">GUI</A>, Vim
 	knows about pasting and will mostly <A HREF="diff.html#do">do</A> the right thing without <A HREF="#'paste'">'paste'</A>
-	being set.  The same is true for a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> where Vim handles the
+	being set.  The same is true for a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> where Vim handles the
 	mouse clicks itself.
 	This option is reset when starting the <A HREF="gui.html#GUI">GUI</A>.  Thus if you set <A HREF="motion.html#it">它</A> in
-	your <A HREF="starting.html#vimrc">vimrc</A> <A HREF="motion.html#it">它</A> will work in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, but not in the <A HREF="gui.html#GUI">GUI</A>.  Setting
+	your <A HREF="starting.html#vimrc">vimrc</A> <A HREF="motion.html#it">它</A> will work in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, but not in the <A HREF="gui.html#GUI">GUI</A>.  Setting
 	<A HREF="#'paste'">'paste'</A> in the <A HREF="gui.html#GUI">GUI</A> has side effects: e.g., the Paste toolbar button
 	will no longer work in <A HREF="intro.html#Insert">插入</A>模式, because <A HREF="motion.html#it">它</A> uses a <A HREF="map.html#mapping">mapping</A>.
 	When the <A HREF="#'paste'">'paste'</A> option is switched on (also when <A HREF="motion.html#it">它</A> was already on):
@@ -4894,7 +4894,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	- When using |<A HREF="netrw.html">netrw.vim</A>| URLs can be used.例如, adding
  &quot;http://www.vim.org&quot; will make &quot;:find index.html&quot; work.
 	- Search upwards and downwards in a directory tree using &quot;*&quot;, &quot;**&quot; and
-	  &quot;<A HREF="motion.html#;">;</A>&quot;.  见 |<A HREF="editing.html#file-searching">file-searching</A>| for info and <A HREF="syntax.html#syntax">syntax</A>.
+	  &quot;<A HREF="motion.html#;">;</A>&quot;.  见 |<A HREF="editing.html#file-searching">file-searching</A>| for info and <A HREF="syntax\.html#syntax">语法</A>.
 	- Careful with '\' characters, type two to get one in the option:
 <B>		:set path=.,c:\\include</B>
  	  Or just use '<A HREF="pattern.html#/">/</A>' instead:
@@ -5128,12 +5128,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'redrawtime'">'redrawtime'</A> <A HREF="#'rdt'">'rdt'</A>	number	(default 2000)
 			global
 	Time in milliseconds for redrawing the display.  Applies to
-	<A HREF="#'hlsearch'">'hlsearch'</A>, <A HREF="#'inccommand'">'inccommand'</A>, |<A HREF="pattern.html#:match">:match</A>| highlighting and <A HREF="syntax.html#syntax">syntax</A>
+	<A HREF="#'hlsearch'">'hlsearch'</A>, <A HREF="#'inccommand'">'inccommand'</A>, |<A HREF="pattern.html#:match">:match</A>| highlighting and <A HREF="syntax\.html#syntax">语法</A>
 	highlighting.
 	When redrawing takes more than this many milliseconds no further
 	matches will be highlighted.
-	For <A HREF="syntax.html#syntax">syntax</A> highlighting the time applies per<A HREF="windows.html#window">窗口</A>.  When over the
-	limit <A HREF="syntax.html#syntax">syntax</A> highlighting is disabled until |<A HREF="various.html#CTRL-L">CTRL-L</A>| is used.
+	For <A HREF="syntax\.html#syntax">语法</A> highlighting the time applies per<A HREF="windows.html#window">窗口</A>.  When over the
+	limit <A HREF="syntax\.html#syntax">语法</A> highlighting is disabled until |<A HREF="various.html#CTRL-L">CTRL-L</A>| is used.
 	This is used to avoid that Vim hangs when using a very complicated
 	<A HREF="pattern.html#pattern">pattern</A>.
 
@@ -5284,8 +5284,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					       $XDG_CONFIG_HOME/nvim/after&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of directories to be searched for these runtime files:
-	  filetype.vim	<A HREF="filetype.html#filetypes">filetypes</A> by file name |<A HREF="filetype.html#new-filetype">new-filetype</A>|
-	  scripts.vim	<A HREF="filetype.html#filetypes">filetypes</A> by file contents |<A HREF="filetype.html#new-filetype-scripts">new-filetype-scripts</A>|
+	  filetype.vim	<A HREF="filetype\.html#filetypes">文件类型</A> by file name |<A HREF="filetype.html#new-filetype">new-filetype</A>|
+	  scripts.vim	<A HREF="filetype\.html#filetypes">文件类型</A> by file contents |<A HREF="filetype.html#new-filetype-scripts">new-filetype-scripts</A>|
 	  autoload/	automatically loaded scripts |<A HREF="eval.html#autoload-functions">autoload-functions</A>|
 	  colors/	color scheme files |<A HREF="syntax.html#:colorscheme">:colorscheme</A>|
 	  compiler/	compiler files |<A HREF="quickfix.html#:compiler">:compiler</A>|
@@ -5375,7 +5375,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Maximum number of lines kept beyond the visible screen. Lines at the
 	top are deleted if new lines exceed this limit.
 	Minimum is 1, maximum is 100000.
-	Only in |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>| <A HREF="windows.html#buffers">buffers</A>.
+	Only in |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| <A HREF="windows.html#buffers">buffers</A>.
 
 
 			*<A NAME="'scrollbind'"></A><B>'scrollbind'</B>* *<A NAME="'scb'"></A><B>'scb'</B>* *<A NAME="'noscrollbind'"></A><B>'noscrollbind'</B>* *<A NAME="'noscb'"></A><B>'noscb'</B>*
@@ -5397,7 +5397,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	Minimal number of lines to scroll when the cursor gets off the
 	screen (e.g., with &quot;j&quot;).  Not used for scroll commands (e.g., <A HREF="scroll.html#CTRL-E">CTRL-E</A>,
-	<A HREF="scroll.html#CTRL-D">CTRL-D</A>).  Useful if your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> scrolls very slowly.
+	<A HREF="scroll.html#CTRL-D">CTRL-D</A>).  Useful if your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> scrolls very slowly.
 	When set to a negative number from -1 to -100 this is used <A HREF="motion.html#as">as</A> the
 	percentage of the<A HREF="windows.html#window">窗口</A>height.  Thus -50 scrolls half the<A HREF="windows.html#window">窗口</A>
 	height.
@@ -5539,7 +5539,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   tabpages	all <A HREF="intro.html#tab">tab</A> pages; without this only the current <A HREF="intro.html#tab">tab</A> page
 			is restored, so that you can make a session for each
 			<A HREF="intro.html#tab">tab</A> page separately
-	   <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>	include <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="windows.html#windows">windows</A> where the command can be
+	   <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>	include <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="windows.html#windows">windows</A> where the command can be
 			restored
 	   winpos	position of the whole Vim<A HREF="windows.html#window">窗口</A>
 	   winsize	<A HREF="windows.html#window">窗口</A>sizes
@@ -5989,7 +5989,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'showcmd'">'showcmd'</A> <A HREF="#'sc'">'sc'</A>		<A HREF="#boolean">boolean</A>	(default: on)
 			global
 	Show (partial) command in the last line of the screen.  Set this
-	option off if your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is slow.
+	option off if your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is slow.
 	In <A HREF="visual\.html#Visual">可视</A>模式 the size of the selected area is shown:
 	- When selecting characters within a line, the number of characters.
 	  If the number of bytes is different <A HREF="motion.html#it">它</A> is also displayed: &quot;2-6&quot;
@@ -6060,7 +6060,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	The minimal number of columns to scroll horizontally.  Used only when
 	the <A HREF="#'wrap'">'wrap'</A> option is off and the cursor is moved off of the screen.
 	When <A HREF="motion.html#it">它</A> is zero the cursor will be put in the middle of the screen.
-	When using a slow <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> set <A HREF="motion.html#it">它</A> to a large number or 0.  Not used
+	When using a slow <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> set <A HREF="motion.html#it">它</A> to a large number or 0.  Not used
 	for &quot;<A HREF="scroll.html#zh">zh</A>&quot; and &quot;<A HREF="scroll.html#zl">zl</A>&quot;命令.
 
 
@@ -6669,9 +6669,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'synmaxcol'"></A><B>'synmaxcol'</B>* *<A NAME="'smc'"></A><B>'smc'</B>*
 <A HREF="#'synmaxcol'">'synmaxcol'</A> <A HREF="#'smc'">'smc'</A>	number	(default 3000)
 			local to buffer
-	Maximum column in which to search for <A HREF="syntax.html#syntax">syntax</A> items.  In long lines the
+	Maximum column in which to search for <A HREF="syntax\.html#syntax">语法</A> items.  In long lines the
 	text after this column is not highlighted and following lines may not
-	be highlighted correctly, because the <A HREF="syntax.html#syntax">syntax</A> state is cleared.
+	be highlighted correctly, because the <A HREF="syntax\.html#syntax">语法</A> state is cleared.
 	This helps to avoid very slow redrawing for an XML file that is one
 	long line.
 	Set to zero to remove the limit.
@@ -6680,26 +6680,26 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'syntax'"></A><B>'syntax'</B>* *<A NAME="'syn'"></A><B>'syn'</B>*
 <A HREF="#'syntax'">'syntax'</A> <A HREF="#'syn'">'syn'</A>		<A HREF="options\.html#options">字符串</A>	(default empty)
 			local to buffer
-	When this option is set, the <A HREF="syntax.html#syntax">syntax</A> with this name is loaded, unless
-	<A HREF="syntax.html#syntax">syntax</A> highlighting has been switched off with &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot;.
-	Otherwise this option does not always reflect the current <A HREF="syntax.html#syntax">syntax</A> (the
+	When this option is set, the <A HREF="syntax\.html#syntax">语法</A> with this name is loaded, unless
+	<A HREF="syntax\.html#syntax">语法</A> highlighting has been switched off with &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot;.
+	Otherwise this option does not always reflect the current <A HREF="syntax\.html#syntax">语法</A> (the
 	b:current_syntax variable does).
-	This option is most useful in a <A HREF="#modeline">modeline</A>, for a file which <A HREF="syntax.html#syntax">syntax</A> is
+	This option is most useful in a <A HREF="#modeline">modeline</A>, for a file which <A HREF="syntax\.html#syntax">语法</A> is
 	not automatically recognized.  Example, in an IDL file:
 <B><FONT color="#3A6F2B">		/* vim: set syntax=idl : */ </FONT></B>
-	When a dot appears in the value then this separates two <A HREF="filetype.html#filetype">filetype</A>
+	When a dot appears in the value then this separates two <A HREF="filetype\.html#filetype">文件类型</A>
 	names.  Example:
 <B><FONT color="#3A6F2B">		/* vim: set syntax=c.doxygen : */ </FONT></B>
-	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="syntax.html#syntax">syntax</A> first然后the &quot;doxygen&quot; <A HREF="syntax.html#syntax">syntax</A>.
+	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="syntax\.html#syntax">语法</A> first然后the &quot;doxygen&quot; <A HREF="syntax\.html#syntax">语法</A>.
 	Note that the second one must be prepared to be loaded <A HREF="motion.html#as">as</A> an addition,
 	otherwise <A HREF="motion.html#it">它</A> will be skipped.  More than one dot may appear.
-	To switch off <A HREF="syntax.html#syntax">syntax</A> highlighting for the current file, use:
+	To switch off <A HREF="syntax\.html#syntax">语法</A> highlighting for the current file, use:
 <B>		:set syntax=OFF</B>
- 	To switch <A HREF="syntax.html#syntax">syntax</A> highlighting on according to the current value of the
+ 	To switch <A HREF="syntax\.html#syntax">语法</A> highlighting on according to the current value of the
 	<A HREF="#'filetype'">'filetype'</A> option:
 <B>		:set syntax=ON</B>
  	What actually happens when setting the <A HREF="#'syntax'">'syntax'</A> option is that the
-	<A HREF="autocmd.html#Syntax">Syntax</A> <A HREF="autocmd.html#autocommand">autocommand</A> event is triggered with the value <A HREF="motion.html#as">as</A> argument.
+	<A HREF="autocmd.html#Syntax">Syntax</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event is triggered with the value <A HREF="motion.html#as">as</A> argument.
 	This option is not copied to another buffer, independent of the '<A HREF="change.html#s">s</A>' or
 	'<A HREF="change.html#S">S</A>' flag in <A HREF="#'cpoptions'">'cpoptions'</A>.
 	Only normal file name characters can be used, &quot;/\*?[|&lt;&gt;&quot; are illegal.
@@ -6897,8 +6897,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'notermbidi'"></A><B>'notermbidi'</B>* *<A NAME="'notbidi'"></A><B>'notbidi'</B>*
 <A HREF="#'termbidi'">'termbidi'</A> <A HREF="#'tbidi'">'tbidi'</A>	<A HREF="#boolean">boolean</A> (default off)
 			global
-	The <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is in charge of Bi-directionality of text (as specified
-	by <A HREF="mbyte.html#Unicode">Unicode</A>).  The <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is also expected to <A HREF="diff.html#do">do</A> the required shaping
+	The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is in charge of Bi-directionality of text (as specified
+	by <A HREF="mbyte.html#Unicode">Unicode</A>).  The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is also expected to <A HREF="diff.html#do">do</A> the required shaping
 	that some languages (such <A HREF="motion.html#as">as</A> <A HREF="arabic.html#Arabic">Arabic</A>) require.
 	Setting this option implies that <A HREF="#'rightleft'">'rightleft'</A> will not be set when
 	<A HREF="#'arabic'">'arabic'</A> is set and the value of <A HREF="#'arabicshape'">'arabicshape'</A> will be ignored.
@@ -6912,14 +6912,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	Enables 24-bit RGB color in the |<A HREF="term.html#TUI">TUI</A>|.  Uses &quot;<A HREF="gui.html#gui">gui</A>&quot; |<A HREF="syntax.html#:highlight">:highlight</A>|
 	attributes instead of &quot;cterm&quot; attributes. |<A HREF="syntax.html#highlight-guifg">highlight-guifg</A>|
-	Requires an ISO-8613-3 compatible <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+	Requires an ISO-8613-3 compatible <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 
 						*<A NAME="'termpastefilter'"></A><B>'termpastefilter'</B>* *<A NAME="'tpf'"></A><B>'tpf'</B>*
 <A HREF="#'termpastefilter'">'termpastefilter'</A> <A HREF="#'tpf'">'tpf'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;BS,HT,ESC,DEL&quot;)
 			global
 	A comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="#options">options</A> for specifying <A HREF="intro.html#control">control</A> characters
-	to be removed from the text pasted into the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>. The
+	to be removed from the text pasted into the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>. The
 	supported values are:
 
 	   BS	    Backspace
@@ -7003,7 +7003,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	key code sequence has been received by the |<A HREF="term.html#TUI">TUI</A>|.
 
 	For example if <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> (the \x1b byte) is received and <A HREF="#'ttimeout'">'ttimeout'</A> is
-	set, Nvim waits <A HREF="#'ttimeoutlen'">'ttimeoutlen'</A> milliseconds for the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to
+	set, Nvim waits <A HREF="#'ttimeoutlen'">'ttimeoutlen'</A> milliseconds for the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> to
 	complete a key code sequence. If no input arrives before the timeout,
 	a single <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is assumed. Many <A HREF="term.html#TUI">TUI</A> cursor key codes start with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
 
@@ -7185,7 +7185,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	If this many milliseconds nothing is typed the swap file will be
 	written to disk (见 |<A HREF="recover.html#crash-recovery">crash-recovery</A>|).  Also used for the
-	|<A HREF="autocmd.html#CursorHold">CursorHold</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event.
+	|<A HREF="autocmd.html#CursorHold">CursorHold</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event.
 
 
 					*<A NAME="'varsofttabstop'"></A><B>'varsofttabstop'</B>* *<A NAME="'vsts'"></A><B>'vsts'</B>*
@@ -7229,11 +7229,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Currently, these <A HREF="message.html#messages">信息</A> are given:
 	&gt;= 1	<A HREF="lua.html#Lua">Lua</A> assignments to <A HREF="#options">options</A>, mappings, etc.
 	&gt;= 2	When a file is &quot;:source&quot;'ed and when the <A HREF="starting.html#shada">shada</A> file is read or written..
-	&gt;= 3	<A HREF="ui.html#UI">UI</A> info, <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> capabilities
+	&gt;= 3	<A HREF="ui.html#UI">UI</A> info, <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities
 	&gt;= 4	Shell commands.
 	&gt;= 5	Every searched <A HREF="tagsrch.html#tags">标签</A> file and include file.
 	&gt;= 8	Files for which a group of autocommands is executed.
-	&gt;= 9	Every executed <A HREF="autocmd.html#autocommand">autocommand</A>.
+	&gt;= 9	Every executed <A HREF="autocmd\.html#autocommand">自动命令</A>.
 	&gt;= 11	Finding items in a path
 	&gt;= 12	Every executed function.
 	&gt;= 13	When an exception is thrown, caught, finished, or discarded.

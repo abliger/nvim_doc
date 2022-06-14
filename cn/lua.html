@@ -202,7 +202,7 @@ Note:
 
 <A HREF="#Lua">Lua</A> <A HREF="autocmd.html#Syntax">Syntax</A> Information                                       *<A NAME="lua-syntax-help"></A><B>lua-syntax-help</B>*
 
-While <A HREF="#Lua">Lua</A> has a simple <A HREF="syntax.html#syntax">syntax</A>, there are a few things to understand,
+While <A HREF="#Lua">Lua</A> has a simple <A HREF="syntax\.html#syntax">语法</A>, there are a few things to understand,
 particularly when looking at the documentation above.
 
 
@@ -552,7 +552,7 @@ For example consider the following <A HREF="#Lua">Lua</A> omnifunc handler:
 <B>    vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.mymod.omnifunc')</B>
 
 Note: The module (&quot;mymod&quot; in the above example) must either be a <A HREF="#Lua">Lua</A> global,
-or use the require <A HREF="syntax.html#syntax">syntax</A> <A HREF="motion.html#as">as</A> specified above to access <A HREF="motion.html#it">它</A> from a package.
+or use the require <A HREF="syntax\.html#syntax">语法</A> <A HREF="motion.html#as">as</A> specified above to access <A HREF="motion.html#it">它</A> from a package.
 
 Note: `v:lua` without a call is not allowed in a Vimscript <A HREF="eval.html#expression">expression</A>:
 |<A HREF="eval.html#Funcref">Funcref</A>|<A HREF="change.html#s">s</A> cannot represent <A HREF="#Lua">Lua</A> <A HREF="eval.html#functions">functions</A>. The following are <A HREF="message.html#errors">errors</A>:
@@ -775,7 +775,7 @@ vim.highlight.range({bufnr}, {ns}, {hlgroup}, {start}, {finish}, {opts})
 <A HREF="#vim.highlight.priorities">vim.highlight.priorities</A>                            *<A NAME="vim.highlight.priorities"></A><B>vim.highlight.priorities</B>*
 
         Table with default priorities used for highlighting:
-            • `syntax`: `50`, used for standard <A HREF="syntax.html#syntax">syntax</A> highlighting
+            • `syntax`: `50`, used for standard <A HREF="syntax\.html#syntax">语法</A> highlighting
             • `treesitter`: `100`, used for tree-sitter-based highlighting
             • `diagnostics`: `150`, used for code analysis such <A HREF="motion.html#as">as</A> diagnostics
             • `user`: `200`, used for user-triggered highlights such <A HREF="motion.html#as">as</A> <A HREF="lsp.html#LSP">LSP</A>
@@ -1156,7 +1156,7 @@ vim.cmd({command})
 
 vim.fn.{func}({...})                                                  *<A NAME="vim.fn"></A><B>vim.fn</B>*
         Invokes |<A HREF="eval.html#vim-function">vim-function</A>| or |<A HREF="eval.html#user-function">user-function</A>| {func} with arguments {...}.
-        To call <A HREF="eval.html#autoload">autoload</A> <A HREF="eval.html#functions">functions</A>, use the <A HREF="syntax.html#syntax">syntax</A>:
+        To call <A HREF="eval.html#autoload">autoload</A> <A HREF="eval.html#functions">functions</A>, use the <A HREF="syntax\.html#syntax">语法</A>:
 <B>            vim.fn['some#function']({...})</B>
  
         Unlike <A HREF="#vim.api">vim.api</A>.|<A HREF="api.html#nvim_call_function()">nvim_call_function()</A>| this converts directly between Vim
@@ -2193,11 +2193,11 @@ select({items}, {opts}, {on_choice})                         *<A NAME="vim.ui.se
 
 ==============================================================================
 
-<A HREF="#Lua">Lua</A> module: <A HREF="filetype.html#filetype">filetype</A>                                            *<A NAME="lua-filetype"></A><B>lua-filetype</B>*
+<A HREF="#Lua">Lua</A> module: <A HREF="filetype\.html#filetype">文件类型</A>                                            *<A NAME="lua-filetype"></A><B>lua-filetype</B>*
 
 
 add({filetypes})                                          *<A NAME="vim.filetype.add()"></A><B>vim.filetype.add()</B>*
-                Add new <A HREF="filetype.html#filetype">filetype</A> mappings.
+                Add new <A HREF="filetype\.html#filetype">文件类型</A> mappings.
 
                 Filetype mappings can be added either by extension or by
                 filename (either the &quot;tail&quot; or the full file path). The full
@@ -2205,14 +2205,14 @@ add({filetypes})                                          *<A NAME="vim.filetype
                 match is not found using the filename然后the filename is
                 matched against the <A HREF="eval.html#list">列表</A> of |<A HREF="#lua-patterns">lua-patterns</A>| (sorted by
                 priority) until a match is found. Lastly, if <A HREF="pattern.html#pattern">pattern</A> matching
-                does not find a <A HREF="filetype.html#filetype">filetype</A>然后the file extension is used.
+                does not find a <A HREF="filetype\.html#filetype">文件类型</A>然后the file extension is used.
 
-                The <A HREF="filetype.html#filetype">filetype</A> can be either a <A HREF="options\.html#options">字符串</A> (in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is used
-                <A HREF="motion.html#as">as</A> the <A HREF="filetype.html#filetype">filetype</A> directly) or a function. If a function, <A HREF="motion.html#it">它</A>
+                The <A HREF="filetype\.html#filetype">文件类型</A> can be either a <A HREF="options\.html#options">字符串</A> (in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is used
+                <A HREF="motion.html#as">as</A> the <A HREF="filetype\.html#filetype">文件类型</A> directly) or a function. If a function, <A HREF="motion.html#it">它</A>
                 takes the full path and buffer number of the file <A HREF="motion.html#as">as</A> arguments
                 (along with captures from the matched <A HREF="pattern.html#pattern">pattern</A>, if any) and
                 should return a <A HREF="options\.html#options">字符串</A> that will be used <A HREF="motion.html#as">as</A> the buffer's
-                <A HREF="filetype.html#filetype">filetype</A>.
+                <A HREF="filetype\.html#filetype">文件类型</A>.
 
                 Filename patterns can specify an optional priority to resolve
                 cases when a file path matches multiple patterns. Higher
@@ -2221,7 +2221,7 @@ add({filetypes})                                          *<A NAME="vim.filetype
 
                 See $VIMRUNTIME/lua/vim/filetype.lua for more examples.
 
-                Note that <A HREF="#Lua">Lua</A> <A HREF="filetype.html#filetype">filetype</A> detection is only enabled when
+                Note that <A HREF="#Lua">Lua</A> <A HREF="filetype\.html#filetype">文件类型</A> detection is only enabled when
                 |<A HREF="filetype.html#g:do_filetype_lua">g:do_filetype_lua</A>| is set to 1.
 
                 Example:
@@ -2256,17 +2256,17 @@ add({filetypes})                                          *<A NAME="vim.filetype
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {filetypes}  (table) A table containing new <A HREF="filetype.html#filetype">filetype</A> maps
+                    {filetypes}  (table) A table containing new <A HREF="filetype\.html#filetype">文件类型</A> maps
                                  (see example).
 
 
 match({name}, {bufnr})                                  *<A NAME="vim.filetype.match()"></A><B>vim.filetype.match()</B>*
-                Set the <A HREF="filetype.html#filetype">filetype</A> for the given buffer from a file name.
+                Set the <A HREF="filetype\.html#filetype">文件类型</A> for the given buffer from a file name.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {name}   (string) File name (can be an absolute or
                              relative path)
-                    {bufnr}  (number|nil) The buffer to set the <A HREF="filetype.html#filetype">filetype</A> for.
+                    {bufnr}  (number|nil) The buffer to set the <A HREF="filetype\.html#filetype">文件类型</A> for.
                              Defaults to the current buffer.
 
 

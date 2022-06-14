@@ -99,7 +99,7 @@ affect other kinds of <A HREF="change.html#formatting">formatting</A> <A HREF="m
 There are in fact four main methods available for indentation, each one
 overrides the previous if <A HREF="motion.html#it">它</A> is enabled, or non-empty for <A HREF="options.html#'indentexpr'">'indentexpr'</A>:
 <A HREF="options.html#'autoindent'">'autoindent'</A>	uses the indent from the previous line.
-<A HREF="options.html#'smartindent'">'smartindent'</A>	is like <A HREF="options.html#'autoindent'">'autoindent'</A> but also recognizes some C <A HREF="syntax.html#syntax">syntax</A> to
+<A HREF="options.html#'smartindent'">'smartindent'</A>	is like <A HREF="options.html#'autoindent'">'autoindent'</A> but also recognizes some C <A HREF="syntax\.html#syntax">语法</A> to
 		increase/reduce the indent where appropriate.
 <A HREF="options.html#'cindent'">'cindent'</A>	Works more cleverly than the other two and is configurable to
 		different indenting styles.
@@ -109,7 +109,7 @@ overrides the previous if <A HREF="motion.html#it">它</A> is enabled, or non-em
 The rest of this section describes the <A HREF="options.html#'cindent'">'cindent'</A> option.
 
 Note that <A HREF="options.html#'cindent'">'cindent'</A> indenting does not work for every code scenario.  Vim
-is not a C compiler: <A HREF="motion.html#it">它</A> does not recognize all <A HREF="syntax.html#syntax">syntax</A>.  One requirement is
+is not a C compiler: <A HREF="motion.html#it">它</A> does not recognize all <A HREF="syntax\.html#syntax">语法</A>.  One requirement is
 that toplevel <A HREF="eval.html#functions">functions</A> have a '<A HREF="motion.html#{">{</A>' in the first column.  Otherwise they are
 easily confused with declarations.
 
@@ -123,7 +123,7 @@ These five <A HREF="options\.html#options">选项</A> <A HREF="intro.html#contro
 If <A HREF="options.html#'lisp'">'lisp'</A> is not on and <A HREF="options.html#'equalprg'">'equalprg'</A> is empty, the &quot;<A HREF="change.html#=">=</A>&quot; <A HREF="motion.html#operator">operator</A> indents using
 Vim's built-in algorithm rather than calling an external program.
 
-见 |<A HREF="autocmd.html#autocommand">autocommand</A>| for how to set the <A HREF="options.html#'cindent'">'cindent'</A> option automatically for C code
+见 |<A HREF="autocmd\.html#autocommand">自动命令</A>| for how to set the <A HREF="options.html#'cindent'">'cindent'</A> option automatically for C code
 files and reset <A HREF="motion.html#it">它</A> for others.
 
 
@@ -861,7 +861,7 @@ follows
 
 in which <A HREF="change.html#case">case</A> <A HREF="diff.html#do">do</A> loops will be indented.  If all your loops are of do/enddo
 type only in, say, .f90 files然后you should set a buffer flag with an
-<A HREF="autocmd.html#autocommand">autocommand</A> such <A HREF="motion.html#as">as</A>
+<A HREF="autocmd\.html#autocommand">自动命令</A> such <A HREF="motion.html#as">as</A>
 
 <B>  au! BufRead,BufNewFile *.f90 let b:fortran_do_enddo=1</B>
 
@@ -951,7 +951,7 @@ Where 0 is for Classic, 1 for Indent nested <A HREF="eval.html#functions">functi
 
 PHP				*<A NAME="ft-php-indent"></A><B>ft-php-indent</B>* *<A NAME="php-indent"></A><B>php-indent</B>* *<A NAME="php-indenting"></A><B>php-indenting</B>*
 
-NOTE:	PHP files will be indented correctly only if PHP |<A HREF="syntax.html#syntax">syntax</A>| is active.
+NOTE:	PHP files will be indented correctly only if PHP |<A HREF="syntax\.html#syntax">语法</A>| is active.
 
 If you are editing a file in Unix <A HREF="options.html#'fileformat'">'fileformat'</A> and '\r' characters are present
 before new lines, indentation won't proceed correctly ; you have to remove
@@ -1252,7 +1252,7 @@ To turn this off, add
 
 <B>  let g:vhdl_indent_genportmap = 0</B>
 
-to the <A HREF="starting.html#vimrc">vimrc</A> file, which causes the previous alignment example to change:
+to <A HREF="starting\.html#vimrc">vimrc</A>文件, which causes the previous alignment example to change:
 
 <B>  ENTITY sync IS</B>
 <B>  PORT (</B>
@@ -1275,7 +1275,7 @@ To turn this off, add
 
 <B>  let g:vhdl_indent_rhsassign = 0</B>
 
-to the <A HREF="starting.html#vimrc">vimrc</A> file, which causes the previous alignment example to change:
+to <A HREF="starting\.html#vimrc">vimrc</A>文件, which causes the previous alignment example to change:
 
 <B>  sig_out &lt;= (bus_a(1) AND</B>
 <B>    (sig_b OR sig_c)) OR</B>

@@ -90,7 +90,7 @@ Starting the <A HREF="#GUI">GUI</A>				*<A NAME="gui-start"></A><B>gui-start</B>
 
 				*<A NAME="ginit.vim"></A><B>ginit.vim</B>* *<A NAME="gui-init"></A><B>gui-init</B>* *<A NAME="gvimrc"></A><B>gvimrc</B>* *<A NAME="$MYGVIMRC"></A><B>$MYGVIMRC</B>*
 For GUI-specific configuration Nvim provides the |<A HREF="autocmd.html#UIEnter">UIEnter</A>| event.  This
-happens after other |<A HREF="starting.html#initialization">initialization</A>|<A HREF="change.html#s">s</A>, like reading your <A HREF="starting.html#vimrc">vimrc</A> file.
+happens after other |<A HREF="starting.html#initialization">initialization</A>|<A HREF="change.html#s">s</A>, like reading your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
 Example: this sets &quot;g:gui&quot; to the value of the UI's &quot;rgb&quot; field:   
 <B>	:autocmd UIEnter * let g:gui = filter(nvim_list_uis(),{k,v-&gt; v.chan==v:event.chan})[0].rgb</B>
@@ -235,13 +235,13 @@ The default <A HREF="#menus">menus</A> are read from the file &quot;$VIMRUNTIME/
 Starting off with the default set is a good idea.  You can add more items, or,
 if you don't like the defaults at all, start with removing all <A HREF="#menus">menus</A>
 |<A HREF="#:unmenu-all">:unmenu-all</A>|.  You can also avoid the default <A HREF="#menus">menus</A> being loaded by adding
-this line to your <A HREF="starting.html#vimrc">vimrc</A> file (NOT your <A HREF="#gvimrc">gvimrc</A> file!):
+this line to your <A HREF="starting\.html#vimrc">vimrc</A>文件 (NOT your <A HREF="#gvimrc">gvimrc</A> file!):
 <B>	:let did_install_default_menus = 1</B>
 If you also want to avoid the <A HREF="autocmd.html#Syntax">Syntax</A> menu:
 <B>	:let did_install_syntax_menu = 1</B>
-The first item in the <A HREF="autocmd.html#Syntax">Syntax</A> menu can be used to show all available <A HREF="filetype.html#filetypes">filetypes</A>
+The first item in the <A HREF="autocmd.html#Syntax">Syntax</A> menu can be used to show all available <A HREF="filetype\.html#filetypes">文件类型</A>
 in the menu (which can take a bit of time to load).  If you want to have all
-<A HREF="filetype.html#filetypes">filetypes</A> already present at <A HREF="starting.html#startup">startup</A>, add:
+<A HREF="filetype\.html#filetypes">文件类型</A> already present at <A HREF="starting.html#startup">startup</A>, add:
 <B>	:let do_syntax_sel_menu = 1</B>
 
 Note that the <A HREF="#menu.vim">menu.vim</A> is sourced when `:syntax on` or `:filetype on` is
@@ -255,7 +255,7 @@ Although this documentation is in the <A HREF="#GUI">GUI</A> section, you can ac
 in console mode too.  You will have to load |<A HREF="menu.html">menu.vim</A>| explicitly then, <A HREF="motion.html#it">它</A> is
 not done by default.  You can use the |<A HREF="#:emenu">:emenu</A>| command and command-line
 completion with <A HREF="options.html#'wildmenu'">'wildmenu'</A> to access the menu entries almost like a real menu
-system.  To <A HREF="diff.html#do">do</A> this, put these commands in your <A HREF="starting.html#vimrc">vimrc</A> file:
+system.  To <A HREF="diff.html#do">do</A> this, put these commands in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
 <B>	:source $VIMRUNTIME/menu.vim</B>
 <B>	:set wildmenu</B>
 <B>	:set cpo-=&lt;</B>

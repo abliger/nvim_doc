@@ -76,11 +76,11 @@
 
 by David Fishburn
 
-This is a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> to work with SQL files.
+This is a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> to work with SQL files.
 
 The Structured Query Language (SQL) is a standard which specifies statements
 that allow a user to interact with a relational database.  Vim includes
-features for <A HREF="motion.html#navigation">navigation</A>, indentation and <A HREF="syntax.html#syntax">syntax</A> highlighting.
+features for <A HREF="motion.html#navigation">navigation</A>, indentation and <A HREF="syntax\.html#syntax">语法</A> highlighting.
 
 1. Navigation					|<A HREF="#sql-navigation">sql-navigation</A>|
     1.1 Matchit					|<A HREF="#sql-matchit">sql-matchit</A>|
@@ -163,7 +163,7 @@ The following keywords are supported:
 
 1.2 Text Object Motions				*<A NAME="sql-object-motions"></A><B>sql-object-motions</B>*
 Vim has a number of predefined keys for working with text |<A HREF="motion.html#object-motions">object-motions</A>|.
-This <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> attempts to translate these keys to maps which make sense
+This <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> attempts to translate these keys to maps which make sense
 for the SQL language.
 
 The following |<A HREF="intro.html#Normal">Normal</A>| mode and |<A HREF="visual.html#Visual">Visual</A>| mode maps exist (when you edit a SQL
@@ -180,7 +180,7 @@ Most relational databases support various standard features, tables, indices,
 triggers and stored procedures.  Each vendor also has a variety of proprietary
 <A HREF="vimindex.html#objects">objects</A>.  The next set of maps have been created to help move between these
 <A HREF="vimindex.html#objects">objects</A>.  Depends on which database vendor you are using, the <A HREF="eval.html#list">列表</A> of <A HREF="vimindex.html#objects">objects</A>
-must be configurable.  The <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> attempts to define many of the
+must be configurable.  The <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> attempts to define many of the
 standard <A HREF="vimindex.html#objects">objects</A>, plus many additional ones.  In order to make this <A HREF="motion.html#as">as</A>
 flexible <A HREF="motion.html#as">as</A> possible, you can override the <A HREF="eval.html#list">列表</A> of <A HREF="vimindex.html#objects">objects</A> from within your
 |<A HREF="starting.html#vimrc">vimrc</A>| with the following:
@@ -227,7 +227,7 @@ By default, the <A HREF="usr_41.html#ftplugin">ftplugin</A> only searches for CR
 override this via your |<A HREF="init.html">init.vim</A>| with the following:
 <B>    let g:ftplugin_sql_statements = 'create,alter'</B>
 
-The <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> defines three types of comments:
+The <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> defines three types of comments:
 <B>    1.  --</B>
 <B>    2.  //</B>
 <B>    3.  /*</B>
@@ -293,18 +293,18 @@ Press any of the following keys:
 All relational databases support SQL.  There is a portion of SQL that is
 portable across vendors (ex. CREATE TABLE, CREATE INDEX), but there is a
 great deal of vendor specific extensions to SQL.  Oracle supports the
-&quot;CREATE OR REPLACE&quot; <A HREF="syntax.html#syntax">syntax</A>, column defaults specified in the CREATE TABLE
+&quot;CREATE OR REPLACE&quot; <A HREF="syntax\.html#syntax">语法</A>, column defaults specified in the CREATE TABLE
 statement and the procedural language (for stored procedures and triggers).
 
-The default Vim <A HREF="intro.html#distribution">distribution</A> ships with <A HREF="syntax.html#syntax">syntax</A> highlighting based on Oracle's
+The default Vim <A HREF="intro.html#distribution">distribution</A> ships with <A HREF="syntax\.html#syntax">语法</A> highlighting based on Oracle's
 PL/SQL.  The default SQL indent <A HREF="usr_41.html#script">script</A> works for Oracle and SQL Anywhere.
-The default <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> works for all vendors and should remain vendor
+The default <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> works for all vendors and should remain vendor
 neutral, but extendable.
 
 Vim currently has support for a variety of different vendors, currently this
-is via <A HREF="syntax.html#syntax">syntax</A> scripts. Unfortunately, to flip between different <A HREF="syntax.html#syntax">syntax</A> rules
+is via <A HREF="syntax\.html#syntax">语法</A> scripts. Unfortunately, to flip between different <A HREF="syntax\.html#syntax">语法</A> rules
 you must either create:
-    1.  New <A HREF="filetype.html#filetypes">filetypes</A>
+    1.  New <A HREF="filetype\.html#filetypes">文件类型</A>
     2.  Custom autocmds
     3.  Manual steps / commands
 
@@ -315,11 +315,11 @@ be nice to specify a default in your |<A HREF="init.html">init.vim</A>|.
 
 2.1 <A HREF="#SQLSetType">SQLSetType</A>					*<A NAME="sqlsettype"></A><B>sqlsettype</B>* *<A NAME="SQLSetType"></A><B>SQLSetType</B>*
 For the people that work with many different databases, <A HREF="motion.html#it">它</A> is nice to be
-able to flip between the various vendors rules (indent, <A HREF="syntax.html#syntax">syntax</A>) on a per
+able to flip between the various vendors rules (indent, <A HREF="syntax\.html#syntax">语法</A>) on a per
 buffer basis, at any time.  The ftplugin/sql.vim file defines this function:
 <B>    SQLSetType</B>
 
-Executing this function without any parameters will set the indent and <A HREF="syntax.html#syntax">syntax</A>
+Executing this function without any parameters will set the indent and <A HREF="syntax\.html#syntax">语法</A>
 scripts back to their defaults, 见 |<A HREF="#sql-type-default">sql-type-default</A>|.  You can use the <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>
 key to complete the optional parameter.
 
@@ -353,7 +353,7 @@ This will echo:
 
 
 2.3 SQL Dialect Default				*<A NAME="sql-type-default"></A><B>sql-type-default</B>*
-As mentioned earlier, the default <A HREF="syntax.html#syntax">syntax</A> rules for Vim is based on Oracle
+As mentioned earlier, the default <A HREF="syntax\.html#syntax">语法</A> rules for Vim is based on Oracle
 (PL/SQL).  You can override this default by placing one of the following in
 your YXXYinit.vim|:
 <B>    let g:sql_type_default = 'sqlanywhere'</B>
@@ -405,15 +405,15 @@ developers to build in code completion for any language.  Vim 7 includes
 code completion for the SQL language.
 
 There are two modes to the SQL completion <A HREF="usr_05.html#plugin">plugin</A>, static and dynamic.  The
-static mode populates the popups with the data generated from current <A HREF="syntax.html#syntax">syntax</A>
+static mode populates the popups with the data generated from current <A HREF="syntax\.html#syntax">语法</A>
 highlight rules.  The dynamic mode populates the popups with data retrieved
 directly from a database.  This includes, table lists, column lists,
 procedures names and more.
 
 
 4.1 Static Mode					*<A NAME="sql-completion-static"></A><B>sql-completion-static</B>*
-The static popups created contain items defined by the active <A HREF="syntax.html#syntax">syntax</A> rules
-while editing a file with a <A HREF="filetype.html#filetype">filetype</A> of SQL.  The <A HREF="usr_05.html#plugin">plugin</A> defines (by default)
+The static popups created contain items defined by the active <A HREF="syntax\.html#syntax">语法</A> rules
+while editing a file with a <A HREF="filetype\.html#filetype">文件类型</A> of SQL.  The <A HREF="usr_05.html#plugin">plugin</A> defines (by default)
 various maps to help the user refine the <A HREF="eval.html#list">列表</A> of items to be displayed.
 The defaults static maps are:
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;a &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('syntax')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
@@ -427,7 +427,7 @@ The use of &quot;&lt;C-C&gt;&quot; can be user chosen by using the following in 
 <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> may not work properly on all platforms:
 <B>    let g:ftplugin_sql_omni_key = '&lt;C-C&gt;'</B>
 
-The static maps (which are based on the <A HREF="syntax.html#syntax">syntax</A> highlight groups) follow this
+The static maps (which are based on the <A HREF="syntax\.html#syntax">语法</A> highlight groups) follow this
 format:
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;k &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlKeyword')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
 <B>    imap &lt;buffer&gt; &lt;C-C&gt;k &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlKeyword\w*')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</B>
@@ -464,12 +464,12 @@ This command breaks down <A HREF="motion.html#as">as</A>:
 <B>			     the syntaxcomplete plugin.</B>
 
 Using the <A HREF="options.html#'syntax'">'syntax'</A> keyword is a special <A HREF="change.html#case">case</A>.  This instructs the
-syntaxcomplete <A HREF="usr_05.html#plugin">plugin</A> to retrieve all <A HREF="syntax.html#syntax">syntax</A> items.  So this will effectively
-work for any of Vim's SQL <A HREF="syntax.html#syntax">syntax</A> files.  At the time of <A HREF="editing.html#writing">写</A> this includes
-10 different <A HREF="syntax.html#syntax">syntax</A> files for the different dialects of SQL (see section 3
+syntaxcomplete <A HREF="usr_05.html#plugin">plugin</A> to retrieve all <A HREF="syntax\.html#syntax">语法</A> items.  So this will effectively
+work for any of Vim's SQL <A HREF="syntax\.html#syntax">语法</A> files.  At the time of <A HREF="editing.html#writing">写</A> this includes
+10 different <A HREF="syntax\.html#syntax">语法</A> files for the different dialects of SQL (see section 3
 above, |<A HREF="#sql-dialects">sql-dialects</A>|).
 
-Here are some examples of the entries which are pulled from the <A HREF="syntax.html#syntax">syntax</A> files:
+Here are some examples of the entries which are pulled from the <A HREF="syntax\.html#syntax">语法</A> files:
 <B>     All</B>
 <B>	 - Contains the contents of all syntax highlight groups</B>
 <B>     Statements</B>
@@ -557,12 +557,12 @@ quotes) &quot;se&quot; then press:
     &lt;C-Space&gt;t
 Assuming &quot;select&quot; is highlighted in the popup <A HREF="eval.html#list">列表</A> press <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to choose
 the entry.  Now type:
-    &#42; fr&lt;C-C&gt;a (show all <A HREF="syntax.html#syntax">syntax</A> items)
+    &#42; fr&lt;C-C&gt;a (show all <A HREF="syntax\.html#syntax">语法</A> items)
 choose &quot;from&quot; from the popup <A HREF="eval.html#list">列表</A>.
 
 When <A HREF="editing.html#writing">写</A> stored procedures using the &quot;type&quot; <A HREF="eval.html#list">列表</A> is useful.  It contains
 a <A HREF="eval.html#list">列表</A> of all the database supported types.  This may or may not be true
-depending on the <A HREF="syntax.html#syntax">syntax</A> file you are using.  The SQL Anywhere <A HREF="syntax.html#syntax">syntax</A> file
+depending on the <A HREF="syntax\.html#syntax">语法</A> file you are using.  The SQL Anywhere <A HREF="syntax\.html#syntax">语法</A> file
 (sqlanywhere.vim) has support for this:
 <B>     BEGIN</B>
 <B>	DECLARE customer_id &lt;C-C&gt;T &lt;-- Choose a type from the list</B>
@@ -735,8 +735,8 @@ your YXXYinit.vim|:
 	  ['syntax','sqlKeyword','sqlFunction','sqlOption','sqlType','sqlStatement']
 	- sqlcomplete can be used in conjunction with other completion
 	  plugins.  This is outlined at |<A HREF="#sql-completion-filetypes">sql-completion-filetypes</A>|.  When the
-	  <A HREF="filetype.html#filetype">filetype</A> is changed temporarily to SQL, the sqlcompletion <A HREF="usr_05.html#plugin">plugin</A>
-	  will cache the <A HREF="syntax.html#syntax">syntax</A> groups listed in the <A HREF="eval.html#list">列表</A> specified in this
+	  <A HREF="filetype\.html#filetype">文件类型</A> is changed temporarily to SQL, the sqlcompletion <A HREF="usr_05.html#plugin">plugin</A>
+	  will cache the <A HREF="syntax\.html#syntax">语法</A> groups listed in the <A HREF="eval.html#list">列表</A> specified in this
 	  option.
 
 
@@ -747,20 +747,20 @@ The default SQL maps have been described in other sections of this document in
 greater detail.  Here is a <A HREF="eval.html#list">列表</A> of the maps with a brief description of each.
 
 Static Maps
-These are maps which use populate the completion <A HREF="eval.html#list">列表</A> using Vim's <A HREF="syntax.html#syntax">syntax</A>
+These are maps which use populate the completion <A HREF="eval.html#list">列表</A> using Vim's <A HREF="syntax\.html#syntax">语法</A>
 highlighting rules.
 <B>    &lt;C-C&gt;a</B>
-        - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items.
+        - Displays all SQL <A HREF="syntax\.html#syntax">语法</A> items.
 <B>    &lt;C-C&gt;k</B>
-        - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items defined <A HREF="motion.html#as">as</A> 'sqlKeyword'.
+        - Displays all SQL <A HREF="syntax\.html#syntax">语法</A> items defined <A HREF="motion.html#as">as</A> 'sqlKeyword'.
 <B>    &lt;C-C&gt;f</B>
-        - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items defined <A HREF="motion.html#as">as</A> 'sqlFunction.
+        - Displays all SQL <A HREF="syntax\.html#syntax">语法</A> items defined <A HREF="motion.html#as">as</A> 'sqlFunction.
 <B>    &lt;C-C&gt;o</B>
-        - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items defined <A HREF="motion.html#as">as</A> 'sqlOption'.
+        - Displays all SQL <A HREF="syntax\.html#syntax">语法</A> items defined <A HREF="motion.html#as">as</A> 'sqlOption'.
 <B>    &lt;C-C&gt;T</B>
-        - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items defined <A HREF="motion.html#as">as</A> 'sqlType'.
+        - Displays all SQL <A HREF="syntax\.html#syntax">语法</A> items defined <A HREF="motion.html#as">as</A> 'sqlType'.
 <B>    &lt;C-C&gt;s</B>
-        - Displays all SQL <A HREF="syntax.html#syntax">syntax</A> items defined <A HREF="motion.html#as">as</A> 'sqlStatement'.
+        - Displays all SQL <A HREF="syntax\.html#syntax">语法</A> items defined <A HREF="motion.html#as">as</A> 'sqlStatement'.
 
 Dynamic Maps
 These are maps which use populate the completion <A HREF="eval.html#list">列表</A> using the dbext.vim
@@ -796,7 +796,7 @@ These are maps which use populate the completion <A HREF="eval.html#list">列表
 
 Customizing Maps
 You can create <A HREF="motion.html#as">as</A> many additional key maps <A HREF="motion.html#as">as</A> you like.  Generally, the maps
-will be specifying different <A HREF="syntax.html#syntax">syntax</A> highlight groups.
+will be specifying different <A HREF="syntax\.html#syntax">语法</A> highlight groups.
 
 If you <A HREF="diff.html#do">do</A> not wish the default maps created or the key choices <A HREF="diff.html#do">do</A> not work on
 your platform (often a <A HREF="change.html#case">case</A> on *nix) you define the following variable in
@@ -814,9 +814,9 @@ platform you can also use &lt;C-Space&gt; or <A HREF="intro.html#ALT">ALT</A> ke
 
 
 
-4.6 Using with other <A HREF="filetype.html#filetypes">filetypes</A>			*<A NAME="sql-completion-filetypes"></A><B>sql-completion-filetypes</B>*
+4.6 Using with other <A HREF="filetype\.html#filetypes">文件类型</A>			*<A NAME="sql-completion-filetypes"></A><B>sql-completion-filetypes</B>*
 
-Many times SQL can be used with different <A HREF="filetype.html#filetypes">filetypes</A>.例如 Perl, Java,
+Many times SQL can be used with different <A HREF="filetype\.html#filetypes">文件类型</A>.例如 Perl, Java,
 PHP, Javascript can all interact with a database.  Often you need both the SQL
 completion and the completion capabilities for the current language you are
 editing.
@@ -827,26 +827,26 @@ This can be enabled easily with the following steps (assuming a Perl file):
 <B>    3.  :set ft=perl</B>
 
 Step 1
-Begins by editing a Perl file.  Vim automatically sets the <A HREF="filetype.html#filetype">filetype</A> to
-&quot;<A HREF="if_perl.html#perl">perl</A>&quot;.  By default, Vim runs the appropriate <A HREF="filetype.html#filetype">filetype</A> file
-ftplugin/perl.vim.  If you are using the <A HREF="syntax.html#syntax">syntax</A> completion <A HREF="usr_05.html#plugin">plugin</A> by following
+Begins by editing a Perl file.  Vim automatically sets the <A HREF="filetype\.html#filetype">文件类型</A> to
+&quot;<A HREF="if_perl.html#perl">perl</A>&quot;.  By default, Vim runs the appropriate <A HREF="filetype\.html#filetype">文件类型</A> file
+ftplugin/perl.vim.  If you are using the <A HREF="syntax\.html#syntax">语法</A> completion <A HREF="usr_05.html#plugin">plugin</A> by following
 the directions at |<A HREF="insert.html#ft-syntax-omni">ft-syntax-omni</A>| then the |<A HREF="options.html#'omnifunc'">'omnifunc'</A>| option has been set to
 &quot;syntax#Complete&quot;.  Pressing &lt;C-X&gt;&lt;C-O&gt; will display the omni popup containing
-the <A HREF="syntax.html#syntax">syntax</A> items for Perl.
+the <A HREF="syntax\.html#syntax">语法</A> items for Perl.
 
 Step 2
-Manually setting the <A HREF="filetype.html#filetype">filetype</A> to 'sql' will also fire the appropriate <A HREF="filetype.html#filetype">filetype</A>
+Manually setting the <A HREF="filetype\.html#filetype">文件类型</A> to 'sql' will also fire the appropriate <A HREF="filetype\.html#filetype">文件类型</A>
 files ftplugin/sql.vim.  This file will define a number of buffer specific
 maps for SQL completion, 见 |<A HREF="#sql-completion-maps">sql-completion-maps</A>|.  Now these maps have
 been created and the SQL completion <A HREF="usr_05.html#plugin">plugin</A> has been initialized.  All SQL
-<A HREF="syntax.html#syntax">syntax</A> items have been cached in preparation.  The SQL <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_41.html#script">script</A> detects
+<A HREF="syntax\.html#syntax">语法</A> items have been cached in preparation.  The SQL <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_41.html#script">script</A> detects
 we are attempting to use two different completion plugins.  Since the SQL maps
 begin with &lt;C-C&gt;, the maps will toggle the |<A HREF="options.html#'omnifunc'">'omnifunc'</A>| when in use.  So you
-can use &lt;C-X&gt;&lt;C-O&gt; to continue using the completion for Perl (using the <A HREF="syntax.html#syntax">syntax</A>
+can use &lt;C-X&gt;&lt;C-O&gt; to continue using the completion for Perl (using the <A HREF="syntax\.html#syntax">语法</A>
 completion <A HREF="usr_05.html#plugin">plugin</A>) and &lt;C-C&gt; to use the SQL completion features.
 
 Step 3
-Setting the <A HREF="filetype.html#filetype">filetype</A> back to Perl sets all the usual &quot;<A HREF="if_perl.html#perl">perl</A>&quot; related items back
+Setting the <A HREF="filetype\.html#filetype">文件类型</A> back to Perl sets all the usual &quot;<A HREF="if_perl.html#perl">perl</A>&quot; related items back
 <A HREF="motion.html#as">as</A> they were.
 
 

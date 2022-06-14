@@ -81,7 +81,7 @@
 
 Terminal <A HREF="ui.html#UI">UI</A>						*<A NAME="TUI"></A><B>TUI</B>* *<A NAME="tui"></A><B>tui</B>*
 
-Nvim uses a <A HREF="eval.html#list">列表</A> of <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> capabilities to display its user interface
+Nvim uses a <A HREF="eval.html#list">列表</A> of <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities to display its user interface
 (except in |<A HREF="starting.html#--embed">--embed</A>| and |<A HREF="starting.html#--headless">--headless</A>| modes). If that information is wrong,
 the screen may be messed up or keys may not be recognized.
 
@@ -91,9 +91,9 @@ the screen may be messed up or keys may not be recognized.
 
 Startup						*<A NAME="startup-terminal"></A><B>startup-terminal</B>*
 
-Nvim guesses the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type when <A HREF="motion.html#it">它</A> starts (except in |<A HREF="starting.html#--embed">--embed</A>| and
+Nvim guesses the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type when <A HREF="motion.html#it">它</A> starts (except in |<A HREF="starting.html#--embed">--embed</A>| and
 |<A HREF="starting.html#--headless">--headless</A>| modes). The |<A HREF="#$TERM">$TERM</A>| environment variable is the primary hint that
-determines the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type.
+determines the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type.
 
 
 					*<A NAME="terminfo"></A><B>terminfo</B>* *<A NAME="E557"></A><B>E557</B>* *<A NAME="E558"></A><B>E558</B>* *<A NAME="E559"></A><B>E559</B>*
@@ -112,25 +112,25 @@ a non-superuser:
  
 
 								*<A NAME="$TERM"></A><B>$TERM</B>*
-The <A HREF="#$TERM">$TERM</A> environment variable must match the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> you are using!
-Otherwise Nvim cannot know what sequences your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> expects, and weird
+The <A HREF="#$TERM">$TERM</A> environment variable must match the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you are using!
+Otherwise Nvim cannot know what sequences your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> expects, and weird
 or sub-optimal behavior will result (scrolling quirks, wrong colors, etc.).
 
 <A HREF="#$TERM">$TERM</A> is also important because <A HREF="motion.html#it">它</A> is forwarded by SSH to the remote session,
 unlike most other environment <A HREF="eval.html#variables">variables</A>.
 
-  For this <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>           Set <A HREF="#$TERM">$TERM</A> to                  |<A HREF="#builtin-terms">builtin-terms</A>|
+  For this <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>           Set <A HREF="#$TERM">$TERM</A> to                  |<A HREF="#builtin-terms">builtin-terms</A>|
   -------------------------------------------------------------------------
   anything libvte-based       vte, vte-256color                   <A HREF="change.html#Y">Y</A>
    (e.g. GNOME Terminal)      (aliases: gnome, gnome-256color)
   iTerm (original)            iterm, iTerm.app                    N
   iTerm2 (new capabilities)   iterm2, iTerm2.app                  <A HREF="change.html#Y">Y</A>
   Konsole                     konsole-256color                    N
-  Linux virtual <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>      linux, linux-256color               <A HREF="change.html#Y">Y</A>
+  Linux virtual <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>      linux, linux-256color               <A HREF="change.html#Y">Y</A>
   PuTTY                       putty, putty-256color               <A HREF="change.html#Y">Y</A>
   rxvt                        rxvt, rxvt-256color                 <A HREF="change.html#Y">Y</A>
   screen                      screen, screen-256color             <A HREF="change.html#Y">Y</A>
-  simple <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (st)        st, st-256color                     <A HREF="change.html#Y">Y</A>
+  simple <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> (st)        st, st-256color                     <A HREF="change.html#Y">Y</A>
   Terminal.app                nsterm                              N
   tmux                        tmux, tmux-256color                 <A HREF="change.html#Y">Y</A>
   Windows/ConEmu              conemu                              <A HREF="change.html#Y">Y</A>
@@ -143,17 +143,17 @@ unlike most other environment <A HREF="eval.html#variables">variables</A>.
 
 					*<A NAME="builtin-terms"></A><B>builtin-terms</B>* *<A NAME="builtin_terms"></A><B>builtin_terms</B>*
 If a |<A HREF="#terminfo">terminfo</A>| database is not available or there is no entry for the current
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, Nvim will map |<A HREF="#$TERM">$TERM</A>| to a builtin entry according to the above
+<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, Nvim will map |<A HREF="#$TERM">$TERM</A>| to a builtin entry according to the above
 table, or &quot;ansi&quot; if there is no match. For example &quot;TERM=putty-256color&quot; will
 be mapped to the builtin &quot;putty&quot; entry. See also |<A HREF="#tui-colors">tui-colors</A>|.
 
 The builtin <A HREF="#terminfo">terminfo</A> is not combined with any external <A HREF="#terminfo">terminfo</A> database, nor
 can <A HREF="motion.html#it">它</A> be used in preference to one.  You can thus entirely override any
 omissions or out-of-date information in the builtin <A HREF="#terminfo">terminfo</A> database by
-supplying an external one with entries for the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type.
+supplying an external one with entries for the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type.
 
 
-Settings depending on <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>			*<A NAME="term-dependent-settings"></A><B>term-dependent-settings</B>*
+Settings depending on <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>			*<A NAME="term-dependent-settings"></A><B>term-dependent-settings</B>*
 
 If you want to set terminal-dependent <A HREF="options\.html#options">选项</A> or mappings, you can <A HREF="diff.html#do">do</A> this in
 your <A HREF="starting.html#init.vim">init.vim</A>.  Example:
@@ -184,14 +184,14 @@ description describes an ability to set top and bottom scroll margins, that is
 used.
 
 This will not speed up <A HREF="scroll.html#scrolling">scrolling</A> in a<A HREF="windows.html#window">窗口</A>that is not the full width of the
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  Xterm has an extra ability, not described by <A HREF="#terminfo">terminfo</A>, to set left
-and right scroll margins <A HREF="motion.html#as">as</A> well.  If Nvim detects that the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is Xterm,
+<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  Xterm has an extra ability, not described by <A HREF="#terminfo">terminfo</A>, to set left
+and right scroll margins <A HREF="motion.html#as">as</A> well.  If Nvim detects that the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is Xterm,
 <A HREF="motion.html#it">它</A> will make use of this ability to speed up <A HREF="scroll.html#scrolling">scrolling</A> that is not the full
-width of the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+width of the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 
 							*<A NAME="tui-input"></A><B>tui-input</B>*
-Nvim uses libtermkey to convert <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="intro.html#escape">escape</A> sequences to key codes.
+Nvim uses libtermkey to convert <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="intro.html#escape">escape</A> sequences to key codes.
 |<A HREF="#terminfo">terminfo</A>| is used first, and CSI sequences not in |<A HREF="#terminfo">terminfo</A>| (including
 extended keys a.k.a. modifyOtherKeys or `CSI u`) can also be parsed.
 For example, when running Nvim in tmux, this makes Nvim leave <A HREF="intro.html#Insert">插入</A>模式 and
@@ -201,61 +201,61 @@ Where `'Escape' [ 2 7 u` is an unambiguous `CSI u` sequence for the <A HREF="int
 
 
 						*<A NAME="tui-modifyOtherKeys"></A><B>tui-modifyOtherKeys</B>* *<A NAME="tui-csiu"></A><B>tui-csiu</B>*
-Historically, <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulators could not distinguish between certain <A HREF="intro.html#control">control</A>
+Historically, <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulators could not distinguish between certain <A HREF="intro.html#control">control</A>
 key modifiers and other keys. For example, &lt;C-I&gt; and <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> are represented the
 same way, <A HREF="motion.html#as">as</A> are <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> and &lt;C-[&gt;, <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> and &lt;C-M&gt;, and <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> and &lt;C-J&gt;. This
 meant that Nvim also could not map these keys separately.
 
-Modern <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulators are able to distinguish between these pairs of keys
+Modern <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulators are able to distinguish between these pairs of keys
 by encoding <A HREF="intro.html#control">control</A> modifiers differently. There are two common but distinct
 ways of doing this, known <A HREF="motion.html#as">as</A> &quot;modifyOtherKeys&quot; and &quot;CSI u&quot;. Nvim supports both
-encoding methods and at <A HREF="starting.html#startup">startup</A> will tell the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator that <A HREF="motion.html#it">它</A>
-understands these key encodings. If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator supports <A HREF="motion.html#it">它</A> then
+encoding methods and at <A HREF="starting.html#startup">startup</A> will tell the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator that <A HREF="motion.html#it">它</A>
+understands these key encodings. If your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator supports <A HREF="motion.html#it">它</A> then
 this will allow you to map the key pairs listed above separately.
 
-At <A HREF="starting.html#startup">startup</A> Nvim will query your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to see if <A HREF="motion.html#it">它</A> supports the CSI <A HREF="undo.html#u">u</A>
+At <A HREF="starting.html#startup">startup</A> Nvim will query your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> to see if <A HREF="motion.html#it">它</A> supports the CSI <A HREF="undo.html#u">u</A>
 encoding by <A HREF="editing.html#writing">写</A> the sequence
 
 <B>	CSI ? u CSI c</B>
 
-If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator responds with
+If your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator responds with
 
 <B>	CSI ? &lt;flags&gt; u</B>
 
-this means your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> supports the CSI <A HREF="undo.html#u">u</A> encoding and Nvim will tell your
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to enable <A HREF="motion.html#it">它</A> by <A HREF="editing.html#writing">写</A> the sequence
+this means your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports the CSI <A HREF="undo.html#u">u</A> encoding and Nvim will tell your
+<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> to enable <A HREF="motion.html#it">它</A> by <A HREF="editing.html#writing">写</A> the sequence
 
 <B>	CSI &gt; 1 u</B>
 
-If your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> does not support CSI <A HREF="undo.html#u">u</A> then Nvim will instead enable the
+If your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> does not support CSI <A HREF="undo.html#u">u</A> then Nvim will instead enable the
 &quot;modifyOtherKeys&quot; encoding by <A HREF="editing.html#writing">写</A> the sequence
 
 <B>	CSI &gt; 4 ; 2 m</B>
 
 When Nvim exits cleanly <A HREF="motion.html#it">它</A> will send the corresponding sequence to disable the
-special key encoding. If Nvim does not exit cleanly then your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
+special key encoding. If Nvim does not exit cleanly then your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
 emulator could be in a bad state. If this happens, simply run &quot;reset&quot;.
 
 
 
 							*<A NAME="tui-colors"></A><B>tui-colors</B>*
-Nvim uses 256 colours by default, ignoring |<A HREF="#terminfo">terminfo</A>| for most <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> types,
+Nvim uses 256 colours by default, ignoring |<A HREF="#terminfo">terminfo</A>| for most <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> types,
 including &quot;linux&quot; (whose virtual terminals have had 256-colour support since
 4.8) and anything claiming to be &quot;xterm&quot;.  Also when $COLORTERM or <A HREF="#$TERM">$TERM</A>
 contain the <A HREF="options\.html#options">字符串</A> &quot;256&quot;.
 
-Nvim similarly assumes that any <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator that sets $COLORTERM to any
+Nvim similarly assumes that any <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator that sets $COLORTERM to any
 value, is capable of at least 16-colour operation.
 
 
 						*<A NAME="true-color"></A><B>true-color</B>* *<A NAME="xterm-true-color"></A><B>xterm-true-color</B>*
-Nvim emits true (24-bit) colours in the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, if <A HREF="options.html#'termguicolors'">'termguicolors'</A> is set.
+Nvim emits true (24-bit) colours in the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, if <A HREF="options.html#'termguicolors'">'termguicolors'</A> is set.
 
 It uses the &quot;setrgbf&quot; and &quot;setrgbb&quot; |<A HREF="#terminfo">terminfo</A>| extensions (proposed by Rüdiger
 Sonderfeld in 2013). If your <A HREF="#terminfo">terminfo</A> definition is missing them然后Nvim
 will decide whether to add them to your <A HREF="#terminfo">terminfo</A> definition, using the ISO
 8613-6:1994/ITU T.416:1993 <A HREF="intro.html#control">control</A> sequences for setting RGB colours (but
-modified to use semicolons instead of colons unless the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is known to
+modified to use semicolons instead of colons unless the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is known to
 follow the standard).
 
 Another convention, pioneered in 2016 by tmux, is the &quot;Tc&quot; <A HREF="#terminfo">terminfo</A> extension.
@@ -265,16 +265,16 @@ capabilities <A HREF="motion.html#as">as</A> if they had been in the <A HREF="#t
 If <A HREF="#terminfo">terminfo</A> does not (yet) have this flag, Nvim will fall back to <A HREF="#$TERM">$TERM</A> and
 other environment <A HREF="eval.html#variables">variables</A>.  It will add constructed &quot;setrgbf&quot; and &quot;setrgbb&quot;
 capabilities in the <A HREF="change.html#case">case</A> of the &quot;rxvt&quot;, &quot;linux&quot;, &quot;st&quot;, &quot;tmux&quot;, and &quot;iterm&quot;
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> types, or when Konsole, genuine Xterm, a libvte <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator
-version 0.36 or later, or a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator that sets the COLORTERM
+<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> types, or when Konsole, genuine Xterm, a libvte <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator
+version 0.36 or later, or a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator that sets the COLORTERM
 environment variable to &quot;truecolor&quot; is detected.
 
 
 							*<A NAME="xterm-resize"></A><B>xterm-resize</B>*
-Nvim can resize the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> display on some terminals that implement an
+Nvim can resize the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> display on some terminals that implement an
 extension pioneered by dtterm.  |<A HREF="#terminfo">terminfo</A>| does not have a flag for this
 extension.  So Nvim simply assumes that (all) &quot;dtterm&quot;, &quot;xterm&quot;, &quot;teraterm&quot;,
-&quot;rxvt&quot; <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> types, and Konsole, are capable of this.
+&quot;rxvt&quot; <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> types, and Konsole, are capable of this.
 
 
 							*<A NAME="tui-cursor-shape"></A><B>tui-cursor-shape</B>*
@@ -288,8 +288,8 @@ the cursor through the &quot;cvvis&quot; and &quot;civis&quot; extensions.
 If your <A HREF="#terminfo">terminfo</A> definition is missing them然后Nvim will decide whether to
 add them to your <A HREF="#terminfo">terminfo</A> definition, by looking at <A HREF="#$TERM">$TERM</A> and other
 environment <A HREF="eval.html#variables">variables</A>.  For the &quot;rxvt&quot;, &quot;putty&quot;, &quot;linux&quot;, &quot;screen&quot;,
-&quot;teraterm&quot;, and &quot;iterm&quot; <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> types, or when Konsole, a libvte-based
-<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator, or genuine Xterm are detected, <A HREF="motion.html#it">它</A> will add constructed
+&quot;teraterm&quot;, and &quot;iterm&quot; <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> types, or when Konsole, a libvte-based
+<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator, or genuine Xterm are detected, <A HREF="motion.html#it">它</A> will add constructed
 &quot;Ss&quot; and &quot;Se&quot; capabilities.
 
 
@@ -297,9 +297,9 @@ environment <A HREF="eval.html#variables">variables</A>.  For the &quot;rxvt&quo
 Within tmux <A HREF="motion.html#it">它</A> may appear that Nvim is not <A HREF="change.html#changing">changing</A> the cursor, but in fact <A HREF="motion.html#it">它</A>
 is tmux receiving instructions from Nvim to change the cursor and not knowing
 what to <A HREF="diff.html#do">do</A> in turn.  tmux must translate what <A HREF="motion.html#it">它</A> receives from Nvim into
-whatever <A HREF="intro.html#control">control</A> sequence is appropriate for the host <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  It shares
+whatever <A HREF="intro.html#control">control</A> sequence is appropriate for the host <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  It shares
 a common mechanism with Nvim, of using the &quot;Ss&quot; and &quot;Se&quot; capabilities from
-<A HREF="#terminfo">terminfo</A> (for the output <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>) if they are present. Unlike Nvim, if they
+<A HREF="#terminfo">terminfo</A> (for the output <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>) if they are present. Unlike Nvim, if they
 are not in <A HREF="#terminfo">terminfo</A> you must add them by setting &quot;terminal-overrides&quot; in
 ~/.tmux.conf .
 
@@ -333,19 +333,19 @@ Slow and fast terminals				*<A NAME="slow-fast-terminal"></A><B>slow-fast-termin
 
 						*<A NAME="slow-terminal"></A><B>slow-terminal</B>*
 
-If you have a slow <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> you may want to reset the <A HREF="options.html#'showcmd'">'showcmd'</A> and <A HREF="options.html#'ruler'">'ruler'</A>
+If you have a slow <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you may want to reset the <A HREF="options.html#'showcmd'">'showcmd'</A> and <A HREF="options.html#'ruler'">'ruler'</A>
 <A HREF="options\.html#options">选项</A>.  The command characters and cursor positions will not be shown in the
 status line (which involves a lot of cursor motions and attribute changes for
-every keypress or <A HREF="intro.html#movement">移动</A>).  If the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> scrolls very slowly, set the
+every keypress or <A HREF="intro.html#movement">移动</A>).  If the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> scrolls very slowly, set the
 <A HREF="options.html#'scrolljump'">'scrolljump'</A> to 5 or so.  If the cursor is moved off the screen (e.g., with
 &quot;<A HREF="motion.html#j">j</A>&quot;) Vim will scroll 5 lines at a time.  Another possibility is to reduce the
 number of lines that Vim uses with the command &quot;z{height}&lt;CR&gt;&quot;.
 
-If the characters from the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> are arriving with more than 1 second
+If the characters from the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> are arriving with more than 1 second
 between them you might want to set the <A HREF="options.html#'timeout'">'timeout'</A> and/or <A HREF="options.html#'ttimeout'">'ttimeout'</A> option.
 See the &quot;Options&quot; chapter |<A HREF="options\.html#options">选项</A>|.
 
-If you are using a color <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> that is slow when displaying lines beyond
+If you are using a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> that is slow when displaying lines beyond
 the end of a buffer, this is because Nvim is drawing the <A HREF="pattern.html#whitespace">whitespace</A> <A HREF="if_cscop.html#twice">twice</A>, in
 two sets of colours and attributes.  To prevent this, use this command:
 <B>	hi NonText cterm=NONE ctermfg=NONE</B>

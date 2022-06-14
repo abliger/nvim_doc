@@ -140,7 +140,7 @@ make changes after loading a file, these will be included in the displayed
 diffs.  You might have to <A HREF="#do">do</A> &quot;<A HREF="#:diffupdate">:diffupdate</A>&quot; now and then, not all changes are
 immediately taken into account, especially when using an external <A HREF="#diff">diff</A> command.
 
-In your <A HREF="starting.html#vimrc">vimrc</A> file you could <A HREF="#do">do</A> something special when Vim was started in
+In your <A HREF="starting\.html#vimrc">vimrc</A>文件 you could <A HREF="#do">do</A> something special when Vim was started in
 <A HREF="#diff">diff</A> mode.  You could use a construct like this:
 
 <B>	if &amp;diff</B>
@@ -386,9 +386,9 @@ can't move the cursor into them.  To fill the deleted lines with the lines
 from another buffer use &quot;<A HREF="#:diffget">:diffget</A>&quot; on the line below them.
 
 								*<A NAME="E787"></A><B>E787</B>*
-When the buffer that is about to be modified is read-only and the <A HREF="autocmd.html#autocommand">autocommand</A>
+When the buffer that is about to be modified is read-only and the <A HREF="autocmd\.html#autocommand">自动命令</A>
 that is triggered by |<A HREF="autocmd.html#FileChangedRO">FileChangedRO</A>| changes <A HREF="windows.html#buffers">buffers</A> the command will fail.
-The <A HREF="autocmd.html#autocommand">autocommand</A> must not change <A HREF="windows.html#buffers">buffers</A>.
+The <A HREF="autocmd\.html#autocommand">自动命令</A> must not change <A HREF="windows.html#buffers">buffers</A>.
 
 The [bufspec] argument above can be a buffer number, a <A HREF="pattern.html#pattern">pattern</A> for a buffer
 name or a part of a buffer name.  Examples:
@@ -406,14 +406,14 @@ Also 见 |<A HREF="options.html#'diffopt'">'diffopt'</A>| and the &quot;diff&quo
 
 
 					    *<A NAME="diff-slow"></A><B>diff-slow</B>* *<A NAME="diff_translations"></A><B>diff_translations</B>*
-For very long lines, the <A HREF="#diff">diff</A> <A HREF="syntax.html#syntax">syntax</A> highlighting might be slow, especially
+For very long lines, the <A HREF="#diff">diff</A> <A HREF="syntax\.html#syntax">语法</A> highlighting might be slow, especially
 since <A HREF="motion.html#it">它</A> tries to match all different kind of localisations. To disable
-localisations and speed up the <A HREF="syntax.html#syntax">syntax</A> highlighting, set the global variable
+localisations and speed up the <A HREF="syntax\.html#syntax">语法</A> highlighting, set the global variable
 g:diff_translations to zero:
 
 <B>    let g:diff_translations = 0</B>
  
-After setting this variable, <A HREF="editing.html#reload">reload</A> the <A HREF="syntax.html#syntax">syntax</A> <A HREF="usr_41.html#script">script</A>:
+After setting this variable, <A HREF="editing.html#reload">reload</A> the <A HREF="syntax\.html#syntax">语法</A> <A HREF="usr_41.html#script">script</A>:
 
 <B>    set syntax=diff</B>
  

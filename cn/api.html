@@ -789,8 +789,8 @@ nvim_call_atomic({calls})                                 *<A NAME="nvim_call_at
 nvim_chan_send({chan}, {data})                              *<A NAME="nvim_chan_send()"></A><B>nvim_chan_send()</B>*
                 Send data to <A HREF="channel.html#channel">channel</A> `id`. For a <A HREF="job_control.html#job">job</A>, <A HREF="motion.html#it">它</A> writes <A HREF="motion.html#it">它</A> to the
                 stdin of the process. For the stdio channel |<A HREF="channel.html#channel-stdio">channel-stdio</A>|,
-                <A HREF="motion.html#it">它</A> writes to Nvim's stdout. For an internal <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> instance
-                (|<A HREF="#nvim_open_term()">nvim_open_term()</A>|) <A HREF="motion.html#it">它</A> writes directly to <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> output.
+                <A HREF="motion.html#it">它</A> writes to Nvim's stdout. For an internal <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> instance
+                (|<A HREF="#nvim_open_term()">nvim_open_term()</A>|) <A HREF="motion.html#it">它</A> writes directly to <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> output.
                 见 |<A HREF="channel.html#channel-bytes">channel-bytes</A>| for more information.
 
                 This function writes raw data, not <A HREF="#RPC">RPC</A> <A HREF="message.html#messages">信息</A>. If the
@@ -1087,7 +1087,7 @@ nvim_get_chan_info({chan})                              *<A NAME="nvim_get_chan_
 
                     • &quot;mode&quot; How data received on the <A HREF="channel.html#channel">channel</A> is interpreted.
                       • &quot;bytes&quot; Send and receive raw bytes.
-                      • &quot;terminal&quot; |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>| instance interprets ASCII
+                      • &quot;terminal&quot; |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| instance interprets ASCII
                         sequences.
                       • &quot;<A HREF="#rpc">rpc</A>&quot; |<A HREF="#RPC">RPC</A>| communication on the <A HREF="channel.html#channel">channel</A> is active.
 
@@ -1095,7 +1095,7 @@ nvim_get_chan_info({chan})                              *<A NAME="nvim_get_chan_
                       system this is a device path like &quot;/dev/pts/1&quot;. If the
                       name is unknown, the key will still be present if a pty
                       is used (e.g. for conpty on Windows).
-                    • &quot;buffer&quot; (optional) Buffer with connected |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|
+                    • &quot;buffer&quot; (optional) Buffer with connected |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|
                       instance.
                     • &quot;client&quot; (optional) Info about the peer (client on the
                       other end of the <A HREF="#RPC">RPC</A> channel), if provided by <A HREF="motion.html#it">它</A> via
@@ -1509,27 +1509,27 @@ nvim_notify({msg}, {log_level}, {opts})                        *<A NAME="nvim_no
 
 
 nvim_open_term({buffer}, {opts})                            *<A NAME="nvim_open_term()"></A><B>nvim_open_term()</B>*
-                Open a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> instance in a buffer
+                Open a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> instance in a buffer
 
-                By default (and currently the only option) the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> will
+                By default (and currently the only option) the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> will
                 not be connected to an external process. Instead, input send
-                on the <A HREF="channel.html#channel">channel</A> will be echoed directly by the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>. This
-                is useful to display ANSI <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> sequences returned <A HREF="motion.html#as">as</A> part
+                on the <A HREF="channel.html#channel">channel</A> will be echoed directly by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>. This
+                is useful to display ANSI <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> sequences returned <A HREF="motion.html#as">as</A> part
                 of a <A HREF="#rpc">rpc</A> message, or similar.
 
-                Note: to directly initiate the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> using the right size,
+                Note: to directly initiate the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> using the right size,
                 display the buffer in a configured<A HREF="windows.html#window">窗口</A>before calling this.
                 For instance, for a floating display, first create an empty
                 buffer using |<A HREF="#nvim_create_buf()">nvim_create_buf()</A>|然后display <A HREF="motion.html#it">它</A> using
                 |<A HREF="#nvim_open_win()">nvim_open_win()</A>|, and then call this function. Then
                 |<A HREF="#nvim_chan_send()">nvim_chan_send()</A>| can be called immediately to process
-                sequences in a virtual <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> having the intended size.
+                sequences in a virtual <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> having the intended size.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {buffer}  the buffer to use (expected to be empty)
                     {opts}    Optional parameters.
                               • on_input: <A HREF="lua.html#lua">lua</A> callback for input sent, <A HREF="insert.html#i">i</A> <A HREF="motion.html#e">e</A>
-                                keypresses in <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> mode. Note: keypresses
+                                keypresses in <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> mode. Note: keypresses
                                 are sent raw <A HREF="motion.html#as">as</A> they would be to the pty
                                 master end. For instance, a carriage return is
                                 sent <A HREF="motion.html#as">as</A> a &quot;\r&quot;, not <A HREF="motion.html#as">as</A> a &quot;\n&quot;. |<A HREF="eval.html#textlock">textlock</A>|
@@ -1606,7 +1606,7 @@ nvim_put({lines}, {type}, {after}, {follow})                      *<A NAME="nvim
 
                                                     *<A NAME="nvim_replace_termcodes()"></A><B>nvim_replace_termcodes()</B>*
 nvim_replace_termcodes({str}, {from_part}, {do_lt}, {special})
-                Replaces <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> codes and |<A HREF="intro.html#keycodes">keycodes</A>| (&lt;CR&gt;, <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, <A HREF="eval.html#...">...</A>) in a
+                Replaces <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> codes and |<A HREF="intro.html#keycodes">keycodes</A>| (&lt;CR&gt;, <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, <A HREF="eval.html#...">...</A>) in a
                 <A HREF="options\.html#options">字符串</A> with the internal representation.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -3500,7 +3500,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                   &quot;MyBorder&quot;} ].
 
                               • noautocmd: If true then no buffer-related
-                                <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> such <A HREF="motion.html#as">as</A> |<A HREF="autocmd.html#BufEnter">BufEnter</A>|,
+                                <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> such <A HREF="motion.html#as">as</A> |<A HREF="autocmd.html#BufEnter">BufEnter</A>|,
                                 |<A HREF="autocmd.html#BufLeave">BufLeave</A>| or |<A HREF="autocmd.html#BufWinEnter">BufWinEnter</A>| may fire from
                                 calling this function.
 
@@ -3650,7 +3650,7 @@ nvim_clear_autocmds({*opts})                           *<A NAME="nvim_clear_auto
 
 
 nvim_create_augroup({name}, {*opts})                   *<A NAME="nvim_create_augroup()"></A><B>nvim_create_augroup()</B>*
-                Create or get an <A HREF="autocmd.html#autocommand">autocommand</A> group |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
+                Create or get an <A HREF="autocmd\.html#autocommand">自动命令</A> group |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
 
                 To get an existing group id, <A HREF="diff.html#do">do</A>:
 <B>                    local id = vim.api.nvim_create_augroup("MyGroup", {</B>
@@ -3673,10 +3673,10 @@ nvim_create_augroup({name}, {*opts})                   *<A NAME="nvim_create_aug
 
 
 nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_autocmd()"></A><B>nvim_create_autocmd()</B>*
-                Create an |<A HREF="autocmd.html#autocommand">autocommand</A>|
+                Create an |<A HREF="autocmd\.html#autocommand">自动命令</A>|
 
                 The <A HREF="#API">API</A> allows for two (mutually <A HREF="motion.html#exclusive">exclusive</A>) types of actions
-                to be executed when the <A HREF="autocmd.html#autocommand">autocommand</A> triggers: a callback
+                to be executed when the <A HREF="autocmd\.html#autocommand">自动命令</A> triggers: a callback
                 function (Lua or Vimscript), or a command (like regular
                 autocommands).
 
@@ -3728,30 +3728,30 @@ nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_aut
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     <A HREF="autocmd.html#{event}">{event}</A>  (string|array) The event or <A HREF="autocmd.html#events">events</A> to <A HREF="intro.html#register">register</A>
-                             this <A HREF="autocmd.html#autocommand">autocommand</A>
-                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="options\.html#options">选项</A>:
+                             this <A HREF="autocmd\.html#autocommand">自动命令</A>
+                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options\.html#options">选项</A>:
                              • group (string|integer) optional: the
-                               <A HREF="autocmd.html#autocommand">autocommand</A> group name or id to match against.
+                               <A HREF="autocmd\.html#autocommand">自动命令</A> group name or id to match against.
                              • <A HREF="pattern.html#pattern">pattern</A> (string|array) optional: <A HREF="pattern.html#pattern">pattern</A> or
                                patterns to match against |<A HREF="autocmd.html#autocmd-pattern">autocmd-pattern</A>|.
                              • buffer (integer) optional: buffer number for
                                buffer local autocommands |<A HREF="autocmd.html#autocmd-buflocal">autocmd-buflocal</A>|.
                                Cannot be used with {pattern}.
                              • desc (string) optional: description of the
-                               <A HREF="autocmd.html#autocommand">autocommand</A>.
+                               <A HREF="autocmd\.html#autocommand">自动命令</A>.
                              • callback (function|string) optional: if a
                                <A HREF="options\.html#options">字符串</A>, the name of a Vimscript function to
-                               call when this <A HREF="autocmd.html#autocommand">autocommand</A> is triggered.
+                               call when this <A HREF="autocmd\.html#autocommand">自动命令</A> is triggered.
                                Otherwise, a <A HREF="lua.html#Lua">Lua</A> function which is called when
-                               this <A HREF="autocmd.html#autocommand">autocommand</A> is triggered. Cannot be used
+                               this <A HREF="autocmd\.html#autocommand">自动命令</A> is triggered. Cannot be used
                                with {command}. <A HREF="lua.html#Lua">Lua</A> callbacks can return true
-                               to delete the <A HREF="autocmd.html#autocommand">autocommand</A>; in addition, they
+                               to delete the <A HREF="autocmd\.html#autocommand">自动命令</A>; in addition, they
                                accept a single table argument with the
                                following keys:
-                               • id: (number) the <A HREF="autocmd.html#autocommand">autocommand</A> id
+                               • id: (number) the <A HREF="autocmd\.html#autocommand">自动命令</A> id
                                • event: (string) the name of the event that
-                                 triggered the <A HREF="autocmd.html#autocommand">autocommand</A> |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>|
-                               • group: (number|nil) the <A HREF="autocmd.html#autocommand">autocommand</A> group id,
+                                 triggered the <A HREF="autocmd\.html#autocommand">自动命令</A> |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>|
+                               • group: (number|nil) the <A HREF="autocmd\.html#autocommand">自动命令</A> group id,
                                  if <A HREF="motion.html#it">它</A> exists
                                • match: (string) the expanded value of
                                  |<A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A>|
@@ -3765,20 +3765,20 @@ nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_aut
                                execute on event. Cannot be used with
                                {callback}
                              • once (boolean) optional: defaults to false. Run
-                               the <A HREF="autocmd.html#autocommand">autocommand</A> only once |<A HREF="autocmd.html#autocmd-once">autocmd-once</A>|.
+                               the <A HREF="autocmd\.html#autocommand">自动命令</A> only once |<A HREF="autocmd.html#autocmd-once">autocmd-once</A>|.
                              • nested (boolean) optional: defaults to false.
                                Run nested autocommands |<A HREF="autocmd.html#autocmd-nested">autocmd-nested</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#Integer">Integer</A> id of the created <A HREF="autocmd.html#autocommand">autocommand</A>.
+                    <A HREF="eval.html#Integer">Integer</A> id of the created <A HREF="autocmd\.html#autocommand">自动命令</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
-                    |<A HREF="autocmd.html#autocommand">autocommand</A>|
+                    |<A HREF="autocmd\.html#autocommand">自动命令</A>|
                     |<A HREF="#nvim_del_autocmd()">nvim_del_autocmd()</A>|
 
 
 nvim_del_augroup_by_id({id})                        *<A NAME="nvim_del_augroup_by_id()"></A><B>nvim_del_augroup_by_id()</B>*
-                Delete an <A HREF="autocmd.html#autocommand">autocommand</A> group by id.
+                Delete an <A HREF="autocmd\.html#autocommand">自动命令</A> group by id.
 
                 To get a group id one can use |<A HREF="#nvim_get_autocmds()">nvim_get_autocmds()</A>|.
 
@@ -3795,7 +3795,7 @@ nvim_del_augroup_by_id({id})                        *<A NAME="nvim_del_augroup_b
 
 
 nvim_del_augroup_by_name({name})                  *<A NAME="nvim_del_augroup_by_name()"></A><B>nvim_del_augroup_by_name()</B>*
-                Delete an <A HREF="autocmd.html#autocommand">autocommand</A> group by name.
+                Delete an <A HREF="autocmd\.html#autocommand">自动命令</A> group by name.
 
                 NOTE: behavior differs from |<A HREF="intro.html#augroup-delete">augroup-delete</A>|. When <A HREF="change.html#deleting">deleting</A> a
                 group, autocommands contained in this group will also be
@@ -3809,7 +3809,7 @@ nvim_del_augroup_by_name({name})                  *<A NAME="nvim_del_augroup_by_
 
 
 nvim_del_autocmd({id})                                    *<A NAME="nvim_del_autocmd()"></A><B>nvim_del_autocmd()</B>*
-                Delete an <A HREF="autocmd.html#autocommand">autocommand</A> by id.
+                Delete an <A HREF="autocmd\.html#autocommand">自动命令</A> by id.
 
                 NOTE: Only autocommands created via the <A HREF="#API">API</A> have an id.
 
@@ -3826,9 +3826,9 @@ nvim_exec_autocmds({event}, {*opts})                    *<A NAME="nvim_exec_auto
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     <A HREF="autocmd.html#{event}">{event}</A>  (String|Array) The event or <A HREF="autocmd.html#events">events</A> to execute
-                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="options\.html#options">选项</A>:
+                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options\.html#options">选项</A>:
                              • group (string|integer) optional: the
-                               <A HREF="autocmd.html#autocommand">autocommand</A> group name or id to match against.
+                               <A HREF="autocmd\.html#autocommand">自动命令</A> group name or id to match against.
                                |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
                              • <A HREF="pattern.html#pattern">pattern</A> (string|array) optional: defaults to
                                &quot;*&quot; |<A HREF="autocmd.html#autocmd-pattern">autocmd-pattern</A>|. Cannot be used with
@@ -3840,7 +3840,7 @@ nvim_exec_autocmds({event}, {*opts})                    *<A NAME="nvim_exec_auto
                                Process the <A HREF="options.html#modeline">modeline</A> after the autocommands
                                |<A HREF="autocmd.html#&lt;nomodeline&gt;">&lt;nomodeline&gt;</A>|.
                              • data (any): arbitrary data to send to the
-                               <A HREF="autocmd.html#autocommand">autocommand</A> callback. See
+                               <A HREF="autocmd\.html#autocommand">自动命令</A> callback. See
                                |<A HREF="#nvim_create_autocmd()">nvim_create_autocmd()</A>| for details.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
@@ -3870,7 +3870,7 @@ nvim_get_autocmds({*opts})                               *<A NAME="nvim_get_auto
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  <A HREF="eval.html#Dictionary">Dictionary</A> with at least one of the following:
-                            • group (string|integer): the <A HREF="autocmd.html#autocommand">autocommand</A> group
+                            • group (string|integer): the <A HREF="autocmd\.html#autocommand">自动命令</A> group
                               name or id to match against.
                             • event (string|array): event or <A HREF="autocmd.html#events">events</A> to match
                               against |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>|.
@@ -3880,18 +3880,18 @@ nvim_get_autocmds({*opts})                               *<A NAME="nvim_get_auto
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Array of autocommands matching the criteria, with each
                     item containing the following fields:
-                    • id (number): the <A HREF="autocmd.html#autocommand">autocommand</A> id (only when defined with
+                    • id (number): the <A HREF="autocmd\.html#autocommand">自动命令</A> id (only when defined with
                       the <A HREF="#API">API</A>).
-                    • group (integer): the <A HREF="autocmd.html#autocommand">autocommand</A> group id.
-                    • group_name (string): the <A HREF="autocmd.html#autocommand">autocommand</A> group name.
-                    • desc (string): the <A HREF="autocmd.html#autocommand">autocommand</A> description.
-                    • event (string): the <A HREF="autocmd.html#autocommand">autocommand</A> event.
-                    • command (string): the <A HREF="autocmd.html#autocommand">autocommand</A> command.
-                    • once (boolean): whether the <A HREF="autocmd.html#autocommand">autocommand</A> is only run
+                    • group (integer): the <A HREF="autocmd\.html#autocommand">自动命令</A> group id.
+                    • group_name (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> group name.
+                    • desc (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> description.
+                    • event (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> event.
+                    • command (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> command.
+                    • once (boolean): whether the <A HREF="autocmd\.html#autocommand">自动命令</A> is only run
                       once.
-                    • <A HREF="pattern.html#pattern">pattern</A> (string): the <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="pattern.html#pattern">pattern</A>. If the
-                      <A HREF="autocmd.html#autocommand">autocommand</A> is buffer local YXXYautocmd-buffer-local|:
-                    • buflocal (boolean): true if the <A HREF="autocmd.html#autocommand">autocommand</A> is buffer
+                    • <A HREF="pattern.html#pattern">pattern</A> (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="pattern.html#pattern">pattern</A>. If the
+                      <A HREF="autocmd\.html#autocommand">自动命令</A> is buffer local YXXYautocmd-buffer-local|:
+                    • buflocal (boolean): true if the <A HREF="autocmd\.html#autocommand">自动命令</A> is buffer
                       local.
                     • buffer (number): the buffer number.
 

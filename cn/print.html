@@ -246,7 +246,7 @@ reasons.
 			global
 This is the name of the font that will be used for the |<A HREF="#:hardcopy">:hardcopy</A>| command's
 output.  It has the same format <A HREF="motion.html#as">as</A> the <A HREF="options.html#'guifont'">'guifont'</A> option, except that only one
-font may be named, and the special &quot;guifont=*&quot; <A HREF="syntax.html#syntax">syntax</A> is not available.
+font may be named, and the special &quot;guifont=*&quot; <A HREF="syntax\.html#syntax">语法</A> is not available.
 
 In the Win32 <A HREF="gui.html#GUI">GUI</A> version this specifies a font name with its extra attributes,
 <A HREF="motion.html#as">as</A> with the <A HREF="options.html#'guifont'">'guifont'</A> option.
@@ -402,10 +402,10 @@ of YXXY:hardcopy|:
   header:0		Do not print a header.
   header:2  (default)	Use two lines for the header
 
-  syntax:n		Do not use <A HREF="syntax.html#syntax">syntax</A> highlighting.  This is faster and
+  syntax:n		Do not use <A HREF="syntax\.html#syntax">语法</A> highlighting.  This is faster and
 			thus useful when <A HREF="#printing">printing</A> large files.
-  syntax:y		Do <A HREF="syntax.html#syntax">syntax</A> highlighting.
-  syntax:a  (default)	Use <A HREF="syntax.html#syntax">syntax</A> highlighting if the printer appears to be
+  syntax:y		Do <A HREF="syntax\.html#syntax">语法</A> highlighting.
+  syntax:a  (default)	Use <A HREF="syntax\.html#syntax">语法</A> highlighting if the printer appears to be
 			able to print color or grey.
 
   number:y		Include line numbers in the printed output.
@@ -553,7 +553,7 @@ characters may not appear when printed.
 
 The fonts to use for CJK <A HREF="#printing">printing</A> are specified with <A HREF="options.html#'printmbfont'">'printmbfont'</A>.  This
 option allows you to specify different fonts to use when <A HREF="#printing">printing</A> characters
-which are <A HREF="syntax.html#syntax">syntax</A> highlighted with the font styles normal, <A HREF="syntax.html#italic">italic</A>, <A HREF="syntax.html#bold">bold</A> and
+which are <A HREF="syntax\.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax.html#italic">italic</A>, <A HREF="syntax.html#bold">bold</A> and
 bold-italic.
 
 No CJK fonts are supplied with Vim.  There are some free <A HREF="mbyte.html#Korean">Korean</A>, <A HREF="mbyte.html#Japanese">Japanese</A>, and
@@ -625,9 +625,9 @@ There are a number of possible causes <A HREF="motion.html#as">as</A> to why the
   not.  Try <A HREF="#printing">printing</A> with collation turned off.
 
 - <A HREF="autocmd.html#Syntax">Syntax</A> highlighting.  Some print management code may prevent the generated
-  PostScript file from being printed on a black and white printer when <A HREF="syntax.html#syntax">syntax</A>
+  PostScript file from being printed on a black and white printer when <A HREF="syntax\.html#syntax">语法</A>
   highlighting is turned on, even if solid black is the only color used.  Try
-  <A HREF="#printing">printing</A> with <A HREF="syntax.html#syntax">syntax</A> highlighting turned off.
+  <A HREF="#printing">printing</A> with <A HREF="syntax\.html#syntax">语法</A> highlighting turned off.
 
 A safe printoptions setting to try is:
 

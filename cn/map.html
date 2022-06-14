@@ -476,7 +476,7 @@ preserved, so tricks with |<A HREF="visual.html#gv">gv</A>| are not needed.  Com
 directly in cmdline-mode (which would otherwise require <A HREF="builtin.html#timer">timer</A> hacks).
 
 Unlike &lt;expr&gt; mappings, there are no special restrictions on the <A HREF="#&lt;Cmd&gt;">&lt;Cmd&gt;</A>
-command: <A HREF="motion.html#it">它</A> is executed <A HREF="motion.html#as">as</A> if an (unrestricted) |<A HREF="autocmd.html#autocommand">autocommand</A>| was invoked
+command: <A HREF="motion.html#it">它</A> is executed <A HREF="motion.html#as">as</A> if an (unrestricted) |<A HREF="autocmd\.html#autocommand">自动命令</A>| was invoked
 or an async event event was processed.
 
 Note:
@@ -709,12 +709,12 @@ There are two ways to map a special key:
    refers to function key 10.
 
 DETAIL: Vim first checks if a sequence from the keyboard is mapped.  If <A HREF="motion.html#it">它</A>
-isn't the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> key codes are tried.  If a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> code is found <A HREF="motion.html#it">它</A> is
+isn't the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> key codes are tried.  If a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> code is found <A HREF="motion.html#it">它</A> is
 replaced with the internal code.  Then the check for a <A HREF="#mapping">mapping</A> is done again
 (so you can map an internal code to something else).  What is written into the
-<A HREF="usr_41.html#script">script</A> file depends on what is recognized. If the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> key code was
+<A HREF="usr_41.html#script">script</A> file depends on what is recognized. If the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> key code was
 recognized <A HREF="motion.html#as">as</A> a <A HREF="#mapping">mapping</A> the key code itself is written to the <A HREF="usr_41.html#script">script</A> file.  If
-<A HREF="motion.html#it">它</A> was recognized <A HREF="motion.html#as">as</A> a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> code the internal code is written to the
+<A HREF="motion.html#it">它</A> was recognized <A HREF="motion.html#as">as</A> a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> code the internal code is written to the
 <A HREF="usr_41.html#script">script</A> file.
 
 
@@ -797,10 +797,10 @@ instead of &quot;<A HREF="#mapleader">mapleader</A>&quot;.  <A HREF="#&lt;LocalL
 local to a buffer.  Example:
 <B>      :map &lt;buffer&gt; &lt;LocalLeader&gt;A  oanother line&lt;Esc&gt;</B>
  
-In a global <A HREF="usr_05.html#plugin">plugin</A> <A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A> should be used and in a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A>
+In a global <A HREF="usr_05.html#plugin">plugin</A> <A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A> should be used and in a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>
 <A HREF="#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A>.  &quot;<A HREF="#mapleader">mapleader</A>&quot; and &quot;<A HREF="#maplocalleader">maplocalleader</A>&quot; can be equal.  Although, if
 you make them different, there is a smaller chance of mappings from global
-plugins to clash with mappings for <A HREF="filetype.html#filetype">filetype</A> plugins.例如, you could
+plugins to clash with mappings for <A HREF="filetype\.html#filetype">文件类型</A> plugins.例如, you could
 keep &quot;<A HREF="#mapleader">mapleader</A>&quot; at the default <A HREF="intro.html#backslash">backslash</A>, and set &quot;<A HREF="#maplocalleader">maplocalleader</A>&quot; to an
 underscore.
 
@@ -1012,7 +1012,7 @@ in the original <A HREF="intro.html#Vi">Vi</A>, you would get back the text befo
 1.10 MAPPING ALT-KEYS					*<A NAME=":map-alt-keys"></A><B>:map-alt-keys</B>*
 
 In the <A HREF="gui.html#GUI">GUI</A> Nvim handles the |<A HREF="intro.html#ALT">ALT</A>| key itself, thus <A HREF="#mapping">mapping</A> keys with ALT
-should always work.  But in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> Nvim gets a sequence of bytes and has
+should always work.  But in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> Nvim gets a sequence of bytes and has
 to figure out whether <A HREF="intro.html#ALT">ALT</A> was pressed.  Terminals may use ESC to indicate that
 <A HREF="intro.html#ALT">ALT</A> was pressed.  If ESC is followed by a {key} within <A HREF="options.html#'ttimeoutlen'">'ttimeoutlen'</A>
 milliseconds, the ESC is interpreted <A HREF="motion.html#as">as</A>:
@@ -1305,7 +1305,7 @@ You type:   <A HREF="motion.html#ab">ab</A> esc ^V^V^V^V^V^[
 You see:    <A HREF="motion.html#ab">ab</A> esc ^V^V^[
 
 	The command-line contains two actual ^Vs before the ^[.  This is
-	how <A HREF="motion.html#it">它</A> should appear in your <A HREF="starting.html#vimrc">vimrc</A> file, if you choose to go that
+	how <A HREF="motion.html#it">它</A> should appear in your <A HREF="starting\.html#vimrc">vimrc</A>文件, if you choose to go that
 	route.  The first ^V is there to <A HREF="change.html#quote">quote</A> the second ^V; the <A HREF="#:ab">:ab</A>
 	command uses ^V <A HREF="motion.html#as">as</A> its own <A HREF="change.html#quote">quote</A> character, so you can include quoted
 	<A HREF="pattern.html#whitespace">whitespace</A> or the &#124; character in the abbreviation.  The <A HREF="#:ab">:ab</A> command
@@ -1360,7 +1360,7 @@ use &quot;s:&quot; or &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; and <A 
 function itself was defined.  Also, the &quot;<A HREF="eval.html#s:var">s:var</A>&quot; local <A HREF="usr_41.html#script">script</A> <A HREF="eval.html#variables">variables</A> can be
 used.
 
-When executing an <A HREF="autocmd.html#autocommand">autocommand</A> or a user command, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of
+When executing an <A HREF="autocmd\.html#autocommand">自动命令</A> or a user command, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of
 the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">它</A> was defined in.  This makes <A HREF="motion.html#it">它</A> possible that the command calls a
 local function or uses a local <A HREF="#mapping">mapping</A>.
 
@@ -1540,7 +1540,7 @@ completion can be enabled:
 	-complete=cscope	|<A HREF="if_cscop.html#:cscope">:cscope</A>| suboptions
 	-complete=dir		directory names
 	-complete=environment	environment variable names
-	-complete=event		<A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A>
+	-complete=event		<A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A>
 	-complete=expression	Vim <A HREF="eval.html#expression">expression</A>
 	-complete=file		file and directory names
 	-complete=file_in_path	file and directory names in |<A HREF="options.html#'path'">'path'</A>|

@@ -129,7 +129,7 @@ will start soon.  见 |<A HREF="options.html#'go-M'">'go-M'</A>| about avoiding 
 If you are running in the <A HREF="gui.html#GUI">GUI</A>, you can get white text on a black background
 with:
 <B>	:highlight Normal guibg=Black guifg=White</B>
-For a color <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> 见 |<A HREF="#:hi-normal-cterm">:hi-normal-cterm</A>|.
+For a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> 见 |<A HREF="#:hi-normal-cterm">:hi-normal-cterm</A>|.
 
 NOTE: The <A HREF="#syntax">syntax</A> files on MS-Windows have lines that end in &lt;CR&gt;&lt;NL&gt;.
 The files for Unix end in <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>.  This means you should use the right type of
@@ -186,13 +186,13 @@ Examples:
 	<A HREF="#c.vim">c.vim</A>		<A HREF="#perl.vim">perl.vim</A>	<A HREF="#java.vim">java.vim</A>	<A HREF="#html.vim">html.vim</A>
 	<A HREF="#cpp.vim">cpp.vim</A>		<A HREF="#sh.vim">sh.vim</A>		<A HREF="#csh.vim">csh.vim</A>
 
-The <A HREF="#syntax">syntax</A> file can contain any <A HREF="intro.html#Ex">Ex</A> commands, just like a <A HREF="starting.html#vimrc">vimrc</A> file.  But
+The <A HREF="#syntax">syntax</A> file can contain any <A HREF="intro.html#Ex">Ex</A> commands, just like a <A HREF="starting\.html#vimrc">vimrc</A>文件.  But
 the idea is that only commands for a specific language are included.  When a
 language is a superset of another language, <A HREF="motion.html#it">它</A> may include the other one,
 for example, the <A HREF="#cpp.vim">cpp.vim</A> file could include the <A HREF="#c.vim">c.vim</A> file:
 <B>   :so $VIMRUNTIME/syntax/c.vim</B>
 
-The .vim files are normally loaded with an <A HREF="autocmd.html#autocommand">autocommand</A>.例如:
+The .vim files are normally loaded with an <A HREF="autocmd\.html#autocommand">自动命令</A>.例如:
 <B>   :au Syntax c	    runtime! syntax/c.vim</B>
 <B>   :au Syntax cpp   runtime! syntax/cpp.vim</B>
 These commands are normally in the file $VIMRUNTIME/syntax/synload.vim.
@@ -248,7 +248,7 @@ add a few items or change the highlighting, follow these steps:
 That's <A HREF="motion.html#it">它</A>.  The next time you edit a C file the Comment color will be
 different.  You don't even have to restart Vim.
 
-If you have multiple files, you can use the <A HREF="filetype.html#filetype">filetype</A> <A HREF="motion.html#as">as</A> the directory name.
+If you have multiple files, you can use the <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="motion.html#as">as</A> the directory name.
 All the &quot;*.vim&quot; files in this directory will be used, for example:
 	~/.config/nvim/after/syntax/c/one.vim
 	~/.config/nvim/after/syntax/c/two.vim
@@ -385,13 +385,13 @@ located.  This is used here <A HREF="motion.html#as">as</A> the variable |<A HRE
 
     &#124;	&#124;   *<A NAME="synload-4"></A><B>synload-4</B>*
     &#124;	|
-    &#124;	+-  Install one <A HREF="autocmd.html#autocommand">autocommand</A> which sources scripts.vim when no file
+    &#124;	+-  Install one <A HREF="autocmd\.html#autocommand">自动命令</A> which sources scripts.vim when no file
 
     &#124;	&#124;   type was detected yet. *<A NAME="synload-5"></A><B>synload-5</B>*
     &#124;	|
     &#124;	+-  Source $VIMRUNTIME/menu.vim, to setup the <A HREF="autocmd.html#Syntax">Syntax</A> menu. |<A HREF="menu.html">menu.vim</A>|
     |
-    +-	Install a <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd.html#autocommand">autocommand</A> to set the <A HREF="options.html#'syntax'">'syntax'</A> option when a file
+    +-	Install a <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd\.html#autocommand">自动命令</A> to set the <A HREF="options.html#'syntax'">'syntax'</A> option when a file
 
     &#124;	type has been detected. *<A NAME="synload-6"></A><B>synload-6</B>*
     |
@@ -407,7 +407,7 @@ Upon loading a file, Vim finds the relevant <A HREF="#syntax">syntax</A> file <A
     &#124;	(known file types) or |<A HREF="#synload-4">synload-4</A>| (user's file types), the <A HREF="options.html#'filetype'">'filetype'</A>
     &#124;	option is set to the file type.
     |
-    +-	The <A HREF="autocmd.html#autocommand">autocommand</A> at |<A HREF="#synload-5">synload-5</A>| is triggered.  If the file type was not
+    +-	The <A HREF="autocmd\.html#autocommand">自动命令</A> at |<A HREF="#synload-5">synload-5</A>| is triggered.  If the file type was not
     &#124;	found yet然后scripts.vim is searched for in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  This
     &#124;	should always load $VIMRUNTIME/scripts.vim, which does the following.
     &#124;	|
@@ -420,10 +420,10 @@ Upon loading a file, Vim finds the relevant <A HREF="#syntax">syntax</A> file <A
     &#124;	    file type can be recognized, and set <A HREF="options.html#'filetype'">'filetype'</A>.
     |
     +-	When the file type was determined and <A HREF="options.html#'filetype'">'filetype'</A> was set, this
-    &#124;	triggers the <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd.html#autocommand">autocommand</A> |<A HREF="#synload-6">synload-6</A>| above.  It sets
+    &#124;	triggers the <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd\.html#autocommand">自动命令</A> |<A HREF="#synload-6">synload-6</A>| above.  It sets
     &#124;	<A HREF="options.html#'syntax'">'syntax'</A> to the determined file type.
     |
-    +-	When the <A HREF="options.html#'syntax'">'syntax'</A> option was set above, this triggers an <A HREF="autocmd.html#autocommand">autocommand</A>
+    +-	When the <A HREF="options.html#'syntax'">'syntax'</A> option was set above, this triggers an <A HREF="autocmd\.html#autocommand">自动命令</A>
     &#124;	from |<A HREF="#synload-1">synload-1</A>| (and |<A HREF="#synload-2">synload-2</A>|).  This find the main <A HREF="#syntax">syntax</A> file in
     &#124;	<A HREF="options.html#'runtimepath'">'runtimepath'</A>, with this command:
     &#124;		runtime! syntax/&lt;name&gt;.vim
@@ -1059,7 +1059,7 @@ BASIC			*<A NAME="basic.vim"></A><B>basic.vim</B>* *<A NAME="vb.vim"></A><B>vb.v
 
 Both <A HREF="visual.html#Visual">Visual</A> Basic and &quot;normal&quot; BASIC use the extension &quot;.bas&quot;.	To detect
 which one should be used, Vim checks for the <A HREF="options\.html#options">字符串</A> &quot;VB_Name&quot; in the first
-five lines of the file.  If <A HREF="motion.html#it">它</A> is not found, <A HREF="filetype.html#filetype">filetype</A> will be &quot;basic&quot;,
+five lines of the file.  If <A HREF="motion.html#it">它</A> is not found, <A HREF="filetype\.html#filetype">文件类型</A> will be &quot;basic&quot;,
 otherwise &quot;vb&quot;.  Files with the &quot;.frm&quot; extension will always be seen <A HREF="motion.html#as">as</A> <A HREF="visual.html#Visual">Visual</A>
 Basic.
 
@@ -1309,9 +1309,9 @@ For using tcsh:
 <B>	:let g:filetype_csh = "tcsh"</B>
 
 Any <A HREF="usr_41.html#script">script</A> with a tcsh extension or a standard tcsh filename (.tcshrc,
-tcsh.tcshrc, tcsh.login) will have <A HREF="filetype.html#filetype">filetype</A> tcsh.  All other tcsh/csh scripts
+tcsh.tcshrc, tcsh.login) will have <A HREF="filetype\.html#filetype">文件类型</A> tcsh.  All other tcsh/csh scripts
 will be classified <A HREF="motion.html#as">as</A> tcsh, UNLESS the &quot;filetype_csh&quot; variable exists.  If the
-&quot;filetype_csh&quot; variable exists, the <A HREF="filetype.html#filetype">filetype</A> will be set to the value of the
+&quot;filetype_csh&quot; variable exists, the <A HREF="filetype\.html#filetype">文件类型</A> will be set to the value of the
 variable.
 
 
@@ -1322,7 +1322,7 @@ Cynlib files are C++ files that use the Cynlib class library to enable
 hardware modelling and simulation using C++.  Typically Cynlib files have a .cc
 or a .cpp extension, which makes <A HREF="motion.html#it">它</A> very difficult to distinguish them from a
 normal C++ file.  Thus, to enable Cynlib highlighting for .cc files, add this
-line to your <A HREF="starting.html#vimrc">vimrc</A> file:
+line to your <A HREF="starting\.html#vimrc">vimrc</A>文件:
 
 <B>	:let cynlib_cyntax_for_cc=1</B>
 
@@ -1419,7 +1419,7 @@ You can set the type manually:
 or:
 <B>	:let docbk_type = "xml"</B>
 You need to <A HREF="diff.html#do">do</A> this before loading the <A HREF="#syntax">syntax</A> file, which is complicated.
-Simpler is setting the <A HREF="filetype.html#filetype">filetype</A> to &quot;docbkxml&quot; or &quot;docbksgml&quot;:
+Simpler is setting the <A HREF="filetype\.html#filetype">文件类型</A> to &quot;docbkxml&quot; or &quot;docbksgml&quot;:
 <B>	:set filetype=docbksgml</B>
 or:
 <B>	:set filetype=docbkxml</B>
@@ -1593,10 +1593,10 @@ add the following line to your <A HREF="starting.html#startup">startup</A> file:
 
 <B>	:let g:filetype_euphoria = "euphoria4"</B>
 
-Elixir and Euphoria share the *.ex file extension.  If the <A HREF="filetype.html#filetype">filetype</A> is
+Elixir and Euphoria share the *.ex file extension.  If the <A HREF="filetype\.html#filetype">文件类型</A> is
 specifically set <A HREF="motion.html#as">as</A> Euphoria with the g:filetype_euphoria variable, or the
 file is determined to be Euphoria based on keywords in the file然后the
-<A HREF="filetype.html#filetype">filetype</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype.html#filetype">filetype</A> will default to
+<A HREF="filetype\.html#filetype">文件类型</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype\.html#filetype">文件类型</A> will default to
 Elixir.
 
 
@@ -1626,10 +1626,10 @@ The following file extensions are auto-detected <A HREF="motion.html#as">as</A> 
 
 	*.ex, *.exs, *.eex, *.leex, *.lock
 
-Elixir and Euphoria share the *.ex file extension. If the <A HREF="filetype.html#filetype">filetype</A> is
+Elixir and Euphoria share the *.ex file extension. If the <A HREF="filetype\.html#filetype">文件类型</A> is
 specifically set <A HREF="motion.html#as">as</A> Euphoria with the g:filetype_euphoria variable, or the
 file is determined to be Euphoria based on keywords in the file然后the
-<A HREF="filetype.html#filetype">filetype</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype.html#filetype">filetype</A> will default to
+<A HREF="filetype\.html#filetype">文件类型</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype\.html#filetype">文件类型</A> will default to
 Elixir.
 
 
@@ -1679,7 +1679,7 @@ directives per default in the same <A HREF="#syntax">syntax</A> group.
 
 A predefined enhanced color mode for FORM is available to distinguish between
 header statements and statements in the body of a FORM program.  To activate
-this mode define the following variable in your <A HREF="starting.html#vimrc">vimrc</A> file
+this mode define the following variable in your <A HREF="starting\.html#vimrc">vimrc</A>文件
 
 <B>	:let form_enhanced_color=1</B>
 
@@ -1689,7 +1689,7 @@ conditionals are LightBlue for better distinction.
 
 Both <A HREF="visual.html#Visual">Visual</A> Basic and FORM use the extension &quot;.frm&quot;.  To detect which one
 should be used, Vim checks for the <A HREF="options\.html#options">字符串</A> &quot;VB_Name&quot; in the first five lines of
-the file.  If <A HREF="motion.html#it">它</A> is found, <A HREF="filetype.html#filetype">filetype</A> will be &quot;vb&quot;, otherwise &quot;form&quot;.
+the file.  If <A HREF="motion.html#it">它</A> is found, <A HREF="filetype\.html#filetype">文件类型</A> will be &quot;vb&quot;, otherwise &quot;form&quot;.
 
 If the automatic detection doesn't work for you or you only edit, for
 example, FORM files, use this in your <A HREF="starting.html#startup">startup</A> <A HREF="starting.html#vimrc">vimrc</A>:
@@ -1728,7 +1728,7 @@ in your <A HREF="starting.html#vimrc">vimrc</A> prior to the <A HREF="#:syntax">
 If the form of the source code depends, in a non-standard way, upon the file
 extension然后<A HREF="motion.html#it">它</A> is most convenient to set fortran_free_source in a <A HREF="usr_41.html#ftplugin">ftplugin</A>
 file.  For more information on ftplugin files, 见 |<A HREF="usr_41.html#ftplugin">ftplugin</A>|. Note that this
-will work only if the &quot;<A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command precedes the &quot;<A HREF="#syntax">syntax</A>
+will work only if the &quot;<A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command precedes the &quot;<A HREF="#syntax">syntax</A>
 on&quot; command in your .vimrc file.
 
 
@@ -1815,8 +1815,8 @@ contain the code
 <B>    else</B>
 <B>	unlet! b:fortran_dialect</B>
 <B>    endif</B>
-Note that this will work only if the &quot;<A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command
-precedes the &quot;<A HREF="#syntax">syntax</A> on&quot; command in your <A HREF="starting.html#vimrc">vimrc</A> file.
+Note that this will work only if the &quot;<A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command
+precedes the &quot;<A HREF="#syntax">syntax</A> on&quot; command in your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
 Finer <A HREF="intro.html#control">control</A> is necessary if the file extension does not uniquely identify
 the dialect.  You can override the default dialect, on a file-by-file basis,
@@ -1894,7 +1894,7 @@ GROFF						*<A NAME="groff.vim"></A><B>groff.vim</B>* *<A NAME="ft-groff-syntax"
 The groff <A HREF="#syntax">syntax</A> file is a wrapper for |<A HREF="nroff.html">nroff.vim</A>|, see the notes
 under that heading for examples of use and configuration.  The purpose
 of this wrapper is to set up groff <A HREF="#syntax">syntax</A> extensions by setting the
-<A HREF="filetype.html#filetype">filetype</A> from a |<A HREF="options.html#modeline">modeline</A>| or in a personal <A HREF="filetype.html#filetype">filetype</A> <A HREF="intro.html#definitions">definitions</A> file
+<A HREF="filetype\.html#filetype">文件类型</A> from a |<A HREF="options.html#modeline">modeline</A>| or in a personal <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="intro.html#definitions">definitions</A> file
 (见 |<A HREF="filetype.html">filetype.txt</A>|).
 
 
@@ -1989,7 +1989,7 @@ If you'd like to see an example <A HREF="intro.html#download">download</A> mysyn
 	<A HREF="http://www.fleiner.com/vim/download.html">http://www.fleiner.com/vim/download.html</A>
 
 You can also disable this rendering by adding the following line to your
-<A HREF="starting.html#vimrc">vimrc</A> file:
+<A HREF="starting\.html#vimrc">vimrc</A>文件:
 <B>	:let html_no_rendering=1</B>
 
 HTML comments are rather special (see an HTML reference document for the
@@ -2030,7 +2030,7 @@ different color) you need to add the following line to your <A HREF="starting.ht
 
 Of course, the ctermfg can be a different color if you choose.
 
-Another issues that HTML/OS runs into is that there is no special <A HREF="filetype.html#filetype">filetype</A> to
+Another issues that HTML/OS runs into is that there is no special <A HREF="filetype\.html#filetype">文件类型</A> to
 signify that <A HREF="motion.html#it">它</A> is a file with HTML/OS coding.	You can change this by opening
 a file and turning on HTML/OS <A HREF="#syntax">syntax</A> by doing the following:
 <B>  :set syntax=htmlos</B>
@@ -2043,9 +2043,9 @@ block of HTML/OS code can either be <A HREF="change.html#&lt;&lt;">&lt;&lt;</A> 
 IA64				*<A NAME="ia64.vim"></A><B>ia64.vim</B>* *<A NAME="intel-itanium"></A><B>intel-itanium</B>* *<A NAME="ft-ia64-syntax"></A><B>ft-ia64-syntax</B>*
 
 Highlighting for the Intel Itanium 64 assembly language.  见 |<A HREF="asm.html">asm.vim</A>| for
-how to recognize this <A HREF="filetype.html#filetype">filetype</A>.
+how to recognize this <A HREF="filetype\.html#filetype">文件类型</A>.
 
-To have *.inc files be recognized <A HREF="motion.html#as">as</A> IA64, add this to your <A HREF="starting.html#vimrc">vimrc</A> file:
+To have *.inc files be recognized <A HREF="motion.html#as">as</A> IA64, add this to your <A HREF="starting\.html#vimrc">vimrc</A>文件:
 <B>	:let g:filetype_inc = "ia64"</B>
 
 
@@ -2270,7 +2270,7 @@ LPC						*<A NAME="lpc.vim"></A><B>lpc.vim</B>* *<A NAME="ft-lpc-syntax"></A><B>
 LPC stands for a simple, memory-efficient language: Lars Pensjö C.  The
 file name of LPC is usually *.c.  Recognizing these files <A HREF="motion.html#as">as</A> LPC would bother
 users <A HREF="editing.html#writing">写</A> only C programs.	If you want to use LPC <A HREF="#syntax">syntax</A> in Vim, you
-should set a variable in your <A HREF="starting.html#vimrc">vimrc</A> file:
+should set a variable in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
 
 <B>	:let lpc_syntax_for_c = 1</B>
 
@@ -2353,13 +2353,13 @@ MAPLE						*<A NAME="maple.vim"></A><B>maple.vim</B>* *<A NAME="ft-maple-syntax"
 Maple <A HREF="visual.html#V">V</A>, by Waterloo Maple Inc, supports symbolic algebra.  The language
 supports many <A HREF="repeat.html#packages">packages</A> of <A HREF="eval.html#functions">functions</A> which are selectively loaded by the user.
 The standard set of packages' <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> supplied in Maple <A HREF="visual.html#V">V</A> release 4 may be
-highlighted at the user's discretion.  Users may place in their <A HREF="starting.html#vimrc">vimrc</A> file:
+highlighted at the user's discretion.  Users may place in their <A HREF="starting\.html#vimrc">vimrc</A>文件:
 
 <B>	:let mvpkg_all= 1</B>
 
 to get all package <A HREF="eval.html#functions">functions</A> highlighted, or users may select any subset by
 choosing a variable/package from the table below and setting that variable to
-1, also in their <A HREF="starting.html#vimrc">vimrc</A> file (prior to sourcing
+1, also in their <A HREF="starting\.html#vimrc">vimrc</A>文件 (prior to sourcing
 $VIMRUNTIME/syntax/syntax.vim).
 
 	Table of Maple <A HREF="visual.html#V">V</A> Package Function Selectors
@@ -3117,7 +3117,7 @@ spaces respectively.
  
 This will set the value of <A HREF="options.html#'foldmethod'">'foldmethod'</A> to &quot;<A HREF="#syntax">syntax</A>&quot; locally to the current
 buffer or<A HREF="windows.html#window">窗口</A>, which will enable syntax-based <A HREF="fold.html#folding">folding</A> when editing <A HREF="if_ruby.html#Ruby">Ruby</A>
-<A HREF="filetype.html#filetypes">filetypes</A>.
+<A HREF="filetype\.html#filetypes">文件类型</A>.
 
 Default <A HREF="fold.html#folding">folding</A> is rather detailed, i.e., small <A HREF="#syntax">syntax</A> units like &quot;if&quot;, &quot;<A HREF="diff.html#do">do</A>&quot;,
 &quot;&#37;w[]&quot; may create corresponding fold levels.
@@ -3156,7 +3156,7 @@ The value is a space-separated <A HREF="eval.html#list">列表</A> of keywords:
 
 By default, the &quot;end&quot; keyword is colorized according to the opening statement
 of the block <A HREF="motion.html#it">它</A> closes.  While useful, this feature can be expensive; if you
-experience slow redrawing (or you are on a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> with poor color support)
+experience slow redrawing (or you are on a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> with poor color support)
 you may want to turn <A HREF="motion.html#it">它</A> off by defining the &quot;<A HREF="#ruby_no_expensive">ruby_no_expensive</A>&quot; variable:
 
 <B>	:let ruby_no_expensive = 1</B>
@@ -3223,7 +3223,7 @@ highlighting on the tabs), define &quot;highlight_sedtabs&quot; by putting
 
 <B>	:let highlight_sedtabs = 1</B>
 
-in the <A HREF="starting.html#vimrc">vimrc</A> file.  (This special highlighting only applies for tabs
+in <A HREF="starting\.html#vimrc">vimrc</A>文件.  (This special highlighting only applies for tabs
 inside search patterns, replacement texts, addresses or text included
 by an Append/Change/Insert command.)  If you enable this option, <A HREF="motion.html#it">它</A> is
 also a good idea to set the <A HREF="intro.html#tab">tab</A> width to one character; by doing that,
@@ -3275,7 +3275,7 @@ are read during <A HREF="starting.html#initialization">initialization</A>)
 <B>   let sgml_my_rendering=1</B>
 
 You can also disable this rendering by adding the following line to your
-<A HREF="starting.html#vimrc">vimrc</A> file:
+<A HREF="starting\.html#vimrc">vimrc</A>文件:
 <B>   let sgml_no_rendering=1</B>
 
 (Adapted from the html.vim help text by Claudio Fleiner <A HREF="mailto:claudio@fleiner.com">&lt;claudio@fleiner.com&gt;</A>) 
@@ -3453,7 +3453,7 @@ with the following extensions are recognized <A HREF="motion.html#as">as</A> squ
 TCSH						*<A NAME="tcsh.vim"></A><B>tcsh.vim</B>* *<A NAME="ft-tcsh-syntax"></A><B>ft-tcsh-syntax</B>*
 
 This covers the shell named &quot;tcsh&quot;.  It is a superset of csh.  见 |<A HREF="csh.html">csh.vim</A>|
-for how the <A HREF="filetype.html#filetype">filetype</A> is detected.
+for how the <A HREF="filetype\.html#filetype">文件类型</A> is detected.
 
 Tcsh does not allow \&quot; in strings unless the &quot;backslash_quote&quot; shell variable
 is set.  If you want VIM to assume that no <A HREF="intro.html#backslash">backslash</A> <A HREF="change.html#quote">quote</A> constructs exist 
@@ -5178,9 +5178,9 @@ in their own color.
 <B>				hi Statement ctermfg=Blue guifg=Blue</B>
 
  			Before the color scheme will be loaded the
-			|<A HREF="autocmd.html#ColorSchemePre">ColorSchemePre</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event is triggered.
+			|<A HREF="autocmd.html#ColorSchemePre">ColorSchemePre</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event is triggered.
 			After the color scheme has been loaded the
-			|<A HREF="autocmd.html#ColorScheme">ColorScheme</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event is triggered.
+			|<A HREF="autocmd.html#ColorScheme">ColorScheme</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event is triggered.
 			For info about <A HREF="editing.html#writing">写</A> a colorscheme file:
 <B>				:edit $VIMRUNTIME/colors/README.txt</B>
 
@@ -5240,7 +5240,7 @@ mentioned for the default values. 见 |<A HREF="various.html#:verbose-cmd">:verb
 
 					*<A NAME="highlight-args"></A><B>highlight-args</B>* *<A NAME="E416"></A><B>E416</B>* *<A NAME="E417"></A><B>E417</B>* *<A NAME="E423"></A><B>E423</B>*
 There are two types of UIs for highlighting:
-cterm	<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> UI (|<A HREF="term.html#TUI">TUI</A>|)
+cterm	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> UI (|<A HREF="term.html#TUI">TUI</A>|)
 <A HREF="gui.html#gui">gui</A>	<A HREF="gui.html#GUI">GUI</A> or RGB-capable <A HREF="term.html#TUI">TUI</A> ('termguicolors')
 
 For each type the highlighting can be given.  This makes <A HREF="motion.html#it">它</A> possible to use
@@ -5277,20 +5277,20 @@ cterm={attr-list}			*<A NAME="attr-list"></A><B>attr-list</B>* *<A NAME="highlig
 	Note that &quot;<A HREF="#bold">bold</A>&quot; can be used here and by using a <A HREF="#bold">bold</A> font.  They
 	have the same effect.
 	&quot;<A HREF="#underlineline">underlineline</A>&quot;, &quot;<A HREF="#undercurl">undercurl</A>&quot;, &quot;<A HREF="#underdot">underdot</A>&quot;, and &quot;<A HREF="#underdash">underdash</A>&quot; fall back
-	to &quot;<A HREF="#underline">underline</A>&quot; in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> that does not support them. The color is
+	to &quot;<A HREF="#underline">underline</A>&quot; in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> that does not support them. The color is
 	set using |<A HREF="#highlight-guisp">highlight-guisp</A>|.
 
 
 start={term-list}				*<A NAME="highlight-start"></A><B>highlight-start</B>* *<A NAME="E422"></A><B>E422</B>*
 
 stop={term-list}				*<A NAME="term-list"></A><B>term-list</B>* *<A NAME="highlight-stop"></A><B>highlight-stop</B>*
-	These lists of <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> codes can be used to get
-	non-standard attributes on a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+	These lists of <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> codes can be used to get
+	non-standard attributes on a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 	The <A HREF="intro.html#escape">escape</A> sequence specified with the &quot;start&quot; argument
 	is written before the characters in the highlighted
 	area.  It can be anything that you want to send to the
-	<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> to highlight this area.  The <A HREF="intro.html#escape">escape</A> sequence
+	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> to highlight this area.  The <A HREF="intro.html#escape">escape</A> sequence
 	specified with the &quot;stop&quot; argument is written after the
 	highlighted area.  This should <A HREF="undo.html#undo">undo</A> the &quot;start&quot; argument.
 	Otherwise the screen will look messed up.
@@ -5307,7 +5307,7 @@ ctermfg={color-nr}				*<A NAME="highlight-ctermfg"></A><B>highlight-ctermfg</B>*
 ctermbg={color-nr}				*<A NAME="highlight-ctermbg"></A><B>highlight-ctermbg</B>*
 	The {color-nr} argument is a color number.  Its range is zero to
 	(not including) the number of |<A HREF="term.html#tui-colors">tui-colors</A>| available.
-	The actual color with this number depends on the type of <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
+	The actual color with this number depends on the type of <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
 	and its settings.  Sometimes the color also depends on the settings of
 	&quot;cterm&quot;.例如, on some systems &quot;cterm=bold ctermfg=3&quot; gives
 	another color, on others you just get color 3.
@@ -5515,10 +5515,10 @@ EndOfBuffer	Filler lines (~) after the end of the buffer.
 		By default, this is highlighted like |<A HREF="#hl-NonText">hl-NonText</A>|.
 
 							*<A NAME="hl-TermCursor"></A><B>hl-TermCursor</B>*
-TermCursor	Cursor in a focused <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+TermCursor	Cursor in a focused <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 							*<A NAME="hl-TermCursorNC"></A><B>hl-TermCursorNC</B>*
-TermCursorNC	Cursor in an unfocused <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+TermCursorNC	Cursor in an unfocused <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 							*<A NAME="hl-ErrorMsg"></A><B>hl-ErrorMsg</B>*
 ErrorMsg	Error <A HREF="message.html#messages">信息</A> on the command line.
@@ -5747,13 +5747,13 @@ will be ignored.  Also when there is an existing link.
 Using [default] is especially useful to overrule the highlighting of a
 specific <A HREF="#syntax">syntax</A> file.例如, the C <A HREF="#syntax">syntax</A> file contains:
 <B>	:highlight default link cComment Comment</B>
-If you like Question highlighting for C comments, put this in your <A HREF="starting.html#vimrc">vimrc</A> file:
+If you like Question highlighting for C comments, put this in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
 <B>	:highlight link cComment Question</B>
 Without the &quot;default&quot; in the C <A HREF="#syntax">syntax</A> file, the highlighting would be
 overruled when the <A HREF="#syntax">syntax</A> file is loaded.
 
 To have a link survive `:highlight clear`, which is useful if you have
-highlighting for a specific <A HREF="filetype.html#filetype">filetype</A> and you want to keep <A HREF="motion.html#it">它</A> when selecting
+highlighting for a specific <A HREF="filetype\.html#filetype">文件类型</A> and you want to keep <A HREF="motion.html#it">它</A> when selecting
 another color scheme, put a command like this in the
 &quot;after/syntax/{filetype}.vim&quot; file:
 <B>    highlight! default link cComment Question</B>
@@ -5802,7 +5802,7 @@ defaults back:
 It is a bit of a wrong name, since <A HREF="motion.html#it">它</A> does not reset any <A HREF="#syntax">syntax</A> items, <A HREF="motion.html#it">它</A> only
 affects the highlighting.
 
-Note that the <A HREF="#syntax">syntax</A> colors that you set in your <A HREF="starting.html#vimrc">vimrc</A> file will also be reset
+Note that the <A HREF="#syntax">syntax</A> colors that you set in your <A HREF="starting\.html#vimrc">vimrc</A>文件 will also be reset
 back to their Vim default.
 Note that if you are using a color scheme, the colors defined by the color
 scheme for <A HREF="#syntax">syntax</A> highlighting will be lost.
@@ -5890,7 +5890,7 @@ To test your color setup, a file has been included in the Vim <A HREF="intro.htm
 To use <A HREF="motion.html#it">它</A>, execute this command:
 <B>   :runtime syntax/colortest.vim</B>
 
-Nvim uses 256-color and |<A HREF="term.html#true-color">true-color</A>| <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> capabilities wherever possible.
+Nvim uses 256-color and |<A HREF="term.html#true-color">true-color</A>| <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities wherever possible.
 
 ==============================================================================
 

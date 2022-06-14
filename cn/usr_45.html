@@ -89,7 +89,7 @@ in various languages is explained.
 |<A HREF="#45.4">45.4</A>|	Editing files with a different encoding
 |<A HREF="#45.5">45.5</A>|	Entering language text
 
-上一章: |<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax.html#syntax">syntax</A> highlighted
+上一章: |<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax\.html#syntax">语法</A> highlighted
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
@@ -172,7 +172,7 @@ Like above, differences between &quot;<A HREF="motion.html#-">-</A>&quot; and &q
 differences are ignored here.
    The <A HREF="options.html#'langmenu'">'langmenu'</A> option must be set before the <A HREF="gui.html#menus">menus</A> are loaded.  Once the
 <A HREF="gui.html#menus">menus</A> have been defined <A HREF="change.html#changing">changing</A> <A HREF="options.html#'langmenu'">'langmenu'</A> has no direct effect.  Therefore,
-put the command to set <A HREF="options.html#'langmenu'">'langmenu'</A> in your <A HREF="starting.html#vimrc">vimrc</A> file.
+put the command to set <A HREF="options.html#'langmenu'">'langmenu'</A> in your <A HREF="starting\.html#vimrc">vimrc</A>文件.
    If you really want to switch menu language while running Vim, you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A>
 this way:
 
@@ -273,20 +273,20 @@ font.  Example:
 
 <B>   xterm -u8 -fn -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1</B>
 
-Now you can run Vim inside this <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  Set <A HREF="options.html#'encoding'">'encoding'</A> to &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot; <A HREF="motion.html#as">as</A>
+Now you can run Vim inside this <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  Set <A HREF="options.html#'encoding'">'encoding'</A> to &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot; <A HREF="motion.html#as">as</A>
 before.  That's all.
 
 
 USING UNICODE IN AN ORDINARY TERMINAL
 
-Suppose you want to work with <A HREF="mbyte.html#Unicode">Unicode</A> files, but don't have a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> with
+Suppose you want to work with <A HREF="mbyte.html#Unicode">Unicode</A> files, but don't have a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> with
 <A HREF="mbyte.html#Unicode">Unicode</A> support.  You can <A HREF="diff.html#do">do</A> this with Vim, although characters that are not
-supported by the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> will not be displayed.  The layout of the text
+supported by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> will not be displayed.  The layout of the text
 will be preserved.
 
 Try editing a file with <A HREF="mbyte.html#Unicode">Unicode</A> characters in <A HREF="motion.html#it">它</A>.  You will notice that Vim
 will put a question <A HREF="motion.html#mark">mark</A> (or underscore or some other character) in places
-where a character should be that the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> can't display.  Move the cursor
+where a character should be that the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> can't display.  Move the cursor
 to a question <A HREF="motion.html#mark">mark</A> and use this command:
 
 <B>	ga</B>
@@ -299,7 +299,7 @@ actually view a file that way, if you have lots of time at hand.
 	Since <A HREF="options.html#'encoding'">'encoding'</A> is used for all text inside Vim, <A HREF="change.html#changing">changing</A> <A HREF="motion.html#it">它</A> makes
 	all non-ASCII text invalid.  You will notice this when using <A HREF="change.html#registers">registers</A>
 	and the |<A HREF="starting.html#shada-file">shada-file</A>| (e.g., a remembered search <A HREF="pattern.html#pattern">pattern</A>).  It's
-	recommended to set <A HREF="options.html#'encoding'">'encoding'</A> in your <A HREF="starting.html#vimrc">vimrc</A> file, and leave <A HREF="motion.html#it">它</A> alone.
+	recommended to set <A HREF="options.html#'encoding'">'encoding'</A> in your <A HREF="starting\.html#vimrc">vimrc</A>文件, and leave <A HREF="motion.html#it">它</A> alone.
 
 ==============================================================================
 

@@ -129,7 +129,7 @@ with these (optional) keys:
 				<A HREF="options.html#'wildmenu'">'wildmenu'</A>. |<A HREF="#ui-popupmenu">ui-popupmenu</A>|
 	`ext_tabline`		Externalize the tabline. |<A HREF="#ui-tabline">ui-tabline</A>|
 	`ext_termcolors`	Use external default colors.
-	`term_name`		Sets the name of the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="vim_diff.html#'term'">'term'</A>.
+	`term_name`		Sets the name of the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="vim_diff.html#'term'">'term'</A>.
 	`term_colors`		Sets the number of supported colors 't_Co'.
 	`term_background`	Sets the default value of <A HREF="options.html#'background'">'background'</A>.
 	`stdin_fd`		Read buffer from `fd` <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">它</A> was a stdin pipe
@@ -231,7 +231,7 @@ procedure:
 An <A HREF="#UI">UI</A> can support the native read from stdin feature <A HREF="motion.html#as">as</A> invoked with
 `command &#124; <A HREF="nvim.html#nvim">nvim</A> -` for the builtin <A HREF="term.html#TUI">TUI</A>. |<A HREF="starting.html#--">--</A>|
 The embedding process can detect that its stdin is open to a file which
-not is a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, just like <A HREF="nvim.html#nvim">nvim</A> does. It then needs to forward this fd
+not is a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, just like <A HREF="nvim.html#nvim">nvim</A> does. It then needs to forward this fd
 to Nvim. As fd=0 is already is used to send <A HREF="api.html#rpc">rpc</A> data from the embedder to
 Nvim, <A HREF="motion.html#it">它</A> needs to use some other file descriptor, like fd=3 or higher.
 
@@ -318,7 +318,7 @@ the editor.
 [&quot;mouse_on&quot;]
 [&quot;mouse_off&quot;]
 	<A HREF="options.html#'mouse'">'mouse'</A> was enabled/disabled in the current editor mode. Useful for
-	a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> <A HREF="#UI">UI</A>, or embedding into an application where Nvim mouse would
+	a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="#UI">UI</A>, or embedding into an application where Nvim mouse would
 	conflict with other usages of the mouse. Other UI:s may ignore this event.
 
 [&quot;busy_start&quot;]
@@ -327,7 +327,7 @@ the editor.
 	is misnamed and does not actually have anything to <A HREF="diff.html#do">do</A> with busyness.
 
 [&quot;suspend&quot;]
-	|<A HREF="starting.html#:suspend">:suspend</A>| command or |<A HREF="starting.html#CTRL-Z">CTRL-Z</A>| <A HREF="map.html#mapping">mapping</A> is used. A <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> client (or
+	|<A HREF="starting.html#:suspend">:suspend</A>| command or |<A HREF="starting.html#CTRL-Z">CTRL-Z</A>| <A HREF="map.html#mapping">mapping</A> is used. A <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> client (or
 	another client where <A HREF="motion.html#it">它</A> makes sense) could <A HREF="starting.html#suspend">suspend</A> itself.  Other
 	clients can safely ignore <A HREF="motion.html#it">它</A>.
 
@@ -369,13 +369,13 @@ numerical highlight ids to the actual attributes.
 [&quot;default_colors_set&quot;, rgb_fg, rgb_bg, rgb_sp, cterm_fg, cterm_bg]
 	The first three arguments set the default foreground, background and
 	special colors respectively. `cterm_fg` and `cterm_bg` specifies the
-	default color codes to use in a 256-color <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+	default color codes to use in a 256-color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 	The RGB values will always be valid colors, by default. If no
 	colors have been set, they will default to black and white, depending
 	on <A HREF="options.html#'background'">'background'</A>. By setting the `ext_termcolors` option, instead
 	-1 will be used for unset colors. This is mostly useful for a <A HREF="term.html#TUI">TUI</A>
-	implementation, where using the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> builtin (&quot;ANSI&quot;) defaults
+	implementation, where using the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> builtin (&quot;ANSI&quot;) defaults
 	are expected.
 
 	Note: Unlike the corresponding |<A HREF="#ui-grid-old">ui-grid-old</A>| <A HREF="autocmd.html#events">events</A>, the screen is not
@@ -415,7 +415,7 @@ numerical highlight ids to the actual attributes.
 	are true.
 
 	Highlights are always transmitted both for both the RGB format and <A HREF="motion.html#as">as</A>
-	<A HREF="nvim_terminal_emulator.html#terminal">terminal</A> 256-color codes, <A HREF="motion.html#as">as</A> the `rgb_attr` and `cterm_attr` parameters
+	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> 256-color codes, <A HREF="motion.html#as">as</A> the `rgb_attr` and `cterm_attr` parameters
 	respectively. The |<A HREF="#ui-rgb">ui-rgb</A>| option has no effect effect anymore.
 	Most external UIs will only need to store and use the `rgb_attr`
 	attributes.
@@ -632,7 +632,7 @@ with the following possible keys:
 
     `kind`:	always present. One of the following values:
 	&quot;<A HREF="#ui">ui</A>&quot;:       Builtin <A HREF="#UI">UI</A> highlight. |<A HREF="syntax.html#highlight-groups">highlight-groups</A>|
-	&quot;<A HREF="syntax.html#syntax">syntax</A>&quot;:   Highlight applied to a buffer by a <A HREF="syntax.html#syntax">syntax</A> declaration or
+	&quot;<A HREF="syntax\.html#syntax">语法</A>&quot;:   Highlight applied to a buffer by a <A HREF="syntax\.html#syntax">语法</A> declaration or
 	            other runtime/plugin functionality such <A HREF="motion.html#as">as</A>
 		    |<A HREF="api.html#nvim_buf_add_highlight()">nvim_buf_add_highlight()</A>|
 	&quot;terminal&quot;: highlight from a process running in a |<A HREF="nvim_terminal_emulator.html#terminal-emulator">terminal-emulator</A>|.

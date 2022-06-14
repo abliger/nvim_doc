@@ -337,7 +337,7 @@ the file again.
 
 The <A HREF="options.html#'undofile'">'undofile'</A> option is checked after <A HREF="editing.html#writing">写</A> a file, before the <A HREF="autocmd.html#BufWritePost">BufWritePost</A>
 autocommands.  If you want to <A HREF="intro.html#control">control</A> what files to write <A HREF="#undo">undo</A> information
-for, you can use a <A HREF="autocmd.html#BufWritePre">BufWritePre</A> <A HREF="autocmd.html#autocommand">autocommand</A>:
+for, you can use a <A HREF="autocmd.html#BufWritePre">BufWritePre</A> <A HREF="autocmd\.html#autocommand">自动命令</A>:
 <B>	au BufWritePre /tmp/* setlocal noundofile</B>
 
 Vim saves <A HREF="#undo">undo</A> trees in a separate <A HREF="#undo">undo</A> file, one for each edited file, using

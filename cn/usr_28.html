@@ -89,7 +89,7 @@ This chapter explains the different ways this can be done.
 |<A HREF="#28.4">28.4</A>|	Saving and restoring <A HREF="fold.html#folds">folds</A>
 |<A HREF="#28.5">28.5</A>|	<A HREF="fold.html#Folding">Folding</A> by indent
 |<A HREF="#28.6">28.6</A>|	<A HREF="fold.html#Folding">Folding</A> with markers
-|<A HREF="#28.7">28.7</A>|	<A HREF="fold.html#Folding">Folding</A> by <A HREF="syntax.html#syntax">syntax</A>
+|<A HREF="#28.7">28.7</A>|	<A HREF="fold.html#Folding">Folding</A> by <A HREF="syntax\.html#syntax">语法</A>
 |<A HREF="#28.8">28.8</A>|	<A HREF="fold.html#Folding">Folding</A> by <A HREF="eval.html#expression">expression</A>
 |<A HREF="#28.9">28.9</A>|	<A HREF="fold.html#Folding">Folding</A> unchanged lines
 |<A HREF="#28.10">28.10</A>|	Which fold <A HREF="eval.html#method">method</A> to use?
@@ -394,16 +394,16 @@ More about <A HREF="fold.html#folding">folding</A> with markers in the reference
 
 ==============================================================================
 
-*<A NAME="28.7"></A><B>28.7</B>*	<A HREF="fold.html#Folding">Folding</A> by <A HREF="syntax.html#syntax">syntax</A>
+*<A NAME="28.7"></A><B>28.7</B>*	<A HREF="fold.html#Folding">Folding</A> by <A HREF="syntax\.html#syntax">语法</A>
 
-For each language Vim uses a different <A HREF="syntax.html#syntax">syntax</A> file.  This defines the colors
-for various items in the file.  If you are reading this in Vim, in a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
-that supports colors, the colors you see are made with the &quot;help&quot; <A HREF="syntax.html#syntax">syntax</A> file.
-   In the <A HREF="syntax.html#syntax">syntax</A> files <A HREF="motion.html#it">它</A> is possible to add <A HREF="syntax.html#syntax">syntax</A> items that have the &quot;fold&quot;
-argument.  These define a fold region.  This requires <A HREF="editing.html#writing">写</A> a <A HREF="syntax.html#syntax">syntax</A> file
+For each language Vim uses a different <A HREF="syntax\.html#syntax">语法</A> file.  This defines the colors
+for various items in the file.  If you are reading this in Vim, in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+that supports colors, the colors you see are made with the &quot;help&quot; <A HREF="syntax\.html#syntax">语法</A> file.
+   In the <A HREF="syntax\.html#syntax">语法</A> files <A HREF="motion.html#it">它</A> is possible to add <A HREF="syntax\.html#syntax">语法</A> items that have the &quot;fold&quot;
+argument.  These define a fold region.  This requires <A HREF="editing.html#writing">写</A> a <A HREF="syntax\.html#syntax">语法</A> file
 and adding these items in <A HREF="motion.html#it">它</A>.  That's not so easy to <A HREF="diff.html#do">do</A>.  But once it's done,
 all <A HREF="fold.html#folding">folding</A> happens automatically.
-   Here we'll assume you are using an existing <A HREF="syntax.html#syntax">syntax</A> file.  Then there is
+   Here we'll assume you are using an existing <A HREF="syntax\.html#syntax">语法</A> file.  Then there is
 nothing more to explain.  You can open and close <A HREF="fold.html#folds">folds</A> <A HREF="motion.html#as">as</A> explained above.
 The <A HREF="fold.html#folds">folds</A> will be created and deleted automatically when you edit the file.
 
@@ -476,7 +476,7 @@ For more details 见 |<A HREF="fold.html#fold-diff">fold-diff</A>|.
 All these possibilities make you wonder which <A HREF="eval.html#method">method</A> you should choose.
 Unfortunately, there is no golden rule.  Here are some hints.
 
-If there is a <A HREF="syntax.html#syntax">syntax</A> file with <A HREF="fold.html#folding">folding</A> for the language you are editing, that
+If there is a <A HREF="syntax\.html#syntax">语法</A> file with <A HREF="fold.html#folding">folding</A> for the language you are editing, that
 is probably the best choice.  If there isn't one, you might try to write <A HREF="motion.html#it">它</A>.
 This requires a good knowledge of search patterns.  It's not easy, but when
 it's working you will not have to define <A HREF="fold.html#folds">folds</A> manually.

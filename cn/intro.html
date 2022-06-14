@@ -270,7 +270,7 @@ Vim	Nvim is based on Vim.  https://www.vim.org/
 
 Notation						*<A NAME="notation"></A><B>notation</B>*
 
-When <A HREF="syntax.html#syntax">syntax</A> highlighting is used to read this, text that is not typed
+When <A HREF="syntax\.html#syntax">语法</A> highlighting is used to read this, text that is not typed
 literally is often highlighted with the Special group.  These are items in <A HREF="motion.html#[]">[]</A>,
 <A HREF="#{}">{}</A> and <A HREF="#&lt;&gt;">&lt;&gt;</A>, and <A HREF="change.html#CTRL-X">CTRL-X</A>.
 
@@ -333,7 +333,7 @@ and <A HREF="#&lt;&gt;">&lt;&gt;</A> are part of what you type, the <A HREF="rep
 		- The motion can be backwards, e.g. &quot;db&quot; to delete to the
 		  start of the <A HREF="motion.html#word">单词</A>.
 		- The motion can also be a mouse click.  The mouse is not
-		  supported in every <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> though.
+		  supported in every <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> though.
 		- The &quot;<A HREF="map.html#:omap">:omap</A>&quot;命令 can be used to map characters while an
 		  <A HREF="motion.html#operator">operator</A> is pending.
 		- <A HREF="#Ex">Ex</A> commands can be used to move the cursor.  This can be
@@ -512,15 +512,15 @@ with the &quot;<A HREF="map.html#:map">:map</A>&quot;命令.
 Note:
 
 - Availability of some keys (&lt;Help&gt;, <A HREF="motion.html#&lt;S-Right&gt;">&lt;S-Right&gt;</A>, …) depends on the <A HREF="ui.html#UI">UI</A> or host
-  <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+  <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 - If numlock is on the |<A HREF="term.html#TUI">TUI</A>| receives plain ASCII values, so <A HREF="map.html#mapping">mapping</A> &lt;k0&gt;,
   &lt;k1&gt;, <A HREF="eval.html#...">...</A>, &lt;k9&gt; and &lt;kPoint&gt; will not work.
 - Nvim supports <A HREF="map.html#mapping">mapping</A> <A HREF="mbyte.html#multibyte">multibyte</A> chars with modifiers such <A HREF="motion.html#as">as</A> `&lt;M-ä&gt;`. Which
-  combinations actually work depends on the the <A HREF="ui.html#UI">UI</A> or host <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+  combinations actually work depends on the the <A HREF="ui.html#UI">UI</A> or host <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 - When a key is pressed using a meta or alt modifier and no <A HREF="map.html#mapping">mapping</A> exists
   for that keypress, Nvim behaves <A HREF="motion.html#as">as</A> though <A HREF="#&lt;Esc&gt;">&lt;Esc&gt;</A> was pressed before the key.
 - It is possible to notate combined modifiers (e.g. &lt;C-A-T&gt; for CTRL-ALT-T),
-  but your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> must encode the input for that to work. |<A HREF="term.html#tui-input">tui-input</A>|
+  but your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> must encode the input for that to work. |<A HREF="term.html#tui-input">tui-input</A>|
 
 
 								*<A NAME="&lt;&gt;"></A><B>&lt;&gt;</B>*
@@ -765,7 +765,7 @@ cursor position			<A HREF="options.html#'ruler'">'ruler'</A>		off	    off
 The current mode is &quot;<A HREF="starting.html#--">--</A> INSERT --&quot; or &quot;<A HREF="starting.html#--">--</A> REPLACE --&quot;, 见 |<A HREF="options.html#'showmode'">'showmode'</A>|.  The
 command characters are those that you typed but were not used yet.
 
-If you have a slow <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> you can switch off the status <A HREF="message.html#messages">信息</A> to speed
+If you have a slow <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you can switch off the status <A HREF="message.html#messages">信息</A> to speed
 up editing:
 	<A HREF="options.html#:set">:set</A> <A HREF="options.html#'nosc'">nosc</A> noru nosm
 

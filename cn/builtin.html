@@ -192,7 +192,7 @@ dictwatcheradd({dict}, {pattern}, {callback})
 				Start watching a dictionary
 dictwatcherdel({dict}, {pattern}, {callback})
 				Stop watching a dictionary
-<A HREF="#did_filetype()">did_filetype()</A>			<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd.html#autocommand">autocommand</A> event used
+<A HREF="#did_filetype()">did_filetype()</A>			<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event used
 diff_filler({lnum})		<A HREF="eval.html#Number">Number</A>	<A HREF="diff.html#diff">diff</A> filler lines about {lnum}
 diff_hlID({lnum}, {col})	<A HREF="eval.html#Number">Number</A>	<A HREF="diff.html#diff">diff</A> highlighting at {lnum}/{col}
 digraph_get({chars})		<A HREF="options\.html#options">字符串</A>	get the <A HREF="digraph.html#digraph">digraph</A> of {chars}
@@ -320,7 +320,7 @@ histdel({history} [, {item}])	<A HREF="options\.html#options">字符串</A>	remo
 histget({history} [, {index}])	<A HREF="options\.html#options">字符串</A>	get the item {index} from a <A HREF="cmdline.html#history">history</A>
 histnr({history})		<A HREF="eval.html#Number">Number</A>	highest index of a <A HREF="cmdline.html#history">history</A>
 hlexists({name})		<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if highlight group {name} exists
-hlID({name})			<A HREF="eval.html#Number">Number</A>	<A HREF="syntax.html#syntax">syntax</A> ID of highlight group {name}
+hlID({name})			<A HREF="eval.html#Number">Number</A>	<A HREF="syntax\.html#syntax">语法</A> ID of highlight group {name}
 <A HREF="#hostname()">hostname()</A>			<A HREF="options\.html#options">字符串</A>	name of the machine Vim is running on
 iconv({expr}, {from}, {to})	<A HREF="options\.html#options">字符串</A>	convert encoding of {expr}
 indent({lnum})			<A HREF="eval.html#Number">Number</A>	indent of line {lnum}
@@ -346,7 +346,7 @@ id({expr})			<A HREF="options\.html#options">字符串</A>	identifier of the con
 items({dict})			<A HREF="eval.html#list">列表</A>	key-value pairs in {dict}
 jobpid({id})			<A HREF="eval.html#Number">Number</A>	Returns pid of a <A HREF="job_control.html#job">job</A>.
 jobresize({id}, {width}, {height})
-				<A HREF="eval.html#Number">Number</A>	Resize pseudo <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>of a <A HREF="job_control.html#job">job</A>
+				<A HREF="eval.html#Number">Number</A>	Resize pseudo <A HREF="nvim_terminal_emulator\.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>of a <A HREF="job_control.html#job">job</A>
 jobstart({cmd} [, {opts}])	<A HREF="eval.html#Number">Number</A>	Spawns {cmd} <A HREF="motion.html#as">as</A> a <A HREF="job_control.html#job">job</A>
 jobstop({id})			<A HREF="eval.html#Number">Number</A>	Stops a <A HREF="job_control.html#job">job</A>
 jobwait({ids} [, {timeout}])	<A HREF="eval.html#Number">Number</A>	Wait for a set of jobs
@@ -560,12 +560,12 @@ substitute({expr}, {pat}, {sub}, {flags})
 				<A HREF="options\.html#options">字符串</A>	all {pat} in {expr} replaced with {sub}
 swapinfo({fname})		<A HREF="eval.html#Dict">Dict</A>	information about swap file {fname}
 swapname({buf})			<A HREF="options\.html#options">字符串</A>	swap file of buffer {buf}
-synID({lnum}, {col}, {trans})	<A HREF="eval.html#Number">Number</A>	<A HREF="syntax.html#syntax">syntax</A> ID at {lnum} and {col}
+synID({lnum}, {col}, {trans})	<A HREF="eval.html#Number">Number</A>	<A HREF="syntax\.html#syntax">语法</A> ID at {lnum} and {col}
 synIDattr({synID}, {what} [, {mode}])
-				<A HREF="options\.html#options">字符串</A>	attribute {what} of <A HREF="syntax.html#syntax">syntax</A> ID {synID}
-synIDtrans({synID})		<A HREF="eval.html#Number">Number</A>	translated <A HREF="syntax.html#syntax">syntax</A> ID of {synID}
+				<A HREF="options\.html#options">字符串</A>	attribute {what} of <A HREF="syntax\.html#syntax">语法</A> ID {synID}
+synIDtrans({synID})		<A HREF="eval.html#Number">Number</A>	translated <A HREF="syntax\.html#syntax">语法</A> ID of {synID}
 synconcealed({lnum}, {col})	<A HREF="eval.html#list">列表</A>	info about concealing
-synstack({lnum}, {col})	<A HREF="eval.html#list">列表</A>	stack of <A HREF="syntax.html#syntax">syntax</A> IDs at {lnum} and {col}
+synstack({lnum}, {col})	<A HREF="eval.html#list">列表</A>	stack of <A HREF="syntax\.html#syntax">语法</A> IDs at {lnum} and {col}
 system({cmd} [, {input}])	<A HREF="options\.html#options">字符串</A>	output of shell command/filter {cmd}
 systemlist({cmd} [, {input}])	<A HREF="eval.html#list">列表</A>	output of shell command/filter {cmd}
 tabpagebuflist([{arg}])		<A HREF="eval.html#list">列表</A>	<A HREF="eval.html#list">列表</A> of buffer numbers in <A HREF="intro.html#tab">tab</A> page
@@ -1764,8 +1764,8 @@ dictwatcherdel({dict}, {pattern}, {callback})		      *<A NAME="dictwatcherdel()"
 		Returns |<A HREF="eval.html#FALSE">FALSE</A>| when `:setf FALLBACK` was used.
 		When editing another file, the counter is reset, thus this
 		really checks if the <A HREF="autocmd.html#FileType">FileType</A> event has been triggered for the
-		current buffer.  This allows an <A HREF="autocmd.html#autocommand">autocommand</A> that starts
-		editing another buffer to set <A HREF="options.html#'filetype'">'filetype'</A> and load a <A HREF="syntax.html#syntax">syntax</A>
+		current buffer.  This allows an <A HREF="autocmd\.html#autocommand">自动命令</A> that starts
+		editing another buffer to set <A HREF="options.html#'filetype'">'filetype'</A> and load a <A HREF="syntax\.html#syntax">语法</A>
 		file.
 
 
@@ -1791,7 +1791,7 @@ diff_hlID({lnum}, {col})				*<A NAME="diff_hlID()"></A><B>diff_hlID()</B>*
 		{col} is 1 for the leftmost column, {lnum} is 1 for the first
 		line.
 		The highlight ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| to obtain
-		<A HREF="syntax.html#syntax">syntax</A> information about the highlighting.
+		<A HREF="syntax\.html#syntax">语法</A> information about the highlighting.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetLnum()-&gt;diff_hlID(col)</B>
@@ -2044,19 +2044,19 @@ exists({expr})	The result is a <A HREF="eval.html#Number">Number</A>, which is |
 					always check the return value to be 2.
 			:2match		The |<A HREF="pattern.html#:2match">:2match</A>| command.
 			:3match		The |<A HREF="pattern.html#:3match">:3match</A>| command.
-			#event		<A HREF="autocmd.html#autocommand">autocommand</A> defined for this event
-			#event#pattern	<A HREF="autocmd.html#autocommand">autocommand</A> defined for this event and
+			#event		<A HREF="autocmd\.html#autocommand">自动命令</A> defined for this event
+			#event#pattern	<A HREF="autocmd\.html#autocommand">自动命令</A> defined for this event and
 					<A HREF="pattern.html#pattern">pattern</A> (the <A HREF="pattern.html#pattern">pattern</A> is taken
 					literally and compared to the
-					<A HREF="autocmd.html#autocommand">autocommand</A> patterns character by
+					<A HREF="autocmd\.html#autocommand">自动命令</A> patterns character by
 					character)
-			#group		<A HREF="autocmd.html#autocommand">autocommand</A> group exists
-			#group#event	<A HREF="autocmd.html#autocommand">autocommand</A> defined for this group and
+			#group		<A HREF="autocmd\.html#autocommand">自动命令</A> group exists
+			#group#event	<A HREF="autocmd\.html#autocommand">自动命令</A> defined for this group and
 					event.
 			#group#event#pattern
-					<A HREF="autocmd.html#autocommand">autocommand</A> defined for this group,
+					<A HREF="autocmd\.html#autocommand">自动命令</A> defined for this group,
 					event and <A HREF="pattern.html#pattern">pattern</A>.
-			##event		<A HREF="autocmd.html#autocommand">autocommand</A> for this event is
+			##event		<A HREF="autocmd\.html#autocommand">自动命令</A> for this event is
 					supported.
 
 		Examples:
@@ -2396,7 +2396,7 @@ filter({expr1}, {expr2})					*<A NAME="filter()"></A><B>filter()</B>*
 finddir({name} [, {path} [, {count}]])				*<A NAME="finddir()"></A><B>finddir()</B>*
 		Find directory {name} in {path}.  Supports both downwards and
 		upwards recursive directory searches.  见 |<A HREF="editing.html#file-searching">file-searching</A>|
-		for the <A HREF="syntax.html#syntax">syntax</A> of {path}.
+		for the <A HREF="syntax\.html#syntax">语法</A> of {path}.
 
 		Returns the path of the first found match.  When the found
 		directory is below the current directory a relative path is
@@ -3112,7 +3112,7 @@ getcompletion({pat}, {type} [, {filtered}])		*<A NAME="getcompletion()"></A><B>g
 		diff_buffer     |<A HREF="diff.html#:diffget">:diffget</A>| and |<A HREF="diff.html#:diffput">:diffput</A>| completion
 		dir		directory names
 		environment	environment variable names
-		event		<A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A>
+		event		<A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A>
 		<A HREF="eval.html#expression">expression</A>	Vim <A HREF="eval.html#expression">expression</A>
 		file		file and directory names
 		file_in_path	file and directory names in |<A HREF="options.html#'path'">'path'</A>|
@@ -3242,7 +3242,7 @@ getfontname([{name}])					*<A NAME="getfontname()"></A><B>getfontname()</B>*
 		Otherwise the actual font name is returned, or {name} if the
 		<A HREF="gui.html#GUI">GUI</A> does not support obtaining the real name.
 		Only works when the <A HREF="gui.html#GUI">GUI</A> is running, thus not in your <A HREF="starting.html#vimrc">vimrc</A> or
-		<A HREF="gui.html#gvimrc">gvimrc</A> file.  Use the |<A HREF="deprecated.html#GUIEnter">GUIEnter</A>| <A HREF="autocmd.html#autocommand">autocommand</A> to use this
+		<A HREF="gui.html#gvimrc">gvimrc</A> file.  Use the |<A HREF="deprecated.html#GUIEnter">GUIEnter</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> to use this
 		function just after the <A HREF="gui.html#GUI">GUI</A> has started.
 
 
@@ -3797,7 +3797,7 @@ getwininfo([{winid}])					*<A NAME="getwininfo()"></A><B>getwininfo()</B>*
 			height		<A HREF="windows.html#window">窗口</A>height (excluding winbar)
 			loclist		1 if showing a location <A HREF="eval.html#list">列表</A>
 			<A HREF="quickfix.html#quickfix">quickfix</A>	1 if <A HREF="quickfix.html#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A><A HREF="windows.html#window">窗口</A>
-			<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>	1 if a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>
+			<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>	1 if a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>
 			tabnr		<A HREF="intro.html#tab">tab</A> page number
 			topline		first displayed buffer line
 			<A HREF="eval.html#variables">variables</A>	a reference to the dictionary with
@@ -3824,9 +3824,9 @@ getwinpos([{timeout}])					*<A NAME="getwinpos()"></A><B>getwinpos()</B>*
 		|<A HREF="#getwinposx()">getwinposx()</A>| and |<A HREF="#getwinposy()">getwinposy()</A>| combined:
 			[x-pos, y-pos]
 		{timeout} can be used to specify how long to wait in msec for
-		a response from the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.  When omitted 100 msec is used.
+		a response from the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  When omitted 100 msec is used.
 
-		Use a longer time for a remote <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+		Use a longer time for a remote <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 		When using a value <A HREF="various.html#less">less</A> than 10 and no response is received
 		within that time, a previously reported position is returned,
 		if available.  This can be used to poll for the position and
@@ -3968,12 +3968,12 @@ has({feature})	Returns 1 if {feature} is supported, 0 otherwise.  The
 		{feature} argument is a feature name like &quot;nvim-0.2.1&quot; or
 		&quot;win32&quot;, see below.  See also |<A HREF="#exists()">exists()</A>|.
 
-		If the code has a <A HREF="syntax.html#syntax">syntax</A> error然后Nvim may skip the rest
+		If the code has a <A HREF="syntax\.html#syntax">语法</A> error然后Nvim may skip the rest
 		of the line and miss |<A HREF="eval.html#:endif">:endif</A>|.
 <B>	if has('feature') | let x = this-&gt;breaks-&gt;without-&gt;the-&gt;feature | endif</B>
  
 		Put |<A HREF="eval.html#:if">:if</A>| and |<A HREF="eval.html#:endif">:endif</A>| on separate lines to avoid the
-		<A HREF="syntax.html#syntax">syntax</A> error.
+		<A HREF="syntax\.html#syntax">语法</A> error.
 <B>	if has('feature')</B>
 <B>	  let x = this-&gt;breaks-&gt;without-&gt;the-&gt;feature</B>
 <B>	endif</B>
@@ -4005,8 +4005,8 @@ has({feature})	Returns 1 if {feature} is supported, 0 otherwise.  The
 			python3		Legacy Vim |<A HREF="if_pyth.html#python3">python3</A>| interface. |<A HREF="if_pyth.html#has-python">has-python</A>|
 			pythonx		Legacy Vim |<A HREF="if_pyth.html#python_x">python_x</A>| interface. |<A HREF="if_pyth.html#has-pythonx">has-pythonx</A>|
 			sun		SunOS system.
-			ttyin		input is a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (tty).
-			ttyout		output is a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (tty).
+			ttyin		input is a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> (tty).
+			ttyout		output is a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> (tty).
 			unix		Unix system.
 
 			*<A NAME="vim_starting"></A><B>vim_starting</B>*	True during |<A HREF="starting.html#startup">startup</A>|.
@@ -4189,7 +4189,7 @@ hlexists({name})					*<A NAME="hlexists()"></A><B>hlexists()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is <A HREF="eval.html#TRUE">TRUE</A> if a highlight group
 		called {name} exists.  This is when the group has been
 		defined in some way.  Not necessarily when highlighting has
-		been defined for <A HREF="motion.html#it">它</A>, <A HREF="motion.html#it">它</A> may also have been used for a <A HREF="syntax.html#syntax">syntax</A>
+		been defined for <A HREF="motion.html#it">它</A>, <A HREF="motion.html#it">它</A> may also have been used for a <A HREF="syntax\.html#syntax">语法</A>
 		item.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -4459,7 +4459,7 @@ insert({object}, {item} [, {idx}])			*<A NAME="insert()"></A><B>insert()</B>*
 		Interrupt <A HREF="usr_41.html#script">script</A> execution.  It works more or <A HREF="various.html#less">less</A> like the
 		user typing <A HREF="pattern.html#CTRL-C">CTRL-C</A>, most commands won't execute and <A HREF="intro.html#control">control</A>
 		returns to the user.  This is useful to abort execution
-		from lower down, e.g. in an <A HREF="autocmd.html#autocommand">autocommand</A>.  Example:
+		from lower down, e.g. in an <A HREF="autocmd\.html#autocommand">自动命令</A>.  Example:
 <B>		:function s:check_typoname(file)</B>
 <B>		:   if fnamemodify(a:file, ':t') == '['</B>
 <B>		:       echomsg 'Maybe typo'</B>
@@ -4563,7 +4563,7 @@ jobpid({job})						*<A NAME="jobpid()"></A><B>jobpid()</B>*
 
 
 jobresize({job}, {width}, {height})			*<A NAME="jobresize()"></A><B>jobresize()</B>*
-		Resize the pseudo <A HREF="nvim_terminal_emulator.html#terminal">terminal</A><A HREF="windows.html#window">窗口</A>of |<A HREF="job_control.html#job-id">job-id</A>| {job} to {width}
+		Resize the pseudo <A HREF="nvim_terminal_emulator\.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>of |<A HREF="job_control.html#job-id">job-id</A>| {job} to {width}
 		columns and {height} rows.
 		Fails if the <A HREF="job_control.html#job">job</A> was not started with `&quot;pty&quot;:v:true`.
 
@@ -4620,7 +4620,7 @@ jobstart({cmd} [, {opts}])				*<A NAME="jobstart()"></A><B>jobstart()</B>*
 		  env:	      (dict) Map of environment variable name:value
 			      pairs extending (or <A HREF="change.html#replacing">replacing</A> with |<A HREF="intro.html#clear_env">clear_env</A>|)
 			      the current environment. |<A HREF="#jobstart-env">jobstart-env</A>|
-		  height:     (number) Height of the `pty` <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+		  height:     (number) Height of the `pty` <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 		  |on_exit|:    (function) Callback invoked when the <A HREF="job_control.html#job">job</A> exits.
 		  |on_stdout|:  (function) Callback invoked when the <A HREF="job_control.html#job">job</A> emits
 			      stdout data.
@@ -4632,7 +4632,7 @@ jobstart({cmd} [, {opts}])				*<A NAME="jobstart()"></A><B>jobstart()</B>*
 			      (Only available on MS-Windows, On other
 			      platforms, this option is silently ignored.)
 		  pty:	      (boolean) Connect the <A HREF="job_control.html#job">job</A> to a new pseudo
-			      <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, and its streams to the master file
+			      <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, and its streams to the master file
 			      descriptor. `on_stdout` receives all output,
 			      `on_stderr` is ignored. |<A HREF="nvim_terminal_emulator.html#terminal-start">terminal-start</A>|
 		  rpc:	      (boolean) Use |<A HREF="api.html#msgpack-rpc">msgpack-rpc</A>| to communicate with
@@ -4645,7 +4645,7 @@ jobstart({cmd} [, {opts}])				*<A NAME="jobstart()"></A><B>jobstart()</B>*
 		  stdin:      (string) Either &quot;pipe&quot; (default) to connect the
 			      job's stdin to a <A HREF="channel.html#channel">channel</A> or &quot;null&quot; to disconnect
 			      stdin.
-		  width:      (number) Width of the `pty` <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+		  width:      (number) Width of the `pty` <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 		{opts} is passed <A HREF="motion.html#as">as</A> |<A HREF="eval.html#self">self</A>| dictionary to the callback; the
 		caller may set other keys to pass application-specific data.
@@ -5186,7 +5186,7 @@ matchadd({group}, {pattern} [, {priority} [, {id} [, {dict}]]])
 		hence all matches with a priority greater than zero will
 		overrule <A HREF="motion.html#it">它</A>.  <A HREF="autocmd.html#Syntax">Syntax</A> highlighting (see <A HREF="options.html#'syntax'">'syntax'</A>) is a separate
 		mechanism, and regardless of the chosen priority a match will
-		always overrule <A HREF="syntax.html#syntax">syntax</A> highlighting.
+		always overrule <A HREF="syntax\.html#syntax">语法</A> highlighting.
 
 		The optional {id} argument allows the request for a specific
 		match ID.  If a specified ID is already taken, an error
@@ -6779,7 +6779,7 @@ searchcount([{options}])					*<A NAME="searchcount()"></A><B>searchcount()</B>*
 <B>			" \   '%{v:hlsearch ? LastSearchCount() : ""}'</B>
  
 		You can also update the search <A HREF="intro.html#count">count</A>, which can be useful in a
-		|<A HREF="autocmd.html#CursorMoved">CursorMoved</A>| or |<A HREF="autocmd.html#CursorMovedI">CursorMovedI</A>| <A HREF="autocmd.html#autocommand">autocommand</A>:
+		|<A HREF="autocmd.html#CursorMoved">CursorMoved</A>| or |<A HREF="autocmd.html#CursorMovedI">CursorMovedI</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>:
 
 <B>			autocmd CursorMoved,CursorMovedI *</B>
 <B>			  \ let s:searchcount_timer = timer_start(</B>
@@ -6941,7 +6941,7 @@ searchpair({start}, {middle}, {end} [, {flags} [, {skip}
 <B>	:echo searchpair('{', '', '}', 'bW')</B>
 
  		This works when the cursor is at or before the &quot;<A HREF="motion.html#}">}</A>&quot; for which a
-		match is to be found.  To reject matches that <A HREF="syntax.html#syntax">syntax</A>
+		match is to be found.  To reject matches that <A HREF="syntax\.html#syntax">语法</A>
 		highlighting recognized <A HREF="motion.html#as">as</A> strings:
 
 <B>	:echo searchpair('{', '', '}', 'bW',</B>
@@ -8375,10 +8375,10 @@ swapname({buf})						*<A NAME="swapname()"></A><B>swapname()</B>*
 
 
 synID({lnum}, {col}, {trans})				*<A NAME="synID()"></A><B>synID()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is the <A HREF="syntax.html#syntax">syntax</A> ID at the position
+		The result is a <A HREF="eval.html#Number">Number</A>, which is the <A HREF="syntax\.html#syntax">语法</A> ID at the position
 		{lnum} and {col} in the current<A HREF="windows.html#window">窗口</A>.
-		The <A HREF="syntax.html#syntax">syntax</A> ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| and
-		|<A HREF="#synIDtrans()">synIDtrans()</A>| to obtain <A HREF="syntax.html#syntax">syntax</A> information about text.
+		The <A HREF="syntax\.html#syntax">语法</A> ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| and
+		|<A HREF="#synIDtrans()">synIDtrans()</A>| to obtain <A HREF="syntax\.html#syntax">语法</A> information about text.
 
 		{col} is 1 for the leftmost column, {lnum} is 1 for the first
 		line.  <A HREF="options.html#'synmaxcol'">'synmaxcol'</A> applies, in a longer line zero is returned.
@@ -8390,26 +8390,26 @@ synID({lnum}, {col}, {trans})				*<A NAME="synID()"></A><B>synID()</B>*
 		item that they reveal.  This is useful when wanting to know
 		the effective color.  When {trans} is |<A HREF="eval.html#FALSE">FALSE</A>|, the transparent
 		item is returned.  This is useful when wanting to know which
-		<A HREF="syntax.html#syntax">syntax</A> item is effective (e.g. inside parens).
+		<A HREF="syntax\.html#syntax">语法</A> item is effective (e.g. inside parens).
 		Warning: This function can be very slow.  Best speed is
 		obtained by going through the file in forward direction.
 
-		Example (echoes the name of the <A HREF="syntax.html#syntax">syntax</A> item under the cursor):
+		Example (echoes the name of the <A HREF="syntax\.html#syntax">语法</A> item under the cursor):
 <B>			:echo synIDattr(synID(line("."), col("."), 1), "name")</B>
  
 
 
 synIDattr({synID}, {what} [, {mode}])			*<A NAME="synIDattr()"></A><B>synIDattr()</B>*
 		The result is a <A HREF="options\.html#options">字符串</A>, which is the {what} attribute of
-		<A HREF="syntax.html#syntax">syntax</A> ID {synID}.  This can be used to obtain information
-		about a <A HREF="syntax.html#syntax">syntax</A> item.
+		<A HREF="syntax\.html#syntax">语法</A> ID {synID}.  This can be used to obtain information
+		about a <A HREF="syntax\.html#syntax">语法</A> item.
 		{mode} can be &quot;<A HREF="gui.html#gui">gui</A>&quot;, &quot;cterm&quot; or &quot;term&quot;, to get the attributes
 		for that mode.  When {mode} is omitted, or an invalid value is
 		used, the attributes for the currently active highlighting are
 		used (GUI, cterm or term).
 		Use <A HREF="#synIDtrans()">synIDtrans()</A> to follow linked highlight groups.
 		{what}		result
-		&quot;name&quot;		the name of the <A HREF="syntax.html#syntax">syntax</A> item
+		&quot;name&quot;		the name of the <A HREF="syntax\.html#syntax">语法</A> item
 		&quot;fg&quot;		foreground color (GUI: color name used to set
 				the color, cterm: color number <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>,
 				term: empty <A HREF="options\.html#options">字符串</A>)
@@ -8433,7 +8433,7 @@ synIDattr({synID}, {what} [, {mode}])			*<A NAME="synIDattr()"></A><B>synIDattr(
 		&quot;<A HREF="syntax.html#underdash">underdash</A>&quot;	&quot;1&quot; if dashed underlined
 		&quot;<A HREF="syntax.html#strikethrough">strikethrough</A>&quot; &quot;1&quot; if struckthrough
 
-		Example (echoes the color of the <A HREF="syntax.html#syntax">syntax</A> item under the
+		Example (echoes the color of the <A HREF="syntax\.html#syntax">语法</A> item under the
 		cursor):
 <B>	:echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")</B>
  
@@ -8442,8 +8442,8 @@ synIDattr({synID}, {what} [, {mode}])			*<A NAME="synIDattr()"></A><B>synIDattr(
 
 
 synIDtrans({synID})					*<A NAME="synIDtrans()"></A><B>synIDtrans()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is the translated <A HREF="syntax.html#syntax">syntax</A> ID of
-		{synID}.  This is the <A HREF="syntax.html#syntax">syntax</A> group ID of what is being used to
+		The result is a <A HREF="eval.html#Number">Number</A>, which is the translated <A HREF="syntax\.html#syntax">语法</A> ID of
+		{synID}.  This is the <A HREF="syntax\.html#syntax">语法</A> group ID of what is being used to
 		highlight the character.  Highlight links given with
 		&quot;<A HREF="syntax.html#:highlight">:highlight</A> link&quot; are followed.
 
@@ -8461,7 +8461,7 @@ synconcealed({lnum}, {col})				*<A NAME="synconcealed()"></A><B>synconcealed()</
 		   displayed in place of the concealed text, depending on the
 		   current setting of <A HREF="options.html#'conceallevel'">'conceallevel'</A> and <A HREF="options.html#'listchars'">'listchars'</A>.
 		3. The third and final item in the <A HREF="eval.html#list">列表</A> is a number
-		   representing the specific <A HREF="syntax.html#syntax">syntax</A> region matched in the
+		   representing the specific <A HREF="syntax\.html#syntax">语法</A> region matched in the
 		   line. When the character is not concealed the value is
 		   zero. This allows detection of the beginning of a new
 		   concealable region if there are two consecutive regions
@@ -8479,7 +8479,7 @@ synconcealed({lnum}, {col})				*<A NAME="synconcealed()"></A><B>synconcealed()</
 
 
 synstack({lnum}, {col})					*<A NAME="synstack()"></A><B>synstack()</B>*
-		Return a |<A HREF="eval.html#list">列表</A>|, which is the stack of <A HREF="syntax.html#syntax">syntax</A> items at the
+		Return a |<A HREF="eval.html#list">列表</A>|, which is the stack of <A HREF="syntax\.html#syntax">语法</A> items at the
 		position {lnum} and {col} in the current<A HREF="windows.html#window">窗口</A>.  {lnum} is
 		used like with |<A HREF="#getline()">getline()</A>|.  Each item in the <A HREF="eval.html#list">列表</A> is an ID
 		like what |<A HREF="#synID()">synID()</A>| returns.
@@ -8487,8 +8487,8 @@ synstack({lnum}, {col})					*<A NAME="synstack()"></A><B>synstack()</B>*
 		items contained in that one.  The last one is what |<A HREF="#synID()">synID()</A>|
 		returns, unless not the whole item is highlighted or <A HREF="motion.html#it">它</A> is a
 		transparent item.
-		This function is useful for debugging a <A HREF="syntax.html#syntax">syntax</A> file.
-		Example that shows the <A HREF="syntax.html#syntax">syntax</A> stack under the cursor:
+		This function is useful for debugging a <A HREF="syntax\.html#syntax">语法</A> file.
+		Example that shows the <A HREF="syntax\.html#syntax">语法</A> stack under the cursor:
 <B>			for id in synstack(line("."), col("."))</B>
 <B>			   echo synIDattr(id, "name")</B>
 <B>			endfor</B>
@@ -8533,7 +8533,7 @@ system({cmd} [, {input}])				*<A NAME="system()"></A><B>system()</B>* *<A NAME="
  		which is equivalent to:
 <B>		    $ echo foo | bash -c 'cat - &amp;'</B>
  		The pipes are disconnected (unless overridden by shell
-		redirection <A HREF="syntax.html#syntax">syntax</A>) before input can reach <A HREF="motion.html#it">它</A>. Use
+		redirection <A HREF="syntax\.html#syntax">语法</A>) before input can reach <A HREF="motion.html#it">它</A>. Use
 		|<A HREF="#jobstart()">jobstart()</A>| instead.
 
 		Note: Use |<A HREF="#shellescape()">shellescape()</A>| or |<A HREF="cmdline.html#::S">::S</A>| with |<A HREF="#expand()">expand()</A>| or
@@ -8688,7 +8688,7 @@ termopen({cmd} [, {opts}])			*<A NAME="termopen()"></A><B>termopen()</B>*
 
 		Terminal environment is initialized <A HREF="motion.html#as">as</A> in &#124;&#124;jobstart-envYXXY,
 		except <A HREF="term.html#$TERM">$TERM</A> is set to &quot;xterm-256color&quot;. Full behavior is
-		described in |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>|.
+		described in |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|.
 
 
 tan({expr})						*<A NAME="tan()"></A><B>tan()</B>*
@@ -9119,7 +9119,7 @@ win_getid([{win} [, {tab}]])				*<A NAME="win_getid()"></A><B>win_getid()</B>*
 
 win_gettype([{nr}])					*<A NAME="win_gettype()"></A><B>win_gettype()</B>*
 		Return the type of the<A HREF="windows.html#window">窗口</A>:
-			&quot;<A HREF="autocmd.html#autocmd">autocmd</A>&quot;	<A HREF="autocmd.html#autocommand">autocommand</A><A HREF="windows.html#window">窗口</A>. Temporary<A HREF="windows.html#window">窗口</A>
+			&quot;<A HREF="autocmd.html#autocmd">autocmd</A>&quot;	<A HREF="autocmd\.html#autocommand">自动命令</A><A HREF="windows.html#window">窗口</A>. Temporary<A HREF="windows.html#window">窗口</A>
 					used to execute autocommands.
 			&quot;command&quot;	command-line<A HREF="windows.html#window">窗口</A>|<A HREF="cmdline.html#cmdwin">cmdwin</A>|
 			(empty)		normal<A HREF="windows.html#window">窗口</A>
@@ -9133,8 +9133,8 @@ win_gettype([{nr}])					*<A NAME="win_gettype()"></A><B>win_gettype()</B>*
 		When {nr} is given return the type of this<A HREF="windows.html#window">窗口</A>by number or
 		|<A HREF="windows.html#window-ID">window-ID</A>|.
 
-		Also see the <A HREF="options.html#'buftype'">'buftype'</A> option.  When running a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> in a
-		popup<A HREF="windows.html#window">窗口</A>then <A HREF="options.html#'buftype'">'buftype'</A> is &quot;<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>&quot; and <A HREF="#win_gettype()">win_gettype()</A>
+		Also see the <A HREF="options.html#'buftype'">'buftype'</A> option.  When running a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> in a
+		popup<A HREF="windows.html#window">窗口</A>then <A HREF="options.html#'buftype'">'buftype'</A> is &quot;<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>&quot; and <A HREF="#win_gettype()">win_gettype()</A>
 		returns &quot;popup&quot;.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -9420,7 +9420,7 @@ winwidth({nr})						*<A NAME="winwidth()"></A><B>winwidth()</B>*
 <B>  :if winwidth(0) &lt;= 50</B>
 <B>  :  50 wincmd |</B>
 <B>  :endif</B>
- 		For getting the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> or screen size, see the <A HREF="options.html#'columns'">'columns'</A>
+ 		For getting the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> or screen size, see the <A HREF="options.html#'columns'">'columns'</A>
 		option.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:

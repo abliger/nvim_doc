@@ -715,7 +715,7 @@ X11 configuration is wrong.  You can find a hint on how to solve this here:
 <B>  Warning: Changing a readonly file</B>
 
 The file is read-only and you are making a change to <A HREF="motion.html#it">它</A> anyway.  You can use
-the |<A HREF="autocmd.html#FileChangedRO">FileChangedRO</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event to avoid this message (the <A HREF="autocmd.html#autocommand">autocommand</A>
+the |<A HREF="autocmd.html#FileChangedRO">FileChangedRO</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event to avoid this message (the <A HREF="autocmd\.html#autocommand">自动命令</A>
 must reset the <A HREF="options.html#'readonly'">'readonly'</A> option).  See <A HREF="options.html#'modifiable'">'modifiable'</A> to completely disallow
 making changes to a file.
 This message is only given for the first change after <A HREF="options.html#'readonly'">'readonly'</A> has been set.
@@ -921,7 +921,7 @@ and the screen is about to be redrawn:
    key being used otherwise.
 <A HREF="eval.html#-&gt;">-&gt;</A> Press '<A HREF="cmdline.html#:">:</A>' or any other <A HREF="intro.html#Normal">正常</A>模式 command character to start that command.
    Note that after an external command some special keys, such <A HREF="motion.html#as">as</A> the cursor
-   keys, may not work normally, because the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> is still set to a state
+   keys, may not work normally, because the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is still set to a state
    for executing the external command.
 <A HREF="eval.html#-&gt;">-&gt;</A> Press '<A HREF="motion.html#k">k</A>', <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>, '<A HREF="undo.html#u">u</A>', '<A HREF="motion.html#b">b</A>' or '<A HREF="vimindex.html#g">g</A>' to scroll back in the <A HREF="#messages">messages</A>.  This
    works the same way <A HREF="motion.html#as">as</A> at the |<A HREF="#more-prompt">more-prompt</A>|.  Only works when <A HREF="options.html#'more'">'more'</A> is on.
@@ -988,7 +988,7 @@ Any other key causes the meaning of the keys to be displayed.
      - When '<A HREF="change.html#r">r</A>' is included in <A HREF="options.html#'mouse'">'mouse'</A> (but then selecting text won't work).
 
 
-Note: The typed key is directly obtained from the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>, <A HREF="motion.html#it">它</A> is not mapped
+Note: The typed key is directly obtained from the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, <A HREF="motion.html#it">它</A> is not mapped
 and typeahead is ignored.
 
 The |<A HREF="#g&lt;">g&lt;</A>| command can be used to see the last page of previous command output.

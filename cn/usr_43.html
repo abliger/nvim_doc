@@ -76,7 +76,7 @@
 
 		     VIM用户手册 - by Bram Moolenaar
 
-			       Using <A HREF="filetype.html#filetypes">filetypes</A>
+			       Using <A HREF="filetype\.html#filetypes">文件类型</A>
 
 
 When you are editing a file of a certain type, for example a C program or a
@@ -84,18 +84,18 @@ shell <A HREF="usr_41.html#script">script</A>, you often use the same option set
 quickly get tired of manually setting these each time.  This chapter explains
 how to <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> automatically.
 
-|<A HREF="#43.1">43.1</A>|	Plugins for a <A HREF="filetype.html#filetype">filetype</A>
-|<A HREF="#43.2">43.2</A>|	Adding a <A HREF="filetype.html#filetype">filetype</A>
+|<A HREF="#43.1">43.1</A>|	Plugins for a <A HREF="filetype\.html#filetype">文件类型</A>
+|<A HREF="#43.2">43.2</A>|	Adding a <A HREF="filetype\.html#filetype">文件类型</A>
 
-下一章: |<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax.html#syntax">syntax</A> highlighted
+下一章: |<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax\.html#syntax">语法</A> highlighted
 上一章: |<A HREF="usr_42.html">usr_42.txt</A>|  Add new <A HREF="gui.html#menus">menus</A>
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="43.1"></A><B>43.1</B>*	Plugins for a <A HREF="filetype.html#filetype">filetype</A>				*<A NAME="filetype-plugin"></A><B>filetype-plugin</B>*
+*<A NAME="43.1"></A><B>43.1</B>*	Plugins for a <A HREF="filetype\.html#filetype">文件类型</A>				*<A NAME="filetype-plugin"></A><B>filetype-plugin</B>*
 
-How to start using <A HREF="filetype.html#filetype">filetype</A> plugins has already been discussed here:
+How to start using <A HREF="filetype\.html#filetype">文件类型</A> plugins has already been discussed here:
 |<A HREF="usr_05.html#add-filetype-plugin">add-filetype-plugin</A>|.  But you probably are not satisfied with the default
 settings, because they have been kept minimal.  Suppose that for C files you
 want to set the <A HREF="options.html#'softtabstop'">'softtabstop'</A> option to 4 and define a <A HREF="map.html#mapping">mapping</A> to insert a
@@ -136,36 +136,36 @@ buffer.  This works with any <A HREF="map.html#mapping">mapping</A> command: &qu
 |<A HREF="map.html#&lt;LocalLeader&gt;">&lt;LocalLeader&gt;</A>| in the <A HREF="map.html#mapping">mapping</A> is replaced with the value of the
 &quot;<A HREF="map.html#maplocalleader">maplocalleader</A>&quot; variable.
 
-The line to set b:undo_ftplugin is for when the <A HREF="filetype.html#filetype">filetype</A> is set to another
+The line to set b:undo_ftplugin is for when the <A HREF="filetype\.html#filetype">文件类型</A> is set to another
 value.  In that <A HREF="change.html#case">case</A> you will want to <A HREF="undo.html#undo">undo</A> your preferences.  The
 b:undo_ftplugin variable is executed <A HREF="motion.html#as">as</A> a command. Watch out for characters
 with a special meaning inside a <A HREF="options\.html#options">字符串</A>, such <A HREF="motion.html#as">as</A> a <A HREF="intro.html#backslash">backslash</A>.
 
-You can find examples for <A HREF="filetype.html#filetype">filetype</A> plugins in this directory:
+You can find examples for <A HREF="filetype\.html#filetype">文件类型</A> plugins in this directory:
 
 <B>	$VIMRUNTIME/ftplugin/</B>
 
-More details about <A HREF="editing.html#writing">写</A> a <A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A> can be found here:
+More details about <A HREF="editing.html#writing">写</A> a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> can be found here:
 |<A HREF="usr_41.html#write-plugin">write-plugin</A>|.
 
 ==============================================================================
 
-*<A NAME="43.2"></A><B>43.2</B>*	Adding a <A HREF="filetype.html#filetype">filetype</A>
+*<A NAME="43.2"></A><B>43.2</B>*	Adding a <A HREF="filetype\.html#filetype">文件类型</A>
 
 If you are using a type of file that is not recognized by Vim, this is how to
 get <A HREF="motion.html#it">它</A> recognized.  You need a runtime directory of your own.  See
 |<A HREF="#your-runtime-dir">your-runtime-dir</A>| above.
 
-Create a file &quot;filetype.vim&quot; which contains an <A HREF="autocmd.html#autocommand">autocommand</A> for your <A HREF="filetype.html#filetype">filetype</A>.
+Create a file &quot;filetype.vim&quot; which contains an <A HREF="autocmd\.html#autocommand">自动命令</A> for your <A HREF="filetype\.html#filetype">文件类型</A>.
 (Autocommands were explained in section |<A HREF="usr_40.html#40.3">40.3</A>|.)  Example:
 
 <B>	augroup filetypedetect</B>
 <B>	au BufNewFile,BufRead *.xyz	setf xyz</B>
 <B>	augroup END</B>
 
-This will recognize all files that end in &quot;.xyz&quot; <A HREF="motion.html#as">as</A> the &quot;xyz&quot; <A HREF="filetype.html#filetype">filetype</A>.  The
-&quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot;命令 put this <A HREF="autocmd.html#autocommand">autocommand</A> in the &quot;filetypedetect&quot; group.  This
-allows removing all autocommands for <A HREF="filetype.html#filetype">filetype</A> detection when doing &quot;<A HREF="filetype.html#:filetype">:filetype</A>
+This will recognize all files that end in &quot;.xyz&quot; <A HREF="motion.html#as">as</A> the &quot;xyz&quot; <A HREF="filetype\.html#filetype">文件类型</A>.  The
+&quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot;命令 put this <A HREF="autocmd\.html#autocommand">自动命令</A> in the &quot;filetypedetect&quot; group.  This
+allows removing all autocommands for <A HREF="filetype\.html#filetype">文件类型</A> detection when doing &quot;<A HREF="filetype.html#:filetype">:filetype</A>
 off&quot;.  The &quot;setf&quot; command will set the <A HREF="options.html#'filetype'">'filetype'</A> option to its argument,
 unless <A HREF="motion.html#it">它</A> was set already.  This will make sure that <A HREF="options.html#'filetype'">'filetype'</A> isn't set
 <A HREF="if_cscop.html#twice">twice</A>.
@@ -200,13 +200,13 @@ That file is found in <A HREF="options.html#'runtimepath'">'runtimepath'</A> fir
 
 What will happen now is that Vim searches for &quot;filetype.vim&quot; files in each
 directory in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  First ~/.config/nvim/filetype.vim is found.  The
-<A HREF="autocmd.html#autocommand">autocommand</A> to catch *.txt files is defined there.  Then Vim finds the
+<A HREF="autocmd\.html#autocommand">自动命令</A> to catch *.txt files is defined there.  Then Vim finds the
 filetype.vim file in <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>, which is halfway <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  Finally
-~/.config/nvim/after/filetype.vim is found and the <A HREF="autocmd.html#autocommand">autocommand</A> for detecting 
+~/.config/nvim/after/filetype.vim is found and the <A HREF="autocmd\.html#autocommand">自动命令</A> for detecting 
 <A HREF="if_ruby.html#ruby">ruby</A> files in /usr/share/scripts is added.
    When you now edit /usr/share/scripts/README.txt, the autocommands are
 checked in the order in which they were defined.  The *.txt <A HREF="pattern.html#pattern">pattern</A> matches,
-thus &quot;setf text&quot; is executed to set the <A HREF="filetype.html#filetype">filetype</A> to &quot;text&quot;.  The <A HREF="pattern.html#pattern">pattern</A> for
+thus &quot;setf text&quot; is executed to set the <A HREF="filetype\.html#filetype">文件类型</A> to &quot;text&quot;.  The <A HREF="pattern.html#pattern">pattern</A> for
 <A HREF="if_ruby.html#ruby">ruby</A> matches too, and the &quot;setf ruby&quot; is executed.  But since <A HREF="options.html#'filetype'">'filetype'</A> was
 already set to &quot;text&quot;, nothing happens here.
    When you edit the file /usr/share/scripts/foobar the same autocommands are
@@ -233,10 +233,10 @@ To recognize this <A HREF="usr_41.html#script">script</A> create a file &quot;sc
 <B>	endif</B>
 
 The first check with <A HREF="builtin.html#did_filetype()">did_filetype()</A> is to avoid that you will check the
-contents of files for which the <A HREF="filetype.html#filetype">filetype</A> was already detected by the file
+contents of files for which the <A HREF="filetype\.html#filetype">文件类型</A> was already detected by the file
 name.  That avoids wasting time on checking the file when the &quot;setf&quot; command
 won't <A HREF="diff.html#do">do</A> anything.
-   The scripts.vim file is sourced by an <A HREF="autocmd.html#autocommand">autocommand</A> in the default
+   The scripts.vim file is sourced by an <A HREF="autocmd\.html#autocommand">自动命令</A> in the default
 filetype.vim file.  Therefore, the order of checks is:
 
 	1. filetype.vim files before <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A> in <A HREF="options.html#'runtimepath'">'runtimepath'</A>
@@ -245,12 +245,12 @@ filetype.vim file.  Therefore, the order of checks is:
 	4. remainder of $VIMRUNTIME/filetype.vim
 	5. filetype.vim files after <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A> in <A HREF="options.html#'runtimepath'">'runtimepath'</A>
 
-If this is not sufficient for you, add an <A HREF="autocmd.html#autocommand">autocommand</A> that matches all files
+If this is not sufficient for you, add an <A HREF="autocmd\.html#autocommand">自动命令</A> that matches all files
 and sources a <A HREF="usr_41.html#script">script</A> or executes a function to check the contents of the file.
 
 ==============================================================================
 
-下一章: |<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax.html#syntax">syntax</A> highlighted
+下一章: |<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax\.html#syntax">语法</A> highlighted
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>

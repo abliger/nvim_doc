@@ -874,9 +874,9 @@ It's possible to form a variable name with curly braces, see
 
 ==============================================================================
 
-2. Expression <A HREF="syntax.html#syntax">syntax</A>					*<A NAME="expression-syntax"></A><B>expression-syntax</B>*
+2. Expression <A HREF="syntax\.html#syntax">语法</A>					*<A NAME="expression-syntax"></A><B>expression-syntax</B>*
 
-Expression <A HREF="syntax.html#syntax">syntax</A> summary, from least to most significant:
+Expression <A HREF="syntax\.html#syntax">语法</A> summary, from least to most significant:
 
 |<A HREF="#expr1">expr1</A>|	<A HREF="#expr2">expr2</A>
 	<A HREF="#expr2">expr2</A> ? <A HREF="#expr1">expr1</A> : <A HREF="#expr1">expr1</A>	if-then-else
@@ -1806,7 +1806,7 @@ maintain a counter:
 <B>	  echo "script executed " .. s:counter .. " times now"</B>
 <B>	endif</B>
 
-Note that this means that <A HREF="filetype.html#filetype">filetype</A> plugins don't get a different set of <A HREF="usr_41.html#script">script</A>
+Note that this means that <A HREF="filetype\.html#filetype">文件类型</A> plugins don't get a different set of <A HREF="usr_41.html#script">script</A>
 <A HREF="#variables">variables</A> for each buffer.  Use local buffer <A HREF="#variables">variables</A> instead |<A HREF="#b:var">b:var</A>|.
 
 
@@ -1883,7 +1883,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 <A HREF="#v:cmdarg">v:cmdarg</A>	This variable is used for two purposes:
 		1. The extra arguments given to a file read/write command.
 		   Currently these are &quot;++enc=&quot; and &quot;++ff=&quot;.  This variable is
-		   set before an <A HREF="autocmd.html#autocommand">autocommand</A> event for a file read/write
+		   set before an <A HREF="autocmd\.html#autocommand">自动命令</A> event for a file read/write
 		   command is triggered.  There is a leading space to make <A HREF="motion.html#it">它</A>
 		   possible to append this variable directly after the
 		   read/write command.  Note: The &quot;<A HREF="editing.html#+cmd">+cmd</A>&quot; argument isn't
@@ -1946,7 +1946,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 					*<A NAME="v:dying"></A><B>v:dying</B>* *<A NAME="dying-variable"></A><B>dying-variable</B>*
 <A HREF="#v:dying">v:dying</A>		Normally zero.  When a deadly signal is caught it's set to
 		one.  When multiple signals are caught the number increases.
-		Can be used in an <A HREF="autocmd.html#autocommand">autocommand</A> to check if Vim didn't
+		Can be used in an <A HREF="autocmd\.html#autocommand">自动命令</A> to check if Vim didn't
 		terminate normally. {only works on Unix}
 		Example:
 <B>	:au VimLeave * if v:dying | echo "\nAAAAaaaarrrggghhhh!!!\n" | endif</B>
@@ -1991,7 +1991,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:event"></A><B>v:event</B>* *<A NAME="event-variable"></A><B>event-variable</B>*
-<A HREF="#v:event">v:event</A>		<A HREF="#Dictionary">Dictionary</A> of event data for the current |<A HREF="autocmd.html#autocommand">autocommand</A>|.  Valid
+<A HREF="#v:event">v:event</A>		<A HREF="#Dictionary">Dictionary</A> of event data for the current |<A HREF="autocmd\.html#autocommand">自动命令</A>|.  Valid
 		only during the event lifetime; storing or passing <A HREF="#v:event">v:event</A> is
 		invalid!  Copy <A HREF="motion.html#it">它</A> instead:
 <B>			au TextYankPost * let g:foo = deepcopy(v:event)</B>
@@ -2061,7 +2061,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 					*<A NAME="v:fcs_reason"></A><B>v:fcs_reason</B>* *<A NAME="fcs_reason-variable"></A><B>fcs_reason-variable</B>*
 <A HREF="#v:fcs_reason">v:fcs_reason</A>	The reason why the |<A HREF="autocmd.html#FileChangedShell">FileChangedShell</A>| event was triggered.
-		Can be used in an <A HREF="autocmd.html#autocommand">autocommand</A> to decide what to <A HREF="diff.html#do">do</A> and/or what
+		Can be used in an <A HREF="autocmd\.html#autocommand">自动命令</A> to decide what to <A HREF="diff.html#do">do</A> and/or what
 		to set <A HREF="#v:fcs_choice">v:fcs_choice</A> to.  Possible values:
 			deleted		file no longer exists
 			conflict	file contents, mode or <A HREF="editing.html#timestamp">timestamp</A> was
@@ -2073,7 +2073,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 					*<A NAME="v:fcs_choice"></A><B>v:fcs_choice</B>* *<A NAME="fcs_choice-variable"></A><B>fcs_choice-variable</B>*
 <A HREF="#v:fcs_choice">v:fcs_choice</A>	What should happen after a |<A HREF="autocmd.html#FileChangedShell">FileChangedShell</A>| event was
-		triggered.  Can be used in an <A HREF="autocmd.html#autocommand">autocommand</A> to tell Vim what to
+		triggered.  Can be used in an <A HREF="autocmd\.html#autocommand">自动命令</A> to tell Vim what to
 		<A HREF="diff.html#do">do</A> with the affected buffer:
 			<A HREF="editing.html#reload">reload</A>		Reload the buffer (does not work if
 					the file was deleted).
@@ -2083,10 +2083,10 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 					(does not work if the file was
 					deleted).
 			ask		Ask the user what to <A HREF="diff.html#do">do</A>, <A HREF="motion.html#as">as</A> if there
-					was no <A HREF="autocmd.html#autocommand">autocommand</A>.  Except that when
+					was no <A HREF="autocmd\.html#autocommand">自动命令</A>.  Except that when
 					only the <A HREF="editing.html#timestamp">timestamp</A> changed nothing
 					will happen.
-			&lt;empty&gt;		Nothing, the <A HREF="autocmd.html#autocommand">autocommand</A> should <A HREF="diff.html#do">do</A>
+			&lt;empty&gt;		Nothing, the <A HREF="autocmd\.html#autocommand">自动命令</A> should <A HREF="diff.html#do">do</A>
 					everything that needs to be done.
 		The default is empty.  If another (invalid) value is used then
 		Vim behaves like <A HREF="motion.html#it">它</A> is empty, there is no warning message.
@@ -2162,7 +2162,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:insertmode"></A><B>v:insertmode</B>* *<A NAME="insertmode-variable"></A><B>insertmode-variable</B>*
-<A HREF="#v:insertmode">v:insertmode</A>	Used for the |<A HREF="autocmd.html#InsertEnter">InsertEnter</A>| and |<A HREF="autocmd.html#InsertChange">InsertChange</A>| <A HREF="autocmd.html#autocommand">autocommand</A>
+<A HREF="#v:insertmode">v:insertmode</A>	Used for the |<A HREF="autocmd.html#InsertEnter">InsertEnter</A>| and |<A HREF="autocmd.html#InsertChange">InsertChange</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>
 		<A HREF="autocmd.html#events">events</A>.  Values:
 			<A HREF="insert.html#i">i</A>	<A HREF="intro.html#Insert">插入</A>模式
 			<A HREF="change.html#r">r</A>	<A HREF="insert\\.html#Replace">替代</A>模式
@@ -2276,32 +2276,32 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 						    *<A NAME="v:option_new"></A><B>v:option_new</B>*
 <A HREF="#v:option_new">v:option_new</A>    New value of the option. Valid while executing an |<A HREF="autocmd.html#OptionSet">OptionSet</A>|
-		<A HREF="autocmd.html#autocommand">autocommand</A>.
+		<A HREF="autocmd\.html#autocommand">自动命令</A>.
 
 						    *<A NAME="v:option_old"></A><B>v:option_old</B>*
 <A HREF="#v:option_old">v:option_old</A>    Old value of the option. Valid while executing an |<A HREF="autocmd.html#OptionSet">OptionSet</A>|
-		<A HREF="autocmd.html#autocommand">autocommand</A>. Depending on the command used for setting and the
+		<A HREF="autocmd\.html#autocommand">自动命令</A>. Depending on the command used for setting and the
 		kind of option this is either the local old value or the
 		global old value.
 
 						    *<A NAME="v:option_oldlocal"></A><B>v:option_oldlocal</B>*
 <A HREF="#v:option_oldlocal">v:option_oldlocal</A>
 		Old local value of the option. Valid while executing an
-		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd.html#autocommand">autocommand</A>.
+		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>.
 
 						    *<A NAME="v:option_oldglobal"></A><B>v:option_oldglobal</B>*
 <A HREF="#v:option_oldglobal">v:option_oldglobal</A>
 		Old global value of the option. Valid while executing an
-		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd.html#autocommand">autocommand</A>.
+		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>.
 
 						    *<A NAME="v:option_type"></A><B>v:option_type</B>*
 <A HREF="#v:option_type">v:option_type</A>   Scope of the set command. Valid while executing an
-		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd.html#autocommand">autocommand</A>. Can be either &quot;global&quot; or &quot;local&quot;
+		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>. Can be either &quot;global&quot; or &quot;local&quot;
 
 						    *<A NAME="v:option_command"></A><B>v:option_command</B>*
 <A HREF="#v:option_command">v:option_command</A>
 		Command used to set the option. Valid while executing an
-		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd.html#autocommand">autocommand</A>.
+		|<A HREF="autocmd.html#OptionSet">OptionSet</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>.
 <B><FONT color="#3A6F2B">			value		option was set via   </FONT></B>
 			&quot;setlocal&quot;	|<A HREF="options.html#:setlocal">:setlocal</A>| or &quot;<A HREF="#:let">:let</A> l:xxx&quot;
 			&quot;setglobal&quot;	|<A HREF="options.html#:setglobal">:setglobal</A>| or &quot;<A HREF="#:let">:let</A> g:xxx&quot;
@@ -2375,7 +2375,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 								       *<A NAME="$NVIM"></A><B>$NVIM</B>*
-		<A HREF="#$NVIM">$NVIM</A> is set by |<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>| and |<A HREF="builtin.html#jobstart()">jobstart()</A>|, and is thus
+		<A HREF="#$NVIM">$NVIM</A> is set by |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| and |<A HREF="builtin.html#jobstart()">jobstart()</A>|, and is thus
 		a hint that the current environment is a subprocess of Nvim.
 		Example:
 <B>		    if $NVIM</B>
@@ -2436,12 +2436,12 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 			'<A HREF="insert.html#a">a</A>'	Abort
 		The value should be a single-character <A HREF="#string">string</A>.  An empty value
 		results in the user being asked, <A HREF="motion.html#as">as</A> would happen when there is
-		no <A HREF="autocmd.html#SwapExists">SwapExists</A> <A HREF="autocmd.html#autocommand">autocommand</A>.  The default is empty.
+		no <A HREF="autocmd.html#SwapExists">SwapExists</A> <A HREF="autocmd\.html#autocommand">自动命令</A>.  The default is empty.
 
 
 					*<A NAME="v:swapcommand"></A><B>v:swapcommand</B>* *<A NAME="swapcommand-variable"></A><B>swapcommand-variable</B>*
 <A HREF="#v:swapcommand">v:swapcommand</A>	<A HREF="intro.html#Normal">正常</A>模式 command to be executed after a file has been
-		opened.  Can be used for a |<A HREF="autocmd.html#SwapExists">SwapExists</A>| <A HREF="autocmd.html#autocommand">autocommand</A> to have
+		opened.  Can be used for a |<A HREF="autocmd.html#SwapExists">SwapExists</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> to have
 		another Vim open the file and jump to the right place.  For
 		example, when jumping to a <A HREF="tagsrch.html#tag">标签</A> the value is &quot;<A HREF="tagsrch.html#:tag">:tag</A> tagname\r&quot;.
 		For &quot;<A HREF="editing.html#:edit">:edit</A> <A HREF="editing.html#+cmd">+cmd</A> file&quot; the value is &quot;:cmd\r&quot;.
@@ -2473,16 +2473,16 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 				*<A NAME="v:termresponse"></A><B>v:termresponse</B>* *<A NAME="termresponse-variable"></A><B>termresponse-variable</B>*
-<A HREF="#v:termresponse">v:termresponse</A>	The <A HREF="intro.html#escape">escape</A> sequence returned by the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> for the DA
+<A HREF="#v:termresponse">v:termresponse</A>	The <A HREF="intro.html#escape">escape</A> sequence returned by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> for the DA
 		(request primary device attributes) <A HREF="intro.html#control">control</A> sequence.  It is
 		set when Vim receives an <A HREF="intro.html#escape">escape</A> sequence that starts with ESC
 		[ or CSI and ends in a '<A HREF="change.html#c">c</A>', with only digits, '<A HREF="motion.html#;">;</A>' and '<A HREF="repeat.html#.">.</A>' in
 		between.
-		When this option is set, the <A HREF="autocmd.html#TermResponse">TermResponse</A> <A HREF="autocmd.html#autocommand">autocommand</A> event is
+		When this option is set, the <A HREF="autocmd.html#TermResponse">TermResponse</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event is
 		fired, so that you can react to the response from the
-		<A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+		<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 		The response from a new xterm is: &quot;&lt;Esc&gt;[ Pp ; Pv ; Pc c&quot;.  Pp
-		is the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> type: 0 for vt100 and 1 for vt220.  Pv is the
+		is the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type: 0 for vt100 and 1 for vt220.  Pv is the
 		patch level (since this was introduced in patch 95, it's
 		always 95 or bigger).  Pc is always zero.
 
@@ -2906,7 +2906,7 @@ allow for <A HREF="#method">method</A> chaining, e.g.:
 
 							*<A NAME="autoload-functions"></A><B>autoload-functions</B>*
 When using many or large <A HREF="#functions">functions</A>, it's possible to automatically define them
-only when they are used.  There are two methods: with an <A HREF="autocmd.html#autocommand">autocommand</A> and with
+only when they are used.  There are two methods: with an <A HREF="autocmd\.html#autocommand">自动命令</A> and with
 the &quot;<A HREF="#autoload">autoload</A>&quot; directory in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.
 
 
@@ -2914,12 +2914,12 @@ the &quot;<A HREF="#autoload">autoload</A>&quot; directory in <A HREF="options.h
 
 This is introduced in the user manual, section |<A HREF="usr_41.html#41.14">41.14</A>|.
 
-The <A HREF="autocmd.html#autocommand">autocommand</A> is useful if you have a <A HREF="usr_05.html#plugin">plugin</A> that is a long Vim <A HREF="usr_41.html#script">script</A> file.
-You can define the <A HREF="autocmd.html#autocommand">autocommand</A> and quickly quit the <A HREF="usr_41.html#script">script</A> with `:finish`.
-That makes Vim <A HREF="starting.html#startup">startup</A> faster.  The <A HREF="autocmd.html#autocommand">autocommand</A> should then load the same file
+The <A HREF="autocmd\.html#autocommand">自动命令</A> is useful if you have a <A HREF="usr_05.html#plugin">plugin</A> that is a long Vim <A HREF="usr_41.html#script">script</A> file.
+You can define the <A HREF="autocmd\.html#autocommand">自动命令</A> and quickly quit the <A HREF="usr_41.html#script">script</A> with `:finish`.
+That makes Vim <A HREF="starting.html#startup">startup</A> faster.  The <A HREF="autocmd\.html#autocommand">自动命令</A> should then load the same file
 again, setting a variable to skip the `:finish` command.
 
-Use the <A HREF="autocmd.html#FuncUndefined">FuncUndefined</A> <A HREF="autocmd.html#autocommand">autocommand</A> event with a <A HREF="pattern.html#pattern">pattern</A> that matches the
+Use the <A HREF="autocmd.html#FuncUndefined">FuncUndefined</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event with a <A HREF="pattern.html#pattern">pattern</A> that matches the
 function(s) to be defined.  Example:
 
 <B>	:au FuncUndefined BufNet* source ~/vim/bufnetfuncs.vim</B>
@@ -3520,7 +3520,7 @@ text...
 :endt[ry]		Change the error handling for the commands between
 			`:try` and `:endtry` including everything being
 			executed across `:source` commands, function calls,
-			or <A HREF="autocmd.html#autocommand">autocommand</A> invocations.
+			or <A HREF="autocmd\.html#autocommand">自动命令</A> invocations.
 
 			When an error or interrupt is detected and there is
 			a `:finally` command following, execution continues
@@ -4500,7 +4500,7 @@ abandoned and the exception is propagated to the caller of the command.
 
 Here, the &quot;<A HREF="editing.html#:write">:write</A>&quot;命令 does not write the file currently being edited (as
 you can see by checking 'modified'), since the exception from the <A HREF="autocmd.html#BufWritePre">BufWritePre</A>
-<A HREF="autocmd.html#autocommand">autocommand</A> abandons the &quot;<A HREF="editing.html#:write">:write</A>&quot;.  The exception is then caught and the
+<A HREF="autocmd\.html#autocommand">自动命令</A> abandons the &quot;<A HREF="editing.html#:write">:write</A>&quot;.  The exception is then caught and the
 <A HREF="usr_41.html#script">script</A> displays:
 
 <B>	Caught: FAIL from BufWrite Auto commands for "*"</B>
@@ -4776,7 +4776,7 @@ The original exception is discarded and an error exception is raised, instead.
 
 							*<A NAME="except-single-line"></A><B>except-single-line</B>*
 The &quot;<A HREF="#:try">:try</A>&quot;, &quot;<A HREF="#:catch">:catch</A>&quot;, &quot;<A HREF="#:finally">:finally</A>&quot;, and &quot;<A HREF="#:endtry">:endtry</A>&quot;命令 can be put on
-a single line, but then <A HREF="syntax.html#syntax">syntax</A> <A HREF="message.html#errors">errors</A> may make <A HREF="motion.html#it">它</A> difficult to recognize the
+a single line, but then <A HREF="syntax\.html#syntax">语法</A> <A HREF="message.html#errors">errors</A> may make <A HREF="motion.html#it">它</A> difficult to recognize the
 &quot;catch&quot; line, thus you better avoid this.
    Example:
 <B>	:try | unlet! foo # | catch | endtry</B>
@@ -4798,8 +4798,8 @@ The value of the error exception inside try conditionals is:
 <B>	Vim(echo):E121: Undefined variable: novar</B>
 
  							*<A NAME="except-syntax-error"></A><B>except-syntax-error</B>*
-But when a <A HREF="syntax.html#syntax">syntax</A> error is detected after a normal error in the same command,
-the <A HREF="syntax.html#syntax">syntax</A> error is used for the exception being thrown.
+But when a <A HREF="syntax\.html#syntax">语法</A> error is detected after a normal error in the same command,
+the <A HREF="syntax\.html#syntax">语法</A> error is used for the exception being thrown.
    Example:
 <B>	unlet novar #</B>
 causes
@@ -4807,7 +4807,7 @@ causes
 <B>	E488: Trailing characters</B>
 The value of the error exception inside try conditionals is:
 <B>	Vim(unlet):E488: Trailing characters</B>
-This is done because the <A HREF="syntax.html#syntax">syntax</A> error might change the execution path in a way
+This is done because the <A HREF="syntax\.html#syntax">语法</A> error might change the execution path in a way
 not intended by the user.  Example:
 <B>	try</B>
 <B>	    try | unlet novar # | catch | echo v:exception | endtry</B>

@@ -821,7 +821,7 @@ file.  The commands that start with &quot;<A HREF="vimindex.html#]">]</A>&quot; 
 
 The <A HREF="options.html#'include'">'include'</A> option is used to define a line that includes another file.  The
 default is &quot;\^#\s*include&quot;, which is for C programs.  Note: Vim does not
-recognize C <A HREF="syntax.html#syntax">syntax</A>, if the <A HREF="options.html#'include'">'include'</A> option matches a line inside
+recognize C <A HREF="syntax\.html#syntax">语法</A>, if the <A HREF="options.html#'include'">'include'</A> option matches a line inside
 &quot;#ifdef/#endif&quot; or inside a comment, <A HREF="motion.html#it">它</A> is searched anyway.  The <A HREF="options.html#'isfname'">'isfname'</A>
 option is used to recognize the file name that comes after the matched
 <A HREF="pattern.html#pattern">pattern</A>.
@@ -1006,7 +1006,7 @@ Common arguments for the commands above:
 <B>		/* comment</B>
 <B>		   foobar */</B>
  	A match for &quot;foobar&quot; is found, because this line is not recognized <A HREF="motion.html#as">as</A>
-	a comment (even though <A HREF="syntax.html#syntax">syntax</A> highlighting does recognize <A HREF="motion.html#it">它</A>).
+	a comment (even though <A HREF="syntax\.html#syntax">语法</A> highlighting does recognize <A HREF="motion.html#it">它</A>).
 	Note: Since a <A HREF="map.html#macro">macro</A> definition mostly doesn't look like a comment, the
 	[!] makes no difference for &quot;<A HREF="#:dlist">:dlist</A>&quot;, &quot;<A HREF="#:dsearch">:dsearch</A>&quot; and &quot;<A HREF="#:djump">:djump</A>&quot;.
 [/]	A <A HREF="pattern.html#pattern">pattern</A> can be surrounded by '<A HREF="pattern.html#/">/</A>'.  Without '<A HREF="pattern.html#/">/</A>' only whole words are

@@ -99,12 +99,12 @@ To enable file type detection, use this command in your <A HREF="starting.html#v
 <B>	:filetype on</B>
 Each time a new or existing file is edited, Vim will try to recognize the type
 of the file and set the <A HREF="options.html#'filetype'">'filetype'</A> option.  This will trigger the <A HREF="autocmd.html#FileType">FileType</A>
-event, which can be used to set the <A HREF="syntax.html#syntax">syntax</A> highlighting, set <A HREF="options\.html#options">选项</A>, etc.
+event, which can be used to set the <A HREF="syntax\.html#syntax">语法</A> highlighting, set <A HREF="options\.html#options">选项</A>, etc.
 
 Detail: The &quot;<A HREF="#:filetype">:filetype</A> on&quot; command will load these files:
 		$VIMRUNTIME/filetype.lua
 		$VIMRUNTIME/filetype.vim
-	filetype.lua creates an <A HREF="autocmd.html#autocommand">autocommand</A> that fires for all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> and
+	filetype.lua creates an <A HREF="autocmd\.html#autocommand">自动命令</A> that fires for all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> and
 	<A HREF="autocmd.html#BufRead">BufRead</A> <A HREF="autocmd.html#events">events</A>. It tries to detect the <A HREF="#filetype">filetype</A> based off of the
 	file's extension or name.
 
@@ -197,7 +197,7 @@ To see the current status, type:
 The output looks something like this:
 <B>	filetype detection:ON  plugin:ON  indent:OFF</B>
 
-The file types are also used for <A HREF="syntax.html#syntax">syntax</A> highlighting.  If the &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;
+The file types are also used for <A HREF="syntax\.html#syntax">语法</A> highlighting.  If the &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;
 command is used, the file type detection is installed too.  There is no need
 to <A HREF="diff.html#do">do</A> &quot;<A HREF="#:filetype">:filetype</A> on&quot; after &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;.
 
@@ -275,7 +275,7 @@ A. If you want to overrule all default file type checks.
       inside <A HREF="motion.html#it">它</A>.  Example for Unix:
 <B>	:!mkdir -p ~/.config/nvim/ftdetect</B>
  
-   2. Create a file that contains an <A HREF="autocmd.html#autocommand">autocommand</A> to detect the file type.
+   2. Create a file that contains an <A HREF="autocmd\.html#autocommand">自动命令</A> to detect the file type.
       Example:
 <B>	au BufRead,BufNewFile *.mine		set filetype=mine</B>
       Note that there is no &quot;augroup&quot; command, this has already been done
@@ -944,7 +944,7 @@ Format description:
 <B>        Buffer list with timestamp 1970-01-01T00:00:00:</B>
 <B>          = [{="f": "/foo"}, {="f": "/bar"}]</B>
  
-      Note 2: specifically for <A HREF="intro.html#register">register</A> entries special <A HREF="syntax.html#syntax">syntax</A> for arrays was 
+      Note 2: specifically for <A HREF="intro.html#register">register</A> entries special <A HREF="syntax\.html#syntax">语法</A> for arrays was 
       designed:
 
 <B>        Register with timestamp 1970-01-01T00:00:00:</B>
@@ -959,7 +959,7 @@ Format description:
 <B>          % Key  Description  Value</B>
 <B>          + rc   contents     ["line1", "line2"]</B>
  
-      Such <A HREF="syntax.html#syntax">syntax</A> is automatically used if array representation appears to be 
+      Such <A HREF="syntax\.html#syntax">语法</A> is automatically used if array representation appears to be 
       too lengthy.
    2. &quot;  @  Description__  Value&quot;: array header.  Same <A HREF="motion.html#as">as</A> map, but key is 
       omitted and description cannot be omitted.  Array entries start with 
@@ -976,9 +976,9 @@ Format description:
 <B>        History entry with timestamp 1970-01-01T00:00:00:</B>
 <B>          = [SEARCH, "foo", '/']</B>
  
-      Note: special array <A HREF="syntax.html#syntax">syntax</A> for <A HREF="intro.html#register">register</A> entries is not recognized here.
+      Note: special array <A HREF="syntax\.html#syntax">语法</A> for <A HREF="intro.html#register">register</A> entries is not recognized here.
    3. &quot;  = {msgpack-value}&quot;: raw values.  |<A HREF="pi_msgpack.html#{msgpack-value}">{msgpack-value}</A>| in this <A HREF="change.html#case">case</A> may 
-      have absolutely any type.  Special array <A HREF="syntax.html#syntax">syntax</A> for <A HREF="intro.html#register">register</A> entries is 
+      have absolutely any type.  Special array <A HREF="syntax\.html#syntax">语法</A> for <A HREF="intro.html#register">register</A> entries is 
       not recognized here <A HREF="motion.html#as">as</A> well.
 
 

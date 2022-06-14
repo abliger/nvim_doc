@@ -400,7 +400,7 @@ Only the first file is loaded, the one that is first in <A HREF="options.html#'r
 this succeeds then additionally files with the name LL.EEE.add.spl are loaded.
 All the ones that are found are used.
 
-If no <A HREF="#spell">spell</A> file is found the |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event is
+If no <A HREF="#spell">spell</A> file is found the |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event is
 triggered.  This may trigger the |<A HREF="spellfile.html">spellfile.vim</A>| <A HREF="usr_05.html#plugin">plugin</A> to offer you
 downloading the <A HREF="#spell">spell</A> file.
 
@@ -517,7 +517,7 @@ so that comments in C, shell and Vim code can be <A HREF="#spell">spell</A> chec
 
 SYNTAX HIGHLIGHTING					*<A NAME="spell-syntax"></A><B>spell-syntax</B>*
 
-Files that use <A HREF="syntax.html#syntax">syntax</A> highlighting can specify where <A HREF="#spell">spell</A> checking should be
+Files that use <A HREF="syntax\.html#syntax">语法</A> highlighting can specify where <A HREF="#spell">spell</A> checking should be
 done:
 
 1.  everywhere			   default
@@ -527,7 +527,7 @@ done:
 For the second <A HREF="eval.html#method">method</A> adding the @NoSpell cluster will disable <A HREF="#spell">spell</A> checking
 again.  This can be used, for example, to add @Spell to the comments of a
 program, and add @NoSpell for items that shouldn't be checked.
-Also 见 |<A HREF="syntax.html#:syn-spell">:syn-spell</A>| for text that is not in a <A HREF="syntax.html#syntax">syntax</A> item.
+Also 见 |<A HREF="syntax.html#:syn-spell">:syn-spell</A>| for text that is not in a <A HREF="syntax\.html#syntax">语法</A> item.
 
 
 VIM SCRIPTS
@@ -755,7 +755,7 @@ server.  The protocol used is SSL (https://) for security.  If you want to use
 another location or another protocol, set the g:spellfile_URL variable to the
  directory that holds the spell files. You can use	<A HREF="http://">http://</A> or	<A HREF="ftp://,">ftp://,</A> but you
 are taking a security risk then.  The |<A HREF="pi_netrw.html#netrw">netrw</A>| <A HREF="usr_05.html#plugin">plugin</A> is used for getting the
-file, look there for the specific <A HREF="syntax.html#syntax">syntax</A> of the URL.  Example:
+file, look there for the specific <A HREF="syntax\.html#syntax">语法</A> of the URL.  Example:
 <B>	let g:spellfile_URL = 'https://ftp.nluug.nl/vim/runtime/spell'</B>
 You may need to <A HREF="intro.html#escape">escape</A> special characters.
 
@@ -763,11 +763,11 @@ The <A HREF="usr_05.html#plugin">plugin</A> will only ask about downloading a la
 try again anyway restart Vim, or set g:spellfile_URL to another value (e.g.,
 prepend a space).
 
-To avoid using the &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> <A HREF="diff.html#do">do</A> this in your <A HREF="starting.html#vimrc">vimrc</A> file:
+To avoid using the &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> <A HREF="diff.html#do">do</A> this in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
 
 <B>	let loaded_spellfile_plugin = 1</B>
 
-Instead of using the <A HREF="usr_05.html#plugin">plugin</A> you can define a |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd.html#autocommand">autocommand</A> to
+Instead of using the <A HREF="usr_05.html#plugin">plugin</A> you can define a |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> to
 handle the missing file yourself.  You can use <A HREF="motion.html#it">它</A> like this:
 
 <B>	:au SpellFileMissing * call Download_spell_file(expand('&lt;amatch&gt;'))</B>
@@ -780,13 +780,13 @@ exceptions:
 - The name &quot;ascii&quot; may also be used for some languages where the words use
   only ASCII letters for most of the words.
 
-The default &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> uses this <A HREF="autocmd.html#autocommand">autocommand</A>, if you define your
-<A HREF="autocmd.html#autocommand">autocommand</A> afterwards you may want to use &quot;:au! SpellFileMissing&quot; to overrule
-<A HREF="motion.html#it">它</A>.  If you define your <A HREF="autocmd.html#autocommand">autocommand</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded <A HREF="motion.html#it">它</A> will notice
+The default &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> uses this <A HREF="autocmd\.html#autocommand">自动命令</A>, if you define your
+<A HREF="autocmd\.html#autocommand">自动命令</A> afterwards you may want to use &quot;:au! SpellFileMissing&quot; to overrule
+<A HREF="motion.html#it">它</A>.  If you define your <A HREF="autocmd\.html#autocommand">自动命令</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded <A HREF="motion.html#it">它</A> will notice
 this and not <A HREF="diff.html#do">do</A> anything.
 
 							*<A NAME="E797"></A><B>E797</B>*
-Note that the <A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A> <A HREF="autocmd.html#autocommand">autocommand</A> must not change or destroy the
+Note that the <A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A> <A HREF="autocmd\.html#autocommand">自动命令</A> must not change or destroy the
 buffer the user was editing.
 
 ==============================================================================
@@ -1417,7 +1417,7 @@ Optionally this may be followed by:
 	+	the group appears one or more times, e.g., c+
 	?	the group appears zero times or once, e.g., <A HREF="change.html#x">x</A>?
 
-This is similar to the <A HREF="pattern.html#regexp">regexp</A> <A HREF="pattern.html#pattern">pattern</A> <A HREF="syntax.html#syntax">syntax</A> (but not the same!).  A few
+This is similar to the <A HREF="pattern.html#regexp">regexp</A> <A HREF="pattern.html#pattern">pattern</A> <A HREF="syntax\.html#syntax">语法</A> (but not the same!).  A few
 examples with the sequence of <A HREF="motion.html#word">单词</A> flags they require:
     COMPOUNDRULE x+	    <A HREF="change.html#x">x</A> xx xxx etc.
     COMPOUNDRULE yz	    yz
@@ -1869,7 +1869,7 @@ checking engine in Vim, for various reasons:
 - For the programs and libraries: Using them as-is would require installing
   them separately from Vim.  That's mostly not impossible, but a drawback.
 - Performance: A few tests showed that it's possible to check spelling on the
-  fly (while redrawing), just like <A HREF="syntax.html#syntax">syntax</A> highlighting.  But the mechanisms
+  fly (while redrawing), just like <A HREF="syntax\.html#syntax">语法</A> highlighting.  But the mechanisms
   used by other code are much slower.  <A HREF="#Myspell">Myspell</A> uses a hashtable, for example.
   The affix compression that most <A HREF="#spell">spell</A> checkers use makes <A HREF="motion.html#it">它</A> slower too.
 - For using an external program like aspell a communication mechanism would

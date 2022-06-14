@@ -145,12 +145,12 @@ command with '<A HREF="motion.html#l">l</A>'.
 
 
 							*<A NAME="E924"></A><B>E924</B>*
-If the current<A HREF="windows.html#window">窗口</A>was closed by an |<A HREF="autocmd.html#autocommand">autocommand</A>| while processing a
+If the current<A HREF="windows.html#window">窗口</A>was closed by an |<A HREF="autocmd\.html#autocommand">自动命令</A>| while processing a
 location <A HREF="eval.html#list">列表</A> command, <A HREF="motion.html#it">它</A> will be aborted.
 
 
 							*<A NAME="E925"></A><B>E925</B>* *<A NAME="E926"></A><B>E926</B>*
-If the current <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> was changed by an |<A HREF="autocmd.html#autocommand">autocommand</A>| while
+If the current <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> was changed by an |<A HREF="autocmd\.html#autocommand">自动命令</A>| while
 processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> command, <A HREF="motion.html#it">它</A> will be aborted.
 
 
@@ -627,7 +627,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
  			To skip entries 1 to 9.
 
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
+			<A HREF="autocmd\.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each buffer.
 			Also 见 |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="windows.html#:windo">:windo</A>|,
@@ -814,7 +814,7 @@ to find a<A HREF="windows.html#window">窗口</A>to edit the file:
 					*<A NAME="CTRL-W_&lt;Enter&gt;"></A><B>CTRL-W_&lt;Enter&gt;</B>* *<A NAME="CTRL-W_&lt;CR&gt;"></A><B>CTRL-W_&lt;CR&gt;</B>*
 You can use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to open a new<A HREF="windows.html#window">窗口</A>and jump to the error there.
 
-When the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has been filled, two <A HREF="autocmd.html#autocommand">autocommand</A> <A HREF="autocmd.html#events">events</A> are
+When the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has been filled, two <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> are
 triggered.  First the <A HREF="options.html#'filetype'">'filetype'</A> option is set to &quot;qf&quot;, which triggers the
 <A HREF="autocmd.html#FileType">FileType</A> event (also 见 |<A HREF="qf.html">qf.vim</A>|).  Then the <A HREF="autocmd.html#BufReadPost">BufReadPost</A> event is triggered,
 using &quot;<A HREF="#quickfix">quickfix</A>&quot; for the buffer name.  This can be used to perform some action
@@ -828,7 +828,7 @@ substitute <A HREF="options\.html#options">字符串</A> of the &quot;<A HREF="c
 The <A HREF="autocmd.html#BufWinEnter">BufWinEnter</A> event is also triggered, again using &quot;<A HREF="#quickfix">quickfix</A>&quot; for the buffer
 name.
 
-Note: When adding to an existing <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> the <A HREF="autocmd.html#autocommand">autocommand</A> are not
+Note: When adding to an existing <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> the <A HREF="autocmd\.html#autocommand">自动命令</A> are not
 triggered.
 
 Note: Making changes in the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has no effect on the <A HREF="eval.html#list">列表</A> of
@@ -1322,7 +1322,7 @@ id-utils) in a similar way to its compiler integration (见 |<A HREF="#:make">:m
 5.3 Setting up external <A HREF="#grep">grep</A>
 
 If you have a standard &quot;<A HREF="#grep">grep</A>&quot; program installed, the <A HREF="#:grep">:grep</A> command may work
-well with the defaults.  The <A HREF="syntax.html#syntax">syntax</A> is very similar to the standard command:
+well with the defaults.  The <A HREF="syntax\.html#syntax">语法</A> is very similar to the standard command:
 
 <B>	:grep foo *.c</B>
 
@@ -1446,7 +1446,7 @@ g:compiler_gcc_ignore_unmatched_lines
 PERL					*<A NAME="quickfix-perl"></A><B>quickfix-perl</B>* *<A NAME="compiler-perl"></A><B>compiler-perl</B>*
 
 The Perl compiler <A HREF="usr_05.html#plugin">plugin</A> doesn't actually compile, but invokes Perl's internal
-<A HREF="syntax.html#syntax">syntax</A> checking feature and parses the output for possible <A HREF="message.html#errors">errors</A> so you can
+<A HREF="syntax\.html#syntax">语法</A> checking feature and parses the output for possible <A HREF="message.html#errors">errors</A> so you can
 correct them in quick-fix mode.
 
 Warnings are forced regardless of &quot;no warnings&quot; or &quot;$^W = 0&quot; within the file
@@ -1507,7 +1507,7 @@ semantics of make, where you specify a target, not source, but you may specify
 filename without extension &quot;.tex&quot; and mean this <A HREF="motion.html#as">as</A> &quot;make filename.dvi or
 filename.pdf or filename.some_result_extension according to compiler&quot;.
 
-Note: tex command line <A HREF="syntax.html#syntax">syntax</A> is set to usable both for MikTeX (suggestion
+Note: tex command line <A HREF="syntax\.html#syntax">语法</A> is set to usable both for MikTeX (suggestion
 by Srinath Avadhanula) and teTeX (checked by Artem Chuprina).  Suggestion
 from |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>| is too complex to keep <A HREF="motion.html#it">它</A> working for different
 shells and OSes and also does not allow to use other available TeX <A HREF="options\.html#options">选项</A>,

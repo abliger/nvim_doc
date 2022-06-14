@@ -337,7 +337,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			interactive <A HREF="options.html#'shell'">'shell'</A>.
 
 			Type |<A HREF="insert.html#i">i</A>| to enter |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>|然后keys are sent to
-			the <A HREF="job_control.html#job">job</A> running in the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>. Type &lt;C-\&gt;&lt;C-N&gt; to
+			the <A HREF="job_control.html#job">job</A> running in the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>. Type &lt;C-\&gt;&lt;C-N&gt; to
 			leave <A HREF="intro.html#Terminal-mode">Terminal-mode</A>. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
 			Fails if changes have been made to the current buffer,
@@ -351,8 +351,8 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 :!{cmd}			Execute {cmd} with <A HREF="options.html#'shell'">'shell'</A>. See also |<A HREF="#:terminal">:terminal</A>|.
 
 			The command runs in a non-interactive shell connected
-			to a pipe (not a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>terminal). Use |<A HREF="#:terminal">:terminal</A>| to run an
-			interactive shell connected to a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>.
+			to a pipe (not a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>terminal). Use |<A HREF="#:terminal">:terminal</A>| to run an
+			interactive shell connected to a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
 
 			Backgrounded (&quot;&amp;&quot;) commands must not write to stdout
 			or stderr, the streams are closed immediately. |<A HREF="builtin.html#E5677">E5677</A>|
@@ -568,11 +568,11 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 							*<A NAME=":verbose-cmd"></A><B>:verbose-cmd</B>*
 When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing the value of a Vim option or a key map or
 an abbreviation or a user-defined function or a command or a highlight group
-or an <A HREF="autocmd.html#autocommand">autocommand</A> will also display where <A HREF="motion.html#it">它</A> was last defined. If they were
+or an <A HREF="autocmd\.html#autocommand">自动命令</A> will also display where <A HREF="motion.html#it">它</A> was last defined. If they were
 defined in <A HREF="lua.html#Lua">Lua</A> they will only be located if <A HREF="options.html#'verbose'">'verbose'</A> is set. So Start
 <A HREF="nvim.html#nvim">nvim</A> with -V1 arg to see them. If <A HREF="motion.html#it">它</A> was defined manually then there
 will be no &quot;Last set&quot; message.  When <A HREF="motion.html#it">它</A> was defined while executing a function,
-user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
+user command or <A HREF="autocmd\.html#autocommand">自动命令</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
 
 
 							*<A NAME="K"></A><B>K</B>*
@@ -631,7 +631,7 @@ user command or <A HREF="autocmd.html#autocommand">autocommand</A>, the <A HREF=
 
 2. Using Vim like <A HREF="#less">less</A> or more					*<A NAME="less"></A><B>less</B>*
 
-If you use the <A HREF="#less">less</A> or more program to view a file, you don't get <A HREF="syntax.html#syntax">syntax</A>
+If you use the <A HREF="#less">less</A> or more program to view a file, you don't get <A HREF="syntax\.html#syntax">语法</A>
 highlighting.  Thus you would like to use Vim instead.  You can <A HREF="diff.html#do">do</A> this by
 using the shell <A HREF="usr_41.html#script">script</A> &quot;$VIMRUNTIME/macros/less.sh&quot;.
 
@@ -640,7 +640,7 @@ up mappings to simulate the commands that <A HREF="#less">less</A> supports.  Ot
 still use the Vim commands.
 
 This isn't perfect.例如, when viewing a short file Vim will still use
-the whole screen.  But <A HREF="motion.html#it">它</A> works well enough for most uses, and you get <A HREF="syntax.html#syntax">syntax</A>
+the whole screen.  But <A HREF="motion.html#it">它</A> works well enough for most uses, and you get <A HREF="syntax\.html#syntax">语法</A>
 highlighting.
 
 The &quot;<A HREF="motion.html#h">h</A>&quot; key will give you a short overview of the available commands.

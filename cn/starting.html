@@ -407,14 +407,14 @@ argument.
 		mappings and settings.  A shell alias can be used to make
 		this easy to use.例如:
 <B>			alias vimc vim -u ~/.config/nvim/c_init.vim !*</B>
- 		Also consider using autocommands; 见 |<A HREF="autocmd.html#autocommand">autocommand</A>|.
+ 		Also consider using autocommands; 见 |<A HREF="autocmd\.html#autocommand">自动命令</A>|.
 
 		When {vimrc} is &quot;NONE&quot; (all uppercase), all initializations
 		from files and environment <A HREF="eval.html#variables">variables</A> are skipped.  Plugins and
-		<A HREF="syntax.html#syntax">syntax</A> highlighting are also skipped.
+		<A HREF="syntax\.html#syntax">语法</A> highlighting are also skipped.
 
 		When {vimrc} is &quot;NORC&quot; (all uppercase), this has the same
-		effect <A HREF="motion.html#as">as</A> &quot;NONE&quot;, but plugins and <A HREF="syntax.html#syntax">syntax</A> highlighting are not
+		effect <A HREF="motion.html#as">as</A> &quot;NONE&quot;, but plugins and <A HREF="syntax\.html#syntax">语法</A> highlighting are not
 		skipped.
 
 
@@ -529,7 +529,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 
 4. Setup |<A HREF="vim_diff.html#default-mappings">default-mappings</A>| and  |<A HREF="vim_diff.html#default-autocmds">default-autocmds</A>|.
 
-5. Enable <A HREF="filetype.html#filetype">filetype</A> and indent plugins.
+5. Enable <A HREF="filetype\.html#filetype">文件类型</A> and indent plugins.
 	This does the same <A HREF="motion.html#as">as</A> the command:
 <B>		:runtime! ftplugin.vim indent.vim</B>
  	Skipped if the &quot;<A HREF="#-u">-u</A> NONE&quot; command line argument was given.
@@ -553,7 +553,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	If Nvim was started with &quot;<A HREF="#-u">-u</A> {file}&quot; then <A HREF="editing.html#{file}">{file}</A> is used <A HREF="motion.html#as">as</A> the <A HREF="#config">config</A>
 	and all initializations until 5. are skipped. <A HREF="#$MYVIMRC">$MYVIMRC</A> is not set.
 	&quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-u">-u</A> NORC&quot; can be used to skip these initializations without
-	reading a file.  &quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-u">-u</A> NONE&quot; also skips plugins and <A HREF="syntax.html#syntax">syntax</A>
+	reading a file.  &quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-u">-u</A> NONE&quot; also skips plugins and <A HREF="syntax\.html#syntax">语法</A>
 	highlighting.  |<A HREF="#-u">-u</A>|
 
 	If Nvim was started with |<A HREF="#-es">-es</A>| all initializations until 5. are
@@ -582,13 +582,13 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	-  The file &quot;.nvimrc&quot;
 	-  The file &quot;.exrc&quot;
 
-7. Enable <A HREF="filetype.html#filetype">filetype</A> detection.
+7. Enable <A HREF="filetype\.html#filetype">文件类型</A> detection.
 	This does the same <A HREF="motion.html#as">as</A> the command:
 <B>		:runtime! filetype.lua filetype.vim</B>
  	Skipped if &quot;<A HREF="filetype.html#:filetype">:filetype</A> off&quot; was called or if the &quot;<A HREF="#-u">-u</A> NONE&quot; command line
 	argument was given.
 
-8. Enable <A HREF="syntax.html#syntax">syntax</A> highlighting.
+8. Enable <A HREF="syntax\.html#syntax">语法</A> highlighting.
 	This does the same <A HREF="motion.html#as">as</A> the command:
 <B>		:runtime! syntax/syntax.vim</B>
  	Skipped if &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot; was called or if the &quot;<A HREF="#-u">-u</A> NONE&quot; command
@@ -839,7 +839,7 @@ These commands will write &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot
 that when these commands are executed, the current key mappings and <A HREF="options\.html#options">选项</A>
 will be set to the same values.  The <A HREF="options\.html#options">选项</A> <A HREF="options.html#'columns'">'columns'</A>, <A HREF="options.html#'endofline'">'endofline'</A>,
 <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'lines'">'lines'</A>, <A HREF="options.html#'modified'">'modified'</A>, and <A HREF="options.html#'scroll'">'scroll'</A> are not included, because
-these are <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> or file dependent.
+these are <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> or file dependent.
 Note that the <A HREF="options\.html#options">选项</A> <A HREF="options.html#'binary'">'binary'</A>, <A HREF="options.html#'paste'">'paste'</A> and <A HREF="options.html#'readonly'">'readonly'</A> are included, this
 might not always be what you want.
 
@@ -855,7 +855,7 @@ with &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.htm
 default <A HREF="#vimrc">vimrc</A> in with a command like &quot;<A HREF="repeat.html#:source">:source</A> ~piet/.vimrc.Cprogs&quot;, change
 the settings and then save them in the current directory with &quot;:mkvimrc!&quot;.  If
 you want to make this file your default |<A HREF="#config">config</A>|, move <A HREF="motion.html#it">它</A> to
-$XDG_CONFIG_HOME/nvim.  You could also use autocommands |<A HREF="autocmd.html#autocommand">autocommand</A>| and/or
+$XDG_CONFIG_HOME/nvim.  You could also use autocommands |<A HREF="autocmd\.html#autocommand">自动命令</A>| and/or
 modelines |<A HREF="options.html#modeline">modeline</A>|.
 
 

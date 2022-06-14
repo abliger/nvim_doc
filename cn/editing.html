@@ -222,7 +222,7 @@ file.  If <A HREF="options.html#'cpoptions'">'cpoptions'</A> contains the '<A HR
 |<A HREF="options.html#cpo-f">cpo-f</A>| the file name is set for the &quot;<A HREF="insert.html#:read">:read</A> file&quot; command.  This is useful
 when starting Vim without an argument and then doing &quot;<A HREF="insert.html#:read">:read</A> file&quot; to start
 editing a file.
-When the file name was set and <A HREF="options.html#'filetype'">'filetype'</A> is empty the <A HREF="filetype.html#filetype">filetype</A> detection
+When the file name was set and <A HREF="options.html#'filetype'">'filetype'</A> is empty the <A HREF="filetype\.html#filetype">文件类型</A> detection
 autocommands will be triggered.
 
 							*<A NAME="not-edited"></A><B>not-edited</B>*
@@ -961,7 +961,7 @@ USING THE ARGUMENT LIST
 			{cmd} can contain '&#124;' to concatenate several commands.
 			{cmd} must not change the argument <A HREF="eval.html#list">列表</A>.
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd.html#autocommand">autocommand</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
+			<A HREF="autocmd\.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each file.
 			Also 见 |<A HREF="windows.html#:windo">:windo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
@@ -1061,7 +1061,7 @@ slower (but safer).
 			the filename of the current buffer to <A HREF="#{file}">{file}</A>.  The
 			previous name is used for the alternate file name.
 			The [!] is needed to overwrite an existing file.
-			When <A HREF="options.html#'filetype'">'filetype'</A> is empty <A HREF="filetype.html#filetype">filetype</A> detection is done
+			When <A HREF="options.html#'filetype'">'filetype'</A> is empty <A HREF="filetype\.html#filetype">文件类型</A> detection is done
 			with the new name, before the file is written.
 			When the write was successful <A HREF="options.html#'readonly'">'readonly'</A> is reset.
 
@@ -1221,7 +1221,7 @@ The names can be in upper- or <A HREF="change.html#lowercase">小写</A>.
 			If there are other <A HREF="intro.html#tab">tab</A> pages and quitting the last
 			<A HREF="windows.html#window">窗口</A>in the current <A HREF="intro.html#tab">tab</A> page the current <A HREF="intro.html#tab">tab</A> page is
 			closed |<A HREF="tabpage.html#tab-page">tab-page</A>|.
-			Triggers the |<A HREF="autocmd.html#QuitPre">QuitPre</A>| <A HREF="autocmd.html#autocommand">autocommand</A> event.
+			Triggers the |<A HREF="autocmd.html#QuitPre">QuitPre</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event.
 			见 |<A HREF="windows.html#CTRL-W_q">CTRL-W_q</A>| for quitting another<A HREF="windows.html#window">窗口</A>.
 
 :conf[irm] q[uit]	Quit, but give prompt when changes have been made, or
@@ -1363,14 +1363,14 @@ If you want to always use &quot;<A HREF="#:confirm">:confirm</A>&quot;, set the 
 			|<A HREF="repeat.html#:source">:source</A>|, |<A HREF="#:update">:update</A>|, |<A HREF="#:visual">:visual</A>|, |<A HREF="windows.html#:vsplit">:vsplit</A>|,
 			and |<A HREF="#:qall">:qall</A>| if <A HREF="options.html#'confirm'">'confirm'</A> is set.
 			{only in Win32 <A HREF="gui.html#GUI">GUI</A>, in console `browse edit` works
-			if the <A HREF="autocmd.html#FileExplorer">FileExplorer</A> <A HREF="autocmd.html#autocommand">autocommand</A> group exists}
+			if the <A HREF="autocmd.html#FileExplorer">FileExplorer</A> <A HREF="autocmd\.html#autocommand">自动命令</A> group exists}
 			When &quot;<A HREF="#:browse">:browse</A>&quot; is not possible you get an error
 			message.  If {command} doesn't support browsing, the
 			{command} is executed without a dialog.
 			&quot;<A HREF="#:browse">:browse</A> set&quot; works like |<A HREF="options.html#:options">:options</A>|.
 			See also |<A HREF="starting.html#:oldfiles">:oldfiles</A>| for &quot;<A HREF="#:browse">:browse</A> oldfiles&quot;.
 
-The <A HREF="syntax.html#syntax">syntax</A> is best shown via some examples:
+The <A HREF="syntax\.html#syntax">语法</A> is best shown via some examples:
 <B>	:browse e $vim/foo</B>
  		Open the browser in the $vim/foo directory, and edit the
 		file chosen.
@@ -1406,7 +1406,7 @@ command:
 
 You can override the <A HREF="change.html#filter">filter</A> setting on a per-buffer basis by setting the
 b:browsefilter variable.  You would most likely set b:browsefilter in a
-<A HREF="filetype.html#filetype">filetype</A> <A HREF="usr_05.html#plugin">plugin</A>, so that the browse dialog would contain entries related to
+<A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>, so that the browse dialog would contain entries related to
 the type of file you are currently editing.  Disadvantage: This makes <A HREF="motion.html#it">它</A>
 difficult to start editing a file of a different type.  To overcome this, you
 may want to add &quot;All Files\t*.*\n&quot; <A HREF="motion.html#as">as</A> the final <A HREF="change.html#filter">filter</A>, so that the user can
@@ -1615,8 +1615,8 @@ this:
 Or, when starting gvim from a shell:
 <B>	gvim file.log -c "set buftype=nofile"</B>
 
-Note that if a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A> <A HREF="autocmd.html#autocommand">autocommand</A> is defined you will not get a
-warning message or prompt.  The <A HREF="autocmd.html#autocommand">autocommand</A> is expected to handle this.
+Note that if a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A> <A HREF="autocmd\.html#autocommand">自动命令</A> is defined you will not get a
+warning message or prompt.  The <A HREF="autocmd\.html#autocommand">自动命令</A> is expected to handle this.
 
 There is no warning for a directory (e.g., with |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|).  But you <A HREF="diff.html#do">do</A>
 get warned if you started editing a new file and <A HREF="motion.html#it">它</A> was created <A HREF="motion.html#as">as</A> a directory
@@ -1635,7 +1635,7 @@ If you don't get warned often enough you can use the following command.
 :checkt[ime]		Check if any <A HREF="windows.html#buffers">buffers</A> were changed outside of Vim.
 			This checks and warns you if you would end up with two
 			versions of a file.
-			If this is called from an <A HREF="autocmd.html#autocommand">autocommand</A>, a &quot;<A HREF="repeat.html#:global">:global</A>&quot;
+			If this is called from an <A HREF="autocmd\.html#autocommand">自动命令</A>, a &quot;<A HREF="repeat.html#:global">:global</A>&quot;
 			command or is not typed the actual check is postponed
 			until a moment the side effects (reloading the file)
 			would be harmless.

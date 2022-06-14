@@ -115,7 +115,7 @@ Highlights
    orientation is per<A HREF="windows.html#window">窗口</A>, so <A HREF="motion.html#it">它</A> is possible to view the same
    file in right-to-left and left-to-right modes, simultaneously.
 
-<A HREF="insert.html#o">o</A>  No special <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> with right-to-left capabilities is required.
+<A HREF="insert.html#o">o</A>  No special <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> with right-to-left capabilities is required.
    The right-to-left changes are completely hardware independent.
    Only <A HREF="#Arabic">Arabic</A> fonts are necessary.
 
@@ -134,7 +134,7 @@ Highlights
 <A HREF="insert.html#o">o</A>  <A HREF="#Arabic">Arabic</A> keymapping on the command line in reverse insert mode.
 
 <A HREF="insert.html#o">o</A>  Proper Bidirectional functionality is possible given Vim is
-   started within a Bidi capable <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> emulator.
+   started within a Bidi capable <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator.
 
 
 
@@ -175,7 +175,7 @@ need to be accounted for and invoked.
 	    font name akin to that used in Linux/Unix systems.
 	    (e.g. -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1)
 
-      You can append the <A HREF="options.html#'guifont'">'guifont'</A> set command to your <A HREF="starting.html#vimrc">vimrc</A> file
+      You can append the <A HREF="options.html#'guifont'">'guifont'</A> set command to your <A HREF="starting\.html#vimrc">vimrc</A>文件
       in order to get the same above noted results.换句话说,
       you can include ':set guifont=your_ARABIC_FONT' to your <A HREF="starting.html#vimrc">vimrc</A>
       file.
@@ -189,9 +189,9 @@ need to be accounted for and invoked.
 
 <B>		:set encoding=utf-8</B>
  
-   to your <A HREF="starting.html#vimrc">vimrc</A> file (entering the command manually into your Vim
+   to your <A HREF="starting\.html#vimrc">vimrc</A>文件 (entering the command manually into your Vim
   <A HREF="windows.html#window">窗口</A>is highly discouraged).  In short, include ':set
-   encoding=utf-8' to your <A HREF="starting.html#vimrc">vimrc</A> file.
+   encoding=utf-8' to your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
    Attempts to use <A HREF="#Arabic">Arabic</A> without <A HREF="mbyte.html#UTF-8">UTF-8</A> will result the following
    warning message,
@@ -221,7 +221,7 @@ need to be accounted for and invoked.
      4. enable rightleftcmd mode (affecting the command-line)
      5. enable arabicshape  mode (do visual character alterations)
 
-   You may also append the command to your <A HREF="starting.html#vimrc">vimrc</A> file and simply
+   You may also append the command to your <A HREF="starting\.html#vimrc">vimrc</A>文件 and simply
    include ':set arabic' to <A HREF="motion.html#it">它</A>.
 
    You are also capable of disabling <A HREF="#Arabic">Arabic</A> support via
@@ -238,7 +238,7 @@ need to be accounted for and invoked.
 
    NOTE: the <A HREF="options.html#'arabic'">'arabic'</A> command takes into consideration <A HREF="options.html#'termbidi'">'termbidi'</A> for
 	 possible external bi-directional (bidi) support from the
-	 <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> (&quot;mlterm&quot; for instance offers such support).
+	 <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> (&quot;mlterm&quot; for instance offers such support).
 	 <A HREF="options.html#'termbidi'">'termbidi'</A>, if available, is superior to rightleft support
 	 and its support is preferred due to its level of offerings.
 	 <A HREF="options.html#'arabic'">'arabic'</A> when <A HREF="options.html#'termbidi'">'termbidi'</A> is enabled only sets the keymap.
@@ -263,8 +263,8 @@ need to be accounted for and invoked.
 <B>		:set keymap=arabic</B>
  
       in your VIM<A HREF="windows.html#window">窗口</A>.  You can also append the <A HREF="options.html#'keymap'">'keymap'</A> set command to
-      your <A HREF="starting.html#vimrc">vimrc</A> file.换句话说, you can include ':set keymap=arabic'
-      to your <A HREF="starting.html#vimrc">vimrc</A> file.
+      your <A HREF="starting\.html#vimrc">vimrc</A>文件.换句话说, you can include ':set keymap=arabic'
+      to your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
       To turn toggle (or switch) your keymapping between <A HREF="#Arabic">Arabic</A> and the
       default <A HREF="map.html#mapping">mapping</A> (English), <A HREF="motion.html#it">它</A> is advised that users use the '<A HREF="editing.html#CTRL-^">CTRL-^</A>'
@@ -285,8 +285,8 @@ need to be accounted for and invoked.
 <B>		:set delcombine</B>
  
       in our VIM<A HREF="windows.html#window">窗口</A>.  You can also append the <A HREF="options.html#'delcombine'">'delcombine'</A> set command
-      to your <A HREF="starting.html#vimrc">vimrc</A> file.换句话说, you can include ':set delcombine'
-      to your <A HREF="starting.html#vimrc">vimrc</A> file.
+      to your <A HREF="starting\.html#vimrc">vimrc</A>文件.换句话说, you can include ':set delcombine'
+      to your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
    +  <A HREF="#Arabic">Arabic</A> right-to-left Mode
 
@@ -300,7 +300,7 @@ need to be accounted for and invoked.
       - While in Left-to-right mode, enter ':set rl' in the command line
 	('rl' is the abbreviation for rightleft).
 
-      - Put the ':set rl' line in your <A HREF="starting.html#vimrc">vimrc</A> file to start Vim in 
+      - Put the ':set rl' line in your <A HREF="starting\.html#vimrc">vimrc</A>文件 to start Vim in 
         right-to-left mode permanently.
 
    +  <A HREF="#Arabic">Arabic</A> right-to-left command-line Mode
@@ -327,8 +327,8 @@ need to be accounted for and invoked.
 <B>		:set arabicshape</B>
  
       in our VIM<A HREF="windows.html#window">窗口</A>.  You can also append the <A HREF="options.html#'arabicshape'">'arabicshape'</A> set
-      command to your <A HREF="starting.html#vimrc">vimrc</A> file.换句话说, you can include
-      ':set arabicshape' to your <A HREF="starting.html#vimrc">vimrc</A> file.
+      command to your <A HREF="starting\.html#vimrc">vimrc</A>文件.换句话说, you can include
+      ':set arabicshape' to your <A HREF="starting\.html#vimrc">vimrc</A>文件.
 
 
 

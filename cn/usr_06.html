@@ -76,7 +76,7 @@
 
 		     VIM用户手册 - by Bram Moolenaar
 
-			  Using <A HREF="syntax.html#syntax">syntax</A> highlighting
+			  使用<A HREF="syntax\.html#syntax">语法</A>高亮
 
 
 Black and white text is boring.  With colors your file comes to life.  This
@@ -100,7 +100,7 @@ screen.
 *<A NAME="06.1"></A><B>06.1</B>*	Switching <A HREF="motion.html#it">它</A> on
 
 <A HREF="autocmd.html#Syntax">Syntax</A> highlighting is enabled by default.  Nvim will automagically detect the
-type of file and load the right <A HREF="syntax.html#syntax">syntax</A> highlighting.
+type of file and load the right <A HREF="syntax\.html#syntax">语法</A> highlighting.
 
 ==============================================================================
 
@@ -108,12 +108,12 @@ type of file and load the right <A HREF="syntax.html#syntax">syntax</A> highligh
 
 There can be a number of reasons why you don't see colors:
 
-- Your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> does not support colors.
+- Your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> does not support colors.
 	Vim will use <A HREF="syntax.html#bold">bold</A>, <A HREF="syntax.html#italic">italic</A> and underlined text, but this doesn't look
-	very nice.  You probably will want to try to get a <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> with
+	very nice.  You probably will want to try to get a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> with
 	colors.
 
-- Your <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> does support colors, but Vim doesn't know this.
+- Your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> does support colors, but Vim doesn't know this.
 	Make sure your <A HREF="term.html#$TERM">$TERM</A> setting is correct.例如, when using an
 	xterm that supports colors:
 
@@ -123,7 +123,7 @@ There can be a number of reasons why you don't see colors:
 
 <B>		TERM=xterm-color; export TERM</B>
 
- 	The <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> name must match the <A HREF="nvim_terminal_emulator.html#terminal">terminal</A> you are using.
+ 	The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> name must match the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you are using.
 
 - The file type is not recognized.
 	Vim doesn't know all file types, and sometimes it's near to impossible
@@ -139,7 +139,7 @@ There can be a number of reasons why you don't see colors:
 
  	To see which types are available, look in the directory
 	$VIMRUNTIME/syntax.  For the <A HREF="gui.html#GUI">GUI</A> you can use the <A HREF="autocmd.html#Syntax">Syntax</A> menu.
-	Setting the <A HREF="filetype.html#filetype">filetype</A> can also be done with a |<A HREF="options.html#modeline">modeline</A>|, so that the
+	Setting the <A HREF="filetype\.html#filetype">文件类型</A> can also be done with a |<A HREF="options.html#modeline">modeline</A>|, so that the
 	file will be highlighted each time you edit <A HREF="motion.html#it">它</A>.例如, this
 	line can be used in a Makefile (put <A HREF="motion.html#it">它</A> near the start or end of the
 	file):
@@ -181,9 +181,9 @@ Or the colors could be wrong:
 	wherever you are viewing the file.  That saves a lot of time, but
 	sometimes the colors are wrong.  A simple fix is hitting <A HREF="various.html#CTRL-L">CTRL-L</A>.  Or
 	scroll back a bit and then forward again.
-	For a real fix, 见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.  Some <A HREF="syntax.html#syntax">syntax</A> files have a way to make
-	<A HREF="motion.html#it">它</A> look further back, see the help for the specific <A HREF="syntax.html#syntax">syntax</A> file.  For
-	example, |<A HREF="tex.html">tex.vim</A>| for the TeX <A HREF="syntax.html#syntax">syntax</A>.
+	For a real fix, 见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.  Some <A HREF="syntax\.html#syntax">语法</A> files have a way to make
+	<A HREF="motion.html#it">它</A> look further back, see the help for the specific <A HREF="syntax\.html#syntax">语法</A> file.  For
+	example, |<A HREF="tex.html">tex.vim</A>| for the TeX <A HREF="syntax\.html#syntax">语法</A>.
 
 ==============================================================================
 
@@ -212,10 +212,10 @@ You could also write your own color scheme.  This is how you <A HREF="diff.html#
 
 2. Edit the color scheme file.  These entries are useful:
 
-	term		attributes in a B&amp;W <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
-	cterm		attributes in a color <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
-	ctermfg		foreground color in a color <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
-	ctermbg		background color in a color <A HREF="nvim_terminal_emulator.html#terminal">terminal</A>
+	term		attributes in a B&amp;W <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+	cterm		attributes in a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+	ctermfg		foreground color in a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+	ctermbg		background color in a color <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
 	<A HREF="gui.html#gui">gui</A>		attributes in the <A HREF="gui.html#GUI">GUI</A>
 	guifg		foreground color in the <A HREF="gui.html#GUI">GUI</A>
 	guibg		background color in the <A HREF="gui.html#GUI">GUI</A>
@@ -245,7 +245,7 @@ readable and look nice.
 *<A NAME="06.4"></A><B>06.4</B>*	With colors or without colors
 
 Displaying text in color takes a lot of effort.  If you find the displaying
-too slow, you might want to disable <A HREF="syntax.html#syntax">syntax</A> highlighting for a moment:
+too slow, you might want to disable <A HREF="syntax\.html#syntax">语法</A> highlighting for a moment:
 
 <B>	:syntax clear</B>
 
@@ -255,16 +255,16 @@ If you want to stop highlighting completely use:
 
 <B>	:syntax off</B>
 
-This will completely disable <A HREF="syntax.html#syntax">syntax</A> highlighting and remove <A HREF="motion.html#it">它</A> immediately for
+This will completely disable <A HREF="syntax\.html#syntax">语法</A> highlighting and remove <A HREF="motion.html#it">它</A> immediately for
 all <A HREF="windows.html#buffers">buffers</A>.  见 |<A HREF="syntax.html#:syntax-off">:syntax-off</A>| for more details.
 
 
 							*<A NAME=":syn-manual"></A><B>:syn-manual</B>*
-If you want <A HREF="syntax.html#syntax">syntax</A> highlighting only for specific files, use this:
+If you want <A HREF="syntax\.html#syntax">语法</A> highlighting only for specific files, use this:
 
 <B>	:syntax manual</B>
 
-This will enable the <A HREF="syntax.html#syntax">syntax</A> highlighting, but not switch <A HREF="motion.html#it">它</A> on automatically
+This will enable the <A HREF="syntax\.html#syntax">语法</A> highlighting, but not switch <A HREF="motion.html#it">它</A> on automatically
 when starting to edit a buffer.  To switch highlighting on for the current
 buffer, set the <A HREF="options.html#'syntax'">'syntax'</A> option:
 
@@ -327,8 +327,8 @@ others look at the colored text.
 
 *<A NAME="06.6"></A><B>06.6</B>*	Further reading
 
-|<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax.html#syntax">syntax</A> highlighted.
-|<A HREF="syntax.html#syntax">syntax</A>|      All the details.
+|<A HREF="usr_44.html">usr_44.txt</A>|  Your own <A HREF="syntax\.html#syntax">语法</A> highlighted.
+|<A HREF="syntax\.html#syntax">语法</A>|      All the details.
 
 ==============================================================================
 
