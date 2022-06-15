@@ -6227,7 +6227,7 @@ readdir({directory} [, {expr}])
 			to the <A HREF="eval.html#list">列表</A>.
 		Each time {expr} is evaluated |<A HREF="eval.html#v:val">v:val</A>| is set to the entry name.
 		When {expr} is a function the name is passed <A HREF="motion.html#as">as</A> the argument.
-		For example, to get a <A HREF="eval.html#list">列表</A> of files ending in &quot;.txt&quot;:
+		For example, to get 文件列表 ending in &quot;.txt&quot;:
 <B>		  readdir(dirname, {n -&gt; n =~ '.txt$'})</B>
  		To skip hidden and <A HREF="editing.html#backup">backup</A> files:
 <B>		  readdir(dirname, {n -&gt; n !~ '^\.\|\~$'})</B>

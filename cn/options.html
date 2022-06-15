@@ -950,7 +950,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	When a copy is made, the original file is truncated and then filled
 	with the new text.  This means that protection bits, owner and
-	symbolic links of the original file are unmodified.  The <A HREF="editing.html#backup">backup</A> file,
+	symbolic links of the original file are unmodified.  the <A HREF="editing\.html#backup">备份</A>文件,
 	however, is a new file, owned by the user who edited the file.  The
 	group of the <A HREF="editing.html#backup">backup</A> is set to the group of the original file.  If this
 	fails, the protection bits for the group are made the same <A HREF="motion.html#as">as</A> for
@@ -969,16 +969,16 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'backupdir'"></A><B>'backupdir'</B>* *<A NAME="'bdir'"></A><B>'bdir'</B>*
 <A HREF="#'backupdir'">'backupdir'</A> <A HREF="#'bdir'">'bdir'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;.,$XDG_STATE_HOME/nvim/backup//&quot;)
 			global
-	<A HREF="eval.html#list">列表</A> of directories for the <A HREF="editing.html#backup">backup</A> file, separated with commas.
-	- The <A HREF="editing.html#backup">backup</A> file will be created in the first directory in the <A HREF="eval.html#list">列表</A>
+	<A HREF="eval.html#list">列表</A> of directories for the <A HREF="editing\.html#backup">备份</A>文件, separated with commas.
+	- the <A HREF="editing\.html#backup">备份</A>文件 will be created in the first directory in the <A HREF="eval.html#list">列表</A>
 	  where this is possible.  If none of the directories exist Nvim will
 	  attempt to create the last directory in the <A HREF="eval.html#list">列表</A>.
 	- Empty means that no <A HREF="editing.html#backup">backup</A> file will be created ('patchmode' is
 	  impossible!).  Writing may fail because of this.
-	- A directory &quot;<A HREF="repeat.html#.">.</A>&quot; means to put the <A HREF="editing.html#backup">backup</A> file in the same directory
+	- A directory &quot;<A HREF="repeat.html#.">.</A>&quot; means to put the <A HREF="editing\.html#backup">备份</A>文件 in the same directory
 	  <A HREF="motion.html#as">as</A> the edited file.
 	- A directory starting with &quot;./&quot; (or &quot;.\&quot; for MS-Windows) means to put
-	  the <A HREF="editing.html#backup">backup</A> file relative to where the edited file is.  The leading
+	  the <A HREF="editing\.html#backup">备份</A>文件 relative to where the edited file is.  The leading
 	  &quot;<A HREF="repeat.html#.">.</A>&quot; is replaced with the path name of the edited file.
 	  (&quot;.&quot; inside a directory name has no special meaning).
 	- Spaces after the comma are ignored, other spaces are considered part
@@ -4855,7 +4855,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	name of the original file with the <A HREF="options\.html#options">字符串</A> in the <A HREF="#'patchmode'">'patchmode'</A> option
 	appended.  This option should start with a dot.  Use a <A HREF="options\.html#options">字符串</A> like
 	&quot;.orig&quot; or &quot;.org&quot;.  <A HREF="#'backupdir'">'backupdir'</A> must not be empty for this to work
-	(Detail: The <A HREF="editing.html#backup">backup</A> file is renamed to the patchmode file after the
+	(Detail: the <A HREF="editing\.html#backup">备份</A>文件 is renamed to the patchmode file after the
 	new file has been successfully written, that's why <A HREF="motion.html#it">它</A> must be possible
 	to write a <A HREF="editing.html#backup">backup</A> file).  If there was no file to be backed up, an
 	empty file is created.

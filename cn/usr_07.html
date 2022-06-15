@@ -79,484 +79,358 @@
 			  编辑更多文件
 
 
-No matter how many files you have, you can edit them without leaving Vim.
-Define a <A HREF="eval.html#list">列表</A> of files to work on and jump from one to the other.  Copy text
-from one file and put <A HREF="motion.html#it">它</A> in another one.
+无论你有多少个文件，你都可以同时编辑它们而不需要退出 Vim。本章介绍如何定义一个文件列表，并基于这个列表工作，或者从一个文件跳转到另一个文件，又或者从一个文件中拷贝文字，并写入到另一个文件中.
 
-|<A HREF="#07.1">07.1</A>|	Edit another file
-|<A HREF="#07.2">07.2</A>|	A <A HREF="eval.html#list">列表</A> of files
-|<A HREF="#07.3">07.3</A>|	Jumping from file to file
-|<A HREF="#07.4">07.4</A>|	Backup files
-|<A HREF="#07.5">07.5</A>|	Copy text between files
-|<A HREF="#07.6">07.6</A>|	Viewing a file
-|<A HREF="#07.7">07.7</A>|	Changing the file name
+|<A HREF="#07.1">07.1</A>|	编辑其他文件
+|<A HREF="#07.2">07.2</A>|	文件列表
+|<A HREF="#07.3">07.3</A>|	文件跳转
+|<A HREF="#07.4">07.4</A>|	备份文件
+|<A HREF="#07.5">07.5</A>|	在文件中相互拷贝
+|<A HREF="#07.6">07.6</A>|	查看文件
+|<A HREF="#07.7">07.7</A>|	改变文件名
 
-下一章: |<A HREF="usr_08.html">usr_08.txt</A>|  Splitting <A HREF="windows.html#windows">windows</A>
+下一章: |<A HREF="usr_08.html">usr_08.txt</A>|  分割<A HREF="windows\.html#windows">窗口</A>
 上一章: |<A HREF="usr_06.html">usr_06.txt</A>|  使用<A HREF="syntax\.html#syntax">语法</A>高亮
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="07.1"></A><B>07.1</B>*	Edit another file
+*<A NAME="07.1"></A><B>07.1</B>*	编辑其他文件
 
-So far you had to start Vim for every file you wanted to edit.  There is a
-simpler way.  To start editing another file, use this command:
+到目前位置，你必须为你想要编辑的每一个文件启动Vim.单有一个更简单的方式去直接编辑其他文件，使用这个命令:
 
 <B>	:edit foo.txt</B>
 
-You can use any file name instead of &quot;foo.txt&quot;.  Vim will close the current
-file and open the new one.  If the current file has unsaved changes, however,
-Vim displays an error message and does not open the new file:
+你能使用任意文件名代替&quot;foo.txt&quot;.Vim会关闭当前文件并打开它.如果当前文件有未保存的内容，Vim发出错误信息且不打开新文件:
 
 <B><FONT color="#3A6F2B">	E37: No write since last change (use ! to override) </FONT></B>
 
-	Note:
-	Vim puts an error ID at the start of each error message.  If you <A HREF="diff.html#do">do</A>
-	not understand the message or what caused <A HREF="motion.html#it">它</A>, look in the help system
-	for this ID.  In this <A HREF="change.html#case">case</A>:
+	注意:
+	Vim会在每一个错误信息前放置错误ID.如果你不懂什么造成了这个消息，可以使用帮助系统搜索这个ID，如:
 
 <B>		:help E37</B>
 
-At this point, you have a number of alternatives.  You can write the file
-using this command:
+此时你有多个解决方案。首先你可以通过如下命令保存当前文件:
 
 <B>	:write</B>
 
-Or you can force Vim to <A HREF="editing.html#discard">discard</A> your changes and edit the new file, using the
-force (!) character:
+你可以强制让Vim<A HREF="editing.html#discard">丢弃</A>改变内容并打开新文件，使用强制字符:
 
 <B>	:edit! foo.txt</B>
 
-If you want to edit another file, but not write the changes in the current
-file yet, you can make <A HREF="motion.html#it">它</A> hidden:
+如果你要编辑其他文件,但目前不在当前文件保存，你可以使<A HREF="motion.html#it">它</A>隐藏:
 
 <B>	:hide edit foo.txt</B>
 
-The text with changes is still there, but you can't see <A HREF="motion.html#it">它</A>.  This is further
-explained in section |22.4|: The buffer <A HREF="eval.html#list">列表</A>.
+改变的文本依然在那，但是你不能看到<A HREF="motion.html#it">它</A>. 深入解释见|22.4|: 缓存区<A HREF="eval.html#list">列表</A>.
 
 ==============================================================================
 
-*<A NAME="07.2"></A><B>07.2</B>*	A <A HREF="eval.html#list">列表</A> of files
+*<A NAME="07.2"></A><B>07.2</B>*	文件列表
 
-You can start Vim to edit a sequence of files.例如:
+你可以使用Vim编辑文件序列.例如:
 
 <B>	vim one.c two.c three.c</B>
 
-This command starts Vim and tells <A HREF="motion.html#it">它</A> that you will be editing three files.
-Vim displays just the first file.  After you have done your thing in this
-file, to edit the next file you use this command:
+这个命令启动Vim并告诉<A HREF="motion.html#it">它</A>会编辑三个文件.Vim只能展示第一个文件.在你编辑完此文件后你可以使用这个命令到下一个文件:
 
 <B>	:next</B>
 
-If you have unsaved changes in the current file, you will get an error
-message and the &quot;<A HREF="editing.html#:next">:next</A>&quot; will not work.  This is the same problem <A HREF="motion.html#as">as</A> with
-&quot;<A HREF="editing.html#:edit">:edit</A>&quot; mentioned in the previous section.  To <A HREF="editing.html#abandon">abandon</A> the changes:
+如果你未保存当前文件，你会得到一个错误并且&quot;<A HREF="editing.html#:next">:next</A>&quot;无效.这和上面提到的&quot;<A HREF="editing.html#:edit">:edit</A>&quot;是一样的.<A HREF="editing.html#abandon">放弃</A>改变:
 
 <B>	:next!</B>
 
-But mostly you want to save the changes and move on to the next file.  There
-is a special command for this:
+但是最可能的是你想要保存改变并跳转到下一个文件，下面的命令特别适合:
 
 <B>	:wnext</B>
 
-This does the same <A HREF="motion.html#as">as</A> using two separate commands:
+这和使用下面两个命令是一样的:
 
 <B>	:write</B>
 <B>	:next</B>
 
 
-WHERE AM I?
+我在哪？
 
-To see which file in the argument <A HREF="eval.html#list">列表</A> you are editing, look in the<A HREF="windows.html#window">窗口</A>
-title.  It should show something like &quot;(2 of 3)&quot;.  This means you are editing
-the second file out of three files.
-   If you want to see the <A HREF="eval.html#list">列表</A> of files, use this command:
+去查看你正编辑的文件在参数<A HREF="eval.html#list">列表</A>的位置,可以看一下<A HREF="windows.html#window">窗口</A>标题.它应该会展示一些像&quot;(2 of 3)&quot;的内容.意思是在你正编辑的三个文件的第二个.
+   如果你想要查看文件<A HREF="eval.html#list">列表</A>,使用命令:
 
 <B>	:args</B>
 
-This is short for &quot;arguments&quot;.  The output might look like this:
+这是&quot;arguments&quot;的缩写.输出如下:
 
 <B><FONT color="#3A6F2B">	one.c [two.c] three.c </FONT></B>
 
-These are the files you started Vim with.  The one you are currently editing,
-&quot;two.c&quot;, is in square brackets.
+这里列出所有你启动 Vim 时指定的文件。你正在编辑的那一个，例如，"two.c"，会用中括号括起.
 
+移动到另一个参数
 
-MOVING TO OTHER ARGUMENTS
-
-To go back one file:
+返回第一的文件:
 
 <B>	:previous</B>
 
-This is just like the &quot;<A HREF="editing.html#:next">:next</A>&quot;命令, except that <A HREF="motion.html#it">它</A> moves in the other
-direction.  Again, there is a shortcut command for when you want to write the
-file first:
+这就像&quot;<A HREF="editing.html#:next">:next</A>&quot;命令, 只不过<A HREF="motion.html#it">它</A>反方向移动. 同样保存移动使用:
 
 <B>	:wprevious</B>
 
-To move to the very last file in the <A HREF="eval.html#list">列表</A>:
+移动到<A HREF="eval.html#list">列表</A>的最后一个:
 
 <B>	:last</B>
 
-And to move back to the first one again:
+再次移动到第一个文件:
 
 <B>	:first</B>
 
-There is no &quot;:wlast&quot; or &quot;:wfirst&quot; command though!
+不过，没有&quot;:wlast&quot;或者&quot;:wfirst&quot;命令!
 
-You can use a <A HREF="intro.html#count">count</A> for &quot;<A HREF="editing.html#:next">:next</A>&quot; and &quot;<A HREF="editing.html#:previous">:previous</A>&quot;.  To skip two files forward:
+你能在&quot;<A HREF="editing.html#:next">:next</A>&quot;和&quot;<A HREF="editing.html#:previous">:previous</A>&quot;添加数字前缀.向前跳转两个文件:
 
 <B>	:2next</B>
 
+自动保存
 
-AUTOMATIC WRITING
-
-When 移动 the files and making changes, you have to remember to use
-&quot;<A HREF="editing.html#:write">:write</A>&quot;.  Otherwise you will get an error message.  If you are sure you
-always want to write modified files, you can tell Vim to automatically write
-them:
+当移动文件和编辑文件时，你需要记得使用&quot;<A HREF="editing.html#:write">:write</A>&quot;.否则你会得到错误信息.如果你确保你总是想要保存修改文件，你可以让Vim自动保存它们:
 
 <B>	:set autowrite</B>
 
-When you are editing a file which you may not want to write, switch <A HREF="motion.html#it">它</A> off
-again:
+当你编辑不想要保存修改的文件时，你可以使用关闭<A HREF="motion.html#it">它</A>:
 
 <B>	:set noautowrite</B>
 
 
-EDITING ANOTHER LIST OF FILES
+编辑文件列表
 
-You can redefine the <A HREF="eval.html#list">列表</A> of files without the need to exit Vim and start <A HREF="motion.html#it">它</A>
-again.  Use this command to edit three other files:
+你不需要退出Vim就可以重定义文件<A HREF="eval.html#list">列表</A>并再次启动<A HREF="motion.html#it">它</A>. 使用此命令编辑其他的三个文件:
 
 <B>	:args five.c six.c seven.h</B>
 
-Or use a <A HREF="editing.html#wildcard">wildcard</A>, like it's used in the shell:
+或使用<A HREF="editing.html#wildcard">wildcard</A>, 就像在命令行中:
 
 <B>	:args *.txt</B>
 
-Vim will take you to the first file in the <A HREF="eval.html#list">列表</A>.  Again, if the current file
-has changes, you can either write the file first, or use &quot;:args!&quot; (with !
-added) to <A HREF="editing.html#abandon">abandon</A> the changes.
+Vim会打开<A HREF="eval.html#list">列表</A>中第一个文件.同样地，如果当前文件没有保存，你需要保存它，或者使用 ":args!" (加了一个 !) 放弃修改.
 
 
-DID YOU EDIT THE LAST FILE?
+你编辑过最后一个文件吗?
 
 							*<A NAME="arglist-quit"></A><B>arglist-quit</B>*
-When you use a <A HREF="eval.html#list">列表</A> of files, Vim assumes you want to edit them all.  To
-protect you from <A HREF="starting.html#exiting">exiting</A> too early, you will get this error when you didn't
-edit the last file in the <A HREF="eval.html#list">列表</A> yet:
+当你使用文件列表, Vim会认为你想要编辑它们所有的文件.防止你提前<A HREF="starting.html#exiting">退出</A>, 在你还没有编辑到列表最后一个文件时会提示错误:
 
 <B><FONT color="#3A6F2B">	E173: 46 more files to edit </FONT></B>
 
-If you really want to exit, just <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> again.  Then <A HREF="motion.html#it">它</A> will work (but not when
-you did other commands in between).
+如果你真地想要退出，可以在退出一次.但如果在两个命令间还执行了其它命令就无效了.
 
 ==============================================================================
 
-*<A NAME="07.3"></A><B>07.3</B>*	Jumping from file to file
+*<A NAME="07.3"></A><B>07.3</B>*	文件跳转
 
-To quickly jump between two files, press <A HREF="editing.html#CTRL-^">CTRL-^</A> (on English-US keyboards the ^
-is above the 6 key).  Example:
+使用<A HREF="editing.html#CTRL-^">CTRL-^</A>快素在文件间跳转(在数字键6上).例如:
 
 <B>	:args one.c two.c three.c</B>
 
-You are now in one.c.
+现在你在one.c 文件中
 
 <B>	:next</B>
 
-Now you are in two.c.  Now use <A HREF="editing.html#CTRL-^">CTRL-^</A> to go back to one.c.  Another <A HREF="editing.html#CTRL-^">CTRL-^</A> and
-you are back in two.c.  Another <A HREF="editing.html#CTRL-^">CTRL-^</A> and you are in one.c again.  If you now
-<A HREF="diff.html#do">do</A>:
+现在你在two.c中.使用<A HREF="editing.html#CTRL-^">CTRL-^</A>返回到one.c.同样地再使用<A HREF="editing.html#CTRL-^">CTRL-^</A>也能返回到two.c.再使用<A HREF="editing.html#CTRL-^">CTRL-^</A>再次返回one.c.如果你现在执行:
 
 <B>	:next</B>
 
-You are in three.c.  Notice that the <A HREF="editing.html#CTRL-^">CTRL-^</A> command does not change the idea
-of where you are in the <A HREF="eval.html#list">列表</A> of files.  Only commands like &quot;<A HREF="editing.html#:next">:next</A>&quot; and
-&quot;<A HREF="editing.html#:previous">:previous</A>&quot; <A HREF="diff.html#do">do</A> that.
+会到three.c.注意<A HREF="editing.html#CTRL-^">CTRL-^</A>命令不会改变你在文件列表的位置.同样的命令如&quot;<A HREF="editing.html#:next">:next</A>&quot;和&quot;<A HREF="editing.html#:previous">:previous</A>&quot;.
 
-The file you were previously editing is called the &quot;alternate&quot; file.  When you
-just started Vim <A HREF="editing.html#CTRL-^">CTRL-^</A> will not work, since there isn't a previous file.
+如果先前你编辑过叫做&quot;alternate&quot;的文件.当你启动Vim，<A HREF="editing.html#CTRL-^">CTRL-^</A>无效, 此时没有轮换文件.
 
 
-PREDEFINED MARKS
+预定标记
 
-After jumping to another file, you can use two predefined marks which are very
-useful:
+跳转到其他文件后，有两个非常有用的预定标记:
 
 <B>	`"</B>
 
-This takes you to the position where the cursor was when you left the file.
-Another <A HREF="motion.html#mark">mark</A> that is remembered is the position where you made the last
-change:
+这个标记会带你到上次你离开前的位置，另一个<A HREF="motion.html#mark">标记</A>是你最后一次改变的位置:
 
 <B>	`.</B>
 
-Suppose you are editing the file &quot;one.txt&quot;.  Somewhere halfway through the
-file you use &quot;<A HREF="change.html#x">x</A>&quot; to delete a character.  Then you go to the last line with &quot;<A HREF="motion.html#G">G</A>&quot;
-and write the file with &quot;<A HREF="editing.html#:w">:w</A>&quot;.  You edit several other files, and then use
-&quot;<A HREF="editing.html#:edit">:edit</A> one.txt&quot; to come back to &quot;one.txt&quot;.  If you now use `&quot; Vim jumps to the
-last line of the file.  Using <A HREF="motion.html#`.">`.</A> takes you to the position where you deleted
-the character.  Even when you move around in the file `&quot; and <A HREF="motion.html#`.">`.</A> will take you
-to the remembered position.  At least until you make another change or leave
-the file.
+加入你在编辑&quot;one.txt&quot;. 有时你中途使用&quot;<A HREF="change.html#x">x</A>&quot;在文件中删除了一个字符.然后你使用&quot;<A HREF="motion.html#G">G</A>&quot;到了文件尾，使用&quot;<A HREF="editing.html#:w">:w</A>&quot;保存文件.编辑了几个其他文件后再使用&quot;<A HREF="editing.html#:edit">:edit</A> one.txt&quot;回到&quot;one.txt&quot;.现在你使用`&quot; Vim跳转到文件尾.  Using <A HREF="motion.html#`.">`.</A>跳转到删除字符的位置.即使你在文件中移动过，但在你修改或者离开文件前，这两个标记都不会改变.
 
 
-FILE MARKS
+文件标记
 
-In section |<A HREF="usr_03.html#03.10">03.10</A>| was explained how you can place a <A HREF="motion.html#mark">mark</A> in a file with &quot;mx&quot;
-and jump to that position with &quot;`x&quot;.  That works within one file.  If you edit
-another file and place marks there, these are specific for that file.  Thus
-each file has its own set of marks, they are local to the file.
-   So far we were 使用标记 with a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>.  There are also marks
-with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>.  These are global, they can be used from any file.
-For example suppose that we are editing the file &quot;foo.txt&quot;.  Go to halfway
-down the file (&quot;50&#37;&quot;) and place the <A HREF="motion.html#F">F</A> <A HREF="motion.html#mark">mark</A> there (F for foo):
+在章节|<A HREF="usr_03.html#03.10">03.10</A>|介绍了如何在文件中使用&quot;mx&quot;放置一个<A HREF="motion.html#mark">标记</A>并使用&quot;`x&quot;跳转到该位置.它只能在一个文件中使用.如果你在编辑其他文件并放置了标记，那么标记只能在那个文件中使用.因此每一个文件都有一个自己的标记集，并只能在该文件中使用.
+   到此为止我们都使用<A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>标记.标记也能使用<A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>.这种标记是全局的，它们可以在任何文件中使用.例如假设我们正编辑&quot;foo.txt&quot;.在文件中间(&quot;50&#37;&quot;)放置<A HREF="motion.html#F">F</A> <A HREF="motion.html#mark">标记</A>(F for foo):
 
 <B>	50%mF</B>
 
-Now edit the file &quot;bar.txt&quot; and place the <A HREF="motion.html#B">B</A> <A HREF="motion.html#mark">mark</A> (B for <A HREF="motion.html#bar">bar</A>) at its last line:
+之后编辑&quot;bar.txt&quot;，在最后放置<A HREF="motion.html#B">B</A> <A HREF="motion.html#mark">标记</A> (B for <A HREF="motion.html#bar">bar</A>):
 
 <B>	GmB</B>
 
-Now you can use the &quot;'F&quot; command to jump back to halfway of foo.txt.  Or edit
-yet another file, type &quot;'B&quot; and you jump to the end of bar.txt.
+现在使用&quot;'F&quot;命令去跳转到foo.txt的中间. 或者编辑其他文件 键入&quot;'B&quot;跳转到bar.txt文件尾.
 
-The file marks are remembered until they are placed somewhere else.  Thus you
-can place the <A HREF="motion.html#mark">mark</A>, <A HREF="diff.html#do">do</A> hours of editing and still be able to jump back to that
-<A HREF="motion.html#mark">mark</A>.
-   It's often useful to think of a simple connection between the <A HREF="motion.html#mark">mark</A> <A HREF="print.html#letter">letter</A>
-and where <A HREF="motion.html#it">它</A> is placed.例如, use the <A HREF="motion.html#H">H</A> <A HREF="motion.html#mark">mark</A> in a header file, <A HREF="motion.html#M">M</A> in
-a Makefile and C in a C code file.
+文件标记会被一直记住直到被重新定义.这样，你可以在一个文件中留下一个标记，然后任意做一段时间的编辑，最后用这个标记跳回去.
+   让文件标记符和对应的位置建立一些关系常常是很有用的。例如，用 H 表示头文件  (Head File)，M 表示 Makefile 而 C 表示 C 的代码文件.
 
-To see where a specific <A HREF="motion.html#mark">mark</A> is, give an argument to the &quot;<A HREF="motion.html#:marks">:marks</A>&quot;命令:
+要知道一个标记在什么地方，在 ":marks" 命令中加上标记名作为参数即可:
 
 <B>	:marks M</B>
 
-You can also give several arguments:
+你也能给出一些参数:
 
 <B>	:marks MCP</B>
 
-Don't forget that you can use <A HREF="motion.html#CTRL-O">CTRL-O</A> and <A HREF="motion.html#CTRL-I">CTRL-I</A> to jump to older and newer
-positions without placing marks there.
+别忘了你还可以 CTRL-O 和 CTRL-I 在整个跳转序列中前后跳转.
 
 ==============================================================================
 
-*<A NAME="07.4"></A><B>07.4</B>*	Backup files
+*<A NAME="07.4"></A><B>07.4</B>*	备份文件
 
-Usually Vim does not produce a <A HREF="editing.html#backup">backup</A> file.  If you want to have one, all you
-need to <A HREF="diff.html#do">do</A> is execute the following command:
+通常Vim不会产生<A HREF="editing.html#backup">备份</A>文件.如果你希望的话，执行如下命令就可以了:
 
 <B>	:set backup</B>
 
-The name of the <A HREF="editing.html#backup">backup</A> file is the original file with a  ~  added to the end.
-If your file is named data.txt, for example, the <A HREF="editing.html#backup">backup</A> file name is
-data.txt~.
-   If you <A HREF="diff.html#do">do</A> not like the fact that the <A HREF="editing.html#backup">backup</A> files end with ~, you can
-change the extension:
+<A HREF="editing\.html#backup">备份</A>文件的名字是原文件名结尾加上~.如，如果你的文件名是data.txt,<A HREF="editing\.html#backup">备份</A>文件的名字是data.txt~.
+   如果你不想让<A HREF="editing\.html#backup">备份</A>文件结尾加~,你也能修改后缀:
 
 <B>	:set backupext=.bak</B>
 
-This will use data.txt.bak instead of data.txt~.
-   Another option that matters here is <A HREF="options.html#'backupdir'">'backupdir'</A>.  It specifies where the
-<A HREF="editing.html#backup">backup</A> file is written.  The default, to write the <A HREF="editing.html#backup">backup</A> in the same
-directory <A HREF="motion.html#as">as</A> the original file, will mostly be the right thing.
+   它会使用data.txt.bak代替data.txt~.
+   其他的相关选项是<A HREF="options.html#'backupdir'">'backupdir'</A>.它指定备份文件的目录。默认情况是与原始文件的路径一致，这在很多情况下都是合适的.
 
-	Note:
-	When the <A HREF="options.html#'backup'">'backup'</A> option isn't set but the <A HREF="options.html#'writebackup'">'writebackup'</A> is, Vim will
-	still create a <A HREF="editing.html#backup">backup</A> file.  However, <A HREF="motion.html#it">它</A> is deleted <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> <A HREF="editing.html#writing">写</A>
-	the file was completed successfully.  This <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a safety
-	against losing your original file when <A HREF="editing.html#writing">写</A> fails in some way (disk
-	full is the most common cause; being hit by lightning might be
-	another, although <A HREF="various.html#less">less</A> common).
+	注意:
+	当<A HREF="options.html#'backup'">'backup'</A>选项没有设置但是<A HREF="options.html#'writebackup'">'writebackup'</A>设置了,Vim也会创建<A HREF="editing.html#backup">备份</A>文件。  但是,在文件编辑完后，这个备份文件会被自动删除。这个功能用于避免发生异常情况导致没有存盘 (磁盘满是最常见的情况；被雷击也是一种情况，不过很少发生).
 
 
-KEEPING THE ORIGINAL FILE
+保留原始文件
 
-If you are editing source files, you might want to keep the file before you
-make any changes.  But the <A HREF="editing.html#backup">backup</A> file will be overwritten each time you write
-the file.  Thus <A HREF="motion.html#it">它</A> only contains the previous version, not the first one.
-   To make Vim keep the original file, set the <A HREF="options.html#'patchmode'">'patchmode'</A> option.  This
-specifies the extension used for the first <A HREF="editing.html#backup">backup</A> of a changed file.  Usually
-you would <A HREF="diff.html#do">do</A> this:
+如果你在编辑源程序，你可能想在修改之前保留一个备份。但备份文件会在你存盘的时候被覆盖。这样它只能保留前一个版本，而不是最早的文件。
+   让Vim保存原始文件，需要设置<A HREF="options.html#'patchmode'">'patchmode'</A>选项.这个选项定义需要改动文件的第一个备份文件的扩展名.你可以这样做:
 
 <B>	:set patchmode=.orig</B>
 
-When you now edit the file data.txt for the first time, make changes and write
-the file, Vim will keep a copy of the unchanged file under the name
-&quot;data.txt.orig&quot;.
-   If you make further changes to the file, Vim will notice that
-&quot;data.txt.orig&quot; already exists and leave <A HREF="motion.html#it">它</A> alone.  Further <A HREF="editing.html#backup">backup</A> files will
-then be called &quot;data.txt~&quot; (or whatever you specified with <A HREF="options.html#'backupext'">'backupext'</A>).
-   If you leave <A HREF="options.html#'patchmode'">'patchmode'</A> empty (that is the default), the original file
-will not be kept.
+这样，当你第一次编辑 data.txt，作了修改并执行存盘，Vim 会保留一个名为"data.txt.orig" 的原始文件.
+  如果你接着修改这个文件，Vim 会发现这个原始文件已经存在，并不再覆盖它。进一步的备份就存在 "data.txt~" (或者你设置的 'backupext' 指定的文件) 中。
+  如果你让 'patchmode' 设为空 (这是默认的情况)，则原始文件不会被保留。
 
 ==============================================================================
 
-*<A NAME="07.5"></A><B>07.5</B>*	Copy text between files
+*<A NAME="07.5"></A><B>07.5</B>*	在文件中相互拷贝
 
-This explains how to copy text from one file to another.  Let's start with a
-simple example.  Edit the file that contains the text you want to copy.  Move
-the cursor to the start of the text and press &quot;<A HREF="visual.html#v">v</A>&quot;.  This starts <A HREF="visual\.html#Visual">可视</A>模式.
-Now move the cursor to the end of the text and press &quot;<A HREF="change.html#y">y</A>&quot;.  This yanks (copies)
-the selected text.
-   To copy the above <A HREF="motion.html#paragraph">段落</A>, you would <A HREF="diff.html#do">do</A>:
+本节解释如何在文件间拷贝文本。我们从一个简单的例子开始。编辑一个你要拷贝文本的文件，把光标移到要拷贝的文本的开始处，用 "v" 命令启动可视模式，然后把光标移到要拷贝文本的结尾处，输入 "y" 拷贝文本。
+例如，要拷贝上面这段文字，你可以执行:
 
 <B>	:edit thisfile</B>
 <B>	/This</B>
 <B>	vjjjj$y</B>
 
-Now edit the file you want to put the text in.  Move the cursor to the
-character where you want the text to appear after.  Use &quot;<A HREF="change.html#p">p</A>&quot; to put the text
-there.
+现在编辑你要粘贴文本的文件。把光标移到你要插入文本的地方。用 "p" 命令把文本粘贴到那里:
+
 <B>	:edit otherfile</B>
 <B>	/There</B>
 <B>	p</B>
 
-Of course you can use many other commands to <A HREF="change.html#yank">yank</A> the text.例如, to
-select whole lines start <A HREF="visual\.html#Visual">可视</A>模式 with &quot;<A HREF="visual.html#V">V</A>&quot;.  Or use <A HREF="visual.html#CTRL-V">CTRL-V</A> to select a
-rectangular block.  Or use &quot;<A HREF="change.html#yy">yy</A>&quot; to <A HREF="change.html#yank">yank</A> a single line, &quot;yaw&quot; to yank-a-word,
-etc.
-   The &quot;<A HREF="change.html#p">p</A>&quot;命令 puts the text after the cursor.  Use &quot;<A HREF="change.html#P">P</A>&quot; to put the text
-before the cursor.  Notice that Vim remembers if you yanked a whole line or a
-block, and puts <A HREF="motion.html#it">它</A> back that way.
+当然，你可以用任何命令拷贝文本。例如，用 "V" 命令选中整行的内容。或者用 CTRL-V选择一个矩形列块。或者使用 "Y" 拷贝一个单行，"yaw" 拷贝一个单词等。
+   "p" 命令把文本粘贴到光标之后，"P" 命令则粘贴到光标之前。注意， Vim 会记住你拷贝的是一整行还是一个列块，并用相同的方式把文本贴出来。
 
 
-USING REGISTERS
+使用寄存器
 
-When you want to copy several pieces of text from one file to another, having
-to switch between the files and <A HREF="editing.html#writing">写</A> the target file takes a lot of time.
-To avoid this, copy each piece of text to its own <A HREF="intro.html#register">register</A>.
-   A <A HREF="intro.html#register">register</A> is a place where Vim stores text.  Here we will use the
-<A HREF="change.html#registers">registers</A> named a to <A HREF="vimindex.html#z">z</A> (later you will find out there are others).  Let's copy
-a <A HREF="motion.html#sentence">sentence</A> to the <A HREF="motion.html#f">f</A> <A HREF="intro.html#register">register</A> (f for First):
+当你需要拷贝一个文件的几个地方到另一个文件，用上面的方法，你就得反复在两个文件间跳来跳去。要避免这种情况，你可以把不同的文本拷贝到不同的寄存器中.
+  寄存器是 Vim 用来保存文本的地方。这里我们使用名称为 a 到 z 的寄存器 (后面我们会发现还有其它寄存器)。让我们拷贝一个句子到 f 寄存器 (f 表示 First):
 
 <B>	"fyas</B>
 
-The &quot;yas&quot; command yanks a <A HREF="motion.html#sentence">sentence</A> like before.  It's the &quot;<A HREF="motion.html#f">f</A> that tells Vim
-the text should be placed in the <A HREF="motion.html#f">f</A> <A HREF="intro.html#register">register</A>.  This must come just before the
-<A HREF="change.html#yank">yank</A> command.
-   Now <A HREF="change.html#yank">yank</A> three whole lines to the <A HREF="motion.html#l">l</A> <A HREF="intro.html#register">register</A> (l for line):
+&quot;yas&quot;命令像以前说过的那样拷贝一个句子，而 "f 告诉 Vim 把文本拷贝到寄存器f。这必须放在拷贝命令的前面.
+  现在，拷贝三个整行到寄存器 l (l 表示 line):
 
 <B>	"l3yy</B>
 
-The <A HREF="intro.html#count">count</A> could be before the &quot;<A HREF="motion.html#l">l</A> just <A HREF="motion.html#as">as</A> well.  To <A HREF="change.html#yank">yank</A> a block of text to the
-<A HREF="motion.html#b">b</A> (for block) <A HREF="intro.html#register">register</A>:
+T计数前缀也可以用在 "l 的前面。要拷贝一个文本列块到寄存器 b (代表 block) 中:
 
 <B>	CTRL-Vjjww"by</B>
 
-Notice that the <A HREF="intro.html#register">register</A> specification &quot;<A HREF="motion.html#b">b</A> is just before the &quot;<A HREF="change.html#y">y</A>&quot;命令.
-This is required.  If you would have put <A HREF="motion.html#it">它</A> before the &quot;<A HREF="motion.html#w">w</A>&quot;命令, <A HREF="motion.html#it">它</A> would
-not have worked.
-   Now you have three pieces of text in the <A HREF="motion.html#f">f</A>, <A HREF="motion.html#l">l</A> and <A HREF="motion.html#b">b</A> <A HREF="change.html#registers">registers</A>.  Edit
-another file, move around and place the text where you want <A HREF="motion.html#it">它</A>:
+注意 "b 正好在 "y" 命令的前面，这是必须的。把它放在 "w" 命令的前面就不行。
+  现在你有了在寄存器 f，l 和 b 有三段文本。编辑另一个文件，并移到要插入文本的地方:
 
 <B>	"fp</B>
 
-Again, the <A HREF="intro.html#register">register</A> specification &quot;<A HREF="motion.html#f">f</A> comes before the &quot;<A HREF="change.html#p">p</A>&quot;命令.
-   You can put the <A HREF="change.html#registers">registers</A> in any order.  And the text stays in the <A HREF="intro.html#register">register</A>
-until you <A HREF="change.html#yank">yank</A> something else into <A HREF="motion.html#it">它</A>.  Thus you can put <A HREF="motion.html#it">它</A> <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A>
-you like.
+同样地，寄存器标识符 "f 必须在 "p" 命令的前面。
+  你可以用任何顺序粘贴寄存器的内容。并且，这些内容一直存在于寄存器中，直到你拷贝其它文件到这个寄存器中。这样，你可以粘贴任意多次。
 
-When you delete text, you can also specify a <A HREF="intro.html#register">register</A>.  Use this to move
-several pieces of text around.例如, to delete-a-word and write <A HREF="motion.html#it">它</A> in
-the <A HREF="motion.html#w">w</A> <A HREF="intro.html#register">register</A>:
+删除文本的时候，你也可以指定寄存器。使用这个方法可以移动几处文本。例如，要删除一个单词并写到 w 寄存器中:
 
 <B>	"wdaw</B>
 
-Again, the <A HREF="intro.html#register">register</A> specification comes before the delete command &quot;<A HREF="change.html#d">d</A>&quot;.
+同样地，寄存器标识符必须在删除命令 "d" 的前面.
 
 
-APPENDING TO A FILE
+添加到文件
 
-When collecting lines of text into one file, you can use this command:
+如果要把收集的行都放到一个文件里，你可以使用:
 
 <B>	:write &gt;&gt; logfile</B>
 
-This will write the text of the current file to the end of &quot;logfile&quot;.  Thus <A HREF="motion.html#it">它</A>
-is appended.  This avoids that you have to copy the lines, edit the log file
-and put them there.  Thus you save two steps.  But you can only append to the
-end of a file.
-   To append only a few lines, select them in <A HREF="visual\.html#Visual">可视</A>模式 before typing
-&quot;<A HREF="editing.html#:write">:write</A>&quot;.  In chapter 10 you will learn other ways to select a range of lines.
+此命令会把当前文件内容写入到&quot;logfile&quot;末尾. 这样实现了文件添加功能。这样使你免去了拷贝，编辑和拷贝的过程，省了两步。但你只能加到目标文件的末尾
+要只拷贝一部分内容，可以先用可视模式选中这些内容后在执行 ":write"。在第 10 章，你将学会选中一个行范围的办法
 
 ==============================================================================
 
-*<A NAME="07.6"></A><B>07.6</B>*	Viewing a file
+*<A NAME="07.6"></A><B>07.6</B>*	查看文件
 
-Sometimes you only want to see what a file contains, without the intention to
-ever write <A HREF="motion.html#it">它</A> back.  There is the risk that you type &quot;<A HREF="editing.html#:w">:w</A>&quot; without thinking and
-overwrite the original file anyway.  To avoid this, edit the file read-only.
-   To start Vim in readonly mode, use this command:
+有时你只想查看文件的内容而不是修改<A HREF="motion.html#it">它</A>.不用考虑使用&quot;<A HREF="editing.html#:w">:w</A>&quot;是危险的并且会覆盖源文件.避免它使用只读模式编辑文件.使用这个命令开启只读模式:
 
 <B>	vim -R file</B>
 
-On Unix this command should <A HREF="diff.html#do">do</A> the same thing:
+在 Unix，如下命令可以完成相同的功能:
 
 <B>	view file</B>
 
-You are now editing &quot;file&quot; in read-only mode.  When you try using &quot;<A HREF="editing.html#:w">:w</A>&quot; you
-will get an error message and the file won't be written.
-   When you try to make a change to the file Vim will give you a warning:
+现在，你就在用只读模式阅读这个文件 "file" 了。但你执行 ":w" 命令的时候，你会得到一个禁止写入的错误信息。
+当你试图修改这个文件时，Vim 会给你一个告警提示:
 
 <B><FONT color="#3A6F2B">	W10: Warning: Changing a readonly file </FONT></B>
 
-The change will be done though.  This allows for <A HREF="change.html#formatting">formatting</A> the file, for
-example, to be able to read <A HREF="motion.html#it">它</A> easily.
-   If you make changes to a file and forgot that <A HREF="motion.html#it">它</A> was read-only, you can
-still write <A HREF="motion.html#it">它</A>.  Add the ! to the write command to force <A HREF="editing.html#writing">写</A>.
-
-If you really want to forbid making changes in a file, <A HREF="diff.html#do">do</A> this:
+即使这样，你的修改还是会被接纳的。有可能你只是想排列这些文本，以便阅读.
+  如果你确实要改动这个文件，在 write 命令前面加上 ! 可以强制写入。
+  
+如果你的确想禁止文件修改，用这个命令:
 
 <B>	vim -M file</B>
 
-Now every attempt to change the text will fail.  The help files are like this,
-for example.  If you try to make a change you get this error message:
+现在任何对文件的修改操作都会失败。例如，帮助文件就是这样的。如果你要在上面作修改，你会得到一个错误提示:
 
 <B><FONT color="#3A6F2B">	E21: Cannot make changes, 'modifiable' is off </FONT></B>
 
-You could use the <A HREF="starting.html#-M">-M</A> argument to setup Vim to work in a viewer mode.  This is
-only voluntary though, since these commands will remove the protection:
+你能使用<A HREF="starting.html#-M">-M</A>参数使Vim在只读模式工作. 这个方式仍然取决于用户的意愿，因为你可以用下面的命令去掉这层保护:
 
 <B>	:set modifiable</B>
 <B>	:set write</B>
 
 ==============================================================================
 
-*<A NAME="07.7"></A><B>07.7</B>*	Changing the file name
+*<A NAME="07.7"></A><B>07.7</B>*	改变文件名
 
-A clever way to start editing a new file is by using an existing file that
-contains most of what you need.例如, you start <A HREF="editing.html#writing">写</A> a new program
-to move a file.  You know that you already have a program that copies a file,
-thus you start with:
+使用大部分内容都是需要的文件去编辑新文件是更聪明的方式.例如,你开始<A HREF="editing.html#writing">写</A>一个移动文件的新项目.你知道你已经有了一个复制文件的程序因此你能因此开始:
 
 <B>	:edit copy.c</B>
 
-You can delete the stuff you don't need.  Now you need to save the file under
-a new name.  The &quot;<A HREF="editing.html#:saveas">:saveas</A>&quot;命令 can be used for this:
+你不需要删除原来的内容，只要保存为一个新名字.&quot;<A HREF="editing.html#:saveas">:saveas</A>&quot;命令可以使用在这里:
 
 <B>	:saveas move.c</B>
 
-Vim will write the file under the given name, and edit that file.  Thus the
-next time you <A HREF="diff.html#do">do</A> &quot;<A HREF="editing.html#:write">:write</A>&quot;, <A HREF="motion.html#it">它</A> will write &quot;move.c&quot;.  &quot;copy.c&quot; remains
-unmodified.
-   When you want to change the name of the file you are editing, but don't
-want to write the file, you can use this command:
+VVim 会用给定的名称保存文件，并开始编辑该文件.这样，下次你用 ":write"，写入的时候，被写入的就是 "move.c"。而 "copy.c" 不会被改变.
+  当你想改变当前文件的文件名，但不想立即保存它，用这个命令:
 
 <B>	:file move.c</B>
 
-Vim will <A HREF="motion.html#mark">mark</A> the file <A HREF="motion.html#as">as</A> &quot;not edited&quot;.  This means that Vim knows this is not
-the file you started editing.  When you try to write the file, you might get
-this message:
+Vim 会把这个文件标记为 "未编辑"。这表示 Vim 知道你现在编辑的文件不是原来那个文件了。当你写这个文件的时候，你会得到如下错误信息:
 
 <B><FONT color="#3A6F2B">	E13: File exists (use ! to override) </FONT></B>
 
-This protects you from accidentally overwriting another file.
+这可以避免你不小心覆盖另一个文件.
 
 ==============================================================================
 
-下一章: |<A HREF="usr_08.html">usr_08.txt</A>|  Splitting <A HREF="windows.html#windows">windows</A>
+下一章: |<A HREF="usr_08.html">usr_08.txt</A>|  分割<A HREF="windows\.html#windows">窗口</A>
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>
