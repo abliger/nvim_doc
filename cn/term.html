@@ -81,30 +81,23 @@
 
 Terminal <A HREF="ui.html#UI">UI</A>						*<A NAME="TUI"></A><B>TUI</B>* *<A NAME="tui"></A><B>tui</B>*
 
-Nvim uses a <A HREF="eval.html#list">列表</A> of <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities to display its user interface
-(except in |<A HREF="starting.html#--embed">--embed</A>| and |<A HREF="starting.html#--headless">--headless</A>| modes). If that information is wrong,
-the screen may be messed up or keys may not be recognized.
+Nvim使用终端功能列表展示用户界面(除了|<A HREF="starting.html#--embed">--embed</A>|和|<A HREF="starting.html#--headless">--headless</A>|模式).如果信息错误,屏幕可能会错乱或者键不能正确识别.
 
                                       键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
 ==============================================================================
 
-Startup						*<A NAME="startup-terminal"></A><B>startup-terminal</B>*
+开始						*<A NAME="startup-terminal"></A><B>startup-terminal</B>*
 
-Nvim guesses the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type when <A HREF="motion.html#it">它</A> starts (except in |<A HREF="starting.html#--embed">--embed</A>| and
-|<A HREF="starting.html#--headless">--headless</A>| modes). The |<A HREF="#$TERM">$TERM</A>| environment variable is the primary hint that
-determines the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type.
+Nvim启动时会猜测终端类型(除了|--embed|和|--headless|模式).|$TERM|环境变量使决定终端类型的主要推测.
 
 
 					*<A NAME="terminfo"></A><B>terminfo</B>* *<A NAME="E557"></A><B>E557</B>* *<A NAME="E558"></A><B>E558</B>* *<A NAME="E559"></A><B>E559</B>*
-The <A HREF="#terminfo">terminfo</A> database is used if available.
+如果terminfo数据库可用，就使用它.
 
-The Unibilium library (used by Nvim to read <A HREF="#terminfo">terminfo</A>) allows you to override
-the system <A HREF="#terminfo">terminfo</A> with one in $HOME/.terminfo/ directory, in part or in
-whole.
+被Nvim用来读取terminfo数据库的Unibilium库允许你在$HOME/.terminfo/目录部分或者全部重写系统terminfo.
 
-Building your own <A HREF="#terminfo">terminfo</A> is usually <A HREF="motion.html#as">as</A> simple <A HREF="motion.html#as">as</A> running this <A HREF="motion.html#as">as</A>
-a non-superuser:
+作为一个普通用户构建你自己的terminfo数据库就像运行它一样容易:
 
 <B>  curl -LO http://invisible-island.net/datafiles/current/terminfo.src.gz</B>
 <B>  gunzip terminfo.src.gz</B>
@@ -112,12 +105,9 @@ a non-superuser:
  
 
 								*<A NAME="$TERM"></A><B>$TERM</B>*
-The <A HREF="#$TERM">$TERM</A> environment variable must match the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you are using!
-Otherwise Nvim cannot know what sequences your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> expects, and weird
-or sub-optimal behavior will result (scrolling quirks, wrong colors, etc.).
+$TERM 环境变量必须比配你使用的终端!因为Nvim不能知道你最终期望的序列，结果是会有奇怪或次优行为的发生(错误的滚动或颜色, 等等.).
 
-<A HREF="#$TERM">$TERM</A> is also important because <A HREF="motion.html#it">它</A> is forwarded by SSH to the remote session,
-unlike most other environment <A HREF="eval.html#variables">variables</A>.
+不像其他的环境变量，$TERM是重要的因为它通过SSH转发到远程链接.
 
   For this <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>           Set <A HREF="#$TERM">$TERM</A> to                  |<A HREF="#builtin-terms">builtin-terms</A>|
   -------------------------------------------------------------------------
@@ -142,21 +132,13 @@ unlike most other environment <A HREF="eval.html#variables">variables</A>.
 
 
 					*<A NAME="builtin-terms"></A><B>builtin-terms</B>* *<A NAME="builtin_terms"></A><B>builtin_terms</B>*
-If a |<A HREF="#terminfo">terminfo</A>| database is not available or there is no entry for the current
-<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, Nvim will map |<A HREF="#$TERM">$TERM</A>| to a builtin entry according to the above
-table, or &quot;ansi&quot; if there is no match. For example &quot;TERM=putty-256color&quot; will
-be mapped to the builtin &quot;putty&quot; entry. See also |<A HREF="#tui-colors">tui-colors</A>|.
+如果一个|terminfo|数据库不是可用的或者当前终端没有条目，Nvim会根据上表映射|$TERM|到一个内置条目中，如果没有匹配就映射为"ansi".例如"TERM=putty-256color"会映射为内置条目"putty".见|tui-colors|.
 
-The builtin <A HREF="#terminfo">terminfo</A> is not combined with any external <A HREF="#terminfo">terminfo</A> database, nor
-can <A HREF="motion.html#it">它</A> be used in preference to one.  You can thus entirely override any
-omissions or out-of-date information in the builtin <A HREF="#terminfo">terminfo</A> database by
-supplying an external one with entries for the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type.
+内置的terminfo不能与任何外部的terminfo数据库结合使用，也不能优先使用。因此，你可以通过提供一个带有终端类型条目的外部终端来完全覆盖内置终端数据库中任何遗漏或过时的信息.
 
+Settings depending on terminal *term-dependent-settings*
 
-Settings depending on <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>			*<A NAME="term-dependent-settings"></A><B>term-dependent-settings</B>*
-
-If you want to set terminal-dependent <A HREF="options\.html#options">选项</A> or mappings, you can <A HREF="diff.html#do">do</A> this in
-your <A HREF="starting.html#init.vim">init.vim</A>.  Example:
+如果你想要设置终端开发选项或者映射，你可以在init.vim这样做. 例如:
 
 <B>    if $TERM =~ '^\(rxvt\|screen\|interix\|putty\)\(-.*\)\?$'</B>
 <B>        set notermguicolors</B>
@@ -178,27 +160,15 @@ your <A HREF="starting.html#init.vim">init.vim</A>.  Example:
  
 
 					*<A NAME="scroll-region"></A><B>scroll-region</B>* *<A NAME="xterm-scroll-region"></A><B>xterm-scroll-region</B>*
-Where possible, Nvim will use the terminal's ability to set a scroll region in
-order to redraw faster when a<A HREF="windows.html#window">窗口</A>is scrolled.  If the terminal's <A HREF="#terminfo">terminfo</A>
-description describes an ability to set top and bottom scroll margins, that is
-used.
+在可能的情况下，Nvim将使用终端设置滚动区域的能力，以便在滚动窗口时更快地重绘。如果终端的terminfo描述描述了设置上下滚动边距的能力，则使用该功能.
 
-This will not speed up <A HREF="scroll.html#scrolling">scrolling</A> in a<A HREF="windows.html#window">窗口</A>that is not the full width of the
-<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  Xterm has an extra ability, not described by <A HREF="#terminfo">terminfo</A>, to set left
-and right scroll margins <A HREF="motion.html#as">as</A> well.  If Nvim detects that the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is Xterm,
-<A HREF="motion.html#it">它</A> will make use of this ability to speed up <A HREF="scroll.html#scrolling">scrolling</A> that is not the full
-width of the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
-
+但它不是在终端没有占满宽度的窗口中加快滚动.但Xterm有这个额外的功能，没有用terminfo描述也能设置上下滚动边距.如果Nvim判断终端是Xterm,就会对终端没有占满宽度的窗口中加快滚动.
 
 							*<A NAME="tui-input"></A><B>tui-input</B>*
-Nvim uses libtermkey to convert <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="intro.html#escape">escape</A> sequences to key codes.
-|<A HREF="#terminfo">terminfo</A>| is used first, and CSI sequences not in |<A HREF="#terminfo">terminfo</A>| (including
-extended keys a.k.a. modifyOtherKeys or `CSI u`) can also be parsed.
-For example, when running Nvim in tmux, this makes Nvim leave <A HREF="intro.html#Insert">插入</A>模式 and
-go to the<A HREF="windows.html#window">窗口</A>below:
+Nvim使用libtermkey把终端转义序列转换为键值.|terminfo|是第一次使用,不在|terminfo|(包括扩展键也可以被解析，即a.k.a modifyOtherKeys或' CSI u
+')的CSI序列也能被解析.例如当在tnux运行Nvim时会使Nvim离开插入模式且进入下面的窗口:
 <B>  tmux send-keys 'Escape' [ 2 7 u 'C-W' j</B>
-Where `'Escape' [ 2 7 u` is an unambiguous `CSI u` sequence for the <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> key.
-
+`'Escape' [ 2 7 u`是一个清晰的`CSI u`序列.
 
 						*<A NAME="tui-modifyOtherKeys"></A><B>tui-modifyOtherKeys</B>* *<A NAME="tui-csiu"></A><B>tui-csiu</B>*
 Historically, <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulators could not distinguish between certain <A HREF="intro.html#control">control</A>
@@ -239,17 +209,13 @@ emulator could be in a bad state. If this happens, simply run &quot;reset&quot;.
 
 
 							*<A NAME="tui-colors"></A><B>tui-colors</B>*
-Nvim uses 256 colours by default, ignoring |<A HREF="#terminfo">terminfo</A>| for most <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> types,
-including &quot;linux&quot; (whose virtual terminals have had 256-colour support since
-4.8) and anything claiming to be &quot;xterm&quot;.  Also when $COLORTERM or <A HREF="#$TERM">$TERM</A>
-contain the <A HREF="options\.html#options">字符串</A> &quot;256&quot;.
+Nvim默认使用256种颜色。忽略最多的终端类型|terminfo|,包括"linux" (从4.8开始所有的虚拟终端都已支持256-colour)和任何类型是"xterm"的终端是默认使用它们.其中也包括$COLORTERM
+或$TERM内容种有"256"字符串的.
 
-Nvim similarly assumes that any <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator that sets $COLORTERM to any
-value, is capable of at least 16-colour operation.
-
+Nvim也会假定能设置$COLORTERM的模拟终端程序都至少支持16-colour.
 
 						*<A NAME="true-color"></A><B>true-color</B>* *<A NAME="xterm-true-color"></A><B>xterm-true-color</B>*
-Nvim emits true (24-bit) colours in the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, if <A HREF="options.html#'termguicolors'">'termguicolors'</A> is set.
+如果'termguicolors'被设置，Nvim会发送真正的颜色（24位）到终端中.
 
 It uses the &quot;setrgbf&quot; and &quot;setrgbb&quot; |<A HREF="#terminfo">terminfo</A>| extensions (proposed by Rüdiger
 Sonderfeld in 2013). If your <A HREF="#terminfo">terminfo</A> definition is missing them然后Nvim

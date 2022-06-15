@@ -79,71 +79,62 @@
 
 
 
-Terminal emulator				*<A NAME="terminal"></A><B>terminal</B>* *<A NAME="terminal-emulator"></A><B>terminal-emulator</B>*
+虚拟终端程序				*<A NAME="terminal"></A><B>terminal</B>* *<A NAME="terminal-emulator"></A><B>terminal-emulator</B>*
 
-Nvim embeds a VT220/xterm <A HREF="#terminal">terminal</A> emulator based on libvterm. The <A HREF="#terminal">terminal</A> is
-presented <A HREF="motion.html#as">as</A> a special <A HREF="options.html#'buftype'">'buftype'</A>, asynchronously updated <A HREF="motion.html#as">as</A> data is received
-from the connected program.
+Nvim嵌入了一个基于libvterm的VT220/xterm终端仿真程序。终端呈现为特殊的“buftype”，当从连接的程序接收到数据时异步更新.
 
-Terminal <A HREF="windows.html#buffers">buffers</A> behave like normal <A HREF="windows.html#buffers">buffers</A>, except:
-- With <A HREF="options.html#'modifiable'">'modifiable'</A>, lines can be edited but not deleted.
-- <A HREF="options.html#'scrollback'">'scrollback'</A> controls how many lines are kept.
-- Output is followed (&quot;tailed&quot;) if cursor is on the last line.
-- <A HREF="options.html#'modified'">'modified'</A> is the default. You can set <A HREF="options.html#'nomodified'">'nomodified'</A> to avoid a warning when
-  closing the <A HREF="#terminal">terminal</A> buffer.
-- <A HREF="options.html#'bufhidden'">'bufhidden'</A> defaults to &quot;hide&quot;.
+终端缓冲区的行为与普通缓冲区类似，除了:
+- 使用'modifiable',行可以编辑但不能被删除.
+- 'scrollback'控制保留多少显示行.
+- 如果光标在最后一行，则输出跟随("tailed").
+- 'modified'是默认的.当关闭终端缓冲区，你可以设置'nomodified'去避免警告.
+- 'bufhidden'默认为"hide".
 
 				      键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
 ==============================================================================
 
-Start						*<A NAME="terminal-start"></A><B>terminal-start</B>*
+开始						*<A NAME="terminal-start"></A><B>terminal-start</B>*
 
-There are several ways to create a <A HREF="#terminal">terminal</A> buffer:
+有几种方法去创建终端缓冲区:
 
-- Run the |<A HREF="various.html#:terminal">:terminal</A>| command.
-- Call the |<A HREF="api.html#nvim_open_term()">nvim_open_term()</A>| or |<A HREF="builtin.html#termopen()">termopen()</A>| function.
-- Edit a &quot;term://&quot; buffer. Examples:
+- 使用:terminal命令.
+- 调用termopen()或者nvim_open_term()函数.
+- 编辑一个名字匹配`term://`的文件.例如:
+
 <B>    :edit term://bash</B>
 <B>    :vsplit term://top</B>
 
-     Note: To open a &quot;term://&quot; buffer from an autocmd, the |<A HREF="autocmd.html#autocmd-nested">autocmd-nested</A>|
-    modifier is required.
+    注意: "term://"匹配项是由一个BufReadCmd处理程序处理,所以需要对|autocmd-nested|进行修改才能使用..
 <B>        autocmd VimEnter * ++nested split term://sh</B>
-     (This is only mentioned for reference; use |<A HREF="various.html#:terminal">:terminal</A>| instead.)
+     (只为参考;使用|<A HREF="various.html#:terminal">:terminal</A>|替代.)
 
-When the <A HREF="#terminal">terminal</A> starts, the buffer contents are updated and the buffer is
-named in the form of `term://{cwd}//{pid}:{cmd}`. This naming scheme is used
-by |<A HREF="starting.html#:mksession">:mksession</A>| to restore a <A HREF="#terminal">terminal</A> buffer (by restarting the {cmd}).
+当Nvim终端启动时，缓冲区内容会更新，且缓冲区的名字变为形如`term://{cwd}//{pid}:{cmd}`.这个名字会被|:mksession|使用去恢复终端缓存(通过重启{cmd})..
 
-The <A HREF="#terminal">terminal</A> environment is initialized <A HREF="motion.html#as">as</A> in |<A HREF="builtin.html#jobstart-env">jobstart-env</A>|.
+<A HREF="#terminal">终端</A>环境使用|<A HREF="builtin.html#jobstart-env">jobstart-env</A>|初始化.
 
 ==============================================================================
 
-Input						*<A NAME="terminal-input"></A><B>terminal-input</B>*
+输入						*<A NAME="terminal-input"></A><B>terminal-input</B>*
 
-To send input, enter |<A HREF="intro.html#Terminal-mode">Terminal-mode</A>| with |<A HREF="insert.html#i">i</A>|, |<A HREF="insert.html#I">I</A>|, |<A HREF="insert.html#a">a</A>|, |<A HREF="insert.html#A">A</A>| or
-|<A HREF="insert.html#:startinsert">:startinsert</A>|. In this mode all keys except &lt;C-\&gt; are sent to the underlying
-program. If &lt;C-\&gt; is pressed, the next key is sent unless <A HREF="motion.html#it">它</A> is &lt;C-N&gt;. Use
-&lt;C-\&gt;&lt;C-N&gt; to return to normal-mode. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
+想要在|<A HREF="intro\.html#Terminal-mode">终端模式</A>|输入内容，需要先使用|<A HREF="insert.html#i">i</A>|, |<A HREF="insert.html#I">I</A>|, |<A HREF="insert.html#a">a</A>|, |<A HREF="insert.html#A">A</A>|或者|<A HREF="insert.html#:startinsert">:startinsert</A>|进入插入模式.在此模式中除了&lt;C-\&gt;所有的键都会发送到当前项目.如果&lt;C-\&gt;被按压,除非<A HREF="motion.html#it">它</A>是&lt;C-N&gt;下一个键也会发送.使用&lt;C-\&gt;&lt;C-N&gt;回到正常模式. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
-<A HREF="intro.html#Terminal-mode">Terminal-mode</A> forces these local <A HREF="options\.html#options">选项</A>:
+<A HREF="intro\.html#Terminal-mode">终端模式</A>强制使用这些<A HREF="options\.html#options">选项</A>:
 
     <A HREF="options.html#'cursorlineopt'">'cursorlineopt'</A> = number
     <A HREF="options.html#'nocursorcolumn'">'nocursorcolumn'</A>
     <A HREF="options.html#'scrolloff'">'scrolloff'</A> = 0
     <A HREF="options.html#'sidescrolloff'">'sidescrolloff'</A> = 0
 
-<A HREF="intro.html#Terminal-mode">Terminal-mode</A> has its own |<A HREF="map.html#:tnoremap">:tnoremap</A>| <A HREF="api.html#namespace">namespace</A> for mappings, this can be used
-to automate any <A HREF="#terminal">terminal</A> interaction.
+<A HREF="intro\.html#Terminal-mode">终端模式</A>有它自己的|<A HREF="map.html#:tnoremap">:tnoremap</A>|和<A HREF="api.html#namespace">名称空间</A>映射, 能和任意<A HREF="#terminal">终端</A>活动配对.
 
-To map <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to exit terminal-mode:
+映射<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>退出终端模式:
 <B>    :tnoremap &lt;Esc&gt; &lt;C-\&gt;&lt;C-n&gt;</B>
 
-To simulate |<A HREF="insert.html#i_CTRL-R">i_CTRL-R</A>| in terminal-mode:
+在终端模式模仿|<A HREF="insert.html#i_CTRL-R">i_CTRL-R</A>|:
 <B>    :tnoremap &lt;expr&gt; &lt;C-R&gt; '&lt;C-\&gt;&lt;C-N&gt;"'.nr2char(getchar()).'pi'</B>
 
-To use `ALT+{h,j,k,l}` to navigate <A HREF="windows.html#windows">windows</A> from any mode:
+从任意模式使用`ALT+{h,j,k,l}`激活<A HREF="windows.html#windows">窗口</A>:
 <B>    :tnoremap &lt;A-h&gt; &lt;C-\&gt;&lt;C-N&gt;&lt;C-w&gt;h</B>
 <B>    :tnoremap &lt;A-j&gt; &lt;C-\&gt;&lt;C-N&gt;&lt;C-w&gt;j</B>
 <B>    :tnoremap &lt;A-k&gt; &lt;C-\&gt;&lt;C-N&gt;&lt;C-w&gt;k</B>
@@ -157,69 +148,52 @@ To use `ALT+{h,j,k,l}` to navigate <A HREF="windows.html#windows">windows</A> fr
 <B>    :nnoremap &lt;A-k&gt; &lt;C-w&gt;k</B>
 <B>    :nnoremap &lt;A-l&gt; &lt;C-w&gt;l</B>
 
-Mouse input has the following behavior:
+鼠标输入有下面的行为:
 
-- If the program has enabled mouse <A HREF="autocmd.html#events">events</A>, the corresponding <A HREF="autocmd.html#events">events</A> will be
-  forwarded to the program.
-- If mouse <A HREF="autocmd.html#events">events</A> are disabled (the default), <A HREF="#terminal">terminal</A> focus will be lost and
-  the event will be processed <A HREF="motion.html#as">as</A> in a normal buffer.
-- If another<A HREF="windows.html#window">窗口</A>is clicked, <A HREF="#terminal">terminal</A> focus will be lost and <A HREF="nvim.html#nvim">nvim</A> will jump
-  to the clicked<A HREF="windows.html#window">窗口</A>
-- If the mouse wheel is used while the mouse is positioned in another<A HREF="windows.html#window">窗口</A>,
-  the <A HREF="#terminal">terminal</A> won't lose focus and the hovered<A HREF="windows.html#window">窗口</A>will be scrolled.
+- 如果项目有鼠标<A HREF="autocmd.html#events">事件</A>,相同的<A HREF="autocmd.html#events">事件</A>会转发到此项目.
+- 如果鼠标<A HREF="autocmd.html#events">事件</A>不可用(默认), <A HREF="#terminal">终端</A>焦点对视，事件将像在普通缓冲区中一样处理.
+- 如果其他<A HREF="windows.html#window">窗口</A>被点击, <A HREF="#terminal">终端</A>中选中的对象会丢失并且<A HREF="nvim.html#nvim">nvim</A>会跳转到被点击的<A HREF="windows.html#window">窗口</A>
+- 当鼠标位于其他<A HREF="windows.html#window">窗口</A>如果鼠标滚轮被使用,<A HREF="#terminal">终端</A>不会对视当前选中目标并且鼠标悬浮的<A HREF="windows.html#window">窗口</A>将会滚动.
 
 ==============================================================================
 
-Configuration					*<A NAME="terminal-config"></A><B>terminal-config</B>*
+配置					*<A NAME="terminal-config"></A><B>terminal-config</B>*
 
-Options:		<A HREF="options.html#'modified'">'modified'</A>, <A HREF="options.html#'scrollback'">'scrollback'</A>
-Events:			|<A HREF="autocmd.html#TermOpen">TermOpen</A>|, |<A HREF="autocmd.html#TermEnter">TermEnter</A>|, |<A HREF="autocmd.html#TermLeave">TermLeave</A>|, |<A HREF="autocmd.html#TermClose">TermClose</A>|
-Highlight groups:	|<A HREF="syntax.html#hl-TermCursor">hl-TermCursor</A>|, |<A HREF="syntax.html#hl-TermCursorNC">hl-TermCursorNC</A>|
+选项:		<A HREF="options.html#'modified'">'modified'</A>, <A HREF="options.html#'scrollback'">'scrollback'</A>
+事件:			|<A HREF="autocmd.html#TermOpen">TermOpen</A>|, |<A HREF="autocmd.html#TermEnter">TermEnter</A>|, |<A HREF="autocmd.html#TermLeave">TermLeave</A>|, |<A HREF="autocmd.html#TermClose">TermClose</A>|
+高亮组:	|<A HREF="syntax.html#hl-TermCursor">hl-TermCursor</A>|, |<A HREF="syntax.html#hl-TermCursorNC">hl-TermCursorNC</A>|
 
-Terminal sets local defaults for some <A HREF="options\.html#options">选项</A>, which may differ from your
-global configuration.
+终端设置了一些不同于全局配置的的默认值.
 
-- <A HREF="options.html#'list'">'list'</A> is disabled
-- <A HREF="options.html#'wrap'">'wrap'</A> is disabled
+- <A HREF="options.html#'list'">'list'</A>是关闭的
+- <A HREF="options.html#'wrap'">'wrap'</A>是关闭的
 
-You can change the defaults with a <A HREF="autocmd.html#TermOpen">TermOpen</A> <A HREF="autocmd\.html#autocommand">自动命令</A>:
+你可以使用<A HREF="autocmd.html#TermOpen">TermOpen</A><A HREF="autocmd\.html#autocommand">自动命令</A>改变默认值:
 <B>    au TermOpen * setlocal list</B>
 
-<B><FONT color="#3A6F2B">TERMINAL COLORS </FONT></B>
+<B><FONT color="#3A6F2B">终端颜色</FONT></B>
 
-The `{g,b}:terminal_color_x` <A HREF="eval.html#variables">variables</A> <A HREF="intro.html#control">control</A> the <A HREF="#terminal">terminal</A> color palette,
-where `x` is the color index between 0 and 255 <A HREF="motion.html#inclusive">inclusive</A>.  The <A HREF="eval.html#variables">variables</A> are
-read during |<A HREF="autocmd.html#TermOpen">TermOpen</A>|. The value must be a color name or hexadecimal <A HREF="options\.html#options">字符串</A>.
-Example:
+`{g,b}:terminal_color_x` <A HREF="eval.html#variables">变量</A> <A HREF="intro.html#control">控制</A> the <A HREF="#terminal">终端</A>调色板,其中`x`是在0到255<A HREF="motion.html#inclusive">内</A>的颜色索引.此<A HREF="eval.html#variables">变量</A>通过|<A HREF="autocmd.html#TermOpen">TermOpen</A>|读取. 这个变量必须设置为颜色名字或者十六进制<A HREF="options\.html#options">字符串</A>.例如:
 <B>    let g:terminal_color_4 = '#ff0000'</B>
 <B>    let g:terminal_color_5 = 'green'</B>
-Only works for RGB UIs (see 'termguicolors'); for 256-color terminals the
-color index is just forwarded.
+只能工作在RGB UI（见 'termguicolors'）;对于256-color终端只是转发.
 
-Editor highlighting (|<A HREF="syntax.html#syntax-highlighting">syntax-highlighting</A>|, |<A HREF="syntax.html#highlight-groups">highlight-groups</A>|, etc.) has
-higher precedence: <A HREF="motion.html#it">它</A> is applied after <A HREF="#terminal">terminal</A> colors are resolved.
+编辑高亮(|<A HREF="syntax.html#syntax-highlighting">syntax-highlighting</A>|, |<A HREF="syntax.html#highlight-groups">highlight-groups</A>|等.)有更高的优先权: <A HREF="motion.html#it">它</A>是在终端颜色被分解后应用的.
 
 ==============================================================================
 
-Status Variables				*<A NAME="terminal-status"></A><B>terminal-status</B>*
+状态变量				*<A NAME="terminal-status"></A><B>terminal-status</B>*
 
-Terminal <A HREF="windows.html#buffers">buffers</A> maintain some buffer-local <A HREF="eval.html#variables">variables</A> and <A HREF="options\.html#options">选项</A>. The values
-are initialized before <A HREF="autocmd.html#TermOpen">TermOpen</A>, so you can use them in a local <A HREF="options.html#'statusline'">'statusline'</A>.
-Example:
+终端<A HREF="windows.html#buffers">缓冲区</A>维护了一些本地缓冲<A HREF="eval.html#variables">变量</A>和<A HREF="options\.html#options">选项</A>.这个变量会在<A HREF="autocmd.html#TermOpen">TermOpen</A>前初始化,所以你可以在本地<A HREF="options.html#'statusline'">'statusline'</A>中使用他们.  例如:
 <B>    :autocmd TermOpen * setlocal statusline=%{b:term_title}</B>
 
 
-- *<A NAME="b:term_title"></A><B>b:term_title</B>*  Terminal title (user-writable), typically displayed in the
- <A HREF="windows.html#window">窗口</A>title or <A HREF="intro.html#tab">tab</A> title of a graphical <A HREF="#terminal">terminal</A> emulator. Terminal
-  programs can set this by emitting an <A HREF="intro.html#escape">escape</A> sequence.
-- |<A HREF="options.html#'channel'">'channel'</A>|  Terminal PTY |<A HREF="job_control.html#job-id">job-id</A>|.  Can be used with |<A HREF="builtin.html#chansend()">chansend()</A>| to send
-  input to the <A HREF="#terminal">terminal</A>.
-- The |<A HREF="autocmd.html#TermClose">TermClose</A>| event gives the <A HREF="#terminal">terminal</A> <A HREF="job_control.html#job">job</A> exit code in the |<A HREF="eval.html#v:event">v:event</A>|
-  &quot;status&quot; field. For example, this <A HREF="autocmd.html#autocmd">autocmd</A> closes <A HREF="#terminal">terminal</A> <A HREF="windows.html#buffers">buffers</A> if the <A HREF="job_control.html#job">job</A>
-  exited without error:
+- *<A NAME="b:term_title"></A><B>b:term_title</B>*  终端标题(用户可写入),显示到图形终端模拟器的<A HREF="windows.html#window">窗口</A>标题或<A HREF="intro.html#tab">tab</A>标题中.终端项目可以通过<A HREF="intro.html#escape">转义</A>序列设置它们.
+- |<A HREF="options.html#'channel'">'channel'</A>|  终端 PTY |<A HREF="job_control.html#job-id">job-id</A>|.  通过|<A HREF="builtin.html#chansend()">chansend()</A>|发送输入信息到<A HREF="#terminal">终端</A>.
+- |<A HREF="autocmd.html#TermClose">TermClose</A>|事件在|<A HREF="eval.html#v:event">v:event</A>| &quot;状态&quot;属性中给<A HREF="#terminal">终端</A><A HREF="job_control.html#job">任务</A>退出值.例如,使用<A HREF="autocmd.html#autocmd">自动命令</A>关闭<A HREF="#terminal">终端</A><A HREF="windows.html#buffers">缓冲区</A>如果退出任务没有错误:
 <B>    autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('&lt;abuf&gt;') | endif</B>
 
-Use |<A HREF="builtin.html#jobwait()">jobwait()</A>| to check if the <A HREF="#terminal">terminal</A> job has finished:
+如果<A HREF="#terminal">终端</A>任务完成,使用|<A HREF="builtin.html#jobwait()">jobwait()</A>|去查看:
 <B>    let running = jobwait([&amp;channel], 0)[0] == -1</B>
 
 ==============================================================================
@@ -243,10 +217,10 @@ command name, for example:
 
 This opens two <A HREF="windows.html#windows">windows</A>:
 
-<A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>in which &quot;<A HREF="debug.html#gdb">gdb</A> vim&quot; is executed.  Here you
+<A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">终端</A><A HREF="windows.html#window">窗口</A>in which &quot;<A HREF="debug.html#gdb">gdb</A> vim&quot; is executed.  Here you
 		can directly interact with <A HREF="debug.html#gdb">gdb</A>.
 
-program<A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>for the executed program.  When &quot;run&quot; is
+program<A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">终端</A><A HREF="windows.html#window">窗口</A>for the executed program.  When &quot;run&quot; is
 		used in <A HREF="debug.html#gdb">gdb</A> the program I/O will happen in this<A HREF="windows.html#window">窗口</A>, so
 		that <A HREF="motion.html#it">它</A> does not interfere with controlling <A HREF="debug.html#gdb">gdb</A>.
 
@@ -257,8 +231,8 @@ highlight the current position, using highlight group debugPC.
 If the buffer in the current<A HREF="windows.html#window">窗口</A>is modified, another<A HREF="windows.html#window">窗口</A>will be opened
 to display the current <A HREF="debug.html#gdb">gdb</A> position.
 
-Focus the <A HREF="#terminal">terminal</A> of the executed program to interact with <A HREF="motion.html#it">它</A>.  This works
-the same <A HREF="motion.html#as">as</A> any command running in a <A HREF="#terminal">terminal</A><A HREF="windows.html#window">窗口</A>.
+Focus the <A HREF="#terminal">终端</A> of the executed program to interact with <A HREF="motion.html#it">它</A>.  This works
+the same <A HREF="motion.html#as">as</A> any command running in a <A HREF="#terminal">终端</A><A HREF="windows.html#window">窗口</A>.
 
 When the debugger ends, typically by typing &quot;quit&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>, the two
 opened <A HREF="windows.html#windows">windows</A> are closed.
@@ -534,7 +508,7 @@ To not use neovim floating <A HREF="windows.html#windows">windows</A> for previe
 <B>	let g:termdebug_useFloatingHover = 0</B>
 
 If you are a mouse person, you can also define a <A HREF="map.html#mapping">mapping</A> using your right
-click to one of the <A HREF="#terminal">terminal</A> command like evaluate the variable under the
+click to one of the <A HREF="#terminal">终端</A> command like evaluate the variable under the
 cursor:
 <B>      	nnoremap &lt;RightMouse&gt; :Evaluate&lt;CR&gt;</B>
 or set/unset a breakpoint:
@@ -600,7 +574,7 @@ If the wide value is set and <A HREF="options.html#'columns'">'columns'</A> is a
 vertical split will be used without modifying <A HREF="options.html#'columns'">'columns'</A>.
 
 Set the wide value to 1 to use a vertical split without ever <A HREF="change.html#changing">changing</A>
-<A HREF="options.html#'columns'">'columns'</A>.  This is useful when the <A HREF="#terminal">terminal</A> can't be resized by Vim.
+<A HREF="options.html#'columns'">'columns'</A>.  This is useful when the <A HREF="#terminal">终端</A> can't be resized by Vim.
 
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
