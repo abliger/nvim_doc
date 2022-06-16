@@ -191,7 +191,7 @@ Vim would never have become what <A HREF="motion.html#it">它</A> is now, withou
 	Benji Fisher		Answering lots of user questions
 	Bill Foster		Athena <A HREF="gui.html#GUI">GUI</A> port (later removed)
 	Google			Lets me work on Vim one day a week
-	Loic Grenie		xvim (ideas for multi <A HREF="windows.html#windows">windows</A> version)
+	Loic Grenie		xvim (ideas for multi <A HREF="windows\.html#windows">窗口</A> version)
 	Sven Guckes		Vim promoter and previous WWW page maintainer
 	Darren Hiebert		Exuberant <A HREF="tagsrch.html#ctags">ctags</A>
 	Jason Hildebrand	GTK+ 2 port
@@ -204,7 +204,7 @@ Vim would never have become what <A HREF="motion.html#it">它</A> is now, withou
 	Sergey Laskavy		Vim's help from Moscow
 	Felix von Leitner	Previous maintainer of Vim Mailing <A HREF="eval.html#Lists">Lists</A>
 	David Leonard		Port of <A HREF="if_pyth.html#Python">Python</A> extensions to Unix
-	Avner Lottem		Edit in right-to-left <A HREF="windows.html#windows">windows</A>
+	Avner Lottem		Edit in right-to-left <A HREF="windows\.html#windows">窗口</A>
 	Flemming Madsen		X11 <A HREF="remote.html#client-server">client-server</A>, various features and patches
 	Tony Mechelynck		answers many user questions
 	Paul Moore		<A HREF="if_pyth.html#Python">Python</A> interface extensions, many patches
@@ -669,7 +669,7 @@ exceptions:
 - When the <A HREF="options.html#'cpoptions'">'cpoptions'</A> option contains '<A HREF="motion.html#$">$</A>', and the change is within one line,
   the text is not directly deleted, but a '<A HREF="motion.html#$">$</A>' is put at the last deleted
   character.
-- When <A HREF="insert.html#inserting">inserting</A> text in one<A HREF="windows.html#window">窗口</A>, other <A HREF="windows.html#windows">windows</A> on the same text are not
+- When <A HREF="insert.html#inserting">inserting</A> text in one<A HREF="windows.html#window">窗口</A>, other <A HREF="windows\.html#windows">窗口</A> on the same text are not
   updated until the insert is finished.
 
 Lines longer than the<A HREF="windows.html#window">窗口</A>width will wrap, unless the <A HREF="options.html#'wrap'">'wrap'</A> option is off
@@ -787,12 +787,12 @@ Definitions						*<A NAME="definitions"></A><B>definitions</B>* *<A NAME="jargon
 
   buffer		Contains lines of text, usually from a file.
   screen		The whole area that Nvim uses to display things.
- <A HREF="windows.html#window">窗口</A>		A view on a buffer.  There can be multiple <A HREF="windows.html#windows">windows</A> for
+ <A HREF="windows.html#window">窗口</A>		A view on a buffer.  There can be multiple <A HREF="windows\.html#windows">窗口</A> for
 			one buffer.
   frame			Windows are kept in a tree of frames.  Each frame
 			contains a column, row, or<A HREF="windows.html#window">窗口</A>(&quot;leaf&quot; frame).
 
-A screen contains one or more <A HREF="windows.html#windows">windows</A>, separated by status lines and with the
+A screen contains one or more <A HREF="windows\.html#windows">窗口</A>, separated by status lines and with the
 command line at the bottom.
 
 	+-------------------------------+
@@ -824,7 +824,7 @@ A difference is made between four types of lines:
 			can only be <A HREF="motion.html#as">as</A> long <A HREF="motion.html#as">as</A> the width of the<A HREF="windows.html#window">窗口</A>allows,
 			longer lines are wrapped or truncated.
   screen lines		The lines of the screen that Nvim uses.  Consists of
-			the<A HREF="windows.html#window">窗口</A>lines of all <A HREF="windows.html#windows">windows</A>, with status lines
+			the<A HREF="windows.html#window">窗口</A>lines of all <A HREF="windows\.html#windows">窗口</A>, with status lines
 			and the command line added.  They can only be <A HREF="motion.html#as">as</A> long
 			<A HREF="motion.html#as">as</A> the width of the screen allows.  When the command
 			line gets longer <A HREF="motion.html#it">它</A> wraps and lines are scrolled to

@@ -604,7 +604,7 @@ wait({timeout}, {condition} [, {interval}])
 <A HREF="#wildmenumode()">wildmenumode()</A>			<A HREF="eval.html#Number">Number</A>	whether <A HREF="options.html#'wildmenu'">'wildmenu'</A> mode is active
 win_execute({id}, {command} [, {silent}])
 				<A HREF="options\.html#options">字符串</A>	execute {command} in<A HREF="windows.html#window">窗口</A>{id}
-win_findbuf({bufnr})		<A HREF="eval.html#list">列表</A>	find <A HREF="windows.html#windows">windows</A> containing {bufnr}
+win_findbuf({bufnr})		<A HREF="eval.html#list">列表</A>	find <A HREF="windows\.html#windows">窗口</A> containing {bufnr}
 win_getid([{win} [, {tab}]])	<A HREF="eval.html#Number">Number</A>	get |<A HREF="windows.html#window-ID">window-ID</A>| for {win} in {tab}
 win_gettype([{nr}])		<A HREF="options\.html#options">字符串</A>	type of<A HREF="windows.html#window">窗口</A>{nr}
 win_gotoid({expr})		<A HREF="eval.html#Number">Number</A>	go to |<A HREF="windows.html#window-ID">window-ID</A>| {expr}
@@ -619,7 +619,7 @@ winbufnr({nr})			<A HREF="eval.html#Number">Number</A>	buffer number of<A HREF="
 <A HREF="#wincol()">wincol()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">窗口</A>column of the cursor
 <A HREF="#windowsversion()">windowsversion()</A>		<A HREF="options\.html#options">字符串</A>	MS-Windows OS version
 winheight({nr})			<A HREF="eval.html#Number">Number</A>	height of<A HREF="windows.html#window">窗口</A>{nr}
-winlayout([{tabnr}])		<A HREF="eval.html#list">列表</A>	layout of <A HREF="windows.html#windows">windows</A> in <A HREF="intro.html#tab">tab</A> {tabnr}
+winlayout([{tabnr}])		<A HREF="eval.html#list">列表</A>	layout of <A HREF="windows\.html#windows">窗口</A> in <A HREF="intro.html#tab">tab</A> {tabnr}
 <A HREF="#winline()">winline()</A>			<A HREF="eval.html#Number">Number</A>	<A HREF="windows.html#window">窗口</A>line of the cursor
 winnr([{expr}])			<A HREF="eval.html#Number">Number</A>	number of current<A HREF="windows.html#window">窗口</A>
 <A HREF="#winrestcmd()">winrestcmd()</A>			<A HREF="options\.html#options">字符串</A>	returns command to restore<A HREF="windows.html#window">窗口</A>sizes
@@ -2808,7 +2808,7 @@ getbufinfo([{dict}])
 					    name  sign name
 			<A HREF="eval.html#variables">variables</A>	A reference to the dictionary with
 					buffer-local <A HREF="eval.html#variables">variables</A>.
-			<A HREF="windows.html#windows">windows</A>		<A HREF="eval.html#list">列表</A> of |<A HREF="windows.html#window-ID">window-ID</A>|<A HREF="change.html#s">s</A> that display this
+			<A HREF="windows\.html#windows">窗口</A>		<A HREF="eval.html#list">列表</A> of |<A HREF="windows.html#window-ID">window-ID</A>|<A HREF="change.html#s">s</A> that display this
 					buffer
 
 		Examples:
@@ -3205,7 +3205,7 @@ getcwd([{winnr} [, {tabnr}]])				*<A NAME="getcwd()"></A><B>getcwd()</B>*
 		|<A HREF="editing.html#current-directory">current-directory</A>|. With {winnr} or {tabnr} the working
 		directory of that scope is returned, and <A HREF="options.html#'autochdir'">'autochdir'</A> is
 		ignored.
-		Tabs and <A HREF="windows.html#windows">windows</A> are identified by their respective numbers,
+		Tabs and <A HREF="windows\.html#windows">窗口</A> are identified by their respective numbers,
 		0 means current <A HREF="intro.html#tab">tab</A> or<A HREF="windows.html#window">窗口</A>. Missing <A HREF="intro.html#tab">tab</A> number implies 0.
 		Thus the following are equivalent:
 <B>			getcwd(0)</B>
@@ -3699,7 +3699,7 @@ gettabinfo([{tabnr}])					*<A NAME="gettabinfo()"></A><B>gettabinfo()</B>*
 			tabnr		<A HREF="intro.html#tab">tab</A> page number.
 			<A HREF="eval.html#variables">variables</A>	a reference to the dictionary with
 					tabpage-local <A HREF="eval.html#variables">variables</A>
-			<A HREF="windows.html#windows">windows</A>		<A HREF="eval.html#list">列表</A> of |<A HREF="windows.html#window-ID">window-ID</A>|<A HREF="change.html#s">s</A> in the <A HREF="intro.html#tab">tab</A> page.
+			<A HREF="windows\.html#windows">窗口</A>		<A HREF="eval.html#list">列表</A> of |<A HREF="windows.html#window-ID">window-ID</A>|<A HREF="change.html#s">s</A> in the <A HREF="intro.html#tab">tab</A> page.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetTabnr()-&gt;gettabinfo()</B>
@@ -3782,13 +3782,13 @@ gettagstack([{winnr}])					*<A NAME="gettagstack()"></A><B>gettagstack()</B>*
 
 
 getwininfo([{winid}])					*<A NAME="getwininfo()"></A><B>getwininfo()</B>*
-		Returns information about <A HREF="windows.html#windows">windows</A> <A HREF="motion.html#as">as</A> a |<A HREF="eval.html#list">列表</A>| with <A HREF="eval.html#Dictionaries">Dictionaries</A>.
+		Returns information about <A HREF="windows\.html#windows">窗口</A> <A HREF="motion.html#as">as</A> a |<A HREF="eval.html#list">列表</A>| with <A HREF="eval.html#Dictionaries">Dictionaries</A>.
 
 		If {winid} is given Information about the<A HREF="windows.html#window">窗口</A>with that ID
 		is returned, <A HREF="motion.html#as">as</A> a |<A HREF="eval.html#list">列表</A>| with one item.  If the<A HREF="windows.html#window">窗口</A>does not
 		exist the result is an empty <A HREF="eval.html#list">列表</A>.
 
-		Without {winid} information about all the <A HREF="windows.html#windows">windows</A> in all the
+		Without {winid} information about all the <A HREF="windows\.html#windows">窗口</A> in all the
 		<A HREF="intro.html#tab">tab</A> pages is returned.
 
 		Each <A HREF="eval.html#list">列表</A> item is a |<A HREF="eval.html#Dictionary">Dictionary</A>| with the following entries:
@@ -4040,7 +4040,7 @@ haslocaldir([{winnr} [, {tabnr}]])			*<A NAME="haslocaldir()"></A><B>haslocaldir
 		local path via |<A HREF="editing.html#:lcd">:lcd</A>| or when {winnr} is -1 and the <A HREF="tabpage.html#tabpage">tabpage</A>
 		has set a local path via |<A HREF="editing.html#:tcd">:tcd</A>|, otherwise 0.
 
-		Tabs and <A HREF="windows.html#windows">windows</A> are identified by their respective numbers,
+		Tabs and <A HREF="windows\.html#windows">窗口</A> are identified by their respective numbers,
 		0 means current <A HREF="intro.html#tab">tab</A> or<A HREF="windows.html#window">窗口</A>. Missing argument implies 0.
 		Thus the following are equivalent:
 <B>			haslocaldir()</B>
@@ -8604,7 +8604,7 @@ tabpagewinnr({tabarg} [, {arg}])			*<A NAME="tabpagewinnr()"></A><B>tabpagewinnr
 		{arg} is used like with YXXYwinnr()|:
 		- When omitted the current<A HREF="windows.html#window">窗口</A>number is returned.  This is
 		  the<A HREF="windows.html#window">窗口</A>which will be used when going to this <A HREF="intro.html#tab">tab</A> page.
-		- When &quot;<A HREF="motion.html#$">$</A>&quot; the number of <A HREF="windows.html#windows">windows</A> is returned.
+		- When &quot;<A HREF="motion.html#$">$</A>&quot; the number of <A HREF="windows\.html#windows">窗口</A> is returned.
 		- When &quot;<A HREF="pattern.html##">#</A>&quot; the previous<A HREF="windows.html#window">窗口</A>nr is returned.
 		Useful examples:
 <B>		    tabpagewinnr(1)	    " current window of tab page 1</B>
@@ -9097,7 +9097,7 @@ win_execute({id}, {command} [, {silent}])		*<A NAME="win_execute()"></A><B>win_e
 
 
 win_findbuf({bufnr})					*<A NAME="win_findbuf()"></A><B>win_findbuf()</B>*
-		Returns a |<A HREF="eval.html#list">列表</A>| with |<A HREF="windows.html#window-ID">window-ID</A>|s for <A HREF="windows.html#windows">windows</A> that contain
+		Returns a |<A HREF="eval.html#list">列表</A>| with |<A HREF="windows.html#window-ID">window-ID</A>|s for <A HREF="windows\.html#windows">窗口</A> that contain
 		buffer {bufnr}.  When there is none the <A HREF="eval.html#list">列表</A> is empty.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -9173,7 +9173,7 @@ win_move_separator({nr}, <A HREF="pattern.html#{offset}">{offset}</A>)			*<A NAM
 		can be a window number or |<A HREF="windows.html#window-ID">window-ID</A>|. A positive <A HREF="pattern.html#{offset}">{offset}</A>
 		moves right and a negative <A HREF="pattern.html#{offset}">{offset}</A> moves left. Moving a
 		window's vertical separator will change the width of the
-		<A HREF="windows.html#window">窗口</A>and the width of other <A HREF="windows.html#windows">windows</A> adjacent to the vertical
+		<A HREF="windows.html#window">窗口</A>and the width of other <A HREF="windows\.html#windows">窗口</A> adjacent to the vertical
 		separator. The magnitude of <A HREF="intro.html#movement">移动</A> may be smaller than
 		specified (e.g., <A HREF="motion.html#as">as</A> a consequence of maintaining
 		<A HREF="options.html#'winminwidth'">'winminwidth'</A>). Returns <A HREF="eval.html#TRUE">TRUE</A> if the<A HREF="windows.html#window">窗口</A>can be found and
@@ -9189,7 +9189,7 @@ win_move_statusline({nr}, <A HREF="pattern.html#{offset}">{offset}</A>)			*<A NA
 		window number or |<A HREF="windows.html#window-ID">window-ID</A>|. A positive <A HREF="pattern.html#{offset}">{offset}</A> moves down
 		and a negative <A HREF="pattern.html#{offset}">{offset}</A> moves up. Moving a window's status
 		line will change the height of the<A HREF="windows.html#window">窗口</A>and the height of
-		other <A HREF="windows.html#windows">windows</A> adjacent to the status line. The magnitude of
+		other <A HREF="windows\.html#windows">窗口</A> adjacent to the status line. The magnitude of
 		<A HREF="intro.html#movement">移动</A> may be smaller than specified (e.g., <A HREF="motion.html#as">as</A> a consequence
 		of maintaining <A HREF="options.html#'winminheight'">'winminheight'</A>). Returns <A HREF="eval.html#TRUE">TRUE</A> if the<A HREF="windows.html#window">窗口</A>can
 		be found and <A HREF="eval.html#FALSE">FALSE</A> otherwise.
@@ -9278,7 +9278,7 @@ winheight({nr})						*<A NAME="winheight()"></A><B>winheight()</B>*
  
 
 winlayout([{tabnr}])					*<A NAME="winlayout()"></A><B>winlayout()</B>*
-		The result is a nested <A HREF="eval.html#list">列表</A> containing the layout of <A HREF="windows.html#windows">windows</A>
+		The result is a nested <A HREF="eval.html#list">列表</A> containing the layout of <A HREF="windows\.html#windows">窗口</A>
 		in a <A HREF="tabpage.html#tabpage">tabpage</A>.
 
 		Without {tabnr} use the current <A HREF="tabpage.html#tabpage">tabpage</A>, otherwise the <A HREF="tabpage.html#tabpage">tabpage</A>
@@ -9354,7 +9354,7 @@ winnr([{arg}])	The result is a <A HREF="eval.html#Number">Number</A>, which is t
 
 							*<A NAME="winrestcmd()"></A><B>winrestcmd()</B>*
 <A HREF="#winrestcmd()">winrestcmd()</A>	Returns a sequence of |<A HREF="windows.html#:resize">:resize</A>| commands that should restore
-		the current<A HREF="windows.html#window">窗口</A>sizes.  Only works properly when no <A HREF="windows.html#windows">windows</A>
+		the current<A HREF="windows.html#window">窗口</A>sizes.  Only works properly when no <A HREF="windows\.html#windows">窗口</A>
 		are opened or closed and the current<A HREF="windows.html#window">窗口</A>and <A HREF="intro.html#tab">tab</A> page is
 		unchanged.
 		Example:

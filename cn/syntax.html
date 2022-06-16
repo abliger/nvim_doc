@@ -485,10 +485,10 @@ and last line to be converted.  Example, using the last set <A HREF="visual.html
 
 			If the current<A HREF="windows.html#window">窗口</A>is part of a |<A HREF="diff.html#diff">diff</A>|, unless
 			|<A HREF="#g:html_diff_one_file">g:html_diff_one_file</A>| is set, <A HREF="#:TOhtml">:TOhtml</A> will convert
-			all <A HREF="windows.html#windows">windows</A> which are part of the <A HREF="diff.html#diff">diff</A> in the current
+			all <A HREF="windows\.html#windows">窗口</A> which are part of the <A HREF="diff.html#diff">diff</A> in the current
 			<A HREF="intro.html#tab">tab</A> and place them side-by-side in a &lt;table&gt; element
 			in the generated HTML. With |<A HREF="#g:html_line_ids">g:html_line_ids</A>| you can
-			jump to lines in specific <A HREF="windows.html#windows">windows</A> with (for example)
+			jump to lines in specific <A HREF="windows\.html#windows">窗口</A> with (for example)
 			#W1L42 for line <A HREF="usr_42.html#42">42</A> in the first diffed<A HREF="windows.html#window">窗口</A>, or
 			#W3L87 for line 87 in the third.
 
@@ -501,7 +501,7 @@ and last line to be converted.  Example, using the last set <A HREF="visual.html
 
 							*<A NAME="g:html_diff_one_file"></A><B>g:html_diff_one_file</B>*
 Default: 0.
-When 0, and using |<A HREF="#:TOhtml">:TOhtml</A>| all <A HREF="windows.html#windows">windows</A> involved in a |<A HREF="diff.html#diff">diff</A>| in the current <A HREF="intro.html#tab">tab</A>
+When 0, and using |<A HREF="#:TOhtml">:TOhtml</A>| all <A HREF="windows\.html#windows">窗口</A> involved in a |<A HREF="diff.html#diff">diff</A>| in the current <A HREF="intro.html#tab">tab</A>
 page are converted to HTML and placed side-by-side in a &lt;table&gt; element. When
 1, only the current buffer is converted.
 Example:
@@ -533,7 +533,7 @@ Example:
  
 You can obtain better performance improvements by also instructing Vim to not
 run interactively, so that too much time is not taken to redraw <A HREF="motion.html#as">as</A> the <A HREF="usr_41.html#script">script</A>
-moves through the buffer, switches <A HREF="windows.html#windows">windows</A>, and the like:
+moves through the buffer, switches <A HREF="windows\.html#windows">窗口</A>, and the like:
 
 <B>  vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c "set ft=c" -c "runtime syntax/2html.vim" -cwqa myfile.c</B>
  
@@ -740,7 +740,7 @@ To append a <A HREF="options\.html#options">字符串</A> &quot;_mystring&quot; 
  
 Note: When converting a <A HREF="diff.html#diff">diff</A> view to HTML, the <A HREF="eval.html#expression">expression</A> will only be
 evaluated for the first<A HREF="windows.html#window">窗口</A>in the <A HREF="diff.html#diff">diff</A>, and the result used for all the
-<A HREF="windows.html#windows">windows</A>.
+<A HREF="windows\.html#windows">窗口</A>.
 
 
 					  *<A NAME="TOhtml-wrap-text"></A><B>TOhtml-wrap-text</B>* *<A NAME="g:html_pre_wrap"></A><B>g:html_pre_wrap</B>*
@@ -5460,7 +5460,7 @@ guisp={color-name}					*<A NAME="highlight-guisp"></A><B>highlight-guisp</B>*
 
 blend={integer}					*<A NAME="highlight-blend"></A><B>highlight-blend</B>*
 	Override the blend level for a highlight group within the popupmenu
-	or floating <A HREF="windows.html#windows">windows</A>. Only takes effect if <A HREF="options.html#'pumblend'">'pumblend'</A> or <A HREF="options.html#'winblend'">'winblend'</A>
+	or floating <A HREF="windows\.html#windows">窗口</A>. Only takes effect if <A HREF="options.html#'pumblend'">'pumblend'</A> or <A HREF="options.html#'winblend'">'winblend'</A>
 	is set for the menu or<A HREF="windows.html#window">窗口</A>. See the help at the respective option.
 
 
@@ -5592,10 +5592,10 @@ NonText		'<A HREF="repeat.html#@">@</A>' at the end of the<A HREF="windows.html#
 <A HREF="intro.html#Normal">Normal</A>		<A HREF="intro.html#Normal">Normal</A> text.
 
 							*<A NAME="hl-NormalFloat"></A><B>hl-NormalFloat</B>*
-NormalFloat	<A HREF="intro.html#Normal">Normal</A> text in floating <A HREF="windows.html#windows">windows</A>.
+NormalFloat	<A HREF="intro.html#Normal">Normal</A> text in floating <A HREF="windows\.html#windows">窗口</A>.
 
 							*<A NAME="hl-NormalNC"></A><B>hl-NormalNC</B>*
-NormalNC	<A HREF="intro.html#Normal">Normal</A> text in non-current <A HREF="windows.html#windows">windows</A>.
+NormalNC	<A HREF="intro.html#Normal">Normal</A> text in non-current <A HREF="windows\.html#windows">窗口</A>.
 
 							*<A NAME="hl-Pmenu"></A><B>hl-Pmenu</B>*
 Pmenu		Popup menu: <A HREF="intro.html#Normal">Normal</A> item.
@@ -5646,7 +5646,7 @@ SpellRare	Word that is recognized by the spellchecker <A HREF="motion.html#as">a
 StatusLine	Status line of current<A HREF="windows.html#window">窗口</A>.
 
 							*<A NAME="hl-StatusLineNC"></A><B>hl-StatusLineNC</B>*
-StatusLineNC	Status lines of not-current <A HREF="windows.html#windows">windows</A>.
+StatusLineNC	Status lines of not-current <A HREF="windows\.html#windows">窗口</A>.
 		Note: If this is equal to &quot;StatusLine&quot;, Vim will use &quot;^^^&quot; in
 		the status line of the current<A HREF="windows.html#window">窗口</A>.
 
@@ -5682,7 +5682,7 @@ WildMenu	Current match in <A HREF="options.html#'wildmenu'">'wildmenu'</A> compl
 WinBar		Window <A HREF="motion.html#bar">bar</A> of current<A HREF="windows.html#window">窗口</A>.
 
 							*<A NAME="hl-WinBarNC"></A><B>hl-WinBarNC</B>*
-WinBarNC	Window <A HREF="motion.html#bar">bar</A> of not-current <A HREF="windows.html#windows">windows</A>.
+WinBarNC	Window <A HREF="motion.html#bar">bar</A> of not-current <A HREF="windows\.html#windows">窗口</A>.
 
 
 					*<A NAME="hl-User1"></A><B>hl-User1</B>* *<A NAME="hl-User1..9"></A><B>hl-User1..9</B>* *<A NAME="hl-User9"></A><B>hl-User9</B>*
@@ -5852,7 +5852,7 @@ And put these lines in your <A HREF="starting.html#vimrc">vimrc</A>:
 
 17. Window-local <A HREF="#syntax">syntax</A>				*<A NAME=":ownsyntax"></A><B>:ownsyntax</B>*
 
-Normally all <A HREF="windows.html#windows">windows</A> on a buffer share the same <A HREF="#syntax">syntax</A> settings. It is
+Normally all <A HREF="windows\.html#windows">窗口</A> on a buffer share the same <A HREF="#syntax">syntax</A> settings. It is
 possible, however, to set a particular<A HREF="windows.html#window">窗口</A>on a file to have its own
 private <A HREF="#syntax">syntax</A> setting. A possible example would be to edit LaTeX source
 with conventional highlighting in one<A HREF="windows.html#window">窗口</A>, while seeing the same source
@@ -5860,7 +5860,7 @@ highlighted differently (so <A HREF="motion.html#as">as</A> to hide <A HREF="int
 <A HREF="#italic">italic</A> etc regions) in another. The <A HREF="options.html#'scrollbind'">'scrollbind'</A> option is useful here.
 
 To set the current<A HREF="windows.html#window">窗口</A>to have the <A HREF="#syntax">syntax</A> &quot;foo&quot;, separately from all other
-<A HREF="windows.html#windows">windows</A> on the buffer:
+<A HREF="windows\.html#windows">窗口</A> on the buffer:
 <B>   :ownsyntax foo</B>
 
  						*<A NAME="w:current_syntax"></A><B>w:current_syntax</B>*
@@ -5871,9 +5871,9 @@ restoring &quot;b:current_syntax&quot;, since the <A HREF="#syntax">syntax</A> f
 &quot;<A HREF="#w:current_syntax">w:current_syntax</A>&quot;.
 Note: This resets the <A HREF="options.html#'spell'">'spell'</A>, <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> and <A HREF="options.html#'spellfile'">'spellfile'</A> <A HREF="options\.html#options">选项</A>.
 
-Once a<A HREF="windows.html#window">窗口</A>has its own <A HREF="#syntax">syntax</A>, <A HREF="#syntax">syntax</A> commands executed from other <A HREF="windows.html#windows">windows</A>
+Once a<A HREF="windows.html#window">窗口</A>has its own <A HREF="#syntax">syntax</A>, <A HREF="#syntax">syntax</A> commands executed from other <A HREF="windows\.html#windows">窗口</A>
 on the same buffer (including <A HREF="#:syntax">:syntax</A> clear) have no effect. Conversely,
-<A HREF="#syntax">syntax</A> commands executed from that<A HREF="windows.html#window">窗口</A><A HREF="diff.html#do">do</A> not affect other <A HREF="windows.html#windows">windows</A> on the
+<A HREF="#syntax">syntax</A> commands executed from that<A HREF="windows.html#window">窗口</A><A HREF="diff.html#do">do</A> not affect other <A HREF="windows\.html#windows">窗口</A> on the
 same buffer.
 
 A<A HREF="windows.html#window">窗口</A>with its own <A HREF="#syntax">syntax</A> reverts to normal behavior when another buffer

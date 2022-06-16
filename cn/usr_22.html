@@ -263,7 +263,7 @@ Example:
 
 WINDOW LOCAL DIRECTORY
 
-When you split a<A HREF="windows.html#window">窗口</A>, both <A HREF="windows.html#windows">windows</A> use the same current directory.  When
+When you split a<A HREF="windows.html#window">窗口</A>, both <A HREF="windows\.html#windows">窗口</A> use the same current directory.  When
 you want to edit a number of files somewhere else in the new<A HREF="windows.html#window">窗口</A>, you can
 make <A HREF="motion.html#it">它</A> use a different directory, without <A HREF="change.html#changing">changing</A> the current directory in
 the other<A HREF="windows.html#window">窗口</A>.  This is called a local directory.
@@ -278,11 +278,11 @@ the other<A HREF="windows.html#window">窗口</A>.  This is called a local direc
 <B>	:pwd</B>
 <B>	/home/Bram/VeryLongFileName</B>
 
-So long <A HREF="motion.html#as">as</A> no `:lcd` command has been used, all <A HREF="windows.html#windows">windows</A> share the same current
+So long <A HREF="motion.html#as">as</A> no `:lcd` command has been used, all <A HREF="windows\.html#windows">窗口</A> share the same current
 directory.  Doing a `:cd` command in one<A HREF="windows.html#window">窗口</A>will also change the current
 directory of the other<A HREF="windows.html#window">窗口</A>.
    For a<A HREF="windows.html#window">窗口</A>where `:lcd` has been used a different current directory is
-remembered.  Using `:cd` or `:lcd` in other <A HREF="windows.html#windows">windows</A> will not change <A HREF="motion.html#it">它</A>.
+remembered.  Using `:cd` or `:lcd` in other <A HREF="windows\.html#windows">窗口</A> will not change <A HREF="motion.html#it">它</A>.
    When using a `:cd` command in a<A HREF="windows.html#window">窗口</A>that uses a different current
 directory, <A HREF="motion.html#it">它</A> will go back to using the shared directory.
 
@@ -291,9 +291,9 @@ TAB LOCAL DIRECTORY
 
 When you open a new <A HREF="intro.html#tab">tab</A> page, <A HREF="motion.html#it">它</A> uses the directory of the<A HREF="windows.html#window">窗口</A>in the
 previous <A HREF="intro.html#tab">tab</A> page from which the new <A HREF="intro.html#tab">tab</A> page was opened. You can change the
-directory of the current <A HREF="intro.html#tab">tab</A> page using the `:tcd` command. All the <A HREF="windows.html#windows">windows</A> in
-a <A HREF="intro.html#tab">tab</A> page share this directory except for <A HREF="windows.html#windows">windows</A> with a window-local
-directory. Any new <A HREF="windows.html#windows">windows</A> opened in this <A HREF="intro.html#tab">tab</A> page will use this directory <A HREF="motion.html#as">as</A>
+directory of the current <A HREF="intro.html#tab">tab</A> page using the `:tcd` command. All the <A HREF="windows\.html#windows">窗口</A> in
+a <A HREF="intro.html#tab">tab</A> page share this directory except for <A HREF="windows\.html#windows">窗口</A> with a window-local
+directory. Any new <A HREF="windows\.html#windows">窗口</A> opened in this <A HREF="intro.html#tab">tab</A> page will use this directory <A HREF="motion.html#as">as</A>
 the current working directory. Using a `:cd` command in a <A HREF="intro.html#tab">tab</A> page will not
 change the working directory of <A HREF="intro.html#tab">tab</A> pages which have a <A HREF="intro.html#tab">tab</A> local directory.
 When the global working directory is changed using the &quot;<A HREF="editing.html#:cd">:cd</A>&quot;命令 in a <A HREF="intro.html#tab">tab</A>

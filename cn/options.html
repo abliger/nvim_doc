@@ -291,7 +291,7 @@ the option values you would expect.  Unfortunately, doing what the user
 expects is a bit complicated...
 
 When splitting a<A HREF="windows.html#window">窗口</A>, the local <A HREF="#options">options</A> are copied to the new<A HREF="windows.html#window">窗口</A>.  Thus
-right after the split the contents of the two <A HREF="windows.html#windows">windows</A> look the same.
+right after the split the contents of the two <A HREF="windows\.html#windows">窗口</A> look the same.
 
 When editing a new buffer, its local option values must be initialized.  Since
 the local <A HREF="#options">options</A> of the current buffer might be specifically for that buffer,
@@ -375,14 +375,14 @@ For buffer-local and window-local <A HREF="#options">options</A>:
 
 Global <A HREF="#options">options</A> with a local value			*<A NAME="global-local"></A><B>global-local</B>*
 
-Options are global when you mostly use one value for all <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows.html#windows">windows</A>.
+Options are global when you mostly use one value for all <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows\.html#windows">窗口</A>.
 For some global <A HREF="#options">options</A> it's useful to sometimes have a different local value.
 You can set the local value with &quot;<A HREF="#:setlocal">:setlocal</A>&quot;.  That buffer or<A HREF="windows.html#window">窗口</A>will then
-use the local value, while other <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows.html#windows">windows</A> continue using the global
+use the local value, while other <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows\.html#windows">窗口</A> continue using the global
 value.
 
-For example, you have two <A HREF="windows.html#windows">windows</A>, both on C source code.  They use the global
-<A HREF="#'makeprg'">'makeprg'</A> option.  If you <A HREF="diff.html#do">do</A> this in one of the two <A HREF="windows.html#windows">windows</A>:
+For example, you have two <A HREF="windows\.html#windows">窗口</A>, both on C source code.  They use the global
+<A HREF="#'makeprg'">'makeprg'</A> option.  If you <A HREF="diff.html#do">do</A> this in one of the two <A HREF="windows\.html#windows">窗口</A>:
 <B>	:set makeprg=gmake</B>
 then the other<A HREF="windows.html#window">窗口</A>will switch to the same value.  There is no need to set
 the <A HREF="#'makeprg'">'makeprg'</A> option in the other C source<A HREF="windows.html#window">窗口</A>too.
@@ -553,7 +553,7 @@ normally not have any).
 							*<A NAME="modeline-local"></A><B>modeline-local</B>*
 The <A HREF="#options">options</A> are set like with &quot;<A HREF="#:setlocal">:setlocal</A>&quot;: The new value only applies to the
 buffer and<A HREF="windows.html#window">窗口</A>that contain the file.  Although it's possible to set global
-<A HREF="#options">options</A> from a <A HREF="#modeline">modeline</A>, this is unusual.  If you have two <A HREF="windows.html#windows">windows</A> open and
+<A HREF="#options">options</A> from a <A HREF="#modeline">modeline</A>, this is unusual.  If you have two <A HREF="windows\.html#windows">窗口</A> open and
 the files in <A HREF="motion.html#it">它</A> set the same global option to a different value, the result
 depends on which one was opened last.
 
@@ -625,7 +625,7 @@ an abbreviation if there is one.  Both forms may be used.
 In this document when a <A HREF="#boolean">boolean</A> option is &quot;set&quot; that means that &quot;<A HREF="#:set">:set</A> <A HREF="intro.html#'option'">option</A>&quot;
 is entered.  When an option is &quot;reset&quot;, &quot;<A HREF="#:set">:set</A> nooption&quot; is used.
 
-Most <A HREF="#options">options</A> are the same in all <A HREF="windows.html#windows">windows</A> and <A HREF="windows.html#buffers">buffers</A>.  There are a few that
+Most <A HREF="#options">options</A> are the same in all <A HREF="windows\.html#windows">窗口</A> and <A HREF="windows.html#buffers">buffers</A>.  There are a few that
 are specific to how the text is presented in a<A HREF="windows.html#window">窗口</A>.  These can be set to a
 different value in each<A HREF="windows.html#window">窗口</A>.例如 the <A HREF="#'list'">'list'</A> option can be set in
 one<A HREF="windows.html#window">窗口</A>and reset in another for the same text, giving both types of view
@@ -634,7 +634,7 @@ file.  These can have a different value for each file or buffer.例如
 the <A HREF="#'textwidth'">'textwidth'</A> option can be 78 for a normal text file and 0 for a C
 program.
 
-	global			one option for all <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows.html#windows">windows</A>
+	global			one option for all <A HREF="windows.html#buffers">buffers</A> and <A HREF="windows\.html#windows">窗口</A>
 	local to<A HREF="windows.html#window">窗口</A>		each<A HREF="windows.html#window">窗口</A>has its own copy of this option
 	local to buffer		each buffer has its own copy of this option
 
@@ -1540,7 +1540,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	completion |<A HREF="insert.html#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</A>|.  It indicates the type of completion
 	and the places to scan.  It is a comma-separated <A HREF="eval.html#list">列表</A> of flags:
 	.	scan the current buffer ('wrapscan' is ignored)
-	<A HREF="motion.html#w">w</A>	scan <A HREF="windows.html#buffers">buffers</A> from other <A HREF="windows.html#windows">windows</A>
+	<A HREF="motion.html#w">w</A>	scan <A HREF="windows.html#buffers">buffers</A> from other <A HREF="windows\.html#windows">窗口</A>
 	<A HREF="motion.html#b">b</A>	scan other loaded <A HREF="windows.html#buffers">buffers</A> that are in the buffer <A HREF="eval.html#list">列表</A>
 	<A HREF="undo.html#u">u</A>	scan the unloaded <A HREF="windows.html#buffers">buffers</A> that are in the buffer <A HREF="eval.html#list">列表</A>
 	<A HREF="undo.html#U">U</A>	scan the <A HREF="windows.html#buffers">buffers</A> that are not in the buffer <A HREF="eval.html#list">列表</A>
@@ -2027,7 +2027,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'cursorbind'">'cursorbind'</A> <A HREF="#'crb'">'crb'</A>	<A HREF="#boolean">boolean</A>  (default off)
 			local to<A HREF="windows.html#window">窗口</A>
 	When this option is set, <A HREF="motion.html#as">as</A> the cursor in the current
-	<A HREF="windows.html#window">窗口</A>moves other cursorbound <A HREF="windows.html#windows">windows</A> (windows that also have
+	<A HREF="windows.html#window">窗口</A>moves other cursorbound <A HREF="windows\.html#windows">窗口</A> (windows that also have
 	this option set) move their cursors to the corresponding line and
 	column.  This option is useful for viewing the
 	differences between two versions of a file (see 'diff'); in <A HREF="diff.html#diff">diff</A> mode,
@@ -2162,7 +2162,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 							*<A NAME="'diff'"></A><B>'diff'</B>* *<A NAME="'nodiff'"></A><B>'nodiff'</B>*
 <A HREF="#'diff'">'diff'</A>			<A HREF="#boolean">boolean</A>	(default off)
 			local to<A HREF="windows.html#window">窗口</A>
-	Join the current<A HREF="windows.html#window">窗口</A>in the group of <A HREF="windows.html#windows">windows</A> that shows differences
+	Join the current<A HREF="windows.html#window">窗口</A>in the group of <A HREF="windows\.html#windows">窗口</A> that shows differences
 	between files.  见 |<A HREF="diff.html#diff-mode">diff-mode</A>|.
 
 
@@ -2184,7 +2184,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		filler		Show filler lines, to keep the text
 				synchronized with a<A HREF="windows.html#window">窗口</A>that has inserted
 				lines at the same position.  Mostly useful
-				when <A HREF="windows.html#windows">windows</A> are side-by-side and <A HREF="#'scrollbind'">'scrollbind'</A>
+				when <A HREF="windows\.html#windows">窗口</A> are side-by-side and <A HREF="#'scrollbind'">'scrollbind'</A>
 				is set.
 
 		context:{n}	Use a <A HREF="repeat.html#context">context</A> of {n} lines between a change
@@ -2200,7 +2200,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 				<A HREF="#'diffexpr'">'diffexpr'</A> is empty.  Check the documentation
 				of the &quot;<A HREF="diff.html#diff">diff</A>&quot;命令 for what this does
 				exactly.
-				NOTE: the <A HREF="diff.html#diff">diff</A> <A HREF="windows.html#windows">windows</A> will get out of sync,
+				NOTE: the <A HREF="diff.html#diff">diff</A> <A HREF="windows\.html#windows">窗口</A> will get out of sync,
 				because no differences between blank lines are
 				taken into account.
 
@@ -2361,9 +2361,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'eadirection'">'eadirection'</A> <A HREF="#'ead'">'ead'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;both&quot;)
 			global
 	Tells when the <A HREF="#'equalalways'">'equalalways'</A> option applies:
-		ver	vertically, width of <A HREF="windows.html#windows">windows</A> is not affected
-		hor	horizontally, height of <A HREF="windows.html#windows">windows</A> is not affected
-		both	width and height of <A HREF="windows.html#windows">windows</A> is affected
+		ver	vertically, width of <A HREF="windows\.html#windows">窗口</A> is not affected
+		hor	horizontally, height of <A HREF="windows\.html#windows">窗口</A> is not affected
+		both	width and height of <A HREF="windows\.html#windows">窗口</A> is affected
 
 
 					*<A NAME="'emoji'"></A><B>'emoji'</B>* *<A NAME="'emo'"></A><B>'emo'</B>* *<A NAME="'noemoji'"></A><B>'noemoji'</B>* *<A NAME="'noemo'"></A><B>'noemo'</B>*
@@ -2402,14 +2402,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			     *<A NAME="'equalalways'"></A><B>'equalalways'</B>* *<A NAME="'ea'"></A><B>'ea'</B>* *<A NAME="'noequalalways'"></A><B>'noequalalways'</B>* *<A NAME="'noea'"></A><B>'noea'</B>*
 <A HREF="#'equalalways'">'equalalways'</A> <A HREF="#'ea'">'ea'</A>	<A HREF="#boolean">boolean</A>	(default on)
 			global
-	When on, all the <A HREF="windows.html#windows">windows</A> are automatically made the same size after
+	When on, all the <A HREF="windows\.html#windows">窗口</A> are automatically made the same size after
 	splitting or closing a<A HREF="windows.html#window">窗口</A>.  This also happens the moment the
 	option is switched on.  When off, splitting a<A HREF="windows.html#window">窗口</A>will reduce the
-	size of the current<A HREF="windows.html#window">窗口</A>and leave the other <A HREF="windows.html#windows">windows</A> the same.  When
+	size of the current<A HREF="windows.html#window">窗口</A>and leave the other <A HREF="windows\.html#windows">窗口</A> the same.  When
 	closing a<A HREF="windows.html#window">窗口</A>the extra lines are given to the<A HREF="windows.html#window">窗口</A>next to <A HREF="motion.html#it">它</A>
 	(depending on <A HREF="#'splitbelow'">'splitbelow'</A> and <A HREF="#'splitright'">'splitright'</A>).
 	When mixing vertically and horizontally 分割<A HREF="windows.html#windows">窗口</A>, a minimal size
-	is computed and some <A HREF="windows.html#windows">windows</A> may be larger if there is room.  The
+	is computed and some <A HREF="windows\.html#windows">窗口</A> may be larger if there is room.  The
 	<A HREF="#'eadirection'">'eadirection'</A> option tells in which direction the size is affected.
 	Changing the height and width of a<A HREF="windows.html#window">窗口</A>can be avoided by setting
 	<A HREF="#'winfixheight'">'winfixheight'</A> and <A HREF="#'winfixwidth'">'winfixwidth'</A>, respectively.
@@ -2689,7 +2689,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 <B><FONT color="#3A6F2B">	  item		default		Used for </FONT></B>
 	  stl:c		'' '' or '<A HREF="motion.html#^">^</A>'	statusline of the current<A HREF="windows.html#window">窗口</A>
-	  stlnc:c	'' '' or '<A HREF="change.html#=">=</A>'	statusline of the non-current <A HREF="windows.html#windows">windows</A>
+	  stlnc:c	'' '' or '<A HREF="change.html#=">=</A>'	statusline of the non-current <A HREF="windows\.html#windows">窗口</A>
 	  wbr:c		'' ''		<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A>
 	  horiz:c	'─' or '<A HREF="motion.html#-">-</A>'	horizontal separators |<A HREF="windows.html#:split">:split</A>|
 	  horizup:c	'┴' or '<A HREF="motion.html#-">-</A>'	upwards facing horizontal separator
@@ -3407,7 +3407,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Minimal initial height of the help<A HREF="windows.html#window">窗口</A>when <A HREF="motion.html#it">它</A> is opened with the
 	&quot;<A HREF="helphelp.html#:help">:help</A>&quot;命令.  The initial height of the help<A HREF="windows.html#window">窗口</A>is half of the
 	current<A HREF="windows.html#window">窗口</A>, or (when the <A HREF="#'ea'">'ea'</A> option is on) the same <A HREF="motion.html#as">as</A> other
-	<A HREF="windows.html#windows">windows</A>.  When the height is <A HREF="various.html#less">less</A> than <A HREF="#'helpheight'">'helpheight'</A>, the height is
+	<A HREF="windows\.html#windows">窗口</A>.  When the height is <A HREF="various.html#less">less</A> than <A HREF="#'helpheight'">'helpheight'</A>, the height is
 	set to <A HREF="#'helpheight'">'helpheight'</A>.  Set to zero to disable.
 
 
@@ -3441,7 +3441,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	- the buffer is modified
 	- <A HREF="#'autowrite'">'autowrite'</A> is off or <A HREF="editing.html#writing">写</A> is not possible
 	- the '<A HREF="change.html#!">!</A>' flag was used
-	Also 见 |<A HREF="windows.html#windows">windows</A>|.
+	Also 见 |<A HREF="windows\.html#windows">窗口</A>|.
 
 	To hide a specific buffer use the <A HREF="#'bufhidden'">'bufhidden'</A> option.
 	<A HREF="#'hidden'">'hidden'</A> is set for one command with &quot;:hide {command}&quot; |<A HREF="windows.html#:hide">:hide</A>|.
@@ -3991,11 +3991,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	The value of this option influences when the last<A HREF="windows.html#window">窗口</A>will have a
 	status line:
 		0: never
-		1: only if there are at least two <A HREF="windows.html#windows">windows</A>
+		1: only if there are at least two <A HREF="windows\.html#windows">窗口</A>
 		2: always
 		3: always and ONLY the last<A HREF="windows.html#window">窗口</A>
 	The screen looks nicer with a status line if you have several
-	<A HREF="windows.html#windows">windows</A>, but <A HREF="motion.html#it">它</A> takes another screen line. |<A HREF="windows.html#status-line">status-line</A>|
+	<A HREF="windows\.html#windows">窗口</A>, but <A HREF="motion.html#it">它</A> takes another screen line. |<A HREF="windows.html#status-line">status-line</A>|
 
 
 			*<A NAME="'lazyredraw'"></A><B>'lazyredraw'</B>* *<A NAME="'lz'"></A><B>'lz'</B>* *<A NAME="'nolazyredraw'"></A><B>'nolazyredraw'</B>* *<A NAME="'nolz'"></A><B>'nolz'</B>*
@@ -5060,7 +5060,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'quickfixtextfunc'">'quickfixtextfunc'</A> <A HREF="#'qftf'">'qftf'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
 			global
 	This option specifies a function to be used to get the text to display
-	in the <A HREF="quickfix.html#quickfix">quickfix</A> and location <A HREF="eval.html#list">列表</A> <A HREF="windows.html#windows">windows</A>.  This can be used to
+	in the <A HREF="quickfix.html#quickfix">quickfix</A> and location <A HREF="eval.html#list">列表</A> <A HREF="windows\.html#windows">窗口</A>.  This can be used to
 	customize the information displayed in the <A HREF="quickfix.html#quickfix">quickfix</A> or location<A HREF="windows.html#window">窗口</A>
 	for each entry in the corresponding <A HREF="quickfix.html#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A>.  See
 	|<A HREF="quickfix.html#quickfix-window-function">quickfix-window-function</A>| for an explanation of how to write the
@@ -5208,7 +5208,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	simultaneously, or to view the same file in both ways (this is
 	useful whenever you have a mixed text file with both right-to-left
 	and left-to-right strings so that both sets are displayed properly
-	in different <A HREF="windows.html#windows">windows</A>).  Also 见 |<A HREF="rileft.html">rileft.txt</A>|.
+	in different <A HREF="windows\.html#windows">窗口</A>).  Also 见 |<A HREF="rileft.html">rileft.txt</A>|.
 
 
 			*<A NAME="'rightleftcmd'"></A><B>'rightleftcmd'</B>* *<A NAME="'rlc'"></A><B>'rlc'</B>*
@@ -5382,13 +5382,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="#'scb'">'scb'</A>	<A HREF="#boolean">boolean</A>  (default off)
 			local to<A HREF="windows.html#window">窗口</A>
 	See also |<A HREF="scroll.html#scroll-binding">scroll-binding</A>|.  When this option is set, the current
-	<A HREF="windows.html#window">窗口</A>scrolls <A HREF="motion.html#as">as</A> other scrollbind <A HREF="windows.html#windows">windows</A> (windows that also have
+	<A HREF="windows.html#window">窗口</A>scrolls <A HREF="motion.html#as">as</A> other scrollbind <A HREF="windows\.html#windows">窗口</A> (windows that also have
 	this option set) scroll.  This option is useful for viewing the
 	differences between two versions of a file, see <A HREF="#'diff'">'diff'</A>.
 	见 |<A HREF="#'scrollopt'">'scrollopt'</A>| for <A HREF="#options">options</A> that determine how this option should be
 	interpreted.
 	This option is mostly reset when splitting a<A HREF="windows.html#window">窗口</A>to edit another
-	file.  This means that &quot;<A HREF="windows.html#:split">:split</A> &#124; edit file&quot; results in two <A HREF="windows.html#windows">windows</A>
+	file.  This means that &quot;<A HREF="windows.html#:split">:split</A> &#124; edit file&quot; results in two <A HREF="windows\.html#windows">窗口</A>
 	with <A HREF="scroll.html#scroll-binding">scroll-binding</A>, but &quot;<A HREF="windows.html#:split">:split</A> file&quot; does not.
 
 
@@ -5422,14 +5422,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'scrollopt'">'scrollopt'</A> <A HREF="#'sbo'">'sbo'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;ver,jump&quot;)
 			global
 	This is a comma-separated <A HREF="eval.html#list">列表</A> of words that specifies how
-	<A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">windows</A> should behave.  <A HREF="#'sbo'">'sbo'</A> stands for ScrollBind
+	<A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A> should behave.  <A HREF="#'sbo'">'sbo'</A> stands for ScrollBind
 	Options.
 	The following words are available:
-	    ver		Bind vertical <A HREF="scroll.html#scrolling">scrolling</A> for <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">windows</A>
-	    hor		Bind horizontal <A HREF="scroll.html#scrolling">scrolling</A> for <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">windows</A>
-	    jump	Applies to the offset between two <A HREF="windows.html#windows">windows</A> for vertical
+	    ver		Bind vertical <A HREF="scroll.html#scrolling">scrolling</A> for <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A>
+	    hor		Bind horizontal <A HREF="scroll.html#scrolling">scrolling</A> for <A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A>
+	    jump	Applies to the offset between two <A HREF="windows\.html#windows">窗口</A> for vertical
 			<A HREF="scroll.html#scrolling">scrolling</A>.  This offset is the difference in the first
-			displayed line of the bound <A HREF="windows.html#windows">windows</A>.  When moving
+			displayed line of the bound <A HREF="windows\.html#windows">窗口</A>.  When moving
 			around in a<A HREF="windows.html#window">窗口</A>, another <A HREF="#'scrollbind'">'scrollbind'</A><A HREF="windows.html#window">窗口</A>may
 			reach a position before the start or after the end of
 			the buffer.  The offset is not changed though, when
@@ -5441,7 +5441,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			   adjusted for the scroll position in the new current
 			  <A HREF="windows.html#window">窗口</A>.  When going back to the other<A HREF="windows.html#window">窗口</A>, the
 			   new relative offset will be used.
-			2. When &quot;jump&quot; is included, the other <A HREF="windows.html#windows">windows</A> are
+			2. When &quot;jump&quot; is included, the other <A HREF="windows\.html#windows">窗口</A> are
 			   scrolled to keep the same relative offset.  When
 			   going back to the other<A HREF="windows.html#window">窗口</A>, <A HREF="motion.html#it">它</A> still uses the
 			   same relative offset.
@@ -5517,8 +5517,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	separated <A HREF="eval.html#list">列表</A> of words.  Each <A HREF="motion.html#word">单词</A> enables saving and restoring
 	something:
 <B><FONT color="#3A6F2B">	   word		save and restore </FONT></B>
-	   blank	empty <A HREF="windows.html#windows">windows</A>
-	   <A HREF="windows.html#buffers">buffers</A>	hidden and unloaded <A HREF="windows.html#buffers">buffers</A>, not just those in <A HREF="windows.html#windows">windows</A>
+	   blank	empty <A HREF="windows\.html#windows">窗口</A>
+	   <A HREF="windows.html#buffers">buffers</A>	hidden and unloaded <A HREF="windows.html#buffers">buffers</A>, not just those in <A HREF="windows\.html#windows">窗口</A>
 	   curdir	the current directory
 	   <A HREF="fold.html#folds">folds</A>	manually created <A HREF="fold.html#folds">folds</A>, opened/closed <A HREF="fold.html#folds">folds</A> and local
 			fold <A HREF="#options">options</A>
@@ -5539,7 +5539,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   tabpages	all <A HREF="intro.html#tab">tab</A> pages; without this only the current <A HREF="intro.html#tab">tab</A> page
 			is restored, so that you can make a session for each
 			<A HREF="intro.html#tab">tab</A> page separately
-	   <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>	include <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="windows.html#windows">windows</A> where the command can be
+	   <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>	include <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="windows\.html#windows">窗口</A> where the command can be
 			restored
 	   winpos	position of the whole Vim<A HREF="windows.html#window">窗口</A>
 	   winsize	<A HREF="windows.html#window">窗口</A>sizes
@@ -6526,11 +6526,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	# -   Set highlight group.  The name must follow and then a # again.
 	      Thus use &#37;#HLname# for highlight group HLname.  The same
 	      highlighting is used, also for the statusline of non-current
-	      <A HREF="windows.html#windows">windows</A>.
+	      <A HREF="windows\.html#windows">窗口</A>.
 	&#42; -   Set highlight group to User{N}, where {N} is taken from the
 	      minwid field, e.g. &#37;1*.  Restore normal highlight with &#37;* or &#37;0*.
 	      The difference between User{N} and StatusLine  will be applied
-	      to StatusLineNC for the statusline of non-current <A HREF="windows.html#windows">windows</A>.
+	      to StatusLineNC for the statusline of non-current <A HREF="windows\.html#windows">窗口</A>.
 	      The number N must be between 1 and 9.  见 |<A HREF="syntax.html#hl-User1..9">hl-User1..9</A>|
 
 	When displaying a flag, Vim removes the leading comma, if any, when
@@ -6647,12 +6647,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Possible values (comma-separated list):
 	   useopen	If included, jump to the first open<A HREF="windows.html#window">窗口</A>that
 			contains the specified buffer (if there is one).
-			Otherwise: Do not examine other <A HREF="windows.html#windows">windows</A>.
+			Otherwise: Do not examine other <A HREF="windows\.html#windows">窗口</A>.
 			This setting is checked with |<A HREF="quickfix.html#quickfix">quickfix</A>| commands, when
 			jumping to <A HREF="message.html#errors">errors</A> (&quot;:cc&quot;, &quot;<A HREF="quickfix.html#:cn">:cn</A>&quot;, &quot;cp&quot;, etc.).  It is
 			also used in all buffer related split commands, for
 			example &quot;<A HREF="windows.html#:sbuffer">:sbuffer</A>&quot;, &quot;<A HREF="windows.html#:sbnext">:sbnext</A>&quot;, or &quot;<A HREF="windows.html#:sbrewind">:sbrewind</A>&quot;.
-	   usetab	Like &quot;useopen&quot;, but also consider <A HREF="windows.html#windows">windows</A> in other <A HREF="intro.html#tab">tab</A>
+	   usetab	Like &quot;useopen&quot;, but also consider <A HREF="windows\.html#windows">窗口</A> in other <A HREF="intro.html#tab">tab</A>
 			pages.
 	   split	If included, split the current<A HREF="windows.html#window">窗口</A>before loading
 			a buffer for a |<A HREF="quickfix.html#quickfix">quickfix</A>| command that display <A HREF="message.html#errors">errors</A>.
@@ -6727,7 +6727,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
 	Keep in mind that only one of the <A HREF="intro.html#tab">tab</A> pages is the current one, others
-	are invisible and you can't jump to their <A HREF="windows.html#windows">windows</A>.
+	are invisible and you can't jump to their <A HREF="windows\.html#windows">窗口</A>.
 
 
 
@@ -7543,7 +7543,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	When <A HREF="change.html#changing">changing</A> something that is used in <A HREF="#'winbar'">'winbar'</A> that does not trigger
 	<A HREF="motion.html#it">它</A> to be updated, use |<A HREF="various.html#:redrawstatus">:redrawstatus</A>|.
 
-	Floating <A HREF="windows.html#windows">windows</A> <A HREF="diff.html#do">do</A> not use the global value of <A HREF="#'winbar'">'winbar'</A>. The
+	Floating <A HREF="windows\.html#windows">窗口</A> <A HREF="diff.html#do">do</A> not use the global value of <A HREF="#'winbar'">'winbar'</A>. The
 	window-local value of <A HREF="#'winbar'">'winbar'</A> must be set for a floating<A HREF="windows.html#window">窗口</A>to
 	have a<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A>.
 
@@ -7580,19 +7580,19 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Minimal number of lines for the current<A HREF="windows.html#window">窗口</A>.  This is not a hard
 	minimum, Vim will use fewer lines if there is not enough room.  If the
 	focus goes to a<A HREF="windows.html#window">窗口</A>that is smaller, its size is increased, at the
-	cost of the height of other <A HREF="windows.html#windows">windows</A>.
+	cost of the height of other <A HREF="windows\.html#windows">窗口</A>.
 	Set <A HREF="#'winheight'">'winheight'</A> to a small number for normal editing.
 	Set <A HREF="motion.html#it">它</A> to 999 to make the current<A HREF="windows.html#window">窗口</A>fill most of the screen.
-	Other <A HREF="windows.html#windows">windows</A> will be only <A HREF="#'winminheight'">'winminheight'</A> high.  This has the drawback
-	that &quot;<A HREF="windows.html#:all">:all</A>&quot; will create only two <A HREF="windows.html#windows">windows</A>.  To avoid &quot;vim <A HREF="starting.html#-o">-o</A> 1 2 3 4&quot;
-	to create only two <A HREF="windows.html#windows">windows</A>, set the option after <A HREF="starting.html#startup">startup</A> is done,
+	Other <A HREF="windows\.html#windows">窗口</A> will be only <A HREF="#'winminheight'">'winminheight'</A> high.  This has the drawback
+	that &quot;<A HREF="windows.html#:all">:all</A>&quot; will create only two <A HREF="windows\.html#windows">窗口</A>.  To avoid &quot;vim <A HREF="starting.html#-o">-o</A> 1 2 3 4&quot;
+	to create only two <A HREF="windows\.html#windows">窗口</A>, set the option after <A HREF="starting.html#startup">startup</A> is done,
 	using the |<A HREF="autocmd.html#VimEnter">VimEnter</A>| event:
 <B>		au VimEnter * set winheight=999</B>
  	Minimum value is 1.
 	The height is not adjusted after one of the commands that change the
 	height of the current<A HREF="windows.html#window">窗口</A>.
 	<A HREF="#'winheight'">'winheight'</A> applies to the current<A HREF="windows.html#window">窗口</A>.  Use <A HREF="#'winminheight'">'winminheight'</A> to set
-	the minimal height for other <A HREF="windows.html#windows">windows</A>.
+	the minimal height for other <A HREF="windows\.html#windows">窗口</A>.
 
 
 						*<A NAME="'winhighlight'"></A><B>'winhighlight'</B>* *<A NAME="'winhl'"></A><B>'winhl'</B>*
@@ -7610,14 +7610,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	the popupmenu are determined by the current<A HREF="windows.html#window">窗口</A>.  Highlights in the
 	message area cannot be overridden.
 
-	Example: show a different color for non-current <A HREF="windows.html#windows">windows</A>:
+	Example: show a different color for non-current <A HREF="windows\.html#windows">窗口</A>:
 <B>		set winhighlight=Normal:MyNormal,NormalNC:MyNormalNC</B>
  
 
 			*<A NAME="'winfixheight'"></A><B>'winfixheight'</B>* *<A NAME="'wfh'"></A><B>'wfh'</B>* *<A NAME="'nowinfixheight'"></A><B>'nowinfixheight'</B>* *<A NAME="'nowfh'"></A><B>'nowfh'</B>*
 <A HREF="#'winfixheight'">'winfixheight'</A> <A HREF="#'wfh'">'wfh'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			local to<A HREF="windows.html#window">窗口</A>
-	Keep the<A HREF="windows.html#window">窗口</A>height when <A HREF="windows.html#windows">windows</A> are opened or closed and
+	Keep the<A HREF="windows.html#window">窗口</A>height when <A HREF="windows\.html#windows">窗口</A> are opened or closed and
 	<A HREF="#'equalalways'">'equalalways'</A> is set.  Also for |<A HREF="windows.html#CTRL-W_=">CTRL-W_=</A>|.  Set by default for the
 	|<A HREF="windows.html#preview-window">preview-window</A>| and |<A HREF="quickfix.html#quickfix-window">quickfix-window</A>|.
 	The height may be changed anyway when running out of room.
@@ -7626,7 +7626,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			*<A NAME="'winfixwidth'"></A><B>'winfixwidth'</B>* *<A NAME="'wfw'"></A><B>'wfw'</B>* *<A NAME="'nowinfixwidth'"></A><B>'nowinfixwidth'</B>* *<A NAME="'nowfw'"></A><B>'nowfw'</B>*
 <A HREF="#'winfixwidth'">'winfixwidth'</A> <A HREF="#'wfw'">'wfw'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			local to<A HREF="windows.html#window">窗口</A>
-	Keep the<A HREF="windows.html#window">窗口</A>width when <A HREF="windows.html#windows">windows</A> are opened or closed and
+	Keep the<A HREF="windows.html#window">窗口</A>width when <A HREF="windows\.html#windows">窗口</A> are opened or closed and
 	<A HREF="#'equalalways'">'equalalways'</A> is set.  Also for |<A HREF="windows.html#CTRL-W_=">CTRL-W_=</A>|.
 	The width may be changed anyway when running out of room.
 
@@ -7635,29 +7635,29 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'winminheight'">'winminheight'</A> <A HREF="#'wmh'">'wmh'</A>	number	(default 1)
 			global
 	The minimal height of a<A HREF="windows.html#window">窗口</A>, when it's not the current<A HREF="windows.html#window">窗口</A>.
-	This is a hard minimum, <A HREF="windows.html#windows">windows</A> will never become smaller.
-	When set to zero, <A HREF="windows.html#windows">windows</A> may be &quot;squashed&quot; to zero lines (i.e. just a
+	This is a hard minimum, <A HREF="windows\.html#windows">窗口</A> will never become smaller.
+	When set to zero, <A HREF="windows\.html#windows">窗口</A> may be &quot;squashed&quot; to zero lines (i.e. just a
 	status <A HREF="motion.html#bar">bar</A>) if necessary.  They will return to at least one line when
 	they become active (since the cursor has to have somewhere to go.)
 	Use <A HREF="#'winheight'">'winheight'</A> to set the minimal height of the current<A HREF="windows.html#window">窗口</A>.
 	This option is only checked when making a<A HREF="windows.html#window">窗口</A>smaller.  Don't use a
 	large number, <A HREF="motion.html#it">它</A> will cause <A HREF="message.html#errors">errors</A> when opening more than a few
-	<A HREF="windows.html#windows">windows</A>.  A value of 0 to 3 is reasonable.
+	<A HREF="windows\.html#windows">窗口</A>.  A value of 0 to 3 is reasonable.
 
 
 						*<A NAME="'winminwidth'"></A><B>'winminwidth'</B>* *<A NAME="'wmw'"></A><B>'wmw'</B>*
 <A HREF="#'winminwidth'">'winminwidth'</A> <A HREF="#'wmw'">'wmw'</A>	number	(default 1)
 			global
 	The minimal width of a<A HREF="windows.html#window">窗口</A>, when it's not the current<A HREF="windows.html#window">窗口</A>.
-	This is a hard minimum, <A HREF="windows.html#windows">windows</A> will never become smaller.
-	When set to zero, <A HREF="windows.html#windows">windows</A> may be &quot;squashed&quot; to zero columns (i.e. just
+	This is a hard minimum, <A HREF="windows\.html#windows">窗口</A> will never become smaller.
+	When set to zero, <A HREF="windows\.html#windows">窗口</A> may be &quot;squashed&quot; to zero columns (i.e. just
 	a vertical separator) if necessary.  They will return to at least one
 	line when they become active (since the cursor has to have somewhere
 	to go.)
 	Use <A HREF="#'winwidth'">'winwidth'</A> to set the minimal width of the current<A HREF="windows.html#window">窗口</A>.
 	This option is only checked when making a<A HREF="windows.html#window">窗口</A>smaller.  Don't use a
 	large number, <A HREF="motion.html#it">它</A> will cause <A HREF="message.html#errors">errors</A> when opening more than a few
-	<A HREF="windows.html#windows">windows</A>.  A value of 0 to 12 is reasonable.
+	<A HREF="windows\.html#windows">窗口</A>.  A value of 0 to 12 is reasonable.
 
 
 						*<A NAME="'winwidth'"></A><B>'winwidth'</B>* *<A NAME="'wiw'"></A><B>'wiw'</B>* *<A NAME="E592"></A><B>E592</B>*
@@ -7666,12 +7666,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Minimal number of columns for the current<A HREF="windows.html#window">窗口</A>.  This is not a hard
 	minimum, Vim will use fewer columns if there is not enough room.  If
 	the current<A HREF="windows.html#window">窗口</A>is smaller, its size is increased, at the cost of
-	the width of other <A HREF="windows.html#windows">windows</A>.  Set <A HREF="motion.html#it">它</A> to 999 to make the current<A HREF="windows.html#window">窗口</A>
+	the width of other <A HREF="windows\.html#windows">窗口</A>.  Set <A HREF="motion.html#it">它</A> to 999 to make the current<A HREF="windows.html#window">窗口</A>
 	always fill the screen.  Set <A HREF="motion.html#it">它</A> to a small number for normal editing.
 	The width is not adjusted after one of the commands to change the
 	width of the current<A HREF="windows.html#window">窗口</A>.
 	<A HREF="#'winwidth'">'winwidth'</A> applies to the current<A HREF="windows.html#window">窗口</A>.  Use <A HREF="#'winminwidth'">'winminwidth'</A> to set
-	the minimal width for other <A HREF="windows.html#windows">windows</A>.
+	the minimal width for other <A HREF="windows\.html#windows">窗口</A>.
 
 
 						*<A NAME="'wrap'"></A><B>'wrap'</B>* *<A NAME="'nowrap'"></A><B>'nowrap'</B>*

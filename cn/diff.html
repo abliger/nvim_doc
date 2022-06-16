@@ -161,7 +161,7 @@ While already in Vim you can start <A HREF="#diff">diff</A> mode in three ways.
 
 
 							*<A NAME=":difft"></A><B>:difft</B>* *<A NAME=":diffthis"></A><B>:diffthis</B>*
-:difft[his]	Make the current<A HREF="windows.html#window">窗口</A>part of the <A HREF="#diff">diff</A> <A HREF="windows.html#windows">windows</A>.  This sets
+:difft[his]	Make the current<A HREF="windows.html#window">窗口</A>part of the <A HREF="#diff">diff</A> <A HREF="windows\.html#windows">窗口</A>.  This sets
 		the <A HREF="options\.html#options">选项</A> <A HREF="motion.html#as">as</A> for &quot;<A HREF="nvim.html#nvim">nvim</A> -d&quot;.
 
 
@@ -198,7 +198,7 @@ file for a moment and come back to the same file and be in <A HREF="#diff">diff<
 :diffo[ff]	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>.  Resets related
 		<A HREF="options\.html#options">选项</A> also when <A HREF="options.html#'diff'">'diff'</A> was not set.
 
-:diffo[ff]!	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>and in all <A HREF="windows.html#windows">windows</A>
+:diffo[ff]!	Switch off <A HREF="#diff">diff</A> mode for the current<A HREF="windows.html#window">窗口</A>and in all <A HREF="windows\.html#windows">窗口</A>
 		in the current <A HREF="intro.html#tab">tab</A> page where <A HREF="options.html#'diff'">'diff'</A> is set.  Resetting
 		related <A HREF="options\.html#options">选项</A> only happens in a<A HREF="windows.html#window">窗口</A>that has <A HREF="options.html#'diff'">'diff'</A> set,
 		if the current<A HREF="windows.html#window">窗口</A>does not have <A HREF="options.html#'diff'">'diff'</A> set then no <A HREF="options\.html#options">选项</A>
@@ -223,9 +223,9 @@ Otherwise they are set to their default value:
 
 2. Viewing diffs						*<A NAME="view-diffs"></A><B>view-diffs</B>*
 
-The effect is that the <A HREF="#diff">diff</A> <A HREF="windows.html#windows">windows</A> show the same text, with the differences
+The effect is that the <A HREF="#diff">diff</A> <A HREF="windows\.html#windows">窗口</A> show the same text, with the differences
 highlighted.  When <A HREF="scroll.html#scrolling">scrolling</A> the text, the <A HREF="options.html#'scrollbind'">'scrollbind'</A> option will make the
-text in other <A HREF="windows.html#windows">windows</A> to be scrolled <A HREF="motion.html#as">as</A> well.  With vertical splits the text
+text in other <A HREF="windows\.html#windows">窗口</A> to be scrolled <A HREF="motion.html#as">as</A> well.  With vertical splits the text
 should be aligned properly.
 
 The alignment of text will go wrong when:

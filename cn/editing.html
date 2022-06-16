@@ -678,7 +678,7 @@ common that names in the buffer <A HREF="eval.html#list">列表</A> are not in t
 
 This subject is introduced in section |<A HREF="usr_07.html#07.2">07.2</A>| of the user manual.
 
-There is one global argument <A HREF="eval.html#list">列表</A>, which is used for all <A HREF="windows.html#windows">windows</A> by default.
+There is one global argument <A HREF="eval.html#list">列表</A>, which is used for all <A HREF="windows\.html#windows">窗口</A> by default.
 It is possible to create a new argument <A HREF="eval.html#list">列表</A> local to a<A HREF="windows.html#window">窗口</A>, see
 |<A HREF="#:arglocal">:arglocal</A>|.
 
@@ -928,15 +928,15 @@ LOCAL ARGUMENT LIST
 :argg[lobal][!] <A HREF="#[++opt]">[++opt]</A> <A HREF="#[+cmd]">[+cmd]</A> <A HREF="#{arglist}">{arglist}</A>
 			Use the global argument <A HREF="eval.html#list">列表</A> for the current<A HREF="windows.html#window">窗口</A>.
 			Define a new global argument <A HREF="eval.html#list">列表</A> like |<A HREF="#:args_f">:args_f</A>|.
-			All <A HREF="windows.html#windows">windows</A> using the global argument <A HREF="eval.html#list">列表</A> will see
+			All <A HREF="windows\.html#windows">窗口</A> using the global argument <A HREF="eval.html#list">列表</A> will see
 			this new <A HREF="eval.html#list">列表</A>.
 
-There can be several argument lists.  They can be shared between <A HREF="windows.html#windows">windows</A>.
+There can be several argument lists.  They can be shared between <A HREF="windows\.html#windows">窗口</A>.
 When they are shared, <A HREF="change.html#changing">changing</A> the argument <A HREF="eval.html#list">列表</A> in one<A HREF="windows.html#window">窗口</A>will also
 change <A HREF="motion.html#it">它</A> in the other<A HREF="windows.html#window">窗口</A>.
 
 When a<A HREF="windows.html#window">窗口</A>is split the new<A HREF="windows.html#window">窗口</A>inherits the argument <A HREF="eval.html#list">列表</A> from the
-current<A HREF="windows.html#window">窗口</A>.  The two <A HREF="windows.html#windows">windows</A> then share this <A HREF="eval.html#list">列表</A>, until one of them uses
+current<A HREF="windows.html#window">窗口</A>.  The two <A HREF="windows\.html#windows">窗口</A> then share this <A HREF="eval.html#list">列表</A>, until one of them uses
 |<A HREF="#:arglocal">:arglocal</A>| or |<A HREF="#:argglobal">:argglobal</A>| to use another argument <A HREF="eval.html#list">列表</A>.
 
 
@@ -1267,7 +1267,7 @@ The names can be in upper- or <A HREF="change.html#lowercase">小写</A>.
 :[range]x[it][!] <A HREF="#[++opt]">[++opt]</A> [file]
 			Like &quot;<A HREF="#:wq">:wq</A>&quot;, but write only when changes have been
 			made.
-			When <A HREF="options.html#'hidden'">'hidden'</A> is set and there are more <A HREF="windows.html#windows">windows</A>, the
+			When <A HREF="options.html#'hidden'">'hidden'</A> is set and there are more <A HREF="windows\.html#windows">窗口</A>, the
 			current buffer becomes hidden, after <A HREF="#writing">writing</A> the file.
 
 
@@ -1279,7 +1279,7 @@ The names can be in upper- or <A HREF="change.html#lowercase">小写</A>.
 							*<A NAME="ZZ"></A><B>ZZ</B>*
 <A HREF="#ZZ">ZZ</A>			Write current file, if modified, and close the current
 			<A HREF="windows.html#window">窗口</A>(same <A HREF="motion.html#as">as</A> &quot;:x&quot;).
-			If there are several <A HREF="windows.html#windows">windows</A> for the current file,
+			If there are several <A HREF="windows\.html#windows">窗口</A> for the current file,
 			only the current<A HREF="windows.html#window">窗口</A>is closed.
 
 
@@ -1465,8 +1465,8 @@ exist, the next-higher scope in the hierarchy applies.
 							*<A NAME=":tc"></A><B>:tc</B>* *<A NAME=":tcd"></A><B>:tcd</B>*
 :tc[d][!] {path}	Like |<A HREF="#:cd">:cd</A>|, but only set the directory for the current
 			<A HREF="intro.html#tab">tab</A>.  The current<A HREF="windows.html#window">窗口</A>will also use this directory.
-			The current directory is not changed for <A HREF="windows.html#windows">windows</A> in
-			other tabs and for <A HREF="windows.html#windows">windows</A> in the current <A HREF="intro.html#tab">tab</A> that
+			The current directory is not changed for <A HREF="windows\.html#windows">窗口</A> in
+			other tabs and for <A HREF="windows\.html#windows">窗口</A> in the current <A HREF="intro.html#tab">tab</A> that
 			have their own window-local directory.
 
 
@@ -1482,7 +1482,7 @@ exist, the next-higher scope in the hierarchy applies.
 							*<A NAME=":lc"></A><B>:lc</B>* *<A NAME=":lcd"></A><B>:lcd</B>*
 :lc[d][!] {path}	Like |<A HREF="#:cd">:cd</A>|, but only set the current directory for the
 			current<A HREF="windows.html#window">窗口</A>.  The current directory for other
-			<A HREF="windows.html#windows">windows</A> or tabs is not changed.
+			<A HREF="windows\.html#windows">窗口</A> or tabs is not changed.
 
 
 							*<A NAME=":lch"></A><B>:lch</B>* *<A NAME=":lchdir"></A><B>:lchdir</B>*
@@ -1514,7 +1514,7 @@ exist, the next-higher scope in the hierarchy applies.
 <B>				:verbose pwd</B>
 <B>				[tabpage] /path/to/current</B>
 
-So long <A HREF="motion.html#as">as</A> no |<A HREF="#:lcd">:lcd</A>| or |<A HREF="#:tcd">:tcd</A>| command has been used, all <A HREF="windows.html#windows">windows</A> share the
+So long <A HREF="motion.html#as">as</A> no |<A HREF="#:lcd">:lcd</A>| or |<A HREF="#:tcd">:tcd</A>| command has been used, all <A HREF="windows\.html#windows">窗口</A> share the
 same current directory.  Using a command to jump to another<A HREF="windows.html#window">窗口</A>doesn't
 change anything for the current directory.
 
@@ -1670,7 +1670,7 @@ can't close this<A HREF="windows.html#window">窗口</A>.  A few other restricti
 sure nothing happens outside of the current buffer.  E.g., setting
 window-local <A HREF="options\.html#options">选项</A> may end up in the wrong<A HREF="windows.html#window">窗口</A>.  Splitting the<A HREF="windows.html#window">窗口</A>,
 doing something there and closing <A HREF="motion.html#it">它</A> should be OK (if there are no side
-effects from other autocommands).  Closing unrelated <A HREF="windows.html#windows">windows</A> and <A HREF="windows.html#buffers">buffers</A> will
+effects from other autocommands).  Closing unrelated <A HREF="windows\.html#windows">窗口</A> and <A HREF="windows.html#buffers">buffers</A> will
 get you into trouble.
 
 Before <A HREF="#writing">writing</A> a file the <A HREF="#timestamp">timestamp</A> is checked.  If <A HREF="motion.html#it">它</A> has changed, Vim will

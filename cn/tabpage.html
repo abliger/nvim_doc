@@ -79,7 +79,7 @@
 
 
 
-Editing with <A HREF="windows.html#windows">windows</A> in multiple <A HREF="intro.html#tab">tab</A> pages.		*<A NAME="tab-page"></A><B>tab-page</B>* *<A NAME="tabpage"></A><B>tabpage</B>*
+Editing with <A HREF="windows\.html#windows">窗口</A> in multiple <A HREF="intro.html#tab">tab</A> pages.		*<A NAME="tab-page"></A><B>tab-page</B>* *<A NAME="tabpage"></A><B>tabpage</B>*
 
 The commands which have been added to use multiple <A HREF="intro.html#tab">tab</A> pages are explained
 here.  Additionally, there are explanations for commands that work differently
@@ -91,8 +91,8 @@ when used in combination with more than one <A HREF="intro.html#tab">tab</A> pag
 
 1. Introduction						*<A NAME="tab-page-intro"></A><B>tab-page-intro</B>*
 
-A <A HREF="intro.html#tab">tab</A> page holds one or more <A HREF="windows.html#windows">windows</A>.  You can easily switch between <A HREF="intro.html#tab">tab</A>
-pages, so that you have several collections of <A HREF="windows.html#windows">windows</A> to work on different
+A <A HREF="intro.html#tab">tab</A> page holds one or more <A HREF="windows\.html#windows">窗口</A>.  You can easily switch between <A HREF="intro.html#tab">tab</A>
+pages, so that you have several collections of <A HREF="windows\.html#windows">窗口</A> to work on different
 things.
 
 Usually you will see a <A HREF="eval.html#list">列表</A> of labels at the top of the Vim<A HREF="windows.html#window">窗口</A>, one for
@@ -222,10 +222,10 @@ When a <A HREF="intro.html#tab">tab</A> is closed the next <A HREF="intro.html#t
 
 							*<A NAME=":tabo"></A><B>:tabo</B>* *<A NAME=":tabonly"></A><B>:tabonly</B>*
 :tabo[nly][!]	Close all other <A HREF="intro.html#tab">tab</A> pages.
-		When the <A HREF="options.html#'hidden'">'hidden'</A> option is set, all <A HREF="windows.html#buffers">buffers</A> in closed <A HREF="windows.html#windows">windows</A>
+		When the <A HREF="options.html#'hidden'">'hidden'</A> option is set, all <A HREF="windows.html#buffers">buffers</A> in closed <A HREF="windows\.html#windows">窗口</A>
 		become hidden.
 		When <A HREF="options.html#'hidden'">'hidden'</A> is not set, and the <A HREF="options.html#'autowrite'">'autowrite'</A> option is set,
-		modified <A HREF="windows.html#buffers">buffers</A> are written.  Otherwise, <A HREF="windows.html#windows">windows</A> that have
+		modified <A HREF="windows.html#buffers">buffers</A> are written.  Otherwise, <A HREF="windows\.html#windows">窗口</A> that have
 		<A HREF="windows.html#buffers">buffers</A> that are modified are not removed, unless the [!] is
 		given然后they become hidden.  But modified <A HREF="windows.html#buffers">buffers</A> are
 		never abandoned, so changes cannot get lost.
@@ -315,7 +315,7 @@ next tab page.  |<A HREF="options.html#'tabline'">'tabline'</A>|
 Other commands:
 
 							*<A NAME=":tabs"></A><B>:tabs</B>*
-<A HREF="#:tabs">:tabs</A>		<A HREF="eval.html#list">列表</A> the <A HREF="intro.html#tab">tab</A> pages and the <A HREF="windows.html#windows">windows</A> they contain.
+<A HREF="#:tabs">:tabs</A>		<A HREF="eval.html#list">列表</A> the <A HREF="intro.html#tab">tab</A> pages and the <A HREF="windows\.html#windows">窗口</A> they contain.
 		Shows a &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; for the current<A HREF="windows.html#window">窗口</A>.
 		Shows a &quot;<A HREF="motion.html#+">+</A>&quot; for modified <A HREF="windows.html#buffers">buffers</A>.
 		For example:
@@ -450,7 +450,7 @@ The highlighting of the <A HREF="intro.html#tab">tab</A> pages line is set with 
 TabLineSel and TabLineFill.  |<A HREF="syntax.html#hl-TabLine">hl-TabLine</A>| |<A HREF="syntax.html#hl-TabLineSel">hl-TabLineSel</A>| |<A HREF="syntax.html#hl-TabLineFill">hl-TabLineFill</A>|
 
 A &quot;<A HREF="motion.html#+">+</A>&quot; will be shown for a <A HREF="intro.html#tab">tab</A> page that has a modified<A HREF="windows.html#window">窗口</A>.  The number of
-<A HREF="windows.html#windows">windows</A> in a <A HREF="#tabpage">tabpage</A> is also shown.  Thus &quot;3+&quot; means three <A HREF="windows.html#windows">windows</A> and one of
+<A HREF="windows\.html#windows">窗口</A> in a <A HREF="#tabpage">tabpage</A> is also shown.  Thus &quot;3+&quot; means three <A HREF="windows\.html#windows">窗口</A> and one of
 them has a modified buffer.
 
 The <A HREF="options.html#'tabline'">'tabline'</A> option allows you to define your preferred way to <A HREF="intro.html#tab">tab</A> pages
@@ -537,7 +537,7 @@ label:
 <B>	:set guitablabel=%N\ %f</B>
 
 An example that resembles the default <A HREF="options.html#'guitablabel'">'guitablabel'</A>: Show the number of
-<A HREF="windows.html#windows">windows</A> in the <A HREF="intro.html#tab">tab</A> page and a '<A HREF="motion.html#+">+</A>' if there is a modified buffer:
+<A HREF="windows\.html#windows">窗口</A> in the <A HREF="intro.html#tab">tab</A> page and a '<A HREF="motion.html#+">+</A>' if there is a modified buffer:
 
 <B>	function GuiTabLabel()</B>
 <B>	  let label = ''</B>
