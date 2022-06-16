@@ -485,7 +485,7 @@ _  &lt;underscore&gt;		<A HREF="intro.html#[count]">[count]</A> - 1 lines downwa
 			Also see the |<A HREF="builtin.html#line2byte()">line2byte()</A>| function, and the '<A HREF="insert.html#o">o</A>'
 			option in <A HREF="options.html#'statusline'">'statusline'</A>.
 
-These commands move to the specified line.  They stop when reaching the first
+These commands 使用<A HREF="gui\.html#GUI">GUI</A> specified line.  They stop when reaching the first
 or the last line.  The first two commands put the cursor in the same column
 (if possible) <A HREF="#as">as</A> <A HREF="#it">it</A> was after the last command that changed the column,
 except after the &quot;<A HREF="#$">$</A>&quot;命令然后the cursor will be put on the last
@@ -542,8 +542,8 @@ A <A HREF="#WORD">WORD</A> consists of a sequence of non-blank characters, separ
 space.  An empty line is also considered to be a <A HREF="#WORD">WORD</A>.
 
 A sequence of folded lines is counted for one <A HREF="#word">word</A> of a single character.
-&quot;<A HREF="#w">w</A>&quot; and &quot;<A HREF="#W">W</A>&quot;, &quot;<A HREF="#e">e</A>&quot; and &quot;<A HREF="#E">E</A>&quot; move to the start/end of the first <A HREF="#word">word</A> or <A HREF="#WORD">WORD</A> after
-a range of folded lines.  &quot;<A HREF="#b">b</A>&quot; and &quot;<A HREF="#B">B</A>&quot; move to the start of the first <A HREF="#word">word</A> or
+&quot;<A HREF="#w">w</A>&quot; and &quot;<A HREF="#W">W</A>&quot;, &quot;<A HREF="#e">e</A>&quot; and &quot;<A HREF="#E">E</A>&quot; 使用<A HREF="gui\.html#GUI">GUI</A> start/end of the first <A HREF="#word">word</A> or <A HREF="#WORD">WORD</A> after
+a range of folded lines.  &quot;<A HREF="#b">b</A>&quot; and &quot;<A HREF="#B">B</A>&quot; 使用<A HREF="gui\.html#GUI">GUI</A> start of the first <A HREF="#word">word</A> or
 <A HREF="#WORD">WORD</A> before the fold.
 
 Special <A HREF="change.html#case">case</A>: &quot;<A HREF="change.html#cw">cw</A>&quot; and &quot;<A HREF="change.html#cW">cW</A>&quot; are treated like &quot;ce&quot; and &quot;cE&quot; if the cursor is

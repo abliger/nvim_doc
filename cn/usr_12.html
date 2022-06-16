@@ -140,7 +140,7 @@ There is a function called &quot;GetResp&quot; that you want to rename to &quot;
 	qq			Start <A HREF="repeat.html#recording">recording</A> into the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">register</A>
 	:&#37;s/\&lt;GetResp\&gt;/GetAnswer/g
 				Do the replacements in the first file.
-	<A HREF="editing.html#:wnext">:wnext</A>			Write this file and move to the next one.
+	<A HREF="editing.html#:wnext">:wnext</A>			Write this file and 使用<A HREF="gui\.html#GUI">GUI</A> next one.
 	<A HREF="repeat.html#q">q</A>			Stop <A HREF="repeat.html#recording">recording</A>.
 	@q			Execute the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">register</A>.  This will replay the
 				substitution and &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot;.  You can verify
@@ -297,8 +297,8 @@ easy to read.
 You can see on which <A HREF="motion.html#word">单词</A> you are (748), and the total number of words in the
 file (774).
 
-When the text is only part of a file, you could move to the start of the text,
-type &quot;g CTRL-G&quot;, move to the end of the text, type &quot;g CTRL-G&quot; again, and then
+When the text is only part of a file, you could 使用<A HREF="gui\.html#GUI">GUI</A> start of the text,
+type &quot;g CTRL-G&quot;, 使用<A HREF="gui\.html#GUI">GUI</A> end of the text, type &quot;g CTRL-G&quot; again, and then
 use your brain to compute the difference in the <A HREF="motion.html#word">单词</A> position.  That's a good
 exercise, but there is an easier way.  With <A HREF="visual\.html#Visual">可视</A>模式, select the text you
 want to <A HREF="intro.html#count">count</A> words in.  Then type <A HREF="vimindex.html#g">g</A> <A HREF="editing.html#CTRL-G">CTRL-G</A>.  The result:

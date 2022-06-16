@@ -506,7 +506,7 @@ Note:
 There are seven sets of mappings
 - For <A HREF="intro.html#Normal">正常</A>模式: When typing commands.
 - For <A HREF="visual\.html#Visual">可视</A>模式: When typing commands while the <A HREF="visual.html#Visual">Visual</A> area is highlighted.
-- For <A HREF="visual.html#Select">Select</A> mode: like <A HREF="visual\.html#Visual">可视</A>模式 but typing text replaces the selection.
+- For <A HREF="visual.html#Select">选择</A>模式: like <A HREF="visual\.html#Visual">可视</A>模式 but typing text replaces the selection.
 - For <A HREF="intro.html#Operator-pending">Operator-pending</A> mode: When an <A HREF="motion.html#operator">operator</A> is pending (after &quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#y">y</A>&quot;, &quot;<A HREF="change.html#c">c</A>&quot;,
   etc.).  See below: |<A HREF="#omap-info">omap-info</A>|.
 - For <A HREF="intro.html#Insert">插入</A>模式.  These are also used in <A HREF="insert\\.html#Replace">替代</A>模式.
@@ -561,10 +561,10 @@ l[nore]map     &#124;  -   &#124; yes &#124; yes &#124;  -  &#124;  -  &#124;  -
 <A HREF="#:nunmap">:nunmap</A> can also be used outside of a monastery.
 
 						*<A NAME="mapmode-x"></A><B>mapmode-x</B>* *<A NAME="mapmode-s"></A><B>mapmode-s</B>*
-Some commands work both in <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">Select</A> mode, some in only one.  Note
-that quite often &quot;<A HREF="visual.html#Visual">Visual</A>&quot; is mentioned where both <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">Select</A> mode
+Some commands work both in <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">选择</A>模式, some in only one.  Note
+that quite often &quot;<A HREF="visual.html#Visual">Visual</A>&quot; is mentioned where both <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">选择</A>模式
 apply. |<A HREF="visual.html#Select-mode-mapping">Select-mode-mapping</A>|
-NOTE: Mapping a printable character in <A HREF="visual.html#Select">Select</A> mode may confuse the user.  It's
+NOTE: Mapping a printable character in <A HREF="visual.html#Select">选择</A>模式 may confuse the user.  It's
 better to explicitly use <A HREF="#:xmap">:xmap</A> and <A HREF="#:smap">:smap</A> for printable characters.  Or use
 <A HREF="#:sunmap">:sunmap</A> after defining the <A HREF="#mapping">mapping</A>.
 
@@ -737,8 +737,8 @@ when using nested mappings.
 Using <A HREF="pattern.html#CTRL-C">CTRL-C</A> in the <A HREF="#{lhs}">{lhs}</A> is possible, but <A HREF="motion.html#it">它</A> will only work when Vim is
 waiting for a key, not when Vim is busy with something.  When Vim is busy
 <A HREF="pattern.html#CTRL-C">CTRL-C</A> interrupts/breaks the command.
-When using the <A HREF="gui.html#GUI">GUI</A> version on MS-Windows <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be mapped to allow a Copy
-command to the <A HREF="provider.html#clipboard">clipboard</A>.  Use CTRL-Break to interrupt Vim.
+When 使用<A HREF="gui\.html#GUI">GUI</A> version on MS-Windows <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be mapped to allow a Copy
+command to 粘贴板.  Use CTRL-Break to interrupt Vim.
 
 
 					*<A NAME="map_space_in_lhs"></A><B>map_space_in_lhs</B>* *<A NAME="map-space_in_lhs"></A><B>map-space_in_lhs</B>*

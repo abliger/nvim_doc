@@ -1445,12 +1445,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="clipboard-unnamed"></A><B>clipboard-unnamed</B>*
-	unnamed		When included, Vim will use the <A HREF="provider.html#clipboard">clipboard</A> <A HREF="intro.html#register">register</A> '*'
+	unnamed		When included, Vim will use 粘贴板 <A HREF="intro.html#register">register</A> '*'
 			for all <A HREF="change.html#yank">yank</A>, delete, change and put operations which
 			would normally go to the unnamed <A HREF="intro.html#register">register</A>.  When a
 			<A HREF="intro.html#register">register</A> is explicitly specified, <A HREF="motion.html#it">它</A> will always be
 			used regardless of whether &quot;unnamed&quot; is in <A HREF="#'clipboard'">'clipboard'</A>
-			or not.  The <A HREF="provider.html#clipboard">clipboard</A> <A HREF="intro.html#register">register</A> can always be
+			or not.  粘贴板 <A HREF="intro.html#register">register</A> can always be
 			explicitly accessed using the &quot;* <A HREF="intro.html#notation">notation</A>.  Also see
 			|<A HREF="provider.html#clipboard">clipboard</A>|.
 
@@ -3648,7 +3648,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	original position when no match is found and when pressing <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.  You
 	still need to finish the search command with <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to move the
 	cursor to the match.
-	You can use the <A HREF="editing.html#CTRL-G">CTRL-G</A> and <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> keys to move to the next and
+	You can use the <A HREF="editing.html#CTRL-G">CTRL-G</A> and <A HREF="tagsrch.html#CTRL-T">CTRL-T</A> keys to 使用<A HREF="gui\.html#GUI">GUI</A> next and
 	previous match. |<A HREF="cmdline.html#c_CTRL-G">c_CTRL-G</A>| |<A HREF="cmdline.html#c_CTRL-T">c_CTRL-T</A>|
 	Vim only searches for about half a second.  With a complicated
 	<A HREF="pattern.html#pattern">pattern</A> and/or a lot of text the match may not be found.  This is to
@@ -3882,7 +3882,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="eval.html#list">列表</A> of comma-separated words, which enable special things that keys
 	can <A HREF="diff.html#do">do</A>.  These values can be used:
 	   startsel	Using a shifted special key starts selection (either
-			<A HREF="visual.html#Select">Select</A> mode or <A HREF="visual\.html#Visual">可视</A>模式, depending on &quot;key&quot; being
+			<A HREF="visual.html#Select">选择</A>模式 or <A HREF="visual\.html#Visual">可视</A>模式, depending on &quot;key&quot; being
 			present in <A HREF="#'selectmode'">'selectmode'</A>).
 	   stopsel	Using a not-shifted special key stops selection.
 	Special keys in this <A HREF="repeat.html#context">context</A> are the cursor keys, <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>, <A HREF="motion.html#&lt;Home&gt;">&lt;Home&gt;</A>,
@@ -4468,7 +4468,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	Drag the |<A HREF="windows.html#status-line">status-line</A>| or vertical separator of a<A HREF="windows.html#window">窗口</A>to resize <A HREF="motion.html#it">它</A>.
 
-	If enabled for &quot;<A HREF="visual.html#v">v</A>&quot; (Visual mode) then <A HREF="term.html#double-click">double-click</A> selects word-wise,
+	If enabled for &quot;<A HREF="visual.html#v">v</A>&quot; (Visual mode) then <A HREF="term.html#double-click">双击</A> selects word-wise,
 	triple-click makes <A HREF="motion.html#it">它</A> line-wise, and quadruple-click makes <A HREF="motion.html#it">它</A>
 	rectangular block-wise.
 
@@ -4481,7 +4481,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#'mousefocus'">'mousefocus'</A>	<A HREF="windows.html#window">窗口</A>focus follows mouse pointer
 	<A HREF="#'mousemodel'">'mousemodel'</A>	what mouse button does which action
 	<A HREF="#'mousehide'">'mousehide'</A>	hide mouse pointer while typing text
-	<A HREF="#'selectmode'">'selectmode'</A>	whether to start <A HREF="visual.html#Select">Select</A> mode or <A HREF="visual\.html#Visual">可视</A>模式
+	<A HREF="#'selectmode'">'selectmode'</A>	whether to start <A HREF="visual.html#Select">选择</A>模式 or <A HREF="visual\.html#Visual">可视</A>模式
 
 	The <A HREF="#:behave">:behave</A> command provides some &quot;profiles&quot; for mouse behavior.
 
@@ -4565,7 +4565,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B>	   :map &lt;4-S-LeftRelease&gt; &lt;4-RightRelease&gt;</B>
  
 	Mouse commands requiring the CTRL modifier can be simulated by typing
-	the &quot;<A HREF="vimindex.html#g">g</A>&quot; key before using the mouse:
+	the &quot;<A HREF="vimindex.html#g">g</A>&quot; key before 使用鼠标:
 	    &quot;<A HREF="tagsrch.html#g&lt;LeftMouse&gt;">g&lt;LeftMouse&gt;</A>&quot;  is &quot;<A HREF="tagsrch.html#&lt;C-LeftMouse&gt;">&lt;C-LeftMouse&gt;</A>	(jump to <A HREF="tagsrch.html#tag">标签</A> under mouse click)
 	    &quot;<A HREF="tagsrch.html#g&lt;RightMouse&gt;">g&lt;RightMouse&gt;</A>&quot; is &quot;<A HREF="tagsrch.html#&lt;C-RightMouse&gt;">&lt;C-RightMouse&gt;</A>	(&quot;CTRL-T&quot;)
 
@@ -5476,7 +5476,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'selection'">'selection'</A> <A HREF="#'sel'">'sel'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot;)
 			global
 	This option defines the behavior of the selection.  It is only used
-	in <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">Select</A> mode.
+	in <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">选择</A>模式.
 	Possible values:
 <B><FONT color="#3A6F2B">	   value	past line     inclusive </FONT></B>
 	   old		   no		yes
@@ -5500,9 +5500,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'selectmode'">'selectmode'</A> <A HREF="#'slm'">'slm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	This is a comma-separated <A HREF="eval.html#list">列表</A> of words, which specifies when to start
-	<A HREF="visual.html#Select">Select</A> mode instead of <A HREF="visual\.html#Visual">可视</A>模式, when a selection is started.
+	<A HREF="visual.html#Select">选择</A>模式 instead of <A HREF="visual\.html#Visual">可视</A>模式, when a selection is started.
 	Possible values:
-	   mouse	when using the mouse
+	   mouse	when 使用鼠标
 	   key		when using shifted special keys
 	   cmd		when using &quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="visual.html#V">V</A>&quot; or <A HREF="visual.html#CTRL-V">CTRL-V</A>
 	见 |<A HREF="visual.html#Select-mode">Select-mode</A>|.
@@ -7309,9 +7309,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	if the line was empty.  But <A HREF="motion.html#it">它</A> is far from <A HREF="intro.html#Vi">Vi</A> compatible.  It may also
 	break some plugins or Vim scripts.例如 because |<A HREF="motion.html#l">l</A>| can move
 	the cursor after the last character.  Use with care!
-	Using the `$` command will move to the last character in the line, not
+	Using the `$` command will 使用<A HREF="gui\.html#GUI">GUI</A> last character in the line, not
 	past <A HREF="motion.html#it">它</A>.  This may actually move the cursor to the left!
-	The `g$` command will move to the end of the screen line.
+	The `g$` command will 使用<A HREF="gui\.html#GUI">GUI</A> end of the screen line.
 	It doesn't make sense to combine &quot;all&quot; with &quot;onemore&quot;, but you will
 	not get a warning for <A HREF="motion.html#it">它</A>.
 	When combined with other words, &quot;none&quot; is ignored.
@@ -7333,7 +7333,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'whichwrap'"></A><B>'whichwrap'</B>* *<A NAME="'ww'"></A><B>'ww'</B>*
 <A HREF="#'whichwrap'">'whichwrap'</A> <A HREF="#'ww'">'ww'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;b,s&quot;)
 			global
-	Allow specified keys that move the cursor left/right to move to the
+	Allow specified keys that move the cursor left/right to 使用<A HREF="gui\.html#GUI">GUI</A>
 	previous/next line when the cursor is on the first/last character in
 	the line.  Concatenate characters to allow this for these keys:
 <B><FONT color="#3A6F2B">		char   key	  mode	</FONT></B>
@@ -7357,7 +7357,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	&quot;<A HREF="map.html#:map">:map</A> <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> X&quot; to make backspace delete the character in front of the
 	cursor.
 	When '<A HREF="motion.html#l">l</A>' is included and <A HREF="motion.html#it">它</A> is used after an <A HREF="motion.html#operator">operator</A> at the end of a
-	line (not an empty line) then <A HREF="motion.html#it">它</A> will not move to the next line.  This
+	line (not an empty line) then <A HREF="motion.html#it">它</A> will not 使用<A HREF="gui\.html#GUI">GUI</A> next line.  This
 	makes &quot;<A HREF="change.html#dl">dl</A>&quot;, &quot;cl&quot;, &quot;yl&quot; etc. work normally.
 
 
