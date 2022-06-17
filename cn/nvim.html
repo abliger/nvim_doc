@@ -81,65 +81,56 @@
 
 Nvim							   *<A NAME="nvim"></A><B>nvim</B>* *<A NAME="nvim-intro"></A><B>nvim-intro</B>*
 
-Nvim is based on Vim by Bram Moolenaar.
+Nvim是基于Bram Moolenaar的Vim完成的.
 
-If you already use Vim 见 |<A HREF="#nvim-from-vim">nvim-from-vim</A>| for a quickstart.
-If you are new to Vim, try the 30-minute tutorial:
+如有你使用过Vim，见 Vim快速上手 |<A HREF="#nvim-from-vim">nvim-from-vim</A>|.如果你是Vim新手，尝试完成30分钟导航:
 
 <B>    :Tutor&lt;Enter&gt;</B>
 
-Nvim is emphatically a fork of Vim, not a clone: compatibility with Vim
-(especially editor and VimL features) is maintained where possible. See
-|<A HREF="vim_diff.html#vim-differences">vim-differences</A>| for the complete reference of differences from Vim.
+Nvim明显是Vim的分支,而不是拷贝: 尽可能保持与Vim的兼容性(特别是编辑器和VimL特性). 见|<A HREF="vim_diff.html#vim-differences">vim-differences</A>| 于Vim不同参考.
 
 				      键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
 ==============================================================================
 
-Transitioning from Vim				*<A NAME="nvim-from-vim"></A><B>nvim-from-vim</B>*
+从Vim过度				*<A NAME="nvim-from-vim"></A><B>nvim-from-vim</B>*
 
-1. To start the transition, create your |<A HREF="init.html">init.vim</A>| (user <A HREF="starting.html#config">config</A>) file:
+1. 开始过度, 创建你的|<A HREF="init.html">初始</A>| (用户<A HREF="starting.html#config">配置</A>) 文件:
 
 <B>    :call mkdir(stdpath('config'), 'p')</B>
 <B>    :exe 'edit '.stdpath('config').'/init.vim'</B>
 
-2. Add these contents to the file:
+2. 添加这些内容：
 
 <B>    set runtimepath^=~/.vim runtimepath+=~/.vim/after</B>
 <B>    let &amp;packpath = &amp;runtimepath</B>
 <B>    source ~/.vimrc</B>
 
-3. Restart Nvim, your existing Vim <A HREF="starting.html#config">config</A> will be loaded.
+3. 重启Nvim, 你的Vim <A HREF="starting.html#config">配置</A>会被加载.
 
-见 |<A HREF="provider.html#provider-python">provider-python</A>| and |<A HREF="provider.html#provider-clipboard">provider-clipboard</A>| for additional software you
-might need to use some features.
+见 |<A HREF="provider.html#provider-python">provider-python</A>| 和 |<A HREF="provider.html#provider-clipboard">provider-clipboard</A>| 对于你需要的额外软件使用一些特性.
 
-Your Vim configuration might not be entirely Nvim-compatible.
-见 |<A HREF="vim_diff.html#vim-differences">vim-differences</A>| for the full <A HREF="eval.html#list">列表</A> of changes.
+你的Vim配置可能不是和Nvim全部兼容.见 |<A HREF="vim_diff.html#vim-differences">vim-differences</A>|展示所有的变化列表
 
-The |<A HREF="vim_diff.html#'ttymouse'">'ttymouse'</A>| option, for example, was removed from Nvim (mouse support
-should work without <A HREF="motion.html#it">它</A>). If you use the same |<A HREF="starting.html#vimrc">vimrc</A>| for Vim and Nvim,
-consider guarding |<A HREF="vim_diff.html#'ttymouse'">'ttymouse'</A>| in your configuration like so:
+例如，|<A HREF="vim_diff.html#'ttymouse'">'ttymouse'</A>| 选项从Nvim删除 (没有 <A HREF="motion.html#it">它</A>鼠标依然支持).如果你使用相同的|<A HREF="starting.html#vimrc">vimrc</A>|配置对于Vim和Nvim,考虑屏蔽|<A HREF="vim_diff.html#'ttymouse'">'ttymouse'</A>|，如:
 
 <B>    if !has('nvim')</B>
 <B>        set ttymouse=xterm2</B>
 <B>    endif</B>
  
-Conversely, if you have Nvim specific configuration items, you could <A HREF="diff.html#do">do</A>
-this:
+相反的，如果你配置Nvim特有的设置选项，你可以这样做:
 
 <B>    if has('nvim')</B>
 <B>        tnoremap &lt;Esc&gt; &lt;C-\&gt;&lt;C-n&gt;</B>
 <B>    endif</B>
  
-For a more granular approach use YXXYexists()|:
+颗粒化管理 可以使用 YXXYexists()|:
 
 <B>    if exists(':tnoremap')</B>
 <B>        tnoremap &lt;Esc&gt; &lt;C-\&gt;&lt;C-n&gt;</B>
 <B>    endif</B>
  
-Now you should be able to explore Nvim more comfortably. Check |<A HREF="vim_diff.html#nvim-features">nvim-features</A>|
-for more information.
+现在您应该能够更轻松地探索Nvim了.详见|<A HREF="vim_diff.html#nvim-features">nvim-features</A>|.
 
 ==============================================================================
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
