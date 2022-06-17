@@ -266,7 +266,7 @@ a |<A HREF="#provider">provider</A>| which transparently uses shell commands to 
 system <A HREF="#clipboard">clipboard</A> or any other <A HREF="#clipboard">clipboard</A> &quot;backend&quot;.
 
 To ALWAYS use the <A HREF="#clipboard">clipboard</A> for ALL operations (instead of interacting with
-the '<A HREF="motion.html#+">+</A>' and/or '*' <A HREF="change.html#registers">registers</A> explicitly):
+the '<A HREF="motion.html#+">+</A>' and/or '*' <A HREF="change.html#registers">寄存器</A> explicitly):
 <B>    set clipboard+=unnamedplus</B>
 
 See <A HREF="options.html#'clipboard'">'clipboard'</A> for details and <A HREF="options\.html#options">选项</A>.
@@ -274,7 +274,7 @@ See <A HREF="options.html#'clipboard'">'clipboard'</A> for details and <A HREF="
 
 							      *<A NAME="clipboard-tool"></A><B>clipboard-tool</B>*
 The presence of a working <A HREF="#clipboard">clipboard</A> tool implicitly enables the '<A HREF="motion.html#+">+</A>' and '*'
-<A HREF="change.html#registers">registers</A>. Nvim looks for these <A HREF="#clipboard">clipboard</A> tools, in order of priority:
+<A HREF="change.html#registers">寄存器</A>. Nvim looks for these <A HREF="#clipboard">clipboard</A> tools, in order of priority:
 
   - |<A HREF="#g:clipboard">g:clipboard</A>|
   - pbcopy, pbpaste (macOS)
@@ -324,9 +324,9 @@ For example this configuration uses the g:foo variable <A HREF="motion.html#as">
 <B>          \   },</B>
 <B>          \ }</B>
 
-The &quot;copy&quot; function stores a <A HREF="eval.html#list">列表</A> of lines and the <A HREF="intro.html#register">register</A> type. The &quot;<A HREF="#paste">paste</A>&quot;
+The &quot;copy&quot; function stores a <A HREF="eval.html#list">列表</A> of lines and the <A HREF="intro.html#register">寄存器</A> type. The &quot;<A HREF="#paste">paste</A>&quot;
 function returns the <A HREF="#clipboard">clipboard</A> <A HREF="motion.html#as">as</A> a `[lines, regtype]` <A HREF="eval.html#list">列表</A>, where `lines` is
-a <A HREF="eval.html#list">列表</A> of lines and `regtype` is a <A HREF="intro.html#register">register</A> type conforming to |<A HREF="builtin.html#setreg()">setreg()</A>|.
+a <A HREF="eval.html#list">列表</A> of lines and `regtype` is a <A HREF="intro.html#register">寄存器</A> type conforming to |<A HREF="builtin.html#setreg()">setreg()</A>|.
 
 ==============================================================================
 
@@ -386,7 +386,7 @@ CLIPBOARD is typically used in X11 applications for copy/paste operations
 generally inserted with the middle mouse button.
 
 Nvim's X11 <A HREF="#clipboard">clipboard</A> providers only use the PRIMARY and CLIPBOARD selections,
-for the &quot;*&quot; and &quot;<A HREF="motion.html#+">+</A>&quot; <A HREF="change.html#registers">registers</A>, respectively.
+for the &quot;*&quot; and &quot;<A HREF="motion.html#+">+</A>&quot; <A HREF="change.html#registers">寄存器</A>, respectively.
 
 ==============================================================================
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

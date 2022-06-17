@@ -139,7 +139,7 @@ will be returned again without extra work. If the buffer was parsed before,
 incremental parsing will be done of the changed parts.
 
 Note: to use the parser directly inside a |<A HREF="intro.html#nvim_buf_attach">nvim_buf_attach</A>| <A HREF="lua.html#Lua">Lua</A> callback, you
-must call `get_parser()` before you <A HREF="intro.html#register">register</A> your callback. But preferably
+must call `get_parser()` before you <A HREF="intro.html#register">寄存器</A> your callback. But preferably
 parsing shouldn't be done directly in the change callback anyway <A HREF="motion.html#as">as</A> they will
 be very frequent. Rather a <A HREF="usr_05.html#plugin">plugin</A> that does any kind of analysis on a tree
 should use a <A HREF="builtin.html#timer">timer</A> to throttle too frequent updates.
@@ -453,7 +453,7 @@ for a buffer with this code:
 
 As mentioned above the supported predicate is currently only `eq?`. `match?`
 predicates behave like matching always fails. As an addition a capture which
-begin with an upper-case <A HREF="print.html#letter">letter</A> like `@WarningMsg` will map directly to this
+begin with an upper-case <A HREF="print.html#letter">字母</A> like `@WarningMsg` will map directly to this
 highlight group, if defined. Also if the predicate begins with upper-case and
 contains a dot only the part before the first will be interpreted <A HREF="motion.html#as">as</A> the
 highlight group. As an example, this warns of a binary <A HREF="eval.html#expression">expression</A> with two

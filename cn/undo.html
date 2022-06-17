@@ -473,28 +473,28 @@ When manual |<A HREF="fold.html#folding">folding</A>| is being used, the <A HREF
 Only changes completely within a fold will keep the fold <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was, because
 the first and last line of the fold don't change.
 
-The numbered <A HREF="change.html#registers">registers</A> can also be used for undoing deletes.  Each time you
-delete text, <A HREF="motion.html#it">它</A> is put into <A HREF="intro.html#register">register</A> &quot;1.  The contents of <A HREF="intro.html#register">register</A> &quot;1 are
-shifted to &quot;2, etc.  The contents of <A HREF="intro.html#register">register</A> &quot;9 are lost.  You can now get
+The numbered <A HREF="change.html#registers">寄存器</A> can also be used for undoing deletes.  Each time you
+delete text, <A HREF="motion.html#it">它</A> is put into <A HREF="intro.html#register">寄存器</A> &quot;1.  The contents of <A HREF="intro.html#register">寄存器</A> &quot;1 are
+shifted to &quot;2, etc.  The contents of <A HREF="intro.html#register">寄存器</A> &quot;9 are lost.  You can now get
 back the most recent deleted text with the put command: &#39;&#34;'1P'.  (also, if the
 deleted text was the result of the last delete or copy operation, '<A HREF="change.html#P">P</A>' or '<A HREF="change.html#p">p</A>'
-also works <A HREF="motion.html#as">as</A> this puts the contents of the unnamed <A HREF="intro.html#register">register</A>).  You can get
+also works <A HREF="motion.html#as">as</A> this puts the contents of the unnamed <A HREF="intro.html#register">寄存器</A>).  You can get
 back the text of three deletes ago with &#39;&#34;'3P'.
 
 
 						*<A NAME="redo-register"></A><B>redo-register</B>*
 If you want to get back more than one part of deleted text, you can use a
 special feature of the repeat command &quot;<A HREF="repeat.html#.">.</A>&quot;.  It will increase the number of the
-<A HREF="intro.html#register">register</A> used.  So if you first <A HREF="diff.html#do">do</A> &#39;&#34;'1P', the following &quot;<A HREF="repeat.html#.">.</A>&quot; will result in a
-&#39;&#34;'2P'.  Repeating this will result in all numbered <A HREF="change.html#registers">registers</A> being inserted.
+<A HREF="intro.html#register">寄存器</A> used.  So if you first <A HREF="diff.html#do">do</A> &#39;&#34;'1P', the following &quot;<A HREF="repeat.html#.">.</A>&quot; will result in a
+&#39;&#34;'2P'.  Repeating this will result in all numbered <A HREF="change.html#registers">寄存器</A> being inserted.
 
 Example:	If you deleted text with 'dd....' <A HREF="motion.html#it">它</A> can be restored with
 		&#39;&#34;'1P....'.
 
-If you don't know in which <A HREF="intro.html#register">register</A> the deleted text is, you can use the
-<A HREF="change.html#:display">:display</A> command.  An alternative is to try the first <A HREF="intro.html#register">register</A> with &#39;&#34;'1P', and
+If you don't know in which <A HREF="intro.html#register">寄存器</A> the deleted text is, you can use the
+<A HREF="change.html#:display">:display</A> command.  An alternative is to try the first <A HREF="intro.html#register">寄存器</A> with &#39;&#34;'1P', and
 if <A HREF="motion.html#it">它</A> is not what you want <A HREF="diff.html#do">do</A> 'u.'.  This will remove the contents of the
-first put, and repeat the put command for the second <A HREF="intro.html#register">register</A>.  Repeat the
+first put, and repeat the put command for the second <A HREF="intro.html#register">寄存器</A>.  Repeat the
 'u.' until you got what you want.
 
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>

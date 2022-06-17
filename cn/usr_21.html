@@ -155,7 +155,7 @@ shell is started.
 
 *<A NAME="21.3"></A><B>21.3</B>*	Remembering information; ShaDa
 
-After editing for a while you will have text in <A HREF="change.html#registers">registers</A>, marks in various
+After editing for a while you will have text in <A HREF="change.html#registers">寄存器</A>, marks in various
 files, a command line <A HREF="cmdline.html#history">history</A> filled with carefully crafted commands.  When
 you exit Vim all of this is lost.  But you can get <A HREF="motion.html#it">它</A> back!
 
@@ -163,7 +163,7 @@ The ShaDa (abbreviation of SHAred DAta) file is designed to store status
 information:
 
 	<A HREF="cmdline.html#Command-line">Command-line</A> and Search <A HREF="pattern.html#pattern">pattern</A> <A HREF="cmdline.html#history">history</A>
-	Text in <A HREF="change.html#registers">registers</A>
+	Text in <A HREF="change.html#registers">寄存器</A>
 	Marks for various files
 	The buffer <A HREF="eval.html#list">列表</A>
 	Global <A HREF="eval.html#variables">variables</A>
@@ -194,7 +194,7 @@ the marks are stored.  You want this feature, so now you have this:
 
 <B>	:set shada='1000,f1</B>
 
-The <A HREF="change.html#&lt;">&lt;</A> option controls how many lines are saved for each of the <A HREF="change.html#registers">registers</A>.  By
+The <A HREF="change.html#&lt;">&lt;</A> option controls how many lines are saved for each of the <A HREF="change.html#registers">寄存器</A>.  By
 default, all the lines are saved.  If 0, nothing is saved.  To avoid adding
 thousands of lines to your ShaDa file (which might never get used and makes
 starting Vim slower) you use a maximum of 500 lines:
@@ -207,7 +207,7 @@ Other <A HREF="options\.html#options">选项</A> you might want to use:
 	/	number of lines to save from the search <A HREF="cmdline.html#history">history</A>
 	<A HREF="change.html#r">r</A>	removable media, for which no marks will be stored (can be
 		used several times)
-	!	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> and
+	!	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A> and
 		don't contain <A HREF="change.html#lowercase">小写</A> letters
 	<A HREF="motion.html#h">h</A>	disable <A HREF="options.html#'hlsearch'">'hlsearch'</A> highlighting when starting
 	<A HREF="motion.html#&#37;">&#37;</A>	the buffer <A HREF="eval.html#list">列表</A> (only restored when starting Vim without file
@@ -282,7 +282,7 @@ More info at |<A HREF="starting.html#:oldfiles">:oldfiles</A>|, |<A HREF="eval.h
 MOVE INFO FROM ONE VIM TO ANOTHER
 
 You can use the &quot;<A HREF="starting.html#:wshada">:wshada</A>&quot; and &quot;<A HREF="starting.html#:rshada">:rshada</A>&quot;命令 to save and restore the
-information while still running Vim.  This is useful for exchanging <A HREF="intro.html#register">register</A>
+information while still running Vim.  This is useful for exchanging <A HREF="intro.html#register">寄存器</A>
 contents between two instances of Vim, for example.  In the first Vim <A HREF="diff.html#do">do</A>:
 
 <B>	:wshada! ~/tmp/shada</B>
@@ -420,11 +420,11 @@ the mouse will also <A HREF="diff.html#do">do</A> this.
 SESSIONS AND SHADA
 
 Sessions store many things, but not the position of marks, contents of
-<A HREF="change.html#registers">registers</A> and the command line <A HREF="cmdline.html#history">history</A>.  You need to use the <A HREF="starting.html#shada">shada</A> feature
+<A HREF="change.html#registers">寄存器</A> and the command line <A HREF="cmdline.html#history">history</A>.  You need to use the <A HREF="starting.html#shada">shada</A> feature
 for these things.
    In most situations you will want to use sessions separately from <A HREF="starting.html#shada">shada</A>.
 This can be used to switch to another session, but keep the command line
-<A HREF="cmdline.html#history">history</A>.  And <A HREF="change.html#yank">yank</A> text into <A HREF="change.html#registers">registers</A> in one session, and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> back in
+<A HREF="cmdline.html#history">history</A>.  And <A HREF="change.html#yank">yank</A> text into <A HREF="change.html#registers">寄存器</A> in one session, and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> back in
 another session.
    You might prefer to keep the info with the session.  You will have to <A HREF="diff.html#do">do</A>
 this yourself then.  Example:

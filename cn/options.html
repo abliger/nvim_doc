@@ -268,7 +268,7 @@ doesn't appear.
 Environment <A HREF="eval.html#variables">variables</A> in specific <A HREF="options\.html#options">字符串</A> <A HREF="#options">options</A> will be expanded.  If the
 environment variable exists the '<A HREF="motion.html#$">$</A>' and the following environment variable
 name is replaced with its value.  If <A HREF="motion.html#it">它</A> does not exist the '<A HREF="motion.html#$">$</A>' and the name
-are not modified.  Any non-id character (not a <A HREF="print.html#letter">letter</A>, digit or '<A HREF="motion.html#_">_</A>') may
+are not modified.  Any non-id character (not a <A HREF="print.html#letter">字母</A>, digit or '<A HREF="motion.html#_">_</A>') may
 follow the environment variable name.  That character and what follows is
 appended to the value of the environment variable.  Examples:
 <B>   :set term=$TERM.new</B>
@@ -671,7 +671,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					*<A NAME="'aleph'"></A><B>'aleph'</B>* *<A NAME="'al'"></A><B>'al'</B>* *<A NAME="aleph"></A><B>aleph</B>* *<A NAME="Aleph"></A><B>Aleph</B>*
 <A HREF="#'aleph'">'aleph'</A> <A HREF="#'al'">'al'</A>		number	(default 224)
 			global
-	The ASCII code for the first <A HREF="print.html#letter">letter</A> of the Hebrew alphabet.  The
+	The ASCII code for the first <A HREF="print.html#letter">字母</A> of the Hebrew alphabet.  The
 	routine that maps the keyboard in Hebrew mode, both in <A HREF="intro.html#Insert">插入</A>模式
 	(when hkmap is set) and on the command-line (when hitting CTRL-_)
 	outputs the Hebrew characters in the range [aleph..aleph+26].
@@ -1083,7 +1083,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	mess	    No output available for |<A HREF="message.html#g&lt;">g&lt;</A>|.
 	showmatch   Error occurred for <A HREF="#'showmatch'">'showmatch'</A> function.
 	<A HREF="motion.html#operator">operator</A>    Empty region error |<A HREF="#cpo-E">cpo-E</A>|.
-	<A HREF="intro.html#register">register</A>    Unknown <A HREF="intro.html#register">register</A> after &lt;C-R&gt; in |<A HREF="insert.html#Insert-mode">Insert-mode</A>|.
+	<A HREF="intro.html#register">寄存器</A>    Unknown <A HREF="intro.html#register">寄存器</A> after &lt;C-R&gt; in |<A HREF="insert.html#Insert-mode">Insert-mode</A>|.
 	shell	    Bell from shell output |<A HREF="various.html#:!">:!</A>|.
 	<A HREF="spell.html#spell">拼写</A>	    Error happened on <A HREF="spell.html#spell">拼写</A> suggest.
 	wildmode    More matches in |<A HREF="cmdline.html#cmdline-completion">cmdline-completion</A>| available
@@ -1445,24 +1445,24 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="clipboard-unnamed"></A><B>clipboard-unnamed</B>*
-	unnamed		When included, Vim will use 粘贴板 <A HREF="intro.html#register">register</A> '*'
+	unnamed		When included, Vim will use 粘贴板 <A HREF="intro.html#register">寄存器</A> '*'
 			for all <A HREF="change.html#yank">yank</A>, delete, change and put operations which
-			would normally go to the unnamed <A HREF="intro.html#register">register</A>.  When a
-			<A HREF="intro.html#register">register</A> is explicitly specified, <A HREF="motion.html#it">它</A> will always be
+			would normally go to the unnamed <A HREF="intro.html#register">寄存器</A>.  When a
+			<A HREF="intro.html#register">寄存器</A> is explicitly specified, <A HREF="motion.html#it">它</A> will always be
 			used regardless of whether &quot;unnamed&quot; is in <A HREF="#'clipboard'">'clipboard'</A>
-			or not.  粘贴板 <A HREF="intro.html#register">register</A> can always be
+			or not.  粘贴板 <A HREF="intro.html#register">寄存器</A> can always be
 			explicitly accessed using the &quot;* <A HREF="intro.html#notation">notation</A>.  Also see
 			|<A HREF="provider.html#clipboard">clipboard</A>|.
 
 
 						*<A NAME="clipboard-unnamedplus"></A><B>clipboard-unnamedplus</B>*
 	unnamedplus	A variant of the &quot;unnamed&quot; flag which uses the
-			<A HREF="provider.html#clipboard">clipboard</A> <A HREF="intro.html#register">register</A> '<A HREF="motion.html#+">+</A>' (|<A HREF="provider.html#quoteplus">quoteplus</A>|) instead of
-			<A HREF="intro.html#register">register</A> '*' for all <A HREF="change.html#yank">yank</A>, delete, change and put
+			<A HREF="provider.html#clipboard">clipboard</A> <A HREF="intro.html#register">寄存器</A> '<A HREF="motion.html#+">+</A>' (|<A HREF="provider.html#quoteplus">quoteplus</A>|) instead of
+			<A HREF="intro.html#register">寄存器</A> '*' for all <A HREF="change.html#yank">yank</A>, delete, change and put
 			operations which would normally go to the unnamed
-			<A HREF="intro.html#register">register</A>.  When &quot;unnamed&quot; is also included to the
+			<A HREF="intro.html#register">寄存器</A>.  When &quot;unnamed&quot; is also included to the
 			option, <A HREF="change.html#yank">yank</A> and delete operations (but not put)
-			will additionally copy the text into <A HREF="intro.html#register">register</A>
+			will additionally copy the text into <A HREF="intro.html#register">寄存器</A>
 			'*'. 见 |<A HREF="provider.html#clipboard">clipboard</A>|.
 
 
@@ -1553,7 +1553,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	s{tsr}	scan the file {tsr}.  Several &quot;<A HREF="change.html#s">s</A>&quot; flags can be given, patterns
 		are valid too.
 	<A HREF="insert.html#i">i</A>	scan current and included files
-	<A HREF="change.html#d">d</A>	scan current and included files for defined name or <A HREF="map.html#macro">macro</A>
+	<A HREF="change.html#d">d</A>	scan current and included files for defined name or <A HREF="map.html#macro">宏指令</A>
 		|<A HREF="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</A>|
 	]	<A HREF="tagsrch.html#tag">标签</A> completion
 	t	same <A HREF="motion.html#as">as</A> &quot;<A HREF="vimindex.html#]">]</A>&quot;
@@ -1764,9 +1764,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			|<A HREF="motion.html#t">t</A>|.
 
 								*<A NAME="cpo-e"></A><B>cpo-e</B>*
-		<A HREF="motion.html#e">e</A>	When executing a <A HREF="intro.html#register">register</A> with &quot;:@r&quot;, always add a
-			<A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> to the last line, also when the <A HREF="intro.html#register">register</A> is not
-			<A HREF="motion.html#linewise">linewise</A>.  If this flag is not present, the <A HREF="intro.html#register">register</A>
+		<A HREF="motion.html#e">e</A>	When executing a <A HREF="intro.html#register">寄存器</A> with &quot;:@r&quot;, always add a
+			<A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> to the last line, also when the <A HREF="intro.html#register">寄存器</A> is not
+			<A HREF="motion.html#linewise">linewise</A>.  If this flag is not present, the <A HREF="intro.html#register">寄存器</A>
 			is not <A HREF="motion.html#linewise">linewise</A> and the last line does not end in a
 			<A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>然后the last line is put on the command-line
 			and can be edited before hitting <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>.
@@ -1965,7 +1965,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			itself may still be different from its file.
 
 								*<A NAME="cpo-&gt;"></A><B>cpo-&gt;</B>*
-		<A HREF="change.html#&gt;">&gt;</A>	When appending to a <A HREF="intro.html#register">register</A>, put a line break before
+		<A HREF="change.html#&gt;">&gt;</A>	When appending to a <A HREF="intro.html#register">寄存器</A>, put a line break before
 			the appended text.
 
 								*<A NAME="cpo-;"></A><B>cpo-;</B>*
@@ -2096,7 +2096,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'define'"></A><B>'define'</B>* *<A NAME="'def'"></A><B>'def'</B>*
 <A HREF="#'define'">'define'</A> <A HREF="#'def'">'def'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;^\s*#\s*define&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
-	<A HREF="pattern.html#Pattern">Pattern</A> to be used to find a <A HREF="map.html#macro">macro</A> definition.  It is a search
+	<A HREF="pattern.html#Pattern">Pattern</A> to be used to find a <A HREF="map.html#macro">宏指令</A> definition.  It is a search
 	<A HREF="pattern.html#pattern">pattern</A>, just like for the &quot;<A HREF="pattern.html#/">/</A>&quot;命令.  This option is used for the
 	commands like &quot;<A HREF="tagsrch.html#[i">[i</A>&quot; and &quot;<A HREF="tagsrch.html#[d">[d</A>&quot; |<A HREF="tagsrch.html#include-search">include-search</A>|.  The <A HREF="#'isident'">'isident'</A> option is
 	used to recognize the defined name after the match:
@@ -2303,7 +2303,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	- For Unix and Win32, if a directory ends in two path separators &quot;//&quot;,
 	  the swap file name will be built from the complete path to the file
 	  with all path separators replaced by percent '<A HREF="motion.html#&#37;">&#37;</A>' <A HREF="sign.html#signs">signs</A> (including
-	  the colon following the drive <A HREF="print.html#letter">letter</A> on Win32). This will ensure
+	  the colon following the drive <A HREF="print.html#letter">字母</A> on Win32). This will ensure
 	  file name uniqueness in the preserve directory.
 	  On Win32, <A HREF="motion.html#it">它</A> is also possible to end with &quot;\\&quot;.  However, When a
 	  separating comma is following, you must use &quot;//&quot;, since &quot;\\&quot; will
@@ -3026,7 +3026,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	When on, the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; flag '<A HREF="vimindex.html#g">g</A>' is default on.  This means that
 	all matches in a line are substituted instead of one.  When a '<A HREF="vimindex.html#g">g</A>' flag
-	is given to a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令, this will toggle the substitution
+	is given to a &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令, this will toggle the 替换
 	of all or one match.  见 |<A HREF="change.html#complex-change">complex-change</A>|.
 
 <B><FONT color="#3A6F2B">		command		'gdefault' on	'gdefault' off	</FONT></B>
@@ -3252,17 +3252,17 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		applications <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> into Vim itself.  When the <A HREF="visual\.html#Visual">可视</A>模式
 		ends, possibly due to an operation on the text, or when an
 		application wants to <A HREF="provider.html#paste">paste</A> the selection, the highlighted text
-		is automatically yanked into the &quot;* selection <A HREF="intro.html#register">register</A>.
+		is automatically yanked into the &quot;* selection <A HREF="intro.html#register">寄存器</A>.
 		Thus the selection is still available for pasting into other
 		applications after the VISUAL mode has ended.
 		    If not present然后Vim won't become the owner of the
 		windowing system's global selection unless explicitly told to
-		by a <A HREF="change.html#yank">yank</A> or delete operation for the &quot;* <A HREF="intro.html#register">register</A>.
+		by a <A HREF="change.html#yank">yank</A> or delete operation for the &quot;* <A HREF="intro.html#register">寄存器</A>.
 		The same applies to the modeless selection.
 
 								*<A NAME="'go-P'"></A><B>'go-P'</B>*
-	  '<A HREF="change.html#P">P</A>'	Like autoselect but using the &quot;<A HREF="motion.html#+">+</A> <A HREF="intro.html#register">register</A> instead of the &quot;*
-		<A HREF="intro.html#register">register</A>.
+	  '<A HREF="change.html#P">P</A>'	Like autoselect but using the &quot;<A HREF="motion.html#+">+</A> <A HREF="intro.html#register">寄存器</A> instead of the &quot;*
+		<A HREF="intro.html#register">寄存器</A>.
 
 								*<A NAME="'go-A'"></A><B>'go-A'</B>*
 	  '<A HREF="insert.html#A">A</A>'	Autoselect for the modeless selection.  Like '<A HREF="insert.html#a">a</A>', but only
@@ -3723,11 +3723,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			local to buffer
 	When doing keyword completion in insert mode |<A HREF="insert.html#ins-completion">ins-completion</A>|, and
 	<A HREF="#'ignorecase'">'ignorecase'</A> is also on, the <A HREF="change.html#case">case</A> of the match is adjusted depending
-	on the typed text.  If the typed text contains a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>
-	where the match has an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A>, the completed part is made
+	on the typed text.  If the typed text contains a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>
+	where the match has an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A>, the completed part is made
 	<A HREF="change.html#lowercase">小写</A>.  If the typed text has no <A HREF="change.html#lowercase">小写</A> letters and the match
-	has a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> where the typed text has an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>,
-	and there is a <A HREF="print.html#letter">letter</A> before <A HREF="motion.html#it">它</A>, the completed part is made <A HREF="change.html#uppercase">大写</A>.
+	has a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A> where the typed text has an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>,
+	and there is a <A HREF="print.html#letter">字母</A> before <A HREF="motion.html#it">它</A>, the completed part is made <A HREF="change.html#uppercase">大写</A>.
 	With <A HREF="#'noinfercase'">'noinfercase'</A> the match is used as-is.
 
 
@@ -4002,7 +4002,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'lazyredraw'">'lazyredraw'</A> <A HREF="#'lz'">'lz'</A>	<A HREF="#boolean">boolean</A>	(default off)
 			global
 	When this option is set, the screen will not be redrawn while
-	executing macros, <A HREF="change.html#registers">registers</A> and other commands that have not been
+	executing macros, <A HREF="change.html#registers">寄存器</A> and other commands that have not been
 	typed.  Also, updating the<A HREF="windows.html#window">窗口</A>title is postponed.  To force an
 	update use |<A HREF="various.html#:redraw">:redraw</A>|.
 
@@ -4475,7 +4475,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	For <A HREF="scroll.html#scrolling">scrolling</A> with a mouse wheel 见 |<A HREF="scroll.html#scroll-mouse-wheel">scroll-mouse-wheel</A>|.
 
 	Note: When enabling the mouse in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, copy/paste will use the
-	&quot;* <A HREF="intro.html#register">register</A> if possible. See also <A HREF="#'clipboard'">'clipboard'</A>.
+	&quot;* <A HREF="intro.html#register">寄存器</A> if possible. See also <A HREF="#'clipboard'">'clipboard'</A>.
 
 	Related <A HREF="#options">options</A>:
 	<A HREF="#'mousefocus'">'mousefocus'</A>	<A HREF="windows.html#window">窗口</A>focus follows mouse pointer
@@ -4652,7 +4652,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	alpha	If included, single alphabetical characters will be
 		incremented or decremented.  This is useful for a <A HREF="eval.html#list">列表</A> with a
 
-		<A HREF="print.html#letter">letter</A> index <A HREF="motion.html#a)">a)</A>, b), etc.		*<A NAME="octal-nrformats"></A><B>octal-nrformats</B>*
+		<A HREF="print.html#letter">字母</A> index <A HREF="motion.html#a)">a)</A>, b), etc.		*<A NAME="octal-nrformats"></A><B>octal-nrformats</B>*
 	<A HREF="eval.html#octal">octal</A>	If included, numbers that start with a zero will be considered
 		to be <A HREF="eval.html#octal">octal</A>.  Example: Using <A HREF="change.html#CTRL-A">CTRL-A</A> on &quot;007&quot; results in &quot;010&quot;.
 	hex	If included, numbers starting with &quot;<A HREF="eval.html#0x">0x</A>&quot; or &quot;0X&quot; will be
@@ -5183,7 +5183,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Threshold for reporting number of lines changed.  When the number of
 	changed lines is more than <A HREF="#'report'">'report'</A> a message will be given for most
 	&quot;<A HREF="cmdline.html#:">:</A>&quot;命令.  If you want <A HREF="motion.html#it">它</A> always, set <A HREF="#'report'">'report'</A> to 0.
-	For the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 the number of substitutions is used
+	For the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 the number of 替换s is used
 	instead of the number of lines.
 
 
@@ -5522,8 +5522,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   curdir	the current directory
 	   <A HREF="fold.html#folds">folds</A>	manually created <A HREF="fold.html#folds">folds</A>, opened/closed <A HREF="fold.html#folds">folds</A> and local
 			fold <A HREF="#options">options</A>
-	   globals	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>
-			and contain at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>.  Only
+	   globals	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>
+			and contain at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>.  Only
 			<A HREF="options\.html#options">字符串</A> and <A HREF="eval.html#Number">Number</A> types are stored.
 	   help		the help<A HREF="windows.html#window">窗口</A>
 	   localoptions	<A HREF="#options">options</A> and mappings local to a<A HREF="windows.html#window">窗口</A>or buffer (not
@@ -5568,13 +5568,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 							*<A NAME="shada-!"></A><B>shada-!</B>*
 	!	When included, save and restore global <A HREF="eval.html#variables">variables</A> that start
-		with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>, and don't contain a <A HREF="change.html#lowercase">小写</A>
-		<A HREF="print.html#letter">letter</A>.  Thus &quot;KEEPTHIS and &quot;K_L_M&quot; are stored, but &quot;KeepThis&quot;
+		with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>, and don't contain a <A HREF="change.html#lowercase">小写</A>
+		<A HREF="print.html#letter">字母</A>.  Thus &quot;KEEPTHIS and &quot;K_L_M&quot; are stored, but &quot;KeepThis&quot;
 		and &quot;_K_L_M&quot; are not.  Nested <A HREF="eval.html#list">列表</A> and <A HREF="eval.html#Dict">Dict</A> items may not be
 		read back correctly, you end up with an empty item.
 
 							*<A NAME="shada-quote"></A><B>shada-quote</B>*
-	&quot;	Maximum number of lines saved for each <A HREF="intro.html#register">register</A>.  Old name of
+	&quot;	Maximum number of lines saved for each <A HREF="intro.html#register">寄存器</A>.  Old name of
 		the '<A HREF="change.html#&lt;">&lt;</A>' item, with the disadvantage that you need to put a
 		<A HREF="intro.html#backslash">backslash</A> before the &quot;<A HREF="motion.html#,">,</A> otherwise <A HREF="motion.html#it">它</A> will be recognized <A HREF="motion.html#as">as</A> the
 		start of a comment!
@@ -5608,8 +5608,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		saved.  When not included, the value of <A HREF="#'history'">'history'</A> is used.
 
 							*<A NAME="shada-&lt;"></A><B>shada-&lt;</B>*
-	<A HREF="change.html#&lt;">&lt;</A>	Maximum number of lines saved for each <A HREF="intro.html#register">register</A>.  If zero then
-		<A HREF="change.html#registers">registers</A> are not saved.  When not included, all lines are
+	<A HREF="change.html#&lt;">&lt;</A>	Maximum number of lines saved for each <A HREF="intro.html#register">寄存器</A>.  If zero then
+		<A HREF="change.html#registers">寄存器</A> are not saved.  When not included, all lines are
 		saved.  &#39;&#34;'' is the old name for this item.
 		Also see the '<A HREF="change.html#s">s</A>' item below: limit specified in KiB.
 
@@ -5663,7 +5663,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  
 	'50		Marks will be remembered for the last 50 files you
 			edited.
-	&lt;1000		<A HREF="quickref.html#Contents">Contents</A> of <A HREF="change.html#registers">registers</A> (up to 1000 lines each) will be
+	&lt;1000		<A HREF="quickref.html#Contents">Contents</A> of <A HREF="change.html#registers">寄存器</A> (up to 1000 lines each) will be
 			remembered.
 	s100		Items with contents occupying more then 100 KiB are 
 			skipped.
@@ -5948,7 +5948,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	  c	don't give |<A HREF="insert.html#ins-completion-menu">ins-completion-menu</A>| <A HREF="message.html#messages">信息</A>.例如,
 		&quot;<A HREF="starting.html#--">--</A> XXX completion (YYY)&quot;, &quot;match 1 of 2&quot;, &quot;The only match&quot;,
 		&quot;<A HREF="pattern.html#Pattern">Pattern</A> not found&quot;, &quot;Back at original&quot;, etc.
-	  <A HREF="repeat.html#q">q</A>	use &quot;<A HREF="repeat.html#recording">recording</A>&quot; instead of &quot;<A HREF="repeat.html#recording">recording</A> @a&quot;
+	  <A HREF="repeat.html#q">q</A>	use &quot;<A HREF="repeat.html#recording">记录</A>&quot; instead of &quot;<A HREF="repeat.html#recording">记录</A> @a&quot;
 	  <A HREF="motion.html#F">F</A>	don't give the file info when editing a file, like `:silent`
 		was used for the command
 	  <A HREF="change.html#S">S</A>     <A HREF="diff.html#do">do</A> not show search <A HREF="intro.html#count">count</A> message when searching, e.g.
@@ -6203,7 +6203,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'spellcapcheck'">'spellcapcheck'</A> <A HREF="#'spc'">'spc'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;[.?!]\_[\])&#39;&#34;' \t]\+&quot;)
 			local to buffer
 	<A HREF="pattern.html#Pattern">Pattern</A> to locate the end of a <A HREF="motion.html#sentence">sentence</A>.  The following <A HREF="motion.html#word">单词</A> will be
-	checked to start with a capital <A HREF="print.html#letter">letter</A>.  If not then <A HREF="motion.html#it">它</A> is highlighted
+	checked to start with a capital <A HREF="print.html#letter">字母</A>.  If not then <A HREF="motion.html#it">它</A> is highlighted
 	with SpellCap |<A HREF="syntax.html#hl-SpellCap">hl-SpellCap</A>| (unless the <A HREF="motion.html#word">单词</A> is also badly spelled).
 	When this check is not wanted make this option empty.
 	Only used when <A HREF="#'spell'">'spell'</A> is set.
@@ -6249,7 +6249,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	that are not recognized will be highlighted.
 	The <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">列表</A> name must consist of alphanumeric characters, a dash or
 	an underscore.  It should not include a comma or dot.  Using a dash is
-	recommended to separate the two <A HREF="print.html#letter">letter</A> language name from a
+	recommended to separate the two <A HREF="print.html#letter">字母</A> language name from a
 	specification.  Thus &quot;en-rare&quot; is used for rare English words.
 	A region name must come last and have the form &quot;_xx&quot;, where &quot;xx&quot; is
 	the two-letter, lower <A HREF="change.html#case">case</A> region name.  You can use more than one
@@ -6277,7 +6277,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	After this option has been set successfully, Vim will source the files
 	&quot;spell/LANG.vim&quot; in <A HREF="#'runtimepath'">'runtimepath'</A>.  &quot;LANG&quot; is the value of <A HREF="#'spelllang'">'spelllang'</A>
-	up to the first character that is not an ASCII <A HREF="print.html#letter">letter</A> or number and
+	up to the first character that is not an ASCII <A HREF="print.html#letter">字母</A> or number and
 	not a dash.  Also 见 |<A HREF="spell.html#set-spc-auto">set-spc-auto</A>|.
 
 
@@ -6423,7 +6423,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		    shifted down to maxwid-2 digits followed by '&gt;'number
 		    where number is the amount of missing digits, much like
 		    an exponential <A HREF="intro.html#notation">notation</A>.
-	item	    A one <A HREF="print.html#letter">letter</A> code <A HREF="motion.html#as">as</A> described below.
+	item	    A one <A HREF="print.html#letter">字母</A> code <A HREF="motion.html#as">as</A> described below.
 
 	Following is a description of the possible statusline items.  The
 	second character in &quot;item&quot; is the type:
@@ -6513,7 +6513,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	         contains space instead, but one should not rely on presence 
 	         of spaces or specific order of modifiers: use |<A HREF="builtin.html#stridx()">stridx()</A>| to 
 	         test whether some modifier is present; <A HREF="options\.html#options">字符串</A> is guaranteed 
-	         to contain only ASCII letters and spaces, one <A HREF="print.html#letter">letter</A> per 
+	         to contain only ASCII letters and spaces, one <A HREF="print.html#letter">字母</A> per 
 	         modifier; &quot;<A HREF="pattern.html#?">?</A>&quot; modifier may also be present, but its presence 
 	         is a bug that denotes that new mouse button recognition was 
 	         added without modifying code that reacts on mouse clicks on 
@@ -6833,7 +6833,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   followscs    Follow the <A HREF="#'smartcase'">'smartcase'</A> and <A HREF="#'ignorecase'">'ignorecase'</A> <A HREF="#options">options</A>
 	   ignore	Ignore <A HREF="change.html#case">case</A>
 	   match	Match <A HREF="change.html#case">case</A>
-	   smart	Ignore <A HREF="change.html#case">case</A> unless an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A> is used
+	   smart	Ignore <A HREF="change.html#case">case</A> unless an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A> is used
 
 
 							*<A NAME="'tagfunc'"></A><B>'tagfunc'</B>* *<A NAME="'tfu'"></A><B>'tfu'</B>*
@@ -7290,7 +7290,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'virtualedit'">'virtualedit'</A> <A HREF="#'ve'">'ve'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	A comma-separated <A HREF="eval.html#list">列表</A> of these words:
-	    block	Allow virtual editing in <A HREF="visual.html#Visual">Visual</A> block mode.
+	    block	Allow virtual editing in <A HREF="visual.html#Visual">可视</A> 块模式.
 	    insert	Allow virtual editing in <A HREF="intro.html#Insert">插入</A>模式.
 	    all		Allow virtual editing in all modes.
 	    onemore	Allow the cursor to move just past the end of the line
@@ -7367,7 +7367,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Character you have to type to start <A HREF="editing.html#wildcard">wildcard</A> expansion in the
 	command-line, <A HREF="motion.html#as">as</A> specified with <A HREF="#'wildmode'">'wildmode'</A>.
 	More info here: |<A HREF="cmdline.html#cmdline-completion">cmdline-completion</A>|.
-	The character is not recognized when used inside a <A HREF="map.html#macro">macro</A>.  See
+	The character is not recognized when used inside a <A HREF="map.html#macro">宏指令</A>.  See
 	<A HREF="#'wildcharm'">'wildcharm'</A> for that.
 	Some keys will not work, such <A HREF="motion.html#as">as</A> <A HREF="pattern.html#CTRL-C">CTRL-C</A>, <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> and Enter.
 	Although <A HREF="#'wc'">'wc'</A> is a number option, you can set <A HREF="motion.html#it">它</A> to a special key:
@@ -7379,7 +7379,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'wildcharm'">'wildcharm'</A> <A HREF="#'wcm'">'wcm'</A>	number	(default: none (0))
 			global
 	<A HREF="#'wildcharm'">'wildcharm'</A> works exactly like <A HREF="#'wildchar'">'wildchar'</A>, except that <A HREF="motion.html#it">它</A> is
-	recognized when used inside a <A HREF="map.html#macro">macro</A>.  You can find &quot;spare&quot; command-line
+	recognized when used inside a <A HREF="map.html#macro">宏指令</A>.  You can find &quot;spare&quot; command-line
 	keys suitable for this option by looking at |<A HREF="vimindex.html#ex-edit-index">ex-edit-index</A>|.  Normally
 	you'll never actually type <A HREF="#'wildcharm'">'wildcharm'</A>, just use <A HREF="motion.html#it">它</A> in mappings that
 	automatically invoke completion mode, e.g.:

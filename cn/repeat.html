@@ -100,7 +100,7 @@ Simple changes can be repeated with the &quot;<A HREF="#.">.</A>&quot;命令.  W
 <A HREF="intro.html#count">count</A> of the last change is used.  If you enter a <A HREF="intro.html#count">count</A>, <A HREF="motion.html#it">它</A> will replace the
 last one.  |<A HREF="eval.html#v:count">v:count</A>| and |<A HREF="eval.html#v:count1">v:count1</A>| will be set.
 
-If the last change included a specification of a numbered <A HREF="intro.html#register">register</A>, the
+If the last change included a specification of a numbered <A HREF="intro.html#register">寄存器</A>, the
 register number will be incremented.  见 |<A HREF="undo.html#redo-register">redo-register</A>| for an example how
 to use this.
 
@@ -133,7 +133,7 @@ Multiple repeats					*<A NAME="multi-repeat"></A><B>multi-repeat</B>*
 
 Example:
 <B>	:g/^Obsolete/d _</B>
-Using the underscore after `:d` avoids clobbering <A HREF="change.html#registers">registers</A> or 粘贴板.
+Using the underscore after `:d` avoids clobbering <A HREF="change.html#registers">寄存器</A> or 粘贴板.
 This also makes <A HREF="motion.html#it">它</A> faster.
 
 Instead of the '<A HREF="pattern.html#/">/</A>' which surrounds the {pattern}, you can use any other
@@ -146,7 +146,7 @@ For the definition of a pattern, 见 |<A HREF="pattern.html#pattern">pattern</A>
 NOTE [cmd] may contain a range; 见 |<A HREF="tips.html#collapse">collapse</A>| and |<A HREF="usr_25.html#edit-paragraph-join">edit-paragraph-join</A>| for
 examples.
 
-The global commands work by first scanning through the <A HREF="cmdline.html#[range]">[range]</A> lines and
+全局命令s work by first scanning through the <A HREF="cmdline.html#[range]">[range]</A> lines and
 marking each line where a match occurs (for a multi-line <A HREF="pattern.html#pattern">pattern</A>, only the
 start of the match matters).
 In a second scan the [cmd] is executed for each marked line, <A HREF="motion.html#as">as</A> if the cursor
@@ -154,7 +154,7 @@ was in that line.  For &quot;<A HREF="#:v">:v</A>&quot; and &quot;:g!&quot; the 
 marked line.  If a line is deleted its <A HREF="motion.html#mark">mark</A> disappears.
 The default for <A HREF="cmdline.html#[range]">[range]</A> is the whole buffer (1,$).  Use &quot;<A HREF="pattern.html#CTRL-C">CTRL-C</A>&quot; to interrupt
 the command.  If an error message is given for a line, the command for that
-line is aborted and the global command continues with the next marked or
+line is aborted and 全局命令 continues with the next marked or
 unmarked line.
 
 								*<A NAME="E147"></A><B>E147</B>*
@@ -173,9 +173,9 @@ have been updated, so you don't know what you are doing.  见 |<A HREF="various.
 
 The undo/redo command will undo/redo the whole global command at once.
 The previous <A HREF="#context">context</A> <A HREF="motion.html#mark">mark</A> will only be set once (with &quot;'&#39;&#34;' you go back to
-where the cursor was before the global command).
+where the cursor was before 全局命令).
 
-The global command sets both the last used search <A HREF="pattern.html#pattern">pattern</A> and the last used
+全局命令 sets both the last used search <A HREF="pattern.html#pattern">pattern</A> and the last used
 substitute <A HREF="pattern.html#pattern">pattern</A> (this is <A HREF="intro.html#vi">vi</A> compatible).  This makes <A HREF="motion.html#it">它</A> easy to globally
 replace a <A HREF="options\.html#options">字符串</A>:
 	:g/pat/s//PAT/g
@@ -195,34 +195,34 @@ Complex repeats						*<A NAME="complex-repeat"></A><B>complex-repeat</B>*
 
 
 							*<A NAME="q"></A><B>q</B>* *<A NAME="recording"></A><B>recording</B>*
-q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">register</A> {0-9a-zA-Z&quot;}
+q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">寄存器</A> {0-9a-zA-Z&quot;}
 			(uppercase to append).  The '<A HREF="#q">q</A>' command is disabled
-			while executing a <A HREF="intro.html#register">register</A>, and <A HREF="motion.html#it">它</A> doesn't work inside
+			while executing a <A HREF="intro.html#register">寄存器</A>, and <A HREF="motion.html#it">它</A> doesn't work inside
 			a <A HREF="map.html#mapping">mapping</A> and |<A HREF="various.html#:normal">:normal</A>|.
 
-			Note: If the <A HREF="intro.html#register">register</A> being used for <A HREF="#recording">recording</A> is also
+			Note: If the <A HREF="intro.html#register">寄存器</A> being used for <A HREF="#recording">recording</A> is also
 			used for |<A HREF="change.html#y">y</A>| and |<A HREF="change.html#p">p</A>| the result is most likely not
 			what is expected, because the put will <A HREF="provider.html#paste">paste</A> the
-			recorded <A HREF="map.html#macro">macro</A> and the <A HREF="change.html#yank">yank</A> will overwrite the
-			recorded <A HREF="map.html#macro">macro</A>.
+			recorded <A HREF="map.html#macro">宏指令</A> and the <A HREF="change.html#yank">yank</A> will overwrite the
+			recorded <A HREF="map.html#macro">宏指令</A>.
 
 			Note: The <A HREF="#recording">recording</A> happens while you type, replaying
-			the <A HREF="intro.html#register">register</A> happens <A HREF="motion.html#as">as</A> if the keys come from a
+			the <A HREF="intro.html#register">寄存器</A> happens <A HREF="motion.html#as">as</A> if the keys come from a
 			<A HREF="map.html#mapping">mapping</A>.  This matters, for example, for <A HREF="undo.html#undo">undo</A>, which
 			only syncs when commands were typed.
 
 <A HREF="#q">q</A>			Stops <A HREF="#recording">recording</A>.
 			Implementation note: The '<A HREF="#q">q</A>' that stops <A HREF="#recording">recording</A> is
-			not stored in the <A HREF="intro.html#register">register</A>, unless <A HREF="motion.html#it">它</A> was the result
+			not stored in the <A HREF="intro.html#register">寄存器</A>, unless <A HREF="motion.html#it">它</A> was the result
 			of a <A HREF="map.html#mapping">mapping</A>
 
 
 							*<A NAME="@"></A><B>@</B>*
-@{0-9a-z&quot;.=*+}		Execute the contents of <A HREF="intro.html#register">register</A> {0-9a-z&quot;.=*+} <A HREF="intro.html#[count]">[count]</A>
-			times.  Note that <A HREF="intro.html#register">register</A> '<A HREF="motion.html#&#37;">&#37;</A>' (name of the current
+@{0-9a-z&quot;.=*+}		Execute the contents of <A HREF="intro.html#register">寄存器</A> {0-9a-z&quot;.=*+} <A HREF="intro.html#[count]">[count]</A>
+			times.  Note that <A HREF="intro.html#register">寄存器</A> '<A HREF="motion.html#&#37;">&#37;</A>' (name of the current
 			file) and '<A HREF="pattern.html##">#</A>' (name of the alternate file) cannot be
 			used.
-			The <A HREF="intro.html#register">register</A> is executed like a <A HREF="map.html#mapping">mapping</A>, that means
+			The <A HREF="intro.html#register">寄存器</A> is executed like a <A HREF="map.html#mapping">mapping</A>, that means
 			that the difference between <A HREF="options.html#'wildchar'">'wildchar'</A> and <A HREF="options.html#'wildcharm'">'wildcharm'</A>
 			applies, and <A HREF="undo.html#undo">undo</A> might not be synced in the same way.
 			For &quot;<A HREF="change.html#@=">@=</A>&quot; you are prompted to enter an <A HREF="eval.html#expression">expression</A>.  The
@@ -235,14 +235,14 @@ q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">r
 
 
 							*<A NAME="Q"></A><B>Q</B>*
-<A HREF="#Q">Q</A>			Repeat the last recorded <A HREF="intro.html#register">register</A> <A HREF="intro.html#[count]">[count]</A> times.
+<A HREF="#Q">Q</A>			Repeat the last recorded <A HREF="intro.html#register">寄存器</A> <A HREF="intro.html#[count]">[count]</A> times.
 			见 |<A HREF="builtin.html#reg_recorded()">reg_recorded()</A>|.
 
 
 							*<A NAME=":@"></A><B>:@</B>*
-:[addr]@{0-9a-z&quot;.=*+}	Execute the contents of <A HREF="intro.html#register">register</A> {0-9a-z&quot;.=*+} <A HREF="motion.html#as">as</A> an <A HREF="intro.html#Ex">Ex</A>
+:[addr]@{0-9a-z&quot;.=*+}	Execute the contents of <A HREF="intro.html#register">寄存器</A> {0-9a-z&quot;.=*+} <A HREF="motion.html#as">as</A> an <A HREF="intro.html#Ex">Ex</A>
 			command.  First set cursor at line [addr] (default is
-			current line).  When the last line in the <A HREF="intro.html#register">register</A> does
+			current line).  When the last line in the <A HREF="intro.html#register">寄存器</A> does
 			not have a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> <A HREF="motion.html#it">它</A> will be added automatically when
 			the '<A HREF="motion.html#e">e</A>' flag is present in <A HREF="options.html#'cpoptions'">'cpoptions'</A>.
 			For &quot;:@=&quot; the last used <A HREF="eval.html#expression">expression</A> is used.  The
@@ -250,7 +250,7 @@ q{0-9a-zA-Z&quot;}		Record typed characters into <A HREF="intro.html#register">r
 			<A HREF="intro.html#Ex">Ex</A> command.
 			Mappings are not recognized in these commands.
 			When the |<A HREF="#line-continuation">line-continuation</A>| character (\) is present
-			at the beginning of a line in a <A HREF="motion.html#linewise">linewise</A> <A HREF="intro.html#register">register</A>,
+			at the beginning of a line in a <A HREF="motion.html#linewise">linewise</A> <A HREF="intro.html#register">寄存器</A>,
 			then <A HREF="motion.html#it">它</A> is combined with the previous line. This is
 			useful for yanking and executing parts of a Vim
 			<A HREF="usr_41.html#script">script</A>.
@@ -455,15 +455,15 @@ For <A HREF="editing.html#writing">写</A> a Vim <A HREF="usr_41.html#script">sc
 			then stops sourcing the <A HREF="usr_41.html#script">script</A>.
 
 All commands and command sequences can be repeated by putting them in a named
-<A HREF="intro.html#register">register</A> and then executing <A HREF="motion.html#it">它</A>.  There are two ways to get the commands in the
-<A HREF="intro.html#register">register</A>:
+<A HREF="intro.html#register">寄存器</A> and then executing <A HREF="motion.html#it">它</A>.  There are two ways to get the commands in the
+<A HREF="intro.html#register">寄存器</A>:
 - Use the record command &quot;<A HREF="#q">q</A>&quot;.  You type the commands once, and while they are
-  being executed they are stored in a <A HREF="intro.html#register">register</A>.  Easy, because you can see
-  what you are doing.  If you make a mistake, &quot;p&quot;ut the <A HREF="intro.html#register">register</A> into the
-  file, edit the command sequence, and then delete <A HREF="motion.html#it">它</A> into the <A HREF="intro.html#register">register</A>
-  again.  You can continue <A HREF="#recording">recording</A> by appending to the <A HREF="intro.html#register">register</A> (use an
-  <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>).
-- Delete or <A HREF="change.html#yank">yank</A> the command sequence into the <A HREF="intro.html#register">register</A>.
+  being executed they are stored in a <A HREF="intro.html#register">寄存器</A>.  Easy, because you can see
+  what you are doing.  If you make a mistake, &quot;p&quot;ut the <A HREF="intro.html#register">寄存器</A> into the
+  file, edit the command sequence, and then delete <A HREF="motion.html#it">它</A> into the <A HREF="intro.html#register">寄存器</A>
+  again.  You can continue <A HREF="#recording">recording</A> by appending to the <A HREF="intro.html#register">寄存器</A> (use an
+  <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>).
+- Delete or <A HREF="change.html#yank">yank</A> the command sequence into the <A HREF="intro.html#register">寄存器</A>.
 
 Often used command sequences can be put under a function key with the '<A HREF="map.html#:map">:map</A>'
 command.
@@ -922,7 +922,7 @@ About the additional commands in debug mode:
 - There is no command-line completion for them, you get the completion for the
   normal <A HREF="intro.html#Ex">Ex</A> commands only.
 - You can shorten them, up to a single character, unless more than one command
-  starts with the same <A HREF="print.html#letter">letter</A>.  &quot;<A HREF="motion.html#f">f</A>&quot; stands for &quot;finish&quot;, use &quot;fr&quot; for &quot;frame&quot;.
+  starts with the same <A HREF="print.html#letter">字母</A>.  &quot;<A HREF="motion.html#f">f</A>&quot; stands for &quot;finish&quot;, use &quot;fr&quot; for &quot;frame&quot;.
 - Hitting <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> will repeat the previous one.  When doing another command, this
   is reset (because it's not clear what you want to repeat).
 - When you want to use the <A HREF="intro.html#Ex">Ex</A> command with the same name, prepend a colon:
@@ -1179,13 +1179,13 @@ mind there are various things that may clobber the results:
 <A HREF="#Context">Context</A>							*<A NAME="Context"></A><B>Context</B>* *<A NAME="context"></A><B>context</B>*
 
 The editor state is represented by the <A HREF="#Context">Context</A> concept. This includes things
-like the current |<A HREF="motion.html#jumplist">jumplist</A>|, values of |<A HREF="change.html#registers">registers</A>|, and more, described below.
+like the current |<A HREF="motion.html#jumplist">jumplist</A>|, values of |<A HREF="change.html#registers">寄存器</A>|, and more, described below.
 
 
 							*<A NAME="context-types"></A><B>context-types</B>*
 The following <A HREF="#Context">Context</A> items are supported:
 	&quot;jumps&quot;		|<A HREF="motion.html#jumplist">jumplist</A>|
-	&quot;regs&quot;		|<A HREF="change.html#registers">registers</A>|
+	&quot;regs&quot;		|<A HREF="change.html#registers">寄存器</A>|
 	&quot;bufs&quot;		|<A HREF="windows.html#buffer-list">buffer-list</A>|
 	&quot;gvars&quot;		|<A HREF="eval.html#global-variable">global-variable</A>|<A HREF="change.html#s">s</A>
 	&quot;sfuncs&quot;	|<A HREF="map.html#script-local">script-local</A>| <A HREF="eval.html#functions">functions</A>

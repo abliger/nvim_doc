@@ -79,426 +79,308 @@
 			     做大改变
 
 
-In chapter 4 several ways to make small changes were explained.  This chapter
-goes into making changes that are repeated or can affect a large amount of
-text.  The <A HREF="visual\.html#Visual">可视</A>模式 allows doing various things with blocks of text.  Use
-an external program to <A HREF="diff.html#do">do</A> really complicated things.
+在第四章节，介绍了一些方法去做小改变.在这个章节我们做替换或者大段地改变.<A HREF="visual\.html#Visual">可视</A>模式允许使用文本块选中不同的文本.使用扩展程序去做真正复杂的事情.
 
-|<A HREF="#10.1">10.1</A>|	Record and playback commands
-|<A HREF="#10.2">10.2</A>|	Substitution
-|<A HREF="#10.3">10.3</A>|	Command ranges
-|<A HREF="#10.4">10.4</A>|	The global command
-|<A HREF="#10.5">10.5</A>|	<A HREF="visual.html#Visual">Visual</A> block mode
-|<A HREF="#10.6">10.6</A>|	Reading and <A HREF="editing.html#writing">写</A> part of a file
-|<A HREF="#10.7">10.7</A>|	Formatting text
-|<A HREF="#10.8">10.8</A>|	Changing <A HREF="change.html#case">case</A>
-|<A HREF="#10.9">10.9</A>|	Using an external program
+|<A HREF="#10.1">10.1</A>|	记录和回退命令
+|<A HREF="#10.2">10.2</A>|	替换
+|<A HREF="#10.3">10.3</A>|	命令范围
+|<A HREF="#10.4">10.4</A>|	全局命令
+|<A HREF="#10.5">10.5</A>|	<A HREF="visual.html#Visual">可视</A> 块模式
+|<A HREF="#10.6">10.6</A>|	读<A HREF="editing.html#writing">写</A>文件内容
+|<A HREF="#10.7">10.7</A>|	格式化文本
+|<A HREF="#10.8">10.8</A>|	改变<A HREF="change.html#case">大小写</A>
+|<A HREF="#10.9">10.9</A>|	使用扩展程序
 
-下一章: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
+下一章: |<A HREF="usr_11.html">usr_11.txt</A>|  从崩溃中恢复
 上一章: |<A HREF="usr_09.html">usr_09.txt</A>|  使用<A HREF="gui\.html#GUI">GUI</A>
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="10.1"></A><B>10.1</B>*	Record and playback commands
+*<A NAME="10.1"></A><B>10.1</B>*	记录和回退命令
 
-The &quot;<A HREF="repeat.html#.">.</A>&quot;命令 repeats the preceding change.  But what if you want to <A HREF="diff.html#do">do</A>
-something more complex than a single change?  That's where command <A HREF="repeat.html#recording">recording</A>
-comes in.  There are three steps:
+&quot;<A HREF="repeat.html#.">.</A>&quot;命令重复之前的改变.但是你怎样做复杂改变而不是单次变化?这就应当使用<A HREF="repeat.html#recording">记录</A>命令了.有三个步骤:
 
-1. The &quot;q{register}&quot; command starts <A HREF="repeat.html#recording">recording</A> keystrokes into the <A HREF="intro.html#register">register</A>
-   named <A HREF="change.html#{register}">{register}</A>.  The <A HREF="intro.html#register">register</A> name must be between a and <A HREF="scroll.html#z.">z.</A>
-2. Type your commands.
-3. To finish <A HREF="repeat.html#recording">recording</A>, press <A HREF="repeat.html#q">q</A> (without any extra character).
+1. &quot;q{register}&quot;命令开始<A HREF="repeat.html#recording">记录</A>按键到名为<A HREF="change.html#{register}">{register}</A>的<A HREF="intro.html#register">寄存器</A>中.<A HREF="intro.html#register">寄存器</A>名字必须在 a 到<A HREF="scroll.html#z.">z之间.</A>
+2. 输入你的命令.
+3. 结束<A HREF="repeat.html#recording">记录</A>使用<A HREF="repeat.html#q">q</A> (不需要其他字符).
 
-You can now execute the <A HREF="map.html#macro">macro</A> by typing the command &quot;@{register}&quot;.
+现在你可以键入&quot;@{register}&quot;执行<A HREF="map.html#macro">宏指令</A>.
 
-Take a look at how to use these commands in practice.  You have a <A HREF="eval.html#list">列表</A> of
-filenames that look like this:
+现在看看你可以怎么用这些命令。假设你有如下文件名列表:
 
 <B><FONT color="#3A6F2B">	stdio.h </FONT></B>
 <B><FONT color="#3A6F2B">	fcntl.h </FONT></B>
 <B><FONT color="#3A6F2B">	unistd.h </FONT></B>
 <B><FONT color="#3A6F2B">	stdlib.h </FONT></B>
 
-And what you want is the following:
+你想要下面这样:
 
 <B><FONT color="#3A6F2B">	#include "stdio.h" </FONT></B>
 <B><FONT color="#3A6F2B">	#include "fcntl.h" </FONT></B>
 <B><FONT color="#3A6F2B">	#include "unistd.h" </FONT></B>
 <B><FONT color="#3A6F2B">	#include "stdlib.h" </FONT></B>
 
-You start by moving to the first character of the first line.  Next you
-execute the following commands:
+你要移动光标到第一行的行首并执行下面的命令:
 
-	qa			Start <A HREF="repeat.html#recording">recording</A> a <A HREF="map.html#macro">macro</A> in <A HREF="intro.html#register">register</A> a.
-	^			使用<A HREF="gui\.html#GUI">GUI</A> beginning of the line.
-	i#include &quot;<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>	<A HREF="insert.html#Insert">Insert</A> the <A HREF="options\.html#options">字符串</A> #include &quot; at the beginning
-				of the line.
-	$			使用<A HREF="gui\.html#GUI">GUI</A> end of the line.
-	a&quot;&lt;Esc&gt;			Append the character double quotation <A HREF="motion.html#mark">mark</A> (&quot;)
-				to the end of the line.
-	<A HREF="motion.html#j">j</A>			Go to the next line.
-	<A HREF="repeat.html#q">q</A>			Stop <A HREF="repeat.html#recording">recording</A> the <A HREF="map.html#macro">macro</A>.
+	qa			开始<A HREF="repeat.html#recording">记录</A>一个<A HREF="map.html#macro">宏指令</A>到<A HREF="intro.html#register">寄存器</A> a中.
+	^			移动到行首
+	i#include &quot;<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>	在行首<A HREF="insert.html#Insert">插入</A><A HREF="options\.html#options">字符串</A> #include &quot;.
+	$			移动到行尾.
+	a&quot;&lt;Esc&gt;			添加双引号(&quot;)到行尾.
+	<A HREF="motion.html#j">j</A>			到下一行.
+	<A HREF="repeat.html#q">q</A>			停止<A HREF="repeat.html#recording">记录</A><A HREF="map.html#macro">宏指令</A>.
 
-Now that you have done the work once, you can repeat the change by typing the
-command &quot;@a&quot; three times.
-   The &quot;@a&quot; command can be preceded by a <A HREF="intro.html#count">count</A>, which will cause the <A HREF="map.html#macro">macro</A> to
-be executed that number of times.  In this <A HREF="change.html#case">case</A> you would type:
+现在你能运行它了, 你能加入&quot;@a&quot;三次去重复改变.
+   &quot;@a&quot;命令能添加<A HREF="intro.html#count">数字</A>前缀,代表<A HREF="map.html#macro">宏指令</A>执行次数.本例中你能输入:
 
 <B>	3@a</B>
 
 
-MOVE AND EXECUTE
+移动和执行
 
-You might have the lines you want to change in various places.  Just move the
-cursor to each location and use the &quot;@a&quot; command.  If you have done that once,
-you can <A HREF="diff.html#do">do</A> <A HREF="motion.html#it">它</A> again with &quot;<A HREF="repeat.html#@@">@@</A>&quot;.  That's a bit easier to type.  If you now
-execute <A HREF="intro.html#register">register</A> <A HREF="motion.html#b">b</A> with &quot;@b&quot;, the next &quot;<A HREF="repeat.html#@@">@@</A>&quot; will use <A HREF="intro.html#register">register</A> <A HREF="motion.html#b">b</A>.
-   If you compare the playback <A HREF="eval.html#method">method</A> with using &quot;<A HREF="repeat.html#.">.</A>&quot;, there are several
-differences.  First of all, &quot;<A HREF="repeat.html#.">.</A>&quot; can only repeat one change.  As seen in the
-example above, &quot;@a&quot; can <A HREF="diff.html#do">do</A> several changes, and move around <A HREF="motion.html#as">as</A> well.
-Secondly, &quot;<A HREF="repeat.html#.">.</A>&quot; can only remember the last change.  Executing a <A HREF="intro.html#register">register</A> allows
-you to make any changes and then still use &quot;@a&quot; to replay the recorded
-commands.  Finally, you can use 26 different <A HREF="change.html#registers">registers</A>.  Thus you can remember
-26 different command sequences to execute.
+你可能有很多行想要修改.只需要把光标移动到相应位置然后执行&quot;@a&quot;命令.如果你已执行一次,你可以使用&quot;<A HREF="repeat.html#@@">@@</A>&quot;再次执行. 这个键入会容易一些.如果你现在执行<A HREF="intro.html#register">寄存器</A><A HREF="motion.html#b">b</A>的命令 &quot;@b&quot;, 那么&quot;<A HREF="repeat.html#@@">@@</A>&quot;会使用<A HREF="intro.html#register">寄存器</A> <A HREF="motion.html#b">b</A>.
+   如果你比较回放命令和&quot;<A HREF="repeat.html#.">.</A>&quot;,有以下不同.首先, &quot;<A HREF="repeat.html#.">.</A>&quot;只能重复一次.上例中&quot;@a&quot;可以回放多个改变且能移动.
+   第二, &quot;<A HREF="repeat.html#.">.</A>&quot;只能记住最后一次改变. 使用<A HREF="intro.html#register">寄存器</A>允许你在很多次变化后，依然能执行&quot;@a&quot;.  
+   最后, 你能使用26种不同的<A HREF="change.html#registers">寄存器</A>.因此，你可以记录多达 26 个命令序列.
 
 
-USING REGISTERS
+使用寄存器
 
-The <A HREF="change.html#registers">registers</A> used for <A HREF="repeat.html#recording">recording</A> are the same ones you used for <A HREF="change.html#yank">yank</A> and
-delete commands.  This allows you to mix <A HREF="repeat.html#recording">recording</A> with other commands to
-manipulate the <A HREF="change.html#registers">registers</A>.
-   Suppose you have recorded a few commands in <A HREF="intro.html#register">register</A> <A HREF="pattern.html#n">n</A>.  When you execute
-this with &quot;@n&quot; you notice you did something wrong.  You could try <A HREF="repeat.html#recording">recording</A>
-again, but perhaps you will make another mistake.  Instead, use this trick:
+用来记录操作的寄存器与你用来拷贝删除文本的寄存器是相同的。这允许你混合记录操作和其它命令来操作这些寄存器。假设你在寄存器 n 中记录了一些命令。当你通过 "@n" 执行这些命令时，你发现这些命令有些问题。这时你可以重新录一次，但这样你可能还会犯其它错误。其实，你可以使用如下窍门:
 
-	<A HREF="motion.html#G">G</A>			Go to the end of the file.
-	o&lt;Esc&gt;			Create an empty line.
-	&quot;np			Put the text from the <A HREF="pattern.html#n">n</A> <A HREF="intro.html#register">register</A>.  You now see
-				the commands you typed <A HREF="motion.html#as">as</A> text in the file.
-	{edits}			Change the commands that were wrong.  This is
-				just like editing text.
-	0			Go to the start of the line.
-	&quot;ny$			Yank the corrected commands into the <A HREF="pattern.html#n">n</A>
-				<A HREF="intro.html#register">register</A>.
-	<A HREF="change.html#dd">dd</A>			Delete the scratch line.
+	<A HREF="motion.html#G">G</A>			到文件结尾.
+	o&lt;Esc&gt;			创建空白行.
+	&quot;np       黏贴 n 寄存器中的文本，你的命令将被黏贴到整个文件的结尾.
+	{edits}			修改错误的命令，就行编辑文字一样.
+	0			移动到行首.
+	&quot;ny$	把正确的命令拷贝回 n 寄存器.
+	<A HREF="change.html#dd">dd</A>			删除临时行.
 
-Now you can execute the corrected commands with &quot;@n&quot;.  (If your recorded
-commands include line breaks, adjust the last two items in the example to
-include all the lines.)
+现在你能使用&quot;@n&quot;执行正确的命令了.  (如果你记录的命令包括换行符，请调整上面例子中最后两行的操作来包括所有的行.)
 
 
-APPENDING TO A REGISTER
+添加寄存器
 
-So far we have used a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> for the <A HREF="intro.html#register">register</A> name.  To append to a
-<A HREF="intro.html#register">register</A>, use an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>.
-   Suppose you have recorded a command to change a <A HREF="motion.html#word">单词</A> to <A HREF="intro.html#register">register</A> <A HREF="change.html#c">c</A>.  It
-works properly, but you would like to add a search for the next <A HREF="motion.html#word">单词</A> to
-change.  This can be done with:
+到此为止，我们一直使用小写的寄存器名。要附加命令到一个寄存器中，可以使用大写的寄存器名。
+假设你在寄存器 c 中已经记录了一个修改一个单词的命令。它可以正常工作，但现在你需要附加一个搜索命令以便找到下一个单词来修改。这可以通过如下命令来完成:
 
 <B>	qC/word&lt;Enter&gt;q</B>
 
-You start with &quot;qC&quot;, which records to the <A HREF="change.html#c">c</A> <A HREF="intro.html#register">register</A> and appends.  Thus
-<A HREF="editing.html#writing">写</A> to an <A HREF="change.html#uppercase">大写</A> <A HREF="intro.html#register">register</A> name means to append to the <A HREF="intro.html#register">register</A> with
-the same <A HREF="print.html#letter">letter</A>, but <A HREF="change.html#lowercase">小写</A>.
+启动 "qC" 命令可以对 c 寄存器追加记录。由此可见，记录到一个大写寄存器表示附加命令到对应的小写寄存器。
 
-This works both with <A HREF="repeat.html#recording">recording</A> and with <A HREF="change.html#yank">yank</A> and delete commands.  For
-example, you want to collect a sequence of lines into the a <A HREF="intro.html#register">register</A>.  Yank
-the first line with:
+这种方法在宏记录，拷贝和删除命令中都有效。例如，你需要把选择一些行到一个寄存器中，可以先这样拷贝第一行:
 
 <B>	"ayy</B>
 
-Now 使用<A HREF="gui\.html#GUI">GUI</A> second line, and type:
+然后移到下一个要拷贝的地方，执行:
 
 <B>	"Ayy</B>
 
-Repeat this command for all lines.  The a <A HREF="intro.html#register">register</A> now contains all those
-lines, in the order you yanked them.
+如此类推。这样在寄存器 a 中就会包括所有你要拷贝的所有行.
 
 ==============================================================================
 
-*<A NAME="10.2"></A><B>10.2</B>*	Substitution						*<A NAME="find-replace"></A><B>find-replace</B>*
+*<A NAME="10.2"></A><B>10.2</B>*	替换						*<A NAME="find-replace"></A><B>find-replace</B>*
 
-The &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 enables you to perform <A HREF="options\.html#options">字符串</A> replacements on a
-whole range of lines.  The general form of this command is <A HREF="motion.html#as">as</A> follows:
+&quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令能让你在整行执行<A HREF="options\.html#options">字符串</A>替换.下面是这个命令的一般形式:
 
 <B>	:[range]substitute/from/to/[flags]</B>
 
-This command changes the &quot;from&quot; <A HREF="options\.html#options">字符串</A> to the &quot;to&quot; <A HREF="options\.html#options">字符串</A> in the lines
-specified with <A HREF="cmdline.html#[range]">[range]</A>.例如, you can change &quot;Professor&quot; to &quot;Teacher&quot;
-in all lines with the following command:
+这个命令使行中<A HREF="cmdline.html#[range]">[range]</A>范围内找到the &quot;from&quot; <A HREF="options\.html#options">字符串</A>后改变为&quot;to&quot; <A HREF="options\.html#options">字符串</A>.例如, 你可以使&quot;Professor&quot; 改为 &quot;Teacher&quot;:
 
 <B>	:%substitute/Professor/Teacher/</B>
- 
-	Note:
-	The &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 is almost never spelled out completely.
-	Most of the time, people use the abbreviated version &quot;<A HREF="change.html#:s">:s</A>&quot;.  From here
-	on the abbreviation will be used.
+   注意：
+   很少人会把整个 ":substitute" 命令完整敲下来。通常，使用命令的缩写形式
+   ":s" 就行了。下文我们将使用这个缩写形式。
 
-The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; before the command specifies the command works on all lines.  Without
-a range, &quot;<A HREF="change.html#:s">:s</A>&quot; only works on the current line.  More about ranges in the next
-section |<A HREF="#10.3">10.3</A>|.
+命令前面的 "%" 表示命令作用于全部行。如果不指定行范围，":s" 命令只作用在当前行
+上。 |<A HREF="#10.3">10.3</A>| 将对 "行范围" 作深入的介绍。
 
-By default, the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 changes only the first occurrence on
-each line.例如, the preceding command changes the line:
+默认情况下，&quot;<A HREF="change.html#:substitute">:substitute</A>&quot; 命令只对某一行中的第一个匹配点起作用。例如，前面例子中会把行:
 
 <B><FONT color="#3A6F2B">	Professor Smith criticized Professor Johnson today. </FONT></B>
 
-to:
+改为:
 
 <B><FONT color="#3A6F2B">	Teacher Smith criticized Professor Johnson today. </FONT></B>
 
-To change every occurrence on the line, you need to add the <A HREF="vimindex.html#g">g</A> (global) flag.
-The command:
+要对行中所有匹配点起作用，你需要加一个 g (global，全局) 标记。下面命令:
 
 <B>	:%s/Professor/Teacher/g</B>
 
-results in (starting with the original line):
+结果是 (starting with the original line):
 
 <B><FONT color="#3A6F2B">	Teacher Smith criticized Teacher Johnson today. </FONT></B>
 
-Other flags include <A HREF="change.html#p">p</A> (print), which causes the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 to print
-out the last line <A HREF="motion.html#it">它</A> changes.  The <A HREF="change.html#c">c</A> (confirm) flag tells &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; to ask
-you for confirmation before <A HREF="motion.html#it">它</A> performs each substitution.  Enter the
-following:
+":s" 命令还支持其它一些标志位，包括 "p" (print，打印)，用于在命令执行的时候打印出最后一个被修改的行。还有 "c" (confirm，确认) 标记会在每次替换前向你询问是否需要替换。执行如下命令:
 
 <B>	:%s/Professor/Teacher/c</B>
 
-Vim finds the first occurrence of &quot;Professor&quot; and displays the text <A HREF="motion.html#it">它</A> is
-about to change.  You get the following prompt:
+Vim 找到第一个匹配点的时候会向你提示如下:
 
 <B>	replace with Teacher (y/n/a/q/l/^E/^Y)?</B>
 
-At this point, you must enter one of the following answers:
+这种时候，你可以输入如下回答中的一个:
 
-	<A HREF="change.html#y">y</A>		Yes; make this change.
-	<A HREF="pattern.html#n">n</A>		No; skip this match.
-	a		All; make this change and all remaining ones without
-			further confirmation.
-	<A HREF="repeat.html#q">q</A>		Quit; don't make any more changes.
-	<A HREF="motion.html#l">l</A>		Last; make this change and then quit.
-	<A HREF="scroll.html#CTRL-E">CTRL-E</A>		Scroll the text one line up.
-	<A HREF="scroll.html#CTRL-Y">CTRL-Y</A>		Scroll the text one line down.
+	<A HREF="change.html#y">y</A>		Yes;确认改变
+	<A HREF="pattern.html#n">n</A>		No; 跳过此匹配.
+	a		All;对剩下的匹配点全部执行替换，不需要再确认.
+	<A HREF="repeat.html#q">q</A>		Quit; 不再改变.
+	<A HREF="motion.html#l">l</A>		Last; 做出改变后退出.
+	<A HREF="scroll.html#CTRL-E">CTRL-E</A>		向上滚动一行.
+	<A HREF="scroll.html#CTRL-Y">CTRL-Y</A>		向下滚动一行.
 
 
-The &quot;from&quot; part of the substitute command is actually a <A HREF="pattern.html#pattern">pattern</A>.  The same
-kind <A HREF="motion.html#as">as</A> used for the search command.例如, this command only
-substitutes &quot;the&quot; when <A HREF="motion.html#it">它</A> appears at the start of a line:
+":s" 命令中的 "from" 部分实际上是一个 "匹配模式" (还记得吗？这是我们前面给pattern 起的名字译者)，这与查找命令一样。例如， 要替换行首的 "the" 可以这样写:
 
 <B>	:s/^the/these/</B>
 
-If you are substituting with a &quot;from&quot; or &quot;to&quot; part that includes a slash, you
-need to put a <A HREF="intro.html#backslash">backslash</A> before <A HREF="motion.html#it">它</A>.  A simpler way is to use another character
-instead of the slash.  A plus, for example:
+如果你要在 "from" 或者 "to" 中使用正斜杠，你需要在前面加上一个反斜杠。更简单的方法是用加号代替正斜杠。例如:
 
 <B>	:s+one/two+one or two+</B>
 
 ==============================================================================
 
-*<A NAME="10.3"></A><B>10.3</B>*	Command ranges
+*<A NAME="10.3"></A><B>10.3</B>*	命令范围
 
-The &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令, and many other : commands, can be applied to a
-selection of lines.  This is called a range.
-   The simple form of a range is {number},{number}.例如:
+&quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令和很多其他的冒号命令可以作用于选中的行.它叫做范围.
+   最简单的范围是{number},{number}.例如:
 
 <B>	:1,5s/this/that/g</B>
 
-Executes the substitute command on the lines 1 to 5.  Line 5 is included.
-The range is always placed before the command.
+在1 到 5 行执行替换命令.包括第五行.范围总是放在命令前面.
 
-A single number can be used to address one specific line:
+单个数字表示某个特定行:
 
 <B>	:54s/President/Fool/</B>
 
-Some commands work on the whole file when you <A HREF="diff.html#do">do</A> not specify a range.  To make
-them work on the current line the &quot;<A HREF="repeat.html#.">.</A>&quot; address is used.  The &quot;<A HREF="editing.html#:write">:write</A>&quot;命令
-works like that.  Without a range, <A HREF="motion.html#it">它</A> writes the whole file.  To make <A HREF="motion.html#it">它</A> write
-only the current line into a file:
+当你没有指出一个范围一些命令会作用整个文件.  作用于当前行使用&quot;<A HREF="repeat.html#.">.</A>&quot;符号.&quot;<A HREF="editing.html#:write">:write</A>&quot;命令就是这样.没有范围, <A HREF="motion.html#it">它</A>保存整个文件.使<A HREF="motion.html#it">它</A>保存当前行到文件:
 
 <B>	:.write otherfile</B>
 
-The first line always has number one.  How about the last line?  The &quot;<A HREF="motion.html#$">$</A>&quot;
-character is used for this.例如, to substitute in the lines from the
-cursor to the end:
+首行数字总是1，但是行尾数字是不确定的.&quot;<A HREF="motion.html#$">$</A>&quot;解决此问题.例如,替换从光标到结尾的内容:
 
 <B>	:.,$s/yes/no/</B>
 
-The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; range that we used before, is actually a short way to say &quot;1,$&quot;, from
-the first to the last line.
+我们前面使用的&quot;<A HREF="motion.html#&#37;">&#37;</A>&quot;范围实际上是&quot;1,$&quot;的缩写，表示从文件首到文件末.
 
 
-USING A PATTERN IN A RANGE
+在范围使用表达式
 
-Suppose you are editing a chapter in a <A HREF="intro.html#book">book</A>, and want to replace all
-occurrences of &quot;grey&quot; with &quot;gray&quot;.  But only in this chapter, not in the next
-one.  You know that only chapter boundaries have the <A HREF="motion.html#word">单词</A> &quot;Chapter&quot; in the
-first column.  This command will work then:
+假设你编辑<A HREF="intro.html#book">书</A>中的一章节,想要使用&quot;gray&quot;替换所有的出现的&quot;grey&quot;.但是现在你只想编辑这一章节而不是其他章节.你知道只有此章节开头有<A HREF="motion.html#word">单词</A> &quot;Chapter&quot;.下面的命令对你有帮助:
 
 <B>	:?^Chapter?,/^Chapter/s=grey=gray=g</B>
 
-You can see a search <A HREF="pattern.html#pattern">pattern</A> is used <A HREF="if_cscop.html#twice">twice</A>.  The first &quot;?^Chapter?&quot; finds the
-line above the current position that matches this <A HREF="pattern.html#pattern">pattern</A>.  Thus the ?pattern?
-range is used to search backwards.  Similarly, &quot;/^Chapter/&quot; is used to search
-forward for the start of the next chapter.
-   To avoid confusion with the slashes, the &quot;<A HREF="change.html#=">=</A>&quot; character was used in the
-substitute command here.  A slash or another character would have worked <A HREF="motion.html#as">as</A>
-well.
+你能看到搜索<A HREF="pattern.html#pattern">表达式</A>被使用两次.第一个是 "?^Chapter?"，用于查找前一个行首的"Chapter"，就是说 "?pattern?" 用于向前查找。同样，"/^Chapter/" 用于向后查找下一章。
+为了避免斜杠使用的混淆，在这种情况下，"=" 字符用于代替斜杠。使用斜杠或使用其它字符其实也是可以的.
 
 
-ADD AND SUBTRACT
+加减号
 
-There is a slight error in the above command: If the title of the next chapter
-had included &quot;grey&quot; <A HREF="motion.html#it">它</A> would be replaced <A HREF="motion.html#as">as</A> well.  Maybe that's what you
-wanted, but what if you didn't?  Then you can specify an offset.
-   To search for a <A HREF="pattern.html#pattern">pattern</A> and then use the line above <A HREF="motion.html#it">它</A>:
+上面的方案其实还是有问题的: 如果下一章的标题行中包括 "grey"，这个 "grey" 也会被替换掉。如果你正好想这样就最好，可是正好你不想呢？这个时候你需要指定一个偏移。
+要查找一个表达式，并且使用它的前一行，需要这样:
 
 <B>	/Chapter/-1</B>
 
-You can use any number instead of the 1.  To address the second line below the
-match:
+你可以用任意数值代替命令中的 1。要定位匹配点下的第二行，要这样:
 
 <B>	/Chapter/+2</B>
 
-The offsets can also be used with the other items in a range.  Look at this
-one:
+偏移还可以用于其它范围指定符。看一下下面这个例子:
 
 <B>	:.+3,$-5</B>
 
-This specifies the range that starts three lines below the cursor and ends
-five lines before the last line in the file.
+这指定当前行下面第三行到文件末倒数第五行的范围.
 
 
 使用标记
 
-Instead of figuring out the line numbers of certain positions, remembering them
-and typing them in a range, you can use marks.
-   Place the marks <A HREF="motion.html#as">as</A> mentioned in chapter 3.例如, use &quot;mt&quot; to <A HREF="motion.html#mark">mark</A>
-the top of an area and &quot;mb&quot; to <A HREF="motion.html#mark">mark</A> the bottom.  Then you can use this range
-to specify the lines between the marks (including the lines with the marks):
+除了指定行号，(这需要记住并把它敲出来)，你还可以使用标记。在前面的例子中，你可以用标记指出第三章的位置。例如，用 "mt" 标记开头，再用
+"mb" 标记结尾。然后你就可以用标记表示一个范围 (包括标记的那一行):
 
 <B>	:'t,'b</B>
 
 
-VISUAL MODE AND RANGES
+可视模式和范围
 
-You can select text with <A HREF="visual\.html#Visual">可视</A>模式.  If you then press &quot;<A HREF="cmdline.html#:">:</A>&quot; to start a colon
-command, you will see this:
+你可以使用<A HREF="visual\.html#Visual">可视</A>模式选择文本.然后使用&quot;<A HREF="cmdline.html#:">:</A>&quot;启动冒号命令，将会看到:
 
 <B>	:'&lt;,'&gt;</B>
 
-Now you can type the command and <A HREF="motion.html#it">它</A> will be applied to the range of lines that
-was visually selected.
+现在，你可以输入剩下的命令，这个命令的作用范围就是可视模式中指定的范围.
 
-	Note:
-	When using <A HREF="visual\.html#Visual">可视</A>模式 to select part of a line, or using <A HREF="visual.html#CTRL-V">CTRL-V</A> to
-	select a block of text, the colon commands will still apply to whole
-	lines.  This might change in a future version of Vim.
+	注意:
+   如果使用可视模式选中行的一部分，或者用 CTRL-V 选中一个文本列块，然后执行冒号命令，命令仍作用于整行，而不只是选中的范围。这可能会在以后的版本中修正.
 
-The <A HREF="motion.html#'&lt;">'&lt;</A> and <A HREF="motion.html#'&gt;">'&gt;</A> are actually marks, placed at the start and end of the <A HREF="visual.html#Visual">Visual</A>
-selection.  The marks remain at their position until another <A HREF="visual.html#Visual">Visual</A> selection
-is made.  Thus you can use the &quot;<A HREF="motion.html#'&lt;">'&lt;</A>&quot;命令 to jump to position where the
-<A HREF="visual.html#Visual">Visual</A> area started.  And you can mix the marks with other items:
+'< 和 '> 实际上是标记，分别标识可视模式的开始和结尾。这个标记一直有效，直到选中了其它的范围为止。你还可以用标记跳转命令 "' <" 跳转到选中文本的开始处。你还可 以把这个标记和其它标记混合，例如:
 
 <B>	:'&gt;,$</B>
 
-This addresses the lines from the end of the <A HREF="visual.html#Visual">Visual</A> area to the end of the
-file.
+这表示从选中部分的结尾到文件末.
 
 
-A NUMBER OF LINES
+行号
 
-When you know how many lines you want to change, you can type the number and
-then &quot;<A HREF="cmdline.html#:">:</A>&quot;.例如, when you type &quot;5:&quot;, you will get:
+如果你知道要修改多少行，你可以先输入一个数值再输入冒号。例如，如果你输入"5:"，你会得到:
 
 <B>	:.,.+4</B>
 
-Now you can type the command you want to use.  It will use the range &quot;<A HREF="repeat.html#.">.</A>&quot;
-(current line) until &quot;.+4&quot; (four lines down).  Thus <A HREF="motion.html#it">它</A> spans five lines.
+现在你可以继续你的命令，这个命令将作用于当前行及其后 4 行.
 
 ==============================================================================
 
-*<A NAME="10.4"></A><B>10.4</B>*	The global command
+*<A NAME="10.4"></A><B>10.4</B>*	全局命令
 
-The &quot;<A HREF="repeat.html#:global">:global</A>&quot;命令 is one of the more powerful features of Vim.  It allows
-you to find a match for a <A HREF="pattern.html#pattern">pattern</A> and execute a command there.  The general
-form is:
+&quot;<A HREF="repeat.html#:global">:global</A>&quot;命令是Vim最强大的命令之一.它允许你发现一个匹配<A HREF="pattern.html#pattern">表达式</A>并在那里执行命令，一般为:
 
 <B>	:[range]global/{pattern}/{command}</B>
 
-This is similar to the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令.  But, instead of <A HREF="change.html#replacing">replacing</A> the
-matched text with other text, the command {command} is executed.
+和&quot;<A HREF="change.html#:substitute">替换</A>&quot;命令相似.但是它不替代匹配的文本而是执行命令.
 
-	Note:
-	The command executed for &quot;<A HREF="repeat.html#:global">:global</A>&quot; must be one that starts with a
-	colon.  <A HREF="intro.html#Normal">正常</A>模式 commands can not be used directly.  The |<A HREF="various.html#:normal">:normal</A>|
-	command can <A HREF="diff.html#do">do</A> this for you.
+注意:
+global 中执行的命令只能是冒号命令。普通模式命令不能在这里使用。如果需要，可以使用 |<A HREF="various.html#:normal">:normal</A>| 命令。
 
-Suppose you want to change &quot;foobar&quot; to &quot;barfoo&quot;, but only in C++ style
-comments.  These comments start with &quot;//&quot;.  Use this command:
+假设你要把 "foobar" 修改为 "barfoo"，但只需要修改 C++ 风格的注释中的内容。这种注释以 "//" 开头。所以可以使用如下命令
 
 <B>	:g+//+s/foobar/barfoo/g</B>
 
-This starts with &quot;<A HREF="repeat.html#:g">:g</A>&quot;.  That is short for &quot;<A HREF="repeat.html#:global">:global</A>&quot;, just like &quot;<A HREF="change.html#:s">:s</A>&quot; is short
-for &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;.  Then the <A HREF="pattern.html#pattern">pattern</A>, enclosed in plus characters.  Since the
-<A HREF="pattern.html#pattern">pattern</A> we are looking for contains a slash, this uses the plus character to
-separate the <A HREF="pattern.html#pattern">pattern</A>.  Next comes the substitute command that changes &quot;foobar&quot;
-into &quot;barfoo&quot;.
-   The default range for the global command is the whole file.  Thus no range
-was specified in this example.  This is different from &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;, which
-works on one line without a range.
-   The command isn't perfect, since <A HREF="motion.html#it">它</A> also matches lines where &quot;//&quot; appears
-halfway through a line, and the substitution will also take place before the
-&quot;//&quot;.
+这个命令用 ":g" 开头，这是 ":global" 的缩写形式，就像 ":s" 是 ":substitute" 的缩写形式一样。然后是一个匹配模式，由于模式中包括正斜杠，我们用加号作分隔符，后面是一个把 "foobar" 替换成 "barfoo" 的替换命令。全局命令的默认范围是整个文件，所以这个例子中没有指定范围。这一点与":substitute" 是不同的。后者只作用于一行。
+这个命令并非完美。因为 "//" 可能出现在一行的中间，但替换命令会把前后的匹配点都替换了。
 
-Just like with &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;, any <A HREF="pattern.html#pattern">pattern</A> can be used.  When you learn more
-complicated patterns later, you can use them here.
+像 ":substitute" 一样，这里也可以使用各种各样的匹配模式。当你从后面的章节中学会更多的关于模式的知识，它们都可以用在这里.
 
 ==============================================================================
 
-*<A NAME="10.5"></A><B>10.5</B>*	<A HREF="visual.html#Visual">Visual</A> block mode
+*<A NAME="10.5"></A><B>10.5</B>*	<A HREF="visual.html#Visual">可视</A> 块模式
 
-With <A HREF="visual.html#CTRL-V">CTRL-V</A> you can start selection of a rectangular area of text.  There are
-a few commands that <A HREF="diff.html#do">do</A> something special with the text block.
+CTRL-V 命令可以选中一个矩形文本块。有几个命令是专门用来处理这个文本块的。
 
-There is something special about using the &quot;<A HREF="motion.html#$">$</A>&quot;命令 in <A HREF="visual.html#Visual">Visual</A> block mode.
-When the last motion command used was &quot;<A HREF="motion.html#$">$</A>&quot;, all lines in the <A HREF="visual.html#Visual">Visual</A> selection
-will extend until the end of the line, also when the line with the cursor is
-shorter.  This remains effective until you use a motion command that moves the
-cursor horizontally.  Thus using &quot;<A HREF="motion.html#j">j</A>&quot; keeps <A HREF="motion.html#it">它</A>, &quot;<A HREF="motion.html#h">h</A>&quot; stops <A HREF="motion.html#it">它</A>.
+在可视列块模式中，"$" 命令有些特别。当最后一个移动命令是 "$" 时，整个可视列块将被扩展到每一行的行尾。这种状态在你使用垂直移动命令的时候一直被保持，直到你使用水平移动命令为止。就是说，用 "j" 命令会保持这种状态，而 "h" 会退出。
 
 
-INSERTING TEXT
+插 入 文 本
 
-The command  &quot;I{string}&lt;Esc&gt;&quot; inserts the text {string} in each line, just
-left of the visual block.  You start by pressing <A HREF="visual.html#CTRL-V">CTRL-V</A> to enter visual block
-mode.  Now you move the cursor to define your block.  Next you type I to enter
-<A HREF="intro.html#Insert">插入</A>模式, followed by the text to insert.  As you type, the text appears on
-the first line only.
-   After you press <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> to end the insert, the text will magically be
-inserted in the rest of the lines contained in the visual selection.  Example:
+"I{string}<Esc>" 命令把 {string} 插到可视列块的每一行的左边。你用 CTRL-V 进入可视列块模式，然后移动光标定义一个列块。接着输入 I 进入插入模式，并随后输入文本。这时，你输入的内容只出现在第一行。
+   然后你输入 <Esc> 结束输入，刚才输入的字符串将神奇地出现在每一行的可视区的左边。例如:
 
 <B><FONT color="#3A6F2B">	include one </FONT></B>
 <B><FONT color="#3A6F2B">	include two </FONT></B>
 <B><FONT color="#3A6F2B">	include three </FONT></B>
 <B><FONT color="#3A6F2B">	include four </FONT></B>
 
-Move the cursor to the &quot;<A HREF="insert.html#o">o</A>&quot; of &quot;one&quot; and press <A HREF="visual.html#CTRL-V">CTRL-V</A>.  Move <A HREF="motion.html#it">它</A> down with &quot;3j&quot;
-to &quot;four&quot;.  You now have a block selection that spans four lines.  Now type:
+把光标移到第一行 "one" 的 "o"上，输入 CTRL-V。然后用 "3j" 向下移动到 "four"。现在你选中了四行的一个方块。接着输入:
 
 <B>	Imain.&lt;Esc&gt;</B>
 
-The result:
+结果是:
 
 <B><FONT color="#3A6F2B">	include main.one </FONT></B>
 <B><FONT color="#3A6F2B">	include main.two </FONT></B>
 <B><FONT color="#3A6F2B">	include main.three </FONT></B>
 <B><FONT color="#3A6F2B">	include main.four </FONT></B>
 
-If the block spans short lines that <A HREF="diff.html#do">do</A> not extend into the block, the text is
-not inserted in that line.例如, make a <A HREF="visual.html#Visual">Visual</A> block selection that
-includes the <A HREF="motion.html#word">单词</A> &quot;long&quot; in the first and last line of this text, and thus has
-no text selected in the second line:
+如果选中的块经过一个短行，并且这行没有任何内容包括在可视列块中，则新的文本不会被插入到该行中。例如，对于下面的例子，用可视列块选中第一和第三行的 "long"，这样第二行的文本将不会被包括在可视列块中:
 
 <B><FONT color="#3A6F2B">	This is a long line </FONT></B>
 <B><FONT color="#3A6F2B">	short </FONT></B>
@@ -506,142 +388,105 @@ no text selected in the second line:
 
 		  ^^^^ selected block
 
-Now use the command &quot;Ivery &lt;Esc&gt;&quot;.  The result is:
+现在输入 "Ivery <esc>"。结果将是:
 
 <B><FONT color="#3A6F2B">	This is a very long line </FONT></B>
 <B><FONT color="#3A6F2B">	short </FONT></B>
 <B><FONT color="#3A6F2B">	Any other very long line </FONT></B>
 
-In the short line no text was inserted.
+可以注意到，第二行中没有插入任何文本。
 
-If the <A HREF="options\.html#options">字符串</A> you insert contains a newline, the &quot;<A HREF="insert.html#I">I</A>&quot; acts just like a <A HREF="intro.html#Normal">Normal</A>
-insert command and affects only the first line of the block.
+如果插入的文本中包括一个新行，则 "I" 命令的效果与普通插入语句一样，只影响块的第一行。
 
-The &quot;<A HREF="insert.html#A">A</A>&quot;命令 works the same way, except that <A HREF="motion.html#it">它</A> appends after the right
-side of the block.  And <A HREF="motion.html#it">它</A> does insert text in a short line.  Thus you can
-make a choice whether you <A HREF="diff.html#do">do</A> or don't want to append text to a short line.
-   There is one special <A HREF="change.html#case">case</A> for &quot;<A HREF="insert.html#A">A</A>&quot;: <A HREF="visual.html#Select">Select</A> a <A HREF="visual.html#Visual">Visual</A> block and then use &quot;<A HREF="motion.html#$">$</A>&quot;
-to make the block extend to the end of each line.  Using &quot;<A HREF="insert.html#A">A</A>&quot; now will append
-the text to the end of each line.
-   Using the same example from above, and then typing &quot;$A XXX&lt;Esc&gt;, you get
-this result:
+"A" 命令的效果与 "I" 命令一样，只是把文字插入可视列块的右边，而且在短行中会插 入文字。这样，你有在短行中插入文字与否的不同选择。
+"A" 在如下情况会有一些特别: 选中一个可视列块然后用 "$" 命令使可视列块扩展 到行尾。然后用 "A" 命令插入文本，文件将被插入到 "每一行" 的行尾。 还是用上面的例子，在选中可视列块后输入 "$A XXX<Esc>"，结果将是:
 
 <B><FONT color="#3A6F2B">	This is a long line XXX </FONT></B>
 <B><FONT color="#3A6F2B">	short XXX </FONT></B>
 <B><FONT color="#3A6F2B">	Any other long line XXX </FONT></B>
 
-This really requires using the &quot;<A HREF="motion.html#$">$</A>&quot;命令.  Vim remembers that <A HREF="motion.html#it">它</A> was used.
-Making the same selection by moving the cursor to the end of the longest line
-with other <A HREF="intro.html#movement">移动</A>命令 will not have the same result.
+出现这个效果完全是 "$" 命令的作用，Vim 能记住这个命令，如果你用移动命令选中相同的可视列块，是不会有这样的效果的。
 
 
 改变文本
 
-The <A HREF="visual.html#Visual">Visual</A> block &quot;<A HREF="change.html#c">c</A>&quot;命令 deletes the block and then throws you into <A HREF="insert.html#Insert">Insert</A>
-mode to enable you to type in a <A HREF="options\.html#options">字符串</A>.  The <A HREF="options\.html#options">字符串</A> will be inserted in each
-line in the block.
-   Starting with the same selection of the &quot;long&quot; words <A HREF="motion.html#as">as</A> above然后typing
-&quot;c_LONG_&lt;Esc&gt;&quot;, you get this:
+可视列块中的 "c" 命令会删除整个可视列块并转入 "插入" 模式，使你可以开始文本，这些文本会被插入可视列块经过的每一行。在上面的例子中，如果仍选中包括所有 "long" 的一个可视列块，然后输入"c_LONG_<Esc>"，结果会变成:
 
 <B><FONT color="#3A6F2B">	This is a _LONG_ line </FONT></B>
 <B><FONT color="#3A6F2B">	short </FONT></B>
 <B><FONT color="#3A6F2B">	Any other _LONG_ line </FONT></B>
 
-Just like with &quot;<A HREF="insert.html#I">I</A>&quot; the short line is not changed.  Also, you can't enter a
-newline in the new text.
+与 "I" 命令一样，短行不会发生变化。而且在插入的过程中，你不能断行。
 
-The &quot;<A HREF="change.html#C">C</A>&quot;命令 deletes text from the left edge of the block to the end of
-line.  It then puts you in <A HREF="intro.html#Insert">插入</A>模式 so that you can type in a <A HREF="options\.html#options">字符串</A>,
-which is added to the end of each line.
-   Starting with the same text again, and typing &quot;Cnew text&lt;Esc&gt;&quot; you get:
+"C" 命令从块的左边界开始删除所有行的后半段，然后状态切换到 "插入" 模式让你输入文本。新的文本被插入到每一行的末尾。在上面的例子中，如果命令改为 "Cnew text<Esc>"，你将获得这样的结果:
 
 <B><FONT color="#3A6F2B">	This is a new text </FONT></B>
 <B><FONT color="#3A6F2B">	short </FONT></B>
 <B><FONT color="#3A6F2B">	Any other new text </FONT></B>
 
-Notice that, even though only the &quot;long&quot; <A HREF="motion.html#word">单词</A> was selected, the text after <A HREF="motion.html#it">它</A>
-is deleted <A HREF="motion.html#as">as</A> well.  Thus only the location of the left edge of the visual
-block really matters.
-   Again, short lines that <A HREF="diff.html#do">do</A> not reach into the block are excluded.
+可以注意到，尽管只有 "long" 被选中，它后面的内容也被删除了。所以在这种情况下，块的左边界才是有意义的。同样，没有包括在块中的行不会受影响。
 
-Other commands that change the characters in the block:
+还有一些命令只影响被选中的字符:
 
-	~	swap <A HREF="change.html#case">case</A>	(a <A HREF="eval.html#-&gt;">-&gt;</A> A and A <A HREF="eval.html#-&gt;">-&gt;</A> <A HREF="motion.html#a)">a)</A>
-	<A HREF="undo.html#U">U</A>	make <A HREF="change.html#uppercase">大写</A>  (a <A HREF="eval.html#-&gt;">-&gt;</A> A and A <A HREF="eval.html#-&gt;">-&gt;</A> A)
-	<A HREF="undo.html#u">u</A>	make <A HREF="change.html#lowercase">小写</A>  (a <A HREF="eval.html#-&gt;">-&gt;</A> a and A <A HREF="eval.html#-&gt;">-&gt;</A> <A HREF="motion.html#a)">a)</A>
+	~	交换大小写	(a <A HREF="eval.html#-&gt;">-&gt;</A> A and A <A HREF="eval.html#-&gt;">-&gt;</A> <A HREF="motion.html#a)">a)</A>
+	<A HREF="undo.html#U">U</A>	变为<A HREF="change.html#uppercase">大写</A>  (a <A HREF="eval.html#-&gt;">-&gt;</A> A and A <A HREF="eval.html#-&gt;">-&gt;</A> A)
+	<A HREF="undo.html#u">u</A>	变为<A HREF="change.html#lowercase">小写</A>  (a <A HREF="eval.html#-&gt;">-&gt;</A> a and A <A HREF="eval.html#-&gt;">-&gt;</A> <A HREF="motion.html#a)">a)</A>
 
+以一个字符填充
 
-FILLING WITH A CHARACTER
-
-To fill the whole block with one character, use the &quot;<A HREF="change.html#r">r</A>&quot;命令.  Again,
-starting with the same example text from above, and then typing &quot;rx&quot;:
+要以某一个字符完全填充整个块，可以使用 "r" 命令。再次选中上例中的文本，然后键入 "rx":
 
 <B><FONT color="#3A6F2B">	This is a xxxx line </FONT></B>
 <B><FONT color="#3A6F2B">	short </FONT></B>
 <B><FONT color="#3A6F2B">	Any other xxxx line </FONT></B>
 
+备注:
+        如果你要在可视列块中包括行尾之后的字符，请参考 25 章的 'virtualedit'
+        特性。
 
-	Note:
-	If you want to include characters beyond the end of the line in the
-	block, check out the <A HREF="options.html#'virtualedit'">'virtualedit'</A> feature in chapter 25.
+平移
 
+">" 命令把选中的文档向右移动一个 "平移单位"，中间用空白填充。平移的起始点是可视列块的左边界。
+还是用上面的例子，">" 命令会导致如下结果:
 
-SHIFTING
-
-The command &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; shifts the selected text to the right one <A HREF="intro.html#shift">shift</A> amount,
-<A HREF="insert.html#inserting">inserting</A> <A HREF="pattern.html#whitespace">whitespace</A>.  The starting point for this <A HREF="intro.html#shift">shift</A> is the left edge of
-the visual block.
-   With the same example again, &quot;<A HREF="change.html#&gt;">&gt;</A>&quot; gives this result:
 
 <B><FONT color="#3A6F2B">	This is a	  long line </FONT></B>
 <B><FONT color="#3A6F2B">	short </FONT></B>
 <B><FONT color="#3A6F2B">	Any other	  long line </FONT></B>
 
-The <A HREF="intro.html#shift">shift</A> amount is specified with the <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> option.  To change <A HREF="motion.html#it">它</A> to
-use 4 spaces:
+平移的距离由 'shiftwidth' 选项定义。例如，要每次平移 4 个空格，可以用这个命令:
 
 <B>	:set shiftwidth=4</B>
 
-The &quot;<A HREF="change.html#&lt;">&lt;</A>&quot;命令 removes one <A HREF="intro.html#shift">shift</A> amount of <A HREF="pattern.html#whitespace">whitespace</A> at the left
-edge of the block.  This command is limited by the amount of text that is
-there; so if there is <A HREF="various.html#less">less</A> than a <A HREF="intro.html#shift">shift</A> amount of <A HREF="pattern.html#whitespace">whitespace</A> available, <A HREF="motion.html#it">它</A>
-removes what <A HREF="motion.html#it">它</A> can.
+"<" 命令向左移动一个 "平移单位" ，但能移动的距离是有限的，因为它左边的不是空白 字符的字符会挡住它，这时它移到尽头就不再移动。
 
 
-JOINING LINES
+链接若干行
 
-The &quot;<A HREF="change.html#J">J</A>&quot;命令 joins all selected lines together into one line.  Thus <A HREF="motion.html#it">它</A>
-removes the line breaks.  Actually, the line break, leading white space and
-trailing white space is replaced by one space.  Two spaces are used after a
-line ending (that can be changed with the <A HREF="options.html#'joinspaces'">'joinspaces'</A> option).
-   Let's use the example that we got so familiar with now.  The result of
-using the &quot;<A HREF="change.html#J">J</A>&quot;命令:
+"J" 命令连接被选中的行。也就是删除所有的换行符。其实不只是换行符，行前后的多余空白字符会一起被删除而全部用一个空格取代。如果行尾刚好是句尾，就插入两个空格(参见 'joinspaces' 选项)还是用那个我们已经非常熟悉的例子，这回的结果将是:
 
 <B><FONT color="#3A6F2B">	This is a long line short Any other long line </FONT></B>
 
-The &quot;<A HREF="change.html#J">J</A>&quot;命令 doesn't require a blockwise selection.  It works with &quot;<A HREF="visual.html#v">v</A>&quot; and
-&quot;<A HREF="visual.html#V">V</A>&quot; selection in exactly the same way.
+"J" 命令其实不关心选中了哪些字符，只关心块涉及到哪些行。所以可视列块的效果与"v" 和 "V" 的效果是完全一样的。
 
-If you don't want the white space to be changed, use the &quot;<A HREF="change.html#gJ">gJ</A>&quot;命令.
+如果你不想改变那些空白字符，可以使用 "gJ" 命令。
 
 ==============================================================================
 
-*<A NAME="10.6"></A><B>10.6</B>*	Reading and <A HREF="editing.html#writing">写</A> part of a file
+*<A NAME="10.6"></A><B>10.6</B>*	读<A HREF="editing.html#writing">写</A>文件内容
 
-When you are <A HREF="editing.html#writing">写</A> an e-mail message, you may want to include another file.
-This can be done with the &quot;<A HREF="insert.html#:read">:read</A> {filename}&quot; command.  The text of the file is
-put below the cursor line.
-   Starting with this text:
+当你在写一封 e-mail，你可能想包括另一个文件。这可以通过 ":read {filename}" 命令达到目的。这些文本将被插入到光标的下面。
+    我们用下面的文本作试验:
 
 <B><FONT color="#3A6F2B">	Hi John, </FONT></B>
 <B><FONT color="#3A6F2B">	Here is the diff that fixes the bug: </FONT></B>
 <B><FONT color="#3A6F2B">	Bye, Pierre. </FONT></B>
 
-Move the cursor to the second line and type:
+移动光标到第二行然后键入:
 
 <B>	:read patch</B>
 
-The file named &quot;patch&quot; will be inserted, with this result:
+文件名为&quot;patch&quot;的内容会被插入 ，结果:
 
 <B><FONT color="#3A6F2B">	Hi John, </FONT></B>
 <B><FONT color="#3A6F2B">	Here is the diff that fixes the bug: </FONT></B>
@@ -651,162 +496,106 @@ The file named &quot;patch&quot; will be inserted, with this result:
 <B><FONT color="#3A6F2B">	&gt;	for (i = 0; i &lt; length; ++i) </FONT></B>
 <B><FONT color="#3A6F2B">	Bye, Pierre. </FONT></B>
 
-The &quot;<A HREF="insert.html#:read">:read</A>&quot;命令 accepts a range.  The file will be put below the last line
-number of this range.  Thus &quot;:$r patch&quot; appends the file &quot;patch&quot; at the end of
-the file.
-   What if you want to read the file above the first line?  This can be done
-with the line number zero.  This line doesn't really exist, you will get an
-error message when using <A HREF="motion.html#it">它</A> with most commands.  But this command is allowed:
+&quot;<A HREF="insert.html#:read">:read</A>&quot;命令可以接受范围. 文件将被插入到范围指定的最后一行的下面。所以":$r patch" 会把 "patch" 文件插入到当前文件的最后.
+   如果要插入到文件的最前面怎么办？你可以把文本插入到第 0 行，这一行实际上是不存在的。在普通的命令的范围中如果你用这个行号会出错，但在 "read" 命令中就可以:
 
 <B>	:0read patch</B>
 
-The file &quot;patch&quot; will be put above the first line of the file.
+这个命令把 "patch" 文件插入到全文的最前面.
 
 
-WRITING A RANGE OF LINES
+保存部分行
 
-To write a range of lines to a file, the &quot;<A HREF="editing.html#:write">:write</A>&quot;命令 can be used.
-Without a range <A HREF="motion.html#it">它</A> writes the whole file.  With a range only the specified
-lines are written:
+要把一部分行写入到文件，可以使用 ":write" 命令。在没有指定范围的时候它写入全文，而指定范围的时候它只写入范围指定的行:
 
 <B>	:.,$write tempo</B>
 
-This writes the lines from the cursor until the end of the file into the file
-&quot;tempo&quot;.  If this file already exists you will get an error message.  Vim
-protects you from accidentally overwriting an existing file.  If you know what
-you are doing and want to overwrite the file, append !:
+这个命令写入当前位置到文件末的全部行到文件 "tempo" 中。如果这个文件已经存在，你会被提示错误。Vim 不会让你直接写入到一个已存在的文件。如果你知道你在干什么而且确实想这样做，就加一个叹号:
 
 <B>	:.,$write! tempo</B>
 
-CAREFUL: The ! must follow the &quot;<A HREF="editing.html#:write">:write</A>&quot;命令 immediately, without white
-space.  Otherwise <A HREF="motion.html#it">它</A> becomes a <A HREF="change.html#filter">filter</A> command, which is explained later in
-this chapter.
+小 心: "!" 必须紧跟着 ":write"，中间不能留有空格。否则这将变成一个过滤器命令，这种命令我们在本章的后面会介绍.
 
 
-APPENDING TO A FILE
+添加内容到文件中
 
-In the first section of this chapter was explained how to collect a number of
-lines into a <A HREF="intro.html#register">register</A>.  The same can be done to collect lines in a file.
-Write the first line with this command:
+本章开始的时候介绍了怎样把文本添加到寄存器中。你可以对文件作同样的操作。例如，把当前行写入文件:
 
 <B>	:.write collection</B>
 
-Now move the cursor to the second line you want to collect, and type this:
+然后移到下一个位置，输入:
 
 <B>	:.write &gt;&gt;collection</B>
 
-The &quot;<A HREF="change.html#&gt;&gt;">&gt;&gt;</A>&quot; tells Vim the &quot;collection&quot; file is not to be written <A HREF="motion.html#as">as</A> a new file,
-but the line must be appended at the end.   You can repeat this <A HREF="motion.html#as">as</A> many times
-<A HREF="motion.html#as">as</A> you like.
+">>" 通知 Vim 把内容添加到文件 "collection" 的后面。你可以重复这个操作，直到获得全部你需要收集的文本.
 
 ==============================================================================
 
-*<A NAME="10.7"></A><B>10.7</B>*	Formatting text
+*<A NAME="10.7"></A><B>10.7</B>*	格式化文本
 
-When you are typing plain text, it's nice if the length of each line is
-automatically trimmed to fit in the<A HREF="windows.html#window">窗口</A>.  To make this happen while
-<A HREF="insert.html#inserting">inserting</A> text, set the <A HREF="options.html#'textwidth'">'textwidth'</A> option:
+在你输入纯文本时，自动换行自然会是比较吸引的功能。要实现这个功能，可以设置'textwidth' 选项:
 
 <B>	:set textwidth=78</B>
 
-You might remember that in the example <A HREF="starting\.html#vimrc">vimrc</A>文件 this command was used for
-every text file.  Thus if you are using that <A HREF="starting\.html#vimrc">vimrc</A>文件, you were already
-using <A HREF="motion.html#it">它</A>.  To check the current value of <A HREF="options.html#'textwidth'">'textwidth'</A>:
+你可能还记得在示例 vimrc 文件中，这个命令被用于所有的文本文件。所以如果你使用的是那个配置文件，实际上你已经设置这个选项了。检查一下该选项的值:
 
 <B>	:set textwidth</B>
 
-Now lines will be broken to take only up to 78 characters.  However, when you
-insert text halfway through a line, or when you delete a few words, the lines
-will get too long or too short.  Vim doesn't automatically reformat the text.
-To tell Vim to format the current <A HREF="motion.html#paragraph">段落</A>:
+现在每行达到 72 个字符就会自动换行。但如果你只是在行中间输入或者删除一些东西，这个功能就无效了。Vim 不会自动排版这些文本。要让 Vim 排版当前的段落:
 
 <B>	gqap</B>
 
-This starts with the &quot;<A HREF="change.html#gq">gq</A>&quot;命令, which is an <A HREF="motion.html#operator">operator</A>.  Following is &quot;<A HREF="motion.html#ap">ap</A>&quot;,
-the text object that stands for &quot;a paragraph&quot;.  A <A HREF="motion.html#paragraph">段落</A> is separated from
-the next <A HREF="motion.html#paragraph">段落</A> by an empty line.
+这个命令用 "gq" 开始，作为操作符，然后跟着 "ap"，作为文本对象，该对象表示 "一段" (a paragraph)。"一段" 与下一段的分割符是一个空行。
 
-	Note:
-	A blank line, which contains white space, does NOT separate
-	paragraphs.  This is hard to notice!
+备注:
+只包括空白字符的空白行不能分割 "一段"。这很不容易分辨。
 
-Instead of &quot;<A HREF="motion.html#ap">ap</A>&quot; you could use any motion or text object.  If your paragraphs
-are properly separated, you can use this command to format the whole file:
+除了用 "ap"，你还可以使用其它 "动作" 或者 "文本对象"。如果你的段落分割正确，你可以用下面命令排版整个文档:
 
 <B>	gggqG</B>
 
-&quot;<A HREF="motion.html#gg">gg</A>&quot; takes you to the first line, &quot;<A HREF="change.html#gq">gq</A>&quot; is the format <A HREF="motion.html#operator">operator</A> and &quot;<A HREF="motion.html#G">G</A>&quot; the
-motion that jumps to the last line.
+"gg" 跳转到第一行，"gq" 是排版操作符，而 "G" 是跳转到文尾的 "动作" 命令。
 
-In <A HREF="change.html#case">case</A> your paragraphs aren't clearly defined, you can format just the lines
-you manually select.  Move the cursor to the first line you want to format.
-Start with the command &quot;gqj&quot;.  This formats the current line and the one below
-<A HREF="motion.html#it">它</A>.  If the first line was short, words from the next line will be appended.
-If <A HREF="motion.html#it">它</A> was too long, words will be moved to the next line.  The cursor moves to
-the second line.  Now you can use &quot;<A HREF="repeat.html#.">.</A>&quot; to repeat the command.  Keep doing this
-until you are at the end of the text you want to format.
+如果你没有清楚地区分段落。你可以只排版你手动选中的行。先移到你要排版的行，执行"gqj"。这会排版当前行和下面一行。如果当前行太短，下面一行会补上来，否则多余的部分会移到下面一行。现在你可以用 "." 命令重复这个操作，直到排版完所有的文本。
 
 ==============================================================================
 
-*<A NAME="10.8"></A><B>10.8</B>*	Changing <A HREF="change.html#case">case</A>
+*<A NAME="10.8"></A><B>10.8</B>*	改变<A HREF="change.html#case">大小写</A>
 
-You have text with section headers in <A HREF="change.html#lowercase">小写</A>.  You want to make the <A HREF="motion.html#word">单词</A>
-&quot;section&quot; all <A HREF="change.html#uppercase">大写</A>.  Do this with the &quot;<A HREF="change.html#gU">gU</A>&quot; <A HREF="motion.html#operator">operator</A>.  Start with the
-cursor in the first column:
+你手头有一个分节标题全部是小写的。你想把全部 "section" 改成大写的。这可以用"gU" 操作符。先在第一列执行:
 
 <B>			     gUw</B>
  	section header	    ----&gt;      SECTION header
 
-The &quot;<A HREF="change.html#gu">gu</A>&quot; <A HREF="motion.html#operator">operator</A> does exactly the opposite:
+&quot;<A HREF="change.html#gu">gu</A>&quot; <A HREF="motion.html#operator">操作符</A>正好相反:
 
 <B>			     guw</B>
  	SECTION header	    ----&gt;      section header
 
-You can also use &quot;<A HREF="change.html#g~">g~</A>&quot; to swap <A HREF="change.html#case">case</A>.  All these are operators, thus they work
-with any motion command, with 文本<A HREF="vimindex\.html#objects">对象</A> and in <A HREF="visual\.html#Visual">可视</A>模式.
-   To make an <A HREF="motion.html#operator">operator</A> work on lines you double <A HREF="motion.html#it">它</A>.  The delete <A HREF="motion.html#operator">operator</A> is
-&quot;<A HREF="change.html#d">d</A>&quot;, thus to delete a line you use &quot;<A HREF="change.html#dd">dd</A>&quot;.  Similarly, &quot;<A HREF="change.html#gugu">gugu</A>&quot; makes a whole line
-<A HREF="change.html#lowercase">小写</A>.  This can be shortened to &quot;<A HREF="change.html#guu">guu</A>&quot;.  &quot;<A HREF="change.html#gUgU">gUgU</A>&quot; is shortened to &quot;<A HREF="change.html#gUU">gUU</A>&quot; and
-&quot;<A HREF="change.html#g~g~">g~g~</A>&quot; to &quot;<A HREF="change.html#g~~">g~~</A>&quot;.  Example:
+你也能使用&quot;<A HREF="change.html#g~">g~</A>&quot;去转换<A HREF="change.html#case">大小写</A>. 所有这些命令都是操作符，所以它们可以用于 "动作"命令，文本对象和可视模式.
+   要让一个操作符作用于当前行，可以执行这个操作符两次。例如，"d" 是删除操作符，所以删除一行就是 "dd"。相似地，"gugu" 使整一行变成小写。这可以缩成 "guu"。"gUgU" 可以缩成 "gUU" 而 "g~g~" 则是 "g~~"。例如:
 
 <B>				g~~</B>
 <B><FONT color="#3A6F2B"> 	Some GIRLS have Fun    ----&gt;   sOME girls HAVE fUN </FONT></B>
 
 ==============================================================================
 
-*<A NAME="10.9"></A><B>10.9</B>*	Using an external program
+*<A NAME="10.9"></A><B>10.9</B>*	使用扩展程序
 
-Vim has a very powerful set of commands, <A HREF="motion.html#it">它</A> can <A HREF="diff.html#do">do</A> anything.  But there may
-still be something that an external command can <A HREF="diff.html#do">do</A> better or faster.
-   The command &quot;!{motion}{program}&quot; takes a block of text and filters <A HREF="motion.html#it">它</A>
-through an external program.换句话说, <A HREF="motion.html#it">它</A> runs the system command
-represented by {program}, giving <A HREF="motion.html#it">它</A> the block of text represented by <A HREF="intro.html#{motion}">{motion}</A>
-<A HREF="motion.html#as">as</A> input.  The output of this command then replaces the selected block.
-   Because this summarizes badly if you are unfamiliar with Unix filters, take
-a look at an example.  The sort command sorts a file.  If you execute the
-following command, the unsorted file input.txt will be sorted and written to
-output.txt.  This works on both Unix and Windows.
+Vim 有一套功能非常强大的命令，可以完成所有功能。但有些东西外部命令能够完成得更好或者更快。命令 "!{motion}{program}" 用一个外部程序对一个文本块进行过滤。换句话说，它用一个文本块作为输入，执行一个由 {program} 指定的外部命令，然后用该程序的输出替代选中的文本块。如果你不熟悉 UNIX 的过滤程序，上面的描述可以说是比较糟糕的。我们这里举个例子来说明一下。sort 命令能对一个文件排序。如果你执行下面的命令，未排序的文件input.txt 会被排序并写入 output.txt。(这在 UNIX 和 Microsoft Windows 上都有效)
 
 <B>	sort &lt;input.txt &gt;output.txt</B>
 
-Now <A HREF="diff.html#do">do</A> the same thing in Vim.  You want to sort lines 1 through 5 of a file.
-You start by putting the cursor on line 1.  Next you execute the following
-command:
+现在在 Vim 中完成相同的功能。假设你要对 1 到 5 行排序。你可以先把光标定位在第一行，然后你执行下面的命令:
 
 <B>	!5G</B>
 
-The &quot;<A HREF="change.html#!">!</A>&quot; tells Vim that you are performing a <A HREF="change.html#filter">filter</A> operation.  The Vim editor
-expects a motion command to follow, indicating which part of the file to
-<A HREF="change.html#filter">filter</A>.  The &quot;5G&quot; command tells Vim to go to line 5, so <A HREF="motion.html#it">它</A> now knows that <A HREF="motion.html#it">它</A>
-is to <A HREF="change.html#filter">filter</A> lines 1 (the current line) through 5.
-   In anticipation of the filtering, the cursor drops to the bottom of the
-screen and a ! prompt displays.  You can now type in the name of the <A HREF="change.html#filter">filter</A>
-program, in this <A HREF="change.html#case">case</A> &quot;sort&quot;.  Therefore, your full command is <A HREF="motion.html#as">as</A> follows:
+"!" 告诉 Vim 你正在执行一个过滤操作。然后 Vim 编辑器等待一个 "动作" 命令来告诉它要过滤哪部分文本。"5G" 命令告诉 Vim 移到第 5 行。于是，Vim 知道要处理的是第1 行 (当前行) 到第 5 行间的内容。由于在执行一个过滤命令，光标被 Vim 移到了屏幕的底部，并显示一个 "!" 作提示符。现在你可以输入过滤程序的名字，在本例中就是 "sort" 了。因此，你整个命令将是:
+
 
 <B>	!5Gsort&lt;Enter&gt;</B>
 
-The result is that the sort program is run on the first 5 lines.  The output
-of the program replaces these lines.
+这个命令的结果是 sort 程序用前 5 行作为输入执行，程序的输出替换了原来的 5 行。
 
 	line 55			      line 11
 	line 33			      line 22
@@ -815,94 +604,68 @@ of the program replaces these lines.
 	line 44			      line 55
 	last line		      last line
 
-The &quot;<A HREF="change.html#!!">!!</A>&quot;命令 filters the current line through a <A HREF="change.html#filter">filter</A>.  In Unix the &quot;date&quot;
-command prints the current time and date.  &quot;!!date&lt;Enter&gt;&quot; replaces the current
-line with the output of &quot;date&quot;.  This is useful to add a <A HREF="editing.html#timestamp">timestamp</A> to a file.
+"!!" 命令用于对当前行执行过滤命令。在 Unix 上，"date" 命令能打印当前的时间和日期，所以，"!!date<Enter>" 用 "date" 的输出代替当前行。这在为文件加入时间戳的时候非常有用。
 
 
-WHEN IT DOESN'T WORK
+如 果 命 令 不 执 行 怎 么 办
 
-Starting a shell, sending <A HREF="motion.html#it">它</A> text and capturing the output requires that Vim
-knows how the shell works exactly.  When you have problems with filtering,
-check the values of these <A HREF="options\.html#options">选项</A>:
+启动一个外壳，发送一个命令并捕获它的输出，这需要 Vim 知道这个外壳程序是怎么工作的。如果你要使用过滤程序，你最好需要检查一下下面的选项:
 
-	<A HREF="options.html#'shell'">'shell'</A>		specifies the program that Vim uses to execute
-			external programs.
-	<A HREF="options.html#'shellcmdflag'">'shellcmdflag'</A>	argument to pass a command to the shell
-	<A HREF="options.html#'shellquote'">'shellquote'</A>	<A HREF="change.html#quote">quote</A> to be used around the command
-	<A HREF="options.html#'shellxquote'">'shellxquote'</A>	<A HREF="change.html#quote">quote</A> to be used around the command and redirection
-	<A HREF="options.html#'shellslash'">'shellslash'</A>	use forward slashes in the command (only for
-			MS-Windows and alikes)
-	<A HREF="options.html#'shellredir'">'shellredir'</A>	<A HREF="options\.html#options">字符串</A> used to write the command output into a file
+   'shell' 指定 Vim 用于执行外部命令的外壳。
+   'shellcmdflag' 传给外壳的参数
+   'shellquote' 外壳程序使用的引号 (用于引用命令)
+   'shellxquote' 用于命令和重定向文件名的引号
+   'shelltype' 外壳程序的类型 (仅用于 Amiga)
+   'shellslash' 在命令中使用正斜杠 (仅用于 MS-Windows 和相容系统)
+   'shellredir' 用于把命令输出写入文件所使用的字符串
 
-On Unix this is hardly ever a problem, because there are two kinds of shells:
-&quot;sh&quot; like and &quot;csh&quot; like.  Vim checks the <A HREF="options.html#'shell'">'shell'</A> option and sets related
-<A HREF="options\.html#options">选项</A> automatically, depending on whether <A HREF="motion.html#it">它</A> sees &quot;csh&quot; somewhere in
-<A HREF="options.html#'shell'">'shell'</A>.
-   On MS-Windows, however, there are many different shells and you might have
-to tune the <A HREF="options\.html#options">选项</A> to make filtering work.  Check the help for the <A HREF="options\.html#options">选项</A>
-for more information.
+在 Unix 上，这几乎不是问题。因为总共只有两种外壳程序: "sh" 类的和 "csh" 类的。 Vim 会检查选项 'shell'，并根据它的类型自动设置这些参数。但在 MS-Windows 上，有很多不同的外壳程序，所以你必须修改这些外壳程序以便过滤功能正常执行。详细情况请参考相应选项的帮助。
 
 
-READING COMMAND OUTPUT
+读 入 一 个 命 令 的 输 出
 
-To read the contents of the current directory into the file, use this:
+要把当前目录的内容读进文件，可以用如下命令:
+Unix 上:
 
-on Unix:
 <B>	:read !ls</B>
 on MS-Windows:
 <B>	:read !dir</B>
 
-The output of the &quot;ls&quot; or &quot;dir&quot; command is captured and inserted in the text,
-below the cursor.  This is similar to reading a file, except that the &quot;<A HREF="change.html#!">!</A>&quot; is
-used to tell Vim that a command follows.
-   The command may have arguments.  And a range can be used to tell where Vim
-should put the lines:
+"ls" 或者 "dir" 的输出会被捕获并插入到光标下面。这好像读入一个文件一样，但是需要加上一个 "!" 让 Vim 知道后面是一个命令。这些命令还可以带参数。而且前面还可以带一个范围用于告诉 Vim 把这行放在什么地方:
 
 <B>	:0read !date -u</B>
 
-This inserts the current time and date in UTC format at the top of the file.
-(Well, if you have a date command that accepts the &quot;<A HREF="starting.html#-u">-u</A>&quot; argument.)  Note the
-difference with using &quot;!!date&quot;: that replaced a line, while &quot;<A HREF="insert.html#:read">:read</A> !date&quot; will
-insert a line.
+这将用 UTC 格式把当前的时间插入到文件开头。(当然了，你的 date 命令必须能够接受-u 选项。) 注意 这与 "!!date" 的区别: "!!date" 替代一行，而 ":read !date" 插入一行。
 
 
-WRITING TEXT TO A COMMAND
+把 文 本 输 出 到 一 个 命 令
 
-The Unix command &quot;wc&quot; counts words.  To <A HREF="intro.html#count">count</A> the words in the current file:
+Unix 命令 "wc" 用于统计单词数目。要统计当前文件有多少个单词，可以这样:
 
 <B>	:write !wc</B>
 
-This is the same write command <A HREF="motion.html#as">as</A> before, but instead of a file name the &quot;<A HREF="change.html#!">!</A>&quot;
-character is used and the name of an external command.  The written text will
-be passed to the specified command <A HREF="motion.html#as">as</A> its standard input.  The output could
-look like this:
+这和前面的写入命令一样，但文件名前面改为一个 "!" 用于告诉 Vim 后面是一个要被执行的外部命令。被写入的文本将作为指定命令的标准输入。这个输出将是:
 
 <B><FONT color="#3A6F2B">       4      47     249 </FONT></B>
 
-The &quot;wc&quot; command isn't <A HREF="starting.html#verbose">verbose</A>.  This means you have 4 lines, 47 words and 249
-characters.
+"wc" 命令惜字如金。这表示你有 4 行，47 个单词和 249 个字符。
 
-Watch out for this mistake:
+注意不要错写成:
 
 <B>	:write! wc</B>
 
-This will write the file &quot;wc&quot; in the current directory, with force.  White
-space is important here!
+这会强制把当前文件存到当前目录的 "wc" 文件中。在这里空格的位置是非常重要的！
 
 
-REDRAWING THE SCREEN
+重 画 屏 幕
 
-If the external command produced an error message, the display may have been
-messed up.  Vim is very efficient and only redraws those parts of the screen
-that <A HREF="motion.html#it">它</A> knows need redrawing.  But <A HREF="motion.html#it">它</A> can't know about what another program
-has written.  To tell Vim to redraw the screen:
+如果外部程序产生一个错误信息，屏幕显示就会乱掉。Vim 颇重效率，所以它只刷新那些需要刷新的地方。可是它不可能知道其它程序修改了哪些地方。要强制 Vim 重画整个屏幕:
 
 <B>	CTRL-L</B>
 
 ==============================================================================
 
-下一章: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
+下一章: |<A HREF="usr_11.html">usr_11.txt</A>|  从崩溃中恢复
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
    </div>

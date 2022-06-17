@@ -114,7 +114,7 @@ or change text.  The following operators are available:
 
 	|<A HREF="change.html#c">c</A>|	c	change
 	|<A HREF="change.html#d">d</A>|	d	delete
-	|<A HREF="change.html#y">y</A>|	y	<A HREF="change.html#yank">yank</A> into <A HREF="intro.html#register">register</A> (does not change the text)
+	|<A HREF="change.html#y">y</A>|	y	<A HREF="change.html#yank">yank</A> into <A HREF="intro.html#register">寄存器</A> (does not change the text)
 	|<A HREF="change.html#~">~</A>|	~	swap <A HREF="change.html#case">case</A> (only if <A HREF="options.html#'tildeop'">'tildeop'</A> is set)
 	|<A HREF="change.html#g~">g~</A>|	g~	swap <A HREF="change.html#case">case</A>
 	|<A HREF="change.html#gu">gu</A>|	gu	make <A HREF="change.html#lowercase">小写</A>
@@ -1016,7 +1016,7 @@ g'{mark}  g`{mark}
 			A-Z or 0-9.  Also clear the |<A HREF="#changelist">changelist</A>|.
 
 A <A HREF="#mark">mark</A> is not visible in any way.  It is just a position in the file that is
-remembered.  Do not confuse marks with named <A HREF="change.html#registers">registers</A>, they are totally
+remembered.  Do not confuse marks with named <A HREF="change.html#registers">寄存器</A>, they are totally
 unrelated.
 
 <A HREF="#'a">'a</A> - 'z		<A HREF="change.html#lowercase">小写</A> marks, valid within one file
@@ -1172,8 +1172,8 @@ These commands are not marks themselves, but jump to a <A HREF="#mark">mark</A>:
 			another text line.
 			These items will not be adjusted for deleted/inserted
 			lines:
-			- lower <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A> marks <A HREF="#'a">'a</A> - 'z
-			- upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A> marks <A HREF="#'A">'A</A> - 'Z
+			- lower <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A> marks <A HREF="#'a">'a</A> - 'z
+			- upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A> marks <A HREF="#'A">'A</A> - 'Z
 			- numbered marks <A HREF="#'0">'0</A> - '9
 			- last insert position <A HREF="#'^">'^</A>
 			- last change position <A HREF="#'.">'.</A>

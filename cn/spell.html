@@ -358,8 +358,8 @@ Specific exception: For German these special regions are used:
 							*<A NAME="spell-russian"></A><B>spell-russian</B>*
 Specific exception: For <A HREF="russian.html#Russian">Russian</A> these special regions are used:
 	ru		all <A HREF="russian.html#Russian">Russian</A> words accepted
-	ru_ru		&quot;IE&quot; <A HREF="print.html#letter">letter</A> spelling
-	ru_yo		&quot;YO&quot; <A HREF="print.html#letter">letter</A> spelling
+	ru_ru		&quot;IE&quot; <A HREF="print.html#letter">字母</A> spelling
+	ru_yo		&quot;YO&quot; <A HREF="print.html#letter">字母</A> spelling
 
 
 							*<A NAME="spell-yiddish"></A><B>spell-yiddish</B>*
@@ -930,10 +930,10 @@ specified with SFX and PFX lines in the <A HREF="#.aff">.aff</A> file, 见 |<A H
 affix file |<A HREF="#spell-FLAG">spell-FLAG</A>|.
 
 When the <A HREF="motion.html#word">单词</A> only has lower-case letters <A HREF="motion.html#it">它</A> will also match with the <A HREF="motion.html#word">单词</A>
-starting with an upper-case <A HREF="print.html#letter">letter</A>.
+starting with an upper-case <A HREF="print.html#letter">字母</A>.
 
-When the <A HREF="motion.html#word">单词</A> includes an upper-case <A HREF="print.html#letter">letter</A>, this means the upper-case <A HREF="print.html#letter">letter</A>
-is required at this position.  The same <A HREF="motion.html#word">单词</A> with a lower-case <A HREF="print.html#letter">letter</A> at this
+When the <A HREF="motion.html#word">单词</A> includes an upper-case <A HREF="print.html#letter">字母</A>, this means the upper-case <A HREF="print.html#letter">字母</A>
+is required at this position.  The same <A HREF="motion.html#word">单词</A> with a lower-case <A HREF="print.html#letter">字母</A> at this
 position will not match. When some of the other letters are upper-case <A HREF="motion.html#it">它</A> will
 not match either.
 
@@ -1140,7 +1140,7 @@ Summary:
 The first line is a header and has four fields:
 	SFX {flag} {combine} {count}
 
-{flag}		The name used for the suffix.  Mostly it's a single <A HREF="print.html#letter">letter</A>,
+{flag}		The name used for the suffix.  Mostly it's a single <A HREF="print.html#letter">字母</A>,
 		but other characters can be used, 见 |<A HREF="#spell-FLAG">spell-FLAG</A>|.
 
 {combine}	Can be '<A HREF="change.html#Y">Y</A>' or '<A HREF="pattern.html#N">N</A>'.  When '<A HREF="change.html#Y">Y</A>' then the <A HREF="motion.html#word">单词</A> plus suffix can
@@ -1169,7 +1169,7 @@ The basic format for the following lines is:
 
 {condition}	A simplistic <A HREF="pattern.html#pattern">pattern</A>.  Only when this matches with a basic
 		<A HREF="motion.html#word">单词</A> will the suffix be used for that <A HREF="motion.html#word">单词</A>.  This is normally
-		for using one suffix <A HREF="print.html#letter">letter</A> with different {add} and {strip}
+		for using one suffix <A HREF="print.html#letter">字母</A> with different {add} and {strip}
 		fields for words with different endings.
 		When {condition} is a . (dot) there is no condition.
 		The <A HREF="pattern.html#pattern">pattern</A> may contain:
@@ -1285,7 +1285,7 @@ Only prefixes without a chop <A HREF="options\.html#options">字符串</A> and w
 Prefixes with a chop <A HREF="options\.html#options">字符串</A> or with flags will still be included in the <A HREF="motion.html#word">单词</A>
 <A HREF="eval.html#list">列表</A>.  An exception if the chop <A HREF="options\.html#options">字符串</A> is one character and equal to the last
 character of the added <A HREF="options\.html#options">字符串</A>, but in lower <A HREF="change.html#case">case</A>.  Thus when the chop <A HREF="options\.html#options">字符串</A>
-is used to allow the following <A HREF="motion.html#word">单词</A> to start with an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A>.
+is used to allow the following <A HREF="motion.html#word">单词</A> to start with an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A>.
 
 
 
@@ -1308,7 +1308,7 @@ for keep-case words.  Example:
 <B><FONT color="#3A6F2B">	KEEPCASE = </FONT></B>
 
 This flag is not supported by <A HREF="#Myspell">Myspell</A>.  It has the meaning that <A HREF="change.html#case">case</A> matters.
-This can be used if the <A HREF="motion.html#word">单词</A> does not have the first <A HREF="print.html#letter">letter</A> in upper <A HREF="change.html#case">case</A> at
+This can be used if the <A HREF="motion.html#word">单词</A> does not have the first <A HREF="print.html#letter">字母</A> in upper <A HREF="change.html#case">case</A> at
 the start of a <A HREF="motion.html#sentence">sentence</A>.  Example:
 
 <B><FONT color="#3A6F2B">    word list	    matches		    does not match </FONT></B>
@@ -1639,7 +1639,7 @@ You can include a space by using an underscore:
 SIMILAR CHARACTERS					*<A NAME="spell-MAP"></A><B>spell-MAP</B>* *<A NAME="E783"></A><B>E783</B>*
 
 In the affix file MAP items can be used to define letters that are very much
-alike.  This is mostly used for a <A HREF="print.html#letter">letter</A> with different accents.  This is used
+alike.  This is mostly used for a <A HREF="print.html#letter">字母</A> with different accents.  This is used
 to prefer suggestions with these letters substituted.  Example:
 
 <B><FONT color="#3A6F2B">	MAP 2 </FONT></B>
@@ -1649,8 +1649,8 @@ to prefer suggestions with these letters substituted.  Example:
 The first line specifies the number of MAP lines following.  Vim ignores the
 number, but the line must be there.
 
-Each <A HREF="print.html#letter">letter</A> must appear in only one of the MAP items.  It's a bit more
-efficient if the first <A HREF="print.html#letter">letter</A> is ASCII or at least one without accents.
+Each <A HREF="print.html#letter">字母</A> must appear in only one of the MAP items.  It's a bit more
+efficient if the first <A HREF="print.html#letter">字母</A> is ASCII or at least one without accents.
 
 
 
@@ -1759,7 +1759,7 @@ CHECKCOMPOUNDTRIPLE  (Hunspell)			*<A NAME="spell-CHECKCOMPOUNDTRIPLE"></A><B>sp
 
 
 CHECKSHARPS  (Hunspell))			*<A NAME="spell-CHECKSHARPS"></A><B>spell-CHECKSHARPS</B>*
-		SS <A HREF="print.html#letter">letter</A> pair in uppercased (German) words may be upper <A HREF="change.html#case">case</A>
+		SS <A HREF="print.html#letter">字母</A> pair in uppercased (German) words may be upper <A HREF="change.html#case">case</A>
 		sharp <A HREF="change.html#s">s</A> (ß). Not supported.
 
 
@@ -1872,7 +1872,7 @@ checking engine in Vim, for various reasons:
   fly (while redrawing), just like <A HREF="syntax\.html#syntax">语法</A> highlighting.  But the mechanisms
   used by other code are much slower.  <A HREF="#Myspell">Myspell</A> uses a hashtable, for example.
   The affix compression that most <A HREF="#spell">spell</A> checkers use makes <A HREF="motion.html#it">它</A> slower too.
-- For using an external program like aspell a communication mechanism would
+- For 使用扩展程序 like aspell a communication mechanism would
   have to be setup.  That's complicated to <A HREF="diff.html#do">do</A> in a portable way (Unix-only
   would be relatively simple, but that's not good enough).  And performance
   will become a problem (lots of process switching involved).

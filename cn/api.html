@@ -828,7 +828,7 @@ nvim_create_user_command({name}, {command}, {*opts})
                 Create a new user command |<A HREF="map.html#user-commands">user-commands</A>|
 
                 {name} is the name of the new command. The name must begin
-                with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>.
+                with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>.
 
                 {command} is the replacement text or <A HREF="lua.html#Lua">Lua</A> function to execute.
 
@@ -840,7 +840,7 @@ nvim_create_user_command({name}, {command}, {*opts})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {name}     Name of the new user command. Must begin with
-                               an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>.
+                               an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>.
                     {command}  Replacement command to execute when this user
                                command is executed. When called from <A HREF="lua.html#Lua">Lua</A>, the
                                command can also be a <A HREF="lua.html#Lua">Lua</A> function. The
@@ -860,7 +860,7 @@ nvim_create_user_command({name}, {command}, {*opts})
                                • range: (number) The number of items in the
                                  command range: 0, 1, or 2 |<A HREF="map.html#&lt;range&gt;">&lt;range&gt;</A>|
                                • count: (number) Any count supplied |<A HREF="map.html#&lt;count&gt;">&lt;count&gt;</A>|
-                               • reg: (string) The optional <A HREF="intro.html#register">register</A>, if
+                               • reg: (string) The optional <A HREF="intro.html#register">寄存器</A>, if
                                  specified |<A HREF="map.html#&lt;reg&gt;">&lt;reg&gt;</A>|
                                • mods: (string) Command modifiers, if any
                                  |<A HREF="map.html#&lt;mods&gt;">&lt;mods&gt;</A>|
@@ -2066,7 +2066,7 @@ nvim_parse_cmd({str}, {opts})                               *<A NAME="nvim_parse
                       command. -1 if command cannot take a <A HREF="intro.html#count">count</A>.
                     • reg: (number) The optional command |<A HREF="map.html#&lt;register&gt;">&lt;register&gt;</A>|, if
                       specified. Empty <A HREF="options\.html#options">字符串</A> if not specified or if command
-                      cannot take a <A HREF="intro.html#register">register</A>.
+                      cannot take a <A HREF="intro.html#register">寄存器</A>.
                     • bang: (boolean) Whether command contains a |<A HREF="map.html#&lt;bang&gt;">&lt;bang&gt;</A>| (!)
                       modifier.
                     • args: (array) Command arguments.
@@ -2187,7 +2187,7 @@ nvim_parse_expression({expr}, {flags}, {highlight})
                       • &quot;ident&quot;: identifier (without scope, if any), present
                         for &quot;Option&quot;, &quot;PlainIdentifier&quot;, &quot;PlainKey&quot; and
                         &quot;Environment&quot; nodes.
-                      • &quot;name&quot;: <A HREF="eval.html#Integer">Integer</A>, <A HREF="intro.html#register">register</A> name (one character) or -1.
+                      • &quot;name&quot;: <A HREF="eval.html#Integer">Integer</A>, <A HREF="intro.html#register">寄存器</A> name (one character) or -1.
                         Only present for &quot;Register&quot; nodes.
                       • &quot;cmp_type&quot;: <A HREF="options\.html#options">字符串</A>, comparison type, one of the value
                         names from ExprComparisonType, stringified without
@@ -3727,7 +3727,7 @@ nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_aut
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    <A HREF="autocmd.html#{event}">{event}</A>  (string|array) The event or <A HREF="autocmd.html#events">events</A> to <A HREF="intro.html#register">register</A>
+                    <A HREF="autocmd.html#{event}">{event}</A>  (string|array) The event or <A HREF="autocmd.html#events">events</A> to <A HREF="intro.html#register">寄存器</A>
                              this <A HREF="autocmd\.html#autocommand">自动命令</A>
                     {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options\.html#options">选项</A>:
                              • group (string|integer) optional: the

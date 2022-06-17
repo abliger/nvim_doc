@@ -94,7 +94,7 @@ For <A HREF="insert.html#inserting">inserting</A> text 见 |<A HREF="insert.html
 
 [&quot;x]&lt;Del&gt;	or					*<A NAME="&lt;Del&gt;"></A><B>&lt;Del&gt;</B>* *<A NAME="x"></A><B>x</B>* *<A NAME="dl"></A><B>dl</B>*
 [&quot;x]x			Delete <A HREF="intro.html#[count]">[count]</A> characters under and after the cursor
-			[into <A HREF="intro.html#register">register</A> x] (not |<A HREF="motion.html#linewise">linewise</A>|).  Does the same <A HREF="motion.html#as">as</A>
+			[into <A HREF="intro.html#register">寄存器</A> x] (not |<A HREF="motion.html#linewise">linewise</A>|).  Does the same <A HREF="motion.html#as">as</A>
 			&quot;<A HREF="#dl">dl</A>&quot;.
 			The <A HREF="#&lt;Del&gt;">&lt;Del&gt;</A> key does not take a <A HREF="intro.html#[count]">[count]</A>.  Instead, <A HREF="motion.html#it">它</A>
 			deletes the last character of the <A HREF="intro.html#count">count</A>.
@@ -104,39 +104,39 @@ For <A HREF="insert.html#inserting">inserting</A> text 见 |<A HREF="insert.html
 
 							*<A NAME="X"></A><B>X</B>* *<A NAME="dh"></A><B>dh</B>*
 [&quot;x]X			Delete <A HREF="intro.html#[count]">[count]</A> characters before the cursor [into
-			<A HREF="intro.html#register">register</A> x] (not |<A HREF="motion.html#linewise">linewise</A>|).  Does the same <A HREF="motion.html#as">as</A> &quot;<A HREF="#dh">dh</A>&quot;.
+			<A HREF="intro.html#register">寄存器</A> x] (not |<A HREF="motion.html#linewise">linewise</A>|).  Does the same <A HREF="motion.html#as">as</A> &quot;<A HREF="#dh">dh</A>&quot;.
 			Also 见 |<A HREF="options.html#'whichwrap'">'whichwrap'</A>|.
 
 
 							*<A NAME="d"></A><B>d</B>*
-[&quot;x]d{motion}		Delete text that <A HREF="intro.html#{motion}">{motion}</A> moves over [into <A HREF="intro.html#register">register</A>
+[&quot;x]d{motion}		Delete text that <A HREF="intro.html#{motion}">{motion}</A> moves over [into <A HREF="intro.html#register">寄存器</A>
 			x].  See below for exceptions.
 
 
 							*<A NAME="dd"></A><B>dd</B>*
-[&quot;x]dd			Delete <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">register</A> x] |<A HREF="motion.html#linewise">linewise</A>|.
+[&quot;x]dd			Delete <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">寄存器</A> x] |<A HREF="motion.html#linewise">linewise</A>|.
 
 
 							*<A NAME="D"></A><B>D</B>*
 [&quot;x]D			Delete the characters under the cursor until the end
-			of the line and [count]-1 more lines [into <A HREF="intro.html#register">register</A>
+			of the line and [count]-1 more lines [into <A HREF="intro.html#register">寄存器</A>
 			x]; synonym for &quot;d$&quot;.
 			(not |<A HREF="motion.html#linewise">linewise</A>|)
 
 
 {Visual}[&quot;x]x	or					*<A NAME="v_x"></A><B>v_x</B>* *<A NAME="v_d"></A><B>v_d</B>* *<A NAME="v_&lt;Del&gt;"></A><B>v_&lt;Del&gt;</B>*
 {Visual}[&quot;x]d   or
-{Visual}[&quot;x]&lt;Del&gt;	Delete the highlighted text [into <A HREF="intro.html#register">register</A> x] (for
+{Visual}[&quot;x]&lt;Del&gt;	Delete the highlighted text [into <A HREF="intro.html#register">寄存器</A> x] (for
 			<A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|).
 
 
 {Visual}[&quot;x]CTRL-H   or					*<A NAME="v_CTRL-H"></A><B>v_CTRL-H</B>* *<A NAME="v_&lt;BS&gt;"></A><B>v_&lt;BS&gt;</B>*
 {Visual}[&quot;x]&lt;BS&gt;	When in <A HREF="visual.html#Select">选择</A>模式: Delete the highlighted text [into
-			<A HREF="intro.html#register">register</A> x].
+			<A HREF="intro.html#register">寄存器</A> x].
 
 
 {Visual}[&quot;x]X	or					*<A NAME="v_X"></A><B>v_X</B>* *<A NAME="v_D"></A><B>v_D</B>* *<A NAME="v_b_D"></A><B>v_b_D</B>*
-{Visual}[&quot;x]D		Delete the highlighted lines [into <A HREF="intro.html#register">register</A> x] (for
+{Visual}[&quot;x]D		Delete the highlighted lines [into <A HREF="intro.html#register">寄存器</A> x] (for
 			<A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|).  In Visual block mode,
 			&quot;<A HREF="#D">D</A>&quot; deletes the highlighted text plus all text until
 			the end of the line.
@@ -144,7 +144,7 @@ For <A HREF="insert.html#inserting">inserting</A> text 见 |<A HREF="insert.html
 
 					*<A NAME=":d"></A><B>:d</B>* *<A NAME=":de"></A><B>:de</B>* *<A NAME=":del"></A><B>:del</B>* *<A NAME=":delete"></A><B>:delete</B>* *<A NAME=":dl"></A><B>:dl</B>* *<A NAME=":dp"></A><B>:dp</B>*
 :[range]d[elete] [x]	Delete <A HREF="cmdline.html#[range]">[range]</A> lines (default: current line) [into
-			<A HREF="intro.html#register">register</A> x].
+			<A HREF="intro.html#register">寄存器</A> x].
 			Note these weird <A HREF="map.html#abbreviations">abbreviations</A>:
 			   <A HREF="#:dl">:dl</A>		delete and <A HREF="eval.html#list">列表</A>
 			   :dell	idem
@@ -161,7 +161,7 @@ For <A HREF="insert.html#inserting">inserting</A> text 见 |<A HREF="insert.html
 :[range]d[elete] [x] {count}
 			Delete {count} lines, starting with <A HREF="cmdline.html#[range]">[range]</A>
 			(default: current line |<A HREF="cmdline.html#cmdline-ranges">cmdline-ranges</A>|) [into
-			<A HREF="intro.html#register">register</A> x].
+			<A HREF="intro.html#register">寄存器</A> x].
 
 These commands delete text.  You can repeat them with the `.` command
 (except `:d`) and <A HREF="undo.html#undo">undo</A> them.  Use <A HREF="visual\.html#Visual">可视</A>模式 to delete blocks of text.  See
@@ -255,7 +255,7 @@ of the resulting line.
 
 
 							*<A NAME="c"></A><B>c</B>*
-[&quot;x]c{motion}		Delete <A HREF="intro.html#{motion}">{motion}</A> text [into <A HREF="intro.html#register">register</A> x] and start
+[&quot;x]c{motion}		Delete <A HREF="intro.html#{motion}">{motion}</A> text [into <A HREF="intro.html#register">寄存器</A> x] and start
 			insert.  When  <A HREF="options.html#'cpoptions'">'cpoptions'</A> includes the '<A HREF="motion.html#E">E</A>' flag and
 			there is no text to delete (e.g., with &quot;cTx&quot; when the
 			cursor is just after an 'x'), an error occurs and
@@ -266,30 +266,30 @@ of the resulting line.
 
 
 							*<A NAME="cc"></A><B>cc</B>*
-[&quot;x]cc			Delete <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">register</A> x] and start
+[&quot;x]cc			Delete <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">寄存器</A> x] and start
 			insert |<A HREF="motion.html#linewise">linewise</A>|.  If <A HREF="options.html#'autoindent'">'autoindent'</A> is on, preserve
 			the indent of the first line.
 
 
 							*<A NAME="C"></A><B>C</B>*
 [&quot;x]C			Delete from the cursor position to the end of the
-			line and [count]-1 more lines [into <A HREF="intro.html#register">register</A> x], and
+			line and [count]-1 more lines [into <A HREF="intro.html#register">寄存器</A> x], and
 			start insert.  Synonym for c$ (not |<A HREF="motion.html#linewise">linewise</A>|).
 
 
 							*<A NAME="s"></A><B>s</B>*
-[&quot;x]s			Delete <A HREF="intro.html#[count]">[count]</A> characters [into <A HREF="intro.html#register">register</A> x] and start
+[&quot;x]s			Delete <A HREF="intro.html#[count]">[count]</A> characters [into <A HREF="intro.html#register">寄存器</A> x] and start
 			insert (s stands for Substitute).  Synonym for &quot;cl&quot;
 			(not |<A HREF="motion.html#linewise">linewise</A>|).
 
 
 							*<A NAME="S"></A><B>S</B>*
-[&quot;x]S			Delete <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">register</A> x] and start
+[&quot;x]S			Delete <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">寄存器</A> x] and start
 			insert.  Synonym for &quot;<A HREF="#cc">cc</A>&quot; |<A HREF="motion.html#linewise">linewise</A>|.
 
 
 {Visual}[&quot;x]c	or					*<A NAME="v_c"></A><B>v_c</B>* *<A NAME="v_s"></A><B>v_s</B>*
-{Visual}[&quot;x]s		Delete the highlighted text [into <A HREF="intro.html#register">register</A> x] and
+{Visual}[&quot;x]s		Delete the highlighted text [into <A HREF="intro.html#register">寄存器</A> x] and
 			start insert (for <A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|).
 
 
@@ -298,12 +298,12 @@ of the resulting line.
 
 
 							*<A NAME="v_C"></A><B>v_C</B>*
-{Visual}[&quot;x]C		Delete the highlighted lines [into <A HREF="intro.html#register">register</A> x] and
-			start insert.  In <A HREF="visual.html#Visual">Visual</A> block mode <A HREF="motion.html#it">它</A> works
+{Visual}[&quot;x]C		Delete the highlighted lines [into <A HREF="intro.html#register">寄存器</A> x] and
+			start insert.  In <A HREF="visual.html#Visual">可视</A> 块模式 <A HREF="motion.html#it">它</A> works
 			differently |<A HREF="visual.html#v_b_C">v_b_C</A>|.
 
 							*<A NAME="v_S"></A><B>v_S</B>*
-{Visual}[&quot;x]S		Delete the highlighted lines [into <A HREF="intro.html#register">register</A> x] and
+{Visual}[&quot;x]S		Delete the highlighted lines [into <A HREF="intro.html#register">寄存器</A> x] and
 			start insert (for <A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|).
 
 
@@ -463,7 +463,7 @@ g?{motion}		Rot13 encode <A HREF="intro.html#{motion}">{motion}</A> text.
 <A HREF="#g?g?">g?g?</A>							*<A NAME="g?g?"></A><B>g?g?</B>* *<A NAME="g??"></A><B>g??</B>*
 <A HREF="#g??">g??</A>			Rot13 encode current line.
 
-To turn one line into title caps, make every first <A HREF="print.html#letter">letter</A> of a <A HREF="motion.html#word">单词</A>
+To turn one line into title caps, make every first <A HREF="print.html#letter">字母</A> of a <A HREF="motion.html#word">单词</A>
 <A HREF="#uppercase">uppercase</A>:
 <B>	:s/\v&lt;(.)(\w*)/\u\1\L\2/g</B>
 
@@ -528,9 +528,9 @@ This depends on the <A HREF="options.html#'nrformats'">'nrformats'</A> option:
   If the cursor is on a number, the commands apply to that number; otherwise
   Vim uses the number to the right of the cursor.
 - When <A HREF="options.html#'nrformats'">'nrformats'</A> includes &quot;hex&quot;, Vim assumes numbers starting with '<A HREF="eval.html#0x">0x</A>' or
-  '0X' are hexadecimal.  The <A HREF="#case">case</A> of the rightmost <A HREF="print.html#letter">letter</A> in the number
+  '0X' are hexadecimal.  The <A HREF="#case">case</A> of the rightmost <A HREF="print.html#letter">字母</A> in the number
   determines the <A HREF="#case">case</A> of the resulting hexadecimal number.  If there is no
-  <A HREF="print.html#letter">letter</A> in the current number, Vim uses the previously detected <A HREF="#case">case</A>.
+  <A HREF="print.html#letter">字母</A> in the current number, Vim uses the previously detected <A HREF="#case">case</A>.
 - When <A HREF="options.html#'nrformats'">'nrformats'</A> includes &quot;alpha&quot;, Vim will change the alphabetic character
   under or after the cursor.  This is useful to make lists with an alphabetic
   index.
@@ -554,15 +554,15 @@ Note similarly, when <A HREF="options.html#'nrformats'">'nrformats'</A> includes
 '<A HREF="eval.html#0x">0x</A>' or '0X' can be interpreted <A HREF="motion.html#as">as</A> hexadecimal rather than binary since '0b'
 are valid hexadecimal digits.
 
-The <A HREF="#CTRL-A">CTRL-A</A> command is very useful in a <A HREF="map.html#macro">macro</A>.  Example: Use the following
+The <A HREF="#CTRL-A">CTRL-A</A> command is very useful in a <A HREF="map.html#macro">宏指令</A>.  Example: Use the following
 steps to make a numbered <A HREF="eval.html#list">列表</A>.
 
 1. Create the first <A HREF="eval.html#list">列表</A> entry, make sure <A HREF="motion.html#it">它</A> starts with a number.
-2. qa	     - start <A HREF="repeat.html#recording">recording</A> into <A HREF="intro.html#register">register</A> '<A HREF="insert.html#a">a</A>'
+2. qa	     - start <A HREF="repeat.html#recording">记录</A> into <A HREF="intro.html#register">寄存器</A> '<A HREF="insert.html#a">a</A>'
 3. <A HREF="#Y">Y</A>	     - <A HREF="#yank">yank</A> the entry
 4. <A HREF="#p">p</A>	     - put a copy of the entry below the first one
 5. <A HREF="#CTRL-A">CTRL-A</A>    - increment the number
-6. <A HREF="repeat.html#q">q</A>	     - stop <A HREF="repeat.html#recording">recording</A>
+6. <A HREF="repeat.html#q">q</A>	     - stop <A HREF="repeat.html#recording">记录</A>
 7. &lt;count&gt;@a - repeat the <A HREF="#yank">yank</A>, put and increment <A HREF="map.html#&lt;count&gt;">&lt;count&gt;</A> times
 
 
@@ -770,7 +770,7 @@ Directory for temporary files is created in the first possible directory of:
 			The space between `:substitute` and the '<A HREF="#c">c</A>', '<A HREF="vimindex.html#g">g</A>',
 			'<A HREF="insert.html#i">i</A>', '<A HREF="insert.html#I">I</A>' and '<A HREF="#r">r</A>' flags isn't required, but in scripts
 			it's a good idea to keep <A HREF="motion.html#it">它</A> to avoid confusion.
-			Also see the two and three <A HREF="print.html#letter">letter</A> commands to repeat
+			Also see the two and three <A HREF="print.html#letter">字母</A> commands to repeat
 			:substitute below |<A HREF="#:substitute-repeat">:substitute-repeat</A>|.
 
 
@@ -790,7 +790,7 @@ Directory for temporary files is created in the first possible directory of:
 								*<A NAME="g&amp;"></A><B>g&amp;</B>*
 <A HREF="#g&amp;">g&amp;</A>			Synonym for `:&#37;s//~/&amp;` (repeat last substitute with
 			last search <A HREF="pattern.html#pattern">pattern</A> on all lines with the same flags).
-			For example, when you first <A HREF="diff.html#do">do</A> a substitution with
+			For example, when you first <A HREF="diff.html#do">do</A> a 替换 with
 			`:s/pattern/repl/flags` and then `/search` for
 			something else, `g&amp;` will <A HREF="diff.html#do">do</A> `:&#37;s/search/repl/flags`.
 			Mnemonic: global substitute.
@@ -815,7 +815,7 @@ The flags that you can use for the substitute commands:
 <B>		:s/this/that/&amp;</B>
  	Note that `:s` and `:&amp;` don't keep the flags.
 
-[c]	Confirm each substitution.  Vim highlights the matching <A HREF="options\.html#options">字符串</A> (with
+[c]	Confirm each 替换.  Vim highlights the matching <A HREF="options\.html#options">字符串</A> (with
 
 	|<A HREF="syntax.html#hl-IncSearch">hl-IncSearch</A>|).  You can type:				*<A NAME=":s_c"></A><B>:s_c</B>*
 	    '<A HREF="#y">y</A>'	    to substitute this match
@@ -922,7 +922,7 @@ use another single-byte character.  This is useful if you want to include a
 You can use most characters, but not an alphanumeric character, '\', &#39;&#34;'' or
 '&#124;'.
 
-For the definition of a pattern, 见 |<A HREF="pattern.html#pattern">pattern</A>|.  In <A HREF="visual.html#Visual">Visual</A> block mode, use
+For the definition of a pattern, 见 |<A HREF="pattern.html#pattern">pattern</A>|.  In <A HREF="visual.html#Visual">可视</A> 块模式, use
 |<A HREF="pattern.html#/\&#37;V">/\&#37;V</A>| in the <A HREF="pattern.html#pattern">pattern</A> to have the substitute work in the block only.
 Otherwise <A HREF="motion.html#it">它</A> works on whole lines anyway.
 
@@ -1004,7 +1004,7 @@ Examples:
 <B>  :s/\w\+/\u\0/g		 modifies "bla bla"  to "Bla Bla"</B>
 <B>  :s/\w\+/\L\u\0/g		 modifies "BLA bla"  to "Bla Bla"</B>
 
-Note: &quot;\L\u&quot; can be used to capitalize the first <A HREF="print.html#letter">letter</A> of a <A HREF="motion.html#word">单词</A>.  This is
+Note: &quot;\L\u&quot; can be used to capitalize the first <A HREF="print.html#letter">字母</A> of a <A HREF="motion.html#word">单词</A>.  This is
 not compatible with <A HREF="intro.html#Vi">Vi</A> and older versions of Vim, where the &quot;\u&quot; would cancel
 out the &quot;\L&quot;. Same for &quot;\U\l&quot;.
 
@@ -1043,7 +1043,7 @@ either the first or second <A HREF="pattern.html#pattern">pattern</A> in parenth
 <B><FONT color="#3A6F2B">2-letter and 3-letter :substitute commands </FONT></B>
 
 These commands repeat the previous `:substitute` command with the given flags.
-The first <A HREF="print.html#letter">letter</A> is always &quot;<A HREF="#s">s</A>&quot;, followed by one or two of the possible flag
+The first <A HREF="print.html#letter">字母</A> is always &quot;<A HREF="#s">s</A>&quot;, followed by one or two of the possible flag
 characters.例如 `:sce` works like `:s///ce`.  The table lists the
 possible combinations, not all flags are possible, because the command is
 short for another command.
@@ -1162,7 +1162,7 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
 
 							*<A NAME=":reg"></A><B>:reg</B>* *<A NAME=":registers"></A><B>:registers</B>*
 :reg[isters]		Display the type and contents of all numbered and
-			named <A HREF="#registers">registers</A>.  If a <A HREF="intro.html#register">register</A> is written to for
+			named <A HREF="#registers">registers</A>.  If a <A HREF="intro.html#register">寄存器</A> is written to for
 			|<A HREF="various.html#:redir">:redir</A>| <A HREF="motion.html#it">它</A> will not be listed.
 			Type can be one of:
 			&quot;c&quot;	for |<A HREF="motion.html#characterwise">characterwise</A>| text
@@ -1182,18 +1182,18 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
 
 
 							*<A NAME="y"></A><B>y</B>* *<A NAME="yank"></A><B>yank</B>*
-[&quot;x]y{motion}		Yank <A HREF="intro.html#{motion}">{motion}</A> text [into <A HREF="intro.html#register">register</A> x].  When no
+[&quot;x]y{motion}		Yank <A HREF="intro.html#{motion}">{motion}</A> text [into <A HREF="intro.html#register">寄存器</A> x].  When no
 			characters are to be yanked (e.g., &quot;y0&quot; in column 1),
 			this is an error when <A HREF="options.html#'cpoptions'">'cpoptions'</A> includes the '<A HREF="motion.html#E">E</A>'
 			flag.
 
 
 							*<A NAME="yy"></A><B>yy</B>*
-[&quot;x]yy			Yank <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">register</A> x] |<A HREF="motion.html#linewise">linewise</A>|.
+[&quot;x]yy			Yank <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">寄存器</A> x] |<A HREF="motion.html#linewise">linewise</A>|.
 
 
 							*<A NAME="Y"></A><B>Y</B>*
-[&quot;x]Y			<A HREF="#yank">yank</A> <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">register</A> x] (synonym for
+[&quot;x]Y			<A HREF="#yank">yank</A> <A HREF="intro.html#[count]">[count]</A> lines [into <A HREF="intro.html#register">寄存器</A> x] (synonym for
 			<A HREF="#yy">yy</A>, |<A HREF="motion.html#linewise">linewise</A>|).
 
 							*<A NAME="Y-default"></A><B>Y-default</B>*
@@ -1201,49 +1201,49 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
 
 
 							*<A NAME="zy"></A><B>zy</B>*
-[&quot;x]zy{motion}		Yank <A HREF="intro.html#{motion}">{motion}</A> text [into <A HREF="intro.html#register">register</A> x].  Only differs
+[&quot;x]zy{motion}		Yank <A HREF="intro.html#{motion}">{motion}</A> text [into <A HREF="intro.html#register">寄存器</A> x].  Only differs
 			from `y` when selecting a block of text, 见 |<A HREF="#v_zy">v_zy</A>|.
 
 
 							*<A NAME="v_y"></A><B>v_y</B>*
-{Visual}[&quot;x]y		Yank the highlighted text [into <A HREF="intro.html#register">register</A> x] (for
+{Visual}[&quot;x]y		Yank the highlighted text [into <A HREF="intro.html#register">寄存器</A> x] (for
 			<A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|).
 
 
 							*<A NAME="v_Y"></A><B>v_Y</B>*
-{Visual}[&quot;x]Y		Yank the highlighted lines [into <A HREF="intro.html#register">register</A> x] (for
+{Visual}[&quot;x]Y		Yank the highlighted lines [into <A HREF="intro.html#register">寄存器</A> x] (for
 			<A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|).
 
 
 							*<A NAME="v_zy"></A><B>v_zy</B>*
-{Visual}[&quot;x]zy		Yank the highlighted text [into <A HREF="intro.html#register">register</A> x].  Trailing
+{Visual}[&quot;x]zy		Yank the highlighted text [into <A HREF="intro.html#register">寄存器</A> x].  Trailing
 			<A HREF="pattern.html#whitespace">whitespace</A> at the end of each line of a selected block
 			won't be yanked.  Especially useful in combination
 			with `zp`.  (for <A HREF="intro.html#{Visual}">{Visual}</A> 见 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|)
 
 
 							*<A NAME=":y"></A><B>:y</B>* *<A NAME=":yank"></A><B>:yank</B>* *<A NAME="E850"></A><B>E850</B>*
-:[range]y[ank] [x]	Yank <A HREF="cmdline.html#[range]">[range]</A> lines [into <A HREF="intro.html#register">register</A> x].
+:[range]y[ank] [x]	Yank <A HREF="cmdline.html#[range]">[range]</A> lines [into <A HREF="intro.html#register">寄存器</A> x].
 
 :[range]y[ank] [x] {count}
 			Yank {count} lines, starting with last line number
 			in <A HREF="cmdline.html#[range]">[range]</A> (default: current line |<A HREF="cmdline.html#cmdline-ranges">cmdline-ranges</A>|),
-			[into <A HREF="intro.html#register">register</A> x].
+			[into <A HREF="intro.html#register">寄存器</A> x].
 
 
 						*<A NAME="p"></A><B>p</B>* *<A NAME="put"></A><B>put</B>* *<A NAME="E353"></A><B>E353</B>* *<A NAME="E1240"></A><B>E1240</B>*
-[&quot;x]p			Put the text [from <A HREF="intro.html#register">register</A> x] after the cursor
+[&quot;x]p			Put the text [from <A HREF="intro.html#register">寄存器</A> x] after the cursor
 			<A HREF="intro.html#[count]">[count]</A> times.
 
 
 							*<A NAME="P"></A><B>P</B>*
-[&quot;x]P			Put the text [from <A HREF="intro.html#register">register</A> x] before the cursor
+[&quot;x]P			Put the text [from <A HREF="intro.html#register">寄存器</A> x] before the cursor
 			<A HREF="intro.html#[count]">[count]</A> times.
 
 
 							*<A NAME="&lt;MiddleMouse&gt;"></A><B>&lt;MiddleMouse&gt;</B>*
-[&quot;x]&lt;MiddleMouse&gt;	Put the text from a <A HREF="intro.html#register">register</A> before the cursor <A HREF="intro.html#[count]">[count]</A>
-			times.  Uses the &quot;* <A HREF="intro.html#register">register</A>, unless another is
+[&quot;x]&lt;MiddleMouse&gt;	Put the text from a <A HREF="intro.html#register">寄存器</A> before the cursor <A HREF="intro.html#[count]">[count]</A>
+			times.  Uses the &quot;* <A HREF="intro.html#register">寄存器</A>, unless another is
 			specified.
 			Leaves the cursor at the end of the new text.
 			使用鼠标 only works when <A HREF="options.html#'mouse'">'mouse'</A> contains '<A HREF="pattern.html#n">n</A>'
@@ -1268,17 +1268,17 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
 
 
 							*<A NAME=":pu"></A><B>:pu</B>* *<A NAME=":put"></A><B>:put</B>*
-:[line]pu[t] [x]	Put the text [from <A HREF="intro.html#register">register</A> x] after [line] (default
+:[line]pu[t] [x]	Put the text [from <A HREF="intro.html#register">寄存器</A> x] after [line] (default
 			current line).  This always works |<A HREF="motion.html#linewise">linewise</A>|, thus
 			this command can be used to put a yanked block <A HREF="motion.html#as">as</A> new
 			lines.
-			If no <A HREF="intro.html#register">register</A> is specified, <A HREF="motion.html#it">它</A> depends on the <A HREF="options.html#'cb'">'cb'</A>
+			If no <A HREF="intro.html#register">寄存器</A> is specified, <A HREF="motion.html#it">它</A> depends on the <A HREF="options.html#'cb'">'cb'</A>
 			option: If <A HREF="options.html#'cb'">'cb'</A> contains &quot;unnamedplus&quot;, <A HREF="provider.html#paste">paste</A> from the
-			+ <A HREF="intro.html#register">register</A> |<A HREF="provider.html#quoteplus">quoteplus</A>|.  Otherwise, if <A HREF="options.html#'cb'">'cb'</A> contains
-			&quot;unnamed&quot;, <A HREF="provider.html#paste">paste</A> from the &#42; <A HREF="intro.html#register">register</A> |<A HREF="provider.html#quotestar">quotestar</A>|.
-			Otherwise, <A HREF="provider.html#paste">paste</A> from the unnamed <A HREF="intro.html#register">register</A>
+			+ <A HREF="intro.html#register">寄存器</A> |<A HREF="provider.html#quoteplus">quoteplus</A>|.  Otherwise, if <A HREF="options.html#'cb'">'cb'</A> contains
+			&quot;unnamed&quot;, <A HREF="provider.html#paste">paste</A> from the &#42; <A HREF="intro.html#register">寄存器</A> |<A HREF="provider.html#quotestar">quotestar</A>|.
+			Otherwise, <A HREF="provider.html#paste">paste</A> from the unnamed <A HREF="intro.html#register">寄存器</A>
 			|<A HREF="#quote_quote">quote_quote</A>|.
-			The <A HREF="intro.html#register">register</A> can also be '<A HREF="#=">=</A>' followed by an optional
+			The <A HREF="intro.html#register">寄存器</A> can also be '<A HREF="#=">=</A>' followed by an optional
 			<A HREF="eval.html#expression">expression</A>.  The <A HREF="eval.html#expression">expression</A> continues until the end of
 			the command.  You need to <A HREF="intro.html#escape">escape</A> the '&#124;' and &#39;&#34;''
 			characters to prevent them from terminating the
@@ -1287,7 +1287,7 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
  			If there is no <A HREF="eval.html#expression">expression</A> after '<A HREF="#=">=</A>', Vim uses the
 			previous <A HREF="eval.html#expression">expression</A>.  You can see <A HREF="motion.html#it">它</A> with &quot;:dis =&quot;.
 
-:[line]pu[t]! [x]	Put the text [from <A HREF="intro.html#register">register</A> x] before [line] (default
+:[line]pu[t]! [x]	Put the text [from <A HREF="intro.html#register">寄存器</A> x] before [line] (default
 			current line).
 
 
@@ -1314,8 +1314,8 @@ inside of strings can change!  Also see <A HREF="options.html#'softtabstop'">'so
 			combination with |<A HREF="#v_zy">v_zy</A>|.
 
 You can use these commands to copy text from one place to another.  Do this
-by first getting the text into a <A HREF="intro.html#register">register</A> with a <A HREF="#yank">yank</A>, delete or change
-command然后<A HREF="insert.html#inserting">inserting</A> the <A HREF="intro.html#register">register</A> contents with a put command.  You can
+by first getting the text into a <A HREF="intro.html#register">寄存器</A> with a <A HREF="#yank">yank</A>, delete or change
+command然后<A HREF="insert.html#inserting">inserting</A> the <A HREF="intro.html#register">寄存器</A> contents with a put command.  You can
 also use these commands to move text from one file to another, because Vim
 preserves all <A HREF="#registers">registers</A> when <A HREF="#changing">changing</A> <A HREF="windows.html#buffers">buffers</A> (the <A HREF="editing.html#CTRL-^">CTRL-^</A> command is a quick
 way to toggle between two files).
@@ -1323,7 +1323,7 @@ way to toggle between two files).
 
 				*<A NAME="linewise-register"></A><B>linewise-register</B>* *<A NAME="charwise-register"></A><B>charwise-register</B>*
 You can repeat the put commands with &quot;<A HREF="repeat.html#.">.</A>&quot; (except for <A HREF="#:put">:put</A>) and <A HREF="undo.html#undo">undo</A> them.  If
-the command that was used to get the text into the <A HREF="intro.html#register">register</A> was |<A HREF="motion.html#linewise">linewise</A>|,
+the command that was used to get the text into the <A HREF="intro.html#register">寄存器</A> was |<A HREF="motion.html#linewise">linewise</A>|,
 Vim inserts the text below (&quot;p&quot;) or above (&quot;P&quot;) the line where the cursor is.
 Otherwise Vim inserts the text after (&quot;p&quot;) or before (&quot;P&quot;) the cursor.  With
 the &quot;<A HREF="#:put">:put</A>&quot;命令, Vim always inserts the text in the next line.  You can
@@ -1337,30 +1337,30 @@ the cursor to the start.
 
 						*<A NAME="put-Visual-mode"></A><B>put-Visual-mode</B>* *<A NAME="v_p"></A><B>v_p</B>* *<A NAME="v_P"></A><B>v_P</B>*
 When using a put command like |<A HREF="#p">p</A>| or |<A HREF="#P">P</A>| in <A HREF="visual\.html#Visual">可视</A>模式, Vim will try to
-replace the selected text with the contents of the <A HREF="intro.html#register">register</A>.  Whether this
+replace the selected text with the contents of the <A HREF="intro.html#register">寄存器</A>.  Whether this
 works well depends on the type of selection and the type of the text in the
-<A HREF="intro.html#register">register</A>.  With blockwise selection <A HREF="motion.html#it">它</A> also depends on the size of the block
+<A HREF="intro.html#register">寄存器</A>.  With blockwise selection <A HREF="motion.html#it">它</A> also depends on the size of the block
 and whether the corners are on an existing character.  (Implementation detail:
-<A HREF="motion.html#it">它</A> actually works by first putting the <A HREF="intro.html#register">register</A> after the selection and then
+<A HREF="motion.html#it">它</A> actually works by first putting the <A HREF="intro.html#register">寄存器</A> after the selection and then
 <A HREF="#deleting">deleting</A> the selection.)
-With |<A HREF="#p">p</A>| the previously selected text is put in the unnamed <A HREF="intro.html#register">register</A> (and
+With |<A HREF="#p">p</A>| the previously selected text is put in the unnamed <A HREF="intro.html#register">寄存器</A> (and
 possibly the selection and/or <A HREF="provider.html#clipboard">clipboard</A>).  This is useful if you want to put
 that text somewhere else.  But you cannot repeat the same change.
-With |<A HREF="#P">P</A>| the unnamed <A HREF="intro.html#register">register</A> is not changed (and neither the selection or
+With |<A HREF="#P">P</A>| the unnamed <A HREF="intro.html#register">寄存器</A> is not changed (and neither the selection or
 clipboard), you can repeat the same change. But the deleted text cannot be
-used.  If you <A HREF="diff.html#do">do</A> need <A HREF="motion.html#it">它</A> you can use |<A HREF="#p">p</A>| with another <A HREF="intro.html#register">register</A>.  E.g., <A HREF="#yank">yank</A>
+used.  If you <A HREF="diff.html#do">do</A> need <A HREF="motion.html#it">它</A> you can use |<A HREF="#p">p</A>| with another <A HREF="intro.html#register">寄存器</A>.  E.g., <A HREF="#yank">yank</A>
 the text to copy, Visually select the text to replace and use &quot;0p .  You can
-repeat this <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A> you like, and the unnamed <A HREF="intro.html#register">register</A> will be
+repeat this <A HREF="motion.html#as">as</A> many times <A HREF="motion.html#as">as</A> you like, and the unnamed <A HREF="intro.html#register">寄存器</A> will be
 changed each time.
 
 When you use a blockwise <A HREF="visual\.html#Visual">可视</A>模式 command and <A HREF="#yank">yank</A> only a single line into
-a <A HREF="intro.html#register">register</A>, a <A HREF="provider.html#paste">paste</A> on a visual selected area will <A HREF="provider.html#paste">paste</A> that single line on
+a <A HREF="intro.html#register">寄存器</A>, a <A HREF="provider.html#paste">paste</A> on a visual selected area will <A HREF="provider.html#paste">paste</A> that single line on
 each of the selected lines (thus <A HREF="#replacing">replacing</A> the blockwise selected region by a
 block of the pasted line).
 
 
 							*<A NAME="blockwise-register"></A><B>blockwise-register</B>*
-If you use a blockwise <A HREF="visual\.html#Visual">可视</A>模式 command to get the text into the <A HREF="intro.html#register">register</A>,
+If you use a blockwise <A HREF="visual\.html#Visual">可视</A>模式 command to get the text into the <A HREF="intro.html#register">寄存器</A>,
 the block of text will be inserted before (&quot;P&quot;) or after (&quot;p&quot;) the cursor
 column in the current and next lines.  Vim makes the whole block of text start
 in the same column.  Thus the inserted text looks the same <A HREF="motion.html#as">as</A> when <A HREF="motion.html#it">它</A> was
@@ -1369,7 +1369,7 @@ this happen.  However, if the width of the block is not a multiple of a <A HREF=
 width and the text after the inserted block contains &lt;Tab&gt;s, that text may be
 misaligned.
 
-Use |<A HREF="#zP">zP</A>|/|<A HREF="#zp">zp</A>| to <A HREF="provider.html#paste">paste</A> a blockwise yanked <A HREF="intro.html#register">register</A> without appending trailing
+Use |<A HREF="#zP">zP</A>|/|<A HREF="#zp">zp</A>| to <A HREF="provider.html#paste">paste</A> a blockwise yanked <A HREF="intro.html#register">寄存器</A> without appending trailing
 spaces.
 
 Note that after a <A HREF="motion.html#charwise">charwise</A> <A HREF="#yank">yank</A> command, Vim leaves the cursor on the first
@@ -1384,54 +1384,54 @@ column is unmodified, thus <A HREF="motion.html#it">它</A> may not be on the fi
 
 
 There are ten types of <A HREF="#registers">registers</A>:		*<A NAME="registers"></A><B>registers</B>* *<A NAME="{register}"></A><B>{register}</B>* *<A NAME="E354"></A><B>E354</B>*
-1. The unnamed <A HREF="intro.html#register">register</A> &quot;&quot;
+1. The unnamed <A HREF="intro.html#register">寄存器</A> &quot;&quot;
 2. 10 numbered <A HREF="#registers">registers</A> &quot;<A HREF="motion.html#0">0</A> to &quot;9
-3. The small delete <A HREF="intro.html#register">register</A> &quot;<A HREF="motion.html#-">-</A>
+3. The small delete <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="motion.html#-">-</A>
 4. 26 named <A HREF="#registers">registers</A> &quot;a to &quot;<A HREF="vimindex.html#z">z</A> or &quot;A to &quot;Z
 5. Three read-only <A HREF="#registers">registers</A> &quot;<A HREF="cmdline.html#:,">:,</A> &quot;., &quot;<A HREF="motion.html#&#37;">&#37;</A>
-6. Alternate buffer <A HREF="intro.html#register">register</A> &quot;<A HREF="pattern.html##">#</A>
-7. The <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A> &quot;<A HREF="#=">=</A>
+6. Alternate buffer <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="pattern.html##">#</A>
+7. The <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="#=">=</A>
 8. The selection <A HREF="#registers">registers</A> &quot;* and &quot;<A HREF="motion.html#+">+</A>
-9. The black hole <A HREF="intro.html#register">register</A> &quot;<A HREF="motion.html#_">_</A>
-10. Last search <A HREF="pattern.html#pattern">pattern</A> <A HREF="intro.html#register">register</A> &quot;<A HREF="pattern.html#/">/</A>
+9. The black hole <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="motion.html#_">_</A>
+10. Last search <A HREF="pattern.html#pattern">pattern</A> <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="pattern.html#/">/</A>
 
 
-1. Unnamed <A HREF="intro.html#register">register</A> &quot;&quot;				*<A NAME="quote_quote"></A><B>quote_quote</B>* *<A NAME="quotequote"></A><B>quotequote</B>*
-Vim fills this <A HREF="intro.html#register">register</A> with text deleted with the &quot;<A HREF="#d">d</A>&quot;, &quot;<A HREF="#c">c</A>&quot;, &quot;<A HREF="#s">s</A>&quot;, &quot;<A HREF="#x">x</A>&quot;命令
+1. Unnamed <A HREF="intro.html#register">寄存器</A> &quot;&quot;				*<A NAME="quote_quote"></A><B>quote_quote</B>* *<A NAME="quotequote"></A><B>quotequote</B>*
+Vim fills this <A HREF="intro.html#register">寄存器</A> with text deleted with the &quot;<A HREF="#d">d</A>&quot;, &quot;<A HREF="#c">c</A>&quot;, &quot;<A HREF="#s">s</A>&quot;, &quot;<A HREF="#x">x</A>&quot;命令
 or copied with the <A HREF="#yank">yank</A> &quot;<A HREF="#y">y</A>&quot;命令, regardless of whether or not a specific
-<A HREF="intro.html#register">register</A> was used (e.g.  &quot;xdd).  This is like the unnamed <A HREF="intro.html#register">register</A> is pointing
-to the last used <A HREF="intro.html#register">register</A>.  Thus when appending using an <A HREF="#uppercase">uppercase</A> <A HREF="intro.html#register">register</A>
-name, the unnamed <A HREF="intro.html#register">register</A> contains the same text <A HREF="motion.html#as">as</A> the named <A HREF="intro.html#register">register</A>.
-An exception is the '<A HREF="motion.html#_">_</A>' <A HREF="intro.html#register">register</A>: &quot;_dd does not store the deleted text in any
-<A HREF="intro.html#register">register</A>.
-Vim uses the contents of the unnamed <A HREF="intro.html#register">register</A> for any put command (p or <A HREF="#P">P</A>)
-which does not specify a <A HREF="intro.html#register">register</A>.  Additionally you can access <A HREF="motion.html#it">它</A> with the
+<A HREF="intro.html#register">寄存器</A> was used (e.g.  &quot;xdd).  This is like the unnamed <A HREF="intro.html#register">寄存器</A> is pointing
+to the last used <A HREF="intro.html#register">寄存器</A>.  Thus when appending using an <A HREF="#uppercase">uppercase</A> <A HREF="intro.html#register">寄存器</A>
+name, the unnamed <A HREF="intro.html#register">寄存器</A> contains the same text <A HREF="motion.html#as">as</A> the named <A HREF="intro.html#register">寄存器</A>.
+An exception is the '<A HREF="motion.html#_">_</A>' <A HREF="intro.html#register">寄存器</A>: &quot;_dd does not store the deleted text in any
+<A HREF="intro.html#register">寄存器</A>.
+Vim uses the contents of the unnamed <A HREF="intro.html#register">寄存器</A> for any put command (p or <A HREF="#P">P</A>)
+which does not specify a <A HREF="intro.html#register">寄存器</A>.  Additionally you can access <A HREF="motion.html#it">它</A> with the
 name &#39;&#34;''.  This means you have to type two double quotes.  Writing to the &quot;&quot;
-<A HREF="intro.html#register">register</A> writes to <A HREF="intro.html#register">register</A> &quot;0.
+<A HREF="intro.html#register">寄存器</A> writes to <A HREF="intro.html#register">寄存器</A> &quot;0.
 
 
 2. Numbered <A HREF="#registers">registers</A> &quot;<A HREF="motion.html#0">0</A> to &quot;9		*<A NAME="quote_number"></A><B>quote_number</B>* *<A NAME="quote0"></A><B>quote0</B>* *<A NAME="quote1"></A><B>quote1</B>*
 
 					*<A NAME="quote2"></A><B>quote2</B>* *<A NAME="quote3"></A><B>quote3</B>* *<A NAME="quote4"></A><B>quote4</B>* *<A NAME="quote9"></A><B>quote9</B>*
 Vim fills these <A HREF="#registers">registers</A> with text from <A HREF="#yank">yank</A> and delete commands.
-   Numbered <A HREF="intro.html#register">register</A> 0 contains the text from the most recent <A HREF="#yank">yank</A> command,
-unless the command specified another <A HREF="intro.html#register">register</A> with [&quot;x].
-   Numbered <A HREF="intro.html#register">register</A> 1 contains the text deleted by the most recent delete or
-change command, unless the command specified another <A HREF="intro.html#register">register</A> or the text is
-<A HREF="various.html#less">less</A> than one line (the small delete <A HREF="intro.html#register">register</A> is used then).  An exception is
+   Numbered <A HREF="intro.html#register">寄存器</A> 0 contains the text from the most recent <A HREF="#yank">yank</A> command,
+unless the command specified another <A HREF="intro.html#register">寄存器</A> with [&quot;x].
+   Numbered <A HREF="intro.html#register">寄存器</A> 1 contains the text deleted by the most recent delete or
+change command, unless the command specified another <A HREF="intro.html#register">寄存器</A> or the text is
+<A HREF="various.html#less">less</A> than one line (the small delete <A HREF="intro.html#register">寄存器</A> is used then).  An exception is
 made for the delete <A HREF="motion.html#operator">operator</A> with these <A HREF="intro.html#movement">移动</A>命令: |<A HREF="motion.html#&#37;">&#37;</A>|, |<A HREF="motion.html#(">(</A>|, |<A HREF="motion.html#)">)</A>|, |<A HREF="motion.html#`">`</A>|,
 |<A HREF="pattern.html#/">/</A>|, |<A HREF="pattern.html#?">?</A>|, |<A HREF="pattern.html#n">n</A>|, |<A HREF="pattern.html#N">N</A>|, |<A HREF="motion.html#{">{</A>| and |<A HREF="motion.html#}">}</A>|.  Register &quot;1 is always used then (this is <A HREF="intro.html#Vi">Vi</A>
-compatible).  The &quot;<A HREF="motion.html#-">-</A> <A HREF="intro.html#register">register</A> is used <A HREF="motion.html#as">as</A> well if the delete is within a line.
+compatible).  The &quot;<A HREF="motion.html#-">-</A> <A HREF="intro.html#register">寄存器</A> is used <A HREF="motion.html#as">as</A> well if the delete is within a line.
 Note that these characters may be mapped.  E.g. |<A HREF="motion.html#&#37;">&#37;</A>| is mapped by the matchit
 <A HREF="usr_05.html#plugin">plugin</A>.
    With each successive deletion or change, Vim shifts the previous contents
-of <A HREF="intro.html#register">register</A> 1 into <A HREF="intro.html#register">register</A> 2, 2 into 3, and so forth, losing the previous
-contents of <A HREF="intro.html#register">register</A> 9.
+of <A HREF="intro.html#register">寄存器</A> 1 into <A HREF="intro.html#register">寄存器</A> 2, 2 into 3, and so forth, losing the previous
+contents of <A HREF="intro.html#register">寄存器</A> 9.
 
 
-3. Small delete <A HREF="intro.html#register">register</A> &quot;<A HREF="motion.html#-">-</A>				*<A NAME="quote_-"></A><B>quote_-</B>* *<A NAME="quote-"></A><B>quote-</B>*
-This <A HREF="intro.html#register">register</A> contains text from commands that delete <A HREF="various.html#less">less</A> than one line,
-except when the command specifies a <A HREF="intro.html#register">register</A> with [&quot;x].
+3. Small delete <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="motion.html#-">-</A>				*<A NAME="quote_-"></A><B>quote_-</B>* *<A NAME="quote-"></A><B>quote-</B>*
+This <A HREF="intro.html#register">寄存器</A> contains text from commands that delete <A HREF="various.html#less">less</A> than one line,
+except when the command specifies a <A HREF="intro.html#register">寄存器</A> with [&quot;x].
 
 
 4. Named <A HREF="#registers">registers</A> &quot;a to &quot;<A HREF="vimindex.html#z">z</A> or &quot;A to &quot;Z			*<A NAME="quote_alpha"></A><B>quote_alpha</B>* *<A NAME="quotea"></A><B>quotea</B>*
@@ -1457,16 +1457,16 @@ and &quot;<A HREF="#:put">:put</A>&quot;命令 and with <A HREF="undo.html#CTRL-
 						*<A NAME="quote_:"></A><B>quote_:</B>* *<A NAME="quote:"></A><B>quote:</B>* *<A NAME="E30"></A><B>E30</B>*
 	&quot;:	Contains the most recent executed command-line.  Example: Use
 		&quot;<A HREF="repeat.html#@:">@:</A>&quot; to repeat the previous command-line command.
-		The command-line is only stored in this <A HREF="intro.html#register">register</A> when at least
+		The command-line is only stored in this <A HREF="intro.html#register">寄存器</A> when at least
 		one character of <A HREF="motion.html#it">它</A> was typed.  Thus <A HREF="motion.html#it">它</A> remains unchanged if
 		the command was completely from a <A HREF="map.html#mapping">mapping</A>.
 
 
 							*<A NAME="quote_#"></A><B>quote_#</B>* *<A NAME="quote#"></A><B>quote#</B>*
-6. Alternate file <A HREF="intro.html#register">register</A> &quot;<A HREF="pattern.html##">#</A>
+6. Alternate file <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="pattern.html##">#</A>
 Contains the name of the alternate file for the current<A HREF="windows.html#window">窗口</A>.  It will
 change how the |<A HREF="editing.html#CTRL-^">CTRL-^</A>| command works.
-This <A HREF="intro.html#register">register</A> is writable, mainly to allow for restoring <A HREF="motion.html#it">它</A> after a <A HREF="usr_05.html#plugin">plugin</A> has
+This <A HREF="intro.html#register">寄存器</A> is writable, mainly to allow for restoring <A HREF="motion.html#it">它</A> after a <A HREF="usr_05.html#plugin">plugin</A> has
 changed <A HREF="motion.html#it">它</A>.  It accepts buffer number:
 <B>    let altbuf = bufnr(@#)</B>
 <B>    ...</B>
@@ -1479,9 +1479,9 @@ Error |<A HREF="windows.html#E93">E93</A>| if there is more than one buffer matc
 if none of <A HREF="windows.html#buffers">buffers</A> matches the given name.
 
 
-7. Expression <A HREF="intro.html#register">register</A> &quot;<A HREF="#=">=</A>			*<A NAME="quote_="></A><B>quote_=</B>* *<A NAME="quote="></A><B>quote=</B>* *<A NAME="@="></A><B>@=</B>*
-This is not really a <A HREF="intro.html#register">register</A> that stores text, but is a way to use an
-<A HREF="eval.html#expression">expression</A> in commands which use a <A HREF="intro.html#register">register</A>.  The <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A> is
+7. Expression <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="#=">=</A>			*<A NAME="quote_="></A><B>quote_=</B>* *<A NAME="quote="></A><B>quote=</B>* *<A NAME="@="></A><B>@=</B>*
+This is not really a <A HREF="intro.html#register">寄存器</A> that stores text, but is a way to use an
+<A HREF="eval.html#expression">expression</A> in commands which use a <A HREF="intro.html#register">寄存器</A>.  The <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A> is
 read-write.
 
 When typing the '<A HREF="#=">=</A>' after &quot; or <A HREF="undo.html#CTRL-R">CTRL-R</A> the cursor moves to the command-line,
@@ -1498,39 +1498,39 @@ converted to a <A HREF="options\.html#options">字符串</A>.  For the &quot;<A 
 turned into a <A HREF="options\.html#options">字符串</A> and used <A HREF="motion.html#as">as</A> a line.  A <A HREF="eval.html#Dictionary">Dictionary</A> or FuncRef results in
 an error message (use <A HREF="builtin.html#string()">string()</A> to convert).
 
-If the &quot;<A HREF="#=">=</A> <A HREF="intro.html#register">register</A> is used for the &quot;<A HREF="#p">p</A>&quot;命令, the <A HREF="options\.html#options">字符串</A> is split up at <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
+If the &quot;<A HREF="#=">=</A> <A HREF="intro.html#register">寄存器</A> is used for the &quot;<A HREF="#p">p</A>&quot;命令, the <A HREF="options\.html#options">字符串</A> is split up at <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
 characters.  If the <A HREF="options\.html#options">字符串</A> ends in a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, <A HREF="motion.html#it">它</A> is regarded <A HREF="motion.html#as">as</A> a <A HREF="motion.html#linewise">linewise</A>
-<A HREF="intro.html#register">register</A>.
+<A HREF="intro.html#register">寄存器</A>.
 
 8. Selection <A HREF="#registers">registers</A> &quot;* and &quot;<A HREF="motion.html#+">+</A>
 Use these <A HREF="#registers">registers</A> for storing and retrieving the selected text for the <A HREF="gui.html#GUI">GUI</A>.
 见 |<A HREF="provider.html#quotestar">quotestar</A>| and |<A HREF="provider.html#quoteplus">quoteplus</A>|.  When 粘贴板 is not available or not
-working, the unnamed <A HREF="intro.html#register">register</A> is used instead.  For Unix systems and Mac OS X,
+working, the unnamed <A HREF="intro.html#register">寄存器</A> is used instead.  For Unix systems and Mac OS X,
 见 |<A HREF="provider.html#primary-selection">primary-selection</A>|.
 
 
-9. Black hole <A HREF="intro.html#register">register</A> &quot;<A HREF="motion.html#_">_</A>				*<A NAME="quote_"></A><B>quote_</B>*
-When <A HREF="editing.html#writing">写</A> to this <A HREF="intro.html#register">register</A>, nothing happens.  This can be used to delete
-text without affecting the normal <A HREF="#registers">registers</A>.  When reading from this <A HREF="intro.html#register">register</A>,
+9. Black hole <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="motion.html#_">_</A>				*<A NAME="quote_"></A><B>quote_</B>*
+When <A HREF="editing.html#writing">写</A> to this <A HREF="intro.html#register">寄存器</A>, nothing happens.  This can be used to delete
+text without affecting the normal <A HREF="#registers">registers</A>.  When reading from this <A HREF="intro.html#register">寄存器</A>,
 nothing is returned.
 
-10. Last search <A HREF="pattern.html#pattern">pattern</A> <A HREF="intro.html#register">register</A>	&quot;<A HREF="pattern.html#/">/</A>		*quote_/* *quote/*
+10. Last search <A HREF="pattern.html#pattern">pattern</A> <A HREF="intro.html#register">寄存器</A>	&quot;<A HREF="pattern.html#/">/</A>		*quote_/* *quote/*
 Contains the most recent <A HREF="pattern.html#search-pattern">search-pattern</A>.  This is used for &quot;<A HREF="pattern.html#n">n</A>&quot; and <A HREF="options.html#'hlsearch'">'hlsearch'</A>.
 It is writable with `:let`, you can change <A HREF="motion.html#it">它</A> to have <A HREF="options.html#'hlsearch'">'hlsearch'</A> highlight
 other matches without actually searching.  You can't <A HREF="#yank">yank</A> or delete into this
-<A HREF="intro.html#register">register</A>.  The search direction is available in |<A HREF="eval.html#v:searchforward">v:searchforward</A>|.
+<A HREF="intro.html#register">寄存器</A>.  The search direction is available in |<A HREF="eval.html#v:searchforward">v:searchforward</A>|.
 Note that the value is restored when returning from a function
 |<A HREF="eval.html#function-search-undo">function-search-undo</A>|.
 
 
 							*<A NAME="@/"></A><B>@/</B>*
-You can write to a <A HREF="intro.html#register">register</A> with a `:let` command |<A HREF="eval.html#:let-@">:let-@</A>|.  Example:
+You can write to a <A HREF="intro.html#register">寄存器</A> with a `:let` command |<A HREF="eval.html#:let-@">:let-@</A>|.  Example:
 <B>	:let @/ = "the"</B>
 
-If you use a put command without specifying a <A HREF="intro.html#register">register</A>, Vim uses the <A HREF="intro.html#register">register</A>
-that was last filled (this is also the contents of the unnamed <A HREF="intro.html#register">register</A>).  If
+If you use a put command without specifying a <A HREF="intro.html#register">寄存器</A>, Vim uses the <A HREF="intro.html#register">寄存器</A>
+that was last filled (this is also the contents of the unnamed <A HREF="intro.html#register">寄存器</A>).  If
 you are confused, use the `:dis` command to find out what Vim will put (this
-command displays all named and numbered <A HREF="#registers">registers</A>; the unnamed <A HREF="intro.html#register">register</A> is
+command displays all named and numbered <A HREF="#registers">registers</A>; the unnamed <A HREF="intro.html#register">寄存器</A> is
 labelled &#39;&#34;'').
 
 The next three commands always work on whole lines.
@@ -1551,7 +1551,7 @@ The next three commands always work on whole lines.
 
 ==============================================================================
 
-6. Formatting text					*<A NAME="formatting"></A><B>formatting</B>*
+6. 格式化文本					*<A NAME="formatting"></A><B>formatting</B>*
 
 
 :[range]ce[nter] [width]				*<A NAME=":ce"></A><B>:ce</B>* *<A NAME=":center"></A><B>:center</B>*

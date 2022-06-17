@@ -93,7 +93,7 @@ commands introduced in the previous chapters and a few more.
 |<A HREF="#12.8">12.8</A>|	Find where a <A HREF="motion.html#word">单词</A> is used
 
 下一章: |<A HREF="usr_20.html">usr_20.txt</A>|  Typing command-line commands quickly
-上一章: |<A HREF="usr_11.html">usr_11.txt</A>|  Recovering from a crash
+上一章: |<A HREF="usr_11.html">usr_11.txt</A>|  从崩溃中恢复
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
@@ -137,13 +137,13 @@ There is a function called &quot;GetResp&quot; that you want to rename to &quot;
 	vim *.cpp		Start Vim, defining the argument <A HREF="eval.html#list">列表</A> to
 				contain all the C++ files.  You are now in the
 				first file.
-	qq			Start <A HREF="repeat.html#recording">recording</A> into the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">register</A>
+	qq			Start <A HREF="repeat.html#recording">记录</A> into the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">寄存器</A>
 	:&#37;s/\&lt;GetResp\&gt;/GetAnswer/g
 				Do the replacements in the first file.
 	<A HREF="editing.html#:wnext">:wnext</A>			Write this file and 使用<A HREF="gui\.html#GUI">GUI</A> next one.
-	<A HREF="repeat.html#q">q</A>			Stop <A HREF="repeat.html#recording">recording</A>.
-	@q			Execute the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">register</A>.  This will replay the
-				substitution and &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot;.  You can verify
+	<A HREF="repeat.html#q">q</A>			Stop <A HREF="repeat.html#recording">记录</A>.
+	@q			Execute the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">寄存器</A>.  This will replay the
+				替换 and &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot;.  You can verify
 				that this doesn't produce an error message.
 	<A HREF="mailto:999@q">999@q</A> Execute the q register on the remaining files. 
 
@@ -152,7 +152,7 @@ to the next file.  This stops the execution, and everything is done.
 
 	Note:
 	When playing back a recorded sequence, an error stops the execution.
-	Therefore, make sure you don't get an error message when <A HREF="repeat.html#recording">recording</A>.
+	Therefore, make sure you don't get an error message when <A HREF="repeat.html#recording">记录</A>.
 
 There is one catch: If one of the .cpp files does not contain the <A HREF="motion.html#word">单词</A>
 &quot;GetResp&quot;, you will get an error and <A HREF="change.html#replacing">replacing</A> will stop.  To avoid this, add
@@ -182,7 +182,7 @@ This can be done with just one command:
 
 Let's break this down in parts.  Obviously <A HREF="motion.html#it">它</A> starts with a substitute
 command.  The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is the line range, which stands for the whole file.  Thus
-the substitution is done in every line in the file.
+the 替换 is done in every line in the file.
    The arguments for the substitute command are &quot;/from/to/&quot;.  The slashes
 separate the &quot;from&quot; <A HREF="pattern.html#pattern">pattern</A> and the &quot;to&quot; <A HREF="options\.html#options">字符串</A>.  This is what the &quot;from&quot;
 <A HREF="pattern.html#pattern">pattern</A> contains:

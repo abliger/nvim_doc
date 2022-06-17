@@ -197,8 +197,8 @@ diff_filler({lnum})		<A HREF="eval.html#Number">Number</A>	<A HREF="diff.html#di
 diff_hlID({lnum}, {col})	<A HREF="eval.html#Number">Number</A>	<A HREF="diff.html#diff">diff</A> highlighting at {lnum}/{col}
 digraph_get({chars})		<A HREF="options\.html#options">字符串</A>	get the <A HREF="digraph.html#digraph">digraph</A> of {chars}
 digraph_getlist([{listall}])	<A HREF="eval.html#list">列表</A>	get all |<A HREF="digraph.html#digraph">digraph</A>|<A HREF="change.html#s">s</A>
-digraph_set({chars}, {digraph})	<A HREF="eval.html#Boolean">Boolean</A>	<A HREF="intro.html#register">register</A> |<A HREF="digraph.html#digraph">digraph</A>|
-digraph_setlist({digraphlist})	<A HREF="eval.html#Boolean">Boolean</A>	<A HREF="intro.html#register">register</A> multiple |<A HREF="digraph.html#digraph">digraph</A>|<A HREF="change.html#s">s</A>
+digraph_set({chars}, {digraph})	<A HREF="eval.html#Boolean">Boolean</A>	<A HREF="intro.html#register">寄存器</A> |<A HREF="digraph.html#digraph">digraph</A>|
+digraph_setlist({digraphlist})	<A HREF="eval.html#Boolean">Boolean</A>	<A HREF="intro.html#register">寄存器</A> multiple |<A HREF="digraph.html#digraph">digraph</A>|<A HREF="change.html#s">s</A>
 empty({expr})			<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if {expr} is empty
 <A HREF="#environ()">environ()</A>			<A HREF="eval.html#Dict">Dict</A>	return environment <A HREF="eval.html#variables">variables</A>
 escape({string}, {chars})	<A HREF="options\.html#options">字符串</A>	<A HREF="intro.html#escape">escape</A> {chars} in {string} with '\'
@@ -288,9 +288,9 @@ getpos({expr})			<A HREF="eval.html#list">列表</A>	position of cursor, <A HREF
 <A HREF="#getqflist()">getqflist()</A>			<A HREF="eval.html#list">列表</A>	<A HREF="eval.html#list">列表</A> of <A HREF="quickfix.html#quickfix">quickfix</A> items
 getqflist({what})		<A HREF="eval.html#Dict">Dict</A>	get specific <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> properties
 getreg([{regname} [, 1 [, {list}]]])
-				<A HREF="options\.html#options">字符串</A> or <A HREF="eval.html#list">列表</A>   contents of a <A HREF="intro.html#register">register</A>
-getreginfo([{regname}])		<A HREF="eval.html#Dict">Dict</A>	information about a <A HREF="intro.html#register">register</A>
-getregtype([{regname}])		<A HREF="options\.html#options">字符串</A>	type of a <A HREF="intro.html#register">register</A>
+				<A HREF="options\.html#options">字符串</A> or <A HREF="eval.html#list">列表</A>   contents of a <A HREF="intro.html#register">寄存器</A>
+getreginfo([{regname}])		<A HREF="eval.html#Dict">Dict</A>	information about a <A HREF="intro.html#register">寄存器</A>
+getregtype([{regname}])		<A HREF="options\.html#options">字符串</A>	type of a <A HREF="intro.html#register">寄存器</A>
 gettabinfo([{expr}])		<A HREF="eval.html#list">列表</A>	<A HREF="eval.html#list">列表</A> of <A HREF="intro.html#tab">tab</A> pages
 gettabvar({nr}, {varname} [, {def}])
 				any	variable {varname} in <A HREF="intro.html#tab">tab</A> {nr} or {def}
@@ -425,9 +425,9 @@ readfile({fname} [, {type} [, {max}]])
 				<A HREF="eval.html#list">列表</A>	get <A HREF="eval.html#list">列表</A> of lines from file {fname}
 reduce({object}, {func} [, {initial}])
 				any	reduce {object} using {func}
-<A HREF="#reg_executing()">reg_executing()</A>			<A HREF="options\.html#options">字符串</A>	get the executing <A HREF="intro.html#register">register</A> name
-<A HREF="#reg_recorded()">reg_recorded()</A>			<A HREF="options\.html#options">字符串</A>	get the last recorded <A HREF="intro.html#register">register</A> name
-<A HREF="#reg_recording()">reg_recording()</A>			<A HREF="options\.html#options">字符串</A>	get the <A HREF="repeat.html#recording">recording</A> <A HREF="intro.html#register">register</A> name
+<A HREF="#reg_executing()">reg_executing()</A>			<A HREF="options\.html#options">字符串</A>	get the executing <A HREF="intro.html#register">寄存器</A> name
+<A HREF="#reg_recorded()">reg_recorded()</A>			<A HREF="options\.html#options">字符串</A>	get the last recorded <A HREF="intro.html#register">寄存器</A> name
+<A HREF="#reg_recording()">reg_recording()</A>			<A HREF="options\.html#options">字符串</A>	get the <A HREF="repeat.html#recording">记录</A> <A HREF="intro.html#register">寄存器</A> name
 reltime([{start} [, {end}]])	<A HREF="eval.html#list">列表</A>	get time value
 reltimefloat({time})		<A HREF="eval.html#Float">Float</A>	turn the time value into a <A HREF="eval.html#Float">Float</A>
 reltimestr({time})		<A HREF="options\.html#options">字符串</A>	turn time value into a <A HREF="options\.html#options">字符串</A>
@@ -485,7 +485,7 @@ setpos({expr}, {list})		<A HREF="eval.html#Number">Number</A>	set the {expr} pos
 setqflist({list} [, {action}])	<A HREF="eval.html#Number">Number</A>	modify <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> using {list}
 setqflist({list}, {action}, {what})
 				<A HREF="eval.html#Number">Number</A>	modify specific <A HREF="quickfix.html#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> props
-setreg({n}, {v} [, {opt}])	<A HREF="eval.html#Number">Number</A>	set <A HREF="intro.html#register">register</A> to value and type
+setreg({n}, {v} [, {opt}])	<A HREF="eval.html#Number">Number</A>	set <A HREF="intro.html#register">寄存器</A> to value and type
 settabvar({nr}, {varname}, {val})	set {varname} in <A HREF="intro.html#tab">tab</A> page {nr} to {val}
 settabwinvar({tabnr}, {winnr}, {varname}, {val})    set {varname} in<A HREF="windows.html#window">窗口</A>
 					{winnr} in <A HREF="intro.html#tab">tab</A> page {tabnr} to {val}
@@ -1434,11 +1434,11 @@ confirm({msg} [, {choices} [, {default} [, {type}]]])
 		{choices} is a <A HREF="options\.html#options">字符串</A>, with the individual choices separated
 		by '\n', e.g.
 <B>			confirm("Save changes?", "&amp;Yes\n&amp;No\n&amp;Cancel")</B>
- 		The <A HREF="print.html#letter">letter</A> after the '<A HREF="change.html#&amp;">&amp;</A>' is the shortcut key for that choice.
+ 		The <A HREF="print.html#letter">字母</A> after the '<A HREF="change.html#&amp;">&amp;</A>' is the shortcut key for that choice.
 		Thus you can type '<A HREF="change.html#c">c</A>' to select &quot;Cancel&quot;.  The shortcut does
-		not need to be the first <A HREF="print.html#letter">letter</A>:
+		not need to be the first <A HREF="print.html#letter">字母</A>:
 <B>			confirm("file has been modified", "&amp;Save\nSave &amp;All")</B>
- 		For the console, the first <A HREF="print.html#letter">letter</A> of each choice is used <A HREF="motion.html#as">as</A>
+ 		For the console, the first <A HREF="print.html#letter">字母</A> of each choice is used <A HREF="motion.html#as">as</A>
 		the default shortcut key.  Case is ignored.
 
 		The optional {type} <A HREF="options\.html#options">字符串</A> argument gives the type of dialog.
@@ -3619,25 +3619,25 @@ getqflist([{what}])					*<A NAME="getqflist()"></A><B>getqflist()</B>*
  
 
 getreg([{regname} [, 1 [, {list}]]])			*<A NAME="getreg()"></A><B>getreg()</B>*
-		The result is a <A HREF="options\.html#options">字符串</A>, which is the contents of <A HREF="intro.html#register">register</A>
+		The result is a <A HREF="options\.html#options">字符串</A>, which is the contents of <A HREF="intro.html#register">寄存器</A>
 		{regname}.  Example:
 <B>			:let cliptext = getreg('*')</B>
- 		When <A HREF="intro.html#register">register</A> {regname} was not set the result is an empty
+ 		When <A HREF="intro.html#register">寄存器</A> {regname} was not set the result is an empty
 		<A HREF="options\.html#options">字符串</A>.
 		The {regname} argument must be a <A HREF="options\.html#options">字符串</A>.
 
 		getreg('=') returns the last evaluated value of the <A HREF="eval.html#expression">expression</A>
-		<A HREF="intro.html#register">register</A>.  (For use in maps.)
+		<A HREF="intro.html#register">寄存器</A>.  (For use in maps.)
 		getreg('=', 1) returns the <A HREF="eval.html#expression">expression</A> itself, so that <A HREF="motion.html#it">它</A> can
-		be restored with |<A HREF="#setreg()">setreg()</A>|.  For other <A HREF="change.html#registers">registers</A> the extra
+		be restored with |<A HREF="#setreg()">setreg()</A>|.  For other <A HREF="change.html#registers">寄存器</A> the extra
 		argument is ignored, thus you can always give <A HREF="motion.html#it">它</A>.
 
 		If {list} is present and |<A HREF="eval.html#TRUE">TRUE</A>|, the result type is changed
 		to |<A HREF="eval.html#list">列表</A>|. Each <A HREF="eval.html#list">列表</A> item is one text line. Use <A HREF="motion.html#it">它</A> if you care
-		about zero bytes possibly present inside <A HREF="intro.html#register">register</A>: without
+		about zero bytes possibly present inside <A HREF="intro.html#register">寄存器</A>: without
 		third argument both NLs and zero bytes are represented <A HREF="motion.html#as">as</A> NLs
 		(见 |<A HREF="pattern.html#NL-used-for-Nul">NL-used-for-Nul</A>|).
-		When the <A HREF="intro.html#register">register</A> was not set an empty <A HREF="eval.html#list">列表</A> is returned.
+		When the <A HREF="intro.html#register">寄存器</A> was not set an empty <A HREF="eval.html#list">列表</A> is returned.
 
 		If {regname} is not specified, |<A HREF="eval.html#v:register">v:register</A>| is used.
 
@@ -3646,22 +3646,22 @@ getreg([{regname} [, 1 [, {list}]]])			*<A NAME="getreg()"></A><B>getreg()</B>*
 
 
 getreginfo([{regname}])					*<A NAME="getreginfo()"></A><B>getreginfo()</B>*
-		Returns detailed information about <A HREF="intro.html#register">register</A> {regname} <A HREF="motion.html#as">as</A> a
+		Returns detailed information about <A HREF="intro.html#register">寄存器</A> {regname} <A HREF="motion.html#as">as</A> a
 		<A HREF="eval.html#Dictionary">Dictionary</A> with the following entries:
-			regcontents	<A HREF="eval.html#list">列表</A> of lines contained in <A HREF="intro.html#register">register</A>
+			regcontents	<A HREF="eval.html#list">列表</A> of lines contained in <A HREF="intro.html#register">寄存器</A>
 					{regname}, like
 					|getreg|({regname}, 1, 1).
-			regtype		the type of <A HREF="intro.html#register">register</A> {regname}, <A HREF="motion.html#as">as</A> in
+			regtype		the type of <A HREF="intro.html#register">寄存器</A> {regname}, <A HREF="motion.html#as">as</A> in
 					|<A HREF="#getregtype()">getregtype()</A>|.
-			isunnamed	<A HREF="eval.html#Boolean">Boolean</A> flag, <A HREF="eval.html#v:true">v:true</A> if this <A HREF="intro.html#register">register</A>
+			isunnamed	<A HREF="eval.html#Boolean">Boolean</A> flag, <A HREF="eval.html#v:true">v:true</A> if this <A HREF="intro.html#register">寄存器</A>
 					is currently pointed to by the unnamed
-					<A HREF="intro.html#register">register</A>.
-			points_to	for the unnamed <A HREF="intro.html#register">register</A>, gives the
-					single <A HREF="print.html#letter">letter</A> name of the <A HREF="intro.html#register">register</A>
+					<A HREF="intro.html#register">寄存器</A>.
+			points_to	for the unnamed <A HREF="intro.html#register">寄存器</A>, gives the
+					single <A HREF="print.html#letter">字母</A> name of the <A HREF="intro.html#register">寄存器</A>
 					currently pointed to (见 |<A HREF="change.html#quotequote">quotequote</A>|).
 					For example, after <A HREF="change.html#deleting">deleting</A> a line
 					with `dd`, this field will be &quot;1&quot;,
-					which is the <A HREF="intro.html#register">register</A> that got the
+					which is the <A HREF="intro.html#register">寄存器</A> that got the
 					deleted text.
 
 		The {regname} argument is a <A HREF="options\.html#options">字符串</A>.  If {regname} is invalid
@@ -3674,12 +3674,12 @@ getreginfo([{regname}])					*<A NAME="getreginfo()"></A><B>getreginfo()</B>*
 
 
 getregtype([{regname}])					*<A NAME="getregtype()"></A><B>getregtype()</B>*
-		The result is a <A HREF="options\.html#options">字符串</A>, which is type of <A HREF="intro.html#register">register</A> {regname}.
+		The result is a <A HREF="options\.html#options">字符串</A>, which is type of <A HREF="intro.html#register">寄存器</A> {regname}.
 		The value will be one of:
 		    &quot;<A HREF="visual.html#v">v</A>&quot;			for |<A HREF="motion.html#charwise">charwise</A>| text
 		    &quot;<A HREF="visual.html#V">V</A>&quot;			for |<A HREF="motion.html#linewise">linewise</A>| text
 		    &quot;&lt;CTRL-V&gt;{width}&quot;	for |<A HREF="visual.html#blockwise-visual">blockwise-visual</A>| text
-		    &quot;&quot;			for an empty or unknown <A HREF="intro.html#register">register</A>
+		    &quot;&quot;			for an empty or unknown <A HREF="intro.html#register">寄存器</A>
 		&lt;CTRL-V&gt; is one character with value 0x16.
 		The {regname} argument is a <A HREF="options\.html#options">字符串</A>.  If {regname} is not
 		specified, |<A HREF="eval.html#v:register">v:register</A>| is used.
@@ -4134,7 +4134,7 @@ histdel({history} [, {item}])				*<A NAME="histdel()"></A><B>histdel()</B>*
 		is returned.
 
 		Examples:
-		Clear <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A> <A HREF="cmdline.html#history">history</A>:
+		Clear <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A> <A HREF="cmdline.html#history">history</A>:
 <B>			:call histdel("expr")</B>
  
 		Remove all entries starting with &quot;*&quot; from the search <A HREF="cmdline.html#history">history</A>:
@@ -5569,7 +5569,7 @@ mkdir({name} [, {path} [, {prot}]])
 mode([expr])	Return a <A HREF="options\.html#options">字符串</A> that indicates the current mode.
 		If [expr] is supplied and <A HREF="motion.html#it">它</A> evaluates to a non-zero <A HREF="eval.html#Number">Number</A> or
 		a non-empty <A HREF="options\.html#options">字符串</A> (|<A HREF="eval.html#non-zero-arg">non-zero-arg</A>|)然后the full mode is
-		returned, otherwise only the first <A HREF="print.html#letter">letter</A> is returned.
+		returned, otherwise only the first <A HREF="print.html#letter">字母</A> is returned.
 
 		   <A HREF="pattern.html#n">n</A>	    <A HREF="intro.html#Normal">Normal</A>
 		   no	    <A HREF="intro.html#Operator-pending">Operator-pending</A>
@@ -6302,20 +6302,20 @@ reduce({object}, {func} [, {initial}])			*<A NAME="reduce()"></A><B>reduce()</B>
 
 
 <A HREF="#reg_executing()">reg_executing()</A>						*<A NAME="reg_executing()"></A><B>reg_executing()</B>*
-		Returns the single <A HREF="print.html#letter">letter</A> name of the <A HREF="intro.html#register">register</A> being executed.
-		Returns an empty <A HREF="options\.html#options">字符串</A> when no <A HREF="intro.html#register">register</A> is being executed.
+		Returns the single <A HREF="print.html#letter">字母</A> name of the <A HREF="intro.html#register">寄存器</A> being executed.
+		Returns an empty <A HREF="options\.html#options">字符串</A> when no <A HREF="intro.html#register">寄存器</A> is being executed.
 		见 |<A HREF="repeat.html#@">@</A>|.
 
 
 <A HREF="#reg_recorded()">reg_recorded()</A>						*<A NAME="reg_recorded()"></A><B>reg_recorded()</B>*
-		Returns the single <A HREF="print.html#letter">letter</A> name of the last recorded <A HREF="intro.html#register">register</A>.
+		Returns the single <A HREF="print.html#letter">字母</A> name of the last recorded <A HREF="intro.html#register">寄存器</A>.
 		Returns an empty <A HREF="options\.html#options">字符串</A> when nothing was recorded yet.
 		见 |<A HREF="repeat.html#q">q</A>| and |<A HREF="repeat.html#Q">Q</A>|.
 
 
 <A HREF="#reg_recording()">reg_recording()</A>						*<A NAME="reg_recording()"></A><B>reg_recording()</B>*
-		Returns the single <A HREF="print.html#letter">letter</A> name of the <A HREF="intro.html#register">register</A> being recorded.
-		Returns an empty <A HREF="options\.html#options">字符串</A> when not <A HREF="repeat.html#recording">recording</A>.  见 |<A HREF="repeat.html#q">q</A>|.
+		Returns the single <A HREF="print.html#letter">字母</A> name of the <A HREF="intro.html#register">寄存器</A> being recorded.
+		Returns an empty <A HREF="options\.html#options">字符串</A> when not <A HREF="repeat.html#recording">记录</A>.  见 |<A HREF="repeat.html#q">q</A>|.
 
 
 reltime([{start} [, {end}]])				*<A NAME="reltime()"></A><B>reltime()</B>*
@@ -6975,8 +6975,8 @@ searchpos({pattern} [, {flags} [, {stopline} [, {timeout} [, {skip}]]]])
  		When the '<A HREF="change.html#p">p</A>' flag is given then there is an extra item with
 		the sub-pattern match number |<A HREF="#search()-sub-match">search()-sub-match</A>|.  Example:
 <B>	:let [lnum, col, submatch] = searchpos('\(\l\)\|\(\u\)', 'np')</B>
- 		In this example &quot;submatch&quot; is 2 when a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> is
-		found |<A HREF="pattern.html#/\l">/\l</A>|, 3 when an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> is found |<A HREF="pattern.html#/\u">/\u</A>|.
+ 		In this example &quot;submatch&quot; is 2 when a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A> is
+		found |<A HREF="pattern.html#/\l">/\l</A>|, 3 when an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A> is found |<A HREF="pattern.html#/\u">/\u</A>|.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetPattern()-&gt;searchpos()</B>
@@ -7417,7 +7417,7 @@ setqflist({list} [, {action} [, {what}]])		*<A NAME="setqflist()"></A><B>setqfli
 
 							*<A NAME="setreg()"></A><B>setreg()</B>*
 setreg({regname}, {value} [, {options}])
-		Set the <A HREF="intro.html#register">register</A> {regname} to {value}.
+		Set the <A HREF="intro.html#register">寄存器</A> {regname} to {value}.
 		The {regname} argument is a <A HREF="options\.html#options">字符串</A>.
 
 		{value} may be any value returned by |<A HREF="#getreg()">getreg()</A>| or
@@ -7425,7 +7425,7 @@ setreg({regname}, {value} [, {options}])
 		If {options} contains &quot;<A HREF="insert.html#a">a</A>&quot; or {regname} is upper <A HREF="change.html#case">case</A>,
 		then the value is appended.
 
-		{options} can also contain a <A HREF="intro.html#register">register</A> type specification:
+		{options} can also contain a <A HREF="intro.html#register">寄存器</A> type specification:
 		    &quot;c&quot; or &quot;<A HREF="visual.html#v">v</A>&quot;	      |<A HREF="motion.html#charwise">charwise</A>| mode
 		    &quot;l&quot; or &quot;<A HREF="visual.html#V">V</A>&quot;	      |<A HREF="motion.html#linewise">linewise</A>| mode
 		    &quot;b&quot; or &quot;&lt;CTRL-V&gt;&quot; |<A HREF="visual.html#blockwise-visual">blockwise-visual</A>| mode
@@ -7433,10 +7433,10 @@ setreg({regname}, {value} [, {options}])
 		used <A HREF="motion.html#as">as</A> the width of the selection - if <A HREF="motion.html#it">它</A> is not specified
 		then the width of the block is set to the number of characters
 		in the longest line (counting a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> <A HREF="motion.html#as">as</A> 1 character).
-		If {options} contains &quot;<A HREF="undo.html#u">u</A>&quot; or &#39;&#34;''然后the unnamed <A HREF="intro.html#register">register</A> is
-		set to point to <A HREF="intro.html#register">register</A> {regname}.
+		If {options} contains &quot;<A HREF="undo.html#u">u</A>&quot; or &#39;&#34;''然后the unnamed <A HREF="intro.html#register">寄存器</A> is
+		set to point to <A HREF="intro.html#register">寄存器</A> {regname}.
 
-		If {options} contains no <A HREF="intro.html#register">register</A> settings然后the default
+		If {options} contains no <A HREF="intro.html#register">寄存器</A> settings然后the default
 		is to use character mode unless {value} ends in a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> for
 		<A HREF="options\.html#options">字符串</A> {value} and <A HREF="motion.html#linewise">linewise</A> mode for <A HREF="eval.html#list">列表</A> {value}. Blockwise
 		mode is never selected automatically.
@@ -7445,7 +7445,7 @@ setreg({regname}, {value} [, {options}])
 
 							*<A NAME="E883"></A><B>E883</B>*
 		Note: you may not use |<A HREF="eval.html#list">列表</A>| containing more than one item to
-		      set search and <A HREF="eval.html#expression">expression</A> <A HREF="change.html#registers">registers</A>. <A HREF="eval.html#Lists">Lists</A> containing no
+		      set search and <A HREF="eval.html#expression">expression</A> <A HREF="change.html#registers">寄存器</A>. <A HREF="eval.html#Lists">Lists</A> containing no
 		      items act like empty strings.
 
 		Examples:
@@ -7455,7 +7455,7 @@ setreg({regname}, {value} [, {options}])
 <B>			:call setreg('"', { 'points_to': 'a'})</B>
 
  		This example shows using the <A HREF="eval.html#functions">functions</A> to save and restore a
-		<A HREF="intro.html#register">register</A>:
+		<A HREF="intro.html#register">寄存器</A>:
 <B>			:let var_a = getreginfo()</B>
 <B>			:call setreg('a', var_a)</B>
  		or:
@@ -7463,12 +7463,12 @@ setreg({regname}, {value} [, {options}])
 <B>			:let var_amode = getregtype('a')</B>
 <B>			    ....</B>
 <B>			:call setreg('a', var_a, var_amode)</B>
- 		Note: you may not reliably restore <A HREF="intro.html#register">register</A> value
+ 		Note: you may not reliably restore <A HREF="intro.html#register">寄存器</A> value
 		without using the third argument to |<A HREF="#getreg()">getreg()</A>| <A HREF="motion.html#as">as</A> without <A HREF="motion.html#it">它</A>
 		newlines are represented <A HREF="motion.html#as">as</A> newlines AND Nul bytes are
 		represented <A HREF="motion.html#as">as</A> newlines <A HREF="motion.html#as">as</A> well, 见 |<A HREF="pattern.html#NL-used-for-Nul">NL-used-for-Nul</A>|.
 
-		You can also change the type of a <A HREF="intro.html#register">register</A> by appending
+		You can also change the type of a <A HREF="intro.html#register">寄存器</A> by appending
 		nothing:
 <B>			:call setreg('a', '', 'al')</B>
 
@@ -8247,7 +8247,7 @@ strtrans({string})					*<A NAME="strtrans()"></A><B>strtrans()</B>*
 		characters translated into printable characters |<A HREF="options.html#'isprint'">'isprint'</A>|.
 		Like they are shown in a<A HREF="windows.html#window">窗口</A>.  Example:
 <B>			echo strtrans(@a)</B>
- 		This displays a newline in <A HREF="intro.html#register">register</A> a <A HREF="motion.html#as">as</A> &quot;^@&quot; instead of
+ 		This displays a newline in <A HREF="intro.html#register">寄存器</A> a <A HREF="motion.html#as">as</A> &quot;^@&quot; instead of
 		starting a new line.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:

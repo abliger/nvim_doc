@@ -699,7 +699,7 @@ out what happens.
 If you have <A HREF="options.html#'shada'">'shada'</A> enabled, the loading of the ShaDa file may take a
 while.  You can find out if this is the problem by disabling ShaDa for a
 moment (use the Vim argument &quot;-i NONE&quot;, |<A HREF="#-i">-i</A>|).  Try reducing the number of
-lines stored in a <A HREF="intro.html#register">register</A> with &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'shada'">shada</A>='20,&lt;50,s10&quot;.  |<A HREF="#shada-file">shada-file</A>|.
+lines stored in a <A HREF="intro.html#register">寄存器</A> with &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'shada'">shada</A>='20,&lt;50,s10&quot;.  |<A HREF="#shada-file">shada-file</A>|.
 
 
 <B><FONT color="#3A6F2B">Troubleshooting broken configurations </FONT></B>
@@ -865,7 +865,7 @@ these steps:
 1. Edit your <A HREF="#vimrc">vimrc</A> file with Vim.
 2. Play with the option until it's right.  E.g., try out different values for
    <A HREF="options.html#'guifont'">'guifont'</A>.
-3. Append a line to set the value of the option, using the <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A>
+3. Append a line to set the value of the option, using the <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A>
    '<A HREF="change.html#=">=</A>' to enter the value.  E.g., for the <A HREF="options.html#'guifont'">'guifont'</A> option:
 <B>   o:set guifont=&lt;C-R&gt;=&amp;guifont&lt;CR&gt;&lt;Esc&gt;</B>
    [&lt;C-R&gt; is a <A HREF="undo.html#CTRL-R">CTRL-R</A>, <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is a return, <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is the <A HREF="intro.html#escape">escape</A> key]
@@ -910,8 +910,8 @@ added to the file.  Which ones depends on the <A HREF="options.html#'sessionopti
 resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source</A>&quot;命令:
 1. Restores global mappings and <A HREF="options\.html#options">选项</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
    &quot;<A HREF="options\.html#options">选项</A>&quot;.  Script-local mappings will not be written.
-2. Restores global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> and contain
-   at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;globals&quot;.
+2. Restores global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A> and contain
+   at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;globals&quot;.
 3. Closes all <A HREF="windows\.html#windows">窗口</A> in the current <A HREF="intro.html#tab">tab</A> page, except the current one; closes
    all <A HREF="intro.html#tab">tab</A> pages except the current one (this results in currently loaded
    <A HREF="windows.html#buffers">buffers</A> to be unloaded, some may become hidden if <A HREF="options.html#'hidden'">'hidden'</A> is set or
@@ -994,7 +994,7 @@ The output of &quot;<A HREF="#:mkview">:mkview</A>&quot; contains these items:
 
 Note that Views and Sessions are not perfect:
 - They don't restore everything.例如, defined <A HREF="eval.html#functions">functions</A>, autocommands
-  and &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot; are not included.  Things like <A HREF="intro.html#register">register</A> contents and
+  and &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot; are not included.  Things like <A HREF="intro.html#register">寄存器</A> contents and
   command line <A HREF="cmdline.html#history">history</A> are in ShaDa, not in Sessions or Views.
 - Global option values are only set when they differ from the default value.
   When the current value is not the default value, loading a <A HREF="#Session">Session</A> will not
@@ -1041,7 +1041,7 @@ The ShaDa file is used to store:
 - The command line <A HREF="cmdline.html#history">history</A>.
 - The search <A HREF="options\.html#options">字符串</A> <A HREF="cmdline.html#history">history</A>.
 - The input-line <A HREF="cmdline.html#history">history</A>.
-- <A HREF="quickref.html#Contents">Contents</A> of non-empty <A HREF="change.html#registers">registers</A>.
+- <A HREF="quickref.html#Contents">Contents</A> of non-empty <A HREF="change.html#registers">寄存器</A>.
 - Marks for several files.
 - File marks, pointing to locations in files.
 - Last search/substitute <A HREF="pattern.html#pattern">pattern</A> (for '<A HREF="pattern.html#n">n</A>' and '&amp;').
@@ -1105,7 +1105,7 @@ Uppercase marks ('A to 'Z) are stored when <A HREF="editing.html#writing">写</A
 numbered marks ('0 to '9) are a bit special.  When the ShaDa file is written
 (when <A HREF="#exiting">exiting</A> or with the |<A HREF="#:wshada">:wshada</A>| command), <A HREF="motion.html#'0">'0</A> is set to the current cursor
 position and file.  The old <A HREF="motion.html#'0">'0</A> is moved to '1, '1 to '2, etc.  This
-resembles what happens with the &quot;1 to &quot;9 delete <A HREF="change.html#registers">registers</A>.  If the current
+resembles what happens with the &quot;1 to &quot;9 delete <A HREF="change.html#registers">寄存器</A>.  If the current
 cursor position is already present in <A HREF="motion.html#'0">'0</A> to '9, <A HREF="motion.html#it">它</A> is moved to <A HREF="motion.html#'0">'0</A>, to avoid
 having the same position <A HREF="if_cscop.html#twice">twice</A>.  The result is that with &quot;<A HREF="motion.html#'0">'0</A>&quot;, you can jump
 back to the file and line where you exited Vim.  To <A HREF="diff.html#do">do</A> that right away, try
@@ -1144,7 +1144,7 @@ with ShaDa entries.  Specifically the following is being done:
 4. Search patterns and substitute strings are not merged: search <A HREF="pattern.html#pattern">pattern</A> or
    substitute <A HREF="options\.html#options">字符串</A> which has greatest <A HREF="editing.html#timestamp">timestamp</A> will be the only one copied
    to ShaDa file.
-5. For each <A HREF="intro.html#register">register</A> entity with greatest <A HREF="editing.html#timestamp">timestamp</A> is the only saved.
+5. For each <A HREF="intro.html#register">寄存器</A> entity with greatest <A HREF="editing.html#timestamp">timestamp</A> is the only saved.
    |<A HREF="options.html#shada-&lt;">shada-&lt;</A>|
 6. All saved <A HREF="eval.html#variables">variables</A> are saved from current Neovim instance. Additionally
    existing variable values are copied, meaning that the only way to remove
@@ -1162,10 +1162,10 @@ ShaDa files are forward and backward compatible.  This means that
 
 1. Entries which have unknown type (i.e. that hold unidentified data) are
    ignored when reading and blindly copied when <A HREF="editing.html#writing">写</A>.
-2. Register entries with unknown <A HREF="intro.html#register">register</A> name are ignored when reading and
-   blindly copied when <A HREF="editing.html#writing">写</A>. Limitation: only <A HREF="change.html#registers">registers</A> that use name with
-   code in interval [1, 255] are supported. |<A HREF="change.html#registers">registers</A>|
-3. Register entries with unknown <A HREF="intro.html#register">register</A> type are ignored when reading and
+2. Register entries with unknown <A HREF="intro.html#register">寄存器</A> name are ignored when reading and
+   blindly copied when <A HREF="editing.html#writing">写</A>. Limitation: only <A HREF="change.html#registers">寄存器</A> that use name with
+   code in interval [1, 255] are supported. |<A HREF="change.html#registers">寄存器</A>|
+3. Register entries with unknown <A HREF="intro.html#register">寄存器</A> type are ignored when reading and
    merged <A HREF="motion.html#as">as</A> usual when <A HREF="editing.html#writing">写</A>. |<A HREF="builtin.html#getregtype()">getregtype()</A>|
 4. Local and global <A HREF="motion.html#mark">mark</A> entries with unknown <A HREF="motion.html#mark">mark</A> names are ignored when
    reading. When <A HREF="editing.html#writing">写</A> global <A HREF="motion.html#mark">mark</A> entries are blindly copied and local <A HREF="motion.html#mark">mark</A>
@@ -1177,7 +1177,7 @@ ShaDa files are forward and backward compatible.  This means that
 5. History entries with unknown <A HREF="cmdline.html#history">history</A> type are ignored when reading and
    blindly copied when <A HREF="editing.html#writing">写</A>. Limitation: there can be only up to 256
    history types. |<A HREF="cmdline.html#history">history</A>|
-6. Unknown keys found in <A HREF="intro.html#register">register</A>, local <A HREF="motion.html#mark">mark</A>, global <A HREF="motion.html#mark">mark</A>, change, jump and
+6. Unknown keys found in <A HREF="intro.html#register">寄存器</A>, local <A HREF="motion.html#mark">mark</A>, global <A HREF="motion.html#mark">mark</A>, change, jump and
    search <A HREF="pattern.html#pattern">pattern</A> entries are saved internally and dumped when <A HREF="editing.html#writing">写</A>.
    Entries created during Neovim session never have such additions.
 7. Additional elements found in replacement <A HREF="options\.html#options">字符串</A> and <A HREF="cmdline.html#history">history</A> entries are
@@ -1213,8 +1213,8 @@ SHADA FILE NAME						*<A NAME="shada-file-name"></A><B>shada-file-name</B>*
 MANUALLY READING AND WRITING				*<A NAME="shada-read-write"></A><B>shada-read-write</B>*
 
 Two commands can be used to read and write the ShaDa file manually.  This
-can be used to exchange <A HREF="change.html#registers">registers</A> between two running Vim programs: First
-type &quot;<A HREF="#:wsh">:wsh</A>&quot; in one and then &quot;<A HREF="#:rsh">:rsh</A>&quot; in the other.  Note that if the <A HREF="intro.html#register">register</A>
+can be used to exchange <A HREF="change.html#registers">寄存器</A> between two running Vim programs: First
+type &quot;<A HREF="#:wsh">:wsh</A>&quot; in one and then &quot;<A HREF="#:rsh">:rsh</A>&quot; in the other.  Note that if the <A HREF="intro.html#register">寄存器</A>
 already contained something然后&quot;:rsh!&quot; would be required.  Also note
 however that this means everything will be overwritten with information from
 the first Vim, including the command line <A HREF="cmdline.html#history">history</A>, etc.
@@ -1224,7 +1224,7 @@ start with an existing one to get the format right.  You need to understand
 MessagePack (or, more likely, find software that is able to use <A HREF="motion.html#it">它</A>) format to
 <A HREF="diff.html#do">do</A> this.  This can be useful in order to create a second file, say
 &quot;~/.my.shada&quot; which could contain certain settings that you always want when
-you first start Neovim.例如, you can preload <A HREF="change.html#registers">registers</A> with
+you first start Neovim.例如, you can preload <A HREF="change.html#registers">寄存器</A> with
 particular data, or put certain commands in the command line <A HREF="cmdline.html#history">history</A>.  A line
 in your |<A HREF="#config">config</A>| file like
 <B>	:rshada! ~/.my.shada</B>
@@ -1236,7 +1236,7 @@ ShaDa file format is contained in |<A HREF="#shada-format">shada-format</A>| sec
 
 					  *<A NAME="E136"></A><B>E136</B>* *<A NAME="E929"></A><B>E929</B>* *<A NAME="shada-error-handling"></A><B>shada-error-handling</B>*
 Some <A HREF="message.html#errors">errors</A> make Neovim leave temporary file named `{basename}.tmp.X` (X is
-any free <A HREF="print.html#letter">letter</A> from `a` to `z`) while normally <A HREF="motion.html#it">它</A> will create this file,
+any free <A HREF="print.html#letter">字母</A> from `a` to `z`) while normally <A HREF="motion.html#it">它</A> will create this file,
 write to <A HREF="motion.html#it">它</A> and then rename `{basename}.tmp.X` to `{basename}`. Such <A HREF="message.html#errors">errors</A>
 include:
 
@@ -1390,7 +1390,7 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
                        listed in |<A HREF="builtin.html#hist-names">hist-names</A>|, here are the corresponding
                        numbers: 0 - cmd, 1 - search, 2 - <A HREF="eval.html#expr">expr</A>, 3 - input,
                        4 - debug.
-   5 (Register)        Map describing one register (|<A HREF="change.html#registers">registers</A>|).  If key
+   5 (Register)        Map describing one register (|<A HREF="change.html#registers">寄存器</A>|).  If key
                        value is equal to default then <A HREF="motion.html#it">它</A> is normally not
                        present.  Keys:
 <B><FONT color="#3A6F2B">                       Key  Type             Def   Description </FONT></B>
@@ -1408,12 +1408,12 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
                                                    line should be represented
                                                    <A HREF="motion.html#as">as</A> NL according to
                                                    |<A HREF="pattern.html#NL-used-for-Nul">NL-used-for-Nul</A>|.
-                       ru   <A HREF="eval.html#Boolean">Boolean</A>          false Unnamed <A HREF="intro.html#register">register</A>. Whether
-                                                   the unnamed <A HREF="intro.html#register">register</A> had
-                                                   pointed to this <A HREF="intro.html#register">register</A>.
+                       ru   <A HREF="eval.html#Boolean">Boolean</A>          false Unnamed <A HREF="intro.html#register">寄存器</A>. Whether
+                                                   the unnamed <A HREF="intro.html#register">寄存器</A> had
+                                                   pointed to this <A HREF="intro.html#register">寄存器</A>.
                        <A HREF="pattern.html#n">n</A>    UInteger         N/A   Register name: character
                                                    code in range [1, 255].
-                                                   Example: |<A HREF="change.html#quote0">quote0</A>| <A HREF="intro.html#register">register</A>
+                                                   Example: |<A HREF="change.html#quote0">quote0</A>| <A HREF="intro.html#register">寄存器</A>
                                                    has name 48 (ASCII code for
                                                    zero character).
                        &#42;    any              none  Other keys are allowed

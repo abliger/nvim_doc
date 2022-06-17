@@ -111,9 +111,9 @@ Range of a <A HREF="eval.html#Number">Number</A> variable:  -2147483648 to 21474
 			   bit systems)
 Maximum length of a line in a <A HREF="tagsrch.html#tags">标签</A> file: 512 bytes.
 
-Information for <A HREF="undo.html#undo">undo</A> and text in <A HREF="change.html#registers">registers</A> is kept in memory, thus when making
+Information for <A HREF="undo.html#undo">undo</A> and text in <A HREF="change.html#registers">寄存器</A> is kept in memory, thus when making
 (big) changes the amount of (virtual) memory available <A HREF="#limits">limits</A> the number of
-<A HREF="undo.html#undo">undo</A> levels and the text that can be kept in <A HREF="change.html#registers">registers</A>.  Other things are also
+<A HREF="undo.html#undo">undo</A> levels and the text that can be kept in <A HREF="change.html#registers">寄存器</A>.  Other things are also
 kept in memory:  <A HREF="cmdline.html#Command-line">Command-line</A> <A HREF="cmdline.html#history">history</A>, error <A HREF="message.html#messages">信息</A> for <A HREF="quickfix.html#Quickfix">Quickfix</A> mode, etc.
 
 ==============================================================================
@@ -202,8 +202,8 @@ Asynchronous communication and <A HREF="builtin.html#timers">timers</A>.			|<A H
 	work. |<A HREF="builtin.html#timer">timer</A>|
 
 Repeat a series of commands.				|<A HREF="repeat.html#q">q</A>|
-	&quot;q{c}&quot; starts <A HREF="repeat.html#recording">recording</A> typed characters into named <A HREF="intro.html#register">register</A> {c}.
-	A subsequent &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">recording</A>.  The <A HREF="intro.html#register">register</A> can then be executed
+	&quot;q{c}&quot; starts <A HREF="repeat.html#recording">记录</A> typed characters into named <A HREF="intro.html#register">寄存器</A> {c}.
+	A subsequent &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">记录</A>.  The <A HREF="intro.html#register">寄存器</A> can then be executed
 	with the &quot;@{c}&quot; command.  This is very useful to repeat a complex
 	action.
 
@@ -408,7 +408,7 @@ Scripts and Expressions.				|<A HREF="eval.html#expression">expression</A>|
 	If this is not enough, an interface is provided to |<A HREF="if_pyth.html#Python">Python</A>|.
 
 Viminfo.
-	The command-line <A HREF="cmdline.html#history">history</A>, marks and <A HREF="change.html#registers">registers</A> can be stored in a file
+	The command-line <A HREF="cmdline.html#history">history</A>, marks and <A HREF="change.html#registers">寄存器</A> can be stored in a file
 	that is read on <A HREF="starting.html#startup">startup</A>.  This can be used to repeat a search command
 	or command-line command after <A HREF="starting.html#exiting">exiting</A> and restarting Vim.  It is also
 	possible to jump right back to where the last edit stopped with |<A HREF="motion.html#'0">'0</A>|.
@@ -422,7 +422,7 @@ Printing.						|<A HREF="print\.html#printing">打印</A>|
 Mouse support.						|<A HREF="term.html#mouse-using">mouse-using</A>|
 	The mouse is supported in the <A HREF="gui.html#GUI">GUI</A> version, in an xterm for Unix, for
 	BSDs with sysmouse, for Linux with gpm, and for Win32.  It can be used
-	to position the cursor, select the visual area, <A HREF="provider.html#paste">paste</A> a <A HREF="intro.html#register">register</A>, etc.
+	to position the cursor, select the visual area, <A HREF="provider.html#paste">paste</A> a <A HREF="intro.html#register">寄存器</A>, etc.
 
 Usage of key names.					|<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>| |<A HREF="intro.html#key-notation">key-notation</A>|
 	Special keys now all have a name like <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>, <A HREF="motion.html#&lt;End&gt;">&lt;End&gt;</A>, etc.

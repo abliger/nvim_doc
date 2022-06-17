@@ -89,7 +89,7 @@ aren't on your keyboard.
 |<A HREF="#24.3">24.3</A>|	Completion
 |<A HREF="#24.4">24.4</A>|	Repeating an insert
 |<A HREF="#24.5">24.5</A>|	Copying from another line
-|<A HREF="#24.6">24.6</A>|	Inserting a <A HREF="intro.html#register">register</A>
+|<A HREF="#24.6">24.6</A>|	Inserting a <A HREF="intro.html#register">寄存器</A>
 |<A HREF="#24.7">24.7</A>|	<A HREF="map.html#Abbreviations">Abbreviations</A>
 |<A HREF="#24.8">24.8</A>|	Entering special characters
 |<A HREF="#24.9">24.9</A>|	<A HREF="digraph.html#Digraphs">Digraphs</A>
@@ -261,7 +261,7 @@ with a certain type of item:
 
 	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-F">CTRL-F</A>		file names
 	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="various.html#CTRL-L">CTRL-L</A>		whole lines
-	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>		<A HREF="map.html#macro">macro</A> <A HREF="intro.html#definitions">definitions</A> (also in included files)
+	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>		<A HREF="map.html#macro">宏指令</A> <A HREF="intro.html#definitions">definitions</A> (also in included files)
 	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-I">CTRL-I</A>		current and included files
 	<A HREF="change.html#CTRL-X">CTRL-X</A> CTRL-K		words from a dictionary
 	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="tagsrch.html#CTRL-T">CTRL-T</A>		words from a thesaurus
@@ -414,20 +414,20 @@ cursor.
 
 ==============================================================================
 
-*<A NAME="24.6"></A><B>24.6</B>*	Inserting a <A HREF="intro.html#register">register</A>
+*<A NAME="24.6"></A><B>24.6</B>*	Inserting a <A HREF="intro.html#register">寄存器</A>
 
-The command <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A> inserts the contents of the <A HREF="intro.html#register">register</A>.  This is
+The command <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A> inserts the contents of the <A HREF="intro.html#register">寄存器</A>.  This is
 useful to avoid having to type a long <A HREF="motion.html#word">单词</A>.例如, you need to type
 this:
 
 <B><FONT color="#3A6F2B">	r = VeryLongFunction(a) + VeryLongFunction(b) + VeryLongFunction(c) </FONT></B>
 
 The function name is defined in a different file.  Edit that file and move the
-cursor on top of the function name there, and <A HREF="change.html#yank">yank</A> <A HREF="motion.html#it">它</A> into <A HREF="intro.html#register">register</A> <A HREF="eval.html#v:">v:</A>
+cursor on top of the function name there, and <A HREF="change.html#yank">yank</A> <A HREF="motion.html#it">它</A> into <A HREF="intro.html#register">寄存器</A> <A HREF="eval.html#v:">v:</A>
 
 <B>	"vyiw</B>
 
-&quot;<A HREF="visual.html#v">v</A> is the <A HREF="intro.html#register">register</A> specification, &quot;yiw&quot; is yank-inner-word.  Now edit the file
+&quot;<A HREF="visual.html#v">v</A> is the <A HREF="intro.html#register">寄存器</A> specification, &quot;yiw&quot; is yank-inner-word.  Now edit the file
 where the new line is to be inserted, and type the first letters:
 
 <B><FONT color="#3A6F2B">	r = </FONT></B>
@@ -438,10 +438,10 @@ Now use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="visual.html#v">v</A> to i
 
 You continue to type the characters in between the function name, and use
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="visual.html#v">v</A> two times more.
-   You could have done the same with completion.  Using a <A HREF="intro.html#register">register</A> is useful
+   You could have done the same with completion.  Using a <A HREF="intro.html#register">寄存器</A> is useful
 when there are many words that start with the same characters.
 
-If the <A HREF="intro.html#register">register</A> contains characters such <A HREF="motion.html#as">as</A> <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> or other special characters,
+If the <A HREF="intro.html#register">寄存器</A> contains characters such <A HREF="motion.html#as">as</A> <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> or other special characters,
 they are interpreted <A HREF="motion.html#as">as</A> if they had been typed from the keyboard.  If you <A HREF="diff.html#do">do</A>
 not want this to happen (you really want the <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> to be inserted in the text),
 use the command <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A>.
@@ -677,11 +677,11 @@ end of the line:
 <B>	CTRL-O D</B>
 
 You can execute only one <A HREF="intro.html#Normal">正常</A>模式 command this way.  But you can specify a
-<A HREF="intro.html#register">register</A> or a <A HREF="intro.html#count">count</A>.  A more complicated example:
+<A HREF="intro.html#register">寄存器</A> or a <A HREF="intro.html#count">count</A>.  A more complicated example:
 
 <B>	CTRL-O "g3dw</B>
 
-This deletes up to the third <A HREF="motion.html#word">单词</A> into <A HREF="intro.html#register">register</A> <A HREF="vimindex.html#g">g</A>.
+This deletes up to the third <A HREF="motion.html#word">单词</A> into <A HREF="intro.html#register">寄存器</A> <A HREF="vimindex.html#g">g</A>.
 
 ==============================================================================
 

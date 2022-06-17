@@ -593,7 +593,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				It is not triggered when waiting for a command
 				argument to be typed, or a <A HREF="intro.html#movement">移动</A> after an
 				<A HREF="motion.html#operator">operator</A>.
-				While <A HREF="repeat.html#recording">recording</A> the <A HREF="#CursorHold">CursorHold</A> event is not
+				While <A HREF="repeat.html#recording">记录</A> the <A HREF="#CursorHold">CursorHold</A> event is not
 				triggered. |<A HREF="repeat.html#q">q</A>|
 
 							*<A NAME="&lt;CursorHold&gt;"></A><B>&lt;CursorHold&gt;</B>*
@@ -1012,16 +1012,16 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				the start/finish respectively.
 
 							*<A NAME="RecordingEnter"></A><B>RecordingEnter</B>*
-<A HREF="#RecordingEnter">RecordingEnter</A>			When a <A HREF="map.html#macro">macro</A> starts <A HREF="repeat.html#recording">recording</A>.
+<A HREF="#RecordingEnter">RecordingEnter</A>			When a <A HREF="map.html#macro">宏指令</A> starts <A HREF="repeat.html#recording">记录</A>.
 				The <A HREF="pattern.html#pattern">pattern</A> is the current file name, and
-				|<A HREF="builtin.html#reg_recording()">reg_recording()</A>| is the current <A HREF="intro.html#register">register</A> that
+				|<A HREF="builtin.html#reg_recording()">reg_recording()</A>| is the current <A HREF="intro.html#register">寄存器</A> that
 				is used.
 
 							*<A NAME="RecordingLeave"></A><B>RecordingLeave</B>*
-<A HREF="#RecordingLeave">RecordingLeave</A>			When a <A HREF="map.html#macro">macro</A> stops <A HREF="repeat.html#recording">recording</A>.
+<A HREF="#RecordingLeave">RecordingLeave</A>			When a <A HREF="map.html#macro">宏指令</A> stops <A HREF="repeat.html#recording">记录</A>.
 				The <A HREF="pattern.html#pattern">pattern</A> is the current file name, and
 				|<A HREF="builtin.html#reg_recording()">reg_recording()</A>| is the recorded
-				<A HREF="intro.html#register">register</A>.
+				<A HREF="intro.html#register">寄存器</A>.
 				|<A HREF="builtin.html#reg_recorded()">reg_recorded()</A>| is only updated after this
 				event.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
@@ -1189,7 +1189,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="TextYankPost"></A><B>TextYankPost</B>*
 <A HREF="#TextYankPost">TextYankPost</A>			Just after a |<A HREF="change.html#yank">yank</A>| or |<A HREF="change.html#deleting">deleting</A>| command, but not
-				if the black hole <A HREF="intro.html#register">register</A> |<A HREF="change.html#quote_">quote_</A>| is used nor
+				if the black hole <A HREF="intro.html#register">寄存器</A> |<A HREF="change.html#quote_">quote_</A>| is used nor
 				for |<A HREF="builtin.html#setreg()">setreg()</A>|. <A HREF="pattern.html#Pattern">Pattern</A> must be *.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
 				    <A HREF="motion.html#inclusive">inclusive</A>

@@ -631,7 +631,7 @@ directory where the <A HREF="#tag">tag</A> file is.
 						*<A NAME="ctags"></A><B>ctags</B>* *<A NAME="jtags"></A><B>jtags</B>*
 A <A HREF="#tags">tags</A> file can be created with an external command, for example &quot;<A HREF="#ctags">ctags</A>&quot;.  It
 will contain a <A HREF="#tag">tag</A> for each function.  Some versions of &quot;<A HREF="#ctags">ctags</A>&quot; will also make
-a <A HREF="#tag">tag</A> for each &quot;#defined&quot; <A HREF="map.html#macro">macro</A>, typedefs, enums, etc.
+a <A HREF="#tag">tag</A> for each &quot;#defined&quot; <A HREF="map.html#macro">宏指令</A>, typedefs, enums, etc.
 
 Some programs that generate <A HREF="#tags">tags</A> files:
 <A HREF="#ctags">ctags</A>			As found on most Unix systems.  Only supports C.  Only
@@ -768,7 +768,7 @@ If the command is a normal search command (it starts and ends with &quot;<A HREF
   made.  If this search also fails another search is done with:
 	&quot;^[#a-zA-Z_].*\&lt;tagname[ \t]*(&quot;
   This means: A line starting with '<A HREF="pattern.html##">#</A>' or an identifier and containing the <A HREF="#tag">tag</A>
-  followed by white space and a '<A HREF="motion.html#(">(</A>'.  This will find <A HREF="map.html#macro">macro</A> names and function
+  followed by white space and a '<A HREF="motion.html#(">(</A>'.  This will find <A HREF="map.html#macro">宏指令</A> names and function
   names with a type prepended.
 
 
@@ -795,7 +795,7 @@ should also be able to update <A HREF="#ctags">ctags</A> to one that supports th
 
 These commands look for a <A HREF="options\.html#options">字符串</A> in the current file and in all encountered
 included files (recursively).  This can be used to find the definition of a
-variable, function or <A HREF="map.html#macro">macro</A>.  If you only want to search in the current
+variable, function or <A HREF="map.html#macro">宏指令</A>.  If you only want to search in the current
 buffer, use the commands listed at |<A HREF="pattern.html#pattern-searches">pattern-searches</A>|.
 
 When a line is encountered that includes another file, that file is searched
@@ -806,14 +806,14 @@ found, possibly your <A HREF="options.html#'path'">'path'</A> option is not set 
 included file is searched, not a buffer that may be editing that file.  Only
 for the current file the lines in the buffer are used.
 
-The <A HREF="options\.html#options">字符串</A> can be any keyword or a defined <A HREF="map.html#macro">macro</A>.  For the keyword any match
+The <A HREF="options\.html#options">字符串</A> can be any keyword or a defined <A HREF="map.html#macro">宏指令</A>.  For the keyword any match
 will be found.  For defined macros only lines that match with the <A HREF="options.html#'define'">'define'</A>
 option will be found.  The default is &quot;^#\s*define&quot;, which is for C programs.
 For other languages you probably want to change this.  See <A HREF="options.html#'define'">'define'</A> for an
 example for C++.  The <A HREF="options\.html#options">字符串</A> cannot contain an end-of-line, only matches
 within a line are found.
 
-When a match is found for a defined <A HREF="map.html#macro">macro</A>, the displaying of lines continues
+When a match is found for a defined <A HREF="map.html#macro">宏指令</A>, the displaying of lines continues
 with the next line when a line ends in a <A HREF="intro.html#backslash">backslash</A>.
 
 The commands that start with &quot;<A HREF="vimindex.html#[">[</A>&quot; start searching from the start of the current
@@ -917,8 +917,8 @@ If you want to <A HREF="eval.html#list">列表</A> matches, and then select one 
 
 
 							*<A NAME="[d"></A><B>[d</B>*
-<A HREF="#[d">[d</A>			Display the first <A HREF="map.html#macro">macro</A> definition that contains the
-			<A HREF="map.html#macro">macro</A> under the cursor.  The search starts from the
+<A HREF="#[d">[d</A>			Display the first <A HREF="map.html#macro">宏指令</A> definition that contains the
+			<A HREF="map.html#macro">宏指令</A> under the cursor.  The search starts from the
 			beginning of the file.  If a <A HREF="intro.html#count">count</A> is given, the
 			count'th matching line is displayed.
 
@@ -935,7 +935,7 @@ If you want to <A HREF="eval.html#list">列表</A> matches, and then select one 
 
 
 							*<A NAME="[D"></A><B>[D</B>*
-<A HREF="#[D">[D</A>			Display all <A HREF="map.html#macro">macro</A> <A HREF="intro.html#definitions">definitions</A> that contain the <A HREF="map.html#macro">macro</A>
+<A HREF="#[D">[D</A>			Display all <A HREF="map.html#macro">宏指令</A> <A HREF="intro.html#definitions">definitions</A> that contain the <A HREF="map.html#macro">宏指令</A>
 			under the cursor.  Filenames and line numbers are
 			displayed for the found lines.  The search starts
 			from the beginning of the file.
@@ -955,7 +955,7 @@ If you want to <A HREF="eval.html#list">列表</A> matches, and then select one 
 
 
 							*<A NAME="[_CTRL-D"></A><B>[_CTRL-D</B>*
-[ <A HREF="scroll.html#CTRL-D">CTRL-D</A>		Jump to the first <A HREF="map.html#macro">macro</A> definition that contains the
+[ <A HREF="scroll.html#CTRL-D">CTRL-D</A>		Jump to the first <A HREF="map.html#macro">宏指令</A> definition that contains the
 			keyword under the cursor.  The search starts from
 			the beginning of the file.  If a <A HREF="intro.html#count">count</A> is given, the
 			count'th matching line is jumped to.
@@ -975,7 +975,7 @@ If you want to <A HREF="eval.html#list">列表</A> matches, and then select one 
 
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>					*<A NAME="CTRL-W_CTRL-D"></A><B>CTRL-W_CTRL-D</B>* *<A NAME="CTRL-W_d"></A><B>CTRL-W_d</B>*
 <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#d">d</A>		Open a new<A HREF="windows.html#window">窗口</A>, with the cursor on the first
-			<A HREF="map.html#macro">macro</A> definition line that contains the keyword
+			<A HREF="map.html#macro">宏指令</A> definition line that contains the keyword
 			under the cursor.  The search starts from the
 			beginning of the file.  If a <A HREF="intro.html#count">count</A> is given, the
 			count'th matching line is jumped to.
@@ -1007,7 +1007,7 @@ Common arguments for the commands above:
 <B>		   foobar */</B>
  	A match for &quot;foobar&quot; is found, because this line is not recognized <A HREF="motion.html#as">as</A>
 	a comment (even though <A HREF="syntax\.html#syntax">语法</A> highlighting does recognize <A HREF="motion.html#it">它</A>).
-	Note: Since a <A HREF="map.html#macro">macro</A> definition mostly doesn't look like a comment, the
+	Note: Since a <A HREF="map.html#macro">宏指令</A> definition mostly doesn't look like a comment, the
 	[!] makes no difference for &quot;<A HREF="#:dlist">:dlist</A>&quot;, &quot;<A HREF="#:dsearch">:dsearch</A>&quot; and &quot;<A HREF="#:djump">:djump</A>&quot;.
 [/]	A <A HREF="pattern.html#pattern">pattern</A> can be surrounded by '<A HREF="pattern.html#/">/</A>'.  Without '<A HREF="pattern.html#/">/</A>' only whole words are
 	matched, using the <A HREF="pattern.html#pattern">pattern</A> &quot;\&lt;pattern\&gt;&quot;.  Only after the second '<A HREF="pattern.html#/">/</A>' a

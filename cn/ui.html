@@ -218,7 +218,7 @@ procedure:
    Buffers and <A HREF="windows\.html#windows">窗口</A> are not available at this point, but this could be used
    to set |<A HREF="eval.html#g:">g:</A>| <A HREF="eval.html#variables">variables</A> visible to <A HREF="starting.html#init.vim">init.vim</A>
 3. If the <A HREF="#UI">UI</A> wants to <A HREF="diff.html#do">do</A> additional setup after user <A HREF="starting.html#config">config</A> is loaded,
-   <A HREF="intro.html#register">register</A> a <A HREF="autocmd.html#VimEnter">VimEnter</A> <A HREF="autocmd.html#autocmd">autocmd</A>:
+   <A HREF="intro.html#register">寄存器</A> a <A HREF="autocmd.html#VimEnter">VimEnter</A> <A HREF="autocmd.html#autocmd">autocmd</A>:
 <B>      nvim_command("autocmd VimEnter * call rpcrequest(1, 'vimenter')")</B>
  4. Now invoke |<A HREF="api.html#nvim_ui_attach()">nvim_ui_attach()</A>|. The <A HREF="#UI">UI</A> must handle user input by now:
    sourcing <A HREF="starting.html#init.vim">init.vim</A> and loading <A HREF="windows.html#buffers">buffers</A> might lead to blocking prompts.
@@ -880,7 +880,7 @@ Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdli
 	by other &quot;msg_&quot; <A HREF="autocmd.html#events">events</A> below will not be affected).
 
 [&quot;msg_showmode&quot;, content]
-	Shows <A HREF="options.html#'showmode'">'showmode'</A> and |<A HREF="repeat.html#recording">recording</A>| <A HREF="message.html#messages">信息</A>. `content` has the same
+	Shows <A HREF="options.html#'showmode'">'showmode'</A> and |<A HREF="repeat.html#recording">记录</A>| <A HREF="message.html#messages">信息</A>. `content` has the same
 	format <A HREF="motion.html#as">as</A> in &quot;msg_show&quot;. This event is sent with empty `content` to
 	hide the last message.
 

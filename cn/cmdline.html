@@ -228,10 +228,10 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 
 
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A>					*<A NAME="c_CTRL-R"></A><B>c_CTRL-R</B>* *<A NAME="c_&lt;C-R&gt;"></A><B>c_&lt;C-R&gt;</B>*
-		<A HREF="insert.html#Insert">Insert</A> the contents of a numbered or named <A HREF="intro.html#register">register</A>.  Between
+		<A HREF="insert.html#Insert">Insert</A> the contents of a numbered or named <A HREF="intro.html#register">寄存器</A>.  Between
 		typing <A HREF="undo.html#CTRL-R">CTRL-R</A> and the second character &#39;&#34;'' will be displayed
 		to indicate that you are expected to enter the name of a
-		<A HREF="intro.html#register">register</A>.
+		<A HREF="intro.html#register">寄存器</A>.
 		The text is inserted <A HREF="motion.html#as">as</A> if you typed <A HREF="motion.html#it">它</A>, but mappings and
 		<A HREF="map.html#abbreviations">abbreviations</A> are not used.  <A HREF="#Command-line">Command-line</A> completion through
 		<A HREF="options.html#'wildchar'">'wildchar'</A> is not triggered though.  And characters that end
@@ -239,8 +239,8 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 		&lt;C-C&gt;).  A <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A> or <A HREF="vimindex.html#CTRL-W">CTRL-W</A> could still end the command line
 		though, and remaining characters will then be interpreted in
 		another mode, which might not be what you intended.
-		Special <A HREF="change.html#registers">registers</A>:
-			&#39;&#34;''	the unnamed <A HREF="intro.html#register">register</A>, containing the text of
+		Special <A HREF="change.html#registers">寄存器</A>:
+			&#39;&#34;''	the unnamed <A HREF="intro.html#register">寄存器</A>, containing the text of
 				the last delete or <A HREF="change.html#yank">yank</A>
 			'<A HREF="motion.html#&#37;">&#37;</A>'	the current file name
 			'<A HREF="pattern.html##">#</A>'	the alternate file name
@@ -252,7 +252,7 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 			'<A HREF="repeat.html#.">.</A>'	the last inserted text
 
 							*<A NAME="c_CTRL-R_="></A><B>c_CTRL-R_=</B>*
-			'<A HREF="change.html#=">=</A>'	the <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A>: you are prompted to
+			'<A HREF="change.html#=">=</A>'	the <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A>: you are prompted to
 				enter an expression (见 |<A HREF="eval.html#expression">expression</A>|)
 				(doesn't work at the <A HREF="eval.html#expression">expression</A> prompt; some
 				things such <A HREF="motion.html#as">as</A> <A HREF="change.html#changing">changing</A> the buffer or current
@@ -267,8 +267,8 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 				sure the <A HREF="eval.html#expression">expression</A> evaluates to an empty
 				<A HREF="options\.html#options">字符串</A>.  E.g.:
 <B>					&lt;C-R&gt;&lt;C-R&gt;=setcmdpos(2)[-1]&lt;CR&gt;</B>
- 		见 |<A HREF="change.html#registers">registers</A>| about registers.
-		Implementation detail: When using the |<A HREF="eval.html#expression">expression</A>| <A HREF="intro.html#register">register</A>
+ 		见 |<A HREF="change.html#registers">寄存器</A>| about registers.
+		Implementation detail: When using the |<A HREF="eval.html#expression">expression</A>| <A HREF="intro.html#register">寄存器</A>
 		and invoking <A HREF="builtin.html#setcmdpos()">setcmdpos()</A>, this sets the position before
 		<A HREF="insert.html#inserting">inserting</A> the resulting <A HREF="options\.html#options">字符串</A>.  Use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> to set the
 		position afterwards.
@@ -301,9 +301,9 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 					*<A NAME="c_CTRL-R_CTRL-O"></A><B>c_CTRL-R_CTRL-O</B>* *<A NAME="c_&lt;C-R&gt;_&lt;C-O&gt;"></A><B>c_&lt;C-R&gt;_&lt;C-O&gt;</B>*
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> {register <A HREF="scroll.html#CTRL-F">CTRL-F</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#CTRL-A">CTRL-A</A> CTRL-L}
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="motion.html#CTRL-O">CTRL-O</A> {register <A HREF="scroll.html#CTRL-F">CTRL-F</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="change.html#CTRL-A">CTRL-A</A> CTRL-L}
-		<A HREF="insert.html#Insert">Insert</A> <A HREF="intro.html#register">register</A> or object under the cursor.  Works like
+		<A HREF="insert.html#Insert">Insert</A> <A HREF="intro.html#register">寄存器</A> or object under the cursor.  Works like
 		|<A HREF="#c_CTRL-R">c_CTRL-R</A>| but inserts the text literally.例如, if
-		<A HREF="intro.html#register">register</A> a contains &quot;xy^Hz&quot; (where ^H is a backspace),
+		<A HREF="intro.html#register">寄存器</A> a contains &quot;xy^Hz&quot; (where ^H is a backspace),
 		&quot;<A HREF="undo.html#CTRL-R">CTRL-R</A> a&quot; will insert &quot;xz&quot; while &quot;<A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> a&quot; will
 		insert &quot;xy^Hz&quot;.
 
@@ -445,7 +445,7 @@ terminals)
 		<A HREF="eval.html#list">列表</A> the contents of <A HREF="#history">history</A> {name} which can be:
 		c[md]	 or :		command-line <A HREF="#history">history</A>
 		s[earch] or / or ?	search <A HREF="options\.html#options">字符串</A> <A HREF="#history">history</A>
-		e[xpr]	 or =		<A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A> <A HREF="#history">history</A>
+		e[xpr]	 or =		<A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A> <A HREF="#history">history</A>
 		i[nput]	 or @		input line <A HREF="#history">history</A>
 		d[ebug]	 or <A HREF="change.html#&gt;">&gt;</A>		debug command <A HREF="#history">history</A>
 		a[ll]			all of the above
@@ -513,7 +513,7 @@ These are the commands that can be used:
 		A match is done on the <A HREF="pattern.html#pattern">pattern</A> in front of the cursor.  The
 		match (if there are several, the first match) is inserted
 		in place of the <A HREF="pattern.html#pattern">pattern</A>.  (Note: does not work inside a
-		<A HREF="map.html#macro">macro</A>, because <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> or <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> are mostly used <A HREF="motion.html#as">as</A> <A HREF="options.html#'wildchar'">'wildchar'</A>,
+		<A HREF="map.html#macro">宏指令</A>, because <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> or <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> are mostly used <A HREF="motion.html#as">as</A> <A HREF="options.html#'wildchar'">'wildchar'</A>,
 		and these have a special meaning in some macros.) When typed
 		again and there were multiple matches, the next
 		match is inserted.  After the last match, the first is used
@@ -908,7 +908,7 @@ Reverse Range						*<A NAME="E493"></A><B>E493</B>*
 A range should have the lower line number first.  If this is not the <A HREF="change.html#case">case</A>, Vim
 will ask you if <A HREF="motion.html#it">它</A> should swap the line numbers.
 <B><FONT color="#3A6F2B">	Backwards range given, OK to swap </FONT></B>
-This is not done within the global command &quot;<A HREF="repeat.html#:g">:g</A>&quot;.
+This is not done within 全局命令 &quot;<A HREF="repeat.html#:g">:g</A>&quot;.
 
 You can use &quot;<A HREF="various.html#:silent">:silent</A>&quot; before a command to avoid the question, the range will
 always be swapped then.
@@ -1130,7 +1130,7 @@ These modifiers can be given, in this order:
 		Any character can be used for '<A HREF="pattern.html#?">?</A>', but <A HREF="motion.html#it">它</A> must not occur in
 		&quot;pat&quot; or &quot;sub&quot;.
 		After this, the previous modifiers can be used again.  For
-		example &quot;<A HREF="various.html#:p">:p</A>&quot;, to make a full path after the substitution.
+		example &quot;<A HREF="various.html#:p">:p</A>&quot;, to make a full path after the 替换.
 	:gs?pat?sub?
 		Substitute all occurrences of &quot;pat&quot; with &quot;sub&quot;.  Otherwise
 		this works like &quot;<A HREF="change.html#:s">:s</A>&quot;.
@@ -1247,8 +1247,8 @@ There are two ways to open the command-line<A HREF="windows.html#window">窗口<
 1. From <A HREF="#Command-line">Command-line</A> mode, use the key specified with the <A HREF="options.html#'cedit'">'cedit'</A> option.
 2. From <A HREF="intro.html#Normal">正常</A>模式, use the &quot;<A HREF="#q:">q:</A>&quot;, &quot;<A HREF="#q/">q/</A>&quot; or &quot;<A HREF="#q?">q?</A>&quot;命令.
    This starts editing an <A HREF="intro.html#Ex">Ex</A> command-line (&quot;q:&quot;) or search <A HREF="options\.html#options">字符串</A> (&quot;q/&quot; or
-   &quot;q?&quot;).  Note that this is not possible while <A HREF="repeat.html#recording">recording</A> is in progress (the
-   &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">recording</A> then).
+   &quot;q?&quot;).  Note that this is not possible while <A HREF="repeat.html#recording">记录</A> is in progress (the
+   &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">记录</A> then).
 
 When the<A HREF="windows.html#window">窗口</A>opens <A HREF="motion.html#it">它</A> is filled with the command-line <A HREF="#history">history</A>.  The last
 line contains the command <A HREF="motion.html#as">as</A> typed so far.  The left column will show a

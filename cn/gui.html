@@ -149,7 +149,7 @@ The interface looks like this (with &quot;<A HREF="options.html#:set">:set</A> <
 		       +-+--------------------------+-+    scrollbar (b) `
 
 Any of the scrollbar or menu components may be turned off by not putting the
-appropriate <A HREF="print.html#letter">letter</A> in the <A HREF="options.html#'guioptions'">'guioptions'</A> <A HREF="options\.html#options">字符串</A>.  The bottom scrollbar is
+appropriate <A HREF="print.html#letter">字母</A> in the <A HREF="options.html#'guioptions'">'guioptions'</A> <A HREF="options\.html#options">字符串</A>.  The bottom scrollbar is
 only useful when <A HREF="options.html#'nowrap'">'nowrap'</A> is set.
 
 
@@ -332,7 +332,7 @@ is equal to:
 Careful: In <A HREF="intro.html#Insert">插入</A>模式 this only works for a SINGLE <A HREF="intro.html#Normal">正常</A>模式 command,
 because of the <A HREF="motion.html#CTRL-O">CTRL-O</A>.  If you have two or more commands, you will need to use
 the &quot;<A HREF="#:imenu">:imenu</A>&quot;命令.  For <A HREF="insert.html#inserting">inserting</A> text in any mode, you can use the
-<A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A>:
+<A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A>:
 
 <B>   :amenu Insert.foobar   "='foobar'&lt;CR&gt;P</B>
 
@@ -456,7 +456,7 @@ simple.
 
 							*<A NAME="gui-toolbar"></A><B>gui-toolbar</B>*
 The default toolbar is setup in <A HREF="#menu.vim">menu.vim</A>.  The display of the toolbar is
-controlled by the <A HREF="options.html#'guioptions'">'guioptions'</A> <A HREF="print.html#letter">letter</A> '<A HREF="motion.html#T">T</A>'.  You can thus have menu <A HREF="change.html#&amp;">&amp;</A> toolbar
+controlled by the <A HREF="options.html#'guioptions'">'guioptions'</A> <A HREF="print.html#letter">字母</A> '<A HREF="motion.html#T">T</A>'.  You can thus have menu <A HREF="change.html#&amp;">&amp;</A> toolbar
 together, or either on its own, or neither.  The appearance is controlled by
 the <A HREF="vim_diff.html#'toolbar'">'toolbar'</A> option.  You can choose between an image, text or both.
 
@@ -640,7 +640,7 @@ name and all existing submenus below <A HREF="motion.html#it">它</A> are affect
 Examples for Menus					*<A NAME="menu-examples"></A><B>menu-examples</B>*
 
 Here is an example on how to add menu items with menu's!  You can add a menu
-item for the keyword under the cursor.  The <A HREF="intro.html#register">register</A> &quot;<A HREF="vimindex.html#z">z</A>&quot; is used.
+item for the keyword under the cursor.  The <A HREF="intro.html#register">寄存器</A> &quot;<A HREF="vimindex.html#z">z</A>&quot; is used.
 
 <B>  :nmenu Words.Add\ Var		wb"zye:menu! Words.&lt;C-R&gt;z &lt;C-R&gt;z&lt;CR&gt;</B>
 <B>  :nmenu Words.Remove\ Var	wb"zye:unmenu! Words.&lt;C-R&gt;z&lt;CR&gt;</B>

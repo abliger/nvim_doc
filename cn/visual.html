@@ -351,7 +351,7 @@ Additionally the following commands can be used:
 	X	delete (2)					|<A HREF="change.html#v_X">v_X</A>|
 	Y	<A HREF="change.html#yank">yank</A> (2)					|<A HREF="change.html#v_Y">v_Y</A>|
 	p	put						|<A HREF="change.html#v_p">v_p</A>|
-	P	put without overwriting <A HREF="change.html#registers">registers</A>		|<A HREF="change.html#v_P">v_P</A>|
+	P	put without overwriting <A HREF="change.html#registers">寄存器</A>		|<A HREF="change.html#v_P">v_P</A>|
 	J	join (1)					|<A HREF="change.html#v_J">v_J</A>|
 	U	make <A HREF="change.html#uppercase">大写</A>					|<A HREF="change.html#v_U">v_U</A>|
 	u	make <A HREF="change.html#lowercase">小写</A>					|<A HREF="change.html#v_u">v_u</A>|
@@ -372,7 +372,7 @@ area, but instead take the highlighted text and search for that:
 (In the &lt;&gt; <A HREF="intro.html#notation">notation</A> |<A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>|, when typing <A HREF="motion.html#it">它</A> you should type <A HREF="motion.html#it">它</A> literally; you
 need to remove the '<A HREF="motion.html#B">B</A>' flag from <A HREF="options.html#'cpoptions'">'cpoptions'</A>.)
 
-If you want to give a <A HREF="intro.html#register">register</A> name using the &quot;&quot;&quot; command, <A HREF="diff.html#do">do</A> this just before
+If you want to give a <A HREF="intro.html#register">寄存器</A> name using the &quot;&quot;&quot; command, <A HREF="diff.html#do">do</A> this just before
 typing the <A HREF="motion.html#operator">operator</A> character: &quot;v{move-around}&quot;xd&quot;.
 
 If you want to give a <A HREF="intro.html#count">count</A> to the command, <A HREF="diff.html#do">do</A> this just before typing the
@@ -597,10 +597,10 @@ Commands in <A HREF="#Select">Select</A> mode:
 
 - <A HREF="motion.html#CTRL-O">CTRL-O</A> switches to <A HREF="#Visual">Visual</A> mode for the duration of one command. *<A NAME="v_CTRL-O"></A><B>v_CTRL-O</B>*
 - <A HREF="editing.html#CTRL-G">CTRL-G</A> switches to <A HREF="#Visual">Visual</A> mode.
-- <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A> selects the <A HREF="intro.html#register">register</A> to be used for the text that is
+- <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A> selects the <A HREF="intro.html#register">寄存器</A> to be used for the text that is
 
   deleted when typing text.					  *<A NAME="v_CTRL-R"></A><B>v_CTRL-R</B>*
-  Unless you specify the &quot;<A HREF="motion.html#_">_</A>&quot; (black hole) <A HREF="intro.html#register">register</A>, the unnamed <A HREF="intro.html#register">register</A> is
+  Unless you specify the &quot;<A HREF="motion.html#_">_</A>&quot; (black hole) <A HREF="intro.html#register">寄存器</A>, the unnamed <A HREF="intro.html#register">寄存器</A> is
   also overwritten.
 
 Otherwise, typed characters are handled <A HREF="motion.html#as">as</A> in <A HREF="#Visual">Visual</A> mode.

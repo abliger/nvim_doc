@@ -227,7 +227,7 @@ A special <A HREF="change.html#case">case</A> is defining a function and directl
 <B>	:   let self.val = 0</B>
 <B>	:endfunction</B>
 
-The key of the <A HREF="#Dictionary">Dictionary</A> can start with a lower <A HREF="change.html#case">case</A> <A HREF="print.html#letter">letter</A>.  The actual
+The key of the <A HREF="#Dictionary">Dictionary</A> can start with a lower <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A>.  The actual
 function name is not used here.  Also 见 |<A HREF="#numbered-function">numbered-function</A>|.
 
 A <A HREF="#Funcref">Funcref</A> can also be used with the |<A HREF="#:call">:call</A>| command:
@@ -354,7 +354,7 @@ length minus one is used:
 <B>	:echo mylist[2:8]		" result: [2, 3]</B>
 
 NOTE: mylist[s:e] means using the variable &quot;s:e&quot; <A HREF="motion.html#as">as</A> index.  Watch out for
-using a single <A HREF="print.html#letter">letter</A> variable before the &quot;<A HREF="cmdline.html#:">:</A>&quot;.  <A HREF="insert.html#Insert">Insert</A> a space when needed:
+using a single <A HREF="print.html#letter">字母</A> variable before the &quot;<A HREF="cmdline.html#:">:</A>&quot;.  <A HREF="insert.html#Insert">Insert</A> a space when needed:
 mylist[s : e].
 
 
@@ -856,11 +856,11 @@ If you need to know the type of a variable or <A HREF="#expression">expression</
 function.
 
 When the '<A HREF="change.html#!">!</A>' flag is included in the <A HREF="options.html#'shada'">'shada'</A> option, global <A HREF="#variables">variables</A> that
-start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>, and don't contain a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A>, are
+start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>, and don't contain a <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>, are
 stored in the shada file |<A HREF="starting.html#shada-file">shada-file</A>|.
 
 When the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option contains &quot;global&quot;, global <A HREF="#variables">variables</A> that
-start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A> and contain at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">letter</A> are
+start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A> and contain at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A> are
 stored in the session file |<A HREF="starting.html#session-file">session-file</A>|.
 
 <B><FONT color="#3A6F2B">variable name		can be stored where </FONT></B>
@@ -940,7 +940,7 @@ Expression <A HREF="syntax\.html#syntax">语法</A> summary, from least to most 
 	variable		internal variable
 	va{ria}ble		internal variable with curly braces
 	$VAR			environment variable
-	<A HREF="#@r">@r</A>			contents of <A HREF="intro.html#register">register</A> '<A HREF="change.html#r">r</A>'
+	<A HREF="#@r">@r</A>			contents of <A HREF="intro.html#register">寄存器</A> '<A HREF="change.html#r">r</A>'
 	function(expr1, <A HREF="#...">...</A>)	function call
 	func{ti}on(expr1, <A HREF="#...">...</A>)	function call with curly braces
 	{args <A HREF="#-&gt;">-&gt;</A> expr1}		<A HREF="#lambda">lambda</A> <A HREF="#expression">expression</A>
@@ -1526,15 +1526,15 @@ anyway.
 
 
 
-<A HREF="intro.html#register">register</A>						*<A NAME="expr-register"></A><B>expr-register</B>* *<A NAME="@r"></A><B>@r</B>*
-<A HREF="#@r">@r</A>			contents of <A HREF="intro.html#register">register</A> '<A HREF="change.html#r">r</A>'
+<A HREF="intro.html#register">寄存器</A>						*<A NAME="expr-register"></A><B>expr-register</B>* *<A NAME="@r"></A><B>@r</B>*
+<A HREF="#@r">@r</A>			contents of <A HREF="intro.html#register">寄存器</A> '<A HREF="change.html#r">r</A>'
 
-The result is the contents of the named <A HREF="intro.html#register">register</A>, <A HREF="motion.html#as">as</A> a single <A HREF="#string">string</A>.
+The result is the contents of the named <A HREF="intro.html#register">寄存器</A>, <A HREF="motion.html#as">as</A> a single <A HREF="#string">string</A>.
 Newlines are inserted where required.  To get the contents of the unnamed
-register use @&quot; or <A HREF="repeat.html#@@">@@</A>.  见 |<A HREF="change.html#registers">registers</A>| for an explanation of the available
-<A HREF="change.html#registers">registers</A>.
+register use @&quot; or <A HREF="repeat.html#@@">@@</A>.  见 |<A HREF="change.html#registers">寄存器</A>| for an explanation of the available
+<A HREF="change.html#registers">寄存器</A>.
 
-When using the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">register</A> you get the <A HREF="#expression">expression</A> itself, not what <A HREF="motion.html#it">它</A>
+When using the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">寄存器</A> you get the <A HREF="#expression">expression</A> itself, not what <A HREF="motion.html#it">它</A>
 evaluates to.  Use |<A HREF="builtin.html#eval()">eval()</A>| to evaluate <A HREF="motion.html#it">它</A>.
 
 
@@ -2012,12 +2012,12 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 					example if |<A HREF="autocmd.html#TextYankPost">TextYankPost</A>| is triggered
 					by the |<A HREF="change.html#:yank">:yank</A>| <A HREF="intro.html#Ex">Ex</A> command then
 					`v:event.operator` is &quot;<A HREF="change.html#y">y</A>&quot;.
-			regcontents	Text stored in the <A HREF="intro.html#register">register</A> <A HREF="motion.html#as">as</A> a
+			regcontents	Text stored in the <A HREF="intro.html#register">寄存器</A> <A HREF="motion.html#as">as</A> a
 					|readfile()|-style <A HREF="#list">list</A> of lines.
-			regname		Requested <A HREF="intro.html#register">register</A> (e.g &quot;<A HREF="change.html#x">x</A>&quot; for &quot;xyy)
+			regname		Requested <A HREF="intro.html#register">寄存器</A> (e.g &quot;<A HREF="change.html#x">x</A>&quot; for &quot;xyy)
 					or the empty <A HREF="#string">string</A> for an unnamed
 					operation.
-			regtype		Type of <A HREF="intro.html#register">register</A> <A HREF="motion.html#as">as</A> returned by
+			regtype		Type of <A HREF="intro.html#register">寄存器</A> <A HREF="motion.html#as">as</A> returned by
 					|<A HREF="builtin.html#getregtype()">getregtype()</A>|.
 			visual		Selection is visual (as opposed to,
 					e.g., via motion).
@@ -2347,11 +2347,11 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 
 
 					*<A NAME="v:register"></A><B>v:register</B>* *<A NAME="register-variable"></A><B>register-variable</B>*
-<A HREF="#v:register">v:register</A>	The name of the <A HREF="intro.html#register">register</A> in effect for the current normal mode
+<A HREF="#v:register">v:register</A>	The name of the <A HREF="intro.html#register">寄存器</A> in effect for the current normal mode
 		command (regardless of whether that command actually used a
-		<A HREF="intro.html#register">register</A>).  Or for the currently executing normal mode <A HREF="map.html#mapping">mapping</A>
-		(use this in custom commands that take a <A HREF="intro.html#register">register</A>).
-		If none is supplied <A HREF="motion.html#it">它</A> is the default <A HREF="intro.html#register">register</A> &#39;&#34;'', unless
+		<A HREF="intro.html#register">寄存器</A>).  Or for the currently executing normal mode <A HREF="map.html#mapping">mapping</A>
+		(use this in custom commands that take a <A HREF="intro.html#register">寄存器</A>).
+		If none is supplied <A HREF="motion.html#it">它</A> is the default <A HREF="intro.html#register">寄存器</A> &#39;&#34;'', unless
 		<A HREF="options.html#'clipboard'">'clipboard'</A> contains &quot;unnamed&quot; or &quot;unnamedplus&quot;然后<A HREF="motion.html#it">它</A> is
 		'*' or '<A HREF="motion.html#+">+</A>'.
 		Also 见 |<A HREF="builtin.html#getreg()">getreg()</A>| and |<A HREF="builtin.html#setreg()">setreg()</A>|
@@ -2569,7 +2569,7 @@ New <A HREF="#functions">functions</A> can be defined.  These can be called just
 <A HREF="#functions">functions</A>.  The function executes a sequence of <A HREF="intro.html#Ex">Ex</A> commands.  <A HREF="intro.html#Normal">正常</A>模式
 commands can be executed with the |<A HREF="various.html#:normal">:normal</A>| command.
 
-The function name must start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">letter</A>, to avoid confusion with
+The function name must start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>, to avoid confusion with
 builtin <A HREF="#functions">functions</A>.  To prevent from using the same name in different scripts
 avoid obvious, short names.  A good habit is to start the function name with
 the name of the <A HREF="usr_41.html#script">script</A>, e.g., &quot;HTMLcolor()&quot;.
@@ -3093,13 +3093,13 @@ This does NOT work:
 
 
 <A HREF="#:let">:let</A> @{reg-name} = {expr1}			*<A NAME=":let-register"></A><B>:let-register</B>* *<A NAME=":let-@"></A><B>:let-@</B>*
-			Write the result of the <A HREF="#expression">expression</A> {expr1} in <A HREF="intro.html#register">register</A>
-			{reg-name}.  {reg-name} must be a single <A HREF="print.html#letter">letter</A>, and
-			must be the name of a writable <A HREF="intro.html#register">register</A> (see
-			|<A HREF="change.html#registers">registers</A>|).  &quot;<A HREF="repeat.html#@@">@@</A>&quot; can be used for the unnamed
-			<A HREF="intro.html#register">register</A>, &quot;<A HREF="change.html#@/">@/</A>&quot; for the search <A HREF="pattern.html#pattern">pattern</A>.
+			Write the result of the <A HREF="#expression">expression</A> {expr1} in <A HREF="intro.html#register">寄存器</A>
+			{reg-name}.  {reg-name} must be a single <A HREF="print.html#letter">字母</A>, and
+			must be the name of a writable <A HREF="intro.html#register">寄存器</A> (see
+			|<A HREF="change.html#registers">寄存器</A>|).  &quot;<A HREF="repeat.html#@@">@@</A>&quot; can be used for the unnamed
+			<A HREF="intro.html#register">寄存器</A>, &quot;<A HREF="change.html#@/">@/</A>&quot; for the search <A HREF="pattern.html#pattern">pattern</A>.
 			If the result of {expr1} ends in a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> or <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, the
-			<A HREF="intro.html#register">register</A> will be <A HREF="motion.html#linewise">linewise</A>, otherwise <A HREF="motion.html#it">它</A> will be set to
+			<A HREF="intro.html#register">寄存器</A> will be <A HREF="motion.html#linewise">linewise</A>, otherwise <A HREF="motion.html#it">它</A> will be set to
 			<A HREF="motion.html#charwise">charwise</A>.
 			This can be used to clear the last search <A HREF="pattern.html#pattern">pattern</A>:
 <B>				:let @/ = ""</B>
@@ -3107,8 +3107,8 @@ This does NOT work:
 			that would match everywhere.
 
 <A HREF="#:let">:let</A> @{reg-name} .= {expr1}
-			Append {expr1} to <A HREF="intro.html#register">register</A> {reg-name}.  If the
-			<A HREF="intro.html#register">register</A> was empty it's like setting <A HREF="motion.html#it">它</A> to {expr1}.
+			Append {expr1} to <A HREF="intro.html#register">寄存器</A> {reg-name}.  If the
+			<A HREF="intro.html#register">寄存器</A> was empty it's like setting <A HREF="motion.html#it">它</A> to {expr1}.
 
 
 <A HREF="#:let">:let</A> &amp;{option-name} = {expr1}			*<A NAME=":let-option"></A><B>:let-option</B>* *<A NAME=":let-&amp;"></A><B>:let-&amp;</B>*
@@ -3326,7 +3326,7 @@ text...
 
  							*<A NAME="E996"></A><B>E996</B>*
 			Note that environment <A HREF="#variables">variables</A>, option values and
-			<A HREF="intro.html#register">register</A> values cannot be used here, since they cannot
+			<A HREF="intro.html#register">寄存器</A> values cannot be used here, since they cannot
 			be locked.
 
 :cons[t]
@@ -5080,12 +5080,12 @@ and some other intermediate groups are present.
 
 *<A NAME="hl-NvimIdentifier"></A><B>hl-NvimIdentifier</B>*                  Identifier              Generic identifier
 
-*<A NAME="hl-NvimIdentifierScope"></A><B>hl-NvimIdentifierScope</B>*             NvimIdentifier          Namespace: <A HREF="print.html#letter">letter</A>
+*<A NAME="hl-NvimIdentifierScope"></A><B>hl-NvimIdentifierScope</B>*             NvimIdentifier          Namespace: <A HREF="print.html#letter">字母</A>
                                                            before `:` in
                                                            |<A HREF="#internal-variables">internal-variables</A>|
 
 *<A NAME="hl-NvimIdentifierScopeDelimiter"></A><B>hl-NvimIdentifierScopeDelimiter</B>*    NvimIdentifier          `:` after <A HREF="api.html#namespace">namespace</A>
-                                                           <A HREF="print.html#letter">letter</A>
+                                                           <A HREF="print.html#letter">字母</A>
 
 *<A NAME="hl-NvimIdentifierName"></A><B>hl-NvimIdentifierName</B>*              NvimIdentifier          Rest of the ident
 

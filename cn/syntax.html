@@ -309,7 +309,7 @@ you can see the actual color, except for &quot;Ignore&quot;):
 	 PreCondit	preprocessor #if, #else, #endif, etc.
 
 	*Type		int, long, char, etc.
-	 StorageClass	static, <A HREF="intro.html#register">register</A>, volatile, etc.
+	 StorageClass	static, <A HREF="intro.html#register">寄存器</A>, volatile, etc.
 	 Structure	struct, union, enum, etc.
 	 Typedef	A typedef
 
@@ -1002,7 +1002,7 @@ To disable a feature:
 <B><FONT color="#3A6F2B">Variable		Highlight </FONT></B>
 nasm_loose_syntax	unofficial parser allowed <A HREF="#syntax">syntax</A> not <A HREF="motion.html#as">as</A> Error
 			  (parser dependent; not recommended)
-nasm_ctx_outside_macro	contexts outside <A HREF="map.html#macro">macro</A> not <A HREF="motion.html#as">as</A> Error
+nasm_ctx_outside_macro	contexts outside <A HREF="map.html#macro">宏指令</A> not <A HREF="motion.html#as">as</A> Error
 nasm_no_warn		potentially risky <A HREF="#syntax">syntax</A> not <A HREF="motion.html#as">as</A> ToDo
 
 
@@ -2401,7 +2401,7 @@ comments:
 
 <B>	:let moo_extended_cstyle_comments = 1</B>
 
-To disable highlighting of pronoun substitution patterns inside strings:
+To disable highlighting of pronoun 替换 patterns inside strings:
 
 <B>	:let moo_no_pronoun_sub = 1</B>
 
@@ -2483,7 +2483,7 @@ features for groff, arrange for files to be recognized <A HREF="motion.html#as">
 <B>  :let nroff_is_groff = 1</B>
 
 Groff is different from the old AT&amp;T n/troff that you may still find in
-Solaris.  Groff <A HREF="map.html#macro">macro</A> and request names can be longer than 2 characters and
+Solaris.  Groff <A HREF="map.html#macro">宏指令</A> and request names can be longer than 2 characters and
 there are extensions to the language primitives.例如, in AT&amp;T troff
 you access the year <A HREF="motion.html#as">as</A> a 2-digit number with the request \(yr.  In groff you
 can use the same request, recognized for compatibility, or you can use groff's
@@ -2534,7 +2534,7 @@ file:
 <B>	let b:preprocs_as_sections = 1</B>
 
 As well, the <A HREF="#syntax">syntax</A> file adds an extra <A HREF="motion.html#paragraph">段落</A> marker for the extended
-<A HREF="motion.html#paragraph">段落</A> <A HREF="map.html#macro">macro</A> (.XP) in the ms package.
+<A HREF="motion.html#paragraph">段落</A> <A HREF="map.html#macro">宏指令</A> (.XP) in the ms package.
 
 Finally, there is a |<A HREF="groff.html">groff.vim</A>| <A HREF="#syntax">syntax</A> file that can be used for enabling
 groff <A HREF="#syntax">syntax</A> highlighting either on a file basis or globally by default.
@@ -3688,7 +3688,7 @@ for the following sets of characters:
 <B>	s = superscripts/subscripts</B>
  
 By leaving one or more of these out, the associated conceal-character
-substitution will not be made.
+替换 will not be made.
 
 
 						*<A NAME="g:tex_isk"></A><B>g:tex_isk</B>* *<A NAME="g:tex_stylish"></A><B>g:tex_stylish</B>*

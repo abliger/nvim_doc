@@ -113,7 +113,7 @@ Your first experience with Vim scripts is <A HREF="starting\.html#vimrc">vimrc</
 prefer.  And you can use any colon command in <A HREF="motion.html#it">它</A> (commands that start with a
 &quot;<A HREF="cmdline.html#:">:</A>&quot;; these are sometimes referred to <A HREF="motion.html#as">as</A> <A HREF="intro.html#Ex">Ex</A> commands or command-line commands).
    <A HREF="autocmd.html#Syntax">Syntax</A> files are also Vim scripts.  As are files that set <A HREF="options\.html#options">选项</A> for a
-specific file type.  A complicated <A HREF="map.html#macro">macro</A> can be defined by a separate Vim
+specific file type.  A complicated <A HREF="map.html#macro">宏指令</A> can be defined by a separate Vim
 <A HREF="#script">script</A> file.  You can think of other uses yourself.
 
 	If you are familiar with <A HREF="if_pyth.html#Python">Python</A>, you can find a comparison between
@@ -368,7 +368,7 @@ themselves.  Thus everywhere an <A HREF="eval.html#expression">expression</A> is
 
 	$NAME		environment variable
 	&amp;name		option
-	<A HREF="eval.html#@r">@r</A>		<A HREF="intro.html#register">register</A>
+	<A HREF="eval.html#@r">@r</A>		<A HREF="intro.html#register">寄存器</A>
 
 Examples:
 
@@ -652,7 +652,7 @@ is a specification of the line number.  In this <A HREF="change.html#case">case<
 the line where the cursor is.
    The <A HREF="builtin.html#substitute()">substitute()</A> function does something similar to the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;
 command.  The first argument is the <A HREF="options\.html#options">字符串</A> on which to perform the
-substitution.  The second argument is the <A HREF="pattern.html#pattern">pattern</A>, the third the replacement
+替换.  The second argument is the <A HREF="pattern.html#pattern">pattern</A>, the third the replacement
 <A HREF="options\.html#options">字符串</A>.  Finally, the last arguments are the flags.
    The <A HREF="builtin.html#setline()">setline()</A> function sets the line, specified by the first argument, to a
 new <A HREF="options\.html#options">字符串</A>, the second argument.  In this example the line under the cursor is
@@ -1070,8 +1070,8 @@ Window size and position:			*<A NAME="window-size-functions"></A><B>window-size-
 Mappings:				    *<A NAME="mapping-functions"></A><B>mapping-functions</B>*
 	<A HREF="builtin.html#digraph_get()">digraph_get()</A>		get |<A HREF="digraph.html#digraph">digraph</A>|
 	<A HREF="builtin.html#digraph_getlist()">digraph_getlist()</A>	get all |<A HREF="digraph.html#digraph">digraph</A>|<A HREF="change.html#s">s</A>
-	<A HREF="builtin.html#digraph_set()">digraph_set()</A>		<A HREF="intro.html#register">register</A> |<A HREF="digraph.html#digraph">digraph</A>|
-	<A HREF="builtin.html#digraph_setlist()">digraph_setlist()</A>	<A HREF="intro.html#register">register</A> multiple |<A HREF="digraph.html#digraph">digraph</A>|<A HREF="change.html#s">s</A>
+	<A HREF="builtin.html#digraph_set()">digraph_set()</A>		<A HREF="intro.html#register">寄存器</A> |<A HREF="digraph.html#digraph">digraph</A>|
+	<A HREF="builtin.html#digraph_setlist()">digraph_setlist()</A>	<A HREF="intro.html#register">寄存器</A> multiple |<A HREF="digraph.html#digraph">digraph</A>|<A HREF="change.html#s">s</A>
 	<A HREF="builtin.html#hasmapto()">hasmapto()</A>		check if a <A HREF="map.html#mapping">mapping</A> exists
 	<A HREF="builtin.html#mapcheck()">mapcheck()</A>		check if a matching <A HREF="map.html#mapping">mapping</A> exists
 	<A HREF="builtin.html#maparg()">maparg()</A>		get rhs of a <A HREF="map.html#mapping">mapping</A>
@@ -1154,12 +1154,12 @@ Various:					*<A NAME="various-functions"></A><B>various-functions</B>*
 	<A HREF="builtin.html#undofile()">undofile()</A>		get the name of the <A HREF="undo.html#undo">undo</A> file
 	<A HREF="builtin.html#undotree()">undotree()</A>		return the state of the <A HREF="undo.html#undo">undo</A> tree
 
-	<A HREF="builtin.html#getreg()">getreg()</A>		get contents of a <A HREF="intro.html#register">register</A>
-	<A HREF="builtin.html#getreginfo()">getreginfo()</A>		get information about a <A HREF="intro.html#register">register</A>
-	<A HREF="builtin.html#getregtype()">getregtype()</A>		get type of a <A HREF="intro.html#register">register</A>
-	<A HREF="builtin.html#setreg()">setreg()</A>		set contents and type of a <A HREF="intro.html#register">register</A>
-	<A HREF="builtin.html#reg_executing()">reg_executing()</A>		return the name of the <A HREF="intro.html#register">register</A> being executed
-	<A HREF="builtin.html#reg_recording()">reg_recording()</A>		return the name of the <A HREF="intro.html#register">register</A> being recorded
+	<A HREF="builtin.html#getreg()">getreg()</A>		get contents of a <A HREF="intro.html#register">寄存器</A>
+	<A HREF="builtin.html#getreginfo()">getreginfo()</A>		get information about a <A HREF="intro.html#register">寄存器</A>
+	<A HREF="builtin.html#getregtype()">getregtype()</A>		get type of a <A HREF="intro.html#register">寄存器</A>
+	<A HREF="builtin.html#setreg()">setreg()</A>		set contents and type of a <A HREF="intro.html#register">寄存器</A>
+	<A HREF="builtin.html#reg_executing()">reg_executing()</A>		return the name of the <A HREF="intro.html#register">寄存器</A> being executed
+	<A HREF="builtin.html#reg_recording()">reg_recording()</A>		return the name of the <A HREF="intro.html#register">寄存器</A> being recorded
 
 	<A HREF="builtin.html#shiftwidth()">shiftwidth()</A>		effective value of <A HREF="options.html#'shiftwidth'">'shiftwidth'</A>
 
@@ -1183,7 +1183,7 @@ begins <A HREF="motion.html#as">as</A> follows:
 <B>	:endfunction</B>
  
 	Note:
-	Function names must begin with a capital <A HREF="print.html#letter">letter</A>.
+	Function names must begin with a capital <A HREF="print.html#letter">字母</A>.
 
 Let's define a short function to return the smaller of two numbers.  It starts
 with this line:
@@ -1878,7 +1878,7 @@ file and then restores the view:
 What this does:
 <B>	ma"aYHmbgg"aP`bzt`a</B>
  	ma			set <A HREF="motion.html#mark">mark</A> a at cursor position
-	  &quot;aY			<A HREF="change.html#yank">yank</A> current line into <A HREF="intro.html#register">register</A> a
+	  &quot;aY			<A HREF="change.html#yank">yank</A> current line into <A HREF="intro.html#register">寄存器</A> a
 	     Hmb		go to top line in<A HREF="windows.html#window">窗口</A>and set <A HREF="motion.html#mark">mark</A> <A HREF="motion.html#b">b</A> there
 		<A HREF="motion.html#gg">gg</A>		go to first line in file
 		  &quot;aP		put the yanked line above <A HREF="motion.html#it">它</A>

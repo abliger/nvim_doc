@@ -154,7 +154,7 @@ when you type &quot;dw&quot;, the &quot;<A HREF="motion.html#w">w</A>&quot; is e
 
 Suppose that you want to define &lt;F7&gt; so that the command d&lt;F7&gt; deletes a C
 program block (text enclosed in curly braces, <A HREF="intro.html#{}">{}</A>).  Similarly y&lt;F7&gt; would <A HREF="change.html#yank">yank</A>
-the program block into the unnamed <A HREF="intro.html#register">register</A>.  Therefore, what you need to <A HREF="diff.html#do">do</A>
+the program block into the unnamed <A HREF="intro.html#register">寄存器</A>.  Therefore, what you need to <A HREF="diff.html#do">do</A>
 is to define &lt;F7&gt; to select the current program block.  You can <A HREF="diff.html#do">do</A> this with
 the following command:
 
@@ -242,7 +242,7 @@ first file.  Define this <A HREF="map.html#mapping">mapping</A>:
 Now you type &quot;,,&quot;.  This triggers the <A HREF="map.html#mapping">mapping</A>.  It replaces &quot;5.1&quot; with &quot;5.2&quot;
 in the first line.  Then <A HREF="motion.html#it">它</A> does a &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; to write the file and edit the
 next one.  The <A HREF="map.html#mapping">mapping</A> ends in &quot;,,&quot;.  This triggers the same <A HREF="map.html#mapping">mapping</A> again,
-thus doing the substitution, etc.
+thus doing the 替换, etc.
    This continues until there is an error.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> could be a file
 where the substitute command doesn't find a match for &quot;5.1&quot;.  You can then
 make a change to insert &quot;5.1&quot; and continue by typing &quot;,,&quot; again.  Or the
@@ -365,7 +365,7 @@ Now when you execute the command &quot;:DeleteFirst&quot; Vim executes &quot;:1d
 deletes the first line.
 
 	Note:
-	User-defined commands must start with a capital <A HREF="print.html#letter">letter</A>.  You cannot
+	User-defined commands must start with a capital <A HREF="print.html#letter">字母</A>.  You cannot
 	use &quot;<A HREF="editing.html#:Next">:Next</A>&quot;.  The underscore cannot be used!  You can use digits, but
 	this is discouraged.
 
@@ -461,9 +461,9 @@ Some of the other <A HREF="options\.html#options">选项</A> and keywords are <A
 				through the <A HREF="map.html#&lt;count&gt;">&lt;count&gt;</A> keyword.
 	-bang			You can use a !.  If present, using <A HREF="map.html#&lt;bang&gt;">&lt;bang&gt;</A> will
 				result in a !.
-	-register		You can specify a <A HREF="intro.html#register">register</A>.  (The default is
-				the unnamed <A HREF="intro.html#register">register</A>.)
-				The <A HREF="intro.html#register">register</A> specification is available <A HREF="motion.html#as">as</A>
+	-register		You can specify a <A HREF="intro.html#register">寄存器</A>.  (The default is
+				the unnamed <A HREF="intro.html#register">寄存器</A>.)
+				The <A HREF="intro.html#register">寄存器</A> specification is available <A HREF="motion.html#as">as</A>
 				<A HREF="map.html#&lt;reg&gt;">&lt;reg&gt;</A> (a.k.a. <A HREF="map.html#&lt;register&gt;">&lt;register&gt;</A>).
 	-complete={type}	Type of command-line completion used.  See
 				|<A HREF="map.html#:command-completion">:command-completion</A>| for the <A HREF="eval.html#list">列表</A> of possible

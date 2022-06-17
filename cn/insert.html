@@ -193,16 +193,16 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 
 
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A>				*<A NAME="i_CTRL-R"></A><B>i_CTRL-R</B>*
-		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">register</A>.  Between typing <A HREF="undo.html#CTRL-R">CTRL-R</A> and
+		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">寄存器</A>.  Between typing <A HREF="undo.html#CTRL-R">CTRL-R</A> and
 		the second character, &#39;&#34;'' will be displayed to indicate that
-		you are expected to enter the name of a <A HREF="intro.html#register">register</A>.
+		you are expected to enter the name of a <A HREF="intro.html#register">寄存器</A>.
 		The text is inserted <A HREF="motion.html#as">as</A> if you typed <A HREF="motion.html#it">它</A>, but mappings and
 		<A HREF="map.html#abbreviations">abbreviations</A> are not used.  If you have <A HREF="options\.html#options">选项</A> like
 		<A HREF="options.html#'textwidth'">'textwidth'</A>, <A HREF="options.html#'formatoptions'">'formatoptions'</A>, or <A HREF="options.html#'autoindent'">'autoindent'</A> set, this will
 		influence what will be inserted.  This is different from what
 		happens with the &quot;<A HREF="change.html#p">p</A>&quot;命令 and pasting with the mouse.
-		Special <A HREF="change.html#registers">registers</A>:
-			&#39;&#34;''	the unnamed <A HREF="intro.html#register">register</A>, containing the text of
+		Special <A HREF="change.html#registers">寄存器</A>:
+			&#39;&#34;''	the unnamed <A HREF="intro.html#register">寄存器</A>, containing the text of
 				the last delete or <A HREF="change.html#yank">yank</A>
 			'<A HREF="motion.html#&#37;">&#37;</A>'	the current file name
 			'<A HREF="pattern.html##">#</A>'	the alternate file name
@@ -214,7 +214,7 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 			'<A HREF="motion.html#-">-</A>'	the last small (less than a line) delete
 
 							*<A NAME="i_CTRL-R_="></A><B>i_CTRL-R_=</B>*
-			'<A HREF="change.html#=">=</A>'	the <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">register</A>: you are prompted to
+			'<A HREF="change.html#=">=</A>'	the <A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A>: you are prompted to
 				enter an expression (见 |<A HREF="eval.html#expression">expression</A>|)
 				Note that 0x80 (128 decimal) is used for
 				special keys.  E.g., you can use this to move
@@ -228,46 +228,46 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 				converted to a <A HREF="options\.html#options">字符串</A>.
 				When <A HREF="builtin.html#append()">append()</A> or <A HREF="builtin.html#setline()">setline()</A> is invoked the <A HREF="undo.html#undo">undo</A>
 				sequence will be broken.
-		见 |<A HREF="change.html#registers">registers</A>| about registers.
+		见 |<A HREF="change.html#registers">寄存器</A>| about registers.
 
 
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="change.html#{register}">{register}</A>			*<A NAME="i_CTRL-R_CTRL-R"></A><B>i_CTRL-R_CTRL-R</B>*
-		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">register</A>.  Works like using a single
+		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">寄存器</A>.  Works like using a single
 		<A HREF="undo.html#CTRL-R">CTRL-R</A>, but the text is inserted literally, not <A HREF="motion.html#as">as</A> if typed.
-		This differs when the <A HREF="intro.html#register">register</A> contains characters like <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>.
-		Example, where <A HREF="intro.html#register">register</A> a contains &quot;ab^Hc&quot;:
+		This differs when the <A HREF="intro.html#register">寄存器</A> contains characters like <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>.
+		Example, where <A HREF="intro.html#register">寄存器</A> a contains &quot;ab^Hc&quot;:
 <B>	CTRL-R a		results in "ac".</B>
 <B>	CTRL-R CTRL-R a		results in "ab^Hc".</B>
  		Options <A HREF="options.html#'textwidth'">'textwidth'</A>, <A HREF="options.html#'formatoptions'">'formatoptions'</A>, etc. still apply.  If
 		you also want to avoid these, use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="motion.html#CTRL-O">CTRL-O</A>, see below.
-		The '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">register</A> (last inserted text) is still inserted <A HREF="motion.html#as">as</A>
+		The '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">寄存器</A> (last inserted text) is still inserted <A HREF="motion.html#as">as</A>
 		typed.
-		After this command, the '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">register</A> contains the text from
-		the <A HREF="intro.html#register">register</A> <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">它</A> was inserted by typing <A HREF="motion.html#it">它</A>.
+		After this command, the '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">寄存器</A> contains the text from
+		the <A HREF="intro.html#register">寄存器</A> <A HREF="motion.html#as">as</A> if <A HREF="motion.html#it">它</A> was inserted by typing <A HREF="motion.html#it">它</A>.
 
 
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="motion.html#CTRL-O">CTRL-O</A> <A HREF="change.html#{register}">{register}</A>			*<A NAME="i_CTRL-R_CTRL-O"></A><B>i_CTRL-R_CTRL-O</B>*
-		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">register</A> literally and don't
+		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">寄存器</A> literally and don't
 		auto-indent.  Does the same <A HREF="motion.html#as">as</A> pasting with the mouse
-		|<A HREF="change.html#&lt;MiddleMouse&gt;">&lt;MiddleMouse&gt;</A>|. When the <A HREF="intro.html#register">register</A> is <A HREF="motion.html#linewise">linewise</A> this will
+		|<A HREF="change.html#&lt;MiddleMouse&gt;">&lt;MiddleMouse&gt;</A>|. When the <A HREF="intro.html#register">寄存器</A> is <A HREF="motion.html#linewise">linewise</A> this will
 		insert the text above the current line, like with `P`.
 		Does not replace characters!
-		The '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">register</A> (last inserted text) is still inserted <A HREF="motion.html#as">as</A>
+		The '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">寄存器</A> (last inserted text) is still inserted <A HREF="motion.html#as">as</A>
 		typed.
-		After this command, the '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">register</A> contains the command
+		After this command, the '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">寄存器</A> contains the command
 		typed and not the text. I.e., the literals &quot;^R^O&quot; and not the
-		text from the <A HREF="intro.html#register">register</A>.
+		text from the <A HREF="intro.html#register">寄存器</A>.
 
 
 <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="motion.html#CTRL-P">CTRL-P</A> <A HREF="change.html#{register}">{register}</A>			*<A NAME="i_CTRL-R_CTRL-P"></A><B>i_CTRL-R_CTRL-P</B>*
-		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">register</A> literally and fix the
+		<A HREF="#Insert">Insert</A> the contents of a <A HREF="intro.html#register">寄存器</A> literally and fix the
 		indent, like |<A HREF="change.html#[&lt;MiddleMouse&gt;">[&lt;MiddleMouse&gt;</A>|.
 		Does not replace characters!
-		The '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">register</A> (last inserted text) is still inserted <A HREF="motion.html#as">as</A>
+		The '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">寄存器</A> (last inserted text) is still inserted <A HREF="motion.html#as">as</A>
 		typed.
-		After this command, the '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">register</A> contains the command
+		After this command, the '<A HREF="repeat.html#.">.</A>' <A HREF="intro.html#register">寄存器</A> contains the command
 		typed and not the text. I.e., the literals &quot;^R^P&quot; and not the
-		text from the <A HREF="intro.html#register">register</A>.
+		text from the <A HREF="intro.html#register">寄存器</A>.
 
 
 						*<A NAME="i_CTRL-T"></A><B>i_CTRL-T</B>*
@@ -726,7 +726,7 @@ actual characters in the file, you are <A HREF="change.html#replacing">replacing
 characters further on in the file never appear to move.
 
 So if you type a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> <A HREF="motion.html#it">它</A> may replace several normal characters, and if you
-type a <A HREF="print.html#letter">letter</A> on top of a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> <A HREF="motion.html#it">它</A> may not replace anything at all, since the
+type a <A HREF="print.html#letter">字母</A> on top of a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> <A HREF="motion.html#it">它</A> may not replace anything at all, since the
 <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> will still line up to the same place <A HREF="motion.html#as">as</A> before.
 
 Typing a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> still doesn't cause characters later in the file to appear to
@@ -820,10 +820,10 @@ a bit easier (although they will hide other commands):
 <B>    :inoremap ^D ^X^D</B>
 <B>    :inoremap ^L ^X^L</B>
 
-As a special <A HREF="change.html#case">case</A>, typing <A HREF="undo.html#CTRL-R">CTRL-R</A> to perform <A HREF="intro.html#register">register</A> insertion (see
+As a special <A HREF="change.html#case">case</A>, typing <A HREF="undo.html#CTRL-R">CTRL-R</A> to perform <A HREF="intro.html#register">寄存器</A> insertion (see
 |<A HREF="#i_CTRL-R">i_CTRL-R</A>|) will not exit <A HREF="change.html#CTRL-X">CTRL-X</A> mode.  This is primarily to allow the use of
-the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">register</A> to call some function to determine the next operation.  If
-the contents of the <A HREF="intro.html#register">register</A> (or result of the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">register</A> evaluation) are
+the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">寄存器</A> to call some function to determine the next operation.  If
+the contents of the <A HREF="intro.html#register">寄存器</A> (or result of the '<A HREF="change.html#=">=</A>' <A HREF="intro.html#register">寄存器</A> evaluation) are
 not valid <A HREF="change.html#CTRL-X">CTRL-X</A> mode keys然后<A HREF="change.html#CTRL-X">CTRL-X</A> mode will be exited <A HREF="motion.html#as">as</A> if those keys
 had been typed.
 
@@ -1122,16 +1122,16 @@ name.  The <A HREF="options.html#'path'">'path'</A> option is used to search for
 
 							*<A NAME="i_CTRL-X_CTRL-D"></A><B>i_CTRL-X_CTRL-D</B>*
 <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>		Search in the current and included files for the
-			first definition (or <A HREF="map.html#macro">macro</A>) name that starts with
+			first definition (or <A HREF="map.html#macro">宏指令</A>) name that starts with
 			the same characters <A HREF="motion.html#as">as</A> before the cursor.  The found
 			definition name is inserted in front of the cursor.
 	<A HREF="scroll.html#CTRL-D">CTRL-D</A>	or
-	<A HREF="motion.html#CTRL-N">CTRL-N</A>		Search forwards for next matching <A HREF="map.html#macro">macro</A> name.  This
-			<A HREF="map.html#macro">macro</A> name replaces the previous matching <A HREF="map.html#macro">macro</A>
+	<A HREF="motion.html#CTRL-N">CTRL-N</A>		Search forwards for next matching <A HREF="map.html#macro">宏指令</A> name.  This
+			<A HREF="map.html#macro">宏指令</A> name replaces the previous matching <A HREF="map.html#macro">宏指令</A>
 			name.
 
-	<A HREF="motion.html#CTRL-P">CTRL-P</A>		Search backward for previous matching <A HREF="map.html#macro">macro</A> name.
-			This <A HREF="map.html#macro">macro</A> name replaces the previous matching <A HREF="map.html#macro">macro</A>
+	<A HREF="motion.html#CTRL-P">CTRL-P</A>		Search backward for previous matching <A HREF="map.html#macro">宏指令</A> name.
+			This <A HREF="map.html#macro">宏指令</A> name replaces the previous matching <A HREF="map.html#macro">宏指令</A>
 			name.
 
 	<A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A>	Further use of <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="scroll.html#CTRL-D">CTRL-D</A> will copy the words
@@ -1330,7 +1330,7 @@ items:
 			or &quot;abbr&quot;
 	info		more information about the item, can be displayed in a
 			preview<A HREF="windows.html#window">窗口</A>
-	kind		single <A HREF="print.html#letter">letter</A> indicating the type of completion
+	kind		single <A HREF="print.html#letter">字母</A> indicating the type of completion
 	icase		when non-zero <A HREF="change.html#case">case</A> is to be ignored when comparing
 			items to be equal; when omitted zero is used, thus
 			items that only differ in <A HREF="change.html#case">case</A> are added
@@ -1358,14 +1358,14 @@ useful for function arguments.  Use a single space for &quot;info&quot; to remov
 existing text in the preview<A HREF="windows.html#window">窗口</A>.  The size of the preview<A HREF="windows.html#window">窗口</A>is three
 lines, but <A HREF="options.html#'previewheight'">'previewheight'</A> is used when <A HREF="motion.html#it">它</A> has a value of 1 or 2.
 
-The &quot;kind&quot; item uses a single <A HREF="print.html#letter">letter</A> to indicate the kind of completion.  This
+The &quot;kind&quot; item uses a single <A HREF="print.html#letter">字母</A> to indicate the kind of completion.  This
 may be used to show the completion differently (different color or icon).
 Currently these types can be used:
 	<A HREF="visual.html#v">v</A>	variable
 	<A HREF="motion.html#f">f</A>	function or <A HREF="eval.html#method">method</A>
 	<A HREF="motion.html#m">m</A>	member of a struct or class
 	t	typedef
-	<A HREF="change.html#d">d</A>	#define or <A HREF="map.html#macro">macro</A>
+	<A HREF="change.html#d">d</A>	#define or <A HREF="map.html#macro">宏指令</A>
 
 When searching for matches takes some time call |<A HREF="builtin.html#complete_add()">complete_add()</A>| to add each
 match to the total <A HREF="eval.html#list">列表</A>.  These matches should then not appear in the returned
@@ -2054,7 +2054,7 @@ a			Append text after the cursor <A HREF="intro.html#[count]">[count]</A> times.
 
 							*<A NAME="A"></A><B>A</B>*
 A			Append text at the end of the line <A HREF="intro.html#[count]">[count]</A> times.
-			For using &quot;A&quot; in <A HREF="visual.html#Visual">Visual</A> block mode 见 |<A HREF="visual.html#v_b_A">v_b_A</A>|.
+			For using &quot;A&quot; in <A HREF="visual.html#Visual">可视</A> 块模式 见 |<A HREF="visual.html#v_b_A">v_b_A</A>|.
 
 
 &lt;insert&gt;	or				*<A NAME="i"></A><B>i</B>* *<A NAME="insert"></A><B>insert</B>* *<A NAME="&lt;Insert&gt;"></A><B>&lt;Insert&gt;</B>*
@@ -2069,7 +2069,7 @@ I			<A HREF="#Insert">Insert</A> text before the first non-blank in the line
 			When the '<A HREF="motion.html#H">H</A>' flag is present in <A HREF="options.html#'cpoptions'">'cpoptions'</A> and the
 			line only contains blanks, insert start just before
 			the last blank.
-			For using &quot;I&quot; in <A HREF="visual.html#Visual">Visual</A> block mode 见 |<A HREF="visual.html#v_b_I">v_b_I</A>|.
+			For using &quot;I&quot; in <A HREF="visual.html#Visual">可视</A> 块模式 见 |<A HREF="visual.html#v_b_I">v_b_I</A>|.
 
 
 							*<A NAME="gI"></A><B>gI</B>*
