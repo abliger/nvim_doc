@@ -271,142 +271,103 @@ More information about packages can be found here: |<A HREF="repeat.html#package
 
 *<A NAME="05.5"></A><B>05.5</B>*	添加<A HREF="#plugin">插件</A>					*<A NAME="add-plugin"></A><B>add-plugin</B>* *<A NAME="plugin"></A><B>plugin</B>*
 
-Vim's functionality can be extended by adding plugins.  A <A HREF="#plugin">插件</A> is nothing
-more than a Vim <A HREF="usr_41.html#script">script</A> file that is loaded automatically when Vim starts.  You
-can add a <A HREF="#plugin">插件</A> very easily by dropping <A HREF="motion.html#it">它</A> in your <A HREF="#plugin">插件</A> directory.
+Vim是通过添加插件进行功能拓展.<A HREF="#plugin">插件</A>只不过是Vim启动后自动加载的<A HREF="usr_41.html#script">脚本</A>文件.你可以把插件文件放到你的插件目录中就能对Vim添加<A HREF="#plugin">插件</A>.
 
-There are two types of plugins:
+有两种类型的插件:
 
-    global <A HREF="#plugin">插件</A>: Used for all kinds of files
-  <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="#plugin">插件</A>: Only used for a specific type of file
+全局<A HREF="#plugin">插件</A>:在所有的文件中运行
+<A HREF="filetype\.html#filetype">文件类型</A><A HREF="#plugin">插件</A>: 只在特定文件类型中运行
 
-The global plugins will be discussed first然后the <A HREF="filetype\.html#filetype">文件类型</A> ones
-|<A HREF="#add-filetype-plugin">add-filetype-plugin</A>|.
+我们会先讲解全局插件然后讲解<A HREF="filetype\.html#filetype">文件类型</A>插件|<A HREF="#add-filetype-plugin">add-filetype-plugin</A>|.
 
+全局插件						*<A NAME="standard-plugin"></A><B>standard-plugin</B>*
 
-
-GLOBAL PLUGINS						*<A NAME="standard-plugin"></A><B>standard-plugin</B>*
-
-When you start Vim, <A HREF="motion.html#it">它</A> will automatically load a number of global plugins.
-You don't have to <A HREF="diff.html#do">do</A> anything for this.  They add functionality that most
-people will want to use, but which was implemented <A HREF="motion.html#as">as</A> a Vim <A HREF="usr_41.html#script">script</A> instead of
-being compiled into Vim.  You can find them listed in the help index
-|<A HREF="index.html#standard-plugin-list">standard-plugin-list</A>|.  Also 见 |<A HREF="starting.html#load-plugins">load-plugins</A>|.
-
+当你启动Vim,<A HREF="motion.html#it">它</A>会自动加载大量的全局插件.你不需要做任何事情.它会添加大多数人们想要使用的功能,插件是使用Vim脚本自动加载的而不是编译到Vim.你能在帮助索引中找到它们的列表|<A HREF="index.html#standard-plugin-list">standard-plugin-list</A>|.见|<A HREF="starting.html#load-plugins">load-plugins</A>|.
 
               *<A NAME="add-global-plugin"></A><B>add-global-plugin</B>*
-You can add a global <A HREF="#plugin">插件</A> to add functionality that will always be present
-when you use Vim.  There are only two steps for adding a global <A HREF="#plugin">插件</A>:
-1. Get a copy of the <A HREF="#plugin">插件</A>.
-2. Drop <A HREF="motion.html#it">它</A> in the right directory.
+你添加全局插件以增加的功能，在使用Vim时总是存在.只有两部去添加<A HREF="#plugin">插件</A>:
+1. 获得<A HREF="#plugin">插件</A>源码.
+2. 放置到插件目录.
 
+获得插件
 
-GETTING A GLOBAL PLUGIN
+在哪找到插件?
+- 有一些已经被加载，你能在$VIMRUNTIME/plugin 找到它们.
+- 有一些在Vim包中.你能在$VIMRUNTIME/macros 和它的子目录$VIM/vimfiles/pack/dist/opt/文件夹中发现它们.
+- 从网络下载.它们收集在<A HREF="http://www.vim.org">http://www.vim.org</A>.
+- 有时它们发布在Vim邮件列表.
+- 自定义插件, 见 |<A HREF="usr_41.html#write-plugin">write-plugin</A>|.
 
-Where can you find plugins?
-- Some are always loaded, you can see them in the directory $VIMRUNTIME/plugin.
-- Some come with Vim.  You can find them in the directory $VIMRUNTIME/macros
-  and its sub-directories and under $VIM/vimfiles/pack/dist/opt/.
- - Download from the net. There is a large collection on	<A HREF="http://www.vim.org">http://www.vim.org</A>.
-- They are sometimes posted in a Vim maillist.
-- You could write one yourself, 见 |<A HREF="usr_41.html#write-plugin">write-plugin</A>|.
+使用全局插件
 
+首先去读<A HREF="#plugin">插件</A>自己的帮助文件检查一些特殊情况.再拷贝到你的插件目录:
 
-USING A GLOBAL PLUGIN
-
-First read the text in the <A HREF="#plugin">插件</A> itself to check for any special conditions.
-Then copy the file to your <A HREF="#plugin">插件</A> directory:
-
-<B><FONT color="#3A6F2B">	system		plugin directory </FONT></B>
+<B><FONT color="#3A6F2B">系统   插件目录</FONT></B>
   Unix		~/.local/share/nvim/site/plugin
 
-Example for Unix (assuming you didn't have a <A HREF="#plugin">插件</A> directory yet):
+对于UNIX来说(假设你还没有<A HREF="#plugin">插件</A>目录):
 
 <B>	mkdir -p ~/.local/share/nvim/site/plugin</B>
 <B>	cp /tmp/yourplugin.vim ~/.local/share/nvim/site/plugin</B>
 
-That's all!  Now you can use the commands defined in this <A HREF="#plugin">插件</A>.
+这就完成了.现在你可以使用再插件中定义的命令了.
 
-Instead of putting plugins directly into the plugin/ directory, you may
-better organize them by putting them into subdirectories under plugin/.
-As an example, consider using &quot;~/.local/share/nvim/site/plugin/perl/*.vim&quot; for 
-all your Perl plugins.
+除了把这些插件直接放进 plugin/ 目录以外，还可以更好地组织一下，把它们放进plugin 的单独的子目录中。例如，可以考虑把所有 Perl 插件放置在&quot;~/.vim/plugin/perl/*.vim&quot;.
 
+文件类型插件			*<A NAME="add-filetype-plugin"></A><B>add-filetype-plugin</B>* *<A NAME="ftplugins"></A><B>ftplugins</B>*
 
-
-FILETYPE PLUGINS			*<A NAME="add-filetype-plugin"></A><B>add-filetype-plugin</B>* *<A NAME="ftplugins"></A><B>ftplugins</B>*
-
-The Vim <A HREF="intro.html#distribution">distribution</A> comes with a set of plugins for different <A HREF="filetype\.html#filetypes">文件类型</A> that
-you can start using with this command:
+Vim使用一系列插件来<A HREF="intro.html#distribution">分销</A>不同的<A HREF="filetype\.html#filetypes">文件类型</A>。你可以使用这个命令启动Vim:
 
 <B>	:filetype plugin on</B>
 
-That's all!  见 |<A HREF="#vimrc-filetype">vimrc-filetype</A>|.
+见 |<A HREF="#vimrc-filetype">vimrc-filetype</A>|.
 
-If you are missing a <A HREF="#plugin">插件</A> for a <A HREF="filetype\.html#filetype">文件类型</A> you are using, or you found a
-better one, you can add <A HREF="motion.html#it">它</A>.  There are two steps for adding a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="#plugin">插件</A>:
-1. Get a copy of the <A HREF="#plugin">插件</A>.
-2. Drop <A HREF="motion.html#it">它</A> in the right directory.
+如果你对你正使用的文件类型的插件感到混乱或者找到更好的插件.有两部添加一个<A HREF="filetype\.html#filetype">文件类型</A><A HREF="#plugin">插件</A>:
+1. 获得<A HREF="#plugin">插件</A>源码.
+2. 放置到插件目录.
 
+获得文件类型插件
 
-GETTING A FILETYPE PLUGIN
-
-You can find them in the same places <A HREF="motion.html#as">as</A> the global plugins.  Watch out if the
-type of file is mentioned然后you know if the <A HREF="#plugin">插件</A> is a global or a
-<A HREF="filetype\.html#filetype">文件类型</A> one.  The scripts in $VIMRUNTIME/macros are global ones, the <A HREF="filetype\.html#filetype">文件类型</A>
-plugins are in $VIMRUNTIME/ftplugin.
+你可以像全局插件一样在相同的地方找到它们.注意一下插件有没有注明文件类型,据此你可以知道这个插件是全局的还是文件类型相关的.全局插件在$VIMRUNTIME/macros,<A HREF="filetype\.html#filetype">文件类型</A>插件在$VIMRUNTIME/ftplugin.
 
 
 
-USING A FILETYPE PLUGIN					*<A NAME="ftplugin-name"></A><B>ftplugin-name</B>*
+使用文件类型插件					*<A NAME="ftplugin-name"></A><B>ftplugin-name</B>*
 
-You can add a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="#plugin">插件</A> by dropping <A HREF="motion.html#it">它</A> in the right directory.  The
-name of this directory is in the same directory mentioned above for global
-plugins, but the last part is &quot;<A HREF="usr_41.html#ftplugin">ftplugin</A>&quot;.  Suppose you have found a <A HREF="#plugin">插件</A> for
-the &quot;stuff&quot; <A HREF="filetype\.html#filetype">文件类型</A>, and you are on Unix.  Then you can move this file to the
-<A HREF="usr_41.html#ftplugin">ftplugin</A> directory:
+你可以通过把插件文件放到合适的目录中来增加一个插件。目录的名字与前面提过的全局插件的位置一样，但最后一级目录是 "ftplugin"。假设你找到一个用于 "stuff" 文件类型的插件，而且你的系统是 Unix。那么，你可以把这个文件用如下命令移入 ftplugin 目录:
 
 <B>	mkdir -p ~/.local/share/nvim/site/ftplugin</B>
 <B>	mv thefile ~/.local/share/nvim/site/ftplugin/stuff.vim</B>
 
-If that file already exists you already have a <A HREF="#plugin">插件</A> for &quot;stuff&quot;.  You might
-want to check if the existing <A HREF="#plugin">插件</A> doesn't conflict with the one you are
-adding.  If it's OK, you can give the new one another name:
+如果这个文件已经存在，你可以检查一下两个插件有没有冲突。如果没有，你可以用另一个名字:
 
 <B>	mv thefile ~/.local/share/nvim/site/ftplugin/stuff_too.vim</B>
 
-The underscore is used to separate the name of the <A HREF="filetype\.html#filetype">文件类型</A> from the rest,
-which can be anything.  If you use &quot;otherstuff.vim&quot; <A HREF="motion.html#it">它</A> wouldn't work, <A HREF="motion.html#it">它</A> would
-be loaded for the &quot;otherstuff&quot; <A HREF="filetype\.html#filetype">文件类型</A>.
+这里，下划线用来分开文件类型和其它部分 (这些部分可以由任意字符组成)。但如果你用 "otherstuff.vim" 就不行了。那是用于 "otherstuff" 类型的文件的.
 
-The generic names for the <A HREF="filetype\.html#filetype">文件类型</A> plugins are:
+<A HREF="filetype\.html#filetype">文件类型</A>插件名字语法是:
 
 <B>	ftplugin/&lt;filetype&gt;.vim</B>
 <B>	ftplugin/&lt;filetype&gt;_&lt;name&gt;.vim</B>
 <B>	ftplugin/&lt;filetype&gt;/&lt;name&gt;.vim</B>
 
-Here &quot;&lt;name&gt;&quot; can be any name that you prefer.
-Examples for the &quot;stuff&quot; <A HREF="filetype\.html#filetype">文件类型</A> on Unix:
+这里 "<name>" 可以是任何你喜欢的名字。例如，在 Unix 上，"stuff" 文件类型的插件可以是:
 
 <B>	~/.local/share/nvim/site/ftplugin/stuff.vim</B>
 <B>	~/.local/share/nvim/site/ftplugin/stuff_def.vim</B>
 <B>	~/.local/share/nvim/site/ftplugin/stuff/header.vim</B>
 
-The &lt;filetype&gt; part is the name of the <A HREF="filetype\.html#filetype">文件类型</A> the <A HREF="#plugin">插件</A> is to be used for.
-Only files of this <A HREF="filetype\.html#filetype">文件类型</A> will use the settings from the <A HREF="#plugin">插件</A>.  The &lt;name&gt;
-part of the <A HREF="#plugin">插件</A> file doesn't matter, you can use <A HREF="motion.html#it">它</A> to have several plugins
-for the same <A HREF="filetype\.html#filetype">文件类型</A>.  Note that <A HREF="motion.html#it">它</A> must end in &quot;.vim&quot; or &quot;.lua&quot;.
+这里，&lt;filetype&gt; 部分是相应文件类型的名称。只有对应文件类型的文件才会用这个插件内的设置。插件的&lt;name&gt;部分则不重要，你可以对同一个文件类型使用多个插件。
+    注意 插件必须以 ".vim"或者 ".lua" 结尾.
 
 
 深入阅读:
-|<A HREF="filetype.html#filetype-plugins">filetype-plugins</A>|	Documentation for the filetype plugins and information
-      about how to avoid that mappings cause problems.
-|<A HREF="starting.html#load-plugins">load-plugins</A>|		When the global plugins are loaded during <A HREF="starting.html#startup">startup</A>.
-|<A HREF="filetype.html#ftplugin-overrule">ftplugin-overrule</A>|	Overruling the settings from a global plugin.
-|<A HREF="usr_41.html#write-plugin">write-plugin</A>|		How to write a plugin <A HREF="usr_41.html#script">script</A>.
-|<A HREF="filetype.html#plugin-details">plugin-details</A>|	For more information about using plugins or when your
-      <A HREF="#plugin">插件</A> doesn't work.
-|<A HREF="filetype.html#new-filetype">new-filetype</A>|		How to detect a new file type.
+|<A HREF="filetype.html#filetype-plugins">filetype-plugins</A>|	文件类型插件的文档和有关如何避免映射引起的问题
+|<A HREF="starting.html#load-plugins">load-plugins</A>|		启动时插件加载时长.
+|<A HREF="filetype.html#ftplugin-overrule">ftplugin-overrule</A>|	控制全局插件选项.
+|<A HREF="usr_41.html#write-plugin">write-plugin</A>|		如何写插件.
+|<A HREF="filetype.html#plugin-details">plugin-details</A>|	插件详情或者你的插件不工作.
+|<A HREF="filetype.html#new-filetype">new-filetype</A>|		如果发现新类型.
 
 ==============================================================================
 
