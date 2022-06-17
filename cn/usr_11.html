@@ -79,23 +79,20 @@
 			   从崩溃中恢复
 
 
-Did your computer crash?  And you just spent hours editing?  Don't panic!  Vim
-stores enough information to be able to restore most of your work.  This
-chapter shows you how to get your work back and explains how the swap file is
-used.
+你的计算机崩溃过吗？是不是还正好在你编辑了几个小时以后？不要惊慌！Vim 已经保存了大部分的信息使你可以恢复你的大多数数据。本章告诉你怎样恢复这些数据并向你介绍Vim 是如何使用交换文件的.
 
-|<A HREF="#11.1">11.1</A>|	Basic <A HREF="recover.html#recovery">recovery</A>
-|<A HREF="#11.2">11.2</A>|	Where is the swap file?
-|<A HREF="#11.3">11.3</A>|	Crashed or not?
+|<A HREF="#11.1">11.1</A>|	基础的<A HREF="recover.html#recovery">恢复</A>
+|<A HREF="#11.2">11.2</A>|	交换文件在哪里?
+|<A HREF="#11.3">11.3</A>|	有没有崩溃
 |<A HREF="#11.4">11.4</A>|	深入阅读
 
-下一章: |<A HREF="usr_12.html">usr_12.txt</A>|  Clever tricks
+下一章: |<A HREF="usr_12.html">usr_12.txt</A>|  小技巧
 上一章: |<A HREF="usr_10.html">usr_10.txt</A>|  做大改变
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="11.1"></A><B>11.1</B>*	Basic <A HREF="recover.html#recovery">recovery</A>
+*<A NAME="11.1"></A><B>11.1</B>*	基础的<A HREF="recover.html#recovery">恢复</A>
 
 In most cases recovering a file is quite simple, assuming you know which file
 you were editing (and the harddisk is still working).  Start Vim on the file,
@@ -156,7 +153,7 @@ You must be in the right directory, otherwise Vim can't find the swap file.
 
 ==============================================================================
 
-*<A NAME="11.2"></A><B>11.2</B>*	Where is the swap file?
+*<A NAME="11.2"></A><B>11.2</B>*	交换文件在哪里?
 
 Vim can store the swap file in several places.  Normally <A HREF="motion.html#it">它</A> is in the same
 directory <A HREF="motion.html#as">as</A> the original file.  To find <A HREF="motion.html#it">它</A>, change to the directory of the
@@ -219,7 +216,7 @@ put the swap file.
 
 ==============================================================================
 
-*<A NAME="11.3"></A><B>11.3</B>*	Crashed or not?					*<A NAME="ATTENTION"></A><B>ATTENTION</B>* *<A NAME="E325"></A><B>E325</B>*
+*<A NAME="11.3"></A><B>11.3</B>*	有没有崩溃					*<A NAME="ATTENTION"></A><B>ATTENTION</B>* *<A NAME="E325"></A><B>E325</B>*
 
 Vim tries to protect you from doing stupid things.  Suppose you innocently
 start editing a file, expecting the contents of the file to show up.  Instead,
@@ -388,7 +385,7 @@ For programmatic access to the swap file, 见 |<A HREF="builtin.html#swapinfo()"
 
 ==============================================================================
 
-下一章: |<A HREF="usr_12.html">usr_12.txt</A>|  Clever tricks
+下一章: |<A HREF="usr_12.html">usr_12.txt</A>|  小技巧
 <A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
 </PRE>
   </div>
