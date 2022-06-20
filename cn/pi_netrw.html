@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: pi_netrw</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -327,7 +327,7 @@ EXTERNAL APPLICATIONS AND PROTOCOLS			*<A NAME="netrw-externapp"></A><B>netrw-ex
  	in your .vimrc.
 
 	<A HREF="#g:netrw_http_put_cmd">g:netrw_http_put_cmd</A>: this option specifies both the executable and
-	any needed <A HREF="options\.html#options">选项</A>.  This command does a PUT operation to the url.
+	any needed <A HREF="options.html#options">选项</A>.  This command does a PUT operation to the url.
 
 
 
@@ -440,7 +440,7 @@ NETRW VARIABLES AND SETTINGS				*<A NAME="netrw-variables"></A><B>netrw-variable
     (Also see:
     |<A HREF="#netrw-browser-var">netrw-browser-var</A>|     : netrw browser option <A HREF="eval.html#variables">variables</A>
     |<A HREF="#netrw-protocol">netrw-protocol</A>|        : file transfer protocol option <A HREF="eval.html#variables">variables</A>
-    |<A HREF="#netrw-settings">netrw-settings</A>|        : additional file transfer <A HREF="options\.html#options">选项</A>
+    |<A HREF="#netrw-settings">netrw-settings</A>|        : additional file transfer <A HREF="options.html#options">选项</A>
     |<A HREF="#netrw-browser-options">netrw-browser-options</A>| : these options affect browsing directories
     )
 
@@ -491,7 +491,7 @@ YXXYnetrw-externapp|:
 			   <A HREF="eval.html#method">method</A> works for your setup.
 
 
- *<A NAME="g:netrw_ftp_options"></A><B>g:netrw_ftp_options</B>*     Chosen by default, these <A HREF="options\.html#options">选项</A> are supposed to
+ *<A NAME="g:netrw_ftp_options"></A><B>g:netrw_ftp_options</B>*     Chosen by default, these <A HREF="options.html#options">选项</A> are supposed to
 			 turn interactive prompting off and to restrain ftp
 			 from attempting auto-login upon initial connection.
 			 However, <A HREF="motion.html#it">它</A> appears that not all ftp implementations
@@ -788,7 +788,7 @@ The &lt;.netrc&gt; file, typically located in your home directory, contains line
 therein which map a hostname (machine name) to the user id and password you
 prefer to use with <A HREF="motion.html#it">它</A>.
 
-The typical <A HREF="syntax\.html#syntax">语法</A> for lines in a &lt;.netrc&gt; file is given <A HREF="motion.html#as">as</A> shown below.
+The typical <A HREF="syntax.html#syntax">语法</A> for lines in a &lt;.netrc&gt; file is given <A HREF="motion.html#as">as</A> shown below.
 Ftp under Unix usually supports &lt;.netrc&gt;; ftp under Windows usually doesn't.
 
 <B>	machine {full machine name} login {user-id} password "{password}"</B>
@@ -826,7 +826,7 @@ However, |<A HREF="#netrw-ssh-hack">netrw-ssh-hack</A>| can help with this probl
 
 Network-oriented file transfers are available by default whenever Vim's
 |<A HREF="vim_diff.html#'nocompatible'">'nocompatible'</A>| mode is enabled.  Netrw's <A HREF="usr_41.html#script">script</A> files reside in your
-system's <A HREF="usr_05.html#plugin">plugin</A>, <A HREF="eval.html#autoload">autoload</A>, and <A HREF="syntax\.html#syntax">语法</A> directories; just the
+system's <A HREF="usr_05.html#plugin">plugin</A>, <A HREF="eval.html#autoload">autoload</A>, and <A HREF="syntax.html#syntax">语法</A> directories; just the
 plugin/netrwPlugin.vim <A HREF="usr_41.html#script">script</A> is sourced automatically whenever you bring up
 vim.  The main <A HREF="usr_41.html#script">script</A> in autoload/netrw.vim is only loaded when you actually
 use <A HREF="#netrw">netrw</A>.  I suggest that, at a minimum, you have at least the following in
@@ -937,7 +937,7 @@ below, a {netfile} is a URL to a remote file.
 (also see: |<A HREF="#netrw-options">netrw-options</A>| |<A HREF="#netrw-variables">netrw-variables</A>| |<A HREF="#netrw-protocol">netrw-protocol</A>|
            |<A HREF="#netrw-browser-settings">netrw-browser-settings</A>| |<A HREF="#netrw-browser-options">netrw-browser-options</A>| )
 
-The &lt;netrw.vim&gt; <A HREF="usr_41.html#script">script</A> provides several <A HREF="eval.html#variables">variables</A> which act <A HREF="motion.html#as">as</A> <A HREF="options\.html#options">选项</A> to
+The &lt;netrw.vim&gt; <A HREF="usr_41.html#script">script</A> provides several <A HREF="eval.html#variables">variables</A> which act <A HREF="motion.html#as">as</A> <A HREF="options.html#options">选项</A> to
 affect &lt;netrw.vim&gt;'s file transfer behavior.  These <A HREF="eval.html#variables">variables</A> typically may be
 set in the user's &lt;.vimrc&gt; file: (see also |<A HREF="#netrw-settings">netrw-settings</A>| |<A HREF="#netrw-protocol">netrw-protocol</A>|)
 
@@ -1029,9 +1029,9 @@ Netrw supports a number of protocols.  These protocols are invoked using the
 
 								*<A NAME="netrw-ftp"></A><B>netrw-ftp</B>*
 
-The g:netrw_..._cmd <A HREF="options\.html#options">选项</A> (|<A HREF="#g:netrw_ftp_cmd">g:netrw_ftp_cmd</A>| and |<A HREF="#g:netrw_sftp_cmd">g:netrw_sftp_cmd</A>|)
+The g:netrw_..._cmd <A HREF="options.html#options">选项</A> (|<A HREF="#g:netrw_ftp_cmd">g:netrw_ftp_cmd</A>| and |<A HREF="#g:netrw_sftp_cmd">g:netrw_sftp_cmd</A>|)
 specify the external program to use handle the ftp protocol.  They may
-include command line <A HREF="options\.html#options">选项</A> (such <A HREF="motion.html#as">as</A> <A HREF="starting.html#-p">-p</A> for passive mode). Example:
+include command line <A HREF="options.html#options">选项</A> (such <A HREF="motion.html#as">as</A> <A HREF="starting.html#-p">-p</A> for passive mode). Example:
 
 <B>	let g:netrw_ftp_cmd= "ftp -p"</B>
  
@@ -1039,8 +1039,8 @@ Browsing is supported by using the |<A HREF="#g:netrw_list_cmd">g:netrw_list_cmd
 &quot;HOSTNAME&quot; will be changed via 替换 with whatever the current request
 is for a hostname.
 
-Two <A HREF="options\.html#options">选项</A> (|<A HREF="#g:netrw_ftp">g:netrw_ftp</A>| and |<A HREF="#netrw-fixup">netrw-fixup</A>|) both help with certain ftp's
-that give trouble .  In order to best understand how to use these <A HREF="options\.html#options">选项</A> if
+Two <A HREF="options.html#options">选项</A> (|<A HREF="#g:netrw_ftp">g:netrw_ftp</A>| and |<A HREF="#netrw-fixup">netrw-fixup</A>|) both help with certain ftp's
+that give trouble .  In order to best understand how to use these <A HREF="options.html#options">选项</A> if
 ftp is giving you troubles, a bit of discussion is provided on how <A HREF="#netrw">netrw</A> does
 ftp reads.
 
@@ -1187,7 +1187,7 @@ There are several things you can <A HREF="diff.html#do">do</A> to affect the bro
 
 			*<A NAME="netrw-getftype"></A><B>netrw-getftype</B>* *<A NAME="netrw-filigree"></A><B>netrw-filigree</B>* *<A NAME="netrw-ftype"></A><B>netrw-ftype</B>*
 The |<A HREF="builtin.html#getftype()">getftype()</A>| function is used to append a bit of filigree to indicate
-<A HREF="filetype\.html#filetype">文件类型</A> to locally listed files:
+<A HREF="filetype.html#filetype">文件类型</A> to locally listed files:
 
 	directory  : /
 	executable : *
@@ -3009,21 +3009,21 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 				 : No route to host$'
 
 
-  *<A NAME="g:netrw_ftp_list_cmd"></A><B>g:netrw_ftp_list_cmd</B>*	<A HREF="options\.html#options">选项</A> for passing along to ftp for directory
+  *<A NAME="g:netrw_ftp_list_cmd"></A><B>g:netrw_ftp_list_cmd</B>*	<A HREF="options.html#options">选项</A> for passing along to ftp for directory
 				listing.  Defaults:
 				 unix or <A HREF="#g:netrw_cygwin">g:netrw_cygwin</A> set: : &quot;ls -lF&quot;
 				 otherwise                     &quot;dir&quot;
 
 
 
-  *<A NAME="g:netrw_ftp_sizelist_cmd"></A><B>g:netrw_ftp_sizelist_cmd</B>*	<A HREF="options\.html#options">选项</A> for passing along to ftp for directory
+  *<A NAME="g:netrw_ftp_sizelist_cmd"></A><B>g:netrw_ftp_sizelist_cmd</B>*	<A HREF="options.html#options">选项</A> for passing along to ftp for directory
 				listing, sorted by size of file.
 				Defaults:
 				 unix or <A HREF="#g:netrw_cygwin">g:netrw_cygwin</A> set: : &quot;ls -slF&quot;
 				 otherwise                     &quot;dir&quot;
 
 
-  *<A NAME="g:netrw_ftp_timelist_cmd"></A><B>g:netrw_ftp_timelist_cmd</B>*	<A HREF="options\.html#options">选项</A> for passing along to ftp for directory
+  *<A NAME="g:netrw_ftp_timelist_cmd"></A><B>g:netrw_ftp_timelist_cmd</B>*	<A HREF="options.html#options">选项</A> for passing along to ftp for directory
 				listing, sorted by time of last modification.
 				Defaults:
 				 unix or <A HREF="#g:netrw_cygwin">g:netrw_cygwin</A> set: : &quot;ls -tlF&quot;
@@ -3268,14 +3268,14 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 
   *<A NAME="g:netrw_sort_sequence"></A><B>g:netrw_sort_sequence</B>*	when <A HREF="change.html#sorting">sorting</A> by name, first sort by the
 				comma-separated <A HREF="pattern.html#pattern">pattern</A> sequence.  Note that
-				any filigree added to indicate <A HREF="filetype\.html#filetypes">文件类型</A>
+				any filigree added to indicate <A HREF="filetype.html#filetypes">文件类型</A>
 				should be accounted for in your <A HREF="pattern.html#pattern">pattern</A>.
 				 default: '[\/]$,*,\.bak$,\.o$,\.h$,
 				           \.info$,\.swp$,\.obj$'
 
 
   *<A NAME="g:netrw_special_syntax"></A><B>g:netrw_special_syntax</B>*	If true然后certain files will be shown
-				using special <A HREF="syntax\.html#syntax">语法</A> in the browser:
+				using special <A HREF="syntax.html#syntax">语法</A> in the browser:
 
 					netrwBak     : *.bak
 					netrwCompress: *.gz *.bz2 *.Z *.zip
@@ -3300,7 +3300,7 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 				In addition, those groups mentioned in
 				|<A HREF="options.html#'suffixes'">'suffixes'</A>| are also added to the special
 				file highlighting group.
-				 These <A HREF="syntax\.html#syntax">语法</A> highlighting groups are linked
+				 These <A HREF="syntax.html#syntax">语法</A> highlighting groups are linked
 				to netrwGray or Folded by default
 				(见 |<A HREF="syntax.html#hl-Folded">hl-Folded</A>|), but one may put lines like
 <B>					hi link netrwCompress Visual</B>
@@ -3426,8 +3426,8 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 
 NETRW BROWSING AND OPTION INCOMPATIBILITIES	*<A NAME="netrw-incompatible"></A><B>netrw-incompatible</B>* {{{2
 
-Netrw has been designed to handle user <A HREF="options\.html#options">选项</A> by saving them, setting the
-<A HREF="options\.html#options">选项</A> to something that's compatible with netrw's needs, and then restoring
+Netrw has been designed to handle user <A HREF="options.html#options">选项</A> by saving them, setting the
+<A HREF="options.html#options">选项</A> to something that's compatible with netrw's needs, and then restoring
 them.  However, the autochdir option:
 <B>	:set acd</B>
 is problematic.  Autochdir sets the current directory to that containing the
@@ -3768,7 +3768,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 	    don't I get sorts by time or size?
 
 		Windows' ftp has a minimal support for ls (ie. <A HREF="motion.html#it">它</A> doesn't
-		accept <A HREF="change.html#sorting">sorting</A> <A HREF="options\.html#options">选项</A>).  It doesn't support the -F which
+		accept <A HREF="change.html#sorting">sorting</A> <A HREF="options.html#options">选项</A>).  It doesn't support the -F which
 		gives an explanatory character (ABC/ for &quot;ABC is a directory&quot;).
 		Netrw then uses &quot;dir&quot; to get both its thin and long listings.
 		If you think your ftp does support a full-up ls, put the
@@ -3892,7 +3892,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 			- Set External Editor (adjust path <A HREF="motion.html#as">as</A> needed, include
 			  the quotes and !.! at the end):
 			    &quot;c:\Program Files\Vim\vim82\gvim.exe&quot; !.!
-			- Check that the <A HREF="filetype\.html#filetype">文件类型</A> in the box below is
+			- Check that the <A HREF="filetype.html#filetype">文件类型</A> in the box below is
 			  {asterisk}.{asterisk} (all files), or whatever types
 			  you want (cec: change {asterisk} to &#42; ; I had to
 			  write <A HREF="motion.html#it">它</A> that way because otherwise the helptags
@@ -4233,7 +4233,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 
 <B>		vim -u netrw.vimrc --noplugins -i NONE [some path here]</B>
  
-	   to avoid entanglements with <A HREF="options\.html#options">选项</A> and other plugins.
+	   to avoid entanglements with <A HREF="options.html#options">选项</A> and other plugins.
 
 	   To save the file: under linux, the output will be in a separate
 	   remote server<A HREF="windows.html#window">窗口</A>; in <A HREF="motion.html#it">它</A>, just save the file with
@@ -4295,7 +4295,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  would not hide with the ^\..* <A HREF="pattern.html#pattern">pattern</A>
 				  correctly.
 				&#42; (Marcin Szamotulski) NetrwOptionRestore
-				  did not restore <A HREF="options\.html#options">选项</A> correctly that
+				  did not restore <A HREF="options.html#options">选项</A> correctly that
 				  had a single <A HREF="change.html#quote">quote</A> in the option <A HREF="options\.html#options">字符串</A>.
 		Apr 13, 2020	&#42; implemented error handling via popup
 				  <A HREF="windows\.html#windows">窗口</A> (见 |<A HREF="intro.html#popup_beval()">popup_beval()</A>|)
@@ -4337,7 +4337,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  items
 				&#42; Prioritized wget over curl for
 				  <A HREF="#g:netrw_http_cmd">g:netrw_http_cmd</A>
-	v162:	Sep 19, 2016	&#42; (haya14busa) pointed out two <A HREF="syntax\.html#syntax">语法</A> <A HREF="message.html#errors">errors</A>
+	v162:	Sep 19, 2016	&#42; (haya14busa) pointed out two <A HREF="syntax.html#syntax">语法</A> <A HREF="message.html#errors">errors</A>
 				  with a patch; these are now fixed.
 		Oct 26, 2016	&#42; I started using mate-terminal and found that
 				  x and gx (|<A HREF="#netrw-x">netrw-x</A>| and |<A HREF="#netrw-gx">netrw-gx</A>|) were no
@@ -4346,7 +4346,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 		Nov 04, 2016	&#42; (Martin Vuille) pointed out that @+ was
 				  being restored with keepregstar rather than
 				  keepregplus.
-		Nov 09, 2016	&#42; Broke apart the command from the <A HREF="options\.html#options">选项</A>,
+		Nov 09, 2016	&#42; Broke apart the command from the <A HREF="options.html#options">选项</A>,
 				  mostly for Windows.  Introduced new <A HREF="#netrw">netrw</A>
 				  settings: |<A HREF="#g:netrw_localcopycmdopt">g:netrw_localcopycmdopt</A>|
 				  |<A HREF="#g:netrw_localcopydircmdopt">g:netrw_localcopydircmdopt</A>| |<A HREF="#g:netrw_localmkdiropt">g:netrw_localmkdiropt</A>|
@@ -4366,7 +4366,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  the active-banner hiding <A HREF="intro.html#control">control</A> to occur
 		Jan 03, 2017	&#42; (Enno Nagel) reported that attempting to
 				  apply <A HREF="#netrw">netrw</A> to a directory that was without
-				  read permission caused a <A HREF="syntax\.html#syntax">语法</A> error.
+				  read permission caused a <A HREF="syntax.html#syntax">语法</A> error.
 		Jan 13, 2017	&#42; (Ingo Karkat) provided a patch which makes
 				  using netrw#Call() better.  Now returns
 				  value of internal routines return, for example.
@@ -4524,7 +4524,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 	v153:	May 13, 2014	&#42; added another |<A HREF="#g:netrw_ffkeep">g:netrw_ffkeep</A>| usage {{{2
 		May 14, 2014	&#42; changed s:PerformListing() so that <A HREF="motion.html#it">它</A>
 				  always sets ft=netrw for <A HREF="#netrw">netrw</A> <A HREF="windows.html#buffers">buffers</A>
-				  (ie. even when <A HREF="syntax\.html#syntax">语法</A> highlighting is
+				  (ie. even when <A HREF="syntax.html#syntax">语法</A> highlighting is
 				  off, not available, etc)
 		May 16, 2014	&#42; introduced the |<A HREF="#netrw-ctrl-r">netrw-ctrl-r</A>| functionality
 		May 17, 2014	&#42; introduced the |<A HREF="#netrw-:NetrwMB">netrw-:NetrwMB</A>| functionality
@@ -4772,7 +4772,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 
 ==============================================================================
 Modelines: {{{1
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

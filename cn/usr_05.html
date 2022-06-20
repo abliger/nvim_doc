@@ -67,7 +67,7 @@
     <div class="container">
         <h1>Nvim 文档: usr_05</h1>
         <A NAME="top"></A>
-        <A HREF="index\.html">主帮助文件</A>
+        <A HREF="index.html">主帮助文件</A>
 
         <HR>
         <PRE>
@@ -81,22 +81,22 @@
 
 Vim可以按你的想法进行调整<A HREF="motion.html#it">它</A>.本章会向你展示如何自定义设置.添加插件去拓展Vim的功能.或者定义自己的宏指令.
 
-|<A HREF="#05.1">05.1</A>|	<A HREF="starting\.html#vimrc">vimrc</A>文件
-|<A HREF="#05.2">05.2</A>|	<A HREF="starting\.html#vimrc">vimrc</A>文件示例解释
+|<A HREF="#05.1">05.1</A>|	<A HREF="starting.html#vimrc">vimrc</A>文件
+|<A HREF="#05.2">05.2</A>|	<A HREF="starting.html#vimrc">vimrc</A>文件示例解释
 |<A HREF="#05.3">05.3</A>|	键盘映射
 |<A HREF="#05.4">05.4</A>|	添加软件包
 |<A HREF="#05.5">05.5</A>|	添加<A HREF="#plugin">插件</A>
 |<A HREF="#05.6">05.6</A>|	添加帮助文件
-|<A HREF="#05.7">05.7</A>|	选项<A HREF="windows\.html#window">窗口</A>
-|<A HREF="#05.8">05.8</A>|	常用<A HREF="options\\.html#options">选项</A>
+|<A HREF="#05.7">05.7</A>|	选项<A HREF="windows.html#window">窗口</A>
+|<A HREF="#05.8">05.8</A>|	常用<A HREF="options.html#options">选项</A>
 
-下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  使用<A HREF="syntax\.html#syntax">语法</A>高亮
+下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  使用<A HREF="syntax.html#syntax">语法</A>高亮
 上一章: |<A HREF="usr_04.html">usr_04.txt</A>|  做小改动
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
 
-*<A NAME="05.1"></A><B>05.1</B>*	<A HREF="starting\.html#vimrc">vimrc</A>文件				*<A NAME="vimrc-intro"></A><B>vimrc-intro</B>*
+*<A NAME="05.1"></A><B>05.1</B>*	<A HREF="starting.html#vimrc">vimrc</A>文件				*<A NAME="vimrc-intro"></A><B>vimrc-intro</B>*
 
 你可能对键入常用的命令感到疲惫.使用你最喜欢的设置和键映射开启Vimd,你需要在<A HREF="starting.html#init.vim">init.vim</A>文件写入那些设置.Vim会在启动时执行这个文件中的命令.
 
@@ -104,14 +104,14 @@ Vim可以按你的想法进行调整<A HREF="motion.html#it">它</A>.本章会�
 
 <B>	:edit $MYVIMRC</B>
 
-如果你还没有<A HREF="starting\.html#vimrc">vimrc</A>文件, 见 |<A HREF="init.html">init.vim</A>|去找到在哪里创建<A HREF="starting\.html#vimrc">vimrc</A>文件.
+如果你还没有<A HREF="starting.html#vimrc">vimrc</A>文件, 见 |<A HREF="init.html">init.vim</A>|去找到在哪里创建<A HREF="starting.html#vimrc">vimrc</A>文件.
 
 这个文件总是被使用，也推荐使用:
 
 <B><FONT color="#3A6F2B">	~/.config/nvim/init.vim         (Unix and OSX) </FONT></B>
 <B><FONT color="#3A6F2B">	~/AppData/Local/nvim/init.vim   (Windows) </FONT></B>
 
-<A HREF="starting\.html#vimrc">vimrc</A>文件可以包含你在冒号命令后面键入的所有命令.最简单的是设置<A HREF="options\.html#options">选项</A>.例如,如果你想要Vim在打开时就开启<A HREF="options.html#'ignorecase'">'ignorecase'</A>,添加这一行到你的<A HREF="starting\.html#vimrc">vimrc</A>文件:
+<A HREF="starting.html#vimrc">vimrc</A>文件可以包含你在冒号命令后面键入的所有命令.最简单的是设置<A HREF="options.html#options">选项</A>.例如,如果你想要Vim在打开时就开启<A HREF="options.html#'ignorecase'">'ignorecase'</A>,添加这一行到你的<A HREF="starting.html#vimrc">vimrc</A>文件:
 
 <B>	set ignorecase</B>
 
@@ -121,9 +121,9 @@ Vim可以按你的想法进行调整<A HREF="motion.html#it">它</A>.本章会�
 
 ==============================================================================
 
-*<A NAME="05.2"></A><B>05.2</B>*	<A HREF="starting\.html#vimrc">vimrc</A>文件示例解释		*<A NAME="vimrc_example.vim"></A><B>vimrc_example.vim</B>*
+*<A NAME="05.2"></A><B>05.2</B>*	<A HREF="starting.html#vimrc">vimrc</A>文件示例解释		*<A NAME="vimrc_example.vim"></A><B>vimrc_example.vim</B>*
 
-本章的第一部分解释了如何创建<A HREF="starting\.html#vimrc">vimrc</A>文件.
+本章的第一部分解释了如何创建<A HREF="starting.html#vimrc">vimrc</A>文件.
 
 <B>	:exe 'edit' stdpath('config').'/init.vim'</B>
 
@@ -180,20 +180,20 @@ Vim可以按你的想法进行调整<A HREF="motion.html#it">它</A>.本章会�
 
 <B>	set hlsearch</B>
 
-此选项Vim会高亮最后匹配的搜索<A HREF="pattern.html#pattern">表达式</A>.当按条件设置配置<A HREF="options\.html#options">选项</A>,&quot;if&quot;会十分有用.更多见|<A HREF="usr_41.html">usr_41.txt</A>|.
+此选项Vim会高亮最后匹配的搜索<A HREF="pattern.html#pattern">表达式</A>.当按条件设置配置<A HREF="options.html#options">选项</A>,&quot;if&quot;会十分有用.更多见|<A HREF="usr_41.html">usr_41.txt</A>|.
 
               *<A NAME="vimrc-filetype"></A><B>vimrc-filetype</B>* 
 <B>	filetype plugin indent on</B>
 
 这启动了三个十分灵巧的机制:
 1. 文件类型探测.
-   当你开始编辑一个文件时,Vim会尝试确定这是哪类文件.比如当你编辑&quot;main.c&quot;,Vim就会查看&quot;.c&quot;的拓展并认识到这是一个&quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype\.html#filetype">文件类型</A>.当你编译一个以&quot;#!/bin/sh&quot;开始的文件时,Vim会意识到<A HREF="motion.html#it">它</A> <A HREF="motion.html#as">是</A>&quot;sh&quot; <A HREF="filetype\.html#filetype">文件类型</A>.<A HREF="filetype\.html#filetype">文件类型</A>探测对于<A HREF="syntax\.html#syntax">语法</A>高亮和下面连个机制是十分有用的.  见 |<A HREF="filetype\.html#filetypes">文件类型</A>|.
+   当你开始编辑一个文件时,Vim会尝试确定这是哪类文件.比如当你编辑&quot;main.c&quot;,Vim就会查看&quot;.c&quot;的拓展并认识到这是一个&quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype.html#filetype">文件类型</A>.当你编译一个以&quot;#!/bin/sh&quot;开始的文件时,Vim会意识到<A HREF="motion.html#it">它</A> <A HREF="motion.html#as">是</A>&quot;sh&quot; <A HREF="filetype.html#filetype">文件类型</A>.<A HREF="filetype.html#filetype">文件类型</A>探测对于<A HREF="syntax.html#syntax">语法</A>高亮和下面连个机制是十分有用的.  见 |<A HREF="filetype.html#filetypes">文件类型</A>|.
 
-2. 使用<A HREF="filetype\.html#filetype">文件类型</A><A HREF="#plugin">插件</A> 
-    不同<A HREF="filetype\.html#filetypes">文件类型</A>的文件会开启不同的<A HREF="options\.html#options">选项</A>.例如,当你编辑&quot;<A HREF="change.html#c">c</A>&quot;文件,设置<A HREF="options.html#'cindent'">'cindent'</A>选项去自动缩进是有用的.这些共同有用的选项会写在<A HREF="filetype\.html#filetype">文件类型</A>插件中.你也可以添加自己的设置,见|<A HREF="usr_41.html#write-filetype-plugin">写文件类型插件</A>|.
+2. 使用<A HREF="filetype.html#filetype">文件类型</A><A HREF="#plugin">插件</A> 
+    不同<A HREF="filetype.html#filetypes">文件类型</A>的文件会开启不同的<A HREF="options.html#options">选项</A>.例如,当你编辑&quot;<A HREF="change.html#c">c</A>&quot;文件,设置<A HREF="options.html#'cindent'">'cindent'</A>选项去自动缩进是有用的.这些共同有用的选项会写在<A HREF="filetype.html#filetype">文件类型</A>插件中.你也可以添加自己的设置,见|<A HREF="usr_41.html#write-filetype-plugin">写文件类型插件</A>|.
 
 3. 使用缩进文件
-   当编辑代码时,行缩进会自动计算.Vim对于不同的<A HREF="filetype\.html#filetypes">文件类型</A>使用不同的缩进规则.见|<A HREF="filetype.html#:filetype-indent-on">:filetype-indent-on</A>|和<A HREF="options.html#'indentexpr'">'indentexpr'</A>.
+   当编辑代码时,行缩进会自动计算.Vim对于不同的<A HREF="filetype.html#filetypes">文件类型</A>使用不同的缩进规则.见|<A HREF="filetype.html#:filetype-indent-on">:filetype-indent-on</A>|和<A HREF="options.html#'indentexpr'">'indentexpr'</A>.
 
 ==============================================================================
 
@@ -227,46 +227,35 @@ Vim可以按你的想法进行调整<A HREF="motion.html#it">它</A>.本章会�
 &quot;<A HREF="map.html#:map">:map</A>&quot;命令 (没有参数)列出当前映射.至少列出<A HREF="intro.html#Normal">正常</A>模式的映射.详见|<A HREF="usr_40.html#40.1">40.1</A>|.
 
 ==============================================================================
-
 *<A NAME="05.4"></A><B>05.4</B>*	添加软件包			*<A NAME="add-package"></A><B>add-package</B>* *<A NAME="vimball-install"></A><B>vimball-install</B>*
 
-A package is a set of files that you can add to Vim.  There are two kinds of
-<A HREF="repeat.html#packages">packages</A>: optional and automatically loaded on <A HREF="starting.html#startup">startup</A>.
+软件包是你能添加到Vim的配置文件.有两种类型的<A HREF="repeat.html#packages">软件包</A>: 选择加载和Vim启动自动加载.
 
-The Vim <A HREF="intro.html#distribution">distribution</A> comes with a few <A HREF="repeat.html#packages">packages</A> that you can optionally use.
-For example, the vimball <A HREF="#plugin">插件</A>.  This <A HREF="#plugin">插件</A> supports creating and using
-vimballs (self-installing Vim <A HREF="#plugin">插件</A> archives).
+Vim<A HREF="intro.html#distribution">发行版</A>自带了一些<A HREF="repeat.html#packages">软件包</A>,你可以选择使用它们.例如,vimball<A HREF="#plugin">插件</A>.这个<A HREF="#plugin">插件</A>支持创建和使用vimballs (安装在Vim<A HREF="#plugin">插件</A>目录中).
 
-To start using the vimball <A HREF="#plugin">插件</A>, add one line to your <A HREF="starting\.html#vimrc">vimrc</A>文件:
+使用vimball <A HREF="#plugin">插件</A>,添加下一行到你的<A HREF="starting.html#vimrc">vimrc</A>文件:
+
 <B>	packadd vimball</B>
 
-That's all!  You can also type the command to try <A HREF="motion.html#it">它</A> out.  Now you can find
-help about this <A HREF="#plugin">插件</A>:
+已经完成了!  你可以使用命令测试<A HREF="motion.html#it">它</A>.如你可以使用帮助系统查找关于此<A HREF="#plugin">插件</A>:
+
 <B>	:help vimball</B>
 
-This works, because when `:packadd` loaded the <A HREF="#plugin">插件</A> <A HREF="motion.html#it">它</A> also added the
-package directory in <A HREF="options.html#'runtimepath'">'runtimepath'</A>, so that the help file can be found.  The
-<A HREF="tagsrch.html#tags">标签</A> for vimball's help are already created.  If you need to generate the help
-<A HREF="tagsrch.html#tags">标签</A> for a package, see the `:helptags` command.
+之所以能工作，因为当`:packadd`加载<A HREF="#plugin">插件</A>时，<A HREF="motion.html#it">它</A>也会把包文件放到<A HREF="options.html#'runtimepath'">'runtimepath'</A>路径下,为了能找到帮助文件.此时vimball的帮助<A HREF="tagsrch.html#tags">标签</A>已经被生成.如果你需要给软件包生成帮助<A HREF="tagsrch.html#tags">标签</A>, 见`:helptags`命令.
 
-You can find <A HREF="repeat.html#packages">packages</A> on the Internet in various places.  It usually comes <A HREF="motion.html#as">as</A>
-an archive or <A HREF="motion.html#as">as</A> a repository.  For an archive you can follow these steps:
-  1. create the package directory:
+你能在网络的任何地方找到<A HREF="repeat.html#packages">软件包</A>.它可能是一个压缩包或者在github存储库中.  如果是压缩包，根据下面命令使用它:
+  1. 创建包目录:
 <B>		mkdir -p ~/.local/share/nvim/site/pack/fancy</B>
-      &quot;fancy&quot; can be any name of your liking.  Use one that describes the
-     package.
-  2. unpack the archive in that directory.  This assumes the top
-     directory in the archive is &quot;start&quot;:
+      &quot;fancy&quot; 可以是你喜欢的任何名字.但最好能描述这个包功能.
+  2. 在此目录解压.假设包中顶层目录是&quot;start&quot;:
 <B>	   	cd ~/.local/share/nvim/site/pack/fancy</B>
 <B>		unzip /tmp/fancy.zip</B>
-      If the archive layout is different make sure that you end up with a
-     path like this:
+      如果压缩包的布局和一般的不同，至少确保路径像下面的结构:
+
 <B><FONT color="#3A6F2B">		~/.local/share/nvim/site/pack/fancy/start/fancytext/plugin/fancy.vim </FONT></B>
-     Here &quot;fancytext&quot; is the name of the package, <A HREF="motion.html#it">它</A> can be anything
-     else.
+     这里的&quot;fancytext&quot;是压缩包的名字, <A HREF="motion.html#it">它</A>也能是任何名字.
 
-More information about packages can be found here: |<A HREF="repeat.html#packages">packages</A>|.
-
+更多信息看这里: |<A HREF="repeat.html#packages">packages</A>|.
 ==============================================================================
 
 *<A NAME="05.5"></A><B>05.5</B>*	添加<A HREF="#plugin">插件</A>					*<A NAME="add-plugin"></A><B>add-plugin</B>* *<A NAME="plugin"></A><B>plugin</B>*
@@ -276,9 +265,9 @@ Vim是通过添加插件进行功能拓展.<A HREF="#plugin">插件</A>只不过
 有两种类型的插件:
 
 全局<A HREF="#plugin">插件</A>:在所有的文件中运行
-<A HREF="filetype\.html#filetype">文件类型</A><A HREF="#plugin">插件</A>: 只在特定文件类型中运行
+<A HREF="filetype.html#filetype">文件类型</A><A HREF="#plugin">插件</A>: 只在特定文件类型中运行
 
-我们会先讲解全局插件然后讲解<A HREF="filetype\.html#filetype">文件类型</A>插件|<A HREF="#add-filetype-plugin">add-filetype-plugin</A>|.
+我们会先讲解全局插件然后讲解<A HREF="filetype.html#filetype">文件类型</A>插件|<A HREF="#add-filetype-plugin">add-filetype-plugin</A>|.
 
 全局插件						*<A NAME="standard-plugin"></A><B>standard-plugin</B>*
 
@@ -316,19 +305,19 @@ Vim是通过添加插件进行功能拓展.<A HREF="#plugin">插件</A>只不过
 
 文件类型插件			*<A NAME="add-filetype-plugin"></A><B>add-filetype-plugin</B>* *<A NAME="ftplugins"></A><B>ftplugins</B>*
 
-Vim使用一系列插件来<A HREF="intro.html#distribution">分销</A>不同的<A HREF="filetype\.html#filetypes">文件类型</A>。你可以使用这个命令启动Vim:
+Vim使用一系列插件来<A HREF="intro.html#distribution">分销</A>不同的<A HREF="filetype.html#filetypes">文件类型</A>。你可以使用这个命令启动Vim:
 
 <B>	:filetype plugin on</B>
 
 见 |<A HREF="#vimrc-filetype">vimrc-filetype</A>|.
 
-如果你对你正使用的文件类型的插件感到混乱或者找到更好的插件.有两部添加一个<A HREF="filetype\.html#filetype">文件类型</A><A HREF="#plugin">插件</A>:
+如果你对你正使用的文件类型的插件感到混乱或者找到更好的插件.有两部添加一个<A HREF="filetype.html#filetype">文件类型</A><A HREF="#plugin">插件</A>:
 1. 获得<A HREF="#plugin">插件</A>源码.
 2. 放置到插件目录.
 
 获得文件类型插件
 
-你可以像全局插件一样在相同的地方找到它们.注意一下插件有没有注明文件类型,据此你可以知道这个插件是全局的还是文件类型相关的.全局插件在$VIMRUNTIME/macros,<A HREF="filetype\.html#filetype">文件类型</A>插件在$VIMRUNTIME/ftplugin.
+你可以像全局插件一样在相同的地方找到它们.注意一下插件有没有注明文件类型,据此你可以知道这个插件是全局的还是文件类型相关的.全局插件在$VIMRUNTIME/macros,<A HREF="filetype.html#filetype">文件类型</A>插件在$VIMRUNTIME/ftplugin.
 
 
 
@@ -345,7 +334,7 @@ Vim使用一系列插件来<A HREF="intro.html#distribution">分销</A>不同的
 
 这里，下划线用来分开文件类型和其它部分 (这些部分可以由任意字符组成)。但如果你用 "otherstuff.vim" 就不行了。那是用于 "otherstuff" 类型的文件的.
 
-<A HREF="filetype\.html#filetype">文件类型</A>插件名字语法是:
+<A HREF="filetype.html#filetype">文件类型</A>插件名字语法是:
 
 <B>	ftplugin/&lt;filetype&gt;.vim</B>
 <B>	ftplugin/&lt;filetype&gt;_&lt;name&gt;.vim</B>
@@ -399,13 +388,13 @@ Vim使用一系列插件来<A HREF="intro.html#distribution">分销</A>不同的
 
 ==============================================================================
 
-*<A NAME="05.7"></A><B>05.7</B>*	选项<A HREF="windows\.html#window">窗口</A>
+*<A NAME="05.7"></A><B>05.7</B>*	选项<A HREF="windows.html#window">窗口</A>
 
-如果你想要查找一个选项，你可以在这个帮助文件中查找: |<A HREF="options\.html#options">选项</A>|.  另一种方法是使用下面的命令:
+如果你想要查找一个选项，你可以在这个帮助文件中查找: |<A HREF="options.html#options">选项</A>|.  另一种方法是使用下面的命令:
 
 <B>	:options</B>
 
-这会打开一个新窗口，其中给出一个选项的列表，并对每个选项提供一行解释.<A HREF="options\.html#options">选项</A>根据种类分组.移动光标并使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> 跳转对应内容.再次使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>跳转回来.或者使用<A HREF="motion.html#CTRL-O">CTRL-O</A>.
+这会打开一个新窗口，其中给出一个选项的列表，并对每个选项提供一行解释.<A HREF="options.html#options">选项</A>根据种类分组.移动光标并使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> 跳转对应内容.再次使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>跳转回来.或者使用<A HREF="motion.html#CTRL-O">CTRL-O</A>.
 
 你也能改变选项的值.例如,移动到&quot;displaying text&quot;主题.然后光标移到下面的行:
 
@@ -427,7 +416,7 @@ Vim使用一系列插件来<A HREF="intro.html#distribution">分销</A>不同的
 
 ==============================================================================
 
-*<A NAME="05.8"></A><B>05.8</B>*	常用<A HREF="options\\.html#options">选项</A>
+*<A NAME="05.8"></A><B>05.8</B>*	常用<A HREF="options.html#options">选项</A>
 
 Vim 中有很多选项。大部分你很少用得上。我们在这个介绍一些常用的。别忘了你可以通过 ":help" 命令获得更多的帮助。方法是在选项命令前后加上单引号例如:
 
@@ -517,8 +506,8 @@ Vim 通常会对长行自动回绕，以便你可以看见所有的文字。但�
 
 ==============================================================================
 
-下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  使用<A HREF="syntax\.html#syntax">语法</A>高亮
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+下一章: |<A HREF="usr_06.html">usr_06.txt</A>|  使用<A HREF="syntax.html#syntax">语法</A>高亮
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
     </div>
 </body>

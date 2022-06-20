@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: indent</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -89,17 +89,17 @@ This file is about indenting C programs and other files.
 The basics for C style indenting are explained in section |<A HREF="usr_30.html#30.2">30.2</A>| of the user
 manual.
 
-Vim has <A HREF="options\.html#options">选项</A> for automatically indenting C style program files. Many
+Vim has <A HREF="options.html#options">选项</A> for automatically indenting C style program files. Many
 programming languages including Java and C++ follow very closely the
-<A HREF="change.html#formatting">formatting</A> conventions established with C.  These <A HREF="options\.html#options">选项</A> affect only the
-indent and <A HREF="diff.html#do">do</A> not perform other <A HREF="change.html#formatting">formatting</A>.  There are additional <A HREF="options\.html#options">选项</A> that
+<A HREF="change.html#formatting">formatting</A> conventions established with C.  These <A HREF="options.html#options">选项</A> affect only the
+indent and <A HREF="diff.html#do">do</A> not perform other <A HREF="change.html#formatting">formatting</A>.  There are additional <A HREF="options.html#options">选项</A> that
 affect other kinds of <A HREF="change.html#formatting">formatting</A> <A HREF="motion.html#as">as</A> well <A HREF="motion.html#as">as</A> indenting, 见 |<A HREF="change.html#format-comments">format-comments</A>|,
 |<A HREF="change.html#fo-table">fo-table</A>|, |<A HREF="change.html#gq">gq</A>| and |<A HREF="change.html#formatting">formatting</A>| for the main ones.
 
 There are in fact four main methods available for indentation, each one
 overrides the previous if <A HREF="motion.html#it">它</A> is enabled, or non-empty for <A HREF="options.html#'indentexpr'">'indentexpr'</A>:
 <A HREF="options.html#'autoindent'">'autoindent'</A>	uses the indent from the previous line.
-<A HREF="options.html#'smartindent'">'smartindent'</A>	is like <A HREF="options.html#'autoindent'">'autoindent'</A> but also recognizes some C <A HREF="syntax\.html#syntax">语法</A> to
+<A HREF="options.html#'smartindent'">'smartindent'</A>	is like <A HREF="options.html#'autoindent'">'autoindent'</A> but also recognizes some C <A HREF="syntax.html#syntax">语法</A> to
 		increase/reduce the indent where appropriate.
 <A HREF="options.html#'cindent'">'cindent'</A>	Works more cleverly than the other two and is configurable to
 		different indenting styles.
@@ -109,11 +109,11 @@ overrides the previous if <A HREF="motion.html#it">它</A> is enabled, or non-em
 The rest of this section describes the <A HREF="options.html#'cindent'">'cindent'</A> option.
 
 Note that <A HREF="options.html#'cindent'">'cindent'</A> indenting does not work for every code scenario.  Vim
-is not a C compiler: <A HREF="motion.html#it">它</A> does not recognize all <A HREF="syntax\.html#syntax">语法</A>.  One requirement is
+is not a C compiler: <A HREF="motion.html#it">它</A> does not recognize all <A HREF="syntax.html#syntax">语法</A>.  One requirement is
 that toplevel <A HREF="eval.html#functions">functions</A> have a '<A HREF="motion.html#{">{</A>' in the first column.  Otherwise they are
 easily confused with declarations.
 
-These five <A HREF="options\.html#options">选项</A> <A HREF="intro.html#control">control</A> C program indenting:
+These five <A HREF="options.html#options">选项</A> <A HREF="intro.html#control">control</A> C program indenting:
 <A HREF="options.html#'cindent'">'cindent'</A>	Enables Vim to perform C program indenting automatically.
 <A HREF="options.html#'cinkeys'">'cinkeys'</A>	Specifies which keys trigger reindenting in insert mode.
 <A HREF="options.html#'cinoptions'">'cinoptions'</A>	Sets your preferred indent style.
@@ -723,7 +723,7 @@ CLOJURE					*<A NAME="ft-clojure-indent"></A><B>ft-clojure-indent</B>* *<A NAME=
 Clojure indentation differs somewhat from traditional Lisps, due in part to
 the use of square and curly brackets, and otherwise by community convention.
 These conventions are not universally followed, so the Clojure indent <A HREF="usr_41.html#script">script</A>
-offers a few configuration <A HREF="options\.html#options">选项</A>.
+offers a few configuration <A HREF="options.html#options">选项</A>.
 
 
 
@@ -951,7 +951,7 @@ Where 0 is for Classic, 1 for Indent nested <A HREF="eval.html#functions">functi
 
 PHP				*<A NAME="ft-php-indent"></A><B>ft-php-indent</B>* *<A NAME="php-indent"></A><B>php-indent</B>* *<A NAME="php-indenting"></A><B>php-indenting</B>*
 
-NOTE:	PHP files will be indented correctly only if PHP |<A HREF="syntax\.html#syntax">语法</A>| is active.
+NOTE:	PHP files will be indented correctly only if PHP |<A HREF="syntax.html#syntax">语法</A>| is active.
 
 If you are editing a file in Unix <A HREF="options.html#'fileformat'">'fileformat'</A> and '\r' characters are present
 before new lines, indentation won't proceed correctly ; you have to remove
@@ -1252,7 +1252,7 @@ To turn this off, add
 
 <B>  let g:vhdl_indent_genportmap = 0</B>
 
-to <A HREF="starting\.html#vimrc">vimrc</A>文件, which causes the previous alignment example to change:
+to <A HREF="starting.html#vimrc">vimrc</A>文件, which causes the previous alignment example to change:
 
 <B>  ENTITY sync IS</B>
 <B>  PORT (</B>
@@ -1275,7 +1275,7 @@ To turn this off, add
 
 <B>  let g:vhdl_indent_rhsassign = 0</B>
 
-to <A HREF="starting\.html#vimrc">vimrc</A>文件, which causes the previous alignment example to change:
+to <A HREF="starting.html#vimrc">vimrc</A>文件, which causes the previous alignment example to change:
 
 <B>  sig_out &lt;= (bus_a(1) AND</B>
 <B>    (sig_b OR sig_c)) OR</B>
@@ -1353,7 +1353,7 @@ indent for a continuation line, a line that starts with a <A HREF="intro.html#ba
 Three times shiftwidth is the default value.
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

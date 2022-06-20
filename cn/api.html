@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: api</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -113,7 +113,7 @@ The <A HREF="#RPC">RPC</A> <A HREF="#API">API</A> is like a more powerful versio
 CONNECTING						*<A NAME="rpc-connecting"></A><B>rpc-connecting</B>*
 
 见 |<A HREF="channel.html#channel-intro">channel-intro</A>| for various ways to open a channel. Channel-opening
-<A HREF="eval.html#functions">functions</A> take an `rpc` key in the <A HREF="options\.html#options">选项</A> dictionary. <A HREF="#RPC">RPC</A> channels can also
+<A HREF="eval.html#functions">functions</A> take an `rpc` key in the <A HREF="options.html#options">选项</A> dictionary. <A HREF="#RPC">RPC</A> channels can also
 be opened by other processes connecting to TCP/IP sockets or named pipes
 listened to by Nvim.
 
@@ -514,7 +514,7 @@ Floating <A HREF="windows\.html#windows">窗口</A>						 *<A NAME="api-floatwin
 Floating <A HREF="windows\.html#windows">窗口</A> (&quot;floats&quot;) are displayed on top of normal <A HREF="windows\.html#windows">窗口</A>.  This is
 useful to implement simple widgets, such <A HREF="motion.html#as">as</A> tooltips displayed next to the
 cursor. Floats are fully functional <A HREF="windows\.html#windows">窗口</A> supporting user editing, common
-|<A HREF="#api-window">api-window</A>| calls, and most window <A HREF="options\.html#options">选项</A> (except <A HREF="options.html#'statusline'">'statusline'</A>).
+|<A HREF="#api-window">api-window</A>| calls, and most window <A HREF="options.html#options">选项</A> (except <A HREF="options.html#'statusline'">'statusline'</A>).
 
 Two ways to create a floating<A HREF="windows.html#window">窗口</A>:
 - |<A HREF="#nvim_open_win()">nvim_open_win()</A>| creates a new<A HREF="windows.html#window">窗口</A>(needs a buffer, 见 |<A HREF="#nvim_create_buf()">nvim_create_buf()</A>|)
@@ -533,7 +533,7 @@ its <A HREF="starting.html#config">config</A> is non-empty:
 Buffer text can be highlighted by typical mechanisms (syntax highlighting,
 |<A HREF="#api-highlights">api-highlights</A>|). The |<A HREF="syntax.html#hl-NormalFloat">hl-NormalFloat</A>| group highlights normal text;
 <A HREF="options.html#'winhighlight'">'winhighlight'</A> can be used <A HREF="motion.html#as">as</A> usual to override groups locally. Floats inherit
-<A HREF="options\.html#options">选项</A> from the current<A HREF="windows.html#window">窗口</A>; specify `style=minimal` in |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
+<A HREF="options.html#options">选项</A> from the current<A HREF="windows.html#window">窗口</A>; specify `style=minimal` in |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
 to disable various visual features such <A HREF="motion.html#as">as</A> the <A HREF="options.html#'number'">'number'</A> column.
 
 Currently, floating <A HREF="windows\.html#windows">窗口</A> don't support some widgets like scrollbar.
@@ -871,7 +871,7 @@ nvim_create_user_command({name}, {command}, {*opts})
                                |<A HREF="map.html#command-attributes">command-attributes</A>| for more details. To use
                                <A HREF="options.html#boolean">boolean</A> attributes (such <A HREF="motion.html#as">as</A> |<A HREF="map.html#:command-bang">:command-bang</A>| or
                                |<A HREF="map.html#:command-bar">:command-bar</A>|) set the value to &quot;true&quot;. In
-                               addition to the <A HREF="options\.html#options">字符串</A> <A HREF="options\.html#options">选项</A> listed in
+                               addition to the <A HREF="options\.html#options">字符串</A> <A HREF="options.html#options">选项</A> listed in
                                |<A HREF="map.html#:command-complete">:command-complete</A>|, the &quot;complete&quot; key also
                                accepts a <A HREF="lua.html#Lua">Lua</A> function which works like the
                                &quot;customlist&quot; completion mode
@@ -1051,13 +1051,13 @@ nvim_feedkeys({keys}, {mode}, {escape_ks})                   *<A NAME="nvim_feed
 
 
 <A HREF="#nvim_get_all_options_info()">nvim_get_all_options_info()</A>                      *<A NAME="nvim_get_all_options_info()"></A><B>nvim_get_all_options_info()</B>*
-                Gets the option information for all <A HREF="options\.html#options">选项</A>.
+                Gets the option information for all <A HREF="options.html#options">选项</A>.
 
                 The dictionary has the full option names <A HREF="motion.html#as">as</A> keys and option
                 metadata dictionaries <A HREF="motion.html#as">as</A> detailed at |<A HREF="intro.html#nvim_get_option_info">nvim_get_option_info</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    dictionary of all <A HREF="options\.html#options">选项</A>
+                    dictionary of all <A HREF="options.html#options">选项</A>
 
 
 <A HREF="#nvim_get_api_info()">nvim_get_api_info()</A>                                      *<A NAME="nvim_get_api_info()"></A><B>nvim_get_api_info()</B>*
@@ -1857,11 +1857,11 @@ nvim_set_option({name}, {value})                           *<A NAME="nvim_set_op
                                                      *<A NAME="nvim_set_option_value()"></A><B>nvim_set_option_value()</B>*
 nvim_set_option_value({name}, {value}, {*opts})
                 Sets the value of an option. The behavior of this function
-                matches that of |:set|: for <A HREF="options.html#global-local">global-local</A> <A HREF="options\.html#options">选项</A>, both the
+                matches that of |:set|: for <A HREF="options.html#global-local">global-local</A> <A HREF="options.html#options">选项</A>, both the
                 global and local value are set unless otherwise specified with
                 {scope}.
 
-                Note the <A HREF="options\.html#options">选项</A> {win} and {buf} cannot be used together.
+                Note the <A HREF="options.html#options">选项</A> {win} and {buf} cannot be used together.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {name}   Option name
@@ -2974,9 +2974,9 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                                 <A HREF="motion.html#mark">mark</A> This should be an array over lines, where
                                 each line in turn is an array over [text,
                                 highlight] tuples. In general, buffer and
-                               <A HREF="windows.html#window">窗口</A><A HREF="options\.html#options">选项</A> <A HREF="diff.html#do">do</A> not affect the display of
+                               <A HREF="windows.html#window">窗口</A><A HREF="options.html#options">选项</A> <A HREF="diff.html#do">do</A> not affect the display of
                                 the text. In particular <A HREF="options.html#'wrap'">'wrap'</A> and <A HREF="options.html#'linebreak'">'linebreak'</A>
-                                <A HREF="options\.html#options">选项</A> <A HREF="diff.html#do">do</A> not take effect, so the number of
+                                <A HREF="options.html#options">选项</A> <A HREF="diff.html#do">do</A> not take effect, so the number of
                                 extra screen lines will always match the size
                                 of the array. However the <A HREF="options.html#'tabstop'">'tabstop'</A> buffer
                                 option is still used for hard tabs. By default
@@ -3097,7 +3097,7 @@ nvim_set_decoration_provider({ns_id}, {opts})
                 set/modified inside the callback anyway.
 
                 Note: doing anything other than setting <A HREF="#extmarks">extmarks</A> is considered
-                experimental. Doing things like <A HREF="change.html#changing">changing</A> <A HREF="options\.html#options">选项</A> are not
+                experimental. Doing things like <A HREF="change.html#changing">changing</A> <A HREF="options.html#options">选项</A> are not
                 expliticly forbidden, but is likely to have unexpected
                 consequences (such <A HREF="motion.html#as">as</A> 100&#37; CPU consumption). doing
                 `vim.rpcnotify` should be OK, but `vim.rpcrequest` is quite
@@ -3454,12 +3454,12 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                               • style: Configure the appearance of the<A HREF="windows.html#window">窗口</A>.
                                 Currently only takes one non-empty value:
                                 • &quot;minimal&quot; Nvim will display the<A HREF="windows.html#window">窗口</A>with
-                                  many <A HREF="ui.html#UI">UI</A> <A HREF="options\.html#options">选项</A> disabled. This is useful
+                                  many <A HREF="ui.html#UI">UI</A> <A HREF="options.html#options">选项</A> disabled. This is useful
                                   when displaying a temporary float where the
                                   text should not be edited. Disables
                                   <A HREF="options.html#'number'">'number'</A>, <A HREF="options.html#'relativenumber'">'relativenumber'</A>, <A HREF="options.html#'cursorline'">'cursorline'</A>,
                                   <A HREF="options.html#'cursorcolumn'">'cursorcolumn'</A>, <A HREF="options.html#'foldcolumn'">'foldcolumn'</A>, <A HREF="options.html#'spell'">'spell'</A> and
-                                  <A HREF="options.html#'list'">'list'</A> <A HREF="options\.html#options">选项</A>. <A HREF="options.html#'signcolumn'">'signcolumn'</A> is changed to
+                                  <A HREF="options.html#'list'">'list'</A> <A HREF="options.html#options">选项</A>. <A HREF="options.html#'signcolumn'">'signcolumn'</A> is changed to
                                   `auto` and <A HREF="options.html#'colorcolumn'">'colorcolumn'</A> is cleared. The
                                   end-of-buffer region is hidden by setting
                                   `eob` flag of <A HREF="options.html#'fillchars'">'fillchars'</A> to a space char,
@@ -3729,7 +3729,7 @@ nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_aut
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     <A HREF="autocmd.html#{event}">{event}</A>  (string|array) The event or <A HREF="autocmd.html#events">events</A> to <A HREF="intro.html#register">寄存器</A>
                              this <A HREF="autocmd\.html#autocommand">自动命令</A>
-                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options\.html#options">选项</A>:
+                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options.html#options">选项</A>:
                              • group (string|integer) optional: the
                                <A HREF="autocmd\.html#autocommand">自动命令</A> group name or id to match against.
                              • <A HREF="pattern.html#pattern">pattern</A> (string|array) optional: <A HREF="pattern.html#pattern">pattern</A> or
@@ -3826,7 +3826,7 @@ nvim_exec_autocmds({event}, {*opts})                    *<A NAME="nvim_exec_auto
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     <A HREF="autocmd.html#{event}">{event}</A>  (String|Array) The event or <A HREF="autocmd.html#events">events</A> to execute
-                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options\.html#options">选项</A>:
+                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options.html#options">选项</A>:
                              • group (string|integer) optional: the
                                <A HREF="autocmd\.html#autocommand">自动命令</A> group name or id to match against.
                                |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
@@ -3996,7 +3996,7 @@ nvim_ui_try_resize_grid({grid}, {width}, {height})
                     {width}   The new requested width.
                     {height}  The new requested height.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: usr_02</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -91,7 +91,7 @@
 |<A HREF="#02.8">02.8</A>|	寻求帮助
 
 下一章: |<A HREF="usr_03.html">usr_03.txt</A>|    移动
-上一章: |<A HREF="usr_01.html">usr_01.txt</A>|  关于本手册
+上一章: |<A HREF="usr_01.html">usr_01.txt</A>|    关于本手册
 目录:   |<A HREF="usr_toc.html">usr_toc.txt</A>|
 
 ==============================================================================
@@ -102,7 +102,7 @@
 
 <B>	gvim file.txt</B>
 
-在Unix中你可以在任何命令提示符中键入此命令.如果你是Windows电脑,打开命令提示符输入此命令. 无论任何一种<A HREF="change.html#case">情况</A>,Vim都可以直接编辑file.txt文件. 因为他是一个新文件，你将会获得一个空白<A HREF="windows.html#window">窗口</A>. 看起来像这样:
+无论Unix还是Windos都可以在终端中键入此命令. 无论任何哪种<A HREF="change.html#case">情况</A>,Vim都可以直接编辑file.txt文件. 因为他是一个新文件，你将会获得一个空白<A HREF="windows.html#window">窗口</A>. 看起来像这样:
 
 	+---------------------------------------+
 	|#					|
@@ -114,7 +114,7 @@
 	+---------------------------------------+
 		('#'是光标位置.)
 
-在此文件中颚化符(~)表示此行不存在.换句话说，当Vim没有显示的文件,<A HREF="motion.html#it">它</A>会显示颚化符.在屏幕底部,显示文件的名称和说明此为新建文件.  这个信息是暂时的，其他的信息可以覆盖<A HREF="motion.html#it">它</A>.
+在此文件中颚化符(~)表示此行不存在.换句话说，当Vim没有显示的内容,<A HREF="motion.html#it">它</A>会显示颚化符.在屏幕底部,显示文件的名称和说明此为新建文件.  这个信息是暂时的，其他的信息可以覆盖<A HREF="motion.html#it">它</A>.
 
 
 Vim 命令
@@ -129,13 +129,13 @@ gvim命令会让编辑器创建一个新<A HREF="windows.html#window">窗口</A>
 
 *<A NAME="02.2"></A><B>02.2</B>*	插入文本
 
-Vim是一个现代编辑器，它意味编辑器的行为与你所在的模式有关.有两个基本模式<A HREF="intro.html#Normal">正常</A>模式和<A HREF="insert.html#Insert">插入</A>模式.在<A HREF="intro.html#Normal">正常</A>模式，你键入的所有字符都是命令.在<A HREF="intro.html#Insert">插入</A>模式，所有的字符都会<A HREF="motion.html#as">作为</A>文本插入.当你进入Vim时，<A HREF="motion.html#it">它</A>会处于<A HREF="intro.html#Normal">正常</A>模式.进入<A HREF="insert.html#Insert">插入</A>模式你需要键入&quot;<A HREF="insert.html#i">i</A>&quot;命令(i是<A HREF="insert.html#Insert">Insert</A>)。然后你就可以输入文本了。这些文本会插入到文件中。如果你犯了一个错误也不用担心，你可以在之后改正它.
+Vim是一个现代编辑器，它意味编辑器的行为与你所在的模式有关.有两个基本模式<A HREF="intro.html#Normal">正常</A>模式和<A HREF="insert.html#Insert">插入</A>模式.在<A HREF="intro.html#Normal">正常</A>模式，你键入的所有字符都是命令.在<A HREF="intro.html#Insert">插入</A>模式，所有的字符都会<A HREF="motion.html#as">作为</A>文本插入.当你进入Vim时，<A HREF="motion.html#it">它</A>会处于<A HREF="intro.html#Normal">正常</A>模式.而进入<A HREF="insert.html#Insert">插入</A>模式你需要键入&quot;<A HREF="insert.html#i">i</A>&quot;命令(i代表<A HREF="insert.html#Insert">Insert</A>)。然后你就可以输入文本了。这些文本会插入到文件中。如果你犯了一个错误也不用担心，你可以在之后改正它.
 输入下文的程序员打油诗，你可以这样敲:
 
 <B>	iA very intelligent turtle</B>
 <B>	Found programming Unix a hurdle</B>
 
-随后键入颚化符;使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>键到新行.最后使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>键停止<A HREF="intro.html#Insert">插入</A>模式并返回<A HREF="intro.html#Normal">正常</A>模式.现在你有了两行文本在你的Vim<A HREF="windows.html#window">窗口</A>中:
+随后键入&quot;turtle&quot;,使用<A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A>键到新行.最后使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>键停止<A HREF="intro.html#Insert">插入</A>模式并返回<A HREF="intro.html#Normal">正常</A>模式.现在你有了两行文本在你的Vim<A HREF="windows.html#window">窗口</A>中:
 
 	+---------------------------------------+
 	|A very intelligent turtle		|
@@ -167,7 +167,7 @@ Vim是一个现代编辑器，它意味编辑器的行为与你所在的模式�
 
 摆脱麻烦
 
-Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模式或者不小心敲击转换模式的命令. 无论你在任何模式，返回<A HREF="intro.html#Normal">正常</A>模式使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>就可以了.有时你需要使用<A HREF="motion.html#it">它</A><A HREF="if_cscop.html#twice">两次</A>.如果Vim发出 "嘀" 一声，你已经处于<A HREF="intro.html#Normal">正常</A>模式.
+Vim新手遇到的问题之一是模式混乱，可能时你忘记所处的模式或者不小心敲击转换模式的命令. 无论你在任何模式，返回<A HREF="intro.html#Normal">正常</A>模式使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>就可以了.有时你需要使用<A HREF="motion.html#it">它</A><A HREF="if_cscop.html#twice">两次</A>.如果Vim发出 "嘀" 一声，你已经处于<A HREF="intro.html#Normal">正常</A>模式.
 
 ==============================================================================
 
@@ -181,11 +181,11 @@ Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模�
 	<A HREF="motion.html#k">k</A>   向上
 	<A HREF="motion.html#l">l</A>   向右
 
-首先,这些命令显得是随机挑选的.  毕竟,谁听说使用<A HREF="motion.html#l">l</A>代表右?但实际上这是有理由的:移动光标是在编辑器中最常做的，而这些键可以让你的右手直接按压.换句话说,这些命令在你最快输入他们的地方(特别是当你使用是个手指输入时).
+首先,这些命令显得是随机挑选的.  毕竟,谁听说使用<A HREF="motion.html#l">l</A>代表右?但实际上这是有理由的:移动光标是在编辑器中最常做的，而这些键可以让你的右手直接按压.换句话说,这些命令在你最快输入它们的地方(特别是当你使用是个手指输入时).
 
 	注意:
-	你也能使用方向键移动光标.然而如果你这样做了，你的键入速度会大大降低.考虑一下你在一小时能可能会移动光标几百次，他会大大消耗你的时间.
-	而且有没有方向键的键盘，或者方向键放置在不习惯的位置.因此，在这些情况下hjkl键的使用是很有帮助的.
+	你也能使用方向键移动光标.然而如果你这样做了，你的键入速度会大大降低.考虑一下你在一小时能可能会移动光标几百次，这会大大消耗你的时间.
+	而且还有没有方向键的键盘，或者方向键放置在你不习惯的位置.因此，在这些情况下hjkl键的使用是很有帮助的.
 
 记住这些命令的一个方法是:<A HREF="motion.html#h">h</A>在左边<A HREF="motion.html#l">l</A>在右边,<A HREF="motion.html#j">j</A>指着下面。用图表示如下:
 
@@ -213,7 +213,7 @@ Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模�
 
 <B>	iA young &lt;Esc&gt;</B>
 
-第一个自负启动插入(就是<A HREF="motion.html#i)">i)</A>,插入&quot;A young&quot;,然后退出插入模式(结束<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>).结果:
+第一个字符启动插入模式(就是<A HREF="motion.html#i)">i)</A>,插入&quot;A young&quot;,然后退出插入模式(结束<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>).结果:
 
 	+---------------------------------------+
 	|A young intelligent turtle		|
@@ -224,8 +224,7 @@ Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模�
 	+---------------------------------------+
 
 
-删除一行
-&quot;<A HREF="change.html#dd">dd</A>&quot;命令.下面的行会移上来填补空缺:
+删除一行, 使用&quot;<A HREF="change.html#dd">dd</A>&quot;命令.下面的行会移上来填补空缺:
 
 	+---------------------------------------+
 	|Found programming Unix a hurdle	|
@@ -260,7 +259,7 @@ Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模�
 
 <B><FONT color="#3A6F2B">	 intelligent turtle </FONT></B>
 
-键入&quot;<A HREF="undo.html#u">u</A>&quot;去<A HREF="undo.html#undo">恢复</A>最近的删除. 这个删除炒作删除<A HREF="motion.html#g,">g,</A>自负，使用<A HREF="undo.html#undo">恢复</A>命令恢复g字符.
+键入&quot;<A HREF="undo.html#u">u</A>&quot;去<A HREF="undo.html#undo">恢复</A>最近的删除. 删除命令最近删除的<A HREF="motion.html#g,">g</A>字符，使用<A HREF="undo.html#undo">恢复</A>命令恢复g字符.
 
 <B><FONT color="#3A6F2B">	g intelligent turtle </FONT></B>
 
@@ -303,14 +302,11 @@ Vim新手遇到的问题之一时模式混乱，可能时你忘记所处的模�
 
 *<A NAME="02.6"></A><B>02.6</B>*	其他编辑命令
 
-Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和下面的内容.
-这里是一些经常用到的.
-
+Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和下面的内容.这里是一些经常用到的.
 
 添加
 
-&quot;<A HREF="insert.html#i">i</A>&quot;命令在光标之前插入字符.一般情况下，这就够用了，但如果你刚好想在
-行尾加东西怎么办?对于这种情况你需要在光标之后插入字符.使用&quot;<A HREF="insert.html#a">a</A>&quot;(附加)命令就可以了.
+&quot;<A HREF="insert.html#i">i</A>&quot;命令在光标之前插入字符.一般情况下，这就够用了，但如果你刚好想在行尾加东西怎么办?对于这种情况你需要在光标之后插入字符.使用&quot;<A HREF="insert.html#a">a</A>&quot;(附加)命令就可以了.
    例如改变这行:
 
 <B><FONT color="#3A6F2B">	and that's not saying much for the turtle. </FONT></B>
@@ -324,7 +320,6 @@ Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和�
 添加三个感叹号到 turtle 的 "e" 后面:
 
 <B><FONT color="#3A6F2B">	and that's not saying much for the turtle!!! </FONT></B>
-
 
 开始一个新行
 
@@ -346,7 +341,6 @@ Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和�
 
 &quot;<A HREF="insert.html#O">O</A>&quot;命令(大写)在光标上方新建新行.
 
-
 指定计数
 
 如果你想要光标移动九行.你可能会键入&quot;kkkkkkkkk&quot;或者你能输入命令&quot;9k&quot;.实际上,你能在很多命令前添加数字.
@@ -361,7 +355,6 @@ Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和�
 	注意:
 	不向其他编辑器，不会自动<A HREF="editing.html#backup">备份</A>文件.如果你使用&quot;<A HREF="editing.html#ZZ">ZZ</A>&quot;,你的修改将会提交且不能找回.你可以配置Vim去生成<A HREF="editing.html#backup">备份</A>文件;见|<A HREF="usr_07.html#07.4">07.4</A>|.
 
-
 放弃修改
 
 有时你会做了一系列的修改才突然发现还不如编辑之前.不要担心;Vim有放弃修改并退出命令.它就是:
@@ -374,8 +367,7 @@ Vim有很多改变文本的命令.见|<A HREF="quickref.html#Q_in">Q_in</A>|和�
 
 <B><FONT color="#3A6F2B">	E37: No write since last change (use ! to override) </FONT></B>
 
-通过指定强制执行，你实际上在告诉 Vim: &quot;<A HREF="insert.html#I">我</A>知道这样做看起来很傻,到那时我真的想要这样<A HREF="diff.html#do">做</A>.&quot;
-如果你想要继续使用Vim编辑: The &quot;:e!&quot;命令可以重新装载原来的文件.
+通过指定强制执行，你实际上在告诉 Vim: &quot;<A HREF="insert.html#I">我</A>知道这样做看起来很傻,到那时我真的想要这样<A HREF="diff.html#do">做</A>.&quot;如果你想要继续使用Vim编辑: The &quot;:e!&quot;命令可以重新装载原来的文件.
 
 ==============================================================================
 
@@ -473,7 +465,7 @@ Vim编辑器有大量的<A HREF="options.html#options">选项</A>使你能够配
 <B>	:help options.txt</B>
     to open the help page which describes all option handling and then search
    using regular expressions, e.g. textwidth.
-   Certain <A HREF="options\.html#options">选项</A> have their own <A HREF="api.html#namespace">namespace</A>, e.g.:
+   Certain <A HREF="options.html#options">选项</A> have their own <A HREF="api.html#namespace">namespace</A>, e.g.:
 <B>	:help cpo-&lt;letter&gt;</B>
     for the corresponding flag of the <A HREF="options.html#'cpoptions'">'cpoptions'</A> settings, substitute &lt;letter&gt;
    by a specific flag, e.g.:
@@ -488,7 +480,7 @@ Vim编辑器有大量的<A HREF="options.html#options">选项</A>使你能够配
 5) <A HREF="intro.html#Insert">插入</A>模式 commands start with i_.  Help for <A HREF="change.html#deleting">deleting</A> a <A HREF="motion.html#word">单词</A>:
 <B>	:help i_CTRL-W</B>
 
-6) <A HREF="visual\.html#Visual">可视</A>模式 commands start with v_.  Help for jumping to the other side of
+6) <A HREF="visual.html#Visual">可视</A>模式 commands start with v_.  Help for jumping to the other side of
    the <A HREF="visual.html#Visual">Visual</A> area:
 <B>	:help v_o</B>
 
@@ -600,7 +592,7 @@ Vim编辑器有大量的<A HREF="options.html#options">选项</A>使你能够配
 <B>	:help hl-WarningMsg</B>
      talks about the WarningMsg highlighting group.
 
-20) <A HREF="autocmd\.html#Syntax">语法</A>高亮 is namespaced to :syn-topic.  E.g.
+20) <A HREF="autocmd.html#Syntax">语法</A>高亮 is namespaced to :syn-topic.  E.g.
 <B>	:help :syn-conceal</B>
      talks about the <A HREF="syntax.html#conceal">conceal</A> argument for the &quot;<A HREF="syntax.html#:syn">:syn</A>&quot;命令.
 
@@ -620,13 +612,13 @@ Vim编辑器有大量的<A HREF="options.html#options">选项</A>使你能够配
     <A HREF="syntax.html#conceal">conceal</A> feature use:
 <B>	:help +conceal</B>
 
-25) Documentation for included <A HREF="filetype\.html#filetype">文件类型</A> specific functionality is usually
+25) Documentation for included <A HREF="filetype.html#filetype">文件类型</A> specific functionality is usually
     available  in the form ft-&lt;filetype&gt;-&lt;functionality&gt;.  So
 <B>	:help ft-c-syntax</B>
-     talks about the C <A HREF="syntax\.html#syntax">语法</A> file and the option <A HREF="motion.html#it">它</A> provides.  Sometimes,
+     talks about the C <A HREF="syntax.html#syntax">语法</A> file and the option <A HREF="motion.html#it">它</A> provides.  Sometimes,
     additional sections for omni completion
 <B>	:help ft-php-omni</B>
-     or <A HREF="filetype\.html#filetype">文件类型</A> plugins
+     or <A HREF="filetype.html#filetype">文件类型</A> plugins
 <B>	:help ft-tex-plugin</B>
      are available.
 
@@ -644,7 +636,7 @@ Vim编辑器有大量的<A HREF="options.html#options">选项</A>使你能够配
 ==============================================================================
 
 下一章: |<A HREF="usr_03.html">usr_03.txt</A>|  移动
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

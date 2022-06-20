@@ -67,7 +67,7 @@
    <div class="container">
       <h1>Nvim 文档: filetype</h1>
       <A NAME="top"></A>
-      <A HREF="index\.html">主帮助文件</A>
+      <A HREF="index.html">主帮助文件</A>
 
       <HR>
       <PRE>
@@ -99,7 +99,7 @@ To enable file type detection, use this command in your <A HREF="starting.html#v
 <B>	:filetype on</B>
 Each time a new or existing file is edited, Vim will try to recognize the type
 of the file and set the <A HREF="options.html#'filetype'">'filetype'</A> option.  This will trigger the <A HREF="autocmd.html#FileType">FileType</A>
-event, which can be used to set the <A HREF="syntax\.html#syntax">语法</A> highlighting, set <A HREF="options\.html#options">选项</A>, etc.
+event, which can be used to set the <A HREF="syntax.html#syntax">语法</A> highlighting, set <A HREF="options.html#options">选项</A>, etc.
 
 Detail: The &quot;<A HREF="#:filetype">:filetype</A> on&quot; command will load these files:
 		$VIMRUNTIME/filetype.lua
@@ -197,7 +197,7 @@ To see the current status, type:
 The output looks something like this:
 <B>	filetype detection:ON  plugin:ON  indent:OFF</B>
 
-The file types are also used for <A HREF="syntax\.html#syntax">语法</A> highlighting.  If the &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;
+The file types are also used for <A HREF="syntax.html#syntax">语法</A> highlighting.  If the &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;
 command is used, the file type detection is installed too.  There is no need
 to <A HREF="diff.html#do">do</A> &quot;<A HREF="#:filetype">:filetype</A> on&quot; after &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;.
 
@@ -445,7 +445,7 @@ There you can see where Vim looks for your <A HREF="usr_05.html#plugin">plugin</
 
 2. Filetype <A HREF="usr_05.html#plugin">plugin</A>					*<A NAME="filetype-plugins"></A><B>filetype-plugins</B>*
 
-When loading filetype plugins has been enabled |<A HREF="#:filetype-plugin-on">:filetype-plugin-on</A>|, <A HREF="options\.html#options">选项</A>
+When loading filetype plugins has been enabled |<A HREF="#:filetype-plugin-on">:filetype-plugin-on</A>|, <A HREF="options.html#options">选项</A>
 will be set and mappings defined.  These are all local to the buffer, they
 will not be used for other files.
 
@@ -777,7 +777,7 @@ These maps can be disabled with
 
 PYTHON						*<A NAME="ft-python-plugin"></A><B>ft-python-plugin</B>* *<A NAME="PEP8"></A><B>PEP8</B>*
 
-By default the following <A HREF="options\.html#options">选项</A> are set, in accordance with <A HREF="#PEP8">PEP8</A>:
+By default the following <A HREF="options.html#options">选项</A> are set, in accordance with <A HREF="#PEP8">PEP8</A>:
 
 <B>	setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=8</B>
 
@@ -944,7 +944,7 @@ Format description:
 <B>        Buffer list with timestamp 1970-01-01T00:00:00:</B>
 <B>          = [{="f": "/foo"}, {="f": "/bar"}]</B>
  
-      Note 2: specifically for <A HREF="intro.html#register">寄存器</A> entries special <A HREF="syntax\.html#syntax">语法</A> for arrays was 
+      Note 2: specifically for <A HREF="intro.html#register">寄存器</A> entries special <A HREF="syntax.html#syntax">语法</A> for arrays was 
       designed:
 
 <B>        Register with timestamp 1970-01-01T00:00:00:</B>
@@ -959,7 +959,7 @@ Format description:
 <B>          % Key  Description  Value</B>
 <B>          + rc   contents     ["line1", "line2"]</B>
  
-      Such <A HREF="syntax\.html#syntax">语法</A> is automatically used if array representation appears to be 
+      Such <A HREF="syntax.html#syntax">语法</A> is automatically used if array representation appears to be 
       too lengthy.
    2. &quot;  @  Description__  Value&quot;: array header.  Same <A HREF="motion.html#as">as</A> map, but key is 
       omitted and description cannot be omitted.  Array entries start with 
@@ -976,9 +976,9 @@ Format description:
 <B>        History entry with timestamp 1970-01-01T00:00:00:</B>
 <B>          = [SEARCH, "foo", '/']</B>
  
-      Note: special array <A HREF="syntax\.html#syntax">语法</A> for <A HREF="intro.html#register">寄存器</A> entries is not recognized here.
+      Note: special array <A HREF="syntax.html#syntax">语法</A> for <A HREF="intro.html#register">寄存器</A> entries is not recognized here.
    3. &quot;  = {msgpack-value}&quot;: raw values.  |<A HREF="pi_msgpack.html#{msgpack-value}">{msgpack-value}</A>| in this <A HREF="change.html#case">case</A> may 
-      have absolutely any type.  Special array <A HREF="syntax\.html#syntax">语法</A> for <A HREF="intro.html#register">寄存器</A> entries is 
+      have absolutely any type.  Special array <A HREF="syntax.html#syntax">语法</A> for <A HREF="intro.html#register">寄存器</A> entries is 
       not recognized here <A HREF="motion.html#as">as</A> well.
 
 
@@ -1033,7 +1033,7 @@ The mappings can be disabled with:
  
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
    </div>
 </body>

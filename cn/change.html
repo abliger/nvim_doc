@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: change</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -848,13 +848,13 @@ The flags that you can use for the substitute commands:
 
 
 							*<A NAME=":s_i"></A><B>:s_i</B>*
-[i]	Ignore <A HREF="#case">case</A> for the <A HREF="pattern.html#pattern">pattern</A>.  The <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A> <A HREF="options\.html#options">选项</A>
+[i]	Ignore <A HREF="#case">case</A> for the <A HREF="pattern.html#pattern">pattern</A>.  The <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A> <A HREF="options.html#options">选项</A>
 	are not used.
 
 
 							*<A NAME=":s_I"></A><B>:s_I</B>*
 [I]	Don't ignore <A HREF="#case">case</A> for the <A HREF="pattern.html#pattern">pattern</A>.  The <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A>
-	<A HREF="options\.html#options">选项</A> are not used.
+	<A HREF="options.html#options">选项</A> are not used.
 
 
 							*<A NAME=":s_n"></A><B>:s_n</B>*
@@ -1449,7 +1449,7 @@ and &quot;<A HREF="#:put">:put</A>&quot;命令 and with <A HREF="undo.html#CTRL-
 		with the insert mode commands <A HREF="#CTRL-A">CTRL-A</A> and CTRL-@).  Note: this
 		doesn't work with <A HREF="undo.html#CTRL-R">CTRL-R</A> on the command-line.  It works a bit
 		differently, like <A HREF="insert.html#inserting">inserting</A> the text instead of putting <A HREF="motion.html#it">它</A>
-		('textwidth' and other <A HREF="options\.html#options">选项</A> affect what is inserted).
+		('textwidth' and other <A HREF="options.html#options">选项</A> affect what is inserted).
 
 							*<A NAME="quote_&#37;"></A><B>quote_&#37;</B>* *<A NAME="quote&#37;"></A><B>quote&#37;</B>*
 	&quot;<A HREF="motion.html#&#37;">&#37;</A>	Contains the name of the current file.
@@ -1644,7 +1644,7 @@ The <A HREF="options.html#'joinspaces'">'joinspaces'</A> option is used when lin
 
 You can set the <A HREF="options.html#'formatexpr'">'formatexpr'</A> option to an <A HREF="eval.html#expression">expression</A> or the <A HREF="options.html#'formatprg'">'formatprg'</A> option
 to the name of an external program for Vim to use for text <A HREF="#formatting">formatting</A>.  The
-<A HREF="options.html#'textwidth'">'textwidth'</A> and other <A HREF="options\.html#options">选项</A> have no effect on <A HREF="#formatting">formatting</A> by an external
+<A HREF="options.html#'textwidth'">'textwidth'</A> and other <A HREF="options.html#options">选项</A> have no effect on <A HREF="#formatting">formatting</A> by an external
 program.
 
 
@@ -1655,7 +1655,7 @@ since <A HREF="#formatting">formatting</A> is highly dependent on the type of fi
 sense to use an |<A HREF="eval.html#autoload">autoload</A>| <A HREF="usr_41.html#script">script</A>, so the corresponding <A HREF="usr_41.html#script">script</A> is only loaded
 when actually needed and the <A HREF="usr_41.html#script">script</A> should be called &lt;filetype&gt;format.vim.
 
-For example, the XML <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> distributed with Vim in the <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>
+For example, the XML <A HREF="filetype.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> distributed with Vim in the <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>
 directory, sets the <A HREF="options.html#'formatexpr'">'formatexpr'</A> option to:
 
 <B>   setlocal formatexpr=xmlformat#Format()</B>
@@ -1822,7 +1822,7 @@ will override the &quot;<A HREF="#r">r</A>&quot; and &quot;<A HREF="motion.html#
 Enabling <A HREF="options.html#'cindent'">'cindent'</A> will override the alignment flags in many cases.
 Reindenting using a different <A HREF="eval.html#method">method</A> like |<A HREF="#gq">gq</A>| or |<A HREF="#=">=</A>| will not consult
 alignment flags either. The same behaviour can be defined in those other
-<A HREF="#formatting">formatting</A> <A HREF="options\.html#options">选项</A>. One consideration is that <A HREF="options.html#'cindent'">'cindent'</A> has additional <A HREF="options\.html#options">选项</A>
+<A HREF="#formatting">formatting</A> <A HREF="options.html#options">选项</A>. One consideration is that <A HREF="options.html#'cindent'">'cindent'</A> has additional <A HREF="options.html#options">选项</A>
 for <A HREF="repeat.html#context">context</A> based indenting of comments but cannot replicate many three piece
 indent alignments.  However, <A HREF="options.html#'indentexpr'">'indentexpr'</A> has the ability to work better with
 three piece comments.
@@ -2020,7 +2020,7 @@ editing text paragraphs.  A few hints on how to use this:
   using the '<A HREF="motion.html#w">w</A>' flag and adding a space at the end of each line in the
   paragraphs except the last one.
 
-- You can set the <A HREF="options.html#'formatoptions'">'formatoptions'</A> based on the type of file |<A HREF="filetype\.html#filetype">文件类型</A>| or
+- You can set the <A HREF="options.html#'formatoptions'">'formatoptions'</A> based on the type of file |<A HREF="filetype.html#filetype">文件类型</A>| or
   specifically for one file with a |<A HREF="options.html#modeline">modeline</A>|.
 
 - Set <A HREF="options.html#'formatoptions'">'formatoptions'</A> to &quot;aw2tq&quot; to make text with indents like this:
@@ -2152,7 +2152,7 @@ The <A HREF="#sorting">sorting</A> can be interrupted, but if you interrupt <A H
 process you may end up with duplicated lines.  This also depends on the system
 library function used.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

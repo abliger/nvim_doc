@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: diagnostic</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -99,7 +99,7 @@ report diagnostics:
 
 1. Create a namespace |<A HREF="api.html#nvim_create_namespace()">nvim_create_namespace()</A>|. Note that the namespace must
    have a name. Anonymous namespaces WILL NOT WORK.
-2. (Optional) Configure <A HREF="options\.html#options">选项</A> for the diagnostic <A HREF="api.html#namespace">namespace</A>
+2. (Optional) Configure <A HREF="options.html#options">选项</A> for the diagnostic <A HREF="api.html#namespace">namespace</A>
    |<A HREF="vim.html">vim.diagnostic.config()</A>|.
 3. Generate diagnostics.
 4. Set the diagnostics for the buffer |<A HREF="vim.html">vim.diagnostic.set()</A>|.
@@ -176,8 +176,8 @@ Handlers can be configured with |<A HREF="vim.html">vim.diagnostic.config()</A>|
 creating a new key in `vim.diagnostic.handlers` (see
 |<A HREF="#diagnostic-handlers-example">diagnostic-handlers-example</A>|).
 
-The {opts} table passed to a handler is the full set of configuration <A HREF="options\.html#options">选项</A>
-(that is, <A HREF="motion.html#it">它</A> is not limited to just the <A HREF="options\.html#options">选项</A> for the handler itself). The
+The {opts} table passed to a handler is the full set of configuration <A HREF="options.html#options">选项</A>
+(that is, <A HREF="motion.html#it">它</A> is not limited to just the <A HREF="options.html#options">选项</A> for the handler itself). The
 values in the table are already resolved (i.e. if a user specifies a
 function for a <A HREF="starting.html#config">config</A> option, the function has already been evaluated).
 
@@ -410,7 +410,7 @@ Example:
 
 
 config({opts}, {namespace})                          *<A NAME="vim.diagnostic.config()"></A><B>vim.diagnostic.config()</B>*
-                Configure diagnostic <A HREF="options\.html#options">选项</A> globally or for a specific
+                Configure diagnostic <A HREF="options.html#options">选项</A> globally or for a specific
                 diagnostic <A HREF="api.html#namespace">namespace</A>.
 
                 Configuration can be specified globally, per-namespace, or
@@ -432,7 +432,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                 then virtual text will not be enabled for those diagnostics.
 
                 Note:
-                    Each of the configuration <A HREF="options\.html#options">选项</A> below accepts one of the
+                    Each of the configuration <A HREF="options.html#options">选项</A> below accepts one of the
                     following:
                     • `false`: Disable this feature
                     • `true`: Enable this feature, use default settings.
@@ -507,9 +507,9 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                    displayed before lower severities (e.g.
                                    ERROR is displayed before WARN). Options:
                                    • reverse: (boolean) Reverse sort order
-                    {namespace}  (number|nil) Update the <A HREF="options\.html#options">选项</A> for the given
+                    {namespace}  (number|nil) Update the <A HREF="options.html#options">选项</A> for the given
                                  <A HREF="api.html#namespace">namespace</A>. When omitted, update the global
-                                 diagnostic <A HREF="options\.html#options">选项</A>.
+                                 diagnostic <A HREF="options.html#options">选项</A>.
 
 
 disable({bufnr}, {namespace})                       *<A NAME="vim.diagnostic.disable()"></A><B>vim.diagnostic.disable()</B>*
@@ -805,7 +805,7 @@ set({namespace}, {bufnr}, {diagnostics}, {opts})        *<A NAME="vim.diagnostic
                     {bufnr}        (number) Buffer number
                     {diagnostics}  (table) A <A HREF="eval.html#list">列表</A> of diagnostic items
                                    |<A HREF="#diagnostic-structure">diagnostic-structure</A>|
-                    {opts}         (table|nil) Display <A HREF="options\.html#options">选项</A> to pass to
+                    {opts}         (table|nil) Display <A HREF="options.html#options">选项</A> to pass to
                                    |<A HREF="vim.html">vim.diagnostic.show()</A>|
 
 
@@ -859,7 +859,7 @@ show({namespace}, {bufnr}, {diagnostics}, {opts})
                                    without saving them or to display only a
                                    subset of diagnostics. May not be used when
                                    {namespace} or {bufnr} is nil.
-                    {opts}         (table|nil) Display <A HREF="options\.html#options">选项</A>. See
+                    {opts}         (table|nil) Display <A HREF="options.html#options">选项</A>. See
                                    |<A HREF="vim.html">vim.diagnostic.config()</A>|.
 
 
@@ -874,7 +874,7 @@ toqflist({diagnostics})                            *<A NAME="vim.diagnostic.toqf
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     array of <A HREF="quickfix.html#quickfix">quickfix</A> list items |<A HREF="builtin.html#setqflist-what">setqflist-what</A>|
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

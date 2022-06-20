@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: lua</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -202,7 +202,7 @@ Note:
 
 <A HREF="#Lua">Lua</A> <A HREF="autocmd.html#Syntax">Syntax</A> Information                                       *<A NAME="lua-syntax-help"></A><B>lua-syntax-help</B>*
 
-While <A HREF="#Lua">Lua</A> has a simple <A HREF="syntax\.html#syntax">语法</A>, there are a few things to understand,
+While <A HREF="#Lua">Lua</A> has a simple <A HREF="syntax.html#syntax">语法</A>, there are a few things to understand,
 particularly when looking at the documentation above.
 
 
@@ -539,7 +539,7 @@ The `v:lua` prefix may be used to call <A HREF="#Lua">Lua</A> <A HREF="eval.html
 example:
 <B>    arg1-&gt;v:lua.somemod.func(arg2)</B>
  
-You can use `v:lua` in &quot;func&quot; <A HREF="options\.html#options">选项</A> like <A HREF="options.html#'tagfunc'">'tagfunc'</A>, <A HREF="options.html#'omnifunc'">'omnifunc'</A>, etc.
+You can use `v:lua` in &quot;func&quot; <A HREF="options.html#options">选项</A> like <A HREF="options.html#'tagfunc'">'tagfunc'</A>, <A HREF="options.html#'omnifunc'">'omnifunc'</A>, etc.
 For example consider the following <A HREF="#Lua">Lua</A> omnifunc handler:
 
 <B>    function mymod.omnifunc(findstart, base)</B>
@@ -552,7 +552,7 @@ For example consider the following <A HREF="#Lua">Lua</A> omnifunc handler:
 <B>    vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.mymod.omnifunc')</B>
 
 Note: The module (&quot;mymod&quot; in the above example) must either be a <A HREF="#Lua">Lua</A> global,
-or use the require <A HREF="syntax\.html#syntax">语法</A> <A HREF="motion.html#as">as</A> specified above to access <A HREF="motion.html#it">它</A> from a package.
+or use the require <A HREF="syntax.html#syntax">语法</A> <A HREF="motion.html#as">as</A> specified above to access <A HREF="motion.html#it">它</A> from a package.
 
 Note: `v:lua` without a call is not allowed in a Vimscript <A HREF="eval.html#expression">expression</A>:
 |<A HREF="eval.html#Funcref">Funcref</A>|<A HREF="change.html#s">s</A> cannot represent <A HREF="#Lua">Lua</A> <A HREF="eval.html#functions">functions</A>. The following are <A HREF="message.html#errors">errors</A>:
@@ -775,7 +775,7 @@ vim.highlight.range({bufnr}, {ns}, {hlgroup}, {start}, {finish}, {opts})
 <A HREF="#vim.highlight.priorities">vim.highlight.priorities</A>                            *<A NAME="vim.highlight.priorities"></A><B>vim.highlight.priorities</B>*
 
         Table with default priorities used for highlighting:
-            • `syntax`: `50`, used for standard <A HREF="syntax\.html#syntax">语法</A> highlighting
+            • `syntax`: `50`, used for standard <A HREF="syntax.html#syntax">语法</A> highlighting
             • `treesitter`: `100`, used for tree-sitter-based highlighting
             • `diagnostics`: `150`, used for code analysis such <A HREF="motion.html#as">as</A> diagnostics
             • `user`: `200`, used for user-triggered highlights such <A HREF="motion.html#as">as</A> <A HREF="lsp.html#LSP">LSP</A>
@@ -1140,7 +1140,7 @@ Log levels are one of the values defined in `vim.log.levels`:
 LUA-VIMSCRIPT BRIDGE                                           *<A NAME="lua-vimscript"></A><B>lua-vimscript</B>*
 
 Nvim <A HREF="#Lua">Lua</A> provides an interface to Vimscript <A HREF="eval.html#variables">variables</A> and <A HREF="eval.html#functions">functions</A>, and
-editor commands and <A HREF="options\.html#options">选项</A>.
+editor commands and <A HREF="options.html#options">选项</A>.
 See also https://github.com/nanotee/nvim-lua-guide.
 
 
@@ -1156,7 +1156,7 @@ vim.cmd({command})
 
 vim.fn.{func}({...})                                                  *<A NAME="vim.fn"></A><B>vim.fn</B>*
         Invokes |<A HREF="eval.html#vim-function">vim-function</A>| or |<A HREF="eval.html#user-function">user-function</A>| {func} with arguments {...}.
-        To call <A HREF="eval.html#autoload">autoload</A> <A HREF="eval.html#functions">functions</A>, use the <A HREF="syntax\.html#syntax">语法</A>:
+        To call <A HREF="eval.html#autoload">autoload</A> <A HREF="eval.html#functions">functions</A>, use the <A HREF="syntax.html#syntax">语法</A>:
 <B>            vim.fn['some#function']({...})</B>
  
         Unlike <A HREF="#vim.api">vim.api</A>.|<A HREF="api.html#nvim_call_function()">nvim_call_function()</A>| this converts directly between Vim
@@ -1236,10 +1236,10 @@ Example:
 
                                                             *<A NAME="lua-vim-setlocal"></A><B>lua-vim-setlocal</B>*
 
-In Vimscript, there is a way to set <A HREF="options\.html#options">选项</A> |<A HREF="options.html#set-option">set-option</A>|. In <A HREF="#Lua">Lua</A>, the
+In Vimscript, there is a way to set <A HREF="options.html#options">选项</A> |<A HREF="options.html#set-option">set-option</A>|. In <A HREF="#Lua">Lua</A>, the
 corresponding <A HREF="eval.html#method">method</A> is `vim.opt`.
 
-`vim.opt` provides several conveniences for setting and controlling <A HREF="options\.html#options">选项</A>
+`vim.opt` provides several conveniences for setting and controlling <A HREF="options.html#options">选项</A>
 from within <A HREF="#Lua">Lua</A>.
 
 <B><FONT color="#3A6F2B">    Examples: </FONT></B>
@@ -1260,7 +1260,7 @@ from within <A HREF="#Lua">Lua</A>.
             `vim.opt.wildignore = '*.o,*.a,__pycache__'`
 
         However, <A HREF="#vim.opt">vim.opt</A> also supports a more elegent way of setting
-        list-style <A HREF="options\.html#options">选项</A> by using <A HREF="#lua">lua</A> tables:
+        list-style <A HREF="options.html#options">选项</A> by using <A HREF="#lua">lua</A> tables:
             `vim.opt.wildignore = { '*.o', '*.a', '__pycache__' }`
 
     To replicate the behavior of |<A HREF="options.html#:set+=">:set+=</A>|, use:
@@ -1355,7 +1355,7 @@ Option:get()
                                                             *<A NAME="vim.opt:append()"></A><B>vim.opt:append()</B>*
 Option:append(value)
 
-    Append a value to string-style <A HREF="options\.html#options">选项</A>. 见 |<A HREF="options.html#:set+=">:set+=</A>|
+    Append a value to string-style <A HREF="options.html#options">选项</A>. 见 |<A HREF="options.html#:set+=">:set+=</A>|
 
     These are equivalent:
         `vim.opt.formatoptions:append('j')`
@@ -1365,7 +1365,7 @@ Option:append(value)
                                                            *<A NAME="vim.opt:prepend()"></A><B>vim.opt:prepend()</B>*
 Option:prepend(value)
 
-    Prepend a value to string-style <A HREF="options\.html#options">选项</A>. 见 |<A HREF="options.html#:set^=">:set^=</A>|
+    Prepend a value to string-style <A HREF="options.html#options">选项</A>. 见 |<A HREF="options.html#:set^=">:set^=</A>|
 
     These are equivalent:
         `vim.opt.wildignore:prepend('*.o')`
@@ -1375,7 +1375,7 @@ Option:prepend(value)
                                                             *<A NAME="vim.opt:remove()"></A><B>vim.opt:remove()</B>*
 Option:remove(value)
 
-    Remove a value from string-style <A HREF="options\.html#options">选项</A>. 见 |<A HREF="options.html#:set-=">:set-=</A>|
+    Remove a value from string-style <A HREF="options.html#options">选项</A>. 见 |<A HREF="options.html#:set-=">:set-=</A>|
 
     These are equivalent:
         `vim.opt.wildignore:remove('*.pyc')`
@@ -1383,8 +1383,8 @@ Option:remove(value)
 
 
 In general, using `vim.opt` will provide the expected result when the user is
-used to interacting with editor |<A HREF="options\.html#options">选项</A>| via `set`. There are still times
-where the user may want to set particular <A HREF="options\.html#options">选项</A> via a shorthand in <A HREF="#Lua">Lua</A>,
+used to interacting with editor |<A HREF="options.html#options">选项</A>| via `set`. There are still times
+where the user may want to set particular <A HREF="options.html#options">选项</A> via a shorthand in <A HREF="#Lua">Lua</A>,
 which is where |<A HREF="#vim.o">vim.o</A>|, |<A HREF="#vim.bo">vim.bo</A>|, |<A HREF="#vim.wo">vim.wo</A>|, and |<A HREF="#vim.go">vim.go</A>| come into play.
 
 The behavior of |<A HREF="#vim.o">vim.o</A>|, |<A HREF="#vim.bo">vim.bo</A>|, |<A HREF="#vim.wo">vim.wo</A>|, and |<A HREF="#vim.go">vim.go</A>| is designed to
@@ -1398,7 +1398,7 @@ vim.bo/vim.wo   <A HREF="options.html#:setlocal">:setlocal</A>            -     
 
 
 <A HREF="#vim.o">vim.o</A>                                                                  *<A NAME="vim.o"></A><B>vim.o</B>*
-        Get or set editor <A HREF="options\.html#options">选项</A>, like |<A HREF="options.html#:set">:set</A>|. Invalid key is an error.
+        Get or set editor <A HREF="options.html#options">选项</A>, like |<A HREF="options.html#:set">:set</A>|. Invalid key is an error.
         Example:
 <B>            vim.o.cmdheight = 4</B>
 <B>            print(vim.o.columns)</B>
@@ -1410,7 +1410,7 @@ vim.bo/vim.wo   <A HREF="options.html#:setlocal">:setlocal</A>            -     
         This is a wrapper around |<A HREF="api.html#nvim_set_option()">nvim_set_option()</A>| and |<A HREF="api.html#nvim_get_option()">nvim_get_option()</A>|.
 
         NOTE: This is different than |<A HREF="#vim.o">vim.o</A>| because this ONLY sets the global
-        option, which generally produces confusing behavior for <A HREF="options\.html#options">选项</A> with
+        option, which generally produces confusing behavior for <A HREF="options.html#options">选项</A> with
         |<A HREF="options.html#global-local">global-local</A>| values.
 
         Example:
@@ -2132,7 +2132,7 @@ input({opts}, {on_confirm})                                   *<A NAME="vim.ui.i
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}        (table) Additional <A HREF="options\.html#options">选项</A>. 见 |<A HREF="builtin.html#input()">input()</A>|
+                    {opts}        (table) Additional <A HREF="options.html#options">选项</A>. 见 |<A HREF="builtin.html#input()">input()</A>|
                                   • prompt (string|nil) Text of the prompt.
                                     Defaults to `Input:`.
                                   • default (string|nil) Default reply to the
@@ -2173,7 +2173,7 @@ select({items}, {opts}, {on_choice})                         *<A NAME="vim.ui.se
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {items}      (table) Arbitrary items
-                    {opts}       (table) Additional <A HREF="options\.html#options">选项</A>
+                    {opts}       (table) Additional <A HREF="options.html#options">选项</A>
                                  • prompt (string|nil) Text of the prompt.
                                    Defaults to `Select one of:`
                                  • format_item (function item <A HREF="eval.html#-&gt;">-&gt;</A> text)
@@ -2193,11 +2193,11 @@ select({items}, {opts}, {on_choice})                         *<A NAME="vim.ui.se
 
 ==============================================================================
 
-<A HREF="#Lua">Lua</A> module: <A HREF="filetype\.html#filetype">文件类型</A>                                            *<A NAME="lua-filetype"></A><B>lua-filetype</B>*
+<A HREF="#Lua">Lua</A> module: <A HREF="filetype.html#filetype">文件类型</A>                                            *<A NAME="lua-filetype"></A><B>lua-filetype</B>*
 
 
 add({filetypes})                                          *<A NAME="vim.filetype.add()"></A><B>vim.filetype.add()</B>*
-                Add new <A HREF="filetype\.html#filetype">文件类型</A> mappings.
+                Add new <A HREF="filetype.html#filetype">文件类型</A> mappings.
 
                 Filetype mappings can be added either by extension or by
                 filename (either the &quot;tail&quot; or the full file path). The full
@@ -2205,14 +2205,14 @@ add({filetypes})                                          *<A NAME="vim.filetype
                 match is not found using the filename然后the filename is
                 matched against the <A HREF="eval.html#list">列表</A> of |<A HREF="#lua-patterns">lua-patterns</A>| (sorted by
                 priority) until a match is found. Lastly, if <A HREF="pattern.html#pattern">pattern</A> matching
-                does not find a <A HREF="filetype\.html#filetype">文件类型</A>然后the file extension is used.
+                does not find a <A HREF="filetype.html#filetype">文件类型</A>然后the file extension is used.
 
-                The <A HREF="filetype\.html#filetype">文件类型</A> can be either a <A HREF="options\.html#options">字符串</A> (in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is used
-                <A HREF="motion.html#as">as</A> the <A HREF="filetype\.html#filetype">文件类型</A> directly) or a function. If a function, <A HREF="motion.html#it">它</A>
+                The <A HREF="filetype.html#filetype">文件类型</A> can be either a <A HREF="options\.html#options">字符串</A> (in which <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> is used
+                <A HREF="motion.html#as">as</A> the <A HREF="filetype.html#filetype">文件类型</A> directly) or a function. If a function, <A HREF="motion.html#it">它</A>
                 takes the full path and buffer number of the file <A HREF="motion.html#as">as</A> arguments
                 (along with captures from the matched <A HREF="pattern.html#pattern">pattern</A>, if any) and
                 should return a <A HREF="options\.html#options">字符串</A> that will be used <A HREF="motion.html#as">as</A> the buffer's
-                <A HREF="filetype\.html#filetype">文件类型</A>.
+                <A HREF="filetype.html#filetype">文件类型</A>.
 
                 Filename patterns can specify an optional priority to resolve
                 cases when a file path matches multiple patterns. Higher
@@ -2221,7 +2221,7 @@ add({filetypes})                                          *<A NAME="vim.filetype
 
                 See $VIMRUNTIME/lua/vim/filetype.lua for more examples.
 
-                Note that <A HREF="#Lua">Lua</A> <A HREF="filetype\.html#filetype">文件类型</A> detection is only enabled when
+                Note that <A HREF="#Lua">Lua</A> <A HREF="filetype.html#filetype">文件类型</A> detection is only enabled when
                 |<A HREF="filetype.html#g:do_filetype_lua">g:do_filetype_lua</A>| is set to 1.
 
                 Example:
@@ -2256,17 +2256,17 @@ add({filetypes})                                          *<A NAME="vim.filetype
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {filetypes}  (table) A table containing new <A HREF="filetype\.html#filetype">文件类型</A> maps
+                    {filetypes}  (table) A table containing new <A HREF="filetype.html#filetype">文件类型</A> maps
                                  (see example).
 
 
 match({name}, {bufnr})                                  *<A NAME="vim.filetype.match()"></A><B>vim.filetype.match()</B>*
-                Set the <A HREF="filetype\.html#filetype">文件类型</A> for the given buffer from a file name.
+                Set the <A HREF="filetype.html#filetype">文件类型</A> for the given buffer from a file name.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {name}   (string) File name (can be an absolute or
                              relative path)
-                    {bufnr}  (number|nil) The buffer to set the <A HREF="filetype\.html#filetype">文件类型</A> for.
+                    {bufnr}  (number|nil) The buffer to set the <A HREF="filetype.html#filetype">文件类型</A> for.
                              Defaults to the current buffer.
 
 
@@ -2335,7 +2335,7 @@ set({mode}, <A HREF="map.html#{lhs}">{lhs}</A>, <A HREF="map.html#{rhs}">{rhs}</
                             function and `opts.expr <A HREF="change.html#==">==</A> true`, returning `nil`
                             is equivalent to an empty <A HREF="options\.html#options">字符串</A>.
                     {opts}  (table) A table of |<A HREF="map.html#:map-arguments">:map-arguments</A>| such <A HREF="motion.html#as">as</A>
-                            &quot;silent&quot;. In addition to the <A HREF="options\.html#options">选项</A> listed in
+                            &quot;silent&quot;. In addition to the <A HREF="options.html#options">选项</A> listed in
                             |<A HREF="api.html#nvim_set_keymap()">nvim_set_keymap()</A>|, this table also accepts the
                             following keys:
                             • buffer: (number or <A HREF="options.html#boolean">boolean</A>) Add a <A HREF="map.html#mapping">mapping</A> to the
@@ -2484,7 +2484,7 @@ parents({start})                                            *<A NAME="vim.fs.par
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (function) Iterator
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

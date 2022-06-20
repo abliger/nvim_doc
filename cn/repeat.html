@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: repeat</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -352,8 +352,8 @@ For <A HREF="editing.html#writing">写</A> a Vim <A HREF="usr_41.html#script">sc
 			below &quot;<A HREF="usr_05.html#plugin">plugin</A>&quot;, just like with plugins in
 			<A HREF="options.html#'runtimepath'">'runtimepath'</A>.
 
-			If the <A HREF="filetype\.html#filetype">文件类型</A> detection was already enabled (this
-			is usually done with a &quot;<A HREF="syntax\.html#syntax">语法</A> enable&quot; or &quot;<A HREF="filetype\.html#filetype">文件类型</A>
+			If the <A HREF="filetype.html#filetype">文件类型</A> detection was already enabled (this
+			is usually done with a &quot;<A HREF="syntax.html#syntax">语法</A> enable&quot; or &quot;<A HREF="filetype.html#filetype">文件类型</A>
 			on&quot; command in your |<A HREF="init.html">init.vim</A>|, or automatically during
 			|<A HREF="starting.html#initialization">initialization</A>|), and the package was found in
 			&quot;pack/*/opt/{name}&quot;, this command will also look
@@ -816,13 +816,13 @@ STARTING DEBUG MODE						*<A NAME="debug-mode"></A><B>debug-mode</B>*
 To enter debugging mode use one of these methods:
 1. Start Vim with the |<A HREF="starting.html#-D">-D</A>| argument:
 <B>	vim -D file.txt</B>
-   Debugging will start <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> the first <A HREF="starting\.html#vimrc">vimrc</A>文件 is sourced.  This is
+   Debugging will start <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> the first <A HREF="starting.html#vimrc">vimrc</A>文件 is sourced.  This is
    useful to find out what is happening when Vim is starting up.  A side
    effect is that Vim will switch the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> mode before initialisations
    have finished, with unpredictable results.
    For a GUI-only version (Windows) the debugging will start <A HREF="motion.html#as">as</A>
    soon <A HREF="motion.html#as">as</A> the <A HREF="gui.html#GUI">GUI</A><A HREF="windows.html#window">窗口</A>has been opened.  To make this happen early, add a
-   &quot;:gui&quot; command in <A HREF="starting\.html#vimrc">vimrc</A>文件.
+   &quot;:gui&quot; command in <A HREF="starting.html#vimrc">vimrc</A>文件.
 
 								*<A NAME=":debug"></A><B>:debug</B>*
 2. Run a command with &quot;<A HREF="#:debug">:debug</A>&quot; prepended.  Debugging will only be done while
@@ -851,7 +851,7 @@ When inside a user function, this will print the value of the local variable
 &quot;idx&quot;.  Prepend &quot;<A HREF="eval.html#g:">g:</A>&quot; to get the value of a global variable:
 <B>	echo g:idx</B>
 All commands are executed in the <A HREF="#context">context</A> of the current function or <A HREF="usr_41.html#script">script</A>.
-You can also set <A HREF="options\.html#options">选项</A>, for example setting or resetting <A HREF="options.html#'verbose'">'verbose'</A> will show
+You can also set <A HREF="options.html#options">选项</A>, for example setting or resetting <A HREF="options.html#'verbose'">'verbose'</A> will show
 what happens, but you might want to set <A HREF="motion.html#it">它</A> just before executing the lines you
 are interested in:
 <B>	:set verbose=20</B>
@@ -1064,7 +1064,7 @@ Profiling means that Vim measures the time that is spent on executing
 
 You can also use the |<A HREF="builtin.html#reltime()">reltime()</A>| function to measure time.
 
-For <A HREF="#profiling">profiling</A> <A HREF="syntax\.html#syntax">语法</A> highlighting 见 |<A HREF="syntax.html#:syntime">:syntime</A>|.
+For <A HREF="#profiling">profiling</A> <A HREF="syntax.html#syntax">语法</A> highlighting 见 |<A HREF="syntax.html#:syntime">:syntime</A>|.
 
 For example, to <A HREF="#profile">profile</A> the one_script.vim <A HREF="usr_41.html#script">script</A> file:
 <B>	:profile start /tmp/one_script_profile</B>
@@ -1206,7 +1206,7 @@ An initially-empty internal <A HREF="#Context">Context</A> stack is maintained b
 functions (见 |<A HREF="usr_41.html#ctx-functions">ctx-functions</A>|).
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

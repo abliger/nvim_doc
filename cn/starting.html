@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: starting</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -96,7 +96,7 @@ More generally, Nvim is started with:
 <B>	nvim [option | filename] ..</B>
 
 Option arguments and file name arguments can be mixed, and any number of them
-can be given.  However, watch out for <A HREF="options\.html#options">选项</A> that take an argument.
+can be given.  However, watch out for <A HREF="options.html#options">选项</A> that take an argument.
 
 The following items decide how to start editing:
 
@@ -109,7 +109,7 @@ filename	One or more file names.  The first one will be the current
 		an option, precede the <A HREF="editing.html#arglist">arglist</A> with &quot;<A HREF="#--">--</A>&quot;, e.g.:
 <B>			nvim -- -filename</B>
  		All arguments after the &quot;<A HREF="#--">--</A>&quot; will be interpreted <A HREF="motion.html#as">as</A> file names,
-		no other <A HREF="options\.html#options">选项</A> or &quot;+command&quot; argument can follow.
+		no other <A HREF="options.html#options">选项</A> or &quot;+command&quot; argument can follow.
 
 
 							*<A NAME="--"></A><B>--</B>*
@@ -156,7 +156,7 @@ filename	One or more file names.  The first one will be the current
 
 
 							*<A NAME="startup-options"></A><B>startup-options</B>*
-The option arguments may be given in any order.  Single-letter <A HREF="options\.html#options">选项</A> can be
+The option arguments may be given in any order.  Single-letter <A HREF="options.html#options">选项</A> can be
 combined after one dash.  There can be no option arguments after the &quot;<A HREF="#--">--</A>&quot;
 argument.
 
@@ -261,7 +261,7 @@ argument.
 		forgot that you are in <A HREF="#View">View</A> mode and did make some changes,
 		you can overwrite a file by adding an exclamation <A HREF="motion.html#mark">mark</A> to
 		the <A HREF="intro.html#Ex">Ex</A> command, <A HREF="motion.html#as">as</A> in &quot;<A HREF="editing.html#:w!">:w!</A>&quot;.  The <A HREF="options.html#'readonly'">'readonly'</A> option can be
-		reset with &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'noro'">noro</A>&quot; (see the options chapter, |<A HREF="options\.html#options">选项</A>|).
+		reset with &quot;<A HREF="options.html#:set">:set</A> <A HREF="options.html#'noro'">noro</A>&quot; (see the options chapter, |<A HREF="options.html#options">选项</A>|).
 		Subsequent edits will not be done in readonly mode.  Calling
 		the executable &quot;view&quot; has the same effect <A HREF="motion.html#as">as</A> the <A HREF="#-R">-R</A> argument.
 		The <A HREF="options.html#'updatecount'">'updatecount'</A> option will be set to 10000, meaning that
@@ -279,7 +279,7 @@ argument.
 <A HREF="#-M">-M</A>		Modifications not allowed.  The <A HREF="options.html#'modifiable'">'modifiable'</A> option will be
 		reset, so that changes are not allowed.  The <A HREF="options.html#'write'">'write'</A> option
 		will be reset, so that <A HREF="editing.html#writing">写</A> files is disabled.  However,
-		the <A HREF="options.html#'modifiable'">'modifiable'</A> and <A HREF="options.html#'write'">'write'</A> <A HREF="options\.html#options">选项</A> can be set to enable
+		the <A HREF="options.html#'modifiable'">'modifiable'</A> and <A HREF="options.html#'write'">'write'</A> <A HREF="options.html#options">选项</A> can be set to enable
 		changes and <A HREF="editing.html#writing">写</A>.
 
 
@@ -324,7 +324,7 @@ argument.
 
 
 							*<A NAME="-l"></A><B>-l</B>*
-<A HREF="#-l">-l</A>		Lisp mode.  Sets the <A HREF="options.html#'lisp'">'lisp'</A> and <A HREF="options.html#'showmatch'">'showmatch'</A> <A HREF="options\.html#options">选项</A> on.
+<A HREF="#-l">-l</A>		Lisp mode.  Sets the <A HREF="options.html#'lisp'">'lisp'</A> and <A HREF="options.html#'showmatch'">'showmatch'</A> <A HREF="options.html#options">选项</A> on.
 
 
 							*<A NAME="-A"></A><B>-A</B>*
@@ -332,7 +332,7 @@ argument.
 
 
 							*<A NAME="-H"></A><B>-H</B>*
-<A HREF="#-H">-H</A>		Hebrew mode.  Sets the <A HREF="options.html#'hkmap'">'hkmap'</A> and <A HREF="options.html#'rightleft'">'rightleft'</A> <A HREF="options\.html#options">选项</A> on.
+<A HREF="#-H">-H</A>		Hebrew mode.  Sets the <A HREF="options.html#'hkmap'">'hkmap'</A> and <A HREF="options.html#'rightleft'">'rightleft'</A> <A HREF="options.html#options">选项</A> on.
 
 
 							*<A NAME="-V"></A><B>-V</B>* *<A NAME="verbose"></A><B>verbose</B>*
@@ -411,10 +411,10 @@ argument.
 
 		When {vimrc} is &quot;NONE&quot; (all uppercase), all initializations
 		from files and environment <A HREF="eval.html#variables">variables</A> are skipped.  Plugins and
-		<A HREF="syntax\.html#syntax">语法</A> highlighting are also skipped.
+		<A HREF="syntax.html#syntax">语法</A> highlighting are also skipped.
 
 		When {vimrc} is &quot;NORC&quot; (all uppercase), this has the same
-		effect <A HREF="motion.html#as">as</A> &quot;NONE&quot;, but plugins and <A HREF="syntax\.html#syntax">语法</A> highlighting are not
+		effect <A HREF="motion.html#as">as</A> &quot;NONE&quot;, but plugins and <A HREF="syntax.html#syntax">语法</A> highlighting are not
 		skipped.
 
 
@@ -518,7 +518,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	if <A HREF="#SHELL">SHELL</A> is not set.
 
 2. Process the arguments
-	The <A HREF="options\.html#options">选项</A> and file names from the command that start Vim are
+	The <A HREF="options.html#options">选项</A> and file names from the command that start Vim are
 	inspected.  Buffers are created for all files (but not loaded yet).
 	The |<A HREF="#-V">-V</A>| argument can be used to display or log what happens next,
 	useful for debugging the initializations.
@@ -529,7 +529,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 
 4. Setup |<A HREF="vim_diff.html#default-mappings">default-mappings</A>| and  |<A HREF="vim_diff.html#default-autocmds">default-autocmds</A>|.
 
-5. Enable <A HREF="filetype\.html#filetype">文件类型</A> and indent plugins.
+5. Enable <A HREF="filetype.html#filetype">文件类型</A> and indent plugins.
 	This does the same <A HREF="motion.html#as">as</A> the command:
 <B>		:runtime! ftplugin.vim indent.vim</B>
  	Skipped if the &quot;<A HREF="#-u">-u</A> NONE&quot; command line argument was given.
@@ -553,7 +553,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	If Nvim was started with &quot;<A HREF="#-u">-u</A> {file}&quot; then <A HREF="editing.html#{file}">{file}</A> is used <A HREF="motion.html#as">as</A> the <A HREF="#config">config</A>
 	and all initializations until 5. are skipped. <A HREF="#$MYVIMRC">$MYVIMRC</A> is not set.
 	&quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-u">-u</A> NORC&quot; can be used to skip these initializations without
-	reading a file.  &quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-u">-u</A> NONE&quot; also skips plugins and <A HREF="syntax\.html#syntax">语法</A>
+	reading a file.  &quot;<A HREF="nvim.html#nvim">nvim</A> <A HREF="#-u">-u</A> NONE&quot; also skips plugins and <A HREF="syntax.html#syntax">语法</A>
 	highlighting.  |<A HREF="#-u">-u</A>|
 
 	If Nvim was started with |<A HREF="#-es">-es</A>| all initializations until 5. are
@@ -582,13 +582,13 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	-  The file &quot;.nvimrc&quot;
 	-  The file &quot;.exrc&quot;
 
-7. Enable <A HREF="filetype\.html#filetype">文件类型</A> detection.
+7. Enable <A HREF="filetype.html#filetype">文件类型</A> detection.
 	This does the same <A HREF="motion.html#as">as</A> the command:
 <B>		:runtime! filetype.lua filetype.vim</B>
  	Skipped if &quot;<A HREF="filetype.html#:filetype">:filetype</A> off&quot; was called or if the &quot;<A HREF="#-u">-u</A> NONE&quot; command line
 	argument was given.
 
-8. Enable <A HREF="syntax\.html#syntax">语法</A> highlighting.
+8. Enable <A HREF="syntax.html#syntax">语法</A> highlighting.
 	This does the same <A HREF="motion.html#as">as</A> the command:
 <B>		:runtime! syntax/syntax.vim</B>
  	Skipped if &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot; was called or if the &quot;<A HREF="#-u">-u</A> NONE&quot; command
@@ -626,14 +626,14 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 	ending in &quot;after&quot;.
 
 10. Set <A HREF="options.html#'shellpipe'">'shellpipe'</A> and <A HREF="options.html#'shellredir'">'shellredir'</A>
-	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> and <A HREF="options.html#'shellredir'">'shellredir'</A> <A HREF="options\.html#options">选项</A> are set according to the
+	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> and <A HREF="options.html#'shellredir'">'shellredir'</A> <A HREF="options.html#options">选项</A> are set according to the
 	value of the <A HREF="options.html#'shell'">'shell'</A> option, unless they have been set before.
 	This means that Nvim will figure out the values of <A HREF="options.html#'shellpipe'">'shellpipe'</A> and
 	<A HREF="options.html#'shellredir'">'shellredir'</A> for you, unless you have set them yourself.
 
 11. Set <A HREF="options.html#'updatecount'">'updatecount'</A> to zero, if &quot;<A HREF="#-n">-n</A>&quot;命令 argument used
 
-12. Set binary <A HREF="options\.html#options">选项</A> if the |<A HREF="#-b">-b</A>| flag was given.
+12. Set binary <A HREF="options.html#options">选项</A> if the |<A HREF="#-b">-b</A>| flag was given.
 
 13. Read the |<A HREF="#shada-file">shada-file</A>|.
 
@@ -659,7 +659,7 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 
 <B><FONT color="#3A6F2B">Saving the current state of Vim to a file </FONT></B>
 
-Whenever you have changed values of <A HREF="options\.html#options">选项</A> or when you have created a
+Whenever you have changed values of <A HREF="options.html#options">选项</A> or when you have created a
 <A HREF="map.html#mapping">mapping</A>然后you may want to save them in a <A HREF="#vimrc">vimrc</A> file for later use.  See
 |<A HREF="#save-settings">save-settings</A>| about saving the current state of settings to a file.
 
@@ -821,12 +821,12 @@ You can use these files <A HREF="motion.html#as">as</A> they are, or copy/paste 
 
 
 							*<A NAME=":mk"></A><B>:mk</B>* *<A NAME=":mkexrc"></A><B>:mkexrc</B>*
-:mk[exrc] [file]	Write current key mappings and changed <A HREF="options\.html#options">选项</A> to
+:mk[exrc] [file]	Write current key mappings and changed <A HREF="options.html#options">选项</A> to
 			[file] (default &quot;.exrc&quot; in the current directory),
 			unless <A HREF="motion.html#it">它</A> already exists.
 
 :mk[exrc]! [file]	Always write current key mappings and changed
-			<A HREF="options\.html#options">选项</A> to [file] (default &quot;.exrc&quot; in the current
+			<A HREF="options.html#options">选项</A> to [file] (default &quot;.exrc&quot; in the current
 			directory).
 
 
@@ -836,11 +836,11 @@ You can use these files <A HREF="motion.html#as">as</A> they are, or copy/paste 
 			written to the file.
 
 These commands will write &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.html#:set">:set</A>&quot;命令 to a file, in such a way
-that when these commands are executed, the current key mappings and <A HREF="options\.html#options">选项</A>
-will be set to the same values.  The <A HREF="options\.html#options">选项</A> <A HREF="options.html#'columns'">'columns'</A>, <A HREF="options.html#'endofline'">'endofline'</A>,
+that when these commands are executed, the current key mappings and <A HREF="options.html#options">选项</A>
+will be set to the same values.  The <A HREF="options.html#options">选项</A> <A HREF="options.html#'columns'">'columns'</A>, <A HREF="options.html#'endofline'">'endofline'</A>,
 <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'lines'">'lines'</A>, <A HREF="options.html#'modified'">'modified'</A>, and <A HREF="options.html#'scroll'">'scroll'</A> are not included, because
 these are <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> or file dependent.
-Note that the <A HREF="options\.html#options">选项</A> <A HREF="options.html#'binary'">'binary'</A>, <A HREF="options.html#'paste'">'paste'</A> and <A HREF="options.html#'readonly'">'readonly'</A> are included, this
+Note that the <A HREF="options.html#options">选项</A> <A HREF="options.html#'binary'">'binary'</A>, <A HREF="options.html#'paste'">'paste'</A> and <A HREF="options.html#'readonly'">'readonly'</A> are included, this
 might not always be what you want.
 
 When special keys are used in mappings, The <A HREF="options.html#'cpoptions'">'cpoptions'</A> option will be
@@ -881,7 +881,7 @@ This is introduced in sections |<A HREF="usr_21.html#21.4">21.4</A>| and |<A HRE
 						*<A NAME="View"></A><B>View</B>* *<A NAME="view-file"></A><B>view-file</B>*
 A <A HREF="#View">View</A> is a collection of settings that apply to one<A HREF="windows.html#window">窗口</A>.  You can save a
 <A HREF="#View">View</A> and when you restore <A HREF="motion.html#it">它</A> later, the text is displayed in the same way.
-The <A HREF="options\.html#options">选项</A> and mappings in this<A HREF="windows.html#window">窗口</A>will also be restored, so that you can
+The <A HREF="options.html#options">选项</A> and mappings in this<A HREF="windows.html#window">窗口</A>will also be restored, so that you can
 continue editing like when the <A HREF="#View">View</A> was saved.
 
 
@@ -908,8 +908,8 @@ You can quickly start editing with a previously saved <A HREF="#View">View</A> o
 The output of &quot;<A HREF="#:mksession">:mksession</A>&quot; is like &quot;<A HREF="#:mkvimrc">:mkvimrc</A>&quot;, but additional commands are
 added to the file.  Which ones depends on the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option.  The
 resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source</A>&quot;命令:
-1. Restores global mappings and <A HREF="options\.html#options">选项</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
-   &quot;<A HREF="options\.html#options">选项</A>&quot;.  Script-local mappings will not be written.
+1. Restores global mappings and <A HREF="options.html#options">选项</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
+   &quot;<A HREF="options.html#options">选项</A>&quot;.  Script-local mappings will not be written.
 2. Restores global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A> and contain
    at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;globals&quot;.
 3. Closes all <A HREF="windows\.html#windows">窗口</A> in the current <A HREF="intro.html#tab">tab</A> page, except the current one; closes
@@ -979,12 +979,12 @@ The output of &quot;<A HREF="#:mkview">:mkview</A>&quot; contains these items:
    The index in the argument <A HREF="eval.html#list">列表</A> is also restored.
 2. The file being edited in the<A HREF="windows.html#window">窗口</A>.  If there is no file, the<A HREF="windows.html#window">窗口</A>is
    made empty.
-3. Restore mappings, <A HREF="map.html#abbreviations">abbreviations</A> and <A HREF="options\.html#options">选项</A> local to the<A HREF="windows.html#window">窗口</A>if
-   <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains &quot;<A HREF="options\.html#options">选项</A>&quot; or &quot;localoptions&quot;.  For the <A HREF="options\.html#options">选项</A> <A HREF="motion.html#it">它</A>
+3. Restore mappings, <A HREF="map.html#abbreviations">abbreviations</A> and <A HREF="options.html#options">选项</A> local to the<A HREF="windows.html#window">窗口</A>if
+   <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains &quot;<A HREF="options.html#options">选项</A>&quot; or &quot;localoptions&quot;.  For the <A HREF="options.html#options">选项</A> <A HREF="motion.html#it">它</A>
    restores only values that are local to the current buffer and values local
    to the<A HREF="windows.html#window">窗口</A>.
-   When storing the view <A HREF="motion.html#as">as</A> part of a session and &quot;<A HREF="options\.html#options">选项</A>&quot; is in
-   <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>, global values for local <A HREF="options\.html#options">选项</A> will be stored too.
+   When storing the view <A HREF="motion.html#as">as</A> part of a session and &quot;<A HREF="options.html#options">选项</A>&quot; is in
+   <A HREF="options.html#'sessionoptions'">'sessionoptions'</A>, global values for local <A HREF="options.html#options">选项</A> will be stored too.
 4. Restore <A HREF="fold.html#folds">folds</A> when using manual <A HREF="fold.html#folding">folding</A> and <A HREF="options.html#'viewoptions'">'viewoptions'</A> contains
    &quot;<A HREF="fold.html#folds">folds</A>&quot;.  Restore manually opened and closed <A HREF="fold.html#folds">folds</A>.
 5. The scroll position and the cursor position in the file.  Doesn't work very
@@ -998,7 +998,7 @@ Note that Views and Sessions are not perfect:
   command line <A HREF="cmdline.html#history">history</A> are in ShaDa, not in Sessions or Views.
 - Global option values are only set when they differ from the default value.
   When the current value is not the default value, loading a <A HREF="#Session">Session</A> will not
-  set <A HREF="motion.html#it">它</A> back to the default value.  Local <A HREF="options\.html#options">选项</A> will be set back to the
+  set <A HREF="motion.html#it">它</A> back to the default value.  Local <A HREF="options.html#options">选项</A> will be set back to the
   default value though.
 - Existing mappings will be overwritten without warning.  An existing <A HREF="map.html#mapping">mapping</A>
   may cause an error for ambiguity.
@@ -1256,7 +1256,7 @@ Do not forget to remove the temporary file or replace the target file with
 temporary one after getting one of the above <A HREF="message.html#errors">errors</A> or all attempts to create
 a ShaDa file may fail with |<A HREF="#E929">E929</A>|.  If you got one of them when using
 |<A HREF="#:wshada">:wshada</A>| (and not when <A HREF="#exiting">exiting</A> Neovim: i.e. when you have Neovim session
-running) you have additional <A HREF="options\.html#options">选项</A>:
+running) you have additional <A HREF="options.html#options">选项</A>:
 
 - First thing which you should consider if you got any error, except failure
   to write to the temporary file: remove existing file and replace <A HREF="motion.html#it">它</A> with the
@@ -1524,7 +1524,7 @@ By default, the file is located at stdpath('log')/log unless that path
 is inaccessible or if <A HREF="#$NVIM_LOG_FILE">$NVIM_LOG_FILE</A> was set before |<A HREF="#startup">startup</A>|.
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

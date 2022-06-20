@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: nvim_terminal_emulator</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -119,7 +119,7 @@ Nvim嵌入了一个基于libvterm的VT220/xterm终端仿真程序。终端呈现
 
 想要在|<A HREF="intro\.html#Terminal-mode">终端模式</A>|输入内容，需要先使用|<A HREF="insert.html#i">i</A>|, |<A HREF="insert.html#I">I</A>|, |<A HREF="insert.html#a">a</A>|, |<A HREF="insert.html#A">A</A>|或者|<A HREF="insert.html#:startinsert">:startinsert</A>|进入插入模式.在此模式中除了&lt;C-\&gt;所有的键都会发送到当前项目.如果&lt;C-\&gt;被按压,除非<A HREF="motion.html#it">它</A>是&lt;C-N&gt;下一个键也会发送.使用&lt;C-\&gt;&lt;C-N&gt;回到正常模式. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
-<A HREF="intro\.html#Terminal-mode">终端模式</A>强制使用这些<A HREF="options\.html#options">选项</A>:
+<A HREF="intro\.html#Terminal-mode">终端模式</A>强制使用这些<A HREF="options.html#options">选项</A>:
 
     <A HREF="options.html#'cursorlineopt'">'cursorlineopt'</A> = number
     <A HREF="options.html#'nocursorcolumn'">'nocursorcolumn'</A>
@@ -184,7 +184,7 @@ Nvim嵌入了一个基于libvterm的VT220/xterm终端仿真程序。终端呈现
 
 状态变量				*<A NAME="terminal-status"></A><B>terminal-status</B>*
 
-终端<A HREF="windows.html#buffers">缓冲区</A>维护了一些本地缓冲<A HREF="eval.html#variables">变量</A>和<A HREF="options\.html#options">选项</A>.这个变量会在<A HREF="autocmd.html#TermOpen">TermOpen</A>前初始化,所以你可以在本地<A HREF="options.html#'statusline'">'statusline'</A>中使用他们.  例如:
+终端<A HREF="windows.html#buffers">缓冲区</A>维护了一些本地缓冲<A HREF="eval.html#variables">变量</A>和<A HREF="options.html#options">选项</A>.这个变量会在<A HREF="autocmd.html#TermOpen">TermOpen</A>前初始化,所以你可以在本地<A HREF="options.html#'statusline'">'statusline'</A>中使用他们.  例如:
 <B>    :autocmd TermOpen * setlocal statusline=%{b:term_title}</B>
 
 
@@ -577,7 +577,7 @@ Set the wide value to 1 to use a vertical split without ever <A HREF="change.htm
 <A HREF="options.html#'columns'">'columns'</A>.  This is useful when the <A HREF="#terminal">终端</A> can't be resized by Vim.
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

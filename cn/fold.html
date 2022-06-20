@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: fold</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -101,7 +101,7 @@ There are six methods to select <A HREF="#folds">folds</A>:
 	manual		manually define <A HREF="#folds">folds</A>
 	indent		more indent means a higher fold level
 	<A HREF="eval.html#expr">expr</A>		specify an <A HREF="eval.html#expression">expression</A> to define <A HREF="#folds">folds</A>
-	<A HREF="syntax\.html#syntax">语法</A>		<A HREF="#folds">folds</A> defined by <A HREF="syntax\.html#syntax">语法</A> highlighting
+	<A HREF="syntax.html#syntax">语法</A>		<A HREF="#folds">folds</A> defined by <A HREF="syntax.html#syntax">语法</A> highlighting
 	<A HREF="diff.html#diff">diff</A>		<A HREF="#folds">folds</A> for unchanged text
 	marker		<A HREF="#folds">folds</A> defined by markers in the text
 
@@ -181,7 +181,7 @@ will also start (end) when the fold level is higher (lower) than the fold
 level of the previous line.
 
 There must be no side effects from the <A HREF="eval.html#expression">expression</A>.  The text in the buffer,
-cursor position, the search patterns, <A HREF="options\.html#options">选项</A> etc. must not be changed.
+cursor position, the search patterns, <A HREF="options.html#options">选项</A> etc. must not be changed.
 You can change and restore them if you are careful.
 
 If there is some error in the <A HREF="eval.html#expression">expression</A>, or the resulting value isn't
@@ -219,12 +219,12 @@ to force updating <A HREF="#folds">folds</A>.
 
 SYNTAX						*<A NAME="fold-syntax"></A><B>fold-syntax</B>*
 
-A fold is defined by <A HREF="syntax\.html#syntax">语法</A> items that have the &quot;fold&quot; argument. |<A HREF="syntax.html#:syn-fold">:syn-fold</A>|
+A fold is defined by <A HREF="syntax.html#syntax">语法</A> items that have the &quot;fold&quot; argument. |<A HREF="syntax.html#:syn-fold">:syn-fold</A>|
 
 The fold level is defined by nesting <A HREF="#folds">folds</A>.  The nesting of <A HREF="#folds">folds</A> is limited
 with <A HREF="options.html#'foldnestmax'">'foldnestmax'</A>.
 
-Be careful to specify proper <A HREF="syntax\.html#syntax">语法</A> syncing.  If this is not done right, <A HREF="#folds">folds</A>
+Be careful to specify proper <A HREF="syntax.html#syntax">语法</A> syncing.  If this is not done right, <A HREF="#folds">folds</A>
 may differ from the displayed highlighting.  This is especially relevant when
 using patterns that match more than one line.  In <A HREF="change.html#case">case</A> of doubt, try using
 brute-force syncing:
@@ -572,7 +572,7 @@ Therefore the commands below may work differently on small <A HREF="#folds">fold
 
 ==============================================================================
 
-3. Fold <A HREF="options\.html#options">选项</A>					*<A NAME="fold-options"></A><B>fold-options</B>*
+3. Fold <A HREF="options.html#options">选项</A>					*<A NAME="fold-options"></A><B>fold-options</B>*
 
 
 COLORS							*<A NAME="fold-colors"></A><B>fold-colors</B>*
@@ -677,7 +677,7 @@ OTHER OPTIONS
 <A HREF="options.html#'foldmethod'">'foldmethod'</A>  <A HREF="options.html#'fdm'">'fdm'</A>:	Name of the current <A HREF="#folding">folding</A> <A HREF="eval.html#method">method</A>.
 <A HREF="options.html#'foldminlines'">'foldminlines'</A> <A HREF="options.html#'fml'">'fml'</A>:	Minimum number of screen lines for a fold to be
 			displayed closed.
-<A HREF="options.html#'foldnestmax'">'foldnestmax'</A> <A HREF="options.html#'fdn'">'fdn'</A>:	Maximum nesting for &quot;indent&quot; and &quot;<A HREF="syntax\.html#syntax">语法</A>&quot; <A HREF="#folding">folding</A>.
+<A HREF="options.html#'foldnestmax'">'foldnestmax'</A> <A HREF="options.html#'fdn'">'fdn'</A>:	Maximum nesting for &quot;indent&quot; and &quot;<A HREF="syntax.html#syntax">语法</A>&quot; <A HREF="#folding">folding</A>.
 <A HREF="options.html#'foldopen'">'foldopen'</A>    <A HREF="options.html#'fdo'">'fdo'</A>:	Which kinds of commands open closed <A HREF="#folds">folds</A>.
 <A HREF="options.html#'foldclose'">'foldclose'</A>   <A HREF="options.html#'fcl'">'fcl'</A>:	When the <A HREF="#folds">folds</A> not under the cursor are closed.
 
@@ -719,7 +719,7 @@ used.  Otherwise the values from the<A HREF="windows.html#window">窗口</A>wher
 are used.
 
 ==============================================================================
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

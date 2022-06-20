@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: if_pyth</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -390,15 +390,15 @@ vim.vvars						*<A NAME="python-vvars"></A><B>python-vvars</B>*
 
 vim.options						*<A NAME="python-options"></A><B>python-options</B>*
 	Object partly supporting <A HREF="map.html#mapping">mapping</A> protocol (supports setting and
-	getting items) providing a read-write access to global <A HREF="options\.html#options">选项</A>.
-	Note: unlike |<A HREF="options.html#:set">:set</A>| this provides access only to global <A HREF="options\.html#options">选项</A>. You
+	getting items) providing a read-write access to global <A HREF="options.html#options">选项</A>.
+	Note: unlike |<A HREF="options.html#:set">:set</A>| this provides access only to global <A HREF="options.html#options">选项</A>. You
 	cannot use this object to obtain or set local options' values or
-	access local-only <A HREF="options\.html#options">选项</A> in any fashion. Raises KeyError if no global
+	access local-only <A HREF="options.html#options">选项</A> in any fashion. Raises KeyError if no global
 	option with such name exists (i.e. does not raise KeyError for
-	|<A HREF="options.html#global-local">global-local</A>| <A HREF="options\.html#options">选项</A> and global only <A HREF="options\.html#options">选项</A>, but does for window-
+	|<A HREF="options.html#global-local">global-local</A>| <A HREF="options.html#options">选项</A> and global only <A HREF="options.html#options">选项</A>, but does for window-
 	and buffer-local ones).  Use |<A HREF="#python-buffer">python-buffer</A>| <A HREF="vimindex.html#objects">objects</A> to access to
-	buffer-local <A HREF="options\.html#options">选项</A> and |<A HREF="#python-window">python-window</A>| <A HREF="vimindex.html#objects">objects</A> to access to
-	window-local <A HREF="options\.html#options">选项</A>.
+	buffer-local <A HREF="options.html#options">选项</A> and |<A HREF="#python-window">python-window</A>| <A HREF="vimindex.html#objects">objects</A> to access to
+	window-local <A HREF="options.html#options">选项</A>.
 
 	Type of this object is available via &quot;Options&quot; attribute of vim
 	module.
@@ -537,8 +537,8 @@ The buffer object attributes are:
 	b.vars		Dictionary-like object used to access
 			|<A HREF="eval.html#buffer-variable">buffer-variable</A>|<A HREF="change.html#s">s</A>.
 	b.options	Mapping object (supports item getting, setting and
-			<A HREF="change.html#deleting">deleting</A>) that provides access to buffer-local <A HREF="options\.html#options">选项</A>
-			and buffer-local values of |<A HREF="options.html#global-local">global-local</A>| <A HREF="options\.html#options">选项</A>. Use
+			<A HREF="change.html#deleting">deleting</A>) that provides access to buffer-local <A HREF="options.html#options">选项</A>
+			and buffer-local values of |<A HREF="options.html#global-local">global-local</A>| <A HREF="options.html#options">选项</A>. Use
 			|<A HREF="#python-window">python-window</A>|.options if option is window-local,
 			this object will raise KeyError. If option is
 			|<A HREF="options.html#global-local">global-local</A>| and local value is missing getting <A HREF="motion.html#it">它</A>
@@ -641,10 +641,10 @@ Window attributes are:
 	vars (read-only)	The<A HREF="windows.html#window">窗口</A>|<A HREF="eval.html#w:">w:</A>| <A HREF="eval.html#variables">variables</A>. Attribute is
 				unassignable, but you can change<A HREF="windows.html#window">窗口</A>
 				<A HREF="eval.html#variables">variables</A> this way
-	<A HREF="options\.html#options">选项</A> (read-only)	The window-local <A HREF="options\.html#options">选项</A>. Attribute is
+	<A HREF="options.html#options">选项</A> (read-only)	The window-local <A HREF="options.html#options">选项</A>. Attribute is
 				unassignable, but you can change<A HREF="windows.html#window">窗口</A>
-				<A HREF="options\.html#options">选项</A> this way. Provides access only to
-				window-local <A HREF="options\.html#options">选项</A>, for buffer-local use
+				<A HREF="options.html#options">选项</A> this way. Provides access only to
+				window-local <A HREF="options.html#options">选项</A>, for buffer-local use
 				|<A HREF="#python-buffer">python-buffer</A>| and for global ones use
 				|<A HREF="#python-options">python-options</A>|. If option is |<A HREF="options.html#global-local">global-local</A>|
 				and local value is missing getting <A HREF="motion.html#it">它</A> will
@@ -782,7 +782,7 @@ To check if `pyx*` <A HREF="eval.html#functions">functions</A> and commands are 
 <B>	endif</B>
 
 ==============================================================================
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

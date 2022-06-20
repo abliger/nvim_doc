@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: lsp</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -222,7 +222,7 @@ FAQ                                                     *<A NAME="lsp-faq"></A><
      Treesitter is a language parsing library that provides excellent tools
      for incrementally parsing text and handling <A HREF="message.html#errors">errors</A>. This makes <A HREF="motion.html#it">它</A> a great
      fit for editors to understand the contents of the current file for things
-     like <A HREF="syntax\.html#syntax">语法</A> highlighting, simple goto-definitions, scope analysis and
+     like <A HREF="syntax.html#syntax">语法</A> highlighting, simple goto-definitions, scope analysis and
      more.
 
      <A HREF="#LSP">LSP</A> and Treesitter are both great tools for editing and inspecting code.
@@ -824,7 +824,7 @@ formatexpr({opts})                                      *<A NAME="vim.lsp.format
                 'v:lua.vim.lsp.formatexpr(#{timeout_ms:250})')`.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {opts}  (table) <A HREF="options\.html#options">选项</A> for customizing the <A HREF="change.html#formatting">formatting</A>
+                    {opts}  (table) <A HREF="options.html#options">选项</A> for customizing the <A HREF="change.html#formatting">formatting</A>
                             <A HREF="eval.html#expression">expression</A> which takes the following optional
                             keys:
                             • timeout_ms (default 500ms). The timeout period
@@ -931,7 +931,7 @@ start({config}, {opts})                                      *<A NAME="vim.lsp.s
 <B>    })</B>
  
 
-                见 |<A HREF="lsp.html">lsp.start_client</A>| for all available <A HREF="options\.html#options">选项</A>. The most
+                见 |<A HREF="lsp.html">lsp.start_client</A>| for all available <A HREF="options.html#options">选项</A>. The most
                 important are:
 
                 `name` is an arbitrary name for the <A HREF="#LSP">LSP</A> client. It should be
@@ -1048,9 +1048,9 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          See `initialize` in the <A HREF="#LSP">LSP</A> spec.
                     {name}               (string, default=client-id) Name in
                                          log <A HREF="message.html#messages">信息</A>.
-                    {get_language_id}    function(bufnr, <A HREF="filetype\.html#filetype">文件类型</A>) <A HREF="eval.html#-&gt;">-&gt;</A> language
+                    {get_language_id}    function(bufnr, <A HREF="filetype.html#filetype">文件类型</A>) <A HREF="eval.html#-&gt;">-&gt;</A> language
                                          ID <A HREF="motion.html#as">as</A> <A HREF="options\.html#options">字符串</A>. Defaults to the
-                                         <A HREF="filetype\.html#filetype">文件类型</A>.
+                                         <A HREF="filetype.html#filetype">文件类型</A>.
                     {offset_encoding}    (default=&quot;utf-16&quot;) One of &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot;,
                                          &quot;utf-16&quot;, or &quot;utf-32&quot; which is the
                                          encoding that the <A HREF="#LSP">LSP</A> server expects.
@@ -1244,7 +1244,7 @@ declaration({options})                             *<A NAME="vim.lsp.buf.declara
                     |<A HREF="vim.html">vim.lsp.buf.definition()</A>| instead.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {options}  (table|nil) additional <A HREF="options\.html#options">选项</A>
+                    {options}  (table|nil) additional <A HREF="options.html#options">选项</A>
                                • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
@@ -1253,7 +1253,7 @@ definition({options})                               *<A NAME="vim.lsp.buf.defini
                 Jumps to the definition of the symbol under the cursor.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {options}  (table|nil) additional <A HREF="options\.html#options">选项</A>
+                    {options}  (table|nil) additional <A HREF="options.html#options">选项</A>
                                • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
@@ -1300,8 +1300,8 @@ format({options})                                       *<A NAME="vim.lsp.buf.fo
                                following optional fields:
                                • formatting_options (table|nil): Can be used
                                  to specify FormattingOptions. Some
-                                 unspecified <A HREF="options\.html#options">选项</A> will be automatically
-                                 derived from the current Neovim <A HREF="options\.html#options">选项</A>.
+                                 unspecified <A HREF="options.html#options">选项</A> will be automatically
+                                 derived from the current Neovim <A HREF="options.html#options">选项</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specification#textDocument_formatting
@@ -1334,9 +1334,9 @@ formatting({options})                               *<A NAME="vim.lsp.buf.format
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {options}  (table|nil) Can be used to specify
-                               FormattingOptions. Some unspecified <A HREF="options\.html#options">选项</A>
+                               FormattingOptions. Some unspecified <A HREF="options.html#options">选项</A>
                                will be automatically derived from the current
-                               Neovim <A HREF="options\.html#options">选项</A>.
+                               Neovim <A HREF="options.html#options">选项</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     https://microsoft.github.io/language-server-protocol/specification#textDocument_formatting
@@ -1474,7 +1474,7 @@ rename({new_name}, {options})                           *<A NAME="vim.lsp.buf.re
                     {new_name}  (string|nil) If not provided, the user will be
                                 prompted for a new name using
                                 |<A HREF="lua.html#vim.ui.input()">vim.ui.input()</A>|.
-                    {options}   (table|nil) additional <A HREF="options\.html#options">选项</A>
+                    {options}   (table|nil) additional <A HREF="options.html#options">选项</A>
                                 • <A HREF="change.html#filter">filter</A> (function|nil): Predicate used to
                                   <A HREF="change.html#filter">filter</A> clients. Receives a client <A HREF="motion.html#as">as</A>
                                   argument and must return a <A HREF="options.html#boolean">boolean</A>. Clients
@@ -1502,7 +1502,7 @@ type_definition({options})                     *<A NAME="vim.lsp.buf.type_defini
                 cursor.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {options}  (table|nil) additional <A HREF="options\.html#options">选项</A>
+                    {options}  (table|nil) additional <A HREF="options.html#options">选项</A>
                                • reuse_win: (boolean) Jump to existing<A HREF="windows.html#window">窗口</A>
                                  if buffer is already open.
 
@@ -1537,7 +1537,7 @@ get_namespace({client_id})                *<A NAME="vim.lsp.diagnostic.get_names
 on_publish_diagnostics({_}, {result}, {ctx}, {config})
                 |<A HREF="#lsp-handler">lsp-handler</A>| for the <A HREF="eval.html#method">method</A> &quot;textDocument/publishDiagnostics&quot;
 
-                见 |<A HREF="vim.html">vim.diagnostic.config()</A>| for configuration <A HREF="options\.html#options">选项</A>.
+                见 |<A HREF="vim.html">vim.diagnostic.config()</A>| for configuration <A HREF="options.html#options">选项</A>.
                 Handler-specific configuration can be set using
                 YXXYvim.lsp.with()|:
 
@@ -1774,7 +1774,7 @@ convert_signature_help_to_markdown_lines({signature_help}, {ft}, {triggers})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {signature_help}  Response of `textDocument/SignatureHelp`
-                    {ft}              optional <A HREF="filetype\.html#filetype">文件类型</A> that will be use <A HREF="motion.html#as">as</A>
+                    {ft}              optional <A HREF="filetype.html#filetype">文件类型</A> that will be use <A HREF="motion.html#as">as</A>
                                       the `lang` for the label markdown code
                                       block
                     {triggers}        optional <A HREF="eval.html#list">列表</A> of trigger characters from
@@ -1865,7 +1865,7 @@ lookup_section({settings}, {section})          *<A NAME="vim.lsp.util.lookup_sec
 
                                   *<A NAME="vim.lsp.util.make_floating_popup_options()"></A><B>vim.lsp.util.make_floating_popup_options()</B>*
 make_floating_popup_options({width}, {height}, {opts})
-                Creates a table with sensible default <A HREF="options\.html#options">选项</A> for a floating
+                Creates a table with sensible default <A HREF="options.html#options">选项</A> for a floating
                <A HREF="windows.html#window">窗口</A>. The table can be passed to |<A HREF="api.html#nvim_open_win()">nvim_open_win()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -1993,7 +1993,7 @@ open_floating_preview({contents}, {syntax}, {opts})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {contents}  (table) of lines to show in<A HREF="windows.html#window">窗口</A>
-                    {syntax}    (string) of <A HREF="syntax\.html#syntax">语法</A> to set for opened buffer
+                    {syntax}    (string) of <A HREF="syntax.html#syntax">语法</A> to set for opened buffer
                     {opts}      (table) with optional fields (additional keys
                                 are passed on to |<A HREF="vim.html">vim.api.nvim_open_win()</A>|)
                                 • height: (number) height of floating<A HREF="windows.html#window">窗口</A>
@@ -2078,7 +2078,7 @@ set_lines({lines}, {A}, {B}, {new_lines})           *<A NAME="vim.lsp.util.set_l
 
                                              *<A NAME="vim.lsp.util.stylize_markdown()"></A><B>vim.lsp.util.stylize_markdown()</B>*
 stylize_markdown({bufnr}, {contents}, {opts})
-                Converts markdown into <A HREF="syntax\.html#syntax">语法</A> highlighted regions by stripping
+                Converts markdown into <A HREF="syntax.html#syntax">语法</A> highlighted regions by stripping
                 the code blocks and converting them into highlighted code.
                 This will by default insert a blank line separator after those
                 code block regions to improve readability.
@@ -2147,7 +2147,7 @@ trim_empty_lines({lines})                    *<A NAME="vim.lsp.util.trim_empty_l
 
                                 *<A NAME="vim.lsp.util.try_trim_markdown_code_blocks()"></A><B>vim.lsp.util.try_trim_markdown_code_blocks()</B>*
 try_trim_markdown_code_blocks({lines})
-                Accepts markdown lines and tries to reduce them to a <A HREF="filetype\.html#filetype">文件类型</A>
+                Accepts markdown lines and tries to reduce them to a <A HREF="filetype.html#filetype">文件类型</A>
                 if they comprise just a single code block.
 
                 CAUTION: Modifies the input in-place!
@@ -2156,7 +2156,7 @@ try_trim_markdown_code_blocks({lines})
                     {lines}  (table) <A HREF="eval.html#list">列表</A> of lines
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (string) <A HREF="filetype\.html#filetype">文件类型</A> or 'markdown' if <A HREF="motion.html#it">它</A> was unchanged.
+                    (string) <A HREF="filetype.html#filetype">文件类型</A> or 'markdown' if <A HREF="motion.html#it">它</A> was unchanged.
 
 
 ==============================================================================
@@ -2350,7 +2350,7 @@ resolve_capabilities({server_capabilities})
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     (table) Normalized table of capabilities
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

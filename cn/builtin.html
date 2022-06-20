@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: builtin</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -320,7 +320,7 @@ histdel({history} [, {item}])	<A HREF="options\.html#options">字符串</A>	remo
 histget({history} [, {index}])	<A HREF="options\.html#options">字符串</A>	get the item {index} from a <A HREF="cmdline.html#history">history</A>
 histnr({history})		<A HREF="eval.html#Number">Number</A>	highest index of a <A HREF="cmdline.html#history">history</A>
 hlexists({name})		<A HREF="eval.html#Number">Number</A>	|<A HREF="eval.html#TRUE">TRUE</A>| if highlight group {name} exists
-hlID({name})			<A HREF="eval.html#Number">Number</A>	<A HREF="syntax\.html#syntax">语法</A> ID of highlight group {name}
+hlID({name})			<A HREF="eval.html#Number">Number</A>	<A HREF="syntax.html#syntax">语法</A> ID of highlight group {name}
 <A HREF="#hostname()">hostname()</A>			<A HREF="options\.html#options">字符串</A>	name of the machine Vim is running on
 iconv({expr}, {from}, {to})	<A HREF="options\.html#options">字符串</A>	convert encoding of {expr}
 indent({lnum})			<A HREF="eval.html#Number">Number</A>	indent of line {lnum}
@@ -560,12 +560,12 @@ substitute({expr}, {pat}, {sub}, {flags})
 				<A HREF="options\.html#options">字符串</A>	all {pat} in {expr} replaced with {sub}
 swapinfo({fname})		<A HREF="eval.html#Dict">Dict</A>	information about swap file {fname}
 swapname({buf})			<A HREF="options\.html#options">字符串</A>	swap file of buffer {buf}
-synID({lnum}, {col}, {trans})	<A HREF="eval.html#Number">Number</A>	<A HREF="syntax\.html#syntax">语法</A> ID at {lnum} and {col}
+synID({lnum}, {col}, {trans})	<A HREF="eval.html#Number">Number</A>	<A HREF="syntax.html#syntax">语法</A> ID at {lnum} and {col}
 synIDattr({synID}, {what} [, {mode}])
-				<A HREF="options\.html#options">字符串</A>	attribute {what} of <A HREF="syntax\.html#syntax">语法</A> ID {synID}
-synIDtrans({synID})		<A HREF="eval.html#Number">Number</A>	translated <A HREF="syntax\.html#syntax">语法</A> ID of {synID}
+				<A HREF="options\.html#options">字符串</A>	attribute {what} of <A HREF="syntax.html#syntax">语法</A> ID {synID}
+synIDtrans({synID})		<A HREF="eval.html#Number">Number</A>	translated <A HREF="syntax.html#syntax">语法</A> ID of {synID}
 synconcealed({lnum}, {col})	<A HREF="eval.html#list">列表</A>	info about concealing
-synstack({lnum}, {col})	<A HREF="eval.html#list">列表</A>	stack of <A HREF="syntax\.html#syntax">语法</A> IDs at {lnum} and {col}
+synstack({lnum}, {col})	<A HREF="eval.html#list">列表</A>	stack of <A HREF="syntax.html#syntax">语法</A> IDs at {lnum} and {col}
 system({cmd} [, {input}])	<A HREF="options\.html#options">字符串</A>	output of shell command/filter {cmd}
 systemlist({cmd} [, {input}])	<A HREF="eval.html#list">列表</A>	output of shell command/filter {cmd}
 tabpagebuflist([{arg}])		<A HREF="eval.html#list">列表</A>	<A HREF="eval.html#list">列表</A> of buffer numbers in <A HREF="intro.html#tab">tab</A> page
@@ -1746,7 +1746,7 @@ dictwatcheradd({dict}, {pattern}, {callback})		      *<A NAME="dictwatcheradd()"
 		- If <A HREF="motion.html#it">它</A> contains only `new`, the key was added.
 		- If <A HREF="motion.html#it">它</A> contains only `old`, the key was deleted.
 
-		This function can be used by plugins to implement <A HREF="options\.html#options">选项</A> with
+		This function can be used by plugins to implement <A HREF="options.html#options">选项</A> with
 		validation and parsing logic.
 
 
@@ -1765,7 +1765,7 @@ dictwatcherdel({dict}, {pattern}, {callback})		      *<A NAME="dictwatcherdel()"
 		When editing another file, the counter is reset, thus this
 		really checks if the <A HREF="autocmd.html#FileType">FileType</A> event has been triggered for the
 		current buffer.  This allows an <A HREF="autocmd\.html#autocommand">自动命令</A> that starts
-		editing another buffer to set <A HREF="options.html#'filetype'">'filetype'</A> and load a <A HREF="syntax\.html#syntax">语法</A>
+		editing another buffer to set <A HREF="options.html#'filetype'">'filetype'</A> and load a <A HREF="syntax.html#syntax">语法</A>
 		file.
 
 
@@ -1791,7 +1791,7 @@ diff_hlID({lnum}, {col})				*<A NAME="diff_hlID()"></A><B>diff_hlID()</B>*
 		{col} is 1 for the leftmost column, {lnum} is 1 for the first
 		line.
 		The highlight ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| to obtain
-		<A HREF="syntax\.html#syntax">语法</A> information about the highlighting.
+		<A HREF="syntax.html#syntax">语法</A> information about the highlighting.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
 <B>			GetLnum()-&gt;diff_hlID(col)</B>
@@ -2396,7 +2396,7 @@ filter({expr1}, {expr2})					*<A NAME="filter()"></A><B>filter()</B>*
 finddir({name} [, {path} [, {count}]])				*<A NAME="finddir()"></A><B>finddir()</B>*
 		Find directory {name} in {path}.  Supports both downwards and
 		upwards recursive directory searches.  见 |<A HREF="editing.html#file-searching">file-searching</A>|
-		for the <A HREF="syntax\.html#syntax">语法</A> of {path}.
+		for the <A HREF="syntax.html#syntax">语法</A> of {path}.
 
 		Returns the path of the first found match.  When the found
 		directory is below the current directory a relative path is
@@ -2600,7 +2600,7 @@ foldlevel({lnum})					*<A NAME="foldlevel()"></A><B>foldlevel()</B>*
 		&quot;45&quot; is the number of lines in the fold.  &quot;abcdef&quot; is the text
 		in the first non-blank line of the fold.  Leading white space,
 		&quot;//&quot; or &quot;/*&quot; and the text from the <A HREF="options.html#'foldmarker'">'foldmarker'</A> and
-		<A HREF="options.html#'commentstring'">'commentstring'</A> <A HREF="options\.html#options">选项</A> is removed.
+		<A HREF="options.html#'commentstring'">'commentstring'</A> <A HREF="options.html#options">选项</A> is removed.
 		When used to draw the actual foldtext, the rest of the line
 		will be filled with the fold char from the <A HREF="options.html#'fillchars'">'fillchars'</A>
 		setting.
@@ -2821,7 +2821,7 @@ getbufinfo([{dict}])
 <B>			    endif</B>
 <B>			endfor</B>
  
-		To get buffer-local <A HREF="options\.html#options">选项</A> use:
+		To get buffer-local <A HREF="options.html#options">选项</A> use:
 <B>			getbufvar({bufnr}, '&amp;option_name')</B>
  
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -2865,7 +2865,7 @@ getbufvar({buf}, {varname} [, {def}])				*<A NAME="getbufvar()"></A><B>getbufvar
 		When {varname} is empty returns a |<A HREF="eval.html#Dictionary">Dictionary</A>| with all the
 		buffer-local <A HREF="eval.html#variables">variables</A>.
 		When {varname} is equal to &quot;<A HREF="change.html#&amp;">&amp;</A>&quot; returns a |<A HREF="eval.html#Dictionary">Dictionary</A>| with all
-		the buffer-local <A HREF="options\.html#options">选项</A>.
+		the buffer-local <A HREF="options.html#options">选项</A>.
 		Otherwise, when {varname} starts with &quot;<A HREF="change.html#&amp;">&amp;</A>&quot; returns the value of
 		a buffer-local option.
 		This also works for a global or buffer-local option, but <A HREF="motion.html#it">它</A>
@@ -3126,7 +3126,7 @@ getcompletion({pat}, {type} [, {filtered}])		*<A NAME="getcompletion()"></A><B>g
 		<A HREF="map.html#mapping">mapping</A>		<A HREF="map.html#mapping">mapping</A> name
 		menu		<A HREF="gui.html#menus">menus</A>
 		messages	|<A HREF="message.html#:messages">:messages</A>| suboptions
-		option		<A HREF="options\.html#options">选项</A>
+		option		<A HREF="options.html#options">选项</A>
 		packadd		optional package |<A HREF="repeat.html#pack-add">pack-add</A>| names
 		shellcmd	Shell command
 		sign		|<A HREF="sign.html#:sign">:sign</A>| suboptions
@@ -3725,7 +3725,7 @@ gettabwinvar({tabnr}, {winnr}, {varname} [, {def}])		*<A NAME="gettabwinvar()"><
 		The {varname} argument is a <A HREF="options\.html#options">字符串</A>.  When {varname} is empty a
  		dictionary with all window-local <A HREF="eval.html#variables">variables</A> is returned.
 		When {varname} is equal to &quot;<A HREF="change.html#&amp;">&amp;</A>&quot; get the values of all
-		window-local <A HREF="options\.html#options">选项</A> in a |<A HREF="eval.html#Dictionary">Dictionary</A>|.
+		window-local <A HREF="options.html#options">选项</A> in a |<A HREF="eval.html#Dictionary">Dictionary</A>|.
 		Otherwise, when {varname} starts with &quot;<A HREF="change.html#&amp;">&amp;</A>&quot; get the value of a
 		window-local option.
 		Note that {varname} must be the name without &quot;<A HREF="eval.html#w:">w:</A>&quot;.
@@ -3872,7 +3872,7 @@ glob({expr} [, {nosuf} [, {list} [, {alllinks}]]])		*<A NAME="glob()"></A><B>glo
 		use of special characters.
 
 		Unless the optional {nosuf} argument is given and is |<A HREF="eval.html#TRUE">TRUE</A>|,
-		the <A HREF="options.html#'suffixes'">'suffixes'</A> and <A HREF="options.html#'wildignore'">'wildignore'</A> <A HREF="options\.html#options">选项</A> apply: Names matching
+		the <A HREF="options.html#'suffixes'">'suffixes'</A> and <A HREF="options.html#'wildignore'">'wildignore'</A> <A HREF="options.html#options">选项</A> apply: Names matching
 		one of the patterns in <A HREF="options.html#'wildignore'">'wildignore'</A> will be skipped and
 		<A HREF="options.html#'suffixes'">'suffixes'</A> affect the ordering of matches.
 		<A HREF="options.html#'wildignorecase'">'wildignorecase'</A> always applies.
@@ -3938,7 +3938,7 @@ globpath({path}, {expr} [, {nosuf} [, {list} [, {allinks}]]])
 		error message.
 
 		Unless the optional {nosuf} argument is given and is |<A HREF="eval.html#TRUE">TRUE</A>|,
-		the <A HREF="options.html#'suffixes'">'suffixes'</A> and <A HREF="options.html#'wildignore'">'wildignore'</A> <A HREF="options\.html#options">选项</A> apply: Names matching
+		the <A HREF="options.html#'suffixes'">'suffixes'</A> and <A HREF="options.html#'wildignore'">'wildignore'</A> <A HREF="options.html#options">选项</A> apply: Names matching
 		one of the patterns in <A HREF="options.html#'wildignore'">'wildignore'</A> will be skipped and
 		<A HREF="options.html#'suffixes'">'suffixes'</A> affect the ordering of matches.
 
@@ -3968,12 +3968,12 @@ has({feature})	Returns 1 if {feature} is supported, 0 otherwise.  The
 		{feature} argument is a feature name like &quot;nvim-0.2.1&quot; or
 		&quot;win32&quot;, see below.  See also |<A HREF="#exists()">exists()</A>|.
 
-		If the code has a <A HREF="syntax\.html#syntax">语法</A> error然后Nvim may skip the rest
+		If the code has a <A HREF="syntax.html#syntax">语法</A> error然后Nvim may skip the rest
 		of the line and miss |<A HREF="eval.html#:endif">:endif</A>|.
 <B>	if has('feature') | let x = this-&gt;breaks-&gt;without-&gt;the-&gt;feature | endif</B>
  
 		Put |<A HREF="eval.html#:if">:if</A>| and |<A HREF="eval.html#:endif">:endif</A>| on separate lines to avoid the
-		<A HREF="syntax\.html#syntax">语法</A> error.
+		<A HREF="syntax.html#syntax">语法</A> error.
 <B>	if has('feature')</B>
 <B>	  let x = this-&gt;breaks-&gt;without-&gt;the-&gt;feature</B>
 <B>	endif</B>
@@ -4189,7 +4189,7 @@ hlexists({name})					*<A NAME="hlexists()"></A><B>hlexists()</B>*
 		The result is a <A HREF="eval.html#Number">Number</A>, which is <A HREF="eval.html#TRUE">TRUE</A> if a highlight group
 		called {name} exists.  This is when the group has been
 		defined in some way.  Not necessarily when highlighting has
-		been defined for <A HREF="motion.html#it">它</A>, <A HREF="motion.html#it">它</A> may also have been used for a <A HREF="syntax\.html#syntax">语法</A>
+		been defined for <A HREF="motion.html#it">它</A>, <A HREF="motion.html#it">它</A> may also have been used for a <A HREF="syntax.html#syntax">语法</A>
 		item.
 
 		Can also be used <A HREF="motion.html#as">as</A> a YXXYmethod|:
@@ -5173,7 +5173,7 @@ matchadd({group}, {pattern} [, {priority} [, {id} [, {dict}]]])
 		match using |<A HREF="#matchdelete()">matchdelete()</A>|.  The ID is bound to the<A HREF="windows.html#window">窗口</A>.
 		Matching is <A HREF="change.html#case">case</A> sensitive and magic, unless <A HREF="change.html#case">case</A> sensitivity
 		or magicness are explicitly overridden in {pattern}.  The
-		<A HREF="options.html#'magic'">'magic'</A>, <A HREF="options.html#'smartcase'">'smartcase'</A> and <A HREF="options.html#'ignorecase'">'ignorecase'</A> <A HREF="options\.html#options">选项</A> are not used.
+		<A HREF="options.html#'magic'">'magic'</A>, <A HREF="options.html#'smartcase'">'smartcase'</A> and <A HREF="options.html#'ignorecase'">'ignorecase'</A> <A HREF="options.html#options">选项</A> are not used.
 		The &quot;Conceal&quot; value is special, <A HREF="motion.html#it">它</A> causes the match to be
 		concealed.
 
@@ -5186,7 +5186,7 @@ matchadd({group}, {pattern} [, {priority} [, {id} [, {dict}]]])
 		hence all matches with a priority greater than zero will
 		overrule <A HREF="motion.html#it">它</A>.  <A HREF="autocmd\.html#Syntax">语法</A>高亮 (see <A HREF="options.html#'syntax'">'syntax'</A>) is a separate
 		mechanism, and regardless of the chosen priority a match will
-		always overrule <A HREF="syntax\.html#syntax">语法</A> highlighting.
+		always overrule <A HREF="syntax.html#syntax">语法</A> highlighting.
 
 		The optional {id} argument allows the request for a specific
 		match ID.  If a specified ID is already taken, an error
@@ -6941,7 +6941,7 @@ searchpair({start}, {middle}, {end} [, {flags} [, {skip}
 <B>	:echo searchpair('{', '', '}', 'bW')</B>
 
  		This works when the cursor is at or before the &quot;<A HREF="motion.html#}">}</A>&quot; for which a
-		match is to be found.  To reject matches that <A HREF="syntax\.html#syntax">语法</A>
+		match is to be found.  To reject matches that <A HREF="syntax.html#syntax">语法</A>
 		highlighting recognized <A HREF="motion.html#as">as</A> strings:
 
 <B>	:echo searchpair('{', '', '}', 'bW',</B>
@@ -8375,10 +8375,10 @@ swapname({buf})						*<A NAME="swapname()"></A><B>swapname()</B>*
 
 
 synID({lnum}, {col}, {trans})				*<A NAME="synID()"></A><B>synID()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is the <A HREF="syntax\.html#syntax">语法</A> ID at the position
+		The result is a <A HREF="eval.html#Number">Number</A>, which is the <A HREF="syntax.html#syntax">语法</A> ID at the position
 		{lnum} and {col} in the current<A HREF="windows.html#window">窗口</A>.
-		The <A HREF="syntax\.html#syntax">语法</A> ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| and
-		|<A HREF="#synIDtrans()">synIDtrans()</A>| to obtain <A HREF="syntax\.html#syntax">语法</A> information about text.
+		The <A HREF="syntax.html#syntax">语法</A> ID can be used with |<A HREF="#synIDattr()">synIDattr()</A>| and
+		|<A HREF="#synIDtrans()">synIDtrans()</A>| to obtain <A HREF="syntax.html#syntax">语法</A> information about text.
 
 		{col} is 1 for the leftmost column, {lnum} is 1 for the first
 		line.  <A HREF="options.html#'synmaxcol'">'synmaxcol'</A> applies, in a longer line zero is returned.
@@ -8390,26 +8390,26 @@ synID({lnum}, {col}, {trans})				*<A NAME="synID()"></A><B>synID()</B>*
 		item that they reveal.  This is useful when wanting to know
 		the effective color.  When {trans} is |<A HREF="eval.html#FALSE">FALSE</A>|, the transparent
 		item is returned.  This is useful when wanting to know which
-		<A HREF="syntax\.html#syntax">语法</A> item is effective (e.g. inside parens).
+		<A HREF="syntax.html#syntax">语法</A> item is effective (e.g. inside parens).
 		Warning: This function can be very slow.  Best speed is
 		obtained by going through the file in forward direction.
 
-		Example (echoes the name of the <A HREF="syntax\.html#syntax">语法</A> item under the cursor):
+		Example (echoes the name of the <A HREF="syntax.html#syntax">语法</A> item under the cursor):
 <B>			:echo synIDattr(synID(line("."), col("."), 1), "name")</B>
  
 
 
 synIDattr({synID}, {what} [, {mode}])			*<A NAME="synIDattr()"></A><B>synIDattr()</B>*
 		The result is a <A HREF="options\.html#options">字符串</A>, which is the {what} attribute of
-		<A HREF="syntax\.html#syntax">语法</A> ID {synID}.  This can be used to obtain information
-		about a <A HREF="syntax\.html#syntax">语法</A> item.
+		<A HREF="syntax.html#syntax">语法</A> ID {synID}.  This can be used to obtain information
+		about a <A HREF="syntax.html#syntax">语法</A> item.
 		{mode} can be &quot;<A HREF="gui.html#gui">gui</A>&quot;, &quot;cterm&quot; or &quot;term&quot;, to get the attributes
 		for that mode.  When {mode} is omitted, or an invalid value is
 		used, the attributes for the currently active highlighting are
 		used (GUI, cterm or term).
 		Use <A HREF="#synIDtrans()">synIDtrans()</A> to follow linked highlight groups.
 		{what}		result
-		&quot;name&quot;		the name of the <A HREF="syntax\.html#syntax">语法</A> item
+		&quot;name&quot;		the name of the <A HREF="syntax.html#syntax">语法</A> item
 		&quot;fg&quot;		foreground color (GUI: color name used to set
 				the color, cterm: color number <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>,
 				term: empty <A HREF="options\.html#options">字符串</A>)
@@ -8433,7 +8433,7 @@ synIDattr({synID}, {what} [, {mode}])			*<A NAME="synIDattr()"></A><B>synIDattr(
 		&quot;<A HREF="syntax.html#underdash">underdash</A>&quot;	&quot;1&quot; if dashed underlined
 		&quot;<A HREF="syntax.html#strikethrough">strikethrough</A>&quot; &quot;1&quot; if struckthrough
 
-		Example (echoes the color of the <A HREF="syntax\.html#syntax">语法</A> item under the
+		Example (echoes the color of the <A HREF="syntax.html#syntax">语法</A> item under the
 		cursor):
 <B>	:echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")</B>
  
@@ -8442,8 +8442,8 @@ synIDattr({synID}, {what} [, {mode}])			*<A NAME="synIDattr()"></A><B>synIDattr(
 
 
 synIDtrans({synID})					*<A NAME="synIDtrans()"></A><B>synIDtrans()</B>*
-		The result is a <A HREF="eval.html#Number">Number</A>, which is the translated <A HREF="syntax\.html#syntax">语法</A> ID of
-		{synID}.  This is the <A HREF="syntax\.html#syntax">语法</A> group ID of what is being used to
+		The result is a <A HREF="eval.html#Number">Number</A>, which is the translated <A HREF="syntax.html#syntax">语法</A> ID of
+		{synID}.  This is the <A HREF="syntax.html#syntax">语法</A> group ID of what is being used to
 		highlight the character.  Highlight links given with
 		&quot;<A HREF="syntax.html#:highlight">:highlight</A> link&quot; are followed.
 
@@ -8461,7 +8461,7 @@ synconcealed({lnum}, {col})				*<A NAME="synconcealed()"></A><B>synconcealed()</
 		   displayed in place of the concealed text, depending on the
 		   current setting of <A HREF="options.html#'conceallevel'">'conceallevel'</A> and <A HREF="options.html#'listchars'">'listchars'</A>.
 		3. The third and final item in the <A HREF="eval.html#list">列表</A> is a number
-		   representing the specific <A HREF="syntax\.html#syntax">语法</A> region matched in the
+		   representing the specific <A HREF="syntax.html#syntax">语法</A> region matched in the
 		   line. When the character is not concealed the value is
 		   zero. This allows detection of the beginning of a new
 		   concealable region if there are two consecutive regions
@@ -8479,7 +8479,7 @@ synconcealed({lnum}, {col})				*<A NAME="synconcealed()"></A><B>synconcealed()</
 
 
 synstack({lnum}, {col})					*<A NAME="synstack()"></A><B>synstack()</B>*
-		Return a |<A HREF="eval.html#list">列表</A>|, which is the stack of <A HREF="syntax\.html#syntax">语法</A> items at the
+		Return a |<A HREF="eval.html#list">列表</A>|, which is the stack of <A HREF="syntax.html#syntax">语法</A> items at the
 		position {lnum} and {col} in the current<A HREF="windows.html#window">窗口</A>.  {lnum} is
 		used like with |<A HREF="#getline()">getline()</A>|.  Each item in the <A HREF="eval.html#list">列表</A> is an ID
 		like what |<A HREF="#synID()">synID()</A>| returns.
@@ -8487,8 +8487,8 @@ synstack({lnum}, {col})					*<A NAME="synstack()"></A><B>synstack()</B>*
 		items contained in that one.  The last one is what |<A HREF="#synID()">synID()</A>|
 		returns, unless not the whole item is highlighted or <A HREF="motion.html#it">它</A> is a
 		transparent item.
-		This function is useful for debugging a <A HREF="syntax\.html#syntax">语法</A> file.
-		Example that shows the <A HREF="syntax\.html#syntax">语法</A> stack under the cursor:
+		This function is useful for debugging a <A HREF="syntax.html#syntax">语法</A> file.
+		Example that shows the <A HREF="syntax.html#syntax">语法</A> stack under the cursor:
 <B>			for id in synstack(line("."), col("."))</B>
 <B>			   echo synIDattr(id, "name")</B>
 <B>			endfor</B>
@@ -8533,7 +8533,7 @@ system({cmd} [, {input}])				*<A NAME="system()"></A><B>system()</B>* *<A NAME="
  		which is equivalent to:
 <B>		    $ echo foo | bash -c 'cat - &amp;'</B>
  		The pipes are disconnected (unless overridden by shell
-		redirection <A HREF="syntax\.html#syntax">语法</A>) before input can reach <A HREF="motion.html#it">它</A>. Use
+		redirection <A HREF="syntax.html#syntax">语法</A>) before input can reach <A HREF="motion.html#it">它</A>. Use
 		|<A HREF="#jobstart()">jobstart()</A>| instead.
 
 		Note: Use |<A HREF="#shellescape()">shellescape()</A>| or |<A HREF="cmdline.html#::S">::S</A>| with |<A HREF="#expand()">expand()</A>| or
@@ -9521,7 +9521,7 @@ Don't forget that &quot;<A HREF="motion.html#^">^</A>&quot; will only match at t
 &quot;<A HREF="motion.html#$">$</A>&quot; at the last character of the <A HREF="options\.html#options">字符串</A>.  They don't match after or before a
 &quot;\n&quot;.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

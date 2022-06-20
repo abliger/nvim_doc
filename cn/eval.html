@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: eval</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -874,9 +874,9 @@ It's possible to form a variable name with curly braces, see
 
 ==============================================================================
 
-2. Expression <A HREF="syntax\.html#syntax">语法</A>					*<A NAME="expression-syntax"></A><B>expression-syntax</B>*
+2. Expression <A HREF="syntax.html#syntax">语法</A>					*<A NAME="expression-syntax"></A><B>expression-syntax</B>*
 
-Expression <A HREF="syntax\.html#syntax">语法</A> summary, from least to most significant:
+Expression <A HREF="syntax.html#syntax">语法</A> summary, from least to most significant:
 
 |<A HREF="#expr1">expr1</A>|	<A HREF="#expr2">expr2</A>
 	<A HREF="#expr2">expr2</A> ? <A HREF="#expr1">expr1</A> : <A HREF="#expr1">expr1</A>	if-then-else
@@ -1520,7 +1520,7 @@ Examples:
 <B>	echo "tabstop is " .. &amp;tabstop</B>
 <B>	if &amp;expandtab</B>
 
-Any option name can be used here.  见 |<A HREF="options\.html#options">选项</A>|.  When using the local value
+Any option name can be used here.  见 |<A HREF="options.html#options">选项</A>|.  When using the local value
 and there is no buffer-local or window-local value, the global value is used
 anyway.
 
@@ -1806,7 +1806,7 @@ maintain a counter:
 <B>	  echo "script executed " .. s:counter .. " times now"</B>
 <B>	endif</B>
 
-Note that this means that <A HREF="filetype\.html#filetype">文件类型</A> plugins don't get a different set of <A HREF="usr_41.html#script">script</A>
+Note that this means that <A HREF="filetype.html#filetype">文件类型</A> plugins don't get a different set of <A HREF="usr_41.html#script">script</A>
 <A HREF="#variables">variables</A> for each buffer.  Use local buffer <A HREF="#variables">variables</A> instead |<A HREF="#b:var">b:var</A>|.
 
 
@@ -2078,7 +2078,7 @@ Some <A HREF="#variables">variables</A> can be set by the user, but the type can
 			<A HREF="editing.html#reload">reload</A>		Reload the buffer (does not work if
 					the file was deleted).
 			edit		Reload the buffer and detect the
-					values for <A HREF="options\.html#options">选项</A> such <A HREF="motion.html#as">as</A>
+					values for <A HREF="options.html#options">选项</A> such <A HREF="motion.html#as">as</A>
 					<A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'binary'">'binary'</A>
 					(does not work if the file was
 					deleted).
@@ -4776,7 +4776,7 @@ The original exception is discarded and an error exception is raised, instead.
 
 							*<A NAME="except-single-line"></A><B>except-single-line</B>*
 The &quot;<A HREF="#:try">:try</A>&quot;, &quot;<A HREF="#:catch">:catch</A>&quot;, &quot;<A HREF="#:finally">:finally</A>&quot;, and &quot;<A HREF="#:endtry">:endtry</A>&quot;命令 can be put on
-a single line, but then <A HREF="syntax\.html#syntax">语法</A> <A HREF="message.html#errors">errors</A> may make <A HREF="motion.html#it">它</A> difficult to recognize the
+a single line, but then <A HREF="syntax.html#syntax">语法</A> <A HREF="message.html#errors">errors</A> may make <A HREF="motion.html#it">它</A> difficult to recognize the
 &quot;catch&quot; line, thus you better avoid this.
    Example:
 <B>	:try | unlet! foo # | catch | endtry</B>
@@ -4798,8 +4798,8 @@ The value of the error exception inside try conditionals is:
 <B>	Vim(echo):E121: Undefined variable: novar</B>
 
  							*<A NAME="except-syntax-error"></A><B>except-syntax-error</B>*
-But when a <A HREF="syntax\.html#syntax">语法</A> error is detected after a normal error in the same command,
-the <A HREF="syntax\.html#syntax">语法</A> error is used for the exception being thrown.
+But when a <A HREF="syntax.html#syntax">语法</A> error is detected after a normal error in the same command,
+the <A HREF="syntax.html#syntax">语法</A> error is used for the exception being thrown.
    Example:
 <B>	unlet novar #</B>
 causes
@@ -4807,7 +4807,7 @@ causes
 <B>	E488: Trailing characters</B>
 The value of the error exception inside try conditionals is:
 <B>	Vim(unlet):E488: Trailing characters</B>
-This is done because the <A HREF="syntax\.html#syntax">语法</A> error might change the execution path in a way
+This is done because the <A HREF="syntax.html#syntax">语法</A> error might change the execution path in a way
 not intended by the user.  Example:
 <B>	try</B>
 <B>	    try | unlet novar # | catch | echo v:exception | endtry</B>
@@ -4919,9 +4919,9 @@ code can be used:
 The <A HREF="#sandbox">sandbox</A>					*<A NAME="eval-sandbox"></A><B>eval-sandbox</B>* *<A NAME="sandbox"></A><B>sandbox</B>*
 
 The <A HREF="options.html#'foldexpr'">'foldexpr'</A>, <A HREF="options.html#'formatexpr'">'formatexpr'</A>, <A HREF="options.html#'includeexpr'">'includeexpr'</A>, <A HREF="options.html#'indentexpr'">'indentexpr'</A>, <A HREF="options.html#'statusline'">'statusline'</A> and
-<A HREF="options.html#'foldtext'">'foldtext'</A> <A HREF="options\.html#options">选项</A> may be evaluated in a <A HREF="#sandbox">sandbox</A>.  This means that you are
+<A HREF="options.html#'foldtext'">'foldtext'</A> <A HREF="options.html#options">选项</A> may be evaluated in a <A HREF="#sandbox">sandbox</A>.  This means that you are
 protected from these expressions having nasty side effects.  This gives some
-safety for when these <A HREF="options\.html#options">选项</A> are set from a <A HREF="options.html#modeline">modeline</A>.  It is also used when
+safety for when these <A HREF="options.html#options">选项</A> are set from a <A HREF="options.html#modeline">modeline</A>.  It is also used when
 the command from a <A HREF="tagsrch.html#tags">标签</A> file is executed and for <A HREF="undo.html#CTRL-R">CTRL-R</A> = in the command line.
 The sandbox is also used for the |<A HREF="#:sandbox">:sandbox</A>| command.
 
@@ -4930,7 +4930,7 @@ The sandbox is also used for the |<A HREF="#:sandbox">:sandbox</A>| command.
 These items are not allowed in the <A HREF="#sandbox">sandbox</A>:
 	- <A HREF="change.html#changing">changing</A> the buffer text
 	- defining or <A HREF="change.html#changing">changing</A> <A HREF="map.html#mapping">mapping</A>, autocommands, user commands
-	- setting certain <A HREF="options\.html#options">选项</A> (见 |<A HREF="options.html#option-summary">option-summary</A>|)
+	- setting certain <A HREF="options.html#options">选项</A> (见 |<A HREF="options.html#option-summary">option-summary</A>|)
 
 	- setting certain v: <A HREF="#variables">variables</A> (见 |<A HREF="#v:var">v:var</A>|)  *<A NAME="E794"></A><B>E794</B>*
 	- executing a shell command
@@ -4947,7 +4947,7 @@ This is not guaranteed 100&#37; secure, but <A HREF="motion.html#it">它</A> sho
 
 
 							*<A NAME="sandbox-option"></A><B>sandbox-option</B>*
-A few <A HREF="options\.html#options">选项</A> contain an <A HREF="#expression">expression</A>.  When this <A HREF="#expression">expression</A> is evaluated <A HREF="motion.html#it">它</A> may
+A few <A HREF="options.html#options">选项</A> contain an <A HREF="#expression">expression</A>.  When this <A HREF="#expression">expression</A> is evaluated <A HREF="motion.html#it">它</A> may
 have to be done in the <A HREF="#sandbox">sandbox</A> to avoid a security risk.  But the <A HREF="#sandbox">sandbox</A> is
 restrictive, thus this only happens when the option was set from an insecure
 location.  Insecure in this <A HREF="repeat.html#context">context</A> are:
@@ -5163,7 +5163,7 @@ and some other intermediate groups are present.
                                                            |<A HREF="#expr-quote">expr-quote</A>| <A HREF="intro.html#escape">escape</A>
                                                            sequence
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

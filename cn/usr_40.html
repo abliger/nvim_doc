@@ -67,7 +67,7 @@
    <div class="container">
       <h1>Nvim 文档: usr_40</h1>
       <A NAME="top"></A>
-      <A HREF="index\.html">主帮助文件</A>
+      <A HREF="index.html">主帮助文件</A>
 
       <HR>
       <PRE>
@@ -454,7 +454,7 @@ defines the SaveIt command, which writes out the specified range to the file
 
 OTHER OPTIONS
 
-Some of the other <A HREF="options\.html#options">选项</A> and keywords are <A HREF="motion.html#as">as</A> follows:
+Some of the other <A HREF="options.html#options">选项</A> and keywords are <A HREF="motion.html#as">as</A> follows:
 
 	-count={number}		The command can take a <A HREF="intro.html#count">count</A> whose default is
 				{number}.  The resulting <A HREF="intro.html#count">count</A> can be used
@@ -545,7 +545,7 @@ EVENTS
 
 One of the most useful <A HREF="autocmd.html#events">events</A> is <A HREF="autocmd.html#BufReadPost">BufReadPost</A>.  It is triggered after a new
 file is being edited.  It is commonly used to set option values.例如,
-you know that &quot;*.gsm&quot; files are GNU assembly language.  To get the <A HREF="syntax\.html#syntax">语法</A> file
+you know that &quot;*.gsm&quot; files are GNU assembly language.  To get the <A HREF="syntax.html#syntax">语法</A> file
 right, define this <A HREF="autocmd\.html#autocommand">自动命令</A>:
 
 <B>	:autocmd BufReadPost *.gsm  set filetype=asm</B>
@@ -609,7 +609,7 @@ To <A HREF="eval.html#list">列表</A> all the currently defined autocommands, u
 
 <B>	:autocmd</B>
 
-The <A HREF="eval.html#list">列表</A> can be very long, especially when <A HREF="filetype\.html#filetype">文件类型</A> detection is used.  To
+The <A HREF="eval.html#list">列表</A> can be very long, especially when <A HREF="filetype.html#filetype">文件类型</A> detection is used.  To
 <A HREF="eval.html#list">列表</A> only part of the commands, specify the group, event and/or <A HREF="pattern.html#pattern">pattern</A>.  For
 example, to <A HREF="eval.html#list">列表</A> all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> autocommands:
 
@@ -652,7 +652,7 @@ NESTING
 
 Generally, commands executed <A HREF="motion.html#as">as</A> the result of an <A HREF="autocmd\.html#autocommand">自动命令</A> event will not
 trigger any new <A HREF="autocmd.html#events">events</A>.  If you read a file in response to a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A>
-event, <A HREF="motion.html#it">它</A> will not trigger the autocommands that would set the <A HREF="syntax\.html#syntax">语法</A>, for
+event, <A HREF="motion.html#it">它</A> will not trigger the autocommands that would set the <A HREF="syntax.html#syntax">语法</A>, for
 example.  To make the <A HREF="autocmd.html#events">events</A> triggered, add the &quot;++nested&quot; flag:
 
 <B>	:autocmd FileChangedShell * ++nested  edit</B>
@@ -730,7 +730,7 @@ To set <A HREF="motion.html#it">它</A> back to the normal behavior, make <A HRE
 ==============================================================================
 
 下一章: |<A HREF="usr_41.html">usr_41.txt</A>|  Write a Vim <A HREF="usr_41.html#script">script</A>
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
    </div>
 </body>

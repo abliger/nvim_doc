@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: print</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -127,7 +127,7 @@ Note: If you have problems <A HREF="#printing">printing</A> with |<A HREF="#:har
 Progress is displayed during <A HREF="#printing">printing</A> <A HREF="motion.html#as">as</A> a page number and a percentage.  To
 abort <A HREF="#printing">printing</A> use the interrupt key (CTRL-C or, on MS-systems, CTRL-Break).
 
-Printer output is controlled by the <A HREF="options.html#'printfont'">'printfont'</A> and <A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options\.html#options">选项</A>.
+Printer output is controlled by the <A HREF="options.html#'printfont'">'printfont'</A> and <A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options.html#options">选项</A>.
 <A HREF="options.html#'printheader'">'printheader'</A> specifies the format of a page header.
 
 The printed file is always limited to the selected margins, irrespective of
@@ -144,9 +144,9 @@ considerations:
 
 ==============================================================================
 
-2. Print <A HREF="options\.html#options">选项</A>					*<A NAME="print-options"></A><B>print-options</B>*
+2. Print <A HREF="options.html#options">选项</A>					*<A NAME="print-options"></A><B>print-options</B>*
 
-Here are the details for the <A HREF="options\.html#options">选项</A> that change the way <A HREF="#printing">printing</A> is done.
+Here are the details for the <A HREF="options.html#options">选项</A> that change the way <A HREF="#printing">printing</A> is done.
 For generic info about setting options 见 |<A HREF="options.html">options.txt</A>|.
 
 
@@ -246,7 +246,7 @@ reasons.
 			global
 This is the name of the font that will be used for the |<A HREF="#:hardcopy">:hardcopy</A>| command's
 output.  It has the same format <A HREF="motion.html#as">as</A> the <A HREF="options.html#'guifont'">'guifont'</A> option, except that only one
-font may be named, and the special &quot;guifont=*&quot; <A HREF="syntax\.html#syntax">语法</A> is not available.
+font may be named, and the special &quot;guifont=*&quot; <A HREF="syntax.html#syntax">语法</A> is not available.
 
 In the Win32 <A HREF="gui.html#GUI">GUI</A> version this specifies a font name with its extra attributes,
 <A HREF="motion.html#as">as</A> with the <A HREF="options.html#'guifont'">'guifont'</A> option.
@@ -402,10 +402,10 @@ of YXXY:hardcopy|:
   header:0		Do not print a header.
   header:2  (default)	Use two lines for the header
 
-  syntax:n		Do not use <A HREF="syntax\.html#syntax">语法</A> highlighting.  This is faster and
+  syntax:n		Do not use <A HREF="syntax.html#syntax">语法</A> highlighting.  This is faster and
 			thus useful when <A HREF="#printing">printing</A> large files.
-  syntax:y		Do <A HREF="syntax\.html#syntax">语法</A> highlighting.
-  syntax:a  (default)	Use <A HREF="syntax\.html#syntax">语法</A> highlighting if the printer appears to be
+  syntax:y		Do <A HREF="syntax.html#syntax">语法</A> highlighting.
+  syntax:a  (default)	Use <A HREF="syntax.html#syntax">语法</A> highlighting if the printer appears to be
 			able to print color or grey.
 
   number:y		Include line numbers in the printed output.
@@ -457,7 +457,7 @@ of YXXY:hardcopy|:
 
 The item indicated with (default) is used when the item is not present.  The
 values are not always used, especially when using a dialog to select the
-printer and <A HREF="options\.html#options">选项</A>.
+printer and <A HREF="options.html#options">选项</A>.
 Example:
 <B>	:set printoptions=paper:letter,duplex:off</B>
 
@@ -536,7 +536,7 @@ print character encoding Vim will use.]
 							*<A NAME="E673"></A><B>E673</B>* *<A NAME="E674"></A><B>E674</B>* *<A NAME="E675"></A><B>E675</B>*
 
 Vim supports <A HREF="#printing">printing</A> of <A HREF="mbyte.html#Chinese">Chinese</A>, <A HREF="mbyte.html#Japanese">Japanese</A>, and <A HREF="mbyte.html#Korean">Korean</A> files.  Setting up Vim
-to correctly print CJK files requires setting up a few more <A HREF="options\.html#options">选项</A>.
+to correctly print CJK files requires setting up a few more <A HREF="options.html#options">选项</A>.
 
 Each of these countries has many standard character sets and encodings which
 require that both be specified when <A HREF="#printing">printing</A>.  In addition, CJK fonts normally
@@ -545,7 +545,7 @@ style to achieve emphasis when <A HREF="#printing">printing</A>.  This in turn r
 approach to specifying fonts to use when <A HREF="#printing">printing</A>.
 
 The encoding and character set are specified with the <A HREF="options.html#'printencoding'">'printencoding'</A> and
-<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options\.html#options">选项</A>.  If <A HREF="options.html#'printencoding'">'printencoding'</A> is not specified then <A HREF="options.html#'encoding'">'encoding'</A>
+<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options.html#options">选项</A>.  If <A HREF="options.html#'printencoding'">'printencoding'</A> is not specified then <A HREF="options.html#'encoding'">'encoding'</A>
 is used <A HREF="motion.html#as">as</A> normal.  If <A HREF="options.html#'printencoding'">'printencoding'</A> is specified then characters will be
 translated to this encoding for <A HREF="#printing">printing</A>.  You should ensure that the encoding
 is compatible with the character set needed for the file contents or some
@@ -553,7 +553,7 @@ characters may not appear when printed.
 
 The fonts to use for CJK <A HREF="#printing">printing</A> are specified with <A HREF="options.html#'printmbfont'">'printmbfont'</A>.  This
 option allows you to specify different fonts to use when <A HREF="#printing">printing</A> characters
-which are <A HREF="syntax\.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax\.html#bold">斜体</A>, <A HREF="syntax\.html#bold">粗体</A> and
+which are <A HREF="syntax.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax\.html#bold">斜体</A>, <A HREF="syntax\.html#bold">粗体</A> and
 bold-italic.
 
 No CJK fonts are supplied with Vim.  There are some free <A HREF="mbyte.html#Korean">Korean</A>, <A HREF="mbyte.html#Japanese">Japanese</A>, and
@@ -625,9 +625,9 @@ There are a number of possible causes <A HREF="motion.html#as">as</A> to why the
   not.  Try <A HREF="#printing">printing</A> with collation turned off.
 
 - <A HREF="autocmd\.html#Syntax">语法</A>高亮.  Some print management code may prevent the generated
-  PostScript file from being printed on a black and white printer when <A HREF="syntax\.html#syntax">语法</A>
+  PostScript file from being printed on a black and white printer when <A HREF="syntax.html#syntax">语法</A>
   highlighting is turned on, even if solid black is the only color used.  Try
-  <A HREF="#printing">printing</A> with <A HREF="syntax\.html#syntax">语法</A> highlighting turned off.
+  <A HREF="#printing">printing</A> with <A HREF="syntax.html#syntax">语法</A> highlighting turned off.
 
 A safe printoptions setting to try is:
 
@@ -753,7 +753,7 @@ step before <A HREF="#printing">printing</A>.
 ALTERNATE DUPLEX PRINTING
 
 It is possible to achieve a poor man's version of duplex <A HREF="#printing">printing</A> using the PS
-utility psselect.  This utility has <A HREF="options\.html#options">选项</A> <A HREF="starting.html#-e">-e</A> and <A HREF="starting.html#-o">-o</A> for <A HREF="#printing">printing</A> just the
+utility psselect.  This utility has <A HREF="options.html#options">选项</A> <A HREF="starting.html#-e">-e</A> and <A HREF="starting.html#-o">-o</A> for <A HREF="#printing">printing</A> just the
 even or odd pages of a PS file respectively.
 
 First generate a PS file with the 'hardcopy' command然后generate new
@@ -816,7 +816,7 @@ to adjust the number of lines before a formfeed character to prevent
 accidental blank pages.
 
 ==============================================================================
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: treesitter</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -128,7 +128,7 @@ Parser methods						*<A NAME="lua-treesitter-parser"></A><B>lua-treesitter-parse
 
 
 <A HREF="#tsparser:parse()">tsparser:parse()</A>					*<A NAME="tsparser:parse()"></A><B>tsparser:parse()</B>*
-Whenever you need to access the current <A HREF="syntax\.html#syntax">语法</A> tree, parse the buffer:
+Whenever you need to access the current <A HREF="syntax.html#syntax">语法</A> tree, parse the buffer:
 
 <B>    tstree = parser:parse()</B>
 
@@ -253,11 +253,11 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 <A HREF="#tsnode:missing()">tsnode:missing()</A>					*<A NAME="tsnode:missing()"></A><B>tsnode:missing()</B>*
 	Check if the node is missing. Missing nodes are inserted by the
-	parser in order to recover from certain kinds of <A HREF="syntax\.html#syntax">语法</A> <A HREF="message.html#errors">errors</A>.
+	parser in order to recover from certain kinds of <A HREF="syntax.html#syntax">语法</A> <A HREF="message.html#errors">errors</A>.
 
 
 <A HREF="#tsnode:has_error()">tsnode:has_error()</A>					*<A NAME="tsnode:has_error()"></A><B>tsnode:has_error()</B>*
-	Check if the node is a <A HREF="syntax\.html#syntax">语法</A> error or contains any <A HREF="syntax\.html#syntax">语法</A> <A HREF="message.html#errors">errors</A>.
+	Check if the node is a <A HREF="syntax.html#syntax">语法</A> error or contains any <A HREF="syntax.html#syntax">语法</A> <A HREF="message.html#errors">errors</A>.
 
 
 <A HREF="#tsnode:sexpr()">tsnode:sexpr()</A>						*<A NAME="tsnode:sexpr()"></A><B>tsnode:sexpr()</B>*
@@ -299,8 +299,8 @@ supports. 见 |<A HREF="#lua-treesitter-predicates">lua-treesitter-predicates</A
 supported by Neovim.
 
 A `query` consists of one or more patterns. A `pattern` is defined over node
-types in the <A HREF="syntax\.html#syntax">语法</A> tree.  A `match` corresponds to specific elements of the
-<A HREF="syntax\.html#syntax">语法</A> tree which match a <A HREF="pattern.html#pattern">pattern</A>. Patterns may optionally define captures
+types in the <A HREF="syntax.html#syntax">语法</A> tree.  A `match` corresponds to specific elements of the
+<A HREF="syntax.html#syntax">语法</A> tree which match a <A HREF="pattern.html#pattern">pattern</A>. Patterns may optionally define captures
 and predicates. A `capture` allows you to associate names with a specific
 node in a <A HREF="pattern.html#pattern">pattern</A>. A `predicate` adds arbitrary metadata and conditional data
 to a match.
@@ -417,7 +417,7 @@ Built-in directives:
  
 
 
-Treesitter <A HREF="syntax\.html#syntax">语法</A> highlighting (WIP)		     *<A NAME="lua-treesitter-highlight"></A><B>lua-treesitter-highlight</B>*
+Treesitter <A HREF="syntax.html#syntax">语法</A> highlighting (WIP)		     *<A NAME="lua-treesitter-highlight"></A><B>lua-treesitter-highlight</B>*
 
 NOTE: This is a partially implemented feature, and not usable <A HREF="motion.html#as">as</A> a default
 solution yet. What is documented here is a temporary interface intended
@@ -491,7 +491,7 @@ get_parser({bufnr}, {lang}, {opts})                             *<A NAME="get_pa
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {bufnr}  The buffer the parser should be tied to
-                    {lang}   The <A HREF="filetype\.html#filetype">文件类型</A> of this parser
+                    {lang}   The <A HREF="filetype.html#filetype">文件类型</A> of this parser
                     {opts}   Options object to pass to the created language
                              tree
 
@@ -611,7 +611,7 @@ parse_query({lang}, {query})                                   *<A NAME="parse_q
                 caller should read the contents into a <A HREF="options\.html#options">字符串</A> before calling).
 
                 Returns a `Query` (见 |<A HREF="#lua-treesitter-query">lua-treesitter-query</A>|) object which
-                can be used to search nodes in the <A HREF="syntax\.html#syntax">语法</A> tree for the
+                can be used to search nodes in the <A HREF="syntax.html#syntax">语法</A> tree for the
                 patterns defined in {query} using `iter_*` methods below.
 
                 Exposes `info` and `captures` with additional <A HREF="repeat.html#context">context</A> about {query}.
@@ -622,7 +622,7 @@ parse_query({lang}, {query})                                   *<A NAME="parse_q
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {lang}   (string) The language
                     {query}  (string) A <A HREF="options\.html#options">字符串</A> containing the query (s-expr
-                             <A HREF="syntax\.html#syntax">语法</A>)
+                             <A HREF="syntax.html#syntax">语法</A>)
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     The query
@@ -637,7 +637,7 @@ Query:iter_captures({self}, {node}, {source}, {start}, {stop})
                 with the current text of the buffer (if relevant). {start_row}
                 and {end_row} can be used to limit matches inside a row range
                 (this is typically used with root node <A HREF="motion.html#as">as</A> the node, <A HREF="insert.html#i">i</A> <A HREF="motion.html#e">e</A> to get
-                <A HREF="syntax\.html#syntax">语法</A> highlight matches in the current viewport). When
+                <A HREF="syntax.html#syntax">语法</A> highlight matches in the current viewport). When
                 omitted the start and end row values are used from the given
                 node.
 
@@ -954,7 +954,7 @@ new({source}, {lang}, {opts})                             *<A NAME="languagetree
                                        the injection language query per
                                        language.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

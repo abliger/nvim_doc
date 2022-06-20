@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: autocmd</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -94,7 +94,7 @@ a file, when entering or leaving a buffer or<A HREF="windows.html#window">窗口
 For example, you can create an <A HREF="#autocommand">autocommand</A> to set the <A HREF="options.html#'cindent'">'cindent'</A> option for
 files matching *.c.  You can also use autocommands to implement advanced
 features, such <A HREF="motion.html#as">as</A> editing compressed files (见 |<A HREF="#gzip-example">gzip-example</A>|).  The usual
-place to put autocommands is in your <A HREF="starting\.html#vimrc">vimrc</A>文件.
+place to put autocommands is in your <A HREF="starting.html#vimrc">vimrc</A>文件.
 
 
 				*<A NAME="E203"></A><B>E203</B>* *<A NAME="E204"></A><B>E204</B>* *<A NAME="E143"></A><B>E143</B>* *<A NAME="E855"></A><B>E855</B>* *<A NAME="E937"></A><B>E937</B>* *<A NAME="E952"></A><B>E952</B>*
@@ -220,13 +220,13 @@ prompt.  When one command outputs two <A HREF="message.html#messages">信息</A>
 			Remove ALL autocommands for <A HREF="#{event}">{event}</A>.
 			Warning: You should not <A HREF="diff.html#do">do</A> this without a group for
 			|<A HREF="#BufRead">BufRead</A>| and other common <A HREF="#events">events</A>, <A HREF="motion.html#it">它</A> can break
-			plugins, <A HREF="syntax\.html#syntax">语法</A> highlighting, etc.
+			plugins, <A HREF="syntax.html#syntax">语法</A> highlighting, etc.
 
 :au[tocmd]! [group]	Remove ALL autocommands.
 			Note: a <A HREF="change.html#quote">quote</A> will be seen <A HREF="motion.html#as">as</A> argument to the <A HREF="#:autocmd">:autocmd</A>
 			and won't start a comment.
 			Warning: You should normally not <A HREF="diff.html#do">do</A> this without a
-			group, <A HREF="motion.html#it">它</A> breaks plugins, <A HREF="syntax\.html#syntax">语法</A> highlighting, etc.
+			group, <A HREF="motion.html#it">它</A> breaks plugins, <A HREF="syntax.html#syntax">语法</A> highlighting, etc.
 
 When the [group] argument is not given, Vim uses the current group (as defined
 with &quot;:augroup&quot;); otherwise, Vim uses the group defined with [group].
@@ -321,7 +321,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="BufEnter"></A><B>BufEnter</B>*
 <A HREF="#BufEnter">BufEnter</A>			After entering a buffer.  Useful for setting
-				<A HREF="options\.html#options">选项</A> for a file type.  Also executed when
+				<A HREF="options.html#options">选项</A> for a file type.  Also executed when
 				starting to edit a buffer.
 				After |<A HREF="#BufAdd">BufAdd</A>|.
 				After |<A HREF="#BufReadPost">BufReadPost</A>|.
@@ -511,7 +511,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="CmdwinEnter"></A><B>CmdwinEnter</B>*
 <A HREF="#CmdwinEnter">CmdwinEnter</A>			After entering the command-line<A HREF="windows.html#window">窗口</A>.
-				Useful for setting <A HREF="options\.html#options">选项</A> specifically for
+				Useful for setting <A HREF="options.html#options">选项</A> specifically for
 				this special type of<A HREF="windows.html#window">窗口</A>.
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expands to a single character,
 				indicating the type of command-line.
@@ -755,12 +755,12 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="FileType"></A><B>FileType</B>*
 <A HREF="#FileType">FileType</A>			When the <A HREF="options.html#'filetype'">'filetype'</A> option has been set.  The
-				<A HREF="pattern.html#pattern">pattern</A> is matched against the <A HREF="filetype\.html#filetype">文件类型</A>.
+				<A HREF="pattern.html#pattern">pattern</A> is matched against the <A HREF="filetype.html#filetype">文件类型</A>.
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> is the name of the file where this
 				option was set.  <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> is the new value of
 				<A HREF="options.html#'filetype'">'filetype'</A>.
 				Cannot switch <A HREF="windows\.html#windows">窗口</A> or <A HREF="windows.html#buffers">buffers</A>.
-				见 |<A HREF="filetype\.html#filetypes">文件类型</A>|.
+				见 |<A HREF="filetype.html#filetypes">文件类型</A>|.
 
 							*<A NAME="FileWriteCmd"></A><B>FileWriteCmd</B>*
 <A HREF="#FileWriteCmd">FileWriteCmd</A>			Before <A HREF="editing.html#writing">写</A> to a file, when not <A HREF="editing.html#writing">写</A> the
@@ -939,8 +939,8 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				Note that when setting a |<A HREF="options.html#global-local">global-local</A>| <A HREF="options\.html#options">字符串</A>
 				option with |<A HREF="options.html#:set">:set</A>|然后|<A HREF="eval.html#v:option_old">v:option_old</A>| is the
 				old global value. However, for all other kinds
-				of <A HREF="options\.html#options">选项</A> (local <A HREF="options\.html#options">字符串</A> <A HREF="options\.html#options">选项</A>, <A HREF="options.html#global-local">global-local</A>
-				number <A HREF="options\.html#options">选项</A>, <A HREF="eval.html#...">...</A>) <A HREF="motion.html#it">它</A> is the old local
+				of <A HREF="options.html#options">选项</A> (local <A HREF="options\.html#options">字符串</A> <A HREF="options.html#options">选项</A>, <A HREF="options.html#global-local">global-local</A>
+				number <A HREF="options.html#options">选项</A>, <A HREF="eval.html#...">...</A>) <A HREF="motion.html#it">它</A> is the old local
 				value.
 
 				<A HREF="#OptionSet">OptionSet</A> is not triggered on <A HREF="starting.html#startup">startup</A> and for
@@ -948,7 +948,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 				Usage example: Check for the existence of the
 				directory in the <A HREF="options.html#'backupdir'">'backupdir'</A> and <A HREF="options.html#'undodir'">'undodir'</A>
-				<A HREF="options\.html#options">选项</A>, create the directory if <A HREF="motion.html#it">它</A> doesn't
+				<A HREF="options.html#options">选项</A>, create the directory if <A HREF="motion.html#it">它</A> doesn't
 				exist yet.
 
 				Note: Do not reset the same option during this
@@ -1109,7 +1109,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="Syntax"></A><B>Syntax</B>*
 <A HREF="#Syntax">Syntax</A>				When the <A HREF="options.html#'syntax'">'syntax'</A> option has been set.  The
-				<A HREF="pattern.html#pattern">pattern</A> is matched against the <A HREF="syntax\.html#syntax">语法</A> name.
+				<A HREF="pattern.html#pattern">pattern</A> is matched against the <A HREF="syntax.html#syntax">语法</A> name.
 				<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> expands to the name of the file where
 				this option was set. <A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> expands to the
 				new value of <A HREF="options.html#'syntax'">'syntax'</A>.
@@ -1218,7 +1218,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 
 							*<A NAME="VimEnter"></A><B>VimEnter</B>*
 <A HREF="#VimEnter">VimEnter</A>			After doing all the <A HREF="starting.html#startup">startup</A> stuff, including
-				loading <A HREF="starting\.html#vimrc">vimrc</A>文件s, executing the &quot;<A HREF="starting.html#-c">-c</A> cmd&quot;
+				loading <A HREF="starting.html#vimrc">vimrc</A>文件s, executing the &quot;<A HREF="starting.html#-c">-c</A> cmd&quot;
 				arguments, creating all <A HREF="windows\.html#windows">窗口</A> and loading
 				the <A HREF="windows.html#buffers">buffers</A> in them.
 				Just before this event is triggered the
@@ -1469,7 +1469,7 @@ buffer.
 
 Autocommands can be put together in a group.  This is useful for removing or
 executing a group of autocommands.例如, all the autocommands for
-<A HREF="syntax\.html#syntax">语法</A> highlighting are put in the &quot;highlight&quot; group, to be able to execute
+<A HREF="syntax.html#syntax">语法</A> highlighting are put in the &quot;highlight&quot; group, to be able to execute
 &quot;<A HREF="#:doautoall">:doautoall</A> highlight BufRead&quot; when the <A HREF="gui.html#GUI">GUI</A> starts.
 
 When no specific group is selected, Vim uses the default group.  The default
@@ -1517,7 +1517,7 @@ Example:
 <B>	:augroup END</B>
 
 This prevents having the autocommands defined <A HREF="if_cscop.html#twice">twice</A> (e.g., after sourcing the
-<A HREF="starting\.html#vimrc">vimrc</A>文件 again).
+<A HREF="starting.html#vimrc">vimrc</A>文件 again).
 
 
 						*<A NAME="FileExplorer"></A><B>FileExplorer</B>*
@@ -1589,7 +1589,7 @@ option will not cause any commands to be executed.
 			buffer, change to another buffer or change the
 			contents of a buffer; the result is unpredictable.
 			This command is intended for autocommands that set
-			<A HREF="options\.html#options">选项</A>, change highlighting, and things like that.
+			<A HREF="options.html#options">选项</A>, change highlighting, and things like that.
 
 ==============================================================================
 
@@ -1834,7 +1834,7 @@ Note that some autocommands are not triggered right away, but only later.
 This specifically applies to |<A HREF="#CursorMoved">CursorMoved</A>| and |<A HREF="#TextChanged">TextChanged</A>|.
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

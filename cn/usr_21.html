@@ -67,7 +67,7 @@
    <div class="container">
       <h1>Nvim 文档: usr_21</h1>
       <A NAME="top"></A>
-      <A HREF="index\.html">主帮助文件</A>
+      <A HREF="index.html">主帮助文件</A>
 
       <HR>
       <PRE>
@@ -178,7 +178,7 @@ the following command:
 
 <B>	:set shada=string</B>
 
-The <A HREF="options\.html#options">字符串</A> specifies what to save.  The <A HREF="syntax\.html#syntax">语法</A> of this <A HREF="options\.html#options">字符串</A> is an option
+The <A HREF="options\.html#options">字符串</A> specifies what to save.  The <A HREF="syntax.html#syntax">语法</A> of this <A HREF="options\.html#options">字符串</A> is an option
 character followed by an argument.  The option/argument pairs are separated by
 commas.
    Take a look at how you can build up your own <A HREF="starting.html#shada">shada</A> <A HREF="options\.html#options">字符串</A>.  First, the ''
@@ -201,7 +201,7 @@ starting Vim slower) you use a maximum of 500 lines:
 
 <B>	:set shada='1000,f1,&lt;500</B>
  
-Other <A HREF="options\.html#options">选项</A> you might want to use:
+Other <A HREF="options.html#options">选项</A> you might want to use:
 	:	number of lines to save from the command line <A HREF="cmdline.html#history">history</A>
 	@	number of lines to save from the input line <A HREF="cmdline.html#history">history</A>
 	/	number of lines to save from the search <A HREF="cmdline.html#history">history</A>
@@ -311,7 +311,7 @@ work and pick up where you left off the next day.  You can <A HREF="diff.html#do
 your editing session and restoring <A HREF="motion.html#it">它</A> the next day.
    A Vim session contains all the information about what you are editing.
 This includes things such <A HREF="motion.html#as">as</A> the file <A HREF="eval.html#list">列表</A>,<A HREF="windows.html#window">窗口</A>layout, global <A HREF="eval.html#variables">variables</A>,
-<A HREF="options\.html#options">选项</A> and other information.  (Exactly what is remembered is controlled by
+<A HREF="options.html#options">选项</A> and other information.  (Exactly what is remembered is controlled by
 the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option, described below.)
    The following command creates a session file:
 
@@ -340,7 +340,7 @@ default value is &quot;blank,buffers,curdir,folds,help,options,winsize&quot;.
 	curdir		the current directory
 	<A HREF="fold.html#folds">folds</A>		<A HREF="fold.html#folds">folds</A>, also manually created ones
 	help		the help<A HREF="windows.html#window">窗口</A>
-	<A HREF="options\.html#options">选项</A>		all <A HREF="options\.html#options">选项</A> and mappings
+	<A HREF="options.html#options">选项</A>		all <A HREF="options.html#options">选项</A> and mappings
 	winsize		<A HREF="windows.html#window">窗口</A>sizes
 
 Change this to your liking.  To also restore the size of the Vim<A HREF="windows.html#window">窗口</A>, for
@@ -461,7 +461,7 @@ you get the view back with this command:
 
 That's easy, isn't <A HREF="motion.html#it">它</A>?
    Now you want to view the file without the <A HREF="options.html#'number'">'number'</A> option on, or with all
-<A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options\.html#options">选项</A> to make the<A HREF="windows.html#window">窗口</A>look that way.  Then
+<A HREF="fold.html#folds">folds</A> open, you can set the <A HREF="options.html#options">选项</A> to make the<A HREF="windows.html#window">窗口</A>look that way.  Then
 store this view with:
 
 <B>	:mkview 1</B>
@@ -481,7 +481,7 @@ A VIEW WITH A NAME
 The second basic way to use views is by storing the view in a file with a name
 you choose.  This view can be loaded while editing another file.  Vim will
 then switch to editing the file specified in the view.  Thus you can use this
-to quickly switch to editing another file, with all its <A HREF="options\.html#options">选项</A> set <A HREF="motion.html#as">as</A> you
+to quickly switch to editing another file, with all its <A HREF="options.html#options">选项</A> set <A HREF="motion.html#as">as</A> you
 saved them.
  例如, to save the view of the current file:
 
@@ -495,11 +495,11 @@ You can restore <A HREF="motion.html#it">它</A> with:
 
 *<A NAME="21.6"></A><B>21.6</B>*	Modelines
 
-When editing a specific file, you might set <A HREF="options\.html#options">选项</A> specifically for that
+When editing a specific file, you might set <A HREF="options.html#options">选项</A> specifically for that
 file.  Typing these commands each time is boring.  Using a session or view for
 editing a file doesn't work when sharing the file between several people.
    The solution for this situation is adding a <A HREF="options.html#modeline">modeline</A> to the file.  This is
-a line of text that tells Vim the values of <A HREF="options\.html#options">选项</A>, to be used in this file
+a line of text that tells Vim the values of <A HREF="options.html#options">选项</A>, to be used in this file
 only.
    A typical example is a C program where you make indents by a multiple of 4
 spaces.  This requires setting the <A HREF="options.html#'shiftwidth'">'shiftwidth'</A> option to 4.  This <A HREF="options.html#modeline">modeline</A>
@@ -552,7 +552,7 @@ For more details 见 |<A HREF="options.html#modeline">modeline</A>|.
 ==============================================================================
 
 下一章: |<A HREF="usr_22.html">usr_22.txt</A>|  Finding the file to edit
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
    </div>
 </body>

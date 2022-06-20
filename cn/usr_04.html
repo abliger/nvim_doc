@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: usr_04</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -79,16 +79,16 @@
 			     做小改动
 
 
-此章节会介绍几个修正和移动文本的方法.会教你三种改变文本的基本方法: 操作符移动, <A HREF="visual\.html#Visual">可视</A>模式和文本<A HREF="vimindex\.html#objects">对象</A>.
+此章节会介绍几个修正和移动文本的方法.会教你三种改变文本的基本方法: 操作符移动, <A HREF="visual.html#Visual">可视</A>模式和文本<A HREF="vimindex.html#objects">对象</A>.
 
 |<A HREF="#04.1">04.1</A>|	操作符和动作
 |<A HREF="#04.2">04.2</A>|	改变文本
 |<A HREF="#04.3">04.3</A>|	重复一个修改
-|<A HREF="#04.4">04.4</A>|	<A HREF="visual\.html#Visual">可视</A>模式
+|<A HREF="#04.4">04.4</A>|	<A HREF="visual.html#Visual">可视</A>模式
 |<A HREF="#04.5">04.5</A>|	移动文本
 |<A HREF="#04.6">04.6</A>|	复制文本
-|<A HREF="#04.7">04.7</A>|	使用<A HREF="provider\.html#clipboard">剪切板</A>
-|<A HREF="#04.8">04.8</A>|	文本<A HREF="vimindex\.html#objects">对象</A>
+|<A HREF="#04.7">04.7</A>|	使用<A HREF="provider.html#clipboard">剪切板</A>
+|<A HREF="#04.8">04.8</A>|	文本<A HREF="vimindex.html#objects">对象</A>
 |<A HREF="#04.9">04.9</A>|	<A HREF="insert\\.html#Replace">替代</A>模式
 |<A HREF="#04.10">04.10</A>|	总结
 
@@ -100,7 +100,7 @@
 
 *<A NAME="04.1"></A><B>04.1</B>*	操作符和动作
 
-再章节2，你学会使用&quot;<A HREF="change.html#x">x</A>&quot;命令去删除单个字符.和使用<A HREF="intro.html#count">count</A>: &quot;4x&quot; deletes four characters.
+在章节2，你学会使用&quot;<A HREF="change.html#x">x</A>&quot;命令去删除单个字符.和使用<A HREF="intro.html#count">count</A>: &quot;4x&quot; deletes four characters.
    &quot;dw&quot;命令会会删除一个<A HREF="motion.html#word">单词</A>.你可能会意识到&quot;<A HREF="motion.html#w">w</A>&quot;命令 <A HREF="motion.html#as">是</A>移动<A HREF="motion.html#word">单词</A>的命令.实际上&quot;<A HREF="change.html#d">d</A>&quot;命令可以跟随任何移动命令,并且<A HREF="motion.html#it">它</A>会删除从光标当前位置到目标位置的全部内容.
    例如，&quot;4w&quot;命令,光标向后移动四个单词.&quot;d4w&quot;命令会向后删除四个单词.
 
@@ -179,14 +179,14 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 &quot;<A HREF="change.html#r">r</A>&quot;命令不是一个<A HREF="motion.html#operator">操作符</A>.他等待你输入一个字符,并使用<A HREF="motion.html#it">它</A>替代光标下的字符.你能<A HREF="diff.html#do">使用</A>&quot;cl&quot;或者&quot;<A HREF="change.html#s">s</A>&quot;命令做相同的事,但是使用&quot;<A HREF="change.html#r">r</A>&quot;你不需要使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>返回正常模式.
 
 <B><FONT color="#3A6F2B">	there is somerhing grong here </FONT></B>
-	rT	     rt    rw
+	rT	        rt    rw
 
 <B><FONT color="#3A6F2B">	There is something wrong here </FONT></B>
 
 使用<A HREF="intro.html#count">数量</A>修饰&quot;<A HREF="change.html#r">r</A>&quot;会造成向后的n个字符用相同的字符替代.例如:
 
 <B><FONT color="#3A6F2B">	There is something wrong here </FONT></B>
-			   5rx
+			     5rx
 
 <B><FONT color="#3A6F2B">	There is something xxxxx here </FONT></B>
 
@@ -210,7 +210,7 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 其他例子: 你想要改变<A HREF="motion.html#word">单词</A> &quot;four&quot;为&quot;five&quot;.它在你的文本中出现好几次，你可以使用下面的命令快速操作:
 
-	/four&lt;Enter&gt;	找到第一个<A HREF="options\.html#options">字符串</A> &quot;four&quot;
+	/four&lt;Enter&gt;	找到第一个<A HREF="options.html#options">字符串</A> &quot;four&quot;
 	cwfive&lt;Esc&gt;	修改<A HREF="motion.html#word">单词</A>为&quot;five&quot;
 	<A HREF="pattern.html#n">n</A>		找到下一个&quot;four&quot;
 	.		重复修改&quot;five&quot;
@@ -219,11 +219,11 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 ==============================================================================
 
-*<A NAME="04.4"></A><B>04.4</B>*	<A HREF="visual\.html#Visual">可视</A>模式
+*<A NAME="04.4"></A><B>04.4</B>*	<A HREF="visual.html#Visual">可视</A>模式
 
-删除一些简单的事项操作移动模式完成的很好.但是常常移动到你想要修改的位置事不容易的.那么你就可以使用<A HREF="visual\.html#Visual">可视</A>模式.
+删除一些简单的事项操作移动模式完成的很好.但是常常移动到你想要修改的位置事不容易的.那么你就可以使用<A HREF="visual.html#Visual">可视</A>模式.
 
-可以使用&quot;<A HREF="visual.html#v">v</A>&quot;开启<A HREF="visual\.html#Visual">可视</A>模式.你可以移动光标到你想要修改的文字上.当你如此做后，文字就会高亮.最后键入<A HREF="motion.html#operator">操作</A>命令.例如,删除从一个单词的中间到另一个单词的中间部分:
+可以使用&quot;<A HREF="visual.html#v">v</A>&quot;开启<A HREF="visual.html#Visual">可视</A>模式.你可以移动光标到你想要修改的文字上.当你如此做后，文字就会高亮.最后键入<A HREF="motion.html#operator">操作</A>命令.例如,删除从一个单词的中间到另一个单词的中间部分:
 
 <B><FONT color="#3A6F2B">		This is an examination sample of visual mode </FONT></B>
 			       ----------&gt;
@@ -233,11 +233,11 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 你真的不需要算需要数出按压&quot;<A HREF="motion.html#l">l</A>&quot;的次数.  当你按压&quot;<A HREF="change.html#d">d</A>&quot;前你可以清楚看到选中的文字.
 
-如果你改变了注意，使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>退出<A HREF="visual\.html#Visual">可视</A>模式.
+如果你改变了注意，使用<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>退出<A HREF="visual.html#Visual">可视</A>模式.
 
 按行选择
 
-如果你想选择整行,使用&quot;<A HREF="visual.html#V">V</A>&quot;进入<A HREF="visual\.html#Visual">可视</A>模式.你可以看到整行都会高亮，上下移动后整行都会被高亮.左右移动不会做任何事.例如,使用&quot;Vjj&quot;选择三行:
+如果你想选择整行,使用&quot;<A HREF="visual.html#V">V</A>&quot;进入<A HREF="visual.html#Visual">可视</A>模式.你可以看到整行都会高亮，上下移动后整行都会被高亮.左右移动不会做任何事.例如,使用&quot;Vjj&quot;选择三行:
 
 			  +------------------------+
 			  &#124; text more text	   |
@@ -249,23 +249,23 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 块选择
 
-如果你想处理矩形字符,使用<A HREF="visual.html#CTRL-V">CTRL-V</A>进入<A HREF="visual\.html#Visual">可视</A>模式.这对于表格是很有用的.
+如果你想处理矩形字符,使用<A HREF="visual.html#CTRL-V">CTRL-V</A>进入<A HREF="visual.html#Visual">可视</A>模式.这对于表格是很有用的.
 
 		name		Q1	Q2	Q3
 		pierre		123	455	234
 		john		0	90	39
 		steve		392	63	334
 
-删除中间的&quot;Q2&quot;列,把光标移动到&&quot;Q2&quot;的&quot;<A HREF="repeat.html#Q">Q</A>&quot;.使用<A HREF="visual.html#CTRL-V">CTRL-V</A>开启块<A HREF="visual\.html#Visual">可视</A>模式.使用&quot;3j&quot;向下移动三行并且使用&quot;<A HREF="motion.html#w">w</A>&quot;移动到下一个单词.你可以看到最后一列的第一个字符是高亮的.排除<A HREF="motion.html#it">它</A>,使用&quot;<A HREF="motion.html#h">h</A>&quot;.现在使用&quot;<A HREF="change.html#d">d</A>&quot;中间的列消失了.
+删除中间的&quot;Q2&quot;列,把光标移动到&&quot;Q2&quot;的&quot;<A HREF="repeat.html#Q">Q</A>&quot;.使用<A HREF="visual.html#CTRL-V">CTRL-V</A>开启块<A HREF="visual.html#Visual">可视</A>模式.使用&quot;3j&quot;向下移动三行并且使用&quot;<A HREF="motion.html#w">w</A>&quot;移动到下一个单词.你可以看到最后一列的第一个字符是高亮的.排除<A HREF="motion.html#it">它</A>,使用&quot;<A HREF="motion.html#h">h</A>&quot;.现在使用&quot;<A HREF="change.html#d">d</A>&quot;中间的列消失了.
 
 移动到另一边
 
-如果你在<A HREF="visual\.html#Visual">可视</A>模式选中了一些文字,然后你发现你需要去修改被选中文字的另一边,可以使用&quot;<A HREF="insert.html#o">o</A>&quot;命令 (提示: <A HREF="insert.html#o">o</A>表示other end).光标会移动到另一边。再移动到选中区域开始的地方，再次使用&quot;<A HREF="insert.html#o">o</A>&quot;回到另一端.
+如果你在<A HREF="visual.html#Visual">可视</A>模式选中了一些文字,然后你发现你需要去修改被选中文字的另一边,可以使用&quot;<A HREF="insert.html#o">o</A>&quot;命令 (提示: <A HREF="insert.html#o">o</A>表示other end).光标会移动到另一边。再移动到选中区域开始的地方，再次使用&quot;<A HREF="insert.html#o">o</A>&quot;回到另一端.
 
 
 使用块选择时有四个角.&quot;<A HREF="insert.html#o">o</A>&quot;只能进行对角跳转.使用&quot;<A HREF="insert.html#O">O</A>&quot;让你移动到行的另一边.
 
-注意&quot;<A HREF="insert.html#o">o</A>&quot;和&quot;<A HREF="insert.html#O">O</A>&quot;在<A HREF="visual\.html#Visual">可视</A>模式的运行不同于<A HREF="intro.html#Normal">正常</A>模式, 正常模式下它们会在光标下上创建新的一行.
+注意&quot;<A HREF="insert.html#o">o</A>&quot;和&quot;<A HREF="insert.html#O">O</A>&quot;在<A HREF="visual.html#Visual">可视</A>模式的运行不同于<A HREF="intro.html#Normal">正常</A>模式, 正常模式下它们会在光标下上创建新的一行.
 
 ==============================================================================
 
@@ -336,11 +336,11 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 ==============================================================================
 
-*<A NAME="04.7"></A><B>04.7</B>*	使用<A HREF="provider\.html#clipboard">剪切板</A>
+*<A NAME="04.7"></A><B>04.7</B>*	使用<A HREF="provider.html#clipboard">剪切板</A>
 
-如果你使用Vim的<A HREF="gui.html#GUI">GUI</A>版本,你可能发现&quot;Copy&quot;在&quot;编辑&quot;菜单中.首先在<A HREF="visual\.html#Visual">可视</A>模式选择文本，然后使用编辑菜单.现在被选择的文本拷贝到了<A HREF="provider.html#clipboard">剪切板</A>.你能<A HREF="provider.html#paste">黏贴</A>文本到其他地方.
+如果你使用Vim的<A HREF="gui.html#GUI">GUI</A>版本,你可能发现&quot;Copy&quot;在&quot;编辑&quot;菜单中.首先在<A HREF="visual.html#Visual">可视</A>模式选择文本，然后使用编辑菜单.现在被选择的文本拷贝到了<A HREF="provider.html#clipboard">剪切板</A>.你能<A HREF="provider.html#paste">黏贴</A>文本到其他地方.
 
-如果已有文本在<A HREF="provider.html#clipboard">剪切板</A>中,你可以在Vim的编辑菜单中使用<A HREF="provider.html#paste">黏贴</A><A HREF="motion.html#it">它</A>.在<A HREF="intro.html#Normal">正常</A>模式和<A HREF="insert.html#Insert">插入</A>模式会正常工作.在<A HREF="visual\.html#Visual">可视</A>模式剪切板的文本会替换被选中的文本.
+如果已有文本在<A HREF="provider.html#clipboard">剪切板</A>中,你可以在Vim的编辑菜单中使用<A HREF="provider.html#paste">黏贴</A><A HREF="motion.html#it">它</A>.在<A HREF="intro.html#Normal">正常</A>模式和<A HREF="insert.html#Insert">插入</A>模式会正常工作.在<A HREF="visual.html#Visual">可视</A>模式剪切板的文本会替换被选中的文本.
 
 &quot;Cut&quot;菜单会在文本放到<A HREF="provider.html#clipboard">剪切搬</A>前删除它.
 
@@ -356,7 +356,7 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 ==============================================================================
 
-*<A NAME="04.8"></A><B>04.8</B>*	文本<A HREF="vimindex\.html#objects">对象</A>
+*<A NAME="04.8"></A><B>04.8</B>*	文本<A HREF="vimindex.html#objects">对象</A>
 
 如果光标在<A HREF="motion.html#word">单词</A>的中间且你想删除那个<A HREF="motion.html#word">单词</A>,在你使用&quot;dw&quot;前你需要移动光标到单词的词首.&quot;<A HREF="motion.html#daw">daw</A>&quot;这种方式可能更简单.
 
@@ -367,7 +367,7 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 &quot;<A HREF="motion.html#daw">daw</A>&quot;的&quot;<A HREF="change.html#d">d</A>&quot;是删除<A HREF="motion.html#operator">操作符</A>.&quot;<A HREF="motion.html#aw">aw</A>&quot;是文本对象.提示: &quot;<A HREF="motion.html#aw">aw</A>&quot;代表&quot;A Word&quot;.因此&quot;<A HREF="motion.html#daw">daw</A>&quot;表示&quot;删除一个单词（Delete A Word）&quot;. 注意<A HREF="motion.html#word">单词</A>的空格也会被删除(或者在行尾删除<A HREF="motion.html#word">单词</A>前面的单词).
 
-使用文本<A HREF="vimindex\.html#objects">对象</A>是在Vim第三种改变方式.我们已经介绍了操作符移动模式和<A HREF="visual\.html#Visual">可视</A>模式.现在我们添加一个操作文本对象.和操作移动模式一样, 但它不是操作于从当前位置到移动目标间的内容， 而是对光标所在位置的文本对象进行操作。文本对象是作为一个整体来处理的。现在光标 在对象中的位置无关紧要。
+使用文本<A HREF="vimindex.html#objects">对象</A>是在Vim第三种改变方式.我们已经介绍了操作符移动模式和<A HREF="visual.html#Visual">可视</A>模式.现在我们添加一个操作文本对象.和操作移动模式一样, 但它不是操作于从当前位置到移动目标间的内容， 而是对光标所在位置的文本对象进行操作。文本对象是作为一个整体来处理的。现在光标 在对象中的位置无关紧要。
 使用&quot;cis&quot;改变整句话.如:
 
 <B><FONT color="#3A6F2B">	Hello there.  This </FONT></B>
@@ -386,7 +386,7 @@ Vim会删除到光标的前一个位置.这是因为Vim知道你可以不想要�
 
 &quot;cis&quot;是由&quot;<A HREF="change.html#c">c</A>&quot; (change) <A HREF="motion.html#operator">操作符</A>和&quot;is&quot;文本对象组成.&quot;is&quot;代表&quot;Inner Sentence&quot;.还有一个文本对象是&quot;<A HREF="motion.html#as">as</A>&quot; (&quot;A Sentence&quot;).不同点在于&quot;<A HREF="motion.html#as">as</A>&quot;包括<A HREF="motion.html#sentence">句子</A>后的空格而&quot;is&quot;不包含.如果你要删除<A HREF="motion.html#sentence">句子</A>, 你一定会同时删除句尾空格,那么就使用&quot;<A HREF="motion.html#das">das</A>&quot;.如果你要替换句子就使用&quot;cis&quot;更好.
 
-你能在<A HREF="visual\.html#Visual">可视</A>模式使用文本<A HREF="vimindex\.html#objects">对象</A>.这样会选中一个文本对象，而且继续留在可视模 式，你可以继续多次执行文本对象命令.例如,开始<A HREF="visual\.html#Visual">可视</A>模式，使用&quot;<A HREF="motion.html#as">as</A>&quot;选择一句话.现在重复执行 "as"，就会继续选中更多的句子。最后你可以使用一 个操作符去处理这些被选中的句子。
+你能在<A HREF="visual.html#Visual">可视</A>模式使用文本<A HREF="vimindex.html#objects">对象</A>.这样会选中一个文本对象，而且继续留在可视模 式，你可以继续多次执行文本对象命令.例如,开始<A HREF="visual.html#Visual">可视</A>模式，使用&quot;<A HREF="motion.html#as">as</A>&quot;选择一句话.现在重复执行 "as"，就会继续选中更多的句子。最后你可以使用一 个操作符去处理这些被选中的句子。
 你可以在这里找到一个详细的文本对象的列表: |<A HREF="motion.html#text-objects">text-objects</A>|.
 
 ==============================================================================
@@ -412,7 +412,7 @@ typed character.
 
 *<A NAME="04.10"></A><B>04.10</B>*	总结
 
-操作符, <A HREF="intro.html#movement">移动</A>命令和文本<A HREF="vimindex\.html#objects">对象</A>可以有多种组合.
+操作符, <A HREF="intro.html#movement">移动</A>命令和文本<A HREF="vimindex.html#objects">对象</A>可以有多种组合.
 在这寻找操作的列表: |<A HREF="motion.html#operator">operator</A>|.
 
 例如,有很多方式去删除文本:
@@ -441,7 +441,7 @@ dgg	删除到文件头
 ==============================================================================
 
 下一章: |<A HREF="usr_05.html">usr_05.txt</A>|  自定义配置
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

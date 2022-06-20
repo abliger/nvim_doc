@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: pattern</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -194,7 +194,7 @@ g*			Like &quot;*&quot;, but don't put &quot;\&lt;&quot; and &quot;\&gt;&quot; a
 			&quot;*&quot;, but lines that look like a comment are ignored
 			(see <A HREF="options.html#'comments'">'comments'</A> option).
 			Note that this is not guaranteed to work, Vim does not
-			really check the <A HREF="syntax\.html#syntax">语法</A>, <A HREF="motion.html#it">它</A> only searches for a match
+			really check the <A HREF="syntax.html#syntax">语法</A>, <A HREF="motion.html#it">它</A> only searches for a match
 			with the keyword.  If included files also need to be
 			searched use the commands listed in |<A HREF="tagsrch.html#include-search">include-search</A>|.
 			After this command |<A HREF="#n">n</A>| searches forward for the next
@@ -467,7 +467,7 @@ For starters, read chapter 27 of the user manual |<A HREF="usr_27.html">usr_27.t
 5. An atom can be one of a long <A HREF="eval.html#list">列表</A> of items.  Many atoms match one character
    in the text.  It is often an ordinary character or a character class.
    Parentheses can be used to make a <A HREF="#pattern">pattern</A> into an atom.  The &quot;\z(\)&quot;
-   construct is only for <A HREF="syntax\.html#syntax">语法</A> highlighting.
+   construct is only for <A HREF="syntax.html#syntax">语法</A> highlighting.
 
    atom    ::=	    ordinary-atom		|<A HREF="#/ordinary-atom">/ordinary-atom</A>|
 		or  \( <A HREF="#pattern">pattern</A> \)		|<A HREF="#/\(">/\(</A>|
@@ -661,9 +661,9 @@ Character classes:					*<A NAME="/character-classes"></A><B>/character-classes</
 |<A HREF="#/\9">/\9</A>|	\9	\9	Like &quot;\1&quot;, but uses ninth \(\)
 
 								*<A NAME="E68"></A><B>E68</B>*
-|<A HREF="syntax.html#/\z1">/\z1</A>|	\z1	\z1	only for <A HREF="syntax\.html#syntax">语法</A> highlighting, 见 |<A HREF="syntax.html#:syn-ext-match">:syn-ext-match</A>|
+|<A HREF="syntax.html#/\z1">/\z1</A>|	\z1	\z1	only for <A HREF="syntax.html#syntax">语法</A> highlighting, 见 |<A HREF="syntax.html#:syn-ext-match">:syn-ext-match</A>|
 	   <A HREF="eval.html#...">...</A>
-|<A HREF="syntax.html#/\z1">/\z1</A>|	\z9	\z9	only for <A HREF="syntax\.html#syntax">语法</A> highlighting, 见 |<A HREF="syntax.html#:syn-ext-match">:syn-ext-match</A>|
+|<A HREF="syntax.html#/\z1">/\z1</A>|	\z9	\z9	only for <A HREF="syntax.html#syntax">语法</A> highlighting, 见 |<A HREF="syntax.html#:syn-ext-match">:syn-ext-match</A>|
 
 	<A HREF="change.html#x">x</A>	<A HREF="change.html#x">x</A>	a character with no special meaning matches itself
 
@@ -1052,7 +1052,7 @@ $	At end of <A HREF="#pattern">pattern</A> or in front of &quot;\|&quot;, &quot;
 	buffer displayed in a<A HREF="windows.html#window">窗口</A>.
 	WARNING: When the cursor is moved after the <A HREF="#pattern">pattern</A> was used, the
 	result becomes invalid.  Vim doesn't automatically update the matches.
-	This is especially relevant for <A HREF="syntax\.html#syntax">语法</A> highlighting and <A HREF="options.html#'hlsearch'">'hlsearch'</A>.
+	This is especially relevant for <A HREF="syntax.html#syntax">语法</A> highlighting and <A HREF="options.html#'hlsearch'">'hlsearch'</A>.
 	In other words: When the cursor moves the display isn't updated for
 	this change.  An update is done for lines which are changed (the whole
 	line is updated) or when using the |<A HREF="various.html#CTRL-L">CTRL-L</A>| command (the whole screen
@@ -1593,7 +1593,7 @@ In Perl, ^ and $ only match at the very beginning and end of the text,
 by default, but you can set the '<A HREF="motion.html#m">m</A>' flag, which lets them match at
 embedded newlines <A HREF="motion.html#as">as</A> well.  You can also set the '<A HREF="change.html#s">s</A>' flag, which causes
 a . to match newlines <A HREF="motion.html#as">as</A> well.  (Both these flags can be changed inside
-a <A HREF="#pattern">pattern</A> using the same <A HREF="syntax\.html#syntax">语法</A> used for the <A HREF="insert.html#i">i</A> flag above, BTW.)
+a <A HREF="#pattern">pattern</A> using the same <A HREF="syntax.html#syntax">语法</A> used for the <A HREF="insert.html#i">i</A> flag above, BTW.)
 
 On the other hand, Vim's ^ and $ always match at embedded newlines, and
 you get two separate atoms, \&#37;^ and \&#37;$, which only match at the very
@@ -1728,7 +1728,7 @@ the matching positions and the fuzzy match scores.
 The &quot;<A HREF="motion.html#f">f</A>&quot; flag of `:vimgrep` enables fuzzy matching.
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

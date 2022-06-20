@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: ui</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -139,7 +139,7 @@ with these (optional) keys:
 
 
 Specifying an unknown option is an error; UIs can check the |<A HREF="api.html#api-metadata">api-metadata</A>|
-`ui_options` key for supported <A HREF="options\.html#options">选项</A>.
+`ui_options` key for supported <A HREF="options.html#options">选项</A>.
 
 By default Nvim requires all connected UIs to support the same capabilities,
 thus the active capabilities are the intersection of those requested. UIs may
@@ -176,7 +176,7 @@ Example of a typical &quot;redraw&quot; batch in a single <A HREF="api.html#RPC"
 
 Events must be handled in-order. Nvim sends a &quot;flush&quot; event when <A HREF="motion.html#it">它</A> has
 completed a redraw of the entire screen (so all <A HREF="windows\.html#windows">窗口</A> have a consistent view
-of buffer state, <A HREF="options\.html#options">选项</A>, etc.). Multiple &quot;redraw&quot; batches may be sent before
+of buffer state, <A HREF="options.html#options">选项</A>, etc.). Multiple &quot;redraw&quot; batches may be sent before
 the entire screen has been redrawn, with &quot;flush&quot; following only the last
 batch. The user should only see the final state (when &quot;flush&quot; is sent), not
 any intermediate state while processing part of the batch array, nor after
@@ -301,9 +301,9 @@ the editor.
 	Options are not represented here if their effects are communicated in
 	other <A HREF="#UI">UI</A> <A HREF="autocmd.html#events">events</A>. For example, instead of forwarding the <A HREF="options.html#'mouse'">'mouse'</A> option
 	value, the &quot;mouse_on&quot; and &quot;mouse_off&quot; <A HREF="#UI">UI</A> <A HREF="autocmd.html#events">events</A> directly indicate if
-	mouse support is active. Some <A HREF="options\.html#options">选项</A> like <A HREF="options.html#'ambiwidth'">'ambiwidth'</A> have already
+	mouse support is active. Some <A HREF="options.html#options">选项</A> like <A HREF="options.html#'ambiwidth'">'ambiwidth'</A> have already
 	taken effect on the grid, where appropriate empty cells are added,
-	however a <A HREF="#UI">UI</A> might still use such <A HREF="options\.html#options">选项</A> when rendering raw text
+	however a <A HREF="#UI">UI</A> might still use such <A HREF="options.html#options">选项</A> when rendering raw text
 	sent from Nvim, like for |<A HREF="#ui-cmdline">ui-cmdline</A>|.
 
 [&quot;mode_change&quot;, mode, mode_idx]
@@ -632,7 +632,7 @@ with the following possible keys:
 
     `kind`:	always present. One of the following values:
 	&quot;<A HREF="#ui">ui</A>&quot;:       Builtin <A HREF="#UI">UI</A> highlight. |<A HREF="syntax.html#highlight-groups">highlight-groups</A>|
-	&quot;<A HREF="syntax\.html#syntax">语法</A>&quot;:   Highlight applied to a buffer by a <A HREF="syntax\.html#syntax">语法</A> declaration or
+	&quot;<A HREF="syntax.html#syntax">语法</A>&quot;:   Highlight applied to a buffer by a <A HREF="syntax.html#syntax">语法</A> declaration or
 	            other runtime/plugin functionality such <A HREF="motion.html#as">as</A>
 		    |<A HREF="api.html#nvim_buf_add_highlight()">nvim_buf_add_highlight()</A>|
 	&quot;terminal&quot;: highlight from a process running in a |<A HREF="nvim_terminal_emulator.html#terminal-emulator">terminal-emulator</A>|.
@@ -758,7 +758,7 @@ Activated by the `ext_tabline` |<A HREF="#ui-option">ui-option</A>|.
 
 [&quot;tabline_update&quot;, curtab, tabs, curbuf, buffers]
 	Tabline was updated. UIs should present this data in a custom tabline
-	widget. Note: <A HREF="options\.html#options">选项</A> `curbuf` + `buffers` were added in API7.
+	widget. Note: <A HREF="options.html#options">选项</A> `curbuf` + `buffers` were added in API7.
 	curtab:   Current Tabpage
 	tabs:     <A HREF="eval.html#list">列表</A> of Dicts <A HREF="motion.html#[{">[{</A> &quot;<A HREF="intro.html#tab">tab</A>&quot;: Tabpage, &quot;name&quot;: <A HREF="options\.html#options">字符串</A> }, ...]
 	curbuf:   Current buffer handle.
@@ -898,7 +898,7 @@ Nvim will not allocate screen space for the <A HREF="cmdline.html#cmdline">cmdli
 	entries, where each entry is a `[kind, content]` tuple.
 
 ==============================================================================
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

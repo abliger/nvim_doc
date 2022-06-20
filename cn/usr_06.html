@@ -67,7 +67,7 @@
   <div class="container">
     <h1>Nvim 文档: usr_06</h1>
     <A NAME="top"></A>
-    <A HREF="index\.html">主帮助文件</A>
+    <A HREF="index.html">主帮助文件</A>
 
     <HR>
     <PRE>
@@ -76,7 +76,7 @@
 
 		     VIM用户手册 - by Bram Moolenaar
 
-			  使用<A HREF="syntax\.html#syntax">语法</A>高亮
+			  使用<A HREF="syntax.html#syntax">语法</A>高亮
 
 
 黑白的文字让人厌倦了，增加一些色彩能为你的文件带来生气。这不但看起来漂亮，还能够提高你的工作效率。本章介绍如何使用不同颜色显示不同文本并把它打印出来.
@@ -96,7 +96,7 @@
 
 *<A NAME="06.1"></A><B>06.1</B>*	打开<A HREF="motion\.html#it">它</A>
 
-<A HREF="autocmd\.html#Syntax">语法</A>高亮默认开启.Nvim自动发现文件类型并加载正确的<A HREF="syntax\.html#syntax">语法</A>高亮.
+<A HREF="autocmd\.html#Syntax">语法</A>高亮默认开启.Nvim自动发现文件类型并加载正确的<A HREF="syntax.html#syntax">语法</A>高亮.
 
 ==============================================================================
 
@@ -126,7 +126,7 @@
 
 <B>		:set filetype=fortran</B>
 
-  要知道哪些类型是有效的，查看一下 $VIMRUNTIME/syntax. 对于<A HREF="gui.html#GUI">GUI</A> ，你可以使用<A HREF="autocmd.html#Syntax">Syntax</A> 菜单.设置<A HREF="filetype\.html#filetype">文件类型</A>也能通过|<A HREF="options.html#modeline">modeline</A>|设置,以便每次编辑<A HREF="motion.html#it">它</A>时都会进行好靓.例如, Makefile文件高亮 (把<A HREF="motion.html#it">它</A>放到文件首位):
+  要知道哪些类型是有效的，查看一下 $VIMRUNTIME/syntax. 对于<A HREF="gui.html#GUI">GUI</A> ，你可以使用<A HREF="autocmd.html#Syntax">Syntax</A> 菜单.设置<A HREF="filetype.html#filetype">文件类型</A>也能通过|<A HREF="options.html#modeline">modeline</A>|设置,以便每次编辑<A HREF="motion.html#it">它</A>时都会进行好靓.例如, Makefile文件高亮 (把<A HREF="motion.html#it">它</A>放到文件首位):
 
 <B>		# vim: syntax=make</B>
 
@@ -150,7 +150,7 @@
  	确保在&quot;<A HREF="syntax.html#:syntax">:syntax</A> enable&quot;命令前调用前两个命令,否则不起作用.你可以<A HREF="diff.html#do">使用</A>&quot;<A HREF="syntax.html#:syntax">:syntax</A> 重置&quot; 在设置<A HREF="options.html#'background'">'background'</A>后使Vim重新染色.
 
 - 从下向上<A HREF="scroll.html#scrolling">滚动</A>使颜色错误.
-	Vim解析文件不是直接解析整个文件. 它只分析你要显示的部分。这样能省不少时间，但也会因此带来错误。一个简单的修正方法是敲<A HREF="various.html#CTRL-L">CTRL-L</A>. 或者往回滚动一下再回来.真正修复见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.一些<A HREF="syntax\.html#syntax">语法</A>文件会让<A HREF="motion.html#it">它</A>看前面的内容,参见相应的<A HREF="syntax\.html#syntax">语法</A>定义文件.如,|<A HREF="tex.html">tex.vim</A>|关于TeX <A HREF="syntax\.html#syntax">语法</A>.
+	Vim解析文件不是直接解析整个文件. 它只分析你要显示的部分。这样能省不少时间，但也会因此带来错误。一个简单的修正方法是敲<A HREF="various.html#CTRL-L">CTRL-L</A>. 或者往回滚动一下再回来.真正修复见 |<A HREF="syntax.html#:syn-sync">:syn-sync</A>|.一些<A HREF="syntax.html#syntax">语法</A>文件会让<A HREF="motion.html#it">它</A>看前面的内容,参见相应的<A HREF="syntax.html#syntax">语法</A>定义文件.如,|<A HREF="tex.html">tex.vim</A>|关于TeX <A HREF="syntax.html#syntax">语法</A>.
 
 ==============================================================================
 
@@ -217,7 +217,7 @@ T这个命令会停止对所有缓冲区的所有语法高亮.详见 |<A HREF="s
 
 
 							*<A NAME=":syn-manual"></A><B>:syn-manual</B>*
-如果你只想在几个文件中打开<A HREF="syntax\.html#syntax">语法</A>高亮，使用:
+如果你只想在几个文件中打开<A HREF="syntax.html#syntax">语法</A>高亮，使用:
 
 <B>	:syntax manual</B>
 
@@ -235,7 +235,7 @@ T这个命令会停止对所有缓冲区的所有语法高亮.详见 |<A HREF="s
 
 你可以获得打印窗口，通过它选择打印机和进行打印设置.如果你有彩色打印机,输出会和在Vim中的相同.但当你使用黑暗背景，颜色会适应白纸以便更好查看.
 
-有几个改变Vim打印行为的<A HREF="options\.html#options">选项</A>:
+有几个改变Vim打印行为的<A HREF="options.html#options">选项</A>:
 	<A HREF="options.html#'printdevice'">'printdevice'</A>
 	<A HREF="options.html#'printheader'">'printheader'</A>
 	<A HREF="options.html#'printfont'">'printfont'</A>
@@ -269,13 +269,13 @@ T这个命令会停止对所有缓冲区的所有语法高亮.详见 |<A HREF="s
 
 *<A NAME="06.6"></A><B>06.6</B>*	深入阅读
 
-|<A HREF="usr_44.html">usr_44.txt</A>|  自定义<A HREF="syntax\.html#syntax">语法</A>高亮.
-|<A HREF="syntax\.html#syntax">语法</A>|      所有的细节.
+|<A HREF="usr_44.html">usr_44.txt</A>|  自定义<A HREF="syntax.html#syntax">语法</A>高亮.
+|<A HREF="syntax.html#syntax">语法</A>|      所有的细节.
 
 ==============================================================================
 
 下一章: |<A HREF="usr_07.html">usr_07.txt</A>|  编辑更多文件
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
   </div>
 </body>

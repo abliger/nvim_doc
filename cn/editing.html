@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: editing</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -191,7 +191,7 @@ If the environment variable <A HREF="options.html#$HOME">$HOME</A> is set, and t
 keep file names short.  When reading or <A HREF="#writing">writing</A> files the full name is still
 used, the &quot;<A HREF="change.html#~">~</A>&quot; is only used when displaying file names.  When <A HREF="change.html#replacing">replacing</A> the
 file name would result in just &quot;<A HREF="change.html#~">~</A>&quot;, &quot;~/&quot; is used instead (to avoid confusion
-between <A HREF="options\.html#options">选项</A> set to <A HREF="options.html#$HOME">$HOME</A> with <A HREF="options.html#'backupext'">'backupext'</A> set to &quot;~&quot;).
+between <A HREF="options.html#options">选项</A> set to <A HREF="options.html#$HOME">$HOME</A> with <A HREF="options.html#'backupext'">'backupext'</A> set to &quot;~&quot;).
 
 When <A HREF="#writing">writing</A> the buffer, the default is to use the current file name.  Thus
 when you give the &quot;<A HREF="#ZZ">ZZ</A>&quot; or &quot;<A HREF="#:wq">:wq</A>&quot;命令, the original file will be
@@ -222,7 +222,7 @@ file.  If <A HREF="options.html#'cpoptions'">'cpoptions'</A> contains the '<A HR
 |<A HREF="options.html#cpo-f">cpo-f</A>| the file name is set for the &quot;<A HREF="insert.html#:read">:read</A> file&quot; command.  This is useful
 when starting Vim without an argument and then doing &quot;<A HREF="insert.html#:read">:read</A> file&quot; to start
 editing a file.
-When the file name was set and <A HREF="options.html#'filetype'">'filetype'</A> is empty the <A HREF="filetype\.html#filetype">文件类型</A> detection
+When the file name was set and <A HREF="options.html#'filetype'">'filetype'</A> is empty the <A HREF="filetype.html#filetype">文件类型</A> detection
 autocommands will be triggered.
 
 							*<A NAME="not-edited"></A><B>not-edited</B>*
@@ -552,7 +552,7 @@ Where {optname} is one of:	    *<A NAME="++ff"></A><B>++ff</B>* *<A NAME="++enc"
 			    a file
 
 {value} cannot contain white space.  It can be any valid value for these
-<A HREF="options\.html#options">选项</A>.  Examples:
+<A HREF="options.html#options">选项</A>.  Examples:
 <B>	:e ++ff=unix</B>
 This edits the same file again with <A HREF="options.html#'fileformat'">'fileformat'</A> set to &quot;unix&quot;.
 
@@ -580,7 +580,7 @@ The default is like &quot;++bad=?&quot;: <A HREF="insert.html#Replace">Replace</
 Note that not all commands use the <A HREF="#++bad">++bad</A> argument, even though they <A HREF="diff.html#do">do</A> not
 give an error when you add it.  E.g. |<A HREF="#:write">:write</A>|.
 
-Note that when reading, the <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'fileencoding'">'fileencoding'</A> <A HREF="options\.html#options">选项</A> will be
+Note that when reading, the <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'fileencoding'">'fileencoding'</A> <A HREF="options.html#options">选项</A> will be
 set to the used format.  When <A HREF="#writing">writing</A> this doesn't happen, thus a next write
 will use the old value of the option.  Same for the <A HREF="options.html#'binary'">'binary'</A> option.
 
@@ -1061,7 +1061,7 @@ slower (but safer).
 			the filename of the current buffer to <A HREF="#{file}">{file}</A>.  The
 			previous name is used for the alternate file name.
 			The [!] is needed to overwrite an existing file.
-			When <A HREF="options.html#'filetype'">'filetype'</A> is empty <A HREF="filetype\.html#filetype">文件类型</A> detection is done
+			When <A HREF="options.html#'filetype'">'filetype'</A> is empty <A HREF="filetype.html#filetype">文件类型</A> detection is done
 			with the new name, before the file is written.
 			When the write was successful <A HREF="options.html#'readonly'">'readonly'</A> is reset.
 
@@ -1167,7 +1167,7 @@ the message &quot;[unix format]&quot; is shown.
 If the <A HREF="options.html#'fileformat'">'fileformat'</A> is &quot;mac&quot;, <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A> is used for <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>.  On non-Mac systems the
 message &quot;[mac format]&quot; is shown.
 
-See also |<A HREF="#file-formats">file-formats</A>| and the <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'fileformats'">'fileformats'</A> <A HREF="options\.html#options">选项</A>.
+See also |<A HREF="#file-formats">file-formats</A>| and the <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'fileformats'">'fileformats'</A> <A HREF="options.html#options">选项</A>.
 
 
 						*<A NAME="ACL"></A><B>ACL</B>*
@@ -1370,7 +1370,7 @@ If you want to always use &quot;<A HREF="#:confirm">:confirm</A>&quot;, set the 
 			&quot;<A HREF="#:browse">:browse</A> set&quot; works like |<A HREF="options.html#:options">:options</A>|.
 			See also |<A HREF="starting.html#:oldfiles">:oldfiles</A>| for &quot;<A HREF="#:browse">:browse</A> oldfiles&quot;.
 
-The <A HREF="syntax\.html#syntax">语法</A> is best shown via some examples:
+The <A HREF="syntax.html#syntax">语法</A> is best shown via some examples:
 <B>	:browse e $vim/foo</B>
  		Open the browser in the $vim/foo directory, and edit the
 		file chosen.
@@ -1406,7 +1406,7 @@ command:
 
 You can override the <A HREF="change.html#filter">filter</A> setting on a per-buffer basis by setting the
 b:browsefilter variable.  You would most likely set b:browsefilter in a
-<A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>, so that the browse dialog would contain entries related to
+<A HREF="filetype.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>, so that the browse dialog would contain entries related to
 the type of file you are currently editing.  Disadvantage: This makes <A HREF="motion.html#it">它</A>
 difficult to start editing a file of a different type.  To overcome this, you
 may want to add &quot;All Files\t*.*\n&quot; <A HREF="motion.html#as">as</A> the final <A HREF="change.html#filter">filter</A>, so that the user can
@@ -1548,7 +1548,7 @@ filename before the &quot;<A HREF="#:cd">:cd</A>&quot;.
 
 Although Vim was made to edit text files, <A HREF="motion.html#it">它</A> is possible to edit binary
 files.  The |<A HREF="starting.html#-b">-b</A>| Vim argument (b for binary) makes Vim <A HREF="diff.html#do">do</A> file I/O in binary
-mode, and sets some <A HREF="options\.html#options">选项</A> for editing binary files ('binary' on, <A HREF="options.html#'textwidth'">'textwidth'</A>
+mode, and sets some <A HREF="options.html#options">选项</A> for editing binary files ('binary' on, <A HREF="options.html#'textwidth'">'textwidth'</A>
 to 0, <A HREF="options.html#'modeline'">'modeline'</A> off, <A HREF="options.html#'expandtab'">'expandtab'</A> off).  Setting the <A HREF="options.html#'binary'">'binary'</A> option has the
 same effect.  Don't forget to <A HREF="diff.html#do">do</A> this before reading the file.
 
@@ -1650,7 +1650,7 @@ If you don't get warned often enough you can use the following command.
 			Once a file has been checked the <A HREF="#timestamp">timestamp</A> is reset,
 			you will not be warned again.
 			<A HREF="autocmd\.html#Syntax">语法</A>高亮, marks, <A HREF="diff.html#diff">diff</A> status,
-			<A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'binary'">'binary'</A> <A HREF="options\.html#options">选项</A>
+			<A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'binary'">'binary'</A> <A HREF="options.html#options">选项</A>
 			are not changed.  见 |<A HREF="eval.html#v:fcs_choice">v:fcs_choice</A>| to <A HREF="#reload">reload</A> these
 			too (for example, if a code <A HREF="change.html#formatting">formatting</A> tools has
 			changed the file).
@@ -1668,7 +1668,7 @@ contains this buffer, the reloading will happen in the <A HREF="repeat.html#cont
 Otherwise a special<A HREF="windows.html#window">窗口</A>is used, so that most autocommands will work.  You
 can't close this<A HREF="windows.html#window">窗口</A>.  A few other restrictions apply.  Best is to make
 sure nothing happens outside of the current buffer.  E.g., setting
-window-local <A HREF="options\.html#options">选项</A> may end up in the wrong<A HREF="windows.html#window">窗口</A>.  Splitting the<A HREF="windows.html#window">窗口</A>,
+window-local <A HREF="options.html#options">选项</A> may end up in the wrong<A HREF="windows.html#window">窗口</A>.  Splitting the<A HREF="windows.html#window">窗口</A>,
 doing something there and closing <A HREF="motion.html#it">它</A> should be OK (if there are no side
 effects from other autocommands).  Closing unrelated <A HREF="windows\.html#windows">窗口</A> and <A HREF="windows.html#buffers">buffers</A> will
 get you into trouble.
@@ -1708,7 +1708,7 @@ problem goes away the next day.
 11. File Searching					*<A NAME="file-searching"></A><B>file-searching</B>*
 
 The file searching is currently used for the <A HREF="options.html#'path'">'path'</A>, <A HREF="options.html#'cdpath'">'cdpath'</A> and <A HREF="options.html#'tags'">'tags'</A>
-<A HREF="options\.html#options">选项</A>, for |<A HREF="builtin.html#finddir()">finddir()</A>| and |<A HREF="builtin.html#findfile()">findfile()</A>|.  Other commands use |<A HREF="#wildcards">wildcards</A>|
+<A HREF="options.html#options">选项</A>, for |<A HREF="builtin.html#finddir()">finddir()</A>| and |<A HREF="builtin.html#findfile()">findfile()</A>|.  Other commands use |<A HREF="#wildcards">wildcards</A>|
 which is slightly different.
 
 There are three different types of searching:
@@ -1804,7 +1804,7 @@ There are three different types of searching:
    currently work with <A HREF="options.html#'path'">'path'</A> items that contain a URL or use the double <A HREF="pattern.html#star">star</A>
    with depth limiter (/usr/**2) or upward search (;) notations.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

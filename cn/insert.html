@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: insert</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -197,7 +197,7 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 		the second character, &#39;&#34;'' will be displayed to indicate that
 		you are expected to enter the name of a <A HREF="intro.html#register">寄存器</A>.
 		The text is inserted <A HREF="motion.html#as">as</A> if you typed <A HREF="motion.html#it">它</A>, but mappings and
-		<A HREF="map.html#abbreviations">abbreviations</A> are not used.  If you have <A HREF="options\.html#options">选项</A> like
+		<A HREF="map.html#abbreviations">abbreviations</A> are not used.  If you have <A HREF="options.html#options">选项</A> like
 		<A HREF="options.html#'textwidth'">'textwidth'</A>, <A HREF="options.html#'formatoptions'">'formatoptions'</A>, or <A HREF="options.html#'autoindent'">'autoindent'</A> set, this will
 		influence what will be inserted.  This is different from what
 		happens with the &quot;<A HREF="change.html#p">p</A>&quot;命令 and pasting with the mouse.
@@ -606,7 +606,7 @@ When <A HREF="#inserting">inserting</A> the same text in front of the column in 
 
 ==============================================================================
 
-3. <A HREF="options.html#'textwidth'">'textwidth'</A> and <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> <A HREF="options\.html#options">选项</A>			*<A NAME="ins-textwidth"></A><B>ins-textwidth</B>*
+3. <A HREF="options.html#'textwidth'">'textwidth'</A> and <A HREF="options.html#'wrapmargin'">'wrapmargin'</A> <A HREF="options.html#options">选项</A>			*<A NAME="ins-textwidth"></A><B>ins-textwidth</B>*
 
 The <A HREF="options.html#'textwidth'">'textwidth'</A> option can be used to automatically break a line before <A HREF="motion.html#it">它</A>
 gets too long.  Set the <A HREF="options.html#'textwidth'">'textwidth'</A> option to the desired maximum line
@@ -654,7 +654,7 @@ mode: hit &quot;<A HREF="visual.html#v">v</A>&quot;, 使用<A HREF="gui\.html#GU
 
 ==============================================================================
 
-4. <A HREF="options.html#'expandtab'">'expandtab'</A>, <A HREF="options.html#'smarttab'">'smarttab'</A> and <A HREF="options.html#'softtabstop'">'softtabstop'</A> <A HREF="options\.html#options">选项</A>	*<A NAME="ins-expandtab"></A><B>ins-expandtab</B>*
+4. <A HREF="options.html#'expandtab'">'expandtab'</A>, <A HREF="options.html#'smarttab'">'smarttab'</A> and <A HREF="options.html#'softtabstop'">'softtabstop'</A> <A HREF="options.html#options">选项</A>	*<A NAME="ins-expandtab"></A><B>ins-expandtab</B>*
 
 If the <A HREF="options.html#'expandtab'">'expandtab'</A> option is on, spaces will be used to fill the amount of
 <A HREF="pattern.html#whitespace">whitespace</A> of the <A HREF="intro.html#tab">tab</A>.  If you want to enter a real <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, type <A HREF="visual.html#CTRL-V">CTRL-V</A> first
@@ -1556,7 +1556,7 @@ A compiled .exe for MS-Windows can be found at:
 If you want to complete system <A HREF="eval.html#functions">functions</A> you can <A HREF="diff.html#do">do</A> something like this.  Use
 <A HREF="tagsrch.html#ctags">ctags</A> to generate a <A HREF="tagsrch.html#tags">标签</A> file for all the system header files:
 <B>	% ctags -R -f ~/.config/nvim/systags /usr/include /usr/local/include</B>
-In your <A HREF="starting\.html#vimrc">vimrc</A>文件 add this <A HREF="tagsrch.html#tags">标签</A> file to the <A HREF="options.html#'tags'">'tags'</A> option:
+In your <A HREF="starting.html#vimrc">vimrc</A>文件 add this <A HREF="tagsrch.html#tags">标签</A> file to the <A HREF="options.html#'tags'">'tags'</A> option:
 <B>	set tags+=~/.config/nvim/systags</B>
 
 When using <A HREF="change.html#CTRL-X">CTRL-X</A> <A HREF="motion.html#CTRL-O">CTRL-O</A> after a name without any &quot;<A HREF="repeat.html#.">.</A>&quot; or &quot;<A HREF="eval.html#-&gt;">-&gt;</A>&quot; <A HREF="motion.html#it">它</A> is completed
@@ -1616,7 +1616,7 @@ run |<A HREF="quickfix.html#:make">:make</A>| command to detect <A HREF="change.
 
 HTML flavor						*<A NAME="html-flavor"></A><B>html-flavor</B>*
 
-The default HTML completion depends on the <A HREF="filetype\.html#filetype">文件类型</A>.  For HTML files <A HREF="motion.html#it">它</A> is
+The default HTML completion depends on the <A HREF="filetype.html#filetype">文件类型</A>.  For HTML files <A HREF="motion.html#it">它</A> is
 HTML 4.01 Transitional ('filetype' is &quot;html&quot;), for XHTML <A HREF="motion.html#it">它</A> is XHTML 1.0
 Strict ('filetype' is &quot;xhtml&quot;).
 
@@ -1757,15 +1757,15 @@ Notes:
 
 SYNTAX							*<A NAME="ft-syntax-omni"></A><B>ft-syntax-omni</B>*
 
-Vim has the ability to color <A HREF="syntax\.html#syntax">语法</A> highlight nearly 500 languages.  Part of
+Vim has the ability to color <A HREF="syntax.html#syntax">语法</A> highlight nearly 500 languages.  Part of
 this highlighting includes knowing what keywords are part of a language.  Many
-<A HREF="filetype\.html#filetypes">文件类型</A> already have custom completion scripts written for them, the
-syntaxcomplete <A HREF="usr_05.html#plugin">plugin</A> provides basic completion for all other <A HREF="filetype\.html#filetypes">文件类型</A>.  It
+<A HREF="filetype.html#filetypes">文件类型</A> already have custom completion scripts written for them, the
+syntaxcomplete <A HREF="usr_05.html#plugin">plugin</A> provides basic completion for all other <A HREF="filetype.html#filetypes">文件类型</A>.  It
 does this by populating the omni completion <A HREF="eval.html#list">列表</A> with the text Vim already
-knows how to color highlight.  It can be used for any <A HREF="filetype\.html#filetype">文件类型</A> and provides a
+knows how to color highlight.  It can be used for any <A HREF="filetype.html#filetype">文件类型</A> and provides a
 minimal language-sensitive completion.
 
-To enable <A HREF="syntax\.html#syntax">语法</A> code completion you can run:
+To enable <A HREF="syntax.html#syntax">语法</A> code completion you can run:
 <B>    setlocal omnifunc=syntaxcomplete#Complete</B>
 
 You can automate this by placing the following in your |<A HREF="init.html">init.vim</A>| (after any
@@ -1778,29 +1778,29 @@ You can automate this by placing the following in your |<A HREF="init.html">init
 <B>    endif</B>
 
 The above will set completion to this <A HREF="usr_41.html#script">script</A> only if a specific <A HREF="usr_05.html#plugin">plugin</A> does
-not already exist for that <A HREF="filetype\.html#filetype">文件类型</A>.
+not already exist for that <A HREF="filetype.html#filetype">文件类型</A>.
 
-Each <A HREF="filetype\.html#filetype">文件类型</A> can have a wide range of <A HREF="syntax\.html#syntax">语法</A> items.  The <A HREF="usr_05.html#plugin">plugin</A> allows you to
-customize which <A HREF="syntax\.html#syntax">语法</A> groups to include or exclude from the <A HREF="eval.html#list">列表</A>.  Let's have
-a look at the PHP <A HREF="filetype\.html#filetype">文件类型</A> to see how this works.
+Each <A HREF="filetype.html#filetype">文件类型</A> can have a wide range of <A HREF="syntax.html#syntax">语法</A> items.  The <A HREF="usr_05.html#plugin">plugin</A> allows you to
+customize which <A HREF="syntax.html#syntax">语法</A> groups to include or exclude from the <A HREF="eval.html#list">列表</A>.  Let's have
+a look at the PHP <A HREF="filetype.html#filetype">文件类型</A> to see how this works.
 
 If you edit a file called, index.php, run the following command:
 <B>    syntax list</B>
 
-The first thing you will notice is that there are many different <A HREF="syntax\.html#syntax">语法</A> groups.
+The first thing you will notice is that there are many different <A HREF="syntax.html#syntax">语法</A> groups.
 The PHP language can include elements from different languages like HTML,
-JavaScript and many more.  The <A HREF="syntax\.html#syntax">语法</A> <A HREF="usr_05.html#plugin">plugin</A> will only include <A HREF="syntax\.html#syntax">语法</A> groups
-that begin with the <A HREF="filetype\.html#filetype">文件类型</A>, &quot;php&quot;, in this <A HREF="change.html#case">case</A>.例如 these <A HREF="syntax\.html#syntax">语法</A>
+JavaScript and many more.  The <A HREF="syntax.html#syntax">语法</A> <A HREF="usr_05.html#plugin">plugin</A> will only include <A HREF="syntax.html#syntax">语法</A> groups
+that begin with the <A HREF="filetype.html#filetype">文件类型</A>, &quot;php&quot;, in this <A HREF="change.html#case">case</A>.例如 these <A HREF="syntax.html#syntax">语法</A>
 groups are included by default with the PHP: phpEnvVar, phpIntVar,
 phpFunctions.
 
-If you wish non-filetype <A HREF="syntax\.html#syntax">语法</A> items to also be included, you can use a
-regular <A HREF="eval.html#expression">expression</A> <A HREF="syntax\.html#syntax">语法</A> (added in version 13.0 of
+If you wish non-filetype <A HREF="syntax.html#syntax">语法</A> items to also be included, you can use a
+regular <A HREF="eval.html#expression">expression</A> <A HREF="syntax.html#syntax">语法</A> (added in version 13.0 of
 autoload/syntaxcomplete.vim) to add items.  Looking at the output from
 &quot;<A HREF="syntax.html#:syntax">:syntax</A> list&quot; while editing a PHP file I can see some of these entries:
 <B>    htmlArg,htmlTag,htmlTagName,javaScriptStatement,javaScriptGlobalObjects</B>
 
-To pick up any JavaScript and HTML keyword <A HREF="syntax\.html#syntax">语法</A> groups while editing a PHP
+To pick up any JavaScript and HTML keyword <A HREF="syntax.html#syntax">语法</A> groups while editing a PHP
 file, you can use 3 different regexs, one for each language.  Or you can
 simply restrict the include groups to a particular value, without using
 a regex <A HREF="options\.html#options">字符串</A>:
@@ -1810,38 +1810,38 @@ a regex <A HREF="options\.html#options">字符串</A>:
 The basic form of this variable is:
 <B>    let g:omni_syntax_group_include_{filetype} = 'regex,comma,separated'</B>
 
-The PHP language has an enormous number of items which <A HREF="motion.html#it">它</A> knows how to <A HREF="syntax\.html#syntax">语法</A>
+The PHP language has an enormous number of items which <A HREF="motion.html#it">它</A> knows how to <A HREF="syntax.html#syntax">语法</A>
 highlight.  These items will be available within the omni completion <A HREF="eval.html#list">列表</A>.
 
 Some people may find this <A HREF="eval.html#list">列表</A> unwieldy or are only interested in certain
 items.  There are two ways to prune this <A HREF="eval.html#list">列表</A> (if necessary).  If you find
-certain <A HREF="syntax\.html#syntax">语法</A> groups you <A HREF="diff.html#do">do</A> not wish displayed you can use two different
-methods to identify these groups.  The first specifically lists the <A HREF="syntax\.html#syntax">语法</A>
+certain <A HREF="syntax.html#syntax">语法</A> groups you <A HREF="diff.html#do">do</A> not wish displayed you can use two different
+methods to identify these groups.  The first specifically lists the <A HREF="syntax.html#syntax">语法</A>
 groups by name.  The second uses a regular <A HREF="eval.html#expression">expression</A> to identify both
-<A HREF="syntax\.html#syntax">语法</A> groups.  Simply add one the following to your <A HREF="starting.html#vimrc">vimrc</A>:
+<A HREF="syntax.html#syntax">语法</A> groups.  Simply add one the following to your <A HREF="starting.html#vimrc">vimrc</A>:
 <B>    let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'</B>
 <B>    let g:omni_syntax_group_exclude_php = 'php\w*Constant'</B>
 
-Add <A HREF="motion.html#as">as</A> many <A HREF="syntax\.html#syntax">语法</A> groups to this <A HREF="eval.html#list">列表</A> by comma separating them.  The basic
+Add <A HREF="motion.html#as">as</A> many <A HREF="syntax.html#syntax">语法</A> groups to this <A HREF="eval.html#list">列表</A> by comma separating them.  The basic
 form of this variable is:
 <B>    let g:omni_syntax_group_exclude_{filetype} = 'regex,comma,separated'</B>
 
 You can create <A HREF="motion.html#as">as</A> many of these <A HREF="eval.html#variables">variables</A> <A HREF="motion.html#as">as</A> you need, varying only the
-<A HREF="filetype\.html#filetype">文件类型</A> at the end of the variable name.
+<A HREF="filetype.html#filetype">文件类型</A> at the end of the variable name.
 
 The <A HREF="usr_05.html#plugin">plugin</A> uses the isKeyword option to determine where <A HREF="motion.html#word">单词</A> boundaries are
-for the <A HREF="syntax\.html#syntax">语法</A> items.例如, in the Scheme language completion should
-include the &quot;<A HREF="motion.html#-">-</A>&quot;, call-with-output-file.  Depending on your <A HREF="filetype\.html#filetype">文件类型</A>, this may
+for the <A HREF="syntax.html#syntax">语法</A> items.例如, in the Scheme language completion should
+include the &quot;<A HREF="motion.html#-">-</A>&quot;, call-with-output-file.  Depending on your <A HREF="filetype.html#filetype">文件类型</A>, this may
 not provide the words you are expecting.  Setting the
-g:omni_syntax_use_iskeyword option to 0 will force the <A HREF="syntax\.html#syntax">语法</A> <A HREF="usr_05.html#plugin">plugin</A> to break
+g:omni_syntax_use_iskeyword option to 0 will force the <A HREF="syntax.html#syntax">语法</A> <A HREF="usr_05.html#plugin">plugin</A> to break
 on <A HREF="motion.html#word">单词</A> characters.   This can be controlled adding the following to your
 <A HREF="starting.html#vimrc">vimrc</A>:
 <B>    let g:omni_syntax_use_iskeyword = 0</B>
 
 For <A HREF="usr_05.html#plugin">plugin</A> developers, the <A HREF="usr_05.html#plugin">plugin</A> exposes a public function OmniSyntaxList.
-This function can be used to request a <A HREF="eval.html#list">列表</A> of <A HREF="syntax\.html#syntax">语法</A> items.  When editing a
+This function can be used to request a <A HREF="eval.html#list">列表</A> of <A HREF="syntax.html#syntax">语法</A> items.  When editing a
 SQL file (:e syntax.sql) you can use the &quot;<A HREF="syntax.html#:syntax">:syntax</A> list&quot; command to see the
-various groups and <A HREF="syntax\.html#syntax">语法</A> items.例如:
+various groups and <A HREF="syntax.html#syntax">语法</A> items.例如:
 <B>    syntax list</B>
 
 Yields data similar to this:
@@ -1854,15 +1854,15 @@ Yields data similar to this:
 <B><FONT color="#3A6F2B">                       varbinary binary smallmoney </FONT></B>
 <B><FONT color="#3A6F2B">                       image float integer timestamp real decimal </FONT></B>
 
-There are two <A HREF="syntax\.html#syntax">语法</A> groups listed here: sqlOperator and sqlType.  To retrieve
-a <A HREF="eval.html#list">列表</A> of <A HREF="syntax\.html#syntax">语法</A> items you can call OmniSyntaxList a number of different
-ways.  To retrieve all <A HREF="syntax\.html#syntax">语法</A> items regardless of <A HREF="syntax\.html#syntax">语法</A> group: 
+There are two <A HREF="syntax.html#syntax">语法</A> groups listed here: sqlOperator and sqlType.  To retrieve
+a <A HREF="eval.html#list">列表</A> of <A HREF="syntax.html#syntax">语法</A> items you can call OmniSyntaxList a number of different
+ways.  To retrieve all <A HREF="syntax.html#syntax">语法</A> items regardless of <A HREF="syntax.html#syntax">语法</A> group: 
 <B>    echo OmniSyntaxList( [] )</B>
 
-To retrieve only the <A HREF="syntax\.html#syntax">语法</A> items for the sqlOperator <A HREF="syntax\.html#syntax">语法</A> group:
+To retrieve only the <A HREF="syntax.html#syntax">语法</A> items for the sqlOperator <A HREF="syntax.html#syntax">语法</A> group:
 <B>    echo OmniSyntaxList( ['sqlOperator'] )</B>
 
-To retrieve all <A HREF="syntax\.html#syntax">语法</A> items for both the sqlOperator and sqlType groups:
+To retrieve all <A HREF="syntax.html#syntax">语法</A> items for both the sqlOperator and sqlType groups:
 <B>    echo OmniSyntaxList( ['sqlOperator', 'sqlType'] )</B>
 
 A regular <A HREF="eval.html#expression">expression</A> can also be used:
@@ -1882,7 +1882,7 @@ with data pulled directly from within a database.  For detailed instructions
 and a tutorial 见 |<A HREF="ft_sql.html#omni-sql-completion">omni-sql-completion</A>|.
 
 The SQL completion <A HREF="usr_05.html#plugin">plugin</A> can be used in conjunction with other completion
-plugins.例如, the PHP <A HREF="filetype\.html#filetype">文件类型</A> has its own completion <A HREF="usr_05.html#plugin">plugin</A>.
+plugins.例如, the PHP <A HREF="filetype.html#filetype">文件类型</A> has its own completion <A HREF="usr_05.html#plugin">plugin</A>.
 Since PHP is often used to generate dynamic website by accessing a database,
 the SQL completion <A HREF="usr_05.html#plugin">plugin</A> can also be enabled.  This allows you to complete
 PHP code and SQL code at the same time.
@@ -2225,7 +2225,7 @@ Of the <A HREF="editing.html#[++opt]">[++opt]</A> arguments one is specifically 
 This is useful when the &quot;<A HREF="#:read">:read</A>&quot;命令 is actually used to read a file into
 the buffer <A HREF="motion.html#as">as</A> if editing that file.  Use this command in an empty buffer:
 <B>	:read ++edit filename</B>
-The effect is that the <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'bomb'">'bomb'</A>, etc. <A HREF="options\.html#options">选项</A> are
+The effect is that the <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'bomb'">'bomb'</A>, etc. <A HREF="options.html#options">选项</A> are
 set to what has been detected for &quot;filename&quot;.  Note that a single empty line
 remains, you may want to delete <A HREF="motion.html#it">它</A>.
 
@@ -2287,7 +2287,7 @@ file.  In the table is an explanation for some of the items.  The others are
 	[READ ERRORS]			not all of the file could be read
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

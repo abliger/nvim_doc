@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: syntax</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -186,7 +186,7 @@ Examples:
 	<A HREF="#c.vim">c.vim</A>		<A HREF="#perl.vim">perl.vim</A>	<A HREF="#java.vim">java.vim</A>	<A HREF="#html.vim">html.vim</A>
 	<A HREF="#cpp.vim">cpp.vim</A>		<A HREF="#sh.vim">sh.vim</A>		<A HREF="#csh.vim">csh.vim</A>
 
-The <A HREF="#syntax">syntax</A> file can contain any <A HREF="intro.html#Ex">Ex</A> commands, just like a <A HREF="starting\.html#vimrc">vimrc</A>文件.  But
+The <A HREF="#syntax">syntax</A> file can contain any <A HREF="intro.html#Ex">Ex</A> commands, just like a <A HREF="starting.html#vimrc">vimrc</A>文件.  But
 the idea is that only commands for a specific language are included.  When a
 language is a superset of another language, <A HREF="motion.html#it">它</A> may include the other one,
 for example, the <A HREF="#cpp.vim">cpp.vim</A> file could include the <A HREF="#c.vim">c.vim</A> file:
@@ -248,7 +248,7 @@ add a few items or change the highlighting, follow these steps:
 That's <A HREF="motion.html#it">它</A>.  The next time you edit a C file the Comment color will be
 different.  You don't even have to restart Vim.
 
-If you have multiple files, you can use the <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="motion.html#as">as</A> the directory name.
+If you have multiple files, you can use the <A HREF="filetype.html#filetype">文件类型</A> <A HREF="motion.html#as">as</A> the directory name.
 All the &quot;*.vim&quot; files in this directory will be used, for example:
 	~/.config/nvim/after/syntax/c/one.vim
 	~/.config/nvim/after/syntax/c/two.vim
@@ -452,7 +452,7 @@ Source the <A HREF="usr_41.html#script">script</A> to convert the current file:
 <B>	:runtime! syntax/2html.vim</B>
  
 Many <A HREF="eval.html#variables">variables</A> affect the output of <A HREF="#2html.vim">2html.vim</A>; see below. Any of the on/off
-<A HREF="options\.html#options">选项</A> listed below can be enabled or disabled by setting them explicitly to
+<A HREF="options.html#options">选项</A> listed below can be enabled or disabled by setting them explicitly to
 the desired value, or restored to their default by removing the variable using
 |<A HREF="eval.html#:unlet">:unlet</A>|.
 
@@ -804,7 +804,7 @@ set to match the chosen document encoding.
 Automatic detection works for the encodings mentioned specifically by name in
 |<A HREF="mbyte.html#encoding-names">encoding-names</A>|, but TOhtml will only automatically use those encodings with
 wide browser support. However, you can override this to support specific
-encodings that may not be automatically detected by default (see <A HREF="options\.html#options">选项</A>
+encodings that may not be automatically detected by default (see <A HREF="options.html#options">选项</A>
  below. See	<A HREF="http://www.iana.org/assignments/character-sets">http://www.iana.org/assignments/character-sets</A> for the IANA names.
 
 Note: By default all <A HREF="mbyte.html#Unicode">Unicode</A> encodings are converted to <A HREF="mbyte.html#UTF-8">UTF-8</A> with no BOM in
@@ -900,7 +900,7 @@ settings, depending on which <A HREF="#syntax">syntax</A> is active.	Example:
 
 ABEL						*<A NAME="abel.vim"></A><B>abel.vim</B>* *<A NAME="ft-abel-syntax"></A><B>ft-abel-syntax</B>*
 
-ABEL highlighting provides some user-defined <A HREF="options\.html#options">选项</A>.  To enable them, assign
+ABEL highlighting provides some user-defined <A HREF="options.html#options">选项</A>.  To enable them, assign
 any value to the respective variable.  Example:
 <B>	:let abel_obsolete_ok=1</B>
 To disable them use &quot;<A HREF="eval.html#:unlet">:unlet</A>&quot;.  Example:
@@ -1048,7 +1048,7 @@ SELECTEMPTY, <A HREF="eval.html#...">...</A> The indentation preceding the begin
 match (spaces are not considered equal to a <A HREF="intro.html#tab">tab</A>).
 <B>	let baan_fold_sql=1</B>
 Note: Block <A HREF="fold.html#folding">folding</A> can result in many small <A HREF="fold.html#folds">folds</A>. It is suggested to |<A HREF="options.html#:set">:set</A>|
-the <A HREF="options\.html#options">选项</A> <A HREF="options.html#'foldminlines'">'foldminlines'</A> and <A HREF="options.html#'foldnestmax'">'foldnestmax'</A> in |<A HREF="init.html">init.vim</A>| or use |<A HREF="options.html#:setlocal">:setlocal</A>|
+the <A HREF="options.html#options">选项</A> <A HREF="options.html#'foldminlines'">'foldminlines'</A> and <A HREF="options.html#'foldnestmax'">'foldnestmax'</A> in |<A HREF="init.html">init.vim</A>| or use |<A HREF="options.html#:setlocal">:setlocal</A>|
 in .../after/syntax/baan.vim (见 |<A HREF="options.html#after-directory">after-directory</A>|). Eg:
 <B>	set foldminlines=5</B>
 <B>	set foldnestmax=6</B>
@@ -1059,7 +1059,7 @@ BASIC			*<A NAME="basic.vim"></A><B>basic.vim</B>* *<A NAME="vb.vim"></A><B>vb.v
 
 Both <A HREF="visual.html#Visual">Visual</A> Basic and &quot;normal&quot; BASIC use the extension &quot;.bas&quot;.	To detect
 which one should be used, Vim checks for the <A HREF="options\.html#options">字符串</A> &quot;VB_Name&quot; in the first
-five lines of the file.  If <A HREF="motion.html#it">它</A> is not found, <A HREF="filetype\.html#filetype">文件类型</A> will be &quot;basic&quot;,
+five lines of the file.  If <A HREF="motion.html#it">它</A> is not found, <A HREF="filetype.html#filetype">文件类型</A> will be &quot;basic&quot;,
 otherwise &quot;vb&quot;.  Files with the &quot;.frm&quot; extension will always be seen <A HREF="motion.html#as">as</A> <A HREF="visual.html#Visual">Visual</A>
 Basic.
 
@@ -1309,9 +1309,9 @@ For using tcsh:
 <B>	:let g:filetype_csh = "tcsh"</B>
 
 Any <A HREF="usr_41.html#script">script</A> with a tcsh extension or a standard tcsh filename (.tcshrc,
-tcsh.tcshrc, tcsh.login) will have <A HREF="filetype\.html#filetype">文件类型</A> tcsh.  All other tcsh/csh scripts
+tcsh.tcshrc, tcsh.login) will have <A HREF="filetype.html#filetype">文件类型</A> tcsh.  All other tcsh/csh scripts
 will be classified <A HREF="motion.html#as">as</A> tcsh, UNLESS the &quot;filetype_csh&quot; variable exists.  If the
-&quot;filetype_csh&quot; variable exists, the <A HREF="filetype\.html#filetype">文件类型</A> will be set to the value of the
+&quot;filetype_csh&quot; variable exists, the <A HREF="filetype.html#filetype">文件类型</A> will be set to the value of the
 variable.
 
 
@@ -1322,7 +1322,7 @@ Cynlib files are C++ files that use the Cynlib class library to enable
 hardware modelling and simulation using C++.  Typically Cynlib files have a .cc
 or a .cpp extension, which makes <A HREF="motion.html#it">它</A> very difficult to distinguish them from a
 normal C++ file.  Thus, to enable Cynlib highlighting for .cc files, add this
-line to your <A HREF="starting\.html#vimrc">vimrc</A>文件:
+line to your <A HREF="starting.html#vimrc">vimrc</A>文件:
 
 <B>	:let cynlib_cyntax_for_cc=1</B>
 
@@ -1419,7 +1419,7 @@ You can set the type manually:
 or:
 <B>	:let docbk_type = "xml"</B>
 You need to <A HREF="diff.html#do">do</A> this before loading the <A HREF="#syntax">syntax</A> file, which is complicated.
-Simpler is setting the <A HREF="filetype\.html#filetype">文件类型</A> to &quot;docbkxml&quot; or &quot;docbksgml&quot;:
+Simpler is setting the <A HREF="filetype.html#filetype">文件类型</A> to &quot;docbkxml&quot; or &quot;docbksgml&quot;:
 <B>	:set filetype=docbksgml</B>
 or:
 <B>	:set filetype=docbkxml</B>
@@ -1472,7 +1472,7 @@ adding the following to your <A HREF="starting.html#vimrc">vimrc</A>.
 <B>	:let g:load_doxygen_syntax=1</B>
 
 There are a couple of <A HREF="eval.html#variables">variables</A> that have an effect on <A HREF="#syntax">syntax</A> highlighting,
-and are to <A HREF="diff.html#do">do</A> with non-standard highlighting <A HREF="options\.html#options">选项</A>.
+and are to <A HREF="diff.html#do">do</A> with non-standard highlighting <A HREF="options.html#options">选项</A>.
 
 <B><FONT color="#3A6F2B">Variable			Default	Effect </FONT></B>
 g:doxygen_enhanced_color
@@ -1593,10 +1593,10 @@ add the following line to your <A HREF="starting.html#startup">startup</A> file:
 
 <B>	:let g:filetype_euphoria = "euphoria4"</B>
 
-Elixir and Euphoria share the *.ex file extension.  If the <A HREF="filetype\.html#filetype">文件类型</A> is
+Elixir and Euphoria share the *.ex file extension.  If the <A HREF="filetype.html#filetype">文件类型</A> is
 specifically set <A HREF="motion.html#as">as</A> Euphoria with the g:filetype_euphoria variable, or the
 file is determined to be Euphoria based on keywords in the file然后the
-<A HREF="filetype\.html#filetype">文件类型</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype\.html#filetype">文件类型</A> will default to
+<A HREF="filetype.html#filetype">文件类型</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype.html#filetype">文件类型</A> will default to
 Elixir.
 
 
@@ -1626,10 +1626,10 @@ The following file extensions are auto-detected <A HREF="motion.html#as">as</A> 
 
 	*.ex, *.exs, *.eex, *.leex, *.lock
 
-Elixir and Euphoria share the *.ex file extension. If the <A HREF="filetype\.html#filetype">文件类型</A> is
+Elixir and Euphoria share the *.ex file extension. If the <A HREF="filetype.html#filetype">文件类型</A> is
 specifically set <A HREF="motion.html#as">as</A> Euphoria with the g:filetype_euphoria variable, or the
 file is determined to be Euphoria based on keywords in the file然后the
-<A HREF="filetype\.html#filetype">文件类型</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype\.html#filetype">文件类型</A> will default to
+<A HREF="filetype.html#filetype">文件类型</A> will be set <A HREF="motion.html#as">as</A> Euphoria. Otherwise, the <A HREF="filetype.html#filetype">文件类型</A> will default to
 Elixir.
 
 
@@ -1641,7 +1641,7 @@ NOTE: This site currently doesn't work, on Wikipedia is mentioned that
 <A HREF="develop.html#development">development</A> stopped in 2009.
 
 <A HREF="autocmd\.html#Syntax">语法</A>高亮 is available for the most common elements of FlexWiki
-<A HREF="#syntax">syntax</A>. The associated <A HREF="usr_41.html#ftplugin">ftplugin</A> <A HREF="usr_41.html#script">script</A> sets some buffer-local <A HREF="options\.html#options">选项</A> to make
+<A HREF="#syntax">syntax</A>. The associated <A HREF="usr_41.html#ftplugin">ftplugin</A> <A HREF="usr_41.html#script">script</A> sets some buffer-local <A HREF="options.html#options">选项</A> to make
 editing FlexWiki pages more convenient. FlexWiki considers a newline <A HREF="motion.html#as">as</A> the
 start of a new <A HREF="motion.html#paragraph">段落</A>, so the <A HREF="usr_41.html#ftplugin">ftplugin</A> sets 'tw'=0 (unlimited line length),
 <A HREF="options.html#'wrap'">'wrap'</A> (wrap long lines instead of using horizontal scrolling), <A HREF="options.html#'linebreak'">'linebreak'</A>
@@ -1679,7 +1679,7 @@ directives per default in the same <A HREF="#syntax">syntax</A> group.
 
 A predefined enhanced color mode for FORM is available to distinguish between
 header statements and statements in the body of a FORM program.  To activate
-this mode define the following variable in your <A HREF="starting\.html#vimrc">vimrc</A>文件
+this mode define the following variable in your <A HREF="starting.html#vimrc">vimrc</A>文件
 
 <B>	:let form_enhanced_color=1</B>
 
@@ -1689,7 +1689,7 @@ conditionals are LightBlue for better distinction.
 
 Both <A HREF="visual.html#Visual">Visual</A> Basic and FORM use the extension &quot;.frm&quot;.  To detect which one
 should be used, Vim checks for the <A HREF="options\.html#options">字符串</A> &quot;VB_Name&quot; in the first five lines of
-the file.  If <A HREF="motion.html#it">它</A> is found, <A HREF="filetype\.html#filetype">文件类型</A> will be &quot;vb&quot;, otherwise &quot;form&quot;.
+the file.  If <A HREF="motion.html#it">它</A> is found, <A HREF="filetype.html#filetype">文件类型</A> will be &quot;vb&quot;, otherwise &quot;form&quot;.
 
 If the automatic detection doesn't work for you or you only edit, for
 example, FORM files, use this in your <A HREF="starting.html#startup">startup</A> <A HREF="starting.html#vimrc">vimrc</A>:
@@ -1728,7 +1728,7 @@ in your <A HREF="starting.html#vimrc">vimrc</A> prior to the <A HREF="#:syntax">
 If the form of the source code depends, in a non-standard way, upon the file
 extension然后<A HREF="motion.html#it">它</A> is most convenient to set fortran_free_source in a <A HREF="usr_41.html#ftplugin">ftplugin</A>
 file.  For more information on ftplugin files, 见 |<A HREF="usr_41.html#ftplugin">ftplugin</A>|. Note that this
-will work only if the &quot;<A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command precedes the &quot;<A HREF="#syntax">syntax</A>
+will work only if the &quot;<A HREF="filetype.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command precedes the &quot;<A HREF="#syntax">syntax</A>
 on&quot; command in your .vimrc file.
 
 
@@ -1815,8 +1815,8 @@ contain the code
 <B>    else</B>
 <B>	unlet! b:fortran_dialect</B>
 <B>    endif</B>
-Note that this will work only if the &quot;<A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command
-precedes the &quot;<A HREF="#syntax">syntax</A> on&quot; command in your <A HREF="starting\.html#vimrc">vimrc</A>文件.
+Note that this will work only if the &quot;<A HREF="filetype.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A> indent on&quot; command
+precedes the &quot;<A HREF="#syntax">syntax</A> on&quot; command in your <A HREF="starting.html#vimrc">vimrc</A>文件.
 
 Finer <A HREF="intro.html#control">control</A> is necessary if the file extension does not uniquely identify
 the dialect.  You can override the default dialect, on a file-by-file basis,
@@ -1894,7 +1894,7 @@ GROFF						*<A NAME="groff.vim"></A><B>groff.vim</B>* *<A NAME="ft-groff-syntax"
 The groff <A HREF="#syntax">syntax</A> file is a wrapper for |<A HREF="nroff.html">nroff.vim</A>|, see the notes
 under that heading for examples of use and configuration.  The purpose
 of this wrapper is to set up groff <A HREF="#syntax">syntax</A> extensions by setting the
-<A HREF="filetype\.html#filetype">文件类型</A> from a |<A HREF="options.html#modeline">modeline</A>| or in a personal <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="intro.html#definitions">definitions</A> file
+<A HREF="filetype.html#filetype">文件类型</A> from a |<A HREF="options.html#modeline">modeline</A>| or in a personal <A HREF="filetype.html#filetype">文件类型</A> <A HREF="intro.html#definitions">definitions</A> file
 (见 |<A HREF="filetype.html">filetype.txt</A>|).
 
 
@@ -1989,7 +1989,7 @@ If you'd like to see an example <A HREF="intro.html#download">download</A> mysyn
 	<A HREF="http://www.fleiner.com/vim/download.html">http://www.fleiner.com/vim/download.html</A>
 
 You can also disable this rendering by adding the following line to your
-<A HREF="starting\.html#vimrc">vimrc</A>文件:
+<A HREF="starting.html#vimrc">vimrc</A>文件:
 <B>	:let html_no_rendering=1</B>
 
 HTML comments are rather special (see an HTML reference document for the
@@ -2030,7 +2030,7 @@ different color) you need to add the following line to your <A HREF="starting.ht
 
 Of course, the ctermfg can be a different color if you choose.
 
-Another issues that HTML/OS runs into is that there is no special <A HREF="filetype\.html#filetype">文件类型</A> to
+Another issues that HTML/OS runs into is that there is no special <A HREF="filetype.html#filetype">文件类型</A> to
 signify that <A HREF="motion.html#it">它</A> is a file with HTML/OS coding.	You can change this by opening
 a file and turning on HTML/OS <A HREF="#syntax">syntax</A> by doing the following:
 <B>  :set syntax=htmlos</B>
@@ -2043,9 +2043,9 @@ block of HTML/OS code can either be <A HREF="change.html#&lt;&lt;">&lt;&lt;</A> 
 IA64				*<A NAME="ia64.vim"></A><B>ia64.vim</B>* *<A NAME="intel-itanium"></A><B>intel-itanium</B>* *<A NAME="ft-ia64-syntax"></A><B>ft-ia64-syntax</B>*
 
 Highlighting for the Intel Itanium 64 assembly language.  见 |<A HREF="asm.html">asm.vim</A>| for
-how to recognize this <A HREF="filetype\.html#filetype">文件类型</A>.
+how to recognize this <A HREF="filetype.html#filetype">文件类型</A>.
 
-To have *.inc files be recognized <A HREF="motion.html#as">as</A> IA64, add this to your <A HREF="starting\.html#vimrc">vimrc</A>文件:
+To have *.inc files be recognized <A HREF="motion.html#as">as</A> IA64, add this to your <A HREF="starting.html#vimrc">vimrc</A>文件:
 <B>	:let g:filetype_inc = "ia64"</B>
 
 
@@ -2106,7 +2106,7 @@ idlsyntax_showerror_soft	Use softer colours by default for <A HREF="message.html
 
 JAVA						*<A NAME="java.vim"></A><B>java.vim</B>* *<A NAME="ft-java-syntax"></A><B>ft-java-syntax</B>*
 
-The <A HREF="#java.vim">java.vim</A> <A HREF="#syntax">syntax</A> highlighting file offers several <A HREF="options\.html#options">选项</A>:
+The <A HREF="#java.vim">java.vim</A> <A HREF="#syntax">syntax</A> highlighting file offers several <A HREF="options.html#options">选项</A>:
 
 In Java 1.0.2 <A HREF="motion.html#it">它</A> was never possible to have braces inside parens, so this was
 flagged <A HREF="motion.html#as">as</A> an error.  Since Java 1.1 this is possible (with anonymous
@@ -2135,7 +2135,7 @@ a <A HREF="intro.html#tab">tab</A>, 8 spaces or 2 spaces you may want to set
 However, if you follow the Java guidelines about how <A HREF="eval.html#functions">functions</A> and classes are
 supposed to be named (with respect to upper and lowercase), use
 <B>	:let java_highlight_functions="style"</B>
-If both <A HREF="options\.html#options">选项</A> <A HREF="diff.html#do">do</A> not work for you, but you would still want function
+If both <A HREF="options.html#options">选项</A> <A HREF="diff.html#do">do</A> not work for you, but you would still want function
 declarations to be highlighted create your own <A HREF="intro.html#definitions">definitions</A> by <A HREF="change.html#changing">changing</A> the
 <A HREF="intro.html#definitions">definitions</A> in <A HREF="#java.vim">java.vim</A> or by creating your own <A HREF="#java.vim">java.vim</A> which includes the
 original one and then adds the code to highlight <A HREF="eval.html#functions">functions</A>.
@@ -2171,7 +2171,7 @@ If you use the special Javadoc comment highlighting described above you
 can also turn on special highlighting for Javascript, visual basic
 scripts and embedded CSS (stylesheets).  This makes only sense if you
 actually have Javadoc comments that include either Javascript or embedded
-CSS.  The <A HREF="options\.html#options">选项</A> to use are
+CSS.  The <A HREF="options.html#options">选项</A> to use are
 <B>	:let java_javascript=1</B>
 <B>	:let java_css=1</B>
 <B>	:let java_vb=1</B>
@@ -2232,7 +2232,7 @@ To highlight <A HREF="deprecated.html#deprecated">deprecated</A> <A HREF="eval.h
 
 LISP						*<A NAME="lisp.vim"></A><B>lisp.vim</B>* *<A NAME="ft-lisp-syntax"></A><B>ft-lisp-syntax</B>*
 
-The lisp <A HREF="#syntax">syntax</A> highlighting provides two <A HREF="options\.html#options">选项</A>:
+The lisp <A HREF="#syntax">syntax</A> highlighting provides two <A HREF="options.html#options">选项</A>:
 
 <B>	g:lisp_instring : If it exists然后"(...)" strings are highlighted</B>
 <B>			  as if the contents of the string were lisp.</B>
@@ -2252,7 +2252,7 @@ highlighting used depends on the dark/bright setting  (见 |<A HREF="options.htm
 
 LITE						*<A NAME="lite.vim"></A><B>lite.vim</B>* *<A NAME="ft-lite-syntax"></A><B>ft-lite-syntax</B>*
 
-There are two <A HREF="options\.html#options">选项</A> for the lite <A HREF="#syntax">syntax</A> highlighting.
+There are two <A HREF="options.html#options">选项</A> for the lite <A HREF="#syntax">syntax</A> highlighting.
 
 If you like SQL <A HREF="#syntax">syntax</A> highlighting inside Strings, use this:
 
@@ -2270,7 +2270,7 @@ LPC						*<A NAME="lpc.vim"></A><B>lpc.vim</B>* *<A NAME="ft-lpc-syntax"></A><B>
 LPC stands for a simple, memory-efficient language: Lars Pensjö C.  The
 file name of LPC is usually *.c.  Recognizing these files <A HREF="motion.html#as">as</A> LPC would bother
 users <A HREF="editing.html#writing">写</A> only C programs.	If you want to use LPC <A HREF="#syntax">syntax</A> in Vim, you
-should set a variable in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
+should set a variable in your <A HREF="starting.html#vimrc">vimrc</A>文件:
 
 <B>	:let lpc_syntax_for_c = 1</B>
 
@@ -2353,13 +2353,13 @@ MAPLE						*<A NAME="maple.vim"></A><B>maple.vim</B>* *<A NAME="ft-maple-syntax"
 Maple <A HREF="visual.html#V">V</A>, by Waterloo Maple Inc, supports symbolic algebra.  The language
 supports many <A HREF="repeat.html#packages">packages</A> of <A HREF="eval.html#functions">functions</A> which are selectively loaded by the user.
 The standard set of packages' <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> supplied in Maple <A HREF="visual.html#V">V</A> release 4 may be
-highlighted at the user's discretion.  Users may place in their <A HREF="starting\.html#vimrc">vimrc</A>文件:
+highlighted at the user's discretion.  Users may place in their <A HREF="starting.html#vimrc">vimrc</A>文件:
 
 <B>	:let mvpkg_all= 1</B>
 
 to get all package <A HREF="eval.html#functions">functions</A> highlighted, or users may select any subset by
 choosing a variable/package from the table below and setting that variable to
-1, also in their <A HREF="starting\.html#vimrc">vimrc</A>文件 (prior to sourcing
+1, also in their <A HREF="starting.html#vimrc">vimrc</A>文件 (prior to sourcing
 $VIMRUNTIME/syntax/syntax.vim).
 
 	Table of Maple <A HREF="visual.html#V">V</A> Package Function Selectors
@@ -2432,7 +2432,7 @@ An example of adding sprintf() to the <A HREF="eval.html#list">列表</A> of kno
 
 MSQL						*<A NAME="msql.vim"></A><B>msql.vim</B>* *<A NAME="ft-msql-syntax"></A><B>ft-msql-syntax</B>*
 
-There are two <A HREF="options\.html#options">选项</A> for the msql <A HREF="#syntax">syntax</A> highlighting.
+There are two <A HREF="options.html#options">选项</A> for the msql <A HREF="#syntax">syntax</A> highlighting.
 
 If you like SQL <A HREF="#syntax">syntax</A> highlighting inside Strings, use this:
 
@@ -2635,7 +2635,7 @@ will be highlighted <A HREF="motion.html#as">as</A> Error.
 
 PERL						*<A NAME="perl.vim"></A><B>perl.vim</B>* *<A NAME="ft-perl-syntax"></A><B>ft-perl-syntax</B>*
 
-There are a number of possible <A HREF="options\.html#options">选项</A> to the <A HREF="if_perl.html#perl">perl</A> <A HREF="#syntax">syntax</A> highlighting.
+There are a number of possible <A HREF="options.html#options">选项</A> to the <A HREF="if_perl.html#perl">perl</A> <A HREF="#syntax">syntax</A> highlighting.
 
 Inline POD highlighting is now turned on by default.  If you don't wish
 to have the added complexity of highlighting POD embedded within Perl
@@ -2670,7 +2670,7 @@ perl_string_as_statement, <A HREF="motion.html#it">它</A> will be highlighted <
 
 (^ = perlString, <A HREF="change.html#S">S</A> = perlStatement, N = None at all)
 
-The syncing has 3 <A HREF="options\.html#options">选项</A>.  The first two switch off some triggering of
+The syncing has 3 <A HREF="options.html#options">选项</A>.  The first two switch off some triggering of
 synchronization and should only be needed in <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> fails to work properly.
 If while <A HREF="scroll.html#scrolling">scrolling</A> all of a sudden the whole screen changes color completely
 then you should try and switch off one of those.  Let me know if you can
@@ -2715,7 +2715,7 @@ PHP3 and PHP4		*<A NAME="php.vim"></A><B>php.vim</B>* *<A NAME="php3.vim"></A><B
 [Note: Previously this was called &quot;php3&quot;, but since <A HREF="motion.html#it">它</A> now also supports php4
 <A HREF="motion.html#it">它</A> has been renamed to &quot;php&quot;]
 
-There are the following <A HREF="options\.html#options">选项</A> for the php <A HREF="#syntax">syntax</A> highlighting.
+There are the following <A HREF="options.html#options">选项</A> for the php <A HREF="#syntax">syntax</A> highlighting.
 
 If you like SQL <A HREF="#syntax">syntax</A> highlighting inside Strings:
 
@@ -2782,7 +2782,7 @@ PPWIZARD					*<A NAME="ppwiz.vim"></A><B>ppwiz.vim</B>* *<A NAME="ft-ppwiz-synta
 
 PPWizard is a preprocessor for HTML and OS/2 INF files
 
-This <A HREF="#syntax">syntax</A> file has the <A HREF="options\.html#options">选项</A>:
+This <A HREF="#syntax">syntax</A> file has the <A HREF="options.html#options">选项</A>:
 
 - ppwiz_highlight_defs : Determines highlighting mode for PPWizard's
   <A HREF="intro.html#definitions">definitions</A>.  Possible values are
@@ -2803,7 +2803,7 @@ This <A HREF="#syntax">syntax</A> file has the <A HREF="options\.html#options">�
 
 PHTML						*<A NAME="phtml.vim"></A><B>phtml.vim</B>* *<A NAME="ft-phtml-syntax"></A><B>ft-phtml-syntax</B>*
 
-There are two <A HREF="options\.html#options">选项</A> for the phtml <A HREF="#syntax">syntax</A> highlighting.
+There are two <A HREF="options.html#options">选项</A> for the phtml <A HREF="#syntax">syntax</A> highlighting.
 
 If you like SQL <A HREF="#syntax">syntax</A> highlighting inside Strings, use this:
 
@@ -2818,7 +2818,7 @@ set &quot;phtml_minlines&quot; to the value you desire.  Example:
 
 POSTSCRIPT				*<A NAME="postscr.vim"></A><B>postscr.vim</B>* *<A NAME="ft-postscr-syntax"></A><B>ft-postscr-syntax</B>*
 
-There are several <A HREF="options\.html#options">选项</A> when <A HREF="motion.html#it">它</A> comes to highlighting PostScript.
+There are several <A HREF="options.html#options">选项</A> when <A HREF="motion.html#it">它</A> comes to highlighting PostScript.
 
 First which version of the PostScript language to highlight.  There are
 currently three defined language versions, or levels.  Level 1 is the original
@@ -2915,7 +2915,7 @@ Pascal.  Use this if you don't use assembly and Pascal:
 
 PYTHON						*<A NAME="python.vim"></A><B>python.vim</B>* *<A NAME="ft-python-syntax"></A><B>ft-python-syntax</B>*
 
-There are six <A HREF="options\.html#options">选项</A> to <A HREF="intro.html#control">control</A> <A HREF="if_pyth.html#Python">Python</A> <A HREF="#syntax">syntax</A> highlighting.
+There are six <A HREF="options.html#options">选项</A> to <A HREF="intro.html#control">control</A> <A HREF="if_pyth.html#Python">Python</A> <A HREF="#syntax">syntax</A> highlighting.
 
 For highlighted numbers:
 <B>	:let python_no_number_highlight = 1</B>
@@ -2939,7 +2939,7 @@ If you want all possible <A HREF="if_pyth.html#Python">Python</A> highlighting (
 preceding last option and unsetting all other ones):
 <B>	:let python_highlight_all = 1</B>
 
-Note: Only existence of these <A HREF="options\.html#options">选项</A> matter, not their value. You can replace
+Note: Only existence of these <A HREF="options.html#options">选项</A> matter, not their value. You can replace
       1 above with anything.
 
 
@@ -3014,7 +3014,7 @@ To highlight <A HREF="change.html#R">R</A> code in knitr chunk headers, add to y
 READLINE				*<A NAME="readline.vim"></A><B>readline.vim</B>* *<A NAME="ft-readline-syntax"></A><B>ft-readline-syntax</B>*
 
 The readline library is primarily used by the BASH shell, which adds quite a
-few commands and <A HREF="options\.html#options">选项</A> to the ones already available.  To highlight these
+few commands and <A HREF="options.html#options">选项</A> to the ones already available.  To highlight these
 items <A HREF="motion.html#as">as</A> well you can add the following to your |<A HREF="starting.html#vimrc">vimrc</A>| or just type <A HREF="motion.html#it">它</A> in the
 command line before loading a file with the readline <A HREF="#syntax">syntax</A>:
 <B>	let readline_has_bash = 1</B>
@@ -3117,7 +3117,7 @@ spaces respectively.
  
 This will set the value of <A HREF="options.html#'foldmethod'">'foldmethod'</A> to &quot;<A HREF="#syntax">syntax</A>&quot; locally to the current
 buffer or<A HREF="windows.html#window">窗口</A>, which will enable syntax-based <A HREF="fold.html#folding">folding</A> when editing <A HREF="if_ruby.html#Ruby">Ruby</A>
-<A HREF="filetype\.html#filetypes">文件类型</A>.
+<A HREF="filetype.html#filetypes">文件类型</A>.
 
 Default <A HREF="fold.html#folding">folding</A> is rather detailed, i.e., small <A HREF="#syntax">syntax</A> units like &quot;if&quot;, &quot;<A HREF="diff.html#do">do</A>&quot;,
 &quot;&#37;w[]&quot; may create corresponding fold levels.
@@ -3223,7 +3223,7 @@ highlighting on the tabs), define &quot;highlight_sedtabs&quot; by putting
 
 <B>	:let highlight_sedtabs = 1</B>
 
-in <A HREF="starting\.html#vimrc">vimrc</A>文件.  (This special highlighting only applies for tabs
+in <A HREF="starting.html#vimrc">vimrc</A>文件.  (This special highlighting only applies for tabs
 inside search patterns, replacement texts, addresses or text included
 by an Append/Change/Insert command.)  If you enable this option, <A HREF="motion.html#it">它</A> is
 also a good idea to set the <A HREF="intro.html#tab">tab</A> width to one character; by doing that,
@@ -3275,7 +3275,7 @@ are read during <A HREF="starting.html#initialization">initialization</A>)
 <B>   let sgml_my_rendering=1</B>
 
 You can also disable this rendering by adding the following line to your
-<A HREF="starting\.html#vimrc">vimrc</A>文件:
+<A HREF="starting.html#vimrc">vimrc</A>文件:
 <B>   let sgml_no_rendering=1</B>
 
 (Adapted from the html.vim help text by Claudio Fleiner <A HREF="mailto:claudio@fleiner.com">&lt;claudio@fleiner.com&gt;</A>) 
@@ -3391,7 +3391,7 @@ extended to other languages.
 SPEEDUP						*<A NAME="spup.vim"></A><B>spup.vim</B>* *<A NAME="ft-spup-syntax"></A><B>ft-spup-syntax</B>*
 (AspenTech plant simulator)
 
-The Speedup <A HREF="#syntax">syntax</A> file has some <A HREF="options\.html#options">选项</A>:
+The Speedup <A HREF="#syntax">syntax</A> file has some <A HREF="options.html#options">选项</A>:
 
 - strict_subsections : If this variable is defined, only keywords for
   sections and subsections will be highlighted <A HREF="motion.html#as">as</A> statements but not
@@ -3453,7 +3453,7 @@ with the following extensions are recognized <A HREF="motion.html#as">as</A> squ
 TCSH						*<A NAME="tcsh.vim"></A><B>tcsh.vim</B>* *<A NAME="ft-tcsh-syntax"></A><B>ft-tcsh-syntax</B>*
 
 This covers the shell named &quot;tcsh&quot;.  It is a superset of csh.  见 |<A HREF="csh.html">csh.vim</A>|
-for how the <A HREF="filetype\.html#filetype">文件类型</A> is detected.
+for how the <A HREF="filetype.html#filetype">文件类型</A> is detected.
 
 Tcsh does not allow \&quot; in strings unless the &quot;backslash_quote&quot; shell variable
 is set.  If you want VIM to assume that no <A HREF="intro.html#backslash">backslash</A> <A HREF="change.html#quote">quote</A> constructs exist 
@@ -3774,7 +3774,7 @@ improve screen updating rates (见 |<A HREF="#:syn-sync">:syn-sync</A>| for more
 <B>	g:vimsyn_maxlines : used to set synchronization maxlines</B>
  
 	(g:vim_minlines and g:vim_maxlines are <A HREF="deprecated.html#deprecated">deprecated</A> variants of
-	these two <A HREF="options\.html#options">选项</A>)
+	these two <A HREF="options.html#options">选项</A>)
 
 
 						*<A NAME="g:vimsyn_embed"></A><B>g:vimsyn_embed</B>*
@@ -4053,7 +4053,7 @@ DEFINING KEYWORDS					*<A NAME=":syn-keyword"></A><B>:syn-keyword</B>*
 <B>  :syntax keyword   Type   int long char</B>
  
 	The {options} can be given anywhere in the line.  They will apply to
-	all keywords given, also for <A HREF="options\.html#options">选项</A> that come after a keyword.
+	all keywords given, also for <A HREF="options.html#options">选项</A> that come after a keyword.
 	These examples <A HREF="diff.html#do">do</A> exactly the same:
 <B>  :syntax keyword   Type   contained int long char</B>
 <B>  :syntax keyword   Type   int long contained char</B>
@@ -4167,7 +4167,7 @@ DEFINING REGIONS	*<A NAME=":syn-region"></A><B>:syn-region</B>* *<A NAME=":syn-s
 	Example:
 <B>  :syntax region String   start=+"+  skip=+\\"+  end=+"+</B>
  
-	The start/skip/end patterns and the <A HREF="options\.html#options">选项</A> can be given in any order.
+	The start/skip/end patterns and the <A HREF="options.html#options">选项</A> can be given in any order.
 	There can be zero or one skip <A HREF="pattern.html#pattern">pattern</A>.	There must be one or more
 	start and end patterns.  This means that you can omit the skip
 	<A HREF="pattern.html#pattern">pattern</A>, but you must give at least one start and one end <A HREF="pattern.html#pattern">pattern</A>.  It
@@ -5747,13 +5747,13 @@ will be ignored.  Also when there is an existing link.
 Using [default] is especially useful to overrule the highlighting of a
 specific <A HREF="#syntax">syntax</A> file.例如, the C <A HREF="#syntax">syntax</A> file contains:
 <B>	:highlight default link cComment Comment</B>
-If you like Question highlighting for C comments, put this in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
+If you like Question highlighting for C comments, put this in your <A HREF="starting.html#vimrc">vimrc</A>文件:
 <B>	:highlight link cComment Question</B>
 Without the &quot;default&quot; in the C <A HREF="#syntax">syntax</A> file, the highlighting would be
 overruled when the <A HREF="#syntax">syntax</A> file is loaded.
 
 To have a link survive `:highlight clear`, which is useful if you have
-highlighting for a specific <A HREF="filetype\.html#filetype">文件类型</A> and you want to keep <A HREF="motion.html#it">它</A> when selecting
+highlighting for a specific <A HREF="filetype.html#filetype">文件类型</A> and you want to keep <A HREF="motion.html#it">它</A> when selecting
 another color scheme, put a command like this in the
 &quot;after/syntax/{filetype}.vim&quot; file:
 <B>    highlight! default link cComment Question</B>
@@ -5802,7 +5802,7 @@ defaults back:
 It is a bit of a wrong name, since <A HREF="motion.html#it">它</A> does not reset any <A HREF="#syntax">syntax</A> items, <A HREF="motion.html#it">它</A> only
 affects the highlighting.
 
-Note that the <A HREF="#syntax">syntax</A> colors that you set in your <A HREF="starting\.html#vimrc">vimrc</A>文件 will also be reset
+Note that the <A HREF="#syntax">syntax</A> colors that you set in your <A HREF="starting.html#vimrc">vimrc</A>文件 will also be reset
 back to their Vim default.
 Note that if you are using a color scheme, the colors defined by the color
 scheme for <A HREF="#syntax">syntax</A> highlighting will be lost.
@@ -5869,7 +5869,7 @@ This will set the &quot;<A HREF="#w:current_syntax">w:current_syntax</A>&quot; v
 restoring &quot;b:current_syntax&quot;, since the <A HREF="#syntax">syntax</A> files <A HREF="diff.html#do">do</A> set
 &quot;b:current_syntax&quot;.  The value set by the <A HREF="#syntax">syntax</A> file is assigned to
 &quot;<A HREF="#w:current_syntax">w:current_syntax</A>&quot;.
-Note: This resets the <A HREF="options.html#'spell'">'spell'</A>, <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> and <A HREF="options.html#'spellfile'">'spellfile'</A> <A HREF="options\.html#options">选项</A>.
+Note: This resets the <A HREF="options.html#'spell'">'spell'</A>, <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> and <A HREF="options.html#'spellfile'">'spellfile'</A> <A HREF="options.html#options">选项</A>.
 
 Once a<A HREF="windows.html#window">窗口</A>has its own <A HREF="#syntax">syntax</A>, <A HREF="#syntax">syntax</A> commands executed from other <A HREF="windows\.html#windows">窗口</A>
 on the same buffer (including <A HREF="#:syntax">:syntax</A> clear) have no effect. Conversely,
@@ -5948,7 +5948,7 @@ literal text specify the size of that text (in bytes):
 &quot;&lt;\@1&lt;=span&quot;	Matches the same, but only tries one byte before &quot;span&quot;.
 
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: options</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -406,7 +406,7 @@ Note: In the future more global <A HREF="#options">options</A> can be made |<A H
 &quot;<A HREF="#:setlocal">:setlocal</A>&quot; on a global option might work differently then.
 
 
-Setting the <A HREF="filetype\.html#filetype">文件类型</A>
+Setting the <A HREF="filetype.html#filetype">文件类型</A>
 
 
 :setf[iletype] [FALLBACK] {filetype}			*<A NAME=":setf"></A><B>:setf</B>* *<A NAME=":setfiletype"></A><B>:setfiletype</B>*
@@ -418,11 +418,11 @@ Setting the <A HREF="filetype\.html#filetype">文件类型</A>
 <B>				:endif</B>
  			This command is used in a filetype.vim file to avoid
 			setting the <A HREF="#'filetype'">'filetype'</A> option <A HREF="if_cscop.html#twice">twice</A>, causing different
-			settings and <A HREF="syntax\.html#syntax">语法</A> files to be loaded.
+			settings and <A HREF="syntax.html#syntax">语法</A> files to be loaded.
 
 			When the optional FALLBACK argument is present, a
 			later <A HREF="#:setfiletype">:setfiletype</A> command will override the
-			<A HREF="#'filetype'">'filetype'</A>.  This is to be used for <A HREF="filetype\.html#filetype">文件类型</A>
+			<A HREF="#'filetype'">'filetype'</A>.  This is to be used for <A HREF="filetype.html#filetype">文件类型</A>
 			detections that are just a guess.  |<A HREF="builtin.html#did_filetype()">did_filetype()</A>|
 			will return false after this command.
 
@@ -845,7 +845,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	However, if the color scheme sets <A HREF="#'background'">'background'</A> itself the effect may
 	be undone.  First delete the &quot;<A HREF="#g:colors_name">g:colors_name</A>&quot; variable when needed.
 
-	Normally this option would be set in <A HREF="starting\.html#vimrc">vimrc</A>文件.  Possibly
+	Normally this option would be set in <A HREF="starting.html#vimrc">vimrc</A>文件.  Possibly
 	depending on the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> name.  Example:
 <B>		:if $TERM ==# "xterm"</B>
 <B>		:  set background=dark</B>
@@ -854,7 +854,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	will change.  To use other settings, place &quot;<A HREF="syntax.html#:highlight">:highlight</A>&quot;命令 AFTER
 	the setting of the <A HREF="#'background'">'background'</A> option.
 	This option is also used in the &quot;$VIMRUNTIME/syntax/syntax.vim&quot; file
-	to select the colors for <A HREF="syntax\.html#syntax">语法</A> highlighting.  After <A HREF="change.html#changing">changing</A> this
+	to select the colors for <A HREF="syntax.html#syntax">语法</A> highlighting.  After <A HREF="change.html#changing">changing</A> this
 	option, you must load syntax.vim again to see the result.  This can be
 	done with &quot;<A HREF="syntax.html#:syntax">:syntax</A> on&quot;.
 
@@ -1316,7 +1316,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	The default value is taken from $CDPATH, with a &quot;<A HREF="motion.html#,">,</A>&quot; prepended to look
 	in the current directory first.
 	If the default value taken from $CDPATH is not what you want, include
-	a modified version of the following command in your <A HREF="starting\.html#vimrc">vimrc</A>文件 to
+	a modified version of the following command in your <A HREF="starting.html#vimrc">vimrc</A>文件 to
 	override <A HREF="motion.html#it">它</A>:
 <B>	  :let &amp;cdpath = ',' .. substitute(substitute($CDPATH, '[, ]', '\\\0', 'g'), ':', ',', 'g')</B>
  	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
@@ -1653,13 +1653,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'conceallevel'"></A><B>'conceallevel'</B>* *<A NAME="'cole'"></A><B>'cole'</B>*
 <A HREF="#'conceallevel'">'conceallevel'</A> <A HREF="#'cole'">'cole'</A>	number (default 0)
 			local to<A HREF="windows.html#window">窗口</A>
-	Determine how text with the &quot;conceal&quot; <A HREF="syntax\.html#syntax">语法</A> attribute |<A HREF="syntax.html#:syn-conceal">:syn-conceal</A>|
+	Determine how text with the &quot;conceal&quot; <A HREF="syntax.html#syntax">语法</A> attribute |<A HREF="syntax.html#:syn-conceal">:syn-conceal</A>|
 	is shown:
 
 <B><FONT color="#3A6F2B">	Value		Effect </FONT></B>
 	0		Text is shown normally
 	1		Each block of concealed text is replaced with one
-			character.  If the <A HREF="syntax\.html#syntax">语法</A> item does not have a custom
+			character.  If the <A HREF="syntax.html#syntax">语法</A> item does not have a custom
 			replacement character defined (见 |<A HREF="syntax.html#:syn-cchar">:syn-cchar</A>|) the
 			character defined in <A HREF="#'listchars'">'listchars'</A> is used.
 			It is highlighted with the &quot;Conceal&quot; highlight group.
@@ -2636,7 +2636,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	can overrule this by setting <A HREF="#'fileformat'">'fileformat'</A> in your .vimrc.
 
 	For systems with a Dos-like <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> (&lt;CR&gt;&lt;NL&gt;), when reading files that
-	are &quot;:source&quot;ed and for <A HREF="starting\.html#vimrc">vimrc</A>文件s, automatic <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> detection may be
+	are &quot;:source&quot;ed and for <A HREF="starting.html#vimrc">vimrc</A>文件s, automatic <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> detection may be
 	done:
 	- When <A HREF="#'fileformats'">'fileformats'</A> is empty, there is no automatic detection.  Dos
 	  format will be used.
@@ -2669,12 +2669,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	for a file for which the file type is not automatically recognized.
 	Example, for in an IDL file:
 <B><FONT color="#3A6F2B">		/* vim: set filetype=idl : */ </FONT></B>
-	|<A HREF="autocmd.html#FileType">FileType</A>| |<A HREF="filetype\.html#filetypes">文件类型</A>|
-	When a dot appears in the value then this separates two <A HREF="filetype\.html#filetype">文件类型</A>
+	|<A HREF="autocmd.html#FileType">FileType</A>| |<A HREF="filetype.html#filetypes">文件类型</A>|
+	When a dot appears in the value then this separates two <A HREF="filetype.html#filetype">文件类型</A>
 	names.  Example:
 <B><FONT color="#3A6F2B">		/* vim: set filetype=c.doxygen : */ </FONT></B>
-	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype\.html#filetype">文件类型</A> first然后the &quot;doxygen&quot; <A HREF="filetype\.html#filetype">文件类型</A>.
-	This works both for <A HREF="filetype\.html#filetype">文件类型</A> plugins and for <A HREF="syntax\.html#syntax">语法</A> files.  More than
+	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="filetype.html#filetype">文件类型</A> first然后the &quot;doxygen&quot; <A HREF="filetype.html#filetype">文件类型</A>.
+	This works both for <A HREF="filetype.html#filetype">文件类型</A> plugins and for <A HREF="syntax.html#syntax">语法</A> files.  More than
 	one dot may appear.
 	This option is not copied to another buffer, independent of the '<A HREF="change.html#s">s</A>' or
 	'<A HREF="change.html#S">S</A>' flag in <A HREF="#'cpoptions'">'cpoptions'</A>.
@@ -2871,7 +2871,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'foldnestmax'"></A><B>'foldnestmax'</B>* *<A NAME="'fdn'"></A><B>'fdn'</B>*
 <A HREF="#'foldnestmax'">'foldnestmax'</A> <A HREF="#'fdn'">'fdn'</A>	number (default: 20)
 			local to<A HREF="windows.html#window">窗口</A>
-	Sets the maximum nesting of <A HREF="fold.html#folds">folds</A> for the &quot;indent&quot; and &quot;<A HREF="syntax\.html#syntax">语法</A>&quot;
+	Sets the maximum nesting of <A HREF="fold.html#folds">folds</A> for the &quot;indent&quot; and &quot;<A HREF="syntax.html#syntax">语法</A>&quot;
 	methods.  This avoids that too many <A HREF="fold.html#folds">folds</A> will be created.  Using more
 	than 20 doesn't work, because the internal limit is 20.
 
@@ -3297,8 +3297,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="'go-M'"></A><B>'go-M'</B>*
 	  '<A HREF="motion.html#M">M</A>'	The system menu &quot;$VIMRUNTIME/menu.vim&quot; is not sourced.  Note
-		that this flag must be added in <A HREF="starting\.html#vimrc">vimrc</A>文件, before
-		switching on <A HREF="syntax\.html#syntax">语法</A> or <A HREF="filetype\.html#filetype">文件类型</A> recognition (when the |<A HREF="gui.html#gvimrc">gvimrc</A>|
+		that this flag must be added in <A HREF="starting.html#vimrc">vimrc</A>文件, before
+		switching on <A HREF="syntax.html#syntax">语法</A> or <A HREF="filetype.html#filetype">文件类型</A> recognition (when the |<A HREF="gui.html#gvimrc">gvimrc</A>|
 		file is sourced the system menu has already been loaded; the
 		`:syntax on` and `:filetype on` commands load the menu too).
 
@@ -3812,7 +3812,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	'*', &#39;&#34;'' and '&#124;' (so that <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on a command finds the help for that
 	command).
 	When the <A HREF="#'lisp'">'lisp'</A> option is on the '<A HREF="motion.html#-">-</A>' character is always included.
-	This option also influences <A HREF="syntax\.html#syntax">语法</A> highlighting, unless the <A HREF="syntax\.html#syntax">语法</A>
+	This option also influences <A HREF="syntax.html#syntax">语法</A> highlighting, unless the <A HREF="syntax.html#syntax">语法</A>
 	uses |<A HREF="syntax.html#:syn-iskeyword">:syn-iskeyword</A>|.
 
 
@@ -3968,8 +3968,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	If your $LANG is set to a non-English language but you <A HREF="diff.html#do">do</A> want to use
 	the English <A HREF="gui.html#menus">menus</A>:
 <B>		:set langmenu=none</B>
- 	This option must be set before loading <A HREF="gui.html#menus">menus</A>, switching on <A HREF="filetype\.html#filetype">文件类型</A>
-	detection or <A HREF="syntax\.html#syntax">语法</A> highlighting.  Once the <A HREF="gui.html#menus">menus</A> are defined setting
+ 	This option must be set before loading <A HREF="gui.html#menus">menus</A>, switching on <A HREF="filetype.html#filetype">文件类型</A>
+	detection or <A HREF="syntax.html#syntax">语法</A> highlighting.  Once the <A HREF="gui.html#menus">menus</A> are defined setting
 	this option has no effect.  But you could <A HREF="diff.html#do">do</A> this:
 <B>		:source $VIMRUNTIME/delmenu.vim</B>
 <B>		:set langmenu=de_DE.ISO_8859-1</B>
@@ -4321,7 +4321,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Running into the limit often means that the <A HREF="pattern.html#pattern">pattern</A> is very
 	inefficient or too complex.  This may already happen with the <A HREF="pattern.html#pattern">pattern</A>
 	&quot;\(.\)*&quot; on a very long line.  &quot;.*&quot; works much better.
-	Might also happen on redraw, when <A HREF="syntax\.html#syntax">语法</A> rules try to match a complex
+	Might also happen on redraw, when <A HREF="syntax.html#syntax">语法</A> rules try to match a complex
 	text structure.
 	Vim may run out of memory before hitting the <A HREF="#'maxmempattern'">'maxmempattern'</A> limit, in
 	which <A HREF="change.html#case">case</A> you get an &quot;Out of memory&quot; error instead.
@@ -4723,7 +4723,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	completion with CTRL-X CTRL-O. |<A HREF="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</A>|
 	见 |<A HREF="insert.html#complete-functions">complete-functions</A>| for an explanation of how the function is
 	invoked and what <A HREF="motion.html#it">它</A> should return.
-	This option is usually set by a <A HREF="filetype\.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>:
+	This option is usually set by a <A HREF="filetype.html#filetype">文件类型</A> <A HREF="usr_05.html#plugin">plugin</A>:
 	|<A HREF="filetype.html#:filetype-plugin-on">:filetype-plugin-on</A>|
 	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
 	security reasons.
@@ -4894,7 +4894,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	- When using |<A HREF="netrw.html">netrw.vim</A>| URLs can be used.例如, adding
  &quot;http://www.vim.org&quot; will make &quot;:find index.html&quot; work.
 	- Search upwards and downwards in a directory tree using &quot;*&quot;, &quot;**&quot; and
-	  &quot;<A HREF="motion.html#;">;</A>&quot;.  见 |<A HREF="editing.html#file-searching">file-searching</A>| for info and <A HREF="syntax\.html#syntax">语法</A>.
+	  &quot;<A HREF="motion.html#;">;</A>&quot;.  见 |<A HREF="editing.html#file-searching">file-searching</A>| for info and <A HREF="syntax.html#syntax">语法</A>.
 	- Careful with '\' characters, type two to get one in the option:
 <B>		:set path=.,c:\\include</B>
  	  Or just use '<A HREF="pattern.html#/">/</A>' instead:
@@ -5128,12 +5128,12 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'redrawtime'">'redrawtime'</A> <A HREF="#'rdt'">'rdt'</A>	number	(default 2000)
 			global
 	Time in milliseconds for redrawing the display.  Applies to
-	<A HREF="#'hlsearch'">'hlsearch'</A>, <A HREF="#'inccommand'">'inccommand'</A>, |<A HREF="pattern.html#:match">:match</A>| highlighting and <A HREF="syntax\.html#syntax">语法</A>
+	<A HREF="#'hlsearch'">'hlsearch'</A>, <A HREF="#'inccommand'">'inccommand'</A>, |<A HREF="pattern.html#:match">:match</A>| highlighting and <A HREF="syntax.html#syntax">语法</A>
 	highlighting.
 	When redrawing takes more than this many milliseconds no further
 	matches will be highlighted.
-	For <A HREF="syntax\.html#syntax">语法</A> highlighting the time applies per<A HREF="windows.html#window">窗口</A>.  When over the
-	limit <A HREF="syntax\.html#syntax">语法</A> highlighting is disabled until |<A HREF="various.html#CTRL-L">CTRL-L</A>| is used.
+	For <A HREF="syntax.html#syntax">语法</A> highlighting the time applies per<A HREF="windows.html#window">窗口</A>.  When over the
+	limit <A HREF="syntax.html#syntax">语法</A> highlighting is disabled until |<A HREF="various.html#CTRL-L">CTRL-L</A>| is used.
 	This is used to avoid that Vim hangs when using a very complicated
 	<A HREF="pattern.html#pattern">pattern</A>.
 
@@ -5284,8 +5284,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					       $XDG_CONFIG_HOME/nvim/after&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of directories to be searched for these runtime files:
-	  filetype.vim	<A HREF="filetype\.html#filetypes">文件类型</A> by file name |<A HREF="filetype.html#new-filetype">new-filetype</A>|
-	  scripts.vim	<A HREF="filetype\.html#filetypes">文件类型</A> by file contents |<A HREF="filetype.html#new-filetype-scripts">new-filetype-scripts</A>|
+	  filetype.vim	<A HREF="filetype.html#filetypes">文件类型</A> by file name |<A HREF="filetype.html#new-filetype">new-filetype</A>|
+	  scripts.vim	<A HREF="filetype.html#filetypes">文件类型</A> by file contents |<A HREF="filetype.html#new-filetype-scripts">new-filetype-scripts</A>|
 	  autoload/	automatically loaded scripts |<A HREF="eval.html#autoload-functions">autoload-functions</A>|
 	  colors/	color scheme files |<A HREF="syntax.html#:colorscheme">:colorscheme</A>|
 	  compiler/	compiler files |<A HREF="quickfix.html#:compiler">:compiler</A>|
@@ -6669,9 +6669,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'synmaxcol'"></A><B>'synmaxcol'</B>* *<A NAME="'smc'"></A><B>'smc'</B>*
 <A HREF="#'synmaxcol'">'synmaxcol'</A> <A HREF="#'smc'">'smc'</A>	number	(default 3000)
 			local to buffer
-	Maximum column in which to search for <A HREF="syntax\.html#syntax">语法</A> items.  In long lines the
+	Maximum column in which to search for <A HREF="syntax.html#syntax">语法</A> items.  In long lines the
 	text after this column is not highlighted and following lines may not
-	be highlighted correctly, because the <A HREF="syntax\.html#syntax">语法</A> state is cleared.
+	be highlighted correctly, because the <A HREF="syntax.html#syntax">语法</A> state is cleared.
 	This helps to avoid very slow redrawing for an XML file that is one
 	long line.
 	Set to zero to remove the limit.
@@ -6680,22 +6680,22 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'syntax'"></A><B>'syntax'</B>* *<A NAME="'syn'"></A><B>'syn'</B>*
 <A HREF="#'syntax'">'syntax'</A> <A HREF="#'syn'">'syn'</A>		<A HREF="options\.html#options">字符串</A>	(default empty)
 			local to buffer
-	When this option is set, the <A HREF="syntax\.html#syntax">语法</A> with this name is loaded, unless
-	<A HREF="syntax\.html#syntax">语法</A> highlighting has been switched off with &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot;.
-	Otherwise this option does not always reflect the current <A HREF="syntax\.html#syntax">语法</A> (the
+	When this option is set, the <A HREF="syntax.html#syntax">语法</A> with this name is loaded, unless
+	<A HREF="syntax.html#syntax">语法</A> highlighting has been switched off with &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot;.
+	Otherwise this option does not always reflect the current <A HREF="syntax.html#syntax">语法</A> (the
 	b:current_syntax variable does).
-	This option is most useful in a <A HREF="#modeline">modeline</A>, for a file which <A HREF="syntax\.html#syntax">语法</A> is
+	This option is most useful in a <A HREF="#modeline">modeline</A>, for a file which <A HREF="syntax.html#syntax">语法</A> is
 	not automatically recognized.  Example, in an IDL file:
 <B><FONT color="#3A6F2B">		/* vim: set syntax=idl : */ </FONT></B>
-	When a dot appears in the value then this separates two <A HREF="filetype\.html#filetype">文件类型</A>
+	When a dot appears in the value then this separates two <A HREF="filetype.html#filetype">文件类型</A>
 	names.  Example:
 <B><FONT color="#3A6F2B">		/* vim: set syntax=c.doxygen : */ </FONT></B>
-	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="syntax\.html#syntax">语法</A> first然后the &quot;doxygen&quot; <A HREF="syntax\.html#syntax">语法</A>.
+	This will use the &quot;<A HREF="change.html#c">c</A>&quot; <A HREF="syntax.html#syntax">语法</A> first然后the &quot;doxygen&quot; <A HREF="syntax.html#syntax">语法</A>.
 	Note that the second one must be prepared to be loaded <A HREF="motion.html#as">as</A> an addition,
 	otherwise <A HREF="motion.html#it">它</A> will be skipped.  More than one dot may appear.
-	To switch off <A HREF="syntax\.html#syntax">语法</A> highlighting for the current file, use:
+	To switch off <A HREF="syntax.html#syntax">语法</A> highlighting for the current file, use:
 <B>		:set syntax=OFF</B>
- 	To switch <A HREF="syntax\.html#syntax">语法</A> highlighting on according to the current value of the
+ 	To switch <A HREF="syntax.html#syntax">语法</A> highlighting on according to the current value of the
 	<A HREF="#'filetype'">'filetype'</A> option:
 <B>		:set syntax=ON</B>
  	What actually happens when setting the <A HREF="#'syntax'">'syntax'</A> option is that the
@@ -7754,7 +7754,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	screen.  When positive, characters are sent to the <A HREF="ui.html#UI">UI</A> one by one.
 	See <A HREF="#'redrawdebug'">'redrawdebug'</A> for more <A HREF="#options">options</A>.  For debugging purposes.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: quickfix</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -1322,13 +1322,13 @@ id-utils) in a similar way to its compiler integration (见 |<A HREF="#:make">:m
 5.3 Setting up external <A HREF="#grep">grep</A>
 
 If you have a standard &quot;<A HREF="#grep">grep</A>&quot; program installed, the <A HREF="#:grep">:grep</A> command may work
-well with the defaults.  The <A HREF="syntax\.html#syntax">语法</A> is very similar to the standard command:
+well with the defaults.  The <A HREF="syntax.html#syntax">语法</A> is very similar to the standard command:
 
 <B>	:grep foo *.c</B>
 
 Will search all files with the .c extension for the substring &quot;foo&quot;.  The
 arguments to <A HREF="#:grep">:grep</A> are passed straight to the &quot;<A HREF="#grep">grep</A>&quot; program, so you can use
-whatever <A HREF="options\.html#options">选项</A> your &quot;<A HREF="#grep">grep</A>&quot; supports.
+whatever <A HREF="options.html#options">选项</A> your &quot;<A HREF="#grep">grep</A>&quot; supports.
 
 By default, <A HREF="#:grep">:grep</A> invokes <A HREF="#grep">grep</A> with the <A HREF="starting.html#-n">-n</A> option (show file and line
 numbers).  You can change this with the <A HREF="options.html#'grepprg'">'grepprg'</A> option.  You will need to set
@@ -1336,7 +1336,7 @@ numbers).  You can change this with the <A HREF="options.html#'grepprg'">'greppr
 
 <A HREF="motion.html#a)">a)</A>	You are using a program that isn't called &quot;<A HREF="#grep">grep</A>&quot;
 <A HREF="motion.html#b">b</A>)	You have to call <A HREF="#grep">grep</A> with a full path
-<A HREF="change.html#c">c</A>)	You want to pass other <A HREF="options\.html#options">选项</A> automatically (e.g. <A HREF="change.html#case">case</A> insensitive
+<A HREF="change.html#c">c</A>)	You want to pass other <A HREF="options.html#options">选项</A> automatically (e.g. <A HREF="change.html#case">case</A> insensitive
 	search.)
 
 Once &quot;<A HREF="#grep">grep</A>&quot; has executed, Vim parses the results using the <A HREF="options.html#'grepformat'">'grepformat'</A>
@@ -1399,18 +1399,18 @@ need to write down a &quot;todo&quot; <A HREF="eval.html#list">列表</A>.
 
 
 						*<A NAME=":comp"></A><B>:comp</B>* *<A NAME=":compiler"></A><B>:compiler</B>* *<A NAME="E666"></A><B>E666</B>*
-:comp[iler][!] {name}		Set <A HREF="options\.html#options">选项</A> to work with compiler {name}.
-				Without the &quot;<A HREF="change.html#!">!</A>&quot; <A HREF="options\.html#options">选项</A> are set for the
-				current buffer.  With &quot;<A HREF="change.html#!">!</A>&quot; global <A HREF="options\.html#options">选项</A> are
+:comp[iler][!] {name}		Set <A HREF="options.html#options">选项</A> to work with compiler {name}.
+				Without the &quot;<A HREF="change.html#!">!</A>&quot; <A HREF="options.html#options">选项</A> are set for the
+				current buffer.  With &quot;<A HREF="change.html#!">!</A>&quot; global <A HREF="options.html#options">选项</A> are
 				set.
 				If you use &quot;<A HREF="#:compiler">:compiler</A> foo&quot; in &quot;file.foo&quot; and
 				then &quot;:compiler! bar&quot; in another buffer, Vim
 				will keep on using &quot;foo&quot; in &quot;file.foo&quot;.
 
 
-The Vim plugins in the &quot;compiler&quot; directory will set <A HREF="options\.html#options">选项</A> to use the
-selected compiler.  For `:compiler` local <A HREF="options\.html#options">选项</A> are set, for `:compiler!`
-global <A HREF="options\.html#options">选项</A>.
+The Vim plugins in the &quot;compiler&quot; directory will set <A HREF="options.html#options">选项</A> to use the
+selected compiler.  For `:compiler` local <A HREF="options.html#options">选项</A> are set, for `:compiler!`
+global <A HREF="options.html#options">选项</A>.
 
 							*<A NAME="current_compiler"></A><B>current_compiler</B>*
 To support older Vim versions, the plugins always use &quot;<A HREF="#current_compiler">current_compiler</A>&quot; and
@@ -1420,7 +1420,7 @@ not &quot;b:current_compiler&quot;.  What the command actually does is the follo
 - Define the &quot;CompilerSet&quot; user command.  With &quot;<A HREF="change.html#!">!</A>&quot; <A HREF="motion.html#it">它</A> does &quot;<A HREF="options.html#:set">:set</A>&quot;, without &quot;<A HREF="change.html#!">!</A>&quot;
   <A HREF="motion.html#it">它</A> does &quot;<A HREF="options.html#:setlocal">:setlocal</A>&quot;.
 - Execute &quot;:runtime! compiler/{name}.(vim|lua)&quot;.  The plugins are expected to
-  set <A HREF="options\.html#options">选项</A> with &quot;CompilerSet&quot; and set the &quot;<A HREF="#current_compiler">current_compiler</A>&quot; variable to the
+  set <A HREF="options.html#options">选项</A> with &quot;CompilerSet&quot; and set the &quot;<A HREF="#current_compiler">current_compiler</A>&quot; variable to the
   name of the compiler.
 - Delete the &quot;CompilerSet&quot; user command.
 - Set &quot;b:current_compiler&quot; to the value of &quot;<A HREF="#current_compiler">current_compiler</A>&quot;.
@@ -1446,7 +1446,7 @@ g:compiler_gcc_ignore_unmatched_lines
 PERL					*<A NAME="quickfix-perl"></A><B>quickfix-perl</B>* *<A NAME="compiler-perl"></A><B>compiler-perl</B>*
 
 The Perl compiler <A HREF="usr_05.html#plugin">plugin</A> doesn't actually compile, but invokes Perl's internal
-<A HREF="syntax\.html#syntax">语法</A> checking feature and parses the output for possible <A HREF="message.html#errors">errors</A> so you can
+<A HREF="syntax.html#syntax">语法</A> checking feature and parses the output for possible <A HREF="message.html#errors">errors</A> so you can
 correct them in quick-fix mode.
 
 Warnings are forced regardless of &quot;no warnings&quot; or &quot;$^W = 0&quot; within the file
@@ -1468,7 +1468,7 @@ are parsed by Vim and presented for you in quick-fix mode.
 
 Unfortunately, there is no standard way to run the tests.
 The alltests.py <A HREF="usr_41.html#script">script</A> seems to be used quite often, that's all.
-Useful values for the <A HREF="options.html#'makeprg'">'makeprg'</A> <A HREF="options\.html#options">选项</A> therefore are:
+Useful values for the <A HREF="options.html#'makeprg'">'makeprg'</A> <A HREF="options.html#options">选项</A> therefore are:
  setlocal makeprg=./alltests.py &quot; Run a testsuite
  setlocal makeprg=python\ <A HREF="cmdline.html#&#37;:S">&#37;:S</A>   &quot; Run a single testcase
 
@@ -1507,10 +1507,10 @@ semantics of make, where you specify a target, not source, but you may specify
 filename without extension &quot;.tex&quot; and mean this <A HREF="motion.html#as">as</A> &quot;make filename.dvi or
 filename.pdf or filename.some_result_extension according to compiler&quot;.
 
-Note: tex command line <A HREF="syntax\.html#syntax">语法</A> is set to usable both for MikTeX (suggestion
+Note: tex command line <A HREF="syntax.html#syntax">语法</A> is set to usable both for MikTeX (suggestion
 by Srinath Avadhanula) and teTeX (checked by Artem Chuprina).  Suggestion
 from |<A HREF="#errorformat-LaTeX">errorformat-LaTeX</A>| is too complex to keep <A HREF="motion.html#it">它</A> working for different
-shells and OSes and also does not allow to use other available TeX <A HREF="options\.html#options">选项</A>,
+shells and OSes and also does not allow to use other available TeX <A HREF="options.html#options">选项</A>,
 if any.  If your TeX doesn't support &quot;-interaction=nonstopmode&quot;, please
 report <A HREF="motion.html#it">它</A> with different means to express \nonstopmode from the command line.
 
@@ -2187,7 +2187,7 @@ Example:
 <B>    endfunc</B>
  
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>

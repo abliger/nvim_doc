@@ -67,7 +67,7 @@
 	<div class="container">
 		<h1>Nvim 文档: spell</h1>
 		<A NAME="top"></A>
-		<A HREF="index\.html">主帮助文件</A>
+		<A HREF="index.html">主帮助文件</A>
 
 		<HR>
 		<PRE>
@@ -517,7 +517,7 @@ so that comments in C, shell and Vim code can be <A HREF="#spell">spell</A> chec
 
 SYNTAX HIGHLIGHTING					*<A NAME="spell-syntax"></A><B>spell-syntax</B>*
 
-Files that use <A HREF="syntax\.html#syntax">语法</A> highlighting can specify where <A HREF="#spell">spell</A> checking should be
+Files that use <A HREF="syntax.html#syntax">语法</A> highlighting can specify where <A HREF="#spell">spell</A> checking should be
 done:
 
 1.  everywhere			   default
@@ -527,7 +527,7 @@ done:
 For the second <A HREF="eval.html#method">method</A> adding the @NoSpell cluster will disable <A HREF="#spell">spell</A> checking
 again.  This can be used, for example, to add @Spell to the comments of a
 program, and add @NoSpell for items that shouldn't be checked.
-Also 见 |<A HREF="syntax.html#:syn-spell">:syn-spell</A>| for text that is not in a <A HREF="syntax\.html#syntax">语法</A> item.
+Also 见 |<A HREF="syntax.html#:syn-spell">:syn-spell</A>| for text that is not in a <A HREF="syntax.html#syntax">语法</A> item.
 
 
 VIM SCRIPTS
@@ -545,7 +545,7 @@ SETTING <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A> AUTOMATICALLY
 
 After the <A HREF="options.html#'spelllang'">'spelllang'</A> option has been set successfully, Vim will source the
 files &quot;spell/LANG.vim&quot; in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  &quot;LANG&quot; is the value of <A HREF="options.html#'spelllang'">'spelllang'</A>
-up to the first comma, dot or underscore.  This can be used to set <A HREF="options\.html#options">选项</A>
+up to the first comma, dot or underscore.  This can be used to set <A HREF="options.html#options">选项</A>
 specifically for the language, especially <A HREF="options.html#'spellcapcheck'">'spellcapcheck'</A>.
 
 The <A HREF="intro.html#distribution">distribution</A> includes a few of these files.  Use this command to see what
@@ -755,7 +755,7 @@ server.  The protocol used is SSL (https://) for security.  If you want to use
 another location or another protocol, set the g:spellfile_URL variable to the
  directory that holds the spell files. You can use	<A HREF="http://">http://</A> or	<A HREF="ftp://,">ftp://,</A> but you
 are taking a security risk then.  The |<A HREF="pi_netrw.html#netrw">netrw</A>| <A HREF="usr_05.html#plugin">plugin</A> is used for getting the
-file, look there for the specific <A HREF="syntax\.html#syntax">语法</A> of the URL.  Example:
+file, look there for the specific <A HREF="syntax.html#syntax">语法</A> of the URL.  Example:
 <B>	let g:spellfile_URL = 'https://ftp.nluug.nl/vim/runtime/spell'</B>
 You may need to <A HREF="intro.html#escape">escape</A> special characters.
 
@@ -763,7 +763,7 @@ The <A HREF="usr_05.html#plugin">plugin</A> will only ask about downloading a la
 try again anyway restart Vim, or set g:spellfile_URL to another value (e.g.,
 prepend a space).
 
-To avoid using the &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> <A HREF="diff.html#do">do</A> this in your <A HREF="starting\.html#vimrc">vimrc</A>文件:
+To avoid using the &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> <A HREF="diff.html#do">do</A> this in your <A HREF="starting.html#vimrc">vimrc</A>文件:
 
 <B>	let loaded_spellfile_plugin = 1</B>
 
@@ -1417,7 +1417,7 @@ Optionally this may be followed by:
 	+	the group appears one or more times, e.g., c+
 	?	the group appears zero times or once, e.g., <A HREF="change.html#x">x</A>?
 
-This is similar to the <A HREF="pattern.html#regexp">regexp</A> <A HREF="pattern.html#pattern">pattern</A> <A HREF="syntax\.html#syntax">语法</A> (but not the same!).  A few
+This is similar to the <A HREF="pattern.html#regexp">regexp</A> <A HREF="pattern.html#pattern">pattern</A> <A HREF="syntax.html#syntax">语法</A> (but not the same!).  A few
 examples with the sequence of <A HREF="motion.html#word">单词</A> flags they require:
     COMPOUNDRULE x+	    <A HREF="change.html#x">x</A> xx xxx etc.
     COMPOUNDRULE yz	    yz
@@ -1869,7 +1869,7 @@ checking engine in Vim, for various reasons:
 - For the programs and libraries: Using them as-is would require installing
   them separately from Vim.  That's mostly not impossible, but a drawback.
 - Performance: A few tests showed that it's possible to check spelling on the
-  fly (while redrawing), just like <A HREF="syntax\.html#syntax">语法</A> highlighting.  But the mechanisms
+  fly (while redrawing), just like <A HREF="syntax.html#syntax">语法</A> highlighting.  But the mechanisms
   used by other code are much slower.  <A HREF="#Myspell">Myspell</A> uses a hashtable, for example.
   The affix compression that most <A HREF="#spell">spell</A> checkers use makes <A HREF="motion.html#it">它</A> slower too.
 - For 使用扩展程序 like aspell a communication mechanism would
@@ -1962,7 +1962,7 @@ This isn't ideal, because the longer Vim is running the higher the counts
 become.  But in practice <A HREF="motion.html#it">它</A> is a noticeable improvement over not using the <A HREF="motion.html#word">单词</A>
 <A HREF="intro.html#count">count</A>.
 
-<A HREF="#top">top</A> - <A HREF="index\.html">主帮助文件</A>
+<A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
 </PRE>
 	</div>
 </body>
