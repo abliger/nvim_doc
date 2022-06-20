@@ -187,7 +187,7 @@ the full path name is being used if you used the &quot;:cd&quot; command |<A HRE
 
 							*<A NAME="home-replace"></A><B>home-replace</B>*
 If the environment variable <A HREF="options.html#$HOME">$HOME</A> is set, and the file name starts with that
-<A HREF="options\.html#options">字符串</A>, <A HREF="motion.html#it">它</A> is often displayed with HOME replaced with &quot;<A HREF="change.html#~">~</A>&quot;.  This was done to
+<A HREF="options.html#options">字符串</A>, <A HREF="motion.html#it">它</A> is often displayed with HOME replaced with &quot;<A HREF="change.html#~">~</A>&quot;.  This was done to
 keep file names short.  When reading or <A HREF="#writing">writing</A> files the full name is still
 used, the &quot;<A HREF="change.html#~">~</A>&quot; is only used when displaying file names.  When <A HREF="change.html#replacing">replacing</A> the
 file name would result in just &quot;<A HREF="change.html#~">~</A>&quot;, &quot;~/&quot; is used instead (to avoid confusion
@@ -241,7 +241,7 @@ start editing another file, Vim will refuse this.  In order to overrule this
 protection, add a '<A HREF="change.html#!">!</A>' to the command.  The changes will then be lost.  For
 example: &quot;<A HREF="#:q">:q</A>&quot; will not work if the buffer was changed, but &quot;:q!&quot; will.  To see
 whether the buffer was changed use the &quot;<A HREF="#CTRL-G">CTRL-G</A>&quot;命令.  The message includes
-the <A HREF="options\.html#options">字符串</A> &quot;[Modified]&quot; if the buffer has been changed, or &quot;<A HREF="motion.html#+">+</A>&quot; if the '<A HREF="motion.html#m">m</A>' flag
+the <A HREF="options.html#options">字符串</A> &quot;[Modified]&quot; if the buffer has been changed, or &quot;<A HREF="motion.html#+">+</A>&quot; if the '<A HREF="motion.html#m">m</A>' flag
 is in <A HREF="options.html#'shortmess'">'shortmess'</A>.
 
 If you want to automatically save the changes without asking, switch on the
@@ -522,11 +522,11 @@ does apply like to other <A HREF="#wildcards">wildcards</A>.
 Environment <A HREF="eval.html#variables">variables</A> in the <A HREF="eval.html#expression">expression</A> are expanded when evaluating the
 <A HREF="eval.html#expression">expression</A>, thus this works:
 <B>	:e `=$HOME .. '/.vimrc'`</B>
-This uses <A HREF="options.html#$HOME">$HOME</A> inside a <A HREF="options\.html#options">字符串</A> and <A HREF="motion.html#it">它</A> will be used literally, most likely not
+This uses <A HREF="options.html#$HOME">$HOME</A> inside a <A HREF="options.html#options">字符串</A> and <A HREF="motion.html#it">它</A> will be used literally, most likely not
 what you intended:
 <B>	:e `='$HOME' .. '/.vimrc'`</B>
 
-If the <A HREF="eval.html#expression">expression</A> returns a <A HREF="options\.html#options">字符串</A> then names are to be separated with line
+If the <A HREF="eval.html#expression">expression</A> returns a <A HREF="options.html#options">字符串</A> then names are to be separated with line
 breaks.  When the result is a |<A HREF="eval.html#list">列表</A>| then each item is used <A HREF="motion.html#as">as</A> a name.  Line
 breaks also separate names.
 Note that such expressions are only supported in places where a filename is
@@ -961,7 +961,7 @@ USING THE ARGUMENT LIST
 			{cmd} can contain '&#124;' to concatenate several commands.
 			{cmd} must not change the argument <A HREF="eval.html#list">列表</A>.
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd\.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
+			<A HREF="autocmd.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each file.
 			Also 见 |<A HREF="windows.html#:windo">:windo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
@@ -1221,7 +1221,7 @@ The names can be in upper- or <A HREF="change.html#lowercase">小写</A>.
 			If there are other <A HREF="intro.html#tab">tab</A> pages and quitting the last
 			<A HREF="windows.html#window">窗口</A>in the current <A HREF="intro.html#tab">tab</A> page the current <A HREF="intro.html#tab">tab</A> page is
 			closed |<A HREF="tabpage.html#tab-page">tab-page</A>|.
-			Triggers the |<A HREF="autocmd.html#QuitPre">QuitPre</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event.
+			Triggers the |<A HREF="autocmd.html#QuitPre">QuitPre</A>| <A HREF="autocmd.html#autocommand">自动命令</A> event.
 			见 |<A HREF="windows.html#CTRL-W_q">CTRL-W_q</A>| for quitting another<A HREF="windows.html#window">窗口</A>.
 
 :conf[irm] q[uit]	Quit, but give prompt when changes have been made, or
@@ -1363,7 +1363,7 @@ If you want to always use &quot;<A HREF="#:confirm">:confirm</A>&quot;, set the 
 			|<A HREF="repeat.html#:source">:source</A>|, |<A HREF="#:update">:update</A>|, |<A HREF="#:visual">:visual</A>|, |<A HREF="windows.html#:vsplit">:vsplit</A>|,
 			and |<A HREF="#:qall">:qall</A>| if <A HREF="options.html#'confirm'">'confirm'</A> is set.
 			{only in Win32 <A HREF="gui.html#GUI">GUI</A>, in console `browse edit` works
-			if the <A HREF="autocmd.html#FileExplorer">FileExplorer</A> <A HREF="autocmd\.html#autocommand">自动命令</A> group exists}
+			if the <A HREF="autocmd.html#FileExplorer">FileExplorer</A> <A HREF="autocmd.html#autocommand">自动命令</A> group exists}
 			When &quot;<A HREF="#:browse">:browse</A>&quot; is not possible you get an error
 			message.  If {command} doesn't support browsing, the
 			{command} is executed without a dialog.
@@ -1394,7 +1394,7 @@ unmodified.
 For MS-Windows you can modify the filters that are used in the browse
 dialog.  By setting the g:browsefilter or b:browsefilter <A HREF="eval.html#variables">variables</A>, you can
 change the filters globally or locally to the buffer.  The variable is set to
-a <A HREF="options\.html#options">字符串</A> in the format &quot;{filter label}\t{pattern};{pattern}\n&quot; where {filter
+a <A HREF="options.html#options">字符串</A> in the format &quot;{filter label}\t{pattern};{pattern}\n&quot; where {filter
 label} is the text that appears in the &quot;Files of Type&quot; comboBox, and {pattern}
 is the <A HREF="pattern.html#pattern">pattern</A> which filters the filenames.  Several patterns can be given,
 separated by '<A HREF="motion.html#;">;</A>'.
@@ -1615,8 +1615,8 @@ this:
 Or, when starting gvim from a shell:
 <B>	gvim file.log -c "set buftype=nofile"</B>
 
-Note that if a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A> <A HREF="autocmd\.html#autocommand">自动命令</A> is defined you will not get a
-warning message or prompt.  The <A HREF="autocmd\.html#autocommand">自动命令</A> is expected to handle this.
+Note that if a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A> <A HREF="autocmd.html#autocommand">自动命令</A> is defined you will not get a
+warning message or prompt.  The <A HREF="autocmd.html#autocommand">自动命令</A> is expected to handle this.
 
 There is no warning for a directory (e.g., with |<A HREF="pi_netrw.html#netrw-browse">netrw-browse</A>|).  But you <A HREF="diff.html#do">do</A>
 get warned if you started editing a new file and <A HREF="motion.html#it">它</A> was created <A HREF="motion.html#as">as</A> a directory
@@ -1635,7 +1635,7 @@ If you don't get warned often enough you can use the following command.
 :checkt[ime]		Check if any <A HREF="windows.html#buffers">buffers</A> were changed outside of Vim.
 			This checks and warns you if you would end up with two
 			versions of a file.
-			If this is called from an <A HREF="autocmd\.html#autocommand">自动命令</A>, a &quot;<A HREF="repeat.html#:global">:global</A>&quot;
+			If this is called from an <A HREF="autocmd.html#autocommand">自动命令</A>, a &quot;<A HREF="repeat.html#:global">:global</A>&quot;
 			command or is not typed the actual check is postponed
 			until a moment the side effects (reloading the file)
 			would be harmless.
@@ -1649,7 +1649,7 @@ If you don't get warned often enough you can use the following command.
 			if <A HREF="motion.html#it">它</A> exists now.
 			Once a file has been checked the <A HREF="#timestamp">timestamp</A> is reset,
 			you will not be warned again.
-			<A HREF="autocmd\.html#Syntax">语法</A>高亮, marks, <A HREF="diff.html#diff">diff</A> status,
+			<A HREF="autocmd.html#Syntax">语法</A>高亮, marks, <A HREF="diff.html#diff">diff</A> status,
 			<A HREF="options.html#'fileencoding'">'fileencoding'</A>, <A HREF="options.html#'fileformat'">'fileformat'</A> and <A HREF="options.html#'binary'">'binary'</A> <A HREF="options.html#options">选项</A>
 			are not changed.  见 |<A HREF="eval.html#v:fcs_choice">v:fcs_choice</A>| to <A HREF="#reload">reload</A> these
 			too (for example, if a code <A HREF="change.html#formatting">formatting</A> tools has

@@ -397,7 +397,7 @@ More about <A HREF="fold.html#folding">folding</A> with markers in the reference
 *<A NAME="28.7"></A><B>28.7</B>*	<A HREF="fold.html#Folding">Folding</A> by <A HREF="syntax.html#syntax">语法</A>
 
 For each language Vim uses a different <A HREF="syntax.html#syntax">语法</A> file.  This defines the colors
-for various items in the file.  If you are reading this in Vim, in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+for various items in the file.  If you are reading this in Vim, in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>
 that supports colors, the colors you see are made with the &quot;help&quot; <A HREF="syntax.html#syntax">语法</A> file.
    In the <A HREF="syntax.html#syntax">语法</A> files <A HREF="motion.html#it">它</A> is possible to add <A HREF="syntax.html#syntax">语法</A> items that have the &quot;fold&quot;
 argument.  These define a fold region.  This requires <A HREF="editing.html#writing">写</A> a <A HREF="syntax.html#syntax">语法</A> file
@@ -433,7 +433,7 @@ Explanation for the <A HREF="options.html#'foldexpr'">'foldexpr'</A> used in the
    getline(v:lnum)			gets the current line
    substitute(...,'\\s','','g')		removes all white space from the line
    substitute(...,'[^&gt;].*','','')	removes everything after leading '&gt;'s
-   strlen(...)				counts the length of the <A HREF="options\.html#options">字符串</A>, which
+   strlen(...)				counts the length of the <A HREF="options.html#options">字符串</A>, which
 					is the number of '&gt;'s found
 
 Note that a <A HREF="intro.html#backslash">backslash</A> must be inserted before every space, double <A HREF="change.html#quote">quote</A> and

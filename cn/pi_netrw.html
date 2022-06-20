@@ -311,7 +311,7 @@ EXTERNAL APPLICATIONS AND PROTOCOLS			*<A NAME="netrw-externapp"></A><B>netrw-ex
 	  file:   *<A NAME="g:netrw_file_cmd"></A><B>g:netrw_file_cmd</B>*     = &quot;elinks&quot; or &quot;links&quot;
 
 
-	*<A NAME="g:netrw_http_xcmd"></A><B>g:netrw_http_xcmd</B>* : the option <A HREF="options\.html#options">字符串</A> for http://... protocols are
+	*<A NAME="g:netrw_http_xcmd"></A><B>g:netrw_http_xcmd</B>* : the option <A HREF="options.html#options">字符串</A> for http://... protocols are
 	specified via this variable and may be independently overridden.  By
 	default, the option arguments for the http-handling commands are:
 
@@ -500,7 +500,7 @@ YXXYnetrw-externapp|:
 
 
  *<A NAME="g:netrw_ftpextracmd"></A><B>g:netrw_ftpextracmd</B>*	default: doesn't exist
-			If this variable exists然后any <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#it">它</A> contains
+			If this variable exists然后any <A HREF="options.html#options">字符串</A> <A HREF="motion.html#it">它</A> contains
 			will be placed into the commands set to your ftp
 			client.  As an example:
 			   =&quot;passive&quot;
@@ -617,7 +617,7 @@ dav/cadaver, <A HREF="#rsync">rsync</A>, or <A HREF="#sftp">sftp</A>.
 <A HREF="#http">http</A> is currently supported read-only via use of wget or <A HREF="#fetch">fetch</A>.
 
 &lt;netrw.vim&gt; is a standard <A HREF="usr_05.html#plugin">plugin</A> which acts <A HREF="motion.html#as">as</A> glue between Vim and the
-various file transfer programs.  It uses <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> (BufReadCmd,
+various file transfer programs.  It uses <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> (BufReadCmd,
 <A HREF="autocmd.html#FileReadCmd">FileReadCmd</A>, <A HREF="autocmd.html#BufWriteCmd">BufWriteCmd</A>) to intercept reads/writes with url-like filenames.
 
 <B>	ex. vim ftp://hostname/path/to/file</B>
@@ -2246,7 +2246,7 @@ subsequently when you use ssh.  For use with vim, you can use
 <B>	ssh-agent vim</B>
 and, when next within vim, use
 <B>	:!ssh-add</B>
-Alternatively, you can apply ssh-agent to the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> you're planning on
+Alternatively, you can apply ssh-agent to the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> you're planning on
 running vim in:
 <B>	ssh-agent xterm &amp;</B>
 and <A HREF="diff.html#do">do</A> ssh-add whenever you need.
@@ -3051,7 +3051,7 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
   *<A NAME="g:netrw_home"></A><B>g:netrw_home</B>*		The home directory for where bookmarks and
 				<A HREF="cmdline.html#history">history</A> are saved (as <A HREF="#.netrwbook">.netrwbook</A> and
 				<A HREF="#.netrwhist">.netrwhist</A>).
-				Netrw uses |<A HREF="builtin.html#expand()">expand()</A>| on the <A HREF="options\.html#options">字符串</A>.
+				Netrw uses |<A HREF="builtin.html#expand()">expand()</A>| on the <A HREF="options.html#options">字符串</A>.
 				 default: stdpath('data') (见 |<A HREF="builtin.html#stdpath()">stdpath()</A>|)
 
 
@@ -3359,7 +3359,7 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 				to <A HREF="intro.html#escape">escape</A> these characters.
 
 
-  *<A NAME="g:netrw_timefmt"></A><B>g:netrw_timefmt</B>*		specify format <A HREF="options\.html#options">字符串</A> to vim's <A HREF="builtin.html#strftime()">strftime()</A>.
+  *<A NAME="g:netrw_timefmt"></A><B>g:netrw_timefmt</B>*		specify format <A HREF="options.html#options">字符串</A> to vim's <A HREF="builtin.html#strftime()">strftime()</A>.
 				The default, &quot;&#37;c&quot;, is &quot;the preferred date
 				and time representation for the current
 				locale&quot; according to my manpage entry for
@@ -3401,8 +3401,8 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 				(见 |<A HREF="#netrw-c-tab">netrw-c-tab</A>|).
 
 
-  *<A NAME="g:netrw_xstrlen"></A><B>g:netrw_xstrlen</B>*		Controls how <A HREF="#netrw">netrw</A> computes <A HREF="options\.html#options">字符串</A> lengths,
-				including <A HREF="mbyte.html#multi-byte">multi-byte</A> characters' <A HREF="options\.html#options">字符串</A>
+  *<A NAME="g:netrw_xstrlen"></A><B>g:netrw_xstrlen</B>*		Controls how <A HREF="#netrw">netrw</A> computes <A HREF="options.html#options">字符串</A> lengths,
+				including <A HREF="mbyte.html#multi-byte">multi-byte</A> characters' <A HREF="options.html#options">字符串</A>
 				length. (thanks to N Weibull, <A HREF="motion.html#T">T</A> Mechelynck)
 				=0: uses Vim's built-in <A HREF="builtin.html#strlen()">strlen()</A>
 				=1: number of codepoints (Latin a + combining
@@ -3669,7 +3669,7 @@ SHRINKING OR EXPANDING A NETRW OR LEXPLORE WINDOW	*<A NAME="netrw-c-tab"></A><B>
 
 The &lt;c-tab&gt; key will toggle a <A HREF="#netrw">netrw</A> or |<A HREF="#:Lexplore">:Lexplore</A>| window's width,
 but only if |<A HREF="#g:netrw_usetab">g:netrw_usetab</A>| exists and is non-zero (and, of course,
-only if your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports differentiating &lt;c-tab&gt; from a plain
+only if your <A HREF="nvim_terminal_emulator.html#terminal">终端</A> supports differentiating &lt;c-tab&gt; from a plain
 &lt;tab&gt;).
 
   &#42; If the current<A HREF="windows.html#window">窗口</A>is a <A HREF="#netrw">netrw</A><A HREF="windows.html#window">窗口</A>, toggle its width
@@ -3705,12 +3705,12 @@ This function goes through all the entries in the |<A HREF="#g:Netrw_UserMaps">g
 	&#42; sets up maps:
 <B>		nno &lt;buffer&gt; &lt;silent&gt; KEYMAP-SEQUENCE</B>
 <B>		:call s:UserMaps(islocal,"ExampleUserMapFunc")</B>
- 	&#42; refreshes if result from that function call is the <A HREF="options\.html#options">字符串</A>
+ 	&#42; refreshes if result from that function call is the <A HREF="options.html#options">字符串</A>
 	  &quot;refresh&quot;
-	&#42; if the result <A HREF="options\.html#options">字符串</A> is not &quot;&quot;然后that <A HREF="options\.html#options">字符串</A> will be
+	&#42; if the result <A HREF="options.html#options">字符串</A> is not &quot;&quot;然后that <A HREF="options.html#options">字符串</A> will be
 	  executed (:exe result)
 	&#42; if the result is a <A HREF="eval.html#list">列表</A>然后the above two actions on results
-	  will be taken for every <A HREF="options\.html#options">字符串</A> in the result <A HREF="eval.html#list">列表</A>
+	  will be taken for every <A HREF="options.html#options">字符串</A> in the result <A HREF="eval.html#list">列表</A>
 
 The user function is passed one argument; <A HREF="motion.html#it">它</A> resembles
 
@@ -3927,7 +3927,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 		|<A HREF="#g:netrw_rm_cmd">g:netrw_rm_cmd</A>|  |<A HREF="#g:netrw_rmdir_cmd">g:netrw_rmdir_cmd</A>| |<A HREF="#g:netrw_rmf_cmd">g:netrw_rmf_cmd</A>|
 
 		The first one (|<A HREF="#g:netrw_ssh_cmd">g:netrw_ssh_cmd</A>|) is the most important; most
-		of the others will use the <A HREF="options\.html#options">字符串</A> in <A HREF="#g:netrw_ssh_cmd">g:netrw_ssh_cmd</A> by
+		of the others will use the <A HREF="options.html#options">字符串</A> in <A HREF="#g:netrw_ssh_cmd">g:netrw_ssh_cmd</A> by
 		default.
 
 
@@ -4296,7 +4296,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  correctly.
 				&#42; (Marcin Szamotulski) NetrwOptionRestore
 				  did not restore <A HREF="options.html#options">选项</A> correctly that
-				  had a single <A HREF="change.html#quote">quote</A> in the option <A HREF="options\.html#options">字符串</A>.
+				  had a single <A HREF="change.html#quote">quote</A> in the option <A HREF="options.html#options">字符串</A>.
 		Apr 13, 2020	&#42; implemented error handling via popup
 				  <A HREF="windows.html#windows">窗口</A> (见 |<A HREF="intro.html#popup_beval()">popup_beval()</A>|)
 		Apr 30, 2020	&#42; (reported by Manatsu Takahashi) while

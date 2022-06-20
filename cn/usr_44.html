@@ -255,9 +255,9 @@ and end of the region.  But what about strings that look like this?
 
 <B><FONT color="#3A6F2B">	"A string with a double quote (\") in it" </FONT></B>
 
-This creates a problem: The double quotation marks in the middle of the <A HREF="options\.html#options">字符串</A>
+This creates a problem: The double quotation marks in the middle of the <A HREF="options.html#options">字符串</A>
 will end the region.  You need to tell Vim to skip over any escaped double
-quotes in the <A HREF="options\.html#options">字符串</A>.  Do this with the skip keyword:
+quotes in the <A HREF="options.html#options">字符串</A>.  Do this with the skip keyword:
 
 <B>	:syntax region xString start=/"/ skip=/\\"/ end=/"/</B>
 

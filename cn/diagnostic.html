@@ -459,7 +459,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                    • severity: Only show virtual text for
                                      diagnostics matching the given severity
                                      |<A HREF="#diagnostic-severity">diagnostic-severity</A>|
-                                   • source: (boolean or <A HREF="options\.html#options">字符串</A>) Include the
+                                   • source: (boolean or <A HREF="options.html#options">字符串</A>) Include the
                                      diagnostic source in virtual text. Use
                                      &quot;if_many&quot; to only show sources if there
                                      is more than one diagnostic source in the
@@ -472,7 +472,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                      message with prefix.
                                    • format: (function) A function that takes
                                      a diagnostic <A HREF="motion.html#as">as</A> input and returns a
-                                     <A HREF="options\.html#options">字符串</A>. The return value is the text used
+                                     <A HREF="options.html#options">字符串</A>. The return value is the text used
                                      to display the diagnostic. Example:
 
 <B>                                       function(diagnostic)</B>
@@ -678,7 +678,7 @@ hide({namespace}, {bufnr})                             *<A NAME="vim.diagnostic.
 
                                                       *<A NAME="vim.diagnostic.match()"></A><B>vim.diagnostic.match()</B>*
 match({str}, {pat}, {groups}, {severity_map}, {defaults})
-                Parse a diagnostic from a <A HREF="options\.html#options">字符串</A>.
+                Parse a diagnostic from a <A HREF="options.html#options">字符串</A>.
 
               例如, consider a line of output from a linter:
 
@@ -695,7 +695,7 @@ match({str}, {pat}, {groups}, {severity_map}, {defaults})
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}           (string) <A HREF="options\.html#options">字符串</A> to parse diagnostics from.
+                    {str}           (string) <A HREF="options.html#options">字符串</A> to parse diagnostics from.
                     {pat}           (string) <A HREF="lua.html#Lua">Lua</A> <A HREF="pattern.html#pattern">pattern</A> with capture groups.
                     {groups}        (table) <A HREF="eval.html#list">列表</A> of fields in a
                                     |<A HREF="#diagnostic-structure">diagnostic-structure</A>| to associate with
@@ -740,12 +740,12 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • severity: 见 |<A HREF="#diagnostic-severity">diagnostic-severity</A>|. Overrides
                               the setting from |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • header: (string or table) <A HREF="options\.html#options">字符串</A> to use <A HREF="motion.html#as">as</A> the
+                            • header: (string or table) <A HREF="options.html#options">字符串</A> to use <A HREF="motion.html#as">as</A> the
                               header for the floating<A HREF="windows.html#window">窗口</A>. If a table, <A HREF="motion.html#it">它</A>
                               is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group] tuple.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • source: (boolean or <A HREF="options\.html#options">字符串</A>) Include the
+                            • source: (boolean or <A HREF="options.html#options">字符串</A>) Include the
                               diagnostic source in the message. Use &quot;if_many&quot;
                               to only show sources if there is more than one
                               source of diagnostics in the buffer. Otherwise,
@@ -753,24 +753,24 @@ open_float({opts}, {...})                        *<A NAME="vim.diagnostic.open_f
                               diagnostic source. Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
                             • format: (function) A function that takes a
-                              diagnostic <A HREF="motion.html#as">as</A> input and returns a <A HREF="options\.html#options">字符串</A>. The
+                              diagnostic <A HREF="motion.html#as">as</A> input and returns a <A HREF="options.html#options">字符串</A>. The
                               return value is the text used to display the
                               diagnostic. Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.
-                            • prefix: (function, <A HREF="options\.html#options">字符串</A>, or table) Prefix each
+                            • prefix: (function, <A HREF="options.html#options">字符串</A>, or table) Prefix each
                               diagnostic in the floating<A HREF="windows.html#window">窗口</A>. If a
                               function, <A HREF="motion.html#it">它</A> must have the signature
                               (diagnostic, <A HREF="insert.html#i">i</A>, total) <A HREF="eval.html#-&gt;">-&gt;</A> (string, string),
                               where {i} is the index of the diagnostic being
                               evaluated and {total} is the total number of
                               diagnostics displayed in the<A HREF="windows.html#window">窗口</A>. The
-                              function should return a <A HREF="options\.html#options">字符串</A> which is
+                              function should return a <A HREF="options.html#options">字符串</A> which is
                               prepended to each diagnostic in the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A>
                               well <A HREF="motion.html#as">as</A> an (optional) highlight group which will
                               be used to highlight the prefix. If {prefix} is
                               a table, <A HREF="motion.html#it">它</A> is interpreted <A HREF="motion.html#as">as</A> a [text, hl_group]
                               tuple <A HREF="motion.html#as">as</A> in |<A HREF="api.html#nvim_echo()">nvim_echo()</A>|; otherwise, if
-                              {prefix} is a <A HREF="options\.html#options">字符串</A>, <A HREF="motion.html#it">它</A> is prepended to each
+                              {prefix} is a <A HREF="options.html#options">字符串</A>, <A HREF="motion.html#it">它</A> is prepended to each
                               diagnostic in the<A HREF="windows.html#window">窗口</A>with no highlight.
                               Overrides the setting from
                               |<A HREF="vim.html">vim.diagnostic.config()</A>|.

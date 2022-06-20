@@ -151,7 +151,7 @@ For generic info about setting options 见 |<A HREF="options.html">options.txt</
 
 
 							*<A NAME="pdev-option"></A><B>pdev-option</B>*
-<A HREF="options.html#'printdevice'">'printdevice'</A> <A HREF="options.html#'pdev'">'pdev'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="options.html#'printdevice'">'printdevice'</A> <A HREF="options.html#'pdev'">'pdev'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 This defines the name of the printer to be used when the |<A HREF="#:hardcopy">:hardcopy</A>| command
 is issued with a bang (!) to skip the printer selection dialog.  On Win32, <A HREF="motion.html#it">它</A>
@@ -162,7 +162,7 @@ If the option is empty然后vim will use the system default printer for
 
 
 							*<A NAME="penc-option"></A><B>penc-option</B>* *<A NAME="E620"></A><B>E620</B>*
-<A HREF="options.html#'printencoding'">'printencoding'</A> <A HREF="options.html#'penc'">'penc'</A>	<A HREF="options\.html#options">字符串</A>	(default empty, except for:
+<A HREF="options.html#'printencoding'">'printencoding'</A> <A HREF="options.html#'penc'">'penc'</A>	<A HREF="options.html#options">字符串</A>	(default empty, except for:
 					Windows: cp1252,
 					Macintosh: mac-roman,
 					HPUX: hp-roman8)
@@ -193,7 +193,7 @@ HPUX character encodings and are used by default on these platforms. Code page
 
 
 							*<A NAME="pexpr-option"></A><B>pexpr-option</B>*
-<A HREF="options.html#'printexpr'">'printexpr'</A> <A HREF="options.html#'pexpr'">'pexpr'</A>	<A HREF="options\.html#options">字符串</A>	(default: see below)
+<A HREF="options.html#'printexpr'">'printexpr'</A> <A HREF="options.html#'pexpr'">'pexpr'</A>	<A HREF="options.html#options">字符串</A>	(default: see below)
 			global
 Expression that is evaluated to print the PostScript produced with
 |<A HREF="#:hardcopy">:hardcopy</A>|.
@@ -201,7 +201,7 @@ The file name to be printed is in |<A HREF="eval.html#v:fname_in">v:fname_in</A>
 The arguments to the &quot;<A HREF="#:hardcopy">:hardcopy</A>&quot;命令 are in |<A HREF="eval.html#v:cmdarg">v:cmdarg</A>|.
 The <A HREF="eval.html#expression">expression</A> must take care of <A HREF="change.html#deleting">deleting</A> the file after <A HREF="#printing">printing</A> <A HREF="motion.html#it">它</A>.
 When there is an error, the <A HREF="eval.html#expression">expression</A> must return a non-zero number.
-If there is no error, return zero or an empty <A HREF="options\.html#options">字符串</A>.
+If there is no error, return zero or an empty <A HREF="options.html#options">字符串</A>.
 The default for non MS-Windows systems is to simply use &quot;lpr&quot; to print the
 file:
 
@@ -242,7 +242,7 @@ reasons.
 
 
 							*<A NAME="pfn-option"></A><B>pfn-option</B>* *<A NAME="E613"></A><B>E613</B>*
-<A HREF="options.html#'printfont'">'printfont'</A> <A HREF="options.html#'pfn'">'pfn'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;courier&quot;)
+<A HREF="options.html#'printfont'">'printfont'</A> <A HREF="options.html#'pfn'">'pfn'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;courier&quot;)
 			global
 This is the name of the font that will be used for the |<A HREF="#:hardcopy">:hardcopy</A>| command's
 output.  It has the same format <A HREF="motion.html#as">as</A> the <A HREF="options.html#'guifont'">'guifont'</A> option, except that only one
@@ -256,7 +256,7 @@ the font.  When omitted, the point size is 10.
 
 
 							*<A NAME="pheader-option"></A><B>pheader-option</B>*
-<A HREF="options.html#'printheader'">'printheader'</A> <A HREF="options.html#'pheader'">'pheader'</A>  <A HREF="options\.html#options">字符串</A>  (default &quot;&#37;&lt;&#37;f&#37;h&#37;m&#37;=Page &#37;N&quot;)
+<A HREF="options.html#'printheader'">'printheader'</A> <A HREF="options.html#'pheader'">'pheader'</A>  <A HREF="options.html#options">字符串</A>  (default &quot;&#37;&lt;&#37;f&#37;h&#37;m&#37;=Page &#37;N&quot;)
 			 global
 This defines the format of the header produced in |<A HREF="#:hardcopy">:hardcopy</A>| output.  The
 option is defined in the same way <A HREF="motion.html#as">as</A> the <A HREF="options.html#'statusline'">'statusline'</A> option.  The same simple
@@ -264,7 +264,7 @@ header is used when this option is empty.
 
 
 							*<A NAME="pmbcs-option"></A><B>pmbcs-option</B>*
-<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options.html#'pmbcs'">'pmbcs'</A>  <A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="options.html#'printmbcharset'">'printmbcharset'</A> <A HREF="options.html#'pmbcs'">'pmbcs'</A>  <A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			  global
 Sets the CJK character set to be used when generating CJK output from
 |<A HREF="#:hardcopy">:hardcopy</A>|.  The following predefined values are currently recognised by Vim:
@@ -339,15 +339,15 @@ defining the character set in the &quot;print&quot; directory in <A HREF="option
 
 
 							*<A NAME="pmbfn-option"></A><B>pmbfn-option</B>*
-<A HREF="options.html#'printmbfont'">'printmbfont'</A> <A HREF="options.html#'pmbfn'">'pmbfn'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="options.html#'printmbfont'">'printmbfont'</A> <A HREF="options.html#'pmbfn'">'pmbfn'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 This is a comma-separated <A HREF="eval.html#list">列表</A> of fields for font names to be used when
 generating CJK output from |<A HREF="#:hardcopy">:hardcopy</A>|.  Each font name has to be preceded
 with a <A HREF="#letter">letter</A> indicating the style the font is to be used for <A HREF="motion.html#as">as</A> follows:
 
   r:{font-name}		font to use for normal characters
-  b:{font-name}		font to use for <A HREF="syntax\.html#bold">粗体</A> characters
-  i:{font-name}		font to use for <A HREF="syntax\.html#bold">斜体</A> characters
+  b:{font-name}		font to use for <A HREF="syntax.html#bold">粗体</A> characters
+  i:{font-name}		font to use for <A HREF="syntax.html#bold">斜体</A> characters
   o:{font-name}		font to use for bold-italic characters
 
 A field with the <A HREF="change.html#r">r</A>: prefix must be specified when doing CJK <A HREF="#printing">printing</A>.  The
@@ -370,14 +370,14 @@ from traditional ASCII characters.  There are two additional fields to <A HREF="
   a:no (default)	code range.
 
 The following is an example of specifying two <A HREF="mbyte.html#multibyte">multibyte</A> fonts, one for normal
-and <A HREF="syntax\.html#bold">斜体</A> <A HREF="#printing">printing</A> and one for <A HREF="syntax\.html#bold">粗体</A> and bold-italic <A HREF="#printing">printing</A>, and using
+and <A HREF="syntax.html#bold">斜体</A> <A HREF="#printing">printing</A> and one for <A HREF="syntax.html#bold">粗体</A> and bold-italic <A HREF="#printing">printing</A>, and using
 Courier to print codes in the ASCII code range but using the national
 character set:
 <B>	:set printmbfont=r:WadaMin-Regular,b:WadaMin-Bold,c:yes</B>
  
 
 							*<A NAME="popt-option"></A><B>popt-option</B>*
-<A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options.html#'popt'">'popt'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="options.html#'printoptions'">'printoptions'</A> <A HREF="options.html#'popt'">'popt'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 This is a comma-separated <A HREF="eval.html#list">列表</A> of items that <A HREF="intro.html#control">control</A> the format of the output
 of YXXY:hardcopy|:
@@ -540,7 +540,7 @@ to correctly print CJK files requires setting up a few more <A HREF="options.htm
 
 Each of these countries has many standard character sets and encodings which
 require that both be specified when <A HREF="#printing">printing</A>.  In addition, CJK fonts normally
-<A HREF="diff.html#do">do</A> not have the concept of <A HREF="syntax\.html#bold">斜体</A> glyphs and use different weight or stroke
+<A HREF="diff.html#do">do</A> not have the concept of <A HREF="syntax.html#bold">斜体</A> glyphs and use different weight or stroke
 style to achieve emphasis when <A HREF="#printing">printing</A>.  This in turn requires a different
 approach to specifying fonts to use when <A HREF="#printing">printing</A>.
 
@@ -553,7 +553,7 @@ characters may not appear when printed.
 
 The fonts to use for CJK <A HREF="#printing">printing</A> are specified with <A HREF="options.html#'printmbfont'">'printmbfont'</A>.  This
 option allows you to specify different fonts to use when <A HREF="#printing">printing</A> characters
-which are <A HREF="syntax.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax\.html#bold">斜体</A>, <A HREF="syntax\.html#bold">粗体</A> and
+which are <A HREF="syntax.html#syntax">语法</A> highlighted with the font styles normal, <A HREF="syntax.html#bold">斜体</A>, <A HREF="syntax.html#bold">粗体</A> and
 bold-italic.
 
 No CJK fonts are supplied with Vim.  There are some free <A HREF="mbyte.html#Korean">Korean</A>, <A HREF="mbyte.html#Japanese">Japanese</A>, and
@@ -624,7 +624,7 @@ There are a number of possible causes <A HREF="motion.html#as">as</A> to why the
   <A HREF="diff.html#do">do</A> not support collating printouts will ignore a request to <A HREF="diff.html#do">do</A> so.  Some may
   not.  Try <A HREF="#printing">printing</A> with collation turned off.
 
-- <A HREF="autocmd\.html#Syntax">语法</A>高亮.  Some print management code may prevent the generated
+- <A HREF="autocmd.html#Syntax">语法</A>高亮.  Some print management code may prevent the generated
   PostScript file from being printed on a black and white printer when <A HREF="syntax.html#syntax">语法</A>
   highlighting is turned on, even if solid black is the only color used.  Try
   <A HREF="#printing">printing</A> with <A HREF="syntax.html#syntax">语法</A> highlighting turned off.

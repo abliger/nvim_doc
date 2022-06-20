@@ -558,14 +558,14 @@ abbreviation for &quot;fresh&quot;, but that's very unlikely).
 REMAPPING ABBREVIATIONS
 
 There is one thing to watch out for when defining an abbreviation: The
-resulting <A HREF="options\.html#options">字符串</A> should not be mapped.例如:
+resulting <A HREF="options.html#options">字符串</A> should not be mapped.例如:
 
 <B>	:abbreviate @a adder</B>
 <B>	:imap dd disk-door</B>
 
 When you now type @a, you will get &quot;adisk-doorer&quot;.  That's not what you want.
 To avoid this, use the &quot;<A HREF="map.html#:noreabbrev">:noreabbrev</A>&quot;命令.  It does the same <A HREF="motion.html#as">as</A>
-&quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot;, but avoids that the resulting <A HREF="options\.html#options">字符串</A> is used for mappings:
+&quot;<A HREF="map.html#:abbreviate">:abbreviate</A>&quot;, but avoids that the resulting <A HREF="options.html#options">字符串</A> is used for mappings:
 
 <B>	:noreabbrev @a adder</B>
 

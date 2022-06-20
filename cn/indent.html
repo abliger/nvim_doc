@@ -123,12 +123,12 @@ These five <A HREF="options.html#options">选项</A> <A HREF="intro.html#control
 If <A HREF="options.html#'lisp'">'lisp'</A> is not on and <A HREF="options.html#'equalprg'">'equalprg'</A> is empty, the &quot;<A HREF="change.html#=">=</A>&quot; <A HREF="motion.html#operator">operator</A> indents using
 Vim's built-in algorithm rather than calling an external program.
 
-见 |<A HREF="autocmd\.html#autocommand">自动命令</A>| for how to set the <A HREF="options.html#'cindent'">'cindent'</A> option automatically for C code
+见 |<A HREF="autocmd.html#autocommand">自动命令</A>| for how to set the <A HREF="options.html#'cindent'">'cindent'</A> option automatically for C code
 files and reset <A HREF="motion.html#it">它</A> for others.
 
 
 					*<A NAME="cinkeys-format"></A><B>cinkeys-format</B>* *<A NAME="indentkeys-format"></A><B>indentkeys-format</B>*
-The <A HREF="options.html#'cinkeys'">'cinkeys'</A> option is a <A HREF="options\.html#options">字符串</A> that controls Vim's indenting in response to
+The <A HREF="options.html#'cinkeys'">'cinkeys'</A> option is a <A HREF="options.html#options">字符串</A> that controls Vim's indenting in response to
 typing certain characters or commands in certain contexts.  Note that this not
 only triggers <A HREF="#C-indenting">C-indenting</A>.  When <A HREF="options.html#'indentexpr'">'indentexpr'</A> is not empty <A HREF="options.html#'indentkeys'">'indentkeys'</A> is
 used instead.  The format of <A HREF="options.html#'cinkeys'">'cinkeys'</A> and <A HREF="options.html#'indentkeys'">'indentkeys'</A> is equal.
@@ -861,7 +861,7 @@ follows
 
 in which <A HREF="change.html#case">case</A> <A HREF="diff.html#do">do</A> loops will be indented.  If all your loops are of do/enddo
 type only in, say, .f90 files然后you should set a buffer flag with an
-<A HREF="autocmd\.html#autocommand">自动命令</A> such <A HREF="motion.html#as">as</A>
+<A HREF="autocmd.html#autocommand">自动命令</A> such <A HREF="motion.html#as">as</A>
 
 <B>  au! BufRead,BufNewFile *.f90 let b:fortran_do_enddo=1</B>
 
@@ -973,7 +973,7 @@ To not enable auto-formatting of comments by default (if you want to use your
 own 'formatoptions'):
 <B>    :let g:PHP_autoformatcomment = 0</B>
 
-Else, '<A HREF="motion.html#t">t</A>' will be removed from the <A HREF="options.html#'formatoptions'">'formatoptions'</A> <A HREF="options\.html#options">字符串</A> and &quot;qrowcb&quot; will be
+Else, '<A HREF="motion.html#t">t</A>' will be removed from the <A HREF="options.html#'formatoptions'">'formatoptions'</A> <A HREF="options.html#options">字符串</A> and &quot;qrowcb&quot; will be
 added, 见 |<A HREF="change.html#fo-table">fo-table</A>| for more information.
 
 

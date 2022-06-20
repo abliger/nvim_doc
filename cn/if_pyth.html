@@ -137,8 +137,8 @@ Note: <A HREF="#Python">Python</A> is very sensitive to indenting.  Make sure th
 			{body}&quot; for each line in the <A HREF="cmdline.html#[range]">[range]</A>, with the
 			function arguments being set to the text of each line
 			in turn, without a trailing <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>, and the current
-			line number. The function should return a <A HREF="options\.html#options">字符串</A> or
-			None. If a <A HREF="options\.html#options">字符串</A> is returned, <A HREF="motion.html#it">它</A> becomes the text of
+			line number. The function should return a <A HREF="options.html#options">字符串</A> or
+			None. If a <A HREF="options.html#options">字符串</A> is returned, <A HREF="motion.html#it">它</A> becomes the text of
 			the line in the current turn. The default for <A HREF="cmdline.html#[range]">[range]</A>
 			is the whole file: &quot;1,$&quot;.
 
@@ -269,7 +269,7 @@ vim.command(str)					*<A NAME="python-command"></A><B>python-command</B>*
 vim.eval(str)						*<A NAME="python-eval"></A><B>python-eval</B>*
 	Evaluates the <A HREF="eval.html#expression">expression</A> str using the vim internal <A HREF="eval.html#expression">expression</A>
 	evaluator (见 |<A HREF="eval.html#expression">expression</A>|).  Returns the expression result <A HREF="motion.html#as">as</A>:
-	- a <A HREF="options\.html#options">字符串</A> if the Vim <A HREF="eval.html#expression">expression</A> evaluates to a <A HREF="options\.html#options">字符串</A> or number
+	- a <A HREF="options.html#options">字符串</A> if the Vim <A HREF="eval.html#expression">expression</A> evaluates to a <A HREF="options.html#options">字符串</A> or number
 	- a <A HREF="eval.html#list">列表</A> if the Vim <A HREF="eval.html#expression">expression</A> evaluates to a Vim <A HREF="eval.html#list">列表</A>
 	- a dictionary if the Vim <A HREF="eval.html#expression">expression</A> evaluates to a Vim dictionary
 	<A HREF="eval.html#Dictionaries">Dictionaries</A> and lists are recursively expanded.
@@ -353,7 +353,7 @@ vim.tabpages						*<A NAME="python-tabpages"></A><B>python-tabpages</B>*
 vim.current						*<A NAME="python-current"></A><B>python-current</B>*
 	An object providing access (via specific attributes) to various
 	&quot;current&quot; <A HREF="vimindex.html#objects">objects</A> available in <A HREF="options.html#vim:">vim:</A>
-		vim.current.line	The current line (RW)		<A HREF="options\.html#options">字符串</A>
+		vim.current.line	The current line (RW)		<A HREF="options.html#options">字符串</A>
 		vim.current.buffer	The current buffer (RW)		Buffer
 		vim.current.window	The current<A HREF="windows.html#window">窗口</A>(RW)		Window
 		vim.current.tabpage	The current <A HREF="intro.html#tab">tab</A> page (RW)	TabPage
@@ -366,7 +366,7 @@ vim.current						*<A NAME="python-current"></A><B>python-current</B>*
 
 	Note: When assigning to vim.current.{buffer,window,tabpage} <A HREF="motion.html#it">它</A> expects
 	valid |<A HREF="#python-buffer">python-buffer</A>|, |<A HREF="#python-window">python-window</A>| or |<A HREF="#python-tabpage">python-tabpage</A>| <A HREF="vimindex.html#objects">objects</A>
-	respectively. Assigning triggers normal (with |<A HREF="autocmd\.html#autocommand">自动命令</A>|<A HREF="change.html#s">s</A>)
+	respectively. Assigning triggers normal (with |<A HREF="autocmd.html#autocommand">自动命令</A>|<A HREF="change.html#s">s</A>)
 	switching to given buffer,<A HREF="windows.html#window">窗口</A>or <A HREF="intro.html#tab">tab</A> page. It is the only way to
 	switch <A HREF="ui.html#UI">UI</A> <A HREF="vimindex.html#objects">objects</A> in <A HREF="#python">python</A>: you can't assign to
 	|<A HREF="#python-tabpage">python-tabpage</A>|.window attribute. To switch without triggering
@@ -480,7 +480,7 @@ Implementation is similar to the following, but written in C:
 
 
 vim.VIM_SPECIAL_PATH					*<A NAME="python-VIM_SPECIAL_PATH"></A><B>python-VIM_SPECIAL_PATH</B>*
-	<A HREF="options\.html#options">字符串</A> constant used in conjunction with vim path hook. If path hook
+	<A HREF="options.html#options">字符串</A> constant used in conjunction with vim path hook. If path hook
 	installed by vim is requested to handle anything but path equal to
 	vim.VIM_SPECIAL_PATH constant <A HREF="motion.html#it">它</A> raises ImportError. In the only other
 	<A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> uses special loader.
@@ -525,7 +525,7 @@ act <A HREF="motion.html#as">as</A> if they were lists (yes, they are mutable) o
 element being a line of the buffer.  All of the usual sequence operations,
 including indexing, index assignment, slicing and <A HREF="eval.html#slice">slice</A> assignment, work <A HREF="motion.html#as">as</A>
 you would expect.  Note that the result of indexing (slicing) a buffer is a
-<A HREF="options\.html#options">字符串</A> (list of strings).  This has one unusual consequence - b[:] is different
+<A HREF="options.html#options">字符串</A> (list of strings).  This has one unusual consequence - b[:] is different
 from <A HREF="motion.html#b">b</A>.  In particular, &quot;b[:] = None&quot; deletes the whole of the buffer, whereas
 &quot;<A HREF="motion.html#b">b</A> = None&quot; merely updates the variable <A HREF="motion.html#b">b</A>, with no effect on the buffer.
 
@@ -543,7 +543,7 @@ The buffer object attributes are:
 			this object will raise KeyError. If option is
 			|<A HREF="options.html#global-local">global-local</A>| and local value is missing getting <A HREF="motion.html#it">它</A>
 			will return None.
-	b.name		<A HREF="options\.html#options">字符串</A>, RW. Contains buffer name (full path).
+	b.name		<A HREF="options.html#options">字符串</A>, RW. Contains buffer name (full path).
 			Note: when assigning to b.name |<A HREF="autocmd.html#BufFilePre">BufFilePre</A>| and
 			|<A HREF="autocmd.html#BufFilePost">BufFilePost</A>| autocommands are launched.
 	b.number	Buffer number. Can be used <A HREF="motion.html#as">as</A> |<A HREF="#python-buffers">python-buffers</A>| key.

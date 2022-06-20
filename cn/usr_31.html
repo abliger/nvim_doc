@@ -79,7 +79,7 @@
 			      Exploiting the <A HREF="gui.html#GUI">GUI</A>
 
 
-Vim works well in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, but the <A HREF="gui.html#GUI">GUI</A> has a few extra items.  A file
+Vim works well in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>, but the <A HREF="gui.html#GUI">GUI</A> has a few extra items.  A file
 browser can be used for commands that use a file.  A dialog to make a choice
 between alternatives.  Use keyboard shortcuts to access menu items quickly.
 
@@ -270,7 +270,7 @@ To change the size set the <A HREF="options.html#'lines'">'lines'</A> and/or <A 
 <B>	:set lines=50</B>
 <B>	:set columns=80</B>
 
-Obtaining the size works in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> just like in the <A HREF="gui.html#GUI">GUI</A>.  Setting the size
+Obtaining the size works in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> just like in the <A HREF="gui.html#GUI">GUI</A>.  Setting the size
 is not possible in most terminals.
 
 You can start the X-Windows version of gvim with an argument to specify the
@@ -292,8 +292,8 @@ select gvim to be the editor for <A HREF="message.html#messages">信息</A>.  Wh
 see that <A HREF="motion.html#it">它</A> doesn't work: The mail program thinks that editing is finished,
 while gvim is still running!
    What happens is that gvim disconnects from the shell <A HREF="motion.html#it">它</A> was started in.
-That is fine when you start gvim in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, so that you can <A HREF="diff.html#do">do</A> other work
-in that <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  But when you really want to wait for gvim to finish, you
+That is fine when you start gvim in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>, so that you can <A HREF="diff.html#do">do</A> other work
+in that <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.  But when you really want to wait for gvim to finish, you
 must prevent <A HREF="motion.html#it">它</A> from disconnecting.  The &quot;-f&quot; argument does this:
 
 <B>	gvim -f file.txt</B>
@@ -304,14 +304,14 @@ in until you finish editing and exit.
 
 DELAYED START OF THE <A HREF="gui.html#GUI">GUI</A>
 
-On Unix it's possible to first start Vim in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  That's useful if you
+On Unix it's possible to first start Vim in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.  That's useful if you
 <A HREF="diff.html#do">do</A> various tasks in the same shell.  If you are editing a file and decide you
 want to use the <A HREF="gui.html#GUI">GUI</A> after all, you can start <A HREF="motion.html#it">它</A> with:
 
 <B>	:gui</B>
 
-Vim will open the <A HREF="gui.html#GUI">GUI</A><A HREF="windows.html#window">窗口</A>and no longer use the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  You can continue
-using the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> for something else.  The &quot;-f&quot; argument is used here to run
+Vim will open the <A HREF="gui.html#GUI">GUI</A><A HREF="windows.html#window">窗口</A>and no longer use the <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.  You can continue
+using the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> for something else.  The &quot;-f&quot; argument is used here to run
 the <A HREF="gui.html#GUI">GUI</A> in the foreground.  You can also use &quot;:gui -f&quot;.
 
 

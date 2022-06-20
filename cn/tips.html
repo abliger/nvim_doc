@@ -471,7 +471,7 @@ get the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation"
 <B> autocmd BufNewFile,BufReadPre * normal i</B>
 
 Another <A HREF="eval.html#method">method</A>, perhaps better, is to use the &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令.  In the
-<A HREF="options\.html#options">字符串</A> you can use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> by preceding <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A>.  Don't
+<A HREF="options.html#options">字符串</A> you can use the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation">notation</A> by preceding <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A>.  Don't
 forget to double the number of existing backslashes and put a <A HREF="intro.html#backslash">backslash</A> before
 &#39;&#34;''.
 
@@ -485,14 +485,14 @@ then the <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> <A HREF="intro.html#notation
 Highlighting matching parens					*<A NAME="match-parens"></A><B>match-parens</B>*
 
 This example shows the use of a few advanced tricks:
-- using the |<A HREF="autocmd.html#CursorMoved">CursorMoved</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event
+- using the |<A HREF="autocmd.html#CursorMoved">CursorMoved</A>| <A HREF="autocmd.html#autocommand">自动命令</A> event
 - using |<A HREF="builtin.html#searchpairpos()">searchpairpos()</A>| to find a matching paren
-- using |<A HREF="builtin.html#synID()">synID()</A>| to detect whether the cursor is in a <A HREF="options\.html#options">字符串</A> or comment
+- using |<A HREF="builtin.html#synID()">synID()</A>| to detect whether the cursor is in a <A HREF="options.html#options">字符串</A> or comment
 - using |<A HREF="pattern.html#:match">:match</A>| to highlight something
 - using a |<A HREF="pattern.html#pattern">pattern</A>| to match a specific position in the file.
 
 This should be put in a Vim <A HREF="usr_41.html#script">script</A> file, since <A HREF="motion.html#it">它</A> uses <A HREF="map.html#script-local">script-local</A> <A HREF="eval.html#variables">variables</A>.
-It skips matches in strings or comments, unless the cursor started in <A HREF="options\.html#options">字符串</A>
+It skips matches in strings or comments, unless the cursor started in <A HREF="options.html#options">字符串</A>
 or comment.  This requires <A HREF="syntax.html#syntax">语法</A> highlighting.
 
 A slightly more advanced version is used in the |<A HREF="pi_paren.html#matchparen">matchparen</A>| <A HREF="usr_05.html#plugin">plugin</A>.

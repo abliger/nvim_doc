@@ -176,7 +176,7 @@ If there are many file names, the <A HREF="#windows">windows</A> will become ver
 want to set the <A HREF="options.html#'winheight'">'winheight'</A> and/or <A HREF="options.html#'winwidth'">'winwidth'</A> <A HREF="options.html#options">选项</A> to create a workable
 situation.
 
-Buf/Win Enter/Leave |<A HREF="autocmd\.html#autocommand">自动命令</A>|<A HREF="change.html#s">s</A> are not executed when opening the new
+Buf/Win Enter/Leave |<A HREF="autocmd.html#autocommand">自动命令</A>|<A HREF="change.html#s">s</A> are not executed when opening the new
 <A HREF="#windows">windows</A> and reading the files, that's only done when they are really entered.
 
 
@@ -238,7 +238,7 @@ the filler characters.
 		Also 见 |<A HREF="editing.html#++opt">++opt</A>| and |<A HREF="editing.html#+cmd">+cmd</A>|.
 
 							*<A NAME="E242"></A><B>E242</B>*
-		Be careful when splitting a <A HREF="#window">window</A> in an <A HREF="autocmd\.html#autocommand">自动命令</A>, <A HREF="motion.html#it">它</A> may
+		Be careful when splitting a <A HREF="#window">window</A> in an <A HREF="autocmd.html#autocommand">自动命令</A>, <A HREF="motion.html#it">它</A> may
 		mess up the <A HREF="#window">window</A> layout if this happens while making other
 		<A HREF="#window">window</A> layout changes.
 
@@ -581,7 +581,7 @@ These commands can also be executed with &quot;<A HREF="#:wincmd">:wincmd</A>&qu
 <B>			:wincmd j</B>
  		Moves to the <A HREF="#window">window</A> below the current one.
 		This command is useful when a <A HREF="intro.html#Normal">正常</A>模式 cannot be used (for
-		the |<A HREF="autocmd.html#CursorHold">CursorHold</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event).  Or when a <A HREF="intro.html#Normal">正常</A>模式
+		the |<A HREF="autocmd.html#CursorHold">CursorHold</A>| <A HREF="autocmd.html#autocommand">自动命令</A> event).  Or when a <A HREF="intro.html#Normal">正常</A>模式
 		command is inconvenient.
 		The <A HREF="intro.html#count">count</A> can also be a <A HREF="#window">window</A> number.  Example:
 <B>			:exe nr .. "wincmd w"</B>
@@ -926,7 +926,7 @@ can also get to them with the buffer <A HREF="eval.html#list">列表</A> command
 			{cmd} must not delete <A HREF="#buffers">buffers</A> or add <A HREF="#buffers">buffers</A> to the
 			buffer <A HREF="eval.html#list">列表</A>.
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd\.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
+			<A HREF="autocmd.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each buffer.
 			Also 见 |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="#:windo">:windo</A>|, |<A HREF="quickfix.html#:cdo">:cdo</A>|, |<A HREF="quickfix.html#:ldo">:ldo</A>|,
@@ -1221,9 +1221,9 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 			   displayed in a <A HREF="#window">window</A> |<A HREF="#hidden-buffer">hidden-buffer</A>|
 		   -	a buffer with <A HREF="options.html#'modifiable'">'modifiable'</A> off
 		   =	a readonly buffer
-		   <A HREF="change.html#R">R</A>	a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> buffer with a running <A HREF="job_control.html#job">job</A>
-		   <A HREF="motion.html#F">F</A>	a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> buffer with a finished <A HREF="job_control.html#job">job</A>
-		   ?    a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> buffer without a <A HREF="job_control.html#job">job</A>: `:terminal NONE`
+		   <A HREF="change.html#R">R</A>	a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> buffer with a running <A HREF="job_control.html#job">job</A>
+		   <A HREF="motion.html#F">F</A>	a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> buffer with a finished <A HREF="job_control.html#job">job</A>
+		   ?    a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> buffer without a <A HREF="job_control.html#job">job</A>: `:terminal NONE`
 		    +	a modified buffer
 		    <A HREF="change.html#x">x</A>   a buffer with read <A HREF="message.html#errors">errors</A>
 
@@ -1238,8 +1238,8 @@ list of <A HREF="#buffers">buffers</A>. |<A HREF="#unlisted-buffer">unlisted-buf
 			<A HREF="change.html#x">x</A>	<A HREF="#buffers">buffers</A> with a read error
 			<A HREF="motion.html#&#37;">&#37;</A>	current buffer
 			#	alternate buffer
-			<A HREF="change.html#R">R</A>	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="#buffers">buffers</A> with a running <A HREF="job_control.html#job">job</A>
-			<A HREF="motion.html#F">F</A>	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="#buffers">buffers</A> with a finished <A HREF="job_control.html#job">job</A>
+			<A HREF="change.html#R">R</A>	<A HREF="nvim_terminal_emulator.html#terminal">终端</A> <A HREF="#buffers">buffers</A> with a running <A HREF="job_control.html#job">job</A>
+			<A HREF="motion.html#F">F</A>	<A HREF="nvim_terminal_emulator.html#terminal">终端</A> <A HREF="#buffers">buffers</A> with a finished <A HREF="job_control.html#job">job</A>
 			t	show time last used and sort <A HREF="#buffers">buffers</A>
 		Combining flags means they are &quot;and&quot;ed together, e.g.:
 			h+	hidden <A HREF="#buffers">buffers</A> which are modified
@@ -1503,7 +1503,7 @@ help		Contains a help file.  Will only be created with the |<A HREF="helphelp.ht
 		and can't be changed.  The <A HREF="options.html#'buflisted'">'buflisted'</A> option will be reset
 		for a help buffer.
 
-terminal	A terminal <A HREF="#window">window</A> buffer, 见 |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|. The contents cannot
+terminal	A terminal <A HREF="#window">window</A> buffer, 见 |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>|. The contents cannot
 		be read or changed until the <A HREF="job_control.html#job">job</A> ends.
 
 directory	Displays directory contents.  Can be used by a file explorer

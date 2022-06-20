@@ -407,7 +407,7 @@ argument.
 		mappings and settings.  A shell alias can be used to make
 		this easy to use.例如:
 <B>			alias vimc vim -u ~/.config/nvim/c_init.vim !*</B>
- 		Also consider using autocommands; 见 |<A HREF="autocmd\.html#autocommand">自动命令</A>|.
+ 		Also consider using autocommands; 见 |<A HREF="autocmd.html#autocommand">自动命令</A>|.
 
 		When {vimrc} is &quot;NONE&quot; (all uppercase), all initializations
 		from files and environment <A HREF="eval.html#variables">variables</A> are skipped.  Plugins and
@@ -839,7 +839,7 @@ These commands will write &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot
 that when these commands are executed, the current key mappings and <A HREF="options.html#options">选项</A>
 will be set to the same values.  The <A HREF="options.html#options">选项</A> <A HREF="options.html#'columns'">'columns'</A>, <A HREF="options.html#'endofline'">'endofline'</A>,
 <A HREF="options.html#'fileformat'">'fileformat'</A>, <A HREF="options.html#'lines'">'lines'</A>, <A HREF="options.html#'modified'">'modified'</A>, and <A HREF="options.html#'scroll'">'scroll'</A> are not included, because
-these are <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> or file dependent.
+these are <A HREF="nvim_terminal_emulator.html#terminal">终端</A> or file dependent.
 Note that the <A HREF="options.html#options">选项</A> <A HREF="options.html#'binary'">'binary'</A>, <A HREF="options.html#'paste'">'paste'</A> and <A HREF="options.html#'readonly'">'readonly'</A> are included, this
 might not always be what you want.
 
@@ -855,7 +855,7 @@ with &quot;<A HREF="map.html#:map">:map</A>&quot; and &quot;<A HREF="options.htm
 default <A HREF="#vimrc">vimrc</A> in with a command like &quot;<A HREF="repeat.html#:source">:source</A> ~piet/.vimrc.Cprogs&quot;, change
 the settings and then save them in the current directory with &quot;:mkvimrc!&quot;.  If
 you want to make this file your default |<A HREF="#config">config</A>|, move <A HREF="motion.html#it">它</A> to
-$XDG_CONFIG_HOME/nvim.  You could also use autocommands |<A HREF="autocmd\.html#autocommand">自动命令</A>| and/or
+$XDG_CONFIG_HOME/nvim.  You could also use autocommands |<A HREF="autocmd.html#autocommand">自动命令</A>| and/or
 modelines |<A HREF="options.html#modeline">modeline</A>|.
 
 
@@ -1039,7 +1039,7 @@ This is introduced in section |<A HREF="usr_21.html#21.3">21.3</A>| of the user 
 
 The ShaDa file is used to store:
 - The command line <A HREF="cmdline.html#history">history</A>.
-- The search <A HREF="options\.html#options">字符串</A> <A HREF="cmdline.html#history">history</A>.
+- The search <A HREF="options.html#options">字符串</A> <A HREF="cmdline.html#history">history</A>.
 - The input-line <A HREF="cmdline.html#history">history</A>.
 - <A HREF="quickref.html#Contents">Contents</A> of non-empty <A HREF="change.html#registers">寄存器</A>.
 - Marks for several files.
@@ -1067,7 +1067,7 @@ option upon <A HREF="#startup">startup</A>.
 							*<A NAME="shada-write"></A><B>shada-write</B>*
 When Vim exits and <A HREF="options.html#'shada'">'shada'</A> is non-empty, the info is stored in the ShaDa file
 (it's actually merged with the existing one, if one exists |<A HREF="#shada-merging">shada-merging</A>|).
-The <A HREF="options.html#'shada'">'shada'</A> option is a <A HREF="options\.html#options">字符串</A> containing information about what info should
+The <A HREF="options.html#'shada'">'shada'</A> option is a <A HREF="options.html#options">字符串</A> containing information about what info should
 be stored, and contains <A HREF="vi_diff.html#limits">limits</A> on how much should be stored (see <A HREF="options.html#'shada'">'shada'</A>).
 
 Notes for Unix:
@@ -1093,7 +1093,7 @@ unless &quot;<A HREF="windows.html#:bdel">:bdel</A>&quot; is used.  If you want 
 about to <A HREF="editing.html#abandon">abandon</A> with &quot;<A HREF="windows.html#:bdel">:bdel</A>&quot;, use &quot;<A HREF="#:wsh">:wsh</A>&quot;.  The '<A HREF="vimindex.html#[">[</A>' and '<A HREF="vimindex.html#]">]</A>' marks are not
 stored, but the &#39;&#34;'' <A HREF="motion.html#mark">mark</A> is.  The &#39;&#34;'' <A HREF="motion.html#mark">mark</A> is very useful for jumping to the
 cursor position when the file was last exited.  No marks are saved for files
-that start with any <A HREF="options\.html#options">字符串</A> given with the &quot;<A HREF="change.html#r">r</A>&quot; flag in <A HREF="options.html#'shada'">'shada'</A>.  This can be
+that start with any <A HREF="options.html#options">字符串</A> given with the &quot;<A HREF="change.html#r">r</A>&quot; flag in <A HREF="options.html#'shada'">'shada'</A>.  This can be
 used to avoid saving marks for files on removable media (for MS-Windows you
 would use &quot;ra:,rb:&quot;).
 The |<A HREF="eval.html#v:oldfiles">v:oldfiles</A>| variable is filled with the file names that the ShaDa file
@@ -1142,7 +1142,7 @@ with ShaDa entries.  Specifically the following is being done:
 3. Jump <A HREF="eval.html#list">列表</A> is merged: jumps are ordered by <A HREF="editing.html#timestamp">timestamp</A>, identical jumps
    (identical position AND <A HREF="editing.html#timestamp">timestamp</A>) are squashed.
 4. Search patterns and substitute strings are not merged: search <A HREF="pattern.html#pattern">pattern</A> or
-   substitute <A HREF="options\.html#options">字符串</A> which has greatest <A HREF="editing.html#timestamp">timestamp</A> will be the only one copied
+   substitute <A HREF="options.html#options">字符串</A> which has greatest <A HREF="editing.html#timestamp">timestamp</A> will be the only one copied
    to ShaDa file.
 5. For each <A HREF="intro.html#register">寄存器</A> entity with greatest <A HREF="editing.html#timestamp">timestamp</A> is the only saved.
    |<A HREF="options.html#shada-&lt;">shada-&lt;</A>|
@@ -1180,7 +1180,7 @@ ShaDa files are forward and backward compatible.  This means that
 6. Unknown keys found in <A HREF="intro.html#register">寄存器</A>, local <A HREF="motion.html#mark">mark</A>, global <A HREF="motion.html#mark">mark</A>, change, jump and
    search <A HREF="pattern.html#pattern">pattern</A> entries are saved internally and dumped when <A HREF="editing.html#writing">写</A>.
    Entries created during Neovim session never have such additions.
-7. Additional elements found in replacement <A HREF="options\.html#options">字符串</A> and <A HREF="cmdline.html#history">history</A> entries are
+7. Additional elements found in replacement <A HREF="options.html#options">字符串</A> and <A HREF="cmdline.html#history">history</A> entries are
    saved internally and dumped. Entries created during Neovim session never
    have such additions.
 8. Additional elements found in variable entries are simply ignored when
@@ -1325,9 +1325,9 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
 3. Third goes the length of the fourth entry.  Unsigned integer <A HREF="motion.html#as">as</A> well, used
    for fast skipping without parsing.
 4. Fourth is actual entry data.  All currently used ShaDa entries use
-   containers to hold data: either map or array.  All <A HREF="options\.html#options">字符串</A> values in those
+   containers to hold data: either map or array.  All <A HREF="options.html#options">字符串</A> values in those
    containers are either binary (applies to filenames) or <A HREF="mbyte.html#UTF-8">UTF-8</A>, yet parser
-   needs to expect that invalid bytes may be present in a <A HREF="mbyte.html#UTF-8">UTF-8</A> <A HREF="options\.html#options">字符串</A>.
+   needs to expect that invalid bytes may be present in a <A HREF="mbyte.html#UTF-8">UTF-8</A> <A HREF="options.html#options">字符串</A>.
 
    Exact format depends on the entry type:
 
@@ -1377,8 +1377,8 @@ exactly four MessagePack <A HREF="vimindex.html#objects">objects</A>:
                        &#42;    any      none     Other keys are allowed for
                                               compatibility reasons, see
                                               |<A HREF="#shada-compatibility">shada-compatibility</A>|.
-   3 (SubString)       Array containing last |<A HREF="change.html#:substitute">:substitute</A>| replacement <A HREF="options\.html#options">字符串</A>.
-                       Contains single entry: binary, replacement <A HREF="options\.html#options">字符串</A> used.
+   3 (SubString)       Array containing last |<A HREF="change.html#:substitute">:substitute</A>| replacement <A HREF="options.html#options">字符串</A>.
+                       Contains single entry: binary, replacement <A HREF="options.html#options">字符串</A> used.
                        More entries are allowed for compatibility reasons, see
                        |<A HREF="#shada-compatibility">shada-compatibility</A>|.
    4 (HistoryEntry)    Array containing one entry from <A HREF="cmdline.html#history">history</A>.  Should have

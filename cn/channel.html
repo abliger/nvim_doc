@@ -165,7 +165,7 @@ on_data({chan-id}, {data}, {name})		*<A NAME="on_data"></A><B>on_data</B>*
 							      *<A NAME="channel-lines"></A><B>channel-lines</B>*
     Stream event handlers receive data <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> becomes available from the OS,
     thus the first and last items in the {data} <A HREF="eval.html#list">列表</A> may be partial lines.
-    Empty <A HREF="options\.html#options">字符串</A> completes the previous partial line. Examples (not including
+    Empty <A HREF="options.html#options">字符串</A> completes the previous partial line. Examples (not including
     the final `['']` emitted at EOF):
       - `foobar` may arrive <A HREF="motion.html#as">as</A> `['fo'], ['obar']` 
       - `foo\nbar` may arrive <A HREF="motion.html#as">as</A>
@@ -243,7 +243,7 @@ invoke any |<A HREF="api.html#api">api</A>| function!
 
 4. Standard IO <A HREF="#channel">channel</A>					    *<A NAME="channel-stdio"></A><B>channel-stdio</B>*
 
-Nvim uses stdin/stdout to interact with the user over the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> interface
+Nvim uses stdin/stdout to interact with the user over the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> interface
 (TUI). If Nvim is |<A HREF="starting.html#--headless">--headless</A>| the <A HREF="term.html#TUI">TUI</A> is not started and stdin/stdout can be
 used <A HREF="motion.html#as">as</A> a <A HREF="#channel">channel</A>. See also |<A HREF="starting.html#--embed">--embed</A>|.
 
@@ -269,9 +269,9 @@ Put this in `uppercase.vim` and run:
 If you want to type input for the <A HREF="job_control.html#job">job</A> in a Vim<A HREF="windows.html#window">窗口</A>you have a few <A HREF="options.html#options">选项</A>:
 - Use a normal buffer and handle all possible commands yourself.
   This will be complicated, since there are so many possible commands.
-- Use a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>.  This works well if what you type goes directly to
+- Use a <A HREF="nvim_terminal_emulator.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>.  This works well if what you type goes directly to
   the <A HREF="job_control.html#job">job</A> and the <A HREF="job_control.html#job">job</A> output is directly displayed in the<A HREF="windows.html#window">窗口</A>.
-  见 |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|.
+  见 |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>|.
 - Use a<A HREF="windows.html#window">窗口</A>with a prompt buffer. This works well when entering a line for
   the <A HREF="job_control.html#job">job</A> in Vim while displaying (possibly filtered) output from the <A HREF="job_control.html#job">job</A>.
 

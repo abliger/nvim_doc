@@ -603,7 +603,7 @@ When decreased, <A HREF="#folds">folds</A> above the new level are closed.  No m
 
 FOLDTEXT						*<A NAME="fold-foldtext"></A><B>fold-foldtext</B>*
 
-<A HREF="options.html#'foldtext'">'foldtext'</A> is a <A HREF="options\.html#options">字符串</A> option that specifies an <A HREF="eval.html#expression">expression</A>.  This <A HREF="eval.html#expression">expression</A>
+<A HREF="options.html#'foldtext'">'foldtext'</A> is a <A HREF="options.html#options">字符串</A> option that specifies an <A HREF="eval.html#expression">expression</A>.  This <A HREF="eval.html#expression">expression</A>
 is evaluated to obtain the text displayed for a closed fold.  Example:
 
 <B>    :set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')</B>
@@ -629,7 +629,7 @@ types of <A HREF="#folding">folding</A>.  If you don't like <A HREF="motion.html
 <A HREF="eval.html#expression">expression</A>.  It can use these special Vim <A HREF="eval.html#variables">variables</A>:
 	<A HREF="eval.html#v:foldstart">v:foldstart</A>	line number of first line in the fold
 	<A HREF="eval.html#v:foldend">v:foldend</A>	line number of last line in the fold
-	<A HREF="eval.html#v:folddashes">v:folddashes</A>	a <A HREF="options\.html#options">字符串</A> that contains dashes to represent the
+	<A HREF="eval.html#v:folddashes">v:folddashes</A>	a <A HREF="options.html#options">字符串</A> that contains dashes to represent the
 			foldlevel.
 	<A HREF="eval.html#v:foldlevel">v:foldlevel</A>	the foldlevel of the fold
 

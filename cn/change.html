@@ -744,7 +744,7 @@ Directory for temporary files is created in the first possible directory of:
 			For each line in <A HREF="cmdline.html#[range]">[range]</A> replace a match of {pattern}
 			with {string}.
 			For the {pattern} 见 |<A HREF="pattern.html#pattern">pattern</A>|.
-			{string} can be a literal <A HREF="options\.html#options">字符串</A>, or something
+			{string} can be a literal <A HREF="options.html#options">字符串</A>, or something
 			special; 见 |<A HREF="#sub-replace-special">sub-replace-special</A>|.
 			When <A HREF="cmdline.html#[range]">[range]</A> and <A HREF="intro.html#[count]">[count]</A> are omitted, replace in the
 			current line only.  When <A HREF="intro.html#[count]">[count]</A> is given, replace in
@@ -763,7 +763,7 @@ Directory for temporary files is created in the first possible directory of:
 
 :[range]&amp;[&amp;][flags] <A HREF="intro.html#[count]">[count]</A>					*<A NAME=":&amp;"></A><B>:&amp;</B>*
 			Repeat last <A HREF="#:substitute">:substitute</A> with same search <A HREF="pattern.html#pattern">pattern</A> and
-			substitute <A HREF="options\.html#options">字符串</A>, but without the same flags.  You
+			substitute <A HREF="options.html#options">字符串</A>, but without the same flags.  You
 			may add [flags], 见 |<A HREF="#:s_flags">:s_flags</A>|.
 			Note that after `:substitute` the '<A HREF="#&amp;">&amp;</A>' flag can't be
 			used, it's recognized <A HREF="motion.html#as">as</A> a <A HREF="pattern.html#pattern">pattern</A> separator.
@@ -775,7 +775,7 @@ Directory for temporary files is created in the first possible directory of:
 
 
 :[range]~[&amp;][flags] <A HREF="intro.html#[count]">[count]</A>					*<A NAME=":~"></A><B>:~</B>*
-			Repeat last substitute with same substitute <A HREF="options\.html#options">字符串</A>
+			Repeat last substitute with same substitute <A HREF="options.html#options">字符串</A>
 			but with last used search <A HREF="pattern.html#pattern">pattern</A>.  This is like
 			`:&amp;r`.  见 |<A HREF="#:s_flags">:s_flags</A>| for [flags].
 
@@ -815,7 +815,7 @@ The flags that you can use for the substitute commands:
 <B>		:s/this/that/&amp;</B>
  	Note that `:s` and `:&amp;` don't keep the flags.
 
-[c]	Confirm each 替换.  Vim highlights the matching <A HREF="options\.html#options">字符串</A> (with
+[c]	Confirm each 替换.  Vim highlights the matching <A HREF="options.html#options">字符串</A> (with
 
 	|<A HREF="syntax.html#hl-IncSearch">hl-IncSearch</A>|).  You can type:				*<A NAME=":s_c"></A><B>:s_c</B>*
 	    '<A HREF="#y">y</A>'	    to substitute this match
@@ -914,9 +914,9 @@ For compatibility with <A HREF="intro.html#Vi">Vi</A> these two exceptions are a
 &quot;\&amp;{string}&amp;&quot; does the same <A HREF="motion.html#as">as</A> &quot;//{string}/&quot;.
 
 						*<A NAME="pattern-delimiter"></A><B>pattern-delimiter</B>* *<A NAME="E146"></A><B>E146</B>*
-Instead of the '<A HREF="pattern.html#/">/</A>' which surrounds the <A HREF="pattern.html#pattern">pattern</A> and replacement <A HREF="options\.html#options">字符串</A>, you can
+Instead of the '<A HREF="pattern.html#/">/</A>' which surrounds the <A HREF="pattern.html#pattern">pattern</A> and replacement <A HREF="options.html#options">字符串</A>, you can
 use another single-byte character.  This is useful if you want to include a
-'<A HREF="pattern.html#/">/</A>' in the search <A HREF="pattern.html#pattern">pattern</A> or replacement <A HREF="options\.html#options">字符串</A>.  Example:
+'<A HREF="pattern.html#/">/</A>' in the search <A HREF="pattern.html#pattern">pattern</A> or replacement <A HREF="options.html#options">字符串</A>.  Example:
 <B>	:s+/+//+</B>
 
 You can use most characters, but not an alphanumeric character, '\', &#39;&#34;'' or
@@ -1075,12 +1075,12 @@ Exceptions:
 Substitute with an <A HREF="eval.html#expression">expression</A>			*<A NAME="sub-replace-expression"></A><B>sub-replace-expression</B>*
 
 						*<A NAME="sub-replace-\="></A><B>sub-replace-\=</B>* *<A NAME="s/\="></A><B>s/\=</B>*
-When the substitute <A HREF="options\.html#options">字符串</A> starts with &quot;\=&quot; the remainder is interpreted <A HREF="motion.html#as">as</A> an
+When the substitute <A HREF="options.html#options">字符串</A> starts with &quot;\=&quot; the remainder is interpreted <A HREF="motion.html#as">as</A> an
 <A HREF="eval.html#expression">expression</A>.
 
 The special meaning for characters <A HREF="motion.html#as">as</A> mentioned at |<A HREF="#sub-replace-special">sub-replace-special</A>| does
 not apply except for &quot;<A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>&quot;.  A <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> character is used <A HREF="motion.html#as">as</A> a line break, you
-can get one with a double-quote <A HREF="options\.html#options">字符串</A>: &quot;\n&quot;.  Prepend a <A HREF="intro.html#backslash">backslash</A> to get a
+can get one with a double-quote <A HREF="options.html#options">字符串</A>: &quot;\n&quot;.  Prepend a <A HREF="intro.html#backslash">backslash</A> to get a
 real <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> character (which will be a NUL in the file).
 
 The &quot;\=&quot; <A HREF="intro.html#notation">notation</A> can also be used inside the third argument {sub} of
@@ -1492,14 +1492,14 @@ result of the <A HREF="eval.html#expression">expression</A>.  If you end <A HREF
 <A HREF="eval.html#expression">expression</A>.  If you <A HREF="diff.html#do">do</A> not enter an <A HREF="eval.html#expression">expression</A>, Vim uses the previous
 <A HREF="eval.html#expression">expression</A> (like with the &quot;<A HREF="pattern.html#/">/</A>&quot;命令).
 
-The <A HREF="eval.html#expression">expression</A> must evaluate to a <A HREF="options\.html#options">字符串</A>.  A <A HREF="eval.html#Number">Number</A> is always automatically
-converted to a <A HREF="options\.html#options">字符串</A>.  For the &quot;<A HREF="#p">p</A>&quot; and &quot;<A HREF="#:put">:put</A>&quot;命令, if the result is a
-<A HREF="eval.html#Float">Float</A> it's converted into a <A HREF="options\.html#options">字符串</A>.  If the result is a <A HREF="eval.html#list">列表</A> each element is
-turned into a <A HREF="options\.html#options">字符串</A> and used <A HREF="motion.html#as">as</A> a line.  A <A HREF="eval.html#Dictionary">Dictionary</A> or FuncRef results in
+The <A HREF="eval.html#expression">expression</A> must evaluate to a <A HREF="options.html#options">字符串</A>.  A <A HREF="eval.html#Number">Number</A> is always automatically
+converted to a <A HREF="options.html#options">字符串</A>.  For the &quot;<A HREF="#p">p</A>&quot; and &quot;<A HREF="#:put">:put</A>&quot;命令, if the result is a
+<A HREF="eval.html#Float">Float</A> it's converted into a <A HREF="options.html#options">字符串</A>.  If the result is a <A HREF="eval.html#list">列表</A> each element is
+turned into a <A HREF="options.html#options">字符串</A> and used <A HREF="motion.html#as">as</A> a line.  A <A HREF="eval.html#Dictionary">Dictionary</A> or FuncRef results in
 an error message (use <A HREF="builtin.html#string()">string()</A> to convert).
 
-If the &quot;<A HREF="#=">=</A> <A HREF="intro.html#register">寄存器</A> is used for the &quot;<A HREF="#p">p</A>&quot;命令, the <A HREF="options\.html#options">字符串</A> is split up at <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
-characters.  If the <A HREF="options\.html#options">字符串</A> ends in a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, <A HREF="motion.html#it">它</A> is regarded <A HREF="motion.html#as">as</A> a <A HREF="motion.html#linewise">linewise</A>
+If the &quot;<A HREF="#=">=</A> <A HREF="intro.html#register">寄存器</A> is used for the &quot;<A HREF="#p">p</A>&quot;命令, the <A HREF="options.html#options">字符串</A> is split up at <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>
+characters.  If the <A HREF="options.html#options">字符串</A> ends in a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A>, <A HREF="motion.html#it">它</A> is regarded <A HREF="motion.html#as">as</A> a <A HREF="motion.html#linewise">linewise</A>
 <A HREF="intro.html#register">寄存器</A>.
 
 8. Selection <A HREF="#registers">registers</A> &quot;* and &quot;<A HREF="motion.html#+">+</A>
@@ -1708,14 +1708,14 @@ an external command, like &quot;par&quot; (e.g.: &quot;!}par&quot; to format unt
 An overview of comment <A HREF="#formatting">formatting</A> is in section |<A HREF="usr_30.html#30.6">30.6</A>| of the user manual.
 
 Vim can automatically insert and format comments in a special way.  Vim
-recognizes a comment by a specific <A HREF="options\.html#options">字符串</A> at the start of the line (ignoring
+recognizes a comment by a specific <A HREF="options.html#options">字符串</A> at the start of the line (ignoring
 white space).  Three types of comments can be used:
 
-- A comment <A HREF="options\.html#options">字符串</A> that repeats at the start of each line.  An example is the
+- A comment <A HREF="options.html#options">字符串</A> that repeats at the start of each line.  An example is the
   type of comment used in shell scripts, starting with &quot;<A HREF="pattern.html##">#</A>&quot;.
-- A comment <A HREF="options\.html#options">字符串</A> that occurs only in the first line, not in the following
+- A comment <A HREF="options.html#options">字符串</A> that occurs only in the first line, not in the following
   lines.  An example is this <A HREF="eval.html#list">列表</A> with dashes.
-- Three-piece comments that have a start <A HREF="options\.html#options">字符串</A>, an end <A HREF="options\.html#options">字符串</A>, and optional
+- Three-piece comments that have a start <A HREF="options.html#options">字符串</A>, an end <A HREF="options.html#options">字符串</A>, and optional
   lines in between.  The strings for the start, middle and end are different.
   An example is the C style comment:
 	/*
@@ -1723,7 +1723,7 @@ white space).  Three types of comments can be used:
 	 */
 
 The <A HREF="options.html#'comments'">'comments'</A> option is a comma-separated <A HREF="eval.html#list">列表</A> of parts.  Each part defines a
-type of comment <A HREF="options\.html#options">字符串</A>.  A part consists of:
+type of comment <A HREF="options.html#options">字符串</A>.  A part consists of:
 	{flags}:{string}
 
 {string} is the literal text that must appear.
@@ -1734,7 +1734,7 @@ type of comment <A HREF="options\.html#options">字符串</A>.  A part consists 
 
   <A HREF="motion.html#b">b</A>	Blank (&lt;Space&gt;, <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> or <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A>) required after {string}.
 
-  <A HREF="motion.html#f">f</A>	Only the first line has the comment <A HREF="options\.html#options">字符串</A>.  Do not repeat comment on
+  <A HREF="motion.html#f">f</A>	Only the first line has the comment <A HREF="options.html#options">字符串</A>.  Do not repeat comment on
 	the next line, but preserve indentation (e.g., a bullet-list).
 
   <A HREF="#s">s</A>	Start of three-piece comment
@@ -1753,8 +1753,8 @@ type of comment <A HREF="options\.html#options">字符串</A>.  A part consists 
   <A HREF="insert.html#O">O</A>	Don't consider this comment for the &quot;<A HREF="insert.html#O">O</A>&quot;命令.
 
   <A HREF="#x">x</A>	Allows three-piece comments to be ended by just typing the last
-	character of the end-comment <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#as">as</A> the first action on a new
-	line when the middle-comment <A HREF="options\.html#options">字符串</A> has been inserted automatically.
+	character of the end-comment <A HREF="options.html#options">字符串</A> <A HREF="motion.html#as">as</A> the first action on a new
+	line when the middle-comment <A HREF="options.html#options">字符串</A> has been inserted automatically.
 	See below for more details.
 
   {digits}
@@ -1766,13 +1766,13 @@ type of comment <A HREF="options\.html#options">字符串</A>.  A part consists 
 	Like {digits} but reduce the indent.  This only works when there is
 	some indent for the start or end part that can be removed.
 
-When a <A HREF="options\.html#options">字符串</A> has none of the '<A HREF="motion.html#f">f</A>', '<A HREF="#s">s</A>', '<A HREF="motion.html#m">m</A>' or '<A HREF="motion.html#e">e</A>' flags, Vim assumes the
-comment <A HREF="options\.html#options">字符串</A> repeats at the start of each line.  The flags field may be
+When a <A HREF="options.html#options">字符串</A> has none of the '<A HREF="motion.html#f">f</A>', '<A HREF="#s">s</A>', '<A HREF="motion.html#m">m</A>' or '<A HREF="motion.html#e">e</A>' flags, Vim assumes the
+comment <A HREF="options.html#options">字符串</A> repeats at the start of each line.  The flags field may be
 empty.
 
 Any blank space in the text before and after the {string} is part of the
 {string}, so <A HREF="diff.html#do">do</A> not include leading or trailing blanks unless the blanks are a
-required part of the comment <A HREF="options\.html#options">字符串</A>.
+required part of the comment <A HREF="options.html#options">字符串</A>.
 
 When one comment leader is part of another, specify the part after the whole.
 For example, to include both &quot;<A HREF="motion.html#-">-</A>&quot; and &quot;<A HREF="eval.html#-&gt;">-&gt;</A>&quot;, use
@@ -1781,11 +1781,11 @@ For example, to include both &quot;<A HREF="motion.html#-">-</A>&quot; and &quot
 A three-piece comment must always be given <A HREF="motion.html#as">as</A> start,middle,end, with no other
 parts in between.  An example of a three-piece comment is
 <B>	sr:/*,mb:*,ex:*/</B>
-for C-comments.  To avoid recognizing &quot;*ptr&quot; <A HREF="motion.html#as">as</A> a comment, the middle <A HREF="options\.html#options">字符串</A>
+for C-comments.  To avoid recognizing &quot;*ptr&quot; <A HREF="motion.html#as">as</A> a comment, the middle <A HREF="options.html#options">字符串</A>
 includes the '<A HREF="motion.html#b">b</A>' flag.  For three-piece comments, Vim checks the text after
-the start and middle strings for the end <A HREF="options\.html#options">字符串</A>.  If Vim finds the end <A HREF="options\.html#options">字符串</A>,
+the start and middle strings for the end <A HREF="options.html#options">字符串</A>.  If Vim finds the end <A HREF="options.html#options">字符串</A>,
 the comment does not continue on the next line.  Three-piece comments must
-have a middle <A HREF="options\.html#options">字符串</A> because otherwise Vim can't recognize the middle lines.
+have a middle <A HREF="options.html#options">字符串</A> because otherwise Vim can't recognize the middle lines.
 
 Notice the use of the &quot;<A HREF="#x">x</A>&quot; flag in the above three-piece comment definition.
 When you hit Return in a C-comment, Vim will insert the middle comment leader
@@ -1799,7 +1799,7 @@ part which is longer, the end part is used.  This makes a C style comment work
 without requiring the middle part to end with a space.
 
 Here is an example of alignment flags at work to make a comment stand out
-(kind of looks like a 1 too). Consider comment <A HREF="options\.html#options">字符串</A>:
+(kind of looks like a 1 too). Consider comment <A HREF="options.html#options">字符串</A>:
 <B>	:set comments=sr:/***,m:**,ex-2:******/</B>
  
 <B><FONT color="#3A6F2B">                                   /*** </FONT></B>
@@ -1841,7 +1841,7 @@ By default, &quot;b:#&quot; is included.  This means that a line that starts wit
 
 							*<A NAME="fo-table"></A><B>fo-table</B>*
 You can use the <A HREF="options.html#'formatoptions'">'formatoptions'</A> option  to influence how Vim formats text.
-<A HREF="options.html#'formatoptions'">'formatoptions'</A> is a <A HREF="options\.html#options">字符串</A> that can contain any of the letters below.  You
+<A HREF="options.html#'formatoptions'">'formatoptions'</A> is a <A HREF="options.html#options">字符串</A> that can contain any of the letters below.  You
 can separate the option letters with commas for readability.
 
 <B><FONT color="#3A6F2B">letter	 meaning when present in 'formatoptions'    </FONT></B>

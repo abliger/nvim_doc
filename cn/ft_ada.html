@@ -80,7 +80,7 @@
 
 ADA								      *<A NAME="ada.vim"></A><B>ada.vim</B>*
 
-1.  <A HREF="autocmd\.html#Syntax">语法</A>高亮			    |<A HREF="#ft-ada-syntax">ft-ada-syntax</A>|
+1.  <A HREF="autocmd.html#Syntax">语法</A>高亮			    |<A HREF="#ft-ada-syntax">ft-ada-syntax</A>|
 2.  File type Plug-in			    |<A HREF="#ft-ada-plugin">ft-ada-plugin</A>|
 3.  Omni Completion			    |<A HREF="#ft-ada-omni">ft-ada-omni</A>|
     3.1 Omni Completion with &quot;gnat xref&quot;	|<A HREF="#gnat-xref">gnat-xref</A>|
@@ -279,37 +279,37 @@ g:gnat.Set_Project_File([{file}])
 		Set gnat project file and load associated session.  An open
 		project will be closed and the session written.  If called
 		without file name the file selector opens for selection of a
-		project file. If called with an empty <A HREF="options\.html#options">字符串</A> then the project
+		project file. If called with an empty <A HREF="options.html#options">字符串</A> then the project
 		and associated session are closed.
 
 
 							 *<A NAME="g:gnat.Project_File"></A><B>g:gnat.Project_File</B>*
-<A HREF="#g:gnat.Project_File">g:gnat.Project_File</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:gnat.Project_File">g:gnat.Project_File</A>	<A HREF="options.html#options">字符串</A>
 		Current project file.
 
 
 							 *<A NAME="g:gnat.Make_Command"></A><B>g:gnat.Make_Command</B>*
-<A HREF="#g:gnat.Make_Command">g:gnat.Make_Command</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:gnat.Make_Command">g:gnat.Make_Command</A>	<A HREF="options.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Make()</A>| (|<A HREF="options.html#'makeprg'">'makeprg'</A>|).
 
 
 						       *<A NAME="g:gnat.Pretty_Program"></A><B>g:gnat.Pretty_Program</B>*
-<A HREF="#g:gnat.Pretty_Program">g:gnat.Pretty_Program</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:gnat.Pretty_Program">g:gnat.Pretty_Program</A>	<A HREF="options.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Pretty()</A>|
 
 
 							 *<A NAME="g:gnat.Find_Program"></A><B>g:gnat.Find_Program</B>*
-<A HREF="#g:gnat.Find_Program">g:gnat.Find_Program</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:gnat.Find_Program">g:gnat.Find_Program</A>	<A HREF="options.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Find()</A>|
 
 
 							 *<A NAME="g:gnat.Tags_Command"></A><B>g:gnat.Tags_Command</B>*
-<A HREF="#g:gnat.Tags_Command">g:gnat.Tags_Command</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:gnat.Tags_Command">g:gnat.Tags_Command</A>	<A HREF="options.html#options">字符串</A>
 		External command used for |<A HREF="g:gnat.html">g:gnat.Tags()</A>|
 
 
 							 *<A NAME="g:gnat.Error_Format"></A><B>g:gnat.Error_Format</B>*
-<A HREF="#g:gnat.Error_Format">g:gnat.Error_Format</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:gnat.Error_Format">g:gnat.Error_Format</A>	<A HREF="options.html#options">字符串</A>
 		Error format (|<A HREF="options.html#'errorformat'">'errorformat'</A>|)
 
 ------------------------------------------------------------------------------
@@ -345,12 +345,12 @@ convention to convert the file into a unit name. Both '<A HREF="motion.html#-">-
 
 
 						       *<A NAME="g:decada.Make_Command"></A><B>g:decada.Make_Command</B>*
-<A HREF="#g:decada.Make_Command">g:decada.Make_Command</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:decada.Make_Command">g:decada.Make_Command</A>	<A HREF="options.html#options">字符串</A>
 		External command used for |<A HREF="g:decada.html">g:decada.Make()</A>| (|<A HREF="options.html#'makeprg'">'makeprg'</A>|).
 
 
 						       *<A NAME="g:decada.Error_Format"></A><B>g:decada.Error_Format</B>*
-<A HREF="#g:decada.Error_Format">g:decada.Error_Format</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:decada.Error_Format">g:decada.Error_Format</A>	<A HREF="options.html#options">字符串</A>
 		Error format (|<A HREF="options.html#'errorformat'">'errorformat'</A>|).
 
 ==============================================================================
@@ -478,7 +478,7 @@ convention to convert the file into a unit name. Both '<A HREF="motion.html#-">-
 
 
 						      *<A NAME="g:ada_default_compiler"></A><B>g:ada_default_compiler</B>*
-<A HREF="#g:ada_default_compiler">g:ada_default_compiler</A>	  <A HREF="options\.html#options">字符串</A>
+<A HREF="#g:ada_default_compiler">g:ada_default_compiler</A>	  <A HREF="options.html#options">字符串</A>
 		set default compiler. Currently supported are 'gnat' and
 		'decada'.
 
@@ -558,17 +558,17 @@ All constants are locked. 见 |<A HREF="eval.html#:lockvar">:lockvar</A>| for de
 
 
 							     *<A NAME="g:ada#WordRegex"></A><B>g:ada#WordRegex</B>*
-<A HREF="#g:ada#WordRegex">g:ada#WordRegex</A>		<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:ada#WordRegex">g:ada#WordRegex</A>		<A HREF="options.html#options">字符串</A>
 		Regular <A HREF="eval.html#expression">expression</A> to search for Ada words.
 
 
 							  *<A NAME="g:ada#DotWordRegex"></A><B>g:ada#DotWordRegex</B>*
-<A HREF="#g:ada#DotWordRegex">g:ada#DotWordRegex</A>	<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:ada#DotWordRegex">g:ada#DotWordRegex</A>	<A HREF="options.html#options">字符串</A>
 		Regular <A HREF="eval.html#expression">expression</A> to search for Ada words separated by dots.
 
 
 							       *<A NAME="g:ada#Comment"></A><B>g:ada#Comment</B>*
-<A HREF="#g:ada#Comment">g:ada#Comment</A>		<A HREF="options\.html#options">字符串</A>
+<A HREF="#g:ada#Comment">g:ada#Comment</A>		<A HREF="options.html#options">字符串</A>
 		Regular <A HREF="eval.html#expression">expression</A> to search for Ada comments.
 
 

@@ -117,16 +117,16 @@ Nvim嵌入了一个基于libvterm的VT220/xterm终端仿真程序。终端呈现
 
 输入						*<A NAME="terminal-input"></A><B>terminal-input</B>*
 
-想要在|<A HREF="intro\.html#Terminal-mode">终端模式</A>|输入内容，需要先使用|<A HREF="insert.html#i">i</A>|, |<A HREF="insert.html#I">I</A>|, |<A HREF="insert.html#a">a</A>|, |<A HREF="insert.html#A">A</A>|或者|<A HREF="insert.html#:startinsert">:startinsert</A>|进入插入模式.在此模式中除了&lt;C-\&gt;所有的键都会发送到当前项目.如果&lt;C-\&gt;被按压,除非<A HREF="motion.html#it">它</A>是&lt;C-N&gt;下一个键也会发送.使用&lt;C-\&gt;&lt;C-N&gt;回到正常模式. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
+想要在|<A HREF="intro.html#Terminal-mode">终端模式</A>|输入内容，需要先使用|<A HREF="insert.html#i">i</A>|, |<A HREF="insert.html#I">I</A>|, |<A HREF="insert.html#a">a</A>|, |<A HREF="insert.html#A">A</A>|或者|<A HREF="insert.html#:startinsert">:startinsert</A>|进入插入模式.在此模式中除了&lt;C-\&gt;所有的键都会发送到当前项目.如果&lt;C-\&gt;被按压,除非<A HREF="motion.html#it">它</A>是&lt;C-N&gt;下一个键也会发送.使用&lt;C-\&gt;&lt;C-N&gt;回到正常模式. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
-<A HREF="intro\.html#Terminal-mode">终端模式</A>强制使用这些<A HREF="options.html#options">选项</A>:
+<A HREF="intro.html#Terminal-mode">终端模式</A>强制使用这些<A HREF="options.html#options">选项</A>:
 
     <A HREF="options.html#'cursorlineopt'">'cursorlineopt'</A> = number
     <A HREF="options.html#'nocursorcolumn'">'nocursorcolumn'</A>
     <A HREF="options.html#'scrolloff'">'scrolloff'</A> = 0
     <A HREF="options.html#'sidescrolloff'">'sidescrolloff'</A> = 0
 
-<A HREF="intro\.html#Terminal-mode">终端模式</A>有它自己的|<A HREF="map.html#:tnoremap">:tnoremap</A>|和<A HREF="api.html#namespace">名称空间</A>映射, 能和任意<A HREF="#terminal">终端</A>活动配对.
+<A HREF="intro.html#Terminal-mode">终端模式</A>有它自己的|<A HREF="map.html#:tnoremap">:tnoremap</A>|和<A HREF="api.html#namespace">名称空间</A>映射, 能和任意<A HREF="#terminal">终端</A>活动配对.
 
 映射<A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>退出终端模式:
 <B>    :tnoremap &lt;Esc&gt; &lt;C-\&gt;&lt;C-n&gt;</B>
@@ -168,12 +168,12 @@ Nvim嵌入了一个基于libvterm的VT220/xterm终端仿真程序。终端呈现
 - <A HREF="options.html#'list'">'list'</A>是关闭的
 - <A HREF="options.html#'wrap'">'wrap'</A>是关闭的
 
-你可以使用<A HREF="autocmd.html#TermOpen">TermOpen</A><A HREF="autocmd\.html#autocommand">自动命令</A>改变默认值:
+你可以使用<A HREF="autocmd.html#TermOpen">TermOpen</A><A HREF="autocmd.html#autocommand">自动命令</A>改变默认值:
 <B>    au TermOpen * setlocal list</B>
 
 <B><FONT color="#3A6F2B">终端颜色</FONT></B>
 
-`{g,b}:terminal_color_x` <A HREF="eval.html#variables">变量</A> <A HREF="intro.html#control">控制</A> the <A HREF="#terminal">终端</A>调色板,其中`x`是在0到255<A HREF="motion.html#inclusive">内</A>的颜色索引.此<A HREF="eval.html#variables">变量</A>通过|<A HREF="autocmd.html#TermOpen">TermOpen</A>|读取. 这个变量必须设置为颜色名字或者十六进制<A HREF="options\.html#options">字符串</A>.例如:
+`{g,b}:terminal_color_x` <A HREF="eval.html#variables">变量</A> <A HREF="intro.html#control">控制</A> the <A HREF="#terminal">终端</A>调色板,其中`x`是在0到255<A HREF="motion.html#inclusive">内</A>的颜色索引.此<A HREF="eval.html#variables">变量</A>通过|<A HREF="autocmd.html#TermOpen">TermOpen</A>|读取. 这个变量必须设置为颜色名字或者十六进制<A HREF="options.html#options">字符串</A>.例如:
 <B>    let g:terminal_color_4 = '#ff0000'</B>
 <B>    let g:terminal_color_5 = 'green'</B>
 只能工作在RGB UI（见 'termguicolors'）;对于256-color终端只是转发.

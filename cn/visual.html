@@ -332,12 +332,12 @@ The <A HREF="vimindex.html#objects">objects</A> that can be used are:
 	i&lt;	inner <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block					|<A HREF="motion.html#v_i&lt;">v_i&lt;</A>|
 	a[	a <A HREF="motion.html#[]">[]</A> block (with <A HREF="motion.html#[]">[]</A>)				|<A HREF="motion.html#v_a[">v_a[</A>|
 	i[	inner <A HREF="motion.html#[]">[]</A> block					|<A HREF="motion.html#v_i[">v_i[</A>|
-	a&quot;	a double quoted <A HREF="options\.html#options">字符串</A> (with quotes)		|<A HREF="motion.html#v_aquote">v_aquote</A>|
-	i&quot;	inner double quoted <A HREF="options\.html#options">字符串</A>			|<A HREF="motion.html#v_iquote">v_iquote</A>|
-	a'	a single quoted <A HREF="options\.html#options">字符串</A> (with quotes)		|<A HREF="motion.html#v_a'">v_a'</A>|
-	i'	inner simple quoted <A HREF="options\.html#options">字符串</A>			|<A HREF="motion.html#v_i'">v_i'</A>|
-	a`	a <A HREF="options\.html#options">字符串</A> in backticks (with backticks)		|<A HREF="motion.html#v_a`">v_a`</A>|
-	i`	inner <A HREF="options\.html#options">字符串</A> in backticks			|<A HREF="motion.html#v_i`">v_i`</A>|
+	a&quot;	a double quoted <A HREF="options.html#options">字符串</A> (with quotes)		|<A HREF="motion.html#v_aquote">v_aquote</A>|
+	i&quot;	inner double quoted <A HREF="options.html#options">字符串</A>			|<A HREF="motion.html#v_iquote">v_iquote</A>|
+	a'	a single quoted <A HREF="options.html#options">字符串</A> (with quotes)		|<A HREF="motion.html#v_a'">v_a'</A>|
+	i'	inner simple quoted <A HREF="options.html#options">字符串</A>			|<A HREF="motion.html#v_i'">v_i'</A>|
+	a`	a <A HREF="options.html#options">字符串</A> in backticks (with backticks)		|<A HREF="motion.html#v_a`">v_a`</A>|
+	i`	inner <A HREF="options.html#options">字符串</A> in backticks			|<A HREF="motion.html#v_i`">v_i`</A>|
 
 Additionally the following commands can be used:
 	:	start <A HREF="intro.html#Ex">Ex</A> command for highlighted lines (1)	|<A HREF="cmdline.html#v_:">v_:</A>|
@@ -413,9 +413,9 @@ block on every line of the block.  There is some differing behavior where the
 block RHS is not straight, due to different line lengths:
 
 1. Block was created with &lt;C-v&gt;$
-    In this <A HREF="change.html#case">case</A> the <A HREF="options\.html#options">字符串</A> is appended to the end of each line.
+    In this <A HREF="change.html#case">case</A> the <A HREF="options.html#options">字符串</A> is appended to the end of each line.
 2. Block was created with &lt;C-v&gt;{move-around}
-    In this <A HREF="change.html#case">case</A> the <A HREF="options\.html#options">字符串</A> is appended to the end of the block on each line,
+    In this <A HREF="change.html#case">case</A> the <A HREF="options.html#options">字符串</A> is appended to the end of the block on each line,
     and <A HREF="pattern.html#whitespace">whitespace</A> is inserted to pad to the end-of-block column.
 见 |<A HREF="#v_b_A_example">v_b_A_example</A>|.
 Note: &quot;<A HREF="insert.html#I">I</A>&quot; and &quot;<A HREF="insert.html#A">A</A>&quot; behave differently for lines that don't extend into the
@@ -425,9 +425,9 @@ Works only for adding text to a line, not for deletions.
 
 
 Visual-block change						*<A NAME="v_b_c"></A><B>v_b_c</B>*
-All selected text in the block will be replaced by the same text <A HREF="options\.html#options">字符串</A>.  When
+All selected text in the block will be replaced by the same text <A HREF="options.html#options">字符串</A>.  When
 using &quot;<A HREF="change.html#c">c</A>&quot; the selected text is deleted and <A HREF="intro.html#Insert">插入</A>模式 started.  You can then
-enter text (without a line break).  When you hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, the same <A HREF="options\.html#options">字符串</A> is
+enter text (without a line break).  When you hit <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, the same <A HREF="options.html#options">字符串</A> is
 inserted in all previously selected lines.
 
 

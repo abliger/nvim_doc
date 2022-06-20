@@ -269,7 +269,7 @@ modes.
 			<A HREF="eval.html#list">列表</A> the key mappings for the key sequences starting
 			with <A HREF="#{lhs}">{lhs}</A> in the modes where the map command applies.
 
-These commands are used to map a key or key sequence to a <A HREF="options\.html#options">字符串</A> of
+These commands are used to map a key or key sequence to a <A HREF="options.html#options">字符串</A> of
 characters.  You can use this to put command sequences under function keys,
 translate one key into another, etc.  见 |<A HREF="starting.html#:mkexrc">:mkexrc</A>| for how to save and
 restore the current mappings.
@@ -350,7 +350,7 @@ before any partial matches.  This works when:
 To define a <A HREF="#mapping">mapping</A> which will not be echoed on the command line, add
 &quot;&lt;silent&gt;&quot; <A HREF="motion.html#as">as</A> the first argument.  Example:
 <B>	:map &lt;silent&gt; ,h /Header&lt;CR&gt;</B>
-The search <A HREF="options\.html#options">字符串</A> will not be echoed when using this <A HREF="#mapping">mapping</A>.  Messages from
+The search <A HREF="options.html#options">字符串</A> will not be echoed when using this <A HREF="#mapping">mapping</A>.  Messages from
 the executed command are still given though.  To shut them up too, add a
 &quot;<A HREF="various.html#:silent">:silent</A>&quot; in the executed command:
 <B>	:map &lt;silent&gt; ,h :exe ":silent normal /Header\r"&lt;CR&gt;</B>
@@ -401,7 +401,7 @@ the abbreviation.  You can use this to decide how to expand the <A HREF="#{lhs}"
 should not either insert or change the <A HREF="eval.html#v:char">v:char</A>.
 
 In <A HREF="change.html#case">case</A> you want the <A HREF="#mapping">mapping</A> to not <A HREF="diff.html#do">do</A> anything, you can have the <A HREF="eval.html#expression">expression</A>
-evaluate to an empty <A HREF="options\.html#options">字符串</A>.  If something changed that requires Vim to
+evaluate to an empty <A HREF="options.html#options">字符串</A>.  If something changed that requires Vim to
 go through the main loop (e.g. to update the display), return &quot;\&lt;Ignore&gt;&quot;.
 This is similar to &quot;nothing&quot; but makes Vim return from the loop that waits for
 input.
@@ -456,7 +456,7 @@ Here is an example that inserts a <A HREF="eval.html#list">列表</A> number tha
 <B>	endfunc</B>
 
 <A HREF="various.html#CTRL-L">CTRL-L</A> inserts the next number, <A HREF="undo.html#CTRL-R">CTRL-R</A> resets the <A HREF="intro.html#count">count</A>.  <A HREF="undo.html#CTRL-R">CTRL-R</A> returns an
-empty <A HREF="options\.html#options">字符串</A>, so that nothing is inserted.
+empty <A HREF="options.html#options">字符串</A>, so that nothing is inserted.
 
 Note that using 0x80 <A HREF="motion.html#as">as</A> a single byte before other text does not work, <A HREF="motion.html#it">它</A> will
 be seen <A HREF="motion.html#as">as</A> a special key.
@@ -476,7 +476,7 @@ preserved, so tricks with |<A HREF="visual.html#gv">gv</A>| are not needed.  Com
 directly in cmdline-mode (which would otherwise require <A HREF="builtin.html#timer">timer</A> hacks).
 
 Unlike &lt;expr&gt; mappings, there are no special restrictions on the <A HREF="#&lt;Cmd&gt;">&lt;Cmd&gt;</A>
-command: <A HREF="motion.html#it">它</A> is executed <A HREF="motion.html#as">as</A> if an (unrestricted) |<A HREF="autocmd\.html#autocommand">自动命令</A>| was invoked
+command: <A HREF="motion.html#it">它</A> is executed <A HREF="motion.html#as">as</A> if an (unrestricted) |<A HREF="autocmd.html#autocommand">自动命令</A>| was invoked
 or an async event event was processed.
 
 Note:
@@ -709,12 +709,12 @@ There are two ways to map a special key:
    refers to function key 10.
 
 DETAIL: Vim first checks if a sequence from the keyboard is mapped.  If <A HREF="motion.html#it">它</A>
-isn't the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> key codes are tried.  If a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> code is found <A HREF="motion.html#it">它</A> is
+isn't the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> key codes are tried.  If a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> code is found <A HREF="motion.html#it">它</A> is
 replaced with the internal code.  Then the check for a <A HREF="#mapping">mapping</A> is done again
 (so you can map an internal code to something else).  What is written into the
-<A HREF="usr_41.html#script">script</A> file depends on what is recognized. If the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> key code was
+<A HREF="usr_41.html#script">script</A> file depends on what is recognized. If the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> key code was
 recognized <A HREF="motion.html#as">as</A> a <A HREF="#mapping">mapping</A> the key code itself is written to the <A HREF="usr_41.html#script">script</A> file.  If
-<A HREF="motion.html#it">它</A> was recognized <A HREF="motion.html#as">as</A> a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> code the internal code is written to the
+<A HREF="motion.html#it">它</A> was recognized <A HREF="motion.html#as">as</A> a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> code the internal code is written to the
 <A HREF="usr_41.html#script">script</A> file.
 
 
@@ -775,8 +775,8 @@ otherwise <A HREF="motion.html#it">它</A> would be impossible to type the á ch
 
 
 					*<A NAME="&lt;Leader&gt;"></A><B>&lt;Leader&gt;</B>* *<A NAME="mapleader"></A><B>mapleader</B>*
-To define a <A HREF="#mapping">mapping</A> which uses the &quot;<A HREF="#mapleader">mapleader</A>&quot; variable, the special <A HREF="options\.html#options">字符串</A>
-&quot;<A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A>&quot; can be used.  It is replaced with the <A HREF="options\.html#options">字符串</A> value of &quot;<A HREF="#mapleader">mapleader</A>&quot;.
+To define a <A HREF="#mapping">mapping</A> which uses the &quot;<A HREF="#mapleader">mapleader</A>&quot; variable, the special <A HREF="options.html#options">字符串</A>
+&quot;<A HREF="#&lt;Leader&gt;">&lt;Leader&gt;</A>&quot; can be used.  It is replaced with the <A HREF="options.html#options">字符串</A> value of &quot;<A HREF="#mapleader">mapleader</A>&quot;.
 If &quot;<A HREF="#mapleader">mapleader</A>&quot; is not set or empty, a <A HREF="intro.html#backslash">backslash</A> is used instead.  Example:
 <B>	:map &lt;Leader&gt;A  oanother line&lt;Esc&gt;</B>
 Works like:
@@ -1012,7 +1012,7 @@ in the original <A HREF="intro.html#Vi">Vi</A>, you would get back the text befo
 1.10 MAPPING ALT-KEYS					*<A NAME=":map-alt-keys"></A><B>:map-alt-keys</B>*
 
 In the <A HREF="gui.html#GUI">GUI</A> Nvim handles the |<A HREF="intro.html#ALT">ALT</A>| key itself, thus <A HREF="#mapping">mapping</A> keys with ALT
-should always work.  But in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> Nvim gets a sequence of bytes and has
+should always work.  But in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> Nvim gets a sequence of bytes and has
 to figure out whether <A HREF="intro.html#ALT">ALT</A> was pressed.  Terminals may use ESC to indicate that
 <A HREF="intro.html#ALT">ALT</A> was pressed.  If ESC is followed by a {key} within <A HREF="options.html#'ttimeoutlen'">'ttimeoutlen'</A>
 milliseconds, the ESC is interpreted <A HREF="motion.html#as">as</A>:
@@ -1034,7 +1034,7 @@ g@{motion}		Call the function set by the <A HREF="options.html#'operatorfunc'">'
 			The <A HREF="motion.html#'[">'[</A> <A HREF="motion.html#mark">mark</A> is positioned at the start of the text
 			moved over by <A HREF="intro.html#{motion}">{motion}</A>, the <A HREF="motion.html#']">']</A> <A HREF="motion.html#mark">mark</A> on the last
 			character of the text.
-			The function is called with one <A HREF="options\.html#options">字符串</A> argument:
+			The function is called with one <A HREF="options.html#options">字符串</A> argument:
 			    &quot;line&quot;	<A HREF="intro.html#{motion}">{motion}</A> was |<A HREF="motion.html#linewise">linewise</A>|
 			    &quot;char&quot;	<A HREF="intro.html#{motion}">{motion}</A> was |<A HREF="motion.html#charwise">charwise</A>|
 			    &quot;block&quot;	<A HREF="intro.html#{motion}">{motion}</A> was |<A HREF="visual.html#blockwise-visual">blockwise-visual</A>|
@@ -1340,7 +1340,7 @@ this, they can be made local to the <A HREF="usr_41.html#script">script</A>.
 
 
 						*<A NAME="&lt;SID&gt;"></A><B>&lt;SID&gt;</B>* *<A NAME="&lt;SNR&gt;"></A><B>&lt;SNR&gt;</B>* *<A NAME="E81"></A><B>E81</B>*
-The <A HREF="options\.html#options">字符串</A> &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; can be used in a <A HREF="#mapping">mapping</A> or menu.
+The <A HREF="options.html#options">字符串</A> &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; can be used in a <A HREF="#mapping">mapping</A> or menu.
    When executing the map command, Vim will replace &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; with the special
 key code <A HREF="#&lt;SNR&gt;">&lt;SNR&gt;</A>, followed by a number that's unique for the <A HREF="usr_41.html#script">script</A>, and an
 underscore.  Example:
@@ -1360,7 +1360,7 @@ use &quot;s:&quot; or &quot;<A HREF="#&lt;SID&gt;">&lt;SID&gt;</A>&quot; and <A 
 function itself was defined.  Also, the &quot;<A HREF="eval.html#s:var">s:var</A>&quot; local <A HREF="usr_41.html#script">script</A> <A HREF="eval.html#variables">variables</A> can be
 used.
 
-When executing an <A HREF="autocmd\.html#autocommand">自动命令</A> or a user command, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of
+When executing an <A HREF="autocmd.html#autocommand">自动命令</A> or a user command, <A HREF="motion.html#it">它</A> will run in the <A HREF="repeat.html#context">context</A> of
 the <A HREF="usr_41.html#script">script</A> <A HREF="motion.html#it">它</A> was defined in.  This makes <A HREF="motion.html#it">它</A> possible that the command calls a
 local function or uses a local <A HREF="#mapping">mapping</A>.
 
@@ -1540,7 +1540,7 @@ completion can be enabled:
 	-complete=cscope	|<A HREF="if_cscop.html#:cscope">:cscope</A>| suboptions
 	-complete=dir		directory names
 	-complete=environment	environment variable names
-	-complete=event		<A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A>
+	-complete=event		<A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A>
 	-complete=expression	Vim <A HREF="eval.html#expression">expression</A>
 	-complete=file		file and directory names
 	-complete=file_in_path	file and directory names in |<A HREF="options.html#'path'">'path'</A>|
@@ -1589,7 +1589,7 @@ The function need not use all these arguments. The function should provide the
 completion candidates <A HREF="motion.html#as">as</A> the return value.
 
 For the &quot;custom&quot; argument, the function should return the completion
-candidates one per line in a newline separated <A HREF="options\.html#options">字符串</A>.
+candidates one per line in a newline separated <A HREF="options.html#options">字符串</A>.
 
 For the &quot;customlist&quot; argument, the function should return the completion
 candidates <A HREF="motion.html#as">as</A> a Vim <A HREF="eval.html#list">列表</A>.  Non-string items in the <A HREF="eval.html#list">列表</A> are ignored.
@@ -1803,7 +1803,7 @@ feature.  Use the full name for new scripts.
 The replacement text {repl} for a user defined command is scanned for special
 <A HREF="intro.html#escape">escape</A> sequences, using &lt;...&gt; <A HREF="intro.html#notation">notation</A>.  Escape sequences are replaced with
 values from the entered command line, and all other text is copied unchanged.
-The resulting <A HREF="options\.html#options">字符串</A> is executed <A HREF="motion.html#as">as</A> an <A HREF="intro.html#Ex">Ex</A> command.  To avoid the replacement
+The resulting <A HREF="options.html#options">字符串</A> is executed <A HREF="motion.html#as">as</A> an <A HREF="intro.html#Ex">Ex</A> command.  To avoid the replacement
 use <A HREF="intro.html#&lt;lt&gt;">&lt;lt&gt;</A> in place of the initial <A HREF="change.html#&lt;">&lt;</A>.  Thus to include &quot;<A HREF="#&lt;bang&gt;">&lt;bang&gt;</A>&quot; literally use
 &quot;&lt;lt&gt;bang&gt;&quot;.
 
@@ -1871,7 +1871,7 @@ The valid <A HREF="intro.html#escape">escape</A> sequences are
 If the first two characters of an <A HREF="intro.html#escape">escape</A> sequence are &quot;q-&quot; (for example,
 <A HREF="#&lt;q-args&gt;">&lt;q-args&gt;</A>) then the value is quoted in such a way <A HREF="motion.html#as">as</A> to make <A HREF="motion.html#it">它</A> a valid value
 for use in an <A HREF="eval.html#expression">expression</A>.  This uses the argument <A HREF="motion.html#as">as</A> one single value.
-When there is no argument <A HREF="#&lt;q-args&gt;">&lt;q-args&gt;</A> is an empty <A HREF="options\.html#options">字符串</A>.
+When there is no argument <A HREF="#&lt;q-args&gt;">&lt;q-args&gt;</A> is an empty <A HREF="options.html#options">字符串</A>.
 
 							*<A NAME="&lt;f-args&gt;"></A><B>&lt;f-args&gt;</B>*
 To allow commands to pass their arguments on to a user-defined function, there

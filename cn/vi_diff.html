@@ -100,7 +100,7 @@ Maximum file size	   2147483647 bytes (2 Gbyte) when a long integer is
 							*<A NAME="E75"></A><B>E75</B>*
 Length of a file path	   Unix and Win32: 1024 characters, otherwise 256
 			   characters (or <A HREF="motion.html#as">as</A> much <A HREF="motion.html#as">as</A> the system supports).
-Length of an expanded <A HREF="options\.html#options">字符串</A> option
+Length of an expanded <A HREF="options.html#options">字符串</A> option
 			   Unix and Win32: 1024 characters, otherwise 256
 			   characters
 Maximum display width	   Unix and Win32: 1024 characters, otherwise 255
@@ -157,7 +157,7 @@ Multiple windows and <A HREF="windows.html#buffers">buffers</A>.				|<A HREF="wi
 	line with <A HREF="intro.html#tab">tab</A> labels can be used to quickly switch between these pages.
 	|<A HREF="tabpage.html#tab-page">tab-page</A>|
 
-<A HREF="autocmd\.html#Syntax">语法</A>高亮.					|<A HREF="syntax.html#:syntax">:syntax</A>|
+<A HREF="autocmd.html#Syntax">语法</A>高亮.					|<A HREF="syntax.html#:syntax">:syntax</A>|
 	Vim can highlight keywords, patterns and other things.  This is
 	defined by a number of |<A HREF="syntax.html#:syntax">:syntax</A>| commands, and can be made to
 	highlight most languages and file types.  A number of files are
@@ -167,7 +167,7 @@ Multiple windows and <A HREF="windows.html#buffers">buffers</A>.				|<A HREF="wi
 	and the <A HREF="gui.html#GUI">GUI</A> with the |<A HREF="syntax.html#:highlight">:highlight</A>| command.  A convenient way to <A HREF="diff.html#do">do</A>
 	this is using a |<A HREF="syntax.html#:colorscheme">:colorscheme</A>| command.
 	The highlighted text can be exported <A HREF="motion.html#as">as</A> HTML. |<A HREF="syntax.html#convert-to-HTML">convert-to-HTML</A>|
-	Other items that can be highlighted are matches with the search <A HREF="options\.html#options">字符串</A>
+	Other items that can be highlighted are matches with the search <A HREF="options.html#options">字符串</A>
 	|<A HREF="options.html#'hlsearch'">'hlsearch'</A>|, matching parens |<A HREF="pi_paren.html#matchparen">matchparen</A>| and the cursor line and
 	column |<A HREF="options.html#'cursorline'">'cursorline'</A>| |<A HREF="options.html#'cursorcolumn'">'cursorcolumn'</A>|.
 
@@ -246,7 +246,7 @@ Block operators.					|<A HREF="visual.html#visual-block">visual-block</A>|
 
 Help system.						|<A HREF="helphelp.html#:help">:help</A>|
 	Help is displayed in a<A HREF="windows.html#window">窗口</A>.  The usual commands can be used to
-	move around, search for a <A HREF="options\.html#options">字符串</A>, etc.  Tags can be used to jump
+	move around, search for a <A HREF="options.html#options">字符串</A>, etc.  Tags can be used to jump
 	around in the help files, just like hypertext links.  The |<A HREF="helphelp.html#:help">:help</A>|
 	command takes an argument to quickly jump to the info on a subject.
 	<A HREF="helphelp.html#&lt;F1&gt;">&lt;F1&gt;</A> is the quick access to the help system.  The name of the help
@@ -352,7 +352,7 @@ Edit-compile-edit speedup.				|<A HREF="quickfix.html#quickfix">quickfix</A>|
 	The <A HREF="options.html#'makeef'">'makeef'</A> option has the name of the file with error <A HREF="message.html#messages">信息</A>.
 	The <A HREF="options.html#'makeprg'">'makeprg'</A> option contains the name of the program to be executed
 	with the |<A HREF="quickfix.html#:make">:make</A>| command.
-	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> option contains the <A HREF="options\.html#options">字符串</A> to be used to put the
+	The <A HREF="options.html#'shellpipe'">'shellpipe'</A> option contains the <A HREF="options.html#options">字符串</A> to be used to put the
 	output of the compiler into the errorfile.
 
 Finding matches in files.				|<A HREF="quickfix.html#:vimgrep">:vimgrep</A>|
@@ -385,7 +385,7 @@ Searching for words in included files.			|<A HREF="tagsrch.html#include-search">
 	The |<A HREF="tagsrch.html#[d">[d</A>|, |<A HREF="tagsrch.html#[D">[D</A>| and |<A HREF="tagsrch.html#[_CTRL-D">[_CTRL-D</A>| commands <A HREF="diff.html#do">do</A> the same, but only for
 	lines where the <A HREF="pattern.html#pattern">pattern</A> given with the <A HREF="options.html#'define'">'define'</A> option matches.
 
-Automatic commands.					|<A HREF="autocmd\.html#autocommand">自动命令</A>|
+Automatic commands.					|<A HREF="autocmd.html#autocommand">自动命令</A>|
 	Commands can be automatically executed when reading a file, <A HREF="editing.html#writing">写</A> a
 	file, jumping to another buffer, etc., depending on the file name.
 	This is useful to set <A HREF="options.html#options">选项</A> and mappings for C programs,
@@ -400,7 +400,7 @@ Scripts and Expressions.				|<A HREF="eval.html#expression">expression</A>|
 	|<A HREF="eval.html#:for">:for</A>|		Loop over a <A HREF="eval.html#list">列表</A>.
 	|<A HREF="eval.html#:echo">:echo</A>|		Print the result of an <A HREF="eval.html#expression">expression</A>.
 	|<A HREF="eval.html#:let">:let</A>|		Assign a value to an internal variable, option, etc.
-			Variable types are <A HREF="eval.html#Number">Number</A>, <A HREF="options\.html#options">字符串</A>, <A HREF="eval.html#list">列表</A> and <A HREF="eval.html#Dictionary">Dictionary</A>.
+			Variable types are <A HREF="eval.html#Number">Number</A>, <A HREF="options.html#options">字符串</A>, <A HREF="eval.html#list">列表</A> and <A HREF="eval.html#Dictionary">Dictionary</A>.
 	|<A HREF="eval.html#:execute">:execute</A>|	Execute a command formed by an <A HREF="eval.html#expression">expression</A>.
 	|<A HREF="eval.html#:try">:try</A>|		Catch exceptions.
 	etc., etc.  见 |<A HREF="eval.html#eval">eval</A>|.
@@ -415,7 +415,7 @@ Viminfo.
 	The <A HREF="deprecated.html#'viminfo'">'viminfo'</A> option can be set to select which items to store in the
 	.viminfo file.  This is off by default.
 
-Printing.						|<A HREF="print\.html#printing">打印</A>|
+Printing.						|<A HREF="print.html#printing">打印</A>|
 	The |<A HREF="print.html#:hardcopy">:hardcopy</A>| command sends text to the printer.  This can include
 	<A HREF="syntax.html#syntax">语法</A> highlighting.
 

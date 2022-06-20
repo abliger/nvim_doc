@@ -179,7 +179,7 @@ typedefs around C99 standard types, others are Nvim-defined data structures.
   <A HREF="eval.html#Boolean">Boolean</A>				bool
   <A HREF="eval.html#Integer">Integer</A> (signed 64-bit integer)	int64_t
   <A HREF="eval.html#Float">Float</A> (IEEE 754 double precision)	double
-  <A HREF="options\.html#options">字符串</A>				{char* data, size_t size} struct
+  <A HREF="options.html#options">字符串</A>				{char* data, size_t size} struct
   Array
   <A HREF="eval.html#Dictionary">Dictionary</A> (msgpack: map)
   Object
@@ -329,7 +329,7 @@ following notification will be sent to the client:
 nvim_error_event[{type}, {message}]
 
 {type} is a numeric id <A HREF="motion.html#as">as</A> defined by `api_info().error_types`, and {message} is
-a <A HREF="options\.html#options">字符串</A> with the error message.
+a <A HREF="options.html#options">字符串</A> with the error message.
 
 ==============================================================================
 
@@ -789,8 +789,8 @@ nvim_call_atomic({calls})                                 *<A NAME="nvim_call_at
 nvim_chan_send({chan}, {data})                              *<A NAME="nvim_chan_send()"></A><B>nvim_chan_send()</B>*
                 Send data to <A HREF="channel.html#channel">channel</A> `id`. For a <A HREF="job_control.html#job">job</A>, <A HREF="motion.html#it">它</A> writes <A HREF="motion.html#it">它</A> to the
                 stdin of the process. For the stdio channel |<A HREF="channel.html#channel-stdio">channel-stdio</A>|,
-                <A HREF="motion.html#it">它</A> writes to Nvim's stdout. For an internal <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> instance
-                (|<A HREF="#nvim_open_term()">nvim_open_term()</A>|) <A HREF="motion.html#it">它</A> writes directly to <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> output.
+                <A HREF="motion.html#it">它</A> writes to Nvim's stdout. For an internal <A HREF="nvim_terminal_emulator.html#terminal">终端</A> instance
+                (|<A HREF="#nvim_open_term()">nvim_open_term()</A>|) <A HREF="motion.html#it">它</A> writes directly to <A HREF="nvim_terminal_emulator.html#terminal">终端</A> output.
                 见 |<A HREF="channel.html#channel-bytes">channel-bytes</A>| for more information.
 
                 This function writes raw data, not <A HREF="#RPC">RPC</A> <A HREF="message.html#messages">信息</A>. If the
@@ -871,7 +871,7 @@ nvim_create_user_command({name}, {command}, {*opts})
                                |<A HREF="map.html#command-attributes">command-attributes</A>| for more details. To use
                                <A HREF="options.html#boolean">boolean</A> attributes (such <A HREF="motion.html#as">as</A> |<A HREF="map.html#:command-bang">:command-bang</A>| or
                                |<A HREF="map.html#:command-bar">:command-bar</A>|) set the value to &quot;true&quot;. In
-                               addition to the <A HREF="options\.html#options">字符串</A> <A HREF="options.html#options">选项</A> listed in
+                               addition to the <A HREF="options.html#options">字符串</A> <A HREF="options.html#options">选项</A> listed in
                                |<A HREF="map.html#:command-complete">:command-complete</A>|, the &quot;complete&quot; key also
                                accepts a <A HREF="lua.html#Lua">Lua</A> function which works like the
                                &quot;customlist&quot; completion mode
@@ -966,13 +966,13 @@ nvim_err_writeln({str})                                   *<A NAME="nvim_err_wri
 
 
 nvim_eval_statusline({str}, {*opts})                  *<A NAME="nvim_eval_statusline()"></A><B>nvim_eval_statusline()</B>*
-                Evaluates statusline <A HREF="options\.html#options">字符串</A>.
+                Evaluates statusline <A HREF="options.html#options">字符串</A>.
 
 <B><FONT color="#3A6F2B">                Attributes: </FONT></B>
                     |<A HREF="#api-fast">api-fast</A>|
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}   Statusline <A HREF="options\.html#options">字符串</A> (see <A HREF="options.html#'statusline'">'statusline'</A>).
+                    {str}   Statusline <A HREF="options.html#options">字符串</A> (see <A HREF="options.html#'statusline'">'statusline'</A>).
                     {opts}  Optional parameters.
                             • <A HREF="windows.html#winid">winid</A>: (number) |<A HREF="windows.html#window-ID">window-ID</A>| of the window to use
                               <A HREF="motion.html#as">as</A> <A HREF="repeat.html#context">context</A> for statusline.
@@ -1087,7 +1087,7 @@ nvim_get_chan_info({chan})                              *<A NAME="nvim_get_chan_
 
                     • &quot;mode&quot; How data received on the <A HREF="channel.html#channel">channel</A> is interpreted.
                       • &quot;bytes&quot; Send and receive raw bytes.
-                      • &quot;terminal&quot; |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| instance interprets ASCII
+                      • &quot;terminal&quot; |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>| instance interprets ASCII
                         sequences.
                       • &quot;<A HREF="#rpc">rpc</A>&quot; |<A HREF="#RPC">RPC</A>| communication on the <A HREF="channel.html#channel">channel</A> is active.
 
@@ -1095,7 +1095,7 @@ nvim_get_chan_info({chan})                              *<A NAME="nvim_get_chan_
                       system this is a device path like &quot;/dev/pts/1&quot;. If the
                       name is unknown, the key will still be present if a pty
                       is used (e.g. for conpty on Windows).
-                    • &quot;buffer&quot; (optional) Buffer with connected |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|
+                    • &quot;buffer&quot; (optional) Buffer with connected |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>|
                       instance.
                     • &quot;client&quot; (optional) Info about the peer (client on the
                       other end of the <A HREF="#RPC">RPC</A> channel), if provided by <A HREF="motion.html#it">它</A> via
@@ -1104,7 +1104,7 @@ nvim_get_chan_info({chan})                              *<A NAME="nvim_get_chan_
 
 nvim_get_color_by_name({name})                      *<A NAME="nvim_get_color_by_name()"></A><B>nvim_get_color_by_name()</B>*
                 Returns the 24-bit RGB value of a |<A HREF="#nvim_get_color_map()">nvim_get_color_map()</A>| color
-                name or &quot;#rrggbb&quot; hexadecimal <A HREF="options\.html#options">字符串</A>.
+                name or &quot;#rrggbb&quot; hexadecimal <A HREF="options.html#options">字符串</A>.
 
                 Example:
 <B>                    :echo nvim_get_color_by_name("Pink")</B>
@@ -1112,7 +1112,7 @@ nvim_get_color_by_name({name})                      *<A NAME="nvim_get_color_by_
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {name}  Color name or &quot;#rrggbb&quot; <A HREF="options\.html#options">字符串</A>
+                    {name}  Color name or &quot;#rrggbb&quot; <A HREF="options.html#options">字符串</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     24-bit RGB value, or -1 for invalid argument.
@@ -1166,7 +1166,7 @@ nvim_get_context({*opts})                                 *<A NAME="nvim_get_con
                 Gets the current line.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    Current line <A HREF="options\.html#options">字符串</A>
+                    Current line <A HREF="options.html#options">字符串</A>
 
 
 <A HREF="#nvim_get_current_tabpage()">nvim_get_current_tabpage()</A>                        *<A NAME="nvim_get_current_tabpage()"></A><B>nvim_get_current_tabpage()</B>*
@@ -1257,7 +1257,7 @@ nvim_get_mark({name}, {opts})                                *<A NAME="nvim_get_
                 waiting for input.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#Dictionary">Dictionary</A> { &quot;mode&quot;: <A HREF="options\.html#options">字符串</A>, &quot;blocking&quot;: <A HREF="eval.html#Boolean">Boolean</A> }
+                    <A HREF="eval.html#Dictionary">Dictionary</A> { &quot;mode&quot;: <A HREF="options.html#options">字符串</A>, &quot;blocking&quot;: <A HREF="eval.html#Boolean">Boolean</A> }
 
 <B><FONT color="#3A6F2B">                Attributes: </FONT></B>
                     |<A HREF="#api-fast">api-fast</A>|
@@ -1423,7 +1423,7 @@ nvim_input_mouse({button}, {action}, {modifier}, {grid}, {row}, {col})
                     {action}    For ordinary buttons, one of &quot;press&quot;, &quot;drag&quot;,
                                 &quot;release&quot;. For the wheel, one of &quot;up&quot;, &quot;down&quot;,
                                 &quot;left&quot;, &quot;right&quot;.
-                    {modifier}  <A HREF="options\.html#options">字符串</A> of modifiers each represented by a
+                    {modifier}  <A HREF="options.html#options">字符串</A> of modifiers each represented by a
                                 single char. The same specifiers are used <A HREF="motion.html#as">as</A>
                                 for a key press, except that the &quot;<A HREF="motion.html#-">-</A>&quot; separator
                                 is optional, so &quot;C-A-&quot;, &quot;c-a&quot; and &quot;CA&quot; can all
@@ -1509,27 +1509,27 @@ nvim_notify({msg}, {log_level}, {opts})                        *<A NAME="nvim_no
 
 
 nvim_open_term({buffer}, {opts})                            *<A NAME="nvim_open_term()"></A><B>nvim_open_term()</B>*
-                Open a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> instance in a buffer
+                Open a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> instance in a buffer
 
-                By default (and currently the only option) the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> will
+                By default (and currently the only option) the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> will
                 not be connected to an external process. Instead, input send
-                on the <A HREF="channel.html#channel">channel</A> will be echoed directly by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>. This
-                is useful to display ANSI <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> sequences returned <A HREF="motion.html#as">as</A> part
+                on the <A HREF="channel.html#channel">channel</A> will be echoed directly by the <A HREF="nvim_terminal_emulator.html#terminal">终端</A>. This
+                is useful to display ANSI <A HREF="nvim_terminal_emulator.html#terminal">终端</A> sequences returned <A HREF="motion.html#as">as</A> part
                 of a <A HREF="#rpc">rpc</A> message, or similar.
 
-                Note: to directly initiate the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> using the right size,
+                Note: to directly initiate the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> using the right size,
                 display the buffer in a configured<A HREF="windows.html#window">窗口</A>before calling this.
                 For instance, for a floating display, first create an empty
                 buffer using |<A HREF="#nvim_create_buf()">nvim_create_buf()</A>|然后display <A HREF="motion.html#it">它</A> using
                 |<A HREF="#nvim_open_win()">nvim_open_win()</A>|, and then call this function. Then
                 |<A HREF="#nvim_chan_send()">nvim_chan_send()</A>| can be called immediately to process
-                sequences in a virtual <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> having the intended size.
+                sequences in a virtual <A HREF="nvim_terminal_emulator.html#terminal">终端</A> having the intended size.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {buffer}  the buffer to use (expected to be empty)
                     {opts}    Optional parameters.
                               • on_input: <A HREF="lua.html#lua">lua</A> callback for input sent, <A HREF="insert.html#i">i</A> <A HREF="motion.html#e">e</A>
-                                keypresses in <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> mode. Note: keypresses
+                                keypresses in <A HREF="nvim_terminal_emulator.html#terminal">终端</A> mode. Note: keypresses
                                 are sent raw <A HREF="motion.html#as">as</A> they would be to the pty
                                 master end. For instance, a carriage return is
                                 sent <A HREF="motion.html#as">as</A> a &quot;\r&quot;, not <A HREF="motion.html#as">as</A> a &quot;\n&quot;. |<A HREF="eval.html#textlock">textlock</A>|
@@ -1606,11 +1606,11 @@ nvim_put({lines}, {type}, {after}, {follow})                      *<A NAME="nvim
 
                                                     *<A NAME="nvim_replace_termcodes()"></A><B>nvim_replace_termcodes()</B>*
 nvim_replace_termcodes({str}, {from_part}, {do_lt}, {special})
-                Replaces <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> codes and |<A HREF="intro.html#keycodes">keycodes</A>| (&lt;CR&gt;, <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, <A HREF="eval.html#...">...</A>) in a
-                <A HREF="options\.html#options">字符串</A> with the internal representation.
+                Replaces <A HREF="nvim_terminal_emulator.html#terminal">终端</A> codes and |<A HREF="intro.html#keycodes">keycodes</A>| (&lt;CR&gt;, <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>, <A HREF="eval.html#...">...</A>) in a
+                <A HREF="options.html#options">字符串</A> with the internal representation.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}        <A HREF="options\.html#options">字符串</A> to be converted.
+                    {str}        <A HREF="options.html#options">字符串</A> to be converted.
                     {from_part}  Legacy Vim parameter. Usually true.
                     {do_lt}      Also translate <A HREF="intro.html#&lt;lt&gt;">&lt;lt&gt;</A>. Ignored if `special` is
                                  false.
@@ -1670,7 +1670,7 @@ nvim_set_client_info({name}, {version}, {type}, {methods}, {attributes})
                                     not set, for no release yet)
                                   • &quot;minor&quot; minor version
                                   • &quot;patch&quot; patch number
-                                  • &quot;prerelease&quot; <A HREF="options\.html#options">字符串</A> describing a
+                                  • &quot;prerelease&quot; <A HREF="options.html#options">字符串</A> describing a
                                     prerelease, like &quot;<A HREF="develop.html#dev">dev</A>&quot; or &quot;beta1&quot;
                                   • &quot;commit&quot; hash or similar identifier of
                                     commit
@@ -1768,7 +1768,7 @@ nvim_set_hl({ns_id}, {name}, {*val})                           *<A NAME="nvim_se
                     will clear the highlight group '<A HREF="visual.html#Visual">Visual</A>'.
 
                 Note:
-                    The fg and bg keys also accept the <A HREF="options\.html#options">字符串</A> values `&quot;fg&quot;` or
+                    The fg and bg keys also accept the <A HREF="options.html#options">字符串</A> values `&quot;fg&quot;` or
                     `&quot;bg&quot;` which act <A HREF="motion.html#as">as</A> aliases to the corresponding
                     foreground and background values of the <A HREF="intro.html#Normal">Normal</A> group. If
                     the <A HREF="intro.html#Normal">Normal</A> group has not been defined, using these values
@@ -1787,7 +1787,7 @@ nvim_set_hl({ns_id}, {name}, {*val})                           *<A NAME="nvim_se
                                see note.
                              • sp (or special): color name or &quot;#RRGGBB&quot;
                              • blend: integer between 0 and 100
-                             • <A HREF="syntax\.html#bold">粗体</A>: <A HREF="options.html#boolean">boolean</A>
+                             • <A HREF="syntax.html#bold">粗体</A>: <A HREF="options.html#boolean">boolean</A>
                              • <A HREF="syntax.html#standout">standout</A>: <A HREF="options.html#boolean">boolean</A>
                              • <A HREF="syntax.html#underline">underline</A>: <A HREF="options.html#boolean">boolean</A>
                              • <A HREF="syntax.html#underlineline">underlineline</A>: <A HREF="options.html#boolean">boolean</A>
@@ -1795,7 +1795,7 @@ nvim_set_hl({ns_id}, {name}, {*val})                           *<A NAME="nvim_se
                              • <A HREF="syntax.html#underdot">underdot</A>: <A HREF="options.html#boolean">boolean</A>
                              • <A HREF="syntax.html#underdash">underdash</A>: <A HREF="options.html#boolean">boolean</A>
                              • <A HREF="syntax.html#strikethrough">strikethrough</A>: <A HREF="options.html#boolean">boolean</A>
-                             • <A HREF="syntax\.html#bold">斜体</A>: <A HREF="options.html#boolean">boolean</A>
+                             • <A HREF="syntax.html#bold">斜体</A>: <A HREF="options.html#boolean">boolean</A>
                              • reverse: <A HREF="options.html#boolean">boolean</A>
                              • <A HREF="syntax.html#nocombine">nocombine</A>: <A HREF="options.html#boolean">boolean</A>
                              • link: name of another highlight group to link
@@ -1831,7 +1831,7 @@ nvim_set_keymap({mode}, <A HREF="map.html#{lhs}">{lhs}</A>, <A HREF="map.html#{r
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {mode}  Mode short-name (map command prefix: &quot;<A HREF="pattern.html#n">n</A>&quot;, &quot;<A HREF="insert.html#i">i</A>&quot;,
-                            &quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="change.html#x">x</A>&quot;, …) or &quot;!&quot; for |<A HREF="map.html#:map!">:map!</A>|, or empty <A HREF="options\.html#options">字符串</A>
+                            &quot;<A HREF="visual.html#v">v</A>&quot;, &quot;<A HREF="change.html#x">x</A>&quot;, …) or &quot;!&quot; for |<A HREF="map.html#:map!">:map!</A>|, or empty <A HREF="options.html#options">字符串</A>
                             for |<A HREF="map.html#:map">:map</A>|.
                     {lhs}   Left-hand-side |<A HREF="map.html#{lhs}">{lhs}</A>| of the <A HREF="map.html#mapping">mapping</A>.
                     {rhs}   Right-hand-side |<A HREF="map.html#{rhs}">{rhs}</A>| of the <A HREF="map.html#mapping">mapping</A>.
@@ -1909,7 +1909,7 @@ nvim_subscribe({event})                                     *<A NAME="nvim_subsc
                     |<A HREF="#RPC">RPC</A>| only
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    <A HREF="autocmd.html#{event}">{event}</A>  Event type <A HREF="options\.html#options">字符串</A>
+                    <A HREF="autocmd.html#{event}">{event}</A>  Event type <A HREF="options.html#options">字符串</A>
 
 
 nvim_unsubscribe({event})                                 *<A NAME="nvim_unsubscribe()"></A><B>nvim_unsubscribe()</B>*
@@ -1919,7 +1919,7 @@ nvim_unsubscribe({event})                                 *<A NAME="nvim_unsubsc
                     |<A HREF="#RPC">RPC</A>| only
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    <A HREF="autocmd.html#{event}">{event}</A>  Event type <A HREF="options\.html#options">字符串</A>
+                    <A HREF="autocmd.html#{event}">{event}</A>  Event type <A HREF="options.html#options">字符串</A>
 
 
 ==============================================================================
@@ -1934,7 +1934,7 @@ nvim_call_dict_function({dict}, {fn}, {args})
                 On execution error: fails with VimL error, updates <A HREF="eval.html#v:errmsg">v:errmsg</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {dict}  <A HREF="eval.html#Dictionary">Dictionary</A>, or <A HREF="options\.html#options">字符串</A> evaluating to a VimL |<A HREF="eval.html#self">self</A>|
+                    {dict}  <A HREF="eval.html#Dictionary">Dictionary</A>, or <A HREF="options.html#options">字符串</A> evaluating to a VimL |<A HREF="eval.html#self">self</A>|
                             <A HREF="eval.html#dict">dict</A>
                     {fn}    Name of the function defined on the VimL <A HREF="eval.html#dict">dict</A>
                     {args}  Function arguments packed in an Array
@@ -1960,7 +1960,7 @@ nvim_cmd({*cmd}, {*opts})                                         *<A NAME="nvim
                 Executes an <A HREF="intro.html#Ex">Ex</A> command.
 
                 Unlike |<A HREF="#nvim_command()">nvim_command()</A>| this command takes a structured
-                <A HREF="eval.html#Dictionary">Dictionary</A> instead of a <A HREF="options\.html#options">字符串</A>. This allows for easier
+                <A HREF="eval.html#Dictionary">Dictionary</A> instead of a <A HREF="options.html#options">字符串</A>. This allows for easier
                 construction and manipulation of an <A HREF="intro.html#Ex">Ex</A> command. This also
                 allows for things such <A HREF="motion.html#as">as</A> having spaces inside a command
                 argument, expanding filenames in a command that otherwise
@@ -1980,7 +1980,7 @@ nvim_cmd({*cmd}, {*opts})                                         *<A NAME="nvim
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Command output (non-error, non-shell |<A HREF="various.html#:!">:!</A>|) if `output` is
-                    true, else empty <A HREF="options\.html#options">字符串</A>.
+                    true, else empty <A HREF="options.html#options">字符串</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     |<A HREF="#nvim_exec()">nvim_exec()</A>|
@@ -2000,7 +2000,7 @@ nvim_command({command})                                       *<A NAME="nvim_com
                 |<A HREF="#nvim_parse_cmd()">nvim_parse_cmd()</A>| in conjunction with |<A HREF="#nvim_cmd()">nvim_cmd()</A>|.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {command}  <A HREF="intro.html#Ex">Ex</A> command <A HREF="options\.html#options">字符串</A>
+                    {command}  <A HREF="intro.html#Ex">Ex</A> command <A HREF="options.html#options">字符串</A>
 
 
 nvim_eval({expr})                                                *<A NAME="nvim_eval()"></A><B>nvim_eval()</B>*
@@ -2010,7 +2010,7 @@ nvim_eval({expr})                                                *<A NAME="nvim_
                 On execution error: fails with VimL error, updates <A HREF="eval.html#v:errmsg">v:errmsg</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {expr}  VimL <A HREF="eval.html#expression">expression</A> <A HREF="options\.html#options">字符串</A>
+                    {expr}  VimL <A HREF="eval.html#expression">expression</A> <A HREF="options.html#options">字符串</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Evaluation result or expanded object
@@ -2032,7 +2032,7 @@ nvim_exec({src}, {output})                                       *<A NAME="nvim_
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Output (non-error, non-shell |<A HREF="various.html#:!">:!</A>|) if `output` is true,
-                    else empty <A HREF="options\.html#options">字符串</A>.
+                    else empty <A HREF="options.html#options">字符串</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     |<A HREF="builtin.html#execute()">execute()</A>|
@@ -2049,7 +2049,7 @@ nvim_parse_cmd({str}, {opts})                               *<A NAME="nvim_parse
                     |<A HREF="#api-fast">api-fast</A>|
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}   Command line <A HREF="options\.html#options">字符串</A> to parse. Cannot contain &quot;\n&quot;.
+                    {str}   Command line <A HREF="options.html#options">字符串</A> to parse. Cannot contain &quot;\n&quot;.
                     {opts}  Optional parameters. Reserved for future use.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -2065,7 +2065,7 @@ nvim_parse_cmd({str}, {opts})                               *<A NAME="nvim_parse
                     • count: (number) Any |<A HREF="map.html#&lt;count&gt;">&lt;count&gt;</A>| that was supplied to the
                       command. -1 if command cannot take a <A HREF="intro.html#count">count</A>.
                     • reg: (number) The optional command |<A HREF="map.html#&lt;register&gt;">&lt;register&gt;</A>|, if
-                      specified. Empty <A HREF="options\.html#options">字符串</A> if not specified or if command
+                      specified. Empty <A HREF="options.html#options">字符串</A> if not specified or if command
                       cannot take a <A HREF="intro.html#register">寄存器</A>.
                     • bang: (boolean) Whether command contains a |<A HREF="map.html#&lt;bang&gt;">&lt;bang&gt;</A>| (!)
                       modifier.
@@ -2102,8 +2102,8 @@ nvim_parse_cmd({str}, {opts})                               *<A NAME="nvim_parse
                       • tab: (integer) |<A HREF="tabpage.html#:tab">:tab</A>|.
                       • verbose: (integer) |<A HREF="various.html#:verbose">:verbose</A>|. -1 when omitted.
                       • vertical: (boolean) |<A HREF="windows.html#:vertical">:vertical</A>|.
-                      • split: (string) Split modifier <A HREF="options\.html#options">字符串</A>, is an empty
-                        <A HREF="options\.html#options">字符串</A> when there's no split modifier. If there is a
+                      • split: (string) Split modifier <A HREF="options.html#options">字符串</A>, is an empty
+                        <A HREF="options.html#options">字符串</A> when there's no split modifier. If there is a
                         split modifier <A HREF="motion.html#it">它</A> can be one of:
                         • &quot;aboveleft&quot;: |<A HREF="windows.html#:aboveleft">:aboveleft</A>|.
                         • &quot;belowright&quot;: |<A HREF="windows.html#:belowright">:belowright</A>|.
@@ -2135,7 +2135,7 @@ nvim_parse_expression({expr}, {flags}, {highlight})
                                    sets:
                                  • &quot;<A HREF="motion.html#m">m</A>&quot; to parse like for &quot;<A HREF="eval.html#:echo">:echo</A>&quot;.
                                  • &quot;<A HREF="motion.html#E">E</A>&quot; to parse like for &quot;&lt;C-r&gt;=&quot;.
-                                 • empty <A HREF="options\.html#options">字符串</A> for &quot;<A HREF="eval.html#:call">:call</A>&quot;.
+                                 • empty <A HREF="options.html#options">字符串</A> for &quot;<A HREF="eval.html#:call">:call</A>&quot;.
                                  • &quot;lm&quot; to parse for &quot;<A HREF="eval.html#:let">:let</A>&quot;.
                     {highlight}  If true, return value will also include
                                  &quot;highlight&quot; key containing array of 4-tuples
@@ -2151,13 +2151,13 @@ nvim_parse_expression({expr}, {flags}, {highlight})
                     • AST: top-level dictionary with these keys:
                       • &quot;error&quot;: <A HREF="eval.html#Dictionary">Dictionary</A> with error, present only if parser
                         saw some error. Contains the following keys:
-                        • &quot;message&quot;: <A HREF="options\.html#options">字符串</A>, error message in printf format,
+                        • &quot;message&quot;: <A HREF="options.html#options">字符串</A>, error message in printf format,
                           translated. Must contain exactly one &quot;&#37;.*s&quot;.
-                        • &quot;arg&quot;: <A HREF="options\.html#options">字符串</A>, error message argument.
+                        • &quot;arg&quot;: <A HREF="options.html#options">字符串</A>, error message argument.
 
                       • &quot;len&quot;: Amount of bytes successfully parsed. With flags
                         equal to &quot;&quot; that should be equal to the length of <A HREF="eval.html#expr">expr</A>
-                        <A HREF="options\.html#options">字符串</A>. (“Successfully parsed” here means
+                        <A HREF="options.html#options">字符串</A>. (“Successfully parsed” here means
                         “participated in AST creation”, not “till the first
                         error”.)
                       • &quot;ast&quot;: AST, either nil or a dictionary with these
@@ -2189,16 +2189,16 @@ nvim_parse_expression({expr}, {flags}, {highlight})
                         &quot;Environment&quot; nodes.
                       • &quot;name&quot;: <A HREF="eval.html#Integer">Integer</A>, <A HREF="intro.html#register">寄存器</A> name (one character) or -1.
                         Only present for &quot;Register&quot; nodes.
-                      • &quot;cmp_type&quot;: <A HREF="options\.html#options">字符串</A>, comparison type, one of the value
+                      • &quot;cmp_type&quot;: <A HREF="options.html#options">字符串</A>, comparison type, one of the value
                         names from ExprComparisonType, stringified without
                         &quot;kExprCmp&quot; prefix. Only present for &quot;Comparison&quot;
                         nodes.
-                      • &quot;ccs_strategy&quot;: <A HREF="options\.html#options">字符串</A>, <A HREF="change.html#case">case</A> comparison strategy, one
+                      • &quot;ccs_strategy&quot;: <A HREF="options.html#options">字符串</A>, <A HREF="change.html#case">case</A> comparison strategy, one
                         of the value names from ExprCaseCompareStrategy,
                         stringified without &quot;kCCStrategy&quot; prefix. Only present
                         for &quot;Comparison&quot; nodes.
-                      • &quot;augmentation&quot;: <A HREF="options\.html#options">字符串</A>, augmentation type for
-                        &quot;Assignment&quot; nodes. Is either an empty <A HREF="options\.html#options">字符串</A>, &quot;Add&quot;,
+                      • &quot;augmentation&quot;: <A HREF="options.html#options">字符串</A>, augmentation type for
+                        &quot;Assignment&quot; nodes. Is either an empty <A HREF="options.html#options">字符串</A>, &quot;Add&quot;,
                         &quot;Subtract&quot; or &quot;Concat&quot; for &quot;<A HREF="change.html#=">=</A>&quot;, &quot;+=&quot;, &quot;-=&quot; or &quot;.=&quot;
                         respectively.
                       • &quot;invert&quot;: <A HREF="eval.html#Boolean">Boolean</A>, true if result of comparison needs
@@ -2206,7 +2206,7 @@ nvim_parse_expression({expr}, {flags}, {highlight})
                       • &quot;ivalue&quot;: <A HREF="eval.html#Integer">Integer</A>, integer value for &quot;<A HREF="eval.html#Integer">Integer</A>&quot; nodes.
                       • &quot;fvalue&quot;: <A HREF="eval.html#Float">Float</A>, floating-point value for &quot;<A HREF="eval.html#Float">Float</A>&quot;
                         nodes.
-                      • &quot;svalue&quot;: <A HREF="options\.html#options">字符串</A>, value for &quot;SingleQuotedString&quot; and
+                      • &quot;svalue&quot;: <A HREF="options.html#options">字符串</A>, value for &quot;SingleQuotedString&quot; and
                         &quot;DoubleQuotedString&quot; nodes.
 
 
@@ -2263,7 +2263,7 @@ nvim_buf_attach({buffer}, {send_buffer}, {opts})           *<A NAME="nvim_buf_at
                     {opts}         Optional parameters.
                                    • on_lines: <A HREF="lua.html#Lua">Lua</A> callback invoked on change.
                                      Return `true` to detach. Args:
-                                     • the <A HREF="options\.html#options">字符串</A> &quot;lines&quot;
+                                     • the <A HREF="options.html#options">字符串</A> &quot;lines&quot;
                                      • buffer handle
                                      • <A HREF="eval.html#b:changedtick">b:changedtick</A>
                                      • first line that changed (zero-indexed)
@@ -2279,7 +2279,7 @@ nvim_buf_attach({buffer}, {send_buffer}, {opts})           *<A NAME="nvim_buf_at
                                      This callback receives more granular
                                      information about the change compared to
                                      on_lines. Return `true` to detach. Args:
-                                     • the <A HREF="options\.html#options">字符串</A> &quot;bytes&quot;
+                                     • the <A HREF="options.html#options">字符串</A> &quot;bytes&quot;
                                      • buffer handle
                                      • <A HREF="eval.html#b:changedtick">b:changedtick</A>
                                      • start row of the changed text
@@ -2297,19 +2297,19 @@ nvim_buf_attach({buffer}, {send_buffer}, {opts})           *<A NAME="nvim_buf_at
                                    • on_changedtick: <A HREF="lua.html#Lua">Lua</A> callback invoked on
                                      changedtick increment without text
                                      change. Args:
-                                     • the <A HREF="options\.html#options">字符串</A> &quot;changedtick&quot;
+                                     • the <A HREF="options.html#options">字符串</A> &quot;changedtick&quot;
                                      • buffer handle
                                      • <A HREF="eval.html#b:changedtick">b:changedtick</A>
 
                                    • on_detach: <A HREF="lua.html#Lua">Lua</A> callback invoked on
                                      detach. Args:
-                                     • the <A HREF="options\.html#options">字符串</A> &quot;detach&quot;
+                                     • the <A HREF="options.html#options">字符串</A> &quot;detach&quot;
                                      • buffer handle
 
                                    • on_reload: <A HREF="lua.html#Lua">Lua</A> callback invoked on
                                      <A HREF="editing.html#reload">reload</A>. The entire buffer content should
                                      be considered changed. Args:
-                                     • the <A HREF="options\.html#options">字符串</A> &quot;<A HREF="editing.html#reload">reload</A>&quot;
+                                     • the <A HREF="options.html#options">字符串</A> &quot;<A HREF="editing.html#reload">reload</A>&quot;
                                      • buffer handle
 
                                    • utf_sizes: include UTF-32 and UTF-16 size
@@ -2783,7 +2783,7 @@ nvim_buf_add_highlight({buffer}, {ns_id}, {hl_group}, {line}, {col_start},
 
                 As a shorthand, `ns_id = 0` can be used to create a new
                 <A HREF="#namespace">namespace</A> for the highlight, the allocated id is then
-                returned. If `hl_group` is the empty <A HREF="options\.html#options">字符串</A> no highlight is
+                returned. If `hl_group` is the empty <A HREF="options.html#options">字符串</A> no highlight is
                 added, but a new `ns_id` is still returned. This is supported
                 for backwards compatibility, new code should use
                 |<A HREF="#nvim_create_namespace()">nvim_create_namespace()</A>| to create a new empty namespace.
@@ -2942,7 +2942,7 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                                 a single highlight group, or an array of
                                 multiple highlight groups that will be stacked
                                 (highest priority last). A highlight group can
-                                be supplied either <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A> or <A HREF="motion.html#as">as</A> an
+                                be supplied either <A HREF="motion.html#as">as</A> a <A HREF="options.html#options">字符串</A> or <A HREF="motion.html#as">as</A> an
                                 integer, the latter which can be obtained
                                 using |<A HREF="intro.html#nvim_get_hl_id_by_name">nvim_get_hl_id_by_name</A>|.
                               • virt_text_pos : position of virtual text.
@@ -3008,7 +3008,7 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                                 not be placed if the line or column value is
                                 past the end of the buffer or end of the line
                                 respectively. Defaults to true.
-                              • sign_text: <A HREF="options\.html#options">字符串</A> of length 1-2 used to
+                              • sign_text: <A HREF="options.html#options">字符串</A> of length 1-2 used to
                                 display in the sign column. Note: ranges are
                                 unsupported and decorations are only applied
                                 to start_row
@@ -3030,7 +3030,7 @@ nvim_buf_set_extmark({buffer}, {ns_id}, {line}, {col}, {*opts})
                                 <A HREF="options.html#'cursorline'">'cursorline'</A> is enabled. Note: ranges are
                                 unsupported and decorations are only applied
                                 to start_row
-                              • <A HREF="syntax.html#conceal">conceal</A>: <A HREF="options\.html#options">字符串</A> which should be either empty
+                              • <A HREF="syntax.html#conceal">conceal</A>: <A HREF="options.html#options">字符串</A> which should be either empty
                                 or a single character. Enable concealing
                                 similar to |<A HREF="syntax.html#:syn-conceal">:syn-conceal</A>|. When a character is
                                 supplied <A HREF="motion.html#it">它</A> is used <A HREF="motion.html#as">as</A> |<A HREF="syntax.html#:syn-cchar">:syn-cchar</A>|.
@@ -3056,10 +3056,10 @@ nvim_create_namespace({name})                        *<A NAME="nvim_create_names
 
                 Namespaces can be named or anonymous. If `name` matches an
                 existing <A HREF="#namespace">namespace</A>, the associated id is returned. If `name`
-                is an empty <A HREF="options\.html#options">字符串</A> a new, anonymous <A HREF="#namespace">namespace</A> is created.
+                is an empty <A HREF="options.html#options">字符串</A> a new, anonymous <A HREF="#namespace">namespace</A> is created.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {name}  Namespace name or empty <A HREF="options\.html#options">字符串</A>
+                    {name}  Namespace name or empty <A HREF="options.html#options">字符串</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Namespace id
@@ -3467,8 +3467,8 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                   <A HREF="options.html#'winhighlight'">'winhighlight'</A>.
 
                               • border: Style of (optional)<A HREF="windows.html#window">窗口</A>border.
-                                This can either be a <A HREF="options\.html#options">字符串</A> or an array. The
-                                <A HREF="options\.html#options">字符串</A> values are
+                                This can either be a <A HREF="options.html#options">字符串</A> or an array. The
+                                <A HREF="options.html#options">字符串</A> values are
                                 • &quot;none&quot;: No border (default).
                                 • &quot;single&quot;: A single line box.
                                 • &quot;double&quot;: A double line box.
@@ -3489,7 +3489,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                   they will be repeated. Thus an ASCII border
                                   could be specified <A HREF="motion.html#as">as</A> [ &quot;<A HREF="pattern.html#/">/</A>&quot;, &quot;<A HREF="motion.html#-">-</A>&quot;, &quot;\\&quot;, &quot;|&quot;
                                   ], or all chars the same <A HREF="motion.html#as">as</A> [ &quot;<A HREF="change.html#x">x</A>&quot; ]. An
-                                  empty <A HREF="options\.html#options">字符串</A> can be used to turn off a
+                                  empty <A HREF="options.html#options">字符串</A> can be used to turn off a
                                   specific border, for instance, [ &quot;&quot;, &quot;&quot;, &quot;&quot;,
                                   &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;<A HREF="change.html#&lt;">&lt;</A>&quot; ] will only make
                                   vertical borders but not horizontal ones. By
@@ -3500,7 +3500,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                   &quot;MyBorder&quot;} ].
 
                               • noautocmd: If true then no buffer-related
-                                <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> such <A HREF="motion.html#as">as</A> |<A HREF="autocmd.html#BufEnter">BufEnter</A>|,
+                                <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> such <A HREF="motion.html#as">as</A> |<A HREF="autocmd.html#BufEnter">BufEnter</A>|,
                                 |<A HREF="autocmd.html#BufLeave">BufLeave</A>| or |<A HREF="autocmd.html#BufWinEnter">BufWinEnter</A>| may fire from
                                 calling this function.
 
@@ -3650,7 +3650,7 @@ nvim_clear_autocmds({*opts})                           *<A NAME="nvim_clear_auto
 
 
 nvim_create_augroup({name}, {*opts})                   *<A NAME="nvim_create_augroup()"></A><B>nvim_create_augroup()</B>*
-                Create or get an <A HREF="autocmd\.html#autocommand">自动命令</A> group |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
+                Create or get an <A HREF="autocmd.html#autocommand">自动命令</A> group |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
 
                 To get an existing group id, <A HREF="diff.html#do">do</A>:
 <B>                    local id = vim.api.nvim_create_augroup("MyGroup", {</B>
@@ -3659,7 +3659,7 @@ nvim_create_augroup({name}, {*opts})                   *<A NAME="nvim_create_aug
  
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {name}  <A HREF="options\.html#options">字符串</A>: The name of the group
+                    {name}  <A HREF="options.html#options">字符串</A>: The name of the group
                     {opts}  <A HREF="eval.html#Dictionary">Dictionary</A> Parameters
                             • clear (bool) optional: defaults to true. Clear
                               existing commands if the group already exists
@@ -3673,10 +3673,10 @@ nvim_create_augroup({name}, {*opts})                   *<A NAME="nvim_create_aug
 
 
 nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_autocmd()"></A><B>nvim_create_autocmd()</B>*
-                Create an |<A HREF="autocmd\.html#autocommand">自动命令</A>|
+                Create an |<A HREF="autocmd.html#autocommand">自动命令</A>|
 
                 The <A HREF="#API">API</A> allows for two (mutually <A HREF="motion.html#exclusive">exclusive</A>) types of actions
-                to be executed when the <A HREF="autocmd\.html#autocommand">自动命令</A> triggers: a callback
+                to be executed when the <A HREF="autocmd.html#autocommand">自动命令</A> triggers: a callback
                 function (Lua or Vimscript), or a command (like regular
                 autocommands).
 
@@ -3728,30 +3728,30 @@ nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_aut
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     <A HREF="autocmd.html#{event}">{event}</A>  (string|array) The event or <A HREF="autocmd.html#events">events</A> to <A HREF="intro.html#register">寄存器</A>
-                             this <A HREF="autocmd\.html#autocommand">自动命令</A>
-                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options.html#options">选项</A>:
+                             this <A HREF="autocmd.html#autocommand">自动命令</A>
+                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="options.html#options">选项</A>:
                              • group (string|integer) optional: the
-                               <A HREF="autocmd\.html#autocommand">自动命令</A> group name or id to match against.
+                               <A HREF="autocmd.html#autocommand">自动命令</A> group name or id to match against.
                              • <A HREF="pattern.html#pattern">pattern</A> (string|array) optional: <A HREF="pattern.html#pattern">pattern</A> or
                                patterns to match against |<A HREF="autocmd.html#autocmd-pattern">autocmd-pattern</A>|.
                              • buffer (integer) optional: buffer number for
                                buffer local autocommands |<A HREF="autocmd.html#autocmd-buflocal">autocmd-buflocal</A>|.
                                Cannot be used with {pattern}.
                              • desc (string) optional: description of the
-                               <A HREF="autocmd\.html#autocommand">自动命令</A>.
+                               <A HREF="autocmd.html#autocommand">自动命令</A>.
                              • callback (function|string) optional: if a
-                               <A HREF="options\.html#options">字符串</A>, the name of a Vimscript function to
-                               call when this <A HREF="autocmd\.html#autocommand">自动命令</A> is triggered.
+                               <A HREF="options.html#options">字符串</A>, the name of a Vimscript function to
+                               call when this <A HREF="autocmd.html#autocommand">自动命令</A> is triggered.
                                Otherwise, a <A HREF="lua.html#Lua">Lua</A> function which is called when
-                               this <A HREF="autocmd\.html#autocommand">自动命令</A> is triggered. Cannot be used
+                               this <A HREF="autocmd.html#autocommand">自动命令</A> is triggered. Cannot be used
                                with {command}. <A HREF="lua.html#Lua">Lua</A> callbacks can return true
-                               to delete the <A HREF="autocmd\.html#autocommand">自动命令</A>; in addition, they
+                               to delete the <A HREF="autocmd.html#autocommand">自动命令</A>; in addition, they
                                accept a single table argument with the
                                following keys:
-                               • id: (number) the <A HREF="autocmd\.html#autocommand">自动命令</A> id
+                               • id: (number) the <A HREF="autocmd.html#autocommand">自动命令</A> id
                                • event: (string) the name of the event that
-                                 triggered the <A HREF="autocmd\.html#autocommand">自动命令</A> |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>|
-                               • group: (number|nil) the <A HREF="autocmd\.html#autocommand">自动命令</A> group id,
+                                 triggered the <A HREF="autocmd.html#autocommand">自动命令</A> |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>|
+                               • group: (number|nil) the <A HREF="autocmd.html#autocommand">自动命令</A> group id,
                                  if <A HREF="motion.html#it">它</A> exists
                                • match: (string) the expanded value of
                                  |<A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A>|
@@ -3765,20 +3765,20 @@ nvim_create_autocmd({event}, {*opts})                  *<A NAME="nvim_create_aut
                                execute on event. Cannot be used with
                                {callback}
                              • once (boolean) optional: defaults to false. Run
-                               the <A HREF="autocmd\.html#autocommand">自动命令</A> only once |<A HREF="autocmd.html#autocmd-once">autocmd-once</A>|.
+                               the <A HREF="autocmd.html#autocommand">自动命令</A> only once |<A HREF="autocmd.html#autocmd-once">autocmd-once</A>|.
                              • nested (boolean) optional: defaults to false.
                                Run nested autocommands |<A HREF="autocmd.html#autocmd-nested">autocmd-nested</A>|.
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#Integer">Integer</A> id of the created <A HREF="autocmd\.html#autocommand">自动命令</A>.
+                    <A HREF="eval.html#Integer">Integer</A> id of the created <A HREF="autocmd.html#autocommand">自动命令</A>.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
-                    |<A HREF="autocmd\.html#autocommand">自动命令</A>|
+                    |<A HREF="autocmd.html#autocommand">自动命令</A>|
                     |<A HREF="#nvim_del_autocmd()">nvim_del_autocmd()</A>|
 
 
 nvim_del_augroup_by_id({id})                        *<A NAME="nvim_del_augroup_by_id()"></A><B>nvim_del_augroup_by_id()</B>*
-                Delete an <A HREF="autocmd\.html#autocommand">自动命令</A> group by id.
+                Delete an <A HREF="autocmd.html#autocommand">自动命令</A> group by id.
 
                 To get a group id one can use |<A HREF="#nvim_get_autocmds()">nvim_get_autocmds()</A>|.
 
@@ -3795,21 +3795,21 @@ nvim_del_augroup_by_id({id})                        *<A NAME="nvim_del_augroup_b
 
 
 nvim_del_augroup_by_name({name})                  *<A NAME="nvim_del_augroup_by_name()"></A><B>nvim_del_augroup_by_name()</B>*
-                Delete an <A HREF="autocmd\.html#autocommand">自动命令</A> group by name.
+                Delete an <A HREF="autocmd.html#autocommand">自动命令</A> group by name.
 
                 NOTE: behavior differs from |<A HREF="intro.html#augroup-delete">augroup-delete</A>|. When <A HREF="change.html#deleting">deleting</A> a
                 group, autocommands contained in this group will also be
                 deleted and cleared. This group will no longer exist.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {name}  <A HREF="options\.html#options">字符串</A> The name of the group.
+                    {name}  <A HREF="options.html#options">字符串</A> The name of the group.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
                     |<A HREF="intro.html#autocommand-groups">autocommand-groups</A>|
 
 
 nvim_del_autocmd({id})                                    *<A NAME="nvim_del_autocmd()"></A><B>nvim_del_autocmd()</B>*
-                Delete an <A HREF="autocmd\.html#autocommand">自动命令</A> by id.
+                Delete an <A HREF="autocmd.html#autocommand">自动命令</A> by id.
 
                 NOTE: Only autocommands created via the <A HREF="#API">API</A> have an id.
 
@@ -3826,9 +3826,9 @@ nvim_exec_autocmds({event}, {*opts})                    *<A NAME="nvim_exec_auto
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     <A HREF="autocmd.html#{event}">{event}</A>  (String|Array) The event or <A HREF="autocmd.html#events">events</A> to execute
-                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="options.html#options">选项</A>:
+                    {opts}   <A HREF="eval.html#Dictionary">Dictionary</A> of <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="options.html#options">选项</A>:
                              • group (string|integer) optional: the
-                               <A HREF="autocmd\.html#autocommand">自动命令</A> group name or id to match against.
+                               <A HREF="autocmd.html#autocommand">自动命令</A> group name or id to match against.
                                |<A HREF="autocmd.html#autocmd-groups">autocmd-groups</A>|.
                              • <A HREF="pattern.html#pattern">pattern</A> (string|array) optional: defaults to
                                &quot;*&quot; |<A HREF="autocmd.html#autocmd-pattern">autocmd-pattern</A>|. Cannot be used with
@@ -3840,7 +3840,7 @@ nvim_exec_autocmds({event}, {*opts})                    *<A NAME="nvim_exec_auto
                                Process the <A HREF="options.html#modeline">modeline</A> after the autocommands
                                |<A HREF="autocmd.html#&lt;nomodeline&gt;">&lt;nomodeline&gt;</A>|.
                              • data (any): arbitrary data to send to the
-                               <A HREF="autocmd\.html#autocommand">自动命令</A> callback. See
+                               <A HREF="autocmd.html#autocommand">自动命令</A> callback. See
                                |<A HREF="#nvim_create_autocmd()">nvim_create_autocmd()</A>| for details.
 
 <B><FONT color="#3A6F2B">                See also: </FONT></B>
@@ -3870,7 +3870,7 @@ nvim_get_autocmds({*opts})                               *<A NAME="nvim_get_auto
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  <A HREF="eval.html#Dictionary">Dictionary</A> with at least one of the following:
-                            • group (string|integer): the <A HREF="autocmd\.html#autocommand">自动命令</A> group
+                            • group (string|integer): the <A HREF="autocmd.html#autocommand">自动命令</A> group
                               name or id to match against.
                             • event (string|array): event or <A HREF="autocmd.html#events">events</A> to match
                               against |<A HREF="autocmd.html#autocmd-events">autocmd-events</A>|.
@@ -3880,18 +3880,18 @@ nvim_get_autocmds({*opts})                               *<A NAME="nvim_get_auto
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Array of autocommands matching the criteria, with each
                     item containing the following fields:
-                    • id (number): the <A HREF="autocmd\.html#autocommand">自动命令</A> id (only when defined with
+                    • id (number): the <A HREF="autocmd.html#autocommand">自动命令</A> id (only when defined with
                       the <A HREF="#API">API</A>).
-                    • group (integer): the <A HREF="autocmd\.html#autocommand">自动命令</A> group id.
-                    • group_name (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> group name.
-                    • desc (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> description.
-                    • event (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> event.
-                    • command (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> command.
-                    • once (boolean): whether the <A HREF="autocmd\.html#autocommand">自动命令</A> is only run
+                    • group (integer): the <A HREF="autocmd.html#autocommand">自动命令</A> group id.
+                    • group_name (string): the <A HREF="autocmd.html#autocommand">自动命令</A> group name.
+                    • desc (string): the <A HREF="autocmd.html#autocommand">自动命令</A> description.
+                    • event (string): the <A HREF="autocmd.html#autocommand">自动命令</A> event.
+                    • command (string): the <A HREF="autocmd.html#autocommand">自动命令</A> command.
+                    • once (boolean): whether the <A HREF="autocmd.html#autocommand">自动命令</A> is only run
                       once.
-                    • <A HREF="pattern.html#pattern">pattern</A> (string): the <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="pattern.html#pattern">pattern</A>. If the
-                      <A HREF="autocmd\.html#autocommand">自动命令</A> is buffer local YXXYautocmd-buffer-local|:
-                    • buflocal (boolean): true if the <A HREF="autocmd\.html#autocommand">自动命令</A> is buffer
+                    • <A HREF="pattern.html#pattern">pattern</A> (string): the <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="pattern.html#pattern">pattern</A>. If the
+                      <A HREF="autocmd.html#autocommand">自动命令</A> is buffer local YXXYautocmd-buffer-local|:
+                    • buflocal (boolean): true if the <A HREF="autocmd.html#autocommand">自动命令</A> is buffer
                       local.
                     • buffer (number): the buffer number.
 

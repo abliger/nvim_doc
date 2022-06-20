@@ -494,7 +494,7 @@ Sort the <A HREF="#tags">tags</A> file!
 
 Note that the binary searching is disabled when not looking for a <A HREF="#tag">tag</A> with a
 specific name.  This happens when ignoring <A HREF="change.html#case">case</A> and when a regular <A HREF="eval.html#expression">expression</A>
-is used that doesn't start with a fixed <A HREF="options\.html#options">字符串</A>.  Tag searching can be a lot
+is used that doesn't start with a fixed <A HREF="options.html#options">字符串</A>.  Tag searching can be a lot
 slower then.  The former can be avoided by case-fold <A HREF="change.html#sorting">sorting</A> the <A HREF="#tags">tags</A> file.
 See <A HREF="options.html#'tagbsearch'">'tagbsearch'</A> for details.
 
@@ -609,7 +609,7 @@ directory, instead of the <A HREF="#tags">tags</A> file in the directory where t
 is.
 
 Instead of the comma a space may be used.  Then a <A HREF="intro.html#backslash">backslash</A> is required for
-the space to be included in the <A HREF="options\.html#options">字符串</A> option:
+the space to be included in the <A HREF="options.html#options">字符串</A> option:
 <B>	:set tags=tags\ /home/user/commontags</B>
 
 To include a space in a file name use three backslashes.  To include a comma
@@ -703,7 +703,7 @@ only supported by new versions of <A HREF="#ctags">ctags</A> (such <A HREF="moti
 
 		The {fieldname} identifies the field, and can only contain
 		alphabetical characters [a-zA-Z].
-		The {value} is any <A HREF="options\.html#options">字符串</A>, but cannot contain a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.
+		The {value} is any <A HREF="options.html#options">字符串</A>, but cannot contain a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>.
 		These characters are special:
 			&quot;\t&quot; stands for a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>
 			&quot;\r&quot; stands for a <A HREF="motion.html#&lt;CR&gt;">&lt;CR&gt;</A>
@@ -793,7 +793,7 @@ should also be able to update <A HREF="#ctags">ctags</A> to one that supports th
 
 							*<A NAME="E387"></A><B>E387</B>* *<A NAME="E388"></A><B>E388</B>* *<A NAME="E389"></A><B>E389</B>*
 
-These commands look for a <A HREF="options\.html#options">字符串</A> in the current file and in all encountered
+These commands look for a <A HREF="options.html#options">字符串</A> in the current file and in all encountered
 included files (recursively).  This can be used to find the definition of a
 variable, function or <A HREF="map.html#macro">宏指令</A>.  If you only want to search in the current
 buffer, use the commands listed at |<A HREF="pattern.html#pattern-searches">pattern-searches</A>|.
@@ -806,11 +806,11 @@ found, possibly your <A HREF="options.html#'path'">'path'</A> option is not set 
 included file is searched, not a buffer that may be editing that file.  Only
 for the current file the lines in the buffer are used.
 
-The <A HREF="options\.html#options">字符串</A> can be any keyword or a defined <A HREF="map.html#macro">宏指令</A>.  For the keyword any match
+The <A HREF="options.html#options">字符串</A> can be any keyword or a defined <A HREF="map.html#macro">宏指令</A>.  For the keyword any match
 will be found.  For defined macros only lines that match with the <A HREF="options.html#'define'">'define'</A>
 option will be found.  The default is &quot;^#\s*define&quot;, which is for C programs.
 For other languages you probably want to change this.  See <A HREF="options.html#'define'">'define'</A> for an
-example for C++.  The <A HREF="options\.html#options">字符串</A> cannot contain an end-of-line, only matches
+example for C++.  The <A HREF="options.html#options">字符串</A> cannot contain an end-of-line, only matches
 within a line are found.
 
 When a match is found for a defined <A HREF="map.html#macro">宏指令</A>, the displaying of lines continues
@@ -1014,7 +1014,7 @@ Common arguments for the commands above:
 	next command can be appended with '&#124;'.  Example:
 <B>	:isearch /string/ | echo "the last one"</B>
  	For a &quot;<A HREF="#:djump">:djump</A>&quot;, &quot;<A HREF="#:dsplit">:dsplit</A>&quot;, &quot;<A HREF="#:dlist">:dlist</A>&quot; and &quot;<A HREF="#:dsearch">:dsearch</A>&quot;命令 the <A HREF="pattern.html#pattern">pattern</A>
-	is used <A HREF="motion.html#as">as</A> a literal <A HREF="options\.html#options">字符串</A>, not <A HREF="motion.html#as">as</A> a search <A HREF="pattern.html#pattern">pattern</A>.
+	is used <A HREF="motion.html#as">as</A> a literal <A HREF="options.html#options">字符串</A>, not <A HREF="motion.html#as">as</A> a search <A HREF="pattern.html#pattern">pattern</A>.
 
 ==============================================================================
 
@@ -1027,10 +1027,10 @@ like |<A HREF="#CTRL-]">CTRL-]</A>|.
 The function used for generating the taglist is specified by setting the
 <A HREF="options.html#'tagfunc'">'tagfunc'</A> option.  The function will be called with three arguments:
    a:pattern	The <A HREF="#tag">tag</A> identifier or <A HREF="pattern.html#pattern">pattern</A> used during the <A HREF="#tag">tag</A> search.
-   a:flags	<A HREF="options\.html#options">字符串</A> containing flags to <A HREF="intro.html#control">control</A> the function behavior.
+   a:flags	<A HREF="options.html#options">字符串</A> containing flags to <A HREF="intro.html#control">control</A> the function behavior.
    a:info	<A HREF="eval.html#Dict">Dict</A> containing the following entries:
 		    buf_ffname	  Full filename which can be used for priority.
-		    user_data	  Custom data <A HREF="options\.html#options">字符串</A>, if stored in the <A HREF="#tag">tag</A>
+		    user_data	  Custom data <A HREF="options.html#options">字符串</A>, if stored in the <A HREF="#tag">tag</A>
 				  stack previously by tagfunc.
 
 Currently up to three flags may be passed to the <A HREF="#tag">tag</A> function:
@@ -1052,7 +1052,7 @@ ordering of the elements in the <A HREF="eval.html#list">列表</A> returned by 
 
 								*<A NAME="E987"></A><B>E987</B>*
 The function should return a <A HREF="eval.html#list">列表</A> of <A HREF="eval.html#Dict">Dict</A> entries.  Each <A HREF="eval.html#Dict">Dict</A> must at least
-include the following entries and each value must be a <A HREF="options\.html#options">字符串</A>:
+include the following entries and each value must be a <A HREF="options.html#options">字符串</A>:
 	name		Name of the <A HREF="#tag">tag</A>.
 	filename	Name of the file where the <A HREF="#tag">tag</A> is defined.  It is
 			either relative to the current directory or a full path.
@@ -1062,7 +1062,7 @@ Note that the format is similar to that of |<A HREF="builtin.html#taglist()">tag
 to use its output to generate the result.
 The following fields are optional:
 	kind		Type of the <A HREF="#tag">tag</A>.
-	user_data	<A HREF="options\.html#options">字符串</A> of custom data stored in the <A HREF="#tag">tag</A> stack which
+	user_data	<A HREF="options.html#options">字符串</A> of custom data stored in the <A HREF="#tag">tag</A> stack which
 			can be used to disambiguate <A HREF="#tags">tags</A> between operations.
 
 If the function returns |<A HREF="eval.html#v:null">v:null</A>| instead of a <A HREF="eval.html#list">列表</A>, a standard <A HREF="#tag">tag</A> lookup will

@@ -273,12 +273,12 @@ VIM::Eval({expr})	Evaluates {expr} and returns (success, value) in <A HREF="eval
 			value of internal |<A HREF="eval.html#variables">variables</A>| <A HREF="change.html#x">x</A>, and '$x' is equivalent
 			to perl's $ENV{x}.  All |<A HREF="eval.html#functions">functions</A>| accessible from
 			the command-line are valid for {expr}.
-			A |<A HREF="eval.html#list">列表</A>| is turned into a <A HREF="options\.html#options">字符串</A> by joining the items
+			A |<A HREF="eval.html#list">列表</A>| is turned into a <A HREF="options.html#options">字符串</A> by joining the items
 			and <A HREF="insert.html#inserting">inserting</A> line breaks.
 
 
 							*<A NAME="perl-Blob"></A><B>perl-Blob</B>*
-VIM::Blob({expr})	Return <A HREF="eval.html#Blob">Blob</A> literal <A HREF="options\.html#options">字符串</A> 0zXXXX from scalar value.
+VIM::Blob({expr})	Return <A HREF="eval.html#Blob">Blob</A> literal <A HREF="options.html#options">字符串</A> 0zXXXX from scalar value.
 
 ==============================================================================
 
@@ -301,7 +301,7 @@ Count()		Returns the number of lines in the Buffer.
 
 							*<A NAME="perl-Buffer-Get"></A><B>perl-Buffer-Get</B>*
 Get({lnum}, {lnum}?, <A HREF="eval.html#...">...</A>)
-			Returns a text <A HREF="options\.html#options">字符串</A> of line {lnum} in the Buffer
+			Returns a text <A HREF="options.html#options">字符串</A> of line {lnum} in the Buffer
 			for each {lnum} specified.  An array can be passed
 			with a <A HREF="eval.html#list">列表</A> of {lnum}'s specified.
 
@@ -315,7 +315,7 @@ Delete({lnum}, {lnum}?)
 
 							*<A NAME="perl-Buffer-Append"></A><B>perl-Buffer-Append</B>*
 Append({lnum}, {line}, {line}?, <A HREF="eval.html#...">...</A>)
-			Appends each {line} <A HREF="options\.html#options">字符串</A> after Buffer line {lnum}.
+			Appends each {line} <A HREF="options.html#options">字符串</A> after Buffer line {lnum}.
 			The <A HREF="eval.html#list">列表</A> of {line}s can be an array.
 
 

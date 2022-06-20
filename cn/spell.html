@@ -400,7 +400,7 @@ Only the first file is loaded, the one that is first in <A HREF="options.html#'r
 this succeeds then additionally files with the name LL.EEE.add.spl are loaded.
 All the ones that are found are used.
 
-If no <A HREF="#spell">spell</A> file is found the |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event is
+If no <A HREF="#spell">spell</A> file is found the |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd.html#autocommand">自动命令</A> event is
 triggered.  This may trigger the |<A HREF="spellfile.html">spellfile.vim</A>| <A HREF="usr_05.html#plugin">plugin</A> to offer you
 downloading the <A HREF="#spell">spell</A> file.
 
@@ -767,7 +767,7 @@ To avoid using the &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HRE
 
 <B>	let loaded_spellfile_plugin = 1</B>
 
-Instead of using the <A HREF="usr_05.html#plugin">plugin</A> you can define a |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> to
+Instead of using the <A HREF="usr_05.html#plugin">plugin</A> you can define a |<A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>| <A HREF="autocmd.html#autocommand">自动命令</A> to
 handle the missing file yourself.  You can use <A HREF="motion.html#it">它</A> like this:
 
 <B>	:au SpellFileMissing * call Download_spell_file(expand('&lt;amatch&gt;'))</B>
@@ -780,13 +780,13 @@ exceptions:
 - The name &quot;ascii&quot; may also be used for some languages where the words use
   only ASCII letters for most of the words.
 
-The default &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> uses this <A HREF="autocmd\.html#autocommand">自动命令</A>, if you define your
-<A HREF="autocmd\.html#autocommand">自动命令</A> afterwards you may want to use &quot;:au! SpellFileMissing&quot; to overrule
-<A HREF="motion.html#it">它</A>.  If you define your <A HREF="autocmd\.html#autocommand">自动命令</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded <A HREF="motion.html#it">它</A> will notice
+The default &quot;<A HREF="#spellfile.vim">spellfile.vim</A>&quot; <A HREF="usr_05.html#plugin">plugin</A> uses this <A HREF="autocmd.html#autocommand">自动命令</A>, if you define your
+<A HREF="autocmd.html#autocommand">自动命令</A> afterwards you may want to use &quot;:au! SpellFileMissing&quot; to overrule
+<A HREF="motion.html#it">它</A>.  If you define your <A HREF="autocmd.html#autocommand">自动命令</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded <A HREF="motion.html#it">它</A> will notice
 this and not <A HREF="diff.html#do">do</A> anything.
 
 							*<A NAME="E797"></A><B>E797</B>*
-Note that the <A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A> <A HREF="autocmd\.html#autocommand">自动命令</A> must not change or destroy the
+Note that the <A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A> <A HREF="autocmd.html#autocommand">自动命令</A> must not change or destroy the
 buffer the user was editing.
 
 ==============================================================================
@@ -1281,10 +1281,10 @@ in the <A HREF="#.aff">.aff</A> file:
 
 <B><FONT color="#3A6F2B">	PFXPOSTPONE </FONT></B>
 
-Only prefixes without a chop <A HREF="options\.html#options">字符串</A> and without flags can be postponed.
-Prefixes with a chop <A HREF="options\.html#options">字符串</A> or with flags will still be included in the <A HREF="motion.html#word">单词</A>
-<A HREF="eval.html#list">列表</A>.  An exception if the chop <A HREF="options\.html#options">字符串</A> is one character and equal to the last
-character of the added <A HREF="options\.html#options">字符串</A>, but in lower <A HREF="change.html#case">case</A>.  Thus when the chop <A HREF="options\.html#options">字符串</A>
+Only prefixes without a chop <A HREF="options.html#options">字符串</A> and without flags can be postponed.
+Prefixes with a chop <A HREF="options.html#options">字符串</A> or with flags will still be included in the <A HREF="motion.html#word">单词</A>
+<A HREF="eval.html#list">列表</A>.  An exception if the chop <A HREF="options.html#options">字符串</A> is one character and equal to the last
+character of the added <A HREF="options.html#options">字符串</A>, but in lower <A HREF="change.html#case">case</A>.  Thus when the chop <A HREF="options.html#options">字符串</A>
 is used to allow the following <A HREF="motion.html#word">单词</A> to start with an upper <A HREF="change.html#case">case</A> <A HREF="print.html#letter">字母</A>.
 
 

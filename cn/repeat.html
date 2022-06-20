@@ -139,7 +139,7 @@ This also makes <A HREF="motion.html#it">它</A> faster.
 Instead of the '<A HREF="pattern.html#/">/</A>' which surrounds the {pattern}, you can use any other
 single byte character, but not an alphabetic character, '\', &#39;&#34;'' or '&#124;'.
 This is useful if you want to include a '<A HREF="pattern.html#/">/</A>' in the search <A HREF="pattern.html#pattern">pattern</A> or
-replacement <A HREF="options\.html#options">字符串</A>.
+replacement <A HREF="options.html#options">字符串</A>.
 
 For the definition of a pattern, 见 |<A HREF="pattern.html#pattern">pattern</A>|.
 
@@ -177,7 +177,7 @@ where the cursor was before 全局命令).
 
 全局命令 sets both the last used search <A HREF="pattern.html#pattern">pattern</A> and the last used
 substitute <A HREF="pattern.html#pattern">pattern</A> (this is <A HREF="intro.html#vi">vi</A> compatible).  This makes <A HREF="motion.html#it">它</A> easy to globally
-replace a <A HREF="options\.html#options">字符串</A>:
+replace a <A HREF="options.html#options">字符串</A>:
 	:g/pat/s//PAT/g
 This replaces all occurrences of &quot;pat&quot; with &quot;PAT&quot;.  The same can be done with:
 	:&#37;s/pat/PAT/g
@@ -275,7 +275,7 @@ For <A HREF="editing.html#writing">写</A> a Vim <A HREF="usr_41.html#script">sc
 					*<A NAME=":so"></A><B>:so</B>* *<A NAME=":source"></A><B>:source</B>* *<A NAME="load-vim-script"></A><B>load-vim-script</B>*
 :[range]so[urce] [file]	Runs |<A HREF="intro.html#Ex">Ex</A>| commands or <A HREF="lua.html#Lua">Lua</A> code (&quot;.lua&quot; files) from
 			[file], or current buffer if no [file].
-			Triggers the |<A HREF="autocmd.html#SourcePre">SourcePre</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>.
+			Triggers the |<A HREF="autocmd.html#SourcePre">SourcePre</A>| <A HREF="autocmd.html#autocommand">自动命令</A>.
 
 							*<A NAME=":source!"></A><B>:source!</B>*
 :[range]so[urce]! <A HREF="editing.html#{file}">{file}</A>
@@ -488,7 +488,7 @@ make a top-down hierarchy of <A HREF="usr_41.html#script">script</A> files.  The
 nested <A HREF="motion.html#as">as</A> deep <A HREF="motion.html#as">as</A> the number of files that can be opened at one time (about
 15).  The '<A HREF="#:source!">:source!</A>' command can be nested up to 15 levels deep.
 
-You can use the &quot;<A HREF="cmdline.html#&lt;sfile&gt;">&lt;sfile&gt;</A>&quot; <A HREF="options\.html#options">字符串</A> (literally, this is not a special key) inside
+You can use the &quot;<A HREF="cmdline.html#&lt;sfile&gt;">&lt;sfile&gt;</A>&quot; <A HREF="options.html#options">字符串</A> (literally, this is not a special key) inside
 of the sourced file, in places where a file name is expected.  It will be
 replaced by the file name of the sourced file.例如, if you have a
 &quot;other.vimrc&quot; file in the same directory <A HREF="motion.html#as">as</A> your |<A HREF="init.html">init.vim</A>| file, you can
@@ -818,7 +818,7 @@ To enter debugging mode use one of these methods:
 <B>	vim -D file.txt</B>
    Debugging will start <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A> the first <A HREF="starting.html#vimrc">vimrc</A>文件 is sourced.  This is
    useful to find out what is happening when Vim is starting up.  A side
-   effect is that Vim will switch the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> mode before initialisations
+   effect is that Vim will switch the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> mode before initialisations
    have finished, with unpredictable results.
    For a GUI-only version (Windows) the debugging will start <A HREF="motion.html#as">as</A>
    soon <A HREF="motion.html#as">as</A> the <A HREF="gui.html#GUI">GUI</A><A HREF="windows.html#window">窗口</A>has been opened.  To make this happen early, add a

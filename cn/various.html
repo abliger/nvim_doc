@@ -336,14 +336,14 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 			|<A HREF="nvim_terminal_emulator.html#terminal-emulator">terminal-emulator</A>| buffer. Without {cmd}, start an
 			interactive <A HREF="options.html#'shell'">'shell'</A>.
 
-			Type |<A HREF="insert.html#i">i</A>| to enter |<A HREF="intro\.html#Terminal-mode">终端模式</A>|然后keys are sent to
-			the <A HREF="job_control.html#job">job</A> running in the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>. Type &lt;C-\&gt;&lt;C-N&gt; to
-			leave <A HREF="intro\.html#Terminal-mode">终端模式</A>. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
+			Type |<A HREF="insert.html#i">i</A>| to enter |<A HREF="intro.html#Terminal-mode">终端模式</A>|然后keys are sent to
+			the <A HREF="job_control.html#job">job</A> running in the <A HREF="nvim_terminal_emulator.html#terminal">终端</A>. Type &lt;C-\&gt;&lt;C-N&gt; to
+			leave <A HREF="intro.html#Terminal-mode">终端模式</A>. |<A HREF="intro.html#CTRL-\_CTRL-N">CTRL-\_CTRL-N</A>|
 
 			Fails if changes have been made to the current buffer,
 			unless <A HREF="options.html#'hidden'">'hidden'</A> is set.
 
-			To enter |<A HREF="intro\.html#Terminal-mode">终端模式</A>| automatically:
+			To enter |<A HREF="intro.html#Terminal-mode">终端模式</A>| automatically:
 <B>			      autocmd TermOpen * startinsert</B>
  
 
@@ -351,8 +351,8 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 :!{cmd}			Execute {cmd} with <A HREF="options.html#'shell'">'shell'</A>. See also |<A HREF="#:terminal">:terminal</A>|.
 
 			The command runs in a non-interactive shell connected
-			to a pipe (not a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>terminal). Use |<A HREF="#:terminal">:terminal</A>| to run an
-			interactive shell connected to a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
+			to a pipe (not a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>terminal). Use |<A HREF="#:terminal">:terminal</A>| to run an
+			interactive shell connected to a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.
 
 			Backgrounded (&quot;&amp;&quot;) commands must not write to stdout
 			or stderr, the streams are closed immediately. |<A HREF="builtin.html#E5677">E5677</A>|
@@ -445,16 +445,16 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 
 :redi[r] =&gt; {var}	Redirect <A HREF="message.html#messages">信息</A> to a variable.  If the variable
 			doesn't exist然后<A HREF="motion.html#it">它</A> is created.  If the variable
-			exists然后<A HREF="motion.html#it">它</A> is initialized to an empty <A HREF="options\.html#options">字符串</A>.
+			exists然后<A HREF="motion.html#it">它</A> is initialized to an empty <A HREF="options.html#options">字符串</A>.
 			The variable will remain empty until redirection ends.
-			Only <A HREF="options\.html#options">字符串</A> <A HREF="eval.html#variables">variables</A> can be used.  After the
+			Only <A HREF="options.html#options">字符串</A> <A HREF="eval.html#variables">variables</A> can be used.  After the
 			redirection starts, if the variable is removed or
 			locked or the variable type is changed然后further
 			command output <A HREF="message.html#messages">信息</A> will cause <A HREF="message.html#errors">errors</A>.
 			To get the output of one command the |<A HREF="builtin.html#execute()">execute()</A>|
 			function can be used instead of redirection.
 
-:redi[r] =&gt;&gt; {var}	Append <A HREF="message.html#messages">信息</A> to an existing variable.  Only <A HREF="options\.html#options">字符串</A>
+:redi[r] =&gt;&gt; {var}	Append <A HREF="message.html#messages">信息</A> to an existing variable.  Only <A HREF="options.html#options">字符串</A>
 			<A HREF="eval.html#variables">variables</A> can be used.
 
 :redi[r] END		End redirecting <A HREF="message.html#messages">信息</A>.
@@ -516,7 +516,7 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 <B>			    :redir END</B>
  			To execute a <A HREF="intro.html#Normal">正常</A>模式 command silently, use the
 			|<A HREF="#:normal">:normal</A>| command.例如, to search for a
-			<A HREF="options\.html#options">字符串</A> without <A HREF="message.html#messages">信息</A>:
+			<A HREF="options.html#options">字符串</A> without <A HREF="message.html#messages">信息</A>:
 <B>			    :silent exe "normal /path\&lt;CR&gt;"</B>
  			&quot;<A HREF="#:silent!">:silent!</A>&quot; is useful to execute a command that may
 			fail, but the failure is to be ignored.  Example:
@@ -568,11 +568,11 @@ Various commands					*<A NAME="various"></A><B>various</B>*
 							*<A NAME=":verbose-cmd"></A><B>:verbose-cmd</B>*
 When <A HREF="options.html#'verbose'">'verbose'</A> is non-zero, listing the value of a Vim option or a key map or
 an abbreviation or a user-defined function or a command or a highlight group
-or an <A HREF="autocmd\.html#autocommand">自动命令</A> will also display where <A HREF="motion.html#it">它</A> was last defined. If they were
+or an <A HREF="autocmd.html#autocommand">自动命令</A> will also display where <A HREF="motion.html#it">它</A> was last defined. If they were
 defined in <A HREF="lua.html#Lua">Lua</A> they will only be located if <A HREF="options.html#'verbose'">'verbose'</A> is set. So Start
 <A HREF="nvim.html#nvim">nvim</A> with -V1 arg to see them. If <A HREF="motion.html#it">它</A> was defined manually then there
 will be no &quot;Last set&quot; message.  When <A HREF="motion.html#it">它</A> was defined while executing a function,
-user command or <A HREF="autocmd\.html#autocommand">自动命令</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
+user command or <A HREF="autocmd.html#autocommand">自动命令</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
 
 
 							*<A NAME="K"></A><B>K</B>*

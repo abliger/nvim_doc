@@ -166,7 +166,7 @@ is true when the variable <A HREF="insert.html#i">i</A> is smaller than five.
 	If you happen to write a while loop that keeps on running, you can
 	interrupt <A HREF="motion.html#it">它</A> by pressing <A HREF="pattern.html#CTRL-C">CTRL-C</A> (CTRL-Break on MS-Windows).
 
-The &quot;<A HREF="eval.html#:echo">:echo</A>&quot;命令 prints its arguments.  In this <A HREF="change.html#case">case</A> the <A HREF="options\.html#options">字符串</A> &quot;<A HREF="intro.html#count">count</A> is&quot;
+The &quot;<A HREF="eval.html#:echo">:echo</A>&quot;命令 prints its arguments.  In this <A HREF="change.html#case">case</A> the <A HREF="options.html#options">字符串</A> &quot;<A HREF="intro.html#count">count</A> is&quot;
 and the value of the variable <A HREF="insert.html#i">i</A>.  Since <A HREF="insert.html#i">i</A> is one, this will print:
 
 <B><FONT color="#3A6F2B">	count is 1 </FONT></B>
@@ -301,8 +301,8 @@ becomes false.  When <A HREF="motion.html#it">它</A> was false, <A HREF="motion
 Thus &quot;if !exists()&quot; can be read <A HREF="motion.html#as">as</A> &quot;if not exists()&quot;.
    What Vim calls true is anything that is not zero.  Zero is false.
 	Note:
-	Vim automatically converts a <A HREF="options\.html#options">字符串</A> to a number when <A HREF="motion.html#it">它</A> is looking for
-	a number.  When using a <A HREF="options\.html#options">字符串</A> that doesn't start with a digit the
+	Vim automatically converts a <A HREF="options.html#options">字符串</A> to a number when <A HREF="motion.html#it">它</A> is looking for
+	a number.  When using a <A HREF="options.html#options">字符串</A> that doesn't start with a digit the
 	resulting number is zero.  Thus look out for this:
 <B>		:if "true"</B>
  	The &quot;true&quot; will be interpreted <A HREF="motion.html#as">as</A> a zero, thus <A HREF="motion.html#as">as</A> false!
@@ -314,27 +314,27 @@ So far only numbers were used for the variable value.  Strings can be used <A HR
 well.  Numbers and strings are the basic types of <A HREF="eval.html#variables">variables</A> that Vim supports.
 The type is dynamic, <A HREF="motion.html#it">它</A> is set each time when assigning a value to the
 variable with &quot;<A HREF="eval.html#:let">:let</A>&quot;.  More about types in |<A HREF="#41.8">41.8</A>|.
-   To assign a <A HREF="options\.html#options">字符串</A> value to a variable, you need to use a <A HREF="options\.html#options">字符串</A> constant.
-There are two types of these.  First the <A HREF="options\.html#options">字符串</A> in double quotes:
+   To assign a <A HREF="options.html#options">字符串</A> value to a variable, you need to use a <A HREF="options.html#options">字符串</A> constant.
+There are two types of these.  First the <A HREF="options.html#options">字符串</A> in double quotes:
 
 <B>	:let name = "peter"</B>
 <B>	:echo name</B>
 <B><FONT color="#3A6F2B"> 	peter </FONT></B>
 
-If you want to include a double <A HREF="change.html#quote">quote</A> inside the <A HREF="options\.html#options">字符串</A>, put a <A HREF="intro.html#backslash">backslash</A> in
+If you want to include a double <A HREF="change.html#quote">quote</A> inside the <A HREF="options.html#options">字符串</A>, put a <A HREF="intro.html#backslash">backslash</A> in
 front of <A HREF="motion.html#it">它</A>:
 
 <B>	:let name = "\"peter\""</B>
 <B>	:echo name</B>
 <B><FONT color="#3A6F2B"> 	"peter" </FONT></B>
 
-To avoid the need for a <A HREF="intro.html#backslash">backslash</A>, you can use a <A HREF="options\.html#options">字符串</A> in single quotes:
+To avoid the need for a <A HREF="intro.html#backslash">backslash</A>, you can use a <A HREF="options.html#options">字符串</A> in single quotes:
 
 <B>	:let name = '"peter"'</B>
 <B>	:echo name</B>
 <B><FONT color="#3A6F2B"> 	"peter" </FONT></B>
 
-Inside a single-quote <A HREF="options\.html#options">字符串</A> all the characters are <A HREF="motion.html#as">as</A> they are.  Only the
+Inside a single-quote <A HREF="options.html#options">字符串</A> all the characters are <A HREF="motion.html#as">as</A> they are.  Only the
 single <A HREF="change.html#quote">quote</A> itself is special: you need to use two to get one.  A <A HREF="intro.html#backslash">backslash</A>
 is taken literally, thus you can't use <A HREF="motion.html#it">它</A> to change the meaning of the
 character after <A HREF="motion.html#it">它</A>.
@@ -353,7 +353,7 @@ a few useful ones:
 
 The last two are just examples.  The  &quot;\&lt;name&gt;&quot; form can be used to include
 the special key &quot;name&quot;.
-   见 |<A HREF="eval.html#expr-quote">expr-quote</A>| for the full <A HREF="eval.html#list">列表</A> of special items in a <A HREF="options\.html#options">字符串</A>.
+   见 |<A HREF="eval.html#expr-quote">expr-quote</A>| for the full <A HREF="eval.html#list">列表</A> of special items in a <A HREF="options.html#options">字符串</A>.
 
 ==============================================================================
 
@@ -364,7 +364,7 @@ definition here: |<A HREF="eval.html#expression-syntax">expression-syntax</A>|. 
 items.
    The numbers, strings and <A HREF="eval.html#variables">variables</A> mentioned above are expressions by
 themselves.  Thus everywhere an <A HREF="eval.html#expression">expression</A> is expected, you can use a number,
-<A HREF="options\.html#options">字符串</A> or variable.  Other basic items in an <A HREF="eval.html#expression">expression</A> are:
+<A HREF="options.html#options">字符串</A> or variable.  Other basic items in an <A HREF="eval.html#expression">expression</A> are:
 
 	$NAME		environment variable
 	&amp;name		option
@@ -507,8 +507,8 @@ very useful to write a <A HREF="#script">script</A> that works with multiple ver
 The logic operators work both for numbers and strings.  When comparing two
 strings, the mathematical difference is used.  This compares byte values,
 which may not be right for some languages.
-   When comparing a <A HREF="options\.html#options">字符串</A> with a number, the <A HREF="options\.html#options">字符串</A> is first converted to a
-number.  This is a bit tricky, because when a <A HREF="options\.html#options">字符串</A> doesn't look like a
+   When comparing a <A HREF="options.html#options">字符串</A> with a number, the <A HREF="options.html#options">字符串</A> is first converted to a
+number.  This is a bit tricky, because when a <A HREF="options.html#options">字符串</A> doesn't look like a
 number, the number zero is used.  Example:
 
 <B>	:if 0 == "one"</B>
@@ -523,7 +523,7 @@ For strings there are two more items:
 	a =~ <A HREF="motion.html#b">b</A>		matches with
 	a !~ <A HREF="motion.html#b">b</A>		does not match with
 
-The left item &quot;<A HREF="insert.html#a">a</A>&quot; is used <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>.  The right item &quot;<A HREF="motion.html#b">b</A>&quot; is used <A HREF="motion.html#as">as</A> a
+The left item &quot;<A HREF="insert.html#a">a</A>&quot; is used <A HREF="motion.html#as">as</A> a <A HREF="options.html#options">字符串</A>.  The right item &quot;<A HREF="motion.html#b">b</A>&quot; is used <A HREF="motion.html#as">as</A> a
 <A HREF="pattern.html#pattern">pattern</A>, like what's used for searching.  Example:
 
 <B>	:if str =~ " "</B>
@@ -533,8 +533,8 @@ The left item &quot;<A HREF="insert.html#a">a</A>&quot; is used <A HREF="motion.
 <B>	:  echo "str does not end in a full stop"</B>
 <B>	:endif</B>
 
-Notice the use of a single-quote <A HREF="options\.html#options">字符串</A> for the <A HREF="pattern.html#pattern">pattern</A>.  This is useful,
-because backslashes would need to be doubled in a double-quote <A HREF="options\.html#options">字符串</A> and
+Notice the use of a single-quote <A HREF="options.html#options">字符串</A> for the <A HREF="pattern.html#pattern">pattern</A>.  This is useful,
+because backslashes would need to be doubled in a double-quote <A HREF="options.html#options">字符串</A> and
 patterns tend to contain many backslashes.
 
 The <A HREF="options.html#'ignorecase'">'ignorecase'</A> option is used when comparing strings.  When you don't want
@@ -583,7 +583,7 @@ very powerful way to build commands and execute them.
 
 <B>	:execute "tag " .. tag_name</B>
 
-The &quot;..&quot; is used to concatenate the <A HREF="options\.html#options">字符串</A> &quot;<A HREF="tagsrch.html#tag">标签</A> &quot; with the value of variable
+The &quot;..&quot; is used to concatenate the <A HREF="options.html#options">字符串</A> &quot;<A HREF="tagsrch.html#tag">标签</A> &quot; with the value of variable
 &quot;tag_name&quot;.  Suppose &quot;tag_name&quot; has the value &quot;get_cmd&quot;然后the command that
 will be executed is:
 
@@ -612,7 +612,7 @@ This inserts &quot;new text &quot; in the current line.  Notice the use of the s
 key &quot;\&lt;Esc&gt;&quot;.  This avoids having to enter a real <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> character in your
 <A HREF="#script">script</A>.
 
-If you don't want to execute a <A HREF="options\.html#options">字符串</A> but evaluate <A HREF="motion.html#it">它</A> to get its <A HREF="eval.html#expression">expression</A>
+If you don't want to execute a <A HREF="options.html#options">字符串</A> but evaluate <A HREF="motion.html#it">它</A> to get its <A HREF="eval.html#expression">expression</A>
 value, you can use the <A HREF="builtin.html#eval()">eval()</A> function:
 
 <B>	:let optname = "path"</B>
@@ -651,11 +651,11 @@ The <A HREF="builtin.html#getline()">getline()</A> function obtains a line from 
 is a specification of the line number.  In this <A HREF="change.html#case">case</A> &quot;<A HREF="repeat.html#.">.</A>&quot; is used, which means
 the line where the cursor is.
    The <A HREF="builtin.html#substitute()">substitute()</A> function does something similar to the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;
-command.  The first argument is the <A HREF="options\.html#options">字符串</A> on which to perform the
+command.  The first argument is the <A HREF="options.html#options">字符串</A> on which to perform the
 替换.  The second argument is the <A HREF="pattern.html#pattern">pattern</A>, the third the replacement
-<A HREF="options\.html#options">字符串</A>.  Finally, the last arguments are the flags.
+<A HREF="options.html#options">字符串</A>.  Finally, the last arguments are the flags.
    The <A HREF="builtin.html#setline()">setline()</A> function sets the line, specified by the first argument, to a
-new <A HREF="options\.html#options">字符串</A>, the second argument.  In this example the line under the cursor is
+new <A HREF="options.html#options">字符串</A>, the second argument.  In this example the line under the cursor is
 replaced with the result of the <A HREF="builtin.html#substitute()">substitute()</A>.  Thus the effect of the three
 statements is equal to:
 
@@ -673,50 +673,50 @@ used for.  You can find an alphabetical list here: |<A HREF="builtin.html#builti
 Use <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on the function name to jump to detailed help on <A HREF="motion.html#it">它</A>.
 
 
-<A HREF="options\.html#options">字符串</A> manipulation:					*<A NAME="string-functions"></A><B>string-functions</B>*
+<A HREF="options.html#options">字符串</A> manipulation:					*<A NAME="string-functions"></A><B>string-functions</B>*
 	<A HREF="builtin.html#nr2char()">nr2char()</A>		get a character by its number value
-	<A HREF="builtin.html#list2str()">list2str()</A>		get a character <A HREF="options\.html#options">字符串</A> from a <A HREF="eval.html#list">列表</A> of numbers
+	<A HREF="builtin.html#list2str()">list2str()</A>		get a character <A HREF="options.html#options">字符串</A> from a <A HREF="eval.html#list">列表</A> of numbers
 	<A HREF="builtin.html#char2nr()">char2nr()</A>		get number value of a character
-	<A HREF="builtin.html#str2list()">str2list()</A>		get <A HREF="eval.html#list">列表</A> of numbers from a <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#str2nr()">str2nr()</A>		convert a <A HREF="options\.html#options">字符串</A> to a <A HREF="eval.html#Number">Number</A>
-	<A HREF="builtin.html#str2float()">str2float()</A>		convert a <A HREF="options\.html#options">字符串</A> to a <A HREF="eval.html#Float">Float</A>
-	<A HREF="builtin.html#printf()">printf()</A>		format a <A HREF="options\.html#options">字符串</A> according to <A HREF="motion.html#&#37;">&#37;</A> items
-	<A HREF="builtin.html#escape()">escape()</A>		<A HREF="intro.html#escape">escape</A> characters in a <A HREF="options\.html#options">字符串</A> with a '\'
-	<A HREF="builtin.html#shellescape()">shellescape()</A>		<A HREF="intro.html#escape">escape</A> a <A HREF="options\.html#options">字符串</A> for use with a shell command
+	<A HREF="builtin.html#str2list()">str2list()</A>		get <A HREF="eval.html#list">列表</A> of numbers from a <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#str2nr()">str2nr()</A>		convert a <A HREF="options.html#options">字符串</A> to a <A HREF="eval.html#Number">Number</A>
+	<A HREF="builtin.html#str2float()">str2float()</A>		convert a <A HREF="options.html#options">字符串</A> to a <A HREF="eval.html#Float">Float</A>
+	<A HREF="builtin.html#printf()">printf()</A>		format a <A HREF="options.html#options">字符串</A> according to <A HREF="motion.html#&#37;">&#37;</A> items
+	<A HREF="builtin.html#escape()">escape()</A>		<A HREF="intro.html#escape">escape</A> characters in a <A HREF="options.html#options">字符串</A> with a '\'
+	<A HREF="builtin.html#shellescape()">shellescape()</A>		<A HREF="intro.html#escape">escape</A> a <A HREF="options.html#options">字符串</A> for use with a shell command
 	<A HREF="builtin.html#fnameescape()">fnameescape()</A>		<A HREF="intro.html#escape">escape</A> a file name for use with a Vim command
 	<A HREF="builtin.html#tr()">tr()</A>			translate characters from one set to another
-	<A HREF="builtin.html#strtrans()">strtrans()</A>		translate a <A HREF="options\.html#options">字符串</A> to make <A HREF="motion.html#it">它</A> printable
-	<A HREF="builtin.html#tolower()">tolower()</A>		turn a <A HREF="options\.html#options">字符串</A> to <A HREF="change.html#lowercase">小写</A>
-	<A HREF="builtin.html#toupper()">toupper()</A>		turn a <A HREF="options\.html#options">字符串</A> to <A HREF="change.html#uppercase">大写</A>
-	<A HREF="builtin.html#match()">match()</A>			position where a <A HREF="pattern.html#pattern">pattern</A> matches in a <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#matchend()">matchend()</A>		position where a <A HREF="pattern.html#pattern">pattern</A> match ends in a <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#matchfuzzy()">matchfuzzy()</A>		fuzzy matches a <A HREF="options\.html#options">字符串</A> in a <A HREF="eval.html#list">列表</A> of strings
-	<A HREF="builtin.html#matchfuzzypos()">matchfuzzypos()</A>		fuzzy matches a <A HREF="options\.html#options">字符串</A> in a <A HREF="eval.html#list">列表</A> of strings
-	<A HREF="builtin.html#matchstr()">matchstr()</A>		match of a <A HREF="pattern.html#pattern">pattern</A> in a <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#matchstrpos()">matchstrpos()</A>		match and positions of a <A HREF="pattern.html#pattern">pattern</A> in a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#strtrans()">strtrans()</A>		translate a <A HREF="options.html#options">字符串</A> to make <A HREF="motion.html#it">它</A> printable
+	<A HREF="builtin.html#tolower()">tolower()</A>		turn a <A HREF="options.html#options">字符串</A> to <A HREF="change.html#lowercase">小写</A>
+	<A HREF="builtin.html#toupper()">toupper()</A>		turn a <A HREF="options.html#options">字符串</A> to <A HREF="change.html#uppercase">大写</A>
+	<A HREF="builtin.html#match()">match()</A>			position where a <A HREF="pattern.html#pattern">pattern</A> matches in a <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#matchend()">matchend()</A>		position where a <A HREF="pattern.html#pattern">pattern</A> match ends in a <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#matchfuzzy()">matchfuzzy()</A>		fuzzy matches a <A HREF="options.html#options">字符串</A> in a <A HREF="eval.html#list">列表</A> of strings
+	<A HREF="builtin.html#matchfuzzypos()">matchfuzzypos()</A>		fuzzy matches a <A HREF="options.html#options">字符串</A> in a <A HREF="eval.html#list">列表</A> of strings
+	<A HREF="builtin.html#matchstr()">matchstr()</A>		match of a <A HREF="pattern.html#pattern">pattern</A> in a <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#matchstrpos()">matchstrpos()</A>		match and positions of a <A HREF="pattern.html#pattern">pattern</A> in a <A HREF="options.html#options">字符串</A>
 	<A HREF="builtin.html#matchlist()">matchlist()</A>		like <A HREF="builtin.html#matchstr()">matchstr()</A> and also return submatches
-	<A HREF="builtin.html#stridx()">stridx()</A>		first index of a short <A HREF="options\.html#options">字符串</A> in a long <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#strridx()">strridx()</A>		last index of a short <A HREF="options\.html#options">字符串</A> in a long <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#strlen()">strlen()</A>		length of a <A HREF="options\.html#options">字符串</A> in bytes
-	<A HREF="builtin.html#strchars()">strchars()</A>		length of a <A HREF="options\.html#options">字符串</A> in characters
-	<A HREF="builtin.html#strwidth()">strwidth()</A>		size of <A HREF="options\.html#options">字符串</A> when displayed
-	<A HREF="builtin.html#strdisplaywidth()">strdisplaywidth()</A>	size of <A HREF="options\.html#options">字符串</A> when displayed, deals with tabs
-	<A HREF="builtin.html#substitute()">substitute()</A>		substitute a <A HREF="pattern.html#pattern">pattern</A> match with a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#stridx()">stridx()</A>		first index of a short <A HREF="options.html#options">字符串</A> in a long <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#strridx()">strridx()</A>		last index of a short <A HREF="options.html#options">字符串</A> in a long <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#strlen()">strlen()</A>		length of a <A HREF="options.html#options">字符串</A> in bytes
+	<A HREF="builtin.html#strchars()">strchars()</A>		length of a <A HREF="options.html#options">字符串</A> in characters
+	<A HREF="builtin.html#strwidth()">strwidth()</A>		size of <A HREF="options.html#options">字符串</A> when displayed
+	<A HREF="builtin.html#strdisplaywidth()">strdisplaywidth()</A>	size of <A HREF="options.html#options">字符串</A> when displayed, deals with tabs
+	<A HREF="builtin.html#substitute()">substitute()</A>		substitute a <A HREF="pattern.html#pattern">pattern</A> match with a <A HREF="options.html#options">字符串</A>
 	<A HREF="builtin.html#submatch()">submatch()</A>		get a specific match in &quot;<A HREF="change.html#:s">:s</A>&quot; and <A HREF="builtin.html#substitute()">substitute()</A>
-	<A HREF="builtin.html#strpart()">strpart()</A>		get part of a <A HREF="options\.html#options">字符串</A> using byte index
-	<A HREF="builtin.html#strcharpart()">strcharpart()</A>		get part of a <A HREF="options\.html#options">字符串</A> using char index
-	<A HREF="builtin.html#strgetchar()">strgetchar()</A>		get character from a <A HREF="options\.html#options">字符串</A> using char index
+	<A HREF="builtin.html#strpart()">strpart()</A>		get part of a <A HREF="options.html#options">字符串</A> using byte index
+	<A HREF="builtin.html#strcharpart()">strcharpart()</A>		get part of a <A HREF="options.html#options">字符串</A> using char index
+	<A HREF="builtin.html#strgetchar()">strgetchar()</A>		get character from a <A HREF="options.html#options">字符串</A> using char index
 	<A HREF="builtin.html#expand()">expand()</A>		expand special keywords
 	<A HREF="builtin.html#expandcmd()">expandcmd()</A>		expand a command like done for `:edit`
 	<A HREF="builtin.html#iconv()">iconv()</A>			convert text from one encoding to another
-	<A HREF="builtin.html#byteidx()">byteidx()</A>		byte index of a character in a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#byteidx()">byteidx()</A>		byte index of a character in a <A HREF="options.html#options">字符串</A>
 	<A HREF="builtin.html#byteidxcomp()">byteidxcomp()</A>		like <A HREF="builtin.html#byteidx()">byteidx()</A> but <A HREF="intro.html#count">count</A> composing characters
-	<A HREF="builtin.html#charidx()">charidx()</A>		character index of a byte in a <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#repeat()">repeat()</A>		repeat a <A HREF="options\.html#options">字符串</A> multiple times
-	<A HREF="builtin.html#eval()">eval()</A>			evaluate a <A HREF="options\.html#options">字符串</A> <A HREF="eval.html#expression">expression</A>
+	<A HREF="builtin.html#charidx()">charidx()</A>		character index of a byte in a <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#repeat()">repeat()</A>		repeat a <A HREF="options.html#options">字符串</A> multiple times
+	<A HREF="builtin.html#eval()">eval()</A>			evaluate a <A HREF="options.html#options">字符串</A> <A HREF="eval.html#expression">expression</A>
 	<A HREF="builtin.html#execute()">execute()</A>		execute an <A HREF="intro.html#Ex">Ex</A> command and get the output
 	<A HREF="builtin.html#win_execute()">win_execute()</A>		like <A HREF="builtin.html#execute()">execute()</A> but in a specified<A HREF="windows.html#window">窗口</A>
-	<A HREF="builtin.html#trim()">trim()</A>			trim characters from a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#trim()">trim()</A>			trim characters from a <A HREF="options.html#options">字符串</A>
 
 
 <A HREF="eval.html#list">列表</A> manipulation:					*<A NAME="list-functions"></A><B>list-functions</B>*
@@ -734,10 +734,10 @@ Use <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on the function name to jump to det
 	<A HREF="builtin.html#sort()">sort()</A>			sort a <A HREF="eval.html#list">列表</A>
 	<A HREF="builtin.html#reverse()">reverse()</A>		reverse the order of a <A HREF="eval.html#list">列表</A>
 	<A HREF="builtin.html#uniq()">uniq()</A>			remove copies of repeated adjacent items
-	<A HREF="builtin.html#split()">split()</A>			split a <A HREF="options\.html#options">字符串</A> into a <A HREF="eval.html#list">列表</A>
-	<A HREF="builtin.html#join()">join()</A>			join <A HREF="eval.html#list">列表</A> items into a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#split()">split()</A>			split a <A HREF="options.html#options">字符串</A> into a <A HREF="eval.html#list">列表</A>
+	<A HREF="builtin.html#join()">join()</A>			join <A HREF="eval.html#list">列表</A> items into a <A HREF="options.html#options">字符串</A>
 	<A HREF="builtin.html#range()">range()</A>			return a <A HREF="eval.html#list">列表</A> with a sequence of numbers
-	<A HREF="builtin.html#string()">string()</A>		<A HREF="options\.html#options">字符串</A> representation of a <A HREF="eval.html#list">列表</A>
+	<A HREF="builtin.html#string()">string()</A>		<A HREF="options.html#options">字符串</A> representation of a <A HREF="eval.html#list">列表</A>
 	<A HREF="builtin.html#call()">call()</A>			call a function with <A HREF="eval.html#list">列表</A> <A HREF="motion.html#as">as</A> arguments
 	<A HREF="builtin.html#index()">index()</A>			index of a value in a <A HREF="eval.html#list">列表</A>
 	<A HREF="builtin.html#max()">max()</A>			maximum value in a <A HREF="eval.html#list">列表</A>
@@ -761,7 +761,7 @@ Use <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on the function name to jump to det
 	<A HREF="builtin.html#items()">items()</A>			get <A HREF="eval.html#list">列表</A> of <A HREF="eval.html#Dictionary">Dictionary</A> key-value pairs
 	<A HREF="builtin.html#copy()">copy()</A>			make a shallow copy of a <A HREF="eval.html#Dictionary">Dictionary</A>
 	<A HREF="builtin.html#deepcopy()">deepcopy()</A>		make a full copy of a <A HREF="eval.html#Dictionary">Dictionary</A>
-	<A HREF="builtin.html#string()">string()</A>		<A HREF="options\.html#options">字符串</A> representation of a <A HREF="eval.html#Dictionary">Dictionary</A>
+	<A HREF="builtin.html#string()">string()</A>		<A HREF="options.html#options">字符串</A> representation of a <A HREF="eval.html#Dictionary">Dictionary</A>
 	<A HREF="builtin.html#max()">max()</A>			maximum value in a <A HREF="eval.html#Dictionary">Dictionary</A>
 	<A HREF="builtin.html#min()">min()</A>			minimum value in a <A HREF="eval.html#Dictionary">Dictionary</A>
 	<A HREF="builtin.html#count()">count()</A>			<A HREF="intro.html#count">count</A> number of times a value appears
@@ -835,7 +835,7 @@ Cursor and <A HREF="motion.html#mark">mark</A> position:		*<A NAME="cursor-funct
 	<A HREF="builtin.html#screenattr()">screenattr()</A>		get attribute at a screen line/row
 	<A HREF="builtin.html#screenchar()">screenchar()</A>		get character code at a screen line/row
 	<A HREF="builtin.html#screenchars()">screenchars()</A>		get character codes at a screen line/row
-	<A HREF="builtin.html#screenstring()">screenstring()</A>		get <A HREF="options\.html#options">字符串</A> of characters at a screen line/row
+	<A HREF="builtin.html#screenstring()">screenstring()</A>		get <A HREF="options.html#options">字符串</A> of characters at a screen line/row
 	<A HREF="builtin.html#charcol()">charcol()</A>		character number of the cursor or a <A HREF="motion.html#mark">mark</A>
 	<A HREF="builtin.html#getcharpos()">getcharpos()</A>		get character position of cursor, <A HREF="motion.html#mark">mark</A>, etc.
 	<A HREF="builtin.html#setcharpos()">setcharpos()</A>		set character position of cursor, <A HREF="motion.html#mark">mark</A>, etc.
@@ -888,7 +888,7 @@ System <A HREF="eval.html#functions">functions</A> and manipulation of files:
 	<A HREF="builtin.html#chdir()">chdir()</A>			change current working directory
 	<A HREF="builtin.html#delete()">delete()</A>		delete a file
 	<A HREF="builtin.html#rename()">rename()</A>		rename a file
-	<A HREF="builtin.html#system()">system()</A>		get the result of a shell command <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#system()">system()</A>		get the result of a shell command <A HREF="motion.html#as">as</A> a <A HREF="options.html#options">字符串</A>
 	<A HREF="builtin.html#systemlist()">systemlist()</A>		get the result of a shell command <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">列表</A>
 	<A HREF="builtin.html#environ()">environ()</A>		get all environment <A HREF="eval.html#variables">variables</A>
 	<A HREF="builtin.html#getenv()">getenv()</A>		get one environment variable
@@ -902,10 +902,10 @@ System <A HREF="eval.html#functions">functions</A> and manipulation of files:
 Date and Time:				*<A NAME="date-functions"></A><B>date-functions</B>* *<A NAME="time-functions"></A><B>time-functions</B>*
 	<A HREF="builtin.html#getftime()">getftime()</A>		get last modification time of a file
 	<A HREF="builtin.html#localtime()">localtime()</A>		get current time in seconds
-	<A HREF="builtin.html#strftime()">strftime()</A>		convert time to a <A HREF="options\.html#options">字符串</A>
-	<A HREF="builtin.html#strptime()">strptime()</A>		convert a date/time <A HREF="options\.html#options">字符串</A> to time
+	<A HREF="builtin.html#strftime()">strftime()</A>		convert time to a <A HREF="options.html#options">字符串</A>
+	<A HREF="builtin.html#strptime()">strptime()</A>		convert a date/time <A HREF="options.html#options">字符串</A> to time
 	<A HREF="builtin.html#reltime()">reltime()</A>		get the current or elapsed time accurately
-	<A HREF="builtin.html#reltimestr()">reltimestr()</A>		convert <A HREF="builtin.html#reltime()">reltime()</A> result to a <A HREF="options\.html#options">字符串</A>
+	<A HREF="builtin.html#reltimestr()">reltimestr()</A>		convert <A HREF="builtin.html#reltime()">reltime()</A> result to a <A HREF="options.html#options">字符串</A>
 	<A HREF="builtin.html#reltimefloat()">reltimefloat()</A>		convert <A HREF="builtin.html#reltime()">reltime()</A> result to a <A HREF="eval.html#Float">Float</A>
 
 
@@ -1144,7 +1144,7 @@ Various:					*<A NAME="various-functions"></A><B>various-functions</B>*
 	<A HREF="builtin.html#has()">has()</A>			check if a feature is supported in Vim
 	<A HREF="builtin.html#changenr()">changenr()</A>		return number of most recent change
 	<A HREF="builtin.html#cscope_connection()">cscope_connection()</A>	check if a <A HREF="if_cscop.html#cscope">cscope</A> connection exists
-	<A HREF="builtin.html#did_filetype()">did_filetype()</A>		check if a <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd\.html#autocommand">自动命令</A> was used
+	<A HREF="builtin.html#did_filetype()">did_filetype()</A>		check if a <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd.html#autocommand">自动命令</A> was used
 	<A HREF="builtin.html#eventhandler()">eventhandler()</A>		check if invoked by an event handler
 	<A HREF="builtin.html#getpid()">getpid()</A>		get process ID of Vim
 
@@ -1403,7 +1403,7 @@ explained in the next section.
 
 *<A NAME="41.8"></A><B>41.8</B>*	<A HREF="eval.html#Lists">Lists</A> and <A HREF="eval.html#Dictionaries">Dictionaries</A>
 
-So far we have used the basic types <A HREF="options\.html#options">字符串</A> and <A HREF="eval.html#Number">Number</A>.  Vim also supports two
+So far we have used the basic types <A HREF="options.html#options">字符串</A> and <A HREF="eval.html#Number">Number</A>.  Vim also supports two
 composite types: <A HREF="eval.html#list">列表</A> and <A HREF="eval.html#Dictionary">Dictionary</A>.
 
 A <A HREF="eval.html#list">列表</A> is an ordered sequence of things.  The things can be any kind of value,
@@ -1582,7 +1582,7 @@ local variable will then refer to that <A HREF="eval.html#Dictionary">Dictionary
 
 <B>	split(a:line)</B>
 
-The <A HREF="builtin.html#split()">split()</A> function takes a <A HREF="options\.html#options">字符串</A>, chops <A HREF="motion.html#it">它</A> into <A HREF="pattern.html#whitespace">whitespace</A> separated words
+The <A HREF="builtin.html#split()">split()</A> function takes a <A HREF="options.html#options">字符串</A>, chops <A HREF="motion.html#it">它</A> into <A HREF="pattern.html#whitespace">whitespace</A> separated words
 and returns a <A HREF="eval.html#list">列表</A> with these words.  Thus in the example <A HREF="motion.html#it">它</A> returns:
 
 <B>	:echo split('three two five one')</B>
@@ -1703,7 +1703,7 @@ generating an error message, this code catches the error and gives the user a
 nice message.
 
 For the commands in between &quot;<A HREF="eval.html#:try">:try</A>&quot; and &quot;<A HREF="eval.html#:endtry">:endtry</A>&quot; <A HREF="message.html#errors">errors</A> are turned into
-exceptions.  An exception is a <A HREF="options\.html#options">字符串</A>.  In the <A HREF="change.html#case">case</A> of an error the <A HREF="options\.html#options">字符串</A>
+exceptions.  An exception is a <A HREF="options.html#options">字符串</A>.  In the <A HREF="change.html#case">case</A> of an error the <A HREF="options.html#options">字符串</A>
 contains the error message.  And every error message has a number.  In this
 <A HREF="change.html#case">case</A>, the error we catch contains &quot;E484:&quot;.  This number is guaranteed to stay
 the same (the text may change, e.g., <A HREF="motion.html#it">它</A> may be translated).
@@ -1891,7 +1891,7 @@ PACKAGING
 
 To avoid your function names to interfere with <A HREF="eval.html#functions">functions</A> that you get from
 others, use this scheme:
-- Prepend a unique <A HREF="options\.html#options">字符串</A> before each function name.  I often use an
+- Prepend a unique <A HREF="options.html#options">字符串</A> before each function name.  I often use an
   abbreviation.例如, &quot;OW_&quot; is used for 选项<A HREF="windows.html#window">窗口</A><A HREF="eval.html#functions">functions</A>.
 - Put the definition of your <A HREF="eval.html#functions">functions</A> together in a file.  Set a global
   variable to indicate that the <A HREF="eval.html#functions">functions</A> have been loaded.  When sourcing the
@@ -2308,7 +2308,7 @@ FILETYPE DETECTION					*<A NAME="plugin-filetype"></A><B>plugin-filetype</B>*
 
 If your <A HREF="filetype.html#filetype">文件类型</A> is not already detected by Vim, you should create a <A HREF="filetype.html#filetype">文件类型</A>
 detection snippet in a separate file.  It is usually in the form of an
-<A HREF="autocmd\.html#autocommand">自动命令</A> that sets the <A HREF="filetype.html#filetype">文件类型</A> when the file name matches a <A HREF="pattern.html#pattern">pattern</A>.
+<A HREF="autocmd.html#autocommand">自动命令</A> that sets the <A HREF="filetype.html#filetype">文件类型</A> when the file name matches a <A HREF="pattern.html#pattern">pattern</A>.
 Example:
 
 <B>	au BufNewFile,BufRead *.foo			set filetype=foofoo</B>
@@ -2643,13 +2643,13 @@ If you drop this <A HREF="#script">script</A> in your <A HREF="usr_05.html#plugi
 <A HREF="starting.html#startup">startup</A>.  This is the sequence of <A HREF="autocmd.html#events">events</A> that happens:
 
 1. The &quot;BNRead&quot; command is defined and the &lt;F19&gt; key is mapped when the <A HREF="#script">script</A>
-   is sourced at <A HREF="starting.html#startup">startup</A>.  A |<A HREF="autocmd.html#FuncUndefined">FuncUndefined</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> is defined.  The
+   is sourced at <A HREF="starting.html#startup">startup</A>.  A |<A HREF="autocmd.html#FuncUndefined">FuncUndefined</A>| <A HREF="autocmd.html#autocommand">自动命令</A> is defined.  The
    &quot;<A HREF="repeat.html#:finish">:finish</A>&quot;命令 causes the <A HREF="#script">script</A> to terminate early.
 
 2. The user types the BNRead command or presses the &lt;F19&gt; key.  The
    BufNetRead() or BufNetWrite() function will be called.
 
-3. Vim can't find the function and triggers the |<A HREF="autocmd.html#FuncUndefined">FuncUndefined</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>
+3. Vim can't find the function and triggers the |<A HREF="autocmd.html#FuncUndefined">FuncUndefined</A>| <A HREF="autocmd.html#autocommand">自动命令</A>
    event.  Since the <A HREF="pattern.html#pattern">pattern</A> &quot;BufNet*&quot; matches the invoked function, the
    command &quot;source fname&quot; will be executed.  &quot;fname&quot; will be equal to the name
    of the <A HREF="#script">script</A>, no matter where <A HREF="motion.html#it">它</A> is located, because <A HREF="motion.html#it">它</A> comes from
@@ -2659,7 +2659,7 @@ If you drop this <A HREF="#script">script</A> in your <A HREF="usr_05.html#plugi
    <A HREF="eval.html#functions">functions</A> are defined.
 
 Notice that the <A HREF="eval.html#functions">functions</A> that are loaded afterwards match the <A HREF="pattern.html#pattern">pattern</A> in the
-|<A HREF="autocmd.html#FuncUndefined">FuncUndefined</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>.  You must make sure that no other <A HREF="usr_05.html#plugin">plugin</A> defines
+|<A HREF="autocmd.html#FuncUndefined">FuncUndefined</A>| <A HREF="autocmd.html#autocommand">自动命令</A>.  You must make sure that no other <A HREF="usr_05.html#plugin">plugin</A> defines
 <A HREF="eval.html#functions">functions</A> that match this <A HREF="pattern.html#pattern">pattern</A>.
 
 ==============================================================================

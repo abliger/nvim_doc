@@ -88,7 +88,7 @@ achieve special effects.  These <A HREF="#options">options</A> come in three for
 
 	<A HREF="#boolean">boolean</A>		can only be on or off		*<A NAME="boolean"></A><B>boolean</B>* *<A NAME="toggle"></A><B>toggle</B>*
 	number		has a numeric value
-	<A HREF="options\.html#options">字符串</A>		has a <A HREF="options\.html#options">字符串</A> value
+	<A HREF="options.html#options">字符串</A>		has a <A HREF="options.html#options">字符串</A> value
 
 				      键入 |<A HREF="various.html#gO">gO</A>| 查看目录.
 
@@ -112,7 +112,7 @@ achieve special effects.  These <A HREF="#options">options</A> come in three for
 
 :se[t] {option}		Toggle option: set, switch <A HREF="motion.html#it">它</A> on.
 			<A HREF="eval.html#Number">Number</A> option: show value.
-			<A HREF="options\.html#options">字符串</A> option: show value.
+			<A HREF="options.html#options">字符串</A> option: show value.
 
 :se[t] no{option}	Toggle option: Reset, switch <A HREF="motion.html#it">它</A> off.
 
@@ -137,7 +137,7 @@ achieve special effects.  These <A HREF="#options">options</A> come in three for
 						*<A NAME=":set-args"></A><B>:set-args</B>* *<A NAME="E487"></A><B>E487</B>* *<A NAME="E521"></A><B>E521</B>*
 :se[t] {option}={value}		or
 :se[t] {option}:{value}
-			Set <A HREF="options\.html#options">字符串</A> or number option to {value}.
+			Set <A HREF="options.html#options">字符串</A> or number option to {value}.
 			For numeric <A HREF="#options">options</A> the value can be given in decimal,
 			hex (preceded with <A HREF="eval.html#0x">0x</A>) or <A HREF="eval.html#octal">octal</A> (preceded with '0').
 			The old value can be inserted by typing <A HREF="#'wildchar'">'wildchar'</A> (by
@@ -151,7 +151,7 @@ achieve special effects.  These <A HREF="#options">options</A> come in three for
 
 :se[t] {option}+={value}				*<A NAME=":set+="></A><B>:set+=</B>*
 			Add the {value} to a number option, or append the
-			{value} to a <A HREF="options\.html#options">字符串</A> option.  When the option is a
+			{value} to a <A HREF="options.html#options">字符串</A> option.  When the option is a
 			comma-separated <A HREF="eval.html#list">列表</A>, a comma is added, unless the
 			value was empty.
 			If the option is a <A HREF="eval.html#list">列表</A> of flags, superfluous flags
@@ -162,7 +162,7 @@ achieve special effects.  These <A HREF="#options">options</A> come in three for
 
 :se[t] {option}^={value}				*<A NAME=":set^="></A><B>:set^=</B>*
 			Multiply the {value} to a number option, or prepend
-			the {value} to a <A HREF="options\.html#options">字符串</A> option.  When the option is a
+			the {value} to a <A HREF="options.html#options">字符串</A> option.  When the option is a
 			comma-separated <A HREF="eval.html#list">列表</A>, a comma is added, unless the
 			value was empty.
 			Also 见 |<A HREF="#:set-args">:set-args</A>| above.
@@ -170,8 +170,8 @@ achieve special effects.  These <A HREF="#options">options</A> come in three for
 
 :se[t] {option}-={value}				*<A NAME=":set-="></A><B>:set-=</B>*
 			Subtract the {value} from a number option, or remove
-			the {value} from a <A HREF="options\.html#options">字符串</A> option, if <A HREF="motion.html#it">它</A> is there.
-			If the {value} is not found in a <A HREF="options\.html#options">字符串</A> option, there
+			the {value} from a <A HREF="options.html#options">字符串</A> option, if <A HREF="motion.html#it">它</A> is there.
+			If the {value} is not found in a <A HREF="options.html#options">字符串</A> option, there
 			is no error or warning.  When the option is a comma-
 			separated <A HREF="eval.html#list">列表</A>, a comma is deleted, unless the option
 			becomes empty.
@@ -198,7 +198,7 @@ This is only done when specific option values are requested, not for &quot;<A HR
 set all&quot; or &quot;<A HREF="various.html#:verbose">:verbose</A> set&quot; without an argument.
 When the option was set by hand there is no &quot;Last set&quot; message.
 When the option was set while executing a function, user command or
-<A HREF="autocmd\.html#autocommand">自动命令</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
+<A HREF="autocmd.html#autocommand">自动命令</A>, the <A HREF="usr_41.html#script">script</A> in which <A HREF="motion.html#it">它</A> was defined is reported.
 A few special texts:
 <B><FONT color="#3A6F2B">	Last set from modeline line 1 </FONT></B>
 		Option was set in a |<A HREF="#modeline">modeline</A>|.
@@ -214,7 +214,7 @@ A few special texts:
 
 
 							*<A NAME="option-backslash"></A><B>option-backslash</B>*
-To include white space in a <A HREF="options\.html#options">字符串</A> option value <A HREF="motion.html#it">它</A> has to be preceded with a
+To include white space in a <A HREF="options.html#options">字符串</A> option value <A HREF="motion.html#it">它</A> has to be preceded with a
 <A HREF="intro.html#backslash">backslash</A>.  To include a <A HREF="intro.html#backslash">backslash</A> you have to use two.  Effectively this
 means that the number of backslashes in an option value is halved (rounded
 down).
@@ -260,12 +260,12 @@ Remove a flag from an option like this:
 <B>   :set guioptions-=a</B>
 This removes the '<A HREF="insert.html#a">a</A>' flag from <A HREF="#'guioptions'">'guioptions'</A>.
 Note that you should add or remove one flag at a time.  If <A HREF="#'guioptions'">'guioptions'</A> has
-the value &quot;<A HREF="motion.html#ab">ab</A>&quot;, using &quot;set guioptions-=ba&quot; won't work, because the <A HREF="options\.html#options">字符串</A> &quot;ba&quot;
+the value &quot;<A HREF="motion.html#ab">ab</A>&quot;, using &quot;set guioptions-=ba&quot; won't work, because the <A HREF="options.html#options">字符串</A> &quot;ba&quot;
 doesn't appear.
 
 
 			   *<A NAME=":set_env"></A><B>:set_env</B>* *<A NAME="expand-env"></A><B>expand-env</B>* *<A NAME="expand-environment-var"></A><B>expand-environment-var</B>*
-Environment <A HREF="eval.html#variables">variables</A> in specific <A HREF="options\.html#options">字符串</A> <A HREF="#options">options</A> will be expanded.  If the
+Environment <A HREF="eval.html#variables">variables</A> in specific <A HREF="options.html#options">字符串</A> <A HREF="#options">options</A> will be expanded.  If the
 environment variable exists the '<A HREF="motion.html#$">$</A>' and the following environment variable
 name is replaced with its value.  If <A HREF="motion.html#it">它</A> does not exist the '<A HREF="motion.html#$">$</A>' and the name
 are not modified.  Any non-id character (not a <A HREF="print.html#letter">字母</A>, digit or '<A HREF="motion.html#_">_</A>') may
@@ -273,7 +273,7 @@ follow the environment variable name.  That character and what follows is
 appended to the value of the environment variable.  Examples:
 <B>   :set term=$TERM.new</B>
 <B>   :set path=/usr/$INCLUDE,$HOME/include,.</B>
-When adding or removing a <A HREF="options\.html#options">字符串</A> from an option with &quot;<A HREF="#:set">:set</A> opt-=val&quot; or &quot;<A HREF="#:set">:set</A>
+When adding or removing a <A HREF="options.html#options">字符串</A> from an option with &quot;<A HREF="#:set">:set</A> opt-=val&quot; or &quot;<A HREF="#:set">:set</A>
 opt+=val&quot; the expansion is done before the adding or removing.
 
 
@@ -392,7 +392,7 @@ files.  You use this command:
 <B>	:setlocal makeprg=perlmake</B>
 You can switch back to using the global value by making the local value empty:
 <B>	:setlocal makeprg=</B>
-This only works for a <A HREF="options\.html#options">字符串</A> option.  For a number or <A HREF="#boolean">boolean</A> option you need
+This only works for a <A HREF="options.html#options">字符串</A> option.  For a number or <A HREF="#boolean">boolean</A> option you need
 to use the &quot;<A HREF="change.html#&lt;">&lt;</A>&quot; flag, like this:
 <B>	:setlocal autoread&lt;</B>
 Note that for non-boolean and non-number <A HREF="#options">options</A> using &quot;<A HREF="change.html#&lt;">&lt;</A>&quot; copies the global
@@ -469,8 +469,8 @@ running an external command:
 <B>	:echo system('set | findstr ^HOME=')</B>
 and
 <B>	:echo luaeval('os.getenv("HOME")')</B>
-should echo nothing (an empty <A HREF="options\.html#options">字符串</A>) despite exists('$HOME') being true.
-When setting <A HREF="#$HOME">$HOME</A> to a non-empty <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#it">它</A> will be exported to the
+should echo nothing (an empty <A HREF="options.html#options">字符串</A>) despite exists('$HOME') being true.
+When setting <A HREF="#$HOME">$HOME</A> to a non-empty <A HREF="options.html#options">字符串</A> <A HREF="motion.html#it">它</A> will be exported to the
 subprocesses.
 
 
@@ -491,7 +491,7 @@ to set <A HREF="#options">options</A> automatically for one or more files:
    |<A HREF="starting.html#:mksession">:mksession</A>|.
 2. If you start editing a new file, the automatic commands are executed.
    This can be used to set <A HREF="#options">options</A> for files matching a particular <A HREF="pattern.html#pattern">pattern</A> and
-   many other things.  见 |<A HREF="autocmd\.html#autocommand">自动命令</A>|.
+   many other things.  见 |<A HREF="autocmd.html#autocommand">自动命令</A>|.
 3. If you start editing a new file, and the <A HREF="#'modeline'">'modeline'</A> option is on, a
    number of lines at the beginning and end of the file are checked for
    modelines.  This is explained here.
@@ -504,7 +504,7 @@ There are two forms of modelines.  The first form:
 [text{white}]		empty or any text followed by at least one blank
 			character (&lt;Space&gt; or &lt;Tab&gt;); &quot;<A HREF="#ex:">ex:</A>&quot; always requires at
 			least one blank character
-{vi:|vim:|ex:}		the <A HREF="options\.html#options">字符串</A> &quot;<A HREF="#vi:">vi:</A>&quot;, &quot;<A HREF="#vim:">vim:</A>&quot; or &quot;<A HREF="#ex:">ex:</A>&quot;
+{vi:|vim:|ex:}		the <A HREF="options.html#options">字符串</A> &quot;<A HREF="#vi:">vi:</A>&quot;, &quot;<A HREF="#vim:">vim:</A>&quot; or &quot;<A HREF="#ex:">ex:</A>&quot;
 [white]			optional white space
 {options}		a <A HREF="eval.html#list">列表</A> of option settings, separated with white space
 			or '<A HREF="cmdline.html#:">:</A>', where each part between '<A HREF="cmdline.html#:">:</A>' is the argument
@@ -521,9 +521,9 @@ The second form (this is compatible with some versions of Vi):
 [text{white}]		empty or any text followed by at least one blank
 			character (&lt;Space&gt; or &lt;Tab&gt;); &quot;<A HREF="#ex:">ex:</A>&quot; always requires at
 			least one blank character
-{vi:|vim:|Vim:|ex:}	the <A HREF="options\.html#options">字符串</A> &quot;<A HREF="#vi:">vi:</A>&quot;, &quot;<A HREF="#vim:">vim:</A>&quot;, &quot;Vim:&quot; or &quot;<A HREF="#ex:">ex:</A>&quot;
+{vi:|vim:|Vim:|ex:}	the <A HREF="options.html#options">字符串</A> &quot;<A HREF="#vi:">vi:</A>&quot;, &quot;<A HREF="#vim:">vim:</A>&quot;, &quot;Vim:&quot; or &quot;<A HREF="#ex:">ex:</A>&quot;
 [white]			optional white space
-se[t]			the <A HREF="options\.html#options">字符串</A> &quot;set &quot; or &quot;se &quot; (note the space); When
+se[t]			the <A HREF="options.html#options">字符串</A> &quot;set &quot; or &quot;se &quot; (note the space); When
 			&quot;Vim&quot; is used <A HREF="motion.html#it">它</A> must be &quot;set&quot;.
 {options}		a <A HREF="eval.html#list">列表</A> of <A HREF="#options">options</A>, separated with white space, which
 			is the argument for a &quot;<A HREF="#:set">:set</A>&quot;命令
@@ -609,7 +609,7 @@ So disable modelines before editing untrusted text.  The mail <A HREF="usr_41.ht
 this, for example.
 
 Hint: If you would like to <A HREF="diff.html#do">do</A> something else than setting an option, you could
-define an <A HREF="autocmd\.html#autocommand">自动命令</A> that checks the file for a specific <A HREF="options\.html#options">字符串</A>.  For
+define an <A HREF="autocmd.html#autocommand">自动命令</A> that checks the file for a specific <A HREF="options.html#options">字符串</A>.  For
 example:
 <B>	au BufReadPost * if getline(1) =~ "VAR" | call SetVar() | endif</B>
 And define a function SetVar() that does something with the line containing
@@ -689,7 +689,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'ambiwidth'"></A><B>'ambiwidth'</B>* *<A NAME="'ambw'"></A><B>'ambw'</B>*
-<A HREF="#'ambiwidth'">'ambiwidth'</A> <A HREF="#'ambw'">'ambw'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;single&quot;)
+<A HREF="#'ambiwidth'">'ambiwidth'</A> <A HREF="#'ambw'">'ambw'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;single&quot;)
 			global
 	Tells Vim what to <A HREF="diff.html#do">do</A> with characters with East Asian Width Class
 	Ambiguous (such <A HREF="motion.html#as">as</A> Euro, Registered Sign, Copyright Sign, Greek
@@ -711,7 +711,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	therefore those fonts have &quot;wide&quot; glyphs for them.  This is also
 	true of some line drawing characters used to make tables in text
 	file.  Therefore, when a CJK font is used for <A HREF="gui.html#GUI">GUI</A> Vim or
-	Vim is running inside a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> (emulators) that uses a CJK font
+	Vim is running inside a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> (emulators) that uses a CJK font
 	(or Vim is run inside an xterm invoked with &quot;-cjkwidth&quot; option.),
 	this option should be set to &quot;double&quot; to match the width perceived
 	by Vim with the width of glyphs in the font.  Perhaps <A HREF="motion.html#it">它</A> also has
@@ -815,7 +815,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Note that for some commands the <A HREF="#'autowrite'">'autowrite'</A> option is not used, see
 	<A HREF="#'autowriteall'">'autowriteall'</A> for that.
 	Some <A HREF="windows.html#buffers">buffers</A> will not be written, specifically when <A HREF="#'buftype'">'buftype'</A> is
-	&quot;nowrite&quot;, &quot;nofile&quot;, &quot;<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>&quot; or &quot;prompt&quot;.
+	&quot;nowrite&quot;, &quot;nofile&quot;, &quot;<A HREF="nvim_terminal_emulator.html#terminal">终端</A>&quot; or &quot;prompt&quot;.
 
 
 			 *<A NAME="'autowriteall'"></A><B>'autowriteall'</B>* *<A NAME="'awa'"></A><B>'awa'</B>* *<A NAME="'noautowriteall'"></A><B>'noautowriteall'</B>* *<A NAME="'noawa'"></A><B>'noawa'</B>*
@@ -828,7 +828,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 							*<A NAME="'background'"></A><B>'background'</B>* *<A NAME="'bg'"></A><B>'bg'</B>*
-<A HREF="#'background'">'background'</A> <A HREF="#'bg'">'bg'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;dark&quot;)
+<A HREF="#'background'">'background'</A> <A HREF="#'bg'">'bg'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;dark&quot;)
 			global
 	When set to &quot;dark&quot; or &quot;light&quot;, adjusts the default color groups for
 	that background type.  The |<A HREF="term.html#TUI">TUI</A>| or other UI sets this on <A HREF="starting.html#startup">startup</A>
@@ -846,7 +846,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	be undone.  First delete the &quot;<A HREF="#g:colors_name">g:colors_name</A>&quot; variable when needed.
 
 	Normally this option would be set in <A HREF="starting.html#vimrc">vimrc</A>文件.  Possibly
-	depending on the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> name.  Example:
+	depending on the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> name.  Example:
 <B>		:if $TERM ==# "xterm"</B>
 <B>		:  set background=dark</B>
 <B>		:endif</B>
@@ -860,7 +860,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 							*<A NAME="'backspace'"></A><B>'backspace'</B>* *<A NAME="'bs'"></A><B>'bs'</B>*
-<A HREF="#'backspace'">'backspace'</A> <A HREF="#'bs'">'bs'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;indent,eol,start&quot;)
+<A HREF="#'backspace'">'backspace'</A> <A HREF="#'bs'">'bs'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;indent,eol,start&quot;)
 			global
 	Influences the working of <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>, <A HREF="change.html#&lt;Del&gt;">&lt;Del&gt;</A>, <A HREF="vimindex.html#CTRL-W">CTRL-W</A> and <A HREF="scroll.html#CTRL-U">CTRL-U</A> in <A HREF="insert.html#Insert">Insert</A>
 	mode.  This is a <A HREF="eval.html#list">列表</A> of items, separated by commas.  Each item allows
@@ -900,7 +900,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'backupcopy'"></A><B>'backupcopy'</B>* *<A NAME="'bkc'"></A><B>'bkc'</B>*
-<A HREF="#'backupcopy'">'backupcopy'</A> <A HREF="#'bkc'">'bkc'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;auto&quot;)
+<A HREF="#'backupcopy'">'backupcopy'</A> <A HREF="#'bkc'">'bkc'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;auto&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	When <A HREF="editing.html#writing">写</A> a file and a <A HREF="editing.html#backup">backup</A> is made, this option tells how it's
 	done.  This is a comma-separated <A HREF="eval.html#list">列表</A> of words.
@@ -950,7 +950,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	When a copy is made, the original file is truncated and then filled
 	with the new text.  This means that protection bits, owner and
-	symbolic links of the original file are unmodified.  the <A HREF="editing\.html#backup">备份</A>文件,
+	symbolic links of the original file are unmodified.  the <A HREF="editing.html#backup">备份</A>文件,
 	however, is a new file, owned by the user who edited the file.  The
 	group of the <A HREF="editing.html#backup">backup</A> is set to the group of the original file.  If this
 	fails, the protection bits for the group are made the same <A HREF="motion.html#as">as</A> for
@@ -967,18 +967,18 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'backupdir'"></A><B>'backupdir'</B>* *<A NAME="'bdir'"></A><B>'bdir'</B>*
-<A HREF="#'backupdir'">'backupdir'</A> <A HREF="#'bdir'">'bdir'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;.,$XDG_STATE_HOME/nvim/backup//&quot;)
+<A HREF="#'backupdir'">'backupdir'</A> <A HREF="#'bdir'">'bdir'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;.,$XDG_STATE_HOME/nvim/backup//&quot;)
 			global
-	<A HREF="eval.html#list">列表</A> of directories for the <A HREF="editing\.html#backup">备份</A>文件, separated with commas.
-	- the <A HREF="editing\.html#backup">备份</A>文件 will be created in the first directory in the <A HREF="eval.html#list">列表</A>
+	<A HREF="eval.html#list">列表</A> of directories for the <A HREF="editing.html#backup">备份</A>文件, separated with commas.
+	- the <A HREF="editing.html#backup">备份</A>文件 will be created in the first directory in the <A HREF="eval.html#list">列表</A>
 	  where this is possible.  If none of the directories exist Nvim will
 	  attempt to create the last directory in the <A HREF="eval.html#list">列表</A>.
 	- Empty means that no <A HREF="editing.html#backup">backup</A> file will be created ('patchmode' is
 	  impossible!).  Writing may fail because of this.
-	- A directory &quot;<A HREF="repeat.html#.">.</A>&quot; means to put the <A HREF="editing\.html#backup">备份</A>文件 in the same directory
+	- A directory &quot;<A HREF="repeat.html#.">.</A>&quot; means to put the <A HREF="editing.html#backup">备份</A>文件 in the same directory
 	  <A HREF="motion.html#as">as</A> the edited file.
 	- A directory starting with &quot;./&quot; (or &quot;.\&quot; for MS-Windows) means to put
-	  the <A HREF="editing\.html#backup">备份</A>文件 relative to where the edited file is.  The leading
+	  the <A HREF="editing.html#backup">备份</A>文件 relative to where the edited file is.  The leading
 	  &quot;<A HREF="repeat.html#.">.</A>&quot; is replaced with the path name of the edited file.
 	  (&quot;.&quot; inside a directory name has no special meaning).
 	- Spaces after the comma are ignored, other spaces are considered part
@@ -1013,9 +1013,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'backupext'"></A><B>'backupext'</B>* *<A NAME="'bex'"></A><B>'bex'</B>* *<A NAME="E589"></A><B>E589</B>*
-<A HREF="#'backupext'">'backupext'</A> <A HREF="#'bex'">'bex'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="change.html#~">~</A>&quot;)
+<A HREF="#'backupext'">'backupext'</A> <A HREF="#'bex'">'bex'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="change.html#~">~</A>&quot;)
 			global
-	<A HREF="options\.html#options">字符串</A> which is appended to a file name to make the name of the
+	<A HREF="options.html#options">字符串</A> which is appended to a file name to make the name of the
 	<A HREF="editing.html#backup">backup</A> file.  The default is quite unusual, because this avoids
 	accidentally overwriting existing files with a <A HREF="editing.html#backup">backup</A> file.  You might
 	prefer using &quot;.bak&quot;, but make sure that you don't have files with
@@ -1023,14 +1023,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Only normal file name characters can be used; &quot;/\*?[|&lt;&gt;&quot; are illegal.
 
 	If you like to keep a lot of backups, you could use a <A HREF="autocmd.html#BufWritePre">BufWritePre</A>
-	<A HREF="autocmd\.html#autocommand">自动命令</A> to change <A HREF="#'backupext'">'backupext'</A> just before <A HREF="editing.html#writing">写</A> the file to
+	<A HREF="autocmd.html#autocommand">自动命令</A> to change <A HREF="#'backupext'">'backupext'</A> just before <A HREF="editing.html#writing">写</A> the file to
 	include a <A HREF="editing.html#timestamp">timestamp</A>.
 <B>		:au BufWritePre * let &amp;bex = '-' .. strftime("%Y%b%d%X") .. '~'</B>
  	Use <A HREF="#'backupdir'">'backupdir'</A> to put the <A HREF="editing.html#backup">backup</A> in a different directory.
 
 
 						*<A NAME="'backupskip'"></A><B>'backupskip'</B>* *<A NAME="'bsk'"></A><B>'bsk'</B>*
-<A HREF="#'backupskip'">'backupskip'</A> <A HREF="#'bsk'">'bsk'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;$TMPDIR/*,$TMP/*,$TEMP/*&quot;
+<A HREF="#'backupskip'">'backupskip'</A> <A HREF="#'bsk'">'bsk'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;$TMPDIR/*,$TMP/*,$TEMP/*&quot;
 				 Unix: &quot;/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*&quot;
 				 Mac: &quot;/private/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*&quot;)
 			global
@@ -1057,7 +1057,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'belloff'"></A><B>'belloff'</B>* *<A NAME="'bo'"></A><B>'bo'</B>*
-<A HREF="#'belloff'">'belloff'</A> <A HREF="#'bo'">'bo'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;all&quot;)
+<A HREF="#'belloff'">'belloff'</A> <A HREF="#'bo'">'bo'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;all&quot;)
 			global
 	Specifies for which <A HREF="autocmd.html#events">events</A> the bell will not be rung. It is a comma-
 	separated <A HREF="eval.html#list">列表</A> of items. For each item that is present, the bell
@@ -1147,7 +1147,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'breakat'"></A><B>'breakat'</B>* *<A NAME="'brk'"></A><B>'brk'</B>*
-<A HREF="#'breakat'">'breakat'</A> <A HREF="#'brk'">'brk'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot; ^I!@*-+;:,./?&quot;)
+<A HREF="#'breakat'">'breakat'</A> <A HREF="#'brk'">'brk'</A>		<A HREF="options.html#options">字符串</A>	(default &quot; ^I!@*-+;:,./?&quot;)
 			global
 	This option lets you choose which characters might cause a line
 	break if <A HREF="#'linebreak'">'linebreak'</A> is on.  Only works for ASCII characters.
@@ -1162,7 +1162,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'breakindentopt'"></A><B>'breakindentopt'</B>* *<A NAME="'briopt'"></A><B>'briopt'</B>*
-<A HREF="#'breakindentopt'">'breakindentopt'</A> <A HREF="#'briopt'">'briopt'</A> <A HREF="options\.html#options">字符串</A> (default empty)
+<A HREF="#'breakindentopt'">'breakindentopt'</A> <A HREF="#'briopt'">'briopt'</A> <A HREF="options.html#options">字符串</A> (default empty)
 			local to<A HREF="windows.html#window">窗口</A>
 	Settings for <A HREF="#'breakindent'">'breakindent'</A>. It can consist of the following optional
 	items and must be separated by a comma:
@@ -1187,7 +1187,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'browsedir'"></A><B>'browsedir'</B>* *<A NAME="'bsdir'"></A><B>'bsdir'</B>*
-<A HREF="#'browsedir'">'browsedir'</A> <A HREF="#'bsdir'">'bsdir'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;last&quot;)
+<A HREF="#'browsedir'">'browsedir'</A> <A HREF="#'bsdir'">'bsdir'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;last&quot;)
 			global
 	Which directory to use for the file browser:
 	   last		Use same directory <A HREF="motion.html#as">as</A> with last file browser, where a
@@ -1198,7 +1198,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'bufhidden'"></A><B>'bufhidden'</B>* *<A NAME="'bh'"></A><B>'bh'</B>*
-<A HREF="#'bufhidden'">'bufhidden'</A> <A HREF="#'bh'">'bh'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;&quot;)
+<A HREF="#'bufhidden'">'bufhidden'</A> <A HREF="#'bh'">'bh'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;&quot;)
 			local to buffer
 	This option specifies what happens when a buffer is no longer
 	displayed in a<A HREF="windows.html#window">窗口</A>:
@@ -1232,7 +1232,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'buftype'"></A><B>'buftype'</B>* *<A NAME="'bt'"></A><B>'bt'</B>* *<A NAME="E382"></A><B>E382</B>*
-<A HREF="#'buftype'">'buftype'</A> <A HREF="#'bt'">'bt'</A>		<A HREF="options\.html#options">字符串</A> (default: &quot;&quot;)
+<A HREF="#'buftype'">'buftype'</A> <A HREF="#'bt'">'bt'</A>		<A HREF="options.html#options">字符串</A> (default: &quot;&quot;)
 			local to buffer
 	The value of this option specifies the type of a buffer:
 	  &lt;empty&gt;	normal buffer
@@ -1282,7 +1282,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'casemap'"></A><B>'casemap'</B>* *<A NAME="'cmp'"></A><B>'cmp'</B>*
-<A HREF="#'casemap'">'casemap'</A> <A HREF="#'cmp'">'cmp'</A>		<A HREF="options\.html#options">字符串</A>	(default: &quot;internal,keepascii&quot;)
+<A HREF="#'casemap'">'casemap'</A> <A HREF="#'cmp'">'cmp'</A>		<A HREF="options.html#options">字符串</A>	(default: &quot;internal,keepascii&quot;)
 			global
 	Specifies details about <A HREF="change.html#changing">changing</A> the <A HREF="change.html#case">case</A> of letters.  It may contain
 	these words, separated by a comma:
@@ -1305,7 +1305,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cdpath'"></A><B>'cdpath'</B>* *<A NAME="'cd'"></A><B>'cd'</B>* *<A NAME="E344"></A><B>E344</B>* *<A NAME="E346"></A><B>E346</B>*
-<A HREF="#'cdpath'">'cdpath'</A> <A HREF="#'cd'">'cd'</A>		<A HREF="options\.html#options">字符串</A>	(default: equivalent to $CDPATH or &quot;,,&quot;)
+<A HREF="#'cdpath'">'cdpath'</A> <A HREF="#'cd'">'cd'</A>		<A HREF="options.html#options">字符串</A>	(default: equivalent to $CDPATH or &quot;,,&quot;)
 			global
 	This is a <A HREF="eval.html#list">列表</A> of directories which will be searched when using the
 	|<A HREF="editing.html#:cd">:cd</A>|, |<A HREF="editing.html#:tcd">:tcd</A>| and |<A HREF="editing.html#:lcd">:lcd</A>| commands, provided that the directory being
@@ -1325,7 +1325,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cedit'"></A><B>'cedit'</B>*
-<A HREF="#'cedit'">'cedit'</A>			<A HREF="options\.html#options">字符串</A>	(default: <A HREF="scroll.html#CTRL-F">CTRL-F</A>)
+<A HREF="#'cedit'">'cedit'</A>			<A HREF="options.html#options">字符串</A>	(default: <A HREF="scroll.html#CTRL-F">CTRL-F</A>)
 			global
 	The key used in <A HREF="cmdline.html#Command-line">命令行</A>模式 to open the command-line<A HREF="windows.html#window">窗口</A>.
 	Only non-printable keys are allowed.
@@ -1346,7 +1346,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 				*<A NAME="'charconvert'"></A><B>'charconvert'</B>* *<A NAME="'ccv'"></A><B>'ccv'</B>* *<A NAME="E202"></A><B>E202</B>* *<A NAME="E214"></A><B>E214</B>* *<A NAME="E513"></A><B>E513</B>*
-<A HREF="#'charconvert'">'charconvert'</A> <A HREF="#'ccv'">'ccv'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'charconvert'">'charconvert'</A> <A HREF="#'ccv'">'ccv'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 	An <A HREF="eval.html#expression">expression</A> that is used for character encoding conversion.  It is
 	evaluated when a file that is to be read or has been written has a
@@ -1356,7 +1356,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	preferred, because <A HREF="motion.html#it">它</A> is much faster.
 	<A HREF="#'charconvert'">'charconvert'</A> is not used when reading stdin |<A HREF="starting.html#--">--</A>|, because there is no
 	file to convert from.  You will have to save the text in a file first.
-	The <A HREF="eval.html#expression">expression</A> must return zero, false or an empty <A HREF="options\.html#options">字符串</A> for success,
+	The <A HREF="eval.html#expression">expression</A> must return zero, false or an empty <A HREF="options.html#options">字符串</A> for success,
 	non-zero or true for failure.
 	见 |<A HREF="mbyte.html#encoding-names">encoding-names</A>| for possible encoding names.
 	Additionally, names given in <A HREF="#'fileencodings'">'fileencodings'</A> and <A HREF="#'fileencoding'">'fileencoding'</A> are
@@ -1399,7 +1399,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 							*<A NAME="'cinkeys'"></A><B>'cinkeys'</B>* *<A NAME="'cink'"></A><B>'cink'</B>*
-<A HREF="#'cinkeys'">'cinkeys'</A> <A HREF="#'cink'">'cink'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;0{,0},0),0],:,0#,!^F,o,O,e&quot;)
+<A HREF="#'cinkeys'">'cinkeys'</A> <A HREF="#'cink'">'cink'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;0{,0},0),0],:,0#,!^F,o,O,e&quot;)
 			local to buffer
 	A <A HREF="eval.html#list">列表</A> of keys that, when typed in <A HREF="intro.html#Insert">插入</A>模式, cause reindenting of
 	the current line.  Only used if <A HREF="#'cindent'">'cindent'</A> is on and <A HREF="#'indentexpr'">'indentexpr'</A> is
@@ -1409,7 +1409,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cinoptions'"></A><B>'cinoptions'</B>* *<A NAME="'cino'"></A><B>'cino'</B>*
-<A HREF="#'cinoptions'">'cinoptions'</A> <A HREF="#'cino'">'cino'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'cinoptions'">'cinoptions'</A> <A HREF="#'cino'">'cino'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	The <A HREF="#'cinoptions'">'cinoptions'</A> affect the way <A HREF="#'cindent'">'cindent'</A> reindents lines in a C
 	program.  见 |<A HREF="indent.html#cinoptions-values">cinoptions-values</A>| for the values of this option, and
@@ -1418,7 +1418,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cinwords'"></A><B>'cinwords'</B>* *<A NAME="'cinw'"></A><B>'cinw'</B>*
-<A HREF="#'cinwords'">'cinwords'</A> <A HREF="#'cinw'">'cinw'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;if,else,while,do,for,switch&quot;)
+<A HREF="#'cinwords'">'cinwords'</A> <A HREF="#'cinw'">'cinw'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;if,else,while,do,for,switch&quot;)
 			local to buffer
 	These keywords start an extra indent in the next line when
 	<A HREF="#'smartindent'">'smartindent'</A> or <A HREF="#'cindent'">'cindent'</A> is set.  For <A HREF="#'cindent'">'cindent'</A> this is only done at
@@ -1429,7 +1429,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cinscopedecls'"></A><B>'cinscopedecls'</B>* *<A NAME="'cinsd'"></A><B>'cinsd'</B>*
-<A HREF="#'cinscopedecls'">'cinscopedecls'</A> <A HREF="#'cinsd'">'cinsd'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;public,protected,private&quot;)
+<A HREF="#'cinscopedecls'">'cinscopedecls'</A> <A HREF="#'cinsd'">'cinsd'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;public,protected,private&quot;)
 			local to buffer
 	Keywords that are interpreted <A HREF="motion.html#as">as</A> a C++ scope declaration by |<A HREF="indent.html#cino-g">cino-g</A>|.
 	Useful e.g. for working with the Qt framework that defines additional
@@ -1438,7 +1438,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
  						*<A NAME="'clipboard'"></A><B>'clipboard'</B>* *<A NAME="'cb'"></A><B>'cb'</B>*
-<A HREF="#'clipboard'">'clipboard'</A> <A HREF="#'cb'">'cb'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'clipboard'">'clipboard'</A> <A HREF="#'cb'">'cb'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	This option is a <A HREF="eval.html#list">列表</A> of comma-separated names.
 	These names are recognized:
@@ -1482,7 +1482,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'colorcolumn'"></A><B>'colorcolumn'</B>* *<A NAME="'cc'"></A><B>'cc'</B>*
-<A HREF="#'colorcolumn'">'colorcolumn'</A> <A HREF="#'cc'">'cc'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'colorcolumn'">'colorcolumn'</A> <A HREF="#'cc'">'cc'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	<A HREF="#'colorcolumn'">'colorcolumn'</A> is a comma-separated <A HREF="eval.html#list">列表</A> of screen columns that are
 	highlighted with ColorColumn |<A HREF="syntax.html#hl-ColorColumn">hl-ColorColumn</A>|.  Useful to align
@@ -1499,9 +1499,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'columns'"></A><B>'columns'</B>* *<A NAME="'co'"></A><B>'co'</B>* *<A NAME="E594"></A><B>E594</B>*
-<A HREF="#'columns'">'columns'</A> <A HREF="#'co'">'co'</A>		number	(default 80 or <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> width)
+<A HREF="#'columns'">'columns'</A> <A HREF="#'co'">'co'</A>		number	(default 80 or <A HREF="nvim_terminal_emulator.html#terminal">终端</A> width)
 			global
-	<A HREF="eval.html#Number">Number</A> of columns of the screen.  Normally this is set by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+	<A HREF="eval.html#Number">Number</A> of columns of the screen.  Normally this is set by the <A HREF="nvim_terminal_emulator.html#terminal">终端</A>
 	<A HREF="starting.html#initialization">initialization</A> and does not have to be set by hand.
 	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable<A HREF="windows.html#window">窗口</A>, setting this
 	option will cause the<A HREF="windows.html#window">窗口</A>size to be changed.  When you only want
@@ -1516,7 +1516,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'comments'"></A><B>'comments'</B>* *<A NAME="'com'"></A><B>'com'</B>* *<A NAME="E524"></A><B>E524</B>* *<A NAME="E525"></A><B>E525</B>*
-<A HREF="#'comments'">'comments'</A> <A HREF="#'com'">'com'</A>	<A HREF="options\.html#options">字符串</A>	(default
+<A HREF="#'comments'">'comments'</A> <A HREF="#'com'">'com'</A>	<A HREF="options.html#options">字符串</A>	(default
 				&quot;s1:/*,mb:*,ex:*/,://,b:#,:&#37;,:XCOMM,n:&gt;,fb:-&quot;)
 			local to buffer
 	A comma-separated <A HREF="eval.html#list">列表</A> of strings that can start a comment line.  See
@@ -1525,7 +1525,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'commentstring'"></A><B>'commentstring'</B>* *<A NAME="'cms'"></A><B>'cms'</B>* *<A NAME="E537"></A><B>E537</B>*
-<A HREF="#'commentstring'">'commentstring'</A> <A HREF="#'cms'">'cms'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;/*&#37;s*/&quot;)
+<A HREF="#'commentstring'">'commentstring'</A> <A HREF="#'cms'">'cms'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;/*&#37;s*/&quot;)
 			local to buffer
 	A <A HREF="autocmd.html#template">template</A> for a comment.  The &quot;&#37;s&quot; in the value is replaced with the
 	comment text.  Currently only used to add markers for <A HREF="fold.html#folding">folding</A>, see
@@ -1533,7 +1533,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'complete'"></A><B>'complete'</B>* *<A NAME="'cpt'"></A><B>'cpt'</B>* *<A NAME="E535"></A><B>E535</B>*
-<A HREF="#'complete'">'complete'</A> <A HREF="#'cpt'">'cpt'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;.,w,b,u,t&quot;)
+<A HREF="#'complete'">'complete'</A> <A HREF="#'cpt'">'cpt'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;.,w,b,u,t&quot;)
 			local to buffer
 	This option specifies how keyword completion |<A HREF="insert.html#ins-completion">ins-completion</A>| works
 	when <A HREF="motion.html#CTRL-P">CTRL-P</A> or <A HREF="motion.html#CTRL-N">CTRL-N</A> are used.  It is also used for whole-line
@@ -1569,7 +1569,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'completefunc'"></A><B>'completefunc'</B>* *<A NAME="'cfu'"></A><B>'cfu'</B>*
-<A HREF="#'completefunc'">'completefunc'</A> <A HREF="#'cfu'">'cfu'</A>	<A HREF="options\.html#options">字符串</A>	(default: empty)
+<A HREF="#'completefunc'">'completefunc'</A> <A HREF="#'cfu'">'cfu'</A>	<A HREF="options.html#options">字符串</A>	(default: empty)
 			local to buffer
 	This option specifies a function to be used for <A HREF="intro.html#Insert">插入</A>模式 completion
 	with CTRL-X CTRL-U. |<A HREF="insert.html#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</A>|
@@ -1580,7 +1580,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'completeslash'"></A><B>'completeslash'</B>* *<A NAME="'csl'"></A><B>'csl'</B>*
-<A HREF="#'completeslash'">'completeslash'</A> <A HREF="#'csl'">'csl'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;&quot;)
+<A HREF="#'completeslash'">'completeslash'</A> <A HREF="#'csl'">'csl'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;&quot;)
 			local to buffer
 			{only for MS-Windows}
 	When this option is set <A HREF="motion.html#it">它</A> overrules <A HREF="#'shellslash'">'shellslash'</A> for completion:
@@ -1596,7 +1596,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'completeopt'"></A><B>'completeopt'</B>* *<A NAME="'cot'"></A><B>'cot'</B>*
-<A HREF="#'completeopt'">'completeopt'</A> <A HREF="#'cot'">'cot'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;menu,preview&quot;)
+<A HREF="#'completeopt'">'completeopt'</A> <A HREF="#'cot'">'cot'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;menu,preview&quot;)
 			global
 	A comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="#options">options</A> for <A HREF="intro.html#Insert">插入</A>模式 completion
 	|<A HREF="insert.html#ins-completion">ins-completion</A>|.  The supported values are:
@@ -1630,7 +1630,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'concealcursor'"></A><B>'concealcursor'</B>* *<A NAME="'cocu'"></A><B>'cocu'</B>*
-<A HREF="#'concealcursor'">'concealcursor'</A> <A HREF="#'cocu'">'cocu'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;&quot;)
+<A HREF="#'concealcursor'">'concealcursor'</A> <A HREF="#'cocu'">'cocu'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	Sets the modes in which text in the cursor line can also be concealed.
 	When the current mode is listed then concealing happens just like in
@@ -1701,7 +1701,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cpoptions'"></A><B>'cpoptions'</B>* *<A NAME="'cpo'"></A><B>'cpo'</B>* *<A NAME="cpo"></A><B>cpo</B>*
-<A HREF="#'cpoptions'">'cpoptions'</A> <A HREF="#'cpo'">'cpo'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;aABceFs_&quot;)
+<A HREF="#'cpoptions'">'cpoptions'</A> <A HREF="#'cpo'">'cpo'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;aABceFs_&quot;)
 			global
 	A sequence of single character flags.  When a character is present
 	this indicates Vi-compatible behavior.  This is used for things where
@@ -1863,7 +1863,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 								*<A NAME="cpo-r"></A><B>cpo-r</B>*
 		<A HREF="change.html#r">r</A>	Redo (&quot;.&quot; command) uses &quot;<A HREF="pattern.html#/">/</A>&quot; to repeat a search
-			command, instead of the actually used search <A HREF="options\.html#options">字符串</A>.
+			command, instead of the actually used search <A HREF="options.html#options">字符串</A>.
 
 								*<A NAME="cpo-R"></A><B>cpo-R</B>*
 		<A HREF="change.html#R">R</A>	Remove marks from filtered lines.  Without this flag
@@ -1947,7 +1947,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			Does not recognize &quot;#if&quot;, &quot;#endif&quot;, etc.
 			Does not recognize &quot;/*&quot; and &quot;*/&quot;.
 			Parens inside single and double quotes are also
-			counted, causing a <A HREF="options\.html#options">字符串</A> that contains a paren to
+			counted, causing a <A HREF="options.html#options">字符串</A> that contains a paren to
 			disturb the matching.例如, in a line like
 			&quot;if (strcmp(&quot;foo(&quot;, s))&quot; the first paren does not
 			match the last one.  When this flag is not included,
@@ -1988,7 +1988,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cscopeprg'"></A><B>'cscopeprg'</B>* *<A NAME="'csprg'"></A><B>'csprg'</B>*
-<A HREF="#'cscopeprg'">'cscopeprg'</A> <A HREF="#'csprg'">'csprg'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="if_cscop.html#cscope">cscope</A>&quot;)
+<A HREF="#'cscopeprg'">'cscopeprg'</A> <A HREF="#'csprg'">'csprg'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="if_cscop.html#cscope">cscope</A>&quot;)
 			global
 	Specifies the command to execute cscope.  见 |<A HREF="if_cscop.html#cscopeprg">cscopeprg</A>|.
 	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
@@ -1996,7 +1996,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cscopequickfix'"></A><B>'cscopequickfix'</B>* *<A NAME="'csqf'"></A><B>'csqf'</B>*
-<A HREF="#'cscopequickfix'">'cscopequickfix'</A> <A HREF="#'csqf'">'csqf'</A> <A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'cscopequickfix'">'cscopequickfix'</A> <A HREF="#'csqf'">'csqf'</A> <A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	Specifies whether to use <A HREF="quickfix.html#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>to show <A HREF="if_cscop.html#cscope">cscope</A> results.
 	见 |<A HREF="if_cscop.html#cscopequickfix">cscopequickfix</A>|.
@@ -2060,7 +2060,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'cursorlineopt'"></A><B>'cursorlineopt'</B>* *<A NAME="'culopt'"></A><B>'culopt'</B>*
-<A HREF="#'cursorlineopt'">'cursorlineopt'</A> <A HREF="#'culopt'">'culopt'</A> <A HREF="options\.html#options">字符串</A> (default: &quot;number,line&quot;)
+<A HREF="#'cursorlineopt'">'cursorlineopt'</A> <A HREF="#'culopt'">'culopt'</A> <A HREF="options.html#options">字符串</A> (default: &quot;number,line&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	Comma-separated <A HREF="eval.html#list">列表</A> of settings for how <A HREF="#'cursorline'">'cursorline'</A> is displayed.
 	Valid values:
@@ -2079,7 +2079,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'debug'"></A><B>'debug'</B>*
-<A HREF="#'debug'">'debug'</A>			<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'debug'">'debug'</A>			<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	These values can be used:
 	msg	Error <A HREF="message.html#messages">信息</A> that would otherwise be omitted will be given
@@ -2094,7 +2094,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'define'"></A><B>'define'</B>* *<A NAME="'def'"></A><B>'def'</B>*
-<A HREF="#'define'">'define'</A> <A HREF="#'def'">'def'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;^\s*#\s*define&quot;)
+<A HREF="#'define'">'define'</A> <A HREF="#'def'">'def'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;^\s*#\s*define&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	<A HREF="pattern.html#Pattern">Pattern</A> to be used to find a <A HREF="map.html#macro">宏指令</A> definition.  It is a search
 	<A HREF="pattern.html#pattern">pattern</A>, just like for the &quot;<A HREF="pattern.html#/">/</A>&quot;命令.  This option is used for the
@@ -2113,7 +2113,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  	If the function is defined with &quot;func_name : <A HREF="builtin.html#function()">function()</A> {...&quot;:
 <B>	        ^\s*\ze\i\+\s*[:]\s*(*function\s*(</B>
  	When using the &quot;<A HREF="#:set">:set</A>&quot;命令, you need to double the backslashes!
-	To avoid that use `:let` with a single <A HREF="change.html#quote">quote</A> <A HREF="options\.html#options">字符串</A>:
+	To avoid that use `:let` with a single <A HREF="change.html#quote">quote</A> <A HREF="options.html#options">字符串</A>:
 <B>		let &amp;l:define = '^\s*\ze\k\+\s*=\s*function('</B>
  
 
@@ -2133,7 +2133,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'dictionary'"></A><B>'dictionary'</B>* *<A NAME="'dict'"></A><B>'dict'</B>*
-<A HREF="#'dictionary'">'dictionary'</A> <A HREF="#'dict'">'dict'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'dictionary'">'dictionary'</A> <A HREF="#'dict'">'dict'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	<A HREF="eval.html#list">列表</A> of file names, separated by commas, that are used to lookup words
 	for keyword completion commands |<A HREF="insert.html#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</A>|.  Each file should
@@ -2167,7 +2167,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'dex'"></A><B>'dex'</B>* *<A NAME="'diffexpr'"></A><B>'diffexpr'</B>*
-<A HREF="#'diffexpr'">'diffexpr'</A> <A HREF="#'dex'">'dex'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'diffexpr'">'diffexpr'</A> <A HREF="#'dex'">'dex'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	Expression which is evaluated to obtain a <A HREF="diff.html#diff">diff</A> file (either ed-style
 	or unified-style) from two versions of a file.  见 |<A HREF="diff.html#diff-diffexpr">diff-diffexpr</A>|.
@@ -2176,7 +2176,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'dip'"></A><B>'dip'</B>* *<A NAME="'diffopt'"></A><B>'diffopt'</B>*
-<A HREF="#'diffopt'">'diffopt'</A> <A HREF="#'dip'">'dip'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;internal,filler,closeoff&quot;)
+<A HREF="#'diffopt'">'diffopt'</A> <A HREF="#'dip'">'dip'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;internal,filler,closeoff&quot;)
 			global
 	Option settings for <A HREF="diff.html#diff">diff</A> mode.  It can consist of the following items.
 	All are optional.  Items must be separated by a comma.
@@ -2283,7 +2283,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'directory'"></A><B>'directory'</B>* *<A NAME="'dir'"></A><B>'dir'</B>*
-<A HREF="#'directory'">'directory'</A> <A HREF="#'dir'">'dir'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;$XDG_STATE_HOME/nvim/swap//&quot;)
+<A HREF="#'directory'">'directory'</A> <A HREF="#'dir'">'dir'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;$XDG_STATE_HOME/nvim/swap//&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of directory names for the swap file, separated with commas.
 
@@ -2336,7 +2336,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'display'"></A><B>'display'</B>* *<A NAME="'dy'"></A><B>'dy'</B>*
-<A HREF="#'display'">'display'</A> <A HREF="#'dy'">'dy'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;lastline,msgsep&quot;)
+<A HREF="#'display'">'display'</A> <A HREF="#'dy'">'dy'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;lastline,msgsep&quot;)
 			global
 	Change the way text is displayed.  This is comma-separated <A HREF="eval.html#list">列表</A> of
 	flags:
@@ -2358,7 +2358,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'eadirection'"></A><B>'eadirection'</B>* *<A NAME="'ead'"></A><B>'ead'</B>*
-<A HREF="#'eadirection'">'eadirection'</A> <A HREF="#'ead'">'ead'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;both&quot;)
+<A HREF="#'eadirection'">'eadirection'</A> <A HREF="#'ead'">'ead'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;both&quot;)
 			global
 	Tells when the <A HREF="#'equalalways'">'equalalways'</A> option applies:
 		ver	vertically, width of <A HREF="windows.html#windows">窗口</A> is not affected
@@ -2419,7 +2419,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'equalprg'"></A><B>'equalprg'</B>* *<A NAME="'ep'"></A><B>'ep'</B>*
-<A HREF="#'equalprg'">'equalprg'</A> <A HREF="#'ep'">'ep'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'equalprg'">'equalprg'</A> <A HREF="#'ep'">'ep'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	External program to use for &quot;<A HREF="change.html#=">=</A>&quot;命令.  When this option is empty
 	the internal <A HREF="change.html#formatting">formatting</A> <A HREF="eval.html#functions">functions</A> are used; either <A HREF="#'lisp'">'lisp'</A>, <A HREF="#'cindent'">'cindent'</A>
@@ -2441,7 +2441,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'errorfile'"></A><B>'errorfile'</B>* *<A NAME="'ef'"></A><B>'ef'</B>*
-<A HREF="#'errorfile'">'errorfile'</A> <A HREF="#'ef'">'ef'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;errors.err&quot;)
+<A HREF="#'errorfile'">'errorfile'</A> <A HREF="#'ef'">'ef'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;errors.err&quot;)
 			global
 	Name of the errorfile for the QuickFix mode (见 |<A HREF="quickfix.html#:cf">:cf</A>|).
 	When the &quot;<A HREF="starting.html#-q">-q</A>&quot;命令-line argument is used, <A HREF="#'errorfile'">'errorfile'</A> is set to the
@@ -2454,17 +2454,17 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'errorformat'"></A><B>'errorformat'</B>* *<A NAME="'efm'"></A><B>'efm'</B>*
-<A HREF="#'errorformat'">'errorformat'</A> <A HREF="#'efm'">'efm'</A>	<A HREF="options\.html#options">字符串</A>	(default is very long)
+<A HREF="#'errorformat'">'errorformat'</A> <A HREF="#'efm'">'efm'</A>	<A HREF="options.html#options">字符串</A>	(default is very long)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Scanf-like description of the format for the lines in the error file
 	(见 |<A HREF="quickfix.html#errorformat">errorformat</A>|).
 
 
 						*<A NAME="'eventignore'"></A><B>'eventignore'</B>* *<A NAME="'ei'"></A><B>'ei'</B>*
-<A HREF="#'eventignore'">'eventignore'</A> <A HREF="#'ei'">'ei'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'eventignore'">'eventignore'</A> <A HREF="#'ei'">'ei'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
-	A <A HREF="eval.html#list">列表</A> of <A HREF="autocmd\.html#autocommand">自动命令</A> event names, which are to be ignored.
-	When set to &quot;all&quot; or when &quot;all&quot; is one of the items, all <A HREF="autocmd\.html#autocommand">自动命令</A>
+	A <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#autocommand">自动命令</A> event names, which are to be ignored.
+	When set to &quot;all&quot; or when &quot;all&quot; is one of the items, all <A HREF="autocmd.html#autocommand">自动命令</A>
 	<A HREF="autocmd.html#events">events</A> are ignored, autocommands will not be executed.
 	Otherwise this is a comma-separated <A HREF="eval.html#list">列表</A> of event names.  Example:
 <B>	    :set ei=WinEnter,WinLeave</B>
@@ -2482,7 +2482,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 				*<A NAME="'fileencoding'"></A><B>'fileencoding'</B>* *<A NAME="'fenc'"></A><B>'fenc'</B>* *<A NAME="E213"></A><B>E213</B>*
-<A HREF="#'fileencoding'">'fileencoding'</A> <A HREF="#'fenc'">'fenc'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;&quot;)
+<A HREF="#'fileencoding'">'fileencoding'</A> <A HREF="#'fenc'">'fenc'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;&quot;)
 			local to buffer
 	File-content encoding for the current buffer. Conversion is done with
 	<A HREF="builtin.html#iconv()">iconv()</A> or <A HREF="motion.html#as">as</A> specified with <A HREF="#'charconvert'">'charconvert'</A>.
@@ -2524,21 +2524,21 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'fileencodings'"></A><B>'fileencodings'</B>* *<A NAME="'fencs'"></A><B>'fencs'</B>*
-<A HREF="#'fileencodings'">'fileencodings'</A> <A HREF="#'fencs'">'fencs'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;ucs-bom,utf-8,default,latin1&quot;)
+<A HREF="#'fileencodings'">'fileencodings'</A> <A HREF="#'fencs'">'fencs'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;ucs-bom,utf-8,default,latin1&quot;)
 			global
 	This is a <A HREF="eval.html#list">列表</A> of character encodings considered when starting to edit
 	an existing file.  When a file is read, Vim tries to use the first
 	mentioned character encoding.  If an error is detected, the next one
 	in the <A HREF="eval.html#list">列表</A> is tried.  When an encoding is found that works,
 	<A HREF="#'fileencoding'">'fileencoding'</A> is set to <A HREF="motion.html#it">它</A>.  If all fail, <A HREF="#'fileencoding'">'fileencoding'</A> is set to
-	an empty <A HREF="options\.html#options">字符串</A>, which means that <A HREF="mbyte.html#UTF-8">UTF-8</A> is used.
+	an empty <A HREF="options.html#options">字符串</A>, which means that <A HREF="mbyte.html#UTF-8">UTF-8</A> is used.
 		WARNING: Conversion can cause loss of information! You can use
 		the |<A HREF="editing.html#++bad">++bad</A>| argument to specify what is done with characters
 		that can't be converted.
 	For an empty file or a file with only ASCII characters most encodings
 	will work and the first entry of <A HREF="#'fileencodings'">'fileencodings'</A> will be used (except
 	&quot;ucs-bom&quot;, which requires the BOM to be present).  If you prefer
-	another encoding use an <A HREF="autocmd.html#BufReadPost">BufReadPost</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event to test if your
+	another encoding use an <A HREF="autocmd.html#BufReadPost">BufReadPost</A> <A HREF="autocmd.html#autocommand">自动命令</A> event to test if your
 	preferred encoding is to be used.  Example:
 <B>		au BufReadPost * if search('\S', 'w') == 0 |</B>
 <B>			\ set fenc=iso-2022-jp | endif</B>
@@ -2575,7 +2575,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'fileformat'"></A><B>'fileformat'</B>* *<A NAME="'ff'"></A><B>'ff'</B>*
-<A HREF="#'fileformat'">'fileformat'</A> <A HREF="#'ff'">'ff'</A>	<A HREF="options\.html#options">字符串</A> (Windows default: &quot;dos&quot;,
+<A HREF="#'fileformat'">'fileformat'</A> <A HREF="#'ff'">'ff'</A>	<A HREF="options.html#options">字符串</A> (Windows default: &quot;dos&quot;,
 				Unix default: &quot;unix&quot;)
 			local to buffer
 	This gives the <A HREF="intro.html#&lt;EOL&gt;">&lt;EOL&gt;</A> of the current buffer, which is used for
@@ -2596,7 +2596,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'fileformats'"></A><B>'fileformats'</B>* *<A NAME="'ffs'"></A><B>'ffs'</B>*
-<A HREF="#'fileformats'">'fileformats'</A> <A HREF="#'ffs'">'ffs'</A>	<A HREF="options\.html#options">字符串</A> (default:
+<A HREF="#'fileformats'">'fileformats'</A> <A HREF="#'ffs'">'ffs'</A>	<A HREF="options.html#options">字符串</A> (default:
 				Win32: &quot;dos,unix&quot;,
 				Unix: &quot;unix,dos&quot;)
 			global
@@ -2656,9 +2656,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'filetype'"></A><B>'filetype'</B>* *<A NAME="'ft'"></A><B>'ft'</B>*
-<A HREF="#'filetype'">'filetype'</A> <A HREF="#'ft'">'ft'</A>		<A HREF="options\.html#options">字符串</A> (default: &quot;&quot;)
+<A HREF="#'filetype'">'filetype'</A> <A HREF="#'ft'">'ft'</A>		<A HREF="options.html#options">字符串</A> (default: &quot;&quot;)
 			local to buffer
-	When this option is set, the <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event is triggered.
+	When this option is set, the <A HREF="autocmd.html#FileType">FileType</A> <A HREF="autocmd.html#autocommand">自动命令</A> event is triggered.
 	All autocommands that match with the value of this option will be
 	executed.  Thus the value of <A HREF="#'filetype'">'filetype'</A> is used in place of the file
 	name.
@@ -2682,7 +2682,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'fillchars'"></A><B>'fillchars'</B>* *<A NAME="'fcs'"></A><B>'fcs'</B>*
-<A HREF="#'fillchars'">'fillchars'</A> <A HREF="#'fcs'">'fcs'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'fillchars'">'fillchars'</A> <A HREF="#'fcs'">'fcs'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	Characters to fill the statuslines and vertical separators.
 	It is a comma-separated <A HREF="eval.html#list">列表</A> of items:
@@ -2756,7 +2756,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldclose'"></A><B>'foldclose'</B>* *<A NAME="'fcl'"></A><B>'fcl'</B>*
-<A HREF="#'foldclose'">'foldclose'</A> <A HREF="#'fcl'">'fcl'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'foldclose'">'foldclose'</A> <A HREF="#'fcl'">'fcl'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 	When set to &quot;all&quot;, a fold is closed when the cursor isn't in <A HREF="motion.html#it">它</A> and
 	its level is higher than <A HREF="#'foldlevel'">'foldlevel'</A>.  Useful if you want <A HREF="fold.html#folds">folds</A> to
@@ -2764,7 +2764,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldcolumn'"></A><B>'foldcolumn'</B>* *<A NAME="'fdc'"></A><B>'fdc'</B>*
-<A HREF="#'foldcolumn'">'foldcolumn'</A> <A HREF="#'fdc'">'fdc'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;<A HREF="motion.html#0">0</A>&quot;)
+<A HREF="#'foldcolumn'">'foldcolumn'</A> <A HREF="#'fdc'">'fdc'</A>	<A HREF="options.html#options">字符串</A> (default &quot;<A HREF="motion.html#0">0</A>&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	When and how to draw the foldcolumn. Valid values are:
 	    &quot;auto&quot;:       resize to the minimum amount of <A HREF="fold.html#folds">folds</A> to display.
@@ -2788,7 +2788,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldexpr'"></A><B>'foldexpr'</B>* *<A NAME="'fde'"></A><B>'fde'</B>*
-<A HREF="#'foldexpr'">'foldexpr'</A> <A HREF="#'fde'">'fde'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;<A HREF="motion.html#0">0</A>&quot;)
+<A HREF="#'foldexpr'">'foldexpr'</A> <A HREF="#'fde'">'fde'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;<A HREF="motion.html#0">0</A>&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	The <A HREF="eval.html#expression">expression</A> used for when <A HREF="#'foldmethod'">'foldmethod'</A> is &quot;<A HREF="eval.html#expr">expr</A>&quot;.  It is evaluated
 	for each line to obtain its fold level.  见 |<A HREF="fold.html#fold-expr">fold-expr</A>|.
@@ -2803,7 +2803,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldignore'"></A><B>'foldignore'</B>* *<A NAME="'fdi'"></A><B>'fdi'</B>*
-<A HREF="#'foldignore'">'foldignore'</A> <A HREF="#'fdi'">'fdi'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;<A HREF="pattern.html##">#</A>&quot;)
+<A HREF="#'foldignore'">'foldignore'</A> <A HREF="#'fdi'">'fdi'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;<A HREF="pattern.html##">#</A>&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	Used only when <A HREF="#'foldmethod'">'foldmethod'</A> is &quot;indent&quot;.  Lines starting with
 	characters in <A HREF="#'foldignore'">'foldignore'</A> will get their fold level from surrounding
@@ -2836,23 +2836,23 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldmarker'"></A><B>'foldmarker'</B>* *<A NAME="'fmr'"></A><B>'fmr'</B>* *<A NAME="E536"></A><B>E536</B>*
-<A HREF="#'foldmarker'">'foldmarker'</A> <A HREF="#'fmr'">'fmr'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;{{{,}}}&quot;)
+<A HREF="#'foldmarker'">'foldmarker'</A> <A HREF="#'fmr'">'fmr'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;{{{,}}}&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	The start and end marker used when <A HREF="#'foldmethod'">'foldmethod'</A> is &quot;marker&quot;.  There
 	must be one comma, which separates the start and end marker.  The
-	marker is a literal <A HREF="options\.html#options">字符串</A> (a regular <A HREF="eval.html#expression">expression</A> would be too slow).
+	marker is a literal <A HREF="options.html#options">字符串</A> (a regular <A HREF="eval.html#expression">expression</A> would be too slow).
 	见 |<A HREF="fold.html#fold-marker">fold-marker</A>|.
 
 
 						*<A NAME="'foldmethod'"></A><B>'foldmethod'</B>* *<A NAME="'fdm'"></A><B>'fdm'</B>*
-<A HREF="#'foldmethod'">'foldmethod'</A> <A HREF="#'fdm'">'fdm'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;manual&quot;)
+<A HREF="#'foldmethod'">'foldmethod'</A> <A HREF="#'fdm'">'fdm'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;manual&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	The kind of <A HREF="fold.html#folding">folding</A> used for the current<A HREF="windows.html#window">窗口</A>.  Possible values:
 	|<A HREF="fold.html#fold-manual">fold-manual</A>|	manual	    Folds are created manually.
 	|<A HREF="fold.html#fold-indent">fold-indent</A>|	indent	    Lines with equal indent form a fold.
 	|<A HREF="fold.html#fold-expr">fold-expr</A>|	expr	    <A HREF="#'foldexpr'">'foldexpr'</A> gives the fold level of a line.
 	|<A HREF="fold.html#fold-marker">fold-marker</A>|	marker	    Markers are used to specify <A HREF="fold.html#folds">folds</A>.
-	|<A HREF="fold.html#fold-syntax">fold-syntax</A>|	syntax	    <A HREF="autocmd\.html#Syntax">语法</A>高亮 items specify <A HREF="fold.html#folds">folds</A>.
+	|<A HREF="fold.html#fold-syntax">fold-syntax</A>|	syntax	    <A HREF="autocmd.html#Syntax">语法</A>高亮 items specify <A HREF="fold.html#folds">folds</A>.
 	|<A HREF="fold.html#fold-diff">fold-diff</A>|	diff	    Fold text that is not changed.
 
 
@@ -2877,7 +2877,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldopen'"></A><B>'foldopen'</B>* *<A NAME="'fdo'"></A><B>'fdo'</B>*
-<A HREF="#'foldopen'">'foldopen'</A> <A HREF="#'fdo'">'fdo'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;block,hor,mark,percent,quickfix,
+<A HREF="#'foldopen'">'foldopen'</A> <A HREF="#'fdo'">'fdo'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;block,hor,mark,percent,quickfix,
 							     search,tag,undo&quot;)
 			global
 	Specifies for which type of commands <A HREF="fold.html#folds">folds</A> will be opened, if the
@@ -2913,7 +2913,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'foldtext'"></A><B>'foldtext'</B>* *<A NAME="'fdt'"></A><B>'fdt'</B>*
-<A HREF="#'foldtext'">'foldtext'</A> <A HREF="#'fdt'">'fdt'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;<A HREF="builtin.html#foldtext()">foldtext()</A>&quot;)
+<A HREF="#'foldtext'">'foldtext'</A> <A HREF="#'fdt'">'fdt'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;<A HREF="builtin.html#foldtext()">foldtext()</A>&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	An <A HREF="eval.html#expression">expression</A> which is used to specify the text displayed for a closed
 	fold.  见 |<A HREF="fold.html#fold-foldtext">fold-foldtext</A>|.
@@ -2927,7 +2927,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'formatexpr'"></A><B>'formatexpr'</B>* *<A NAME="'fex'"></A><B>'fex'</B>*
-<A HREF="#'formatexpr'">'formatexpr'</A> <A HREF="#'fex'">'fex'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'formatexpr'">'formatexpr'</A> <A HREF="#'fex'">'fex'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			local to buffer
 	Expression which is evaluated to format a range of lines for the |<A HREF="change.html#gq">gq</A>|
 	<A HREF="motion.html#operator">operator</A> or automatic <A HREF="change.html#formatting">formatting</A> (see <A HREF="#'formatoptions'">'formatoptions'</A>).  When this
@@ -2962,7 +2962,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'formatlistpat'"></A><B>'formatlistpat'</B>* *<A NAME="'flp'"></A><B>'flp'</B>*
-<A HREF="#'formatlistpat'">'formatlistpat'</A> <A HREF="#'flp'">'flp'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;^\s*\d\+[\]:.)}\t ]\s*&quot;)
+<A HREF="#'formatlistpat'">'formatlistpat'</A> <A HREF="#'flp'">'flp'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;^\s*\d\+[\]:.)}\t ]\s*&quot;)
 			local to buffer
 	A <A HREF="pattern.html#pattern">pattern</A> that is used to recognize a <A HREF="eval.html#list">列表</A> header.  This is used for
 	the &quot;<A HREF="pattern.html#n">n</A>&quot; flag in <A HREF="#'formatoptions'">'formatoptions'</A>.
@@ -2976,7 +2976,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'formatoptions'"></A><B>'formatoptions'</B>* *<A NAME="'fo'"></A><B>'fo'</B>*
-<A HREF="#'formatoptions'">'formatoptions'</A> <A HREF="#'fo'">'fo'</A>	<A HREF="options\.html#options">字符串</A> (default: &quot;tcqj&quot;)
+<A HREF="#'formatoptions'">'formatoptions'</A> <A HREF="#'fo'">'fo'</A>	<A HREF="options.html#options">字符串</A> (default: &quot;tcqj&quot;)
 			local to buffer
 	This is a sequence of letters which describes how automatic
 	<A HREF="change.html#formatting">formatting</A> is to be done.  见 |<A HREF="change.html#fo-table">fo-table</A>|.  When the <A HREF="#'paste'">'paste'</A> option is
@@ -2987,14 +2987,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'formatprg'"></A><B>'formatprg'</B>* *<A NAME="'fp'"></A><B>'fp'</B>*
-<A HREF="#'formatprg'">'formatprg'</A> <A HREF="#'fp'">'fp'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'formatprg'">'formatprg'</A> <A HREF="#'fp'">'fp'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	The name of an external program that will be used to format the lines
 	selected with the |<A HREF="change.html#gq">gq</A>| <A HREF="motion.html#operator">operator</A>.  The program must take the input on
 	stdin and produce the output on stdout.  The Unix program &quot;fmt&quot; is
 	such a program.
 	If the <A HREF="#'formatexpr'">'formatexpr'</A> option is not empty <A HREF="motion.html#it">它</A> will be used instead.
-	Otherwise, if <A HREF="#'formatprg'">'formatprg'</A> option is an empty <A HREF="options\.html#options">字符串</A>, the internal
+	Otherwise, if <A HREF="#'formatprg'">'formatprg'</A> option is an empty <A HREF="options.html#options">字符串</A>, the internal
 	format function will be used |<A HREF="indent.html#C-indenting">C-indenting</A>|.
 	Environment <A HREF="eval.html#variables">variables</A> are expanded |<A HREF="#:set_env">:set_env</A>|.  见 |<A HREF="#option-backslash">option-backslash</A>|
 	about including spaces and backslashes.
@@ -3040,15 +3040,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'grepformat'"></A><B>'grepformat'</B>* *<A NAME="'gfm'"></A><B>'gfm'</B>*
-<A HREF="#'grepformat'">'grepformat'</A> <A HREF="#'gfm'">'gfm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&#37;f:&#37;l:&#37;m,&#37;f:&#37;l&#37;m,&#37;f  &#37;l&#37;m&quot;)
+<A HREF="#'grepformat'">'grepformat'</A> <A HREF="#'gfm'">'gfm'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&#37;f:&#37;l:&#37;m,&#37;f:&#37;l&#37;m,&#37;f  &#37;l&#37;m&quot;)
 			global
 	Format to recognize for the &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot;命令 output.
-	This is a scanf-like <A HREF="options\.html#options">字符串</A> that uses the same format <A HREF="motion.html#as">as</A> the
+	This is a scanf-like <A HREF="options.html#options">字符串</A> that uses the same format <A HREF="motion.html#as">as</A> the
 	<A HREF="#'errorformat'">'errorformat'</A> option: 见 |<A HREF="quickfix.html#errorformat">errorformat</A>|.
 
 
 						*<A NAME="'grepprg'"></A><B>'grepprg'</B>* *<A NAME="'gp'"></A><B>'gp'</B>*
-<A HREF="#'grepprg'">'grepprg'</A> <A HREF="#'gp'">'gp'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="quickfix.html#grep">grep</A> <A HREF="starting.html#-n">-n</A> &quot;<A HREF="motion.html#,">,</A>
+<A HREF="#'grepprg'">'grepprg'</A> <A HREF="#'gp'">'gp'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="quickfix.html#grep">grep</A> <A HREF="starting.html#-n">-n</A> &quot;<A HREF="motion.html#,">,</A>
 				 Unix: &quot;<A HREF="quickfix.html#grep">grep</A> <A HREF="starting.html#-n">-n</A> $* /dev/null&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Program to use for the |<A HREF="quickfix.html#:grep">:grep</A>| command.  This option may contain '<A HREF="motion.html#&#37;">&#37;</A>'
@@ -3069,7 +3069,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 			*<A NAME="'guicursor'"></A><B>'guicursor'</B>* *<A NAME="'gcr'"></A><B>'gcr'</B>* *<A NAME="E545"></A><B>E545</B>* *<A NAME="E546"></A><B>E546</B>* *<A NAME="E548"></A><B>E548</B>* *<A NAME="E549"></A><B>E549</B>*
-<A HREF="#'guicursor'">'guicursor'</A> <A HREF="#'gcr'">'gcr'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20&quot;)
+<A HREF="#'guicursor'">'guicursor'</A> <A HREF="#'gcr'">'gcr'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20&quot;)
 			global
 	Configures the cursor style for each mode. Works in the <A HREF="gui.html#GUI">GUI</A> and many
 	terminals.  见 |<A HREF="term.html#tui-cursor-shape">tui-cursor-shape</A>|.
@@ -3135,7 +3135,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   n-v-c-sm:block,i-ci-ve:ver25-Cursor,r-cr-o:hor20
 				In <A HREF="intro.html#Normal">Normal</A> et al. modes, use a block cursor
 				with the default colors defined by the host
-				<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  In Insert-likes modes, use
+				<A HREF="nvim_terminal_emulator.html#terminal">终端</A>.  In Insert-likes modes, use
 				a vertical <A HREF="motion.html#bar">bar</A> cursor with colors from
 				&quot;Cursor&quot; highlight group.  In Replace-likes
 				modes, use a <A HREF="syntax.html#underline">underline</A> cursor with
@@ -3159,7 +3159,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 					*<A NAME="'guifont'"></A><B>'guifont'</B>* *<A NAME="'gfn'"></A><B>'gfn'</B>*
 
 						   *<A NAME="E235"></A><B>E235</B>* *<A NAME="E596"></A><B>E596</B>*
-<A HREF="#'guifont'">'guifont'</A> <A HREF="#'gfn'">'gfn'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'guifont'">'guifont'</A> <A HREF="#'gfn'">'gfn'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	This is a <A HREF="eval.html#list">列表</A> of fonts which will be used for the <A HREF="gui.html#GUI">GUI</A> version of Vim.
 	In its simplest form the value is just one font name.  When
@@ -3180,7 +3180,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	settings (for X, <A HREF="motion.html#it">它</A> will use the Vim.font resource), and finally <A HREF="motion.html#it">它</A>
 	will try some builtin default which should always be there (&quot;7x13&quot; in
 	the <A HREF="change.html#case">case</A> of X).  The font names given should be &quot;normal&quot; fonts.  Vim
-	will try to find the related <A HREF="syntax\.html#bold">粗体</A> and <A HREF="syntax\.html#bold">斜体</A> fonts.
+	will try to find the related <A HREF="syntax.html#bold">粗体</A> and <A HREF="syntax.html#bold">斜体</A> fonts.
 
 	For Win32 and Mac OS:
 <B>	    :set guifont=*</B>
@@ -3203,8 +3203,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	- takes these <A HREF="#options">options</A> in the font name:
 		hXX - height is XX (points, can be floating-point)
 		wXX - width is XX (points, can be floating-point)
-		<A HREF="motion.html#b">b</A>   - <A HREF="syntax\.html#bold">粗体</A>
-		<A HREF="insert.html#i">i</A>   - <A HREF="syntax\.html#bold">斜体</A>
+		<A HREF="motion.html#b">b</A>   - <A HREF="syntax.html#bold">粗体</A>
+		<A HREF="insert.html#i">i</A>   - <A HREF="syntax.html#bold">斜体</A>
 		<A HREF="undo.html#u">u</A>   - <A HREF="syntax.html#underline">underline</A>
 		<A HREF="change.html#s">s</A>   - strikeout
 		cXX - character set XX.  Valid charsets are: ANSI, ARABIC,
@@ -3222,7 +3222,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  
 
 				*<A NAME="'guifontwide'"></A><B>'guifontwide'</B>* *<A NAME="'gfw'"></A><B>'gfw'</B>* *<A NAME="E231"></A><B>E231</B>* *<A NAME="E533"></A><B>E533</B>* *<A NAME="E534"></A><B>E534</B>*
-<A HREF="#'guifontwide'">'guifontwide'</A> <A HREF="#'gfw'">'gfw'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'guifontwide'">'guifontwide'</A> <A HREF="#'gfw'">'gfw'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	Comma-separated <A HREF="eval.html#list">列表</A> of fonts to be used for double-width characters.
 	The first font that can be loaded is used.
@@ -3234,7 +3234,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'guioptions'"></A><B>'guioptions'</B>* *<A NAME="'go'"></A><B>'go'</B>*
-<A HREF="#'guioptions'">'guioptions'</A> <A HREF="#'go'">'go'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;egmrLT&quot;   (MS-Windows))
+<A HREF="#'guioptions'">'guioptions'</A> <A HREF="#'go'">'go'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;egmrLT&quot;   (MS-Windows))
 			global
 	This option only has an effect in the <A HREF="gui.html#GUI">GUI</A> version of Vim.  It is a
 	sequence of letters which describes what components and <A HREF="#options">options</A> of the
@@ -3358,7 +3358,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'guitablabel'"></A><B>'guitablabel'</B>* *<A NAME="'gtl'"></A><B>'gtl'</B>*
-<A HREF="#'guitablabel'">'guitablabel'</A> <A HREF="#'gtl'">'gtl'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'guitablabel'">'guitablabel'</A> <A HREF="#'gtl'">'gtl'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 	When non-empty describes the text to use in a label of the <A HREF="gui.html#GUI">GUI</A> <A HREF="intro.html#tab">tab</A>
 	pages line.  When empty and when the result is empty Vim will use a
@@ -3376,7 +3376,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'guitabtooltip'"></A><B>'guitabtooltip'</B>* *<A NAME="'gtt'"></A><B>'gtt'</B>*
-<A HREF="#'guitabtooltip'">'guitabtooltip'</A> <A HREF="#'gtt'">'gtt'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'guitabtooltip'">'guitabtooltip'</A> <A HREF="#'gtt'">'gtt'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 	When non-empty describes the text to use in a tooltip for the <A HREF="gui.html#GUI">GUI</A> <A HREF="intro.html#tab">tab</A>
 	pages line.  When empty Vim will use a default tooltip.
@@ -3387,7 +3387,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'helpfile'"></A><B>'helpfile'</B>* *<A NAME="'hf'"></A><B>'hf'</B>*
-<A HREF="#'helpfile'">'helpfile'</A> <A HREF="#'hf'">'hf'</A>		<A HREF="options\.html#options">字符串</A>	(default (MS-Windows) &quot;$VIMRUNTIME\doc\help.txt&quot;
+<A HREF="#'helpfile'">'helpfile'</A> <A HREF="#'hf'">'hf'</A>		<A HREF="options.html#options">字符串</A>	(default (MS-Windows) &quot;$VIMRUNTIME\doc\help.txt&quot;
 					 (others) &quot;$VIMRUNTIME/doc/help.txt&quot;)
 			global
 	Name of the main help file.  All distributed help files should be
@@ -3412,7 +3412,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'helplang'"></A><B>'helplang'</B>* *<A NAME="'hlg'"></A><B>'hlg'</B>*
-<A HREF="#'helplang'">'helplang'</A> <A HREF="#'hlg'">'hlg'</A>	<A HREF="options\.html#options">字符串</A>	(default: <A HREF="message.html#messages">信息</A> language or empty)
+<A HREF="#'helplang'">'helplang'</A> <A HREF="#'hlg'">'hlg'</A>	<A HREF="options.html#options">字符串</A>	(default: <A HREF="message.html#messages">信息</A> language or empty)
 			global
 	Comma-separated <A HREF="eval.html#list">列表</A> of languages.  Vim will use the first language
 	for which the desired help can be found.  The English help will always
@@ -3503,15 +3503,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#'iconstring'">'iconstring'</A> (if <A HREF="motion.html#it">它</A> is not empty), or to the name of the file
 	currently being edited.  Only the last part of the name is used.
 	Overridden by the <A HREF="#'iconstring'">'iconstring'</A> option.
-	Only works if the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports setting<A HREF="windows.html#window">窗口</A>icons.
+	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> supports setting<A HREF="windows.html#window">窗口</A>icons.
 
 
 						*<A NAME="'iconstring'"></A><B>'iconstring'</B>*
-<A HREF="#'iconstring'">'iconstring'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'iconstring'">'iconstring'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	When this option is not empty, <A HREF="motion.html#it">它</A> will be used for the icon text of
 	the<A HREF="windows.html#window">窗口</A>.  This happens only when the <A HREF="#'icon'">'icon'</A> option is on.
-	Only works if the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports setting<A HREF="windows.html#window">窗口</A>icon text
+	Only works if the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> supports setting<A HREF="windows.html#window">窗口</A>icon text
 	When this option contains printf-style '<A HREF="motion.html#&#37;">&#37;</A>' items, they will be
 	expanded according to the rules used for <A HREF="#'statusline'">'statusline'</A>.  See
 	<A HREF="#'titlestring'">'titlestring'</A> for example settings.
@@ -3583,7 +3583,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'inccommand'"></A><B>'inccommand'</B>* *<A NAME="'icm'"></A><B>'icm'</B>*
-<A HREF="#'inccommand'">'inccommand'</A> <A HREF="#'icm'">'icm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;nosplit&quot;)
+<A HREF="#'inccommand'">'inccommand'</A> <A HREF="#'icm'">'icm'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;nosplit&quot;)
 			global
 
 	When nonempty, shows the effects of |<A HREF="change.html#:substitute">:substitute</A>|, |<A HREF="change.html#:smagic">:smagic</A>|,
@@ -3602,7 +3602,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'include'"></A><B>'include'</B>* *<A NAME="'inc'"></A><B>'inc'</B>*
-<A HREF="#'include'">'include'</A> <A HREF="#'inc'">'inc'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;^\s*#\s*include&quot;)
+<A HREF="#'include'">'include'</A> <A HREF="#'inc'">'inc'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;^\s*#\s*include&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	<A HREF="pattern.html#Pattern">Pattern</A> to be used to find an include command.  It is a search
 	pattern, just like for the &quot;<A HREF="pattern.html#/">/</A>&quot;命令 (见 |<A HREF="pattern.html#pattern">pattern</A>|).  The default
@@ -3618,9 +3618,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'includeexpr'"></A><B>'includeexpr'</B>* *<A NAME="'inex'"></A><B>'inex'</B>*
-<A HREF="#'includeexpr'">'includeexpr'</A> <A HREF="#'inex'">'inex'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'includeexpr'">'includeexpr'</A> <A HREF="#'inex'">'inex'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
-	Expression to be used to transform the <A HREF="options\.html#options">字符串</A> found with the <A HREF="#'include'">'include'</A>
+	Expression to be used to transform the <A HREF="options.html#options">字符串</A> found with the <A HREF="#'include'">'include'</A>
 	option to a file name.  Mostly useful to change &quot;<A HREF="repeat.html#.">.</A>&quot; to &quot;<A HREF="pattern.html#/">/</A>&quot; for Java:
 <B>		:set includeexpr=substitute(v:fname,'\\.','/','g')</B>
  	The &quot;<A HREF="eval.html#v:fname">v:fname</A>&quot; variable will be set to the file name that was detected.
@@ -3641,7 +3641,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'incsearch'">'incsearch'</A> <A HREF="#'is'">'is'</A>	<A HREF="#boolean">boolean</A>	(default on)
 			global
 	While typing a search command, show where the <A HREF="pattern.html#pattern">pattern</A>, <A HREF="motion.html#as">as</A> <A HREF="motion.html#it">它</A> was typed
-	so far, matches.  The matched <A HREF="options\.html#options">字符串</A> is highlighted.  If the <A HREF="pattern.html#pattern">pattern</A>
+	so far, matches.  The matched <A HREF="options.html#options">字符串</A> is highlighted.  If the <A HREF="pattern.html#pattern">pattern</A>
 	is invalid or not found, nothing is shown.  The screen will be updated
 	often, this is only useful on fast terminals.
 	Note that the match will be shown, but the cursor will return to its
@@ -3674,7 +3674,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'indentexpr'"></A><B>'indentexpr'</B>* *<A NAME="'inde'"></A><B>'inde'</B>*
-<A HREF="#'indentexpr'">'indentexpr'</A> <A HREF="#'inde'">'inde'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'indentexpr'">'indentexpr'</A> <A HREF="#'inde'">'inde'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	Expression which is evaluated to obtain the proper indent for a line.
 	It is used when a new line is created, for the |<A HREF="change.html#=">=</A>| <A HREF="motion.html#operator">operator</A> and
@@ -3710,7 +3710,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'indentkeys'"></A><B>'indentkeys'</B>* *<A NAME="'indk'"></A><B>'indk'</B>*
-<A HREF="#'indentkeys'">'indentkeys'</A> <A HREF="#'indk'">'indk'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;0{,0},0),0],:,0#,!^F,o,O,e&quot;)
+<A HREF="#'indentkeys'">'indentkeys'</A> <A HREF="#'indk'">'indk'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;0{,0},0),0],:,0#,!^F,o,O,e&quot;)
 			local to buffer
 	A <A HREF="eval.html#list">列表</A> of keys that, when typed in <A HREF="intro.html#Insert">插入</A>模式, cause reindenting of
 	the current line.  Only happens if <A HREF="#'indentexpr'">'indentexpr'</A> isn't empty.
@@ -3732,7 +3732,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'isfname'"></A><B>'isfname'</B>* *<A NAME="'isf'"></A><B>'isf'</B>*
-<A HREF="#'isfname'">'isfname'</A> <A HREF="#'isf'">'isf'</A>		<A HREF="options\.html#options">字符串</A>	(default for Windows:
+<A HREF="#'isfname'">'isfname'</A> <A HREF="#'isf'">'isf'</A>		<A HREF="options.html#options">字符串</A>	(default for Windows:
 			     &quot;@,48-57,/,\,.,-,_,+,,,#,$,&#37;,{,},[,],:,@-@,!,~,=&quot;
 			    otherwise: &quot;@,48-57,/,.,-,_,+,,,#,$,&#37;,~,=&quot;)
 			global
@@ -3784,7 +3784,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'isident'"></A><B>'isident'</B>* *<A NAME="'isi'"></A><B>'isi'</B>*
-<A HREF="#'isident'">'isident'</A> <A HREF="#'isi'">'isi'</A>		<A HREF="options\.html#options">字符串</A>	(default for Windows:
+<A HREF="#'isident'">'isident'</A> <A HREF="#'isi'">'isi'</A>		<A HREF="options.html#options">字符串</A>	(default for Windows:
 					   &quot;@,48-57,_,128-167,224-235&quot;
 				otherwise: &quot;@,48-57,_,192-255&quot;)
 			global
@@ -3800,7 +3800,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'iskeyword'"></A><B>'iskeyword'</B>* *<A NAME="'isk'"></A><B>'isk'</B>*
-<A HREF="#'iskeyword'">'iskeyword'</A> <A HREF="#'isk'">'isk'</A>	<A HREF="options\.html#options">字符串</A> (default: @,48-57,_,192-255)
+<A HREF="#'iskeyword'">'iskeyword'</A> <A HREF="#'isk'">'isk'</A>	<A HREF="options.html#options">字符串</A> (default: @,48-57,_,192-255)
 			local to buffer
 	Keywords are used in searching and recognizing with many commands:
 	&quot;<A HREF="motion.html#w">w</A>&quot;, &quot;*&quot;, &quot;<A HREF="tagsrch.html#[i">[i</A>&quot;, etc.  It is also used for &quot;\k&quot; in a |<A HREF="pattern.html#pattern">pattern</A>|.  See
@@ -3817,7 +3817,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'isprint'"></A><B>'isprint'</B>* *<A NAME="'isp'"></A><B>'isp'</B>*
-<A HREF="#'isprint'">'isprint'</A> <A HREF="#'isp'">'isp'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;@,161-255&quot;)
+<A HREF="#'isprint'">'isprint'</A> <A HREF="#'isp'">'isp'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;@,161-255&quot;)
 			global
 	The characters given by this option are displayed directly on the
 	screen.  It is also used for &quot;\p&quot; in a |<A HREF="pattern.html#pattern">pattern</A>|.  The characters from
@@ -3848,7 +3848,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'jumpoptions'"></A><B>'jumpoptions'</B>* *<A NAME="'jop'"></A><B>'jop'</B>*
-<A HREF="#'jumpoptions'">'jumpoptions'</A> <A HREF="#'jop'">'jop'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'jumpoptions'">'jumpoptions'</A> <A HREF="#'jop'">'jop'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of words that change the behavior of the |<A HREF="motion.html#jumplist">jumplist</A>|.
 	  stack         Make the <A HREF="motion.html#jumplist">jumplist</A> behave like the <A HREF="tagsrch.html#tagstack">tagstack</A> or like a
@@ -3867,7 +3867,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'keymap'"></A><B>'keymap'</B>* *<A NAME="'kmp'"></A><B>'kmp'</B>* *<A NAME="E544"></A><B>E544</B>*
-<A HREF="#'keymap'">'keymap'</A> <A HREF="#'kmp'">'kmp'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'keymap'">'keymap'</A> <A HREF="#'kmp'">'kmp'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	Name of a keyboard <A HREF="map.html#mapping">mapping</A>.  见 |<A HREF="mbyte.html#mbyte-keymap">mbyte-keymap</A>|.
 	Setting this option to a valid keymap name has the side effect of
@@ -3877,7 +3877,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'keymodel'"></A><B>'keymodel'</B>* *<A NAME="'km'"></A><B>'km'</B>*
-<A HREF="#'keymodel'">'keymodel'</A> <A HREF="#'km'">'km'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'keymodel'">'keymodel'</A> <A HREF="#'km'">'km'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of comma-separated words, which enable special things that keys
 	can <A HREF="diff.html#do">do</A>.  These values can be used:
@@ -3891,7 +3891,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'keywordprg'"></A><B>'keywordprg'</B>* *<A NAME="'kp'"></A><B>'kp'</B>*
-<A HREF="#'keywordprg'">'keywordprg'</A> <A HREF="#'kp'">'kp'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="filetype.html#:Man">:Man</A>&quot;, Windows: &quot;<A HREF="helphelp.html#:help">:help</A>&quot;)
+<A HREF="#'keywordprg'">'keywordprg'</A> <A HREF="#'kp'">'kp'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="filetype.html#:Man">:Man</A>&quot;, Windows: &quot;<A HREF="helphelp.html#:help">:help</A>&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Program to use for the |<A HREF="various.html#K">K</A>| command.  Environment <A HREF="eval.html#variables">variables</A> are
 	expanded |<A HREF="#:set_env">:set_env</A>|.  &quot;<A HREF="helphelp.html#:help">:help</A>&quot; may be used to access the Vim internal
@@ -3910,7 +3910,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'langmap'"></A><B>'langmap'</B>* *<A NAME="'lmap'"></A><B>'lmap'</B>* *<A NAME="E357"></A><B>E357</B>* *<A NAME="E358"></A><B>E358</B>*
-<A HREF="#'langmap'">'langmap'</A> <A HREF="#'lmap'">'lmap'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'langmap'">'langmap'</A> <A HREF="#'lmap'">'lmap'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	This option allows switching your keyboard into a special language
 	mode.  When you are typing text in <A HREF="intro.html#Insert">插入</A>模式 the characters are
@@ -3955,7 +3955,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'langmenu'"></A><B>'langmenu'</B>* *<A NAME="'lm'"></A><B>'lm'</B>*
-<A HREF="#'langmenu'">'langmenu'</A> <A HREF="#'lm'">'lm'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'langmenu'">'langmenu'</A> <A HREF="#'lm'">'lm'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	Language to use for menu translation.  Tells which file is loaded
 	from the &quot;lang&quot; directory in <A HREF="#'runtimepath'">'runtimepath'</A>:
@@ -4022,11 +4022,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'lines'"></A><B>'lines'</B>* *<A NAME="E593"></A><B>E593</B>*
-<A HREF="#'lines'">'lines'</A>			number	(default 24 or <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> height)
+<A HREF="#'lines'">'lines'</A>			number	(default 24 or <A HREF="nvim_terminal_emulator.html#terminal">终端</A> height)
 			global
 	<A HREF="eval.html#Number">Number</A> of lines of the Vim<A HREF="windows.html#window">窗口</A>.
 	Normally you don't need to set this.  It is done automatically by the
-	<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="starting.html#initialization">initialization</A> code.
+	<A HREF="nvim_terminal_emulator.html#terminal">终端</A> <A HREF="starting.html#initialization">initialization</A> code.
 	When Vim is running in the <A HREF="gui.html#GUI">GUI</A> or in a resizable<A HREF="windows.html#window">窗口</A>, setting this
 	option will cause the<A HREF="windows.html#window">窗口</A>size to be changed.  When you only want
 	to use the size for the <A HREF="gui.html#GUI">GUI</A>, put the command in your |<A HREF="gui.html#gvimrc">gvimrc</A>| file.
@@ -4064,7 +4064,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'lispwords'"></A><B>'lispwords'</B>* *<A NAME="'lw'"></A><B>'lw'</B>*
-<A HREF="#'lispwords'">'lispwords'</A> <A HREF="#'lw'">'lw'</A>	<A HREF="options\.html#options">字符串</A>	(default is very long)
+<A HREF="#'lispwords'">'lispwords'</A> <A HREF="#'lw'">'lw'</A>	<A HREF="options.html#options">字符串</A>	(default is very long)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Comma-separated <A HREF="eval.html#list">列表</A> of words that influence the Lisp indenting.
 	|<A HREF="#'lisp'">'lisp'</A>|
@@ -4089,10 +4089,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'listchars'"></A><B>'listchars'</B>* *<A NAME="'lcs'"></A><B>'lcs'</B>*
-<A HREF="#'listchars'">'listchars'</A> <A HREF="#'lcs'">'lcs'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;tab:&gt; ,trail:-,nbsp:+&quot;)
+<A HREF="#'listchars'">'listchars'</A> <A HREF="#'lcs'">'lcs'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;tab:&gt; ,trail:-,nbsp:+&quot;)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	Strings to use in <A HREF="#'list'">'list'</A> mode and for the |<A HREF="various.html#:list">:list</A>| command.  It is a
-	comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="options\.html#options">字符串</A> settings.
+	comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="options.html#options">字符串</A> settings.
 
 
 							*<A NAME="lcs-eol"></A><B>lcs-eol</B>*
@@ -4209,7 +4209,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'makeef'"></A><B>'makeef'</B>* *<A NAME="'mef'"></A><B>'mef'</B>*
-<A HREF="#'makeef'">'makeef'</A> <A HREF="#'mef'">'mef'</A>		<A HREF="options\.html#options">字符串</A>	(default: &quot;&quot;)
+<A HREF="#'makeef'">'makeef'</A> <A HREF="#'mef'">'mef'</A>		<A HREF="options.html#options">字符串</A>	(default: &quot;&quot;)
 			global
 	Name of the errorfile for the |<A HREF="quickfix.html#:make">:make</A>| command (见 |<A HREF="quickfix.html#:make_makeprg">:make_makeprg</A>|)
 	and the |<A HREF="quickfix.html#:grep">:grep</A>| command.
@@ -4225,7 +4225,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'makeencoding'"></A><B>'makeencoding'</B>* *<A NAME="'menc'"></A><B>'menc'</B>*
-<A HREF="#'makeencoding'">'makeencoding'</A> <A HREF="#'menc'">'menc'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'makeencoding'">'makeencoding'</A> <A HREF="#'menc'">'menc'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Encoding used for reading the output of external commands.  When empty,
 	encoding is not converted.
@@ -4240,7 +4240,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  
 
 						*<A NAME="'makeprg'"></A><B>'makeprg'</B>* *<A NAME="'mp'"></A><B>'mp'</B>*
-<A HREF="#'makeprg'">'makeprg'</A> <A HREF="#'mp'">'mp'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;make&quot;)
+<A HREF="#'makeprg'">'makeprg'</A> <A HREF="#'mp'">'mp'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;make&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Program to use for the &quot;:make&quot; command.  见 |<A HREF="quickfix.html#:make_makeprg">:make_makeprg</A>|.
 	This option may contain '&#37;' and '#' characters (see  |<A HREF="cmdline.html#:_&#37;">:_&#37;</A>| and |<A HREF="cmdline.html#:_#">:_#</A>|),
@@ -4260,7 +4260,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'matchpairs'"></A><B>'matchpairs'</B>* *<A NAME="'mps'"></A><B>'mps'</B>*
-<A HREF="#'matchpairs'">'matchpairs'</A> <A HREF="#'mps'">'mps'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;(:),{:},[:]&quot;)
+<A HREF="#'matchpairs'">'matchpairs'</A> <A HREF="#'mps'">'mps'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;(:),{:},[:]&quot;)
 			local to buffer
 	Characters that form pairs.  The |<A HREF="motion.html#&#37;">&#37;</A>| command jumps from one to the
 	other.
@@ -4336,7 +4336,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'mkspellmem'"></A><B>'mkspellmem'</B>* *<A NAME="'msm'"></A><B>'msm'</B>*
-<A HREF="#'mkspellmem'">'mkspellmem'</A> <A HREF="#'msm'">'msm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;460000,2000,500&quot;)
+<A HREF="#'mkspellmem'">'mkspellmem'</A> <A HREF="#'msm'">'msm'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;460000,2000,500&quot;)
 			global
 	Parameters for |<A HREF="spell.html#:mkspell">:mkspell</A>|.  This tunes when to start compressing the
 	<A HREF="motion.html#word">单词</A> tree.  Compression can be slow when there are many words, but
@@ -4426,7 +4426,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   Similarly for <A HREF="#'eol'">'eol'</A> and <A HREF="#'bomb'">'bomb'</A>.
 	This option is not set when a change is made to the buffer <A HREF="motion.html#as">as</A> the
 	result of a <A HREF="autocmd.html#BufNewFile">BufNewFile</A>, BufRead/BufReadPost, <A HREF="autocmd.html#BufWritePost">BufWritePost</A>,
-	<A HREF="autocmd.html#FileAppendPost">FileAppendPost</A> or <A HREF="autocmd.html#VimLeave">VimLeave</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event.  见 |<A HREF="autocmd.html#gzip-example">gzip-example</A>| for
+	<A HREF="autocmd.html#FileAppendPost">FileAppendPost</A> or <A HREF="autocmd.html#VimLeave">VimLeave</A> <A HREF="autocmd.html#autocommand">自动命令</A> event.  见 |<A HREF="autocmd.html#gzip-example">gzip-example</A>| for
 	an explanation.
 	When <A HREF="#'buftype'">'buftype'</A> is &quot;nowrite&quot; or &quot;nofile&quot; this option may be set, but
 	will be ignored.
@@ -4443,7 +4443,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'mouse'"></A><B>'mouse'</B>*
-<A HREF="#'mouse'">'mouse'</A>			<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'mouse'">'mouse'</A>			<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 
 	Enables mouse support. For example, to enable the mouse in <A HREF="intro.html#Normal">正常</A>模式
@@ -4474,7 +4474,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 	For <A HREF="scroll.html#scrolling">scrolling</A> with a mouse wheel 见 |<A HREF="scroll.html#scroll-mouse-wheel">scroll-mouse-wheel</A>|.
 
-	Note: When enabling the mouse in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, copy/paste will use the
+	Note: When enabling the mouse in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>, copy/paste will use the
 	&quot;* <A HREF="intro.html#register">寄存器</A> if possible. See also <A HREF="#'clipboard'">'clipboard'</A>.
 
 	Related <A HREF="#options">options</A>:
@@ -4519,7 +4519,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'mousemodel'"></A><B>'mousemodel'</B>* *<A NAME="'mousem'"></A><B>'mousem'</B>*
-<A HREF="#'mousemodel'">'mousemodel'</A> <A HREF="#'mousem'">'mousem'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;extend&quot;)
+<A HREF="#'mousemodel'">'mousemodel'</A> <A HREF="#'mousem'">'mousem'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;extend&quot;)
 			global
 	Sets the model to use for the mouse.  The name mostly specifies what
 	the right mouse button is used for:
@@ -4573,7 +4573,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					*<A NAME="'mouseshape'"></A><B>'mouseshape'</B>* *<A NAME="'mouses'"></A><B>'mouses'</B>* *<A NAME="E547"></A><B>E547</B>*
-<A HREF="#'mouseshape'">'mouseshape'</A> <A HREF="#'mouses'">'mouses'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;i:beam,r:beam,s:updown,sd:cross,
+<A HREF="#'mouseshape'">'mouseshape'</A> <A HREF="#'mouses'">'mouses'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;i:beam,r:beam,s:updown,sd:cross,
 					m:no,ml:up-arrow,v:rightup-arrow&quot;)
 			global
 	This option tells Vim what the mouse pointer should look like in
@@ -4644,7 +4644,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 							*<A NAME="'nrformats'"></A><B>'nrformats'</B>* *<A NAME="'nf'"></A><B>'nf'</B>*
-<A HREF="#'nrformats'">'nrformats'</A> <A HREF="#'nf'">'nf'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;bin,hex&quot;)
+<A HREF="#'nrformats'">'nrformats'</A> <A HREF="#'nf'">'nf'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;bin,hex&quot;)
 			local to buffer
 	This defines what bases Vim will consider for numbers when using the
 	<A HREF="change.html#CTRL-A">CTRL-A</A> and <A HREF="change.html#CTRL-X">CTRL-X</A> commands for adding to and subtracting from a number
@@ -4705,7 +4705,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'numberwidth'">'numberwidth'</A> <A HREF="#'nuw'">'nuw'</A>	number	(default: 4)
 			local to<A HREF="windows.html#window">窗口</A>
 	Minimal number of columns to use for the line number.  Only relevant
-	when the <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A> option is set or <A HREF="print\.html#printing">打印</A> lines
+	when the <A HREF="#'number'">'number'</A> or <A HREF="#'relativenumber'">'relativenumber'</A> option is set or <A HREF="print.html#printing">打印</A> lines
 	with a line number. Since one space is always between the number and
 	the text, there is one <A HREF="various.html#less">less</A> character for the number itself.
 	The value is the minimum width.  A bigger width is used when needed to
@@ -4717,7 +4717,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'omnifunc'"></A><B>'omnifunc'</B>* *<A NAME="'ofu'"></A><B>'ofu'</B>*
-<A HREF="#'omnifunc'">'omnifunc'</A> <A HREF="#'ofu'">'ofu'</A>	<A HREF="options\.html#options">字符串</A>	(default: empty)
+<A HREF="#'omnifunc'">'omnifunc'</A> <A HREF="#'ofu'">'ofu'</A>	<A HREF="options.html#options">字符串</A>	(default: empty)
 			local to buffer
 	This option specifies a function to be used for <A HREF="intro.html#Insert">插入</A>模式 omni
 	completion with CTRL-X CTRL-O. |<A HREF="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</A>|
@@ -4743,7 +4743,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'operatorfunc'"></A><B>'operatorfunc'</B>* *<A NAME="'opfunc'"></A><B>'opfunc'</B>*
-<A HREF="#'operatorfunc'">'operatorfunc'</A> <A HREF="#'opfunc'">'opfunc'</A>	<A HREF="options\.html#options">字符串</A>	(default: empty)
+<A HREF="#'operatorfunc'">'operatorfunc'</A> <A HREF="#'opfunc'">'opfunc'</A>	<A HREF="options.html#options">字符串</A>	(default: empty)
 			global
 	This option specifies a function to be called by the |<A HREF="map.html#g@">g@</A>| <A HREF="motion.html#operator">operator</A>.
 	见 |<A HREF="map.html#:map-operator">:map-operator</A>| for more info and an example.
@@ -4753,13 +4753,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 				*<A NAME="'packpath'"></A><B>'packpath'</B>* *<A NAME="'pp'"></A><B>'pp'</B>*
-<A HREF="#'packpath'">'packpath'</A> <A HREF="#'pp'">'pp'</A>		<A HREF="options\.html#options">字符串</A>	(default: see <A HREF="#'runtimepath'">'runtimepath'</A>)
+<A HREF="#'packpath'">'packpath'</A> <A HREF="#'pp'">'pp'</A>		<A HREF="options.html#options">字符串</A>	(default: see <A HREF="#'runtimepath'">'runtimepath'</A>)
 	Directories used to find packages.  见 |<A HREF="repeat.html#packages">packages</A>| and |<A HREF="#rtp-packages">rtp-packages</A>|.
 
 
 
 						*<A NAME="'paragraphs'"></A><B>'paragraphs'</B>* *<A NAME="'para'"></A><B>'para'</B>*
-<A HREF="#'paragraphs'">'paragraphs'</A> <A HREF="#'para'">'para'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;IPLPPPQPP TPHPLIPpLpItpplpipbp&quot;)
+<A HREF="#'paragraphs'">'paragraphs'</A> <A HREF="#'para'">'para'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;IPLPPPQPP TPHPLIPpLpItpplpipbp&quot;)
 			global
 	Specifies the nroff macros that separate paragraphs.  These are pairs
 	of two letters (见 |<A HREF="motion.html#object-motions">object-motions</A>|).
@@ -4773,13 +4773,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Put Vim in Paste mode.  This is useful if you want to cut or copy
 	some text from one<A HREF="windows.html#window">窗口</A>and <A HREF="provider.html#paste">paste</A> <A HREF="motion.html#it">它</A> in Vim.  This will avoid
 	unexpected effects.
-	Setting this option is useful when using Vim in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, where Vim
+	Setting this option is useful when using Vim in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>, where Vim
 	cannot distinguish between typed text and pasted text.  In the <A HREF="gui.html#GUI">GUI</A>, Vim
 	knows about pasting and will mostly <A HREF="diff.html#do">do</A> the right thing without <A HREF="#'paste'">'paste'</A>
-	being set.  The same is true for a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> where Vim handles the
+	being set.  The same is true for a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> where Vim handles the
 	mouse clicks itself.
 	This option is reset when starting the <A HREF="gui.html#GUI">GUI</A>.  Thus if you set <A HREF="motion.html#it">它</A> in
-	your <A HREF="starting.html#vimrc">vimrc</A> <A HREF="motion.html#it">它</A> will work in a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>, but not in the <A HREF="gui.html#GUI">GUI</A>.  Setting
+	your <A HREF="starting.html#vimrc">vimrc</A> <A HREF="motion.html#it">它</A> will work in a <A HREF="nvim_terminal_emulator.html#terminal">终端</A>, but not in the <A HREF="gui.html#GUI">GUI</A>.  Setting
 	<A HREF="#'paste'">'paste'</A> in the <A HREF="gui.html#GUI">GUI</A> has side effects: e.g., the Paste toolbar button
 	will no longer work in <A HREF="intro.html#Insert">插入</A>模式, because <A HREF="motion.html#it">它</A> uses a <A HREF="map.html#mapping">mapping</A>.
 	When the <A HREF="#'paste'">'paste'</A> option is switched on (also when <A HREF="motion.html#it">它</A> was already on):
@@ -4814,7 +4814,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'pastetoggle'"></A><B>'pastetoggle'</B>* *<A NAME="'pt'"></A><B>'pt'</B>*
-<A HREF="#'pastetoggle'">'pastetoggle'</A> <A HREF="#'pt'">'pt'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'pastetoggle'">'pastetoggle'</A> <A HREF="#'pt'">'pt'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	When non-empty, specifies the key sequence that toggles the <A HREF="#'paste'">'paste'</A>
 	option.  This is like specifying a <A HREF="map.html#mapping">mapping</A>:
@@ -4839,23 +4839,23 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'pex'"></A><B>'pex'</B>* *<A NAME="'patchexpr'"></A><B>'patchexpr'</B>*
-<A HREF="#'patchexpr'">'patchexpr'</A> <A HREF="#'pex'">'pex'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'patchexpr'">'patchexpr'</A> <A HREF="#'pex'">'pex'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	Expression which is evaluated to apply a patch to a file and generate
 	the resulting new version of the file.  见 |<A HREF="diff.html#diff-patchexpr">diff-patchexpr</A>|.
 
 
 					*<A NAME="'patchmode'"></A><B>'patchmode'</B>* *<A NAME="'pm'"></A><B>'pm'</B>* *<A NAME="E205"></A><B>E205</B>* *<A NAME="E206"></A><B>E206</B>*
-<A HREF="#'patchmode'">'patchmode'</A> <A HREF="#'pm'">'pm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'patchmode'">'patchmode'</A> <A HREF="#'pm'">'pm'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	When non-empty the oldest version of a file is kept.  This can be used
 	to keep the original version of a file if you are <A HREF="change.html#changing">changing</A> files in a
 	source <A HREF="intro.html#distribution">distribution</A>.  Only the first time that a file is written a
 	copy of the original file will be kept.  The name of the copy is the
-	name of the original file with the <A HREF="options\.html#options">字符串</A> in the <A HREF="#'patchmode'">'patchmode'</A> option
-	appended.  This option should start with a dot.  Use a <A HREF="options\.html#options">字符串</A> like
+	name of the original file with the <A HREF="options.html#options">字符串</A> in the <A HREF="#'patchmode'">'patchmode'</A> option
+	appended.  This option should start with a dot.  Use a <A HREF="options.html#options">字符串</A> like
 	&quot;.orig&quot; or &quot;.org&quot;.  <A HREF="#'backupdir'">'backupdir'</A> must not be empty for this to work
-	(Detail: the <A HREF="editing\.html#backup">备份</A>文件 is renamed to the patchmode file after the
+	(Detail: the <A HREF="editing.html#backup">备份</A>文件 is renamed to the patchmode file after the
 	new file has been successfully written, that's why <A HREF="motion.html#it">它</A> must be possible
 	to write a <A HREF="editing.html#backup">backup</A> file).  If there was no file to be backed up, an
 	empty file is created.
@@ -4867,7 +4867,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 				*<A NAME="'path'"></A><B>'path'</B>* *<A NAME="'pa'"></A><B>'pa'</B>* *<A NAME="E343"></A><B>E343</B>* *<A NAME="E345"></A><B>E345</B>* *<A NAME="E347"></A><B>E347</B>* *<A NAME="E854"></A><B>E854</B>*
-<A HREF="#'path'">'path'</A> <A HREF="#'pa'">'pa'</A>		<A HREF="options\.html#options">字符串</A>	(default on Unix: &quot;.,/usr/include,,&quot;
+<A HREF="#'path'">'path'</A> <A HREF="#'pa'">'pa'</A>		<A HREF="options.html#options">字符串</A>	(default on Unix: &quot;.,/usr/include,,&quot;
 				   other systems: &quot;.,,&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	This is a <A HREF="eval.html#list">列表</A> of directories which will be searched when using the
@@ -4886,7 +4886,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B>		:set path=.,/dir/with\\,comma</B>
  	- To search relative to the directory of the current file, use:
 <B>		:set path=.</B>
- 	- To search in the current directory use an empty <A HREF="options\.html#options">字符串</A> between two
+ 	- To search in the current directory use an empty <A HREF="options.html#options">字符串</A> between two
 	  commas:
 <B>		:set path=,,</B>
  	- A directory name may end in a '<A HREF="cmdline.html#:">:</A>' or '<A HREF="pattern.html#/">/</A>'.
@@ -4954,7 +4954,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'printdevice'"></A><B>'printdevice'</B>* *<A NAME="'pdev'"></A><B>'pdev'</B>*
-<A HREF="#'printdevice'">'printdevice'</A> <A HREF="#'pdev'">'pdev'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'printdevice'">'printdevice'</A> <A HREF="#'pdev'">'pdev'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 	The name of the printer to be used for |<A HREF="print.html#:hardcopy">:hardcopy</A>|.
 	见 |<A HREF="print.html#pdev-option">pdev-option</A>|.
@@ -4963,14 +4963,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'printencoding'"></A><B>'printencoding'</B>* *<A NAME="'penc'"></A><B>'penc'</B>*
-<A HREF="#'printencoding'">'printencoding'</A> <A HREF="#'penc'">'penc'</A>	<A HREF="options\.html#options">字符串</A>	(default empty, except for some systems)
+<A HREF="#'printencoding'">'printencoding'</A> <A HREF="#'penc'">'penc'</A>	<A HREF="options.html#options">字符串</A>	(default empty, except for some systems)
 			global
-	Sets the character encoding used when <A HREF="print\.html#printing">打印</A>.
+	Sets the character encoding used when <A HREF="print.html#printing">打印</A>.
 	见 |<A HREF="print.html#penc-option">penc-option</A>|.
 
 
 						*<A NAME="'printexpr'"></A><B>'printexpr'</B>* *<A NAME="'pexpr'"></A><B>'pexpr'</B>*
-<A HREF="#'printexpr'">'printexpr'</A> <A HREF="#'pexpr'">'pexpr'</A>	<A HREF="options\.html#options">字符串</A>	(default: see below)
+<A HREF="#'printexpr'">'printexpr'</A> <A HREF="#'pexpr'">'pexpr'</A>	<A HREF="options.html#options">字符串</A>	(default: see below)
 			global
 	Expression used to print the PostScript produced with |<A HREF="print.html#:hardcopy">:hardcopy</A>|.
 	见 |<A HREF="print.html#pexpr-option">pexpr-option</A>|.
@@ -4979,35 +4979,35 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'printfont'"></A><B>'printfont'</B>* *<A NAME="'pfn'"></A><B>'pfn'</B>*
-<A HREF="#'printfont'">'printfont'</A> <A HREF="#'pfn'">'pfn'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;courier&quot;)
+<A HREF="#'printfont'">'printfont'</A> <A HREF="#'pfn'">'pfn'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;courier&quot;)
 			global
 	The name of the font that will be used for |<A HREF="print.html#:hardcopy">:hardcopy</A>|.
 	见 |<A HREF="print.html#pfn-option">pfn-option</A>|.
 
 
 						*<A NAME="'printheader'"></A><B>'printheader'</B>* *<A NAME="'pheader'"></A><B>'pheader'</B>*
-<A HREF="#'printheader'">'printheader'</A> <A HREF="#'pheader'">'pheader'</A>  <A HREF="options\.html#options">字符串</A>  (default &quot;&#37;&lt;&#37;f&#37;h&#37;m&#37;=Page &#37;N&quot;)
+<A HREF="#'printheader'">'printheader'</A> <A HREF="#'pheader'">'pheader'</A>  <A HREF="options.html#options">字符串</A>  (default &quot;&#37;&lt;&#37;f&#37;h&#37;m&#37;=Page &#37;N&quot;)
 			global
 	The format of the header produced in |<A HREF="print.html#:hardcopy">:hardcopy</A>| output.
 	见 |<A HREF="print.html#pheader-option">pheader-option</A>|.
 
 
 						*<A NAME="'printmbcharset'"></A><B>'printmbcharset'</B>* *<A NAME="'pmbcs'"></A><B>'pmbcs'</B>*
-<A HREF="#'printmbcharset'">'printmbcharset'</A> <A HREF="#'pmbcs'">'pmbcs'</A>  <A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'printmbcharset'">'printmbcharset'</A> <A HREF="#'pmbcs'">'pmbcs'</A>  <A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 	The CJK character set to be used for CJK output from |<A HREF="print.html#:hardcopy">:hardcopy</A>|.
 	见 |<A HREF="print.html#pmbcs-option">pmbcs-option</A>|.
 
 
 						*<A NAME="'printmbfont'"></A><B>'printmbfont'</B>* *<A NAME="'pmbfn'"></A><B>'pmbfn'</B>*
-<A HREF="#'printmbfont'">'printmbfont'</A> <A HREF="#'pmbfn'">'pmbfn'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'printmbfont'">'printmbfont'</A> <A HREF="#'pmbfn'">'pmbfn'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of font names to be used for CJK output from |<A HREF="print.html#:hardcopy">:hardcopy</A>|.
 	见 |<A HREF="print.html#pmbfn-option">pmbfn-option</A>|.
 
 
 						*<A NAME="'printoptions'"></A><B>'printoptions'</B>* *<A NAME="'popt'"></A><B>'popt'</B>*
-<A HREF="#'printoptions'">'printoptions'</A> <A HREF="#'popt'">'popt'</A> <A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'printoptions'">'printoptions'</A> <A HREF="#'popt'">'popt'</A> <A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of items that <A HREF="intro.html#control">control</A> the format of the output of |<A HREF="print.html#:hardcopy">:hardcopy</A>|.
 	见 |<A HREF="print.html#popt-option">popt-option</A>|.
@@ -5057,7 +5057,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'quickfixtextfunc'"></A><B>'quickfixtextfunc'</B>* *<A NAME="'qftf'"></A><B>'qftf'</B>*
-<A HREF="#'quickfixtextfunc'">'quickfixtextfunc'</A> <A HREF="#'qftf'">'qftf'</A>	<A HREF="options\.html#options">字符串</A> (default &quot;&quot;)
+<A HREF="#'quickfixtextfunc'">'quickfixtextfunc'</A> <A HREF="#'qftf'">'qftf'</A>	<A HREF="options.html#options">字符串</A> (default &quot;&quot;)
 			global
 	This option specifies a function to be used to get the text to display
 	in the <A HREF="quickfix.html#quickfix">quickfix</A> and location <A HREF="eval.html#list">列表</A> <A HREF="windows.html#windows">窗口</A>.  This can be used to
@@ -5072,13 +5072,13 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'quoteescape'"></A><B>'quoteescape'</B>* *<A NAME="'qe'"></A><B>'qe'</B>*
-<A HREF="#'quoteescape'">'quoteescape'</A> <A HREF="#'qe'">'qe'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;\&quot;)
+<A HREF="#'quoteescape'">'quoteescape'</A> <A HREF="#'qe'">'qe'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;\&quot;)
 			local to buffer
-	The characters that are used to <A HREF="intro.html#escape">escape</A> quotes in a <A HREF="options\.html#options">字符串</A>.  Used for
+	The characters that are used to <A HREF="intro.html#escape">escape</A> quotes in a <A HREF="options.html#options">字符串</A>.  Used for
 	<A HREF="vimindex.html#objects">objects</A> like a', a&quot; and <A HREF="motion.html#a`">a`</A> |<A HREF="motion.html#a'">a'</A>|.
-	When one of the characters in this option is found inside a <A HREF="options\.html#options">字符串</A>,
+	When one of the characters in this option is found inside a <A HREF="options.html#options">字符串</A>,
 	the following character will be skipped.  The default value makes the
-	text &quot;foo\&quot;bar\\&quot; considered to be one <A HREF="options\.html#options">字符串</A>.
+	text &quot;foo\&quot;bar\\&quot; considered to be one <A HREF="options.html#options">字符串</A>.
 
 
 				   *<A NAME="'readonly'"></A><B>'readonly'</B>* *<A NAME="'ro'"></A><B>'ro'</B>* *<A NAME="'noreadonly'"></A><B>'noreadonly'</B>* *<A NAME="'noro'"></A><B>'noro'</B>*
@@ -5095,7 +5095,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'redrawdebug'"></A><B>'redrawdebug'</B>* *<A NAME="'rdb'"></A><B>'rdb'</B>*
-<A HREF="#'redrawdebug'">'redrawdebug'</A> <A HREF="#'rdb'">'rdb'</A>	<A HREF="options\.html#options">字符串</A>	(default <A HREF="motion.html#''">''</A>)
+<A HREF="#'redrawdebug'">'redrawdebug'</A> <A HREF="#'rdb'">'rdb'</A>	<A HREF="options.html#options">字符串</A>	(default <A HREF="motion.html#''">''</A>)
 			global
 	Flags to change the way redrawing works, for debugging purposes.
 	Most useful with <A HREF="#'writedelay'">'writedelay'</A> set to some reasonable value.
@@ -5212,7 +5212,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 			*<A NAME="'rightleftcmd'"></A><B>'rightleftcmd'</B>* *<A NAME="'rlc'"></A><B>'rlc'</B>*
-<A HREF="#'rightleftcmd'">'rightleftcmd'</A> <A HREF="#'rlc'">'rlc'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;search&quot;)
+<A HREF="#'rightleftcmd'">'rightleftcmd'</A> <A HREF="#'rlc'">'rlc'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;search&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	Each <A HREF="motion.html#word">单词</A> in this option enables the command line editing to work in
 	right-to-left mode for a group of commands:
@@ -5251,10 +5251,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'rulerformat'"></A><B>'rulerformat'</B>* *<A NAME="'ruf'"></A><B>'ruf'</B>*
-<A HREF="#'rulerformat'">'rulerformat'</A> <A HREF="#'ruf'">'ruf'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'rulerformat'">'rulerformat'</A> <A HREF="#'ruf'">'ruf'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 	When this option is not empty, <A HREF="motion.html#it">它</A> determines the content of the ruler
-	<A HREF="options\.html#options">字符串</A>, <A HREF="motion.html#as">as</A> displayed for the <A HREF="#'ruler'">'ruler'</A> option.
+	<A HREF="options.html#options">字符串</A>, <A HREF="motion.html#as">as</A> displayed for the <A HREF="#'ruler'">'ruler'</A> option.
 	The format of this option is like that of <A HREF="#'statusline'">'statusline'</A>.
 	This option cannot be set in a <A HREF="#modeline">modeline</A> when <A HREF="#'modelineexpr'">'modelineexpr'</A> is off.
 
@@ -5265,7 +5265,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  
 
 				*<A NAME="'runtimepath'"></A><B>'runtimepath'</B>* *<A NAME="'rtp'"></A><B>'rtp'</B>* *<A NAME="vimfiles"></A><B>vimfiles</B>*
-<A HREF="#'runtimepath'">'runtimepath'</A> <A HREF="#'rtp'">'rtp'</A>	<A HREF="options\.html#options">字符串</A>	(default:     &quot;$XDG_CONFIG_HOME/nvim,
+<A HREF="#'runtimepath'">'runtimepath'</A> <A HREF="#'rtp'">'rtp'</A>	<A HREF="options.html#options">字符串</A>	(default:     &quot;$XDG_CONFIG_HOME/nvim,
 					       $XDG_CONFIG_DIRS[1]/nvim,
 					       $XDG_CONFIG_DIRS[2]/nvim,
 					       …
@@ -5297,7 +5297,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	  menu.vim	<A HREF="gui.html#GUI">GUI</A> <A HREF="gui.html#menus">menus</A> |<A HREF="menu.html">menu.vim</A>|
 	  pack/		<A HREF="repeat.html#packages">packages</A> |<A HREF="repeat.html#:packadd">:packadd</A>|
 	  plugin/	plugin scripts |<A HREF="usr_41.html#write-plugin">write-plugin</A>|
-	  print/	files for <A HREF="print\.html#printing">打印</A> |<A HREF="print.html#postscript-print-encoding">postscript-print-encoding</A>|
+	  print/	files for <A HREF="print.html#printing">打印</A> |<A HREF="print.html#postscript-print-encoding">postscript-print-encoding</A>|
 	  rplugin/	|<A HREF="remote_plugin.html#remote-plugin">remote-plugin</A>| scripts
 	  spell/	spell checking files |<A HREF="spell.html#spell">拼写</A>|
 	  syntax/	syntax files |<A HREF="syntax.html#mysyntaxfile">mysyntaxfile</A>|
@@ -5375,7 +5375,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Maximum number of lines kept beyond the visible screen. Lines at the
 	top are deleted if new lines exceed this limit.
 	Minimum is 1, maximum is 100000.
-	Only in |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| <A HREF="windows.html#buffers">buffers</A>.
+	Only in |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>| <A HREF="windows.html#buffers">buffers</A>.
 
 
 			*<A NAME="'scrollbind'"></A><B>'scrollbind'</B>* *<A NAME="'scb'"></A><B>'scb'</B>* *<A NAME="'noscrollbind'"></A><B>'noscrollbind'</B>* *<A NAME="'noscb'"></A><B>'noscb'</B>*
@@ -5397,7 +5397,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	Minimal number of lines to scroll when the cursor gets off the
 	screen (e.g., with &quot;j&quot;).  Not used for scroll commands (e.g., <A HREF="scroll.html#CTRL-E">CTRL-E</A>,
-	<A HREF="scroll.html#CTRL-D">CTRL-D</A>).  Useful if your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> scrolls very slowly.
+	<A HREF="scroll.html#CTRL-D">CTRL-D</A>).  Useful if your <A HREF="nvim_terminal_emulator.html#terminal">终端</A> scrolls very slowly.
 	When set to a negative number from -1 to -100 this is used <A HREF="motion.html#as">as</A> the
 	percentage of the<A HREF="windows.html#window">窗口</A>height.  Thus -50 scrolls half the<A HREF="windows.html#window">窗口</A>
 	height.
@@ -5419,7 +5419,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'scrollopt'"></A><B>'scrollopt'</B>* *<A NAME="'sbo'"></A><B>'sbo'</B>*
-<A HREF="#'scrollopt'">'scrollopt'</A> <A HREF="#'sbo'">'sbo'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;ver,jump&quot;)
+<A HREF="#'scrollopt'">'scrollopt'</A> <A HREF="#'sbo'">'sbo'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;ver,jump&quot;)
 			global
 	This is a comma-separated <A HREF="eval.html#list">列表</A> of words that specifies how
 	<A HREF="#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A> should behave.  <A HREF="#'sbo'">'sbo'</A> stands for ScrollBind
@@ -5451,7 +5451,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'sections'"></A><B>'sections'</B>* *<A NAME="'sect'"></A><B>'sect'</B>*
-<A HREF="#'sections'">'sections'</A> <A HREF="#'sect'">'sect'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;SHNHH HUnhsh&quot;)
+<A HREF="#'sections'">'sections'</A> <A HREF="#'sect'">'sect'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;SHNHH HUnhsh&quot;)
 			global
 	Specifies the nroff macros that separate sections.  These are pairs of
 	two letters (见 |<A HREF="motion.html#object-motions">object-motions</A>|).  The default makes a section start
@@ -5473,7 +5473,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'selection'"></A><B>'selection'</B>* *<A NAME="'sel'"></A><B>'sel'</B>*
-<A HREF="#'selection'">'selection'</A> <A HREF="#'sel'">'sel'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot;)
+<A HREF="#'selection'">'selection'</A> <A HREF="#'sel'">'sel'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot;)
 			global
 	This option defines the behavior of the selection.  It is only used
 	in <A HREF="visual.html#Visual">Visual</A> and <A HREF="visual.html#Select">选择</A>模式.
@@ -5497,7 +5497,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'selectmode'"></A><B>'selectmode'</B>* *<A NAME="'slm'"></A><B>'slm'</B>*
-<A HREF="#'selectmode'">'selectmode'</A> <A HREF="#'slm'">'slm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'selectmode'">'selectmode'</A> <A HREF="#'slm'">'slm'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	This is a comma-separated <A HREF="eval.html#list">列表</A> of words, which specifies when to start
 	<A HREF="visual.html#Select">选择</A>模式 instead of <A HREF="visual.html#Visual">可视</A>模式, when a selection is started.
@@ -5510,7 +5510,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'sessionoptions'"></A><B>'sessionoptions'</B>* *<A NAME="'ssop'"></A><B>'ssop'</B>*
-<A HREF="#'sessionoptions'">'sessionoptions'</A> <A HREF="#'ssop'">'ssop'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;blank,buffers,curdir,folds,
+<A HREF="#'sessionoptions'">'sessionoptions'</A> <A HREF="#'ssop'">'ssop'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;blank,buffers,curdir,folds,
 					       help,tabpages,winsize&quot;)
 			global
 	Changes the effect of the |<A HREF="starting.html#:mksession">:mksession</A>| command.  It is a comma-
@@ -5524,7 +5524,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			fold <A HREF="#options">options</A>
 	   globals	global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A>
 			and contain at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>.  Only
-			<A HREF="options\.html#options">字符串</A> and <A HREF="eval.html#Number">Number</A> types are stored.
+			<A HREF="options.html#options">字符串</A> and <A HREF="eval.html#Number">Number</A> types are stored.
 	   help		the help<A HREF="windows.html#window">窗口</A>
 	   localoptions	<A HREF="#options">options</A> and mappings local to a<A HREF="windows.html#window">窗口</A>or buffer (not
 			global values for local <A HREF="#options">options</A>)
@@ -5539,7 +5539,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   tabpages	all <A HREF="intro.html#tab">tab</A> pages; without this only the current <A HREF="intro.html#tab">tab</A> page
 			is restored, so that you can make a session for each
 			<A HREF="intro.html#tab">tab</A> page separately
-	   <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>	include <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="windows.html#windows">窗口</A> where the command can be
+	   <A HREF="nvim_terminal_emulator.html#terminal">终端</A>	include <A HREF="nvim_terminal_emulator.html#terminal">终端</A> <A HREF="windows.html#windows">窗口</A> where the command can be
 			restored
 	   winpos	position of the whole Vim<A HREF="windows.html#window">窗口</A>
 	   winsize	<A HREF="windows.html#window">窗口</A>sizes
@@ -5552,14 +5552,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	the session.
 
 				*<A NAME="'shada'"></A><B>'shada'</B>* *<A NAME="'sd'"></A><B>'sd'</B>* *<A NAME="E526"></A><B>E526</B>* *<A NAME="E527"></A><B>E527</B>* *<A NAME="E528"></A><B>E528</B>*
-<A HREF="#'shada'">'shada'</A> <A HREF="#'sd'">'sd'</A>		<A HREF="options\.html#options">字符串</A>	(default for
+<A HREF="#'shada'">'shada'</A> <A HREF="#'sd'">'sd'</A>		<A HREF="options.html#options">字符串</A>	(default for
 				   Win32:  !,'100,&lt;50,s10,h,rA:,rB:
 				   others: !,'100,&lt;50,s10,h)
 			global
 	When non-empty, the <A HREF="starting.html#shada">shada</A> file is read upon <A HREF="starting.html#startup">startup</A> and written
-	when <A HREF="starting.html#exiting">exiting</A> Vim (见 |<A HREF="starting.html#shada-file">shada-file</A>|).  The <A HREF="options\.html#options">字符串</A> should be a comma-
+	when <A HREF="starting.html#exiting">exiting</A> Vim (见 |<A HREF="starting.html#shada-file">shada-file</A>|).  The <A HREF="options.html#options">字符串</A> should be a comma-
 	separated <A HREF="eval.html#list">列表</A> of parameters, each consisting of a single character
-	identifying the particular parameter, followed by a number or <A HREF="options\.html#options">字符串</A>
+	identifying the particular parameter, followed by a number or <A HREF="options.html#options">字符串</A>
 	which specifies the value of that parameter.  If a particular
 	character is left out然后the default value is used for that
 	parameter.  The following is a <A HREF="eval.html#list">列表</A> of the identifying characters and
@@ -5641,7 +5641,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 		expanded when opening the file, not when setting the option.
 
 							*<A NAME="shada-r"></A><B>shada-r</B>*
-	<A HREF="change.html#r">r</A>	Removable media.  The argument is a <A HREF="options\.html#options">字符串</A> (up to the next
+	<A HREF="change.html#r">r</A>	Removable media.  The argument is a <A HREF="options.html#options">字符串</A> (up to the next
 		',').  This parameter can be given several times.  Each
 		specifies the start of a path for which no marks will be
 		stored.  This is to avoid removable media.  For Windows you
@@ -5683,7 +5683,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 				*<A NAME="'shadafile'"></A><B>'shadafile'</B>* *<A NAME="'sdf'"></A><B>'sdf'</B>*
-<A HREF="#'shadafile'">'shadafile'</A> <A HREF="#'sdf'">'sdf'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;&quot;)
+<A HREF="#'shadafile'">'shadafile'</A> <A HREF="#'sdf'">'sdf'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;&quot;)
 			global
 	When non-empty, overrides the file name used for |<A HREF="starting.html#shada">shada</A>| (viminfo).
 	When equal to &quot;NONE&quot; no <A HREF="starting.html#shada">shada</A> file will be read or written.
@@ -5694,7 +5694,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shell'"></A><B>'shell'</B>* *<A NAME="'sh'"></A><B>'sh'</B>* *<A NAME="E91"></A><B>E91</B>*
-<A HREF="#'shell'">'shell'</A> <A HREF="#'sh'">'sh'</A>		<A HREF="options\.html#options">字符串</A>	(default $SHELL or &quot;sh&quot;, Win32: &quot;cmd.exe&quot;)
+<A HREF="#'shell'">'shell'</A> <A HREF="#'sh'">'sh'</A>		<A HREF="options.html#options">字符串</A>	(default $SHELL or &quot;sh&quot;, Win32: &quot;cmd.exe&quot;)
 			global
 	Name of the shell to use for ! and <A HREF="various.html#:!">:!</A> commands.  When <A HREF="change.html#changing">changing</A> the
 	value also check these <A HREF="#options">options</A>: <A HREF="#'shellpipe'">'shellpipe'</A>, <A HREF="#'shellslash'">'shellslash'</A>
@@ -5746,7 +5746,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shellcmdflag'"></A><B>'shellcmdflag'</B>* *<A NAME="'shcf'"></A><B>'shcf'</B>*
-<A HREF="#'shellcmdflag'">'shellcmdflag'</A> <A HREF="#'shcf'">'shcf'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;<A HREF="starting.html#-c">-c</A>&quot;; Windows: &quot;/s /c&quot;)
+<A HREF="#'shellcmdflag'">'shellcmdflag'</A> <A HREF="#'shcf'">'shcf'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;<A HREF="starting.html#-c">-c</A>&quot;; Windows: &quot;/s /c&quot;)
 			global
 	Flag passed to the shell to execute &quot;<A HREF="change.html#!">!</A>&quot; and &quot;<A HREF="various.html#:!">:!</A>&quot;命令; e.g.,
 	`bash.exe <A HREF="starting.html#-c">-c</A> ls` or `cmd.exe /s /c &quot;dir&quot;`.  For MS-Windows, the
@@ -5762,10 +5762,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shellpipe'"></A><B>'shellpipe'</B>* *<A NAME="'sp'"></A><B>'sp'</B>*
-<A HREF="#'shellpipe'">'shellpipe'</A> <A HREF="#'sp'">'sp'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, &quot;&gt;&#37;s 2&gt;&amp;1&quot;, &quot;| tee&quot;, &quot;|&amp; tee&quot; or
+<A HREF="#'shellpipe'">'shellpipe'</A> <A HREF="#'sp'">'sp'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, &quot;&gt;&#37;s 2&gt;&amp;1&quot;, &quot;| tee&quot;, &quot;|&amp; tee&quot; or
 				 &quot;2&gt;&amp;1| tee&quot;)
 			global
-	<A HREF="options\.html#options">字符串</A> to be used to put the output of the &quot;<A HREF="quickfix.html#:make">:make</A>&quot;命令 in the
+	<A HREF="options.html#options">字符串</A> to be used to put the output of the &quot;<A HREF="quickfix.html#:make">:make</A>&quot;命令 in the
 	error file.  See also |<A HREF="quickfix.html#:make_makeprg">:make_makeprg</A>|.  见 |<A HREF="#option-backslash">option-backslash</A>| about
 	including spaces and backslashes.
 	The name of the temporary file can be represented by &quot;&#37;s&quot; if necessary
@@ -5784,7 +5784,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	and the other initializations, so that when the <A HREF="#'shell'">'shell'</A> option is set
 	there, the <A HREF="#'shellpipe'">'shellpipe'</A> option changes automatically, unless <A HREF="motion.html#it">它</A> was
 	explicitly set before.
-	When <A HREF="#'shellpipe'">'shellpipe'</A> is set to an empty <A HREF="options\.html#options">字符串</A>, no redirection of the
+	When <A HREF="#'shellpipe'">'shellpipe'</A> is set to an empty <A HREF="options.html#options">字符串</A>, no redirection of the
 	&quot;<A HREF="quickfix.html#:make">:make</A>&quot; output will be done.  This is useful if you use a <A HREF="#'makeprg'">'makeprg'</A>
 	that writes to <A HREF="#'makeef'">'makeef'</A> by itself.  If you want no piping, but <A HREF="diff.html#do">do</A>
 	want to include the <A HREF="#'makeef'">'makeef'</A>, set <A HREF="#'shellpipe'">'shellpipe'</A> to a single space.
@@ -5796,14 +5796,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shellquote'"></A><B>'shellquote'</B>* *<A NAME="'shq'"></A><B>'shq'</B>*
-<A HREF="#'shellquote'">'shellquote'</A> <A HREF="#'shq'">'shq'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;&quot;; Windows, when <A HREF="#'shell'">'shell'</A>
+<A HREF="#'shellquote'">'shellquote'</A> <A HREF="#'shq'">'shq'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;&quot;; Windows, when <A HREF="#'shell'">'shell'</A>
 					contains &quot;sh&quot; somewhere: &quot;\&quot;&quot;)
 			global
 	Quoting character(s), put around the command passed to the shell, for
 	the &quot;<A HREF="change.html#!">!</A>&quot; and &quot;<A HREF="various.html#:!">:!</A>&quot;命令.  The redirection is kept outside of the
 	quoting.  See <A HREF="#'shellxquote'">'shellxquote'</A> to include the redirection.  It's
 	probably not useful to set both <A HREF="#options">options</A>.
-	This is an empty <A HREF="options\.html#options">字符串</A> by default.  Only known to be useful for
+	This is an empty <A HREF="options.html#options">字符串</A> by default.  Only known to be useful for
 	third-party shells on Windows systems, such <A HREF="motion.html#as">as</A> the MKS Korn Shell
 	or bash, where <A HREF="motion.html#it">它</A> should be &quot;\&quot;&quot;.  The default is adjusted according
 	the value of <A HREF="#'shell'">'shell'</A>, to reduce the need to set this option by the
@@ -5813,9 +5813,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shellredir'"></A><B>'shellredir'</B>* *<A NAME="'srr'"></A><B>'srr'</B>*
-<A HREF="#'shellredir'">'shellredir'</A> <A HREF="#'srr'">'srr'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, &quot;&gt;&amp;&quot; or &quot;&gt;&#37;s 2&gt;&amp;1&quot;)
+<A HREF="#'shellredir'">'shellredir'</A> <A HREF="#'srr'">'srr'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;<A HREF="change.html#&gt;">&gt;</A>&quot;, &quot;&gt;&amp;&quot; or &quot;&gt;&#37;s 2&gt;&amp;1&quot;)
 			global
-	<A HREF="options\.html#options">字符串</A> to be used to put the output of a <A HREF="change.html#filter">filter</A> command in a temporary
+	<A HREF="options.html#options">字符串</A> to be used to put the output of a <A HREF="change.html#filter">filter</A> command in a temporary
 	file.  See also |<A HREF="various.html#:!">:!</A>|.  见 |<A HREF="#option-backslash">option-backslash</A>| about including spaces
 	and backslashes.
 	The name of the temporary file can be represented by &quot;&#37;s&quot; if necessary
@@ -5871,7 +5871,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shellxescape'"></A><B>'shellxescape'</B>* *<A NAME="'sxe'"></A><B>'sxe'</B>*
-<A HREF="#'shellxescape'">'shellxescape'</A> <A HREF="#'sxe'">'sxe'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;&quot;)
+<A HREF="#'shellxescape'">'shellxescape'</A> <A HREF="#'sxe'">'sxe'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;&quot;)
 			global
 	When <A HREF="#'shellxquote'">'shellxquote'</A> is set to &quot;<A HREF="motion.html#(">(</A>&quot; then the characters listed in this
 	option will be escaped with a '<A HREF="motion.html#^">^</A>' character.  This makes <A HREF="motion.html#it">它</A> possible
@@ -5879,7 +5879,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shellxquote'"></A><B>'shellxquote'</B>* *<A NAME="'sxq'"></A><B>'sxq'</B>*
-<A HREF="#'shellxquote'">'shellxquote'</A> <A HREF="#'sxq'">'sxq'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;&quot;, Windows: &quot;\&quot;&quot;)
+<A HREF="#'shellxquote'">'shellxquote'</A> <A HREF="#'sxq'">'sxq'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;&quot;, Windows: &quot;\&quot;&quot;)
 			global
 	Quoting character(s), put around the command passed to the shell, for
 	the &quot;<A HREF="change.html#!">!</A>&quot; and &quot;<A HREF="various.html#:!">:!</A>&quot;命令.  Includes the redirection.  See
@@ -5910,7 +5910,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'shortmess'"></A><B>'shortmess'</B>* *<A NAME="'shm'"></A><B>'shm'</B>*
-<A HREF="#'shortmess'">'shortmess'</A> <A HREF="#'shm'">'shm'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;filnxtToOF&quot;)
+<A HREF="#'shortmess'">'shortmess'</A> <A HREF="#'shm'">'shm'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;filnxtToOF&quot;)
 			global
 	This option helps to avoid all the |<A HREF="message.html#hit-enter">hit-enter</A>| prompts caused by file
 	<A HREF="message.html#messages">信息</A>, for example  with <A HREF="editing.html#CTRL-G">CTRL-G</A>, and to avoid some other <A HREF="message.html#messages">信息</A>.
@@ -5965,9 +5965,9 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'showbreak'"></A><B>'showbreak'</B>* *<A NAME="'sbr'"></A><B>'sbr'</B>* *<A NAME="E595"></A><B>E595</B>*
-<A HREF="#'showbreak'">'showbreak'</A> <A HREF="#'sbr'">'sbr'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'showbreak'">'showbreak'</A> <A HREF="#'sbr'">'sbr'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
-	<A HREF="options\.html#options">字符串</A> to put at the start of lines that have been wrapped.  Useful
+	<A HREF="options.html#options">字符串</A> to put at the start of lines that have been wrapped.  Useful
 	values are &quot;<A HREF="change.html#&gt;">&gt;</A> &quot; or &quot;+++ &quot;:
 <B>		:set showbreak=&gt;\ </B>
  	Note the <A HREF="intro.html#backslash">backslash</A> to <A HREF="intro.html#escape">escape</A> the trailing space.  It's easier like
@@ -5989,7 +5989,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <A HREF="#'showcmd'">'showcmd'</A> <A HREF="#'sc'">'sc'</A>		<A HREF="#boolean">boolean</A>	(default: on)
 			global
 	Show (partial) command in the last line of the screen.  Set this
-	option off if your <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is slow.
+	option off if your <A HREF="nvim_terminal_emulator.html#terminal">终端</A> is slow.
 	In <A HREF="visual.html#Visual">可视</A>模式 the size of the selected area is shown:
 	- When selecting characters within a line, the number of characters.
 	  If the number of bytes is different <A HREF="motion.html#it">它</A> is also displayed: &quot;2-6&quot;
@@ -6060,7 +6060,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	The minimal number of columns to scroll horizontally.  Used only when
 	the <A HREF="#'wrap'">'wrap'</A> option is off and the cursor is moved off of the screen.
 	When <A HREF="motion.html#it">它</A> is zero the cursor will be put in the middle of the screen.
-	When using a slow <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> set <A HREF="motion.html#it">它</A> to a large number or 0.  Not used
+	When using a slow <A HREF="nvim_terminal_emulator.html#terminal">终端</A> set <A HREF="motion.html#it">它</A> to a large number or 0.  Not used
 	for &quot;<A HREF="scroll.html#zh">zh</A>&quot; and &quot;<A HREF="scroll.html#zl">zl</A>&quot;命令.
 
 
@@ -6089,7 +6089,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  
 
 						*<A NAME="'signcolumn'"></A><B>'signcolumn'</B>* *<A NAME="'scl'"></A><B>'scl'</B>*
-<A HREF="#'signcolumn'">'signcolumn'</A> <A HREF="#'scl'">'scl'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;auto&quot;)
+<A HREF="#'signcolumn'">'signcolumn'</A> <A HREF="#'scl'">'scl'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;auto&quot;)
 			local to<A HREF="windows.html#window">窗口</A>
 	When and how to draw the signcolumn. Valid values are:
 	   &quot;auto&quot;   	only when there is a sign to display
@@ -6189,7 +6189,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	set.
 
 	The value of <A HREF="#'softtabstop'">'softtabstop'</A> will be ignored if |<A HREF="#'varsofttabstop'">'varsofttabstop'</A>| is set
-	to anything other than an empty <A HREF="options\.html#options">字符串</A>.
+	to anything other than an empty <A HREF="options.html#options">字符串</A>.
 
 
 						*<A NAME="'spell'"></A><B>'spell'</B>* *<A NAME="'nospell'"></A><B>'nospell'</B>*
@@ -6200,7 +6200,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'spellcapcheck'"></A><B>'spellcapcheck'</B>* *<A NAME="'spc'"></A><B>'spc'</B>*
-<A HREF="#'spellcapcheck'">'spellcapcheck'</A> <A HREF="#'spc'">'spc'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;[.?!]\_[\])&#39;&#34;' \t]\+&quot;)
+<A HREF="#'spellcapcheck'">'spellcapcheck'</A> <A HREF="#'spc'">'spc'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;[.?!]\_[\])&#39;&#34;' \t]\+&quot;)
 			local to buffer
 	<A HREF="pattern.html#Pattern">Pattern</A> to locate the end of a <A HREF="motion.html#sentence">sentence</A>.  The following <A HREF="motion.html#word">单词</A> will be
 	checked to start with a capital <A HREF="print.html#letter">字母</A>.  If not then <A HREF="motion.html#it">它</A> is highlighted
@@ -6214,7 +6214,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'spellfile'"></A><B>'spellfile'</B>* *<A NAME="'spf'"></A><B>'spf'</B>*
-<A HREF="#'spellfile'">'spellfile'</A> <A HREF="#'spf'">'spf'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'spellfile'">'spellfile'</A> <A HREF="#'spf'">'spf'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			local to buffer
 	Name of the <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">列表</A> file where words are added for the |<A HREF="spell.html#zg">zg</A>| and |<A HREF="spell.html#zw">zw</A>|
 	commands.  It must end in &quot;.{encoding}.add&quot;.  You need to include the
@@ -6240,7 +6240,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'spelllang'"></A><B>'spelllang'</B>* *<A NAME="'spl'"></A><B>'spl'</B>*
-<A HREF="#'spelllang'">'spelllang'</A> <A HREF="#'spl'">'spl'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;en&quot;)
+<A HREF="#'spelllang'">'spelllang'</A> <A HREF="#'spl'">'spl'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;en&quot;)
 			local to buffer
 	A comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="motion.html#word">单词</A> <A HREF="eval.html#list">列表</A> names.  When the <A HREF="#'spell'">'spell'</A> option is
 	on spellchecking will be done for these languages.  Example:
@@ -6282,7 +6282,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'spelloptions'"></A><B>'spelloptions'</B>* *<A NAME="'spo'"></A><B>'spo'</B>*
-<A HREF="#'spelloptions'">'spelloptions'</A> <A HREF="#'spo'">'spo'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'spelloptions'">'spelloptions'</A> <A HREF="#'spo'">'spo'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	A comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="#options">options</A> for <A HREF="spell.html#spell">拼写</A> checking:
 	   camel	When a <A HREF="motion.html#word">单词</A> is CamelCased, assume &quot;Cased&quot; is a
@@ -6292,7 +6292,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'spellsuggest'"></A><B>'spellsuggest'</B>* *<A NAME="'sps'"></A><B>'sps'</B>*
-<A HREF="#'spellsuggest'">'spellsuggest'</A> <A HREF="#'sps'">'sps'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;best&quot;)
+<A HREF="#'spellsuggest'">'spellsuggest'</A> <A HREF="#'sps'">'sps'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;best&quot;)
 			global
 	Methods used for spelling suggestions.  Both for the |<A HREF="spell.html#z=">z=</A>| command and
 	the |<A HREF="builtin.html#spellsuggest()">spellsuggest()</A>| function.  This is a comma-separated <A HREF="eval.html#list">列表</A> of
@@ -6384,7 +6384,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 			   *<A NAME="'statusline'"></A><B>'statusline'</B>* *<A NAME="'stl'"></A><B>'stl'</B>* *<A NAME="E540"></A><B>E540</B>* *<A NAME="E542"></A><B>E542</B>*
-<A HREF="#'statusline'">'statusline'</A> <A HREF="#'stl'">'stl'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'statusline'">'statusline'</A> <A HREF="#'stl'">'stl'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	When non-empty, this option determines the content of the status line.
 	Also 见 |<A HREF="windows.html#status-line">status-line</A>|.
@@ -6428,7 +6428,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Following is a description of the possible statusline items.  The
 	second character in &quot;item&quot; is the type:
 		N for number
-		<A HREF="change.html#S">S</A> for <A HREF="options\.html#options">字符串</A>
+		<A HREF="change.html#S">S</A> for <A HREF="options.html#options">字符串</A>
 		<A HREF="motion.html#F">F</A> for flags <A HREF="motion.html#as">as</A> described below
 		- not applicable
 
@@ -6473,7 +6473,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	      <A HREF="eval.html#expression">expression</A> cannot contain a '<A HREF="motion.html#}">}</A>' character, call a function to
 	      work around that.  见 |<A HREF="#stl-&#37;{">stl-&#37;{</A>| below.
 	{&#37; -  This is almost same <A HREF="motion.html#as">as</A> { except the result of the <A HREF="eval.html#expression">expression</A> is
-	      re-evaluated <A HREF="motion.html#as">as</A> a statusline format <A HREF="options\.html#options">字符串</A>.  Thus if the
+	      re-evaluated <A HREF="motion.html#as">as</A> a statusline format <A HREF="options.html#options">字符串</A>.  Thus if the
 	      return value of <A HREF="eval.html#expr">expr</A> contains <A HREF="motion.html#&#37;">&#37;</A> items they will get expanded.
 	      The <A HREF="eval.html#expression">expression</A> can contain the } character, the end of
 	      <A HREF="eval.html#expression">expression</A> is denoted by &#37;}.
@@ -6504,15 +6504,15 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	      2. number of mouse clicks to detect multiple clicks
 	      3. mouse button used: &quot;<A HREF="motion.html#l">l</A>&quot;, &quot;<A HREF="change.html#r">r</A>&quot; or &quot;<A HREF="motion.html#m">m</A>&quot; for left, right or middle 
 	         button respectively; one should not rely on third argument 
-	         being only &quot;<A HREF="motion.html#l">l</A>&quot;, &quot;<A HREF="change.html#r">r</A>&quot; or &quot;<A HREF="motion.html#m">m</A>&quot;: any other non-empty <A HREF="options\.html#options">字符串</A> value 
+	         being only &quot;<A HREF="motion.html#l">l</A>&quot;, &quot;<A HREF="change.html#r">r</A>&quot; or &quot;<A HREF="motion.html#m">m</A>&quot;: any other non-empty <A HREF="options.html#options">字符串</A> value 
 	         that contains only ASCII lower <A HREF="change.html#case">case</A> letters may be expected 
 	         for other mouse buttons
-	      4. modifiers pressed: <A HREF="options\.html#options">字符串</A> which contains &quot;<A HREF="change.html#s">s</A>&quot; if <A HREF="intro.html#shift">shift</A> 
+	      4. modifiers pressed: <A HREF="options.html#options">字符串</A> which contains &quot;<A HREF="change.html#s">s</A>&quot; if <A HREF="intro.html#shift">shift</A> 
 	         modifier was pressed, &quot;<A HREF="change.html#c">c</A>&quot; for <A HREF="intro.html#control">control</A>, &quot;<A HREF="insert.html#a">a</A>&quot; for alt and &quot;<A HREF="motion.html#m">m</A>&quot; 
-	         for meta; currently if modifier is not pressed <A HREF="options\.html#options">字符串</A> 
+	         for meta; currently if modifier is not pressed <A HREF="options.html#options">字符串</A> 
 	         contains space instead, but one should not rely on presence 
 	         of spaces or specific order of modifiers: use |<A HREF="builtin.html#stridx()">stridx()</A>| to 
-	         test whether some modifier is present; <A HREF="options\.html#options">字符串</A> is guaranteed 
+	         test whether some modifier is present; <A HREF="options.html#options">字符串</A> is guaranteed 
 	         to contain only ASCII letters and spaces, one <A HREF="print.html#letter">字母</A> per 
 	         modifier; &quot;<A HREF="pattern.html#?">?</A>&quot; modifier may also be present, but its presence 
 	         is a bug that denotes that new mouse button recognition was 
@@ -6537,7 +6537,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	that flag comes right after plaintext.  This will make a nice display
 	when flags are used like in the examples below.
 
-	When all items in a group becomes an empty <A HREF="options\.html#options">字符串</A> (i.e. flags that are
+	When all items in a group becomes an empty <A HREF="options.html#options">字符串</A> (i.e. flags that are
 	not set) and a minwid is not set for the group, the whole group will
 	become empty.  This will make a group like the following disappear
 	completely from the statusline when none of the flags are set.
@@ -6593,7 +6593,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
  
 
 						*<A NAME="'suffixes'"></A><B>'suffixes'</B>* *<A NAME="'su'"></A><B>'su'</B>*
-<A HREF="#'suffixes'">'suffixes'</A> <A HREF="#'su'">'su'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;.bak,~,.o,.h,.info,.swp,.obj&quot;)
+<A HREF="#'suffixes'">'suffixes'</A> <A HREF="#'su'">'su'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;.bak,~,.o,.h,.info,.swp,.obj&quot;)
 			global
 	Files with these <A HREF="cmdline.html#suffixes">suffixes</A> get a lower priority when multiple files
 	match a <A HREF="editing.html#wildcard">wildcard</A>.  见 |<A HREF="cmdline.html#suffixes">suffixes</A>|.  Commas can be used to separate the
@@ -6608,7 +6608,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'suffixesadd'"></A><B>'suffixesadd'</B>* *<A NAME="'sua'"></A><B>'sua'</B>*
-<A HREF="#'suffixesadd'">'suffixesadd'</A> <A HREF="#'sua'">'sua'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'suffixesadd'">'suffixesadd'</A> <A HREF="#'sua'">'sua'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	Comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="cmdline.html#suffixes">suffixes</A>, which are used when searching for a
 	file for the &quot;<A HREF="editing.html#gf">gf</A>&quot;, &quot;<A HREF="tagsrch.html#[I">[I</A>&quot;, etc. commands.  Example:
@@ -6639,7 +6639,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'switchbuf'"></A><B>'switchbuf'</B>* *<A NAME="'swb'"></A><B>'swb'</B>*
-<A HREF="#'switchbuf'">'switchbuf'</A> <A HREF="#'swb'">'swb'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;uselast&quot;)
+<A HREF="#'switchbuf'">'switchbuf'</A> <A HREF="#'swb'">'swb'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;uselast&quot;)
 			global
 	This option controls the behavior when switching between <A HREF="windows.html#buffers">buffers</A>.
 	Mostly for |<A HREF="quickfix.html#quickfix">quickfix</A>| commands some values are also used for other
@@ -6678,7 +6678,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'syntax'"></A><B>'syntax'</B>* *<A NAME="'syn'"></A><B>'syn'</B>*
-<A HREF="#'syntax'">'syntax'</A> <A HREF="#'syn'">'syn'</A>		<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'syntax'">'syntax'</A> <A HREF="#'syn'">'syn'</A>		<A HREF="options.html#options">字符串</A>	(default empty)
 			local to buffer
 	When this option is set, the <A HREF="syntax.html#syntax">语法</A> with this name is loaded, unless
 	<A HREF="syntax.html#syntax">语法</A> highlighting has been switched off with &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot;.
@@ -6699,14 +6699,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	<A HREF="#'filetype'">'filetype'</A> option:
 <B>		:set syntax=ON</B>
  	What actually happens when setting the <A HREF="#'syntax'">'syntax'</A> option is that the
-	<A HREF="autocmd.html#Syntax">Syntax</A> <A HREF="autocmd\.html#autocommand">自动命令</A> event is triggered with the value <A HREF="motion.html#as">as</A> argument.
+	<A HREF="autocmd.html#Syntax">Syntax</A> <A HREF="autocmd.html#autocommand">自动命令</A> event is triggered with the value <A HREF="motion.html#as">as</A> argument.
 	This option is not copied to another buffer, independent of the '<A HREF="change.html#s">s</A>' or
 	'<A HREF="change.html#S">S</A>' flag in <A HREF="#'cpoptions'">'cpoptions'</A>.
 	Only normal file name characters can be used, &quot;/\*?[|&lt;&gt;&quot; are illegal.
 
 
 						*<A NAME="'tabline'"></A><B>'tabline'</B>* *<A NAME="'tal'"></A><B>'tal'</B>*
-<A HREF="#'tabline'">'tabline'</A> <A HREF="#'tal'">'tal'</A>		<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'tabline'">'tabline'</A> <A HREF="#'tal'">'tal'</A>		<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 	When non-empty, this option determines the content of the <A HREF="intro.html#tab">tab</A> pages
 	line at the top of the Vim<A HREF="windows.html#window">窗口</A>.  When empty Vim will use a default
@@ -6746,7 +6746,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	the |<A HREF="change.html#:retab">:retab</A>| command, and the <A HREF="#'softtabstop'">'softtabstop'</A> option.
 
 	Note: Setting <A HREF="#'tabstop'">'tabstop'</A> to any other value than 8 can make your file
-	appear wrong in many places, e.g., when <A HREF="print\.html#printing">打印</A> <A HREF="motion.html#it">它</A>.
+	appear wrong in many places, e.g., when <A HREF="print.html#printing">打印</A> <A HREF="motion.html#it">它</A>.
 	The value must be more than 0 and <A HREF="various.html#less">less</A> than 10000.
 
 	There are four main ways to use tabs in Vim:
@@ -6768,7 +6768,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	   changed.
 
 	The value of <A HREF="#'tabstop'">'tabstop'</A> will be ignored if |<A HREF="#'vartabstop'">'vartabstop'</A>| is set to
-	anything other than an empty <A HREF="options\.html#options">字符串</A>.
+	anything other than an empty <A HREF="options.html#options">字符串</A>.
 
 
 			*<A NAME="'tagbsearch'"></A><B>'tagbsearch'</B>* *<A NAME="'tbs'"></A><B>'tbs'</B>* *<A NAME="'notagbsearch'"></A><B>'notagbsearch'</B>* *<A NAME="'notbs'"></A><B>'notbs'</B>*
@@ -6825,7 +6825,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 							*<A NAME="'tagcase'"></A><B>'tagcase'</B>* *<A NAME="'tc'"></A><B>'tc'</B>*
-<A HREF="#'tagcase'">'tagcase'</A> <A HREF="#'tc'">'tc'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;followic&quot;)
+<A HREF="#'tagcase'">'tagcase'</A> <A HREF="#'tc'">'tc'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;followic&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	This option specifies how <A HREF="change.html#case">case</A> is handled when searching the <A HREF="tagsrch.html#tags">标签</A>
 	file:
@@ -6837,7 +6837,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 							*<A NAME="'tagfunc'"></A><B>'tagfunc'</B>* *<A NAME="'tfu'"></A><B>'tfu'</B>*
-<A HREF="#'tagfunc'">'tagfunc'</A> <A HREF="#'tfu'">'tfu'</A>		<A HREF="options\.html#options">字符串</A>	(default: empty)
+<A HREF="#'tagfunc'">'tagfunc'</A> <A HREF="#'tfu'">'tfu'</A>		<A HREF="options.html#options">字符串</A>	(default: empty)
 			local to buffer
 	This option specifies a function to be used to perform <A HREF="tagsrch.html#tag">标签</A> searches.
 	The function gets the <A HREF="tagsrch.html#tag">标签</A> <A HREF="pattern.html#pattern">pattern</A> and should return a <A HREF="eval.html#list">列表</A> of matching
@@ -6859,7 +6859,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'tags'"></A><B>'tags'</B>* *<A NAME="'tag'"></A><B>'tag'</B>* *<A NAME="E433"></A><B>E433</B>*
-<A HREF="#'tags'">'tags'</A> <A HREF="#'tag'">'tag'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;./tags;,tags&quot;)
+<A HREF="#'tags'">'tags'</A> <A HREF="#'tag'">'tag'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;./tags;,tags&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	Filenames for the <A HREF="tagsrch.html#tag">标签</A> command, separated by spaces or commas.  To
 	include a space or comma in a file name, precede <A HREF="motion.html#it">它</A> with a <A HREF="intro.html#backslash">backslash</A>
@@ -6897,8 +6897,8 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 						*<A NAME="'notermbidi'"></A><B>'notermbidi'</B>* *<A NAME="'notbidi'"></A><B>'notbidi'</B>*
 <A HREF="#'termbidi'">'termbidi'</A> <A HREF="#'tbidi'">'tbidi'</A>	<A HREF="#boolean">boolean</A> (default off)
 			global
-	The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is in charge of Bi-directionality of text (as specified
-	by <A HREF="mbyte.html#Unicode">Unicode</A>).  The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is also expected to <A HREF="diff.html#do">do</A> the required shaping
+	The <A HREF="nvim_terminal_emulator.html#terminal">终端</A> is in charge of Bi-directionality of text (as specified
+	by <A HREF="mbyte.html#Unicode">Unicode</A>).  The <A HREF="nvim_terminal_emulator.html#terminal">终端</A> is also expected to <A HREF="diff.html#do">do</A> the required shaping
 	that some languages (such <A HREF="motion.html#as">as</A> <A HREF="arabic.html#Arabic">Arabic</A>) require.
 	Setting this option implies that <A HREF="#'rightleft'">'rightleft'</A> will not be set when
 	<A HREF="#'arabic'">'arabic'</A> is set and the value of <A HREF="#'arabicshape'">'arabicshape'</A> will be ignored.
@@ -6912,14 +6912,14 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	Enables 24-bit RGB color in the |<A HREF="term.html#TUI">TUI</A>|.  Uses &quot;<A HREF="gui.html#gui">gui</A>&quot; |<A HREF="syntax.html#:highlight">:highlight</A>|
 	attributes instead of &quot;cterm&quot; attributes. |<A HREF="syntax.html#highlight-guifg">highlight-guifg</A>|
-	Requires an ISO-8613-3 compatible <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
+	Requires an ISO-8613-3 compatible <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.
 
 
 						*<A NAME="'termpastefilter'"></A><B>'termpastefilter'</B>* *<A NAME="'tpf'"></A><B>'tpf'</B>*
-<A HREF="#'termpastefilter'">'termpastefilter'</A> <A HREF="#'tpf'">'tpf'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;BS,HT,ESC,DEL&quot;)
+<A HREF="#'termpastefilter'">'termpastefilter'</A> <A HREF="#'tpf'">'tpf'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;BS,HT,ESC,DEL&quot;)
 			global
 	A comma-separated <A HREF="eval.html#list">列表</A> of <A HREF="#options">options</A> for specifying <A HREF="intro.html#control">control</A> characters
-	to be removed from the text pasted into the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>. The
+	to be removed from the text pasted into the <A HREF="nvim_terminal_emulator.html#terminal">终端</A><A HREF="windows.html#window">窗口</A>. The
 	supported values are:
 
 	   BS	    Backspace
@@ -6953,7 +6953,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'thesaurus'"></A><B>'thesaurus'</B>* *<A NAME="'tsr'"></A><B>'tsr'</B>*
-<A HREF="#'thesaurus'">'thesaurus'</A> <A HREF="#'tsr'">'tsr'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'thesaurus'">'thesaurus'</A> <A HREF="#'tsr'">'tsr'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	<A HREF="eval.html#list">列表</A> of file names, separated by commas, that are used to lookup words
 	for thesaurus completion commands |<A HREF="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</A>|.  See
@@ -6972,7 +6972,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'thesaurusfunc'"></A><B>'thesaurusfunc'</B>* *<A NAME="'tsrfu'"></A><B>'tsrfu'</B>*
-<A HREF="#'thesaurusfunc'">'thesaurusfunc'</A> <A HREF="#'tsrfu'">'tsrfu'</A>	<A HREF="options\.html#options">字符串</A>	(default: empty)
+<A HREF="#'thesaurusfunc'">'thesaurusfunc'</A> <A HREF="#'tsrfu'">'tsrfu'</A>	<A HREF="options.html#options">字符串</A>	(default: empty)
 			global or local to buffer |<A HREF="#global-local">global-local</A>|
 	This option specifies a function to be used for thesaurus completion
 	with CTRL-X CTRL-T. |<A HREF="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</A>| 见 |<A HREF="insert.html#compl-thesaurusfunc">compl-thesaurusfunc</A>|.
@@ -7003,7 +7003,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	key code sequence has been received by the |<A HREF="term.html#TUI">TUI</A>|.
 
 	For example if <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> (the \x1b byte) is received and <A HREF="#'ttimeout'">'ttimeout'</A> is
-	set, Nvim waits <A HREF="#'ttimeoutlen'">'ttimeoutlen'</A> milliseconds for the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> to
+	set, Nvim waits <A HREF="#'ttimeoutlen'">'ttimeoutlen'</A> milliseconds for the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> to
 	complete a key code sequence. If no input arrives before the timeout,
 	a single <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is assumed. Many <A HREF="term.html#TUI">TUI</A> cursor key codes start with <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A>.
 
@@ -7057,7 +7057,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'titleold'"></A><B>'titleold'</B>*
-<A HREF="#'titleold'">'titleold'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'titleold'">'titleold'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	If not empty, this option will be used to set the<A HREF="windows.html#window">窗口</A>title when
 	<A HREF="starting.html#exiting">exiting</A>.  Only if <A HREF="#'title'">'title'</A> is enabled.
@@ -7065,7 +7065,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	security reasons.
 
 						*<A NAME="'titlestring'"></A><B>'titlestring'</B>*
-<A HREF="#'titlestring'">'titlestring'</A>		<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'titlestring'">'titlestring'</A>		<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	When this option is not empty, <A HREF="motion.html#it">它</A> will be used for the title of the
 	<A HREF="windows.html#window">窗口</A>.  This happens only when the <A HREF="#'title'">'title'</A> option is on.
@@ -7089,7 +7089,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'undodir'"></A><B>'undodir'</B>* *<A NAME="'udir'"></A><B>'udir'</B>* *<A NAME="E5003"></A><B>E5003</B>*
-<A HREF="#'undodir'">'undodir'</A> <A HREF="#'udir'">'udir'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;$XDG_STATE_HOME/nvim/undo//&quot;)
+<A HREF="#'undodir'">'undodir'</A> <A HREF="#'udir'">'udir'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;$XDG_STATE_HOME/nvim/undo//&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of directory names for <A HREF="undo.html#undo">undo</A> files, separated with commas.
 	See <A HREF="#'backupdir'">'backupdir'</A> for details of the format.
@@ -7185,11 +7185,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 			global
 	If this many milliseconds nothing is typed the swap file will be
 	written to disk (见 |<A HREF="recover.html#crash-recovery">crash-recovery</A>|).  Also used for the
-	|<A HREF="autocmd.html#CursorHold">CursorHold</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event.
+	|<A HREF="autocmd.html#CursorHold">CursorHold</A>| <A HREF="autocmd.html#autocommand">自动命令</A> event.
 
 
 					*<A NAME="'varsofttabstop'"></A><B>'varsofttabstop'</B>* *<A NAME="'vsts'"></A><B>'vsts'</B>*
-<A HREF="#'varsofttabstop'">'varsofttabstop'</A> <A HREF="#'vsts'">'vsts'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'varsofttabstop'">'varsofttabstop'</A> <A HREF="#'vsts'">'vsts'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	A <A HREF="eval.html#list">列表</A> of the number of spaces that a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> counts for while editing,
 	such <A HREF="motion.html#as">as</A> <A HREF="insert.html#inserting">inserting</A> a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> or using <A HREF="motion.html#&lt;BS&gt;">&lt;BS&gt;</A>.  It &quot;feels&quot; like variable-
@@ -7209,7 +7209,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'vartabstop'"></A><B>'vartabstop'</B>* *<A NAME="'vts'"></A><B>'vts'</B>*
-<A HREF="#'vartabstop'">'vartabstop'</A> <A HREF="#'vts'">'vts'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'vartabstop'">'vartabstop'</A> <A HREF="#'vts'">'vts'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			local to buffer
 	A <A HREF="eval.html#list">列表</A> of the number of spaces that a <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> in the file counts for,
 	separated by commas.  Each value corresponds to one <A HREF="intro.html#tab">tab</A>, with the
@@ -7229,11 +7229,11 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	Currently, these <A HREF="message.html#messages">信息</A> are given:
 	&gt;= 1	<A HREF="lua.html#Lua">Lua</A> assignments to <A HREF="#options">options</A>, mappings, etc.
 	&gt;= 2	When a file is &quot;:source&quot;'ed and when the <A HREF="starting.html#shada">shada</A> file is read or written..
-	&gt;= 3	<A HREF="ui.html#UI">UI</A> info, <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities
+	&gt;= 3	<A HREF="ui.html#UI">UI</A> info, <A HREF="nvim_terminal_emulator.html#terminal">终端</A> capabilities
 	&gt;= 4	Shell commands.
 	&gt;= 5	Every searched <A HREF="tagsrch.html#tags">标签</A> file and include file.
 	&gt;= 8	Files for which a group of autocommands is executed.
-	&gt;= 9	Every executed <A HREF="autocmd\.html#autocommand">自动命令</A>.
+	&gt;= 9	Every executed <A HREF="autocmd.html#autocommand">自动命令</A>.
 	&gt;= 11	Finding items in a path
 	&gt;= 12	Every executed function.
 	&gt;= 13	When an exception is thrown, caught, finished, or discarded.
@@ -7250,7 +7250,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'verbosefile'"></A><B>'verbosefile'</B>* *<A NAME="'vfile'"></A><B>'vfile'</B>*
-<A HREF="#'verbosefile'">'verbosefile'</A> <A HREF="#'vfile'">'vfile'</A>	<A HREF="options\.html#options">字符串</A>	(default empty)
+<A HREF="#'verbosefile'">'verbosefile'</A> <A HREF="#'vfile'">'vfile'</A>	<A HREF="options.html#options">字符串</A>	(default empty)
 			global
 	When not empty all <A HREF="message.html#messages">信息</A> are written in a file with this name.
 	When the file exists <A HREF="message.html#messages">信息</A> are appended.
@@ -7262,7 +7262,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'viewdir'"></A><B>'viewdir'</B>* *<A NAME="'vdir'"></A><B>'vdir'</B>*
-<A HREF="#'viewdir'">'viewdir'</A> <A HREF="#'vdir'">'vdir'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;$XDG_STATE_HOME/nvim/view//&quot;)
+<A HREF="#'viewdir'">'viewdir'</A> <A HREF="#'vdir'">'vdir'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;$XDG_STATE_HOME/nvim/view//&quot;)
 			global
 	Name of the directory where to store files for |<A HREF="starting.html#:mkview">:mkview</A>|.
 	This option cannot be set from a |<A HREF="#modeline">modeline</A>| or in the |<A HREF="eval.html#sandbox">sandbox</A>|, for
@@ -7270,7 +7270,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'viewoptions'"></A><B>'viewoptions'</B>* *<A NAME="'vop'"></A><B>'vop'</B>*
-<A HREF="#'viewoptions'">'viewoptions'</A> <A HREF="#'vop'">'vop'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;folds,cursor,curdir&quot;)
+<A HREF="#'viewoptions'">'viewoptions'</A> <A HREF="#'vop'">'vop'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;folds,cursor,curdir&quot;)
 			global
 	Changes the effect of the |<A HREF="starting.html#:mkview">:mkview</A>| command.  It is a comma-separated
 	<A HREF="eval.html#list">列表</A> of words.  Each <A HREF="motion.html#word">单词</A> enables saving and restoring something:
@@ -7287,7 +7287,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 					    *<A NAME="'virtualedit'"></A><B>'virtualedit'</B>* *<A NAME="'ve'"></A><B>'ve'</B>*
-<A HREF="#'virtualedit'">'virtualedit'</A> <A HREF="#'ve'">'ve'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'virtualedit'">'virtualedit'</A> <A HREF="#'ve'">'ve'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	A comma-separated <A HREF="eval.html#list">列表</A> of these words:
 	    block	Allow virtual editing in <A HREF="visual.html#Visual">可视</A> 块模式.
@@ -7331,7 +7331,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'whichwrap'"></A><B>'whichwrap'</B>* *<A NAME="'ww'"></A><B>'ww'</B>*
-<A HREF="#'whichwrap'">'whichwrap'</A> <A HREF="#'ww'">'ww'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;b,s&quot;)
+<A HREF="#'whichwrap'">'whichwrap'</A> <A HREF="#'ww'">'ww'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;b,s&quot;)
 			global
 	Allow specified keys that move the cursor left/right to 使用<A HREF="gui.html#GUI">GUI</A>
 	previous/next line when the cursor is on the first/last character in
@@ -7389,7 +7389,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'wildignore'"></A><B>'wildignore'</B>* *<A NAME="'wig'"></A><B>'wig'</B>*
-<A HREF="#'wildignore'">'wildignore'</A> <A HREF="#'wig'">'wig'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;&quot;)
+<A HREF="#'wildignore'">'wildignore'</A> <A HREF="#'wig'">'wig'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;&quot;)
 			global
 	A <A HREF="eval.html#list">列表</A> of file patterns.  A file that matches with one of these
 	patterns is ignored when expanding |<A HREF="editing.html#wildcards">wildcards</A>|, completing file or
@@ -7452,7 +7452,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'wildmode'"></A><B>'wildmode'</B>* *<A NAME="'wim'"></A><B>'wim'</B>*
-<A HREF="#'wildmode'">'wildmode'</A> <A HREF="#'wim'">'wim'</A>	<A HREF="options\.html#options">字符串</A>	(default: &quot;full&quot;)
+<A HREF="#'wildmode'">'wildmode'</A> <A HREF="#'wim'">'wim'</A>	<A HREF="options.html#options">字符串</A>	(default: &quot;full&quot;)
 			global
 	Completion mode that is used for the character specified with
 	<A HREF="#'wildchar'">'wildchar'</A>.  It is a comma-separated <A HREF="eval.html#list">列表</A> of up to four parts.  Each
@@ -7464,10 +7464,10 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	following possible values:
 	&quot;&quot;		Complete only the first match.
 	&quot;full&quot;		Complete the next full match.  After the last match,
-			the original <A HREF="options\.html#options">字符串</A> is used and then the first match
+			the original <A HREF="options.html#options">字符串</A> is used and then the first match
 			again.  Will also start <A HREF="#'wildmenu'">'wildmenu'</A> if <A HREF="motion.html#it">它</A> is enabled.
-	&quot;longest&quot;	Complete till longest common <A HREF="options\.html#options">字符串</A>.  If this doesn't
-			result in a longer <A HREF="options\.html#options">字符串</A>, use the next part.
+	&quot;longest&quot;	Complete till longest common <A HREF="options.html#options">字符串</A>.  If this doesn't
+			result in a longer <A HREF="options.html#options">字符串</A>, use the next part.
 	&quot;<A HREF="eval.html#list">列表</A>&quot;		When more than one match, <A HREF="eval.html#list">列表</A> all matches.
 	&quot;lastused&quot;	When completing buffer names and more than one buffer
 			matches, sort <A HREF="windows.html#buffers">buffers</A> by time last used (other than
@@ -7480,7 +7480,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 	&quot;list:full&quot;	When more than one match, <A HREF="eval.html#list">列表</A> all matches and
 			complete first match.
 	&quot;list:longest&quot;	When more than one match, <A HREF="eval.html#list">列表</A> all matches and
-			complete till longest common <A HREF="options\.html#options">字符串</A>.
+			complete till longest common <A HREF="options.html#options">字符串</A>.
 	&quot;list:lastused&quot; When more than one buffer matches, <A HREF="eval.html#list">列表</A> all matches
 			and sort <A HREF="windows.html#buffers">buffers</A> by time last used (other than the
 			current buffer).
@@ -7489,18 +7489,18 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 <B>		:set wildmode=full</B>
  	Complete first full match, next match, etc.  (the default)
 <B>		:set wildmode=longest,full</B>
- 	Complete longest common <A HREF="options\.html#options">字符串</A>然后each full match
+ 	Complete longest common <A HREF="options.html#options">字符串</A>然后each full match
 <B>		:set wildmode=list:full</B>
  	<A HREF="eval.html#list">列表</A> all matches and complete each full match
 <B>		:set wildmode=list,full</B>
  	<A HREF="eval.html#list">列表</A> all matches without completing然后each full match
 <B>		:set wildmode=longest,list</B>
- 	Complete longest common <A HREF="options\.html#options">字符串</A>然后<A HREF="eval.html#list">列表</A> alternatives.
+ 	Complete longest common <A HREF="options.html#options">字符串</A>然后<A HREF="eval.html#list">列表</A> alternatives.
 	More info here: |<A HREF="cmdline.html#cmdline-completion">cmdline-completion</A>|.
 
 
 						*<A NAME="'wildoptions'"></A><B>'wildoptions'</B>* *<A NAME="'wop'"></A><B>'wop'</B>*
-<A HREF="#'wildoptions'">'wildoptions'</A> <A HREF="#'wop'">'wop'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;pum,tagfile&quot;)
+<A HREF="#'wildoptions'">'wildoptions'</A> <A HREF="#'wop'">'wop'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;pum,tagfile&quot;)
 			global
 	<A HREF="eval.html#list">列表</A> of words that change how |<A HREF="cmdline.html#cmdline-completion">cmdline-completion</A>| is done.
 	  pum		Display the completion matches using the popupmenu
@@ -7513,7 +7513,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'winaltkeys'"></A><B>'winaltkeys'</B>* *<A NAME="'wak'"></A><B>'wak'</B>*
-<A HREF="#'winaltkeys'">'winaltkeys'</A> <A HREF="#'wak'">'wak'</A>	<A HREF="options\.html#options">字符串</A>	(default &quot;menu&quot;)
+<A HREF="#'winaltkeys'">'winaltkeys'</A> <A HREF="#'wak'">'wak'</A>	<A HREF="options.html#options">字符串</A>	(default &quot;menu&quot;)
 			global
 			{only used in Win32}
 	Some <A HREF="gui.html#GUI">GUI</A> versions allow the access to menu entries by using the <A HREF="intro.html#ALT">ALT</A>
@@ -7533,7 +7533,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'winbar'"></A><B>'winbar'</B>* *<A NAME="'wbr'"></A><B>'wbr'</B>*
-<A HREF="#'winbar'">'winbar'</A> <A HREF="#'wbr'">'wbr'</A>		<A HREF="options\.html#options">字符串</A> (default empty)
+<A HREF="#'winbar'">'winbar'</A> <A HREF="#'wbr'">'wbr'</A>		<A HREF="options.html#options">字符串</A> (default empty)
 			global or local to<A HREF="windows.html#window">窗口</A>|<A HREF="#global-local">global-local</A>|
 	When non-empty, this option enables the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A> and determines its
 	contents. The<A HREF="windows.html#window">窗口</A><A HREF="motion.html#bar">bar</A> is a <A HREF="motion.html#bar">bar</A> that's shown at the top of every
@@ -7596,7 +7596,7 @@ A jump table for the <A HREF="#options">options</A> with a short description can
 
 
 						*<A NAME="'winhighlight'"></A><B>'winhighlight'</B>* *<A NAME="'winhl'"></A><B>'winhl'</B>*
-<A HREF="#'winhighlight'">'winhighlight'</A> <A HREF="#'winhl'">'winhl'</A>	<A HREF="options\.html#options">字符串</A> (default empty)
+<A HREF="#'winhighlight'">'winhighlight'</A> <A HREF="#'winhl'">'winhl'</A>	<A HREF="options.html#options">字符串</A> (default empty)
 			local to<A HREF="windows.html#window">窗口</A>
 	Window-local highlights.  Comma-delimited <A HREF="eval.html#list">列表</A> of highlight
 	|<A HREF="syntax.html#group-name">group-name</A>| pairs &quot;{hl-builtin}:{hl},...&quot; where each {hl-builtin} is

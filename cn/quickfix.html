@@ -145,12 +145,12 @@ command with '<A HREF="motion.html#l">l</A>'.
 
 
 							*<A NAME="E924"></A><B>E924</B>*
-If the current<A HREF="windows.html#window">窗口</A>was closed by an |<A HREF="autocmd\.html#autocommand">自动命令</A>| while processing a
+If the current<A HREF="windows.html#window">窗口</A>was closed by an |<A HREF="autocmd.html#autocommand">自动命令</A>| while processing a
 location <A HREF="eval.html#list">列表</A> command, <A HREF="motion.html#it">它</A> will be aborted.
 
 
 							*<A NAME="E925"></A><B>E925</B>* *<A NAME="E926"></A><B>E926</B>*
-If the current <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> was changed by an |<A HREF="autocmd\.html#autocommand">自动命令</A>| while
+If the current <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> was changed by an |<A HREF="autocmd.html#autocommand">自动命令</A>| while
 processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> command, <A HREF="motion.html#it">它</A> will be aborted.
 
 
@@ -429,13 +429,13 @@ processing a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#lis
 							*<A NAME=":cex"></A><B>:cex</B>* *<A NAME=":cexpr"></A><B>:cexpr</B>* *<A NAME="E777"></A><B>E777</B>*
 :cex[pr][!] {expr}	Create a <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> using the result of {expr} and
 			jump to the first error.
-			If {expr} is a <A HREF="options\.html#options">字符串</A>然后each newline terminated
-			line in the <A HREF="options\.html#options">字符串</A> is processed using the global value
+			If {expr} is a <A HREF="options.html#options">字符串</A>然后each newline terminated
+			line in the <A HREF="options.html#options">字符串</A> is processed using the global value
 			of <A HREF="options.html#'errorformat'">'errorformat'</A> and the result is added to the
 			<A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A>.
-			If {expr} is a <A HREF="eval.html#list">列表</A>然后each <A HREF="options\.html#options">字符串</A> item in the <A HREF="eval.html#list">列表</A>
+			If {expr} is a <A HREF="eval.html#list">列表</A>然后each <A HREF="options.html#options">字符串</A> item in the <A HREF="eval.html#list">列表</A>
 			is processed and added to the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A>.  Non
-			<A HREF="options\.html#options">字符串</A> items in the <A HREF="eval.html#list">列表</A> are ignored.
+			<A HREF="options.html#options">字符串</A> items in the <A HREF="eval.html#list">列表</A> are ignored.
 			见 |<A HREF="#:cc">:cc</A>| for [!].
 			Examples:
 <B>				:cexpr system('grep -n xyz *')</B>
@@ -627,7 +627,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
  			To skip entries 1 to 9.
 
 			Note: While this command is executing, the <A HREF="autocmd.html#Syntax">Syntax</A>
-			<A HREF="autocmd\.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
+			<A HREF="autocmd.html#autocommand">自动命令</A> event is disabled by adding <A HREF="motion.html#it">它</A> to
 			<A HREF="options.html#'eventignore'">'eventignore'</A>.  This considerably speeds up editing
 			each buffer.
 			Also 见 |<A HREF="windows.html#:bufdo">:bufdo</A>|, |<A HREF="tabpage.html#:tabdo">:tabdo</A>|, |<A HREF="editing.html#:argdo">:argdo</A>|, |<A HREF="windows.html#:windo">:windo</A>|,
@@ -814,7 +814,7 @@ to find a<A HREF="windows.html#window">窗口</A>to edit the file:
 					*<A NAME="CTRL-W_&lt;Enter&gt;"></A><B>CTRL-W_&lt;Enter&gt;</B>* *<A NAME="CTRL-W_&lt;CR&gt;"></A><B>CTRL-W_&lt;CR&gt;</B>*
 You can use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="intro.html#&lt;Enter&gt;">&lt;Enter&gt;</A> to open a new<A HREF="windows.html#window">窗口</A>and jump to the error there.
 
-When the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has been filled, two <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> are
+When the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has been filled, two <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> are
 triggered.  First the <A HREF="options.html#'filetype'">'filetype'</A> option is set to &quot;qf&quot;, which triggers the
 <A HREF="autocmd.html#FileType">FileType</A> event (also 见 |<A HREF="qf.html">qf.vim</A>|).  Then the <A HREF="autocmd.html#BufReadPost">BufReadPost</A> event is triggered,
 using &quot;<A HREF="#quickfix">quickfix</A>&quot; for the buffer name.  This can be used to perform some action
@@ -823,12 +823,12 @@ on the listed <A HREF="message.html#errors">errors</A>.  Example:
 <B>		\ | silent exe 'g/^/s//\=line(".") .. " "/'</B>
 <B>		\ | setlocal nomodifiable</B>
 This prepends the line number to each line.  Note the use of &quot;\=&quot; in the
-substitute <A HREF="options\.html#options">字符串</A> of the &quot;<A HREF="change.html#:s">:s</A>&quot;命令, which is used to evaluate an
+substitute <A HREF="options.html#options">字符串</A> of the &quot;<A HREF="change.html#:s">:s</A>&quot;命令, which is used to evaluate an
 <A HREF="eval.html#expression">expression</A>.
 The <A HREF="autocmd.html#BufWinEnter">BufWinEnter</A> event is also triggered, again using &quot;<A HREF="#quickfix">quickfix</A>&quot; for the buffer
 name.
 
-Note: When adding to an existing <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> the <A HREF="autocmd\.html#autocommand">自动命令</A> are not
+Note: When adding to an existing <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> the <A HREF="autocmd.html#autocommand">自动命令</A> are not
 triggered.
 
 Note: Making changes in the <A HREF="#quickfix">quickfix</A><A HREF="windows.html#window">窗口</A>has no effect on the <A HREF="eval.html#list">列表</A> of
@@ -1097,7 +1097,7 @@ option.  This works almost like typing
 
 	&quot;:!{makeprg} [arguments] {shellpipe} {errorfile}&quot;.
 
-{makeprg} is the <A HREF="options\.html#options">字符串</A> given with the <A HREF="options.html#'makeprg'">'makeprg'</A> option.  Any command can be
+{makeprg} is the <A HREF="options.html#options">字符串</A> given with the <A HREF="options.html#'makeprg'">'makeprg'</A> option.  Any command can be
 used, not just &quot;make&quot;.  Characters '<A HREF="motion.html#&#37;">&#37;</A>' and '<A HREF="pattern.html##">#</A>' are expanded <A HREF="motion.html#as">as</A> usual on a
 command-line.  You can use &quot;&#37;&lt;&quot; to insert the current file name without
 extension, or &quot;#&lt;&quot; to insert the alternate file name without extension, for
@@ -1208,9 +1208,9 @@ commands can be combined to create a NewGrep command:
 			     updated.  With the [!] any changes in the current
 			     buffer are abandoned.
 
-			'<A HREF="motion.html#f">f</A>'  When the '<A HREF="motion.html#f">f</A>' flag is specified, fuzzy <A HREF="options\.html#options">字符串</A>
+			'<A HREF="motion.html#f">f</A>'  When the '<A HREF="motion.html#f">f</A>' flag is specified, fuzzy <A HREF="options.html#options">字符串</A>
 			     matching is used to find matching lines. In this
-			     <A HREF="change.html#case">case</A>, {pattern} is treated <A HREF="motion.html#as">as</A> a literal <A HREF="options\.html#options">字符串</A>
+			     <A HREF="change.html#case">case</A>, {pattern} is treated <A HREF="motion.html#as">as</A> a literal <A HREF="options.html#options">字符串</A>
 			     instead of a regular <A HREF="eval.html#expression">expression</A>.  See
 			     |<A HREF="pattern.html#fuzzy-matching">fuzzy-matching</A>| for more information about fuzzy
 			     matching strings.
@@ -1527,7 +1527,7 @@ first format that matches with an error message is used.  You can add several
 formats for different <A HREF="message.html#messages">信息</A> your compiler produces, or even entries for
 multiple compilers.  见 |<A HREF="#efm-entries">efm-entries</A>|.
 
-Each entry in <A HREF="options.html#'errorformat'">'errorformat'</A> is a scanf-like <A HREF="options\.html#options">字符串</A> that describes the format.
+Each entry in <A HREF="options.html#'errorformat'">'errorformat'</A> is a scanf-like <A HREF="options.html#options">字符串</A> that describes the format.
 First, you need to know how scanf works.  Look in the documentation of your
 C compiler.  Below you find the <A HREF="motion.html#&#37;">&#37;</A> items that Vim understands.  Others are
 invalid.
@@ -1547,8 +1547,8 @@ rest is ignored.  Items can only be 1023 bytes long.
 
 Basic items
 
-	&#37;f		file name (finds a <A HREF="options\.html#options">字符串</A>)
-	&#37;o		module name (finds a <A HREF="options\.html#options">字符串</A>)
+	&#37;f		file name (finds a <A HREF="options.html#options">字符串</A>)
+	&#37;o		module name (finds a <A HREF="options.html#options">字符串</A>)
 	&#37;l		line number (finds a number)
 	&#37;e		end line number (finds a number)
 	&#37;c		column number (finds a number representing character
@@ -1567,18 +1567,18 @@ Basic items
 			    <A HREF="insert.html#i">i</A> - info message
 			    <A HREF="pattern.html#n">n</A> - note message
 	&#37;n		error number (finds a number)
-	&#37;m		error message (finds a <A HREF="options\.html#options">字符串</A>)
+	&#37;m		error message (finds a <A HREF="options.html#options">字符串</A>)
 	&#37;r		matches the &quot;rest&quot; of a single-line file message &#37;O/P/Q
 	&#37;p		pointer line (finds a sequence of '<A HREF="motion.html#-">-</A>', '<A HREF="repeat.html#.">.</A>', '' '' or
 			tabs and uses the length for the column number)
 	&#37;*{conv}	any scanf non-assignable conversion
 	&#37;&#37;		the single '<A HREF="motion.html#&#37;">&#37;</A>' character
-	&#37;s		search text (finds a <A HREF="options\.html#options">字符串</A>)
+	&#37;s		search text (finds a <A HREF="options.html#options">字符串</A>)
 
 The &quot;&#37;f&quot; conversion may depend on the current <A HREF="options.html#'isfname'">'isfname'</A> setting.  &quot;~/&quot; is
 expanded to the home directory and environment <A HREF="eval.html#variables">variables</A> are expanded.
 
-The &quot;&#37;f&quot; and &quot;&#37;m&quot; conversions have to detect the end of the <A HREF="options\.html#options">字符串</A>.  This
+The &quot;&#37;f&quot; and &quot;&#37;m&quot; conversions have to detect the end of the <A HREF="options.html#options">字符串</A>.  This
 normally happens by matching following characters and items.  When nothing is
 following the rest of the line is matched.  If &quot;&#37;f&quot; is followed by a '<A HREF="motion.html#&#37;">&#37;</A>' or a
 <A HREF="intro.html#backslash">backslash</A>, <A HREF="motion.html#it">它</A> will look for a sequence of <A HREF="options.html#'isfname'">'isfname'</A> characters.
@@ -1596,7 +1596,7 @@ to indicate the column of the error.  This is to be used in a multi-line error
 message.  见 |<A HREF="#errorformat-javac">errorformat-javac</A>| for a  useful example.
 
 The &quot;&#37;s&quot; conversion specifies the text to search for, to locate the error line.
-The text is used <A HREF="motion.html#as">as</A> a literal <A HREF="options\.html#options">字符串</A>.  The anchors &quot;<A HREF="motion.html#^">^</A>&quot; and &quot;<A HREF="motion.html#$">$</A>&quot; are added to
+The text is used <A HREF="motion.html#as">as</A> a literal <A HREF="options.html#options">字符串</A>.  The anchors &quot;<A HREF="motion.html#^">^</A>&quot; and &quot;<A HREF="motion.html#$">$</A>&quot; are added to
 the text to locate the error line exactly matching the search text and the
 text is prefixed with the &quot;\V&quot; atom to make <A HREF="motion.html#it">它</A> &quot;very nomagic&quot;.  The &quot;&#37;s&quot;
 conversion can be used to locate lines without a line number in the error
@@ -1618,9 +1618,9 @@ be prepended to each file name read by &#37;f (example: GNU make).  The followin
 codes can be used to scan these directory names; they will be stored in an
 
 internal directory stack.					*<A NAME="E379"></A><B>E379</B>*
-	&#37;D		&quot;enter directory&quot; format <A HREF="options\.html#options">字符串</A>; expects a following
+	&#37;D		&quot;enter directory&quot; format <A HREF="options.html#options">字符串</A>; expects a following
 			  &#37;f that finds the directory name
-	&#37;X		&quot;leave directory&quot; format <A HREF="options\.html#options">字符串</A>; expects following &#37;f
+	&#37;X		&quot;leave directory&quot; format <A HREF="options.html#options">字符串</A>; expects following &#37;f
 
 When defining an &quot;enter directory&quot; or &quot;leave directory&quot; format, the &quot;&#37;D&quot; or
 &quot;&#37;X&quot; has to be given at the start of that substring.  Vim tracks the directory
@@ -1655,7 +1655,7 @@ Example: Your compiler happens to write out <A HREF="message.html#errors">errors
 <B><FONT color="#3A6F2B">     3	column 3 </FONT></B>
 <B><FONT color="#3A6F2B">     4	' ' expected after '--' </FONT></B>
 
-The appropriate error format <A HREF="options\.html#options">字符串</A> has to look like this:
+The appropriate error format <A HREF="options.html#options">字符串</A> has to look like this:
 <B>   :set efm=%EError\ %n,%Cline\ %l,%Ccolumn\ %c,%Z%m</B>
 
 And the |<A HREF="#:clist">:clist</A>| error message generated for this error is:
@@ -1683,10 +1683,10 @@ Say you want |<A HREF="#:clist">:clist</A>| write the relevant information of th
 namely:
  5 unittests/dbfacadeTest.py:89:  AssertionError: 34 != 33
 
-Then the error format <A HREF="options\.html#options">字符串</A> could be defined <A HREF="motion.html#as">as</A> follows:
+Then the error format <A HREF="options.html#options">字符串</A> could be defined <A HREF="motion.html#as">as</A> follows:
 <B>  :set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m</B>
 
-Note that the &#37;C <A HREF="options\.html#options">字符串</A> is given before the &#37;A here: since the <A HREF="eval.html#expression">expression</A>
+Note that the &#37;C <A HREF="options.html#options">字符串</A> is given before the &#37;A here: since the <A HREF="eval.html#expression">expression</A>
 '' &#37;.&#37;#' (which stands for the regular <A HREF="eval.html#expression">expression</A> '' .*') matches every line
 starting with a space, followed by any characters to the end of the line,
 <A HREF="motion.html#it">它</A> also hides line 7 which would trigger a separate error message otherwise.
@@ -1731,7 +1731,7 @@ leading line numbers):
      1	[a1.tt]
      2	(1,17)  error: '<A HREF="motion.html#;">;</A>' missing
      3	(21,2)  warning: variable '<A HREF="vimindex.html#z">z</A>' not defined
-     4	(67,3)  error: end of file found before <A HREF="options\.html#options">字符串</A> ended
+     4	(67,3)  error: end of file found before <A HREF="options.html#options">字符串</A> ended
      5
      6	[a2.tt]
      7
@@ -1748,7 +1748,7 @@ A call of |<A HREF="#:clist">:clist</A>| writes them accordingly with their corr
 
   2 a1.tt:1 col 17 error: '<A HREF="motion.html#;">;</A>' missing
   3 a1.tt:21 col 2 warning: variable '<A HREF="vimindex.html#z">z</A>' not defined
-  4 a1.tt:67 col 3 error: end of file found before <A HREF="options\.html#options">字符串</A> ended
+  4 a1.tt:67 col 3 error: end of file found before <A HREF="options.html#options">字符串</A> ended
   8 a3.tt:2 col 2 warning: variable '<A HREF="change.html#x">x</A>' not defined
   9 a3.tt:67 col 3 warning: '<A HREF="change.html#s">s</A>' already defined
 
@@ -1766,7 +1766,7 @@ Ignoring and using whole <A HREF="message.html#messages">信息</A>			*<A NAME="
 The codes '<A HREF="motion.html#+">+</A>' or '<A HREF="motion.html#-">-</A>' can be combined with the <A HREF="change.html#uppercase">大写</A> codes above; in that
 <A HREF="change.html#case">case</A> they have to precede the <A HREF="print.html#letter">字母</A>, e.g. '&#37;+A' or '&#37;-G':
 	&#37;-		<A HREF="diff.html#do">do</A> not include the matching multi-line in any output
-	&#37;+		include the whole matching line in the &#37;m error <A HREF="options\.html#options">字符串</A>
+	&#37;+		include the whole matching line in the &#37;m error <A HREF="options.html#options">字符串</A>
 
 One prefix is only useful in combination with '<A HREF="motion.html#+">+</A>' or '<A HREF="motion.html#-">-</A>', namely &#37;G.  It parses
 over lines containing general information like compiler version strings or
@@ -1869,7 +1869,7 @@ formats.
 Filtering <A HREF="message.html#messages">信息</A>
 
 If you have a compiler that produces error <A HREF="message.html#messages">信息</A> that <A HREF="diff.html#do">do</A> not fit in the
-format <A HREF="options\.html#options">字符串</A>, you could write a program that translates the error <A HREF="message.html#messages">信息</A>
+format <A HREF="options.html#options">字符串</A>, you could write a program that translates the error <A HREF="message.html#messages">信息</A>
 into this format.  You can use this program with the &quot;<A HREF="#:make">:make</A>&quot;命令 by
 <A HREF="change.html#changing">changing</A> the <A HREF="options.html#'makeprg'">'makeprg'</A> option.例如:
 <B>   :set mp=make\ \\\|&amp;\ error_filter</B>
@@ -1938,8 +1938,8 @@ prints information about entering a directory in the form &quot;Making all in di
    Making all in dir2		  ./dir1/dir2
    Making all in dir2		  ./dir1/dir2
 
-   This can be solved by <A HREF="print\.html#printing">打印</A> absolute directories in the &quot;enter directory&quot;
-   message or by <A HREF="print\.html#printing">打印</A> &quot;leave directory&quot; <A HREF="message.html#messages">信息</A>.
+   This can be solved by <A HREF="print.html#printing">打印</A> absolute directories in the &quot;enter directory&quot;
+   message or by <A HREF="print.html#printing">打印</A> &quot;leave directory&quot; <A HREF="message.html#messages">信息</A>.
 
 To avoid this problem, ensure to print absolute directory names and &quot;leave
 directory&quot; <A HREF="message.html#messages">信息</A>.
@@ -1970,7 +1970,7 @@ Note that Vim doesn't check if the directory name in a &quot;leave directory&quo
 Jikes(TM), a source-to-bytecode Java compiler published by IBM Research,
 produces simple multi-line error <A HREF="message.html#messages">信息</A>.
 
-An <A HREF="options.html#'errorformat'">'errorformat'</A> <A HREF="options\.html#options">字符串</A> matching the produced <A HREF="message.html#messages">信息</A> is shown below.
+An <A HREF="options.html#'errorformat'">'errorformat'</A> <A HREF="options.html#options">字符串</A> matching the produced <A HREF="message.html#messages">信息</A> is shown below.
 The following lines can be placed in the user's |<A HREF="init.html">init.vim</A>| to overwrite Vim's
 recognized default formats, or 见 |<A HREF="options.html#:set+=">:set+=</A>| how to install this format
 additionally to the default.
@@ -2035,7 +2035,7 @@ The <A HREF="options.html#'errorformat'">'errorformat'</A> which handles ant wit
  
 
 						*<A NAME="errorformat-LaTeX"></A><B>errorformat-LaTeX</B>*
-The following is an example how an <A HREF="options.html#'errorformat'">'errorformat'</A> <A HREF="options\.html#options">字符串</A> can be specified
+The following is an example how an <A HREF="options.html#'errorformat'">'errorformat'</A> <A HREF="options.html#options">字符串</A> can be specified
 for the (La)TeX typesetting system which displays error <A HREF="message.html#messages">信息</A> over
 multiple lines.  The output of &quot;<A HREF="#:clist">:clist</A>&quot; and &quot;<A HREF="#:cc">:cc</A>&quot; etc. commands displays
 multi-lines in a single line, leading white space is removed.
@@ -2058,7 +2058,7 @@ remove the comment lines.  For the '\' <A HREF="intro.html#notation">notation</A
 <B>	\%E!\ %m,</B>
  		Start of multi-line warning <A HREF="message.html#messages">信息</A>; the first two also
 		include the line number.  Meaning of some regular expressions:
-		  - &quot;&#37;.&#37;#&quot;  (&quot;.*&quot;)   matches a (possibly empty) <A HREF="options\.html#options">字符串</A>
+		  - &quot;&#37;.&#37;#&quot;  (&quot;.*&quot;)   matches a (possibly empty) <A HREF="options.html#options">字符串</A>
 		  - &quot;&#37;*\\d&quot; (&quot;\d\+&quot;) matches a number
 <B>	\%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,</B>
 <B>	\%+W%.%#\ at\ lines\ %l--%*\\d,</B>
@@ -2160,7 +2160,7 @@ information about the entries using the |<A HREF="builtin.html#getqflist()">getq
 the <A HREF="#quickfix">quickfix</A> <A HREF="eval.html#list">列表</A> identifier &quot;id&quot;. For a location <A HREF="eval.html#list">列表</A>, <A HREF="builtin.html#getloclist()">getloclist()</A> function
 can be used with the '<A HREF="windows.html#winid">winid</A>' argument. If an empty <A HREF="eval.html#list">列表</A> is returned然后the
 default format is used to display all the entries. If an item in the returned
-<A HREF="eval.html#list">列表</A> is an empty <A HREF="options\.html#options">字符串</A>然后the default format is used to display the
+<A HREF="eval.html#list">列表</A> is an empty <A HREF="options.html#options">字符串</A>然后the default format is used to display the
 corresponding entry.
 
 If a <A HREF="#quickfix">quickfix</A> or location <A HREF="eval.html#list">列表</A> specific customization is needed然后the

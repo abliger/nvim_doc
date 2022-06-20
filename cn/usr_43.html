@@ -139,7 +139,7 @@ buffer.  This works with any <A HREF="map.html#mapping">mapping</A> command: &qu
 The line to set b:undo_ftplugin is for when the <A HREF="filetype.html#filetype">文件类型</A> is set to another
 value.  In that <A HREF="change.html#case">case</A> you will want to <A HREF="undo.html#undo">undo</A> your preferences.  The
 b:undo_ftplugin variable is executed <A HREF="motion.html#as">as</A> a command. Watch out for characters
-with a special meaning inside a <A HREF="options\.html#options">字符串</A>, such <A HREF="motion.html#as">as</A> a <A HREF="intro.html#backslash">backslash</A>.
+with a special meaning inside a <A HREF="options.html#options">字符串</A>, such <A HREF="motion.html#as">as</A> a <A HREF="intro.html#backslash">backslash</A>.
 
 You can find examples for <A HREF="filetype.html#filetype">文件类型</A> plugins in this directory:
 
@@ -156,7 +156,7 @@ If you are using a type of file that is not recognized by Vim, this is how to
 get <A HREF="motion.html#it">它</A> recognized.  You need a runtime directory of your own.  See
 |<A HREF="#your-runtime-dir">your-runtime-dir</A>| above.
 
-Create a file &quot;filetype.vim&quot; which contains an <A HREF="autocmd\.html#autocommand">自动命令</A> for your <A HREF="filetype.html#filetype">文件类型</A>.
+Create a file &quot;filetype.vim&quot; which contains an <A HREF="autocmd.html#autocommand">自动命令</A> for your <A HREF="filetype.html#filetype">文件类型</A>.
 (Autocommands were explained in section |<A HREF="usr_40.html#40.3">40.3</A>|.)  Example:
 
 <B>	augroup filetypedetect</B>
@@ -164,7 +164,7 @@ Create a file &quot;filetype.vim&quot; which contains an <A HREF="autocmd\.html#
 <B>	augroup END</B>
 
 This will recognize all files that end in &quot;.xyz&quot; <A HREF="motion.html#as">as</A> the &quot;xyz&quot; <A HREF="filetype.html#filetype">文件类型</A>.  The
-&quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot;命令 put this <A HREF="autocmd\.html#autocommand">自动命令</A> in the &quot;filetypedetect&quot; group.  This
+&quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot;命令 put this <A HREF="autocmd.html#autocommand">自动命令</A> in the &quot;filetypedetect&quot; group.  This
 allows removing all autocommands for <A HREF="filetype.html#filetype">文件类型</A> detection when doing &quot;<A HREF="filetype.html#:filetype">:filetype</A>
 off&quot;.  The &quot;setf&quot; command will set the <A HREF="options.html#'filetype'">'filetype'</A> option to its argument,
 unless <A HREF="motion.html#it">它</A> was set already.  This will make sure that <A HREF="options.html#'filetype'">'filetype'</A> isn't set
@@ -200,9 +200,9 @@ That file is found in <A HREF="options.html#'runtimepath'">'runtimepath'</A> fir
 
 What will happen now is that Vim searches for &quot;filetype.vim&quot; files in each
 directory in <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  First ~/.config/nvim/filetype.vim is found.  The
-<A HREF="autocmd\.html#autocommand">自动命令</A> to catch *.txt files is defined there.  Then Vim finds the
+<A HREF="autocmd.html#autocommand">自动命令</A> to catch *.txt files is defined there.  Then Vim finds the
 filetype.vim file in <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A>, which is halfway <A HREF="options.html#'runtimepath'">'runtimepath'</A>.  Finally
-~/.config/nvim/after/filetype.vim is found and the <A HREF="autocmd\.html#autocommand">自动命令</A> for detecting 
+~/.config/nvim/after/filetype.vim is found and the <A HREF="autocmd.html#autocommand">自动命令</A> for detecting 
 <A HREF="if_ruby.html#ruby">ruby</A> files in /usr/share/scripts is added.
    When you now edit /usr/share/scripts/README.txt, the autocommands are
 checked in the order in which they were defined.  The *.txt <A HREF="pattern.html#pattern">pattern</A> matches,
@@ -236,7 +236,7 @@ The first check with <A HREF="builtin.html#did_filetype()">did_filetype()</A> is
 contents of files for which the <A HREF="filetype.html#filetype">文件类型</A> was already detected by the file
 name.  That avoids wasting time on checking the file when the &quot;setf&quot; command
 won't <A HREF="diff.html#do">do</A> anything.
-   The scripts.vim file is sourced by an <A HREF="autocmd\.html#autocommand">自动命令</A> in the default
+   The scripts.vim file is sourced by an <A HREF="autocmd.html#autocommand">自动命令</A> in the default
 filetype.vim file.  Therefore, the order of checks is:
 
 	1. filetype.vim files before <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A> in <A HREF="options.html#'runtimepath'">'runtimepath'</A>
@@ -245,7 +245,7 @@ filetype.vim file.  Therefore, the order of checks is:
 	4. remainder of $VIMRUNTIME/filetype.vim
 	5. filetype.vim files after <A HREF="starting.html#$VIMRUNTIME">$VIMRUNTIME</A> in <A HREF="options.html#'runtimepath'">'runtimepath'</A>
 
-If this is not sufficient for you, add an <A HREF="autocmd\.html#autocommand">自动命令</A> that matches all files
+If this is not sufficient for you, add an <A HREF="autocmd.html#autocommand">自动命令</A> that matches all files
 and sources a <A HREF="usr_41.html#script">script</A> or executes a function to check the contents of the file.
 
 ==============================================================================

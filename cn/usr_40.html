@@ -413,7 +413,7 @@ For example:
 
 <B>	:Say he said "hello"</B>
 
-To get special characters turned into a <A HREF="options\.html#options">字符串</A>, properly escaped to use <A HREF="motion.html#as">as</A> an
+To get special characters turned into a <A HREF="options.html#options">字符串</A>, properly escaped to use <A HREF="motion.html#as">as</A> an
 <A HREF="eval.html#expression">expression</A>, use &quot;<A HREF="map.html#&lt;q-args&gt;">&lt;q-args&gt;</A>&quot;:
 
 <B>	:command -nargs=+ Say :echo &lt;q-args&gt;</B>
@@ -501,7 +501,7 @@ More details about all this in the reference manual: |<A HREF="map.html#user-com
 
 *<A NAME="40.3"></A><B>40.3</B>*	Autocommands
 
-An <A HREF="autocmd\.html#autocommand">自动命令</A> is a command that is executed automatically in response to some
+An <A HREF="autocmd.html#autocommand">自动命令</A> is a command that is executed automatically in response to some
 event, such <A HREF="motion.html#as">as</A> a file being read or written or a buffer change.  Through the
 use of autocommands you can train Vim to edit compressed files, for example.
 That is used in the |<A HREF="pi_gzip.html#gzip">gzip</A>| <A HREF="usr_05.html#plugin">plugin</A>.
@@ -522,7 +522,7 @@ to a file.  This will make that happen:
 
 <B>	:autocmd BufWritePre *  call DateInsert()</B>
 
-&quot;<A HREF="autocmd.html#BufWritePre">BufWritePre</A>&quot; is the event for which this <A HREF="autocmd\.html#autocommand">自动命令</A> is triggered: Just
+&quot;<A HREF="autocmd.html#BufWritePre">BufWritePre</A>&quot; is the event for which this <A HREF="autocmd.html#autocommand">自动命令</A> is triggered: Just
 before (pre) <A HREF="editing.html#writing">写</A> a buffer to a file.  The &quot;*&quot; is a <A HREF="pattern.html#pattern">pattern</A> to match with
 the file name.  In this <A HREF="change.html#case">case</A> <A HREF="motion.html#it">它</A> matches all files.
    With this command enabled, when you <A HREF="diff.html#do">do</A> a &quot;<A HREF="editing.html#:write">:write</A>&quot;, Vim checks for any
@@ -536,7 +536,7 @@ The [group] name is optional.  It is used in managing and calling the commands
 (more on this later).  The {events} parameter is a <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#events">events</A> (comma
 separated) that trigger the command.
    {file-pattern} is a filename, usually with <A HREF="editing.html#wildcards">wildcards</A>.例如, using
-&quot;*.txt&quot; makes the <A HREF="autocmd\.html#autocommand">自动命令</A> be used for all files whose name end in &quot;.txt&quot;.
+&quot;*.txt&quot; makes the <A HREF="autocmd.html#autocommand">自动命令</A> be used for all files whose name end in &quot;.txt&quot;.
 The optional [++nested] flag allows for nesting of autocommands (see below),
 and finally, {command} is the command to be executed.
 
@@ -546,7 +546,7 @@ EVENTS
 One of the most useful <A HREF="autocmd.html#events">events</A> is <A HREF="autocmd.html#BufReadPost">BufReadPost</A>.  It is triggered after a new
 file is being edited.  It is commonly used to set option values.例如,
 you know that &quot;*.gsm&quot; files are GNU assembly language.  To get the <A HREF="syntax.html#syntax">语法</A> file
-right, define this <A HREF="autocmd\.html#autocommand">自动命令</A>:
+right, define this <A HREF="autocmd.html#autocommand">自动命令</A>:
 
 <B>	:autocmd BufReadPost *.gsm  set filetype=asm</B>
 
@@ -594,7 +594,7 @@ of the file (&quot;/home/biep/readme.txt&quot;) and the relative path (e.g.,
 
 DELETING
 
-To delete an <A HREF="autocmd\.html#autocommand">自动命令</A>, use the same command <A HREF="motion.html#as">as</A> what <A HREF="motion.html#it">它</A> was defined with,
+To delete an <A HREF="autocmd.html#autocommand">自动命令</A>, use the same command <A HREF="motion.html#as">as</A> what <A HREF="motion.html#it">它</A> was defined with,
 but leave out the {command} at the end and use a !.  Example:
 
 <B>	:autocmd! FileWritePre *</B>
@@ -627,7 +627,7 @@ for the cprograms group:
 
 GROUPS
 
-The {group} item, used when defining an <A HREF="autocmd\.html#autocommand">自动命令</A>, groups related autocommands
+The {group} item, used when defining an <A HREF="autocmd.html#autocommand">自动命令</A>, groups related autocommands
 together.  This can be used to delete all the autocommands in a certain group,
 for example.
    When defining several autocommands for a certain group, use the &quot;<A HREF="autocmd.html#:augroup">:augroup</A>&quot;
@@ -650,7 +650,7 @@ To delete all autocommands in the &quot;cprograms&quot; group:
 
 NESTING
 
-Generally, commands executed <A HREF="motion.html#as">as</A> the result of an <A HREF="autocmd\.html#autocommand">自动命令</A> event will not
+Generally, commands executed <A HREF="motion.html#as">as</A> the result of an <A HREF="autocmd.html#autocommand">自动命令</A> event will not
 trigger any new <A HREF="autocmd.html#events">events</A>.  If you read a file in response to a <A HREF="autocmd.html#FileChangedShell">FileChangedShell</A>
 event, <A HREF="motion.html#it">它</A> will not trigger the autocommands that would set the <A HREF="syntax.html#syntax">语法</A>, for
 example.  To make the <A HREF="autocmd.html#events">events</A> triggered, add the &quot;++nested&quot; flag:
@@ -660,12 +660,12 @@ example.  To make the <A HREF="autocmd.html#events">events</A> triggered, add th
 
 EXECUTING AUTOCOMMANDS
 
-It is possible to trigger an <A HREF="autocmd\.html#autocommand">自动命令</A> by pretending an event has occurred.
-This is useful to have one <A HREF="autocmd\.html#autocommand">自动命令</A> trigger another one.  Example:
+It is possible to trigger an <A HREF="autocmd.html#autocommand">自动命令</A> by pretending an event has occurred.
+This is useful to have one <A HREF="autocmd.html#autocommand">自动命令</A> trigger another one.  Example:
 
 <B>	:autocmd BufReadPost *.new  execute "doautocmd BufReadPost " . expand("&lt;afile&gt;:r")</B>
 
-This defines an <A HREF="autocmd\.html#autocommand">自动命令</A> that is triggered when a new file has been edited.
+This defines an <A HREF="autocmd.html#autocommand">自动命令</A> that is triggered when a new file has been edited.
 The file name must end in &quot;.new&quot;.  The &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令 uses <A HREF="eval.html#expression">expression</A>
 evaluation to form a new command and execute <A HREF="motion.html#it">它</A>.  When editing the file
 &quot;tryout.c.new&quot; the executed command will be:
@@ -673,7 +673,7 @@ evaluation to form a new command and execute <A HREF="motion.html#it">它</A>.  
 <B>	:doautocmd BufReadPost tryout.c</B>
 
 The <A HREF="builtin.html#expand()">expand()</A> function takes the &quot;<A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A>&quot; argument, which stands for the file
-name the <A HREF="autocmd\.html#autocommand">自动命令</A> was executed for, and takes the root of the file name
+name the <A HREF="autocmd.html#autocommand">自动命令</A> was executed for, and takes the root of the file name
 with &quot;<A HREF="insert.html#:r">:r</A>&quot;.
 
 &quot;<A HREF="autocmd.html#:doautocmd">:doautocmd</A>&quot; executes on the current buffer.  The &quot;<A HREF="autocmd.html#:doautoall">:doautoall</A>&quot;命令 works
@@ -682,7 +682,7 @@ like &quot;doautocmd&quot; except <A HREF="motion.html#it">它</A> executes on a
 
 USING NORMAL MODE COMMANDS
 
-The commands executed by an <A HREF="autocmd\.html#autocommand">自动命令</A> are <A HREF="cmdline.html#Command-line">Command-line</A> commands.  If you
+The commands executed by an <A HREF="autocmd.html#autocommand">自动命令</A> are <A HREF="cmdline.html#Command-line">Command-line</A> commands.  If you
 want to use a <A HREF="intro.html#Normal">正常</A>模式 command, the &quot;<A HREF="various.html#:normal">:normal</A>&quot;命令 can be used.
 Example:
 
@@ -706,14 +706,14 @@ to pass unprintable characters in a convenient way.  Example:
 This also shows the use of a <A HREF="intro.html#backslash">backslash</A> to break a long command into more
 lines.  This can be used in Vim scripts (not at the command line).
 
-When you want the <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="diff.html#do">do</A> something complicated, which involves jumping
+When you want the <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="diff.html#do">do</A> something complicated, which involves jumping
 around in the file and then returning to the original position, you may want
 to restore the view on the file.  见 |<A HREF="tips.html#restore-position">restore-position</A>| for an example.
 
 
 IGNORING EVENTS
 
-At times, you will not want to trigger an <A HREF="autocmd\.html#autocommand">自动命令</A>.  The <A HREF="options.html#'eventignore'">'eventignore'</A>
+At times, you will not want to trigger an <A HREF="autocmd.html#autocommand">自动命令</A>.  The <A HREF="options.html#'eventignore'">'eventignore'</A>
 option contains a <A HREF="eval.html#list">列表</A> of <A HREF="autocmd.html#events">events</A> that will be totally ignored.例如,
 the following causes <A HREF="autocmd.html#events">events</A> for entering and leaving a<A HREF="windows.html#window">窗口</A>to be ignored:
 

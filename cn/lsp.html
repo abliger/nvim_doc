@@ -715,7 +715,7 @@ buf_request_sync({bufnr}, {method}, {params}, {timeout_ms})
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
                     Map of client_id:request_result. On timeout, cancel or
-                    error, returns `(nil, err)` where `err` is a <A HREF="options\.html#options">字符串</A>
+                    error, returns `(nil, err)` where `err` is a <A HREF="options.html#options">字符串</A>
                     describing the failure reason.
 
 
@@ -742,7 +742,7 @@ client()                                                      *<A NAME="vim.lsp.
                     Returns: { err=err, result=result }, a dictionary, where
                     `err` and `result` come from the |<A HREF="#lsp-handler">lsp-handler</A>|. On
                     timeout, cancel or error, returns `(nil, err)` where `err`
-                    is a <A HREF="options\.html#options">字符串</A> describing the failure reason. If the request
+                    is a <A HREF="options.html#options">字符串</A> describing the failure reason. If the request
                     was unsuccessful returns `nil`.
                   • notify(method, params) Sends a notification to an <A HREF="#LSP">LSP</A>
                     server. Returns: a <A HREF="options.html#boolean">boolean</A> to indicate if the notification
@@ -948,7 +948,7 @@ start({config}, {opts})                                      *<A NAME="vim.lsp.s
                 current directory until either a `pyproject.toml` or
                 `setup.py` file is found.
 
-                `workspace_folders` a <A HREF="eval.html#list">列表</A> of { uri:string, name: <A HREF="options\.html#options">字符串</A> }
+                `workspace_folders` a <A HREF="eval.html#list">列表</A> of { uri:string, name: <A HREF="options.html#options">字符串</A> }
                 tables. The project root folders used by the language server.
                 If `nil` the property is derived from the `root_dir` for
                 convenience.
@@ -986,7 +986,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                 table.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {cmd}                (required, <A HREF="options\.html#options">字符串</A> or <A HREF="eval.html#list">列表</A> treated
+                    {cmd}                (required, <A HREF="options.html#options">字符串</A> or <A HREF="eval.html#list">列表</A> treated
                                          like |<A HREF="builtin.html#jobstart()">jobstart()</A>|) Base command that
                                          initiates the <A HREF="#LSP">LSP</A> client.
                     {cmd_cwd}            (string, default=|<A HREF="builtin.html#getcwd()">getcwd()</A>|)
@@ -996,7 +996,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          the <A HREF="#LSP">LSP</A> on spawn. Can be specified
                                          using keys like a map or <A HREF="motion.html#as">as</A> a <A HREF="eval.html#list">列表</A>
                                          with `k=v` pairs or both. Non-string values are
-                                         coerced to <A HREF="options\.html#options">字符串</A>. Example:
+                                         coerced to <A HREF="options.html#options">字符串</A>. Example:
 
 <B>                 { "PRODUCTION=true"; "TEST=123"; PORT = 8080; HOST = "0.0.0.0"; }</B>
  
@@ -1033,7 +1033,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                                          language server if requested via
                                          `workspace/configuration`. Keys are
                                          case-sensitive.
-                    {commands}           (table) Table that maps <A HREF="options\.html#options">字符串</A> of
+                    {commands}           (table) Table that maps <A HREF="options.html#options">字符串</A> of
                                          clientside commands to user-defined
                                          <A HREF="eval.html#functions">functions</A>. Commands passed to
                                          start_client take precedence over the
@@ -1049,7 +1049,7 @@ start_client({config})                                *<A NAME="vim.lsp.start_cl
                     {name}               (string, default=client-id) Name in
                                          log <A HREF="message.html#messages">信息</A>.
                     {get_language_id}    function(bufnr, <A HREF="filetype.html#filetype">文件类型</A>) <A HREF="eval.html#-&gt;">-&gt;</A> language
-                                         ID <A HREF="motion.html#as">as</A> <A HREF="options\.html#options">字符串</A>. Defaults to the
+                                         ID <A HREF="motion.html#as">as</A> <A HREF="options.html#options">字符串</A>. Defaults to the
                                          <A HREF="filetype.html#filetype">文件类型</A>.
                     {offset_encoding}    (default=&quot;utf-16&quot;) One of &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot;,
                                          &quot;utf-16&quot;, or &quot;utf-32&quot; which is the
@@ -1512,8 +1512,8 @@ workspace_symbol({query})                     *<A NAME="vim.lsp.buf.workspace_sy
                <A HREF="windows.html#window">窗口</A>.
 
                 The <A HREF="eval.html#list">列表</A> is filtered against {query}; if the argument is
-                omitted from the call, the user is prompted to enter a <A HREF="options\.html#options">字符串</A>
-                on the command line. An empty <A HREF="options\.html#options">字符串</A> means no filtering is
+                omitted from the call, the user is prompted to enter a <A HREF="options.html#options">字符串</A>
+                on the command line. An empty <A HREF="options.html#options">字符串</A> means no filtering is
                 done.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
@@ -1855,11 +1855,11 @@ lookup_section({settings}, {section})          *<A NAME="vim.lsp.util.lookup_sec
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {settings}  a table of language server settings
-                    {section}   a <A HREF="options\.html#options">字符串</A> indicating the field of the settings
+                    {section}   a <A HREF="options.html#options">字符串</A> indicating the field of the settings
                                 table
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    (table or <A HREF="options\.html#options">字符串</A>) The value of settings accessed via
+                    (table or <A HREF="options.html#options">字符串</A>) The value of settings accessed via
                     section
 
 
@@ -2270,7 +2270,7 @@ start({cmd}, {cmd_args}, {dispatchers}, {extra_spawn_params})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {cmd}                 (string) Command to start the <A HREF="#LSP">LSP</A>
                                           server.
-                    {cmd_args}            (table) <A HREF="eval.html#list">列表</A> of additional <A HREF="options\.html#options">字符串</A>
+                    {cmd_args}            (table) <A HREF="eval.html#list">列表</A> of additional <A HREF="options.html#options">字符串</A>
                                           arguments to pass to {cmd}.
                     {dispatchers}         (table, optional) Dispatchers for
                                           <A HREF="#LSP">LSP</A> message types. Valid dispatcher

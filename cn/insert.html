@@ -123,7 +123,7 @@ all the time.
 
 						*<A NAME="i_CTRL-C"></A><B>i_CTRL-C</B>*
 <A HREF="pattern.html#CTRL-C">CTRL-C</A>		Quit insert mode, go back to <A HREF="intro.html#Normal">正常</A>模式.  Do not check for
-		<A HREF="map.html#abbreviations">abbreviations</A>.  Does not trigger the |<A HREF="autocmd.html#InsertLeave">InsertLeave</A>| <A HREF="autocmd\.html#autocommand">自动命令</A>
+		<A HREF="map.html#abbreviations">abbreviations</A>.  Does not trigger the |<A HREF="autocmd.html#InsertLeave">InsertLeave</A>| <A HREF="autocmd.html#autocommand">自动命令</A>
 		event.
 
 
@@ -184,7 +184,7 @@ CTRL-@		<A HREF="#Insert">Insert</A> previously inserted text and stop insert.
 CTRL-K {char1} [char2]
 		Enter digraph (见 |<A HREF="digraph.html#digraphs">digraphs</A>|).  When {char1} is a special
 		key, the code for that key is inserted in <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> form.  For
-		example, the <A HREF="options\.html#options">字符串</A> &quot;&lt;S-Space&gt;&quot; can be entered by typing
+		example, the <A HREF="options.html#options">字符串</A> &quot;&lt;S-Space&gt;&quot; can be entered by typing
 		&lt;C-K&gt;&lt;S-Space&gt; (two keys).  Neither char is considered for
 		<A HREF="map.html#mapping">mapping</A>.
 
@@ -225,7 +225,7 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 				<A HREF="motion.html#as">as</A> lines.  They can have line breaks inside
 				too.
 				When the result is a <A HREF="eval.html#Float">Float</A> it's automatically
-				converted to a <A HREF="options\.html#options">字符串</A>.
+				converted to a <A HREF="options.html#options">字符串</A>.
 				When <A HREF="builtin.html#append()">append()</A> or <A HREF="builtin.html#setline()">setline()</A> is invoked the <A HREF="undo.html#undo">undo</A>
 				sequence will be broken.
 		见 |<A HREF="change.html#registers">寄存器</A>| about registers.
@@ -304,7 +304,7 @@ CTRL-P		Find previous keyword (见 |<A HREF="#i_CTRL-P">i_CTRL-P</A>|).
 
 						*<A NAME="i_CTRL-Q"></A><B>i_CTRL-Q</B>*
 CTRL-Q		Same <A HREF="motion.html#as">as</A> <A HREF="visual.html#CTRL-V">CTRL-V</A>.
-		Note: Some <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> connections may eat CTRL-Q, <A HREF="motion.html#it">它</A> doesn't
+		Note: Some <A HREF="nvim_terminal_emulator.html#terminal">终端</A> connections may eat CTRL-Q, <A HREF="motion.html#it">它</A> doesn't
 		work then.  It does work in the <A HREF="gui.html#GUI">GUI</A>.
 
 
@@ -700,7 +700,7 @@ typed character is appended (as in <A HREF="#Insert">Insert</A> mode).  Thus the
 characters in a line stays the same until you get to the end of the line.
 If a <A HREF="motion.html#&lt;NL&gt;">&lt;NL&gt;</A> is typed, a line break is inserted and no character is deleted.
 
-Be careful with <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> characters.  If you type a normal <A HREF="print\.html#printing">打印</A> character in
+Be careful with <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> characters.  If you type a normal <A HREF="print.html#printing">打印</A> character in
 its place, the number of characters is still the same, but the number of
 columns will become smaller.
 
@@ -898,8 +898,8 @@ with &quot;\&lt;&quot; prepended (meaning: start of a <A HREF="motion.html#word"
 <A HREF="motion.html#as">as</A> search <A HREF="pattern.html#pattern">pattern</A> (start of any keyword of at least two characters).
 
 In <A HREF="#Replace">Replace</A> mode, the number of characters that are replaced depends on the
-length of the matched <A HREF="options\.html#options">字符串</A>.  This works like typing the characters of the
-matched <A HREF="options\.html#options">字符串</A> in <A HREF="#Replace">Replace</A> mode.
+length of the matched <A HREF="options.html#options">字符串</A>.  This works like typing the characters of the
+matched <A HREF="options.html#options">字符串</A> in <A HREF="#Replace">Replace</A> mode.
 
 If there is not a valid keyword character before the cursor, any keyword of
 at least two characters is matched.
@@ -1305,14 +1305,14 @@ text may have been changed.
 In order to return more information than the matching words, return a <A HREF="eval.html#Dict">Dict</A>
 that contains the <A HREF="eval.html#list">列表</A>.  The <A HREF="eval.html#Dict">Dict</A> can have these items:
 	words		The <A HREF="eval.html#list">列表</A> of matching words (mandatory).
-	refresh		A <A HREF="options\.html#options">字符串</A> to <A HREF="intro.html#control">control</A> re-invocation of the function
+	refresh		A <A HREF="options.html#options">字符串</A> to <A HREF="intro.html#control">control</A> re-invocation of the function
 			(optional).
 			The only value currently recognized is &quot;always&quot;, the
 			effect is that the function is called whenever the
 			leading text is changed.
 Other items are ignored.
 
-For acting upon end of completion, see the |<A HREF="autocmd.html#CompleteDone">CompleteDone</A>| <A HREF="autocmd\.html#autocommand">自动命令</A> event.
+For acting upon end of completion, see the |<A HREF="autocmd.html#CompleteDone">CompleteDone</A>| <A HREF="autocmd.html#autocommand">自动命令</A> event.
 
 For example, the function can contain this:
 <B>	let matches = ... list of words ...</B>
@@ -1320,7 +1320,7 @@ For example, the function can contain this:
  
 
 						*<A NAME="complete-items"></A><B>complete-items</B>*
-Each <A HREF="eval.html#list">列表</A> item can either be a <A HREF="options\.html#options">字符串</A> or a <A HREF="eval.html#Dictionary">Dictionary</A>.  When <A HREF="motion.html#it">它</A> is a <A HREF="options\.html#options">字符串</A> <A HREF="motion.html#it">它</A>
+Each <A HREF="eval.html#list">列表</A> item can either be a <A HREF="options.html#options">字符串</A> or a <A HREF="eval.html#Dictionary">Dictionary</A>.  When <A HREF="motion.html#it">它</A> is a <A HREF="options.html#options">字符串</A> <A HREF="motion.html#it">它</A>
 is used <A HREF="motion.html#as">as</A> the completion.  When <A HREF="motion.html#it">它</A> is a <A HREF="eval.html#Dictionary">Dictionary</A> <A HREF="motion.html#it">它</A> can contain these
 items:
 	<A HREF="motion.html#word">单词</A>		the text that will be inserted, mandatory
@@ -1340,14 +1340,14 @@ items:
 	dup		when non-zero this match will be added even when an
 			item with the same <A HREF="motion.html#word">单词</A> is already present.
 	empty		when non-zero this match will be added even when <A HREF="motion.html#it">它</A> is
-			an empty <A HREF="options\.html#options">字符串</A>
+			an empty <A HREF="options.html#options">字符串</A>
 	user_data 	custom data which is associated with the item and
 			available in |<A HREF="eval.html#v:completed_item">v:completed_item</A>|; it can be any type;
-			defaults to an empty <A HREF="options\.html#options">字符串</A>
+			defaults to an empty <A HREF="options.html#options">字符串</A>
 
-All of these except &quot;icase&quot;, &quot;equal&quot;, &quot;dup&quot; and &quot;empty&quot; must be a <A HREF="options\.html#options">字符串</A>.  If
+All of these except &quot;icase&quot;, &quot;equal&quot;, &quot;dup&quot; and &quot;empty&quot; must be a <A HREF="options.html#options">字符串</A>.  If
 an item does not meet these requirements then an error message is given and
-further items in the <A HREF="eval.html#list">列表</A> are not used.  You can mix <A HREF="options\.html#options">字符串</A> and <A HREF="eval.html#Dictionary">Dictionary</A>
+further items in the <A HREF="eval.html#list">列表</A> are not used.  You can mix <A HREF="options.html#options">字符串</A> and <A HREF="eval.html#Dictionary">Dictionary</A>
 items in the returned <A HREF="eval.html#list">列表</A>.
 
 The &quot;menu&quot; item is used in the popup menu and may be truncated, thus <A HREF="motion.html#it">它</A> should
@@ -1435,7 +1435,7 @@ Vim can display the matches in a simplistic popup menu.
 
 The menu is used when:
 - The <A HREF="options.html#'completeopt'">'completeopt'</A> option contains &quot;menu&quot; or &quot;menuone&quot;.
-- The <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> supports at least 8 colors.
+- The <A HREF="nvim_terminal_emulator.html#terminal">终端</A> supports at least 8 colors.
 - There are at least two matches.  One if &quot;menuone&quot; is used.
 
 The <A HREF="options.html#'pumheight'">'pumheight'</A> option can be used to set a maximum height.  The default is to
@@ -1484,7 +1484,7 @@ any printable, non-white character:
 In all three states these can be used:
 <A HREF="scroll.html#CTRL-Y">CTRL-Y</A>		  Yes: Accept the currently selected match and stop completion.
 <A HREF="scroll.html#CTRL-E">CTRL-E</A>		  End completion, go back to what was there before selecting a
-		  match (what was typed or longest common <A HREF="options\.html#options">字符串</A>).
+		  match (what was typed or longest common <A HREF="options.html#options">字符串</A>).
 <A HREF="scroll.html#&lt;PageUp&gt;">&lt;PageUp&gt;</A>	  <A HREF="visual.html#Select">Select</A> a match several entries back, but don't insert <A HREF="motion.html#it">它</A>.
 <A HREF="scroll.html#&lt;PageDown&gt;">&lt;PageDown&gt;</A>	  <A HREF="visual.html#Select">Select</A> a match several entries further, but don't insert <A HREF="motion.html#it">它</A>.
 <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>		  <A HREF="visual.html#Select">Select</A> the previous match, <A HREF="motion.html#as">as</A> if <A HREF="motion.html#CTRL-P">CTRL-P</A> was used, but don't
@@ -1803,7 +1803,7 @@ autoload/syntaxcomplete.vim) to add items.  Looking at the output from
 To pick up any JavaScript and HTML keyword <A HREF="syntax.html#syntax">语法</A> groups while editing a PHP
 file, you can use 3 different regexs, one for each language.  Or you can
 simply restrict the include groups to a particular value, without using
-a regex <A HREF="options\.html#options">字符串</A>:
+a regex <A HREF="options.html#options">字符串</A>:
 <B>    let g:omni_syntax_group_include_php = 'php\w\+,javaScript\w\+,html\w\+'</B>
 <B>    let g:omni_syntax_group_include_php = 'phpFunctions,phpMethods'</B>
  
@@ -2146,7 +2146,7 @@ NOTE: These commands cannot be used with |<A HREF="repeat.html#:global">:global<
 
 
 							*<A NAME=":start"></A><B>:start</B>* *<A NAME=":startinsert"></A><B>:startinsert</B>*
-:star[tinsert][!]	Start <A HREF="#Insert">Insert</A> mode (or |<A HREF="intro\.html#Terminal-mode">终端模式</A>| in a |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|
+:star[tinsert][!]	Start <A HREF="#Insert">Insert</A> mode (or |<A HREF="intro.html#Terminal-mode">终端模式</A>| in a |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>|
 			buffer) just after executing this command.
 			Works like typing &quot;<A HREF="#i">i</A>&quot; in <A HREF="intro.html#Normal">正常</A>模式.  When the ! is
 			included <A HREF="motion.html#it">它</A> works like &quot;<A HREF="#A">A</A>&quot;, append to the line.
@@ -2158,9 +2158,9 @@ NOTE: These commands cannot be used with |<A HREF="repeat.html#:global">:global<
 
 
 							*<A NAME=":stopi"></A><B>:stopi</B>* *<A NAME=":stopinsert"></A><B>:stopinsert</B>*
-:stopi[nsert]		Stop <A HREF="#Insert">Insert</A> mode or |<A HREF="intro\.html#Terminal-mode">终端模式</A>| <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A>
+:stopi[nsert]		Stop <A HREF="#Insert">Insert</A> mode or |<A HREF="intro.html#Terminal-mode">终端模式</A>| <A HREF="motion.html#as">as</A> soon <A HREF="motion.html#as">as</A>
 			possible.  Works like typing <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> in <A HREF="#Insert">Insert</A> mode.
-			Can be used in an <A HREF="autocmd\.html#autocommand">自动命令</A>, example:
+			Can be used in an <A HREF="autocmd.html#autocommand">自动命令</A>, example:
 <B>				:au BufEnter scratch stopinsert</B>
  
 

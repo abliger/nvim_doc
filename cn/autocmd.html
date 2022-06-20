@@ -869,7 +869,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				user does not expect.
 				The cursor is restored afterwards.  If you <A HREF="diff.html#do">do</A>
 				not want that set |<A HREF="eval.html#v:char">v:char</A>| to a non-empty
-				<A HREF="options\.html#options">字符串</A>.
+				<A HREF="options.html#options">字符串</A>.
 
 							*<A NAME="InsertLeavePre"></A><B>InsertLeavePre</B>*
 <A HREF="#InsertLeavePre">InsertLeavePre</A>			Just before leaving <A HREF="intro.html#Insert">插入</A>模式.  Also when
@@ -936,10 +936,10 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				the option. Similarly |<A HREF="eval.html#v:option_oldglobal">v:option_oldglobal</A>| is
 				only set when |<A HREF="options.html#:set">:set</A>| or |<A HREF="options.html#:setglobal">:setglobal</A>| was used.
 
-				Note that when setting a |<A HREF="options.html#global-local">global-local</A>| <A HREF="options\.html#options">字符串</A>
+				Note that when setting a |<A HREF="options.html#global-local">global-local</A>| <A HREF="options.html#options">字符串</A>
 				option with |<A HREF="options.html#:set">:set</A>|然后|<A HREF="eval.html#v:option_old">v:option_old</A>| is the
 				old global value. However, for all other kinds
-				of <A HREF="options.html#options">选项</A> (local <A HREF="options\.html#options">字符串</A> <A HREF="options.html#options">选项</A>, <A HREF="options.html#global-local">global-local</A>
+				of <A HREF="options.html#options">选项</A> (local <A HREF="options.html#options">字符串</A> <A HREF="options.html#options">选项</A>, <A HREF="options.html#global-local">global-local</A>
 				number <A HREF="options.html#options">选项</A>, <A HREF="eval.html#...">...</A>) <A HREF="motion.html#it">它</A> is the old local
 				value.
 
@@ -1001,7 +1001,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				<A HREF="pattern.html#pattern">pattern</A> is matched against the {serverid}.
 				<A HREF="cmdline.html#&lt;amatch&gt;">&lt;amatch&gt;</A> is equal to the {serverid} from which
 				the reply was sent, and <A HREF="cmdline.html#&lt;afile&gt;">&lt;afile&gt;</A> is the actual
-				reply <A HREF="options\.html#options">字符串</A>.
+				reply <A HREF="options.html#options">字符串</A>.
 				Note that even if an <A HREF="#autocommand">autocommand</A> is defined,
 				the reply should be read with |<A HREF="intro.html#remote_read()">remote_read()</A>|
 				to consume <A HREF="motion.html#it">它</A>.
@@ -1092,7 +1092,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				edited.  |<A HREF="eval.html#v:swapcommand">v:swapcommand</A>| may contain a command
 				to be executed in the opened file.
 				The commands should set the |<A HREF="eval.html#v:swapchoice">v:swapchoice</A>|
-				variable to a <A HREF="options\.html#options">字符串</A> with one character to
+				variable to a <A HREF="options.html#options">字符串</A> with one character to
 				tell Vim what should be done next:
 					'<A HREF="insert.html#o">o</A>'	open read-only
 					'<A HREF="motion.html#e">e</A>'	edit the file anyway
@@ -1100,7 +1100,7 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 					'<A HREF="change.html#d">d</A>'	delete the swap file
 					'<A HREF="repeat.html#q">q</A>'	quit, don't edit the file
 					'<A HREF="insert.html#a">a</A>'	abort, like hitting <A HREF="pattern.html#CTRL-C">CTRL-C</A>
-				When set to an empty <A HREF="options\.html#options">字符串</A> the user will be
+				When set to an empty <A HREF="options.html#options">字符串</A> the user will be
 				asked, <A HREF="motion.html#as">as</A> if there was no <A HREF="#SwapExists">SwapExists</A> <A HREF="#autocmd">autocmd</A>.
 
 							*<A NAME="E812"></A><B>E812</B>*
@@ -1138,27 +1138,27 @@ Nvim recognizes the following <A HREF="#events">events</A>.  Names are case-inse
 				the <A HREF="intro.html#tab">tab</A> page number.
 
 							*<A NAME="TermOpen"></A><B>TermOpen</B>*
-<A HREF="#TermOpen">TermOpen</A>			When a |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| <A HREF="job_control.html#job">job</A> is starting.  Can be
-				used to configure the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> buffer.
+<A HREF="#TermOpen">TermOpen</A>			When a |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>| <A HREF="job_control.html#job">job</A> is starting.  Can be
+				used to configure the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> buffer.
 
 							*<A NAME="TermEnter"></A><B>TermEnter</B>*
-<A HREF="#TermEnter">TermEnter</A>			After entering |<A HREF="intro\.html#Terminal-mode">终端模式</A>|.
+<A HREF="#TermEnter">TermEnter</A>			After entering |<A HREF="intro.html#Terminal-mode">终端模式</A>|.
 				After <A HREF="#TermOpen">TermOpen</A>.
 
 							*<A NAME="TermLeave"></A><B>TermLeave</B>*
-<A HREF="#TermLeave">TermLeave</A>			After leaving |<A HREF="intro\.html#Terminal-mode">终端模式</A>|.
+<A HREF="#TermLeave">TermLeave</A>			After leaving |<A HREF="intro.html#Terminal-mode">终端模式</A>|.
 				After <A HREF="#TermClose">TermClose</A>.
 
 							*<A NAME="TermClose"></A><B>TermClose</B>*
-<A HREF="#TermClose">TermClose</A>			When a |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| <A HREF="job_control.html#job">job</A> ends.
+<A HREF="#TermClose">TermClose</A>			When a |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>| <A HREF="job_control.html#job">job</A> ends.
 				Sets these |<A HREF="eval.html#v:event">v:event</A>| keys:
 				    status
 
 							*<A NAME="TermResponse"></A><B>TermResponse</B>*
 <A HREF="#TermResponse">TermResponse</A>			After the response to t_RV is received from
-				the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  The value of |<A HREF="eval.html#v:termresponse">v:termresponse</A>|
+				the <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.  The value of |<A HREF="eval.html#v:termresponse">v:termresponse</A>|
 				can be used to <A HREF="diff.html#do">do</A> things depending on the
-				<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> version.  May be triggered halfway
+				<A HREF="nvim_terminal_emulator.html#terminal">终端</A> version.  May be triggered halfway
 				through another event (file I/O, a shell
 				command, or anything else that takes time).
 
@@ -1434,7 +1434,7 @@ Examples:
 <B>    :au BufNewFile * au CursorHold &lt;buffer=abuf&gt;  echo 'hold'</B>
 
 All the commands for autocommands also work with buffer-local autocommands,
-simply use the special <A HREF="options\.html#options">字符串</A> instead of the <A HREF="pattern.html#pattern">pattern</A>.  Examples:
+simply use the special <A HREF="options.html#options">字符串</A> instead of the <A HREF="pattern.html#pattern">pattern</A>.  Examples:
 <B>    :au! * &lt;buffer&gt;		     " remove buffer-local autocommands for</B>
 <B>				     " current buffer</B>
 <B>    :au! * &lt;buffer=33&gt;		     " remove buffer-local autocommands for</B>
@@ -1760,7 +1760,7 @@ uses the &quot;<A HREF="repeat.html#:g">:g</A>&quot;命令 to find lines that co
 lines the &quot;<A HREF="change.html#:s">:s</A>&quot;命令 is executed to replace the existing date with the
 current one.  The &quot;<A HREF="eval.html#:execute">:execute</A>&quot;命令 is used to be able to use an <A HREF="eval.html#expression">expression</A>
 for the &quot;<A HREF="repeat.html#:g">:g</A>&quot; and &quot;<A HREF="change.html#:s">:s</A>&quot;命令.  The date is obtained with the <A HREF="builtin.html#strftime()">strftime()</A>
-function.  You can change its argument to get another date <A HREF="options\.html#options">字符串</A>.
+function.  You can change its argument to get another date <A HREF="options.html#options">字符串</A>.
 
 When entering <A HREF="#:autocmd">:autocmd</A> on the command-line, completion of <A HREF="#events">events</A> and command
 names may be done (with <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A>, <A HREF="scroll.html#CTRL-D">CTRL-D</A>, etc.) where appropriate.

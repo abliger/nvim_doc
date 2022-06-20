@@ -136,7 +136,7 @@ match.  That's smart!
 CASE IN ONE PATTERN
 
 If you want to ignore <A HREF="change.html#case">case</A> for one specific <A HREF="pattern.html#pattern">pattern</A>, you can <A HREF="diff.html#do">do</A> this by
-prepending the &quot;\c&quot; <A HREF="options\.html#options">字符串</A>.  Using &quot;\C&quot; will make the <A HREF="pattern.html#pattern">pattern</A> to match <A HREF="change.html#case">case</A>.
+prepending the &quot;\c&quot; <A HREF="options.html#options">字符串</A>.  Using &quot;\C&quot; will make the <A HREF="pattern.html#pattern">pattern</A> to match <A HREF="change.html#case">case</A>.
 This overrules the <A HREF="options.html#'ignorecase'">'ignorecase'</A> and <A HREF="options.html#'smartcase'">'smartcase'</A> <A HREF="options.html#options">选项</A>, when &quot;\c&quot; or &quot;\C&quot; is
 used their value doesn't matter.
 
@@ -164,9 +164,9 @@ matter if <A HREF="options.html#'ignorecase'">'ignorecase'</A> or <A HREF="optio
 
 *<A NAME="27.2"></A><B>27.2</B>*	Wrapping around the file end
 
-By default, a forward search starts searching for the given <A HREF="options\.html#options">字符串</A> at the
+By default, a forward search starts searching for the given <A HREF="options.html#options">字符串</A> at the
 current cursor location.  It then proceeds to the end of the file.  If <A HREF="motion.html#it">它</A> has
-not found the <A HREF="options\.html#options">字符串</A> by that time, <A HREF="motion.html#it">它</A> starts from the beginning and searches
+not found the <A HREF="options.html#options">字符串</A> by that time, <A HREF="motion.html#it">它</A> starts from the beginning and searches
 from the start of the file to the cursor location.
    Keep in mind that when <A HREF="repeat.html#repeating">repeating</A> the &quot;<A HREF="pattern.html#n">n</A>&quot;命令 to search for the next
 match, you eventually get back to the first match.  If you don't notice this
@@ -325,7 +325,7 @@ Thus:
 matches &quot;<A HREF="insert.html#a">a</A>&quot;, &quot;aa&quot;, &quot;aaa&quot;, etc.  But also &quot;&quot; (the empty string), because zero
 times is included.
    The &quot;*&quot; only applies to the item directly before <A HREF="motion.html#it">它</A>.  Thus &quot;ab*&quot; matches
-&quot;<A HREF="insert.html#a">a</A>&quot;, &quot;<A HREF="motion.html#ab">ab</A>&quot;, &quot;abb&quot;, &quot;abbb&quot;, etc.  To match a whole <A HREF="options\.html#options">字符串</A> multiple times, <A HREF="motion.html#it">它</A>
+&quot;<A HREF="insert.html#a">a</A>&quot;, &quot;<A HREF="motion.html#ab">ab</A>&quot;, &quot;abb&quot;, &quot;abbb&quot;, etc.  To match a whole <A HREF="options.html#options">字符串</A> multiple times, <A HREF="motion.html#it">它</A>
 must be grouped into one item.  This is done by putting &quot;\(&quot; before <A HREF="motion.html#it">它</A> and
 &quot;\)&quot; after <A HREF="motion.html#it">它</A>.  Thus this command:
 
@@ -333,7 +333,7 @@ must be grouped into one item.  This is done by putting &quot;\(&quot; before <A
 
 Matches: &quot;<A HREF="motion.html#ab">ab</A>&quot;, &quot;abab&quot;, &quot;ababab&quot;, etc.  And also &quot;&quot;.
 
-To avoid matching the empty <A HREF="options\.html#options">字符串</A>, use &quot;\+&quot;.  This makes the previous item
+To avoid matching the empty <A HREF="options.html#options">字符串</A>, use &quot;\+&quot;.  This makes the previous item
 match one or more times.
 
 <B>	/ab\+</B>

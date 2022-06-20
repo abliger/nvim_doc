@@ -96,7 +96,7 @@
 
 *<A NAME="06.1"></A><B>06.1</B>*	打开<A HREF="motion.html#it">它</A>
 
-<A HREF="autocmd\.html#Syntax">语法</A>高亮默认开启.Nvim自动发现文件类型并加载正确的<A HREF="syntax.html#syntax">语法</A>高亮.
+<A HREF="autocmd.html#Syntax">语法</A>高亮默认开启.Nvim自动发现文件类型并加载正确的<A HREF="syntax.html#syntax">语法</A>高亮.
 
 ==============================================================================
 
@@ -104,10 +104,10 @@
 
 你看不到颜色有很多原因:
 
-- 你的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>不支持颜色.
-	Vim会使用<A HREF="syntax\.html#bold">粗体</A>,<A HREF="syntax\.html#bold">斜体</A>和下划线展示文字,但是看起来不怎么样. 你可以使用支持颜色的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.
+- 你的<A HREF="nvim_terminal_emulator.html#terminal">终端</A>不支持颜色.
+	Vim会使用<A HREF="syntax.html#bold">粗体</A>,<A HREF="syntax.html#bold">斜体</A>和下划线展示文字,但是看起来不怎么样. 你可以使用支持颜色的<A HREF="nvim_terminal_emulator.html#terminal">终端</A>.
 
-- 你的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>支持颜色,但Vim不知道.确保<A HREF="term.html#$TERM">$TERM</A>设置是正确的.例如,当使用支持颜色的xterm终端:
+- 你的<A HREF="nvim_terminal_emulator.html#terminal">终端</A>支持颜色,但Vim不知道.确保<A HREF="term.html#$TERM">$TERM</A>设置是正确的.例如,当使用支持颜色的xterm终端:
 
 <B>		setenv TERM xterm-color</B>
  
@@ -115,7 +115,7 @@
 
 <B>		TERM=xterm-color; export TERM</B>
 
-设置的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>的名字必须和你使用的<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>相同.
+设置的<A HREF="nvim_terminal_emulator.html#terminal">终端</A>的名字必须和你使用的<A HREF="nvim_terminal_emulator.html#terminal">终端</A>相同.
 
 - 文件类型不能识别.
   Vim 不可能识别所有文件，而且有时很难说一个文件是什么类型的。试一下这个命令:
@@ -175,10 +175,10 @@
 
 2. 编辑这个色彩方案，常用的有下面的这些条目:
 
-	term		黑白<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>的属性
-	cterm		支持颜色<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>的属性
-	ctermfg		<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>前景色
-	ctermbg		<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>背景色
+	term		黑白<A HREF="nvim_terminal_emulator.html#terminal">终端</A>的属性
+	cterm		支持颜色<A HREF="nvim_terminal_emulator.html#terminal">终端</A>的属性
+	ctermfg		<A HREF="nvim_terminal_emulator.html#terminal">终端</A>前景色
+	ctermbg		<A HREF="nvim_terminal_emulator.html#terminal">终端</A>背景色
 	<A HREF="gui.html#gui">gui</A>		<A HREF="gui.html#GUI">GUI</A>属性
 	guifg		<A HREF="gui.html#GUI">GUI</A>前景色
 	guibg		<A HREF="gui.html#GUI">GUI</A>背景色
@@ -187,7 +187,7 @@
 
 <B>	:highlight Comment ctermfg=green guifg=green</B>
  
-   对于&quot;cterm&quot;和&quot;<A HREF="gui.html#gui">gui</A>&quot;可以使用&quot;<A HREF="syntax\.html#bold">粗体</A>&quot; and &quot;<A HREF="syntax.html#underline">下划线</A>&quot;属性修饰. 使用&quot;bold,underline&quot;都设置.  查看细节使用|<A HREF="syntax.html#:highlight">:highlight</A>|命令.
+   对于&quot;cterm&quot;和&quot;<A HREF="gui.html#gui">gui</A>&quot;可以使用&quot;<A HREF="syntax.html#bold">粗体</A>&quot; and &quot;<A HREF="syntax.html#underline">下划线</A>&quot;属性修饰. 使用&quot;bold,underline&quot;都设置.  查看细节使用|<A HREF="syntax.html#:highlight">:highlight</A>|命令.
 
 3. 告诉 Vim 总使用你这个色彩方案。把如下语句加入你的 vimrc 中:
 
@@ -263,7 +263,7 @@ T这个命令会停止对所有缓冲区的所有语法高亮.详见 |<A HREF="s
 
 用你喜欢的浏览器打开这个文件，并通过它打印这个文件。如果一切顺利，这个输出应该与 Vim 中显示的一样.详见|<A HREF="2html.html">2html.vim</A>|.处理完后别忘了删掉那个 HTML 文件.
 
-除了<A HREF="print\.html#printing">打印</A>,你还可以把这个 HTML 文件，放到 WEB 服务器上，让其他人可以通过彩色文本阅读.
+除了<A HREF="print.html#printing">打印</A>,你还可以把这个 HTML 文件，放到 WEB 服务器上，让其他人可以通过彩色文本阅读.
 
 ==============================================================================
 

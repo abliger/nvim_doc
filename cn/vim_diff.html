@@ -102,7 +102,7 @@ centralized reference of the differences.
 
 - Filetype detection is enabled by default. This can be disabled by adding
   &quot;<A HREF="filetype.html#:filetype">:filetype</A> off&quot; to |<A HREF="init.html">init.vim</A>|.
-- <A HREF="autocmd\.html#Syntax">语法</A>高亮 is enabled by default. This can be disabled by adding
+- <A HREF="autocmd.html#Syntax">语法</A>高亮 is enabled by default. This can be disabled by adding
   &quot;<A HREF="syntax.html#:syntax">:syntax</A> off&quot; to |<A HREF="init.html">init.vim</A>|.
 
 - <A HREF="options.html#'autoindent'">'autoindent'</A> is enabled
@@ -175,7 +175,7 @@ Default autocommands exist in the following groups. Use &quot;:autocmd! {group}&
 remove them and &quot;<A HREF="autocmd.html#:autocmd">:autocmd</A> {group}&quot; to see how they're defined.
 
 nvim_terminal:
-- <A HREF="autocmd.html#BufReadCmd">BufReadCmd</A>: Treats &quot;term://&quot; <A HREF="windows.html#buffers">buffers</A> <A HREF="motion.html#as">as</A> |<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>| <A HREF="windows.html#buffers">buffers</A>. |<A HREF="nvim_terminal_emulator.html#terminal-start">terminal-start</A>|
+- <A HREF="autocmd.html#BufReadCmd">BufReadCmd</A>: Treats &quot;term://&quot; <A HREF="windows.html#buffers">buffers</A> <A HREF="motion.html#as">as</A> |<A HREF="nvim_terminal_emulator.html#terminal">终端</A>| <A HREF="windows.html#buffers">buffers</A>. |<A HREF="nvim_terminal_emulator.html#terminal-start">terminal-start</A>|
 
 nvim_cmdwin:
 - <A HREF="autocmd.html#CmdwinEnter">CmdwinEnter</A>: Limits <A HREF="syntax.html#syntax">语法</A> sync to maxlines=1 in the |<A HREF="cmdline.html#cmdwin">cmdwin</A>|.
@@ -198,7 +198,7 @@ Providers
   <A HREF="if_ruby.html#Ruby">Ruby</A> plugins			|<A HREF="provider.html#provider-ruby">provider-ruby</A>|
 Remote plugins			|<A HREF="remote_plugin.html#remote-plugin">remote-plugin</A>|
 Shared data			|<A HREF="starting.html#shada">shada</A>|
-Terminal emulator		|<A HREF="nvim_terminal_emulator\.html#terminal">终端</A>|
+Terminal emulator		|<A HREF="nvim_terminal_emulator.html#terminal">终端</A>|
 Vimscript parser		|<A HREF="api.html#nvim_parse_expression()">nvim_parse_expression()</A>|
 XDG base directories		|<A HREF="starting.html#xdg">xdg</A>|
 
@@ -314,7 +314,7 @@ Input/Mappings:
 Options:
   <A HREF="options.html#'cpoptions'">'cpoptions'</A>   flags: |<A HREF="options.html#cpo-_">cpo-_</A>|
   <A HREF="options.html#'display'">'display'</A>     flags: &quot;msgsep&quot; minimizes <A HREF="scroll.html#scrolling">scrolling</A> when showing <A HREF="message.html#messages">信息</A>
-  <A HREF="options.html#'guicursor'">'guicursor'</A>   works in the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>
+  <A HREF="options.html#'guicursor'">'guicursor'</A>   works in the <A HREF="nvim_terminal_emulator.html#terminal">终端</A>
   <A HREF="options.html#'fillchars'">'fillchars'</A>   flags: &quot;msgsep&quot; (see 'display'), &quot;horiz&quot;, &quot;horizup&quot;,
                 &quot;horizdown&quot;, &quot;vertleft&quot;, &quot;vertright&quot;, &quot;verthoriz&quot;
   <A HREF="options.html#'foldcolumn'">'foldcolumn'</A>  supports up to 9 dynamic/fixed columns
@@ -371,7 +371,7 @@ are always available and may be used simultaneously. 见 |<A HREF="provider.html
  
    <A HREF="motion.html#it">它</A> does not use &quot;[...]&quot; (was: &quot;[[], [...]]&quot;, now: &quot;[[], []]&quot;). &quot;<A HREF="eval.html#...">...</A>&quot; is
    only used for recursive containers.
-3. |<A HREF="eval.html#:echo">:echo</A>| <A HREF="print\.html#printing">打印</A> nested containers adds &quot;@level&quot; after &quot;<A HREF="eval.html#...">...</A>&quot; designating
+3. |<A HREF="eval.html#:echo">:echo</A>| <A HREF="print.html#printing">打印</A> nested containers adds &quot;@level&quot; after &quot;<A HREF="eval.html#...">...</A>&quot; designating
    the level at which recursive container was printed: |<A HREF="eval.html#:echo-self-refer">:echo-self-refer</A>|.
    Same thing applies to |<A HREF="builtin.html#string()">string()</A>| (though <A HREF="motion.html#it">它</A> uses construct like
    &quot;{E724@level}&quot;), but this is not reliable because |<A HREF="builtin.html#string()">string()</A>| continues to
@@ -407,7 +407,7 @@ Additional differences:
 - ShaDa file keeps search direction (|<A HREF="eval.html#v:searchforward">v:searchforward</A>|), viminfo does not.
 
 |<A HREF="builtin.html#printf()">printf()</A>| returns something meaningful when used with `&#37;p` argument: in Vim 
-<A HREF="motion.html#it">它</A> used to return useless address of the <A HREF="options\.html#options">字符串</A> (strings are copied to the 
+<A HREF="motion.html#it">它</A> used to return useless address of the <A HREF="options.html#options">字符串</A> (strings are copied to the 
 newly allocated memory all over the place) and fail on types which cannot be 
 coerced to strings. 见 |<A HREF="builtin.html#id()">id()</A>| for more details, currently <A HREF="motion.html#it">它</A> uses 
 `printf(&quot;&#37;p&quot;, {expr})` internally.
@@ -496,7 +496,7 @@ Startup:
     - works by default: &quot;<A HREF="motion.html#-">-</A>&quot; file is optional
     - works in more cases: |<A HREF="starting.html#-Es">-Es</A>|, file args
 
-<A HREF="autocmd\.html#Syntax">语法</A>高亮:
+<A HREF="autocmd.html#Syntax">语法</A>高亮:
   syncolor.vim has been removed. Nvim now sets up default highlighting groups
   automatically for both light and dark backgrounds, regardless of whether or
   not syntax highlighting is enabled. This means that |<A HREF="syntax.html#:syntax-on">:syntax-on</A>| and
@@ -507,12 +507,12 @@ Startup:
 <A HREF="term.html#TUI">TUI</A>:
 
 			*<A NAME=":set-termcap"></A><B>:set-termcap</B>*
-  Start Nvim with <A HREF="options.html#'verbose'">'verbose'</A> level 3 to show <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities:
+  Start Nvim with <A HREF="options.html#'verbose'">'verbose'</A> level 3 to show <A HREF="nvim_terminal_emulator.html#terminal">终端</A> capabilities:
 <B>	nvim -V3</B>
  
 
 			*<A NAME="'term'"></A><B>'term'</B>* *<A NAME="E529"></A><B>E529</B>* *<A NAME="E530"></A><B>E530</B>* *<A NAME="E531"></A><B>E531</B>*
-  <A HREF="#'term'">'term'</A> reflects the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> type derived from |<A HREF="term.html#$TERM">$TERM</A>| and other environment
+  <A HREF="#'term'">'term'</A> reflects the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> type derived from |<A HREF="term.html#$TERM">$TERM</A>| and other environment
   checks.  For debugging only; not reliable during <A HREF="starting.html#startup">startup</A>.
 <B>	  :echo &amp;term</B>
    &quot;builtin_x&quot; means one of the |<A HREF="term.html#builtin-terms">builtin-terms</A>| was chosen, because the expected
@@ -744,8 +744,8 @@ Test <A HREF="eval.html#functions">functions</A>:
 
 			  *<A NAME="t_xx"></A><B>t_xx</B>* *<A NAME="termcap-options"></A><B>termcap-options</B>* *<A NAME="t_AB"></A><B>t_AB</B>* *<A NAME="t_Sb"></A><B>t_Sb</B>* *<A NAME="t_vb"></A><B>t_vb</B>* *<A NAME="t_SI"></A><B>t_SI</B>*
   Nvim does not have special `t_XX` <A HREF="options.html#options">选项</A> nor &lt;t_XX&gt; <A HREF="intro.html#keycodes">keycodes</A> to configure
-  <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> capabilities. Instead Nvim treats the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> <A HREF="motion.html#as">as</A> any other <A HREF="ui.html#UI">UI</A>,
-  e.g. <A HREF="options.html#'guicursor'">'guicursor'</A> sets the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> cursor style if possible.
+  <A HREF="nvim_terminal_emulator.html#terminal">终端</A> capabilities. Instead Nvim treats the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> <A HREF="motion.html#as">as</A> any other <A HREF="ui.html#UI">UI</A>,
+  e.g. <A HREF="options.html#'guicursor'">'guicursor'</A> sets the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> cursor style if possible.
 
 
 			  *<A NAME="termcap"></A><B>termcap</B>*
@@ -754,10 +754,10 @@ Test <A HREF="eval.html#functions">functions</A>:
 
 			  *<A NAME="xterm-8bit"></A><B>xterm-8bit</B>* *<A NAME="xterm-8-bit"></A><B>xterm-8-bit</B>*
   Xterm can be run in a mode where <A HREF="motion.html#it">它</A> uses true 8-bit CSI.  Supporting this
-  requires autodetection of whether the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is in <A HREF="mbyte.html#UTF-8">UTF-8</A> mode or non-UTF-8
+  requires autodetection of whether the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> is in <A HREF="mbyte.html#UTF-8">UTF-8</A> mode or non-UTF-8
   mode, <A HREF="motion.html#as">as</A> the 8-bit CSI character has to be written differently in each <A HREF="change.html#case">case</A>.
-  Vim issues a &quot;request version&quot; sequence to the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> at <A HREF="starting.html#startup">startup</A> and looks
-  at how the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> is sending CSI.  Nvim does not issue such a sequence and
+  Vim issues a &quot;request version&quot; sequence to the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> at <A HREF="starting.html#startup">startup</A> and looks
+  at how the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> is sending CSI.  Nvim does not issue such a sequence and
   always uses 7-bit <A HREF="intro.html#control">control</A> sequences.
 
 ==============================================================================

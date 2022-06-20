@@ -273,20 +273,20 @@ font.  Example:
 
 <B>   xterm -u8 -fn -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1</B>
 
-Now you can run Vim inside this <A HREF="nvim_terminal_emulator\.html#terminal">终端</A>.  Set <A HREF="options.html#'encoding'">'encoding'</A> to &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot; <A HREF="motion.html#as">as</A>
+Now you can run Vim inside this <A HREF="nvim_terminal_emulator.html#terminal">终端</A>.  Set <A HREF="options.html#'encoding'">'encoding'</A> to &quot;<A HREF="mbyte.html#utf-8">utf-8</A>&quot; <A HREF="motion.html#as">as</A>
 before.  That's all.
 
 
 USING UNICODE IN AN ORDINARY TERMINAL
 
-Suppose you want to work with <A HREF="mbyte.html#Unicode">Unicode</A> files, but don't have a <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> with
+Suppose you want to work with <A HREF="mbyte.html#Unicode">Unicode</A> files, but don't have a <A HREF="nvim_terminal_emulator.html#terminal">终端</A> with
 <A HREF="mbyte.html#Unicode">Unicode</A> support.  You can <A HREF="diff.html#do">do</A> this with Vim, although characters that are not
-supported by the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> will not be displayed.  The layout of the text
+supported by the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> will not be displayed.  The layout of the text
 will be preserved.
 
 Try editing a file with <A HREF="mbyte.html#Unicode">Unicode</A> characters in <A HREF="motion.html#it">它</A>.  You will notice that Vim
 will put a question <A HREF="motion.html#mark">mark</A> (or underscore or some other character) in places
-where a character should be that the <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> can't display.  Move the cursor
+where a character should be that the <A HREF="nvim_terminal_emulator.html#terminal">终端</A> can't display.  Move the cursor
 to a question <A HREF="motion.html#mark">mark</A> and use this command:
 
 <B>	ga</B>

@@ -238,7 +238,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 
 <A HREF="#tsnode:type()">tsnode:type()</A>						*<A NAME="tsnode:type()"></A><B>tsnode:type()</B>*
-	Get the node's type <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>.
+	Get the node's type <A HREF="motion.html#as">as</A> a <A HREF="options.html#options">字符串</A>.
 
 
 <A HREF="#tsnode:symbol()">tsnode:symbol()</A>						*<A NAME="tsnode:symbol()"></A><B>tsnode:symbol()</B>*
@@ -247,7 +247,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 <A HREF="#tsnode:named()">tsnode:named()</A>						*<A NAME="tsnode:named()"></A><B>tsnode:named()</B>*
 	Check if the node is named. Named nodes correspond to named rules in
-	the  grammar, whereas anonymous nodes correspond to <A HREF="options\.html#options">字符串</A> literals
+	the  grammar, whereas anonymous nodes correspond to <A HREF="options.html#options">字符串</A> literals
 	in the grammar.
 
 
@@ -261,7 +261,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 
 <A HREF="#tsnode:sexpr()">tsnode:sexpr()</A>						*<A NAME="tsnode:sexpr()"></A><B>tsnode:sexpr()</B>*
-	Get an S-expression representing the node <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>.
+	Get an S-expression representing the node <A HREF="motion.html#as">as</A> a <A HREF="options.html#options">字符串</A>.
 
 
 <A HREF="#tsnode:id()">tsnode:id()</A>						*<A NAME="tsnode:id()"></A><B>tsnode:id()</B>*
@@ -269,7 +269,7 @@ tsnode:named_child({index})			         *<A NAME="tsnode:named_child()"></A><B>ts
 
 	No guarantees are made about this identifier's internal
 	representation, except for being a primitive <A HREF="lua.html#lua">lua</A> type with value
-	equality (so not a table). Presently <A HREF="motion.html#it">它</A> is a (non-printable) <A HREF="options\.html#options">字符串</A>.
+	equality (so not a table). Presently <A HREF="motion.html#it">它</A> is a (non-printable) <A HREF="options.html#options">字符串</A>.
 
 	Note: the id is not guaranteed to be unique for nodes from different
 	trees.
@@ -500,11 +500,11 @@ get_parser({bufnr}, {lang}, {opts})                             *<A NAME="get_pa
 
 
 get_string_parser({str}, {lang}, {opts})                 *<A NAME="get_string_parser()"></A><B>get_string_parser()</B>*
-                Gets a <A HREF="options\.html#options">字符串</A> parser
+                Gets a <A HREF="options.html#options">字符串</A> parser
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {str}   The <A HREF="options\.html#options">字符串</A> to parse
-                    {lang}  The language of this <A HREF="options\.html#options">字符串</A>
+                    {str}   The <A HREF="options.html#options">字符串</A> to parse
+                    {lang}  The language of this <A HREF="options.html#options">字符串</A>
                     {opts}  Options to pass to the created language tree
 
 
@@ -568,7 +568,7 @@ get_node_text({node}, {source})                              *<A NAME="get_node_
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {node}    the node
-                    {source}  The buffer or <A HREF="options\.html#options">字符串</A> from which the node is
+                    {source}  The buffer or <A HREF="options.html#options">字符串</A> from which the node is
                               extracted
 
 
@@ -607,8 +607,8 @@ get_query_files({lang}, {query_name}, {is_included})
 
 
 parse_query({lang}, {query})                                   *<A NAME="parse_query()"></A><B>parse_query()</B>*
-                Parse {query} <A HREF="motion.html#as">as</A> a <A HREF="options\.html#options">字符串</A>. (If the query is in a file, the
-                caller should read the contents into a <A HREF="options\.html#options">字符串</A> before calling).
+                Parse {query} <A HREF="motion.html#as">as</A> a <A HREF="options.html#options">字符串</A>. (If the query is in a file, the
+                caller should read the contents into a <A HREF="options.html#options">字符串</A> before calling).
 
                 Returns a `Query` (见 |<A HREF="#lua-treesitter-query">lua-treesitter-query</A>|) object which
                 can be used to search nodes in the <A HREF="syntax.html#syntax">语法</A> tree for the
@@ -621,7 +621,7 @@ parse_query({lang}, {query})                                   *<A NAME="parse_q
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {lang}   (string) The language
-                    {query}  (string) A <A HREF="options\.html#options">字符串</A> containing the query (s-expr
+                    {query}  (string) A <A HREF="options.html#options">字符串</A> containing the query (s-expr
                              <A HREF="syntax.html#syntax">语法</A>)
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
@@ -658,7 +658,7 @@ Query:iter_captures({self}, {node}, {source}, {start}, {stop})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {node}    The node under which the search will occur
-                    {source}  The source buffer or <A HREF="options\.html#options">字符串</A> to extract text from
+                    {source}  The source buffer or <A HREF="options.html#options">字符串</A> to extract text from
                     {start}   The starting line of the search
                     {stop}    The stopping line of the search (end-exclusive)
                     {self}
@@ -696,7 +696,7 @@ Query:iter_matches({self}, {node}, {source}, {start}, {stop})
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {node}    The node under which the search will occur
-                    {source}  The source buffer or <A HREF="options\.html#options">字符串</A> to search
+                    {source}  The source buffer or <A HREF="options.html#options">字符串</A> to search
                     {start}   The starting line of the search
                     {stop}    The stopping line of the search (end-exclusive)
                     {self}
@@ -713,10 +713,10 @@ set_query({lang}, {query_name}, {text})                          *<A NAME="set_q
                 configuration set by plugins.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {lang}        <A HREF="options\.html#options">字符串</A>: The language to use for the query
-                    {query_name}  <A HREF="options\.html#options">字符串</A>: The name of the query (i.e.
+                    {lang}        <A HREF="options.html#options">字符串</A>: The language to use for the query
+                    {query_name}  <A HREF="options.html#options">字符串</A>: The name of the query (i.e.
                                   &quot;highlights&quot;)
-                    {text}        <A HREF="options\.html#options">字符串</A>: The query text (unparsed).
+                    {text}        <A HREF="options.html#options">字符串</A>: The query text (unparsed).
 
 
 ==============================================================================
@@ -800,7 +800,7 @@ LanguageTree:for_each_child({self}, {fn}, {include_self})
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {fn}            The function to invoke. This is invoked
                                     with arguments (tree: LanguageTree, lang:
-                                    <A HREF="options\.html#options">字符串</A>)
+                                    <A HREF="options.html#options">字符串</A>)
                     {include_self}  Whether to include the invoking tree in
                                     the results.
                     {self}
@@ -924,7 +924,7 @@ LanguageTree:set_included_regions({self}, {regions})
 
 LanguageTree:source({self})                            *<A NAME="LanguageTree:source()"></A><B>LanguageTree:source()</B>*
                 Returns the source content of the language tree (bufnr or
-                <A HREF="options\.html#options">字符串</A>).
+                <A HREF="options.html#options">字符串</A>).
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {self}
@@ -944,7 +944,7 @@ new({source}, {lang}, {opts})                             *<A NAME="languagetree
                 the tree.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
-                    {source}           Can be a bufnr or a <A HREF="options\.html#options">字符串</A> of text to
+                    {source}           Can be a bufnr or a <A HREF="options.html#options">字符串</A> of text to
                                        parse
                     {lang}             The language this tree represents
                     {opts}             Options table

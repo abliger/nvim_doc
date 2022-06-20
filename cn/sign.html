@@ -96,9 +96,9 @@ arrow representing the Program Counter (PC).  The sign features allow both
 placement of a sign, or icon, in the left-hand side of the<A HREF="windows.html#window">窗口</A>and
 definition of a highlight which will be applied to that line.  Displaying the
 sign <A HREF="motion.html#as">as</A> an image is most likely only feasible in gvim (although Sun
-Microsystem's dtterm does support this it's the only <A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator I know
+Microsystem's dtterm does support this it's the only <A HREF="nvim_terminal_emulator.html#terminal">终端</A> emulator I know
 of which does).  A text sign and the highlight should be feasible in any color
-<A HREF="nvim_terminal_emulator\.html#terminal">终端</A> emulator.
+<A HREF="nvim_terminal_emulator.html#terminal">终端</A> emulator.
 
 Signs and highlights are not useful just for debuggers.  There are plugins
 that use <A HREF="#signs">signs</A> to <A HREF="motion.html#mark">mark</A> build <A HREF="message.html#errors">errors</A> or display version <A HREF="intro.html#control">control</A> status.
@@ -140,7 +140,7 @@ to allocate the next available identifier.
 
 							*<A NAME="sign-group"></A><B>sign-group</B>*
 Each placed sign can be assigned to either the global group or a named group.
-When placing a sign, if a group name is not supplied, or an empty <A HREF="options\.html#options">字符串</A> is
+When placing a sign, if a group name is not supplied, or an empty <A HREF="options.html#options">字符串</A> is
 used然后the sign is placed in the global group. Otherwise the sign is
 placed in the named group. The sign identifier is unique within a group. The
 sign group allows Vim plugins to use unique <A HREF="#signs">signs</A> without interfering with
@@ -469,7 +469,7 @@ sign_define({list})
 		Prefix {name} with a unique text to avoid name collisions.
 		There is no {group} like with placing <A HREF="#signs">signs</A>.
 
-		The {name} can be a <A HREF="options\.html#options">字符串</A> or a <A HREF="eval.html#Number">Number</A>.  The optional {dict}
+		The {name} can be a <A HREF="options.html#options">字符串</A> or a <A HREF="eval.html#Number">Number</A>.  The optional {dict}
 		argument specifies the sign attributes.  The following values
 		are supported:
 		   icon		full path to the bitmap file for the sign.
@@ -566,7 +566,7 @@ sign_getplaced([{buf} [, {dict}]])			*<A NAME="sign_getplaced()"></A><B>sign_get
 				of {lnum}, 见 |<A HREF="builtin.html#line()">line()</A>|.
 		If {group} is '*'然后<A HREF="#signs">signs</A> in all the groups including the
 		global group are returned. If {group} is not supplied or is an
-		empty <A HREF="options\.html#options">字符串</A>然后only <A HREF="#signs">signs</A> in the global group are
+		empty <A HREF="options.html#options">字符串</A>然后only <A HREF="#signs">signs</A> in the global group are
 		returned.  If no arguments are supplied然后<A HREF="#signs">signs</A> in the
 		global group placed in all the <A HREF="windows.html#buffers">buffers</A> are returned.
 		见 |<A HREF="#sign-group">sign-group</A>|.
@@ -644,7 +644,7 @@ sign_place({id}, {group}, {name}, {buf} [, {dict}])
 		If the sign identifier {id} is zero然后a new identifier is
 		allocated.  Otherwise the specified number is used. {group} is
 		the sign group name. To use the global sign group, use an
-		empty <A HREF="options\.html#options">字符串</A>.  {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A> for {id}, thus
+		empty <A HREF="options.html#options">字符串</A>.  {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A> for {id}, thus
 		two groups can use the same IDs. Refer to |<A HREF="#sign-identifier">sign-identifier</A>|
 		and |<A HREF="#sign-group">sign-group</A>| for more information.
 
@@ -699,7 +699,7 @@ sign_placelist({list})
 		    group	sign group. {group} <A HREF="eval.html#functions">functions</A> <A HREF="motion.html#as">as</A> a <A HREF="api.html#namespace">namespace</A>
 				for {id}, thus two groups can use the same
 				IDs. If not specified or set to an empty
-				<A HREF="options\.html#options">字符串</A>然后the global group is used.   See
+				<A HREF="options.html#options">字符串</A>然后the global group is used.   See
 				|<A HREF="#sign-group">sign-group</A>| for more information.
 		    id		sign identifier. If not specified or zero,
 				then a new unique identifier is allocated.
@@ -783,7 +783,7 @@ sign_unplace({group} [, {dict}])			*<A NAME="sign_unplace()"></A><B>sign_unplace
 		is similar to the |<A HREF="#:sign-unplace">:sign-unplace</A>| command.
 
 		{group} is the sign group name. To use the global sign group,
-		use an empty <A HREF="options\.html#options">字符串</A>.  If {group} is set to '*'然后all the
+		use an empty <A HREF="options.html#options">字符串</A>.  If {group} is set to '*'然后all the
 		groups including the global group are used.
 		The <A HREF="#signs">signs</A> in {group} are selected based on the entries in
 		{dict}.  The following optional entries in {dict} are
@@ -835,7 +835,7 @@ sign_unplacelist({list})				*<A NAME="sign_unplacelist()"></A><B>sign_unplacelis
 				then the specified sign is removed from all
 				the <A HREF="windows.html#buffers">buffers</A>.
 		    group	sign group name. If not specified or set to an
-				empty <A HREF="options\.html#options">字符串</A>然后the global sign group is
+				empty <A HREF="options.html#options">字符串</A>然后the global sign group is
 				used. If set to '*'然后all the groups
 				including the global group are used.
 		    id		sign identifier. If not specified然后all

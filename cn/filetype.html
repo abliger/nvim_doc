@@ -104,7 +104,7 @@ event, which can be used to set the <A HREF="syntax.html#syntax">语法</A> high
 Detail: The &quot;<A HREF="#:filetype">:filetype</A> on&quot; command will load these files:
 		$VIMRUNTIME/filetype.lua
 		$VIMRUNTIME/filetype.vim
-	filetype.lua creates an <A HREF="autocmd\.html#autocommand">自动命令</A> that fires for all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> and
+	filetype.lua creates an <A HREF="autocmd.html#autocommand">自动命令</A> that fires for all <A HREF="autocmd.html#BufNewFile">BufNewFile</A> and
 	<A HREF="autocmd.html#BufRead">BufRead</A> <A HREF="autocmd.html#events">events</A>. It tries to detect the <A HREF="#filetype">filetype</A> based off of the
 	file's extension or name.
 
@@ -275,7 +275,7 @@ A. If you want to overrule all default file type checks.
       inside <A HREF="motion.html#it">它</A>.  Example for Unix:
 <B>	:!mkdir -p ~/.config/nvim/ftdetect</B>
  
-   2. Create a file that contains an <A HREF="autocmd\.html#autocommand">自动命令</A> to detect the file type.
+   2. Create a file that contains an <A HREF="autocmd.html#autocommand">自动命令</A> to detect the file type.
       Example:
 <B>	au BufRead,BufNewFile *.mine		set filetype=mine</B>
       Note that there is no &quot;augroup&quot; command, this has already been done
@@ -460,7 +460,7 @@ define yourself.  There are a few ways to avoid this:
 2. Define your own <A HREF="map.html#mapping">mapping</A>.  Example:
 <B>	:map ,p &lt;Plug&gt;MailQuote</B>
    You need to check the description of the <A HREF="usr_05.html#plugin">plugin</A> file below for the
-   functionality <A HREF="motion.html#it">它</A> offers and the <A HREF="options\.html#options">字符串</A> to map to.
+   functionality <A HREF="motion.html#it">它</A> offers and the <A HREF="options.html#options">字符串</A> to map to.
    You need to define your own <A HREF="map.html#mapping">mapping</A> before the <A HREF="usr_05.html#plugin">plugin</A> is loaded (before
    editing a file of that type).  The <A HREF="usr_05.html#plugin">plugin</A> will then skip installing the
    default <A HREF="map.html#mapping">mapping</A>.
@@ -567,7 +567,7 @@ g:changelog_username	The name and email address of the user.
 g:changelog_new_date_format
 			The format to use when creating a new date-entry.
 			The following table describes special tokens in the
-			<A HREF="options\.html#options">字符串</A>:
+			<A HREF="options.html#options">字符串</A>:
 				&#37;&#37;	insert a single '<A HREF="motion.html#&#37;">&#37;</A>' character
 				&#37;d	insert the date from above
 				&#37;u	insert the user from above
@@ -584,7 +584,7 @@ g:changelog_new_date_format
 g:changelog_new_entry_format
 			The format used when creating a new entry.
 			The following table describes special tokens in the
-			<A HREF="options\.html#options">字符串</A>:
+			<A HREF="options.html#options">字符串</A>:
                                 &#37;p	insert result of b:changelog_entry_prefix
 				&#37;c	where to position cursor when done
 			The default is &quot;\t*&#37;c&quot;, which produces something
@@ -626,7 +626,7 @@ b:changelog_path
 b:changelog_entry_prefix
 			Name of a function to call to generate a prefix to a
 			new entry.  This function takes no arguments and
-			should return a <A HREF="options\.html#options">字符串</A> containing the prefix.
+			should return a <A HREF="options.html#options">字符串</A> containing the prefix.
 			Returning an empty prefix is fine.
 			The default generates the shortest path between the
 			ChangeLog's pathname and the current <A HREF="windows.html#buffers">buffers</A> pathname.
@@ -748,7 +748,7 @@ soft wrapped <A HREF="motion.html#as">as</A> with `g:man_hardwrap=0`. You can se
 
 So `groff`'s pre-formatting output will be the same <A HREF="motion.html#as">as</A> with `g:man_hardwrap=0` i.e soft-wrapped.
 
-To disable <A HREF="syntax\.html#bold">粗体</A> highlighting:
+To disable <A HREF="syntax.html#bold">粗体</A> highlighting:
 <B>     :highlight link manBold Normal</B>
 
 
@@ -876,7 +876,7 @@ Format description:
    ShaDa format.  Lines containing no non-whitespace characters are also 
    ignored.
 2. Each entry starts with line that has format &quot;{type} with <A HREF="editing.html#timestamp">timestamp</A> 
-   {timestamp}:&quot;. {timestamp} is |strftime()|-formatted <A HREF="options\.html#options">字符串</A> representing 
+   {timestamp}:&quot;. {timestamp} is |strftime()|-formatted <A HREF="options.html#options">字符串</A> representing 
    actual Unix <A HREF="editing.html#timestamp">timestamp</A> value. First <A HREF="builtin.html#strftime()">strftime()</A> argument is equal to
    `&#37;Y-&#37;m-&#37;dT&#37;H:&#37;M:&#37;S`.  When <A HREF="editing.html#writing">写</A> this <A HREF="editing.html#timestamp">timestamp</A> is parsed using 
    |<A HREF="pi_msgpack.html#msgpack#strptime()">msgpack#strptime()</A>|, with caching (it remembers which <A HREF="editing.html#timestamp">timestamp</A> produced 
@@ -884,7 +884,7 @@ Format description:
    <A HREF="editing.html#timestamp">timestamp</A>). {type} is one of
     1 - Header
     2 - Search <A HREF="pattern.html#pattern">pattern</A>
-    3 - Replacement <A HREF="options\.html#options">字符串</A>
+    3 - Replacement <A HREF="options.html#options">字符串</A>
     4 - History entry
     5 - Register
     6 - Variable

@@ -261,16 +261,16 @@ CTRL-K {char1} {char2}					*<A NAME="c_CTRL-K"></A><B>c_CTRL-K</B>*
 				<A HREF="motion.html#as">as</A> lines.  They can have line breaks inside
 				too.
 				When the result is a <A HREF="eval.html#Float">Float</A> it's automatically
-				converted to a <A HREF="options\.html#options">字符串</A>.
+				converted to a <A HREF="options.html#options">字符串</A>.
 				Note that when you only want to move the
 				cursor and not insert anything, you must make
 				sure the <A HREF="eval.html#expression">expression</A> evaluates to an empty
-				<A HREF="options\.html#options">字符串</A>.  E.g.:
+				<A HREF="options.html#options">字符串</A>.  E.g.:
 <B>					&lt;C-R&gt;&lt;C-R&gt;=setcmdpos(2)[-1]&lt;CR&gt;</B>
  		见 |<A HREF="change.html#registers">寄存器</A>| about registers.
 		Implementation detail: When using the |<A HREF="eval.html#expression">expression</A>| <A HREF="intro.html#register">寄存器</A>
 		and invoking <A HREF="builtin.html#setcmdpos()">setcmdpos()</A>, this sets the position before
-		<A HREF="insert.html#inserting">inserting</A> the resulting <A HREF="options\.html#options">字符串</A>.  Use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> to set the
+		<A HREF="insert.html#inserting">inserting</A> the resulting <A HREF="options.html#options">字符串</A>.  Use <A HREF="undo.html#CTRL-R">CTRL-R</A> <A HREF="undo.html#CTRL-R">CTRL-R</A> to set the
 		position afterwards.
 
 
@@ -428,10 +428,10 @@ CTRL-_		Switch between Hebrew and English keyboard mode, which is
 
 For Emacs-style editing on the command-line 见 |<A HREF="tips.html#emacs-keys">emacs-keys</A>|.
 
-The <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> and <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> keys take the current command-line <A HREF="motion.html#as">as</A> a search <A HREF="options\.html#options">字符串</A>.
+The <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A> and <A HREF="motion.html#&lt;Down&gt;">&lt;Down&gt;</A> keys take the current command-line <A HREF="motion.html#as">as</A> a search <A HREF="options.html#options">字符串</A>.
 The beginning of the next/previous command-lines are compared with this
-<A HREF="options\.html#options">字符串</A>.  The first line that matches is the new command-line.  When typing
-these two keys repeatedly, the same <A HREF="options\.html#options">字符串</A> is used again.例如, this
+<A HREF="options.html#options">字符串</A>.  The first line that matches is the new command-line.  When typing
+these two keys repeatedly, the same <A HREF="options.html#options">字符串</A> is used again.例如, this
 can be used to find the previous substitute command: Type &quot;<A HREF="change.html#:s">:s</A>&quot; and then <A HREF="motion.html#&lt;Up&gt;">&lt;Up&gt;</A>.
 The same could be done by typing <A HREF="scroll.html#&lt;S-Up&gt;">&lt;S-Up&gt;</A> a number of times until the desired
 command-line is shown.  (Note: the shifted arrow keys <A HREF="diff.html#do">do</A> not work on all
@@ -444,7 +444,7 @@ terminals)
 :his[tory] [{name}] [{first}][, [{last}]]
 		<A HREF="eval.html#list">列表</A> the contents of <A HREF="#history">history</A> {name} which can be:
 		c[md]	 or :		command-line <A HREF="#history">history</A>
-		s[earch] or / or ?	search <A HREF="options\.html#options">字符串</A> <A HREF="#history">history</A>
+		s[earch] or / or ?	search <A HREF="options.html#options">字符串</A> <A HREF="#history">history</A>
 		e[xpr]	 or =		<A HREF="eval.html#expression">expression</A> <A HREF="intro.html#register">寄存器</A> <A HREF="#history">history</A>
 		i[nput]	 or @		input line <A HREF="#history">history</A>
 		d[ebug]	 or <A HREF="change.html#&gt;">&gt;</A>		debug command <A HREF="#history">history</A>
@@ -569,7 +569,7 @@ These are the commands that can be used:
 
 The <A HREF="options.html#'wildchar'">'wildchar'</A> option defaults to <A HREF="motion.html#&lt;Tab&gt;">&lt;Tab&gt;</A> (CTRL-E when in <A HREF="intro.html#Vi">Vi</A> compatible mode; in
 a previous version <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> was used).  In the <A HREF="pattern.html#pattern">pattern</A> standard <A HREF="editing.html#wildcards">wildcards</A> '*' and
-'<A HREF="pattern.html#?">?</A>' are accepted when matching file names.  '*' matches any <A HREF="options\.html#options">字符串</A>, '<A HREF="pattern.html#?">?</A>'
+'<A HREF="pattern.html#?">?</A>' are accepted when matching file names.  '*' matches any <A HREF="options.html#options">字符串</A>, '<A HREF="pattern.html#?">?</A>'
 matches exactly one character.
 
 When <A HREF="repeat.html#repeating">repeating</A> <A HREF="options.html#'wildchar'">'wildchar'</A> or <A HREF="motion.html#CTRL-N">CTRL-N</A> you cycle through the matches, eventually
@@ -1046,7 +1046,7 @@ Note: these are typed literally, they are not special keys!
 							*<A NAME=":&lt;amatch&gt;"></A><B>:&lt;amatch&gt;</B>* *<A NAME="&lt;amatch&gt;"></A><B>&lt;amatch&gt;</B>*
 	<A HREF="#&lt;amatch&gt;">&lt;amatch&gt;</A>   When executing autocommands, is replaced with the match for
 
-		   which this <A HREF="autocmd\.html#autocommand">自动命令</A> was executed.  *<A NAME="E497"></A><B>E497</B>*
+		   which this <A HREF="autocmd.html#autocommand">自动命令</A> was executed.  *<A NAME="E497"></A><B>E497</B>*
 		   It differs from <A HREF="#&lt;afile&gt;">&lt;afile&gt;</A> when the file name isn't used to
 		   match with (for <A HREF="autocmd.html#FileType">FileType</A>, <A HREF="autocmd.html#Syntax">Syntax</A> and <A HREF="autocmd.html#SpellFileMissing">SpellFileMissing</A>
 		   <A HREF="autocmd.html#events">events</A>).
@@ -1246,7 +1246,7 @@ OPEN						*<A NAME="c_CTRL-F"></A><B>c_CTRL-F</B>* *<A NAME="q:"></A><B>q:</B>* 
 There are two ways to open the command-line<A HREF="windows.html#window">窗口</A>:
 1. From <A HREF="#Command-line">Command-line</A> mode, use the key specified with the <A HREF="options.html#'cedit'">'cedit'</A> option.
 2. From <A HREF="intro.html#Normal">正常</A>模式, use the &quot;<A HREF="#q:">q:</A>&quot;, &quot;<A HREF="#q/">q/</A>&quot; or &quot;<A HREF="#q?">q?</A>&quot;命令.
-   This starts editing an <A HREF="intro.html#Ex">Ex</A> command-line (&quot;q:&quot;) or search <A HREF="options\.html#options">字符串</A> (&quot;q/&quot; or
+   This starts editing an <A HREF="intro.html#Ex">Ex</A> command-line (&quot;q:&quot;) or search <A HREF="options.html#options">字符串</A> (&quot;q/&quot; or
    &quot;q?&quot;).  Note that this is not possible while <A HREF="repeat.html#recording">记录</A> is in progress (the
    &quot;<A HREF="repeat.html#q">q</A>&quot; stops <A HREF="repeat.html#recording">记录</A> then).
 
@@ -1353,7 +1353,7 @@ You can disable this in your <A HREF="starting.html#config">config</A> with &quo
 
 AUTOCOMMANDS
 
-Two <A HREF="autocmd\.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> are used: |<A HREF="autocmd.html#CmdwinEnter">CmdwinEnter</A>| and |<A HREF="autocmd.html#CmdwinLeave">CmdwinLeave</A>|.  You can use
+Two <A HREF="autocmd.html#autocommand">自动命令</A> <A HREF="autocmd.html#events">events</A> are used: |<A HREF="autocmd.html#CmdwinEnter">CmdwinEnter</A>| and |<A HREF="autocmd.html#CmdwinLeave">CmdwinLeave</A>|.  You can use
 the Cmdwin <A HREF="autocmd.html#events">events</A> to <A HREF="diff.html#do">do</A> settings specifically for the command-line<A HREF="windows.html#window">窗口</A>.
 Be careful not to cause side effects!
 Example:
@@ -1369,10 +1369,10 @@ This will make Vim start in <A HREF="intro.html#Insert">插入</A>模式 in the 
 The character used for the <A HREF="pattern.html#pattern">pattern</A> indicates the type of command-line:
 	:	normal <A HREF="intro.html#Ex">Ex</A> command
 	<A HREF="change.html#&gt;">&gt;</A>	debug mode command |<A HREF="repeat.html#debug-mode">debug-mode</A>|
-	/	forward search <A HREF="options\.html#options">字符串</A>
-	?	backward search <A HREF="options\.html#options">字符串</A>
+	/	forward search <A HREF="options.html#options">字符串</A>
+	?	backward search <A HREF="options.html#options">字符串</A>
 	=	<A HREF="eval.html#expression">expression</A> for &quot;<A HREF="change.html#=">=</A> |<A HREF="eval.html#expr-register">expr-register</A>|
-	@	<A HREF="options\.html#options">字符串</A> for |<A HREF="builtin.html#input()">input()</A>|
+	@	<A HREF="options.html#options">字符串</A> for |<A HREF="builtin.html#input()">input()</A>|
 	-	text for |<A HREF="insert.html#:insert">:insert</A>| or |<A HREF="insert.html#:append">:append</A>|
 
 <A HREF="#top">top</A> - <A HREF="index.html">主帮助文件</A>
