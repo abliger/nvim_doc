@@ -83,7 +83,7 @@ An editing task is hardly ever unstructured.  A change often needs to be made
 several times.  In this chapter a number of useful ways to repeat a change
 will be explained.
 
-|<A HREF="#26.1">26.1</A>|	Repeating with <A HREF="visual\.html#Visual">可视</A>模式
+|<A HREF="#26.1">26.1</A>|	Repeating with <A HREF="visual.html#Visual">可视</A>模式
 |<A HREF="#26.2">26.2</A>|	Add and subtract
 |<A HREF="#26.3">26.3</A>|	Making a change in many files
 |<A HREF="#26.4">26.4</A>|	Using Vim from a shell <A HREF="usr_41.html#script">script</A>
@@ -94,9 +94,9 @@ will be explained.
 
 ==============================================================================
 
-*<A NAME="26.1"></A><B>26.1</B>*	Repeating with <A HREF="visual\.html#Visual">可视</A>模式
+*<A NAME="26.1"></A><B>26.1</B>*	Repeating with <A HREF="visual.html#Visual">可视</A>模式
 
-<A HREF="visual\.html#Visual">可视</A>模式 is very handy for making a change in any sequence of lines.  You
+<A HREF="visual.html#Visual">可视</A>模式 is very handy for making a change in any sequence of lines.  You
 can see the highlighted text, thus you can check if the correct lines are
 changed.  But making the selection takes some typing.  The &quot;<A HREF="visual.html#gv">gv</A>&quot;命令
 selects the same area again.  This allows you to <A HREF="diff.html#do">do</A> another operation on the
@@ -110,7 +110,7 @@ same text.
 <B><FONT color="#3A6F2B">			2000		2001 </FONT></B>
 <B><FONT color="#3A6F2B">	income		45,403		66,234 </FONT></B>
 
-First change &quot;2001&quot; to &quot;2002&quot;.  <A HREF="visual.html#Select">Select</A> the lines in <A HREF="visual\.html#Visual">可视</A>模式, and use:
+First change &quot;2001&quot; to &quot;2002&quot;.  <A HREF="visual.html#Select">Select</A> the lines in <A HREF="visual.html#Visual">可视</A>模式, and use:
 
 <B>	:s/2001/2002/g</B>
 
@@ -195,7 +195,7 @@ file only if <A HREF="motion.html#it">它</A> was changed.  If no &quot;x_cnt&qu
 happens.
 
 There is also the &quot;<A HREF="windows.html#:windo">:windo</A>&quot;命令, which executes its argument in all
-<A HREF="windows\.html#windows">窗口</A>.  And &quot;<A HREF="windows.html#:bufdo">:bufdo</A>&quot; executes its argument on all <A HREF="windows.html#buffers">buffers</A>.  Be careful with
+<A HREF="windows.html#windows">窗口</A>.  And &quot;<A HREF="windows.html#:bufdo">:bufdo</A>&quot; executes its argument on all <A HREF="windows.html#buffers">buffers</A>.  Be careful with
 this, because you might have more files in the buffer <A HREF="eval.html#list">列表</A> than you think.
 Check this with the &quot;<A HREF="windows.html#:buffers">:buffers</A>&quot;命令 (or &quot;:ls&quot;).
 

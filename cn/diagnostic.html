@@ -260,7 +260,7 @@ All highlights defined for diagnostics begin with `Diagnostic` followed by
 the type of highlight (e.g., `Sign`, `Underline`, etc.) and the severity (e.g.
 `Error`, `Warn`, etc.)
 
-By default, highlights for <A HREF="sign.html#signs">signs</A>, floating <A HREF="windows\.html#windows">窗口</A>, and virtual text are linked to the
+By default, highlights for <A HREF="sign.html#signs">signs</A>, floating <A HREF="windows.html#windows">窗口</A>, and virtual text are linked to the
 corresponding default highlight. Underline highlights are not linked and use their
 own default highlight groups.
 
@@ -495,7 +495,7 @@ config({opts}, {namespace})                          *<A NAME="vim.diagnostic.co
                                      Otherwise, all <A HREF="sign.html#signs">signs</A> use the same
                                      priority.
 
-                                 • float: Options for floating <A HREF="windows\.html#windows">窗口</A>. See
+                                 • float: Options for floating <A HREF="windows.html#windows">窗口</A>. See
                                    |<A HREF="vim.html">vim.diagnostic.open_float()</A>|.
                                  • update_in_insert: (default false) Update
                                    diagnostics in <A HREF="intro.html#Insert">插入</A>模式 (if false,
@@ -625,7 +625,7 @@ get_prev_pos({opts})                           *<A NAME="vim.diagnostic.get_prev
 
 
 goto_next({opts})                                 *<A NAME="vim.diagnostic.goto_next()"></A><B>vim.diagnostic.goto_next()</B>*
-                使用<A HREF="gui\.html#GUI">GUI</A> next diagnostic.
+                使用<A HREF="gui.html#GUI">GUI</A> next diagnostic.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  (table|nil) Configuration table with the following
@@ -650,7 +650,7 @@ goto_next({opts})                                 *<A NAME="vim.diagnostic.goto_
 
 
 goto_prev({opts})                                 *<A NAME="vim.diagnostic.goto_prev()"></A><B>vim.diagnostic.goto_prev()</B>*
-                使用<A HREF="gui\.html#GUI">GUI</A> previous diagnostic in the current buffer.
+                使用<A HREF="gui.html#GUI">GUI</A> previous diagnostic in the current buffer.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {opts}  (table) 见 |<A HREF="vim.html">vim.diagnostic.goto_next()</A>|

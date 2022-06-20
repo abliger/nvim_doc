@@ -509,11 +509,11 @@ Example using the <A HREF="#API">API</A> from Vimscript:
 
 ==============================================================================
 
-Floating <A HREF="windows\.html#windows">窗口</A>						 *<A NAME="api-floatwin"></A><B>api-floatwin</B>*
+Floating <A HREF="windows.html#windows">窗口</A>						 *<A NAME="api-floatwin"></A><B>api-floatwin</B>*
 
-Floating <A HREF="windows\.html#windows">窗口</A> (&quot;floats&quot;) are displayed on top of normal <A HREF="windows\.html#windows">窗口</A>.  This is
+Floating <A HREF="windows.html#windows">窗口</A> (&quot;floats&quot;) are displayed on top of normal <A HREF="windows.html#windows">窗口</A>.  This is
 useful to implement simple widgets, such <A HREF="motion.html#as">as</A> tooltips displayed next to the
-cursor. Floats are fully functional <A HREF="windows\.html#windows">窗口</A> supporting user editing, common
+cursor. Floats are fully functional <A HREF="windows.html#windows">窗口</A> supporting user editing, common
 |<A HREF="#api-window">api-window</A>| calls, and most window <A HREF="options.html#options">选项</A> (except <A HREF="options.html#'statusline'">'statusline'</A>).
 
 Two ways to create a floating<A HREF="windows.html#window">窗口</A>:
@@ -536,10 +536,10 @@ Buffer text can be highlighted by typical mechanisms (syntax highlighting,
 <A HREF="options.html#options">选项</A> from the current<A HREF="windows.html#window">窗口</A>; specify `style=minimal` in |<A HREF="#nvim_open_win()">nvim_open_win()</A>|
 to disable various visual features such <A HREF="motion.html#as">as</A> the <A HREF="options.html#'number'">'number'</A> column.
 
-Currently, floating <A HREF="windows\.html#windows">窗口</A> don't support some widgets like scrollbar.
+Currently, floating <A HREF="windows.html#windows">窗口</A> don't support some widgets like scrollbar.
 
 The output of |<A HREF="starting.html#:mksession">:mksession</A>| does not include commands for restoring floating
-<A HREF="windows\.html#windows">窗口</A>.
+<A HREF="windows.html#windows">窗口</A>.
 
 Example: create a float with scratch buffer:
 
@@ -2333,7 +2333,7 @@ nvim_buf_call({buffer}, {fun})                               *<A NAME="nvim_buf_
                 This temporarily switches current buffer to &quot;buffer&quot;. If the
                 current<A HREF="windows.html#window">窗口</A>already shows &quot;buffer&quot;, the<A HREF="windows.html#window">窗口</A>is not
                 switched If a<A HREF="windows.html#window">窗口</A>inside the current <A HREF="tabpage.html#tabpage">tabpage</A> (including a
-                float) already shows the buffer One of these <A HREF="windows\.html#windows">窗口</A> will be
+                float) already shows the buffer One of these <A HREF="windows.html#windows">窗口</A> will be
                 set <A HREF="motion.html#as">as</A> current<A HREF="windows.html#window">窗口</A>temporarily. Otherwise a temporary
                 scratch<A HREF="windows.html#window">窗口</A>(called the &quot;<A HREF="autocmd.html#autocmd">autocmd</A> window&quot; for historical
                 reasons) will be used.
@@ -3355,12 +3355,12 @@ Win_Config Functions                                          *<A NAME="api-win_
 nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open_win()"></A><B>nvim_open_win()</B>*
                 Open a new<A HREF="windows.html#window">窗口</A>.
 
-                Currently this is used to open floating and external <A HREF="windows\.html#windows">窗口</A>.
-                Floats are <A HREF="windows\.html#windows">窗口</A> that are drawn above the split layout, at
+                Currently this is used to open floating and external <A HREF="windows.html#windows">窗口</A>.
+                Floats are <A HREF="windows.html#windows">窗口</A> that are drawn above the split layout, at
                 some anchor position in some other<A HREF="windows.html#window">窗口</A>. Floats can be drawn
                 internally or by external <A HREF="gui.html#GUI">GUI</A> with the |<A HREF="ui.html#ui-multigrid">ui-multigrid</A>|
-                extension. External <A HREF="windows\.html#windows">窗口</A> are only supported with multigrid
-                GUIs, and are displayed <A HREF="motion.html#as">as</A> separate top-level <A HREF="windows\.html#windows">窗口</A>.
+                extension. External <A HREF="windows.html#windows">窗口</A> are only supported with multigrid
+                GUIs, and are displayed <A HREF="motion.html#as">as</A> separate top-level <A HREF="windows.html#windows">窗口</A>.
 
                 For a general overview of floats, 见 |<A HREF="#api-floatwin">api-floatwin</A>|.
 
@@ -3434,7 +3434,7 @@ nvim_open_win({buffer}, {enter}, {*config})                  *<A NAME="nvim_open
                                 width&quot;, may be fractional.
                               • focusable: Enable focus by user actions
                                 (wincmds, mouse <A HREF="autocmd.html#events">events</A>). Defaults to true.
-                                Non-focusable <A HREF="windows\.html#windows">窗口</A> can be entered by
+                                Non-focusable <A HREF="windows.html#windows">窗口</A> can be entered by
                                 |<A HREF="#nvim_set_current_win()">nvim_set_current_win()</A>|.
                               • external: <A HREF="gui.html#GUI">GUI</A> should display the<A HREF="windows.html#window">窗口</A><A HREF="motion.html#as">as</A> an
                                 external top-level<A HREF="windows.html#window">窗口</A>. Currently accepts
@@ -3513,7 +3513,7 @@ nvim_win_get_config({window})                          *<A NAME="nvim_win_get_co
 
                 The returned value may be given to |<A HREF="#nvim_open_win()">nvim_open_win()</A>|.
 
-                `relative` is empty for normal <A HREF="windows\.html#windows">窗口</A>.
+                `relative` is empty for normal <A HREF="windows.html#windows">窗口</A>.
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {window}  Window handle, or 0 for current<A HREF="windows.html#window">窗口</A>
@@ -3525,7 +3525,7 @@ nvim_win_get_config({window})                          *<A NAME="nvim_win_get_co
 
 nvim_win_set_config({window}, {*config})               *<A NAME="nvim_win_set_config()"></A><B>nvim_win_set_config()</B>*
                 Configures<A HREF="windows.html#window">窗口</A>layout. Currently only for floating and
-                external <A HREF="windows\.html#windows">窗口</A> (including <A HREF="change.html#changing">changing</A> a split<A HREF="windows.html#window">窗口</A>to those
+                external <A HREF="windows.html#windows">窗口</A> (including <A HREF="change.html#changing">changing</A> a split<A HREF="windows.html#window">窗口</A>to those
                 layouts).
 
                 When reconfiguring a floating<A HREF="windows.html#window">窗口</A>, absent option keys will
@@ -3596,13 +3596,13 @@ nvim_tabpage_is_valid({tabpage})                     *<A NAME="nvim_tabpage_is_v
 
 
 nvim_tabpage_list_wins({tabpage})                   *<A NAME="nvim_tabpage_list_wins()"></A><B>nvim_tabpage_list_wins()</B>*
-                Gets the <A HREF="windows\.html#windows">窗口</A> in a <A HREF="tabpage.html#tabpage">tabpage</A>
+                Gets the <A HREF="windows.html#windows">窗口</A> in a <A HREF="tabpage.html#tabpage">tabpage</A>
 
 <B><FONT color="#3A6F2B">                Parameters: </FONT></B>
                     {tabpage}  Tabpage handle, or 0 for current <A HREF="tabpage.html#tabpage">tabpage</A>
 
 <B><FONT color="#3A6F2B">                Return: </FONT></B>
-                    <A HREF="eval.html#list">列表</A> of <A HREF="windows\.html#windows">窗口</A> in `tabpage`
+                    <A HREF="eval.html#list">列表</A> of <A HREF="windows.html#windows">窗口</A> in `tabpage`
 
 
                                                       *<A NAME="nvim_tabpage_set_var()"></A><B>nvim_tabpage_set_var()</B>*
@@ -3935,7 +3935,7 @@ nvim_ui_attach({width}, {height}, {options})                *<A NAME="nvim_ui_at
                                                     *<A NAME="nvim_ui_pum_set_bounds()"></A><B>nvim_ui_pum_set_bounds()</B>*
 nvim_ui_pum_set_bounds({width}, {height}, {row}, {col})
                 Tells Nvim the geometry of the popumenu, to align floating
-                <A HREF="windows\.html#windows">窗口</A> with an external popup menu.
+                <A HREF="windows.html#windows">窗口</A> with an external popup menu.
 
                 Note that this <A HREF="eval.html#method">method</A> is not to be confused with
                 |<A HREF="#nvim_ui_pum_set_height()">nvim_ui_pum_set_height()</A>|, which sets the number of visible

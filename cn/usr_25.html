@@ -161,7 +161,7 @@ line, type:
 
 <B>	v4jgq</B>
 
-&quot;<A HREF="visual.html#v">v</A>&quot; to start <A HREF="visual\.html#Visual">可视</A>模式, &quot;4j&quot; to 使用<A HREF="gui\.html#GUI">GUI</A> end of the <A HREF="motion.html#paragraph">段落</A> and then
+&quot;<A HREF="visual.html#v">v</A>&quot; to start <A HREF="visual.html#Visual">可视</A>模式, &quot;4j&quot; to 使用<A HREF="gui.html#GUI">GUI</A> end of the <A HREF="motion.html#paragraph">段落</A> and then
 the &quot;<A HREF="change.html#gq">gq</A>&quot; <A HREF="motion.html#operator">operator</A>.  The result is:
 
 		 1	   2	     3
@@ -176,7 +176,7 @@ Note: there is a way to <A HREF="diff.html#do">do</A> automatic <A HREF="change.
 layouts, 见 |<A HREF="change.html#auto-format">auto-format</A>|.
 
 Since &quot;<A HREF="change.html#gq">gq</A>&quot; is an <A HREF="motion.html#operator">operator</A>, you can use one of the three ways to select the
-text <A HREF="motion.html#it">它</A> works on: With <A HREF="visual\.html#Visual">可视</A>模式, with a <A HREF="intro.html#movement">移动</A> and with a text object.
+text <A HREF="motion.html#it">它</A> works on: With <A HREF="visual.html#Visual">可视</A>模式, with a <A HREF="intro.html#movement">移动</A> and with a text object.
    The example above could also be done with &quot;gq4j&quot;.  That's <A HREF="various.html#less">less</A> typing, but
 you have to know the line <A HREF="intro.html#count">count</A>.  A more useful motion command is &quot;<A HREF="motion.html#}">}</A>&quot;.  This
 moves to the end of a <A HREF="motion.html#paragraph">段落</A>.  Thus &quot;gq}&quot; formats from the cursor to the
@@ -192,7 +192,7 @@ whole file by typing this:
 
 <B>	gggqG</B>
 
-&quot;<A HREF="motion.html#gg">gg</A>&quot; to 使用<A HREF="gui\.html#GUI">GUI</A> first line, &quot;gqG&quot; to format until the last line.
+&quot;<A HREF="motion.html#gg">gg</A>&quot; to 使用<A HREF="gui.html#GUI">GUI</A> first line, &quot;gqG&quot; to format until the last line.
    Warning: If your paragraphs are not properly separated, they will be joined
 together.  A common mistake is to have a line with a space or <A HREF="intro.html#tab">tab</A>.  That's a
 blank line, but not an empty line.
@@ -279,7 +279,7 @@ Or put this line in your YXXYvimrc|:
 <B>	packadd! justify</B>
 
 This Vim <A HREF="usr_41.html#script">script</A> file defines a new visual command &quot;_j&quot;.  To justify a block of
-text, highlight the text in <A HREF="visual\.html#Visual">可视</A>模式 and then execute &quot;_j&quot;.
+text, highlight the text in <A HREF="visual.html#Visual">可视</A>模式 and then execute &quot;_j&quot;.
    Look in the file for more explanations.  To go there, <A HREF="diff.html#do">do</A> &quot;<A HREF="editing.html#gf">gf</A>&quot; on this name:
 $VIMRUNTIME/pack/dist/opt/justify/plugin/justify.vim.
 
@@ -474,7 +474,7 @@ Set <A HREF="options.html#'textwidth'">'textwidth'</A> to zero to avoid a <A HRE
 
 MOVING BY VISIBLE LINES
 
-The &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot;命令 使用<A HREF="gui\.html#GUI">GUI</A> next and previous lines.  When used on
+The &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot;命令 使用<A HREF="gui.html#GUI">GUI</A> next and previous lines.  When used on
 a long line, this means moving a lot of screen lines at once.
    To move only one screen line, use the &quot;<A HREF="motion.html#gj">gj</A>&quot; and &quot;<A HREF="motion.html#gk">gk</A>&quot;命令.  When a line
 doesn't wrap they <A HREF="diff.html#do">do</A> the same <A HREF="motion.html#as">as</A> &quot;<A HREF="motion.html#j">j</A>&quot; and &quot;<A HREF="motion.html#k">k</A>&quot;.  When the line does wrap, they
@@ -545,7 +545,7 @@ Suppose you are editing a table with four columns:
 <B><FONT color="#3A6F2B">	input A		  0.534 </FONT></B>
 <B><FONT color="#3A6F2B">	input B		  0.913 </FONT></B>
 
-You need to enter numbers in the third column.  You could 使用<A HREF="gui\.html#GUI">GUI</A> second
+You need to enter numbers in the third column.  You could 使用<A HREF="gui.html#GUI">GUI</A> second
 line, use &quot;<A HREF="insert.html#A">A</A>&quot;, enter a lot of spaces and type the text.
    For this kind of editing there is a special option:
 
@@ -581,7 +581,7 @@ You want to add a column, which should be a copy of the third column and
 placed before the &quot;test 1&quot; column.  Do this in seven steps:
 1.  Move the cursor to the left upper corner of this column, e.g., with
     &quot;/test 3&quot;.
-2.  Press <A HREF="visual.html#CTRL-V">CTRL-V</A> to start blockwise <A HREF="visual\.html#Visual">可视</A>模式.
+2.  Press <A HREF="visual.html#CTRL-V">CTRL-V</A> to start blockwise <A HREF="visual.html#Visual">可视</A>模式.
 3.  Move the cursor down two lines with &quot;2j&quot;.  You are now in &quot;virtual space&quot;:
     the &quot;input B&quot; line of the &quot;test 3&quot; column.
 4.  Move the cursor right, to include the whole column in the selection, plus
@@ -608,7 +608,7 @@ VIRTUAL REPLACE MODE
 
 The disadvantage of using <A HREF="options.html#'virtualedit'">'virtualedit'</A> is that <A HREF="motion.html#it">它</A> &quot;feels&quot; different.  You
 can't recognize tabs or spaces beyond the end of line when moving the cursor
-around.  Another <A HREF="eval.html#method">method</A> can be used: Virtual <A HREF="insert\\.html#Replace">替代</A>模式.
+around.  Another <A HREF="eval.html#method">method</A> can be used: Virtual <A HREF="insert.html#Replace">替代</A>模式.
    Suppose you have a line in a table that contains both tabs and other
 characters.  Use &quot;rx&quot; on the first <A HREF="intro.html#tab">tab</A>:
 
@@ -636,7 +636,7 @@ gap.  Thus what actually happens is that a <A HREF="intro.html#tab">tab</A> is r
 blanks added to make the text after <A HREF="motion.html#it">它</A> keep its place.  In this <A HREF="change.html#case">case</A> a
 <A HREF="intro.html#tab">tab</A> is inserted.
    When you need to replace more than one character, you use the &quot;<A HREF="change.html#R">R</A>&quot;命令
-to go to <A HREF="insert\\.html#Replace">替代</A>模式 (见 |<A HREF="usr_04.html#04.9">04.9</A>|).  This messes up the layout and replaces
+to go to <A HREF="insert.html#Replace">替代</A>模式 (见 |<A HREF="usr_04.html#04.9">04.9</A>|).  This messes up the layout and replaces
 the wrong characters:
 
 <B><FONT color="#3A6F2B">	inp	0	0.534	0.693 </FONT></B>
@@ -647,7 +647,7 @@ the wrong characters:
 
 <B><FONT color="#3A6F2B">	inp	0.78634	0.693 </FONT></B>
 
-The &quot;<A HREF="change.html#gR">gR</A>&quot;命令 uses Virtual <A HREF="insert\\.html#Replace">替代</A>模式.  This preserves the layout:
+The &quot;<A HREF="change.html#gR">gR</A>&quot;命令 uses Virtual <A HREF="insert.html#Replace">替代</A>模式.  This preserves the layout:
 
 <B><FONT color="#3A6F2B">	inp	0	0.534	0.693 </FONT></B>
 

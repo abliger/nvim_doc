@@ -487,7 +487,7 @@ Note:
 - The command is not echo'ed, no need for &lt;silent&gt;.
 - The <A HREF="#{rhs}">{rhs}</A> is not subject to <A HREF="#abbreviations">abbreviations</A> nor to other mappings, even if the
   <A HREF="#mapping">mapping</A> is recursive.
-- In <A HREF="visual\.html#Visual">可视</A>模式  you can use `line('v')` and `col('v')` to get one end of the
+- In <A HREF="visual.html#Visual">可视</A>模式  you can use `line('v')` and `col('v')` to get one end of the
   <A HREF="visual.html#Visual">Visual</A> area, the cursor is at the other end.
 - In select-mode, |<A HREF="#:map">:map</A>| and |<A HREF="#:vmap">:vmap</A>| command mappings are executed in
   <A HREF="visual.html#visual-mode">visual-mode</A>.  Use |<A HREF="#:smap">:smap</A>| to handle select-mode.
@@ -505,11 +505,11 @@ Note:
 
 There are seven sets of mappings
 - For <A HREF="intro.html#Normal">正常</A>模式: When typing commands.
-- For <A HREF="visual\.html#Visual">可视</A>模式: When typing commands while the <A HREF="visual.html#Visual">Visual</A> area is highlighted.
-- For <A HREF="visual.html#Select">选择</A>模式: like <A HREF="visual\.html#Visual">可视</A>模式 but typing text replaces the selection.
+- For <A HREF="visual.html#Visual">可视</A>模式: When typing commands while the <A HREF="visual.html#Visual">Visual</A> area is highlighted.
+- For <A HREF="visual.html#Select">选择</A>模式: like <A HREF="visual.html#Visual">可视</A>模式 but typing text replaces the selection.
 - For <A HREF="intro.html#Operator-pending">Operator-pending</A> mode: When an <A HREF="motion.html#operator">operator</A> is pending (after &quot;<A HREF="change.html#d">d</A>&quot;, &quot;<A HREF="change.html#y">y</A>&quot;, &quot;<A HREF="change.html#c">c</A>&quot;,
   etc.).  See below: |<A HREF="#omap-info">omap-info</A>|.
-- For <A HREF="intro.html#Insert">插入</A>模式.  These are also used in <A HREF="insert\\.html#Replace">替代</A>模式.
+- For <A HREF="intro.html#Insert">插入</A>模式.  These are also used in <A HREF="insert.html#Replace">替代</A>模式.
 - For <A HREF="cmdline.html#Command-line">命令行</A>模式: When entering a &quot;<A HREF="cmdline.html#:">:</A>&quot; or &quot;<A HREF="pattern.html#/">/</A>&quot;命令.
 - For Terminal mode: When typing in a |<A HREF="various.html#:terminal">:terminal</A>| buffer.
 
@@ -601,14 +601,14 @@ used with any <A HREF="motion.html#operator">operator</A>.  Simple example:
 makes &quot;y{&quot; work like &quot;yw&quot; and &quot;d{&quot; like &quot;dw&quot;.
 
 To ignore the starting cursor position and select different text, you can have
-the omap start <A HREF="visual\.html#Visual">可视</A>模式 to select the text to be operated upon.  Example
+the omap start <A HREF="visual.html#Visual">可视</A>模式 to select the text to be operated upon.  Example
 that operates on a function name in the current line:
 <B>	onoremap &lt;silent&gt; F :&lt;C-U&gt;normal! 0f(hviw&lt;CR&gt;</B>
 The <A HREF="scroll.html#CTRL-U">CTRL-U</A> (&lt;C-U&gt;) is used to remove the range that Vim may insert.  The
 <A HREF="intro.html#Normal">正常</A>模式 commands find the first '<A HREF="motion.html#(">(</A>' character and select the first <A HREF="motion.html#word">单词</A>
 before <A HREF="motion.html#it">它</A>.  That usually is the function name.
 
-To enter a <A HREF="#mapping">mapping</A> for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual\.html#Visual">可视</A>模式, but not <A HREF="intro.html#Operator-pending">Operator-pending</A> mode,
+To enter a <A HREF="#mapping">mapping</A> for <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">可视</A>模式, but not <A HREF="intro.html#Operator-pending">Operator-pending</A> mode,
 first define <A HREF="motion.html#it">它</A> for all three modes然后unmap <A HREF="motion.html#it">它</A> for
 <A HREF="intro.html#Operator-pending">Operator-pending</A> mode:
 <B>	:map    xx something-difficult</B>
@@ -671,7 +671,7 @@ Everything from the first non-blank after <A HREF="#{lhs}">{lhs}</A> up to the e
 (or '&#124;') is considered to be part of <A HREF="#{rhs}">{rhs}</A>.  This allows the <A HREF="#{rhs}">{rhs}</A> to end
 with a space.
 
-Note: When using mappings for <A HREF="visual\.html#Visual">可视</A>模式, you can use the &quot;<A HREF="motion.html#'&lt;">'&lt;</A>&quot; <A HREF="motion.html#mark">mark</A>, which
+Note: When using mappings for <A HREF="visual.html#Visual">可视</A>模式, you can use the &quot;<A HREF="motion.html#'&lt;">'&lt;</A>&quot; <A HREF="motion.html#mark">mark</A>, which
 is the start of the last selected <A HREF="visual.html#Visual">Visual</A> area in the current buffer |<A HREF="motion.html#'&lt;">'&lt;</A>|.
 
 The |<A HREF="various.html#:filter">:filter</A>| command can be used to select what mappings to <A HREF="eval.html#list">列表</A>.  The
@@ -737,7 +737,7 @@ when using nested mappings.
 Using <A HREF="pattern.html#CTRL-C">CTRL-C</A> in the <A HREF="#{lhs}">{lhs}</A> is possible, but <A HREF="motion.html#it">它</A> will only work when Vim is
 waiting for a key, not when Vim is busy with something.  When Vim is busy
 <A HREF="pattern.html#CTRL-C">CTRL-C</A> interrupts/breaks the command.
-When 使用<A HREF="gui\.html#GUI">GUI</A> version on MS-Windows <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be mapped to allow a Copy
+When 使用<A HREF="gui.html#GUI">GUI</A> version on MS-Windows <A HREF="pattern.html#CTRL-C">CTRL-C</A> can be mapped to allow a Copy
 command to 粘贴板.  Use CTRL-Break to interrupt Vim.
 
 
@@ -1077,7 +1077,7 @@ This also avoids using a command line, which would trigger <A HREF="autocmd.html
 <A HREF="autocmd.html#CmdlineLeave">CmdlineLeave</A> autocommands.
 
 Note that the <A HREF="options.html#'selection'">'selection'</A> option is temporarily set to &quot;<A HREF="motion.html#inclusive">inclusive</A>&quot; to be able
-to <A HREF="change.html#yank">yank</A> exactly the right text by using <A HREF="visual\.html#Visual">可视</A>模式 from the <A HREF="motion.html#'[">'[</A> to the <A HREF="motion.html#']">']</A>
+to <A HREF="change.html#yank">yank</A> exactly the right text by using <A HREF="visual.html#Visual">可视</A>模式 from the <A HREF="motion.html#'[">'[</A> to the <A HREF="motion.html#']">']</A>
 <A HREF="motion.html#mark">mark</A>.
 
 Also note that the <A HREF="options.html#'clipboard'">'clipboard'</A> option is temporarily emptied to avoid
@@ -1091,7 +1091,7 @@ The `mode()` function will return the state <A HREF="motion.html#as">as</A> <A H
 
 2. <A HREF="#Abbreviations">Abbreviations</A>			*<A NAME="abbreviations"></A><B>abbreviations</B>* *<A NAME="Abbreviations"></A><B>Abbreviations</B>*
 
-<A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="insert\\.html#Replace">替代</A>模式 and <A HREF="cmdline.html#Command-line">命令行</A>模式.
+<A HREF="#Abbreviations">Abbreviations</A> are used in <A HREF="intro.html#Insert">插入</A>模式, <A HREF="insert.html#Replace">替代</A>模式 and <A HREF="cmdline.html#Command-line">命令行</A>模式.
 If you enter a <A HREF="motion.html#word">单词</A> that is an abbreviation, <A HREF="motion.html#it">它</A> is replaced with the <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">它</A>
 stands for.  This can be used to save typing for often used long words.  And
 you can use <A HREF="motion.html#it">它</A> to automatically correct obvious spelling <A HREF="message.html#errors">errors</A>.
@@ -1651,14 +1651,14 @@ specified.
                                                   *<A NAME=":command-addr"></A><B>:command-addr</B>*
 It is possible that the special characters in the range like `.`, `$` or `&#37;`
 which by default correspond to the current line, last line and the whole
-buffer, relate to arguments, (loaded) <A HREF="windows.html#buffers">buffers</A>, <A HREF="windows\.html#windows">窗口</A> or <A HREF="intro.html#tab">tab</A> pages.
+buffer, relate to arguments, (loaded) <A HREF="windows.html#buffers">buffers</A>, <A HREF="windows.html#windows">窗口</A> or <A HREF="intro.html#tab">tab</A> pages.
 
 Possible values are (second column is the short name used in listing):
     -addr=lines		  line	Range of lines (this is the default)
     -addr=arguments	  arg	Range for arguments
     -addr=buffers	  buf	Range for <A HREF="windows.html#buffers">buffers</A> (also not loaded <A HREF="windows.html#buffers">buffers</A>)
     -addr=loaded_buffers  load	Range for loaded <A HREF="windows.html#buffers">buffers</A>
-    -addr=windows	  win	Range for <A HREF="windows\.html#windows">窗口</A>
+    -addr=windows	  win	Range for <A HREF="windows.html#windows">窗口</A>
     -addr=tabs		  <A HREF="intro.html#tab">tab</A>	Range for <A HREF="intro.html#tab">tab</A> pages
     -addr=quickfix	  qf	Range for <A HREF="quickfix.html#quickfix">quickfix</A> entries
     -addr=other		  ?	other kind of range

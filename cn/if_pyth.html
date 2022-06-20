@@ -327,7 +327,7 @@ vim.buffers						*<A NAME="python-buffers"></A><B>python-buffers</B>*
  
 
 vim.windows						*<A NAME="python-windows"></A><B>python-windows</B>*
-	A sequence object providing access to the <A HREF="eval.html#list">列表</A> of vim <A HREF="windows\.html#windows">窗口</A>.  The
+	A sequence object providing access to the <A HREF="eval.html#list">列表</A> of vim <A HREF="windows.html#windows">窗口</A>.  The
 	object supports the following operations:
 <B>	    :py w = vim.windows[i]	# Indexing (read-only)</B>
 <B>	    :py w in vim.windows	# Membership test</B>
@@ -335,7 +335,7 @@ vim.windows						*<A NAME="python-windows"></A><B>python-windows</B>*
 <B>	    :py for w in vim.windows:	# Sequential access</B>
  	Note: vim.windows object always accesses current <A HREF="intro.html#tab">tab</A> page.
 	|<A HREF="#python-tabpage">python-tabpage</A>|.windows <A HREF="vimindex.html#objects">objects</A> are bound to parent |<A HREF="#python-tabpage">python-tabpage</A>|
-	object and always use <A HREF="windows\.html#windows">窗口</A> from that <A HREF="intro.html#tab">tab</A> page (or throw vim.error
+	object and always use <A HREF="windows.html#windows">窗口</A> from that <A HREF="intro.html#tab">tab</A> page (or throw vim.error
 	in <A HREF="change.html#case">case</A> <A HREF="intro.html#tab">tab</A> page was deleted). You can keep a reference to both
 	without keeping a reference to vim module object or |<A HREF="#python-tabpage">python-tabpage</A>|,
 	they will not lose their properties in this <A HREF="change.html#case">case</A>.
@@ -623,10 +623,10 @@ Example (assume <A HREF="change.html#r">r</A> is the current range):
 
 Window <A HREF="vimindex.html#objects">objects</A>						*<A NAME="python-window"></A><B>python-window</B>*
 
-Window <A HREF="vimindex.html#objects">objects</A> represent vim <A HREF="windows\.html#windows">窗口</A>.  You can obtain them in a number of ways:
+Window <A HREF="vimindex.html#objects">objects</A> represent vim <A HREF="windows.html#windows">窗口</A>.  You can obtain them in a number of ways:
 	- via vim.current.window (|<A HREF="#python-current">python-current</A>|)
 	- from indexing vim.windows (|<A HREF="#python-windows">python-windows</A>|)
-	- from indexing &quot;<A HREF="windows\.html#windows">窗口</A>&quot; attribute of a tab page (|<A HREF="#python-tabpage">python-tabpage</A>|)
+	- from indexing &quot;<A HREF="windows.html#windows">窗口</A>&quot; attribute of a tab page (|<A HREF="#python-tabpage">python-tabpage</A>|)
 	- from the &quot;<A HREF="windows.html#window">窗口</A>&quot; attribute of a tab page (|<A HREF="#python-tabpage">python-tabpage</A>|)
 
 You can manipulate<A HREF="windows.html#window">窗口</A><A HREF="vimindex.html#objects">objects</A> only through their attributes.  They have no
@@ -673,7 +673,7 @@ ways:
 	- via vim.current.tabpage (|<A HREF="#python-current">python-current</A>|)
 	- from indexing vim.tabpages (|<A HREF="#python-tabpages">python-tabpages</A>|)
 
-You can use this object to access <A HREF="intro.html#tab">tab</A> page <A HREF="windows\.html#windows">窗口</A>. They have no methods and
+You can use this object to access <A HREF="intro.html#tab">tab</A> page <A HREF="windows.html#windows">窗口</A>. They have no methods and
 no sequence or other interfaces.
 
 <A HREF="intro.html#Tab">Tab</A> page attributes are:

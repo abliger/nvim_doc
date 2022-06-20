@@ -375,17 +375,17 @@ argument.
 
 
 							*<A NAME="-o"></A><B>-o</B>*
--o[N]		Open N <A HREF="windows\.html#windows">窗口</A>, split horizontally.  If [N] is not given,
+-o[N]		Open N <A HREF="windows.html#windows">窗口</A>, split horizontally.  If [N] is not given,
 		one<A HREF="windows.html#window">窗口</A>is opened for every file given <A HREF="motion.html#as">as</A> argument.  If
 		there is not enough room, only the first few files get a
-		<A HREF="windows.html#window">窗口</A>.  If there are more <A HREF="windows\.html#windows">窗口</A> than arguments, the last
-		few <A HREF="windows\.html#windows">窗口</A> will be editing an empty file.
+		<A HREF="windows.html#window">窗口</A>.  If there are more <A HREF="windows.html#windows">窗口</A> than arguments, the last
+		few <A HREF="windows.html#windows">窗口</A> will be editing an empty file.
 
 
 							*<A NAME="-O"></A><B>-O</B>*
--O[N]		Open N <A HREF="windows\.html#windows">窗口</A>, split vertically.  Otherwise it's like <A HREF="#-o">-o</A>.
+-O[N]		Open N <A HREF="windows.html#windows">窗口</A>, split vertically.  Otherwise it's like <A HREF="#-o">-o</A>.
 		If both the <A HREF="#-o">-o</A> and the <A HREF="#-O">-O</A> option are given, the last one on
-		the command line determines how the <A HREF="windows\.html#windows">窗口</A> will be split.
+		the command line determines how the <A HREF="windows.html#windows">窗口</A> will be split.
 
 
 							*<A NAME="-p"></A><B>-p</B>*
@@ -639,14 +639,14 @@ accordingly, proceeding <A HREF="motion.html#as">as</A> follows:
 
 14. Read the <A HREF="quickfix.html#quickfix">quickfix</A> file if the |<A HREF="#-q">-q</A>| flag was given, or exit on failure.
 
-15. Open all <A HREF="windows\.html#windows">窗口</A>
-	When the |<A HREF="#-o">-o</A>| flag was given, <A HREF="windows\.html#windows">窗口</A> will be opened (but not
+15. Open all <A HREF="windows.html#windows">窗口</A>
+	When the |<A HREF="#-o">-o</A>| flag was given, <A HREF="windows.html#windows">窗口</A> will be opened (but not
 	displayed yet).
 	When the |<A HREF="#-p">-p</A>| flag was given, <A HREF="intro.html#tab">tab</A> pages will be created (but not
 	displayed yet).
 	When switching screens, <A HREF="motion.html#it">它</A> happens now.  Redrawing starts.
 	If the |<A HREF="#-q">-q</A>| flag was given, the first error is jumped to.
-	Buffers for all <A HREF="windows\.html#windows">窗口</A> will be loaded, without triggering |<A HREF="autocmd.html#BufAdd">BufAdd</A>|
+	Buffers for all <A HREF="windows.html#windows">窗口</A> will be loaded, without triggering |<A HREF="autocmd.html#BufAdd">BufAdd</A>|
 	autocommands.
 
 16. Execute <A HREF="#startup">startup</A> commands
@@ -777,9 +777,9 @@ Suspending						*<A NAME="suspend"></A><B>suspend</B>*
 
 					*<A NAME="CTRL-Z"></A><B>CTRL-Z</B>* *<A NAME="v_CTRL-Z"></A><B>v_CTRL-Z</B>*
 <A HREF="#CTRL-Z">CTRL-Z</A>			Suspend Nvim, like &quot;<A HREF="#:stop">:stop</A>&quot;.
-			Works in <A HREF="intro.html#Normal">Normal</A> and in <A HREF="visual\.html#Visual">可视</A>模式.  In <A HREF="insert.html#Insert">Insert</A> and
+			Works in <A HREF="intro.html#Normal">Normal</A> and in <A HREF="visual.html#Visual">可视</A>模式.  In <A HREF="insert.html#Insert">Insert</A> and
 			<A HREF="cmdline.html#Command-line">命令行</A>模式, the <A HREF="#CTRL-Z">CTRL-Z</A> is inserted <A HREF="motion.html#as">as</A> a normal
-			character.  In <A HREF="visual\.html#Visual">可视</A>模式 Nvim goes back to <A HREF="intro.html#Normal">Normal</A>
+			character.  In <A HREF="visual.html#Visual">可视</A>模式 Nvim goes back to <A HREF="intro.html#Normal">Normal</A>
 			mode.
 
 
@@ -803,8 +803,8 @@ Exiting							*<A NAME="exiting"></A><B>exiting</B>*
 There are several ways to exit Vim:
 - Close the last<A HREF="windows.html#window">窗口</A>with `:quit`.  Only when there are no changes.
 - Close the last<A HREF="windows.html#window">窗口</A>with `:quit!`.  Also when there are changes.
-- Close all <A HREF="windows\.html#windows">窗口</A> with `:qall`.  Only when there are no changes.
-- Close all <A HREF="windows\.html#windows">窗口</A> with `:qall!`.  Also when there are changes.
+- Close all <A HREF="windows.html#windows">窗口</A> with `:qall`.  Only when there are no changes.
+- Close all <A HREF="windows.html#windows">窗口</A> with `:qall!`.  Also when there are changes.
 - Use `:cquit`.  Also when there are changes.
 
 When using `:cquit` or when there was an error message Vim exits with exit
@@ -886,7 +886,7 @@ continue editing like when the <A HREF="#View">View</A> was saved.
 
 
 						*<A NAME="Session"></A><B>Session</B>* *<A NAME="session-file"></A><B>session-file</B>*
-A <A HREF="#Session">Session</A> keeps the Views for all <A HREF="windows\.html#windows">窗口</A>, plus the global settings.  You can
+A <A HREF="#Session">Session</A> keeps the Views for all <A HREF="windows.html#windows">窗口</A>, plus the global settings.  You can
 save a <A HREF="#Session">Session</A> and when you restore <A HREF="motion.html#it">它</A> later the<A HREF="windows.html#window">窗口</A>layout looks the same.
 You can use a <A HREF="#Session">Session</A> to quickly switch between different projects,
 automatically loading the files you were last working on in that project.
@@ -912,7 +912,7 @@ resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source
    &quot;<A HREF="options.html#options">选项</A>&quot;.  Script-local mappings will not be written.
 2. Restores global <A HREF="eval.html#variables">variables</A> that start with an <A HREF="change.html#uppercase">大写</A> <A HREF="print.html#letter">字母</A> and contain
    at least one <A HREF="change.html#lowercase">小写</A> <A HREF="print.html#letter">字母</A>, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;globals&quot;.
-3. Closes all <A HREF="windows\.html#windows">窗口</A> in the current <A HREF="intro.html#tab">tab</A> page, except the current one; closes
+3. Closes all <A HREF="windows.html#windows">窗口</A> in the current <A HREF="intro.html#tab">tab</A> page, except the current one; closes
    all <A HREF="intro.html#tab">tab</A> pages except the current one (this results in currently loaded
    <A HREF="windows.html#buffers">buffers</A> to be unloaded, some may become hidden if <A HREF="options.html#'hidden'">'hidden'</A> is set or
    otherwise specified); wipes out the current buffer, if <A HREF="motion.html#it">它</A> is empty
@@ -924,15 +924,15 @@ resulting file, when executed with a &quot;<A HREF="repeat.html#:source">:source
 6. Restores screen size, if <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;resize&quot;.
 7. Reloads the buffer <A HREF="eval.html#list">列表</A>, with the last cursor positions.  If
    <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;<A HREF="windows.html#buffers">buffers</A>&quot; then all <A HREF="windows.html#buffers">buffers</A> are restored,
-   including hidden and unloaded <A HREF="windows.html#buffers">buffers</A>.  Otherwise only <A HREF="windows.html#buffers">buffers</A> in <A HREF="windows\.html#windows">窗口</A>
+   including hidden and unloaded <A HREF="windows.html#buffers">buffers</A>.  Otherwise only <A HREF="windows.html#buffers">buffers</A> in <A HREF="windows.html#windows">窗口</A>
    are restored.
-8. Restores all <A HREF="windows\.html#windows">窗口</A> with the same layout.  If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
-   &quot;help&quot;, help <A HREF="windows\.html#windows">窗口</A> are restored.  If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;blank&quot;,
-   <A HREF="windows\.html#windows">窗口</A> editing a buffer without a name will be restored.
-   If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;winsize&quot; and no (help/blank) <A HREF="windows\.html#windows">窗口</A> were
+8. Restores all <A HREF="windows.html#windows">窗口</A> with the same layout.  If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains
+   &quot;help&quot;, help <A HREF="windows.html#windows">窗口</A> are restored.  If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;blank&quot;,
+   <A HREF="windows.html#windows">窗口</A> editing a buffer without a name will be restored.
+   If <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> contains &quot;winsize&quot; and no (help/blank) <A HREF="windows.html#windows">窗口</A> were
    left out, the<A HREF="windows.html#window">窗口</A>sizes are restored (relative to the screen size).
-   Otherwise, the <A HREF="windows\.html#windows">窗口</A> are just given sensible sizes.
-9. Restores the Views for all the <A HREF="windows\.html#windows">窗口</A>, <A HREF="motion.html#as">as</A> with |<A HREF="#:mkview">:mkview</A>|.  But
+   Otherwise, the <A HREF="windows.html#windows">窗口</A> are just given sensible sizes.
+9. Restores the Views for all the <A HREF="windows.html#windows">窗口</A>, <A HREF="motion.html#as">as</A> with |<A HREF="#:mkview">:mkview</A>|.  But
    <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> is used instead of <A HREF="options.html#'viewoptions'">'viewoptions'</A>.
 10. If a file exists with the same name <A HREF="motion.html#as">as</A> the <A HREF="#Session">Session</A> file, but ending in
    &quot;x.vim&quot; (for eXtra), executes that <A HREF="motion.html#as">as</A> well.  You can use *x.vim files to

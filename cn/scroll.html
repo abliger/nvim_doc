@@ -285,11 +285,11 @@ text scrolls on the screen.
 
 5. Scrolling synchronously				*<A NAME="scroll-binding"></A><B>scroll-binding</B>*
 
-Occasionally, <A HREF="motion.html#it">它</A> is desirable to bind two or more <A HREF="windows\.html#windows">窗口</A> together such that
-when one<A HREF="windows.html#window">窗口</A>is scrolled, the other <A HREF="windows\.html#windows">窗口</A> are also scrolled.  In Vim,
-<A HREF="windows\.html#windows">窗口</A> can be given this behavior by setting the (window-specific)
+Occasionally, <A HREF="motion.html#it">它</A> is desirable to bind two or more <A HREF="windows.html#windows">窗口</A> together such that
+when one<A HREF="windows.html#window">窗口</A>is scrolled, the other <A HREF="windows.html#windows">窗口</A> are also scrolled.  In Vim,
+<A HREF="windows.html#windows">窗口</A> can be given this behavior by setting the (window-specific)
 <A HREF="options.html#'scrollbind'">'scrollbind'</A> option.  When a<A HREF="windows.html#window">窗口</A>that has <A HREF="options.html#'scrollbind'">'scrollbind'</A> set is scrolled, all
-other <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A> are scrolled the same amount, if possible.  The
+other <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A> are scrolled the same amount, if possible.  The
 behavior of <A HREF="options.html#'scrollbind'">'scrollbind'</A> can be modified by the <A HREF="options.html#'scrollopt'">'scrollopt'</A> option.
 
 When using the scrollbars, the binding only happens when <A HREF="#scrolling">scrolling</A> the<A HREF="windows.html#window">窗口</A>
@@ -305,24 +305,24 @@ Otherwise the following <A HREF="eval.html#method">method</A> is used.
 Each <A HREF="options.html#'scrollbind'">'scrollbind'</A><A HREF="windows.html#window">窗口</A>keeps track of its &quot;relative offset,&quot; which can be
 thought of <A HREF="motion.html#as">as</A> the difference between the current window's vertical scroll
 position and the other window's vertical scroll position.  When one of the
-<A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A> is asked to vertically scroll past the beginning or end
+<A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A> is asked to vertically scroll past the beginning or end
 limit of its text, the<A HREF="windows.html#window">窗口</A>no longer scrolls, but remembers how far past
 the limit <A HREF="motion.html#it">它</A> wishes to be.  The<A HREF="windows.html#window">窗口</A>keeps this information so that <A HREF="motion.html#it">它</A> can
 maintain the same relative offset, regardless of its being asked to scroll
 past its buffer's <A HREF="vi_diff.html#limits">limits</A>.
 
 However, if a <A HREF="options.html#'scrollbind'">'scrollbind'</A><A HREF="windows.html#window">窗口</A>that has a relative offset that is past its
-buffer's <A HREF="vi_diff.html#limits">limits</A> is given the cursor focus, the other <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A> must
+buffer's <A HREF="vi_diff.html#limits">limits</A> is given the cursor focus, the other <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A> must
 jump to a location where the current window's relative offset is valid.  This
 behavior can be changed by clearing the &quot;jump&quot; flag from the <A HREF="options.html#'scrollopt'">'scrollopt'</A>
 option.
 
 
 						*<A NAME="syncbind"></A><B>syncbind</B>* *<A NAME=":syncbind"></A><B>:syncbind</B>* *<A NAME=":sync"></A><B>:sync</B>*
-<A HREF="#:syncbind">:syncbind</A>		Force all <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A> to have the same
+<A HREF="#:syncbind">:syncbind</A>		Force all <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A> to have the same
 			relative offset.  I.e., when any of the <A HREF="options.html#'scrollbind'">'scrollbind'</A>
-			<A HREF="windows\.html#windows">窗口</A> is scrolled to the top of its buffer, all of
-			the <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A> will also be at the top of
+			<A HREF="windows.html#windows">窗口</A> is scrolled to the top of its buffer, all of
+			the <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A> will also be at the top of
 			their <A HREF="windows.html#buffers">buffers</A>.
 
 
@@ -331,7 +331,7 @@ The <A HREF="options.html#'scrollbind'">'scrollbind'</A> flag is meaningful when
 scroll a<A HREF="windows.html#window">窗口</A>, and also meaningful when using the vertical scrollbar of the
 <A HREF="windows.html#window">窗口</A>which has the cursor focus.  However, when using the vertical scrollbar
 of a<A HREF="windows.html#window">窗口</A>which doesn't have the cursor focus, <A HREF="options.html#'scrollbind'">'scrollbind'</A> is ignored.
-This allows quick adjustment of the relative offset of <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows\.html#windows">窗口</A>.
+This allows quick adjustment of the relative offset of <A HREF="options.html#'scrollbind'">'scrollbind'</A> <A HREF="windows.html#windows">窗口</A>.
 
 ==============================================================================
 

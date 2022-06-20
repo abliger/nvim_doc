@@ -709,7 +709,7 @@ Multithreading                                            *<A NAME="lua-loop-thr
 Plugins can perform work in separate (os-level) threads using the threading
 APIs in luv, for instance `vim.loop.new_thread`. Note that every thread
 gets its own separate <A HREF="#lua">lua</A> interpreter state, with no access to <A HREF="#lua">lua</A> globals
-in the main thread. Neither can the state of the editor (buffers, <A HREF="windows\.html#windows">窗口</A>,
+in the main thread. Neither can the state of the editor (buffers, <A HREF="windows.html#windows">窗口</A>,
 etc) be directly accessed from threads.
 
 A subset of the `vim.*` <A HREF="api.html#API">API</A> is available in threads. This includes:

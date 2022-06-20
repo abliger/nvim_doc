@@ -330,12 +330,12 @@ This tells Vim to read a specific file on <A HREF="starting.html#startup">startu
 session (actually, you can source any Vim <A HREF="usr_41.html#script">script</A> with <A HREF="starting.html#-S">-S</A>, thus <A HREF="motion.html#it">它</A> might <A HREF="motion.html#as">as</A>
 well stand for &quot;source&quot;).
 
-The <A HREF="windows\.html#windows">窗口</A> that were open are restored, with the same position and size <A HREF="motion.html#as">as</A>
+The <A HREF="windows.html#windows">窗口</A> that were open are restored, with the same position and size <A HREF="motion.html#as">as</A>
 before.  Mappings and option values are like before.
    What exactly is restored depends on the <A HREF="options.html#'sessionoptions'">'sessionoptions'</A> option.  The
 default value is &quot;blank,buffers,curdir,folds,help,options,winsize&quot;.
 
-	blank		keep empty <A HREF="windows\.html#windows">窗口</A>
+	blank		keep empty <A HREF="windows.html#windows">窗口</A>
 	<A HREF="windows.html#buffers">buffers</A>		all <A HREF="windows.html#buffers">buffers</A>, not only the ones in a<A HREF="windows.html#window">窗口</A>
 	curdir		the current directory
 	<A HREF="fold.html#folds">folds</A>		<A HREF="fold.html#folds">folds</A>, also manually created ones
@@ -365,7 +365,7 @@ is saved, using &quot;:mksession!&quot;.  This overwrites the previous session. 
 next time you load the secret session you can continue where you were at this
 point.  And finally you load the new &quot;boring&quot; session.
 
-If you open help <A HREF="windows\.html#windows">窗口</A>, split and close various <A HREF="windows\.html#windows">窗口</A>, and generally mess
+If you open help <A HREF="windows.html#windows">窗口</A>, split and close various <A HREF="windows.html#windows">窗口</A>, and generally mess
 up the<A HREF="windows.html#window">窗口</A>layout, you can go back to the last saved session:
 
 <B>	:source ~/.config/nvim/boring.vim</B>
@@ -404,7 +404,7 @@ More about this in the next chapter.
 <B>	CTRL-W w</B>
 <B>	:vertical split ~/</B>
 
-You can resize the <A HREF="windows\.html#windows">窗口</A> a bit to your liking.  Then save the session with:
+You can resize the <A HREF="windows.html#windows">窗口</A> a bit to your liking.  Then save the session with:
 
 <B>	:mksession ~/.config/nvim/mine.vim</B>
 

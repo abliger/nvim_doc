@@ -215,7 +215,7 @@ To start debugging use `:Termdebug` or `:TermdebugCommand` followed by the
 command name, for example:
 <B>	:Termdebug vim</B>
 
-This opens two <A HREF="windows\.html#windows">窗口</A>:
+This opens two <A HREF="windows.html#windows">窗口</A>:
 
 <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>	A <A HREF="#terminal">终端</A><A HREF="windows.html#window">窗口</A>in which &quot;<A HREF="debug.html#gdb">gdb</A> vim&quot; is executed.  Here you
 		can directly interact with <A HREF="debug.html#gdb">gdb</A>.
@@ -235,7 +235,7 @@ Focus the <A HREF="#terminal">终端</A> of the executed program to interact wit
 the same <A HREF="motion.html#as">as</A> any command running in a <A HREF="#terminal">终端</A><A HREF="windows.html#window">窗口</A>.
 
 When the debugger ends, typically by typing &quot;quit&quot; in the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>, the two
-opened <A HREF="windows\.html#windows">窗口</A> are closed.
+opened <A HREF="windows.html#windows">窗口</A> are closed.
 
 Only one debugger can be active at a time.
 
@@ -269,7 +269,7 @@ Start Vim:
 Load the termdebug <A HREF="usr_05.html#plugin">plugin</A> and start debugging Vim:
 <B>	:packadd termdebug</B>
 <B>	:Termdebug vim</B>
-You should now have three <A HREF="windows\.html#windows">窗口</A>:
+You should now have three <A HREF="windows.html#windows">窗口</A>:
     source  - where you started
     <A HREF="debug.html#gdb">gdb</A>	    - you can type <A HREF="debug.html#gdb">gdb</A> commands here
     program - the executed program will use this<A HREF="windows.html#window">窗口</A>
@@ -293,7 +293,7 @@ This way you can inspect the value of local <A HREF="eval.html#variables">variab
 <B>	print *eap</B>
 If mouse pointer movements are working, Vim will also show a balloon when the
 mouse rests on text that can be evaluated by <A HREF="debug.html#gdb">gdb</A>.
-You can also use the &quot;<A HREF="various.html#K">K</A>&quot; <A HREF="map.html#mapping">mapping</A> that will either use neovim floating <A HREF="windows\.html#windows">窗口</A>
+You can also use the &quot;<A HREF="various.html#K">K</A>&quot; <A HREF="map.html#mapping">mapping</A> that will either use neovim floating <A HREF="windows.html#windows">窗口</A>
 if available to show the results or print below the status <A HREF="motion.html#bar">bar</A>.
 
 Now go back to the source<A HREF="windows.html#window">窗口</A>and put the cursor on the first line after
@@ -425,7 +425,7 @@ Four autocommands can be used:
 				the <A HREF="debug.html#gdb">gdb</A><A HREF="windows.html#window">窗口</A>.
 
 						*<A NAME="TermdebugStopPost"></A><B>TermdebugStopPost</B>*
-<A HREF="#TermdebugStopPost">TermdebugStopPost</A>		After debugging has ended, gdb-related <A HREF="windows\.html#windows">窗口</A>
+<A HREF="#TermdebugStopPost">TermdebugStopPost</A>		After debugging has ended, gdb-related <A HREF="windows.html#windows">窗口</A>
 				are closed, debug <A HREF="windows.html#buffers">buffers</A> wiped out and
 				the state before the debugging was restored.
 
@@ -503,7 +503,7 @@ If the command needs an argument use a <A HREF="eval.html#list">列表</A>:
 Or if there is no <A HREF="#g:termdebug_config">g:termdebug_config</A>:
 <B>	let g:termdebugger = ['rr', 'replay', '--']</B>
 
-To not use neovim floating <A HREF="windows\.html#windows">窗口</A> for previewing variable evaluation, set the
+To not use neovim floating <A HREF="windows.html#windows">窗口</A> for previewing variable evaluation, set the
 `g:termdebug_useFloatingHover` variable like this:
 <B>	let g:termdebug_useFloatingHover = 0</B>
 

@@ -89,7 +89,7 @@ Nvim <A HREF="#UI">UI</A> protocol					*<A NAME="UI"></A><B>UI</B>* *<A NAME="ui
 
 UIs can be implemented <A HREF="motion.html#as">as</A> external client processes communicating with Nvim
 over the <A HREF="api.html#RPC">RPC</A> <A HREF="api.html#API">API</A>. The default <A HREF="#UI">UI</A> model is a terminal-like grid with a single,
-monospace font. The <A HREF="#UI">UI</A> can opt-in to have <A HREF="windows\.html#windows">窗口</A> drawn on separate grids, and
+monospace font. The <A HREF="#UI">UI</A> can opt-in to have <A HREF="windows.html#windows">窗口</A> drawn on separate grids, and
 have some elements (&quot;widgets&quot;) presented by the <A HREF="#UI">UI</A> itself rather than by Nvim
 (&quot;externalized&quot;).
 
@@ -175,7 +175,7 @@ Example of a typical &quot;redraw&quot; batch in a single <A HREF="api.html#RPC"
 <B>    ]</B>
 
 Events must be handled in-order. Nvim sends a &quot;flush&quot; event when <A HREF="motion.html#it">它</A> has
-completed a redraw of the entire screen (so all <A HREF="windows\.html#windows">窗口</A> have a consistent view
+completed a redraw of the entire screen (so all <A HREF="windows.html#windows">窗口</A> have a consistent view
 of buffer state, <A HREF="options.html#options">选项</A>, etc.). Multiple &quot;redraw&quot; batches may be sent before
 the entire screen has been redrawn, with &quot;flush&quot; following only the last
 batch. The user should only see the final state (when &quot;flush&quot; is sent), not
@@ -215,7 +215,7 @@ procedure:
 1. Invoke |<A HREF="api.html#nvim_get_api_info()">nvim_get_api_info()</A>|, if needed to setup the client library and/or
    to get the <A HREF="eval.html#list">列表</A> of supported <A HREF="#UI">UI</A> extensions.
 2. Do any configuration that should be happen before user <A HREF="starting.html#config">config</A> is loaded.
-   Buffers and <A HREF="windows\.html#windows">窗口</A> are not available at this point, but this could be used
+   Buffers and <A HREF="windows.html#windows">窗口</A> are not available at this point, but this could be used
    to set |<A HREF="eval.html#g:">g:</A>| <A HREF="eval.html#variables">variables</A> visible to <A HREF="starting.html#init.vim">init.vim</A>
 3. If the <A HREF="#UI">UI</A> wants to <A HREF="diff.html#do">do</A> additional setup after user <A HREF="starting.html#config">config</A> is loaded,
    <A HREF="intro.html#register">寄存器</A> a <A HREF="autocmd.html#VimEnter">VimEnter</A> <A HREF="autocmd.html#autocmd">autocmd</A>:
@@ -405,7 +405,7 @@ numerical highlight ids to the actual attributes.
 	`underdot`:		underdotted text. The dots have `special` color.
 	`underdash`:		underdashed text. The dashes have `special` color.
 	`blend`:		Blend level (0-100). Could be used by UIs to
-				support blending floating <A HREF="windows\.html#windows">窗口</A> to the
+				support blending floating <A HREF="windows.html#windows">窗口</A> to the
 				background or to signal a transparent cursor.
 
 	For absent color keys the default color should be used. Don't store
@@ -659,7 +659,7 @@ Activates |<A HREF="#ui-linegrid">ui-linegrid</A>| implicitly.
 见 |<A HREF="api.html#nvim_ui_try_resize_grid()">nvim_ui_try_resize_grid()</A>| to request <A HREF="change.html#changing">changing</A> the grid size.
 见 |<A HREF="api.html#nvim_input_mouse()">nvim_input_mouse()</A>| for sending mouse <A HREF="autocmd.html#events">events</A> to Nvim.
 
-The multigrid extension gives UIs more <A HREF="intro.html#control">control</A> over how <A HREF="windows\.html#windows">窗口</A> are displayed:
+The multigrid extension gives UIs more <A HREF="intro.html#control">control</A> over how <A HREF="windows.html#windows">窗口</A> are displayed:
 - UIs receive updates on a separate grid for each<A HREF="windows.html#window">窗口</A>.
 - UIs can set the grid size independently of how much space the<A HREF="windows.html#window">窗口</A>
   occupies on the global layout. So the <A HREF="#UI">UI</A> could use a different font size

@@ -180,7 +180,7 @@ look like this:
 
 The first column of the <A HREF="eval.html#list">列表</A> shows in which mode the <A HREF="map.html#mapping">mapping</A> is effective.
 This is &quot;<A HREF="pattern.html#n">n</A>&quot; for <A HREF="intro.html#Normal">正常</A>模式, &quot;<A HREF="insert.html#i">i</A>&quot; for <A HREF="intro.html#Insert">插入</A>模式, etc.  A blank is used for a
-<A HREF="map.html#mapping">mapping</A> defined with &quot;<A HREF="map.html#:map">:map</A>&quot;, thus effective in both <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual\.html#Visual">可视</A>模式.
+<A HREF="map.html#mapping">mapping</A> defined with &quot;<A HREF="map.html#:map">:map</A>&quot;, thus effective in both <A HREF="intro.html#Normal">Normal</A> and <A HREF="visual.html#Visual">可视</A>模式.
    One useful purpose of listing the <A HREF="map.html#mapping">mapping</A> is to check if special keys in <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A>
 form have been recognized (this only works when color is supported).  For
 example, when <A HREF="intro.html#&lt;Esc&gt;">&lt;Esc&gt;</A> is displayed in color, <A HREF="motion.html#it">它</A> stands for the <A HREF="intro.html#escape">escape</A> character.
@@ -265,8 +265,8 @@ applies to depends on the command used:
 	<A HREF="map.html#:cunmap">:cunmap</A>		<A HREF="cmdline.html#Command-line">Command-line</A>
 
 There is a trick to define a <A HREF="map.html#mapping">mapping</A> that works in <A HREF="intro.html#Normal">Normal</A> and <A HREF="intro.html#Operator-pending">Operator-pending</A>
-mode, but not in <A HREF="visual\.html#Visual">可视</A>模式.  First define <A HREF="motion.html#it">它</A> for all three modes, then
-delete <A HREF="motion.html#it">它</A> for <A HREF="visual\.html#Visual">可视</A>模式:
+mode, but not in <A HREF="visual.html#Visual">可视</A>模式.  First define <A HREF="motion.html#it">它</A> for all three modes, then
+delete <A HREF="motion.html#it">它</A> for <A HREF="visual.html#Visual">可视</A>模式:
 
 <B>	:map &lt;C-A&gt; /---&gt;&lt;CR&gt;</B>
 <B>	:vunmap &lt;C-A&gt;</B>

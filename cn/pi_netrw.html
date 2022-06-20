@@ -562,11 +562,11 @@ YXXYnetrw-externapp|:
 
  *<A NAME="g:netrw_use_errorwindow"></A><B>g:netrw_use_errorwindow</B>* =2: <A HREF="message.html#messages">信息</A> from <A HREF="#netrw">netrw</A> will use a popup<A HREF="windows.html#window">窗口</A>
 			     Move the mouse and pause to remove the popup<A HREF="windows.html#window">窗口</A>.
-			     (default value if popup <A HREF="windows\.html#windows">窗口</A> are availble)
+			     (default value if popup <A HREF="windows.html#windows">窗口</A> are availble)
 			 =1 : <A HREF="message.html#messages">信息</A> from <A HREF="#netrw">netrw</A> will use a separate one
 			      line<A HREF="windows.html#window">窗口</A>.  This<A HREF="windows.html#window">窗口</A>provides reliable
 			      delivery of <A HREF="message.html#messages">信息</A>.
-			     (default value if popup <A HREF="windows\.html#windows">窗口</A> are not availble)
+			     (default value if popup <A HREF="windows.html#windows">窗口</A> are not availble)
 			 =0 : <A HREF="message.html#messages">信息</A> from <A HREF="#netrw">netrw</A> will use echoerr ;
 			      <A HREF="message.html#messages">信息</A> don't always seem to show up this
 			      way, but one doesn't have to quit the<A HREF="windows.html#window">窗口</A>.
@@ -577,9 +577,9 @@ YXXYnetrw-externapp|:
 			=0 force normal ftp behavior (no trailing line removal)
 
 
- *<A NAME="g:netrw_cygwin"></A><B>g:netrw_cygwin</B>*	=1 assume <A HREF="#scp">scp</A> under <A HREF="windows\.html#windows">窗口</A> is from cygwin. Also
+ *<A NAME="g:netrw_cygwin"></A><B>g:netrw_cygwin</B>*	=1 assume <A HREF="#scp">scp</A> under <A HREF="windows.html#windows">窗口</A> is from cygwin. Also
 			   permits <A HREF="#network">network</A> browsing to use ls with time and
-			   size <A HREF="change.html#sorting">sorting</A> (default if <A HREF="windows\.html#windows">窗口</A>)
+			   size <A HREF="change.html#sorting">sorting</A> (default if <A HREF="windows.html#windows">窗口</A>)
 			=0 assume Windows' <A HREF="#scp">scp</A> accepts windows-style paths
 			   Network browsing uses dir instead of ls
 			   This option is ignored if you're using unix
@@ -662,7 +662,7 @@ variable (ex. <A HREF="#scp">scp</A> uses the variable <A HREF="#g:netrw_scp_cmd
 <B>	let g:netrw_scp_cmd = '"c:\Program Files\PuTTY\pscp.exe" -q -batch'</B>
 <B>	let g:netrw_sftp_cmd= '"c:\Program Files\PuTTY\psftp.exe"'</B>
  
-(note: <A HREF="motion.html#it">它</A> has been reported that <A HREF="windows\.html#windows">窗口</A> 7 with putty v0.6's &quot;-batch&quot; option
+(note: <A HREF="motion.html#it">它</A> has been reported that <A HREF="windows.html#windows">窗口</A> 7 with putty v0.6's &quot;-batch&quot; option
        doesn't work, so its best to leave <A HREF="motion.html#it">它</A> off for that system)
 
 见 |<A HREF="#netrw-p8">netrw-p8</A>| for more about putty, pscp, psftp, etc.
@@ -950,9 +950,9 @@ set in the user's &lt;.vimrc&gt; file: (see also |<A HREF="#netrw-settings">netr
 <B>	--------------		-----------------------------------------------</B>
  
         b:netrw_col             Holds current cursor position (during NetWrite)
-        <A HREF="#g:netrw_cygwin">g:netrw_cygwin</A>          =1 assume <A HREF="#scp">scp</A> under <A HREF="windows\.html#windows">窗口</A> is from cygwin
+        <A HREF="#g:netrw_cygwin">g:netrw_cygwin</A>          =1 assume <A HREF="#scp">scp</A> under <A HREF="windows.html#windows">窗口</A> is from cygwin
                                                               (default/windows)
-                                =0 assume <A HREF="#scp">scp</A> under <A HREF="windows\.html#windows">窗口</A> accepts <A HREF="windows\.html#windows">窗口</A>
+                                =0 assume <A HREF="#scp">scp</A> under <A HREF="windows.html#windows">窗口</A> accepts <A HREF="windows.html#windows">窗口</A>
                                    style paths                (default/else)
         <A HREF="#g:netrw_ftp">g:netrw_ftp</A>             =0 use default ftp            (uid password)
         <A HREF="#g:netrw_ftpmode">g:netrw_ftpmode</A>         =&quot;binary&quot;                     (default)
@@ -1407,7 +1407,7 @@ horizontally or vertically, respectively.  When the option is set to three, a
 &lt;cr&gt; will cause the file to appear in a new <A HREF="intro.html#tab">tab</A>.
 
 
-When 使用<A HREF="gui\.html#GUI">GUI</A> (gvim), one may select a file by pressing the &lt;leftmouse&gt;
+When 使用<A HREF="gui.html#GUI">GUI</A> (gvim), one may select a file by pressing the &lt;leftmouse&gt;
 button.  In addition, if
 
  &#42; |<A HREF="#g:netrw_retmap">g:netrw_retmap</A>| <A HREF="change.html#==">==</A> 1       AND   (its default value is 0)
@@ -1922,7 +1922,7 @@ The optional parameters are:
       rows and/or columns the new explorer<A HREF="windows.html#window">窗口</A>should have.
       Otherwise, the |<A HREF="#g:netrw_winsize">g:netrw_winsize</A>| variable, if <A HREF="motion.html#it">它</A> has been specified by the
       user, is used to <A HREF="intro.html#control">control</A> the quantity of rows and/or columns new
-      explorer <A HREF="windows\.html#windows">窗口</A> should have.
+      explorer <A HREF="windows.html#windows">窗口</A> should have.
 
  [dir]: By default, these explorer commands use the current file's directory.
         However, one may explicitly provide a directory (path) to use instead;
@@ -2696,7 +2696,7 @@ Set the marked file copy/move-to target (见 |<A HREF="#netrw-mc">netrw-mc</A>| 
 
 There is only one copy/move-to target at a time in a vim session; ie. the
 target is a <A HREF="usr_41.html#script">script</A> variable (见 |<A HREF="eval.html#s:var">s:var</A>|) and is shared between all <A HREF="#netrw">netrw</A>
-<A HREF="windows\.html#windows">窗口</A> (in an instance of vim).
+<A HREF="windows.html#windows">窗口</A> (in an instance of vim).
 
 When using <A HREF="gui.html#menus">menus</A> and gvim, <A HREF="#netrw">netrw</A> provides a &quot;Targets&quot; entry which allows one
 to pick a target from the <A HREF="eval.html#list">列表</A> of bookmarks and <A HREF="cmdline.html#history">history</A>.
@@ -2843,7 +2843,7 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 				    and<A HREF="windows.html#window">窗口</A>numbers to perform editing
 				    (见 |<A HREF="remote.html#clientserver">clientserver</A>|, |<A HREF="#netrw-ctrl-r">netrw-ctrl-r</A>|)
 				This option does not affect the production of
-				|<A HREF="#:Lexplore">:Lexplore</A>| <A HREF="windows\.html#windows">窗口</A>.
+				|<A HREF="#:Lexplore">:Lexplore</A>| <A HREF="windows.html#windows">窗口</A>.
 
 				Related topics:
 				    |<A HREF="#g:netrw_alto">g:netrw_alto</A>|	|<A HREF="#g:netrw_altv">g:netrw_altv</A>|
@@ -3380,7 +3380,7 @@ your browsing preferences.  (see also: |<A HREF="#netrw-settings">netrw-settings
 				  default: 1
 
 
-  *<A NAME="g:netrw_winsize"></A><B>g:netrw_winsize</B>*		specify initial size of new <A HREF="windows\.html#windows">窗口</A> made with
+  *<A NAME="g:netrw_winsize"></A><B>g:netrw_winsize</B>*		specify initial size of new <A HREF="windows.html#windows">窗口</A> made with
 				&quot;o&quot; (见 |<A HREF="#netrw-o">netrw-o</A>|), &quot;v&quot; (见 |<A HREF="#netrw-v">netrw-v</A>|),
 				|<A HREF="#:Hexplore">:Hexplore</A>| or |<A HREF="#:Vexplore">:Vexplore</A>|.  The <A HREF="#g:netrw_winsize">g:netrw_winsize</A>
 				is an integer describing the percentage of the
@@ -3753,7 +3753,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 	(also 见 |<A HREF="#netrw-debug">netrw-debug</A>|)
 
 								*<A NAME="netrw-p1"></A><B>netrw-p1</B>*
-	P1. I use <A HREF="windows\.html#windows">窗口</A> 95, and my ftp dumps four blank lines at the      {{{2
+	P1. I use <A HREF="windows.html#windows">窗口</A> 95, and my ftp dumps four blank lines at the      {{{2
 	    end of every read.
 
 		见 |<A HREF="#netrw-fixup">netrw-fixup</A>|, and put the following into your
@@ -3851,7 +3851,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 	P8. I'm getting &quot;ssh is not executable on your system&quot; <A HREF="starting.html#--">--</A> what <A HREF="diff.html#do">do</A> I {{{2
 	    <A HREF="diff.html#do">do</A>?
 
-		(Dudley Fox) Most people I know use putty for <A HREF="windows\.html#windows">窗口</A> ssh.  It
+		(Dudley Fox) Most people I know use putty for <A HREF="windows.html#windows">窗口</A> ssh.  It
 		is a free ssh/telnet application. You can read more about <A HREF="motion.html#it">它</A>
 		here:
 
@@ -3867,7 +3867,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 
 	<A HREF="http://the.earth.li/~sgtatham/putty/0.58/htmldoc/Chapter7.html#plink">http://the.earth.li/~sgtatham/putty/0.58/htmldoc/Chapter7.html#plink</A>
 
-		(Vissale Neang) Maybe you can try OpenSSH for <A HREF="windows\.html#windows">窗口</A>, which
+		(Vissale Neang) Maybe you can try OpenSSH for <A HREF="windows.html#windows">窗口</A>, which
 		can be obtained from:
 
 	<A HREF="http://sshwindows.sourceforge.net/">http://sshwindows.sourceforge.net/</A>
@@ -3956,7 +3956,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 
 
 								*<A NAME="netrw-p11"></A><B>netrw-p11</B>*
-	P11. I want to have two <A HREF="windows\.html#windows">窗口</A>; a thin one on the left and my      {{{2
+	P11. I want to have two <A HREF="windows.html#windows">窗口</A>; a thin one on the left and my      {{{2
 	     editing<A HREF="windows.html#window">窗口</A>on the right.  How may I accomplish this?
 
 	     You probably want <A HREF="#netrw">netrw</A> running <A HREF="motion.html#as">as</A> in a side<A HREF="windows.html#window">窗口</A>.  If so, you
@@ -3971,7 +3971,7 @@ Example: Clear netrw's marked file <A HREF="eval.html#list">列表</A> via a <A 
 			let <A HREF="#g:netrw_altv">g:netrw_altv</A> = 1
 		&#42; Edit the current directory:  <A HREF="editing.html#:e">:e</A> .
 		&#42; <A HREF="visual.html#Select">Select</A> some file, press <A HREF="visual.html#v">v</A>
-		&#42; Resize the <A HREF="windows\.html#windows">窗口</A> <A HREF="motion.html#as">as</A> you wish (见 |<A HREF="windows.html#CTRL-W_&lt;">CTRL-W_&lt;</A>| and
+		&#42; Resize the <A HREF="windows.html#windows">窗口</A> <A HREF="motion.html#as">as</A> you wish (见 |<A HREF="windows.html#CTRL-W_&lt;">CTRL-W_&lt;</A>| and
 		  |<A HREF="windows.html#CTRL-W_&gt;">CTRL-W_&gt;</A>|).  If you're using gvim, you can drag
 		  the separating <A HREF="motion.html#bar">bar</A> with your mouse.
 		&#42; When you want a new file, use  ctrl-w <A HREF="motion.html#h">h</A>  to go back to the
@@ -4298,7 +4298,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  did not restore <A HREF="options.html#options">选项</A> correctly that
 				  had a single <A HREF="change.html#quote">quote</A> in the option <A HREF="options\.html#options">字符串</A>.
 		Apr 13, 2020	&#42; implemented error handling via popup
-				  <A HREF="windows\.html#windows">窗口</A> (见 |<A HREF="intro.html#popup_beval()">popup_beval()</A>|)
+				  <A HREF="windows.html#windows">窗口</A> (见 |<A HREF="intro.html#popup_beval()">popup_beval()</A>|)
 		Apr 30, 2020	&#42; (reported by Manatsu Takahashi) while
 				  using Lexplore, a modified file could
 				  be overwritten.  Sol'n: will not overwrite,
@@ -4452,7 +4452,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  buffer problem.
 	v155:	Oct 29, 2015	&#42; (Timur Fayzrakhmanov) reported that netrw's
 				  <A HREF="map.html#mapping">mapping</A> of ctrl-l was not allowing refresh of
-				  other <A HREF="windows\.html#windows">窗口</A> when <A HREF="motion.html#it">它</A> was done in a <A HREF="#netrw">netrw</A>
+				  other <A HREF="windows.html#windows">窗口</A> when <A HREF="motion.html#it">它</A> was done in a <A HREF="#netrw">netrw</A>
 				 <A HREF="windows.html#window">窗口</A>.
 		Nov 05, 2015	&#42; Improved s:TreeSqueezeDir() to use <A HREF="builtin.html#search()">search()</A>
 				  instead of a loop
@@ -4517,7 +4517,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				&#42; The netrw:target menu showed duplicate
 				  entries
 		Oct 13, 2015	&#42; (mattn) provided an exception to handle
-				  <A HREF="windows\.html#windows">窗口</A> with shellslash set but no shell
+				  <A HREF="windows.html#windows">窗口</A> with shellslash set but no shell
 		Oct 23, 2015	&#42; if <A HREF="#g:netrw_usetab">g:netrw_usetab</A> and &lt;c-tab&gt; now used
 				  to <A HREF="intro.html#control">control</A> whether NetrwShrink is used
 				  (见 |<A HREF="#netrw-c-tab">netrw-c-tab</A>|)
@@ -4573,7 +4573,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  second instance to have a &quot;temporary&quot;
 				  name.  Fixed: now they use the same buffer.
 		Sep 18, 2014	&#42; (Yasuhiro Matsumoto) provided a patch which
-				  allows <A HREF="#scp">scp</A> and <A HREF="windows\.html#windows">窗口</A> local paths to work.
+				  allows <A HREF="#scp">scp</A> and <A HREF="windows.html#windows">窗口</A> local paths to work.
 		Oct 07, 2014	&#42; gx (见 |<A HREF="#netrw-gx">netrw-gx</A>|) when atop a directory,
 				  will now <A HREF="diff.html#do">do</A> |<A HREF="editing.html#gf">gf</A>| instead
 		Nov 06, 2014	&#42; For cygwin: cygstart will be available for
@@ -4633,7 +4633,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  |<A HREF="#:Rexplore">:Rexplore</A>|
 		Mar 08, 2014	&#42; (David Kotchan) provided some patches
 				  allowing <A HREF="#netrw">netrw</A> to work properly with
-				  <A HREF="windows\.html#windows">窗口</A> shares.
+				  <A HREF="windows.html#windows">窗口</A> shares.
 				&#42; Multiple one-liner help <A HREF="message.html#messages">信息</A> available
 				  by pressing &lt;cr&gt; while atop the &quot;Quick
 				  Help&quot; line
@@ -4694,7 +4694,7 @@ Step 3: If the problem still is present然后get a debugging trace from
 				  setting `:let g:netrw_liststyle=1` on Windows.
 				&#42; (Paul Domaskis) noted that sometimes
 				  cursorline was activating in non-netrw
-				  <A HREF="windows\.html#windows">窗口</A>.  All but one setting of cursorline
+				  <A HREF="windows.html#windows">窗口</A>.  All but one setting of cursorline
 				  was done via setl; there was one that was
 				  overlooked.  Fixed.
 		Dec 24, 2013	&#42; (esquifit) asked that <A HREF="#netrw">netrw</A> allow the

@@ -181,7 +181,7 @@ mode: <A HREF="#mark">mark</A> the start of the text with &quot;<A HREF="visual.
 text that is to be affected and then hit the <A HREF="#operator">operator</A>.  The text between the
 start and the cursor position is highlighted, so you can see what text will
 be operated upon.  This allows much more freedom, but requires more key
-strokes and has limited <A HREF="undo.html#redo">redo</A> functionality.  See the chapter on <A HREF="visual\.html#Visual">可视</A>模式
+strokes and has limited <A HREF="undo.html#redo">redo</A> functionality.  See the chapter on <A HREF="visual.html#Visual">可视</A>模式
 |<A HREF="visual.html#Visual-mode">Visual-mode</A>|.
 
 You can use a &quot;<A HREF="cmdline.html#:">:</A>&quot;命令 for a motion.例如 &quot;d:call FindEnd()&quot;.
@@ -290,7 +290,7 @@ $  or <A HREF="#&lt;End&gt;">&lt;End&gt;</A>		To the end of the line.  When a <A
 			|<A HREF="#inclusive">inclusive</A>| motion.  If a <A HREF="intro.html#count">count</A> of 2 or larger is
 			given and the cursor is on the last line, that is an
 			error and the cursor doesn't move.
-			In <A HREF="visual\.html#Visual">可视</A>模式 the cursor goes to just after the last
+			In <A HREF="visual.html#Visual">可视</A>模式 the cursor goes to just after the last
 			character in the line.
 			When <A HREF="options.html#'virtualedit'">'virtualedit'</A> is active, &quot;<A HREF="#$">$</A>&quot; may move the cursor
 			back from past the end of the line to the last
@@ -485,7 +485,7 @@ _  &lt;underscore&gt;		<A HREF="intro.html#[count]">[count]</A> - 1 lines downwa
 			Also see the |<A HREF="builtin.html#line2byte()">line2byte()</A>| function, and the '<A HREF="insert.html#o">o</A>'
 			option in <A HREF="options.html#'statusline'">'statusline'</A>.
 
-These commands 使用<A HREF="gui\.html#GUI">GUI</A> specified line.  They stop when reaching the first
+These commands 使用<A HREF="gui.html#GUI">GUI</A> specified line.  They stop when reaching the first
 or the last line.  The first two commands put the cursor in the same column
 (if possible) <A HREF="#as">as</A> <A HREF="#it">it</A> was after the last command that changed the column,
 except after the &quot;<A HREF="#$">$</A>&quot;命令然后the cursor will be put on the last
@@ -542,8 +542,8 @@ A <A HREF="#WORD">WORD</A> consists of a sequence of non-blank characters, separ
 space.  An empty line is also considered to be a <A HREF="#WORD">WORD</A>.
 
 A sequence of folded lines is counted for one <A HREF="#word">word</A> of a single character.
-&quot;<A HREF="#w">w</A>&quot; and &quot;<A HREF="#W">W</A>&quot;, &quot;<A HREF="#e">e</A>&quot; and &quot;<A HREF="#E">E</A>&quot; 使用<A HREF="gui\.html#GUI">GUI</A> start/end of the first <A HREF="#word">word</A> or <A HREF="#WORD">WORD</A> after
-a range of folded lines.  &quot;<A HREF="#b">b</A>&quot; and &quot;<A HREF="#B">B</A>&quot; 使用<A HREF="gui\.html#GUI">GUI</A> start of the first <A HREF="#word">word</A> or
+&quot;<A HREF="#w">w</A>&quot; and &quot;<A HREF="#W">W</A>&quot;, &quot;<A HREF="#e">e</A>&quot; and &quot;<A HREF="#E">E</A>&quot; 使用<A HREF="gui.html#GUI">GUI</A> start/end of the first <A HREF="#word">word</A> or <A HREF="#WORD">WORD</A> after
+a range of folded lines.  &quot;<A HREF="#b">b</A>&quot; and &quot;<A HREF="#B">B</A>&quot; 使用<A HREF="gui.html#GUI">GUI</A> start of the first <A HREF="#word">word</A> or
 <A HREF="#WORD">WORD</A> before the fold.
 
 Special <A HREF="change.html#case">case</A>: &quot;<A HREF="change.html#cw">cw</A>&quot; and &quot;<A HREF="change.html#cW">cW</A>&quot; are treated like &quot;ce&quot; and &quot;cE&quot; if the cursor is
@@ -605,7 +605,7 @@ between <A HREF="intro.html#Vi">Vi</A> and Vim.
 			the first column.  |<A HREF="#exclusive">exclusive</A>|
 			Note that |<A HREF="#exclusive-linewise">exclusive-linewise</A>| often applies.
 
-These commands move over three kinds of 文本<A HREF="vimindex\.html#objects">对象</A>.
+These commands move over three kinds of 文本<A HREF="vimindex.html#objects">对象</A>.
 
 
 							*<A NAME="sentence"></A><B>sentence</B>*
@@ -656,7 +656,7 @@ and &quot;<A HREF="#]]">]]</A>&quot; anyway, try these mappings:
 
 						*<A NAME="v_a"></A><B>v_a</B>* *<A NAME="v_i"></A><B>v_i</B>*
 
-This is a series of commands that can only be used while in <A HREF="visual\.html#Visual">可视</A>模式 or
+This is a series of commands that can only be used while in <A HREF="visual.html#Visual">可视</A>模式 or
 after an <A HREF="#operator">operator</A>.  The commands that start with &quot;<A HREF="insert.html#a">a</A>&quot; select &quot;<A HREF="insert.html#a">a</A>&quot;n object
 including white space, the commands starting with &quot;<A HREF="insert.html#i">i</A>&quot; select an &quot;inner&quot; object
 without white space, or just the white space.  Thus the &quot;inner&quot; commands
@@ -698,13 +698,13 @@ Also see `gn` and `gN`, operating on the last search <A HREF="pattern.html#patte
 							*<A NAME="v_as"></A><B>v_as</B>* *<A NAME="as"></A><B>as</B>*
 <A HREF="#as">as</A>			&quot;a sentence&quot;, select <A HREF="intro.html#[count]">[count]</A> sentences (see
 			|<A HREF="#sentence">sentence</A>|).
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 							*<A NAME="v_is"></A><B>v_is</B>* *<A NAME="is"></A><B>is</B>*
 is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A> sentences (see
 			|<A HREF="#sentence">sentence</A>|).
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 							*<A NAME="v_ap"></A><B>v_ap</B>* *<A NAME="ap"></A><B>ap</B>*
@@ -712,7 +712,7 @@ is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A>
 			|<A HREF="#paragraph">paragraph</A>|).
 			Exception: a blank line (only containing white space)
 			is also a <A HREF="#paragraph">paragraph</A> boundary.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#linewise">linewise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#linewise">linewise</A>.
 
 
 							*<A NAME="v_ip"></A><B>v_ip</B>* *<A NAME="ip"></A><B>ip</B>*
@@ -720,7 +720,7 @@ is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A>
 			|<A HREF="#paragraph">paragraph</A>|).
 			Exception: a blank line (only containing white space)
 			is also a <A HREF="#paragraph">paragraph</A> boundary.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#linewise">linewise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#linewise">linewise</A>.
 
 
 <A HREF="#a]">a]</A>						*<A NAME="v_a]"></A><B>v_a]</B>* *<A NAME="v_a["></A><B>v_a[</B>* *<A NAME="a]"></A><B>a]</B>* *<A NAME="a["></A><B>a[</B>*
@@ -728,7 +728,7 @@ is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A>
 			goes backwards to the <A HREF="intro.html#[count]">[count]</A> unclosed '<A HREF="vimindex.html#[">[</A>', and finds
 			the matching '<A HREF="vimindex.html#]">]</A>'.  The enclosed text is selected,
 			including the '<A HREF="vimindex.html#[">[</A>' and '<A HREF="vimindex.html#]">]</A>'.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#i]">i]</A>						*<A NAME="v_i]"></A><B>v_i]</B>* *<A NAME="v_i["></A><B>v_i[</B>* *<A NAME="i]"></A><B>i]</B>* *<A NAME="i["></A><B>i[</B>*
@@ -736,7 +736,7 @@ is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A>
 			goes backwards to the <A HREF="intro.html#[count]">[count]</A> unclosed '<A HREF="vimindex.html#[">[</A>', and finds
 			the matching '<A HREF="vimindex.html#]">]</A>'.  The enclosed text is selected,
 			excluding the '<A HREF="vimindex.html#[">[</A>' and '<A HREF="vimindex.html#]">]</A>'.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#a)">a)</A>							*<A NAME="v_a)"></A><B>v_a)</B>* *<A NAME="a)"></A><B>a)</B>* *<A NAME="a("></A><B>a(</B>*
@@ -746,7 +746,7 @@ is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A>
 			the matching '<A HREF="#)">)</A>', including the '<A HREF="#(">(</A>' and '<A HREF="#)">)</A>' (see
 			|<A HREF="#[(">[(</A>|).  Does not include white space outside of the
 			parenthesis.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#i)">i)</A>							*<A NAME="v_i)"></A><B>v_i)</B>* *<A NAME="i)"></A><B>i)</B>* *<A NAME="i("></A><B>i(</B>*
@@ -755,21 +755,21 @@ is			&quot;inner sentence&quot;, select <A HREF="intro.html#[count]">[count]</A>
 <A HREF="#ib">ib</A>			&quot;inner block&quot;, select <A HREF="intro.html#[count]">[count]</A> blocks, from &quot;<A HREF="intro.html#[count]">[count]</A> [(&quot;
 			to the matching '<A HREF="#)">)</A>', excluding the '<A HREF="#(">(</A>' and '<A HREF="#)">)</A>' (see
 			|<A HREF="#[(">[(</A>|).
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#a&gt;">a&gt;</A>						*<A NAME="v_a&gt;"></A><B>v_a&gt;</B>* *<A NAME="v_a&lt;"></A><B>v_a&lt;</B>* *<A NAME="a&gt;"></A><B>a&gt;</B>* *<A NAME="a&lt;"></A><B>a&lt;</B>*
 <A HREF="#a&lt;">a&lt;</A>			&quot;a <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block&quot;, select <A HREF="intro.html#[count]">[count]</A> <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> blocks, from the
 			[count]'th unmatched '<A HREF="change.html#&lt;">&lt;</A>' backwards to the matching
 			'<A HREF="change.html#&gt;">&gt;</A>', including the '<A HREF="change.html#&lt;">&lt;</A>' and '<A HREF="change.html#&gt;">&gt;</A>'.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#i&gt;">i&gt;</A>						*<A NAME="v_i&gt;"></A><B>v_i&gt;</B>* *<A NAME="v_i&lt;"></A><B>v_i&lt;</B>* *<A NAME="i&gt;"></A><B>i&gt;</B>* *<A NAME="i&lt;"></A><B>i&lt;</B>*
 <A HREF="#i&lt;">i&lt;</A>			&quot;inner <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> block&quot;, select <A HREF="intro.html#[count]">[count]</A> <A HREF="intro.html#&lt;&gt;">&lt;&gt;</A> blocks, from
 			the [count]'th unmatched '<A HREF="change.html#&lt;">&lt;</A>' backwards to the matching
 			'<A HREF="change.html#&gt;">&gt;</A>', excluding the '<A HREF="change.html#&lt;">&lt;</A>' and '<A HREF="change.html#&gt;">&gt;</A>'.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 						*<A NAME="v_at"></A><B>v_at</B>* *<A NAME="at"></A><B>at</B>*
@@ -777,7 +777,7 @@ at			&quot;a <A HREF="tagsrch.html#tag">标签</A> block&quot;, select <A HREF="
 			[count]'th unmatched &quot;&lt;aaa&gt;&quot; backwards to the matching
 			&quot;&lt;/aaa&gt;&quot;, including the &quot;&lt;aaa&gt;&quot; and &quot;&lt;/aaa&gt;&quot;.
 			见 |<A HREF="#tag-blocks">tag-blocks</A>| about the details.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 						*<A NAME="v_it"></A><B>v_it</B>* *<A NAME="it"></A><B>it</B>*
@@ -785,7 +785,7 @@ at			&quot;a <A HREF="tagsrch.html#tag">标签</A> block&quot;, select <A HREF="
 			[count]'th unmatched &quot;&lt;aaa&gt;&quot; backwards to the matching
 			&quot;&lt;/aaa&gt;&quot;, excluding the &quot;&lt;aaa&gt;&quot; and &quot;&lt;/aaa&gt;&quot;.
 			见 |<A HREF="#tag-blocks">tag-blocks</A>| about the details.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#a}">a}</A>							*<A NAME="v_a}"></A><B>v_a}</B>* *<A NAME="a}"></A><B>a}</B>* *<A NAME="a{"></A><B>a{</B>*
@@ -794,7 +794,7 @@ at			&quot;a <A HREF="tagsrch.html#tag">标签</A> block&quot;, select <A HREF="
 <A HREF="#aB">aB</A>			&quot;a Block&quot;, select <A HREF="intro.html#[count]">[count]</A> Blocks, from &quot;<A HREF="intro.html#[count]">[count]</A> [{&quot; to
 			the matching '<A HREF="#}">}</A>', including the '<A HREF="#{">{</A>' and '<A HREF="#}">}</A>' (see
 			|<A HREF="#[{">[{</A>|).
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 <A HREF="#i}">i}</A>							*<A NAME="v_i}"></A><B>v_i}</B>* *<A NAME="i}"></A><B>i}</B>* *<A NAME="i{"></A><B>i{</B>*
@@ -803,7 +803,7 @@ at			&quot;a <A HREF="tagsrch.html#tag">标签</A> block&quot;, select <A HREF="
 <A HREF="#iB">iB</A>			&quot;inner Block&quot;, select <A HREF="intro.html#[count]">[count]</A> Blocks, from &quot;<A HREF="intro.html#[count]">[count]</A> [{&quot;
 			to the matching '<A HREF="#}">}</A>', excluding the '<A HREF="#{">{</A>' and '<A HREF="#}">}</A>' (see
 			|<A HREF="#[{">[{</A>|).
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
 
 
 a&quot;							*<A NAME="v_aquote"></A><B>v_aquote</B>* *<A NAME="aquote"></A><B>aquote</B>*
@@ -820,8 +820,8 @@ a&quot;							*<A NAME="v_aquote"></A><B>v_aquote</B>* *<A NAME="aquote"></A><B>
 			start of the line.
 			Any trailing white space is included, unless there is
 			none然后leading white space is included.
-			When used in <A HREF="visual\.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
-			Repeating this object in <A HREF="visual\.html#Visual">可视</A>模式 another <A HREF="options\.html#options">字符串</A> is
+			When used in <A HREF="visual.html#Visual">可视</A>模式 <A HREF="#it">it</A> is made <A HREF="#charwise">charwise</A>.
+			Repeating this object in <A HREF="visual.html#Visual">可视</A>模式 another <A HREF="options\.html#options">字符串</A> is
 			included.  A <A HREF="intro.html#count">count</A> is currently not used.
 
 
@@ -850,7 +850,7 @@ For a block object:
 	the surrounding braces are excluded.  For the &quot;<A HREF="insert.html#a">a</A>&quot;命令, the braces
 	are included.
 
-When used in <A HREF="visual\.html#Visual">可视</A>模式:
+When used in <A HREF="visual.html#Visual">可视</A>模式:
 When start and end of the <A HREF="visual.html#Visual">Visual</A> area are the same (just after typing &quot;v&quot;):
 	One object is selected, the same <A HREF="#as">as</A> for using an <A HREF="#operator">operator</A>.
 When start and end of the <A HREF="visual.html#Visual">Visual</A> area are not the same:
@@ -903,7 +903,7 @@ the <A HREF="#word">word</A> under the cursor and the space after or before <A H
 
 Tag blocks						*<A NAME="tag-blocks"></A><B>tag-blocks</B>*
 
-For the &quot;<A HREF="#it">it</A>&quot; and &quot;<A HREF="#at">at</A>&quot; 文本<A HREF="vimindex\.html#objects">对象</A> an attempt is done to select blocks between
+For the &quot;<A HREF="#it">it</A>&quot; and &quot;<A HREF="#at">at</A>&quot; 文本<A HREF="vimindex.html#objects">对象</A> an attempt is done to select blocks between
 matching <A HREF="tagsrch.html#tags">标签</A> for HTML and XML.  But since these are not completely compatible
 there are a few restrictions.
 
@@ -918,7 +918,7 @@ matter.
 In HTML <A HREF="#it">it</A> is possible to have a <A HREF="tagsrch.html#tag">标签</A> like &lt;br&gt; or &lt;meta ...&gt; without a
 matching end <A HREF="tagsrch.html#tag">标签</A>.  These are ignored.
 
-The 文本<A HREF="vimindex\.html#objects">对象</A> are tolerant about mistakes.  Stray end <A HREF="tagsrch.html#tags">标签</A> are ignored.
+The 文本<A HREF="vimindex.html#objects">对象</A> are tolerant about mistakes.  Stray end <A HREF="tagsrch.html#tags">标签</A> are ignored.
 
 ==============================================================================
 
@@ -953,7 +953,7 @@ m{a-zA-Z}		Set <A HREF="#mark">mark</A> {a-zA-Z} at cursor position (does not mo
 <A HREF="#m&lt;">m&lt;</A>  or  <A HREF="#m&gt;">m&gt;</A>		Set the |<A HREF="#'&lt;">'&lt;</A>| or |<A HREF="#'&gt;">'&gt;</A>| <A HREF="#mark">mark</A>.  Useful to change what the
 			`gv` command selects.  (does not move the cursor, this
 			is not a motion command).
-			Note that the <A HREF="visual\.html#Visual">可视</A>模式 cannot be set, only the
+			Note that the <A HREF="visual.html#Visual">可视</A>模式 cannot be set, only the
 			start and end position.
 
 
@@ -1065,7 +1065,7 @@ After yanking 10 lines you want to go to the last one of them: &quot;10Y']&quot;
 inserted line: &quot;p']&quot;.  This also works for text that has been inserted.
 
 Note: After <A HREF="change.html#deleting">deleting</A> text, the start and end positions are the same, except
-when using blockwise <A HREF="visual\.html#Visual">可视</A>模式.  These commands <A HREF="diff.html#do">do</A> not work when no change
+when using blockwise <A HREF="visual.html#Visual">可视</A>模式.  These commands <A HREF="diff.html#do">do</A> not work when no change
 was made yet in the current file.
 
 
