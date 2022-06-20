@@ -79,18 +79,16 @@
 				小技巧
 
 
-By combining several commands you can make Vim <A HREF="diff.html#do">do</A> nearly everything.  In this
-chapter a number of useful combinations will be presented.  This uses the
-commands introduced in the previous chapters and a few more.
+通过组合一些命令，你可以用 Vim 完成几乎所有的工作。本章将介绍一些有用的命令组合。涉及的命令大都是前面章节介绍过的，但也会有一点新命令。
 
 |<A HREF="#12.1">12.1</A>|	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">单词</A>
-|<A HREF="#12.2">12.2</A>|	Change &quot;Last, First&quot; to &quot;First Last&quot;
-|<A HREF="#12.3">12.3</A>|	Sort a <A HREF="eval.html#list">列表</A>
-|<A HREF="#12.4">12.4</A>|	Reverse line order
-|<A HREF="#12.5">12.5</A>|	Count words
-|<A HREF="#12.6">12.6</A>|	Find a man page
-|<A HREF="#12.7">12.7</A>|	Trim blanks
-|<A HREF="#12.8">12.8</A>|	Find where a <A HREF="motion.html#word">单词</A> is used
+|<A HREF="#12.2">12.2</A>|	把&quot;Last, First&quot;变为&quot;First Last&quot;
+|<A HREF="#12.3">12.3</A>|	排序
+|<A HREF="#12.4">12.4</A>|	反转行顺序
+|<A HREF="#12.5">12.5</A>|	单词统计
+|<A HREF="#12.6">12.6</A>|	查阅 man 信息
+|<A HREF="#12.7">12.7</A>|	删除多余空格
+|<A HREF="#12.8">12.8</A>|	查找单词的使用位置
 
 下一章: |<A HREF="usr_20.html">usr_20.txt</A>|  Typing command-line commands quickly
 上一章: |<A HREF="usr_11.html">usr_11.txt</A>|  从崩溃中恢复
@@ -100,115 +98,88 @@ commands introduced in the previous chapters and a few more.
 
 *<A NAME="12.1"></A><B>12.1</B>*	<A HREF="insert.html#Replace">Replace</A> a <A HREF="motion.html#word">单词</A>
 
-The substitute command can be used to replace all occurrences of a <A HREF="motion.html#word">单词</A> with
-another <A HREF="motion.html#word">单词</A>:
+替换命令可以在全文中用一个单词替换另一个单词:
 
 <B>	:%s/four/4/g</B>
 
-The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; range means to replace in all lines.  The &quot;<A HREF="vimindex.html#g">g</A>&quot; flag at the end causes
-all words in a line to be replaced.
-   This will not <A HREF="diff.html#do">do</A> the right thing if your file also contains &quot;thirtyfour&quot;.
-It would be replaced with &quot;thirty4&quot;.  To avoid this, use the &quot;\&lt;&quot; item to
-match the start of a <A HREF="motion.html#word">单词</A>:
+"%" 范围前缀表示在所有行中执行替换。最后的 "g" 标记表示替换行中的所有匹配点。如果你有一个像 "thirtyfour" 这样的单词，上面的命令会出错。这种情况下，这个单词会被替换成 "thirty4"。要解决这个问题，用 "\<" 来指定匹配单词开头:
 
 <B>	:%s/\&lt;four/4/g</B>
 
-Obviously, this still goes wrong on &quot;fourteen&quot;.  Use &quot;\&gt;&quot; to match the end of
-a <A HREF="motion.html#word">单词</A>:
+显然，这样在处理 "fourteen" 的时候还是会出错。用 "\>" 来解决这个问题:
 
 <B>	:%s/\&lt;four\&gt;/4/g</B>
 
-If you are programming, you might want to replace &quot;four&quot; in comments, but not
-in the code.  Since this is difficult to specify, add the &quot;<A HREF="change.html#c">c</A>&quot; flag to have the
-substitute command prompt you for each replacement:
+如果你在编码，你可能只想替换注释中的 "four"，而保留代码中的。由于这很难指定，可以在替换命令中加一个 "c" 标记，这样，Vim 会在每次替换前提示你:
 
 
 <B>	:%s/\&lt;four\&gt;/4/gc</B>
 
 
-REPLACING IN SEVERAL FILES
+多文件替换
 
-Suppose you want to replace a <A HREF="motion.html#word">单词</A> in more than one file.  You could edit each
-file and type the command manually.  It's a lot faster to use record and
-playback.
-   Let's assume you have a directory with C++ files, all ending in &quot;.cpp&quot;.
-There is a function called &quot;GetResp&quot; that you want to rename to &quot;GetAnswer&quot;.
+假设你需要替换多个文件中的单词。你的一个选择是打开每一个文件并手工修改。但是使用记录和回放命令会快很多。
+假设你有一个包括有 C++ 文件的目录，所有的文件都以 ".cpp" 结尾。有一个叫"GetResp" 的函数，你需要把它改名为 "GetAnswer"。
 
-	vim *.cpp		Start Vim, defining the argument <A HREF="eval.html#list">列表</A> to
-				contain all the C++ files.  You are now in the
-				first file.
-	qq			Start <A HREF="repeat.html#recording">记录</A> into the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">寄存器</A>
-	:&#37;s/\&lt;GetResp\&gt;/GetAnswer/g
-				Do the replacements in the first file.
-	<A HREF="editing.html#:wnext">:wnext</A>			Write this file and 使用<A HREF="gui.html#GUI">GUI</A> next one.
-	<A HREF="repeat.html#q">q</A>			Stop <A HREF="repeat.html#recording">记录</A>.
-	@q			Execute the <A HREF="repeat.html#q">q</A> <A HREF="intro.html#register">寄存器</A>.  This will replay the
-				替换 and &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot;.  You can verify
-				that this doesn't produce an error message.
-	<A HREF="mailto:999@q">999@q</A> Execute the q register on the remaining files. 
+	vim *.cpp	启动 Vim，用当前目录的所有 C++ 文件作为文件参数。启动后你会停在第一个文件上。
+	qq			qq 用 q 作为寄存器启动一次记录。
+	:&#37;s/\&lt;GetResp\&gt;/GetAnswer/g 在第一个文件中执行替换。
+	<A HREF="editing.html#:wnext">:wnext</A>	保存文件并移到下一个文件.
+	<A HREF="repeat.html#q">q</A>			停止<A HREF="repeat.html#recording">记录</A>.
+	@q      回放 q 中的记录。这会执行又一次替换和":wnext"。你现在可以检查一下记录有没有错。
+	<A HREF="mailto:999@q">999@q</A>      对剩下的文件执行 q 中的命令
 
-At the last file you will get an error message, because &quot;<A HREF="editing.html#:wnext">:wnext</A>&quot; cannot move
-to the next file.  This stops the execution, and everything is done.
+Vim 会在最后一个文件上报错，因为 ":wnext" 无法移到下一个文件上。这时所有的文件中的操作都完成了。
 
-	Note:
-	When playing back a recorded sequence, an error stops the execution.
-	Therefore, make sure you don't get an error message when <A HREF="repeat.html#recording">记录</A>.
+备注:
+在回放记录的时候，任何错误都会中止回放的过程。所以，要注意保证记录中的命令不会产生错误。
 
-There is one catch: If one of the .cpp files does not contain the <A HREF="motion.html#word">单词</A>
-&quot;GetResp&quot;, you will get an error and <A HREF="change.html#replacing">replacing</A> will stop.  To avoid this, add
-the &quot;<A HREF="motion.html#e">e</A>&quot; flag to the substitute command:
+这里有一个陷阱: 如果有一个文件不包含 "GetResp"，Vim 会报错，而整个过程会中止，要避免这个问题，可以在替换命令后面加一个标记:
 
 <B>	:%s/\&lt;GetResp\&gt;/GetAnswer/ge</B>
 
-The &quot;<A HREF="motion.html#e">e</A>&quot; flag tells &quot;<A HREF="change.html#:substitute">:substitute</A>&quot; that not finding a match is not an error.
+"e" 标记通知 ":substitute" 命令找不到不是错误。
 
 ==============================================================================
 
-*<A NAME="12.2"></A><B>12.2</B>*	Change &quot;Last, First&quot; to &quot;First Last&quot;
+*<A NAME="12.2"></A><B>12.2</B>*	把&quot;Last, First&quot;变为&quot;First Last&quot;
 
-You have a <A HREF="eval.html#list">列表</A> of names in this form:
+你有如下样式的一个名字列表:
 
 <B><FONT color="#3A6F2B">	Doe, John </FONT></B>
 <B><FONT color="#3A6F2B">	Smith, Peter </FONT></B>
 
-You want to change that to:
+你想把它改成:
 
 <B><FONT color="#3A6F2B">	John Doe </FONT></B>
 <B><FONT color="#3A6F2B">	Peter Smith </FONT></B>
 
-This can be done with just one command:
+这可以用一个命令完成:
 
 <B>	:%s/\([^,]*\), \(.*\)/\2 \1/</B>
 
-Let's break this down in parts.  Obviously <A HREF="motion.html#it">它</A> starts with a substitute
-command.  The &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is the line range, which stands for the whole file.  Thus
-the 替换 is done in every line in the file.
-   The arguments for the substitute command are &quot;/from/to/&quot;.  The slashes
-separate the &quot;from&quot; <A HREF="pattern.html#pattern">pattern</A> and the &quot;to&quot; <A HREF="options.html#options">字符串</A>.  This is what the &quot;from&quot;
+我们把这个命令分解成几个部分。首先，很明显它是一个替换命令。"%" 是行范围，表示作用于全文。这样替换命令会作用于全文的每一行。
+替换命令的参数格式是 "from/to"，正斜杠区分 "from" 模式和 "to" 字符串。所以，"from" 部分是:
+
 <A HREF="pattern.html#pattern">pattern</A> contains:
 <B><FONT color="#3A6F2B">							\([^,]*\), \(.*\) </FONT></B>
 
-	The first part between \( \) matches &quot;Last&quot;	\(     \)
-	    match anything but a comma			  [^,]
-	    any number of times				      *
-	matches &quot;<A HREF="motion.html#,">,</A> &quot; literally					 ,
-	The second part between \( \) matches &quot;First&quot;		   \(  \)
-	    any character					     .
-	    any number of times					      *
+  第一对 \( 和 \) 之间的部分匹配 "Last" &quot;Last&quot;	\(     \)
+      匹配除逗号外的任何东西			  [^,]
+      任意多次				      *
+	匹配&quot;<A HREF="motion.html#,">,</A> &quot; literally					 ,
+  第二对 \( 和 \) 之间的部分匹配 "First"		   \(  \)
+      匹配任意字符				     .
+      任意多次					      *
 
-In the &quot;to&quot; part we have &quot;\2&quot; and &quot;\1&quot;.  These are called backreferences.
-They refer to the text matched by the &quot;\( \)&quot; parts in the <A HREF="pattern.html#pattern">pattern</A>.  &quot;\2&quot;
-refers to the text matched by the second &quot;\( \)&quot;, which is the &quot;First&quot; name.
-&quot;\1&quot; refers to the first &quot;\( \)&quot;, which is the &quot;Last&quot; name.
-   You can use up to nine backreferences in the &quot;to&quot; part of a substitute
-command.  &quot;<A HREF="change.html#\0">\0</A>&quot; stands for the whole matched <A HREF="pattern.html#pattern">pattern</A>.  There are a few more
-special items in a substitute command, 见 |<A HREF="change.html#sub-replace-special">sub-replace-special</A>|.
+在 "to" 部分，我们有 "\2" 和 "\1"。这些称为 "反向引用"。它们指向前面模式中的\( 和 \) 间的部分。"\2" 指向模式中的第二对 \( 和 \) 间的部分，也就是 "First"名 (译者注: 英文中 Last Name 表示姓，即家族名，后面的 First Name 表示名字)。"\1" 指向第一对 \( \)，即 "Last" 名。
+你可以在替换部分使用多达 9 个反向引用。"\0" 表示整个匹配部分。还有一些特殊的项可以用在替换命令中。, 见 |<A HREF="change.html#sub-replace-special">sub-replace-special</A>|.
 
 ==============================================================================
 
-*<A NAME="12.3"></A><B>12.3</B>*	Sort a <A HREF="eval.html#list">列表</A>
+*<A NAME="12.3"></A><B>12.3</B>*	排序
 
-In a Makefile you often have 文件列表.例如:
+在你的 Makefile 中常常会有文件列表。例如:
 
 <B><FONT color="#3A6F2B">	OBJS = \ </FONT></B>
 <B><FONT color="#3A6F2B">		version.o \ </FONT></B>
@@ -220,17 +191,14 @@ In a Makefile you often have 文件列表.例如:
 <B><FONT color="#3A6F2B">		patch.o \ </FONT></B>
 <B><FONT color="#3A6F2B">		backup.o </FONT></B>
 
-To sort this <A HREF="eval.html#list">列表</A>, <A HREF="change.html#filter">filter</A> the text through the external sort command:
+要对这个文件列表排序可以用一个外部过滤命令:To sort this <A HREF="eval.html#list">列表</A>, <A HREF="change.tml#filter">filter</A> the text through the external sort command:
 
 <B>	/^OBJS</B>
 <B>	j</B>
 <B>	:.,/^$/-1!sort</B>
 
-This goes to the first line, where &quot;OBJS&quot; is the first thing in the line.
-Then <A HREF="motion.html#it">它</A> goes one line down and filters the lines until the next empty line.
-You could also select the lines in <A HREF="visual.html#Visual">可视</A>模式 and then use &quot;!sort&quot;.  That's
-easier to type, but more work when there are many lines.
-   The result is this:
+这会先移到 "OBJS" 开头的行，向下移动一行，然后一行行执行过滤，直到遇到一个空行。你也可以先选中所有需要排序的行，然后执行 "!sort"。那更容易一些，但如果有很多行就比较麻烦。
+上面操作的结果将是:
 
 <B><FONT color="#3A6F2B">	OBJS = \ </FONT></B>
 <B><FONT color="#3A6F2B">		backup.o </FONT></B>
@@ -243,183 +211,130 @@ easier to type, but more work when there are many lines.
 <B><FONT color="#3A6F2B">		version.o \ </FONT></B>
 
 
-Notice that a <A HREF="intro.html#backslash">backslash</A> at the end of each line is used to indicate the line
-continues.  After <A HREF="change.html#sorting">sorting</A>, this is wrong!  The &quot;backup.o&quot; line that was at
-the end didn't have a <A HREF="intro.html#backslash">backslash</A>.  Now that <A HREF="motion.html#it">它</A> sorts to another place, <A HREF="motion.html#it">它</A>
-must have a <A HREF="intro.html#backslash">backslash</A>.
-   The simplest solution is to add the <A HREF="intro.html#backslash">backslash</A> with &quot;A \&lt;Esc&gt;&quot;.  You can
-keep the <A HREF="intro.html#backslash">backslash</A> in the last line, if you make sure an empty line comes
-after <A HREF="motion.html#it">它</A>.  That way you don't have this problem again.
+注意，列表中每一行都有一个续行符，但排序后就错掉了！"backup.o" 在列表的最后，不需要续行符，但排序后它被移动了。这时它需要有一个续行符。
+最简单的解决方案是用 "A \<Esc>" 补一个续行符。你也可以在最后一行放一个续行符，由于后面有一个空行，这样做是不会有问题的。
 
 ==============================================================================
 
-*<A NAME="12.4"></A><B>12.4</B>*	Reverse line order
+*<A NAME="12.4"></A><B>12.4</B>*	反转行顺序
 
-The |<A HREF="repeat.html#:global">:global</A>| command can be combined with the |<A HREF="change.html#:move">:move</A>| command to move all the
-lines before the first line, resulting in a reversed file.  The command is:
+:global 命令可以和 :move 命令联用，将所有行移动到文件首部。结果是文件被按
+行反转了次序。命令是:
 
 <B>	:global/^/move 0</B>
 
-Abbreviated:
+缩写：
 
 <B>	:g/^/m 0</B>
 
-The &quot;<A HREF="motion.html#^">^</A>&quot; regular <A HREF="eval.html#expression">expression</A> matches the beginning of the line (even if the line
-is blank).  The |<A HREF="change.html#:move">:move</A>| command moves the matching line to after the imaginary
-zeroth line, so the current matching line becomes the first line of the file.
-As the |<A HREF="repeat.html#:global">:global</A>| command is not confused by the <A HREF="change.html#changing">changing</A> line numbering,
-|<A HREF="repeat.html#:global">:global</A>| proceeds to match all remaining lines of the file and puts each <A HREF="motion.html#as">as</A>
-the first.
+正则表达式 "^" 匹配行首 (即使该行是一个空行)。 :move 命令将匹配的行移动到那个神秘的第 0 行之后。这样匹配的行就成了文件中的第一行。由于 :global 命令不会被改变了的行号搞混，该命令继续匹配文件中剩余的行并将它们一一变为首行。
 
-This also works on a range of lines.  First move to above the first line and
-<A HREF="motion.html#mark">mark</A> <A HREF="motion.html#it">它</A> with &quot;mt&quot;.  Then move the cursor to the last line in the range and
-type:
+这对一个行范围同样有效。先移动到第一行上方并做标记 't' (mt)。然后移动到范围的最后一行并键入:
 
 <B>	:'t+1,.g/^/m 't</B>
 
 ==============================================================================
 
-*<A NAME="12.5"></A><B>12.5</B>*	Count words
+*<A NAME="12.5"></A><B>12.5</B>*	单词统计
 
-Sometimes you have to write a text with a maximum number of words.  Vim can
-<A HREF="intro.html#count">count</A> the words for you.
-   When the whole file is what you want to <A HREF="intro.html#count">count</A> the words in, use this
-command:
+有时你要写一些有最高字数限制的文字。Vim 可以帮你计算字数。
+如果你需要统计的是整个文件的字数，可以用这个命令:
 
 <B>	g CTRL-G</B>
 
-Do not type a space after the <A HREF="motion.html#g,">g,</A> this is just used here to make the command
-easy to read.
-   The output looks like this:
+不要在 "g" 后面输入一个空格，这里只是方便阅读。
+它的输出是:
 
 <B><FONT color="#3A6F2B">	Col 1 of 0; Line 141 of 157; Word 748 of 774; Byte 4489 of 4976 </FONT></B>
 
-You can see on which <A HREF="motion.html#word">单词</A> you are (748), and the total number of words in the
-file (774).
+你可以看到你在第几个单词 (748) 上以及文件中的单词总数 (774)。
 
-When the text is only part of a file, you could 使用<A HREF="gui.html#GUI">GUI</A> start of the text,
-type &quot;g CTRL-G&quot;, 使用<A HREF="gui.html#GUI">GUI</A> end of the text, type &quot;g CTRL-G&quot; again, and then
-use your brain to compute the difference in the <A HREF="motion.html#word">单词</A> position.  That's a good
-exercise, but there is an easier way.  With <A HREF="visual.html#Visual">可视</A>模式, select the text you
-want to <A HREF="intro.html#count">count</A> words in.  Then type <A HREF="vimindex.html#g">g</A> <A HREF="editing.html#CTRL-G">CTRL-G</A>.  The result:
+如果你要知道的是全文的一部分的字数，你可以移到该文本的开头，输入 "g CTRL-G"，然后移到该段文字的末尾，再输入 "g CTRL-G"，最后心算出结果来。这是一种很好的心算练习，不过不是那么容易。比较方便的办法是使用可视模式，选中你要计算字数的文本，然后输入 "g CTRL-G"，结果将是:
 
 <B><FONT color="#3A6F2B">	Selected 5 of 293 Lines; 70 of 1884 Words; 359 of 10928 Bytes </FONT></B>
 
-For other ways to count words, lines and other items, 见 |<A HREF="tips.html#count-items">count-items</A>|.
+要知道其它计算字数，行数和其它东西总数的方法，可以参见, 见 |<A HREF="tips.html#count-items">count-items</A>|.
 
 ==============================================================================
 
-*<A NAME="12.6"></A><B>12.6</B>*	Find a man page					*<A NAME="find-manpage"></A><B>find-manpage</B>*
+*<A NAME="12.6"></A><B>12.6</B>*	查阅 man 信息					*<A NAME="find-manpage"></A><B>find-manpage</B>*
 
-While editing a shell <A HREF="usr_41.html#script">script</A> or C program, you are using a command or function
-that you want to find the man page for (this is on Unix).  Let's first use a
-simple way: Move the cursor to the <A HREF="motion.html#word">单词</A> you want to find help on and press
+编辑一个脚本文件或者 C 程序的时候，有时你会需要从 man 手册中查询某个命令或者函
+数的用法 (使用 Unix 的情况下)。让我们先用一个简单的方法: 把鼠标移到对应的单词
+上然后输入:
 
-<B>	K</B>
+K
 
-Nvim will run |<A HREF="filetype.html#:Man">:Man</A>| on the <A HREF="motion.html#word">单词</A>.  If the man page is found, <A HREF="motion.html#it">它</A> is displayed.
-You can also use the |<A HREF="filetype.html#:Man">:Man</A>| command to open a<A HREF="windows.html#window">窗口</A>on a man page:
+Vim 会在对应的单词上执行外部命令: man。如果能找到相应的手册，那个手册页就会被
+显示出来。它常常用 more 一类的程序显示页面。在手册滚动到文件末并回车，控制就会
+回到 Vim 中。
 
-<B>	:Man csh</B>
+这种方法的缺点是你不能同时查看手册和编辑文档。这里有一种办法可以把手册显示到一
+个 Vim 的窗口中。首先，加载 man 文件类型的外挂:
 
-You can scroll around and the text is highlighted.  This allows you to find
-the help you were looking for.  Use <A HREF="vimindex.html#CTRL-W">CTRL-W</A> <A HREF="motion.html#w">w</A> to jump to the<A HREF="windows.html#window">窗口</A>with the
-text you were working on.
-   To find a man page in a specific section, put the section number first.
-For example, to look in section 3 for &quot;echo&quot;:
+:runtime! ftplugin/man.vim
 
-<B>	:Man 3 echo</B>
+如果你经常用到这种方法，可以把这个命令加到你的 vimrc 文件中。现在你可以用
+":Man" 命令打开一个显示 man 手册的窗口了:
 
-To jump to another man page, which is in the text with the typical form
-&quot;word(1)&quot;, press <A HREF="tagsrch.html#CTRL-]">CTRL-]</A> on <A HREF="motion.html#it">它</A>.  Further &quot;<A HREF="filetype.html#:Man">:Man</A>&quot;命令 will use the same
-<A HREF="windows.html#window">窗口</A>.
+:Man csh
 
-To display a man page for the <A HREF="motion.html#word">单词</A> under the cursor, use this:
+你可以在这个新的窗口中上下滚动，而手册的本文会用语法高亮的形式显示。这样，你可
+以找到需要的地方，并用 CTRL-W w 跳转到原来的窗口中继续工作。
+要指定手册的章节，可以在手册名称前面指定。例如，要找第三章的 "echo":
 
-<B>	K</B>
+:Man 3 echo
 
-For example, you want to know the return value of &quot;<A HREF="builtin.html#strstr()">strstr()</A>&quot; while editing
-this line:
+要跳转到另一个由 "word(1)" 形式定义的手册，只要在上面敲 CTRL-]。无论怎样，
+":Man" 命令总使用同一个窗口。
 
-<B><FONT color="#3A6F2B">	if ( strstr (input, "aap") == ) </FONT></B>
+要显示当前光标下的单词的手册，这样:
 
-Move the cursor to somewhere on &quot;strstr&quot; and type &quot;<A HREF="various.html#K">K</A>&quot;.  A<A HREF="windows.html#window">窗口</A>will open
-to display the man page for <A HREF="builtin.html#strstr()">strstr()</A>.
+\K
+
+(如果你重定义了 <Leader>，用那个字符代替上面命令的反斜杠)。
+  例如，你想知道下面语句中的 "strstr()" 函数的返回值:
+
+  if ( strstr(input, "aap") == )
+
+  可以把光标移到 "strstr" 并输入 "\K"。手册使用的窗口会显示 strstr() 的信息。
 
 ==============================================================================
 
-*<A NAME="12.7"></A><B>12.7</B>*	Trim blanks
+*<A NAME="12.7"></A><B>12.7</B>*	删除多余空格
 
-Some people find spaces and tabs at the end of a line useless, wasteful, and
-ugly.  To remove <A HREF="pattern.html#whitespace">whitespace</A> at the end of every line, execute the following
-command:
+有些人认为行末的空格是无用，浪费而难看的。要删除这些每行后面多余的空格，可以执行如下命令:
 
 <B>	:%s/\s\+$//</B>
 
-The line range &quot;<A HREF="motion.html#&#37;">&#37;</A>&quot; is used, thus this works on the whole file.  The <A HREF="pattern.html#pattern">pattern</A>
-that the &quot;<A HREF="change.html#:substitute">:substitute</A>&quot;命令 matches with is &quot;\s\+$&quot;.  This finds white
-space characters (\s), 1 or more of them (\+), before the end-of-line ($).
-Later will be explained how you write patterns like this, 见 |<A HREF="usr_27.html">usr_27.txt</A>|.
-   The &quot;to&quot; part of the substitute command is empty: &quot;//&quot;.  Thus <A HREF="motion.html#it">它</A> replaces
-with nothing, effectively <A HREF="change.html#deleting">deleting</A> the matched white space.
+命令前面指明范围是 "%"，所以这会作用于整个文件。"substitute" 命令的匹配模式是"\s\+$"。这表示行末 ($) 前的一个或者多个 (\+) 空格 (\s)。后面我们会介绍怎样写这样的模式。见 usr_27.txt 。
+替换命令的 "to" 部分是空的: "//"。这样就会删除那些匹配的空白字符。
 
-Another wasteful use of spaces is placing them before a <A HREF="intro.html#tab">tab</A>.  Often these can
-be deleted without <A HREF="change.html#changing">changing</A> the amount of white space.  But not always!
-Therefore, you can best <A HREF="diff.html#do">do</A> this manually.  Use this search command:
+另一种没有用的空格是 Tab 前面的字符。通常这可以删除而不影响格式。但并不是总这样！所以，你最好手工删除它。执行如下命令:
 
 <B>	/ 	</B>
 
-You cannot see <A HREF="motion.html#it">它</A>, but there is a space before a <A HREF="intro.html#tab">tab</A> in this command.  Thus
-it's &quot;/&lt;Space&gt;&lt;Tab&gt;&quot;.   Now use &quot;<A HREF="change.html#x">x</A>&quot; to delete the space and check that the
-amount of white space doesn't change.  You might have to insert a <A HREF="intro.html#tab">tab</A> if <A HREF="motion.html#it">它</A>
-does change.  Type &quot;<A HREF="pattern.html#n">n</A>&quot; to find the next match.  Repeat this until no more
-matches can be found.
+你什么都看不见，其实这是一个空格加一个 TAB 键。相当于 "/<Space><Tab>"。现在，你可以用 "x" 删除多余的空格，并保证格式没有改变。接着你可以用 "n" 找到下一个位置并重复这个操作。
+
 
 ==============================================================================
 
-*<A NAME="12.8"></A><B>12.8</B>*	Find where a <A HREF="motion.html#word">单词</A> is used
+*<A NAME="12.8"></A><B>12.8</B>*	查找单词的使用位置
 
-If you are a Unix user, you can use a combination of Vim and the <A HREF="quickfix.html#grep">grep</A> command
-to edit all the files that contain a given <A HREF="motion.html#word">单词</A>.  This is extremely useful if
-you are working on a program and want to view or edit all the files that
-contain a specific variable.
- 例如, suppose you want to edit all the C program files that contain
-the <A HREF="motion.html#word">单词</A> &quot;frame_counter&quot;.  To <A HREF="diff.html#do">do</A> this you use the command:
+如果你是一个 UNIX 用户，你可以用 Vim 和 grep 命令的组合来完成编辑包括特定单词的所有文件的工作。这在你编辑一个程序而且想查看和编辑看所有的包括使用某个变量的文件的时候非常有用。
+举个例子，假设想编辑所有包括单词 "frame_counter" 的 C 源文件，你可以执行如下命令:
 
-<B>	vim `grep -l frame_counter *.c`</B>
+vim `grep -l frame_counter *.c`
 
-Let's look at this command in detail.  The <A HREF="quickfix.html#grep">grep</A> command searches through a set
-of files for a given <A HREF="motion.html#word">单词</A>.  Because the <A HREF="starting.html#-l">-l</A> argument is specified, the command
-will only <A HREF="eval.html#list">列表</A> the files containing the <A HREF="motion.html#word">单词</A> and not print the matching lines.
-The <A HREF="motion.html#word">单词</A> <A HREF="motion.html#it">它</A> is searching for is &quot;frame_counter&quot;.  Actually, this can be any
-regular <A HREF="eval.html#expression">expression</A>.  (Note: What <A HREF="quickfix.html#grep">grep</A> uses for regular expressions is not
-exactly the same <A HREF="motion.html#as">as</A> what Vim uses.)
-   The entire command is enclosed in backticks (`).  This tells the Unix shell
-to run this command and pretend that the results were typed on the command
-line.  So what happens is that the <A HREF="quickfix.html#grep">grep</A> command is run and produces a <A HREF="eval.html#list">列表</A> of
-files, these files are put on the Vim command line.  This results in Vim
-editing the file <A HREF="eval.html#list">列表</A> that is the output of <A HREF="quickfix.html#grep">grep</A>.  You can then use commands
-like &quot;<A HREF="editing.html#:next">:next</A>&quot; and &quot;<A HREF="editing.html#:first">:first</A>&quot; to browse through the files.
+让我们分析一下这个命令。grep 从一组文件中查找特定的单词。由于指定了 -l 参数，grep 只列出文件而不打印匹配点。被查找的单词是 "frame_counter"，其实这可以是任何正则表达式。(注意: grep 所使用的正则表达式与 Vim 使用的不完全一样)。整个命令用反引号 (`) 包起来，这告诉 UNIX 的外壳使用该命令的输出作为命令行的一部分。于是，grep 命令产生一个文件列表，并作为 Vim 的命令参数。Vim 将编辑grep 列出来的所有文件。你可以通过 ":next" 和 ":first" 命令一个一个处理这些文件。
 
+找 到 每 一 行
 
-FINDING EACH LINE
+上面的命令只是找到包括单词的那个文件。你还需要知道单词在该文件中出现的地方。Vim 有一个内置的命令用于在一组文件中找一个指定的字符串。例如，如果你想在所有的 C 文件中查找 "error_string"，可以使用如下命令:
 
-The above command only finds the files in which the <A HREF="motion.html#word">单词</A> is found.  You still
-have to find the <A HREF="motion.html#word">单词</A> within the files.
-   Vim has a built-in command that you can use to search a set of files for a
-given <A HREF="options.html#options">字符串</A>.  If you want to find all occurrences of &quot;error_string&quot; in all C
-program files, for example, enter the following command:
+:grep error_string *.c
 
-<B>	:grep error_string *.c</B>
-
-This causes Vim to search for the <A HREF="options.html#options">字符串</A> &quot;error_string&quot; in all the specified
-files (*.c).  The editor will now open the first file where a match is found
-and position the cursor on the first matching line.  To go to the next
-matching line (no matter in what file <A HREF="motion.html#it">它</A> is), use the &quot;<A HREF="quickfix.html#:cnext">:cnext</A>&quot;命令.  To go
-to the previous match, use the &quot;<A HREF="quickfix.html#:cprev">:cprev</A>&quot;命令.  Use &quot;<A HREF="quickfix.html#:clist">:clist</A>&quot; to see all the
-matches and where they are.
-   The &quot;<A HREF="quickfix.html#:grep">:grep</A>&quot;命令 uses the external commands <A HREF="quickfix.html#grep">grep</A> (on Unix) or findstr
-(on Windows).  You can change this by setting the option <A HREF="options.html#'grepprg'">'grepprg'</A>.
+这会使 Vim 在所有指定的文件 (*.c) 中查找 "error_string"。Vim 会打开第一个匹配的文件并将光标定位在第一个匹配行。要到下一个匹配行 (无论在哪个文件)，可以执行"cnext" 命令。要回到上一个匹配行，可以用 ":cprev" 命令。使用 "clist" 可以看到所有的匹配点。":grep" 命令会使用一个外部的程序。可能是 grep (在 Unix 上) 或者 findstr(在 Windows 上)。你可以通过 'grepprg' 选项修改这个设置。
 
 ==============================================================================
 
