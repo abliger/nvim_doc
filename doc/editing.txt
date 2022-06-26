@@ -342,41 +342,31 @@ more than one file name (like ":next file1 file2") embedded spaces must be
 escaped with a backslash.
 
 						*wildcard* *wildcards*
-Wildcards in {file} are expanded, but as with file completion, 'wildignore'
-and 'suffixes' apply.  Which wildcards are supported depends on the system.
-These are the common ones:
-	?	matches one character
-	*	matches anything, including nothing
-	**	matches anything, including nothing, recurses into directories
-	[abc]	match 'a', 'b' or 'c'
+{file}中的通配符会被展开,但与文件补全一样,会应用'wildignore'和'suffix'.支持哪些通配符取决于系统.这些是常见的:
 
-To avoid the special meaning of the wildcards prepend a backslash.  However,
-on MS-Windows the backslash is a path separator and "path\[abc]" is still seen
-as a wildcard when "[" is in the 'isfname' option.  A simple way to avoid this
-is to use "path\[[]abc]", this matches the file "path\[abc]".
+	?	匹配一个字符
+	*	匹配任意字符,包括没有匹配字符
+	**	匹配任意字符,包括没有匹配字符,目录递归	
+	[abc]	匹配 'a', 'b' 或 'c'
+
+要匹配通配符需要在前面加上反斜线.然而,在 MS-Windows 反斜线是路径分隔符,如遇到 "path\[abc]" 依然视为通配符,当 "[" 是 'isfname' 当选项时.一个简单的方法是避免这样使用,去使用"path\[[]abc]".
 
 					*starstar-wildcard*
-Expanding "**" is possible on Unix, Win32, macOS and a few other systems.
-This allows searching a directory tree.  This goes up to 100 directories deep.
-Note there are some commands where this works slightly differently, see
-|file-searching|.
-Example: >
+在 Unix, Win32, macOS 和其他的系统可以解析 "**".它能查询目录树,进入100层目录深度.
+注意: 有一些命令会有所不同,见 |file-searching|.
+例如: >
 	:n **/*.txt
-Finds files:
+发现文件:
 	aaa.txt ~
 	subdir/bbb.txt ~
 	a/b/c/d/ccc.txt ~
-When non-wildcard characters are used right before or after "**" these are
-only matched in the top directory.  They are not used for directories further
-down in the tree. For example: >
+当在"**"之前或之后使用非通配符时,这些字符只在顶级目录中匹配.  它不匹配树中更低的目录. 例如: >
 	:n /usr/inc**/types.h
-Finds files:
+发现的文件:
 	/usr/include/types.h ~
 	/usr/include/sys/types.h ~
 	/usr/inc/old/types.h ~
-Note that the path with "/sys" is included because it does not need to match
-"/inc".  Thus it's like matching "/usr/inc*/*/*...", not
-"/usr/inc*/inc*/inc*".
+注意: 我们是能找到 "/sys"的因为我们不需要匹配 "/inc".因此,只需要 "/usr/inc*/*/*...",而不是 "/usr/inc*/inc*/inc*".
 
 					*backtick-expansion* *`-expansion*
 On Unix and a few other systems you can also use backticks for the file name

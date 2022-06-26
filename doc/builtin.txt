@@ -1942,8 +1942,7 @@ debugbreak({pid})					*debugbreak()*
 			GetPid()->debugbreak()
 
 expand({string} [, {nosuf} [, {list}]])				*expand()*
-		Expand wildcards and the following special keywords in 
-		{string}.  'wildignorecase' applies.
+		解析{string}中的通配符和关键字.'wildignorecase' 默认开启.
 
 		If {list} is given and it is |TRUE|, a List will be returned.
 		Otherwise the result is a String and when there are several
