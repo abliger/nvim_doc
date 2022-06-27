@@ -1,109 +1,86 @@
 *usr_01.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		     VIM 用户手册 - by Bram Moolenaar
+				  译者: abliger
+			      关于本手册
 
-			      About the manuals
+阅读本文以了解解释命令的条件.
 
+|01.1|	两本手册
+|01.2|	Vim 安装
+|01.3|	使用 Vim 指导
+|01.4|	版权
 
-This chapter introduces the manuals available with Vim.  Read this to know the
-conditions under which the commands are explained.
-
-|01.1|	Two manuals
-|01.2|	Vim installed
-|01.3|	Using the Vim tutor
-|01.4|	Copyright
-
-     Next chapter: |usr_02.txt|  The first steps in Vim
-Table of contents: |usr_toc.txt|
+下一章: |usr_02.txt|   Vim 初步
+  目录: |usr_toc.txt|
 
 ==============================================================================
-*01.1*	Two manuals
+*01.1*	两本手册
 
-The Vim documentation consists of two parts:
+Vim 文档由两部分构成:
 
-1. The User manual
-   Task oriented explanations, from simple to complex.  Reads from start to
-   end like a book.
+1. 用户手册
+   从简单到复杂的面向任务的使用说明.可以像书一样从头读到尾.
 
-2. The Reference manual
-   Precise description of how everything in Vim works.
+2. 参考手册
+   精确描述了使用 Vim 工作的每一件事.
 
-The notation used in these manuals is explained here: |notation|
+本手册使用的符号请参见: |notation|
 
+跳转
 
-JUMPING AROUND
+文本包含两部分间的超级链接,允许你快速的从编辑任务描述和命令及选项精确说明间跳.使用这两个命令:
 
-The text contains hyperlinks between the two parts, allowing you to quickly
-jump between the description of an editing task and a precise explanation of
-the commands and options used for it.  Use these two commands:
+	使用 CTRL-] 跳转光标下的地址.
+	使用 CTRL-O 跳转回来(重复则回到更远处).
 
-	Press  CTRL-]  to jump to a subject under the cursor.
-	Press  CTRL-O  to jump back (repeat to go further back).
+许多链接在竖线中间,如: |bars|.竖线可能是隐藏或不可见的;见下面.  选项名,像 'number',使用双引号包裹的命令,像 ':write' 和其他任何单词都可以作为一个链接.
+试试看: 移动贯标到 CTRL-] 上,键入 CTRL-] 打开链接.
 
-Many links are in vertical bars, like this: |bars|.  The bars themselves may
-be hidden or invisible; see below.  An option name, like 'number', a command
-in double quotes like ":write" and any other word can also be used as a link.
-Try it out: Move the cursor to  CTRL-]  and press CTRL-] on it.
+其他主题可以使用":help"命令找到;见 |help.txt|.
 
-Other subjects can be found with the ":help" command; see |help.txt|.
+竖线和星星在使用 |conceal| 特性时常常时是隐藏的.它们也能使用 |hl-Ignore| 与背景保持一致颜色.你可以使他们可见: >
 
-The bars and stars are usually hidden with the |conceal| feature.  They also
-use |hl-Ignore|, using the same color for the text as the background.  You can
-make them visible with: >
 	:set conceallevel=0
 	:hi link HelpBar Normal
 	:hi link HelpStar Normal
 
 ==============================================================================
-*01.2*	Vim installed					   *setup-vimrc_example*
+*01.2*	Vim 安装					   *setup-vimrc_example*
 
-To create an empty vimrc: >
+创建新的 |vimrc| 文件: >
 
 	:call mkdir(stdpath('config'),'p')
 	:exe 'edit' stdpath('config').'/init.vim'
 	:write
 
-For more info see |vimrc|.
+更多信息请见|vimrc|.
 
 ==============================================================================
-*01.3*	Using the Vim tutor			         *tutor* *vimtutor*
+*01.3*	使用 Vim 指导			         *tutor* *vimtutor*
 
-Instead of reading the text (boring!) you can use :Tutor to learn your first
-Vim commands.  This is a 30-minute tutorial that teaches the most basic Vim
-functionality hands-on.
+除了读文字(无聊!),你可以使用 ':Tutor' 去学习 Vim .它用大约三十分钟叫你 Vim 基本使用.
 
-To start the tutorial, execute >
+使用指导手册,使用如下命令 >
 
         :Tutor
 <
-from within nvim. The tutorial will lead you from that point. Have fun!
+教程会一点一点引导你.祝你看的愉快!
 
 ==============================================================================
-*01.4*	Copyright					*manual-copyright*
+*01.4*	版权					*manual-copyright*
 
-The Vim user manual and reference manual are Copyright (c) 1988-2003 by Bram
-Moolenaar.  This material may be distributed only subject to the terms and
-conditions set forth in the Open Publication License, v1.0 or later.  The
-latest version is presently available at:
-	     http://www.opencontent.org/openpub/
+Vim用户手册和参考手册版权归Bram Moolenaar 所有(c) 1988-2003.本材料的分发仅受开放出版许可 v1.0 或更高版本中规定的条款和条件的约束。最新版本现已上载于:
+  
+  http://www.opencontent.org/openpub/
 
-People who contribute to the manuals must agree with the above copyright
-notice.
-							*frombook*
-Parts of the user manual come from the book "Vi IMproved - Vim" by Steve
-Oualline (published by New Riders Publishing, ISBN: 0735710015).  The Open
-Publication License applies to this book.  Only selected parts are included
-and these have been modified (e.g., by removing the pictures, updating the
-text for Vim 6.0 and later, fixing mistakes).  The omission of the |frombook|
-tag does not mean that the text does not come from the book.
+对手册做出贡献的人必须同意上述版权声明.
+						*frombook*
+用户手册的内容部分来自 Steve Oualline(ISBN: 0735710015) 写的 "Vi IMproved - Vim".开放出版物版本协议同样适用于这本书。被选入的部分经过剪裁 (例如去掉插图，根据 Vim 6.0 和之后的新特性进行修改，并修正一些错误)。某些部分省略了  frombook  标记，这并不表示这些部分不是来自这本书。
 
-Many thanks to Steve Oualline and New Riders for creating this book and
-publishing it under the OPL!  It has been a great help while writing the user
-manual.  Not only by providing literal text, but also by setting the tone and
-style.
+非常感谢 Steve Oualline 和 New Riders 编写并出版了这本书并在 OPL 协议下发行它!它对写这份手册起到了非常大的作用.它不只是提供了文字描述,还确定了这份手册 的基调和风格.
 
-If you make money through selling the manuals, you are strongly encouraged to
-donate part of the profit to help AIDS victims in Uganda.  See |iccf|.
+如果你通过销售手册赚钱,我们强烈鼓励你捐出一部分利润来帮助乌干达的艾滋病患者.见 |iccf|.
 
 ==============================================================================
 
