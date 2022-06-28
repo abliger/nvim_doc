@@ -1,70 +1,56 @@
 *usr_03.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		     VIM 用户手册 - by Bram Moolenaar
+                                  译者: abliger      
+			     移动
 
-			     Moving around
 
+在你插入或者删除之前，你需要移动到合适的位置。Vim 有一大堆命令可以移动光标。本章向你介绍最重要的那些.你可以在|Q_lr|中找到这些命令的列表.
 
-Before you can insert or delete text the cursor has to be moved to the right
-place.  Vim has a large number of commands to position the cursor.  This
-chapter shows you how to use the most important ones.  You can find a list of
-these commands below |Q_lr|.
+|03.1|	词移动
+|03.2|	移动到行首或行尾
+|03.3|	移动一个字符
+|03.4|	括号匹配
+|03.5|	移动到指定行
+|03.6|	确认当前位置
+|03.7|	滚动
+|03.8|	简单搜索
+|03.9|	简单搜索模式
+|03.10|	使用标记
 
-|03.1|	Word movement
-|03.2|	Moving to the start or end of a line
-|03.3|	Moving to a character
-|03.4|	Matching a parenthesis
-|03.5|	Moving to a specific line
-|03.6|	Telling where you are
-|03.7|	Scrolling around
-|03.8|	Simple searches
-|03.9|	Simple search patterns
-|03.10|	Using marks
-
-     Next chapter: |usr_04.txt|  Making small changes
- Previous chapter: |usr_02.txt|  The first steps in Vim
-Table of contents: |usr_toc.txt|
+下一章: |usr_04.txt|  做小改动
+上一章: |usr_02.txt|  Vim初步
+目录:   |usr_toc.txt|
+                                                               
 
 ==============================================================================
-*03.1*	Word movement
+*03.1*	词移动
 
-To move the cursor forward one word, use the "w" command.  Like most Vim
-commands, you can use a numeric prefix to move past multiple words.  For
-example, "3w" moves three words.  This figure shows how it works (starting at
-the position marked with "x"):
+移动光标向前跳一个单词,使用 "w" 命令.像大多数 Vim 命令一样，你可以在命令前加数字前缀表示把这个命令重复多次.例如, "3w" 移动三个单词.下面的图形展现了它如何工作的(从 "x" 的位置开始):
 
 	This is a line with example text ~
 	  x-->-->->----------------->
 	   w  w  w    3w
 
-Notice that "w" moves to the start of the next word if it already is at the
-start of a word.
-   The "b" command moves backward to the start of the previous word:
+注意如果光标在单词的开始,"w" 会移动到下一个单词的开始."b" 命令移动到前一个单词的字首:
 
 	This is a line with example text ~
 	<----<--<-<---------<--x
 	   b   b b    2b      b
 
-There is also the "e" command that moves to the next end of a word and "ge",
-which moves to the previous end of a word:
+也有 "e" 命令移动到下一个单词的字尾和"ge"命令移动到前一个单词的字尾:
 
 	This is a line with example text ~
 	   <----<----x---->------------>
 	   2ge   ge     e       2e
 
-If you are at the last word of a line, the "w" command will take you to the
-first word in the next line.  Thus you can use this to move through a
-paragraph, much faster than using "l".  "b" does the same in the other
-direction.
+如果你在一行的最后一个单词,使用 "w" 命令将会移动下一行第一个单词.因此你可以使用这个命令去移动段落,它比 "l" 快的多."b" 在反方向完成此功能.
 
-A word ends at a non-word character, such as a ".", "-" or ")".  To change
-what Vim considers to be a word, see the 'iskeyword' option.  If you try this
-out in the help directly, 'iskeyword' needs to be reset for the examples to
-work: >
+一个单词以非单词字符结尾, 诸如 ".", "-" or ")".要改 变Vim 对于单词的判断, 查看 'iskeyword' 选项.如果你想直接在帮助中尝试它,'iskeyword' 需要重新设定，示例才能工作: >
+
 	:set iskeyword&
-It is also possible to move by white-space separated WORDs.  This is not a
-word in the normal sense, that's why the uppercase is used.  The commands for
-moving by WORDs are also uppercase, as this figure shows:
+
+尽可能使用空格分开单词.这不是通常意义的单词,这也是我们为什么使用大写.按字串移动的命令也全都是大写,像下图这样: 
 
 	       ge      b	  w				e
 	       <-     <-	 --->			       --->
@@ -72,18 +58,14 @@ moving by WORDs are also uppercase, as this figure shows:
 	   <----- <-----	 -------------------->	       ----->
 	     gE      B			 W			 E
 
-With this mix of lowercase and uppercase commands, you can quickly move
-forward and backward through a paragraph.
+组合使用小写和大写命令,你能在段落快速向前向后移动.
 
 ==============================================================================
-*03.2*	Moving to the start or end of a line
+*03.2*	移动到行首或行尾
 
-The "$" command moves the cursor to the end of a line.  If your keyboard has
-an <End> key it will do the same thing.
+"$" 命令移动光标到行尾.如果你的键盘有 <End> 键它将做相同的事.
 
-The "^" command moves to the first non-blank character of the line.  The "0"
-command (zero) moves to the very first character of the line, and the <Home>
-key does the same thing.  In a picture ("." indicates a space):
+"^" 命令移动到此行第一个非空字符处."0" 命令使光标移动到行首第一个字符和 <Home> 做了同样的事.  如下("." 代表空格):
 
 		  ^
 	     <-----------x
@@ -91,70 +73,50 @@ key does the same thing.  In a picture ("." indicates a space):
 	<----------------x   x-------------->
 		0		   $
 
-(the "....." indicates blanks here)
+("....."这里表示空格)
 
-   The "$" command takes a count, like most movement commands.  But moving to
-the end of the line several times doesn't make sense.  Therefore it causes the
-editor to move to the end of another line.  For example, "1$" moves you to
-the end of the first line (the one you're on), "2$" to the end of the next
-line, and so on.
-   The "0" command doesn't take a count argument, because the "0" would be
-part of the count.  Unexpectedly, using a count with "^" doesn't have any
-effect.
+像大多数移动命令,"$" 命令可以接受数量前缀.但是移动到一行的行尾 n 次没有什么意义.因此它会是光标移动到其他行e.例如,"1$" 移动到当前行的行尾，而 "2$" 则移动到下一行的行尾，如此类推.
+"0" 命令不接受数量前缀,因为 "0" 已经是数字了.出人意料的是，使用数字到 "^" 没有反应.
 
 ==============================================================================
-*03.3*	Moving to a character
+*03.3*	移动一个字符
 
-One of the most useful movement commands is the single-character search
-command.  The command "fx" searches forward in the line for the single
-character x.  Hint: "f" stands for "Find".
-   For example, you are at the beginning of the following line.  Suppose you
-want to go to the h of human.  Just execute the command "fh" and the cursor
-will be positioned over the h:
+最有用的移动命令是单字符查找命令.这个命令 "fx" 向前查找单字符x.提示: "f" 表示 "Find".
+例如,你在下面例子的开始.假定你想要去 human 的 h.只使用 "fh" 光标将会定位到 h:
+
 
 	To err is human.  To really foul up you need a computer. ~
 	---------->--------------->
 	    fh		 fy
 
-This also shows that the command "fy" moves to the end of the word really.
-   You can specify a count; therefore, you can go to the "l" of "foul" with
-"3fl":
+你也能看到,"fy" 会移动到单词 really 的结尾.
+你也可以添加数量修饰;所以你如果找 "foul" 的 "l" 可以使用 "3fl":
+
 
 	To err is human.  To really foul up you need a computer. ~
 		  --------------------->
 			   3fl
 
-The "F" command searches to the left:
+"F"命令是向左查询:
 
 	To err is human.  To really foul up you need a computer. ~
 		  <---------------------
 			    Fh
 
-The "tx" command works like the "fx" command, except it stops one character
-before the searched character.  Hint: "t" stands for "To".  The backward
-version of this command is "Tx".
+"tx" 命令很像 "fx" 命令,除了它只把光标移动到目标字符的前一个字符上.提示: "t" 代表 "To".这个命令的反向版本是 "Tx".
 
 	To err is human.  To really foul up you need a computer. ~
 		   <------------  ------------->
 			Th		tn
 
-These four commands can be repeated with ";".  "," repeats in the other
-direction.  The cursor is never moved to another line.  Not even when the
-sentence continues.
+这四个命令可以通过 ";" 重复."," 反向重复.无论用哪个命令，光标永远都不会移出当前行，哪怕这两行是连续的一个句子.
 
-Sometimes you will start a search, only to realize that you have typed the
-wrong command.  You type "f" to search backward, for example, only to realize
-that you really meant "F".  To abort a search, press <Esc>.  So "f<Esc>" is an
-aborted forward search and doesn't do anything.  Note: <Esc> cancels most
-operations, not just searches.
+有时你启动了一个查找命令后才发现自己执行了一个错误的命令.如你键入了 "f" 之后意识到你想要键入 "F".想要打断查询，可以键入 <Esc>.所以 "f<Esc>" 是一个打断向前查找并不做任何事情.注意: <Esc> 能取消大部分操作，不只是查询.
 
 ==============================================================================
-*03.4*	Matching a parenthesis
+*03.4*	括号匹配
 
-When writing a program you often end up with nested () constructs.  Then the
-"%" command is very handy: It moves to the matching paren.  If the cursor is
-on a "(" it will move to the matching ")".  If it's on a ")" it will move to
-the matching "(".
+当你经常写程序会遇到嵌套的 () 结构.此时 "%" 命令是非常有用的: 它会移动到匹配的括号上.如果光标在一个 "(" 它将会移动匹配的 ")" 上.如果它在 ")" 它将移动到 "(" 上.
 
 			    %
 			 <----->
@@ -162,35 +124,23 @@ the matching "(".
 		   <---------------->
 			    %
 
-This also works for [] and {} pairs.  (This can be defined with the
-'matchpairs' option.)
+它也能在 [] 和 {} 上工作.(可用 'matchpairs' 选项定义.)
 
-When the cursor is not on a useful character, "%" will search forward to find
-one.  Thus if the cursor is at the start of the line of the previous example,
-"%" will search forward and find the first "(".  Then it moves to its match:
+当光标不在有用的字符上时, "%" 将会向前查抄一个有用的字符.因此如果光标在例子的行首, "%" 会向前查找第一个 "(".然后它移动到匹配的字符上:
 
 		if (a == (b * c) / d) ~
 		---+---------------->
 			   %
 
 ==============================================================================
-*03.5*	Moving to a specific line
+*03.5*	移动到指定行
 
-If you are a C or C++ programmer, you are familiar with error messages such as
-the following:
+如果你是一个 C 或者 C++ 程序员，你对下面这样的错误信息非常熟悉:
 
 	prog.c:33: j   undeclared (first use in this function) ~
 
-This tells you that you might want to fix something on line 33.  So how do you
-find line 33?  One way is to do "9999k" to go to the top of the file and "32j"
-to go down thirty-two lines.  It is not a good way, but it works.  A much
-better way of doing things is to use the "G" command.  With a count, this
-command positions you at the given line number.  For example, "33G" puts you
-on line 33.  (For a better way of going through a compiler's error list, see
-|usr_30.txt|, for information on the :make command.)
-   With no argument, "G" positions you at the end of the file.  A quick way to
-go to the start of a file use "gg".  "1G" will do the same, but is a tiny bit
-more typing.
+它告诉你在33 行你需要进行修改一些东西.所以你要怎么去第 33 行? 一种方法是使用 "9999k" 回到文件头再使用 "32j" 向下移动 32 行.这不是一个好方法,但它可以工作.更好的方式是使用 "G" 命令. 使用数字,这个命令会让光标定位到你指定的行.例如, "33G" 把你带到 33 行.  (要用更好的方法在编译器的错误列表中移动,见 |usr_30.txt|, 的 :make 命令部分.)
+如果没有计数前缀,"G" 会定位到文件尾.快速定位到文件首可以使用 "gg"."1G" 也会做相同的事,但却要打更多字符.
 
 	    |	first line of a file   ^
 	    |	text text text text    |
@@ -203,13 +153,9 @@ more typing.
 		text text text text    |
 		last line of a file    V
 
-Another way to move to a line is using the "%" command with a count.  For
-example, "50%" moves you halfway through the file, and "90%" goes to near the
-end.
+另一个定位行的方法是使用带计数前缀的 "%" 命令.例如 "50%" 会移动到文件中间,"90%" 会移动到接近文件未的位置.
 
-The previous assumes that you want to move to a line in the file, no matter if
-it's currently visible or not.  What if you want to move to one of the lines
-you can see?  This figure shows the three commands you can use:
+前面的描述假定你想移动到文件中的某一行，而不在乎它是否可见。那么如何移动到视野之内的一行呢？下图演示了三个可以使用的命令:
 
 			+---------------------------+
 		H -->	| text sample text	    |
@@ -223,61 +169,42 @@ you can see?  This figure shows the three commands you can use:
 		L -->	| text sample text	    |
 			+---------------------------+
 
-Hints: "H" stands for Home, "M" for Middle and "L" for Last.  Alternatively,
-"H" for high, "M" for Middle and "L" for low.
+提示: "H" 代表 Home, "M" 代表 Middle 和 "L" 代表 Last.另外一种记法,"H" 代表 high, "M" 代表 Middle 和 "L" 代表 low.
 
 ==============================================================================
-*03.6*	Telling where you are
+*03.6*	确认当前位置
 
-To see where you are in a file, there are three ways:
+如果查看你在文件的位置，有三种方法:
 
-1.  Use the CTRL-G command.  You get a message like this (assuming the 'ruler'
-    option is off):
+1.  使用 CTRL-G 命令.你可以获得下面的信息(假定 'ruler' 选项是 off):
 
-	"usr_03.txt" line 233 of 650 --35%-- col 45-52 ~
+	"usr_03.txt" line 233 of 650 --35%-- col 45-52 
 
-    This shows the name of the file you are editing, the line number where the
-    cursor is, the total number of lines, the percentage of the way through
-    the file and the column of the cursor.
-       Sometimes you will see a split column number.  For example, "col 2-9".
-    This indicates that the cursor is positioned on the second character, but
-    because character one is a tab, occupying eight spaces worth of columns,
-    the screen column is 9.
+    它显示了你编辑的文件名，光标所在的行号，总行数和光标再文件中行号占比.
+    有时你能看到分开的行号.例如, "col 2-9".这表示光标处于第二个字符上，但由于使用了制表符，在屏幕上的位置是 9.
 
-2.  Set the 'number' option.  This will display a line number in front of
-    every line: >
+2.  设置 'number' 选项.这会再每一行前面显示行号: >
 
 	:set number
-<
-    To switch this off again: >
+ 
+<    要重新关闭这个选项: >
 
 	:set nonumber
-<
-    Since 'number' is a boolean option, prepending "no" to its name has the
-    effect of switching it off.  A boolean option has only these two values,
-    it is either on or off.
-       Vim has many options.  Besides the boolean ones there are options with
-    a numerical value and string options.  You will see examples of this where
-    they are used.
+ 
+<    因为 'number' 是一个 boolean 选项, 关闭它既加上前缀 "no".boolean 选项只有两个值,on 或 off.
+    Vim 有很多选项.  在 boolean 选项外还有数字选项和字符串选项.在用到的时候会给出一些例子的.
 
-3.  Set the 'ruler' option.  This will display the cursor position in the
-    lower right corner of the Vim window: >
+3.  设置 'ruler' 选项.  这会再Vim窗口的右下角显示当前光标的位置:
 
 	:set ruler
 
-Using the 'ruler' option has the advantage that it doesn't take much room,
-thus there is more space for your text.
+使用 'ruler' 选项的好处是它不占多少地方,从而可以留下更多的地方给你的文本.
 
 ==============================================================================
-*03.7*	Scrolling around
+*03.7*	滚动
 
-The CTRL-U command scrolls down half a screen of text.  Think of looking
-through a viewing window at the text and moving this window up by half the
-height of the window.  Thus the window moves up over the text, which is
-backward in the file.  Don't worry if you have a little trouble remembering
-which end is up.  Most users have the same problem.
-   The CTRL-D command moves the viewing window down half a screen in the file,
-thus scrolls the text up half a screen.
+CTRL-U 命令向下滚动半屏.想象一下通过窗口查看文本并且移动该窗口一般的高度.因此窗口移动到当前文字的上面，而文字则移到窗口的下面。不用担心记不住那边是上。很多人都是这样.
+CTRL-D 命令把窗口命令把视窗向下移动半屏，所以把文字向上移动半屏.
 
 				       +----------------+
 				       | some text	|
@@ -297,17 +224,11 @@ thus scrolls the text up half a screen.
 				       | example	|
 				       +----------------+
 
-To scroll one line at a time use CTRL-E (scroll up) and CTRL-Y (scroll down).
-Think of CTRL-E to give you one line Extra.  (If you use MS-Windows compatible
-key mappings CTRL-Y will redo a change instead of scroll.)
+每次滚动一行可以使用 CTRL-E (向上)和 CTRL-Y (向下).可以认为 CTRL-E 给了你额外的一行.  (如果你使用 MS-Windows 兼容的按键映射 CTRL-Y 会使用重做代替滚动.)
 
-To scroll forward by a whole screen (except for two lines) use CTRL-F.  To
-scroll backwards, use CTRL-B.  These should be easy to remember: F for
-Forwards and B for Backwards.
+正向滚动整屏(减去两行)使用 CTRL-F.相反的使用 CTRL-B.应该很容易记住: F 代表 Forwards 和 B 代表 Backwards.
 
-A common issue is that after moving down many lines with "j" your cursor is at
-the bottom of the screen.  You would like to see the context of the line with
-the cursor.  That's done with the "zz" command.
+有一个问题是当向下移动很多行时在使用 "j" 你的光标是在屏幕的最下面.而你可能想要看到光标所在行的内容.这可以使用 "zz" 命令实现.
 
 	+------------------+		 +------------------+
 	| earlier text	   |		 | earlier text	    |
@@ -319,63 +240,46 @@ the cursor.  That's done with the "zz" command.
 	| line with cursor |		 | later text	    |
 	+------------------+		 +------------------+
 
-The "zt" command puts the cursor line at the top, "zb" at the bottom.  There
-are a few more scrolling commands, see |Q_sc|.  To always keep a few lines of
-context around the cursor, use the 'scrolloff' option.
+"zt" 命令把光标所在行放到顶部, "zb" 放在底部.有很多滚动命令, 见 |Q_sc|.要使一些行的内容总是保持在光标周围,使用 'scrolloff' 选项.
 
 ==============================================================================
-*03.8*	Simple searches
+*03.8*	简单搜索
 
-To search for a string, use the "/string" command.  To find the word include,
-for example, use the command: >
+搜索一个字符串,使用 "/string" 命令.例如,查找单词 include,使用命令:  >
 
 	/include
 
-You will notice that when you type the "/" the cursor jumps to the last line
-of the Vim window, like with colon commands.  That is where you type the word.
-You can press the backspace key (backarrow or <BS>) to make corrections.  Use
-the <Left> and <Right> cursor keys when necessary.
-   Pressing <Enter> executes the command.
+你会注意到当你键入 "/" 时光标会想冒号命令一样跳转到Vim窗口的最后一行.那是你键入单词.你可以使用空格键(方向键和 <BS>)去更正错误.使用 <Left> 和 <Right> 当你需要的时候.使用 <Enter> 执行命令.
 
-	Note:
-	The characters .*[]^%/\?~$ have special meanings.  If you want to use
-	them in a search you must put a \ in front of them.  See below.
+	注意:
+	字符.*[]^%/\?~$ 有特殊含义.如果你想要在查找时找到它们，你必须使用 \ 符号在输入前转义它们。见下面.
 
-To find the next occurrence of the same string use the "n" command.  Use this
-to find the first #include after the cursor: >
+使用 "n" 命令查找下一个匹配的字符串.使用下面的命令去发现光标后第一个 #include: >
 
 	/#include
 
-And then type "n" several times.  You will move to each #include in the text.
-You can also use a count if you know which match you want.  Thus "3n" finds
-the third match.  You can also use a count with "/": "4/the" goes to the
-fourth match of "the".
+然后键入几次 "n".你会在之后的文本中找到每一个 #include.如果你知道匹配的次数可以在这个命令前面增加计数前缀.因此 "3n" 是第三个匹配的位置置.你也能在 "/" 前添加数量: "4/the" 会找到第四个匹配 "the" 的位置.
 
-The "?" command works like "/" but searches backwards: >
+"?" 命令像 "/" 但是是反方向查找: >
 
 	?word
 
-The "N" command repeats the last search the opposite direction.  Thus using
-"N" after a "/" command searches backwards, using "N" after "?" searches
-forwards.
+"N" 命令反方向重复查找.因此在 "/" 命令后,使用 "n" 反方向查找,在 "?" 后使用 "N" 正向查找.
 
+忽略大小写
 
-IGNORING CASE
-
-Normally you have to type exactly what you want to find.  If you don't care
-about upper or lowercase in a word, set the 'ignorecase' option: >
+通常，你需要正确的键入你想要查找的内容.如果你不关心单词的大写或者小写,可以查看 'ignorecase' 选项: >
 
 	:set ignorecase
 
-If you now search for "word", it will also match "Word" and "WORD".  To match
-case again: >
+如果你想查找 "word", 它 也会匹配 "Word" 和 "WORD".如果要进行区分使用下面的命令: >
 
 	:set noignorecase
 
 
-HISTORY
+历史
 
-Suppose you do three searches: >
+加入你做了三次查询: >
 
 	/one
 	/two
