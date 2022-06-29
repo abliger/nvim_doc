@@ -285,211 +285,142 @@ CTRL-D 命令把窗口命令把视窗向下移动半屏，所以把文字向上�
 	/two
 	/three
 
-Now let's start searching by typing a simple "/" without pressing <Enter>.  If
-you press <Up> (the cursor key), Vim puts "/three" on the command line.
-Pressing <Enter> at this point searches for three.  If you do not press
-<Enter>, but press <Up> instead, Vim changes the prompt to "/two".  Another
-press of <Up> moves you to "/one".
-   You can also use the <Down> cursor key to move through the history of
-search commands in the other direction.
+现在我们输入"/" 进行简单的查找，但先不使用 <Enter>.如果你使用 <Up> (上箭头),Vim 会把 "/three" 放到你的命令行上. 使用 <Enter> 会在当前位置查找 three.如果你没有使用 <Enter>,继续使用 <Up>,Vim 会显示 "/two".继续使用 <Up> Vim 显示 "/one".
+   如果你使用 <Down> 会在历史记录钟反向查找.
 
-If you know what a previously used pattern starts with, and you want to use it
-again, type that character before pressing <Up>.  With the previous example,
-you can type "/o<Up>" and Vim will put "/one" on the command line.
+如果你知道之前正则表达式的开头,并且你想要再一次使用它,在使用 <Up> 前先键入正则表达式的前几个字符.例如,你可以键入 "/o<Up>" 会在命令行上显示 "/one".
 
-The commands starting with ":" also have a history.  That allows you to recall
-a previous command and execute it again.  These two histories are separate.
+使用":" 开头的命令也有历史记录.这会让你能取到之前的命令并执行它.这两种历史记录是分开的.
 
 
-SEARCHING FOR A WORD IN THE TEXT
+在文本中查找单词 
 
-Suppose you see the word "TheLongFunctionName" in the text and you want to
-find the next occurrence of it.  You could type "/TheLongFunctionName", but
-that's a lot of typing.  And when you make a mistake Vim won't find it.
-   There is an easier way: Position the cursor on the word and use the "*"
-command.  Vim will grab the word under the cursor and use it as the search
-string.
-   The "#" command does the same in the other direction.  You can prepend a
-count: "3*" searches for the third occurrence of the word under the cursor.
+假如你在文本中看到一个单词 "TheLongFunctionName" 并且找到下一个相同的单词.你可以键入 "/TheLongFunctionName",但是这样做会输入很多字符.并且如果输错了，Vim 是不可能找到你要找的单词的。
+   有一种简单的方法解决: 让光标移动到你要查询的单词上并且使用 "*" 命令.Vim将会抓取在光标下的单词并且使用它 作为查询字符串.
+   "#" 命令反方向做同样的事.你可以添加一个数字前缀: "3*" 查询光标下第三次出现的相同单词.
 
 
-SEARCHING FOR WHOLE WORDS
+查找整个单词
 
-If you type "/the" it will also match "there".  To only find words that end
-in "the" use: >
+如果你键入"/the" 它可能会匹配"there".只要查找"the"可以使用: >
 
 	/the\>
 
-The "\>" item is a special marker that only matches at the end of a word.
-Similarly "\<" only matches at the beginning of a word.  Thus to search for
-the word "the" only: >
+"\>"是一个只匹配单词结尾的特殊符号.同样的还有"\<"只匹配单词的开头.因此只查询单词 "the"使用: >
 
 	/\<the\>
 
-This does not match "there" or "soothe".  Notice that the "*" and "#" commands
-use these start-of-word and end-of-word markers to only find whole words (you
-can use "g*" and "g#" to match partial words).
+这就不会匹配 "there" 或 "soothe".注意使用 "*" 和"#" 命令使用了词首词尾标记整个单词(你可以使用 "g*" 和 "g#" 去部分匹配).
 
 
-HIGHLIGHTING MATCHES
+高亮匹配
 
-While editing a program you see a variable called "nr".  You want to check
-where it's used.  You could move the cursor to "nr" and use the "*" command
-and press "n" to go along all the matches.
+当你编辑程序时，你看到一个叫 "nr" 的变量.你想要查看它在哪里使用到.你可以移动光标到 "nr" 然后使用 "*" 命令，然后使用 "n" 命令遍历所有的匹配项.
 
-Vim will highlight all matches. That is a very good way to see where the
-variable is used, without the need to type commands.
-   To switch this off: >
+Vim 会高亮所有的匹配项。这是一个查看所有变量使用的好方法，而且还不需要键入命令。
+   关掉此功能使用: >
 
 	:set nohlsearch
 
-Then you need to switch it on again if you want to use it for the next search
-command: >
+如果你想要下一次查询时使用高亮，你可以这样启用它: >
 
 	:set hlsearch
 
-If you only want to remove the highlighting, use this command: >
+如果你想要移除高亮: >
 
 	:nohlsearch
 
-This doesn't reset the option.  Instead, it disables the highlighting.  As
-soon as you execute a search command, the highlighting will be used again.
-Also for the "n" and "N" commands.
+它没有复位设置.实际上, 它只是关闭了高亮.当你再一次进行查询时，高亮会再次出现。对于 "n" and "N" 命令也成立.
 
 
-TUNING SEARCHES
+调节查询
 
-There are a few options that change how searching works.  These are the
-essential ones:
+有一些改变查询工作方式的选项.有一些重要的选项:
 >
 	:set nowrapscan
 
-This stops the search at the end of the file.  Or, when you are searching
-backwards, it stops the search at the start of the file.  The 'wrapscan'
-option is on by default, thus searching wraps around the end of the file.
+查询到文件尾后停止查询.或者当你反相向查找时，它在文件首停止查询.'wrapscan' 选项时默认开启的,所以在找到文件尾的时候会自动折返到文件头.
 >
 	:set noincsearch
 
-This disables the display of the matches while you are still typing your
-search.
+这会在你键入查询内容时不展示匹配项.
 
+插曲
 
-INTERMEZZO
-
-If you like one of the options mentioned before, and set it each time you use
-Vim, you can put the command in your Vim startup file.  Edit the file, for
-example with: >
+如果你喜欢之前提及的选项,你不想在每次使用 Vim 的时候设置它,你可以把这些命令放到 Vim 的开始文件中.编辑这个文件,例如:
 
 	:edit ~/.config/nvim/init.vim
 
-Then add a line with the command to set the option, just like you typed it in
-Vim.  Example: >
+然后在文中加一行命令来设置这些选项，就好像你在 Vim 中输入一样，例如: >
 
 	Go:set hlsearch<Esc>
 
-"G" moves to the end of the file.  "o" starts a new line, where you type the
-":set" command.  You end insert mode with <Esc>.  Then write and close the
-file: >
+"G" 移动到文件尾.  "o" 新建一行，然后在哪里输入 ":set" 命令.然后使用 <Esc> 结束插入模式.保存关闭文件:
 
 	ZZ
 
-If you now start Vim again, the 'hlsearch' option will already be set.
+如果重新打开 Vim，'hlsearch' 已经被设置了.
 
 ==============================================================================
-*03.9*	Simple search patterns
+*03.9*	简单搜索模式
 
-The Vim editor uses regular expressions to specify what to search for.
-Regular expressions are an extremely powerful and compact way to specify a
-search pattern.  Unfortunately, this power comes at a price, because regular
-expressions are a bit tricky to specify.
-   In this section we mention only a few essential ones.  More about search
-patterns and commands can be found in chapter 27 |usr_27.txt|.  You can find
-the full explanation here: |pattern|.
+Vim 使用正则表达式去要求查找内容.正则表达式时一种非常强大的并且紧凑轻易查询模式的方法.但是非常不幸，这种强大的功能是有代价的，因为使用它需要掌握一些技巧.
+   本章我们只介绍一些基本的正则表达式。要了解更多的关于查找模式和命令，请参考 第 27 章 |usr_27.txt|.这里你能知道所有的正则描述: |pattern|.
 
+行首和行尾
 
-BEGINNING AND END OF A LINE
+^ 字符匹配一行的开始.在英语键盘上你能在数字 6 上找到它.模式 "include" 匹配在一行上任意位置的单词 include.但是使用模式 "^include" 只匹配行首单词是 include的.
+   $字符只匹配行尾.因此,"was$" 只匹配行尾单词是 was 的.
 
-The ^ character matches the beginning of a line.  On an English-US keyboard
-you find it above the 6.  The pattern "include" matches the word include
-anywhere on the line.  But the pattern "^include" matches the word include
-only if it is at the beginning of a line.
-   The $ character matches the end of a line.  Therefore, "was$" matches the
-word was only if it is at the end of a line.
-
-Let's mark the places where "/the" matches in this example line with "x"s:
+让我们使用 "x" 标记出 "/the" 在例子中匹配的地方:
 
 	the solder holding one of the chips melted and the ~
 	xxx			  xxx		       xxx
 
-Using "/the$" we find this match:
+如果使用"/the$"是这样:
 
 	the solder holding one of the chips melted and the ~
 						       xxx
 
-And with "/^the" we find this one:
+如果使用"/^the"是这样:
 	the solder holding one of the chips melted and the ~
 	xxx
 
-You can try searching with "/^the$"; it will only match a single line
-consisting entirely of "the".  White space does matter here, thus if a line
-contains a space after the word, like "the ", the pattern will not match.
+你可以使用 "/^the$" 去查找; 它会只匹配完全由 "the" 构成的单行.空格并不会被匹配,因此如果一个单词后面有空格,向 "the ",这个模式不会匹配.
 
+匹配单个字符
 
-MATCHING ANY SINGLE CHARACTER
-
-The . (dot) character matches any existing character.  For example, the
-pattern "c.m" matches a string whose first character is a c, whose second
-character is anything, and whose third character is m.  Example:
+. (点)会和任何字符匹配.例如,模式 "c.m" 会匹配一个字符串.这个字符串的第一个字符是 c,第二个字符没有限制,第三个字符是 m.例如:
 
 	We use a computer that became the cummin winter. ~
 		 xxx		 xxx	  xxx
 
 
-MATCHING SPECIAL CHARACTERS
+匹配特殊字符
 
-If you really want to match a dot, you must avoid its special meaning by
-putting a backslash before it.
-   If you search for "ter.", you will find these matches:
+如果你真的想要匹配一个点,你必须在它之前，使用反斜线避免特殊含义.例如如果你要搜索 "ter.",你会发现这些匹配项:
 
 	We use a computer that became the cummin winter. ~
 		      xxxx			    xxxx
 
-Searching for "ter\." only finds the second match.
+S 使用 "ter\." 只会匹配第二个匹配项.
 
 ==============================================================================
-*03.10*	Using marks
+*03.10*	使用标记
 
-When you make a jump to a position with the "G" command, Vim remembers the
-position from before this jump.  This position is called a mark.  To go back
-where you came from, use this command: >
+当你使用 "G" 命令去跳转到一个地方时,Vim 会在跳转前记住这个地方.这个地方叫做标记.使用这个命令回到原来的地方: >
 
 	``
+<
+` 是一个反引号.如果你第二次使用，他会再次跳转到原来的位置.这是因为 "`" 命令自身就是一个跳转,并且在使用 "`" 跳转前已经标记了该位置.一般地,每次你执行的会将光标移动到本行之外的命令都叫跳转.这包狂查询命令 "/" 和 "n" 命令(无论多远).但不包括 "fx" 和 "tx" 和单词移动 "w" 和 "e".此外, "j" 和 "k" 也不认为是一个跳转,甚至是使用数字去修饰它们也不行.
 
-This ` is a backtick or open single-quote character.
-   If you use the same command a second time you will jump back again.  That's
-because the "`" command is a jump itself, and the position from before this
-jump is remembered.
-
-Generally, every time you do a command that can move the cursor further than
-within the same line, this is called a jump.  This includes the search
-commands "/" and "n" (it doesn't matter how far away the match is).  But not
-the character searches with "fx" and "tx" or the word movements "w" and "e".
-   Also, "j" and "k" are not considered to be a jump, even when you use a
-count to make them move the cursor quite a long way away.
-
-The "``" command jumps back and forth, between two points.  The CTRL-O command
-jumps to older positions (Hint: O for older).  CTRL-I then jumps back to newer
-positions (Hint: for many common keyboard layouts, I is just next to O).
-Consider this sequence of commands: >
+"``" 命令可以前后跳转.CTRL-O 命令会跳转到较老的位置(提示: O 代表 older).  CTRL-I 跳转到较新的位置(提示: 在普通的键盘布局中，I 紧挨着 O).考虑如下命令: >
 
 	33G
 	/^The
 	CTRL-O
 
-You first jump to line 33, then search for a line that starts with "The".
-Then with CTRL-O you jump back to line 33.  Another CTRL-O takes you back to
-where you started.  If you now use CTRL-I you jump to line 33 again.  And
-to the match for "The" with another CTRL-I.
+你第一次跳转到 33 行，然后查询以 "The" 单词开始的行.然后使用 CTRL-O 回 到33 行.再次执行 CTRL-O 回到开始的地方.如果你现在使用 CTRL-I 你又会回到 33 行.再次使再次使用用 CTRL-I 回到 The 的地方.
 
 
 	     |	example text   ^	     |
@@ -501,61 +432,50 @@ to the match for "The" with another CTRL-I.
 	     V	There you are  |	     V
 		example text
 
-	Note:
-	CTRL-I is the same as <Tab>.
+       注意:
+	CTRL-I 等同 <Tab>.
 
-The ":jumps" command gives a list of positions you jumped to.  The entry which
-you used last is marked with a ">".
+":jumps" 命令会给你跳转过的列表.最后一个使用过的标记会用 ">" 标记出来.
 
 
-NAMED MARKS							*bookmark*
+名称标记							*bookmark*
 
-Vim enables you to place your own marks in the text.  The command "ma" marks
-the place under the cursor as mark a.  You can place 26 marks (a through z) in
-your text.  You can't see them, it's just a position that Vim remembers.
-   To go to a mark, use the command `{mark}, where {mark} is the mark letter.
-Thus to move to the a mark:
+Vim 允许你在文本中添加自己的标记.使用命令 "ma" 让光标之下的位置当作 标记 a.你能放置 26 个标记(a 到 z).这些标记是不可见的，只是一个由 Vim 记住的位置.
+跳转到标记,使用命令 `{mark}，这里的 {mark} 是指标记 字母.因此移动标记的命令是:
 >
 	`a
 
-The command "'mark" (single quotation mark, or apostrophe) moves you to the
-beginning of the line containing the mark.  This differs from the "`mark"
-command, which also moves you to the marked column.
+命令 "'mark" (单引号加标记字符)会移动到标记所在行的行首.与 "`mark" 命令不同的是,它会同时移动到标记的列上.
 
-The marks can be very useful when working on two related parts in a file.
-Suppose you have some text near the start of the file you need to look at,
-while working on some text near the end of the file.
-   Move to the text at the start and place the s (start) mark there: >
+标记在需要处理一个文件的两个相关地方的时候非常有用。假设你在处理文件末的时候需 要查看文件首的一些内容。
+    先移动到文件首，设置一个标记 s (start，开始): >
 
 	ms
 
-Then move to the text you want to work on and put the e (end) mark there: >
+然后在你需要处理的地方放置标记 e(end): >
 
 	me
 
-Now you can move around, and when you want to look at the start of the file,
-you use this to jump there: >
+现在你可以随意移动，当你需要看开头的地方，可以使用这个命令移到那里: >
 
 	's
 
-Then you can use '' to jump back to where you were, or 'e to jump to the text
-you were working on at the end.
-   There is nothing special about using s for start and e for end, they are
-just easy to remember.
+然后你可以使用 '' 跳转回来,或者使用 'e 跳转到你需要处理的的地方.
+	 这里使用 s 和 e 作标记名没有特别的含义，只是为了好记而已。
 
-You can use this command to get a list of marks: >
+你可以使用这个命令获得标记列表列表: >
 
 	:marks
 
-You will notice a few special marks.  These include:
+你会注意到有一些特殊的标记，包括:
 
-	'	The cursor position before doing a jump
-	"	The cursor position when last editing the file
-	[	Start of the last change
-	]	End of the last change
+	'	跳转前光标的位置	
+	"	最后编辑的光标位置	
+	[	最后改变的开始位置	
+	]	最后改变的结束位置	
 
 ==============================================================================
 
-Next chapter: |usr_04.txt|  Making small changes
+下一章: |usr_04.txt|  做小改动
 
 Copyright: see |manual-copyright|  vim:tw=78:ts=8:noet:ft=help:norl:
