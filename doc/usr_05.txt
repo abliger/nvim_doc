@@ -1,112 +1,80 @@
 *usr_05.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		     VIM 用户手册 - by Bram Moolenaar
+                                  译者: abliger   
+			      自定义配置
 
-			      Set your settings
 
+Vim可以按你的想法进行调整它.本章会向你展示如何自定义设置.添加插件去拓展 Vim 的功能.或者定义自己的宏指令.
 
-Vim can be tuned to work like you want it to.  This chapter shows you how to
-make Vim start with options set to different values.  Add plugins to extend
-Vim's capabilities.  Or define your own macros.
+|05.1|	vimrc文件
+|05.2|	vimrc文件示例解释
+|05.3|	键盘映射
+|05.4|	添加软件包
+|05.5|	添加插件
+|05.6|	添加帮助文件
+|05.7|	选项窗口
+|05.8|	常用选项
 
-|05.1|	The vimrc file
-|05.2|	The example vimrc file explained
-|05.3|	Simple mappings
-|05.4|	Adding a package
-|05.5|	Adding a plugin
-|05.6|	Adding a help file
-|05.7|	The option window
-|05.8|	Often used options
-
-     Next chapter: |usr_06.txt|  Using syntax highlighting
- Previous chapter: |usr_04.txt|  Making small changes
-Table of contents: |usr_toc.txt|
+下一章: |usr_06.txt|  使用语法高亮
+上一章: |usr_04.txt|  做小改动
+目录:   |usr_toc.txt|
 
 ==============================================================================
-*05.1*	The vimrc file				*vimrc-intro*
+*05.1*	vimrc 文件					*vimrc-intro*
 
-You probably got tired of typing commands that you use very often.  To start
-Vim with all your favorite option settings and mappings, you write them in
-what is called the init.vim file.  Vim executes the commands in this file when 
-it starts up.
+你可能对键入常用的命令感到疲惫.使用你最喜欢的设置和键映射开启 Vim,你需要在 init.vim 文件写入那些设置.Vim 会在启动时执行这个文件中的命令.
 
-If you already have a init.vim file (e.g., when your sysadmin has one setup 
-for you), you can edit it this way: >
+如果你已经有了 init.vim 文件(如,你的系统管理员为你配置好了),你可以使用这种方式编辑它: >
 
 	:edit $MYVIMRC
 
-If you don't have a vimrc file yet, see |init.vim| to find out where you can
-create a vimrc file.
+如果你还没有 vimrc 文件, 见 |init.vim| 去找到创建vimrc文件的地方.
 
-This file is always used and is recommended:
+这个文件总是被使用，也推荐使用: >
 
-	~/.config/nvim/init.vim         (Unix and OSX) ~
-	~/AppData/Local/nvim/init.vim   (Windows) ~
+	~/.config/nvim/init.vim         (Unix and OSX) 
+	~/AppData/Local/nvim/init.vim   (Windows) 
 
-The vimrc file can contain all the commands that you type after a colon.  The
-simplest ones are for setting options.  For example, if you want Vim to always
-start with the 'incsearch' option on, add this line your vimrc file: >
+vimrc 文件可以包含你在冒号命令后面键入的所有命令.最简单的是设置选项.例如,如果你想要 Vim 在打开时就开启 'ignorecase',添加这一行到你的vimrc文件: >
 
 	set ignorecase
 
-For this new line to take effect you need to exit Vim and start it again.
-Later you will learn how to do this without exiting Vim.
+退出 Vim 并再次启动它这个选项会起作用.之后你会学你怎样不退出 Vim 也能生效.
 
-This chapter only explains the most basic items.  For more information on how
-to write a Vim script file: |usr_41.txt|.
+本章只解释最基本的内容.  如何写 Vim 脚本文件见: |usr_41.txt|.
 
 ==============================================================================
-*05.2*	The example vimrc file explained		*vimrc_example.vim*
+*05.2*	vimrc 文件示例解释		*vimrc_example.vim*
 
-In the first chapter was explained how to create a vimrc file. >
+第一章解释了如何创建 vimrc 文件. >
 
 	:exe 'edit' stdpath('config').'/init.vim'
 
-In this section we will explain the various commands used in this file.  This
-will give you hints about how to set up your own preferences.  Not everything
-will be explained though.  Use the ":help" command to find out more.
+这部分我们讲解在初始化文件有用的命令.这会给你自定义设置时一些提示.尽管不是所有的命令都会提到.但是使用 ":help" 命令可以了解其他命令. >
 
->
 	set backspace=indent,eol,start
 
-This specifies where in Insert mode the <BS> is allowed to delete the
-character in front of the cursor.  The three items, separated by commas, tell
-Vim to delete the white space at the start of the line, a line break and the
-character before where Insert mode started.
->
-
+命令指定了当 Vim 处于插入模式,<BS> 退格键会删除光标前面的字符.这三个被逗号分隔的内容告诉 Vim 退格键可以删除行首缩进，回车符和插入模式前开始前的字符. >
 	set autoindent
 
-This makes Vim use the indent of the previous line for a newly created line.
-Thus there is the same amount of white space before the new line.  For example
-when pressing <Enter> in Insert mode, and when using the "o" command to open a
-new line.
->
+这个选项让 Vim 在创建新行时使用前一行的缩进.从而新行直接拥有和之前一样数量的空格.例如当在插入模式中使用 <Enter> 时,和直接使用 "o" 命令插入新行. >
 
 	set backup
 
-This tells Vim to keep a backup copy of a file when overwriting it. The backup
-file will have the same name as the original file with "~" added.  See |07.4|
->
+这会告诉 Vim 当编辑文件时会生成一个文件备份.这个备份文件会在原来的名字上添加 "~".见 |07.4| >
 
 	set history=50
 
-Keep 50 commands and 50 search patterns in the history.  Use another number if
-you want to remember fewer or more lines.
->
+保存 50 条命令和 50 条查询匹配表达式.如果你想保存更多或更少可以使用其他值. >
 
 	set ruler
 
-Always display the current cursor position in the lower right corner of the
-Vim window.
-
+在右下角窗口展示当前光标位置.
 >
 	set showcmd
 
-Display an incomplete command in the lower right corner of the Vim window,
-left of the ruler.  For example, when you type "2f", Vim is waiting for you to
-type the character to find and "2f" is displayed.  When you press "w" next,
-the "2fw" command is executed and the displayed "2f" is removed.
+在右下角窗口，标尺的左边展示不完全的命令.例如,当你键入 "2f", Vim 会等待你键入想要找的字符，此时 "2f" 就会出现.当你使用 "w","2fw" 命令就会执行，"2f" 消失.
 
 	+-------------------------------------------------+
 	|text in the Vim window				  |
@@ -120,496 +88,354 @@ the "2fw" command is executed and the displayed "2f" is removed.
 >
 	set incsearch
 
-Display matches for a search pattern while you type.
+展示你输入的搜索表达式.
 
 >
 	map Q gq
 
-This defines a key mapping.  More about that in the next section.  This
-defines the "Q" command to do formatting with the "gq" operator.  This is how
-it worked before Vim 5.0.  Otherwise the "Q" command starts Ex mode, but you
-will not need it.
-
+这是定义一个键映射.更多信息在下一小节.它定义了 "Q" 命令去做 "gq" 操作符相同的事.这是在 Vim 5.0 版前 "Q" 命令的作用.否则 "Q" 命令会启动 Ex 模式,现在你不需要它.
 >
 	vnoremap _g y:exe "grep /" .. escape(@", '\\/') .. "/ *.c *.h"<CR>
 
-This mapping yanks the visually selected text and searches for it in C files.
-This is a complicated mapping.  You can see that mappings can be used to do
-quite complicated things.  Still, it is just a sequence of commands that are
-executed like you typed them.
-
+这个映射复制可视模式下的选中文本并在 C 文件中查找它.这个映射相当复杂.但它只是一个可执行的命令序列，和直接输入它们没区别.
 >
 	syntax on
 	set hlsearch
 
-This switches on syntax highlighting.  And the 'hlsearch' option tells Vim to
-highlight matches with the last used search pattern.  The "if" command is very
-useful to set options only when some condition is met.  More about that in
-|usr_41.txt|.
+此选项 Vim 会高亮最后匹配的搜索表达式.当按条件设置配置选项, "if" 会十分有用.更多见 |usr_41.txt|.
 
 							*vimrc-filetype*  >
 	filetype plugin indent on
 
-This switches on three very clever mechanisms:
-1. Filetype detection.
-   Whenever you start editing a file, Vim will try to figure out what kind of
-   file this is.  When you edit "main.c", Vim will see the ".c" extension and
-   recognize this as a "c" filetype.  When you edit a file that starts with
-   "#!/bin/sh", Vim will recognize it as a "sh" filetype.
-   The filetype detection is used for syntax highlighting and the other two
-   items below.
-   See |filetypes|.
+这启动了三个十分灵巧的机制:
+1. 文件类型探测.
+   当你开始编辑一个文件时, Vim 会尝试确定这是哪类文件.比如当你编辑 "main.c",Vim 就会通过 ".c" 的拓展名并认识到这是一个 "c" 文件类型.当你编译一个以 "#!/bin/sh" 开始的文件时,Vim会意识到它是 "sh" 文件类型.文件类型探测对于语法高亮和下面连个机制是十分有用的.  见 |filetypes|.
 
-2. Using filetype plugin files
-   Many different filetypes are edited with different options.  For example,
-   when you edit a "c" file, it's very useful to set the 'cindent' option to
-   automatically indent the lines.  These commonly useful option settings are
-   included with Vim in filetype plugins.  You can also add your own, see
-   |write-filetype-plugin|.
+2. 使用文件类型插件 
+    不同文件类型的文件会开启不同的选项.例如,当你编辑 "c" 文件,设置 'cindent' 选项去自动缩进是有用的.这些共同有用的选项会写在文件类型插件中.你也可以添加自己的设置,见|write-filetype-plugin|.
 
-3. Using indent files
-   When editing programs, the indent of a line can often be computed
-   automatically.  Vim comes with these indent rules for a number of
-   filetypes.  See |:filetype-indent-on| and 'indentexpr'.
-
+3. 使用缩进文件
+   当编辑代码时,行缩进会自动计算.Vim 对于不同的文件类型使用不同的缩进规则.见 |:filetype-indent-on| 和 'indentexpr'.
 
 				*restore-cursor* *last-position-jump*  >
     autocmd BufRead * autocmd FileType <buffer> ++once
       \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
 
-Another autocommand.  This time it is used after reading any file.  The
-complicated stuff after it checks if the '" mark is defined, and jumps to it
-if so.  The backslash at the start of a line is used to continue the command
-from the previous line.  That avoids a line getting very long.
-See |line-continuation|.  This only works in a Vim script file, not when
-typing commands at the command-line.
-
+这是又一个自动命令。这回它设置为在读入任何文件之后自动执行。后面那堆复杂的东西检查 '" 标记是否已被定义，如果是，则跳转到该标记。行首的反斜杠用于把所有语句连接成一行。这可以避免一行写得太长，请参见 |line-continuation|.这只在 Vim 脚本文件中有效，在命令行中无效。
 >
 	command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 
-This adds the ":DiffOrig" command.  Use this in a modified buffer to see the
-differences with the file it was loaded from.  See |diff| and |:DiffOrig|.
-
+添加 ":DiffOrig" 命令。在修改过的缓冲区中应用可以看到和原先载入的文件间的差异。见 |diff| 和 |:DiffOrig|.
 >
 	set nolangremap
 
-Prevent that the langmap option applies to characters that result from a
-mapping.  If set (default), this may break plugins (but it's backward
-compatible).  See 'langremap'.
+防止 langmap 选项应用于映射生成的字符上。如果置位 (缺省)，会破坏插件 (但后向兼容)。见 'langremap'.
 
 ==============================================================================
-*05.3*	Simple mappings
+*05.3*	键盘映射
 
-A mapping enables you to bind a set of Vim commands to a single key.  Suppose,
-for example, that you need to surround certain words with curly braces.  In
-other words, you need to change a word such as "amount" into "{amount}".  With
-the :map command, you can tell Vim that the F5 key does this job.  The command
-is as follows: >
+映射能绑定 Vim 命令到键盘的一个键.例如，假设你需要在单词周围添加大括号,如把 "amount" 变为 "{amount}".使用 :map 命令, 可以让 F5 完成这个工作.命令如下: >
 
 	:map <F5> i{<Esc>ea}<Esc>
 <
-	Note:
-	When entering this command, you must enter <F5> by typing four
-	characters.  Similarly, <Esc> is not entered by pressing the <Esc>
-	key, but by typing five characters.  Watch out for this difference
-	when reading the manual!
+  注意:
+  输入此命令中的<F5>必须使用四个字符组成.同样地,<Esc>也不是使用<Esc>键,而是键入五个字符.读本手册时注意这个区别!
 
-Let's break this down:
-    <F5>	The F5 function key.  This is the trigger key that causes the
-		command to be executed as the key is pressed.
+让我们分解以下命令:
+    <F5>	F5 功能键。这是命令的触发器。当这个键被按下时，相应的命令即被 执行
 
-    i{<Esc>	Insert the { character.  The <Esc> key ends Insert mode.
+    i{<Esc>	插入 { 字符。 键用于退出插入模式
 
-    e		Move to the end of the word.
+    e		移动到词尾
 
-    a}<Esc>	Append the } to the word.
+    a}<Esc>	插入 } 到单词尾
 
-After you execute the ":map" command, all you have to do to put {} around a
-word is to put the cursor on the first character and press F5.
+执行 ":map" 命令后，要在单词两端加上 {}，只需要移到单词的第一个字符上并按 F5.
 
-In this example, the trigger is a single key; it can be any string.  But when
-you use an existing Vim command, that command will no longer be available.
-You better avoid that.
-   One key that can be used with mappings is the backslash.  Since you
-probably want to define more than one mapping, add another character.  You
-could map "\p" to add parentheses around a word, and "\c" to add curly braces,
-for example: >
-
+在这个例子中，触发器是单独一个键；它还可以是任何字符串。但若你使用一个已经存在的 Vim 命令，该命令将不再有效。最好避免出现这种情况
+一个可用于映射的键是反斜杠。因为你很可能想定义多个映射，那就加上另一个字符。你可以映射 "\p" 为在单词两端加圆括号，而映射 "\c" 为加花括号，例如 >
 	:map \p i(<Esc>ea)<Esc>
 	:map \c i{<Esc>ea}<Esc>
 
-You need to type the \ and the p quickly after another, so that Vim knows they
-belong together.
+你需要键入 \ 后快速键入 p,以便 Vim 知道他们是在一起的.
 
-The ":map" command (with no arguments) lists your current mappings.  At
-least the ones for Normal mode.  More about mappings in section |40.1|.
+":map" 命令 (没有参数)列出当前映射.至少列出正常模式的映射.详见 |40.1|.
 
 ==============================================================================
-*05.4*	Adding a package			*add-package* *vimball-install*
+*05.4*	添加软件包			*add-package* *vimball-install*
 
-A package is a set of files that you can add to Vim.  There are two kinds of
-packages: optional and automatically loaded on startup.
+软件包是你能添加到 Vim 的配置文件.有两种类型的软件包: 选择加载和 Vim 启动自动加载.
 
-The Vim distribution comes with a few packages that you can optionally use.
-For example, the vimball plugin.  This plugin supports creating and using
-vimballs (self-installing Vim plugin archives).
+Vim 发行版自带了一些软件包,你可以选择使用它们.例如, vimball 插件.这个插件支持创建和使用 vimballs (安装在 Vim 插件目录中).
 
-To start using the vimball plugin, add one line to your vimrc file: >
+使用 vimball 插件,添加下一行到你的 vimrc 文件: >
+
 	packadd vimball
 
-That's all!  You can also type the command to try it out.  Now you can find
-help about this plugin: >
+已经完成了 !  你可以使用命令测试它.如你可以使用帮助系统查找关于此插件: >
+
 	:help vimball
 
-This works, because when `:packadd` loaded the plugin it also added the
-package directory in 'runtimepath', so that the help file can be found.  The
-tags for vimball's help are already created.  If you need to generate the help
-tags for a package, see the `:helptags` command.
+之所以能工作，因为当 `:packadd` 加载插件时，它也会把包文件放到 'runtimepath' 路径下,为了能找到帮助文件.此时 vimball 的帮助标签已经被生成.如果你需要给软件包生成帮助标签, 见 `:helptags` 命令.
 
-You can find packages on the Internet in various places.  It usually comes as
-an archive or as a repository.  For an archive you can follow these steps:
-	1. create the package directory: >
+你能在网络的任何地方找到软件包.它可能是一个压缩包或者在github存储库中.  如果是压缩包，根据下面命令使用它:
+
+	1. 创建包目录: >
 		mkdir -p ~/.local/share/nvim/site/pack/fancy
-<	   "fancy" can be any name of your liking.  Use one that describes the
-	   package.
-	2. unpack the archive in that directory.  This assumes the top
-	   directory in the archive is "start": >
+<	   "fancy" 可以是你喜欢的任何名字.但最好能描述这个包功能.
+	2. 在此目录解压.假设包中顶层目录是"start": >
 	   	cd ~/.local/share/nvim/site/pack/fancy
 		unzip /tmp/fancy.zip
-<	   If the archive layout is different make sure that you end up with a
-	   path like this:
+<	   如果压缩包的布局和一般的不同，至少确保路径像下面的结构:
 		~/.local/share/nvim/site/pack/fancy/start/fancytext/plugin/fancy.vim ~
-	   Here "fancytext" is the name of the package, it can be anything
-	   else.
+	   这里的"fancytext"是压缩包的名字, 它也能是任何名字.
 
-More information about packages can be found here: |packages|.
+更多信息看这里: |packages|.
 
 ==============================================================================
-*05.5*	Adding a plugin					*add-plugin* *plugin*
+*05.5*	添加插件					*add-plugin* *plugin*
 
-Vim's functionality can be extended by adding plugins.  A plugin is nothing
-more than a Vim script file that is loaded automatically when Vim starts.  You
-can add a plugin very easily by dropping it in your plugin directory.
+Vim 是通过添加插件进行功能拓展.插件只不过是 Vim 启动后自动加载的脚本文件.你可以把插件文件放到你的插件目录中就能对 Vim 添加插件.
 
-There are two types of plugins:
+有两种类型的插件:
 
-    global plugin: Used for all kinds of files
-  filetype plugin: Only used for a specific type of file
+全局插件:在所有的文件中运行
+文件类型插件: 只在特定文件类型中运行
 
-The global plugins will be discussed first, then the filetype ones
-|add-filetype-plugin|.
+我们会先讲解全局插件然后讲解文件类型插件 |add-filetype-plugin|.
 
+全局插件						*standard-plugin*
 
-GLOBAL PLUGINS						*standard-plugin*
-
-When you start Vim, it will automatically load a number of global plugins.
-You don't have to do anything for this.  They add functionality that most
-people will want to use, but which was implemented as a Vim script instead of
-being compiled into Vim.  You can find them listed in the help index
-|standard-plugin-list|.  Also see |load-plugins|.
+当你启动 Vim,它会自动加载大量的全局插件.你不需要做任何事情.它会添加大多数人们想要使用的功能,插件是使用 Vim 脚本自动加载的而不是编译到Vim.你能在帮助索引中找到它们的列表 |standard-plugin-list|.见 |load-plugins|.
 
 							*add-global-plugin*
-You can add a global plugin to add functionality that will always be present
-when you use Vim.  There are only two steps for adding a global plugin:
-1. Get a copy of the plugin.
-2. Drop it in the right directory.
+你使用全局插件以增加的功能，使打开 Vim 时总是运行.只有两部去添加插件:
+1. 获得插件源码.
+2. 放置到插件目录.
 
+获得插件
 
-GETTING A GLOBAL PLUGIN
+在哪找到插件?
+- 有一些已经被加载，你能在 $VIMRUNTIME/plugin 找到它们.
+- 有一些在Vim包中.你能在 $VIMRUNTIME/macros 和它的子目录 $VIM/vimfiles/pack/dist/opt/ 文件夹中发现它们.
+- 从网络下载.它们收集在 http://www.vim.org.
+- 有时它们发布在 Vim 邮件列表.
+- 自定义插件, 见 |write-plugin|.
 
-Where can you find plugins?
-- Some are always loaded, you can see them in the directory $VIMRUNTIME/plugin.
-- Some come with Vim.  You can find them in the directory $VIMRUNTIME/macros
-  and its sub-directories and under $VIM/vimfiles/pack/dist/opt/.
-- Download from the net.  There is a large collection on http://www.vim.org.
-- They are sometimes posted in a Vim maillist.
-- You could write one yourself, see |write-plugin|.
+使用全局插件
 
-
-USING A GLOBAL PLUGIN
-
-First read the text in the plugin itself to check for any special conditions.
-Then copy the file to your plugin directory:
+首先去读插件自己的帮助文件检查一些特殊情况.再拷贝到你的插件目录:
 
 	system		plugin directory ~
 	Unix		~/.local/share/nvim/site/plugin
 
-Example for Unix (assuming you didn't have a plugin directory yet): >
+对于 UNIX 来说(假设你还没有插件目录): >
 
 	mkdir -p ~/.local/share/nvim/site/plugin
 	cp /tmp/yourplugin.vim ~/.local/share/nvim/site/plugin
 
-That's all!  Now you can use the commands defined in this plugin.
+这就完成了.现在你可以使用再插件中定义的命令了.
 
-Instead of putting plugins directly into the plugin/ directory, you may
-better organize them by putting them into subdirectories under plugin/.
-As an example, consider using "~/.local/share/nvim/site/plugin/perl/*.vim" for 
-all your Perl plugins.
+除了把这些插件直接放进 plugin/ 目录以外，还可以更好地组织一下，把它们放进 plugin 的单独的子目录中。例如，可以考虑把所有 Perl 插件放置在 "~/.vim/plugin/perl/*.vim".
 
+文件类型插件			*add-filetype-plugin* *ftplugins*
 
-FILETYPE PLUGINS			*add-filetype-plugin* *ftplugins*
-
-The Vim distribution comes with a set of plugins for different filetypes that
-you can start using with this command: >
+Vim 自身携带了一些不同的文件类型。你可以使用这个命令启动: >
 
 	:filetype plugin on
 
-That's all!  See |vimrc-filetype|.
+见 |vimrc-filetype|.
 
-If you are missing a plugin for a filetype you are using, or you found a
-better one, you can add it.  There are two steps for adding a filetype plugin:
-1. Get a copy of the plugin.
-2. Drop it in the right directory.
+如果你对你正使用的文件类型的插件感到混乱或者找到更好的插件.有两部添加一个文件类型插件:
+1. 获得插件源码.
+2. 放置到插件目录.
 
+获得文件类型插件
 
-GETTING A FILETYPE PLUGIN
-
-You can find them in the same places as the global plugins.  Watch out if the
-type of file is mentioned, then you know if the plugin is a global or a
-filetype one.  The scripts in $VIMRUNTIME/macros are global ones, the filetype
-plugins are in $VIMRUNTIME/ftplugin.
+你可以像全局插件一样在相同的地方找到它们.注意一下插件有没有注明文件类型,据此你可以知道这个插件是全局的还是文件类型相关的.全局插件在 $VIMRUNTIME/macros,文件类型插件在 $VIMRUNTIME/ftplugin.
 
 
-USING A FILETYPE PLUGIN					*ftplugin-name*
+使用文件类型插件					*ftplugin-name*
 
-You can add a filetype plugin by dropping it in the right directory.  The
-name of this directory is in the same directory mentioned above for global
-plugins, but the last part is "ftplugin".  Suppose you have found a plugin for
-the "stuff" filetype, and you are on Unix.  Then you can move this file to the
-ftplugin directory: >
+你可以通过把插件文件放到合适的目录中来增加一个插件。目录的名字与前面提过的全局插件一样，但最后一级目录是 "ftplugin"。假设你找到一个用于 "stuff" 文件类型的插件，而且你的系统是 Unix。那么，你可以把这个文件用如下命令移入 ftplugin 目录: >
 
 	mkdir -p ~/.local/share/nvim/site/ftplugin
 	mv thefile ~/.local/share/nvim/site/ftplugin/stuff.vim
 
-If that file already exists you already have a plugin for "stuff".  You might
-want to check if the existing plugin doesn't conflict with the one you are
-adding.  If it's OK, you can give the new one another name: >
+如果这个文件已经存在，你可以检查一下两个插件有没有冲突。如果没有，你可以用另一个名字: >
 
 	mv thefile ~/.local/share/nvim/site/ftplugin/stuff_too.vim
 
-The underscore is used to separate the name of the filetype from the rest,
-which can be anything.  If you use "otherstuff.vim" it wouldn't work, it would
-be loaded for the "otherstuff" filetype.
-
-The generic names for the filetype plugins are: >
+这里，下划线用来分开文件类型和其它部分 (这些部分可以由任意字符组成)。但如果你用 "otherstuff.vim" 就不行了。那是用于 "otherstuff" 类型的文件的.
+文件类型插件名字语法是: >
 
 	ftplugin/<filetype>.vim
 	ftplugin/<filetype>_<name>.vim
 	ftplugin/<filetype>/<name>.vim
 
-Here "<name>" can be any name that you prefer.
-Examples for the "stuff" filetype on Unix: >
+这里 "<name>" 可以是任何你喜欢的名字。例如，在 Unix 上，"stuff" 文件类型的插件可以是: >
 
 	~/.local/share/nvim/site/ftplugin/stuff.vim
 	~/.local/share/nvim/site/ftplugin/stuff_def.vim
 	~/.local/share/nvim/site/ftplugin/stuff/header.vim
 
-The <filetype> part is the name of the filetype the plugin is to be used for.
-Only files of this filetype will use the settings from the plugin.  The <name>
-part of the plugin file doesn't matter, you can use it to have several plugins
-for the same filetype.  Note that it must end in ".vim" or ".lua".
+这里，<filetype> 部分是相应文件类型的名称。只有对应文件类型的文件才会用这个插件内的设置。插件的 <name> 部分则不重要，你可以对同一个文件类型使用多个插件。注意:插件必须以 ".vim"或者 ".lua" 结尾.
 
 
-Further reading:
-|filetype-plugins|	Documentation for the filetype plugins and information
-			about how to avoid that mappings cause problems.
-|load-plugins|		When the global plugins are loaded during startup.
-|ftplugin-overrule|	Overruling the settings from a global plugin.
-|write-plugin|		How to write a plugin script.
-|plugin-details|	For more information about using plugins or when your
-			plugin doesn't work.
-|new-filetype|		How to detect a new file type.
+深入阅读:
+|filetype-plugins|	文件类型插件的文档和有关如何避免映射引起的问题
+|load-plugins|		启动时插件加载时长.
+|ftplugin-overrule|	控制全局插件选项.
+|write-plugin|		如何写插件.
+|plugin-details|	插件详情或者你的插件不工作.
+|new-filetype|		如果发现新类型.
 
 ==============================================================================
-*05.6*	Adding a help file		                   *add-local-help*
+*05.6*	添加帮助文件		                   *add-local-help*
 
-If you are lucky, the plugin you installed also comes with a help file.  We
-will explain how to install the help file, so that you can easily find help
-for your new plugin.
+如果有幸你安装的插件携带帮助文件.我们会说明如何安装帮助文件，为例你能更容易使用新插件.
 
-Let us suppose a plugin ("my-plugin"), which comes with a help file in a
-non-standard place (it usually resides in a sub-folder called `doc/`).
+让我们假定一个有帮助文件的插件 ("my-plugin"),且帮助文件不在标准地方 (它经常放到 `doc/` 目录下).
 
-First, create a "doc" directory in one of the directories in 'runtimepath': >
+首先在 'runtimepath' 中创建 "doc": >
 
 	:!mkdir -p ~/.local/share/nvim/site/doc
 
-Now, copy the help file to the "doc" directory: >
+拷贝帮助文件到 "doc" 文件夹: >
 
 	:!cp my-plugin/my-plugin-doc.txt ~/.local/share/nvim/site/doc
 
-Here comes the trick, which allows you to jump to the subjects in the new help
-file. Generate the local tags file with the |:helptags| command: >
+有一个小窍门，可以让你快速跳转到新帮助文件中.使用 |:helptags| 命令生成本地标签文件: >
 
 	:helptags ~/.local/share/nvim/site/doc
 
-You can see an entry for the local help file when you do: >
+如此便可以看见一个本地标签文件的条目. >
 
 	:help local-additions
 
-The title lines from the local help files are automagically added to this
-section.  There you can see which local help files have been added and jump to
-them through the tag.
+本地帮助的标题行被自动的加入到该节了。在那里你可以看到 Vim 添加了那些本地的帮助文件。你还可以从这里跳转到新的帮助中。
 
-For writing a local help file, see |write-local-help|.
+写一个本地帮助文件, 见 |write-local-help|.
 
 ==============================================================================
-*05.7*	The option window
+*05.7*	选项窗口
 
-If you are looking for an option that does what you want, you can search in
-the help files here: |options|.  Another way is by using this command: >
+如果你想要查找一个选项，你可以在这个帮助文件中查找: |options|.  另一种方法是使用下面的命令:
 
 	:options
 
-This opens a new window, with a list of options with a one-line explanation.
-The options are grouped by subject.  Move the cursor to a subject and press
-<Enter> to jump there.  Press <Enter> again to jump back.  Or use CTRL-O.
+这会打开一个新窗口，其中给出一个选项的列表，并对每个选项提供一行解释.选项根据种类分组.移动光标并使用 <Enter> 跳转对应内容.再次使用 <Enter> 跳转回来.或者使用 CTRL-O.
 
-You can change the value of an option.  For example, move to the "displaying
-text" subject.  Then move the cursor down to this line:
+你也能改变选项的值.例如,移动到 "displaying text" 主题.然后光标移到下面的行:
 
 	set wrap	nowrap ~
 
-When you hit <Enter>, the line will change to:
+当你敲击 <Enter>,此行会变成:
 
 	set nowrap	wrap ~
 
-The option has now been switched off.
+现在此选项切换为关闭.
 
-Just above this line is a short description of the 'wrap' option.  Move the
-cursor one line up to place it in this line.  Now hit <Enter> and you jump to
-the full help on the 'wrap' option.
+这行的上方是对这个选项的简要描述。将光标向上移动一行，然后按 <Enter> ，你可以跳转到 'wrap' 的完整帮助，再用 CTRL-O 可以跳回来。
 
-For options that take a number or string argument you can edit the value.
-Then press <Enter> to apply the new value.  For example, move the cursor a few
-lines up to this line:
+对于那些值为数值或者字符串的选项，你可以编辑它的值，然后按 <Enter> 来启用该值。例如，把光标移动到下面这行;
+
 
 	set so=0 ~
 
-Position the cursor on the zero with "$".  Change it into a five with "r5".
-Then press <Enter> to apply the new value.  When you now move the cursor
-around you will notice that the text starts scrolling before you reach the
-border.  This is what the 'scrolloff' option does, it specifies an offset
-from the window border where scrolling starts.
+用 $ 移到行尾，再用 "r5" 命令修改为五，然后按 <Enter> 使修改生效。现在如果你移动一下光标，你会发现在你的光标移到窗口边界前，你的文字就开始滚动了。这就是选项 'scrolloff' 完成的功能: 它指定在距离边界多远的地方开始滚动文字
 
 ==============================================================================
-*05.8*	Often used options
+*05.8*	常用选项
 
-There are an awful lot of options.  Most of them you will hardly ever use.
-Some of the more useful ones will be mentioned here.  Don't forget you can
-find more help on these options with the ":help" command, with single quotes
-before and after the option name.  For example: >
+Vim 中有很多选项。大部分你很少用得上。我们在这个介绍一些常用的。别忘了你可以通过 ":help" 命令获得更多的帮助。方法是在选项命令前后加上单引号例如: >
 
 	:help 'wrap'
 
-In case you have messed up an option value, you can set it back to the
-default by putting an ampersand (&) after the option name.  Example: >
+如果你搞乱了一个选项，你可以通过在选项后加上一个 & 号把它恢复到默认值.例如: >
 
 	:set iskeyword&
 
 
-NOT WRAPPING LINES
+不换行
 
-Vim normally wraps long lines, so that you can see all of the text.  Sometimes
-it's better to let the text continue right of the window.  Then you need to
-scroll the text left-right to see all of a long line.  Switch wrapping off
-with this command: >
+Vim 通常会对长行自动回绕，以便你可以看见所有的文字。但有时最好还是能让文字在一行中显示完。这样，你需要左右移动才能看到一整行。以下命令可以关闭行的回绕. >
 
 	:set nowrap
 
-Vim will automatically scroll the text when you move to text that is not
-displayed.  To see a context of ten characters, do this: >
+当你移动到那些不能显示的文字上，Vim 会自动向右滚动让你看到后面的文字，要一次滚动十个字符，这样就行了: >
 
 	:set sidescroll=10
 
-This doesn't change the text in the file, only the way it is displayed.
+这个命令不改变文件中的文本，只改变显示方式.
 
 
-WRAPPING MOVEMENT COMMANDS
+移动命令换行
 
-Most commands for moving around will stop moving at the start and end of a
-line.  You can change that with the 'whichwrap' option.  This sets it to the
-default value: >
+大多数命令移动到行首和行尾就会停止.你可以改变 'whichwrap' 选项.设置它未默认值: >
 
 	:set whichwrap=b,s
 
-This allows the <BS> key, when used in the first position of a line, to move
-the cursor to the end of the previous line.  And the <Space> key moves from
-the end of a line to the start of the next one.
+当光标在行首时，可以使用 <BS> 键,移动到上一行的结尾.使用 <Space> 键从行尾移动到下一行行首.
 
-To allow the cursor keys <Left> and <Right> to also wrap, use this command: >
+允许 <Left> 和 <Right> 也自动换行，使用下面的命令: >
 
 	:set whichwrap=b,s,<,>
 
-This is still only for Normal mode.  To let <Left> and <Right> do this in
-Insert mode as well: >
+这只在正常模式起作用.让 <Left> 和 <Right> 在插入模式起作用，可以: >
 
 	:set whichwrap=b,s,<,>,[,]
 
-There are a few other flags that can be added, see 'whichwrap'.
+也能加入其他内容，详见 'whichwrap'.
 
 
-VIEWING TABS
+显示 TAB 键
 
-When there are tabs in a file, you cannot see where they are.  To make them
-visible: >
+当文件中有很多 TAB 键，但都不可见，可以使用: >
 
 	:set list
 
-Now every tab is displayed as ^I.  And a $ is displayed at the end of each
-line, so that you can spot trailing spaces that would otherwise go unnoticed.
-   A disadvantage is that this looks ugly when there are many Tabs in a file.
-If you have a color terminal, or are using the GUI, Vim can show the spaces
-and tabs as highlighted characters.  Use the 'listchars' option: >
+现在每一个 tab都显示为 ^I.而 $ 显示在每行的结尾，以便你能找到可能会被你忽略的空白字符在哪里。 缺点时文件中很多 TAB 键会显得很难看. 如果你使用显示颜色的终端或者使用 GUI,Vim 可以使用高亮展现空格和字符.使用 'listchars' 选项: >
 
 	:set listchars=tab:>-,trail:-
 
-Now every tab will be displayed as ">---" (with more or less "-") and trailing
-white space as "-".  Looks a lot better, doesn't it?
+现在每一个 tab 会显示成 ">---" ("-" 数目不定)，显示空格为 "-". 看起来更好了，不是吗?
 
 
-KEYWORDS
+关键字
 
-The 'iskeyword' option specifies which characters can appear in a word: >
+'iskeyword' 选项指定在单词中的字符: >
 
 	:set iskeyword
 <	  iskeyword=@,48-57,_,192-255 ~
 
-The "@" stands for all alphabetic letters.  "48-57" stands for ASCII
-characters 48 to 57, which are the numbers 0 to 9.  "192-255" are the
-printable latin characters.
-   Sometimes you will want to include a dash in keywords, so that commands
-like "w" consider "upper-case" to be one word.  You can do it like this: >
+"@" 代表所有的字母."48-57" 代表 ASCII 字符 48 到 57,也就是数字 0 到 9."192-255" 时可打印拉丁字母.有时你希望横线也是关键字, 为了如 "w" 命令能认识到 "upper-case" 是一个单词.你可以这样做:
 
 	:set iskeyword+=-
 	:set iskeyword
 <	  iskeyword=@,48-57,_,192-255,- ~
 
-If you look at the new value, you will see that Vim has added a comma for you.
-   To remove a character use "-=".  For example, to remove the underscore: >
+查看新值，你会发现Vim给 - 添加了逗号. 从中删除字符使用 "-=".例如,删除下划线: >
 
 	:set iskeyword-=_
 	:set iskeyword
 <	  iskeyword=@,48-57,192-255,- ~
 
-This time a comma is automatically deleted.
+逗号也随之删除.
 
 
-ROOM FOR MESSAGES
+显示消息的空间
 
-When Vim starts there is one line at the bottom that is used for messages.
-When a message is long, it is either truncated, thus you can only see part of
-it, or the text scrolls and you have to press <Enter> to continue.
-   You can set the 'cmdheight' option to the number of lines used for
-messages.  Example: >
+当 Vim 启动的时候，在屏幕底部有一行被用于显示消息。当消息很长的时候，多余的部分会被截断。这样你只能看到一部分或者文字自动滚动，你要按 <Enter> 继续.
+   你可以设置 'cmdheight' 选项去控制信息使用的行数.例如:
 
 	:set cmdheight=3
 
-This does mean there is less room to edit text, thus it's a compromise.
+这样意味着你用于编辑文字的空间少了，所以这实际上是一种折衷.
 
 ==============================================================================
 
-Next chapter: |usr_06.txt|  Using syntax highlighting
+下一章: |usr_06.txt|  使用语法高亮
 
 Copyright: see |manual-copyright|  vim:tw=78:ts=8:noet:ft=help:norl:
