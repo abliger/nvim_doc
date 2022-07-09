@@ -1,276 +1,213 @@
 *usr_06.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		     VIM 用户手册 - by Bram Moolenaar
+                                  译者: abliger
+			  使用语法高亮
 
-			  Using syntax highlighting
 
+黑白的文字是令人厌倦的，增加一些色彩能为你的文件带来生气。这不但看起来漂亮，还能够提高你的工作效率。本章介绍如何使用不同颜色显示不同文本并把它打印出来.
 
-Black and white text is boring.  With colors your file comes to life.  This
-not only looks nice, it also speeds up your work.  Change the colors used for
-the different sorts of text.  Print your text, with the colors you see on the
-screen.
+|06.1|	打开它
+|06.2|	颜色错误或者没有颜色?
+|06.3|	使用不同的颜色
+|06.4|	是否使用颜色
+|06.5|	带颜色打印
+|06.6|	深入阅读
 
-|06.1|	Switching it on
-|06.2|	No or wrong colors?
-|06.3|	Different colors
-|06.4|	With colors or without colors
-|06.5|	Printing with colors
-|06.6|	Further reading
-
-     Next chapter: |usr_07.txt|  Editing more than one file
- Previous chapter: |usr_05.txt|  Set your settings
-Table of contents: |usr_toc.txt|
+下一章: |usr_07.txt|  编辑更多文件
+上一章: |usr_05.txt|  自定义配置
+目录:   |usr_toc.txt|
 
 ==============================================================================
-*06.1*	Switching it on
+*06.1*	打开它
 
-It all starts with one simple command: >
+使用一个很简单的命令启动它: >
 
 	:syntax enable
 
-That should work in most situations to get color in your files.  Vim will
-automagically detect the type of file and load the right syntax highlighting.
-Suddenly comments are blue, keywords brown and strings red.  This makes it
-easy to overview the file.  After a while you will find that black&white text
-slows you down!
+大多数情况下，这会让你的文件带上颜色。Vim 会自动检测文件的类型，并调用合适的语 法高亮。一下子注释变成蓝色，关键字变成褐色，而字符串变成红色了。这使你可以很容易浏览整个文档。很快你就会发现，黑白的文本真的会降低你的效率！
 
-If you always want to use syntax highlighting, put the ":syntax enable"
-command in your |init.vim| file.
+如果你想要开始时使用可以在 |init.vim| 文件中放入这个命令 ":syntax enable".
 
-If you want syntax highlighting only when the terminal supports colors, you
-can put this in your |init.vim| file: >
+如果你想要在支持颜色的终端中使用语法高亮,你可以把下列内容放入 |init.vim| 文件中: >
 
 	if &t_Co > 1
 	   syntax enable
 	endif
 
-If you want syntax highlighting only in the GUI version, put the ":syntax
-enable" command in your |ginit.vim| file.
+如果你只想在 GUI 版本中进行语法高亮,可以在 |ginit.vim| 文件中放入这个命令 ":syntax enable".
 
 ==============================================================================
-*06.2*	No or wrong colors?
+*06.2*	颜色错误或者没有颜色?
 
-There can be a number of reasons why you don't see colors:
+你看不到颜色有很多原因:
 
-- Your terminal does not support colors.
-	Vim will use bold, italic and underlined text, but this doesn't look
-	very nice.  You probably will want to try to get a terminal with
-	colors.
+- 你的终端不支持颜色.
+	Vim会使用粗体,斜体和下划线展示文字,但是看起来不怎么样. 你可以使用支持颜色的终端.
 
-- Your terminal does support colors, but Vim doesn't know this.
-	Make sure your $TERM setting is correct.  For example, when using an
-	xterm that supports colors: >
+- 你的终端支持颜色,但Vim不知道.确保$TERM设置是正确的.例如,当使用支持颜色的xterm终端: >
 
 		setenv TERM xterm-color
 <
-	or (depending on your shell): >
+	或者(取决于你的shell): >
 
 		TERM=xterm-color; export TERM
 
-<	The terminal name must match the terminal you are using.
+<	设置的终端的名字必须和你使用的终端相同.
 
-- The file type is not recognized.
-	Vim doesn't know all file types, and sometimes it's near to impossible
-	to tell what language a file uses.  Try this command: >
+- 文件类型不能识别.
+        Vim 不可能识别所有文件，而且有时很难说一个文件是什么类型的。试一下这个命令: >
 
 		:set filetype
 <
-	If the result is "filetype=" then the problem is indeed that Vim
-	doesn't know what type of file this is.  You can set the type
-	manually: >
+	如果结果是"filetype="那么问题就是出在文件类型上了。你可以手工指定文件类型: >
 
 		:set filetype=fortran
 
-<	To see which types are available, look in the directory
-	$VIMRUNTIME/syntax.  For the GUI you can use the Syntax menu.
-	Setting the filetype can also be done with a |modeline|, so that the
-	file will be highlighted each time you edit it.  For example, this
-	line can be used in a Makefile (put it near the start or end of the
-	file): >
+<	要知道哪些类型是有效的，查看一下 $VIMRUNTIME/syntax. 对于 GUI ，你可以使用 Syntax 菜单.设置文件类型也能通过 |modeline| 设置,以便每次编辑它时都会进行高亮.例如, Makefile 文件高亮 (把它放到文件首位): >
 
 		# vim: syntax=make
 
-<	You might know how to detect the file type yourself.  Often the file
-	name extension (after the dot) can be used.
-	See |new-filetype| for how to tell Vim to detect that file type.
+<	你可能知道怎么检测自己的文件类型，通常的方法是检查文件的扩展名 (就是点后面的内容).  见 |new-filetype| 去告诉Vim怎样确定文件类型.
 
-- There is no highlighting for your file type.
-	You could try using a similar file type by manually setting it as
-	mentioned above.  If that isn't good enough, you can write your own
-	syntax file, see |mysyntaxfile|.
+- 你的文件类型没有语法高亮定义.
+	你可以找一个相似的文件类型并人工设置为那种类型。如果觉得不好，你可以自  己写一个, 见 |mysyntaxfile|.
 
 
-Or the colors could be wrong:
+颜色错误:
 
-- The colored text is very hard to read.
-	Vim guesses the background color that you are using.  If it is black
-	(or another dark color) it will use light colors for text.  If it is
-	white (or another light color) it will use dark colors for text.  If
-	Vim guessed wrong the text will be hard to read.  To solve this, set
-	the 'background' option.  For a dark background: >
+- 带颜色的文本以至于难以阅读.
+	Vim 自动猜测你使用的背景色.如果是黑的 (或者其它深色的色彩)，它会用浅色作为前景色。如果是白的 (或者其它浅色)，它会使用深色作为前景色。如果 Vim 猜错了，文字就很难认了。要解决这个问题，设置一下background' 选项。对于深色: >
 
 		:set background=dark
 
-<	And for a light background: >
+<	对于亮色背景: >
 
 		:set background=light
 
-<	Make sure you put this _before_ the ":syntax enable" command,
-	otherwise the colors will already have been set.  You could do
-	":syntax reset" after setting 'background' to make Vim set the default
-	colors again.
+<	确保在 ":syntax enable" 命令前调用前两个命令,否则不起作用.你可以使用 ":syntax reset" 在设置 'background' 后使 Vim 重新染色.
 
-- The colors are wrong when scrolling bottom to top.
-	Vim doesn't read the whole file to parse the text.  It starts parsing
-	wherever you are viewing the file.  That saves a lot of time, but
-	sometimes the colors are wrong.  A simple fix is hitting CTRL-L.  Or
-	scroll back a bit and then forward again.
-	For a real fix, see |:syn-sync|.  Some syntax files have a way to make
-	it look further back, see the help for the specific syntax file.  For
-	example, |tex.vim| for the TeX syntax.
+- 从下向上滚动使颜色错误.
+	Vim 解析文件不是直接解析整个文件. 它只分析你要显示的部分。这样能省不少时间，但也会因此带来错误。一个简单的修正方法是敲 CTRL-L. 或者往回滚动一下再回来.
+	真正修复见 |:syn-sync|.一些语法文件会让它看前面的内容,参见相应的语法定义文件.如,|tex.vim| 关于 TeX 语法.
 
 ==============================================================================
-*06.3*	Different colors				*:syn-default-override*
+*06.3*	使用不同的颜色				*:syn-default-override*
 
-If you don't like the default colors, you can select another color scheme.  In
-the GUI use the Edit/Color Scheme menu.  You can also type the command: >
+如果你不喜欢默认的颜色方案，你可以选另一个色彩方案。在 GUI 版本中可以使用 Edit/Color 菜单。你也可以使用这个命令: >
 
 	:colorscheme evening
 
-"evening" is the name of the color scheme.  There are several others you might
-want to try out.  Look in the directory $VIMRUNTIME/colors.
+"evening" 是色彩方案的名称。还有几种备选方案可以试一下. 从 $VIMRUNTIME/colors 找到他们.
 
-When you found the color scheme that you like, add the ":colorscheme" command
-to your |init.vim| file.
+当你找到你喜欢的颜色主题, 添加 ":colorscheme" 命令到你的 |init.vim| 文件.
 
-You could also write your own color scheme.  This is how you do it:
+你可以自己编写色彩方案，方法如下:
 
-1. Select a color scheme that comes close.  Copy this file to your own Vim
-   directory.  For Unix, this should work: >
+1. 选择你满意的颜色主题.把这个文件拷贝到你自己的 Vim 目录中。在 Unix 上，可以这样: >
 
 	!mkdir -p ~/.config/nvim/colors
 	!cp $VIMRUNTIME/colors/morning.vim ~/.config/nvim/colors/mine.vim
 <
-   This is done from Vim, because it knows the value of $VIMRUNTIME.
+	这样做是因为它知道 $VIMRUNTIME 的值.
 
-2. Edit the color scheme file.  These entries are useful:
+2. 编辑这个色彩方案，常用的有下面的这些条目:
 
-	term		attributes in a B&W terminal
-	cterm		attributes in a color terminal
-	ctermfg		foreground color in a color terminal
-	ctermbg		background color in a color terminal
-	gui		attributes in the GUI
-	guifg		foreground color in the GUI
-	guibg		background color in the GUI
+	term		黑白终端的属性
+	cterm		支持颜色终端的属性
+	ctermfg		终端前景色
+	ctermbg		终端背景色
+	gui		GUI 属性
+	guifg		GUI 前景色
+	guibg		GUI 背景色
 
-   For example, to make comments green: >
+ 例如, 使用绿色注释: >
 
 	:highlight Comment ctermfg=green guifg=green
 <
-   Attributes you can use for "cterm" and "gui" are "bold" and "underline".
-   If you want both, use "bold,underline".  For details see the |:highlight|
-   command.
+   对于 "cterm" 和 "gui" 可以使用粗体和下划线属性修饰. 使用 "bold,underline" 设置两种状态.  查看细节使用 |:highlight| 命令.
 
-3. Tell Vim to always use your color scheme.  Put this line in your |vimrc|: >
+3. 告诉 Vim 总使用你这个色彩方案。把如下语句加入你的 vimrc 中: >
 
 	colorscheme mine
 
-If you want to see what the most often used color combinations look like, use
-this command: >
+如果你要测试一下常用的色彩组合，用如下命令: >
 
 	:runtime syntax/colortest.vim
 
-You will see text in various color combinations.  You can check which ones are
-readable and look nice.
+这样你会看到不同的颜色组合。你可以很容易的看到哪一种可读性好而且漂亮.
 
 ==============================================================================
-*06.4*	With colors or without colors
+*06.4*	是否使用颜色
 
-Displaying text in color takes a lot of effort.  If you find the displaying
-too slow, you might want to disable syntax highlighting for a moment: >
+使用色彩显示文本会影响效率。如果你觉得显示得很慢，可以临时关掉这个功能: >
 
 	:syntax clear
 
-When editing another file (or the same one) the colors will come back.
+当你开始编辑另一个文件 (或者同一个文件)，色彩会重新生效.
 
-If you want to stop highlighting completely use: >
+如果你要完全关闭这个功能: >
 
 	:syntax off
 
-This will completely disable syntax highlighting and remove it immediately for
-all buffers.  See |:syntax-off| for more details.
+这个命令会停止对所有缓冲区的所有语法高亮.详见 |:syntax-off|.
 
 							*:syn-manual*
-If you want syntax highlighting only for specific files, use this: >
+如果你只想在几个文件中打开语法高亮，使用: >
 
 	:syntax manual
 
-This will enable the syntax highlighting, but not switch it on automatically
-when starting to edit a buffer.  To switch highlighting on for the current
-buffer, set the 'syntax' option: >
+这个命令激活语法高亮功能，但不会在你开始编辑一个缓冲区时自动生效，要在当前缓冲区中使用高亮，需要设置 'syntax' 选项: >
 
 	:set syntax=ON
 <
 ==============================================================================
-*06.5*	Printing with colors				*syntax-printing*
+*06.5*	带颜色打印				*syntax-printing*
 
-In the MS-Windows version you can print the current file with this command: >
+在 MS-Windows 版本上，你可以用如下命令打印当前文件: >
 
 	:hardcopy
 
-You will get the usual printer dialog, where you can select the printer and a
-few settings.  If you have a color printer, the paper output should look the
-same as what you see inside Vim.  But when you use a dark background the
-colors will be adjusted to look good on white paper.
+你可以获得打印窗口，通过它选择打印机和进行打印设置.如果你有彩色打印机,输出会和在 Vim 中的相同.但当你使用黑暗背景，颜色会适应白纸以便更好查看.
 
-There are several options that change the way Vim prints:
+有几个改变 Vim 打印行为的选项:
 	'printdevice'
 	'printheader'
 	'printfont'
 	'printoptions'
 
-To print only a range of lines,  use Visual mode to select the lines and then
-type the command: >
+只打印一定范围的行,使用可视模式选择这些行，如: >
 
 	v100j:hardcopy
 
-"v" starts Visual mode.  "100j" moves a hundred lines down, they will be
-highlighted.  Then ":hardcopy" will print those lines.  You can use other
-commands to move in Visual mode, of course.
+"v" 进入可视模式."100j" 向下选中 100 行.然后使用 ":hardcopy" 打印这些行.
 
-This also works on Unix, if you have a PostScript printer.  Otherwise, you
-will have to do a bit more work.  You need to convert the text to HTML first,
-and then print it from a web browser.
+如果你有一台 PostScript 打印机，上面的方法也适合 Unix 系统。否则，你必须做一些额外的处理: 你需要先把文件转换成 HTML 类型，然后用浏览器打印.
 
-Convert the current file to HTML with this command: >
+如下命令把当前文件转换成 HTML 格式: >
 
 	:TOhtml
 
-In case that doesn't work: >
+以防它不工作: >
 
 	:source $VIMRUNTIME/syntax/2html.vim
 
-You will see it crunching away, this can take quite a while for a large file.
-Some time later another window shows the HTML code.  Now write this somewhere
-(doesn't matter where, you throw it away later):
+你发现它会嘎吱嘎吱执行一阵子，(如果文件很大，这可能要花点时间)。之后，Vim 会打开一个新的窗口并显示 HTML 代码。现在把这个文件存下来 (存在哪都不要紧，反正最后你要删掉它的):
 >
 	:write main.c.html
 
-Open this file in your favorite browser and print it from there.  If all goes
-well, the output should look exactly as it does in Vim.  See |2html.vim| for
-details.  Don't forget to delete the HTML file when you are done with it.
+用你喜欢的浏览器打开这个文件，并通过它打印这个文件。如果一切顺利，这个输出应该与 Vim 中显示的一样.详见 |2html.vim|.处理完后别忘了删掉那个 HTML 文件.
 
-Instead of printing, you could also put the HTML file on a web server, and let
-others look at the colored text.
+除了打印,你还可以把这个 HTML 文件，放到 WEB 服务器上，让其他人可以通过彩色文本阅读.
 
 ==============================================================================
-*06.6*	Further reading
+*06.6*	深入阅读
 
-|usr_44.txt|  Your own syntax highlighted.
-|syntax|      All the details.
+|usr_44.txt|  自定义语法高亮.
+||syntax||      所有的细节.
 
 ==============================================================================
 
-Next chapter: |usr_07.txt|  Editing more than one file
+下一章: |usr_07.txt|  编辑更多文件
 
 Copyright: see |manual-copyright|  vim:tw=78:ts=8:noet:ft=help:norl:
