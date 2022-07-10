@@ -1,220 +1,165 @@
 *usr_10.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		     VIM 用户手册 - by Bram Moolenaar
+                                  译者: abliger
+			     做大改变
 
-			     Making big changes
+在第四章节，介绍了一些方法去做小改变.在这个章节我们做替换或者大段地改变.可视模式加上文本块可以让我们做各种个样的事.使用扩展程序去做真正复杂的事情.
 
+|10.1|	记录和回退命令
+|10.2|	替换
+|10.3|	命令范围
+|10.4|	全局命令
+|10.5|	可视块模式
+|10.6|	读写文件内容
+|10.7|	格式化文本
+|10.8|	改变大小写
+|10.9|	使用扩展程序
 
-In chapter 4 several ways to make small changes were explained.  This chapter
-goes into making changes that are repeated or can affect a large amount of
-text.  The Visual mode allows doing various things with blocks of text.  Use
-an external program to do really complicated things.
-
-|10.1|	Record and playback commands
-|10.2|	Substitution
-|10.3|	Command ranges
-|10.4|	The global command
-|10.5|	Visual block mode
-|10.6|	Reading and writing part of a file
-|10.7|	Formatting text
-|10.8|	Changing case
-|10.9|	Using an external program
-
-     Next chapter: |usr_11.txt|  Recovering from a crash
- Previous chapter: |usr_09.txt|  Using the GUI
-Table of contents: |usr_toc.txt|
+下一章: |usr_11.txt|  从崩溃中恢复
+上一章: |usr_09.txt|  使用 GUI
+目录:   |usr_toc.txt|
 
 ==============================================================================
-*10.1*	Record and playback commands
+*10.1*	记录和回退命令
 
-The "." command repeats the preceding change.  But what if you want to do
-something more complex than a single change?  That's where command recording
-comes in.  There are three steps:
+"." 命令重复之前的改变.但是你怎样做复杂改变而不是单次变化?这就应当使用记录命令了.有三个步骤:
 
-1. The "q{register}" command starts recording keystrokes into the register
-   named {register}.  The register name must be between a and z.
-2. Type your commands.
-3. To finish recording, press q (without any extra character).
+1. "q{register}" 命令开始记录按键到名为 {register} 的寄存器中.寄存器名字必须在 a 到 z 之间.
+2. 输入你的命令.
+3. 结束记录使用 q (不需要其他字符).
 
-You can now execute the macro by typing the command "@{register}".
+现在你可以键入 "@{register}" 执行宏指令.
 
-Take a look at how to use these commands in practice.  You have a list of
-filenames that look like this:
+现在看看你可以怎么用这些命令。假设你有如下文件名列表:
 
 	stdio.h ~
 	fcntl.h ~
 	unistd.h ~
 	stdlib.h ~
 
-And what you want is the following:
+你想要下面这样:
 
 	#include "stdio.h" ~
 	#include "fcntl.h" ~
 	#include "unistd.h" ~
 	#include "stdlib.h" ~
 
-You start by moving to the first character of the first line.  Next you
-execute the following commands:
+你要移动光标到第一行的行首并执行下面的命令:
 
-	qa			Start recording a macro in register a.
-	^			Move to the beginning of the line.
-	i#include "<Esc>	Insert the string #include " at the beginning
-				of the line.
-	$			Move to the end of the line.
-	a"<Esc>			Append the character double quotation mark (")
-				to the end of the line.
-	j			Go to the next line.
-	q			Stop recording the macro.
+	qa			开始记录一个宏指令到寄存器 a中.
+	^			移动到行首
+	i#include "<Esc>	在行首插入字符串 #include ".
+	$			移动到行尾.
+	a"<Esc>			添加双引号(")到行尾.
+	j			到下一行.
+	q			停止记录宏指令.
 
-Now that you have done the work once, you can repeat the change by typing the
-command "@a" three times.
-   The "@a" command can be preceded by a count, which will cause the macro to
-be executed that number of times.  In this case you would type: >
+现在你能运行它了, 你能重复执行"@a"三次,以重复改变.
+   "@a" 命令能添加数字前缀,代表宏指令执行次数.本例中你能输入: >
 
 	3@a
 
 
-MOVE AND EXECUTE
+移动和执行
 
-You might have the lines you want to change in various places.  Just move the
-cursor to each location and use the "@a" command.  If you have done that once,
-you can do it again with "@@".  That's a bit easier to type.  If you now
-execute register b with "@b", the next "@@" will use register b.
-   If you compare the playback method with using ".", there are several
-differences.  First of all, "." can only repeat one change.  As seen in the
-example above, "@a" can do several changes, and move around as well.
-Secondly, "." can only remember the last change.  Executing a register allows
-you to make any changes and then still use "@a" to replay the recorded
-commands.  Finally, you can use 26 different registers.  Thus you can remember
-26 different command sequences to execute.
+你可能有很多行想要修改.只需要把光标移动到相应位置然后执行 "@a" 命令.如果你已执行一次,你可以使用 "@@" 再次执行. 这个键入会容易一些.如果你现在执行寄存器 b 的命令 "@b", 那么 "@@" 会使用寄存器 b.
+   如果你比较回放命令和 ".",有以下不同.首先, "." 只能重复一次.上例中 "@a" 可以回放多个改变且能移动.
+   第二, "." 只能记住最后一次改变. 使用寄存器允许你在很多次变化后，依然能执行 "@a".  
+   最后, 你能使用 26 种不同的寄存器.因此，你可以记录多达 26 个命令序列.
 
 
-USING REGISTERS
+使用寄存器
 
-The registers used for recording are the same ones you used for yank and
-delete commands.  This allows you to mix recording with other commands to
-manipulate the registers.
-   Suppose you have recorded a few commands in register n.  When you execute
-this with "@n" you notice you did something wrong.  You could try recording
-again, but perhaps you will make another mistake.  Instead, use this trick:
+用来记录操作的寄存器与你用来拷贝删除文本的寄存器是相同的。这允许你混合记录操作和其它命令来操作这些寄存器。假设你在寄存器 n 中记录了一些命令。当你通过 "@n" 执行这些命令时，你发现这些命令有些问题。这时你可以重新录一次，但这样你可能还会犯其它错误。其实，你可以使用如下窍门:
 
-	G			Go to the end of the file.
-	o<Esc>			Create an empty line.
-	"np			Put the text from the n register.  You now see
-				the commands you typed as text in the file.
-	{edits}			Change the commands that were wrong.  This is
-				just like editing text.
-	0			Go to the start of the line.
-	"ny$			Yank the corrected commands into the n
-				register.
-	dd			Delete the scratch line.
+	G			到文件结尾.
+	o<Esc>			创建空白行.
+	"np       		黏贴 n 寄存器中的文本，你的命令将被黏贴到整个文件的结尾.
+	{edits}			修改错误的命令，就行编辑文字一样.
+	0			移动到行首.
+	"ny$			把正确的命令拷贝回 n 寄存器.
+	dd			删除临时行.
 
-Now you can execute the corrected commands with "@n".  (If your recorded
-commands include line breaks, adjust the last two items in the example to
-include all the lines.)
+现在你能使用 "@n" 执行正确的命令了.  (如果你记录的命令包括换行符，请调整上面例子中最后两行的操作来包括所有的行.)
 
 
-APPENDING TO A REGISTER
+添加寄存器
 
-So far we have used a lowercase letter for the register name.  To append to a
-register, use an uppercase letter.
-   Suppose you have recorded a command to change a word to register c.  It
-works properly, but you would like to add a search for the next word to
-change.  This can be done with: >
+到此为止，我们一直使用小写的寄存器名。要附加命令到一个寄存器中，可以使用大写的寄存器名。
+假设你在寄存器 c 中已经记录了一个修改一个单词的命令。它可以正常工作，但现在你需要附加一个搜索命令以便找到下一个单词来修改。这可以通过如下命令来完成: >
 
 	qC/word<Enter>q
 
-You start with "qC", which records to the c register and appends.  Thus
-writing to an uppercase register name means to append to the register with
-the same letter, but lowercase.
+启动 "qC" 命令可以对 c 寄存器追加记录。由此可见，记录到一个大写寄存器表示附加命令到对应的小写寄存器。
 
-This works both with recording and with yank and delete commands.  For
-example, you want to collect a sequence of lines into the a register.  Yank
-the first line with: >
+这种方法在宏记录，拷贝和删除命令中都有效。例如，你需要把选择一些行到一个寄存器中，可以先这样拷贝第一行: >
 
 	"ayy
 
-Now move to the second line, and type: >
+然后移到下一个要拷贝的地方，执行: >
 
 	"Ayy
 
-Repeat this command for all lines.  The a register now contains all those
-lines, in the order you yanked them.
+如此类推。这样在寄存器 a 中就会包括所有你要拷贝的所有行.
 
 ==============================================================================
-*10.2*	Substitution						*find-replace*
+*10.2*	替换						*find-replace*
 
-The ":substitute" command enables you to perform string replacements on a
-whole range of lines.  The general form of this command is as follows: >
+":substitute" 命令能让你在整行执行字符串替换.下面是这个命令的一般形式: >
 
 	:[range]substitute/from/to/[flags]
 
-This command changes the "from" string to the "to" string in the lines
-specified with [range].  For example, you can change "Professor" to "Teacher"
-in all lines with the following command: >
+这个命令使行中 [range] 范围内找到 "from" 字符串后改变为 "to" 字符串.例如, 你可以使 "Professor" 改为 "Teacher": >
 
 	:%substitute/Professor/Teacher/
 <
-	Note:
-	The ":substitute" command is almost never spelled out completely.
-	Most of the time, people use the abbreviated version ":s".  From here
-	on the abbreviation will be used.
+	注意：
+	很少人会把整个 ":substitute" 命令完整敲下来。通常，使用命令的缩写形式 ":s" 就行了。下文我们将使用这个缩写形式。
 
-The "%" before the command specifies the command works on all lines.  Without
-a range, ":s" only works on the current line.  More about ranges in the next
-section |10.3|.
+命令前面的 "%" 表示命令作用于全部行。如果不指定行范围，":s" 命令只作用在当前行
+上。 |10.3| 将对 "行范围" 作深入的介绍。
 
-By default, the ":substitute" command changes only the first occurrence on
-each line.  For example, the preceding command changes the line:
+默认情况下，":substitute" 命令只对某一行中的第一个匹配点起作用。例如，前面例子中会把行:
 
 	Professor Smith criticized Professor Johnson today. ~
 
-to:
+改为:
 
 	Teacher Smith criticized Professor Johnson today. ~
 
-To change every occurrence on the line, you need to add the g (global) flag.
-The command: >
+要对行中所有匹配点起作用，你需要加一个 g (global，全局) 标记。下面命令: >
 
 	:%s/Professor/Teacher/g
 
-results in (starting with the original line):
+结果是:
 
 	Teacher Smith criticized Teacher Johnson today. ~
 
-Other flags include p (print), which causes the ":substitute" command to print
-out the last line it changes.  The c (confirm) flag tells ":substitute" to ask
-you for confirmation before it performs each substitution.  Enter the
-following: >
+":s" 命令还支持其它一些标志位，包括 "p" (print，打印)，用于在命令执行的时候打印出最后一个被修改的行。还有 "c" (confirm，确认) 标记会在每次替换前向你询问是否需要替换。执行如下命令: >
 
 	:%s/Professor/Teacher/c
 
-Vim finds the first occurrence of "Professor" and displays the text it is
-about to change.  You get the following prompt: >
+Vim 找到第一个匹配点的时候会向你提示如下: >
 
 	replace with Teacher (y/n/a/q/l/^E/^Y)?
 
-At this point, you must enter one of the following answers:
+这种时候，你可以输入如下回答中的一个:
 
-	y		Yes; make this change.
-	n		No; skip this match.
-	a		All; make this change and all remaining ones without
-			further confirmation.
-	q		Quit; don't make any more changes.
-	l		Last; make this change and then quit.
-	CTRL-E		Scroll the text one line up.
-	CTRL-Y		Scroll the text one line down.
+	y		Yes;确认改变
+	n		No; 跳过此匹配.
+	a		All;对剩下的匹配点全部执行替换，不需要再确认.
+	q		Quit; 不再改变.
+	l		Last; 做出改变后退出.
+	CTRL-E		向上滚动一行.
+	CTRL-Y		向下滚动一行.
 
 
-The "from" part of the substitute command is actually a pattern.  The same
-kind as used for the search command.  For example, this command only
-substitutes "the" when it appears at the start of a line: >
+":s" 命令中的 "from" 部分实际上是 "匹配一个表达式"，这与查找命令一样。例如， 要替换行首的 "the" 可以这样写: >
 
 	:s/^the/these/
 
-If you are substituting with a "from" or "to" part that includes a slash, you
-need to put a backslash before it.  A simpler way is to use another character
-instead of the slash.  A plus, for example: >
+如果你要在 "from" 或者 "to" 中使用正斜杠，你需要在前面加上一个反斜杠。更简单的方法是用加号代替正斜杠。例如:  >
 
 	:s+one/two+one or two+
 

@@ -1,27 +1,27 @@
 *usr_toc.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
-
-			      Table Of Contents			*user-manual*
-
+		     VIM 用户手册 - by Bram Moolenaar
+                                  译者: abliger
+			      目录			*user-manual*
+                                                                                                                           
 ==============================================================================
-Overview ~
+综述 ~
 
-Getting Started
-|usr_01.txt|  About the manuals
-|usr_02.txt|  The first steps in Vim
-|usr_03.txt|  Moving around
-|usr_04.txt|  Making small changes
-|usr_05.txt|  Set your settings
-|usr_06.txt|  Using syntax highlighting
-|usr_07.txt|  Editing more than one file
-|usr_08.txt|  Splitting windows
-|usr_09.txt|  Using the GUI
-|usr_10.txt|  Making big changes
-|usr_11.txt|  Recovering from a crash
-|usr_12.txt|  Clever tricks
+开始
+|usr_01.txt|  关于本手册
+|usr_02.txt|  Vim初步
+|usr_03.txt|  移动
+|usr_04.txt|  做小改动
+|usr_05.txt|  自定义配置
+|usr_06.txt|  使用语法高亮
+|usr_07.txt|  编辑更多文件
+|usr_08.txt|  分割窗口
+|usr_09.txt|  使用GUI
+|usr_10.txt|  做大改变
+|usr_11.txt|  从崩溃中恢复
+|usr_12.txt|  小技巧
 
-Editing Effectively
+有效地编辑
 |usr_20.txt|  Typing command-line commands quickly
 |usr_21.txt|  Go away and come back
 |usr_22.txt|  Finding the file to edit
@@ -52,119 +52,120 @@ The user manual is online:
 	https://neovim.io/doc/user
 
 ==============================================================================
-Getting Started ~
+开始 ~
 
-Read this from start to end to learn the essential commands.
+从头到位通读本手册学习基本命令.
 
-|usr_01.txt|  About the manuals
-		|01.1|	Two manuals
-		|01.2|	Vim installed
-		|01.3|	Using the Vim tutor
-		|01.4|	Copyright
+|usr_01.txt|  关于本手册
+		|01.1|	两个手册
+		|01.2|	Vim 安装
+		|01.3|	使用 Vim 指导
+		|01.4|	版权
 
-|usr_02.txt|  The first steps in Vim
-		|02.1|	Running Vim for the First Time
-		|02.2|	Inserting text
-		|02.3|	Moving around
-		|02.4|	Deleting characters
-		|02.5|	Undo and Redo
-		|02.6|	Other editing commands
-		|02.7|	Getting out
-		|02.8|	Finding help
+|usr_02.txt|  Vim 初步
+		|02.1|	第一次运行 Vim
+		|02.2|	插入文本
+		|02.3|	移动
+		|02.4|	删除字符
+		|02.5|	重做和恢复
+		|02.6|	其他编辑命令
+		|02.7|	退出
+		|02.8|	寻求帮助
 
-|usr_03.txt|  Moving around
-		|03.1|	Word movement
-		|03.2|	Moving to the start or end of a line
-		|03.3|	Moving to a character
-		|03.4|	Matching a paren
-		|03.5|	Moving to a specific line
-		|03.6|	Telling where you are
-		|03.7|	Scrolling around
-		|03.8|	Simple searches
-		|03.9|	Simple search patterns
-		|03.10|	Using marks
+|usr_03.txt|  移动
+		|03.1|	词移动
+		|03.2|	移动到行首或行尾
+		|03.3|	移动一个字符
+		|03.4|	匹配表达式
+		|03.5|	移动到指定行
+		|03.6|	确认当前位置
+		|03.7|	滚动
+		|03.8|	简单搜索
+		|03.9|	简单搜索模式
+		|03.10|	使用标记
 
-|usr_04.txt|  Making small changes
-		|04.1|	Operators and motions
-		|04.2|	Changing text
-		|04.3|	Repeating a change
-		|04.4|	Visual mode
-		|04.5|	Moving text
-		|04.6|	Copying text
-		|04.7|	Using the clipboard
-		|04.8|	Text objects
-		|04.9|	Replace mode
-		|04.10|	Conclusion
+|usr_04.txt|  做小改动
+		|04.1|	操作符和动作
+		|04.2|	改变文本
+		|04.3|	重复一个修改
+		|04.4|	可视模式
+		|04.5|	移动文本
+		|04.6|	复制文本
+		|04.7|	使用剪切板
+		|04.8|	文本对象
+		|04.9|	替代模式
+		|04.10|	总结
 
-|usr_05.txt|  Set your settings
-		|05.1|	The vimrc file
-		|05.2|	The example vimrc file explained
-		|05.3|	Simple mappings
-		|05.4|	Adding a package
-		|05.5|	Adding a plugin
-		|05.6|	Adding a help file
-		|05.7|	The option window
-		|05.8|	Often used options
+|usr_05.txt|  自定义配置
+		|05.1|	vimrc 文件
+		|05.2|	vimrc 文件示例解释
+		|05.3|	键盘映射
+		|05.4|	添加软件包
+		|05.5|	添加插件
+		|05.6|	添加帮助文件
+		|05.7|	选项窗口
+		|05.8|	常用选项
 
-|usr_06.txt|  Using syntax highlighting
-		|06.1|	Switching it on
-		|06.2|	No or wrong colors?
-		|06.3|	Different colors
-		|06.4|	With colors or without colors
-		|06.5|	Printing with colors
-		|06.6|	Further reading
+|usr_06.txt|  使用语法高亮
+		|06.1|	打开它
+		|06.2|	颜色错误或者没有颜色?
+		|06.3|	使用不同的颜色
+		|06.4|	是否使用颜色
+		|06.5|	带颜色打印
+		|06.6|	深入阅读
 
-|usr_07.txt|  Editing more than one file
-		|07.1|	Edit another file
-		|07.2|	A list of files
-		|07.3|	Jumping from file to file
-		|07.4|	Backup files
-		|07.5|	Copy text between files
-		|07.6|	Viewing a file
-		|07.7|	Changing the file name
+|usr_07.txt|  编辑更多文件
+		|07.1|	编辑其他文件
+		|07.2|	文件列表
+		|07.3|	文件跳转
+		|07.4|	备份文件
+		|07.5|	在文件中相互拷贝
+		|07.6|	查看文件
+		|07.7|	改变文件名
 
-|usr_08.txt|  Splitting windows
-		|08.1|	Split a window
-		|08.2|	Split a window on another file
-		|08.3|	Window size
-		|08.4|	Vertical splits
-		|08.5|	Moving windows
-		|08.6|	Commands for all windows
-		|08.7|	Viewing differences with diff mode
-		|08.8|	Various
+|usr_08.txt|  分割窗口
+		|08.1|	分隔窗口
+		|08.2|	在其他文件上分隔窗口		
+		|08.3|	窗口大小		
+		|08.4|	竖直分隔		
+		|08.5|	移动窗口		
+		|08.6|	对所有窗口执行命令		
+		|08.7|	使用比较模式查看不同		
+		|08.8|	杂项		
+	        |08.9|	标签页
 
-|usr_09.txt|  Using the GUI
-		|09.1|	Parts of the GUI
-		|09.2|	Using the mouse
-		|09.3|	The clipboard
-		|09.4|	Select mode
+|usr_09.txt|  使用 GUI
+		|09.1|	GUI 组件
+		|09.2|	使用鼠标
+		|09.3|	粘贴板
+		|09.4|	选择模式
 
-|usr_10.txt|  Making big changes
-		|10.1|	Record and playback commands
-		|10.2|	Substitution
-		|10.3|	Command ranges
-		|10.4|	The global command
-		|10.5|	Visual block mode
-		|10.6|	Reading and writing part of a file
-		|10.7|	Formatting text
-		|10.8|	Changing case
-		|10.9|	Using an external program
+|usr_10.txt|  做大改变
+		|10.1|	记录和回退命令
+		|10.2|	替换
+		|10.3|	命令范围
+		|10.4|	全局命令
+		|10.5|	可视块模式
+		|10.6|	读写文件内容
+		|10.7|	格式化文本
+		|10.8|	改变大小写
+		|10.9|	使用扩展程序
 
-|usr_11.txt|  Recovering from a crash
-		|11.1|	Basic recovery
-		|11.2|	Where is the swap file?
-		|11.3|	Crashed or not?
-		|11.4|	Further reading
+|usr_11.txt|  从崩溃中恢复
+		|11.1|	基础的恢复
+		|11.2|	交换文件在哪里?
+		|11.3|	有没有崩溃
+		|11.4|	深入阅读
 
-|usr_12.txt|  Clever tricks
-		|12.1|	Replace a word
-		|12.2|	Change "Last, First" to "First Last"
-		|12.3|	Sort a list
-		|12.4|	Reverse line order
-		|12.5|	Count words
-		|12.6|	Find a man page
-		|12.7|	Trim blanks
-		|12.8|	Find where a word is used
+|usr_12.txt|  小技巧
+		|12.1|	替换单词
+		|12.2|	把 "Last, First" 变为 "First Last"
+		|12.3|	排序
+		|12.4|	反转行顺序
+		|12.5|	单词统计
+		|12.6|	查阅 man 信息
+		|12.7|	删除多余空格
+		|12.8|	查找单词的使用位置
 
 ==============================================================================
 Editing Effectively ~
