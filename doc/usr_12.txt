@@ -1,137 +1,106 @@
 *usr_12.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		     VIM用户手册 - by Bram Moolenaar
+                                 译者: abliger
+				小技巧
 
-				Clever tricks
 
+通过组合一些命令，你可以用 Vim 完成几乎所有的工作。本章将介绍一些有用的命令组合。涉及的命令大都是前面章节介绍过的，但也会有一点新命令。
 
-By combining several commands you can make Vim do nearly everything.  In this
-chapter a number of useful combinations will be presented.  This uses the
-commands introduced in the previous chapters and a few more.
+|12.1|	替换单词
+|12.2|	把 "Last, First" 变为"First Last"
+|12.3|	排序
+|12.4|	反转行顺序
+|12.5|	单词统计
+|12.6|	查阅 man 信息
+|12.7|	删除多余空格
+|12.8|	查找单词的使用位置
 
-|12.1|	Replace a word
-|12.2|	Change "Last, First" to "First Last"
-|12.3|	Sort a list
-|12.4|	Reverse line order
-|12.5|	Count words
-|12.6|	Find a man page
-|12.7|	Trim blanks
-|12.8|	Find where a word is used
-
-     Next chapter: |usr_20.txt|  Typing command-line commands quickly
- Previous chapter: |usr_11.txt|  Recovering from a crash
-Table of contents: |usr_toc.txt|
+下一章: |usr_20.txt|  快速键入命令行命令
+上一章: |usr_11.txt|  从崩溃中恢复
+目录:   |usr_toc.txt|
 
 ==============================================================================
-*12.1*	Replace a word
+*12.1*	替换单词
 
-The substitute command can be used to replace all occurrences of a word with
-another word: >
+替换命令可以在全文中用一个单词替换另一个单词: >
 
 	:%s/four/4/g
 
-The "%" range means to replace in all lines.  The "g" flag at the end causes
-all words in a line to be replaced.
-   This will not do the right thing if your file also contains "thirtyfour".
-It would be replaced with "thirty4".  To avoid this, use the "\<" item to
-match the start of a word: >
+"%" 范围前缀表示在所有行中执行替换。最后的 "g" 标记表示替换行中的所有匹配点。如果你有一个像 "thirtyfour" 这样的单词，上面的命令会出错。这种情况下，这个单词会被替换成 "thirty4"。要解决这个问题，用 "\<" 来指定匹配单词开头: >
 
 	:%s/\<four/4/g
 
-Obviously, this still goes wrong on "fourteen".  Use "\>" to match the end of
-a word: >
+显然，这样在处理 "fourteen" 的时候还是会出错。用 "\>" 来解决这个问题: >
 
 	:%s/\<four\>/4/g
 
-If you are programming, you might want to replace "four" in comments, but not
-in the code.  Since this is difficult to specify, add the "c" flag to have the
-substitute command prompt you for each replacement: >
-
+如果你在编码，你可能只想替换注释中的 "four"，而保留代码中的。由于这很难指定，可以在替换命令中加一个 "c" 标记，这样，Vim 会在每次替换前提示你: >
 
 	:%s/\<four\>/4/gc
 
 
-REPLACING IN SEVERAL FILES
+多文件替换
 
-Suppose you want to replace a word in more than one file.  You could edit each
-file and type the command manually.  It's a lot faster to use record and
-playback.
-   Let's assume you have a directory with C++ files, all ending in ".cpp".
-There is a function called "GetResp" that you want to rename to "GetAnswer".
+假设你需要替换多个文件中的单词。你的一个选择是打开每一个文件并手工修改。但是使用记录和回放命令会快很多。
+假设你有一个包括有 C++ 文件的目录，所有的文件都以 ".cpp" 结尾。有一个叫"GetResp" 的函数，你需要把它改名为 "GetAnswer"。
 
-	vim *.cpp		Start Vim, defining the argument list to
-				contain all the C++ files.  You are now in the
-				first file.
-	qq			Start recording into the q register
-	:%s/\<GetResp\>/GetAnswer/g
-				Do the replacements in the first file.
-	:wnext			Write this file and move to the next one.
-	q			Stop recording.
-	@q			Execute the q register.  This will replay the
-				substitution and ":wnext".  You can verify
-				that this doesn't produce an error message.
-	999@q			Execute the q register on the remaining files.
+	vim *.cpp			启动 Vim，用当前目录的所有 C++ 文件作为文件参数。启动后你会停在第一个文件上。
+	qq				qq 用 q 作为寄存器启动一次记录。
+	:%s/\<GetResp\>/GetAnswer/g 	在第一个文件中执行替换。
+	:wnext				保存文件并移到下一个文件.
+	q				停止记录.
+	@q      			回放 q 中的记录。这会执行又一次替换和":wnext"。你现在可以检查一下记录有没有错。
+	999@q      			对剩下的文件执行 q 中的命令
 
-At the last file you will get an error message, because ":wnext" cannot move
-to the next file.  This stops the execution, and everything is done.
+Vim 会在最后一个文件上报错，因为 ":wnext" 无法移到下一个文件上。这时所有的文件中的操作都完成了。
 
-	Note:
-	When playing back a recorded sequence, an error stops the execution.
-	Therefore, make sure you don't get an error message when recording.
+备注:
+在回放记录的时候，任何错误都会中止回放的过程。所以，要注意保证记录中的命令不会产生错误。
 
-There is one catch: If one of the .cpp files does not contain the word
-"GetResp", you will get an error and replacing will stop.  To avoid this, add
-the "e" flag to the substitute command: >
+这里有一个陷阱: 如果有一个文件不包含 "GetResp"，Vim 会报错，而整个过程会中止，要避免这个问题，可以在替换命令后面加一个标记: >
 
 	:%s/\<GetResp\>/GetAnswer/ge
 
-The "e" flag tells ":substitute" that not finding a match is not an error.
+"e" 标记通知 ":substitute" 命令找不到不是错误.
 
 ==============================================================================
-*12.2*	Change "Last, First" to "First Last"
+*12.2*	把 "Last, First" 变为 "First Last"
 
-You have a list of names in this form:
+你有如下样式的一个名字列表:
 
 	Doe, John ~
 	Smith, Peter ~
 
-You want to change that to:
+你想把它改成:
 
 	John Doe ~
 	Peter Smith ~
 
-This can be done with just one command: >
+这可以用一个命令完成: >
 
 	:%s/\([^,]*\), \(.*\)/\2 \1/
 
-Let's break this down in parts.  Obviously it starts with a substitute
-command.  The "%" is the line range, which stands for the whole file.  Thus
-the substitution is done in every line in the file.
-   The arguments for the substitute command are "/from/to/".  The slashes
-separate the "from" pattern and the "to" string.  This is what the "from"
-pattern contains:
-							\([^,]*\), \(.*\) ~
+我们把这个命令分解成几个部分。首先，很明显它是一个替换命令。"%" 是行范围，表示作用于全文。这样替换命令会作用于全文的每一行。
+替换命令的参数格式是 "from/to"，正斜杠区分 "from" 模式和 "to" 字符串。所以，"from" 部分是:
 
-	The first part between \( \) matches "Last"	\(     \)
-	    match anything but a comma			  [^,]
-	    any number of times				      *
-	matches ", " literally					 ,
-	The second part between \( \) matches "First"		   \(  \)
-	    any character					     .
-	    any number of times					      *
+	\([^,]*\), \(.*\) 
 
-In the "to" part we have "\2" and "\1".  These are called backreferences.
-They refer to the text matched by the "\( \)" parts in the pattern.  "\2"
-refers to the text matched by the second "\( \)", which is the "First" name.
-"\1" refers to the first "\( \)", which is the "Last" name.
-   You can use up to nine backreferences in the "to" part of a substitute
-command.  "\0" stands for the whole matched pattern.  There are a few more
-special items in a substitute command, see |sub-replace-special|.
+      第一对 \( 和 \) 之间的部分匹配 "Last" "Last"	\(     \)
+      匹配除逗号外的任何东西			  	[^,]
+      任意多次				      		*
+      匹配", " literally				,
+      第二对 \( 和 \) 之间的部分匹配 "First"		\(  \)
+      匹配任意字符				     	.
+      任意多次					      	*
+
+在 "to" 部分，我们有 "\2" 和 "\1"。这些称为 "反向引用"。它们指向前面模式中的 \( 和 \) 间的部分。"\2" 指向模式中的第二对 \( 和 \) 间的部分，也就是 "First" 名 (译者注: 英文中 Last Name 表示姓，即家族名，后面的 First Name 表示名字)。"\1" 指向第一对 \( \)，即 "Last" 名。
+你可以在替换部分使用多达 9 个反向引用。"\0" 表示整个匹配部分。还有一些特殊的项可以用在替换命令中.见 |sub-replace-special|.
 
 ==============================================================================
-*12.3*	Sort a list
+*12.3*	序
 
-In a Makefile you often have a list of files.  For example:
+在你的 Makefile 中常常会有文件列表。例如:
 
 	OBJS = \ ~
 		version.o \ ~
@@ -143,17 +112,14 @@ In a Makefile you often have a list of files.  For example:
 		patch.o \ ~
 		backup.o ~
 
-To sort this list, filter the text through the external sort command: >
+要对这个文件列表排序可以用一个外部过滤命令: >
 
 	/^OBJS
 	j
 	:.,/^$/-1!sort
 
-This goes to the first line, where "OBJS" is the first thing in the line.
-Then it goes one line down and filters the lines until the next empty line.
-You could also select the lines in Visual mode and then use "!sort".  That's
-easier to type, but more work when there are many lines.
-   The result is this:
+这会先移到 "OBJS" 开头的行，向下移动一行，然后一行行执行过滤，直到遇到一个空行。你也可以先选中所有需要排序的行，然后执行 "!sort"。那更容易一些，但如果有很多行就比较麻烦。
+上面操作的结果将是:
 
 	OBJS = \ ~
 		backup.o ~
@@ -166,181 +132,111 @@ easier to type, but more work when there are many lines.
 		version.o \ ~
 
 
-Notice that a backslash at the end of each line is used to indicate the line
-continues.  After sorting, this is wrong!  The "backup.o" line that was at
-the end didn't have a backslash.  Now that it sorts to another place, it
-must have a backslash.
-   The simplest solution is to add the backslash with "A \<Esc>".  You can
-keep the backslash in the last line, if you make sure an empty line comes
-after it.  That way you don't have this problem again.
+注意，列表中每一行都有一个续行符，但排序后就错掉了！"backup.o" 在列表的最后，不需要续行符，但排序后它被移动了。这时它需要有一个续行符。
+最简单的解决方案是用 "A \" 补一个续行符。你也可以在最后一行放一个续行符，由于后面有一个空行，这样做是不会有问题的。
 
 ==============================================================================
-*12.4*	Reverse line order
+*12.4*	反转行顺序
 
-The |:global| command can be combined with the |:move| command to move all the
-lines before the first line, resulting in a reversed file.  The command is: >
+:global 命令可以和 :move 命令联用，将所有行移动到文件首部。结果是文件被按行反转了次序。命令是: >
 
 	:global/^/move 0
 
-Abbreviated: >
+缩写: >
 
 	:g/^/m 0
 
-The "^" regular expression matches the beginning of the line (even if the line
-is blank).  The |:move| command moves the matching line to after the imaginary
-zeroth line, so the current matching line becomes the first line of the file.
-As the |:global| command is not confused by the changing line numbering,
-|:global| proceeds to match all remaining lines of the file and puts each as
-the first.
+正则表达式 "^" 匹配行首 (即使该行是一个空行)。 :move 命令将匹配的行移动到那个神秘的第 0 行之后。这样匹配的行就成了文件中的第一行。由于 :global 命令不会被改变了的行号搞混，该命令继续匹配文件中剩余的行并将它们一一变为首行。
 
-This also works on a range of lines.  First move to above the first line and
-mark it with "mt".  Then move the cursor to the last line in the range and
-type: >
+这对一个行范围同样有效。先移动到第一行上方并做标记 't' (mt)。然后移动到范围的最后一行并键入: >
 
 	:'t+1,.g/^/m 't
 
 ==============================================================================
-*12.5*	Count words
+*12.5*	单词统计
 
-Sometimes you have to write a text with a maximum number of words.  Vim can
-count the words for you.
-   When the whole file is what you want to count the words in, use this
-command: >
+有时你要写一些有最高字数限制的文字。Vim 可以帮你计算字数。
+如果你需要统计的是整个文件的字数，可以用这个命令: >
 
 	g CTRL-G
 
-Do not type a space after the g, this is just used here to make the command
-easy to read.
-   The output looks like this:
+不要在 "g" 后面输入一个空格，这里只是方便阅读。
+它的输出是:
 
 	Col 1 of 0; Line 141 of 157; Word 748 of 774; Byte 4489 of 4976 ~
 
-You can see on which word you are (748), and the total number of words in the
-file (774).
+你可以看到你在第几个单词 (748) 上以及文件中的单词总数 (774)。
 
-When the text is only part of a file, you could move to the start of the text,
-type "g CTRL-G", move to the end of the text, type "g CTRL-G" again, and then
-use your brain to compute the difference in the word position.  That's a good
-exercise, but there is an easier way.  With Visual mode, select the text you
-want to count words in.  Then type g CTRL-G.  The result:
+如果你要知道的是全文的一部分的字数，你可以移到该文本的开头，输入 "g CTRL-G"，然后移到该段文字的末尾，再输入 "g CTRL-G"，最后心算出结果来。这是一种很好的心算练习，不过不是那么容易。比较方便的办法是使用可视模式，选中你要计算字数的文本，然后输入 "g CTRL-G"，结果将是:
 
 	Selected 5 of 293 Lines; 70 of 1884 Words; 359 of 10928 Bytes ~
 
-For other ways to count words, lines and other items, see |count-items|.
+要知道其它计算字数，行数和其它东西总数的方法，可以参见, 见 |count-items|.
 
 ==============================================================================
-*12.6*	Find a man page					*find-manpage*
+*12.6*	查阅 man 信息					*find-manpage*
 
-While editing a shell script or C program, you are using a command or function
-that you want to find the man page for (this is on Unix).  Let's first use a
-simple way: Move the cursor to the word you want to find help on and press >
+编辑一个脚本文件或者 C 程序的时候，有时你会需要从 man 手册中查询某个命令或者函数的用法 (使用 Unix 的情况下)。让我们先用一个简单的方法: 把鼠标移到对应的单词上然后输入: >
 
 	K
 
-Nvim will run |:Man| on the word.  If the man page is found, it is displayed.
-You can also use the |:Man| command to open a window on a man page: >
+NVim 会在对应的单词上执行外部命令: man。如果能找到相应的手册，那个手册页就会被显示出来。现在你可以用 ":Man" 命令打开一个显示 man 手册的窗口了。 >
 
 	:Man csh
 
-You can scroll around and the text is highlighted.  This allows you to find
-the help you were looking for.  Use CTRL-W w to jump to the window with the
-text you were working on.
-   To find a man page in a specific section, put the section number first.
-For example, to look in section 3 for "echo": >
+你可以在这个新的窗口中上下滚动，而手册的本文会用语法高亮的形式显示。这样，你可以找到需要的地方，并用 CTRL-W w 跳转到原来的窗口中继续工作。要指定手册的章节，可以在手册名称前面指定。例如，要找第三章的 "echo": >
 
 	:Man 3 echo
 
-To jump to another man page, which is in the text with the typical form
-"word(1)", press CTRL-] on it.  Further ":Man" commands will use the same
-window.
+要跳转到另一个由 "word(1)" 形式定义的手册，只要在上面敲 CTRL-]。无论怎样，":Man" 命令总使用同一个窗口。
 
-To display a man page for the word under the cursor, use this: >
+要显示当前光标下的单词的手册，这样:  >
 
-	K
+	\K
 
-For example, you want to know the return value of "strstr()" while editing
-this line:
+(如果你重定义了 ，用那个字符代替上面命令的反斜杠)。
+例如，你想知道下面语句中的 "strstr()" 函数的返回值:
 
 	if ( strstr (input, "aap") == ) ~
 
-Move the cursor to somewhere on "strstr" and type "K".  A window will open
-to display the man page for strstr().
+可以把光标移到 "strstr" 并输入 "\K"。手册使用的窗口会显示 strstr() 的信息。
 
 ==============================================================================
-*12.7*	Trim blanks
+*12.7*	删除多余空格
 
-Some people find spaces and tabs at the end of a line useless, wasteful, and
-ugly.  To remove whitespace at the end of every line, execute the following
-command: >
+有些人认为行末的空格是无用，浪费而难看的。要删除这些每行后面多余的空格，可以执行如下命令: >
 
 	:%s/\s\+$//
 
-The line range "%" is used, thus this works on the whole file.  The pattern
-that the ":substitute" command matches with is "\s\+$".  This finds white
-space characters (\s), 1 or more of them (\+), before the end-of-line ($).
-Later will be explained how you write patterns like this, see |usr_27.txt|.
-   The "to" part of the substitute command is empty: "//".  Thus it replaces
-with nothing, effectively deleting the matched white space.
+命令前面指明范围是 "%"，所以这会作用于整个文件。"substitute" 命令的匹配模式是"\s\+$"。这表示行末 ($) 前的一个或者多个 (\+) 空格 (\s)。后面我们会介绍怎样写这样的模式。见 usr_27.txt 。
+替换命令的 "to" 部分是空的: "//"。这样就会删除那些匹配的空白字符。
 
-Another wasteful use of spaces is placing them before a tab.  Often these can
-be deleted without changing the amount of white space.  But not always!
-Therefore, you can best do this manually.  Use this search command: >
+另一种没有用的空格是 Tab 前面的字符。通常这可以删除而不影响格式。但并不是总这样！所以，你最好手工删除它。执行如下命令: >
 
 	/ 	
 
-You cannot see it, but there is a space before a tab in this command.  Thus
-it's "/<Space><Tab>".   Now use "x" to delete the space and check that the
-amount of white space doesn't change.  You might have to insert a tab if it
-does change.  Type "n" to find the next match.  Repeat this until no more
-matches can be found.
+你什么都看不见，其实这是一个空格加一个 TAB 键。相当于 "/"。现在，你可以用 "x" 删除多余的空格，并保证格式没有改变。接着你可以用 "n" 找到下一个位置并重复这个操作。
 
 ==============================================================================
-*12.8*	Find where a word is used
+*12.8*	查找单词的使用位置
 
-If you are a Unix user, you can use a combination of Vim and the grep command
-to edit all the files that contain a given word.  This is extremely useful if
-you are working on a program and want to view or edit all the files that
-contain a specific variable.
-   For example, suppose you want to edit all the C program files that contain
-the word "frame_counter".  To do this you use the command: >
-
+如果你是一个 UNIX 用户，你可以用 Vim 和 grep 命令的组合来完成编辑包括特定单词的所有文件的工作。这在你编辑一个程序而且想查看和编辑看所有的包括使用某个变量的文件的时候非常有用。
+举个例子，假设想编辑所有包括单词 "frame_counter" 的 C 源文件，你可以执行如下命令: >
+>
 	vim `grep -l frame_counter *.c`
 
-Let's look at this command in detail.  The grep command searches through a set
-of files for a given word.  Because the -l argument is specified, the command
-will only list the files containing the word and not print the matching lines.
-The word it is searching for is "frame_counter".  Actually, this can be any
-regular expression.  (Note: What grep uses for regular expressions is not
-exactly the same as what Vim uses.)
-   The entire command is enclosed in backticks (`).  This tells the Unix shell
-to run this command and pretend that the results were typed on the command
-line.  So what happens is that the grep command is run and produces a list of
-files, these files are put on the Vim command line.  This results in Vim
-editing the file list that is the output of grep.  You can then use commands
-like ":next" and ":first" to browse through the files.
+让我们分析一下这个命令。grep 从一组文件中查找特定的单词。由于指定了 -l 参数，grep 只列出文件而不打印匹配点。被查找的单词是 "frame_counter"，其实这可以是任何正则表达式。(注意: grep 所使用的正则表达式与 Vim 使用的不完全一样)。整个命令用反引号 (`) 包起来，这告诉 UNIX 的外壳使用该命令的输出作为命令行的一部分。于是，grep 命令产生一个文件列表，并作为 Vim 的命令参数。Vim 将编辑grep 列出来的所有文件。你可以通过 ":next" 和 ":first" 命令一个一个处理这些文件。
 
+找 到 每 一 行
 
-FINDING EACH LINE
-
-The above command only finds the files in which the word is found.  You still
-have to find the word within the files.
-   Vim has a built-in command that you can use to search a set of files for a
-given string.  If you want to find all occurrences of "error_string" in all C
-program files, for example, enter the following command: >
+上面的命令只是找到包括单词的那个文件。你还需要知道单词在该文件中出现的地方。Vim 有一个内置的命令用于在一组文件中找一个指定的字符串。例如，如果你想在所有的 C 文件中查找 "error_string"，可以使用如下命令: >
 
 	:grep error_string *.c
 
-This causes Vim to search for the string "error_string" in all the specified
-files (*.c).  The editor will now open the first file where a match is found
-and position the cursor on the first matching line.  To go to the next
-matching line (no matter in what file it is), use the ":cnext" command.  To go
-to the previous match, use the ":cprev" command.  Use ":clist" to see all the
-matches and where they are.
-   The ":grep" command uses the external commands grep (on Unix) or findstr
-(on Windows).  You can change this by setting the option 'grepprg'.
+这会使 Vim 在所有指定的文件 (*.c) 中查找 "error_string"。Vim 会打开第一个匹配的文件并将光标定位在第一个匹配行。要到下一个匹配行 (无论在哪个文件)，可以执行"cnext" 命令。要回到上一个匹配行，可以用 ":cprev" 命令。使用 "clist" 可以看到所有的匹配点。":grep" 命令会使用一个外部的程序。可能是 grep (在 Unix 上) 或者 findstr(在 Windows 上)。你可以通过 'grepprg' 选项修改这个设置。
 
 ==============================================================================
 
-Next chapter: |usr_20.txt|  Typing command-line commands quickly
+下一章: |usr_20.txt|  快速键入命令行命令
 
 Copyright: see |manual-copyright|  vim:tw=78:ts=8:noet:ft=help:norl:
