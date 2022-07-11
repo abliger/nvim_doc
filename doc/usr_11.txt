@@ -1,36 +1,29 @@
 *usr_11.txt*	Nvim
 
-		     VIM USER MANUAL - by Bram Moolenaar
+		      VIM用户手册 - by Bram Moolenaar
+                                  译者: abliger
+			   从崩溃中恢复
 
-			   Recovering from a crash
 
+你的计算机崩溃过吗？是不是还正好在你编辑了几个小时以后？不要惊慌！Vim 已经保存了大部分的信息使你可以恢复你的大多数数据。本章告诉你怎样恢复这些数据并向你介绍 Vim 是如何使用交换文件的.
 
-Did your computer crash?  And you just spent hours editing?  Don't panic!  Vim
-stores enough information to be able to restore most of your work.  This
-chapter shows you how to get your work back and explains how the swap file is
-used.
+|11.1|	基础的恢复
+|11.2|	交换文件在哪里?
+|11.3|	有没有崩溃
+|11.4|	深入阅读
 
-|11.1|	Basic recovery
-|11.2|	Where is the swap file?
-|11.3|	Crashed or not?
-|11.4|	Further reading
-
-     Next chapter: |usr_12.txt|  Clever tricks
- Previous chapter: |usr_10.txt|  Making big changes
-Table of contents: |usr_toc.txt|
+下一章: |usr_12.txt|  小技巧
+上一章: |usr_10.txt|  做大改变
+目录:   |usr_toc.txt|
 
 ==============================================================================
-*11.1*	Basic recovery
+*11.1*	基础的恢复
 
-In most cases recovering a file is quite simple, assuming you know which file
-you were editing (and the harddisk is still working).  Start Vim on the file,
-with the "-r" argument added: >
+大多数情况恢复文件是比较简单的，假设你知道正在编辑的是哪个文件 (并且硬盘没坏的话)。可以用"-r"选项启动: >
 
 	vim -r help.txt
 
-Vim will read the swap file (used to store text you were editing) and may read
-bits and pieces of the original file.  If Vim recovered your changes you will
-see these messages (with different file names, of course):
+Vim 会读取交换文件 (用于保存你的编辑数据的文件) 并且提取原文的编辑碎片。如果Vim 恢复了你的改变，你会看到如下文字 (当然了，文件名会不一样):
 
 	Using swap file ".help.txt.swp" ~
 	Original file "~/vim/runtime/doc/help.txt" ~
@@ -39,60 +32,43 @@ see these messages (with different file names, of course):
 	and run diff with the original file to check for changes) ~
 	You may want to delete the .swp file now. ~
 
-To be on the safe side, write this file under another name: >
+为了安全起见，可以用另一个文件名保存这个文件: >
 
 	:write help.txt.recovered
 
-Compare the file with the original file to check if you ended up with what you
-expected.  Diff mode is very useful for this |08.7|.  For example: >
+可以把这个文件与原文件作一下比较，看看恢复的效果如何。这方面 Vimdiff 可以帮很大的忙,见 |08.7|.例如:  >
 
 	:write help.txt.recovered
 	:edit #
 	:diffsp help.txt
 
-Watch out for the original file to contain a more recent version (you saved
-the file just before the computer crashed).  And check that no lines are
-missing (something went wrong that Vim could not recover).
-   If Vim produces warning messages when recovering, read them carefully.
-This is rare though.
-
-If the recovery resulted in text that is exactly the same as the file
-contents, you will get this message:
+注意用一个比较新的原文件来比较 (你在计算机崩溃前最后保存过的文件)，并且检查有没有东西丢失了 (由于某些问题导致 Vim 无法恢复)。如果在恢复的过程中 Vim 显示出一些警告信息，注意小心阅读。这应该是很少见的。
+如果恢复产生的文件和文件内容完全一致，你会看到以下消息:
 
 	Using swap file ".help.txt.swp" ~
 	Original file "~/vim/runtime/doc/help.txt" ~
 	Recovery completed. Buffer contents equals file contents. ~
 	You may want to delete the .swp file now. ~
 
-This usually happens if you already recovered your changes, or you wrote the
-file after making changes.  It is safe to delete the swap file now.
+通常这是因为你已经恢复过改变，或者修改后写入了文件。此时删除交换文件应该安全。
 
-It is normal that the last few changes can not be recovered.  Vim flushes the
-changes to disk when you don't type for about four seconds, or after typing
-about two hundred characters.  This is set with the 'updatetime' and
-'updatecount' options.  Thus when Vim didn't get a chance to save itself when
-the system went down, the changes after the last flush will be lost.
+最后所做的一些修改不能恢复是正常的。Vim 在你停止大约 4 秒不输入的时候或者输入大约两百个字符以后才会更新交换文件。这间可以通过 'updatetime' 和 'updatecount' 两个选项来调整。这样，如果系统崩溃前 Vim 没有更新交换文件，最后一次更新后编辑的内容就会丢失。
 
-If you were editing without a file name, give an empty string as argument: >
+如果你编辑的时候没有给定文件名，可以用一个空的字符串来表示文件名: >
 
 	vim -r ""
 
-You must be in the right directory, otherwise Vim can't find the swap file.
+你需要进入原来的目录执行这个命令，否则 Vim 是找不到这个交换文件的
 
 ==============================================================================
-*11.2*	Where is the swap file?
+*11.2*	交换文件在哪里?
 
-Vim can store the swap file in several places.  Normally it is in the same
-directory as the original file.  To find it, change to the directory of the
-file, and use: >
+Vim 可以把交换文件保存在几个不同的地方。通常是原文件所在的目录。要知道这一点,进入该目录，然后输入: >
 
 	vim -r
 
-Vim will list the swap files that it can find.  It will also look in other
-directories where the swap file for files in the current directory may be
-located.  It will not find swap files in any other directories though, it
-doesn't search the directory tree.
-   The output could look like this:
+Vim 会列出所有它能找到的交换文件。它还会从其它目录寻找本目录文件的交换文件，但它不会寻找其它目录里的交换文件，更不会遍及整个目录树。
+这个命令的输出如下:
 
 	Swap files found: ~
 	   In current directory: ~
@@ -109,44 +85,28 @@ doesn't search the directory tree.
 	   In directory /tmp: ~
 	      -- none -- ~
 
-If there are several swap files that look like they may be the one you want to
-use, a list is given of these swap files and you are requested to enter the
-number of the one you want to use.  Carefully look at the dates to decide
-which one you want to use.
-   In case you don't know which one to use, just try them one by one and check
-the resulting files if they are what you expected.
+如果有几个交换文件，其中一个可能是你要的，Vim 会给出一个文件列表，你需要输入一个表示这个文件的数字。小心检查那几个文件的时间，并确定哪一个才是你需要的。
+万一你不知道是哪个的话，一个一个试一试。
 
+使用特定的交换文件
 
-USING A SPECIFIC SWAP FILE
+如果你知道要用哪个文件，你可以指定交换文件的名字。Vim 会找出交换文件所对应的原始文件的名字。
 
-If you know which swap file needs to be used, you can recover by giving the
-swap file name.  Vim will then find out the name of the original file from
-the swap file.
+例如:  >
 
-Example: >
 	vim -r .help.txt.swo
 
-This is also handy when the swap file is in another directory than expected.
-Vim recognizes files with the pattern *.s[uvw][a-z] as swap files.
+这个方法在交换文件在一个非预期的目录中时很有用。Vim 知道 *.s[uvw][a-z] 模式的文件是交换文件。
 
-If this still does not work, see what file names Vim reports and rename the
-files accordingly.  Check the 'directory' option to see where Vim may have
-put the swap file.
+如果这还不行，看看 Vim 报告的文件名是什么，然后根据需要给文件换名。根据 'directory' 选项的值你可以知道 Vim 会把交换文件放到什么地方。
 
-	Note:
-	Vim tries to find the swap file by searching the directories in the
-	'dir' option, looking for files that match "filename.sw?".  If
-	wildcard expansion doesn't work (e.g., when the 'shell' option is
-	invalid), Vim does a desperate try to find the file "filename.swp".
-	If that fails too, you will have to give the name of the swapfile
-	itself to be able to recover the file.
+备注:
+Vim 在 'dir' 选项指定的目录中寻找名为 "filename.sw?" 的交换文件。如果通配符不能正常工作 (例如 'shell' 选项不正确)，Vim 转而尝试文件"filename.swp"。如果仍失败，你就只能通过给定交换文件的名称来恢复原来的文件了。
 
 ==============================================================================
-*11.3*	Crashed or not?					*ATTENTION* *E325*
+*11.3*	有没有崩溃					*ATTENTION* *E325*
 
-Vim tries to protect you from doing stupid things.  Suppose you innocently
-start editing a file, expecting the contents of the file to show up.  Instead,
-Vim produces a very long message:
+Vim 尽可能保护你不要做傻事。有时你打开一个文件，天真地以为文件的内容会显示出来。可是，Vim 却给出一段很长的信息:
 
 		E325: ATTENTION ~
 	Found a swap file by the name ".main.c.swp" ~
@@ -169,143 +129,92 @@ Vim produces a very long message:
 	    If you did this already, delete the swap file ".main.c.swp" ~
 	    to avoid this message. ~
 
-You get this message, because, when starting to edit a file, Vim checks if a
-swap file already exists for that file.  If there is one, there must be
-something wrong.  It may be one of these two situations.
+你遇到这个信息是因为 Vim 发现你编辑的文件的交换文件已经存在。这一定是有什么地方出问题了。可能的原因有两个:
 
-1. Another edit session is active on this file.  Look in the message for the
-   line with "process ID".  It might look like this:
+1. 这个文件正在被另一个进程编辑。注意有 "process ID" 那行。它看起来是这样的:
 
 		process ID: 12559 (still running) ~
 
-   The text "(still running)" indicates that the process editing this file
-   runs on the same computer.  When working on a non-Unix system you will not
-   get this extra hint.  When editing a file over a network, you may not see
-   the hint, because the process might be running on another computer.  In
-   those two cases you must find out what the situation is yourself.
-      If there is another Vim editing the same file, continuing to edit will
-   result in two versions of the same file.  The one that is written last will
-   overwrite the other one, resulting in loss of changes.  You better quit
-   this Vim.
-
-2. The swap file might be the result from a previous crash of Vim or the
-   computer.  Check the dates mentioned in the message.  If the date of the
-   swap file is newer than the file you were editing, and this line appears:
+   "still running" 表示同一台计算机上有一个进程正在编辑这个文件。在非 Unix 的
+    系统上你不会得到这个信息。而如果你通过网络编辑这个文件，可能也得不到这个信
+    息，因为那个进程不在你的机器上。在这两种情况下，你要自己找到原因。
+    如果另一个 Vim 正在编辑这个文件，继续编辑会导致同一个文件有两个版本。最
+    后存盘的文件会覆盖前一个版本。这样的结果是一些编辑数据丢失了。这种情况下，
+    你最好退出这个 Vim。
+    
+    2. 交换文件可能是由于前一次 Vim 或者计算机崩溃导致的。检查提示信息中的日期。如
+    果交换文件比你正在编辑的文件新，而且出现这个信息:
 
 		modified: YES ~
 
-   Then you very likely have a crashed edit session that is worth recovering.
-      If the date of the file is newer than the date of the swap file, then
-   either it was changed after the crash (perhaps you recovered it earlier,
-   but didn't delete the swap file?), or else the file was saved before the
-   crash but after the last write of the swap file (then you're lucky: you
-   don't even need that old swap file).  Vim will warn you for this with this
-   extra line:
+    这就表明你很可能需要恢复了。
+    如果文件的日期比交换文件新，可能是在崩溃后被修改过了 (也许你已经恢复
+    过，只是没有删除交换文件？)，也可能文件在崩溃前保存过，但这发生在在最后一次
+    写入该交换文件之后 (那你运气了，你根本不需要这个旧的交换文件)。Vim 会用如下
+    语句提醒你:
 
       NEWER than swap file! ~
 
 
-NOTE that in the following situation Vim knows the swap file is not useful and
-will automatically delete it:
-- The file is a valid swap file (Magic number is correct).
-- The flag that the file was modified is not set.
-- The process is not running.
+备注 在下面情形下，Vim 知道交换文件没有用了，会自动删除它:
+- 文件是合法的交换文件 (魔术数正确)。
+- 文件修改过的标志位未置位。
+- 进程不在运行。
 
-You can programmatically deal with this situation with the |FileChangedShell|
-autocommand event.
+可以用 |FileChangedShell| 自动命令事件来编程处理这种情况。
 
+无法读取的交换文件 ~
 
-UNREADABLE SWAP FILE ~
-
-Sometimes the line
+有时下面这样的信息
 
 	[cannot be read] ~
 
-will appear under the name of the swap file.  This can be good or bad,
-depending on circumstances.
+会出现在交换文件的文件名之下。这可好可坏，依情况而定。
 
-It is good if a previous editing session crashed without having made any
-changes to the file.  Then a directory listing of the swap file will show
-that it has zero bytes.  You may delete it and proceed.
+如果上次编辑在作出任何修改前就崩溃了的话，是好事。这样交换文件的长度为 0。你只要删除之然后继续即可。
 
-It is slightly bad if you don't have read permission for the swap file.  You
-may want to view the file read-only, or quit.  On multi-user systems, if you
-yourself did the last changes under a different login name, a logout
-followed by a login under that other name might cure the "read error".  Or
-else you might want to find out who last edited (or is editing) the file and
-have a talk with them.
+如果情况是你对交换文件没有读权限，就比较糟糕。你可能得以只读方式浏览该文件。或者退出。在多用户系统中，如果你以别人的身份登录并做了上一次修改，先退出登录然后以那个身份重新登录可能会 "治愈" 该读取错误。不然的话，你得找出是谁做的上一次修改 (或正在修改)，然后和那个人聊聊。
 
-It is very bad if it means there is a physical read error on the disk
-containing the swap file.  Fortunately, this almost never happens.
-You may want to view the file read-only at first (if you can), to see the
-extent of the changes that were "forgotten".  If you are the one in charge of
-that file, be prepared to redo your last changes.
+如果情况是交换文件所在的磁盘物理性地损坏了，就非常糟糕了。幸运的是，这种情况几乎不会发生。你可能需要以只读方式查看文件 (如果允许的话)，看看到底有多少改动被 "忘记" 了。如果你是改动文件的那个人，准备好重做你的改动。
 
 
-WHAT TO DO?					*swap-exists-choices*
+怎么办?					*swap-exists-choices*
 
-If dialogs are supported you will be asked to select one of six choices:
+如果 Vim 版本支持对话框，你可以从对话框的六个选择中挑一个:
 
   Swap file ".main.c.swp" already exists! ~
   [O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort, (D)elete it: ~
 
-O  Open the file readonly.  Use this when you just want to view the file and
-   don't need to recover it.  You might want to use this when you know someone
-   else is editing the file, but you just want to look in it and not make
-   changes.
+O 用只读方式打开文件。当你只是想看看文件的内容，而不打算恢复它的时候用这个选项。你可能知道有人在编辑它，但你想看看它的内容，而不会修改它。
 
-E  Edit the file anyway.  Use this with caution!  If the file is being edited
-   in another Vim, you might end up with two versions of the file.  Vim will
-   try to warn you when this happens, but better be safe than sorry.
+E 直接编辑。小心使用这个选择！如果这个文件已经被另一个文件打开，你编辑它会导致它有两个版本。Vim 已经警告过你了，安全比事后说对不起要好。
 
-R  Recover the file from the swap file.  Use this if you know that the swap
-   file contains changes that you want to recover.
+R 从交换文件中恢复文件。如果你知道交换文件中有新的东西，而你想恢复它，选择这一项。
 
-Q  Quit.  This avoids starting to edit the file.  Use this if there is another
-   Vim editing the same file.
-      When you just started Vim, this will exit Vim.  When starting Vim with
-   files in several windows, Vim quits only if there is a swap file for the
-   first one.  When using an edit command, the file will not be loaded and you
-   are taken back to the previously edited file.
+Q 退出。不再编辑该文件。在有另一个 Vim 编辑该文件的时候选这一项。如果你刚打开 Vim，这会退出 Vim。当你用多个窗口打开几个文件，Vim 只会在第一个文件遇到交换文件的时候退出。如果你是通过编辑命令打开文件，该文件不会被载入，Vim 会回到原来的文件中。
 
-A  Abort.  Like Quit, but also abort further commands.  This is useful when
-   loading a script that edits several files, such as a session with multiple
-   windows.
+A 中止。类似 (Q) 退出，但同时中止更多的命令。这在试图加载一个编辑多个文件的脚本 (例如一个多窗口的会话) 时很有用。
 
-D  Delete the swap file.  Use this when you are sure you no longer need it.
-   For example, when it doesn't contain changes, or when the file itself is
-   newer than the swap file.
-      On Unix this choice is only offered when the process that created the
-   swap file does not appear to be running.
-
-If you do not get the dialog (you are running a version of Vim that does not
-support it), you will have to do it manually.  To recover the file, use this
-command: >
+D 删除交换文件。当你能确定你不再需要它的时候选这一项。例如，它不包括修改的数据，或者你的文件比交换文件新。在 Unix 系统上，只有建立这个交换文件的进程不再运行，这个选择才会出现。如果没有出现对话框 (你使用的 Vim 不支持对话框)，你只能手工处理。要恢复一个文件，使用如下命令: >
 
 	:recover
 
+Vim 不是总能检测到一个文件有交换文件的。当另一个会话把交换文件放到别的位置或者在编辑另一台机器的文件的时候，双方使用的交换文件路径不一样都会发生这个问题。所以，不要老是等 Vim 来提醒你。
 
-Vim cannot always detect that a swap file already exists for a file.  This is
-the case when the other edit session puts the swap files in another directory
-or when the path name for the file is different when editing it on different
-machines.  Therefore, don't rely on Vim always warning you.
+如果你确实不想看到这个信息，你可以在 'shortmess' 选项中加上 'A' 标志位。不过一般你不需要这样做。
 
-If you really don't want to see this message, you can add the 'A' flag to the
-'shortmess' option.  But it's very unusual that you need this.
-
-For programmatic access to the swap file, see |swapinfo()|.
+关于加密和交换文件关系的注释，见 :recover-crypt.
+要通过程序访问交换文件，见 swapinfo().
 
 ==============================================================================
-*11.4*	Further reading
+*11.4*	深入阅读
 
-|swap-file|	An explanation about where the swap file will be created and
-		what its name is.
-|:preserve|	Manually flushing the swap file to disk.
-|:swapname|	See the name of the swap file for the current file.
-'updatecount'	Number of key strokes after which the swap file is flushed to
-		disk.
-'updatetime'	Timeout after which the swap file is flushed to disk.
-'directory'	List of directory names where to store the swap file.
+|swap-file|	解释交换文件在什么地方创建以及名字是什么。
+|:preserve|	手工刷新交换文件
+|:swapname|	查看当前文件的交换文件
+'updatecount'  多少个键被敲下后执行一次交换文件刷新
+'updatetime'	交换文件刷新后的超时时间
+'directory'	列出用于保存交换文件的目录
 
 ==============================================================================
 
