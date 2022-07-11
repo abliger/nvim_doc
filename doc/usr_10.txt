@@ -164,207 +164,142 @@ Vim 找到第一个匹配点的时候会向你提示如下: >
 	:s+one/two+one or two+
 
 ==============================================================================
-*10.3*	Command ranges
+*10.3*	命令范围
 
-The ":substitute" command, and many other : commands, can be applied to a
-selection of lines.  This is called a range.
-   The simple form of a range is {number},{number}.  For example: >
+":substitute" 命令和很多其他的冒号命令可以作用于选中的行.它叫做范围.
+   最简单的范围是 {number},{number}.例如: >
 
 	:1,5s/this/that/g
 
-Executes the substitute command on the lines 1 to 5.  Line 5 is included.
-The range is always placed before the command.
+在1 到 5 行执行替换命令.包括第五行.范围总是放在命令前面.
 
-A single number can be used to address one specific line: >
+单个数字表示某个特定行: >
 
 	:54s/President/Fool/
 
-Some commands work on the whole file when you do not specify a range.  To make
-them work on the current line the "." address is used.  The ":write" command
-works like that.  Without a range, it writes the whole file.  To make it write
-only the current line into a file: >
+当你没有指出一个范围一些命令会作用整个文件.  作用于当前行使用 "." 符号.":write" 命令就是这样.没有范围, 它保存整个文件.使它保存当前行到文件: >
 
 	:.write otherfile
 
-The first line always has number one.  How about the last line?  The "$"
-character is used for this.  For example, to substitute in the lines from the
-cursor to the end: >
+首行数字总是 1，但是行尾数字是不确定的."$" 解决此问题.例如,替换从光标到结尾的内容: >
 
 	:.,$s/yes/no/
 
-The "%" range that we used before, is actually a short way to say "1,$", from
-the first to the last line.
+我们前面使用的 "%" 范围实际上是 "1,$" 的缩写，表示从文件首到文件末.
 
 
-USING A PATTERN IN A RANGE
+在范围使用表达式
 
-Suppose you are editing a chapter in a book, and want to replace all
-occurrences of "grey" with "gray".  But only in this chapter, not in the next
-one.  You know that only chapter boundaries have the word "Chapter" in the
-first column.  This command will work then: >
+假设你编辑书中的一章节,想要使用 "gray" 替换所有的出现的 "grey".但是现在你只想编辑这一章节而不是其他章节.你知道只有此章节开头有单词 "Chapter".下面的命令对你有帮助: >
 
 	:?^Chapter?,/^Chapter/s=grey=gray=g
 
-You can see a search pattern is used twice.  The first "?^Chapter?" finds the
-line above the current position that matches this pattern.  Thus the ?pattern?
-range is used to search backwards.  Similarly, "/^Chapter/" is used to search
-forward for the start of the next chapter.
-   To avoid confusion with the slashes, the "=" character was used in the
-substitute command here.  A slash or another character would have worked as
-well.
+你能看到搜索表达式被使用两次.第一个是 "?^Chapter?"，用于查找前一个行首的"Chapter"，就是说 "?pattern?" 用于向前查找。同样，"/^Chapter/" 用于向后查找下一章。
+为了避免斜杠使用的混淆，在这种情况下，"=" 字符用于代替斜杠。使用斜杠或使用其它字符其实也是可以的.
 
 
-ADD AND SUBTRACT
+加减号
 
-There is a slight error in the above command: If the title of the next chapter
-had included "grey" it would be replaced as well.  Maybe that's what you
-wanted, but what if you didn't?  Then you can specify an offset.
-   To search for a pattern and then use the line above it: >
+上面的方案其实还是有问题的: 如果下一章的标题行中包括 "grey"，这个 "grey" 也会被替换掉。如果你正好想这样就最好，可是正好你不想呢？这个时候你需要指定一个偏移。
+要查找一个表达式，并且使用它的前一行，需要这样: >
 
 	/Chapter/-1
 
-You can use any number instead of the 1.  To address the second line below the
-match: >
+你可以用任意数值代替命令中的 1。要定位匹配点下的第二行，要这样: >
 
 	/Chapter/+2
 
-The offsets can also be used with the other items in a range.  Look at this
-one: >
+偏移还可以用于其它范围指定符。看一下下面这个例子: >
 
 	:.+3,$-5
 
-This specifies the range that starts three lines below the cursor and ends
-five lines before the last line in the file.
+这指定当前行下面第三行到文件末倒数第五行的范围.
 
 
-USING MARKS
+使用标记
 
-Instead of figuring out the line numbers of certain positions, remembering them
-and typing them in a range, you can use marks.
-   Place the marks as mentioned in chapter 3.  For example, use "mt" to mark
-the top of an area and "mb" to mark the bottom.  Then you can use this range
-to specify the lines between the marks (including the lines with the marks): >
+除了指定行号，(这需要记住并把它敲出来)，你还可以使用标记。在前面的例子中，你可以用标记指出第三章的位置。例如，用 "mt" 标记开头，再用 "mb" 标记结尾。然后你就可以用标记表示一个范围 (包括标记的那一行): >
 
 	:'t,'b
 
 
-VISUAL MODE AND RANGES
+可视模式和范围
 
-You can select text with Visual mode.  If you then press ":" to start a colon
-command, you will see this: >
+你可以使用可视模式选择文本.然后使用 ":" 启动冒号命令，将会看到: >
 
 	:'<,'>
 
-Now you can type the command and it will be applied to the range of lines that
-was visually selected.
+现在，你可以输入剩下的命令，这个命令的作用范围就是可视模式中指定的范围.
 
-	Note:
-	When using Visual mode to select part of a line, or using CTRL-V to
-	select a block of text, the colon commands will still apply to whole
-	lines.  This might change in a future version of Vim.
+	注意:
+   如果使用可视模式选中行的一部分，或者用 CTRL-V 选中一个文本列块，然后执行冒号命令，命令仍作用于整行，而不只是选中的范围。这可能会在以后的版本中修正.
 
-The '< and '> are actually marks, placed at the start and end of the Visual
-selection.  The marks remain at their position until another Visual selection
-is made.  Thus you can use the "'<" command to jump to position where the
-Visual area started.  And you can mix the marks with other items: >
+'< 和 '> 实际上是标记，分别标识可视模式的开始和结尾。这个标记一直有效，直到选中了其它的范围为止。你还可以用标记跳转命令 "' <" 跳转到选中文本的开始处。你还可以把这个标记和其它标记混合，例如: >
 
 	:'>,$
 
-This addresses the lines from the end of the Visual area to the end of the
-file.
+这表示从选中部分的结尾到文件末.
 
 
-A NUMBER OF LINES
+行号
 
-When you know how many lines you want to change, you can type the number and
-then ":".  For example, when you type "5:", you will get: >
+如果你知道要修改多少行，你可以先输入一个数值再输入冒号。例如，如果你输入 "5:"，你会得到: >
 
 	:.,.+4
 
-Now you can type the command you want to use.  It will use the range "."
-(current line) until ".+4" (four lines down).  Thus it spans five lines.
+现在你可以继续你的命令，这个命令将作用于当前行及其后 4 行.
 
 ==============================================================================
-*10.4*	The global command
+*10.4*	全局命令
 
-The ":global" command is one of the more powerful features of Vim.  It allows
-you to find a match for a pattern and execute a command there.  The general
-form is: >
+":global" 命令是 Vim 最强大的命令之一.它允许你发现一个匹配表达式并在那里执行命令，一般为: >
 
 	:[range]global/{pattern}/{command}
 
-This is similar to the ":substitute" command.  But, instead of replacing the
-matched text with other text, the command {command} is executed.
+和"替换"命令相似.但是它不替代匹配的文本而是执行命令.
 
-	Note:
-	The command executed for ":global" must be one that starts with a
-	colon.  Normal mode commands can not be used directly.  The |:normal|
-	command can do this for you.
+注意:
+global 中执行的命令只能是冒号命令。普通模式命令不能在这里使用。如果需要，可以使用 |:normal| 命令。
 
-Suppose you want to change "foobar" to "barfoo", but only in C++ style
-comments.  These comments start with "//".  Use this command: >
+假设你要把 "foobar" 修改为 "barfoo"，但只需要修改 C++ 风格的注释中的内容。这种注释以 "//" 开头。所以可以使用如下命令: >
 
 	:g+//+s/foobar/barfoo/g
 
-This starts with ":g".  That is short for ":global", just like ":s" is short
-for ":substitute".  Then the pattern, enclosed in plus characters.  Since the
-pattern we are looking for contains a slash, this uses the plus character to
-separate the pattern.  Next comes the substitute command that changes "foobar"
-into "barfoo".
-   The default range for the global command is the whole file.  Thus no range
-was specified in this example.  This is different from ":substitute", which
-works on one line without a range.
-   The command isn't perfect, since it also matches lines where "//" appears
-halfway through a line, and the substitution will also take place before the
-"//".
+这个命令用 ":g" 开头，这是 ":global" 的缩写形式，就像 ":s" 是 ":substitute" 的缩写形式一样。然后是一个匹配模式，由于模式中包括正斜杠，我们用加号作分隔符，后面是一个把 "foobar" 替换成 "barfoo" 的替换命令。全局命令的默认范围是整个文件，所以这个例子中没有指定范围。这一点与":substitute" 是不同的。后者只作用于一行。
+这个命令并非完美。因为 "//" 可能出现在一行的中间，但替换命令会把前后的匹配点都替换了。
 
-Just like with ":substitute", any pattern can be used.  When you learn more
-complicated patterns later, you can use them here.
+像 ":substitute" 一样，这里也可以使用各种各样的匹配模式。当你从后面的章节中学会更多的关于模式的知识，它们都可以用在这里.
 
 ==============================================================================
-*10.5*	Visual block mode
+*10.5*	可视 块模式
 
-With CTRL-V you can start selection of a rectangular area of text.  There are
-a few commands that do something special with the text block.
+CTRL-V 命令可以选中一个矩形文本块。有几个命令是专门用来处理这个文本块的。
 
-There is something special about using the "$" command in Visual block mode.
-When the last motion command used was "$", all lines in the Visual selection
-will extend until the end of the line, also when the line with the cursor is
-shorter.  This remains effective until you use a motion command that moves the
-cursor horizontally.  Thus using "j" keeps it, "h" stops it.
+在可视列块模式中，"$" 命令有些特别。当最后一个移动命令是 "$" 时，整个可视列块将被扩展到每一行的行尾。这种状态在你使用垂直移动命令的时候一直被保持，直到你使用水平移动命令为止。就是说，用 "j" 命令会保持这种状态，而 "h" 会退出。
 
 
-INSERTING TEXT
+插 入 文 本
 
-The command  "I{string}<Esc>" inserts the text {string} in each line, just
-left of the visual block.  You start by pressing CTRL-V to enter visual block
-mode.  Now you move the cursor to define your block.  Next you type I to enter
-Insert mode, followed by the text to insert.  As you type, the text appears on
-the first line only.
-   After you press <Esc> to end the insert, the text will magically be
-inserted in the rest of the lines contained in the visual selection.  Example:
+"I{string}" 命令把 {string} 插到可视列块的每一行的左边。你用 CTRL-V 进入可视列块模式，然后移动光标定义一个列块。接着输入 I 进入插入模式，并随后输入文本。这时，你输入的内容只出现在第一行。
+   然后你输入  结束输入，刚才输入的字符串将神奇地出现在每一行的可视区的左边。例如:
 
 	include one ~
 	include two ~
 	include three ~
 	include four ~
 
-Move the cursor to the "o" of "one" and press CTRL-V.  Move it down with "3j"
-to "four".  You now have a block selection that spans four lines.  Now type: >
+把光标移到第一行 "one" 的 "o" 上，输入 CTRL-V。然后用 "3j" 向下移动到 "four"。现在你选中了四行的一个方块。接着输入: >
 
 	Imain.<Esc>
 
-The result:
+结果是:
 
 	include main.one ~
 	include main.two ~
 	include main.three ~
 	include main.four ~
 
-If the block spans short lines that do not extend into the block, the text is
-not inserted in that line.  For example, make a Visual block selection that
-includes the word "long" in the first and last line of this text, and thus has
-no text selected in the second line:
+如果选中的块经过一个短行，并且这行没有任何内容包括在可视列块中，则新的文本不会被插入到该行中。例如，对于下面的例子，用可视列块选中第一和第三行的 "long"，这样第二行的文本将不会被包括在可视列块中:
 
 	This is a long line ~
 	short ~
@@ -372,141 +307,103 @@ no text selected in the second line:
 
 		  ^^^^ selected block
 
-Now use the command "Ivery <Esc>".  The result is:
+现在输入 "Ivery "。结果将是:
 
 	This is a very long line ~
 	short ~
 	Any other very long line ~
 
-In the short line no text was inserted.
+可以注意到，第二行中没有插入任何文本。
 
-If the string you insert contains a newline, the "I" acts just like a Normal
-insert command and affects only the first line of the block.
+如果插入的文本中包括一个新行，则 "I" 命令的效果与普通插入语句一样，只影响块的第一行。
 
-The "A" command works the same way, except that it appends after the right
-side of the block.  And it does insert text in a short line.  Thus you can
-make a choice whether you do or don't want to append text to a short line.
-   There is one special case for "A": Select a Visual block and then use "$"
-to make the block extend to the end of each line.  Using "A" now will append
-the text to the end of each line.
-   Using the same example from above, and then typing "$A XXX<Esc>, you get
-this result:
+"A" 命令的效果与 "I" 命令一样，只是把文字插入可视列块的右边，而且在短行中会插入文字。这样，你有在短行中插入文字与否的不同选择。
+"A" 在如下情况会有一些特别: 选中一个可视列块然后用 "$" 命令使可视列块扩展 到行尾。然后用 "A" 命令插入文本，文件将被插入到 "每一行" 的行尾。 还是用上面的例子，在选中可视列块后输入 "$A XXX"，结果将是:
 
 	This is a long line XXX ~
 	short XXX ~
 	Any other long line XXX ~
 
-This really requires using the "$" command.  Vim remembers that it was used.
-Making the same selection by moving the cursor to the end of the longest line
-with other movement commands will not have the same result.
+出现这个效果完全是 "$" 命令的作用，Vim 能记住这个命令，如果你用移动命令选中相同的可视列块，是不会有这样的效果的。
 
 
-CHANGING TEXT
+改变文本
 
-The Visual block "c" command deletes the block and then throws you into Insert
-mode to enable you to type in a string.  The string will be inserted in each
-line in the block.
-   Starting with the same selection of the "long" words as above, then typing
-"c_LONG_<Esc>", you get this:
+可视列块中的 "c" 命令会删除整个可视列块并转入 "插入" 模式，使你可以开始文本，这些文本会被插入可视列块经过的每一行。在上面的例子中，如果仍选中包括所有 "long" 的一个可视列块，然后输入 "c_LONG_"，结果会变成:
 
 	This is a _LONG_ line ~
 	short ~
 	Any other _LONG_ line ~
 
-Just like with "I" the short line is not changed.  Also, you can't enter a
-newline in the new text.
+与 "I" 命令一样，短行不会发生变化。而且在插入的过程中，你不能断行。
 
-The "C" command deletes text from the left edge of the block to the end of
-line.  It then puts you in Insert mode so that you can type in a string,
-which is added to the end of each line.
-   Starting with the same text again, and typing "Cnew text<Esc>" you get:
+"C" 命令从块的左边界开始删除所有行的后半段，然后状态切换到 "插入" 模式让你输入文本。新的文本被插入到每一行的末尾。在上面的例子中，如果命令改为 "Cnew text"，你将获得这样的结果:
 
 	This is a new text ~
 	short ~
 	Any other new text ~
 
-Notice that, even though only the "long" word was selected, the text after it
-is deleted as well.  Thus only the location of the left edge of the visual
-block really matters.
-   Again, short lines that do not reach into the block are excluded.
+可以注意到，尽管只有 "long" 被选中，它后面的内容也被删除了。所以在这种情况下，块的左边界才是有意义的。同样，没有包括在块中的行不会受影响。
 
-Other commands that change the characters in the block:
+还有一些命令只影响被选中的字符:
 
-	~	swap case	(a -> A and A -> a)
-	U	make uppercase  (a -> A and A -> A)
-	u	make lowercase  (a -> a and A -> a)
+	~	交换大小写	(a -> A and A -> a)
+	U	变为大写  (a -> A and A -> A)
+	u	变为小写  (a -> a and A -> a)
 
+以一个字符填充
 
-FILLING WITH A CHARACTER
-
-To fill the whole block with one character, use the "r" command.  Again,
-starting with the same example text from above, and then typing "rx":
+要以某一个字符完全填充整个块，可以使用 "r" 命令。再次选中上例中的文本，然后键入 "rx":
 
 	This is a xxxx line ~
 	short ~
 	Any other xxxx line ~
 
 
-	Note:
-	If you want to include characters beyond the end of the line in the
-	block, check out the 'virtualedit' feature in chapter 25.
+	注意:
+	如果你要在可视列块中包括行尾之后的字符，请参考 25 章的 'virtualedit' 特性。
 
+平移
 
-SHIFTING
-
-The command ">" shifts the selected text to the right one shift amount,
-inserting whitespace.  The starting point for this shift is the left edge of
-the visual block.
-   With the same example again, ">" gives this result:
+">" 命令把选中的文档向右移动一个 "平移单位"，中间用空白填充。平移的起始点是可视列块的左边界。
+还是用上面的例子，">" 命令会导致如下结果:
 
 	This is a	  long line ~
 	short ~
 	Any other	  long line ~
 
-The shift amount is specified with the 'shiftwidth' option.  To change it to
-use 4 spaces: >
+平移的距离由 'shiftwidth' 选项定义。例如，要每次平移 4 个空格，可以用这个命令: >
 
 	:set shiftwidth=4
 
-The "<" command removes one shift amount of whitespace at the left
-edge of the block.  This command is limited by the amount of text that is
-there; so if there is less than a shift amount of whitespace available, it
-removes what it can.
+"<" 命令向左移动一个 "平移单位" ，但能移动的距离是有限的，因为它左边的不是空白 字符的字符会挡住它，这时它移到尽头就不再移动。
 
 
-JOINING LINES
+链接若干行
 
-The "J" command joins all selected lines together into one line.  Thus it
-removes the line breaks.  Actually, the line break, leading white space and
-trailing white space is replaced by one space.  Two spaces are used after a
-line ending (that can be changed with the 'joinspaces' option).
-   Let's use the example that we got so familiar with now.  The result of
-using the "J" command:
+"J" 命令连接被选中的行。也就是删除所有的换行符。其实不只是换行符，行前后的多余空白字符会一起被删除而全部用一个空格取代。如果行尾刚好是句尾，就插入两个空格(参见 'joinspaces' 选项)还是用那个我们已经非常熟悉的例子，这回的结果将是:
 
 	This is a long line short Any other long line ~
 
-The "J" command doesn't require a blockwise selection.  It works with "v" and
-"V" selection in exactly the same way.
+"J" 命令其实不关心选中了哪些字符，只关心块涉及到哪些行。所以可视列块的效果与"v" 和 "V" 的效果是完全一样的。
 
-If you don't want the white space to be changed, use the "gJ" command.
+如果你不想改变那些空白字符，可以使用 "gJ" 命令。
 
 ==============================================================================
-*10.6*	Reading and writing part of a file
+*10.6*	读写文件内容
 
-When you are writing an e-mail message, you may want to include another file.
-This can be done with the ":read {filename}" command.  The text of the file is
-put below the cursor line.
-   Starting with this text:
+当你在写一封 e-mail，你可能想包括另一个文件。这可以通过 ":read {filename}" 命令达到目的。这些文本将被插入到光标的下面。
+    我们用下面的文本作试验:
 
 	Hi John, ~
 	Here is the diff that fixes the bug: ~
 	Bye, Pierre. ~
 
-Move the cursor to the second line and type: >
+移动光标到第二行然后键入: >
 
 	:read patch
 
-The file named "patch" will be inserted, with this result:
+文件名为 "patch" 的内容会被插入 ，结果:
 
 	Hi John, ~
 	Here is the diff that fixes the bug: ~
@@ -516,159 +413,102 @@ The file named "patch" will be inserted, with this result:
 	>	for (i = 0; i < length; ++i) ~
 	Bye, Pierre. ~
 
-The ":read" command accepts a range.  The file will be put below the last line
-number of this range.  Thus ":$r patch" appends the file "patch" at the end of
-the file.
-   What if you want to read the file above the first line?  This can be done
-with the line number zero.  This line doesn't really exist, you will get an
-error message when using it with most commands.  But this command is allowed:
->
+":read" 命令可以接受范围. 文件将被插入到范围指定的最后一行的下面。所以 ":$r patch" 会把 "patch" 文件插入到当前文件的最后.
+   如果要插入到文件的最前面怎么办？你可以把文本插入到第 0 行，这一行实际上是不存在的。在普通的命令的范围中如果你用这个行号会出错，但在 "read" 命令中就可以:
+
 	:0read patch
 
-The file "patch" will be put above the first line of the file.
+这个命令把 "patch" 文件插入到全文的最前面.
 
 
-WRITING A RANGE OF LINES
+保存部分行
 
-To write a range of lines to a file, the ":write" command can be used.
-Without a range it writes the whole file.  With a range only the specified
-lines are written: >
+要把一部分行写入到文件，可以使用 ":write" 命令。在没有指定范围的时候它写入全文，而指定范围的时候它只写入范围指定的行: >
 
 	:.,$write tempo
 
-This writes the lines from the cursor until the end of the file into the file
-"tempo".  If this file already exists you will get an error message.  Vim
-protects you from accidentally overwriting an existing file.  If you know what
-you are doing and want to overwrite the file, append !: >
+这个命令写入当前位置到文件末的全部行到文件 "tempo" 中。如果这个文件已经存在，你会被提示错误。Vim 不会让你直接写入到一个已存在的文件。如果你知道你在干什么而且确实想这样做，就加一个叹号:  >
 
 	:.,$write! tempo
 
-CAREFUL: The ! must follow the ":write" command immediately, without white
-space.  Otherwise it becomes a filter command, which is explained later in
-this chapter.
+小 心: "!" 必须紧跟着 ":write"，中间不能留有空格。否则这将变成一个过滤器命令，这种命令我们在本章的后面会介绍.
 
 
-APPENDING TO A FILE
+添加内容到文件中
 
-In the first section of this chapter was explained how to collect a number of
-lines into a register.  The same can be done to collect lines in a file.
-Write the first line with this command: >
+本章开始的时候介绍了怎样把文本添加到寄存器中。你可以对文件作同样的操作。例如，把当前行写入文件: >
 
 	:.write collection
 
-Now move the cursor to the second line you want to collect, and type this: >
+然后移到下一个位置，输入: >
 
 	:.write >>collection
 
-The ">>" tells Vim the "collection" file is not to be written as a new file,
-but the line must be appended at the end.   You can repeat this as many times
-as you like.
+">>" 通知 Vim 把内容添加到文件 "collection" 的后面。你可以重复这个操作，直到获得全部你需要收集的文本.
 
 ==============================================================================
-*10.7*	Formatting text
+*10.7*	格式化文本
 
-When you are typing plain text, it's nice if the length of each line is
-automatically trimmed to fit in the window.  To make this happen while
-inserting text, set the 'textwidth' option: >
+在你输入纯文本时，自动换行自然会是比较吸引的功能。要实现这个功能，可以设置 'textwidth' 选项: >
 
 	:set textwidth=78
 
-You might remember that in the example vimrc file this command was used for
-every text file.  Thus if you are using that vimrc file, you were already
-using it.  To check the current value of 'textwidth': >
+你可能还记得在示例 vimrc 文件中，这个命令被用于所有的文本文件。所以如果你使用的是那个配置文件，实际上你已经设置这个选项了。检查一下该选项的值: >
 
 	:set textwidth
 
-Now lines will be broken to take only up to 78 characters.  However, when you
-insert text halfway through a line, or when you delete a few words, the lines
-will get too long or too short.  Vim doesn't automatically reformat the text.
-To tell Vim to format the current paragraph: >
+现在每行达到 72 个字符就会自动换行。但如果你只是在行中间输入或者删除一些东西，这个功能就无效了。Vim 不会自动排版这些文本。要让 Vim 排版当前的段落: >
 
 	gqap
 
-This starts with the "gq" command, which is an operator.  Following is "ap",
-the text object that stands for "a paragraph".  A paragraph is separated from
-the next paragraph by an empty line.
+这个命令用 "gq" 开始，作为操作符，然后跟着 "ap"，作为文本对象，该对象表示一段 (a paragraph)。"ap" 与下一段的分割符是一个空行。
 
-	Note:
-	A blank line, which contains white space, does NOT separate
-	paragraphs.  This is hard to notice!
+备注:
+只包括空白字符的空白行不能分割一段。这很不容易分辨。
 
-Instead of "ap" you could use any motion or text object.  If your paragraphs
-are properly separated, you can use this command to format the whole file: >
+除了用 "ap"，你还可以使用其它动作或者文本对象。如果你的段落分割正确，你可以用下面命令排版整个文档: >
 
 	gggqG
 
-"gg" takes you to the first line, "gq" is the format operator and "G" the
-motion that jumps to the last line.
+"gg" 跳转到第一行，"gq" 是排版操作符，而 "G" 是跳转到文尾的动作命令。
 
-In case your paragraphs aren't clearly defined, you can format just the lines
-you manually select.  Move the cursor to the first line you want to format.
-Start with the command "gqj".  This formats the current line and the one below
-it.  If the first line was short, words from the next line will be appended.
-If it was too long, words will be moved to the next line.  The cursor moves to
-the second line.  Now you can use "." to repeat the command.  Keep doing this
-until you are at the end of the text you want to format.
+如果你没有清楚地区分段落。你可以只排版你手动选中的行。先移到你要排版的行，执行 "gqj"。这会排版当前行和下面一行。如果当前行太短，下面一行会补上来，否则多余的部分会移到下面一行。现在你可以用 "." 命令重复这个操作，直到排版完所有的文本。
 
 ==============================================================================
-*10.8*	Changing case
+*10.8*	改变大小写
 
-You have text with section headers in lowercase.  You want to make the word
-"section" all uppercase.  Do this with the "gU" operator.  Start with the
-cursor in the first column: >
+你手头有一个分节标题全部是小写的。你想把全部 "section" 改成大写的。这可以用 "gU" 操作符。先在第一列执行: >
 
 			     gUw
 <	section header	    ---->      SECTION header
 
-The "gu" operator does exactly the opposite: >
+"gu" 操作符正好相反: >
 
 			     guw
 <	SECTION header	    ---->      section header
 
-You can also use "g~" to swap case.  All these are operators, thus they work
-with any motion command, with text objects and in Visual mode.
-   To make an operator work on lines you double it.  The delete operator is
-"d", thus to delete a line you use "dd".  Similarly, "gugu" makes a whole line
-lowercase.  This can be shortened to "guu".  "gUgU" is shortened to "gUU" and
-"g~g~" to "g~~".  Example: >
+你也能使用 "g~" 去转换大小写. 所有这些命令都是操作符，所以它们可以用于动作命令，文本对象和可视模式.
+   要让一个操作符作用于当前行，可以执行这个操作符两次。例如，"d" 是删除操作符，所以删除一行就是 "dd"。相似地，"gugu" 使整一行变成小写。这可以缩成 "guu"。"gUgU" 可以缩成 "gUU" 而 "g~g~" 则是 "g~~"。例如: >
 
 				g~~
 <	Some GIRLS have Fun    ---->   sOME girls HAVE fUN ~
 
 ==============================================================================
-*10.9*	Using an external program
+*10.9*	使用扩展程序
 
-Vim has a very powerful set of commands, it can do anything.  But there may
-still be something that an external command can do better or faster.
-   The command "!{motion}{program}" takes a block of text and filters it
-through an external program.  In other words, it runs the system command
-represented by {program}, giving it the block of text represented by {motion}
-as input.  The output of this command then replaces the selected block.
-   Because this summarizes badly if you are unfamiliar with Unix filters, take
-a look at an example.  The sort command sorts a file.  If you execute the
-following command, the unsorted file input.txt will be sorted and written to
-output.txt.  This works on both Unix and Windows. >
+Vim 有一套功能非常强大的命令，可以完成所有功能。但有些东西外部命令能够完成得更好或者更快。命令 "!{motion}{program}" 用一个外部程序对一个文本块进行过滤。换句话说，它用一个文本块作为输入，执行一个由 {program} 指定的外部命令，然后用该程序的输出替代选中的文本块。如果你不熟悉 UNIX 的过滤程序，上面的描述可以说是比较糟糕的。我们这里举个例子来说明一下。sort 命令能对一个文件排序。如果你执行下面的命令，未排序的文件input.txt 会被排序并写入 output.txt。(这在 UNIX 和 Microsoft Windows 上都有效) >
 
 	sort <input.txt >output.txt
 
-Now do the same thing in Vim.  You want to sort lines 1 through 5 of a file.
-You start by putting the cursor on line 1.  Next you execute the following
-command: >
+现在在 Vim 中完成相同的功能。假设你要对 1 到 5 行排序。你可以先把光标定位在第一行，然后你执行下面的命令: >
 
 	!5G
 
-The "!" tells Vim that you are performing a filter operation.  The Vim editor
-expects a motion command to follow, indicating which part of the file to
-filter.  The "5G" command tells Vim to go to line 5, so it now knows that it
-is to filter lines 1 (the current line) through 5.
-   In anticipation of the filtering, the cursor drops to the bottom of the
-screen and a ! prompt displays.  You can now type in the name of the filter
-program, in this case "sort".  Therefore, your full command is as follows: >
+"!" 告诉 Vim 你正在执行一个过滤操作。然后 Vim 编辑器等待一个 "动作" 命令来告诉它要过滤哪部分文本。"5G" 命令告诉 Vim 移到第 5 行。于是，Vim 知道要处理的是第1 行 (当前行) 到第 5 行间的内容。由于在执行一个过滤命令，光标被 Vim 移到了屏幕的底部，并显示一个 "!" 作提示符。现在你可以输入过滤程序的名字，在本例中就是 "sort" 了。因此，你整个命令将是: >
 
 	!5Gsort<Enter>
 
-The result is that the sort program is run on the first 5 lines.  The output
-of the program replaces these lines.
+这个命令的结果是 sort 程序用前 5 行作为输入执行，程序的输出替换了原来的 5 行。
 
 	line 55			      line 11
 	line 33			      line 22
@@ -677,93 +517,66 @@ of the program replaces these lines.
 	line 44			      line 55
 	last line		      last line
 
-The "!!" command filters the current line through a filter.  In Unix the "date"
-command prints the current time and date.  "!!date<Enter>" replaces the current
-line with the output of "date".  This is useful to add a timestamp to a file.
+"!!" 命令用于对当前行执行过滤命令。在 Unix 上，"date" 命令能打印当前的时间和日期，所以，"!!date" 用 "date" 的输出代替当前行。这在为文件加入时间戳的时候非常有用。
 
 
-WHEN IT DOESN'T WORK
+如 果 命 令 不 执 行 怎 么 办
 
-Starting a shell, sending it text and capturing the output requires that Vim
-knows how the shell works exactly.  When you have problems with filtering,
-check the values of these options:
+启动一个外壳，发送一个命令并捕获它的输出，这需要 Vim 知道这个外壳程序是怎么工作的。如果你要使用过滤程序，你最好需要检查一下下面的选项:
 
-	'shell'		specifies the program that Vim uses to execute
-			external programs.
-	'shellcmdflag'	argument to pass a command to the shell
-	'shellquote'	quote to be used around the command
-	'shellxquote'	quote to be used around the command and redirection
-	'shellslash'	use forward slashes in the command (only for
-			MS-Windows and alikes)
-	'shellredir'	string used to write the command output into a file
+   'shell' 		指定 Vim 用于执行外部命令的外壳。
+   'shellcmdflag' 	传给外壳的参数
+   'shellquote' 	外壳程序使用的引号 (用于引用命令)
+   'shellxquote' 	用于命令和重定向文件名的引号
+   'shelltype' 		外壳程序的类型 (仅用于 Amiga)
+   'shellslash' 	在命令中使用正斜杠 (仅用于 MS-Windows 和相容系统)
+   'shellredir' 	用于把命令输出写入文件所使用的字符串
 
-On Unix this is hardly ever a problem, because there are two kinds of shells:
-"sh" like and "csh" like.  Vim checks the 'shell' option and sets related
-options automatically, depending on whether it sees "csh" somewhere in
-'shell'.
-   On MS-Windows, however, there are many different shells and you might have
-to tune the options to make filtering work.  Check the help for the options
-for more information.
+在 Unix 上，这几乎不是问题。因为总共只有两种外壳程序: "sh" 类的和 "csh" 类的。 Vim 会检查选项 'shell'，并根据它的类型自动设置这些参数。但在 MS-Windows 上，有很多不同的外壳程序，所以你必须修改这些外壳程序以便过滤功能正常执行。详细情况请参考相应选项的帮助。
 
 
-READING COMMAND OUTPUT
+读 入 一 个 命 令 的 输 出
 
-To read the contents of the current directory into the file, use this:
-
-on Unix: >
+要把当前目录的内容读进文件，可以用如下命令:
+Unix 上: >
 	:read !ls
-on MS-Windows: >
+MS-Windows: >
 	:read !dir
 
-The output of the "ls" or "dir" command is captured and inserted in the text,
-below the cursor.  This is similar to reading a file, except that the "!" is
-used to tell Vim that a command follows.
-   The command may have arguments.  And a range can be used to tell where Vim
-should put the lines: >
+"ls" 或者 "dir" 的输出会被捕获并插入到光标下面。这好像读入一个文件一样，但是需要加上一个 "!" 让 Vim 知道后面是一个命令。这些命令还可以带参数。而且前面还可以带一个范围用于告诉 Vim 把这行放在什么地方: >
 
 	:0read !date -u
 
-This inserts the current time and date in UTC format at the top of the file.
-(Well, if you have a date command that accepts the "-u" argument.)  Note the
-difference with using "!!date": that replaced a line, while ":read !date" will
-insert a line.
+这将用 UTC 格式把当前的时间插入到文件开头。(当然了，你的 date 命令必须能够接受-u 选项。) 注意 这与 "!!date" 的区别: "!!date" 替代一行，而 ":read !date" 插入一行。
 
 
-WRITING TEXT TO A COMMAND
+把 文 本 输 出 到 一 个 命 令
 
-The Unix command "wc" counts words.  To count the words in the current file: >
+Unix 命令 "wc" 用于统计单词数目。要统计当前文件有多少个单词，可以这样: >
 
 	:write !wc
 
-This is the same write command as before, but instead of a file name the "!"
-character is used and the name of an external command.  The written text will
-be passed to the specified command as its standard input.  The output could
-look like this:
+这和前面的写入命令一样，但文件名前面改为一个 "!" 用于告诉 Vim 后面是一个要被执行的外部命令。被写入的文本将作为指定命令的标准输入。这个输出将是:
 
        4      47     249 ~
 
-The "wc" command isn't verbose.  This means you have 4 lines, 47 words and 249
-characters.
+"wc" 命令惜字如金。这表示你有 4 行，47 个单词和 249 个字符。
 
-Watch out for this mistake: >
+注意不要错写成: >
 
 	:write! wc
 
-This will write the file "wc" in the current directory, with force.  White
-space is important here!
+这会强制把当前文件存到当前目录的 "wc" 文件中。在这里空格的位置是非常重要的！
 
 
-REDRAWING THE SCREEN
+重 画 屏 幕
 
-If the external command produced an error message, the display may have been
-messed up.  Vim is very efficient and only redraws those parts of the screen
-that it knows need redrawing.  But it can't know about what another program
-has written.  To tell Vim to redraw the screen: >
+如果外部程序产生一个错误信息，屏幕显示就会乱掉。Vim 颇重效率，所以它只刷新那些需要刷新的地方。可是它不可能知道其它程序修改了哪些地方。要强制 Vim 重画整个屏幕: >
 
 	CTRL-L
 
 ==============================================================================
 
-Next chapter: |usr_11.txt|  Recovering from a crash
+下一章: |usr_11.txt|  从崩溃中恢复
 
 Copyright: see |manual-copyright|  vim:tw=78:ts=8:noet:ft=help:norl:
